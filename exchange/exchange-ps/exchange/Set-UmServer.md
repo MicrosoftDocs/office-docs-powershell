@@ -6,7 +6,11 @@ schema: 2.0.0
 # Set-UMServer
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Set-UMServer cmdlet to set the properties on a Unified Messaging (UM) server.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -26,7 +30,7 @@ The Set-UMServer cmdlet sets specific properties on a Unified Messaging server. 
 
 After this task is completed, the cmdlet sets the parameters and the values specified.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM server" entry in the Unified Messaging Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 

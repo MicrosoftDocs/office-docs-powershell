@@ -10,6 +10,8 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-ImapSubscription cmdlet to modify the properties of an existing IMAP subscription configured in a user's cloud-based mailbox.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ### Set2
@@ -40,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-ImapSubscription "Fabrikam IMAP" -Mailbox "Kim Akers" -DisplayName "Kim's Fabrikam Mail"
 ```
 
 This example modifies the display name of the IMAP subscription Fabrikam IMAP that's configured in the cloud-based mailbox of the user Kim Akers.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-ImapSubscription "Brian Contoso Mail" -Mailbox "Brian Johnson" -IncomingServer imap.contoso.com -Force
 ```

@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-AcceptedDomain cmdlet to create an accepted domain in your organization. An accepted domain is any SMTP namespace for which an Exchange organization sends and receives email.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ### -ResourcePropertySchema
 The ResourcePropertySchema parameter specifies the custom resource property that you want to make available to room or equipment mailboxes. This parameter uses the syntax Room/\<Text\> or Equipment/\<Text\> where the \<Text\> value doesn't contain spaces. For example, Room/Whiteboard or Equipment/Van. You can specify multiple values separated by commas.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 

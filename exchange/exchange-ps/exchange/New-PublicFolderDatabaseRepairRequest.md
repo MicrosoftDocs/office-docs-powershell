@@ -6,9 +6,13 @@ schema: 2.0.0
 # New-PublicFolderDatabaseRepairRequest
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the New-PublicFolderDatabaseRepairRequest cmdlet to detect and fix replication issues in the public folder database. Public folders on the public folder database can still be accessed while the request is running. However, access isn't available to the public folder currently being repaired.
 
 After you begin the repair request, it can't be stopped unless you dismount the database. For more information, see Dismount a Database.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -19,18 +23,18 @@ New-PublicFolderDatabaseRepairRequest [-Database] <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder database repair request" entry in the Mailbox Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-PublicFolderDatabaseRepairRequest -Database PFDB01 -CorruptionType ReplState
 ```
 
 This example detects and repairs replication issues in the public folder database PFDB01.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-PublicFolderDatabaseRepairRequest -Database PFDB02 -CorruptionType ReplState -DetectOnly
 ```

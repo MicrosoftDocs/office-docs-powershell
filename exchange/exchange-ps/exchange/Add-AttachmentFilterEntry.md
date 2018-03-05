@@ -10,6 +10,8 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Add-AttachmentFilterEntry cmdlet to add an entry to the attachment filter list that's used by the Attachment Filtering agent on Edge Transport servers.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

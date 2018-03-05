@@ -25,7 +25,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Set-SupervisoryReviewPolicyV2 -Identity "EU Brokers" -AddReviewers chris@contoso.com,michelle@contoso.com -Comment "Updated for new EU regulations"
 ```

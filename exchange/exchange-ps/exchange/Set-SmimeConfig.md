@@ -297,31 +297,27 @@ Accept wildcard characters: False
 ```
 
 ### -OWAEncryptionAlgorithms
-The OWAEncryptionAlgorithms parameter specifies a list of algorithms that are used by Outlook on the web to encrypt messages.
+The OWAEncryptionAlgorithms parameter specifies a list of symmetric encryption algorithms that are used by Outlook on the web to encrypt messages.
 
-Valid input for this parameter is a semicolon-separated list of symmetric encryption algorithm identifiers. When you use an algorithm that supports multiple key lengths, you need to specify the key length. Note that RC2 is the only supported algorithm that that offers multiple key lengths.
+Valid values are::
 
-You can specify the object identifier (OID) of the cryptographic service provider (CSP) when using third-party CSPs. An OID must be specified together with an algorithm ID. Outlook on the web needs an algorithm ID so that it can infer how the algorithm should be used. For example, to provide a custom replacement for the 3DES algorithm, you would specify the algorithm ID of 3DES (6603) and the custom OID of the replacement algorithm by using the value 6603,\<OID\>.
+- 6601: DES (56-bit)
 
-The encryption algorithms, key length values, and algorithm IDs that you can use with this parameter are described in the following list:
+- 6602: RC2. Supported key lengths are 40, 56, 64, and 128. RC2 is the only supported algorithm that that offers multiple key lengths.
 
-- RC2 algorithm ID: 6602 (supported key lengths are 40, 56, 64, and 128)
+- 6603: 3DES (168-bit)
 
-- DES (56-bit) algorithm ID: 6601
+- 660E: AES128
 
-- 3DES (168-bit) algorithm ID: 6603
+- 660F: AES192
 
-- AES128 algorithm ID: 660E
+- 6610: AES256 (This is the default value)
 
-- AES192 algorithm ID: 660F
+If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the 3DES algorithm, use the value 6603,\<CustomOID\>.
 
-- AES256 algorithm ID: 6610
+This parameter uses the sytax <AlgorithmID> or RC2:<KeyLength> or <AlgorithmID>,<CustomOID>. You can specify multiple values separated by semicolons (;). For example, to set the encryption algorithms to 3DES, RC2-128, RC2-64, DES, and RC2-56, use the following value: 6603;6602:128;6602:64;6601;6602:56.
 
-This parameter uses the following syntax: {Algorithm ID} |; [Algorithm ID] | [,Custom replacement algorithm OID] |; [Algorithm ID[:key length]]....
-
-For example, to set the encryption algorithms to 3DES, RC2-128, RC2-64, DES, and RC2-56, use the following value: 6603;6602:128;6602:64;6601;6602:56.
-
-The algorithm specified by OWAEncryptionAlgorithms is always used. If the parameter is not specified or is not formatted correctly, Outlook on the web uses the default value 6610 (AES256). If the encryption algorithm or minimum key length is not available on a client, Outlook on the web does not allow encryption.
+If the parameter is not specified or is not formatted correctly, Outlook on the web uses 6610 (AES256). If the encryption algorithm or minimum key length is not available on a client, Outlook on the web does not allow encryption.
 
 ```yaml
 Type: String
@@ -495,29 +491,27 @@ Accept wildcard characters: False
 ```
 
 ### -OWASigningAlgorithms
-The OWASigningAlgorithms parameter specifies the list of signing algorithms that are used by Outlook on the web to sign messages with the S/MIME control.
+The OWASigningAlgorithms parameter specifies the list of symmetric encryption signing algorithms that are used by Outlook on the web to sign messages with the S/MIME control.
 
-Valid input for this parameter is a semicolon-separated list of symmetric encryption algorithm identifiers.
+Valid values are:
 
-You can specify the object identifier (OID) of the cryptographic service provider (CSP) when using third-party CSPs. An OID must be specified together with an algorithm ID. Outlook on the web needs an algorithm ID so that it can infer how the algorithm should be used. For example, to provide a custom replacement for the SHA1 algorithm, you would specify the algorithm ID of SHA1 (8804) and the custom OID of the replacement algorithm by using the value 8804,\<OID\>.
+- 8003: CALG\_MD5 or 128-bit MD5
 
-This parameter supports the following algorithms.
+- 800E: CALG\_SHA\_512 or 512-bit Secure Hash Algorithm (SHA)
 
-- CALG\_SHA\_512: Type: 512 bit secure hashing algorithm (SHA). Algorithm ID: 800E.
+- 800D: CALG\_SHA\_384 or 384-bit SHA
 
-- CALG\_SHA\_384: Type: 384 bit SHA. Algorithm ID: 800D.
+- 800C: CALG\_SHA\_256 or 256-bit SHA
 
-- CALG\_SHA\_256: Type: 256 bit SHA. Algorithm ID: 800C.
+- 8004: SHA1 or 160-bit SHA-1 (This is the default value)
+ 
+If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value 8804,\<CustomOID\>.
 
-- SHA1: Type: SHA. Algorithm ID: 8004.
-
-- CALG\_MD5: Type: MD5 hashing algorithm. Algorithm ID: 8003.
-
-This parameter uses the syntax {Algorithm ID} |; [Algorithm ID] | [,Custom replacement algorithm OID] |; [Algorithm ID[:key length]] ....
+This parameter uses the sytax <AlgorithmID> or <AlgorithmID>:<KeyLength> or <AlgorithmID>,<CustomOID>. You can specify multiple values separated by semicolons (;).
 
 For example, to set the signing algorithms to CALG\_SHA\_512, SHA1, and CALG\_MD5, use the value 800E;8004;8003.
 
-The algorithm specified by OWASigningAlgorithms is always used. If this parameter is not specified or is not formatted correctly, Outlook on the web defaults to 8004 (SHA1).
+If this parameter is not specified or is not formatted correctly, Outlook on the web defaults to 8004 (SHA1).
 
 ```yaml
 Type: String

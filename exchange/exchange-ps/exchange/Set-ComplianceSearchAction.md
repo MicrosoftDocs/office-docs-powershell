@@ -26,7 +26,7 @@ This cmdlet is available in the Mailbox Search role. By default, this role is as
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Set-ComplianceSearchAction -Identity "Project X_Export" -ChangeExportKey
 ```

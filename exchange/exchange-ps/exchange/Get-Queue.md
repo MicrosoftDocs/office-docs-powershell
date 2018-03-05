@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-Queue cmdlet to view configuration information for queues on Mailbox servers or Edge Transport servers.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ### Set2

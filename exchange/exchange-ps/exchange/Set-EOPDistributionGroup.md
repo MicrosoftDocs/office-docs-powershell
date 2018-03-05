@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-EOPDistributionGroup -Identity "Security Team" -PrimarySmtpAddress NewSecTeamId@Contoso.com
 ```

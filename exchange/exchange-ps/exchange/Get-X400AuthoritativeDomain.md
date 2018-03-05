@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-X400AuthoritativeDomain cmdlet to view the configuration information for the X.400 authoritative domains configured in your organization. For more information about how to configure an X.400 authoritative domain, see Set-X400AuthoritativeDomain.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

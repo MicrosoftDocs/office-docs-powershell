@@ -10,9 +10,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-IRMConfiguration cmdlet to configure Information Rights Management (IRM) features on your organization.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
 Configuring and using IRM features in an on-premises Exchange organization requires Active Directory Rights Management Services (AD RMS).
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 

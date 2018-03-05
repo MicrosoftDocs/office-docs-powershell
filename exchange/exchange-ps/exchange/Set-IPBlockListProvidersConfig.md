@@ -10,6 +10,8 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Set-IPBlockListProvidersConfig cmdlet to modify the settings that affect all IP Block list providers that are configured on an Edge Transport server.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```
@@ -48,7 +50,7 @@ This example makes the following changes to the list of bypassed recipients:
 ### -BypassedRecipients
 The BypassedRecipients parameter specifies the email addresses of internal recipients that are exempted from filtering by IP Block list providers.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 

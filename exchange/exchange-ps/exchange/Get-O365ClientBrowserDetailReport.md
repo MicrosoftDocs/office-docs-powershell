@@ -14,7 +14,6 @@ Use the Get-O365ClientBrowserDetailReport cmdlet to get a detailed report of cli
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
-
 ## SYNTAX
 
 ### Set1

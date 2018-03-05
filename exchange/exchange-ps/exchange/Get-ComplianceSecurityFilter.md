@@ -26,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-ComplianceSecurityFilter | Format-Table -Auto FilterName,Action
 ```
 
 This example returns a summary list of all compliance security filters.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-ComplianceSecurityFilter -FilterName "HR Filter"
 ```

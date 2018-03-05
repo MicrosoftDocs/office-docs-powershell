@@ -14,7 +14,6 @@ Use the Get-CsConferenceReport cmdlet to view statistics about the conferences t
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
-
 ## SYNTAX
 
 ### Set1

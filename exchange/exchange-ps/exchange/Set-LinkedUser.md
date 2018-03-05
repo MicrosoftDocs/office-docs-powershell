@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-LinkedUser "GALSync-ServiceAccount" -CertificateSubject "X509:<I>CN=3rdPartyCAExample.com<S>C=US,O=Contoso Corp, CN=contoso.com"
 ```

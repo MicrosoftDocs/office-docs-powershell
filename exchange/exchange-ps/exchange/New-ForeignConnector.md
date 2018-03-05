@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-ForeignConnector cmdlet to create a new Foreign connector in the Transport service of a Mailbox server.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

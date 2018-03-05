@@ -14,7 +14,6 @@ Use the Get-MailboxUsageReport cmdlet to view the number of mailboxes in your or
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
-
 ## SYNTAX
 
 ### Set1

@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-SenderIdConfig cmdlet to view the Sender ID configuration information for the computer on which the command is run.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```
@@ -21,7 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-SenderIdConfig | Format-List
 ```

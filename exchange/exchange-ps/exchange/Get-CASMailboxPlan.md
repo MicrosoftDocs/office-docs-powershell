@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-CASMailboxPlan | Format-Table -Auto DisplayName,ActiveSyncEnabled,ImapEnabled,PopEnabled,OwaMailboxPolicy
 ```
 
 This example returns a summary list of all CAS mailbox plans in the organization.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-CASMailboxPlan -Identity ExchangeOnlineEnterprise
 ```

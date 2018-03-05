@@ -26,7 +26,7 @@ The Export-UMCallDataRecord cmdlet is available when you're using the Exchange A
 
 After this task is completed, a report is generated that contains Unified Messaging call data records.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call data and summary reports" entry in the Unified Messaging permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 

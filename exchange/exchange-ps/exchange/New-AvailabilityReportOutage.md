@@ -6,7 +6,11 @@ schema: 2.0.0
 # New-AvailabilityReportOutage
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the New-AvailabilityReportOutage cmdlet to create an outage to add unrecorded issues to availability reporting.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -17,11 +21,11 @@ New-AvailabilityReportOutage [-SiteName] <String> -Comment <String> -DowntimeMin
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test system health" entry in the Exchange and Shell Infrastructure Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-AvailabilityReportOutage -ReportDate:"2009-12-02" -Site:"Site1" -DowntimeMinutes:120 -Comment:"Downtime not recorded by System Center Operations Manager 2007"
 ```

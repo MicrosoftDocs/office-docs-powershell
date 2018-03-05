@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-ForeignConnector cmdlet to delete a Foreign connector in the Transport service of a Mailbox server.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

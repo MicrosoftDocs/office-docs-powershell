@@ -24,7 +24,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-SupervisoryReviewRule -Name "EU Brokers Rule" -Policy "EU Brokers Policy" -SamplingRate 100 -Conditions {(NOT(Reviewee:US Compliance)) -AND (Reviewee:EU Brokers) -AND ((trade) -OR (insider trading)) -AND (NOT(approved by the Contoso financial team))}
 ```

@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-RecipientPermission -Trustee "Kim Akers"
 ```
 
 This example lists the recipients for whom the user Kim Akers has SendAs permission. Kim can send messages that appear to come directly from the recipients.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-RecipientPermission "Help Desk"
 ```

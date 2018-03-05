@@ -25,28 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-PublicFolderClientPermission -Identity \"My Public Folder" -User Chris -AccessRights CreateItems -Server "My Server"
 ```
 
 In Exchange Server 2010, this example removes permission for the user Chris to create items in the public folder My Public Folder on the server My Server.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-PublicFolderClientPermission -Identity "\My Public Folder" -User Contoso\Chris
-```
-
-This example removes permission for the user Chris to the public folder My Public Folder.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-PublicFolderClientPermission -Identity "\My Public Folder" -User Contoso\Chris
-```
-
-This example removes permission for the user Chris to the public folder My Public Folder.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 2
 ```
 Remove-PublicFolderClientPermission -Identity "\My Public Folder" -User Contoso\Chris
 ```
@@ -56,47 +42,49 @@ This example removes permission for the user Chris to the public folder My Publi
 ## PARAMETERS
 
 ### -AccessRights
+This parameter is available only in on-premises Exchange Server 2010.
+
 The AccessRights parameter specifies the rights being removed. This parameter accepts the following values:
 
-- ReadItems The user has the right to read items within the specified public folder.
+- ReadItems: The user has the right to read items within the specified public folder.
 
-- CreateItems The user has the right to create items within the specified public folder.
+- CreateItems: The user has the right to create items within the specified public folder.
 
-- EditOwnedItems The user has the right to edit the items that the user owns in the specified public folder.
+- EditOwnedItems: The user has the right to edit the items that the user owns in the specified public folder.
 
-- DeleteOwnedItems The user has the right to delete items that the user owns in the specified public folder.
+- DeleteOwnedItems: The user has the right to delete items that the user owns in the specified public folder.
 
-- EditAllItems The user has the right to edit all items in the specified public folder.
+- EditAllItems: The user has the right to edit all items in the specified public folder.
 
-- DeleteAllItems The user has the right to delete all items in the specified public folder.
+- DeleteAllItems: The user has the right to delete all items in the specified public folder.
 
-- CreateSubfolders The user has the right to create subfolders in the specified public folder.
+- CreateSubfolders: The user has the right to create subfolders in the specified public folder.
 
-- FolderOwner The user is the owner of the specified public folder. The user has the right to view and move the public folder and create subfolders. The user can't read items, edit items, delete items, or create items.
+- FolderOwner: The user is the owner of the specified public folder. The user has the right to view and move the public folder and create subfolders. The user can't read items, edit items, delete items, or create items.
 
-- FolderContact The user is the contact for the specified public folder.
+- FolderContact: The user is the contact for the specified public folder.
 
-- FolderVisible The user can view the specified public folder, but can't read or edit items within the specified public folder.
+- FolderVisible: The user can view the specified public folder, but can't read or edit items within the specified public folder.
 
 In addition to the access rights, you can create rights based upon roles, which includes multiple access rights. This parameter accepts the following values for roles:
 
-- NoneFolderVisible
+- None: FolderVisible
 
-- OwnerCreateItems, ReadItems, CreateSubfolders, FolderOwner, FolderContact, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
+- Owner: CreateItems, ReadItems, CreateSubfolders, FolderOwner, FolderContact, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
 
-- PublishingEditorCreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
+- PublishingEditor: CreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
 
-- EditorCreateItems, ReadItems, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
+- Editor: CreateItems, ReadItems, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
 
-- PublishingAuthorCreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, DeleteOwnedItems
+- PublishingAuthor: CreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, DeleteOwnedItems
 
-- AuthorCreateItems, ReadItems, FolderVisible, EditOwnedItems, DeleteOwnedItems
+- Author: CreateItems, ReadItems, FolderVisible, EditOwnedItems, DeleteOwnedItems
 
-- NonEditingAuthorCreateItems, ReadItems, FolderVisible
+- NonEditingAuthor: CreateItems, ReadItems, FolderVisible
 
-- ReviewerReadItems, FolderVisible
+- Reviewer: ReadItems, FolderVisible
 
-- ContributorCreateItems, FolderVisible
+- Contributor: CreateItems, FolderVisible
 
 ```yaml
 Type: MultiValuedProperty
@@ -174,7 +162,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -184,7 +172,19 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the server on which to perform the selected operations.
+This parameter is available only in on-premises Exchange Server 2010.
+
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifes the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter

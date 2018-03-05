@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-RecipientFilterConfig cmdlet to view the recipient filter configuration information for the computer on which the command is run.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

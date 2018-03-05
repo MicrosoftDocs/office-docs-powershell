@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ForeignConnector cmdlet to modify an existing Foreign connector in the Transport service of a Mailbox server.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```
@@ -329,7 +331,7 @@ Accept wildcard characters: False
 ### -SourceTransportServers
 The SourceTransportServers parameter specifies the names of the Mailbox servers that use this Foreign connector. Having a single Foreign connector homed on multiple Mailbox servers running the Transport service provides fault tolerance and high availability if one of the servers fails. The default value of this parameter is the name of the Mailbox server on which this Foreign connector was first installed.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 

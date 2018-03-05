@@ -24,7 +24,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Set-AuditConfigurationRule 989a3a6c-dc40-4fa4-8307-beb3ece992e9 -AuditOperation @{Add="CheckOut"}
 ```

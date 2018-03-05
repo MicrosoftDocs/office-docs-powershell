@@ -33,14 +33,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-DeviceConditionalAccessPolicy | Format-Table Name,Enabled,Priority
 ```
 
 This example shows summary information for all mobile device conditional access policies.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-DeviceConditionalAccessPolicy -Identity "Human Resources"
 ```

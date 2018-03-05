@@ -23,14 +23,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-AuditConfigurationPolicy | Format-List Name,Enabled,Workload,Priority,*Location
 ```
 
 This example lists summary information about all audit configuration policies.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-AuditConfigurationPolicy -Identity 8d4d2060-ee8e-46a8-8d72-24922956fba5
 ```
