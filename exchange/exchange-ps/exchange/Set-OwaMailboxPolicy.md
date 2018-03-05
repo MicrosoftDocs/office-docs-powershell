@@ -1587,13 +1587,9 @@ Accept wildcard characters: False
 ### -BoxAttachmentsEnabled
 This parameter is available only in the cloud-based service.
 
-The BoxAttachmentsEnabled parameter specifies whether to allow Box attachments in Outlook on the web when the value of the ThirdPartyAttachmentsEnabled parameter is $true. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: Box attachments are enabled. This is the default value.
-
-- $false: Box attachments are disabled.
-
-This parameter has no effect if the value of the ThirdPartyAttachmentsEnabled parameter is $false.
+To enable or disable Box attachments in Outlook on the web, use the ThirdPartyAttachmentsEnabled parameter.
 
 ```yaml
 Type: $true | $false
@@ -1631,13 +1627,9 @@ Accept wildcard characters: False
 ### -DropboxAttachmentsEnabled
 This parameter is available only in the cloud-based service.
 
-The DropboxAttachmentsEnabled parameter specifies whether to allow Dropbox attachments in Outlook on the web when the value of the ThirdPartyAttachmentsEnabled parameter is $true. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: Dropbox attachments are enabled. This is the default value.
-
-- $false: Dropbox attachments are disabled.
-
-This parameter has no effect if the value of the ThirdPartyAttachmentsEnabled parameter is $false.
+To enable or disable Dropbox attachments in Outlook on the web, use the ThirdPartyAttachmentsEnabled parameter.
 
 ```yaml
 Type: $true | $false
@@ -1695,13 +1687,9 @@ Accept wildcard characters: False
 ### -GoogleDriveAttachmentsEnabled
 This parameter is available only in the cloud-based service.
 
-The GoogleDriveAttachmentsEnabled parameter specifies whether to allow Google Drive attachments in Outlook on the web when the value of the ThirdPartyAttachmentsEnabled parameter is $true. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- $true: Google Drive attachments are enabled. This is the default value.
-
-- $false: Google Drive attachments are disabled.
-
-This parameter has no effect if the value of the ThirdPartyAttachmentsEnabled parameter is $false.
+To enable or disable Google Drive attachments in Outlook on the web, use the ThirdPartyAttachmentsEnabled parameter.
 
 ```yaml
 Type: $true | $false
@@ -1883,7 +1871,7 @@ Accept wildcard characters: False
 ### -ThirdPartyAttachmentsEnabled
 This parameter is available only in the cloud-based service.
 
-The ThirdPartyAttachmentsEnabled parameter specifies whether to allow third-party attachments in Outlook on the web. Valid values are:
+The ThirdPartyAttachmentsEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Google Drive) attachments in Outlook on the web. Valid values are:
 
 - $true: Third-party attachments are enabled. Users can connect their third-party file sharing accounts and share files over email. This is the default value.
 

@@ -21,7 +21,8 @@ Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> `
 ## DESCRIPTION
 Use this cmdlet to associate a site with a hub site.
 
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
+> [!IMPORTANT]
+> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
 ## EXAMPLES
 
@@ -78,5 +79,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
+If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
+
+If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
 
 ## RELATED LINKS

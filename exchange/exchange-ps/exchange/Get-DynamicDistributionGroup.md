@@ -67,10 +67,11 @@ This example returns all dynamic distribution groups whose names contain the str
 
 ### Example 4
 ```
-$FTE = Get-DynamicDistributionGroup "Full Time Employees"; Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter
+$FTE = Get-DynamicDistributionGroup "Full Time Employees"; Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
 ```
 
 This example returns the members for the dynamic distribution group named Full Time Employees. The first command stores the dynamic distribution group object in the variable $FTE. The second command uses the Get-Recipient cmdlet to list the recipients that match the criteria defined for the dynamic distribution group.
+
 
 ## PARAMETERS
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-SPOHubSiteRights
 
 ## SYNOPSIS
-Grants rights to users or security groups to access the hub site.
+Grants rights to users or mail-enabled security groups to access the hub site.
 
 ## SYNTAX
 
@@ -18,7 +18,12 @@ Grant-SPOHubSiteRights [-Identity] <SpoHubSitePipeBind> -Principals
 ```
 
 ## DESCRIPTION
-Applies permissions to a set of users or security groups. Use this cmdlet to scope visibility of who can associate their site with the hub site when using the SharePoint user interface. Hub sites are public by default. Once you set permissions, only those groups or users you specified can associate their site with the hub site.
+Applies permissions to a set of users or mail-enabled security groups. Use this cmdlet to scope visibility of who can associate their site with the hub site when using the SharePoint user interface. Hub sites are public by default. Once you set permissions, only those groups or users you specified can associate their site with the hub site.
+
+To view which users or groups have permissions to a site, use the [Get-SPOHubSite](Get-SPOHubSite.md) cmdlet.
+
+> [!IMPORTANT]
+> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
 ## EXAMPLES
 
