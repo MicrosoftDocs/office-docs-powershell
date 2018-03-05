@@ -20,7 +20,8 @@ Revoke-SPOHubSiteRights [-Identity] <SpoHubSitePipeBind> -Principals
 ## DESCRIPTION
 Revokes rights for specified principals to the given hub site. The specified principals will no longer be able to associate sites with the hub. To find which principals have access to a hub site, use the [Get-SPOHubSite](Get-SPOHubSite.md) cmdlet.
 
-> [!IMPORTANT] This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> [!IMPORTANT]
+> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
 If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
