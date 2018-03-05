@@ -10,6 +10,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-RemoteDomain cmdlet to remove a remote domain. When you remove a remote domain, the remote domain object is deleted. Removing a remote domain doesn't disable mail flow to that domain.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

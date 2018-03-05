@@ -6,7 +6,11 @@ schema: 2.0.0
 # Enable-UMServer
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Enable-UMServer cmdlet to set the status of a Unified Messaging (UM) server to enabled. This enables the Unified Messaging server to process UM calls.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -20,11 +24,11 @@ The Enable-UMServer cmdlet sets the status of a Unified Messaging server. A UM s
 
 After this task is completed, the Unified Messaging server is available to answer incoming calls.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM server" entry in the Unified Messaging Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Enable-UMServer -Identity MyUMServer
 ```

@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-MailboxPlan
 ```
 
 This example returns a summary list of all mailbox plans in the organization.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MailboxPlan -Identity ExchangeOnlineEnterprise | Format-List
 ```

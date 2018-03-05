@@ -6,7 +6,11 @@ schema: 2.0.0
 # Get-AvailabilityReportOutage
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Get-AvailabilityReportOutage cmdlet to return the daily downtime (if any) for each service entity and its overridden value (if set) to the overall reported availability for the day.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -16,18 +20,18 @@ Get-AvailabilityReportOutage [[-Identity] <AvailabilityReportOutageIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test system health" entry in the Exchange and Shell Infrastructure Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-AvailabilityReportOutage
 ```
 
 This example returns all outages that occurred the previous day. This cmdlet always returns outages for one day.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-AvailabilityReportOutage -ReportDate:"2009-12-05" -Identity:"Outlook*"
 ```

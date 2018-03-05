@@ -10,6 +10,8 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Set-IPAllowListProvider cmdlet to modify IP Allow list providers that are used by the Connection Filtering agent on Edge Transport servers.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```
@@ -151,7 +153,7 @@ Accept wildcard characters: False
 ### -IPAddressesMatch
 The IPAddressesMatch parameter specifies the IP address status codes that are returned by the allow list provider. Use this parameter if the allow list provider returns IP address or A record responses. Valid input for this parameter one or more IP addresses in the format 127.0.0.1.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 

@@ -8,6 +8,8 @@ schema: 2.0.0
 ## SYNOPSIS
 The Enable-AntispamUpdates cmdlet has been deprecated in Microsoft Exchange Server 2010 Service Pack 1.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

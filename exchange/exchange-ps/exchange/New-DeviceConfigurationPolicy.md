@@ -34,7 +34,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-DeviceConfigurationPolicy -Name "Engineering Group"
 ```

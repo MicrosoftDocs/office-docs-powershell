@@ -10,6 +10,8 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Test-IPAllowListProvider cmdlet to test IP Allow list providers on Edge Transport servers.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

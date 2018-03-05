@@ -36,14 +36,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-HoldComplianceRule
 ```
 
 This example displays summary information for all preservation rules in your organization.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-HoldComplianceRule -Identity "30DayRule" | Format-List
 ```

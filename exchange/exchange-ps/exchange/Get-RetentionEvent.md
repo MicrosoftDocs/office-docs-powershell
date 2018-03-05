@@ -23,14 +23,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-RetentionEvent
 ```
 
 This example returns a summary list of all retention events.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-RetentionEvent -Identity x | Format-List
 ```

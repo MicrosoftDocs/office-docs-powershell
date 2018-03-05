@@ -425,7 +425,7 @@ This parameter uses the syntax DisplayNameEmailAddress.
 
 - EmailAddress specifies the internal or external email address that's associated with the display name.
 
-- You can specify multiple value sets by using the syntax: "DisplayName1;EmailAddress1","DisplayName2;EmailAddress2".... The combination of DisplayName and EmailAddress needs to be unique for each value set.
+- You can specify multiple value sets by using the syntax: "DisplayName1;EmailAddress1","DisplayName2;EmailAddress2",..."DisplayNameN;EmailAddressN". The combination of DisplayName and EmailAddress needs to be unique for each value set.
 
 ```yaml
 Type: MultiValuedProperty

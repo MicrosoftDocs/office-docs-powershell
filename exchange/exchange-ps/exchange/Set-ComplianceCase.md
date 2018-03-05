@@ -25,7 +25,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Set-ComplianceCase -Identity "Fabrikam Litigation" -Description "For details, contact the Laura at the Contoso law firm"
 ```

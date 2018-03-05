@@ -6,6 +6,8 @@ schema: 2.0.0
 # Get-MailboxSentItemsConfiguration
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Get-MailboxSentItemsConfiguration cmdlet to view the Sent Items settings on mailboxes.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).

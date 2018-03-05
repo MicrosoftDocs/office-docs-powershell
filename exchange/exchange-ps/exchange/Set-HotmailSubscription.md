@@ -27,7 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-HotmailSubscription "Contoso Hotmail" -Mailbox "Ayla Kol" -DisplayName "Ayla's Contoso Subscription"
 ```

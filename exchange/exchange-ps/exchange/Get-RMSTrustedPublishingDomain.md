@@ -24,7 +24,7 @@ A trusted publishing domain contains the settings needed to use RMS features in 
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-RMSTrustedPublishingDomain | Format-List
 ```

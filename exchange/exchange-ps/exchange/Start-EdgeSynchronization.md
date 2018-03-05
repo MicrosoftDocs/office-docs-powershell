@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Start-EdgeSynchronization cmdlet to immediately start synchronization of configuration data from Active Directory to the subscribed Edge Transport servers.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

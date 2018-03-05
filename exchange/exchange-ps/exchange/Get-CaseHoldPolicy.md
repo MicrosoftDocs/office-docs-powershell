@@ -24,14 +24,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-CaseHoldPolicy -Case "Contoso Legal"
 ```
 
 This example displays detailed information for the policy that's associated with the eDiscovery case named Contoso Legal.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-CaseHoldPolicy -Identity "Regulation 123 Compliance"
 ```

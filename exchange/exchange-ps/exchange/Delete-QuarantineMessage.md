@@ -54,7 +54,7 @@ This example deletes all quarantined messages. The Identity parameter is require
 ## PARAMETERS
 
 ### -Identities
-The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: value1,value2.... The value is a unique quarantined message identifier in the format GUID1\\GUID2 (for example c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7.
+The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: value1,value2...valueN. The value is a unique quarantined message identifier in the format GUID1\\GUID2 (for example c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7.
 
 You can find the identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
 

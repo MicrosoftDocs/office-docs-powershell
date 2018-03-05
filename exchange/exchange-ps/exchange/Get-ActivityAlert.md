@@ -23,14 +23,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-ActivityAlert | Format-List Disabled,Name,Description,Operation,UserId,NotifyUser
 ```
 
 This example returns a summary list of all activity alerts.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-ActivityAlert -Identity "All Mailbox Activities"
 ```

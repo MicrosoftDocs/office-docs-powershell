@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-SpoActiveUserReport -ReportType Monthly -StartDate 11/01/2015 -EndDate 11/30/2015
 ```

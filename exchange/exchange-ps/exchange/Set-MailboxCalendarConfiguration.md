@@ -489,7 +489,7 @@ The WeatherLocations parameter specifies one or more locations to display the we
 
 This parameter uses the syntax: LocationId:\<LocationID\>;Name:\<Name\>;Latitude:\<Latitude\>;Longitude:\<Longitude\>. For example, LocationId:105808079;Name:Redmond, WA;Latitude:47.679;Longitude:-122.132.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 

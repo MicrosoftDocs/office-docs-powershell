@@ -6,7 +6,11 @@ schema: 2.0.0
 # Get-ManagedContentSettings
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Get-ManagedContentSettings cmdlet to retrieve managed content settings associated with managed folders.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -27,7 +31,7 @@ The Get-ManagedContentSettings cmdlet retrieves from one to all of the managed c
 
 If only the Identity parameter is present, the folder content settings and all associated attributes are returned. If the Identity parameter isn't present, the command returns all content settings. If the FolderName parameter is present, the command returns all content settings contained in the specified managed folder and all the attributes of each setting.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 

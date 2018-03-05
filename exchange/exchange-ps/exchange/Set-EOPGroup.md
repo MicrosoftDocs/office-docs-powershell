@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-Group -Identity "Legal Department" -Notes "Group members updated June 1, 2014"
 ```

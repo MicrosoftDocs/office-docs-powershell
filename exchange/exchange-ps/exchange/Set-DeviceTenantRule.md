@@ -36,7 +36,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Set-DeviceTenantRule -ExclusionList "Research and Development"
 ```
@@ -144,7 +144,7 @@ The ExclusionList parameter specifies the security groups to exclude from this p
 
 This parameter uses the GUID value of the group. To find this GUID value, run the command Get-Group | Format-Table Name,GUID.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 ```yaml
 Type: MultiValuedProperty

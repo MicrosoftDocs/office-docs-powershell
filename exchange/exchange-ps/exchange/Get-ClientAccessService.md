@@ -25,14 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ClientAccessService | Format-Table Name
 ```
 
 This example returns a summary list of all Exchange servers in your organization that have theClient Access server role installed.
 
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-ClientAccessService -Identity mail.contoso.com | Format-List
 ```

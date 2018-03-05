@@ -41,61 +41,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-DistributionGroup -Name "Managers" -OrganizationalUnit "contoso.com/Users" -SamAccountName "Managers" -Type "Security"
-```
-
-This example creates a mail-enabled universal security group that has the following parameters:
-
-
-The group name is Managers.
-
-The group is created in the Users container in the domain contoso.com.
-
-The group SamAccountName parameter value is Managers.
-
-The group type is Security.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-DistributionGroup -Name "Managers" -OrganizationalUnit "contoso.com/Users" -SamAccountName "Managers" -Type "Security"
-```
-
-This example creates a mail-enabled universal security group that has the following parameters:
-
-
-The group name is Managers.
-
-The group is created in the Users container in the domain contoso.com.
-
-The group SamAccountName parameter value is Managers.
-
-The group type is Security.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-DistributionGroup -Name Managers"Managers" -Type "Security"
-```
-
-This example creates a mail-enabled security group named Managers without specifying any members.
-
-
-You use the Add-DistributionGroupMember cmdlet to add members after you create the group.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-DistributionGroup -Name Managers"Managers" -Type "Security"
-```
-
-This example creates a mail-enabled security group named Managers without specifying any members.
-
-
-You use the Add-DistributionGroupMember cmdlet to add members after you create the group.
-
 ### Example 1
 ```
-New-DistributionGroup -Name Managers"Managers" -Type "Security"
+New-DistributionGroup -Name "Managers" -Type "Security"
 ```
 
 This example creates a mail-enabled security group named Managers without specifying any members.
@@ -144,7 +92,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
-If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
+If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
 The Alias parameter never generates or updates the primary email address of a mail contact or a mail user.
 

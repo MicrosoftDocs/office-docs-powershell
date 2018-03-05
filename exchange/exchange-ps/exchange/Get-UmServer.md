@@ -6,7 +6,11 @@ schema: 2.0.0
 # Get-UMServer
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Get-UMServer cmdlet to display the properties for a single Unified Messaging (UM) server or to display a list of servers enabled for Unified Messaging.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -21,18 +25,18 @@ The ExchangeVersion attribute that's returned is the minimum version of Microsof
 
 After this task is completed, you can view the parameters and values for a single Unified Messaging server or a list of all of the Unified Messaging servers in Active Directory.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM server" entry in the Unified Messaging Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-UMServer
 ```
 
 This example displays a list of all the Unified Messaging servers in the Active Directory forest.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-UMServer -Identity MyUMServer | Format-List
 ```

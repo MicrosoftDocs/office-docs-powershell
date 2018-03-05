@@ -6,7 +6,11 @@ schema: 2.0.0
 # Update-PublicFolderHierarchy
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Update-PublicFolderHierarchy cmdlet to start content synchronization of the public folder hierarchy.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -16,11 +20,11 @@ Update-PublicFolderHierarchy -Server <ServerIdParameter> [-Confirm] [-DomainCont
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder replication" entry in the Mailbox Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-MailboxServer -Identity Server1 | Update-PublicFolderHierarchy
 ```

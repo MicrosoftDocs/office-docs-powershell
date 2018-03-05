@@ -23,14 +23,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-DlpKeywordDictionary | Format-Table -Auto Name,Description
 ```
 
 This example returns a summary list of all DLP keyword dictionaries.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-DlpKeywordDictionary -Name "Financial Data"
 ```

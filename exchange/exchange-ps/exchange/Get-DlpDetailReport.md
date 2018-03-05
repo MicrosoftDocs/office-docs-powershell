@@ -62,7 +62,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-DlpDetailReport -StartDate 11/01/2015 -EndDate 11/07/2015
 ```

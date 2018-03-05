@@ -14,7 +14,6 @@ Use the Get-StaleMailboxDetailReport cmdlet to view mailboxes that haven't been 
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
-
 ## SYNTAX
 
 ### Set1
