@@ -13,6 +13,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 {{Manually Enter Add-SPOGeoAdministrator Description Here}}
 
+### [Add-SPOHubSiteAssociation](Add-SPOHubSiteAssociation.md)
+{{Manually Enter Add-SPOHubSiteAssociation Description Here}}
+
 ### [Add-SPOSiteDesign](Add-SPOSiteDesign.md)
 {{Manually Enter Add-SPOSiteDesign Description Here}}
 
@@ -25,11 +28,23 @@ The following cmdlet references are for SharePoint Online.
 ### [Add-SPOUser](Add-SPOUser.md)
 {{Manually Enter Add-SPOUser Description Here}}
 
+### [Approve-SPOTenantServicePrincipalPermissionRequest](Approve-SPOTenantServicePrincipalPermissionRequest.md)
+{{Manually Enter Approve-SPOTenantServicePrincipalPermissionRequest Description Here}}
+
 ### [Connect-SPOService](Connect-SPOService.md)
+{{Manually Enter Connect-SPOService Description Here}}
+
+### [Deny-SPOTenantServicePrincipalPermissionRequest](Deny-SPOTenantServicePrincipalPermissionRequest.md)
+{{Manually Enter Deny-SPOTenantServicePrincipalPermissionRequest Description Here}}
+
+### [Disable-SPOTenantServicePrincipal](Disable-SPOTenantServicePrincipal.md)
 {{Manually Enter Connect-SPOService Description Here}}
 
 ### [Disconnect-SPOService](Disconnect-SPOService.md)
 {{Manually Enter Disconnect-SPOService Description Here}}
+
+### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
+{{Manually Enter Enable-SPOTenantServicePrincipal Description Here}}
 
 ### [Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)
 {{Manually Enter Get-SPO365LinkSettings Description Here}}
@@ -61,7 +76,7 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOfficeStoreAppsDefaultActivation](Get-SPOfficeStoreAppsDefaultActivation.md)
 {{Manually Enter Get-SPOfficeStoreAppsDefaultActivation Description Here}}
 
-### [Get-SPOGeoAdministrators](Get-SPOGeoAdministrators.md)
+### [Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
 {{Manually Enter Get-SPOGeoAdministrators Description Here}}
 
 ### [Get-SPOGeoMoveCompatibilityStatus](Get-SPOGeoMoveCompatibilityStatus.md)
@@ -69,6 +84,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOGeoStorageQuota](Get-SPOGeoStorageQuota.md)
 {{Manually Enter Get-SPOGeoStorageQuota Description Here}}
+
+### [Get-SPOHubSite](Get-SPOHubSite.md)
+{{Manually Enter Get-SPOHubSite Description Here}}
 
 ### [Get-SPOMigrationJobProgress](Get-SPOMigrationJobProgress.md)
 {{Manually Enter Get-SPOMigrationJobProgress Description Here}}
@@ -118,6 +136,12 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOTenantLogLastAvailableTimeInUtc](Get-SPOTenantLogLastAvailableTimeInUtc.md)
 {{Manually Enter Get-SPOTenantLogLastAvailableTimeInUtc Description Here}}
 
+### [Get-SPOTenantServicePrincipalPermissionGrants](Get-SPOTenantServicePrincipalPermissionGrants.md)
+{{Manually Enter Get-SPOTenantServicePrincipalPermissionGrants Description Here}}
+
+### [Get-SPOTenantServicePrincipalPermissionRequests](Get-SPOTenantServicePrincipalPermissionRequests.md)
+{{Manually Enter Get-SPOTenantServicePrincipalPermissionRequests Description Here}}
+
 ### [Get-SPOTenantSyncClientRestriction](Get-SPOTenantSyncClientRestriction.md)
 {{Manually Enter Get-SPOTenantSyncClientRestriction Description Here}}
 
@@ -135,6 +159,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOWebTemplate](Get-SPOWebTemplate.md)
 {{Manually Enter Get-SPOWebTemplate Description Here}}
+
+### [Grant-SPOHubSiteRights](Grant-SPOHubSiteRights.md)
+{{Manually Enter Grant-SPOHubSiteRights Description Here}}
 
 ### [Grant-SPOSiteDesignRights](Grant-SPOSiteDesignRights.md)
 {{Manually Enter Grant-SPOSiteDesignRights Description Here}}
@@ -169,6 +196,9 @@ The following cmdlet references are for SharePoint Online.
 ### [New-SPOSiteGroup](New-SPOSiteGroup.md)
 {{Manually Enter New-SPOSiteGroup Description Here}}
 
+### [Register-SPOHubSite](Register-SPOHubSite.md)
+{{Manually Enter Register-SPOHubSite Description Here}}
+
 ### [Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 {{Manually Enter Remove-SPODataConnectionSetting Description Here}}
 
@@ -180,6 +210,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
 {{Manually Enter Remove-SPOGeoAdministrator Description Here}}
+
+### [Remove-SPOHubSiteAssociation](Remove-SPOHubSiteAssociation.md)
+{{Manually Enter Remove-SPOHubSiteAssociation Description Here}}
 
 ### [Remove-SPOMigrationJob](Remove-SPOMigrationJob.md)
 {{Manually Enter Remove-SPOMigrationJob Description Here}}
@@ -226,8 +259,14 @@ The following cmdlet references are for SharePoint Online.
 ### [Revoke-SPObjectSecurity](Revoke-SPObjectSecurity.md)
 {{Manually Enter Revoke-SPObjectSecurity Description Here}}
 
+### [Revoke-SPOHubSiteRights](Revoke-SPOHubSiteRights.md)
+{{Manually Enter Revoke-SPOHubSiteRights Description Here}}
+
 ### [Revoke-SPOSiteDesignRights](Revoke-SPOSiteDesignRights.md)
 {{Manually Enter Revoke-SPOSiteDesignRights Description Here}}
+
+### [Revoke-SPOTenantServicePrincipalPermission](Revoke-SPOTenantServicePrincipalPermission.md)
+{{Manually Enter Revoke-SPOTenantServicePrincipalPermission Description Here}}
 
 ### [Revoke-SPOUserSession](Revoke-SPOUserSession.md)
 {{Manually Enter Revoke-SPOUserSession Description Here}}
@@ -246,6 +285,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Set-SPOGeoStorageQuota](Set-SPOGeoStorageQuota.md)
 {{Manually Enter Set-SPOGeoStorageQuota Description Here}}
+
+### [Set-SPOHubSite](Set-SPOHubSite.md)
+{{Manually Enter Set-SPOHubSite Description Here}}
 
 ### [Set-SPOMigrationPackageAzureSource](Set-SPOMigrationPackageAzureSource.md)
 {{Manually Enter Set-SPOMigrationPackageAzureSource Description Here}}
@@ -301,8 +343,11 @@ The following cmdlet references are for SharePoint Online.
 ### [Test-SPOSite](Test-SPOSite.md)
 {{Manually Enter Test-SPOSite Description Here}}
 
+### [Unregister-SPOHubSite](Unregister-SPOHubSite.md)
+{{Manually Enter Unregister-SPOHubSite Description Here}}
+
 ### [Upgrade-SPOSite](Upgrade-SPOSite.md)
 {{Manually Enter Upgrade-SPOSite Description Here}}
 
 
-<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-powershell-->
+<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-powershell; added items from TOC that were missing on this page-->
