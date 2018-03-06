@@ -104,7 +104,9 @@ The EnableATPForSPOTeamsODB parameter specifies whether ATP is enabled for Share
 
 - $true: ATP is enabled for SharePoint Online, OneDrive for Business and Microsoft Teams.
 
-- $false: ATP is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.### -EnableSafeLinksForClients
+- $false: ATP is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
+
+### -EnableSafeLinksForClients
 
 The EnableSafeLinksForClients parameter specifies whether Safe Links is enabled for Office 365 ProPlus clients. Valid values are:
 
