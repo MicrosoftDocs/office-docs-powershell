@@ -30,6 +30,52 @@ Add-SPOSiteScript
 | -Description | A description of the script. |
 
 
+### -Title
+The display name of the site design.
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
+
+### -Content
+JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
+
+### -Description
+A description of the script.
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
+
+
 ## EXAMPLES
 
 ### Example 1

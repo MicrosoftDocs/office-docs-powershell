@@ -25,6 +25,20 @@ Get-SPOSiteScript
 |--------------|--------------|
 | [-Identity]  | The ID of the site script to get information about. |
 
+### [-Identity]
+The ID of the site script to get information about.
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
 
 ## EXAMPLES
 

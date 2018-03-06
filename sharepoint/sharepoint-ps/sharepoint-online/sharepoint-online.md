@@ -13,6 +13,12 @@ The following cmdlet references are for SharePoint Online.
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 {{Manually Enter Add-SPOGeoAdministrator Description Here}}
 
+### [Add-SPOSiteDesign](Add-SPOSiteDesign.md)
+{{Manually Enter Add-SPOSiteDesign Description Here}}
+
+### [Add-SPOSiteScript](Add-SPOSiteScript.md)
+{{Manually Enter Add-SPOSiteScript Description Here}}
+
 ### [Add-SPOTenantCdnOrigin](Add-SPOTenantCdnOrigin.md)
 {{Manually Enter Add-SPOTenantCdnOrigin Description Here}}
 
@@ -79,8 +85,17 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOSiteContentMoveState](Get-SPOSiteContentMoveState.md)
 {{Manually Enter Get-SPOSiteContentMoveState Description Here}}
 
+### [Get-SPOSiteDesign](Get-SPOSiteDesign.md)
+{{Manually Enter Get-SPOSiteDesign Description Here}}
+
+### [Get-SPOSiteDesignRights](Get-SPOSiteDesignRights.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 {{Manually Enter Get-SPOSiteGroup Description Here}}
+
+### [Get-SPOSiteScript](Get-SPOSiteScript.md)
+{{Manually Enter Get-SPOSiteScript Description Here}}
 
 ### [Get-SPOTenant](Get-SPOTenant.md)
 {{Manually Enter Get-SPOTenant Description Here}}
@@ -121,8 +136,14 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOWebTemplate](Get-SPOWebTemplate.md)
 {{Manually Enter Get-SPOWebTemplate Description Here}}
 
+### [Grant-SPOSiteDesignRights](Grant-SPOSiteDesignRights.md)
+{{Manually Enter Grant-SPOSiteDesignRights Description Here}}
+
 ### [Invoke-SPOMigrationEncryptUploadSubmit](Invoke-SPOMigrationEncryptUploadSubmit.md)
 {{Manually Enter Invoke-SPOMigrationEncryptUploadSubmit Description Here}}
+
+### [Invoke-SPOSiteDesign](Invoke-SPOSiteDesign.md)
+{{Manually Enter Invoke-SPOSiteDesign Description Here}}
 
 ### [New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 {{Manually Enter New-SPODataConnectionSetting Description Here}}
@@ -172,8 +193,14 @@ The following cmdlet references are for SharePoint Online.
 ### [Remove-SPOSite](Remove-SPOSite.md)
 {{Manually Enter Remove-SPOSite Description Here}}
 
+### [Remove-SPOSiteDesign](Remove-SPOSiteDesign.md)
+{{Manually Enter Remove-SPOSiteDesign Description Here}}
+
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)
 {{Manually Enter Remove-SPOSiteGroup Description Here}}
+
+### [Remove-SPOSiteScript](Remove-SPOSiteScript.md)
+{{Manually Enter Remove-SPOSiteScript Description Here}}
 
 ### [Remove-SPOTenantCdnOrigin](Remove-SPOTenantCdnOrigin.md)
 {{Manually Enter Remove-SPOTenantCdnOrigin Description Here}}
@@ -199,6 +226,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Revoke-SPObjectSecurity](Revoke-SPObjectSecurity.md)
 {{Manually Enter Revoke-SPObjectSecurity Description Here}}
 
+### [Revoke-SPOSiteDesignRights](Revoke-SPOSiteDesignRights.md)
+{{Manually Enter Revoke-SPOSiteDesignRights Description Here}}
+
 ### [Revoke-SPOUserSession](Revoke-SPOUserSession.md)
 {{Manually Enter Revoke-SPOUserSession Description Here}}
 
@@ -223,8 +253,14 @@ The following cmdlet references are for SharePoint Online.
 ### [Set-SPOSite](Set-SPOSite.md)
 {{Manually Enter Set-SPOSite Description Here}}
 
+### [Set-SPOSiteDesign](Set-SPOSiteDesign.md)
+{{Manually Enter Set-SPOSiteDesign Description Here}}
+
 ### [Set-SPOSiteGroup](Set-SPOSiteGroup.md)
 {{Manually Enter Set-SPOSiteGroup Description Here}}
+
+### [Set-SPOSiteScript](Set-SPOSiteScript.md)
+{{Manually Enter Set-SPOSiteScript Description Here}}
 
 ### [Set-SPOTenant](Set-SPOTenant.md)
 {{Manually Enter Set-SPOTenant Description Here}}
@@ -268,3 +304,5 @@ The following cmdlet references are for SharePoint Online.
 ### [Upgrade-SPOSite](Upgrade-SPOSite.md)
 {{Manually Enter Upgrade-SPOSite Description Here}}
 
+
+<!--updated March 6, 2018; moved cmdlets from https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-powershell-->

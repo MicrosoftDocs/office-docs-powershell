@@ -25,4 +25,17 @@ Remove-SPOSiteScript
 |--------------|--------------|
 | [-Identity]  | The ID of the site script to remove. |
 
+### [-Identity]
+The ID of the site script to remove.
 
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```

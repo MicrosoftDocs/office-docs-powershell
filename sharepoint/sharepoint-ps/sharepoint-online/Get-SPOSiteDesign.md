@@ -25,6 +25,20 @@ Get-SPOSiteDesign
 |--------------|--------------|
 | [-Identity]  | The ID of the site design to retrieve. |
 
+### [-Identity]
+The ID of the site design to retrieve.
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
 
 ## EXAMPLES
 

@@ -25,6 +25,20 @@ Get-SPOSiteDesignRights
 |--------------|--------------|
 | [-Identity]  | The ID of the site design to get scoping information. |
 
+### [-Identity]
+The ID of the site design to get scoping information.
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
 
 ## EXAMPLES
 

@@ -19,12 +19,27 @@ Removes a site design. It no longer appears in the UI for creating a new site.
   [<CommonParameters>]
 ```
 
+
 ## PARAMETERS
 
 |Parameter     | Description  |
 |--------------|--------------|
 | [-Identity]  | The ID of the site design to remove. |
 
+### [-Identity]
+The ID of the site design to remove.
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
 
 ## EXAMPLES
 

@@ -27,6 +27,36 @@ Revoke-SPOSiteDesignRights
 | [-Identity]  | The ID of the site design from which to revoke rights. |
 | -Principals  | One or more principals to revoke rights on the specified site design. |
 
+### [-Identity]
+The ID of the site design from which to revoke rights.
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
+
+### -Principals
+One or more principals to revoke rights on the specified site design.
+
+```yaml
+Type: 
+Parameter Sets: 
+Aliases: 
+Applicable: SharePoint Online
+Required: 
+Position: 
+Default value: 
+Accept pipeline input: 
+Accept wildcard characters: 
+```
+
 ## EXAMPLES
 
 ### Example 1 
