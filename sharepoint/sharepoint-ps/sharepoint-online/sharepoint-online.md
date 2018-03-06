@@ -5,7 +5,7 @@ title: sharepoint-online
 Locale: en-US
 ---
 
-# SharePoint Online PowerShell
+# SharePoint Online PowerShell 
 ## Description
 The following cmdlet references are for SharePoint Online.
 
