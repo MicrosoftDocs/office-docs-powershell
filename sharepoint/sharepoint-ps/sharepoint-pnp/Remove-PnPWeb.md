@@ -30,21 +30,21 @@ Remove-PnPWeb -Identity <WebPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPWeb -Url projectA
+Remove-PnPWeb -Url projectA
 ```
 
 Remove a web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPWeb -Identity 5fecaf67-6b9e-4691-a0ff-518fc9839aa0
+Remove-PnPWeb -Identity 5fecaf67-6b9e-4691-a0ff-518fc9839aa0
 ```
 
 Remove a web specified by its ID
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPSubWebs | Remove-PnPWeb -Force
+Get-PnPSubWebs | Remove-PnPWeb -Force
 ```
 
 Remove all subwebs and do not ask for confirmation
@@ -56,7 +56,7 @@ Do not ask for confirmation to delete the subweb
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -88,7 +88,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

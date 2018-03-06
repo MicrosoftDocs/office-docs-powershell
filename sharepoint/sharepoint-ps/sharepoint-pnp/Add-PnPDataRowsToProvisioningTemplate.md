@@ -11,10 +11,11 @@ Adds datarows to a list inside a PnP Provisioning Template
 ## SYNTAX 
 
 ```powershell
-Add-PnPDataRowsToProvisioningTemplate -List <ListPipeBind>
+Add-PnPDataRowsToProvisioningTemplate -Path <String>
+                                      -List <ListPipeBind>
                                       -Query <String>
-                                      -Path <String>
                                       [-Fields <String[]>]
+                                      [-TokenizeUrls [<SwitchParameter>]]
                                       [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
                                       [-IncludeSecurity [<SwitchParameter>]]
                                       [-Web <WebPipeBind>]
@@ -25,14 +26,14 @@ Add-PnPDataRowsToProvisioningTemplate -List <ListPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPDataRowsToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice'
+Add-PnPDataRowsToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice'
 ```
 
 Adds datarows to a list in an in-memory PnP Provisioning Template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPDataRowsToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice' -IncludeSecurity
+Add-PnPDataRowsToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice' -IncludeSecurity
 ```
 
 Adds datarows to a list in an in-memory PnP Provisioning Template
@@ -111,8 +112,20 @@ Position: 4
 Accept pipeline input: False
 ```
 
+### -TokenizeUrls
+If set, this switch will try to tokenize the values with web and site related tokens
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

@@ -11,8 +11,8 @@ Adds a new section to a Client-Side page
 ## SYNTAX 
 
 ```powershell
-Add-PnPClientSidePageSection -SectionTemplate <CanvasSectionTemplate>
-                             -Page <ClientSidePagePipeBind>
+Add-PnPClientSidePageSection -Page <ClientSidePagePipeBind>
+                             -SectionTemplate <CanvasSectionTemplate>
                              [-Order <Int>]
                              [-Web <WebPipeBind>]
                              [-Connection <SPOnlineConnection>]
@@ -22,21 +22,21 @@ Add-PnPClientSidePageSection -SectionTemplate <CanvasSectionTemplate>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPClientSidePageSection -Page "MyPage" -SectionTemplate OneColumn
+Add-PnPClientSidePageSection -Page "MyPage" -SectionTemplate OneColumn
 ```
 
 Adds a new one-column section to the Client-Side page 'MyPage'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPClientSidePageSection -Page "MyPage" -SectionTemplate ThreeColumn -Order 10
+Add-PnPClientSidePageSection -Page "MyPage" -SectionTemplate ThreeColumn -Order 10
 ```
 
 Adds a new Three columns section to the Client-Side page 'MyPage' with an order index of 10
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> $page = Add-PnPClientSidePage -Name "MyPage"
+$page = Add-PnPClientSidePage -Name "MyPage"
 PS> Add-PnPClientSidePageSection -Page $page -SectionTemplate OneColumn
 ```
 
@@ -81,7 +81,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

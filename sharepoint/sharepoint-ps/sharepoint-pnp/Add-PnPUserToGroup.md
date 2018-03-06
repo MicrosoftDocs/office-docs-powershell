@@ -32,14 +32,14 @@ Add-PnPUserToGroup -Identity <GroupPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPUserToGroup -LoginName user@company.com -Identity 'Marketing Site Members'
+Add-PnPUserToGroup -LoginName user@company.com -Identity 'Marketing Site Members'
 ```
 
 Add the specified user to the group "Marketing Site Members"
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPUserToGroup -LoginName user@company.com -Identity 5
+Add-PnPUserToGroup -LoginName user@company.com -Identity 5
 ```
 
 Add the specified user to the group with Id 5
@@ -48,6 +48,8 @@ Add the specified user to the group with Id 5
 
 ### -EmailAddress
 The email address of the user
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -60,6 +62,8 @@ Accept pipeline input: False
 
 ### -EmailBody
 
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -75,7 +79,7 @@ The group id, group name or group object to add the user to.
 
 ```yaml
 Type: GroupPipeBind
-Parameter Sets: Internal
+Parameter Sets: Internal, External
 
 Required: True
 Position: Named
@@ -97,6 +101,8 @@ Accept pipeline input: False
 ### -SendEmail
 
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: External
@@ -107,7 +113,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

@@ -31,42 +31,42 @@ Get-PnPSiteSearchQueryResults [-All [<SwitchParameter>]]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPSiteSearchQueryResults
+Get-PnPSiteSearchQueryResults
 ```
 
 Returns the top 500 site collections indexed by SharePoint Search
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPSiteSearchQueryResults -Query "WebTemplate:STS"
+Get-PnPSiteSearchQueryResults -Query "WebTemplate:STS"
 ```
 
 Returns the top 500 site collections indexed by SharePoint Search which have are based on the STS (Team Site) template
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPSiteSearchQueryResults -Query "WebTemplate:SPSPERS"
+Get-PnPSiteSearchQueryResults -Query "WebTemplate:SPSPERS"
 ```
 
 Returns the top 500 site collections indexed by SharePoint Search which have are based on the SPSPERS (MySite) template, up to the MaxResult limit
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPSiteSearchQueryResults -Query "Title:Intranet*"
+Get-PnPSiteSearchQueryResults -Query "Title:Intranet*"
 ```
 
 Returns the top 500 site collections indexed by SharePoint Search of which the title starts with the word Intranet
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPSiteSearchQueryResults -MaxResults 10
+Get-PnPSiteSearchQueryResults -MaxResults 10
 ```
 
 Returns the top 10 site collections indexed by SharePoint Search
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPSiteSearchQueryResults -All
+Get-PnPSiteSearchQueryResults -All
 ```
 
 Returns absolutely all site collections indexed by SharePoint Search
@@ -102,7 +102,7 @@ Search query in Keyword Query Language (KQL) to execute to refine the returned s
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: 0
@@ -122,7 +122,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

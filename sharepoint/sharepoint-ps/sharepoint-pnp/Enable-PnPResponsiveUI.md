@@ -23,7 +23,7 @@ Enables the PnP Responsive UI implementation on a classic SharePoint Site
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Enable-PnPResponsiveUI
+Enable-PnPResponsiveUI
 ```
 
 Will upload a CSS file, a JavaScript file and adds a custom action to the root web of the current site collection, enabling the responsive UI on the site collection. The CSS and JavaScript files are located in the style library, in a folder called SP.Responsive.UI.
@@ -43,7 +43,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

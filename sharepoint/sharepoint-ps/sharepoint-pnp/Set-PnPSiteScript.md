@@ -23,15 +23,15 @@ Set-PnPSiteScript -Identity <TenantSiteScriptPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPSiteScript -Identity f1d55d9b-b116-4f54-bc00-164a51e7e47f -Title "My Site Script"
+Set-PnPSiteScript -Identity f1d55d9b-b116-4f54-bc00-164a51e7e47f -Title "My Site Script"
 ```
 
 Updates an existing Site Script and changes the title.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> $script = Get-PnPSiteScript -Identity f1d55d9b-b116-4f54-bc00-164a51e7e47f 
-PS:> Set-PnPSiteScript -Identity $script -Title "My Site Script"
+$script = Get-PnPSiteScript -Identity f1d55d9b-b116-4f54-bc00-164a51e7e47f 
+Set-PnPSiteScript -Identity $script -Title "My Site Script"
 ```
 
 Updates an existing Site Script and changes the title.
@@ -99,7 +99,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

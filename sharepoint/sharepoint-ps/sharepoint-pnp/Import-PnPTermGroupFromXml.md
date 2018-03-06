@@ -26,14 +26,14 @@ Import-PnPTermGroupFromXml [-Path <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Import-PnPTermGroupFromXml -Xml $xml
+Import-PnPTermGroupFromXml -Xml $xml
 ```
 
 Imports the XML based termgroup information located in the $xml variable
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Import-PnPTermGroupFromXml -Path input.xml
+Import-PnPTermGroupFromXml -Path input.xml
 ```
 
 Imports the XML file specified by the path.
@@ -65,7 +65,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

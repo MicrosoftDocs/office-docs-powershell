@@ -20,28 +20,28 @@ Set-PnPSite [-Classification <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPSite -Classification "HBI"
+Set-PnPSite -Classification "HBI"
 ```
 
 Sets the current site classification to HBI
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPSite -Classification $null
+Set-PnPSite -Classification $null
 ```
 
 Unsets the current site classification
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPSite -DisableFlows
+Set-PnPSite -DisableFlows
 ```
 
 Disables Flows for this site
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPSite -DisableFlows:$false
+Set-PnPSite -DisableFlows:$false
 ```
 
 Enables Flows for this site
@@ -73,7 +73,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

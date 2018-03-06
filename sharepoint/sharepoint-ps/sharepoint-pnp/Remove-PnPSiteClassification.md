@@ -11,7 +11,7 @@ Removes one or more existing site classification values from the list of availab
 ## SYNTAX 
 
 ```powershell
-Remove-PnPSiteClassification -Classifications <List`1>
+Remove-PnPSiteClassification -Classifications <String>
                              [-Confirm [<SwitchParameter>]]
 ```
 
@@ -19,16 +19,16 @@ Remove-PnPSiteClassification -Classifications <List`1>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Remove-PnPSiteClassification -Classifications "HBI"
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Remove-PnPSiteClassification -Classifications "HBI"
 ```
 
 Removes the "HBI" site classification from the list of available values.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Remove-PnPSiteClassification -Classifications "HBI", "Top Secret"
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Remove-PnPSiteClassification -Classifications "HBI", "Top Secret"
 ```
 
 Removes the "HBI" site classification from the list of available values.
@@ -39,7 +39,7 @@ Removes the "HBI" site classification from the list of available values.
 
 
 ```yaml
-Type: List`1
+Type: String
 Parameter Sets: (All)
 
 Required: True

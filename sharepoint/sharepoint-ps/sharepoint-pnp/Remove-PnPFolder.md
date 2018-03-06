@@ -23,14 +23,14 @@ Remove-PnPFolder -Name <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPFolder -Name NewFolder -Folder _catalogs/masterpage
+Remove-PnPFolder -Name NewFolder -Folder _catalogs/masterpage
 ```
 
 Removes the folder 'NewFolder' from '_catalogsmasterpage'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPFolder -Name NewFolder -Folder _catalogs/masterpage -Recycle
+Remove-PnPFolder -Name NewFolder -Folder _catalogs/masterpage -Recycle
 ```
 
 Removes the folder 'NewFolder' from '_catalogsmasterpage' and is saved in the Recycle Bin
@@ -86,7 +86,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

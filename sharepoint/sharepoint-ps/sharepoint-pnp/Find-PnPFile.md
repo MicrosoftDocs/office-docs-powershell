@@ -19,16 +19,16 @@ Find-PnPFile -Match <String>
 
 ### List
 ```powershell
-Find-PnPFile -List <ListPipeBind>
-             -Match <String>
+Find-PnPFile -Match <String>
+             -List <ListPipeBind>
              [-Web <WebPipeBind>]
              [-Connection <SPOnlineConnection>]
 ```
 
 ### Folder
 ```powershell
-Find-PnPFile -Folder <FolderPipeBind>
-             -Match <String>
+Find-PnPFile -Match <String>
+             -Folder <FolderPipeBind>
              [-Web <WebPipeBind>]
              [-Connection <SPOnlineConnection>]
 ```
@@ -37,21 +37,21 @@ Find-PnPFile -Folder <FolderPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Find-PnPFile -Match *.master
+Find-PnPFile -Match *.master
 ```
 
 Will return all masterpages located in the current web.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Find-PnPFile -List "Documents" -Match *.pdf
+Find-PnPFile -List "Documents" -Match *.pdf
 ```
 
 Will return all pdf files located in given list.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Find-PnPFile -Folder "Shared Documents/Sub Folder" -Match *.docx
+Find-PnPFile -Folder "Shared Documents/Sub Folder" -Match *.docx
 ```
 
 Will return all docx files located in given folder.
@@ -87,7 +87,7 @@ Wildcard query
 
 ```yaml
 Type: String
-Parameter Sets: Web
+Parameter Sets: Web, List, Folder
 
 Required: True
 Position: 0
@@ -95,7 +95,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -120,7 +120,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.File](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.file.aspx)
+### Microsoft.SharePoint.Client.File
 
 ## RELATED LINKS
 

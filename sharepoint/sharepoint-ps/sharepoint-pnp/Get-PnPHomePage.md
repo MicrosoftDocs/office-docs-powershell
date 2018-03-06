@@ -22,7 +22,7 @@ Returns the URL to the page set as home page
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPHomePage
+Get-PnPHomePage
 ```
 
 Will return the URL of the home page of the web.
@@ -30,7 +30,7 @@ Will return the URL of the home page of the web.
 ## PARAMETERS
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

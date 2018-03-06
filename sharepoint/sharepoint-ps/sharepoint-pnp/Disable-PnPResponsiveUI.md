@@ -22,7 +22,7 @@ Disables the PnP Responsive UI implementation on a classic SharePoint Site
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Disable-PnPResponsiveUI
+Disable-PnPResponsiveUI
 ```
 
 If enabled previously, this will remove the PnP Responsive UI from a site.
@@ -30,7 +30,7 @@ If enabled previously, this will remove the PnP Responsive UI from a site.
 ## PARAMETERS
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

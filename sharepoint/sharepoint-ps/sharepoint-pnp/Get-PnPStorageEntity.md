@@ -19,14 +19,14 @@ Get-PnPStorageEntity [-Key <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPStorageEntity
+Get-PnPStorageEntity
 ```
 
 Returns all site storage entities/farm properties
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPTenantSite -Key MyKey
+Get-PnPStorageEntity -Key MyKey
 ```
 
 Returns the storage entity/farm property with the given key.
@@ -46,7 +46,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

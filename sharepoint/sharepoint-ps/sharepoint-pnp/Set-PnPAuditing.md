@@ -42,35 +42,35 @@ Set-PnPAuditing -DisableAll [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPAuditing -EnableAll
+Set-PnPAuditing -EnableAll
 ```
 
 Enables all auditing settings for the current site
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPAuditing -DisableAll
+Set-PnPAuditing -DisableAll
 ```
 
 Disables all auditing settings for the current site
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPAuditing -RetentionTime 7
+Set-PnPAuditing -RetentionTime 7
 ```
 
 Sets the audit log trimming to 7 days, this also enables the automatic trimming of the audit log
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPAuditing -TrimAuditLog
+Set-PnPAuditing -TrimAuditLog
 ```
 
 Enables the automatic trimming of the audit log
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Set-PnPAuditing -RetentionTime 7 -CheckOutCheckInItems -MoveCopyItems -SearchContent
+Set-PnPAuditing -RetentionTime 7 -CheckOutCheckInItems -MoveCopyItems -SearchContent
 ```
 
 Sets the audit log trimming to 7 days, this also enables the automatic trimming of the audit log.
@@ -183,7 +183,7 @@ Set the retention time
 
 ```yaml
 Type: Int
-Parameter Sets: Specific flags
+Parameter Sets: Specific flags, Enable all
 
 Required: False
 Position: Named
@@ -207,7 +207,7 @@ Trim the audit log
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Specific flags
+Parameter Sets: Specific flags, Enable all
 
 Required: False
 Position: Named
@@ -215,7 +215,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

@@ -26,21 +26,21 @@ New-PnPList -Title <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> New-PnPList -Title Announcements -Template Announcements
+New-PnPList -Title Announcements -Template Announcements
 ```
 
 Create a new announcements list
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> New-PnPList -Title "Demo List" -Url "DemoList" -Template Announcements
+New-PnPList -Title "Demo List" -Url "DemoList" -Template Announcements
 ```
 
 Create a list with a title that is different from the url
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> New-PnPList -Title HiddenList -Template GenericList -Hidden
+New-PnPList -Title HiddenList -Template GenericList -Hidden
 ```
 
 Create a new custom list and hides it from the SharePoint UI.
@@ -132,7 +132,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

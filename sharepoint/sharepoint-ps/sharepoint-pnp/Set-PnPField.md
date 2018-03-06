@@ -11,8 +11,8 @@ Changes one or more properties of a field in a specific list or for the whole we
 ## SYNTAX 
 
 ```powershell
-Set-PnPField -Values <Hashtable>
-             -Identity <FieldPipeBind>
+Set-PnPField -Identity <FieldPipeBind>
+             -Values <Hashtable>
              [-List <ListPipeBind>]
              [-UpdateExistingLists [<SwitchParameter>]]
              [-Web <WebPipeBind>]
@@ -23,21 +23,21 @@ Set-PnPField -Values <Hashtable>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPField -Identity AssignedTo -Values @{JSLink="customrendering.js";Group="My fields"}
+Set-PnPField -Identity AssignedTo -Values @{JSLink="customrendering.js";Group="My fields"}
 ```
 
 Updates the AssignedTo field on the current web to use customrendering.js for the JSLink and sets the group name the field is categorized in to "My Fields". Lists that are already using the AssignedTo field will not be updated.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPField -Identity AssignedTo -Values @{JSLink="customrendering.js";Group="My fields"} -UpdateExistingLists
+Set-PnPField -Identity AssignedTo -Values @{JSLink="customrendering.js";Group="My fields"} -UpdateExistingLists
 ```
 
 Updates the AssignedTo field on the current web to use customrendering.js for the JSLink and sets the group name the field is categorized in to "My Fields". Lists that are already using the AssignedTo field will also be updated.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPField -List "Tasks" -Identity "AssignedTo" -Values @{JSLink="customrendering.js"}
+Set-PnPField -List "Tasks" -Identity "AssignedTo" -Values @{JSLink="customrendering.js"}
 ```
 
 Updates the AssignedTo field on the Tasks list to use customrendering.js for the JSLink
@@ -93,7 +93,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -118,7 +118,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.Field](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.field.aspx)
+### Microsoft.SharePoint.Client.Field
 
 ## RELATED LINKS
 

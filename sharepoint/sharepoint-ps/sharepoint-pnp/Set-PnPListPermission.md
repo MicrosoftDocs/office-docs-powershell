@@ -34,14 +34,14 @@ Set-PnPListPermission -User <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPListPermission -Identity 'Documents' -User 'user@contoso.com' -AddRole 'Contribute'
+Set-PnPListPermission -Identity 'Documents' -User 'user@contoso.com' -AddRole 'Contribute'
 ```
 
 Adds the 'Contribute' permission to the user 'user@contoso.com' for the list 'Documents'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPListPermission -Identity 'Documents' -User 'user@contoso.com' -RemoveRole 'Contribute'
+Set-PnPListPermission -Identity 'Documents' -User 'user@contoso.com' -RemoveRole 'Contribute'
 ```
 
 Removes the 'Contribute' permission to the user 'user@contoso.com' for the list 'Documents'
@@ -77,7 +77,7 @@ The ID or Title of the list.
 
 ```yaml
 Type: ListPipeBind
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: Named
@@ -109,7 +109,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

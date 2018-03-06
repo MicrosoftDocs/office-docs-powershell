@@ -11,8 +11,8 @@ Removes a group from a web.
 ## SYNTAX 
 
 ```powershell
-Remove-PnPGroup [-Force [<SwitchParameter>]]
-                [-Identity <GroupPipeBind>]
+Remove-PnPGroup [-Identity <GroupPipeBind>]
+                [-Force [<SwitchParameter>]]
                 [-Web <WebPipeBind>]
                 [-Connection <SPOnlineConnection>]
 ```
@@ -21,7 +21,7 @@ Remove-PnPGroup [-Force [<SwitchParameter>]]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPGroup -Identity "My Users"
+Remove-PnPGroup -Identity "My Users"
 ```
 
 Removes the group "My Users"
@@ -53,7 +53,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
