@@ -943,7 +943,9 @@ The PermanentlyDeleteDisabled parameter specfies whether to disable the Permanen
 
 - $false The PermanentlyDelete retention action is enabled. This is the default value.
 
-A message that's permanently deleted can't be recovered by using the Recoverable Items folder. Additionally, permanently deleted messages aren't returned by a Discovery search, unless litigation hold or single item recovery is enabled for the mailbox.### -PreferredInternetCodePageForShiftJis
+A message that's permanently deleted can't be recovered by using the Recoverable Items folder. Additionally, permanently deleted messages aren't returned by a Discovery search, unless litigation hold or single item recovery is enabled for the mailbox.
+
+### -PreferredInternetCodePageForShiftJis
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
