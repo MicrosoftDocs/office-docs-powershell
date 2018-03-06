@@ -18,14 +18,14 @@ Get-PnPUnifiedGroupOwners -Identity <UnifiedGroupPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPUnifiedGroupOwners -Identity $groupId
+Get-PnPUnifiedGroupOwners -Identity $groupId
 ```
 
 Retrieves all the owners of a specific Office 365 Group based on its ID
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPUnifiedGroupOwners -Identity $group
+Get-PnPUnifiedGroupOwners -Identity $group
 ```
 
 Retrieves all the owners of a specific Office 365 Group based on the group's object instance

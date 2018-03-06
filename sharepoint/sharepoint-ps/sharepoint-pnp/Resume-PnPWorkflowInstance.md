@@ -23,7 +23,7 @@ Resumes a previously stopped workflow instance
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Resume-PnPWorkflowInstance -identity $wfInstance
+Resume-PnPWorkflowInstance -identity $wfInstance
 ```
 
 Resumes the workflow instance, this can be the Guid of the instance or the instance itself.
@@ -43,7 +43,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

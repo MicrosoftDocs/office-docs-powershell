@@ -20,21 +20,21 @@ Get-PnPPublishingImageRendition [-Identity <ImageRenditionPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPPublishingImageRendition
+Get-PnPPublishingImageRendition
 ```
 
 Returns all Image Renditions
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPPublishingImageRendition -Identity "Test"
+Get-PnPPublishingImageRendition -Identity "Test"
 ```
 
 Returns the image rendition named "Test"
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPPublishingImageRendition -Identity 2
+Get-PnPPublishingImageRendition -Identity 2
 ```
 
 Returns the image rendition where its id equals 2
@@ -54,7 +54,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -79,7 +79,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.Publishing.ImageRendition](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.publishing.imagerendition.aspx)
+### Microsoft.SharePoint.Client.Publishing.ImageRendition
 
 ## RELATED LINKS
 

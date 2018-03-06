@@ -15,14 +15,14 @@ Returns a Client Side Object Model context
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> $ctx = Get-PnPContext
+$ctx = Get-PnPContext
 ```
 
 This will put the current context in the $ctx variable.
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.ClientContext](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientcontext.aspx)
+### Microsoft.SharePoint.Client.ClientContext
 
 ## RELATED LINKS
 

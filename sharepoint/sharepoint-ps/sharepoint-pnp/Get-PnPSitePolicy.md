@@ -21,21 +21,21 @@ Get-PnPSitePolicy [-AllAvailable [<SwitchParameter>]]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPSitePolicy
+Get-PnPSitePolicy
 ```
 
 Retrieves the current applied site policy.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPSitePolicy -AllAvailable
+Get-PnPSitePolicy -AllAvailable
 ```
 
 Retrieves all available site policies.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPSitePolicy -Name "Contoso HBI"
+Get-PnPSitePolicy -Name "Contoso HBI"
 ```
 
 Retrieves an available site policy with the name "Contoso HBI".
@@ -67,7 +67,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

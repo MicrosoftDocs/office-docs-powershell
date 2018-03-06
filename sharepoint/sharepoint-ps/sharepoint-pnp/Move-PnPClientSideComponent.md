@@ -13,8 +13,8 @@ Moves a Client-Side Component to a different section/column
 ### Move to other section
 ```powershell
 Move-PnPClientSideComponent -Section <Int>
-                            -InstanceId <GuidPipeBind>
                             -Page <ClientSidePagePipeBind>
+                            -InstanceId <GuidPipeBind>
                             [-Position <Int>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
@@ -23,8 +23,8 @@ Move-PnPClientSideComponent -Section <Int>
 ### Move to other column
 ```powershell
 Move-PnPClientSideComponent -Column <Int>
-                            -InstanceId <GuidPipeBind>
                             -Page <ClientSidePagePipeBind>
+                            -InstanceId <GuidPipeBind>
                             [-Position <Int>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
@@ -33,8 +33,8 @@ Move-PnPClientSideComponent -Column <Int>
 ### Move within a column
 ```powershell
 Move-PnPClientSideComponent -Position <Int>
-                            -InstanceId <GuidPipeBind>
                             -Page <ClientSidePagePipeBind>
+                            -InstanceId <GuidPipeBind>
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
 ```
@@ -43,8 +43,8 @@ Move-PnPClientSideComponent -Position <Int>
 ```powershell
 Move-PnPClientSideComponent -Section <Int>
                             -Column <Int>
-                            -InstanceId <GuidPipeBind>
                             -Page <ClientSidePagePipeBind>
+                            -InstanceId <GuidPipeBind>
                             [-Position <Int>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
@@ -57,28 +57,28 @@ Moves a Client-Side Component to a different location on the page. Notice that t
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Move-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Section 1
+Move-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Section 1
 ```
 
 Moves the specified component to the first section of the page.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Move-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Column 2
+Move-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Column 2
 ```
 
 Moves the specified component to the second column of the current section.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Move-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Section 1 -Column 2
+Move-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Section 1 -Column 2
 ```
 
 Moves the specified component to the first section of the page into the second column.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Move-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Section 1 -Column 2 -Position 2
+Move-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Section 1 -Column 2 -Position 2
 ```
 
 Moves the specified component to the first section of the page into the second column and sets the column to position 2 in the list of webparts.
@@ -90,7 +90,7 @@ The column to move the webpart to
 
 ```yaml
 Type: Int
-Parameter Sets: Move to other column
+Parameter Sets: Move to other column, Move to other section and column
 
 Required: True
 Position: Named
@@ -126,7 +126,7 @@ Change to order of the webpart in the column
 
 ```yaml
 Type: Int
-Parameter Sets: Move to other column
+Parameter Sets: Move to other column, Move to other section, Move to other section and column, Move within a column
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ The section to move the webpart to
 
 ```yaml
 Type: Int
-Parameter Sets: Move to other section
+Parameter Sets: Move to other section, Move to other section and column
 
 Required: True
 Position: Named
@@ -146,7 +146,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

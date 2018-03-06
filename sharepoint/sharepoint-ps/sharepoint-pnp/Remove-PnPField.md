@@ -22,14 +22,14 @@ Remove-PnPField -Identity <FieldPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPField -Identity "Speakers"
+Remove-PnPField -Identity "Speakers"
 ```
 
 Removes the speakers field from the site columns
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPField -List "Demo list" -Identity "Speakers"
+Remove-PnPField -List "Demo list" -Identity "Speakers"
 ```
 
 Removes the speakers field from the list Demo list
@@ -73,7 +73,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

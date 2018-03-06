@@ -12,8 +12,8 @@ Returns a specific group or all groups.
 
 ### ByName
 ```powershell
-Get-PnPGroup [-Web <WebPipeBind>]
-             [-Identity <GroupPipeBind>]
+Get-PnPGroup [-Identity <GroupPipeBind>]
+             [-Web <WebPipeBind>]
              [-Connection <SPOnlineConnection>]
 ```
 
@@ -40,8 +40,8 @@ Get-PnPGroup [-AssociatedOwnerGroup [<SwitchParameter>]]
 
 ### 
 ```powershell
-Get-PnPGroup [-Web <WebPipeBind>]
-             [-Includes <String[]>]
+Get-PnPGroup [-Includes <String[]>]
+             [-Web <WebPipeBind>]
              [-Connection <SPOnlineConnection>]
 ```
 
@@ -49,21 +49,21 @@ Get-PnPGroup [-Web <WebPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPGroup
+Get-PnPGroup
 ```
 
 Returns all groups
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPGroup -Identity 'My Site Users'
+Get-PnPGroup -Identity 'My Site Users'
 ```
 
 This will return the group called 'My Site Users' if available
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPGroup -AssociatedMemberGroup
+Get-PnPGroup -AssociatedMemberGroup
 ```
 
 This will return the current members group for the site
@@ -124,7 +124,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -144,7 +144,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -157,7 +157,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [List<Microsoft.SharePoint.Client.Group>](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.group.aspx)
+### List<Microsoft.SharePoint.Client.Group>
 
 ## RELATED LINKS
 

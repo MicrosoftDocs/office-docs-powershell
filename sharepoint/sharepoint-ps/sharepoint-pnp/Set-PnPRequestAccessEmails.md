@@ -20,14 +20,14 @@ Set-PnPRequestAccessEmails -Emails <String[]>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPRequestAccessEmails -Emails someone@example.com 
+Set-PnPRequestAccessEmails -Emails someone@example.com 
 ```
 
 This will update the request access e-mail address
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPRequestAccessEmails -Emails @( someone@example.com; someoneelse@example.com )
+Set-PnPRequestAccessEmails -Emails @( someone@example.com; someoneelse@example.com )
 ```
 
 This will update multiple request access e-mail addresses
@@ -47,7 +47,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

@@ -3,17 +3,17 @@ external help file:
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 schema: 2.0.0
 ---
-# Execute-PnPQuery
+# Invoke-PnPQuery
 
 ## SYNOPSIS
-Execute the current queued actions
+Executes the currently queued actions
 
 ## SYNTAX 
 
 ```powershell
-Execute-PnPQuery [-RetryCount <Int>]
-                 [-RetryWait <Int>]
-                 [-Connection <SPOnlineConnection>]
+Invoke-PnPQuery [-RetryCount <Int>]
+                [-RetryWait <Int>]
+                [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
@@ -23,14 +23,14 @@ Executes any queued actions / changes on the SharePoint Client Side Object Model
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Execute-PnPQuery -RetryCount 5
+Invoke-PnPQuery -RetryCount 5
 ```
 
 This will execute any queued actions / changes on the SharePoint Client Side Object Model Context and will retry 5 times in case of throttling.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Execute-PnPQuery -RetryWait 10
+Invoke-PnPQuery -RetryWait 10
 ```
 
 This will execute any queued actions / changes on the SharePoint Client Side Object Model Context and delay the execution for 10 seconds before it retries the execution.
@@ -62,7 +62,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

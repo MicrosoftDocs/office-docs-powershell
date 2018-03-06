@@ -30,28 +30,28 @@ Set-PnPSearchConfiguration -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPSearchConfiguration -Configuration $config
+Set-PnPSearchConfiguration -Configuration $config
 ```
 
 Sets the search configuration for the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPSearchConfiguration -Configuration $config -Scope Site
+Set-PnPSearchConfiguration -Configuration $config -Scope Site
 ```
 
 Sets the search configuration for the current site collection
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPSearchConfiguration -Configuration $config -Scope Subscription
+Set-PnPSearchConfiguration -Configuration $config -Scope Subscription
 ```
 
 Sets the search configuration for the current tenant
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPSearchConfiguration -Path searchconfig.xml -Scope Subscription
+Set-PnPSearchConfiguration -Path searchconfig.xml -Scope Subscription
 ```
 
 Reads the search configuration from the specified XML file and sets it for the current tenant
@@ -87,7 +87,7 @@ Accept pipeline input: False
 
 ```yaml
 Type: SearchConfigurationScope
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

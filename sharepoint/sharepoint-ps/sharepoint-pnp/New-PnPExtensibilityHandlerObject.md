@@ -3,7 +3,7 @@ external help file:
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 schema: 2.0.0
 ---
-# New-PnPExtensbilityHandlerObject
+# New-PnPExtensibilityHandlerObject
 
 ## SYNOPSIS
 Creates an ExtensibilityHandler Object, to be used by the Get-SPOProvisioningTemplate cmdlet
@@ -11,10 +11,10 @@ Creates an ExtensibilityHandler Object, to be used by the Get-SPOProvisioningTem
 ## SYNTAX 
 
 ```powershell
-New-PnPExtensbilityHandlerObject -Type <String>
-                                 -Assembly <String>
-                                 [-Configuration <String>]
-                                 [-Disabled [<SwitchParameter>]]
+New-PnPExtensibilityHandlerObject -Assembly <String>
+                                  -Type <String>
+                                  [-Configuration <String>]
+                                  [-Disabled [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
@@ -22,8 +22,8 @@ New-PnPExtensbilityHandlerObject -Type <String>
 ### ------------------EXAMPLE 1------------------
 ```powershell
 
-PS:> $handler = New-PnPExtensbilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler
-PS:> Get-PnPProvisioningTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler
+$handler = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler
+Get-PnPProvisioningTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler
 ```
 
 This will create a new ExtensibilityHandler object that is run during extraction of the template

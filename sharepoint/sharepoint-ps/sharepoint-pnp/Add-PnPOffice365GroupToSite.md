@@ -6,30 +6,32 @@ schema: 2.0.0
 # Add-PnPOffice365GroupToSite
 
 ## SYNOPSIS
-Groupifies a classic team site by creating a group for it and connecting the site with the newly created group
+Groupifies a classic team site by creating an Office 365 group for it and connecting the site with the newly created group
 
 ## SYNTAX 
 
 ```powershell
-Add-PnPOffice365GroupToSite -Alias <String>
+Add-PnPOffice365GroupToSite -Url <String>
+                            -Alias <String>
                             -DisplayName <String>
                             [-Description <String>]
                             [-Classification <String>]
                             [-IsPublic [<SwitchParameter>]]
+                            [-KeepOldHomePage [<SwitchParameter>]]
                             [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
-This command allows you to add an Office 365 Unified group to an existing classic site collection. It acts on the current site collection which you connected to with Connect-PnPOnline.
+This command allows you to add an Office 365 Unified group to an existing classic site collection.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPOffice365GroupToSite -Alias "MyGroup" -DisplayName = "My new Group"
+Add-PnPOffice365GroupToSite -Url "https://contoso.sharepoint.com/sites/FinanceTeamsite" -Alias "FinanceTeamsite" -DisplayName = "My finance team site group"
 ```
 
-This will add a group call MyGroup to the current site collection
+This will add a group called MyGroup to the current site collection
 
 ## PARAMETERS
 
@@ -93,8 +95,32 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -KeepOldHomePage
+Specifies if the current site home page is kept. Defaults to false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Url
+Url of the site to be connected to an Office 365 Group.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

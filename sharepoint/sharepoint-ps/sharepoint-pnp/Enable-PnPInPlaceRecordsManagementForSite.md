@@ -18,7 +18,7 @@ Enable-PnPInPlaceRecordsManagementForSite [-Connection <SPOnlineConnection>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Enable-PnPInPlaceRecordsManagementForSite
+Enable-PnPInPlaceRecordsManagementForSite
 ```
 
 The in place records management feature will be enabled and the in place record management will be enabled in all locations with record declaration allowed by all contributors and undeclaration by site admins
@@ -26,7 +26,7 @@ The in place records management feature will be enabled and the in place record 
 ## PARAMETERS
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

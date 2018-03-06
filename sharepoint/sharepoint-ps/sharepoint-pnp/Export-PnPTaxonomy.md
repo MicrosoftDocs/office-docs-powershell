@@ -26,21 +26,21 @@ Export-PnPTaxonomy [-TermSetId <GuidPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Export-PnPTaxonomy
+Export-PnPTaxonomy
 ```
 
 Exports the full taxonomy to the standard output
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Export-PnPTaxonomy -Path c:\output.txt
+Export-PnPTaxonomy -Path c:\output.txt
 ```
 
 Exports the full taxonomy the file output.txt
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Export-PnPTaxonomy -Path c:\output.txt -TermSet f6f43025-7242-4f7a-b739-41fa32847254
+Export-PnPTaxonomy -Path c:\output.txt -TermSet f6f43025-7242-4f7a-b739-41fa32847254
 ```
 
 Exports the term set with the specified id
@@ -132,7 +132,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
