@@ -169,7 +169,9 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 
 - All: Block access to everyone except the owner and the last modifier.
 
-- PerUser: Block access to external users.### -Comment
+- PerUser: Block access to external users.
+
+### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
@@ -722,7 +724,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter
