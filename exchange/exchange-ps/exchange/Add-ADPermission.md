@@ -161,6 +161,8 @@ Accept wildcard characters: False
 ### -AccessRights
 The AccessRights parameter specifies the rights needed to perform the operation. Valid values include:
 
+- AccessSystemSecurity
+
 - CreateChild
 
 - DeleteChild
@@ -197,7 +199,6 @@ The AccessRights parameter specifies the rights needed to perform the operation.
 
 - Synchronize
 
-- AccessSystemSecurity
 
 ```yaml
 Type: ActiveDirectoryRights[]
