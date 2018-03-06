@@ -1165,7 +1165,8 @@ Accept wildcard characters: False
 Indicates which Microsoft Outlook contact folders (if any) should not be searched any time Skype for Business searches for new contacts.
 Multiple folders can be specified by separating the folder names using semicolons; for example, `-ExcludedContactFolders "SenderPhotoContacts;OtherContacts".`
 
-
+NOTE: When using a Skype for Business client, with either Office 2013 or Office 2016, this policy won't work in the same way.
+In that combination, the Skype for Business client uses the search capabilities of Office (mso.dll), which finds contacts from Exchange mailbox contact folders. There isn't an option to suppress the search of those contact folders for the Office search component.
 
 ```yaml
 Type: String
@@ -1881,7 +1882,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
 
 ```yaml
 Type: Object
@@ -1897,7 +1897,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableClientAutoPopulateWithTeam
-{{Fill EnableClientAutoPopulateWithTeam Description}}
+
+When set to true, allows a user's Skype client to be autopopulated with members of his or her immediate team.
 
 ```yaml
 Type: Object
@@ -1913,7 +1914,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeContactsFolder
-{{Fill EnableExchangeContactsFolder Description}}
+
+When set to false, this allows admins to hide Skype for Business contacts from showing up in users' Outlook and Outlook on the Web clients.
 
 ```yaml
 Type: Object
@@ -1985,7 +1987,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedback
-{{Fill EnableOnlineFeedback Description}}
+
+When set to true, allows users to provide feedback through the "help->report a problem" menu options in the client.
 
 ```yaml
 Type: Object
@@ -2001,7 +2004,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedbackScreenshots
-{{Fill EnableOnlineFeedbackScreenshots Description}}
+When set to true, allows users to provide screenshots of their clients when reporting problems.
 
 ```yaml
 Type: Object
@@ -2240,7 +2243,6 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter

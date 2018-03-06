@@ -72,7 +72,7 @@ This example creates an English 14 mode site collection by using the Team site t
 
 ### -Url
 Specifies the URL that the new site collection uses.
-If the URL is not a host header site, the URL must start with the the web application URL.
+If the URL is not a host header site, the URL must start with the web application URL.
 
 ```yaml
 Type: String

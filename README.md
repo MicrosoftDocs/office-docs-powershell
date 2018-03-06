@@ -9,7 +9,7 @@ When you contribute your work will go directly into the Microsoft Office product
 
 ## Contribute using the GitHub website
 
-SHORT VIDEO COMING SOON!
+[![Image of Quick Start video](images/edit_video_capture.jpg)](https://support.office.com/en-us/article/edit-powershell-cmdlet-in-github-dcd20227-3764-48ce-ad6e-763af8b48daf?ui=en-US&rs=en-US&ad=US)
 
 1. Open your browser, login to GitHub, and then navigate to https://github.com/microsoftdocs/office-docs-powershell
 2. Browse to the file you want to edit. In this example we will edit https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/teams/teams-ps/teams/New-Team.md and add a link in the Related Links section.

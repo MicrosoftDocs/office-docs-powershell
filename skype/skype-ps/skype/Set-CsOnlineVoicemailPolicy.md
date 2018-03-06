@@ -8,18 +8,20 @@ schema: 2.0.0
 # Set-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Modifies an existing Online Voicemail policy. Online Voicemail policies determine whether or not voicemail transcription and profanity masking for the voicemail transcriptions are enabled for a user.
 
 ## SYNTAX
 
 ```
 Set-CsOnlineVoicemailPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-EnableTranscription <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
+ [-EnableTranscription <Object>] [-EnableTranscriptionProfanityMasking <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Online Voicemail service provides organizations with voicemail deposit capabilities for Phone System implementation.
+
+By default, users enabled for Phone System will be enabled for Online Voicemail, and Online Voicemail policy controls whether or not voicemail transcription and profanity masking for the voicemail transcriptions are enabled for a user. Online Voicemail transcription is enabled by default and transcription profanity masking is disabled by default, and you can modify existing policies to match your organization's requirements.
 
 ## EXAMPLES
 
@@ -66,6 +68,22 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTranscriptionProfanityMasking
 PARAMVALUE: $true | $false
 
 ```yaml

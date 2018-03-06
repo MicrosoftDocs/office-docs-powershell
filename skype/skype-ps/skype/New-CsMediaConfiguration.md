@@ -27,7 +27,7 @@ New-CsMediaConfiguration [-Identity] <XdsIdentity> [-EnableQoS <Boolean>] [-Enab
 
 ## DESCRIPTION
 
-This cmdlet creates a new collection of settings that define behaviors for specific media actions.
+This cmdlet creates a new collection of settings that define the behavior of specific media actions.
 
 
 
@@ -63,7 +63,7 @@ A configuration at the site scope would be entered as site:\<site name\>, such a
 A service would be entered as \<server role\>:\<fqdn\>, such as MediationServer:pool0.litwareinc.com.
 A media configuration at the global scope will always exist and cannot be removed, so a new global configuration cannot be created.
 
-Media configurations created at the service scope can be created only for the A/V Conferencing service, Mediation Server, and Application Server.
+Media configurations created at the service scope can be created for only the A/V Conferencing service, Mediation Server, and Application Server.
 
 
 
@@ -83,6 +83,7 @@ Accept wildcard characters: False
 ### -EnableQoS
 
 QoS monitors the quality of voice signals over a network.
+The EnableIncallQoS attribute enables or disables the ability of Skype for Business clients to send the raw data that's required to generate IncallQuality messages.
 
 Default: False
 
