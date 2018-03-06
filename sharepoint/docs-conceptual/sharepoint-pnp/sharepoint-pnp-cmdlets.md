@@ -236,8 +236,6 @@ Cmdlet|Description|Platform
 **[Rename&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Rename-PnPFolder.md)** |Renames a folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Resolve&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Resolve-PnPFolder.md)** |Returns a folder from a given site relative path, and will create it if it does not exist.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPFolderItem](../../sharepoint-ps/sharepoint-pnp/Get-PnPFolderItem.md)** |List content in folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Copy&#8209;PnPItemProxy](../../sharepoint-ps/sharepoint-pnp/Copy-PnPItemProxy.md)** |Proxy cmdlet for using Copy-Item between SharePoint provider and FileSystem provider|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Move&#8209;PnPItemProxy](../../sharepoint-ps/sharepoint-pnp/Move-PnPItemProxy.md)** |Proxy cmdlet for using Move-Item between SharePoint provider and FileSystem provider|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 
 
 ### Information Management 
