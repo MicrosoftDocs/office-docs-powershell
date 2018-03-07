@@ -15,7 +15,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-AntiPhishPolicy [[-Identity] <AntiPhishPolicyIdParameter>] [<CommonParameters>]
+Get-AntiPhishPolicy [-Identity <AntiPhishPolicyIdParameter>] [-Advanced <SwitchParameter>] [-Impersonation <SwitchParameter>] [-Spoof <SwitchParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +39,22 @@ This example shows detailed information about the antiphish policy named Default
 
 ## PARAMETERS
 
+### -Advanced
+The Advanced switch filters the results by advanced antiphishing policies. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 The Identity parameter specifies the antiphishing policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
@@ -56,6 +72,38 @@ Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Impersonation
+The Impersonation switch filters the results by impersonation antiphishing policies. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Spoof
+The Spoof switch filters the results by spoof antiphishing policies. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

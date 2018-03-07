@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Online
 schema: 2.0.0
 ---
 
@@ -8,7 +8,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Test-ClientAccessRule cmdlet to test how client access rules affect access to your cloud-based organization. If any of the client properties you specify for this cmdlet match any client access rules, the rules are returned in the results.
+Use the Test-ClientAccessRule cmdlet to test how client access rules affect access to your organization. If any of the client properties you specify for this cmdlet match any client access rules, the rules are returned in the results.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -79,7 +79,7 @@ In client access rules, authentication types are defined by the AnyOfAuthenticat
 Type: BasicAuthentication | NonBasicAuthentication | AdfsAuthentication | CertificateBasedAuthentication | OAuthAuthentication
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ In client access rules, protocol types are defined by the AnyOfProtocols and Exc
 Type: ExchangeWebServices | RemotePowerShell | OutlookAnywhere | POP3 | IMAP4 | OutlookWebApp | ExchangeAdminCenter | ExchangeActiveSync | OfflineAddressBook | PowerShellWebServices | REST
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: True
 Position: Named
@@ -139,7 +139,7 @@ In client access rules, IP addresses are defined by the AnyOfClientIPAddressesOr
 Type: IPAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: True
 Position: Named
@@ -155,7 +155,7 @@ The RemotePort parameter specifies the client TCP port to test. Valid input for 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: True
 Position: Named
@@ -197,7 +197,7 @@ In client access rules, users are defined by the UsernameMatchesAnyOfPatterns, U
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: True
 Position: Named
@@ -217,7 +217,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ The OAuthClaims parameter specifies the OAuth claims token of a middle-tier app.
 Type: Hashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
