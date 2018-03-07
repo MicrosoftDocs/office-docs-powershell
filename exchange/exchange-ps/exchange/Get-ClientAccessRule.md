@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Online
 schema: 2.0.0
 ---
 
@@ -53,7 +53,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -71,7 +71,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016
 
 Required: False
 Position: Named
@@ -93,7 +93,7 @@ The Identity parameter specifies the client access rule that you want to view. Y
 Type: ClientAccessRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: 1
@@ -109,7 +109,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
