@@ -22,23 +22,19 @@ Removes a site design. It no longer appears in the UI for creating a new site.
 
 ## PARAMETERS
 
-|Parameter     | Description  |
-|--------------|--------------|
-| [-Identity]  | The ID of the site design to remove. |
-
 ### [-Identity]
 The ID of the site design to remove.
 
 ```yaml
-Type: 
-Parameter Sets: 
+Type: SPOSiteDesignPipeBind
+Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: 
-Position: 
-Default value: 
-Accept pipeline input: 
-Accept wildcard characters: 
+Required: False 
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False  
 ```
 
 ## EXAMPLES

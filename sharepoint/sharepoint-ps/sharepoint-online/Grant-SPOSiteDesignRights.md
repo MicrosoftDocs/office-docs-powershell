@@ -23,12 +23,50 @@ Grant-SPOSiteDesignRights
 
 ## PARAMETERS
 
-|Parameter     | Description  |
-|--------------|--------------|
-| [-Identity]  | The ID of the site design to get scoping information. |
-| -Principals  | One or more principles to add permissions for. |
-| -Rights      | Always set to the value **View**. Any user or group with view permissions can view and use the site design. |
+### [-Identity]
+The ID of the site design to get scoping information.
 
+```yaml
+Type: SPOSiteDesignPipeBind
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: False 
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False 
+```
+
+### -Principals
+One or more principles to add permissions for. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: True 
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False 
+```
+
+### -Rights
+Always set to the value **View**. Any user or group with view permissions can view and use the site design.
+
+```yaml
+Type: 
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: True 
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False 
+```
 
 ## EXAMPLES
 

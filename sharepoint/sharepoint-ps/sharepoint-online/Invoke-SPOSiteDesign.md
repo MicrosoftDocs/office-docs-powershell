@@ -22,39 +22,34 @@ Invoke-SPOSiteDesign
 
 ## PARAMETERS
 
-|Parameter     | Description  |
-|--------------|--------------|
-| -Identity       | The ID of the site design to apply. |
-| -WebUrl    | The Url of the site collection where the site design will be applied.|
-
-### -Identity
+### [-Identity]
 The ID of the site design to apply.
 
 ```yaml
 Type: 
-Parameter Sets: 
+Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: 
-Position: 
-Default value: 
-Accept pipeline input: 
-Accept wildcard characters: 
+Required: False 
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False  
 ```
 
 ### -WebUrl
 The URL of the site collection where the site design will be applied.
 
 ```yaml
-Type: 
-Parameter Sets: 
+Type: String
+Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: 
-Position: 
-Default value: 
-Accept pipeline input: 
-Accept wildcard characters: 
+Required: True 
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False  
 ```
 
 ## EXAMPLES

@@ -23,56 +23,49 @@ Add-SPOSiteScript
 
 ## PARAMETERS
 
-|Parameter     | Description  |
-|--------------|--------------|
-| -Title       | The display name of the site design. |
-| -Content     | JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).|
-| -Description | A description of the script. |
-
-
 ### -Title
 The display name of the site design.
 
 ```yaml
-Type: 
-Parameter Sets: 
+Type: String
+Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: 
-Position: 
-Default value: 
-Accept pipeline input: 
-Accept wildcard characters: 
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Content
-JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).
+The JSON value that describes the script. For more information, see the [JSON reference](site-design-json-schema.md).
 
 ```yaml
-Type: 
-Parameter Sets: 
+Type: String
+Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: 
-Position: 
-Default value: 
-Accept pipeline input: 
-Accept wildcard characters: 
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False 
 ```
 
-### -Description
+### [-Description]
 A description of the script.
 
 ```yaml
-Type: 
-Parameter Sets: 
+Type: String
+Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: 
-Position: 
-Default value: 
-Accept pipeline input: 
-Accept wildcard characters: 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False 
 ```
 
 
