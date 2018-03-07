@@ -18,14 +18,14 @@ Get-PnPUnifiedGroupMembers -Identity <UnifiedGroupPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPUnifiedGroupMembers -Identity $groupId
+Get-PnPUnifiedGroupMembers -Identity $groupId
 ```
 
 Retrieves all the members of a specific Office 365 Group based on its ID
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPUnifiedGroupMembers -Identity $group
+Get-PnPUnifiedGroupMembers -Identity $group
 ```
 
 Retrieves all the members of a specific Office 365 Group based on the group's object instance

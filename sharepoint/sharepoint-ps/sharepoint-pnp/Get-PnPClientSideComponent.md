@@ -21,14 +21,14 @@ Get-PnPClientSideComponent -Page <ClientSidePagePipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPClientSideComponent -Page Home
+Get-PnPClientSideComponent -Page Home
 ```
 
 Returns all controls defined on the given page.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPClientSideComponent -Page Home -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
+Get-PnPClientSideComponent -Page Home -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
 ```
 
 Returns a specific control defined on the given page.
@@ -60,7 +60,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

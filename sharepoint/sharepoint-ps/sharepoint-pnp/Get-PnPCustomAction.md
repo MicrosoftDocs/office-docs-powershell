@@ -12,11 +12,11 @@ Return user custom actions
 
 ### 
 ```powershell
-Get-PnPCustomAction [-Identity <GuidPipeBind>]
+Get-PnPCustomAction [-Includes <String[]>]
+                    [-Identity <GuidPipeBind>]
                     [-Scope <CustomActionScope>]
                     [-ThrowExceptionIfCustomActionNotFound [<SwitchParameter>]]
                     [-Web <WebPipeBind>]
-                    [-Includes <String[]>]
                     [-Connection <SPOnlineConnection>]
 ```
 
@@ -27,21 +27,21 @@ Returns all or a specific user custom action
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPCustomAction
+Get-PnPCustomAction
 ```
 
 Returns all custom actions of the current site.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
+Get-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
 ```
 
 Returns the custom action with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2'.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPCustomAction -Scope web
+Get-PnPCustomAction -Scope web
 ```
 
 Returns all custom actions for the current web object.
@@ -65,7 +65,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -109,7 +109,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -122,7 +122,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [List<Microsoft.SharePoint.Client.UserCustomAction>](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.usercustomaction.aspx)
+### List<Microsoft.SharePoint.Client.UserCustomAction>
 
 ## RELATED LINKS
 

@@ -18,14 +18,14 @@ Remove-PnPUnifiedGroup -Identity <UnifiedGroupPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPUnifiedGroup -Identity $groupId
+Remove-PnPUnifiedGroup -Identity $groupId
 ```
 
 Removes an Office 365 Groups based on its ID
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPUnifiedGroup -Identity $group
+Remove-PnPUnifiedGroup -Identity $group
 ```
 
 Removes the provided Office 365 Groups

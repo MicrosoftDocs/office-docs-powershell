@@ -20,14 +20,14 @@ Remove-PnPWorkflowDefinition -Identity <WorkflowDefinitionPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPWorkflowDefinition -Identity $wfDef
+Remove-PnPWorkflowDefinition -Identity $wfDef
 ```
 
 Removes the workflow, retrieved by Get-PnPWorkflowDefinition, from the site.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPWorkflowDefinition -Name MyWorkflow | Remove-PnPWorkflowDefinition
+Get-PnPWorkflowDefinition -Name MyWorkflow | Remove-PnPWorkflowDefinition
 ```
 
 Get the workflow MyWorkFlow and remove from the site.
@@ -47,7 +47,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

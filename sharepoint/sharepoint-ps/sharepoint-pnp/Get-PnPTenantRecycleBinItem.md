@@ -21,7 +21,7 @@ This command will return all the items in the tenant recycle bin for the Office 
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPTenantRecycleBinItem
+Get-PnPTenantRecycleBinItem
 ```
 
 Returns all site collections in the tenant scoped recycle bin
@@ -29,7 +29,7 @@ Returns all site collections in the tenant scoped recycle bin
 ## PARAMETERS
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -42,7 +42,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.Online.SharePoint.TenantAdministration.DeletedSiteProperties](https://msdn.microsoft.com/en-us/library/microsoft.online.sharepoint.tenantadministration.deletedsiteproperties.aspx)
+### Microsoft.Online.SharePoint.TenantAdministration.DeletedSiteProperties
 
 ## RELATED LINKS
 

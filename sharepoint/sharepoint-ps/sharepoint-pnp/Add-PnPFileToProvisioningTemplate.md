@@ -24,28 +24,28 @@ Add-PnPFileToProvisioningTemplate -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPFileToProvisioningTemplate -Path template.pnp -Source $sourceFilePath -Folder $targetFolder
+Add-PnPFileToProvisioningTemplate -Path template.pnp -Source $sourceFilePath -Folder $targetFolder
 ```
 
 Adds a file to a PnP Provisioning Template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPFileToProvisioningTemplate -Path template.xml -Source $sourceFilePath -Folder $targetFolder
+Add-PnPFileToProvisioningTemplate -Path template.xml -Source $sourceFilePath -Folder $targetFolder
 ```
 
 Adds a file reference to a PnP Provisioning XML Template
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Add-PnPFileToProvisioningTemplate -Path template.pnp -Source "./myfile.png" -Folder "folderinsite" -FileLevel Published -FileOverwrite:$false
+Add-PnPFileToProvisioningTemplate -Path template.pnp -Source "./myfile.png" -Folder "folderinsite" -FileLevel Published -FileOverwrite:$false
 ```
 
 Adds a file to a PnP Provisioning Template, specifies the level as Published and defines to not overwrite the file if it exists in the site.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Add-PnPFileToProvisioningTemplate -Path template.pnp -Source $sourceFilePath -Folder $targetFolder -Container $container
+Add-PnPFileToProvisioningTemplate -Path template.pnp -Source $sourceFilePath -Folder $targetFolder -Container $container
 ```
 
 Adds a file to a PnP Provisioning Template with a custom container for the file

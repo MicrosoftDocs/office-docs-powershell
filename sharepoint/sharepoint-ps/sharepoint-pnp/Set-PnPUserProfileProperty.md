@@ -36,14 +36,14 @@ Requires a connection to a SharePoint Tenant Admin site.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'SPS-Location' -Value 'Stockholm'
+Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'SPS-Location' -Value 'Stockholm'
 ```
 
 Sets the SPS-Location property for the user as specified by the Account parameter
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'MyProperty' -Values 'Value 1','Value 2'
+Set-PnPUserProfileProperty -Account 'user@domain.com' -Property 'MyProperty' -Values 'Value 1','Value 2'
 ```
 
 Sets the MyProperty multi value property for the user as specified by the Account parameter
@@ -55,7 +55,7 @@ The account of the user, formatted either as a login name, or as a claims identi
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: Named
@@ -67,7 +67,7 @@ The property to set, for instance SPS-Skills or SPS-Location
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: Named
@@ -99,7 +99,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
