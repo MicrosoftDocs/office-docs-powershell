@@ -30,24 +30,34 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>Move-SPUser -Identity "DOMAIN\JaneDoe" -NewAlias "Domain\JaneSmith"
+C:\PS>$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web http://webUrl
+C:\PS>Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>Move-SPUser -Identity "DomainA\JaneDoe" -NewAlias "DomainB\JaneDoe"
+C:\PS>$user = Get-SPUser -Identity "DomainA\JaneDoe" -Web http://webUrl
+C:\PS>Move-SPUser -Identity $user -NewAlias "DomainB\JaneDoe"
 ```
 
-This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\JaneDoe in DomainB.
+This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\JaneDoe in DomainB with SID History enabled.
+
+### ------------------EXAMPLE 3------------------ 
+```
+C:\PS>$user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web http://webUrl
+C:\PS>Move-SPUser -Identity $user -NewAlias "i:0#.W|Domain\JaneSmith" -IgnoreSid
+```
+
+This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith when using Windows Claims. `-IgnoreSid` must always be used with `Move-SPUser` when using a Claims Identity, such as Windows Claims.
 
 ## PARAMETERS
 
 ### -Identity
-Specifies the GUID or login name of the user to be returned.
+Specifies the `SPUser` object retrieved via `Get-SPUser`.
 
-The type must be a valid login name or GUID of the user, in the form DOMAIN\username or 1234-5678-9876-0987.
+The type must be a valid `SPUser` object.
 
 ```yaml
 Type: SPUserPipeBind
