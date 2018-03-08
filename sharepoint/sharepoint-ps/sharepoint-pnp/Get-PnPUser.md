@@ -24,42 +24,42 @@ This command will return all the users that exist in the current site collection
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPUser
+Get-PnPUser
 ```
 
 Returns all users from the User Information List of the current site collection regardless if they currently have rights to access the current site
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPUser -Identity 23
+Get-PnPUser -Identity 23
 ```
 
 Returns the user with Id 23 from the User Information List of the current site collection
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPUser -Identity i:0#.f|membership|user@tenant.onmicrosoft.com
+Get-PnPUser -Identity i:0#.f|membership|user@tenant.onmicrosoft.com
 ```
 
 Returns the user with LoginName i:0#.f|membership|user@tenant.onmicrosoft.com from the User Information List of the current site collection
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPUser | ? Email -eq "user@tenant.onmicrosoft.com"
+Get-PnPUser | ? Email -eq "user@tenant.onmicrosoft.com"
 ```
 
 Returns the user with e-mail address user@tenant.onmicrosoft.com from the User Information List of the current site collection
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPUser -WithRightsAssigned
+Get-PnPUser -WithRightsAssigned
 ```
 
 Returns only those users from the User Information List of the current site collection who currently have any kind of access rights given either directly to the user or Active Directory Group or given to the user or Active Directory Group via membership of a SharePoint Group to the current site
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPUser -WithRightsAssigned -Web subsite1
+Get-PnPUser -WithRightsAssigned -Web subsite1
 ```
 
 Returns only those users from the User Information List of the current site collection who currently have any kind of access rights given either directly to the user or Active Directory Group or given to the user or Active Directory Group via membership of a SharePoint Group to subsite 'subsite1'
@@ -91,7 +91,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -116,7 +116,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.User](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.user.aspx)
+### Microsoft.SharePoint.Client.User
 
 ## RELATED LINKS
 

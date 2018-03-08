@@ -19,7 +19,7 @@ Uninstall-PnPApp -Identity <AppMetadataPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Uninstall-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
+Uninstall-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
 ```
 
 This will uninstall the specified app from the current site.
@@ -28,6 +28,8 @@ This will uninstall the specified app from the current site.
 
 ### -Identity
 Specifies the Id of the Addin Instance
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: AppMetadataPipeBind
@@ -39,7 +41,9 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: SPOnlineConnection

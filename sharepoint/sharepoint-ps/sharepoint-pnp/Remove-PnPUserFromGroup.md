@@ -21,7 +21,7 @@ Remove-PnPUserFromGroup -LoginName <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPUserFromGroup -LoginName user@company.com -GroupName 'Marketing Site Members'
+Remove-PnPUserFromGroup -LoginName user@company.com -GroupName 'Marketing Site Members'
 ```
 
 Removes the user user@company.com from the Group 'Marketing Site Members'
@@ -55,7 +55,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

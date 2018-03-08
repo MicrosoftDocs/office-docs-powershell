@@ -11,14 +11,14 @@ Generates a provisioning template from a given folder, including only files that
 ## SYNTAX 
 
 ```powershell
-New-PnPProvisioningTemplateFromFolder [-Match <String>]
+New-PnPProvisioningTemplateFromFolder [-Out <String>]
+                                      [-Folder <String>]
+                                      [-Match <String>]
                                       [-ContentType <ContentTypePipeBind>]
                                       [-Properties <Hashtable>]
                                       [-AsIncludeFile [<SwitchParameter>]]
                                       [-Force [<SwitchParameter>]]
                                       [-Encoding <Encoding>]
-                                      [-Out <String>]
-                                      [-Folder <String>]
                                       [-TargetFolder <String>]
                                       [-Schema <XMLPnPSchemaVersion>]
                                       [-Web <WebPipeBind>]
@@ -29,56 +29,56 @@ New-PnPProvisioningTemplateFromFolder [-Match <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml
+New-PnPProvisioningTemplateFromFolder -Out template.xml
 ```
 
 Creates an empty provisioning template, and includes all files in the current folder.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp
 ```
 
 Creates an empty provisioning template, and includes all files in the c:\temp folder.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js
 ```
 
 Creates an empty provisioning template, and includes all files with a JS extension in the c:\temp folder.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents"
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents"
 ```
 
 Creates an empty provisioning template, and includes all files with a JS extension in the c:\temp folder and marks the files in the template to be added to the 'Shared Documents' folder
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents" -ContentType "Test Content Type"
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents" -ContentType "Test Content Type"
 ```
 
 Creates an empty provisioning template, and includes all files with a JS extension in the c:\temp folder and marks the files in the template to be added to the 'Shared Documents' folder. It will add a property to the item for the content type.
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents" -Properties @{"Title" = "Test Title"; "Category"="Test Category"}
+New-PnPProvisioningTemplateFromFolder -Out template.xml -Folder c:\temp -Match *.js -TargetFolder "Shared Documents" -Properties @{"Title" = "Test Title"; "Category"="Test Category"}
 ```
 
 Creates an empty provisioning template, and includes all files with a JS extension in the c:\temp folder and marks the files in the template to be added to the 'Shared Documents' folder. It will add the specified properties to the file entries.
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.pnp
+New-PnPProvisioningTemplateFromFolder -Out template.pnp
 ```
 
 Creates an empty provisioning template as a pnp package file, and includes all files in the current folder
 
 ### ------------------EXAMPLE 8------------------
 ```powershell
-PS:> New-PnPProvisioningTemplateFromFolder -Out template.pnp -Folder c:\temp
+New-PnPProvisioningTemplateFromFolder -Out template.pnp -Folder c:\temp
 ```
 
 Creates an empty provisioning template as a pnp package file, and includes all files in the c:\temp folder
@@ -206,7 +206,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

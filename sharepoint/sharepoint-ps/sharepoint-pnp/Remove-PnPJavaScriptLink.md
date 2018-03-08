@@ -11,9 +11,9 @@ Removes a JavaScript link or block from a web or sitecollection
 ## SYNTAX 
 
 ```powershell
-Remove-PnPJavaScriptLink [-Force [<SwitchParameter>]]
+Remove-PnPJavaScriptLink [-Identity <UserCustomActionPipeBind>]
+                         [-Force [<SwitchParameter>]]
                          [-Scope <CustomActionScope>]
-                         [-Identity <UserCustomActionPipeBind>]
                          [-Web <WebPipeBind>]
                          [-Connection <SPOnlineConnection>]
 ```
@@ -22,42 +22,42 @@ Remove-PnPJavaScriptLink [-Force [<SwitchParameter>]]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPJavaScriptLink -Identity jQuery
+Remove-PnPJavaScriptLink -Identity jQuery
 ```
 
 Removes the injected JavaScript file with the name jQuery from the current web after confirmation
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPJavaScriptLink -Identity jQuery -Scope Site
+Remove-PnPJavaScriptLink -Identity jQuery -Scope Site
 ```
 
 Removes the injected JavaScript file with the name jQuery from the current site collection after confirmation
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Remove-PnPJavaScriptLink -Identity jQuery -Scope Site -Confirm:$false
+Remove-PnPJavaScriptLink -Identity jQuery -Scope Site -Confirm:$false
 ```
 
 Removes the injected JavaScript file with the name jQuery from the current site collection and will not ask for confirmation
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Remove-PnPJavaScriptLink -Scope Site
+Remove-PnPJavaScriptLink -Scope Site
 ```
 
 Removes all the injected JavaScript files from the current site collection after confirmation for each of them
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Remove-PnPJavaScriptLink -Identity faea0ce2-f0c2-4d45-a4dc-73898f3c2f2e -Scope All
+Remove-PnPJavaScriptLink -Identity faea0ce2-f0c2-4d45-a4dc-73898f3c2f2e -Scope All
 ```
 
 Removes the injected JavaScript file with id faea0ce2-f0c2-4d45-a4dc-73898f3c2f2e from both the Web and Site scopes
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPJavaScriptLink -Scope All | ? Sequence -gt 1000 | Remove-PnPJavaScriptLink
+Get-PnPJavaScriptLink -Scope All | ? Sequence -gt 1000 | Remove-PnPJavaScriptLink
 ```
 
 Removes all the injected JavaScript files from both the Web and Site scope that have a sequence number higher than 1000
@@ -102,7 +102,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

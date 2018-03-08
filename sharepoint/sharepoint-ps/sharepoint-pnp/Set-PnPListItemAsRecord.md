@@ -11,8 +11,8 @@ Declares a list item as a record
 ## SYNTAX 
 
 ```powershell
-Set-PnPListItemAsRecord -Identity <ListItemPipeBind>
-                        -List <ListPipeBind>
+Set-PnPListItemAsRecord -List <ListPipeBind>
+                        -Identity <ListItemPipeBind>
                         [-DeclarationDate <DateTime>]
                         [-Web <WebPipeBind>]
                         [-Connection <SPOnlineConnection>]
@@ -22,14 +22,14 @@ Set-PnPListItemAsRecord -Identity <ListItemPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPListItemAsRecord -List "Documents" -Identity 4
+Set-PnPListItemAsRecord -List "Documents" -Identity 4
 ```
 
 Declares the document in the documents library with id 4 as a record
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPListItemAsRecord -List "Documents" -Identity 4 -DeclarationDate $date
+Set-PnPListItemAsRecord -List "Documents" -Identity 4 -DeclarationDate $date
 ```
 
 Declares the document in the documents library with id as a record
@@ -73,7 +73,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

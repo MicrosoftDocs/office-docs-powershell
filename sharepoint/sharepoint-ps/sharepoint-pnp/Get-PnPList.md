@@ -12,10 +12,10 @@ Returns a List object
 
 ### 
 ```powershell
-Get-PnPList [-ThrowExceptionIfListNotFound [<SwitchParameter>]]
-            [-Web <WebPipeBind>]
-            [-Includes <String[]>]
+Get-PnPList [-Includes <String[]>]
             [-Identity <ListPipeBind>]
+            [-ThrowExceptionIfListNotFound [<SwitchParameter>]]
+            [-Web <WebPipeBind>]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -23,21 +23,21 @@ Get-PnPList [-ThrowExceptionIfListNotFound [<SwitchParameter>]]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPList
+Get-PnPList
 ```
 
 Returns all lists in the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPList -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
+Get-PnPList -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
 ```
 
 Returns a list with the given id.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPList -Identity Lists/Announcements
+Get-PnPList -Identity Lists/Announcements
 ```
 
 Returns a list with the given url.
@@ -61,7 +61,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -93,7 +93,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -106,7 +106,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.List](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.list.aspx)
+### Microsoft.SharePoint.Client.List
 
 ## RELATED LINKS
 

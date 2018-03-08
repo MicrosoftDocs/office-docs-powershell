@@ -19,8 +19,8 @@ Add-PnPApp -Path <String>
 
 ### Add and Publish
 ```powershell
-Add-PnPApp -Publish [<SwitchParameter>]
-           -Path <String>
+Add-PnPApp -Path <String>
+           -Publish [<SwitchParameter>]
            [-SkipFeatureDeployment [<SwitchParameter>]]
            [-Overwrite [<SwitchParameter>]]
            [-Connection <SPOnlineConnection>]
@@ -30,14 +30,14 @@ Add-PnPApp -Publish [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPApp -Path ./myapp.sppkg
+Add-PnPApp -Path ./myapp.sppkg
 ```
 
 This will upload the specified app package to the app catalog
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPApp -Path ./myapp.sppkg -Publish
+Add-PnPApp -Path ./myapp.sppkg -Publish
 ```
 
 This will upload the specified app package to the app catalog and deploy/trust it at the same time.
@@ -61,7 +61,7 @@ Specifies the Id or an actual app metadata instance
 
 ```yaml
 Type: String
-Parameter Sets: Add only
+Parameter Sets: Add only, Add and Publish
 
 Required: True
 Position: 0
@@ -93,7 +93,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

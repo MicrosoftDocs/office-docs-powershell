@@ -25,28 +25,28 @@ New-PnPUnifiedGroup -DisplayName <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNickname $nickname
+New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNickname $nickname
 ```
 
 Creates a public Office 365 Group with all the required properties
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNickname $nickname -Owners $arrayOfOwners -Members $arrayOfMembers
+New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNickname $nickname -Owners $arrayOfOwners -Members $arrayOfMembers
 ```
 
 Creates a public Office 365 Group with all the required properties, and with a custom list of Owners and a custom list of Members
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNickname $nickname -IsPrivate
+New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNickname $nickname -IsPrivate
 ```
 
 Creates a private Office 365 Group with all the required properties
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNickname $nickname -Owners $arrayOfOwners -Members $arrayOfMembers -IsPrivate
+New-PnPUnifiedGroup -DisplayName $displayName -Description $description -MailNickname $nickname -Owners $arrayOfOwners -Members $arrayOfMembers -IsPrivate
 ```
 
 Creates a private Office 365 Group with all the required properties, and with a custom list of Owners and a custom list of Members
@@ -114,7 +114,7 @@ Accept pipeline input: False
 ```
 
 ### -MailNickname
-The Mail Nickname of the Office 365 Group.
+The Mail Nickname of the Office 365 Group. Cannot contain spaces.
 
 ```yaml
 Type: String

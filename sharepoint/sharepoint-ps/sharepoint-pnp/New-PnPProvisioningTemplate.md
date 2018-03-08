@@ -19,7 +19,7 @@ New-PnPProvisioningTemplate [-Web <WebPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> $template = New-PnPProvisioningTemplate
+$template = New-PnPProvisioningTemplate
 ```
 
 Creates a new instance of a provisioning template object.
@@ -27,7 +27,7 @@ Creates a new instance of a provisioning template object.
 ## PARAMETERS
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
