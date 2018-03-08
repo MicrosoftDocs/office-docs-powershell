@@ -19,7 +19,7 @@ Get-PnPRequestAccessEmails [-Web <WebPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPRequestAccessEmails
+Get-PnPRequestAccessEmails
 ```
 
 This will return all the request access e-mail addresses for the current web
@@ -27,7 +27,7 @@ This will return all the request access e-mail addresses for the current web
 ## PARAMETERS
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

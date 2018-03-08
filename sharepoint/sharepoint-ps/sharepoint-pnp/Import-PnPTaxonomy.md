@@ -34,14 +34,14 @@ Import-PnPTaxonomy -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Import-PnPTaxonomy -Terms 'Company|Locations|Stockholm'
+Import-PnPTaxonomy -Terms 'Company|Locations|Stockholm'
 ```
 
 Creates a new termgroup, 'Company', a termset 'Locations' and a term 'Stockholm'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Import-PnPTaxonomy -Terms 'Company|Locations|Stockholm|Central','Company|Locations|Stockholm|North'
+Import-PnPTaxonomy -Terms 'Company|Locations|Stockholm|Central','Company|Locations|Stockholm|North'
 ```
 
 Creates a new termgroup, 'Company', a termset 'Locations', a term 'Stockholm' and two subterms: 'Central', and 'North'
@@ -53,7 +53,7 @@ The path delimiter to be used, by default this is '|'
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -65,7 +65,7 @@ Accept pipeline input: False
 
 ```yaml
 Type: Int
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ If specified, terms that exist in the termset, but are not in the imported data,
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Term store to import to; if not specified the default term store is used.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

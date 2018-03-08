@@ -11,9 +11,9 @@ Set Client-Side Text Component properties
 ## SYNTAX 
 
 ```powershell
-Set-PnPClientSideText -InstanceId <GuidPipeBind>
+Set-PnPClientSideText -Page <ClientSidePagePipeBind>
+                      -InstanceId <GuidPipeBind>
                       -Text <String>
-                      -Page <ClientSidePagePipeBind>
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
 ```
@@ -25,7 +25,7 @@ Sets the rendered text in existing client side text component
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPSetClientSideText -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Text "MyText"
+Set-PnPSetClientSideText -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -Text "MyText"
 ```
 
 Sets the text of the client side text component.
@@ -69,7 +69,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

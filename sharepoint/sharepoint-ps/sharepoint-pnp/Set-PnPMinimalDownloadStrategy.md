@@ -33,14 +33,14 @@ Activates or deactivates the minimal download strategy feature of a site
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPMinimalDownloadStrategy -Off
+Set-PnPMinimalDownloadStrategy -Off
 ```
 
 Will deactivate minimal download strategy (MDS) for the current web.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPMinimalDownloadStrategy -On
+Set-PnPMinimalDownloadStrategy -On
 ```
 
 Will activate minimal download strategy (MDS) for the current web.
@@ -48,7 +48,7 @@ Will activate minimal download strategy (MDS) for the current web.
 ## PARAMETERS
 
 ### -Force
-Specifying the Force parameter will skip the confirmation question.
+Specifies whether to overwrite (when activating) or continue (when deactivating) an existing feature with the same feature identifier. This parameter is ignored if there are no errors.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +84,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

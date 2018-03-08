@@ -12,10 +12,10 @@ Returns all activated or a specific activated feature
 
 ### 
 ```powershell
-Get-PnPFeature [-Scope <FeatureScope>]
-               [-Web <WebPipeBind>]
-               [-Includes <String[]>]
+Get-PnPFeature [-Includes <String[]>]
                [-Identity <FeaturePipeBind>]
+               [-Scope <FeatureScope>]
+               [-Web <WebPipeBind>]
                [-Connection <SPOnlineConnection>]
 ```
 
@@ -23,28 +23,28 @@ Get-PnPFeature [-Scope <FeatureScope>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPFeature
+Get-PnPFeature
 ```
 
 This will return all activated web scoped features
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPFeature -Scope Site
+Get-PnPFeature -Scope Site
 ```
 
 This will return all activated site scoped features
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
+Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
 ```
 
 This will return a specific activated web scoped feature
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22 -Scope Site
+Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22 -Scope Site
 ```
 
 This will return a specific activated site scoped feature
@@ -68,7 +68,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -100,7 +100,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -113,7 +113,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [List<Microsoft.SharePoint.Client.Feature>](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.feature.aspx)
+### List<Microsoft.SharePoint.Client.Feature>
 
 ## RELATED LINKS
 

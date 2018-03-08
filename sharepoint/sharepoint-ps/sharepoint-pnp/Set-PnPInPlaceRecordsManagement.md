@@ -28,14 +28,14 @@ Set-PnPInPlaceRecordsManagement -Off [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPInPlaceRecordsManagement -On
+Set-PnPInPlaceRecordsManagement -On
 ```
 
 Activates In Place Records Management
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPInPlaceRecordsManagement -Off
+Set-PnPInPlaceRecordsManagement -Off
 ```
 
 Deactivates In Place Records Management
@@ -67,7 +67,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

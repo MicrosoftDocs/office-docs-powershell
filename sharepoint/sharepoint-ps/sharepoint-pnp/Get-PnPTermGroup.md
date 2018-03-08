@@ -12,9 +12,9 @@ Returns a taxonomy term group
 
 ### 
 ```powershell
-Get-PnPTermGroup [-TermStore <Id, Name or Object>]
-                 [-Includes <String[]>]
+Get-PnPTermGroup [-Includes <String[]>]
                  [-Identity <Id, Title or TaxonomyItem>]
+                 [-TermStore <Id, Name or Object>]
                  [-Connection <SPOnlineConnection>]
 ```
 
@@ -22,21 +22,21 @@ Get-PnPTermGroup [-TermStore <Id, Name or Object>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPTermGroup
+Get-PnPTermGroup
 ```
 
 Returns all Term Groups in the site collection termstore
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPTermGroup -Identity "Departments"
+Get-PnPTermGroup -Identity "Departments"
 ```
 
 Returns the termgroup named "Departments" from the site collection termstore
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPTermGroup -Identity ab2af486-e097-4b4a-9444-527b251f1f8d
+Get-PnPTermGroup -Identity ab2af486-e097-4b4a-9444-527b251f1f8d
 ```
 
 Returns the termgroup with the given ID from the site collection termstore
@@ -61,7 +61,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -82,7 +82,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -95,7 +95,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.Taxonomy.TermGroup](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.taxonomy.termgroup.aspx)
+### Microsoft.SharePoint.Client.Taxonomy.TermGroup
 
 ## RELATED LINKS
 

@@ -65,21 +65,21 @@ Apply-PnPProvisioningTemplate -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Apply-PnPProvisioningTemplate -Path template.xml
+Apply-PnPProvisioningTemplate -Path template.xml
 ```
 
 Applies a provisioning template in XML format to the current web.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Apply-PnPProvisioningTemplate -Path template.xml -ResourceFolder c:\provisioning\resources
+Apply-PnPProvisioningTemplate -Path template.xml -ResourceFolder c:\provisioning\resources
 ```
 
 Applies a provisioning template in XML format to the current web. Any resources like files that are referenced in the template will be retrieved from the folder as specified with the ResourceFolder parameter.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Apply-PnPProvisioningTemplate -Path template.xml -Parameters @{"ListTitle"="Projects";"parameter2"="a second value"}
+Apply-PnPProvisioningTemplate -Path template.xml -Parameters @{"ListTitle"="Projects";"parameter2"="a second value"}
 ```
 
 Applies a provisioning template in XML format to the current web. It will populate the parameter in the template the values as specified and in the template you can refer to those values with the {parameter:<key>} token.
@@ -88,21 +88,21 @@ For instance with the example above, specifying {parameter:ListTitle} in your te
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Apply-PnPProvisioningTemplate -Path template.xml -Handlers Lists, SiteSecurity
+Apply-PnPProvisioningTemplate -Path template.xml -Handlers Lists, SiteSecurity
 ```
 
 Applies a provisioning template in XML format to the current web. It will only apply the lists and site security part of the template.
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Apply-PnPProvisioningTemplate -Path template.pnp
+Apply-PnPProvisioningTemplate -Path template.pnp
 ```
 
 Applies a provisioning template from a pnp package to the current web.
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Apply-PnPProvisioningTemplate -Path https://tenant.sharepoint.com/sites/templatestorage/Documents/template.pnp
+Apply-PnPProvisioningTemplate -Path https://tenant.sharepoint.com/sites/templatestorage/Documents/template.pnp
 ```
 
 Applies a provisioning template from a pnp package stored in a library to the current web.
@@ -110,16 +110,16 @@ Applies a provisioning template from a pnp package stored in a library to the cu
 ### ------------------EXAMPLE 7------------------
 ```powershell
 
-PS:> $handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-PS:> $handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-PS:> Apply-PnPProvisioningTemplate -Path NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
+$handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+Apply-PnPProvisioningTemplate -Path NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
 ```
 
 This will create two new ExtensibilityHandler objects that are run while provisioning the template
 
 ### ------------------EXAMPLE 8------------------
 ```powershell
-PS:> Apply-PnPProvisioningTemplate -Path .\ -InputInstance $template
+Apply-PnPProvisioningTemplate -Path .\ -InputInstance $template
 ```
 
 Applies a provisioning template from an in-memory instance of a ProvisioningTemplate type of the PnP Core Component, reading the supporting files, if any, from the current (.\) path. The syntax can be used together with any other supported parameters.
@@ -143,7 +143,7 @@ Allows you to run all handlers, excluding the ones specified.
 
 ```yaml
 Type: Handlers
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ Allows you to specify ExtensbilityHandlers to execute while applying a template
 
 ```yaml
 Type: ExtensibilityHandler[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ Allows you to only process a specific part of the template. Notice that this mig
 
 ```yaml
 Type: Handlers
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -191,7 +191,7 @@ Ignore duplicate data row errors when the data row in the template already exist
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -215,7 +215,7 @@ Specify this parameter if you want to overwrite and/or create properties that ar
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -227,7 +227,7 @@ Allows you to specify parameters that can be referred to in the template by mean
 
 ```yaml
 Type: Hashtable
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -263,7 +263,7 @@ Root folder where resources/files that are being referenced in the template are 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ Allows you to specify ITemplateProviderExtension to execute while applying a tem
 
 ```yaml
 Type: ITemplateProviderExtension[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -283,7 +283,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

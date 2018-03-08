@@ -23,14 +23,14 @@ Requires a connection to a SharePoint Tenant Admin site.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPUserProfileProperty -Account 'user@domain.com'
+Get-PnPUserProfileProperty -Account 'user@domain.com'
 ```
 
 Returns the profile properties for the specified user
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPUserProfileProperty -Account 'user@domain.com','user2@domain.com'
+Get-PnPUserProfileProperty -Account 'user@domain.com','user2@domain.com'
 ```
 
 Returns the profile properties for the specified users
@@ -50,7 +50,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -63,7 +63,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.UserProfiles.PersonProperties](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.userprofiles.personproperties.aspx)
+### Microsoft.SharePoint.Client.UserProfiles.PersonProperties
 
 ## RELATED LINKS
 

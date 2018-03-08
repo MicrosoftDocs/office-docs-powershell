@@ -11,7 +11,8 @@ Generates a provisioning template from a web
 ## SYNTAX 
 
 ```powershell
-Get-PnPProvisioningTemplate [-IncludeAllTermGroups [<SwitchParameter>]]
+Get-PnPProvisioningTemplate [-Out <String>]
+                            [-IncludeAllTermGroups [<SwitchParameter>]]
                             [-IncludeSiteCollectionTermGroup [<SwitchParameter>]]
                             [-IncludeSiteGroups [<SwitchParameter>]]
                             [-IncludeTermGroupsSecurity [<SwitchParameter>]]
@@ -34,7 +35,6 @@ Get-PnPProvisioningTemplate [-IncludeAllTermGroups [<SwitchParameter>]]
                             [-TemplateProperties <Hashtable>]
                             [-OutputInstance [<SwitchParameter>]]
                             [-ExcludeContentTypesFromSyndication [<SwitchParameter>]]
-                            [-Out <String>]
                             [-Schema <XMLPnPSchemaVersion>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
@@ -44,49 +44,49 @@ Get-PnPProvisioningTemplate [-IncludeAllTermGroups [<SwitchParameter>]]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp
+Get-PnPProvisioningTemplate -Out template.pnp
 ```
 
 Extracts a provisioning template in Office Open XML from the current web.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.xml
+Get-PnPProvisioningTemplate -Out template.xml
 ```
 
 Extracts a provisioning template in XML format from the current web.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -Schema V201503
+Get-PnPProvisioningTemplate -Out template.pnp -Schema V201503
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and saves it in the V201503 version of the schema.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -IncludeAllTermGroups
+Get-PnPProvisioningTemplate -Out template.pnp -IncludeAllTermGroups
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and includes all term groups, term sets and terms from the Managed Metadata Service Taxonomy.
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -IncludeSiteCollectionTermGroup
+Get-PnPProvisioningTemplate -Out template.pnp -IncludeSiteCollectionTermGroup
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and includes the term group currently (if set) assigned to the site collection.
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -PersistComposedLookFiles
+Get-PnPProvisioningTemplate -Out template.pnp -PersistComposedLookFiles
 ```
 
 Extracts a provisioning template in Office Open XML from the current web and saves the files that make up the composed look to the same folder as where the template is saved.
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -Handlers Lists, SiteSecurity
+Get-PnPProvisioningTemplate -Out template.pnp -Handlers Lists, SiteSecurity
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, but only processes lists and site security when generating the template.
@@ -94,9 +94,9 @@ Extracts a provisioning template in Office Open XML from the current web, but on
 ### ------------------EXAMPLE 8------------------
 ```powershell
 
-PS:> $handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-PS:> $handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
-PS:> Get-PnPProvisioningTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
+$handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+$handler2 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
+Get-PnPProvisioningTemplate -Out NewTemplate.xml -ExtensibilityHandlers $handler1,$handler2
 ```
 
 This will create two new ExtensibilityHandler objects that are run during extraction of the template
@@ -104,7 +104,7 @@ This will create two new ExtensibilityHandler objects that are run during extrac
 ### ------------------EXAMPLE 9------------------
 Only supported on SP2016 and SP Online
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources
+Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, and for supported artifacts it will create a resource file for each supported language (based upon the language settings of the current web). The generated resource files will be named after the value specified in the Out parameter. For instance if the Out parameter is specified as -Out 'template.xml' the generated resource file will be called 'template.en-US.resx'.
@@ -112,28 +112,28 @@ Extracts a provisioning template in Office Open XML from the current web, and fo
 ### ------------------EXAMPLE 10------------------
 Only supported on SP2016 and SP Online
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources -ResourceFilePrefix MyResources
+Get-PnPProvisioningTemplate -Out template.pnp -PersistMultiLanguageResources -ResourceFilePrefix MyResources
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, and for supported artifacts it will create a resource file for each supported language (based upon the language settings of the current web). The generated resource files will be named 'MyResources.en-US.resx' etc.
 
 ### ------------------EXAMPLE 11------------------
 ```powershell
-PS:> $template = Get-PnPProvisioningTemplate -OutputInstance
+$template = Get-PnPProvisioningTemplate -OutputInstance
 ```
 
 Extracts an instance of a provisioning template object from the current web. This syntax cannot be used together with the -Out parameter, but it can be used together with any other supported parameters.
 
 ### ------------------EXAMPLE 12------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -ContentTypeGroups "Group A","Group B"
+Get-PnPProvisioningTemplate -Out template.pnp -ContentTypeGroups "Group A","Group B"
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, but only processes content types from the to given content type groups.
 
 ### ------------------EXAMPLE 13------------------
 ```powershell
-PS:> Get-PnPProvisioningTemplate -Out template.pnp -ExcludeContentTypesFromSyndication
+Get-PnPProvisioningTemplate -Out template.pnp -ExcludeContentTypesFromSyndication
 ```
 
 Extracts a provisioning template in Office Open XML from the current web, excluding content types provisioned through content type syndication (content type hub), in order to prevent provisioning errors if the target also provision the content type using syndication.
@@ -335,6 +335,8 @@ Accept pipeline input: False
 ### -PersistMultiLanguageResources
 If specified, resource values for applicable artifacts will be persisted to a resource file
 
+Only applicable to: SharePoint Online, SharePoint Server 2016
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -358,6 +360,8 @@ Accept pipeline input: False
 
 ### -ResourceFilePrefix
 If specified, resource files will be saved with the specified prefix instead of using the template name specified. If no template name is specified the files will be called PnP-Resources.<language>.resx. See examples for more info.
+
+Only applicable to: SharePoint Online, SharePoint Server 2016
 
 ```yaml
 Type: String
@@ -441,7 +445,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

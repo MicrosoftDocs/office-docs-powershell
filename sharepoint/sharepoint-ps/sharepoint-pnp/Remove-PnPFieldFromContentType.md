@@ -22,14 +22,14 @@ Remove-PnPFieldFromContentType -Field <FieldPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPFieldFromContentType -Field "Project_Name" -ContentType "Project Document"
+Remove-PnPFieldFromContentType -Field "Project_Name" -ContentType "Project Document"
 ```
 
 This will remove the site column with an internal name of "Project_Name" from a content type called "Project Document"
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPFieldFromContentType -Field "Project_Name" -ContentType "Project Document" -DoNotUpdateChildren
+Remove-PnPFieldFromContentType -Field "Project_Name" -ContentType "Project Document" -DoNotUpdateChildren
 ```
 
 This will remove the site column with an internal name of "Project_Name" from a content type called "Project Document". It will not update content types that inherit from the "Project Document" content type.
@@ -37,7 +37,7 @@ This will remove the site column with an internal name of "Project_Name" from a 
 ## PARAMETERS
 
 ### -ContentType
-The content type where the field is to be removed from.
+The content type where the field is to be removed from
 
 ```yaml
 Type: ContentTypePipeBind
@@ -49,7 +49,7 @@ Accept pipeline input: False
 ```
 
 ### -DoNotUpdateChildren
-If specified, inherited content types will not be updated.
+If specified, inherited content types will not be updated
 
 ```yaml
 Type: SwitchParameter
@@ -61,7 +61,7 @@ Accept pipeline input: False
 ```
 
 ### -Field
-The field to remove.
+The field to remove
 
 ```yaml
 Type: FieldPipeBind
@@ -73,7 +73,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

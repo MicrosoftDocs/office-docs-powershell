@@ -11,8 +11,8 @@ Removes a Client-Side component from a page
 ## SYNTAX 
 
 ```powershell
-Remove-PnPClientSideComponent -InstanceId <GuidPipeBind>
-                              -Page <ClientSidePagePipeBind>
+Remove-PnPClientSideComponent -Page <ClientSidePagePipeBind>
+                              -InstanceId <GuidPipeBind>
                               [-Force [<SwitchParameter>]]
                               [-Web <WebPipeBind>]
                               [-Connection <SPOnlineConnection>]
@@ -22,7 +22,7 @@ Remove-PnPClientSideComponent -InstanceId <GuidPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82
+Remove-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82
 ```
 
 Removes the control specified from the page.
@@ -66,7 +66,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

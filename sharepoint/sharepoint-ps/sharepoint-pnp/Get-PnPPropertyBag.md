@@ -11,8 +11,8 @@ Returns the property bag values.
 ## SYNTAX 
 
 ```powershell
-Get-PnPPropertyBag [-Folder <String>]
-                   [-Key <String>]
+Get-PnPPropertyBag [-Key <String>]
+                   [-Folder <String>]
                    [-Web <WebPipeBind>]
                    [-Connection <SPOnlineConnection>]
 ```
@@ -21,35 +21,35 @@ Get-PnPPropertyBag [-Folder <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPPropertyBag
+Get-PnPPropertyBag
 ```
 
 This will return all web property bag values
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPPropertyBag -Key MyKey
+Get-PnPPropertyBag -Key MyKey
 ```
 
 This will return the value of the key MyKey from the web property bag
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPPropertyBag -Folder /MyFolder
+Get-PnPPropertyBag -Folder /MyFolder
 ```
 
 This will return all property bag values for the folder MyFolder which is located in the root of the current web
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPPropertyBag -Folder /MyFolder -Key vti_mykey
+Get-PnPPropertyBag -Folder /MyFolder -Key vti_mykey
 ```
 
 This will return the value of the key vti_mykey from the folder MyFolder which is located in the root of the current web
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPPropertyBag -Folder / -Key vti_mykey
+Get-PnPPropertyBag -Folder / -Key vti_mykey
 ```
 
 This will return the value of the key vti_mykey from the root folder of the current web
@@ -81,7 +81,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
