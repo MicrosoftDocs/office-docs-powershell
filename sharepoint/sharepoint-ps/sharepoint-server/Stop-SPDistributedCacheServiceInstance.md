@@ -8,7 +8,7 @@ schema: 2.0.0
 # Stop-SPDistributedCacheServiceInstance
 
 ## SYNOPSIS
-Stops an instance of the distributed cache service on a local server.
+Stops an instance of the Distributed Cache service on a local server.
 
 
 ## SYNTAX
@@ -19,28 +19,18 @@ Stop-SPDistributedCacheServiceInstance [-Graceful] [-AssignmentCollection <SPAss
 ```
 
 ## DESCRIPTION
-Use the `Stop-SPDistributedCacheServiceInstance` cmdlet to stop an instance of the distributed cache service on a local server.
+Use the `Stop-SPDistributedCacheServiceInstance` cmdlet to stop an instance of the Distributed Cache service on a local server. While a `-Graceful` switch does exist, this cmdlet is not capable of properly transferring cached items to another Distributed Cache host within the farm. Follow the guidance available at https://technet.microsoft.com/en-us/library/jj219613.aspx#graceful to properly issue a graceful shutdown of the Distributed Cache service.
 
-Execution of this cmdlet moves cached items to another server to preserve them.
-If you stop the distributed service before you stop each instance, cached items are lost.
-To prevent cached items from being lost, use the Graceful parameter.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831.
 
 ## EXAMPLES
 
-### ------------EXAMPLE----------
-```
-C:\PS>Stop-SPDistributedCacheServiceInstance -Graceful
-```
-
-This example gracefully stops an instance of a distributed cache service on a local server.
-
+### 
 
 ## PARAMETERS
 
 ### -Graceful
-Specifies whether to gracefully stop an instance of the distributed cache service.
+Specifies whether to gracefully stop an instance of the Distributed Cache service.
 
 ```yaml
 Type: SwitchParameter
