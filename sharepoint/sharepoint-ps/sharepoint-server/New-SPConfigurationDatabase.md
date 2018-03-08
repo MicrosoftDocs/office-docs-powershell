@@ -32,12 +32,26 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- 
+### ------------------EXAMPLE 1----------------------- 
 ```
 C:\PS>New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential)
 ```
 
 This example prompts the user to provide user credentials for the default Farm Administrator account.
+
+### ------------------EXAMPLE 2----------------------- 
+```
+C:\PS>New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -SkipRegisterAsDistributedCacheHost
+```
+
+This example prompts the user to provide user credentials for the default Farm Administrator account and skips registering the server as Distributed Cache host. Applies to SharePoint Server 2013 and SharePoint Server 2016 only.
+
+### ------------------EXAMPLE 3----------------------- 
+```
+C:\PS>New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -LocalServerRole Custom
+```
+
+This example prompts the user to provide user credentials for the default Farm Administrator account and sets the Server Role to Custom. Applies to SharePoint Server 2016 only.
 
 ## PARAMETERS
 
@@ -186,7 +200,7 @@ If you want to have a dedicated cache host, then use this parameter to make sure
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: 9
@@ -218,13 +232,13 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseFailOverServer
-{{Fill DatabaseFailOverServer Description}}
+Specifies the SQL Server Database Mirror partner server for the Configuration and Central Administration database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -234,7 +248,11 @@ Accept wildcard characters: False
 ```
 
 ### -LocalServerRole
-{{Fill LocalServerRole Description}}
+Specifies the Server Role. Valid options for all versions of SharePoint Server 2016 are:
+`Custom`, `SingleServerFarm`, `Application`, `WebFrontEnd`, `DistributedCache`, `Search`
+
+With the addition of Feature Pack 1, new options include:
+`ApplicationWithSearch`, `WebApplicationWithDistributedCache`
 
 ```yaml
 Type: SPServerRole
@@ -250,7 +268,39 @@ Accept wildcard characters: False
 ```
 
 ### -ServerRoleOptional
-{{Fill ServerRoleOptional Description}}
+Configures the farm to not require a server role to be specified. If no server role is specified, the server defaults to the Custom role.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server 2016
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteMapDatabaseName
+Do not use. Specifies the database name of the Site Map site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server 2016
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteMapDatabaseServer
+Do not use. Specifies the database server name of the Site Map site.
 
 ```yaml
 Type: SwitchParameter
