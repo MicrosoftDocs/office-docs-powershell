@@ -27,7 +27,7 @@ When you contribute your work will go directly into the Microsoft Office product
 
 5. You can click the Preview changes link to see what the changes will look like. 
 
-   *IMPORTANT* The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
+   **IMPORTANT** The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
    Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
 6. Once you are satisified with your work you submit a Pull Request which asks the maintainer of the main repository (known as Upstream) to pull your edits up. To submit a Pull Request you navigate back to the main repository, https://github.com/microsoftdocs/office-docs-powershell, and click the '''New pull request''' button. You will then request your edits to be pulled up into the main repo. Make sure to click the **compare across forks** link since you are request a pull from the edits you made that reside in your own personal repsitory. To learn more about pull requests and forking, see https://help.github.com/articles/creating-a-pull-request-from-a-fork/.
 
