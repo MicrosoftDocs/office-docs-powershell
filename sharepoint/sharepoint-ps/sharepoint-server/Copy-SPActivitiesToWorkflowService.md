@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Copy-SPActivitiesToWorkflowService
 schema: 2.0.0
 ---
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Copy-SPActivitiesToWorkflowService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Copies SharePoint 2013 workflow activities from SharePoint to Workflow Manager.
 
 ## SYNTAX
 
@@ -25,10 +25,14 @@ Copy-SPActivitiesToWorkflowService [-ActivityName <String>] [-AssignmentCollecti
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
+PS C:\>$site = Get-SPSite(https://siteCollection)
+PS C:\>$proxy = Get-SPWorkflowServiceApplicationProxy
+PS C:\>$svcAddress = $proxy.GetWorkflowServiceAddress($site)
+PS C:\>Copy-SPActivitiesToWorkflowService -WorkflowServiceAddress $svcAddress -Credential $credential -Force $true
 ```
 
-{{ Add example description here }}
+Copies Worklow Activities from the specified Site Collection to Workflow Manager.
 
 ## PARAMETERS
 
@@ -39,7 +43,7 @@ PS C:\> {{ Add example code here }}
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable:  SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -55,7 +59,7 @@ Accept wildcard characters: False
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable:  SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -71,7 +75,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable:  SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -87,7 +91,7 @@ Accept wildcard characters: False
 Type: ICredentials
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable:  SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -103,7 +107,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable:  SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -120,7 +124,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable:  SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -130,13 +134,13 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowServiceAddress
-{{Fill WorkflowServiceAddress Description}}
+The URL of the registered Workflow Manager service.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable:  SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
