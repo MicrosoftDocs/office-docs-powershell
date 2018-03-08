@@ -1,4 +1,4 @@
-# Short URL: aka.ms/powershell
+# Short URL: aka.ms/office-powershell
 
 # Overview
 A repository to hold the help reference content for Office PowerShell cmdlets. The expert knowledge around Office PowerShell is distributed amongst customers, MVPs, partners, product teams, support, and other community members. Consumers also have various preferences when consuming knowledge such as a website, PowerShell Get-Help, Windows app, iOS app, Android app, and others. The following diagram illustrates the point.
