@@ -31,15 +31,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------EXAMPLE-------------- 
 ```
 C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
 C:\PS>$database = $databases[0]
-
 C:\PS>$state = Get-SPScaleOutDatabaseDataState -Database $database
-
 C:\PS>Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode Deleted -IsUpperSubRange $false
-
 C:\PS>$state = Get-SPScaleOutDatabaseDataState -Database $database
-
 C:\PS>Clear-SPScaleOutDatabaseDeletedDataSubRange -Database $database -Range $state.Range -IsUpperSubRange $false
 ```
 
