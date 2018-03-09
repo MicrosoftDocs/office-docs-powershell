@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Resets the Windows trace logging and event logging levels to their default values.
+Resets the Windows event logging and trace logging to their default values.
 
 
 
@@ -48,6 +48,13 @@ C:\PS>Get-SPLogLevel | Clear-SPLogLevel
 ```
 
 This example resets the log levels for all categories.
+
+### --------------EXAMPLE 4----------------- 
+```
+C:\PS>Clear-SPLogLevel -Identity "SharePoint Server:Database"
+```
+
+This example resets the log level for the specific category in the SharePoint Server area only. This is useful when more than one area uses the same named category.
 
 ## PARAMETERS
 
