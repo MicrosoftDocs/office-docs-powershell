@@ -40,19 +40,14 @@ This example removes all the cache items for distributed token cache.
 
 Specifies the container type to clear.
 
-The valid values are the following:
+The valid values for SharePoint Server 2013 and SharePoint Server 2016 are the following:
 
---DistributedDefaultCache
---DistributedAccessCache
---DistributedActivityFeedCache
---DistributedBouncerCache
---DistributedLogonTokenCache
---DistributedServerToAppServerAccessTokenCache
---DistributedSearchCache
---DistributedSecurityTrimmingCache
---DistributedActivityFeedLMTCache
---DistributedViewStateCache
+DistributedDefaultCache, DistributedAccessCache, DistributedActivityFeedCache, DistributedBouncerCache, DistributedLogonTokenCache, DistributedServerToAppServerAccessTokenCache, DistributedSearchCache, DistributedSecurityTrimmingCache, DistributedActivityFeedLMTCache, DistributedViewStateCache
 
+Additional valid values for SharePoint Server 2016 are the following:
+
+DistributedSharedWithUserCache, DistributedUnifiedGroupsCache, DistributedFileLockThrottlerCache,
+DistributedResourceTallyCache, DistributedHealthScoreCache, DistributedClientSideAppUpdateTimeCache
 
 
 ```yaml
