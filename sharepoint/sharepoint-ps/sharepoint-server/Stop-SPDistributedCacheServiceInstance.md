@@ -25,8 +25,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### Example 1 
-
+### ------------ Example 1 ----------
+```
+C:\PS>
+```
 Please see referenced article instead of using this cmdlet directly.
 
 ## PARAMETERS
