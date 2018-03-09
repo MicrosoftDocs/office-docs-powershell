@@ -19,14 +19,14 @@ Install-PnPApp -Identity <AppMetadataPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Install-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
+Install-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
 ```
 
 This will install an available app, specified by the id, to the current site.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPAvailableApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe | Install-PnPApp
+Get-PnPAvailableApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe | Install-PnPApp
 ```
 
 This will install the given app into the site.
@@ -46,7 +46,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

@@ -24,14 +24,14 @@ The Reset-PnPTenantRecycleBinItem cmdlet allows a site collection that has been 
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Reset-PnPTenantRecycleBinItem -Url https://tenant.sharepoint.com/sites/contoso
+Reset-PnPTenantRecycleBinItem -Url https://tenant.sharepoint.com/sites/contoso
 ```
 
 This will restore the deleted site collection with the url 'https://tenant.sharepoint.com/sites/contoso' to its original location
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Reset-PnPTenantRecycleBinItem -Url https://tenant.sharepoint.com/sites/contoso -Wait
+Reset-PnPTenantRecycleBinItem -Url https://tenant.sharepoint.com/sites/contoso -Wait
 ```
 
 This will restore the deleted site collection with the url 'https://tenant.sharepoint.com/sites/contoso' to its original location and will wait with executing further PowerShell commands until the site collection restore has completed
@@ -75,7 +75,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

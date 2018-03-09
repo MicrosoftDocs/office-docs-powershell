@@ -6,7 +6,11 @@ schema: 2.0.0
 # New-RoutingGroupConnector
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the New-RoutingGroupConnector cmdlet to establish a connection between a Microsoft Exchange Server 2010 routing group and an Exchange Server 2003 routing group when the organization is running more than one version of Exchange.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -21,11 +25,11 @@ The New-RoutingGroupConnector cmdlet creates a new routing group connector betwe
 
 To create the routing group connector, you must specify the source servers from the originating routing group and the target servers in the destination routing group. The routing group connector is created in the routing group of which the source server is a member. By using the Bidirectional parameter, you can specify whether the connector is used for one-way or two-way mail flow. If you specify a two-way connector, a reciprocal connector is created in the target routing group. The source and target servers must be Exchange 2010 Hub Transport servers or Exchange 2003 bridgehead servers.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Routing group connectors" entry in the Transport Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-RoutingGroupConnector -Name "Interop RGC" -SourceTransportServers "Hub2010.contoso.com" -TargetTransportServers "Bridgehead2003.contoso.com" -Cost 100 -Bidirectional $true
 ```

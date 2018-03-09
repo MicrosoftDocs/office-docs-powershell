@@ -6,20 +6,6 @@ schema: 2.0.0
 # Get-ImapSettings
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-IMAPSettings cmdlet to display the properties of a single server running Microsoft Exchange Server 2010 that has the Client Access server role installed and is running the IMAP4 service.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-IMAPSettings cmdlet to display the properties of a single server running Microsoft Exchange Server 2013 that has the Client Access server role installed and is running the IMAP4 service.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ImapSettings cmdlet to view the settings of the Microsoft Exchange IMAP4 service on Exchange servers. This is the client access (frontend) IMAP4 service that clients connect to.
@@ -33,39 +19,11 @@ Get-ImapSettings [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<Comm
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-With the Get-IMAPSettings cmdlet, you can view the settings for the IMAP4 service running on an Exchange Client Access server. Information can only be returned about servers located in the Exchange organization from which the cmdlet is being run.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "IMAP4 settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-With the Get-IMAPSettings cmdlet, you can view the settings for the IMAP4 service running on an Exchange Client Access server. Information can only be returned about servers located in the Exchange organization from which the cmdlet is being run.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "IMAP4 settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-IMAPSettings -Server CAS01
-```
-
-This example displays the parameters and values for the Client Access server CAS01 running the IMAP4 service.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-IMAPSettings -Server CAS01
-```
-
-This example displays the parameters and values for the Client Access server CAS01 running the IMAP4 service.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-IMAPSettings -Server MBX01
 ```
@@ -91,14 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Server parameter specifies whether the command returns the properties of an individual Client Access server in your organization for which you're viewing IMAP4 settings.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -110,8 +60,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -144,4 +92,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/172e1a14-bd90-4010-abd9-e4878b4213a2.aspx)
-

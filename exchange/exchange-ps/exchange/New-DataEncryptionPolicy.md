@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-DataEncryptionPolicy -Name "US Mailboxes" -AzureKeyIDs "https://contosoWestUSvault01.vault.azure.net/keys/USA_Key_01","https://contosoEastUSvault01.vault.azure.net/keys/USA_Key_02" -Description "Root key for mailboxes located in US territories"
 ```

@@ -1,11 +1,13 @@
 ---
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Online
 schema: 2.0.0
 ---
 
 # Get-ClientAccessRule
 
 ## SYNOPSIS
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
 Use the Get-ClientAccessRule cmdlet to view client access rules. Client access rules help you control access to your cloud-based organization based on the properties of the connection.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
@@ -18,20 +20,20 @@ Get-ClientAccessRule [[-Identity] <ClientAccessRuleIdParameter>] [-Confirm] [-Do
 ```
 
 ## DESCRIPTION
-Client access rules are like transport rules for client connections to your organization. You use conditions and exceptions to identify the connections based on the user or properties of the client or the connection, and actions that define what to do with those connections.
+Client access rules are like mail flow rules (also known as transport rules) for client connections to your organization. You use conditions and exceptions to identify the connections based on their properties, and actions that allow or block the connections.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-ClientAccessRule
 ```
 
 This example shows a summary list of all client access rules.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-ClientAccessRule "Block Client Connections from 192.168.1.0/24" | Format-List
 ```
@@ -51,7 +53,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -61,13 +63,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016
 
 Required: False
 Position: Named
@@ -89,7 +93,7 @@ The Identity parameter specifies the client access rule that you want to view. Y
 Type: ClientAccessRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: 1
@@ -105,7 +109,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named

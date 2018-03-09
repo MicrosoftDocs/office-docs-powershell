@@ -21,20 +21,13 @@ Stop-ComplianceSearch [-Identity] <ComplianceSearchIdParameter> [-Confirm] [-Wha
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-This cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group, and not to the Organization Management role group.
+This cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group and not to the Organization Management role group.
 
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Stop-ComplianceSearch -Identity "Case 1234"
-```
-
-This example stops the active compliance search named Case 1234
-
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Stop-ComplianceSearch -Identity "Case 1234"
 ```
@@ -123,4 +116,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/675934e6-8a55-4615-8c46-a20bc656afdc.aspx)
-

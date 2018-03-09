@@ -6,7 +6,11 @@ schema: 2.0.0
 # Get-PublicFolderAdministrativePermission
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Get-PublicFolderAdministrativePermission cmdlet to get the administrative permissions for a public folder or a public folder hierarchy.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -23,25 +27,25 @@ Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder administrative permissions" entry in the Mailbox Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder"
 ```
 
 This example retrieves the administrative permissions for all users of the public folder My Public Folder.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder" -User Chris -Server "My Server" | Format-List
 ```
 
 This example retrieves the administrative permissions for the public folder My Public Folder, for the user Chris, on the server My Server. In this example, the output of the Get-PublicFolderAdministrativePermission command is piped to the Format-List command so that all the available information is displayed in the result.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder" -Owner
 ```

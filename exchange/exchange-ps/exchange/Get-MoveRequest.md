@@ -219,9 +219,9 @@ The MoveStatus parameter returns move requests in the specified status. You can 
 
 - InProgress
 
-- None
-
 - Queued
+
+- Retrying
 
 - Suspended
 

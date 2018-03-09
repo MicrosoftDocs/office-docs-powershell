@@ -6,15 +6,11 @@ schema: 2.0.0
 # Get-AdSite
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-AdSite cmdlet to display configuration information about one or more Active Directory sites.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-AdSite cmdlet to display configuration information about one or more Active Directory sites.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -23,41 +19,13 @@ Get-AdSite [[-Identity] <AdSiteIdParameter>] [-DomainController <Fqdn>] [<Common
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Computers running Microsoft Exchange Server 2010 that have the Hub Transport server role installed use Active Directory sites and the costs assigned to the Active Directory site links to determine the least cost routing path from each Hub Transport server in the organization to every other Hub Transport server in the organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport configuration" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-Exchange uses Active Directory sites and the costs assigned to the Active Directory site links to make message routing decisions.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport configuration" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 Exchange uses Active Directory sites and the costs assigned to the Active Directory site links to make message routing decisions.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-AdSite -Identity Default-First-Site-Name
-```
-
-This example displays the configuration details for the Active Directory site Default-First-Site-Name.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-AdSite Default-First-Site-Name
-```
-
-This example displays the configuration details for the Active Directory site named Default-First-Site-Name.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-AdSite Default-First-Site-Name
 ```
@@ -67,19 +35,9 @@ This example displays the configuration details for the Active Directory site na
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -128,4 +86,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/af3b6cc3-eb86-41d9-a643-171e36a3482d.aspx)
-

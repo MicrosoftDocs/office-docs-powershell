@@ -6,16 +6,6 @@ schema: 2.0.0
 # Enable-UMService
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Enable-UMService cmdlet to set the status of a Microsoft Exchange Server 2007 or Exchange Server 2010 Unified Messaging server to enabled. This setting enables the Unified Messaging server to process UM calls.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-UMService cmdlet to set the status of an Exchange Server 2010 Unified Messaging server to enabled. This setting enables the Unified Messaging server to process UM calls.
@@ -32,18 +22,6 @@ Enable-UMService [-Identity] <UMServerIdParameter> [-Confirm] [-DomainController
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Enable-UMService cmdlet sets the status of an Exchange server running the Unified Messaging server role. A UM server has a logical status variable controlled using the enable and disable cmdlets. A UM server won't process any new calls unless it's in the enabled state. With the status variable, you can start or stop call processing on a UM server so the UM server can be brought online or taken offline in a controlled way.
-
-After this task is completed, the UM server is available to answer incoming calls.
-
-This cmdlet only is available for Exchange 2007 and Exchange 2010 servers running the Unified Messaging server role, and it's not available on Exchange 2013 Client Access and Mailbox servers.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Server (UM service)" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016
-
 The Enable-UMService cmdlet sets the status of an Exchange server running the Unified Messaging server role. A UM server has a logical status variable controlled using the enable and disable cmdlets. A UM server won't process any new calls unless it's in the enabled state. With the status variable, you can start or stop call processing on a UM server so the UM server can be brought online or taken offline in a controlled way.
 
 After this task is completed, the UM server is available to answer incoming calls.
@@ -52,14 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Enable-UMService -Identity MyUMServer
-```
-
-This example enables Unified Messaging on the UM server MyUMServer.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Enable-UMService -Identity MyUMServer
 ```
@@ -69,14 +40,6 @@ This example enables Unified Messaging on the UM server MyUMServer.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identifier for the UM server being enabled. This is the directory object ID for the Mailbox server.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Exchange 2010 UM server that you want to enable. You can use any value that uniquely identifies the UM server. For example:
 
 - Name
@@ -86,8 +49,6 @@ The Identity parameter specifies the Exchange 2010 UM server that you want to en
 - ExchangeLegacyDN
 
 - GUID
-
-
 
 ```yaml
 Type: UMServerIdParameter
@@ -172,4 +133,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/88f457c7-92bc-4f59-b0cf-c0b79f46a7a1.aspx)
-

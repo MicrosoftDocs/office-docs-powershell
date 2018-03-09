@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-DatabaseAvailabilityGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-DatabaseAvailabilityGroup cmdlet to delete a database availability group (DAG). A DAG is a set of Mailbox servers that provide automatic database-level recovery from a database, server, or network failure. Before you can delete a DAG, you must first remove all servers from the DAG.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-DatabaseAvailabilityGroup cmdlet to delete an empty database availability group (DAG). Before you can delete a DAG, you must first remove all Mailbox servers from the DAG.
@@ -26,35 +20,11 @@ Remove-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParamet
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-DatabaseAvailabilityGroup -Identity DAG1
-```
-
-This example, deletes a DAG named DAG1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-DatabaseAvailabilityGroup -Identity DAG1
-```
-
-This example, deletes the DAG DAG1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-DatabaseAvailabilityGroup -Identity DAG1
 ```
@@ -149,4 +119,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1cca1888-c27b-45af-8db7-dd182bcdf32e.aspx)
-

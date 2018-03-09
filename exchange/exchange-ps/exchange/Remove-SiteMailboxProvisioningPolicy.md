@@ -6,16 +6,6 @@ schema: 2.0.0
 # Remove-SiteMailboxProvisioningPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-SiteMailboxProvisioningPolicy cmdlet to delete a site mailbox provisioning policy.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-SiteMailboxProvisioningPolicy cmdlet to remove site mailbox provisioning policies.
@@ -30,31 +20,13 @@ Remove-SiteMailboxProvisioningPolicy [-Identity] <MailboxPolicyIdParameter> [-Co
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You can't delete the default site mailbox provisioning policy. You need to create a default policy by using the New-SiteMailboxProvisioningPolicy cmdlet or assign another provisioning policy as the default by using the Set-SiteMailboxProvisioningPolicy cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Site mailbox provisioning policy" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
-You can't delete the default site mailbox provisioning policy. You need to create a new default policy by using the New-SiteMailboxProvisioningPolicy cmdlet, or designate an existing policy as the default policy by using the Set-SiteMailboxProvisioningPolicy cmdlet.
+You can't delete the default site mailbox provisioning policy. You need to create a new default policy by using the New-SiteMailboxProvisioningPolicy cmdlet or designate an existing policy as the default policy by using the Set-SiteMailboxProvisioningPolicy cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-SiteMailboxProvisioningPolicy -Identity Default
-```
-
-This example deletes the site mailbox policy that was created when you installed Microsoft Exchange.
-
-
-You must first create and designate a default policy before you can remove the policy named Default.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-SiteMailboxProvisioningPolicy -Identity Default
 ```
@@ -64,14 +36,6 @@ This example deletes the site mailbox policy named Default that was created when
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the site mailbox provisioning policy that you want to delete.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the site mailbox provisioning policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -79,8 +43,6 @@ The Identity parameter specifies the site mailbox provisioning policy that you w
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -165,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8430cadd-def3-408b-ab1c-c3d8a10f64f7.aspx)
-

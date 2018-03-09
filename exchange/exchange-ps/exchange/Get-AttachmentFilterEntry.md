@@ -6,21 +6,11 @@ schema: 2.0.0
 # get-attachmentfilterentry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-AttachmentFilterEntry cmdlet to view the list of attachment filter entries configured on a computer that has the Edge Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Get-AttachmentFilterEntry cmdlet to view the list of attachment filter entries that are used by the Attachment Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Get-AttachmentFilterEntry cmdlet to view the list of attachment filter entries that are used by the Attachment Filtering agent on Edge Transport servers.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -29,83 +19,27 @@ get-attachmentfilterentry [[-Identity] <String>] [-DomainController <Fqdn>] [<Co
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Attachment Filter agent can block attachments from entering the Microsoft Exchange Server 2010 organization based on the content type or file name of the attachment. The configuration of the Attachment Filter agent determines how attachments are processed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see Set-AttachmentFilterListConfig.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see Set-AttachmentFilterListConfig.
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-AttachmentFilterEntry
 ```
 
 This example returns all attachment filter entries.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-AttachmentFilterEntry
-```
-
-This example returns all attachment filter entries.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-AttachmentFilterEntry
-```
-
-This example returns all attachment filter entries.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-AttachmentFilterEntry -Identity FileName:*.txt
-```
-
-This example returns only the attachment filter entries that filter file names with a .txt extension.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-AttachmentFilterEntry FileName:*.txt
 ```
 
 This example returns only the attachment filter entries that filter file names with a .txt extension.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-AttachmentFilterEntry FileName:*.txt
-```
-
-This example returns only the attachment filter entries that filter file names with a .txt extension.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-AttachmentFilterEntry -Identity ContentType:image/jpeg
-```
-
-This example returns only the attachment filter entries that filter attachments that have the MIME content type image/jpeg.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-AttachmentFilterEntry ContentType:image/jpeg
-```
-
-This example returns only the attachment filter entries that filter attachments that have the MIME content type image/jpeg.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-AttachmentFilterEntry ContentType:image/jpeg
 ```
@@ -133,25 +67,11 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies which attachment filter entry the command retrieves. The Identity parameter accepts values in the format Type:Name, where Type is one of the following values:
-
-- ContentType This value matches the attachment filter entry against the MIME content type.
-
-- FileName This value matches the attachment filter entry against the simple file name.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies which attachment filter entry the command retrieves. The Identity parameter accepts values in the format Type:Name, where Type is one of the following values:
 
 - ContentType: This value matches the attachment filter entry against the MIME content type.
 
 - FileName: This value matches the attachment filter entry against the simple file name.
-
-
 
 ```yaml
 Type: String
@@ -184,4 +104,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c181b910-b2a3-4e68-8a10-7bb3d2b92ddb.aspx)
-

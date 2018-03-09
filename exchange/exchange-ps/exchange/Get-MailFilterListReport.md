@@ -24,21 +24,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailFilterListReport -SelectionTarget TransportRule
-```
-
-This example uses the Get-MailFilterListReport cmdlet to return information about transport rules.
-
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-MailFilterListReport -SelectionTarget TransportRule
-```
-
-This example uses the Get-MailFilterListReport cmdlet to return information about transport rules.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-MailFilterListReport -SelectionTarget TransportRule
 ```
@@ -96,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -SelectionTarget
-The SelectionTarget parameter filters the report information by object type. Valid values for this parameter are: Actions, DlpPolicy, DlpRule, Domain, EventTypes, FindOnPremConnector, or TransportRule.
+The SelectionTarget parameter filters the report information by object type. Valid values for this parameter are: Actions, DlpPolicy, DlpRule, Domain, EventTypes, FindOnPremConnector or TransportRule.
 
 ```yaml
 Type: MultiValuedProperty
@@ -129,4 +115,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e295ac9a-3ecf-405a-b81c-c77e3067126a.aspx)
-

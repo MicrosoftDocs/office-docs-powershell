@@ -6,21 +6,11 @@ schema: 2.0.0
 # remove-addressrewriteentry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-AddressRewriteEntry cmdlet to remove an existing address rewrite entry that's no longer needed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Remove-AddressRewriteEntry cmdlet to remove an existing address rewrite entry that's no longer needed on an Edge Transport server.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Remove-AddressRewriteEntry cmdlet to remove an existing address rewrite entry that's no longer needed on an Edge Transport server.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -30,99 +20,34 @@ remove-addressrewriteentry [-Identity] <AddressRewriteEntryIdParameter> [-Confir
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-With address rewriting in Microsoft Exchange Server 2010, you can modify the addresses of senders and recipients on messages that enter or leave an Exchange 2010 organization. You configure Address Rewriting agents on the Receive connector and Send connector on a computer that has the Edge Transport server role installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address Rewriting agent" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address Rewriting - Edge Transport" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-AddressRewriteEntry "Address rewrite entry for contoso.com"
 ```
 
 This example removes a specific address rewrite entry.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-AddressRewriteEntry "Address rewrite entry for contoso.com"
-```
-
-This example removes a specific address rewrite entry.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-AddressRewriteEntry "Address rewrite entry for contoso.com"
-```
-
-This example removes a specific address rewrite entry.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-AddressRewriteEntry | Where {$_.InternalAddress -like '*contoso.com'} | Remove-AddressRewriteEntry
 ```
 
 This example removes all address rewrite entries that include contoso.com in the domain name. It accomplishes the following:
 
+- Retrieves all address rewrite entries.
 
-Retrieves all address rewrite entries.
+- Filters the result for entries that have contoso.com or its subdomains as the internal address.
 
-Filters the result for entries that have contoso.com or its subdomains as the internal address.
-
-Removes the filtered entries.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-AddressRewriteEntry | Where {$_.InternalAddress -like '*contoso.com'} | Remove-AddressRewriteEntry
-```
-
-This example removes all address rewrite entries that include contoso.com in the domain name. It accomplishes the following:
-
-
-Retrieves all address rewrite entries.
-
-Filters the result for entries that have contoso.com or its subdomains as the internal address.
-
-Removes the filtered entries.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-AddressRewriteEntry | Where {$_.InternalAddress -like '*contoso.com'} | Remove-AddressRewriteEntry
-```
-
-This example removes all address rewrite entries that include contoso.com in the domain name. It accomplishes the following:
-
-
-Retrieves all address rewrite entries.
-
-Filters the result for entries that have contoso.com or its subdomains as the internal address.
-
-Removes the filtered entries.
+- Removes the filtered entries.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the address rewrite entry to be removed. The Identity parameter accepts a GUID or the unique address rewrite name. You can omit the Identity parameter label.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the address rewrite entry you want to remove. The Identity parameter accepts a GUID or the unique address rewrite name. You can omit the Identity parameter label.
-
-
 
 ```yaml
 Type: AddressRewriteEntryIdParameter
@@ -138,25 +63,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -223,4 +134,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a588e988-3f80-42c6-aae0-8efaf2f439b3.aspx)
-

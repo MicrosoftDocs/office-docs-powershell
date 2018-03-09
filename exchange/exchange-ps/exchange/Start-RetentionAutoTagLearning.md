@@ -6,9 +6,13 @@ schema: 2.0.0
 # Start-RetentionAutoTagLearning
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Start-RetentionAutoTagLearning cmdlet to start auto-tagging for a specified mailbox or to cross-validate auto-tagging results for the mailbox.
 
 Messaging records management (MRM) must be configured before the Start-RetentionAutoTagLearning cmdlet can be used. For more information, see Understanding Retention Tags and Retention Policies.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -25,25 +29,25 @@ Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-Clear] [-Confi
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Train
 ```
 
 This example sets user Joe Healy's mailbox to train.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -CrossValidate -NumberOfSegments 15
 ```
 
 This example sets user Joe Healy's mailbox to cross-validate and sets the number of segments for cross-validation to 15.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Clear
 ```

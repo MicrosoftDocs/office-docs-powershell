@@ -6,20 +6,6 @@ schema: 2.0.0
 # dismount-Database
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Dismount-Database cmdlet to dismount a database on a computer running Microsoft Exchange Server 2010 that has the Mailbox server role installed. You can run this command only if the Microsoft Exchange Information Store service is running.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Dismount-Database cmdlet to dismount a database on a computer running Microsoft Exchange Server 2013 that has the Mailbox server role installed. You can run this command only if the Microsoft Exchange Information Store service is running.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Dismount-Database cmdlet to dismount databases. You can run this command only if the Microsoft Exchange Information Store service is running.
@@ -34,61 +20,22 @@ dismount-Database [-Identity] <DatabaseIdParameter> [-Confirm] [-DomainControlle
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox database" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox databases" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Dismount-Database -Identity MyDatabase
 ```
 
 This example dismounts the database MyDatabase.
-
-
-Regardless of where you run this cmdlet, it operates against the server hosting the active copy of the database.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Dismount-Database -Identity MyDatabase
-```
-
-This example dismounts the database MyDatabase.
-
-
-Regardless of where you run this cmdlet, it operates against the server hosting the active copy of the database.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Dismount-Database -Identity MyDatabase
-```
-
-This example dismounts the database MyDatabase.
-
 
 Regardless of where you run this cmdlet, it operates against the server hosting the active copy of the database.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the GUID or distinguished name (DN) that represents a specific database.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the database that you want to dismount. You can use any value that uniquely identifies the database. For example:
 
 - Name
@@ -96,8 +43,6 @@ The Identity parameter specifies the database that you want to dismount. You can
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -182,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e261955b-a9f0-4d87-bf56-f9e67ea5ba3f.aspx)
-

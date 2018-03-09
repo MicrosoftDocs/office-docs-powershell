@@ -26,7 +26,7 @@ This cmdlet is available in the Mailbox Search role. By default, this role is as
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Set-ComplianceSearchAction -Identity "Project X_Export" -ChangeExportKey
 ```
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

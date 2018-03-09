@@ -39,7 +39,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-DlpComplianceRuleV2 -Name "SocialSecurityRule" -Policy "USFinancialChecks" -ContentContainsSensitiveInformation @{Name="U.S. Social Security Number (SSN)"} -BlockAccess $True
 ```
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 ### -ContentPropertyContainsWords
 The ContentPropertyContainsWords parameter specifies a condition for the DLP rule that's based on a property match in content. The rule is applied to content that contains the specified property.
 
-This parameter accepts values in the format: "\<Property1\>:\<Value1\>,\<Value2\>","\<Property2\>:\<Value3\>,\<Value4\>"....
+This parameter accepts values in the format: "\<Property1\>:\<Value1\>,\<Value2\>","\<Property2\>:\<Value3\>,\<Value4\>",..."\<PropertyN\>:\<ValueN\>,\<ValueN\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -721,7 +721,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

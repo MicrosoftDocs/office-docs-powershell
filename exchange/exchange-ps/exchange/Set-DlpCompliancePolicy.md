@@ -40,14 +40,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Set-DlpCompliancePolicy -Identity "Main PII" -AddSharePointLocation "https://my.url1","https://my.url2" -AddOneDriveLocation "https://my.url3","https://my.url4"
 ```
 
 This example adds the specified URLs to the SharePoint Online and OneDrive for Business locations for the DLP policy named Main PII without affecting the existing URL values.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Set-DlpCompliancePolicy -Identity MainPII -Mode Disable
 ```
@@ -383,7 +383,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

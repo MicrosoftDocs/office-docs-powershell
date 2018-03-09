@@ -25,28 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-HistoricalSearch
 ```
 
 The example returns a summary list of all historical searches that have been performed in the last ten days.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-HistoricalSearch
-```
-
-The example returns a summary list of all historical searches that have been performed in the last ten days.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-HistoricalSearch -JobId f9c66f83-b5c8-4a0c-91f4-a38376f74182 | Format-List
-```
-
-This example returns detailed information about the historical search that's in progress that has the identity value f9c66f83-b5c8-4a0c-91f4-a38376f74182.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-HistoricalSearch -JobId f9c66f83-b5c8-4a0c-91f4-a38376f74182 | Format-List
 ```
@@ -89,4 +75,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/70f2ec73-2733-4f87-ac89-1665d575a4dc.aspx)
-

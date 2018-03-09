@@ -34,14 +34,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-DeviceConfigurationRule | Format-List Name,Disabled,Priority
 ```
 
 This example shows summary information for all mobile device configuration rules.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-DeviceConfigurationRule -Identity "Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}"
 ```

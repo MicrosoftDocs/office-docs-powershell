@@ -6,20 +6,6 @@ schema: 2.0.0
 # Disable-CmdletExtensionAgent
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-CmdletExtensionAgent cmdlet on a server running Microsoft Exchange Server 2010 to disable an existing cmdlet extension agent.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Disable-CmdletExtensionAgent cmdlet on a server running Microsoft Exchange Server 2013 to disable an existing cmdlet extension agent.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Disable-CmdletExtensionAgent cmdlet to disable existing cmdlet extension agents.
@@ -34,20 +20,6 @@ Disable-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter> [-Con
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Run the Disable-CmdletExtensionAgent cmdlet on an Exchange 2010 server to disable an existing cmdlet extension agent. When you disable a cmdlet extension agent, the agent is disabled for the entire organization. When an agent is disabled, it's not made available to cmdlets. Cmdlets can no longer use the agent to perform additional operations.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "cmdlet extension agents" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-Run the Disable-CmdletExtensionAgent cmdlet on an Exchange 2013 server to disable an existing cmdlet extension agent. When you disable a cmdlet extension agent, the agent is disabled for the entire organization. When an agent is disabled, it's not made available to cmdlets. Cmdlets can no longer use the agent to perform additional operations.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Cmdlet extension agents" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or third-party products can't use cmdlet extension agents.
 
 When you disable a cmdlet extension agent, the agent is disabled for the entire organization. When an agent is disabled, it's not made available to cmdlets. Cmdlets can no longer use the agent to perform additional operations.
@@ -56,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-CmdletExtensionAgent "Scripting Agent"
-```
-
-This example disables a specific cmdlet extension agent.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-CmdletExtensionAgent "Scripting Agent"
-```
-
-This example disables a specific cmdlet extension agent.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Disable-CmdletExtensionAgent "Scripting Agent"
 ```
@@ -80,20 +38,6 @@ This example disables the cmdlet extension agent named Scripting Agent.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the name of the cmdlet extension agent to disable. If the name contains spaces, enclose the name in quotation marks.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the name of the cmdlet extension agent to disable. If the name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the enabled cmdlet extension agent that you want to disable. You can use any value that uniquely identifies the agent. For example:
 
 - Name
@@ -101,8 +45,6 @@ The Identity parameter specifies the enabled cmdlet extension agent that you wan
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: CmdletExtensionAgentIdParameter
@@ -118,25 +60,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -201,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8e4b3691-b8e8-4299-97a3-027b9503966a.aspx)
-

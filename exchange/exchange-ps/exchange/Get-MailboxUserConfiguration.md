@@ -24,28 +24,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-MailboxUserConfiguration -Mailbox laura@contoso.com -Identity Configuration\* | Format-Table -Auto Identity
 ```
 
 This example returns a summary list of all user configuration items in the Configuration folder in the mailbox laura@contoso.com.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailboxUserConfiguration -Mailbox laura@contoso.com -Identity Configuration\* | Format-Table -Auto Identity
-```
-
-This example returns a summary list of all user configuration items in the Configuration folder in the mailbox laura@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxUserConfiguration -Mailbox julia@contoso.com -Identity Configuration\IPM.Configuration.Aggregated.OwaUserConfiguration
-```
-
-This example returns detailed information for the specified user configuration item in the mailbox julia@contoso.com.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MailboxUserConfiguration -Mailbox julia@contoso.com -Identity Configuration\IPM.Configuration.Aggregated.OwaUserConfiguration
 ```
@@ -182,4 +168,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d54dcb7d-e989-463f-aaf0-950ba3ed0c65.aspx)
-

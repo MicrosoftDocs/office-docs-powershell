@@ -29,42 +29,20 @@ Get-PublicFolderMoveRequest [[-Identity] <PublicFolderMoveRequestIdParameter>] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Public folder move requests are used to move public folders between public folder mailboxes. After the move request is complete, you need to update the hierarchy using the Update-PublicFolderMailbox cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 Public folder move requests are used to move public folders between public folder mailboxes. After the move request is complete, you need to update the hierarchy using the Update-PublicFolderMailbox cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-PublicFolderMoveRequest -Identity \PublicFolderMove
 ```
 
 This example returns the status of an in-progress public folder move request with the identity \\PublicFolderMove, which is the default name assigned to public folder moves.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMoveRequest -Identity \PublicFolderMove
-```
-
-This example returns the status of an in-progress public folder move request with the identity \\PublicFolderMove, which is the default name assigned to public folder moves.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolderMoveRequest -RequestQueue MBD01
-```
-
-This example returns the status of in-progress and queued requests that are on the source database MBD01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-PublicFolderMoveRequest -RequestQueue MBD01
 ```
@@ -230,9 +208,9 @@ The Status parameter filters the results based on status. You can use the follow
 
 - InProgress
 
-- None
-
 - Queued
+
+- Retrying
 
 - Suspended
 
@@ -289,4 +267,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2bcadd33-e520-498b-8551-9ef38d6d5f54.aspx)
-

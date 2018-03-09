@@ -6,15 +6,11 @@ schema: 2.0.0
 # Get-ContentFilterPhrase
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ContentFilterPhrase cmdlet to view one or all custom words that the Content Filter agent processes.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ContentFilterPhrase cmdlet to view one or all custom words that the Content Filter agent processes.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -31,77 +27,25 @@ Get-ContentFilterPhrase [-DomainController <Fqdn>] [-Phrase <ContentFilterPhrase
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-ContentFilterPhrase
 ```
 
 This example returns all custom words stored on the computer where the command is being run.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ContentFilterPhrase
-```
-
-This example returns all custom words stored on the computer where the command is being run.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ContentFilterPhrase
-```
-
-This example returns all custom words stored on the computer where the command is being run.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-ContentFilterPhrase -Phrase "Free credit report"
 ```
 
 This example returns a specific custom word specified by the Phrase parameter. In this example, the custom word is the phrase Free credit report.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ContentFilterPhrase -Phrase "Free credit report"
-```
-
-This example returns a specific custom word specified by the Phrase parameter. In this example, the custom word is the phrase Free credit report.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ContentFilterPhrase -Phrase "Free credit report"
-```
-
-This example returns a specific custom word specified by the Phrase parameter. In this example, the custom word is the phrase Free credit report.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-ContentFilterPhrase | Where {$_.Phrase -like '*free offer*'}
-```
-
-This example returns all custom words and phrases that contain the words free offer.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-ContentFilterPhrase | Where {$_.Phrase -like '*free offer*'}
-```
-
-This example returns all custom words and phrases that contain the words free offer.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-ContentFilterPhrase | Where {$_.Phrase -like '*free offer*'}
 ```
@@ -182,4 +126,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/22af0f6c-00f7-4fe5-9ff8-c63305adb9bc.aspx)
-

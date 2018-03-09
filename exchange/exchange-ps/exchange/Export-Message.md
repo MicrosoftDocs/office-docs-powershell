@@ -6,15 +6,11 @@ schema: 2.0.0
 # Export-Message
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Export-Message cmdlet to copy a message from a queue on a computer that has the Hub Transport server role or the Edge Transport server role installed to a specified file path in a Microsoft Exchange Server 2010 organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Export-Message cmdlet to copy a message from a queue on a Mailbox server or an Edge Transport server to a specified file path in your organization.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -23,113 +19,36 @@ Export-Message [-Identity] <MessageIdentity> [-Confirm] [-WhatIf] [<CommonParame
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Export-Message cmdlet copies messages from the Delivery queue, the Unreachable queue, or the poison message queue on a Hub Transport server or an Edge Transport server to a specified file path. Before you export a message, you must first suspend the message. Messages in the poison message queue are already suspended. You can use the Export-Message cmdlet to copy messages to the Replay directory of another transport server for delivery.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Queues" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Export-Message cmdlet copies messages from the Delivery queue, the Unreachable queue, or the poison message queue on Mailbox server or an Edge Transport server to a specified file path. Before you export a message, you must first suspend the message. Messages in the poison message queue are already suspended. You can use the Export-Message cmdlet to copy messages to the Replay directory of another Mailbox server for delivery.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Queues" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Export-Message cmdlet copies messages from the Delivery queue, the Unreachable queue, or the poison message queue on Mailbox server or an Edge Transport server to a specified file path. Before you export a message, you must first suspend the message. Messages in the poison message queue are already suspended. You can use the Export-Message cmdlet to copy messages to the Replay directory of another Mailbox server for delivery.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Export-Message -Identity ExchSrv1\contoso.com\1234 | AssembleMessage -Path "c:\exportfolder\filename.eml"
-```
-
-This example exports a single message to the specified file path. Because the Export-Message cmdlet returns a binary object, you must use the AssembleMessage filter to be able to save the message content into a specified location.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Export-Message ExchSrv1\contoso.com\1234 | AssembleMessage -Path "c:\exportfolder\filename.eml"
 ```
 
 This example exports a single message to the specified file path. Because the Export-Message cmdlet returns a binary object, you must use the AssembleMessage filter to be able to save the message content into a specified location.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Export-Message ExchSrv1\contoso.com\1234 | AssembleMessage -Path "c:\exportfolder\filename.eml"
-```
-
-This example exports a single message to the specified file path. Because the Export-Message cmdlet returns a binary object, you must use the AssembleMessage filter to be able to save the message content into a specified location.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-Message -Queue "Server1\contoso.com" | ForEach-Object {$Temp="C:\ExportFolder\"+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
-```
-
-This example retrieves all messages from the specified queue. The query results are then piped to the Export-Message command, and all the messages are copied to individual .eml files. The Internet Message IDs of each message are used as the file names. To accomplish this, the command does the following:
-
-
-Retrieves all messages in a specific queue using the Get-Message cmdlet.
-
-The result is pipelined into the ForEach-Object cmdlet which executes the following actions for each message:
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-Message -Queue "Server1\contoso.com" -ResultSize Unlimited | ForEach-Object {Suspend-Message $_.Identity -Confirm:$False; $Temp="C:\ExportFolder\"+$_.InternetMessageID+".eml"; $Temp=$Temp.Replace("<","_"); $Temp=$Temp.Replace(">","_"); Export-Message $_.Identity | AssembleMessage -Path $Temp}
 ```
 
 This example retrieves all messages from the specified queue. The query results are then piped to the Export-Message command, and all the messages are copied to individual .eml files. The Internet Message IDs of each message are used as the file names. To accomplish this, the command does the following:
 
+- Retrieves all messages in a specific queue using the Get-Message cmdlet.
 
-Retrieves all messages in a specific queue using the Get-Message cmdlet.
+- The result is pipelined into the ForEach-Object cmdlet, which prepares a file name including full path using the temporary variable $Temp that consists of the Internet Message ID with .eml extension. The Internet Message ID field contains angled brackets ("\>" and "\<") which need to be removed as they are invalid file names. This is done using the Replace method of the temporary variable.
 
-The result is pipelined into the ForEach-Object cmdlet, which prepares a file name including full path using the temporary variable $Temp that consists of the Internet Message ID with .eml extension. The Internet Message ID field contains angled brackets ("\>" and "\<") which need to be removed as they are invalid file names. This is done using the Replace method of the temporary variable.
-
-The ForEach-Object cmdlet also exports the message using the file name prepared.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-Message -Queue "Server1\contoso.com" -ResultSize Unlimited | ForEach-Object {Suspend-Message $_.Identity -Confirm:$False; $Temp="C:\ExportFolder\"+$_.InternetMessageID+".eml"; $Temp=$Temp.Replace("<","_"); $Temp=$Temp.Replace(">","_"); Export-Message $_.Identity | AssembleMessage -Path $Temp}
-```
-
-This example retrieves all messages from the specified queue. The query results are then piped to the Export-Message command, and all the messages are copied to individual .eml files. The Internet Message IDs of each message are used as the file names. To accomplish this, the command does the following:
-
-
-Retrieves all messages in a specific queue using the Get-Message cmdlet.
-
-The result is pipelined into the ForEach-Object cmdlet, which prepares a file name including full path using the temporary variable $Temp that consists of the Internet Message ID with .eml extension. The Internet Message ID field contains angled brackets ("\>" and "\<") which need to be removed as they are invalid file names. This is done using the Replace method of the temporary variable.
-
-The ForEach-Object cmdlet also exports the message using the file name prepared.
+- The ForEach-Object cmdlet also exports the message using the file name prepared.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the MessageIdentity integer. This is an integer that represents a particular message and an optional server and queue identity. The syntax for this parameter is as follows:
-
-- Server\\QueueIdentity\\MessageIdentity
-
-- QueueIdentity\\MessageIdentity
-
-- You must include QueueIdentity when you use the Export-Message command. If no server name is used, the task runs on the local server.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see the "Message identity" section in Use the Exchange Management Shell to manage queues.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see the "Message identity" section in Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
-
-
 
 ```yaml
 Type: MessageIdentity
@@ -198,4 +117,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/34036966-9014-4096-9e2d-82a01889dbe4.aspx)
-

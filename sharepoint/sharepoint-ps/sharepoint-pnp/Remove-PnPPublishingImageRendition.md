@@ -21,7 +21,7 @@ Remove-PnPPublishingImageRendition -Identity <ImageRenditionPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPPublishingImageRendition -Name "MyImageRendition" -Width 800 -Height 600
+Remove-PnPPublishingImageRendition -Name "MyImageRendition" -Width 800 -Height 600
 ```
 
 
@@ -53,7 +53,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

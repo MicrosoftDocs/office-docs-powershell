@@ -437,7 +437,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
@@ -755,7 +755,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The AttachmentContainsWords parameter specifies a condition that looks for words in message attachments. Only supported attachment types are checked.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 ```yaml
 Type: Word[]
@@ -803,7 +803,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The AttachmentMatchesPatterns parameter specifies a condition that looks for text patterns in the content of message attachments by using regular expressions. Only supported attachment types are checked.
 
-You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 Only the first 150 kilobytes (KB) of the attachment is scanned when trying to match a text pattern.
 
@@ -825,7 +825,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentNameMatchesPatterns parameter specifies a condition that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The AttachmentNameMatchesPatterns parameter specifies a condition that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 ```yaml
 Type: Pattern[]
@@ -1367,7 +1367,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
@@ -1561,7 +1561,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfAttachmentContainsWords parameter specifies an exception that looks for words in message attachments. Only supported attachment types are checked.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 ```yaml
 Type: Word[]
@@ -1609,7 +1609,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfAttachmentMatchesPatterns parameter specifies an exception that looks for text patterns in the content of message attachments by using regular expressions. Only supported attachment types are checked.
 
-You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 Only the first 150 KB of the attachment is scanned when trying to match a text pattern.
 
@@ -1631,7 +1631,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfAttachmentNameMatchesPatterns parameter specifies an exception that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The ExceptIfAttachmentNameMatchesPatterns parameter specifies an exception that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 ```yaml
 Type: Pattern[]
@@ -1823,7 +1823,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfFromAddressMatchesPatterns parameter specifies an exception that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The ExceptIfFromAddressMatchesPatterns parameter specifies an exception that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -1981,7 +1981,7 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 
 The ExceptIfHeaderContainsWords parameter specifies an exception that looks for words in a header field.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 You specify the header field to search by using the ExceptIfHeaderContainsMessageHeader parameter.
 
@@ -2023,7 +2023,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfHeaderMatchesPatterns parameter specifies an exception that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The ExceptIfHeaderMatchesPatterns parameter specifies an exception that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 You specify the header field to search by using the ExceptIfHeaderMatchesMessageHeader parameter.
 
@@ -2207,7 +2207,7 @@ You can check against any of the following Active Directory attributes:
 
 - ZipCode
 
-This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4.... Don't use words with leading or trailing spaces.
+This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4...". Don't use words with leading or trailing spaces.
 
 For example, "City:San Francisco,Palo Alto" or "City:San Francisco,Palo Alto","Department:Sales,Finance".
 
@@ -2331,7 +2331,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The ExceptIfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -2454,7 +2454,7 @@ You can check against any of the following Active Directory attributes:
 
 - ZipCode
 
-This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4.... Don't use words with leading or trailing spaces.
+This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4...". Don't use words with leading or trailing spaces.
 
 For example, "City:San Francisco,Palo Alto" or "City:San Francisco,Palo Alto","Department:Sales,Finance".
 
@@ -2693,7 +2693,7 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 
 The ExceptIfSubjectContainsWords parameter specifies an exception that looks for words in the Subject field of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 ```yaml
 Type: Word[]
@@ -2713,7 +2713,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfSubjectMatchesPatterns parameter specifies an exception that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The ExceptIfSubjectMatchesPatterns parameter specifies an exception that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 ```yaml
 Type: Pattern[]
@@ -2735,7 +2735,7 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 
 The ExceptIfSubjectOrBodyContainsWords parameter specifies an exception that looks for words in the Subject field or body of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 ```yaml
 Type: Word[]
@@ -2755,7 +2755,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfSubjectOrBodyMatchesPatterns parameter specifies an exception that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The ExceptIfSubjectOrBodyMatchesPatterns parameter specifies an exception that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 ```yaml
 Type: Pattern[]
@@ -2863,7 +2863,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The FromAddressMatchesPatterns parameter specifies a condition that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The FromAddressMatchesPatterns parameter specifies a condition that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -3021,7 +3021,7 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The HeaderContainsWords parameter specifies a condition that looks for words in a header field.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 You specify the header field to search by using the HeaderContainsMessageHeader parameter.
 
@@ -3063,7 +3063,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The HeaderMatchesPatterns parameter specifies a condition that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The HeaderMatchesPatterns parameter specifies a condition that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 You specify the header field to search by using the HeaderMatchesMessageHeader parameter.
 
@@ -3417,7 +3417,7 @@ You can check against any of the following Active Directory attributes:
 
 - ZipCode
 
-This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4.... Don't use words with leading or trailing spaces.
+This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4...". Don't use words with leading or trailing spaces.
 
 For example, "City:San Francisco,Palo Alto" or "City:San Francisco,Palo Alto","Department:Sales,Finance".
 
@@ -3541,7 +3541,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The RecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The RecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -3770,7 +3770,7 @@ You can check against any of the following Active Directory attributes:
 
 - ZipCode
 
-This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4.... Don't use words with leading or trailing spaces.
+This parameter uses the syntax: "AttributeName:Word". To specify multiple attributes, or multiple words for the same attribute, use the following syntax: "AttributeName1:Word1,Phrase with spaces,word2...","AttributeName2:Word3,Phrase with spaces,word4...". Don't use words with leading or trailing spaces.
 
 For example, "City:San Francisco,Palo Alto" or "City:San Francisco,Palo Alto","Department:Sales,Finance".
 
@@ -4119,7 +4119,7 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The SubjectContainsWords parameter specifies a condition that looks for words in the Subject field of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 ```yaml
 Type: Word[]
@@ -4139,7 +4139,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The SubjectMatchesPatterns parameter specifies a condition that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The SubjectMatchesPatterns parameter specifies a condition that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 ```yaml
 Type: Pattern[]
@@ -4161,7 +4161,7 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The SubjectOrBodyContainsWords parameter specifies a condition that looks for words in the Subject field or body of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 ```yaml
 Type: Word[]
@@ -4181,7 +4181,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The SubjectOrBodyMatchesPatterns parameter specifies a condition that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",....
+The SubjectOrBodyMatchesPatterns parameter specifies a condition that looks for text patterns in the Subject field or body of messages. You can specify multiple text patterns by using the following syntax: "\<regular expression1\>","\<regular expression2\>",..."\<regular expressionN\>".
 
 ```yaml
 Type: Pattern[]
@@ -4409,7 +4409,7 @@ The AttachmentPropertyContainsWords parameter specifies a condition that looks f
 
 - Protected Health Information
 
-This parameter uses the syntax: "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2...","PropertyName2:Word3,Phrase with spaces,word4.... Don't use leading or trailing spaces.
+The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2,...","PropertyName2:Word3,Phrase with spaces,word4,...". Don't use leading or trailing spaces.
 
 When you specify multiple properties, or multiple values for the same property, the or operator is used.
 
@@ -4433,7 +4433,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The ContentCharacterSetContainsWords parameter specifies a condition that looks for character set names in messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 ```yaml
 Type: Word[]
@@ -4593,7 +4593,7 @@ The ExceptIfAttachmentPropertyContainsWords parameter specifies an exception tha
 
 - Protected Health Information
 
-The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2...","PropertyName2:Word3,Phrase with spaces,word4.... Don't use values with leading or trailing spaces.
+The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2,...","PropertyName2:Word3,Phrase with spaces,word4,...". Don't use values with leading or trailing spaces.
 
 When you specify multiple properties, or multiple values for the same property, the or operator is used.
 
@@ -4617,7 +4617,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfContentCharacterSetContainsWords parameter specifies an exception that looks for character set names in messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,.... Don't use leading or trailing spaces.
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
 
 ```yaml
 Type: Word[]
@@ -4663,7 +4663,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfMessageContainsDataClassifications parameter specifies an exception that looks for sensitive information types in the body of messages, and in any attachments.
 
-This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},.... For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
+This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
 
 For a list of sensitive information types available, see Sensitive information types in Exchange 2016.
 
@@ -4987,7 +4987,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The MessageContainsDataClassifications parameter specifies a condition that looks for sensitive information types in the body of messages, and in any attachments.
 
-This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},.... For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
+This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
 
 For a list of sensitive information types available, see Sensitive information types in Exchange 2016.
 

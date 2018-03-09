@@ -6,9 +6,13 @@ schema: 2.0.0
 # New-ManagedFolder
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the New-ManagedFolder cmdlet to create a managed folder object for messaging records management (MRM).
 
 This command doesn't accept pipelined input.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -44,25 +48,25 @@ The New-ManagedFolder cmdlet creates a new managed folder in Active Directory. A
 
 By default, managed custom folders are created with this cmdlet. However, you can also create additional copies of managed default folders using the DefaultFolderType parameter to specify which type of default folder to create (for example, an additional Inbox folder). When you create multiple copies of a managed default folder, you can assign different content settings to each one. For example, you could have two Inbox folders, one named InboxSixMonths and another named InboxOneYear. Then, you could assign a retention time of six months to the first folder and one year to the second folder with the New-ManagedContentSettings cmdlet (or using the New Managed Content Settings wizard in the Exchange Management Console). You must assign a unique name (using the Name parameter) to each of the managed default folders that you create. Users, however, always see the unaltered default folder name. In the example, whether users are assigned an InboxSixMonths folder or an InboxOneYear folder, the Inbox that they see in their mailbox is labeled Inbox. Although the folder names that users see in their mailboxes can be reassigned for managed custom folders (using the Set-ManagedFolder command FolderName parameter), the folder names seen by users for managed default folders can't be changed.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-ManagedFolder -Name NewFolder -FolderName "New Folder" -StorageQuota "1 MB"
 ```
 
 This example creates a managed folder that has a maximum capacity of 1 MB.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-ManagedFolder -Name MyFolder -FolderName "My Folder" -LocalizedFolderName Spanish:"Mi Carpeta", French:"Mon Dossier" -Comment "My comment" -LocalizedComment Spanish:"Mi comentario", French:"Mon annotation"
 ```
 
 This example creates a managed folder that has a default folder name and comment in English, localized folder name in Spanish and French, and localized comment in Spanish and French.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 New-ManagedFolder -Name AnotherInbox -DefaultFolderType Inbox
 ```

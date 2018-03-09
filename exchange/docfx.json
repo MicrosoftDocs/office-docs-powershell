@@ -53,8 +53,9 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "kenwith",
-      "ms.author" : "kenwith",
+      "author" : "chrisda",
+      "ms.author" : "chrisda",
+      "manager" : "serdars",
       "ms.date" : "09/25/2017",
       "ms.topic" : "reference",
       "ms.service" : "exchange-powershell",

@@ -36,14 +36,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-DataRetentionReport -StartDate 04/01/2017 -EndDate 04/30/2017
-```
-
-This example lists the data detections for April, 2017.
-
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-DataRetentionReport -StartDate 04/01/2017 -EndDate 04/30/2017
 ```
@@ -154,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/69b3a80d-17ae-4d2c-9d71-5833a9013b17.aspx)
-

@@ -35,52 +35,18 @@ Get-MigrationUser [[-Identity] <MigrationUserIdParameter>] [-DomainController <F
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-MigrationUser -Identity TonySmith@contoso.com
 ```
 
 This example retrieves status information about the recently migrated user, Tony Smith.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationUser -Identity TonySmith@contoso.com
-```
-
-This example retrieves status information about the recently migrated user, Tony Smith.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MigrationUser -Identity TonySmith@contoso.com
-```
-
-This example retrieves status information about the recently migrated user, Tony Smith.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationUser -MailboxGuid b6a6795c-a010-4f67-aaaa-da372d56fcb9 | Get-MigrationUserStatistics
-```
-
-This example retrieves more detailed information about any ongoing migration for the user with the specified mailbox GUID.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationUser -MailboxGuid b6a6795c-a010-4f67-aaaa-da372d56fcb9 | Get-MigrationUserStatistics
-```
-
-This example retrieves more detailed information about any ongoing migration for the user with the specified mailbox GUID.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MigrationUser -MailboxGuid b6a6795c-a010-4f67-aaaa-da372d56fcb9 | Get-MigrationUserStatistics
 ```
@@ -156,17 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-!!! Exchange Server 2013
-
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all users that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Unlimited
@@ -299,4 +255,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ca5cbd36-fde3-41f4-8ddf-0b7c4d71fd31.aspx)
-

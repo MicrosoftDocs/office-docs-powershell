@@ -19,52 +19,18 @@ Get-DlpPolicy [[-Identity] <DlpPolicyIdParameter>] [-DomainController <Fqdn>] [<
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-DlpPolicy
 ```
 
 This example returns a summary list of all DLP policies.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-DlpPolicy
-```
-
-This example returns a summary list of all DLP policies.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-DlpPolicy
-```
-
-This example returns a summary list of all DLP policies.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-DlpPolicy "Employee Numbers" | Format-List
-```
-
-This example returns detailed information about the DLP policy named Employee Numbers. The command is piped to the Format-List cmdlet to display the detailed configuration of the specified DLP policy.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-DlpPolicy "Employee Numbers" | Format-List
-```
-
-This example returns detailed information about the DLP policy named Employee Numbers. The command is piped to the Format-List cmdlet to display the detailed configuration of the specified DLP policy.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-DlpPolicy "Employee Numbers" | Format-List
 ```
@@ -92,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the DLP policy you want to remove. You can use any value that uniquely identifies the DLP policy. For example, you can specify the name, GUID, or distinguished name (DN) of the DLP policy.
+The Identity parameter specifies the DLP policy you want to remove. You can use any value that uniquely identifies the DLP policy. For example, you can specify the name, GUID or distinguished name (DN) of the DLP policy.
 
 ```yaml
 Type: DlpPolicyIdParameter
@@ -125,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cfb850c5-efb2-4fb5-a5c3-3fb6aba11008.aspx)
-

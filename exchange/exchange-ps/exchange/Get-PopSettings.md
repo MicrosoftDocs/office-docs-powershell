@@ -6,23 +6,9 @@ schema: 2.0.0
 # Get-PopSettings
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-POPSettings cmdlet to display the properties of a single server running Microsoft Exchange Server 2010 that has the Client Access server role installed and is running the POP3 service.
-
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-POPSettings cmdlet to display the properties of a single server running Microsoft Exchange Server 2013 that has the Client Access server role installed and is running the POP3 service.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-POPSettings cmdlet to view the configuration of the Microsoft Exchange POP3 service. This service exists on Exchange servers that have the Client Access server role installed, and is used by POP3 clients to connect to Exchange.
+Use the Get-POPSettings cmdlet to view the configuration of the Microsoft Exchange POP3 service. This service exists on Exchange servers that have the Client Access server role installed and is used by POP3 clients to connect to Exchange.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -33,46 +19,18 @@ Get-PopSettings [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<Commo
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-With the Get-POPSettings cmdlet, you can view the settings for the POP3 service running on an Exchange Client Access server. Information can only be returned about servers located in the Exchange organization from which the cmdlet is being run.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "POP3 settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-With the Get-POPSettings cmdlet, you can view the settings for the POP3 service running on an Exchange Client Access server. Information can only be returned about servers located in the Exchange organization from which the cmdlet is being run.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "POP3 settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-POPSettings -Server CAS01
-```
-
-This example displays the parameters and values for the Client Access server CAS01 running the POP3 service.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-POPSettings -Server CAS01
-```
-
-This example displays the parameters and values for the Client Access server CAS01 running the POP3 service.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-POPSettings
 ```
 
 This example returns a summary list of the configuration of the Microsoft Exchange POP3 service on the local server.
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-POPSettings -Server MBX01 | Format-List
 ```
@@ -98,14 +56,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Server parameter specifies whether the command returns the properties of an individual Client Access server in your organization for which you're viewing POP3 settings.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -117,8 +67,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -151,4 +99,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/30bd001f-d923-4936-a997-f005a392302e.aspx)
-

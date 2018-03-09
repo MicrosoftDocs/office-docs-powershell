@@ -6,12 +6,6 @@ schema: 2.0.0
 # Restore-DetailsTemplate
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Restore-DetailsTemplate cmdlet to restore the specified template to its default state.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Restore-DetailsTemplate cmdlet to restore the specified template to its default state.
@@ -26,41 +20,13 @@ Restore-DetailsTemplate [-Identity] <DetailsTemplateIdParameter> [-Confirm] [-Do
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Details templates can't be created or deleted, but this task restores the specified template to its default state. All user changes are lost.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Details templates" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-Details templates can't be created or deleted, but this task restores the specified template to its default state. All user changes are lost.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Details templates" entry in the Email address and address book permissions topic.
-
-!!! Exchange Server 2016
-
 Details templates can't be created or deleted, but this task restores the specified template to its default state. All user changes are lost.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Restore-DetailsTemplate -Identity en-us\User
-```
-
-This example restores the default attributes to the User details template for the English language.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Restore-DetailsTemplate -Identity en-us\User
-```
-
-This example restores the default attributes to the User details template for the English language.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Restore-DetailsTemplate -Identity en-us\User
 ```
@@ -70,26 +36,6 @@ This example restores the default attributes to the User details template for th
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the GUID or specifies the details template type and language separated by a slash, for example, en-us\\user. Details template types include:
-
-- User
-
-- Group
-
-- PublicFolder
-
-- SearchDialog
-
-- MailboxAgent
-
-- Contact
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the GUID or specifies the details template type and language separated by a backslash, for example, en-us\\User. Details template types include:
 
 - User
@@ -103,8 +49,6 @@ The Identity parameter specifies the GUID or specifies the details template type
 - MailboxAgent
 
 - Contact
-
-
 
 ```yaml
 Type: DetailsTemplateIdParameter
@@ -120,25 +64,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -203,4 +133,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f3027ef9-e7bf-4db0-b844-9e9426a5b9a8.aspx)
-

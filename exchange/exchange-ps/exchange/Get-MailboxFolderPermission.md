@@ -6,20 +6,6 @@ schema: 2.0.0
 # Get-MailboxFolderPermission
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailboxFolderPermission cmdlet to view the folder-level permissions for a folder or a specific user's permissions for a folder.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-MailboxFolderPermission cmdlet to view the folder-level permissions for a folder or a specific user's permissions for a folder.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailboxFolderPermission cmdlet to view folder-level permissions in mailboxes.
@@ -34,70 +20,18 @@ Get-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox folder" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox folder permissions" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports
-```
-
-This example returns the current list of user permissions for John's Reports mailbox folder under the Marketing folder.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports
-```
-
-This example returns the current list of user permissions for John's Reports mailbox folder under the Marketing folder.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports
 ```
 
 This example returns the current list of user permissions for the Reports subfolder in the Marketing folder in John's mailbox.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports
-```
-
-This example returns the current list of user permissions for the Reports subfolder in the Marketing folder in John's mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User Ayla@contoso.com
-```
-
-This example returns the permissions that Ayla has to view John's Marketing Reports folder.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User Ayla@contoso.com
-```
-
-This example returns the permissions that Ayla has to view John's Marketing Reports folder.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User Ayla@contoso.com
-```
-
-This example returns the permissions for the same folder in John's mailbox, but only for the user Ayla.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MailboxFolderPermission -Identity john@contoso.com:\Marketing\Reports -User Ayla@contoso.com
 ```
@@ -107,14 +41,6 @@ This example returns the permissions for the same folder in John's mailbox, but 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the mailbox and folder for which you want to view permissions. This parameter takes the following format: \<SMTP Address or Alias of the mailbox\>:\<Folder path\>, for example, john@contoso.com:\\Calendar.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -143,8 +69,6 @@ For example:
 
 Example values for this parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
 
-
-
 ```yaml
 Type: MailboxFolderIdParameter
 Parameter Sets: (All)
@@ -159,19 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -187,18 +101,6 @@ Accept wildcard characters: False
 ```
 
 ### -User
-!!! Exchange Server 2010, Exchange Server 2013
-
-The User parameter specifies who's granted permission to view or modify folder contents of the user and folder specified in the Identity parameter. You can use the following values:
-
-- Alias
-
-- SMTP address
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The User parameter filters the results by the specified mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group.
 
 For example:
@@ -216,8 +118,6 @@ For example:
 - Email address
 
 - GUID
-
-
 
 ```yaml
 Type: MailboxFolderUserIdParameter
@@ -268,4 +168,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/048000f2-70ce-4630-985f-b3902903ae67.aspx)
-

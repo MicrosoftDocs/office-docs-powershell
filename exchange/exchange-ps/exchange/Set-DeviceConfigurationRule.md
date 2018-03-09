@@ -57,7 +57,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Set-DeviceConfigurationRule -Identity "Engineering Group{914f151c-394b-4da9-9422-f5a2f65dec30}" -??? -???
 ```
@@ -1516,7 +1516,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

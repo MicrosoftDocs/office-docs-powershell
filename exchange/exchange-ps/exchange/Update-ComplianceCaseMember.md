@@ -33,7 +33,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Update-ComplianceCaseMember -Case "Case 5150" -Members chris@contoso.com,michelle@contoso.com,laura@contoso.com,julia@contoso.com
 ```
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

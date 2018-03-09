@@ -20,14 +20,14 @@ Convert-PnPFolderToProvisioningTemplate -Out <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Convert-PnPFolderToProvisioningTemplate -Out template.pnp
+Convert-PnPFolderToProvisioningTemplate -Out template.pnp
 ```
 
 Creates a pnp package file of an existing template xml, and includes all files in the current folder
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Convert-PnPFolderToProvisioningTemplate -Out template.pnp -Folder c:\temp
+Convert-PnPFolderToProvisioningTemplate -Out template.pnp -Folder c:\temp
 ```
 
 Creates a pnp package file of an existing template xml, and includes all files in the c:\temp folder

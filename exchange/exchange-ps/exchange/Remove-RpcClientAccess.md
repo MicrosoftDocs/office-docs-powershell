@@ -6,7 +6,11 @@ schema: 2.0.0
 # Remove-RPCClientAccess
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Remove-RpcClientAccess cmdlet to remove the configuration information that allows RPC access through the Client Access server role on Microsoft Exchange Server 2010. After you remove the configuration information, the Exchange RPC Client Access service stops and no longer starts.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -18,11 +22,11 @@ Remove-RPCClientAccess -Server <ServerIdParameter> [-Confirm] [-DomainController
 ## DESCRIPTION
 Disabling RPC client access on a server blocks all RPC access through the specified Client Access server. Therefore, RPC clients (for example, clients running Microsoft Office Outlook 2007) with mailboxes on any mailbox databases configured to use the specified Client Access server won't be able to connect.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "RPC Client Access settings" entry in the Client Access Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-RpcClientAccess -Server CAS01
 ```

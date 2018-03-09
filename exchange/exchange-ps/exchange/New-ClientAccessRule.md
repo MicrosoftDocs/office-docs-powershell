@@ -1,12 +1,14 @@
 ---
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Online
 schema: 2.0.0
 ---
 
 # New-ClientAccessRule
 
 ## SYNOPSIS
-Use the New-ClientAccessRule cmdlet to create client access rules. Client access rules help you control access to your cloud-based organization based on the properties of the connection.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
+Use the New-ClientAccessRule cmdlet to create client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -24,30 +26,30 @@ New-ClientAccessRule [-Name] <String> -Action <AllowAccess | DenyAccess>
 ```
 
 ## DESCRIPTION
-Client access rules are like transport rules for client connections to your organization. You use conditions and exceptions to identify the connections based on the user or properties of the client or the connection, and actions that define what to do with those connections.
+Client access rules are like mail flow rules (also known as transport rules) for client connections to your organization. You use conditions and exceptions to identify the connections based on their properties, and actions that allow or block the connections.
 
 Note: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
-- OutlookWebApp:BasicAuthentication and AdfsAuthentication.
+- OutlookWebApp: BasicAuthentication and AdfsAuthentication.
 
-- ExchangeAdminCenter:BasicAuthentication and AdfsAuthentication.
+- ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
 
-- RemotePowerShell:BasicAuthentication and NonBasicAuthentication.
+- RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
 
-- ExchangeActiveSync:BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
+- ExchangeActiveSync: BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-ClientAccessRule -Name AllowRemotePS -Action Allow -AnyOfProtocols RemotePowerShell -Priority 1
 ```
 
 This example creates a highest priority rule that allows access to remote PowerShell. This rule is an important safeguard to preserve access to your organization. Without this rule, if you create rules that block your access to remote PowerShell, or that block all protocols for everyone, you'll lose the ability to fix the rules yourself (you'll need to call Microsoft Customer Service and Support).
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 New-ClientAccessRule -Name "Block ActiveSync" -Action DenyAccess -AnyOfProtocols ExchangeActiveSync -ExceptAnyOfClientIPAddressesOrRanges 192.168.10.1/24
 ```
@@ -63,7 +65,7 @@ The Action parameter specifies the action for the client access rule. Valid valu
 Type: AllowAccess | DenyAccess
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: True
 Position: Named
@@ -79,7 +81,7 @@ The Name parameter specifies a unique name for the client access rule.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: True
 Position: 1
@@ -89,6 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfAuthenticationTypes
+This parameter is available only in the cloud-based service.
+
 The AnyOfAuthenticationTypes parameter specifies a condition for the client access rule that's based on the client's authentication type.
 
 Valid values for this parameter are:
@@ -133,7 +137,7 @@ You can enter multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -175,7 +179,7 @@ You can enter multiple values separated by commas. Don't use quotation marks.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -195,7 +199,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -211,7 +215,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -221,13 +225,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016
 
 Required: False
 Position: Named
@@ -243,7 +249,7 @@ The Enabled parameter specifies whether the client access rule is enabled or dis
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -253,6 +259,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfAuthenticationTypes
+This parameter is available only in the cloud-based service.
+
 The ExceptAnyOfAuthenticationTypes parameter specifies an exception for the client access rule that's based on the client's authentication type.
 
 Valid values for this parameter are:
@@ -297,7 +305,7 @@ You can enter multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -307,6 +315,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfProtocols
+This parameter is available only in the cloud-based service.
+
 The ExceptAnyOfProtocols parameter specifies an exception for the client access rule that's based on the client's protocol.
 
 Valid values for this parameter are:
@@ -349,6 +359,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptUsernameMatchesAnyOfPatterns
+This parameter is available only in the cloud-based service.
+
 The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format \<Domain\>\\\<UserName\> (for example, contoso.com\\jeff). This parameter accepts text and the wildcard character (\*) (for example, \*jeff\*, but not jeff\*). Non-alphanumeric characters don't require an escape character.
 
 You can enter multiple values separated by commas.
@@ -383,7 +395,7 @@ If you modify the priority value of a rule, the position of the rule in the list
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -403,7 +415,7 @@ The Scope parameter specifies the scope of the client access rule. Valid values 
 Type: All | Users
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named
@@ -413,6 +425,8 @@ Accept wildcard characters: False
 ```
 
 ### -UsernameMatchesAnyOfPatterns
+This parameter is available only in the cloud-based service.
+
 The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format \<Domain\>\\\<UserName\> (for example, contoso.com\\jeff). This parameter accepts text and the wildcard character (\*) (for example, \*jeff\*, but not jeff\*). Non-alphanumeric characters don't require an escape character.
 
 You can enter multiple values separated by commas.
@@ -431,6 +445,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserRecipientFilter
+This parameter is available only in the cloud-based service.
+
 The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPath filter syntax to identify the user. For example, {City -eq "Redmond"}. The filterable attributes that you can use with this parameter are:
 
 - City
@@ -471,7 +487,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named

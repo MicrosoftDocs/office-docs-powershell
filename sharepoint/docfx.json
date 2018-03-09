@@ -55,6 +55,7 @@
     "globalMetadata": {
       "author" : "techwriter40",
       "ms.author" : "kirks",
+      "manager" : "pamgreen",
       "ms.date" : "11/28/2017",
       "ms.topic" : "reference",
       "ms.devlang" : "powershell"
@@ -65,9 +66,6 @@
       },
       "ms.prod":{
         "sharepoint-ps/sharepoint-server/*.md":"sharepoint-2016-powershell"
-      },
-      "ROBOTS":{
-        "sharepoint-ps/sharepoint-pnp/*.md":"NOINDEX,NOFOLLOW"
       }
     },
     "template": [],

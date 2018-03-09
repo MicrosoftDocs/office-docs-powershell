@@ -24,28 +24,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-HostedContentFilterRule
 ```
 
 This example shows a summary list of all the content filter rules in your cloud-based organization.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-HostedContentFilterRule
-```
-
-This example shows a summary list of all the content filter rules in your cloud-based organization.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-HostedContentFilterRule "Contoso Recipients" | Format-List
-```
-
-This example retrieves details about the content filter rule named Contoso Recipients.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-HostedContentFilterRule "Contoso Recipients" | Format-List
 ```
@@ -120,4 +106,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/969cd73d-05b2-4fc9-8a07-282d4108dae2.aspx)
-

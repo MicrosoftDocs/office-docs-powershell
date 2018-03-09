@@ -10,6 +10,8 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-PerimeterConfig cmdlet to view the list of gateway server and internal mail server IP addresses that have been added to the cloud-based safelists.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```
@@ -17,16 +19,16 @@ Get-PerimeterConfig [[-Identity] <OrganizationIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-If you have an on-premises messaging system, you can add the IP addresses of your mail servers to cloud-based safelists. Safelists are also known as whitelists. You add IP addresses to cloud-based safelists to make sure that e-mail that originates in your on-premises messaging system isn't treated as spam.
+If you have an on-premises email system, you can use the Set-PerimeterConfig cmdlet to add the IP addresses of your gateway servers to cloud-based safelists (also known as whitelists) to make sure that messages sent from your on-premises email system aren't treated as spam.
 
 ## EXAMPLES
 
-### Example -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-PerimeterConfig
 ```
 
-This example returns the list of gateway servers and internal mail servers in your organization that have been added to cloud-based safelists.
+This example returns the list of gateway servers and internal email servers in your organization that have been added to cloud-based safelists.
 
 ## PARAMETERS
 

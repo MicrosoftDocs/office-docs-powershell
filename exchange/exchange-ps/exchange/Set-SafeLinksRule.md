@@ -29,14 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-SafeAttachmentRule -Identity "Engineering Department URL Rule" -ExceptIfRecipientDomainIs fabrikam.com
-```
-
-This example modifies the existing Safe Links Rule named Engineering Department URL Rule to exclude messages sent to the fabrikam.com domain.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-SafeAttachmentRule -Identity "Engineering Department URL Rule" -ExceptIfRecipientDomainIs fabrikam.com
 ```
@@ -196,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and rules can't have the same priority value.
 
 Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
 
@@ -238,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -SafeLinksPolicy
-The SafeLinksPolicy parameter specifies the Safe Links policy that's associated with this Safe Links rule. The rule defines the conditions, and the policy defines the actions.
+The SafeLinksPolicy parameter specifies the Safe Links policy that's associated with this Safe Links rule. The rule defines the conditions and the policy defines the actions.
 
 You can use any value that uniquely identifies the policy. For example:
 
@@ -355,4 +348,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/eb658430-ac2e-4c5b-89a3-acfb3bed1b69.aspx)
-

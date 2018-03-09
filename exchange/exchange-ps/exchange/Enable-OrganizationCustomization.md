@@ -39,14 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Enable-OrganizationCustomization
-```
-
-This example runs the command as required.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Enable-OrganizationCustomization
 ```
@@ -109,4 +102,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/04b39afc-74c9-4644-97e6-8df216b8985d.aspx)
-

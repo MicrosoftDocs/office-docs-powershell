@@ -6,16 +6,6 @@ schema: 2.0.0
 # Add-ServerMonitoringOverride
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Add-ServerMonitoringOverride cmdlet to override the thresholds and parameters of managed availability probes, monitors, and responders on specific Exchange 2013 servers.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Add-ServerMonitoringOverride cmdlet to override the thresholds and parameters of managed availability probes, monitors, and responders on Exchange servers.
@@ -39,24 +29,11 @@ Add-ServerMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | R
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Shell infrastructure permissions" section in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Add-ServerMonitoringOverride -Identity "AD\ActiveDirectoryConnectivityConfigDCServerReboot" -Server EXCH03 -ItemType Responder -PropertyName Enabled -PropertyValue 0 -Duration 20.00:00:00
-```
-
-This example adds a server monitoring override that disables the responder ActiveDirectoryConnectivityConfigDCServerReboot on the server named EXCH03 for 20 days. Note that the value of Identity is case-sensitive.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Add-ServerMonitoringOverride -Identity "AD\ActiveDirectoryConnectivityConfigDCServerReboot" -Server EXCH03 -ItemType Responder -PropertyName Enabled -PropertyValue 0 -Duration 20.00:00:00
 ```
@@ -66,25 +43,11 @@ This example adds a server monitoring override that disables the responder Activ
 ## PARAMETERS
 
 ### -ApplyVersion
-!!! Exchange Server 2013
-
-The ApplyVersion parameter specifies the version of Exchange that gets the override. f you update Exchange to a newer version (for example, you apply a Cumulative Update or Service Pack), the override is no longer applied to the server.
-
-Valid input for this parameter is an Exchange version number in the format 15.00.xxxx.xxx.
-
-You can't use this parameter with the Duration parameter.
-
-
-
-!!! Exchange Server 2016
-
 The ApplyVersion parameter specifies the version of Exchange that gets the override. If you update Exchange to a newer version (for example, you apply a Cumulative Update or Service Pack), the override is no longer applied to the server.
 
 Valid input for this parameter is an Exchange version number in the format 15.01.xxxx.xxx.
 
 You can't use this parameter with the Duration parameter.
-
-
 
 ```yaml
 Type: Version
@@ -218,29 +181,13 @@ Accept wildcard characters: False
 ```
 
 ### -Duration
-!!! Exchange Server 2013
-
 The Duration parameter specifies the length of time that the override is active.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 For example, 30.10:00:00 specifies 30 days and 10 hours.
 
 You can't use this parameter with the ApplyVersion parameter.
-
-
-
-!!! Exchange Server 2016
-
-The Duration parameter specifies the length of time that the override is active.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-For example, 30.10:00:00 specifies 30 days and 10 hours.
-
-You can't use this parameter with the ApplyVersion parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -289,4 +236,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/350eb7e0-3181-4de9-9934-6c8467b920c3.aspx)
-

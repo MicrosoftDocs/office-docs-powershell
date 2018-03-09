@@ -42,7 +42,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-RetentionComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -RetentionDuration Unlimited
 ```
@@ -220,7 +220,7 @@ The ExcludedItemClasses parameter specifies the types of messages to exclude fro
 
 - IPM.Note.Microsoft.Voicemail.UM.CA
 
-You can specify multiple item class values by using the syntax "Value1","Value2"....
+You can specify multiple item class values by using the syntax "Value1","Value2",..."ValueN".
 
 ```yaml
 Type: MultiValuedProperty
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

@@ -6,15 +6,11 @@ schema: 2.0.0
 # Get-SendConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-SendConnector cmdlet to view the configuration information for a Send connector on a computer that has the Hub Transport server role or the Edge Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-SendConnector cmdlet to view the settings for a Send connector.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -23,35 +19,11 @@ Get-SendConnector [[-Identity] <SendConnectorIdParameter>] [-DomainController <F
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Send connectors" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Send connectors" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-SendConnector "Contoso.com Send Connector" | Format-List
-```
-
-This example displays detailed information about the Send connector Contoso.com Send Connector.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-SendConnector "Contoso.com Send Connector" | Format-List
-```
-
-This example displays detailed information about the Send connector named Contoso.com Send Connector.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-SendConnector "Contoso.com Send Connector" | Format-List
 ```
@@ -61,17 +33,7 @@ This example displays detailed information about the Send connector named Contos
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the administrator-supplied name or the system-generated GUID of the Send connector. You can omit the Identity parameter label so that only the connector name or GUID is supplied. You can also include the server name by using the format ServerName\\ConnectorName.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the name, or GUID of the Send connector. If the Identity name contains spaces, enclose the name in quotation marks ("). You can omit the Identity parameter label. You can also include the server name by using the format ServerName\\ConnectorName.
-
-
 
 ```yaml
 Type: SendConnectorIdParameter
@@ -122,4 +84,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ca71bbd3-14db-4196-a265-0938efead108.aspx)
-

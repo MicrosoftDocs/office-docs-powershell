@@ -23,28 +23,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-ComplianceTag | Format-Table -Auto Name,Priority,RetentionAction,RetentionDuration,Workload
 ```
 
 This example returns a summary list of all labels.
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-ComplianceTag | Format-Table -Auto Name,Priority,RetentionAction,RetentionDuration,Workload
-```
-
-This example returns a summary list of all labels.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-ComplianceTag -Identity "HR Content"
-```
-
-This example returns detailed information about the label named HR Content.
-
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-ComplianceTag -Identity "HR Content"
 ```
@@ -93,4 +79,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/101c1af9-202a-43a9-ad3d-bde116b01889.aspx)
-

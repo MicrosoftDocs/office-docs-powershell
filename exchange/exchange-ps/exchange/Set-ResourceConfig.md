@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-ResourceConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-ResourceConfig cmdlet to create custom resource properties that you can add to room and equipment mailboxes.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-ResourceConfig cmdlet to create custom resource properties that you can add to room and equipment mailboxes.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-ResourceConfig cmdlet to create custom resource properties that you can add to room and equipment mailboxes.
@@ -34,76 +20,20 @@ Set-ResourceConfig [-Confirm] [-DomainController <Fqdn>] [-ResourcePropertySchem
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-After you use this cmdlet to create custom resource properties, you use the ResourceCustom parameter on the Set-Mailbox cmdlet to add one or more of those properties to a room or equipment mailbox. For more information, see the ResourceCustom parameter description in Set-Mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Resource mailbox schema configuration" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-After you use this cmdlet to create custom resource properties, you use the ResourceCustom parameter on the Set-Mailbox cmdlet to add one or more of those properties to a room or equipment mailbox. For more information, see the ResourceCustom parameter description in Set-Mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Resource mailbox schema configuration" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 After you use this cmdlet to create custom resource properties, you use the ResourceCustom parameter on the Set-Mailbox cmdlet to add one or more of those properties to a room or equipment mailbox. For more information, see the ResourceCustom parameter description in Set-Mailbox.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-ResourceConfig -ResourcePropertySchema Room/Whiteboard,Equipment/Van
 ```
 
 This example adds the custom resource properties Room/Whiteboard and Equipment/Van. These values replace any existing custom resource properties that are already configured.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-ResourceConfig -ResourcePropertySchema Room/Whiteboard,Equipment/Van
-```
-
-This example adds the custom resource properties Room/Whiteboard and Equipment/Van. These values replace any existing custom resource properties that are already configured.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-ResourceConfig -ResourcePropertySchema Room/Whiteboard,Equipment/Van
-```
-
-This example adds the custom resource properties Room/Whiteboard and Equipment/Van. These values replace any existing custom resource properties that are already configured.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-ResourceConfig -ResourcePropertySchema Room/Whiteboard,Equipment/Van
-```
-
-This example adds the custom resource properties Room/Whiteboard and Equipment/Van. These values replace any existing custom resource properties that are already configured.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
-```
-
-This example adds the custom resource property Room/TV and removes Equipment/Laptop without affecting other custom resource properties that are already configured.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
-```
-
-This example adds the custom resource property Room/TV and removes Equipment/Laptop without affecting other custom resource properties that are already configured.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
-```
-
-This example adds the custom resource property Room/TV and removes Equipment/Laptop without affecting other custom resource properties that are already configured.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
 ```
@@ -133,19 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -163,7 +83,7 @@ Accept wildcard characters: False
 ### -ResourcePropertySchema
 The ResourcePropertySchema parameter specifies the custom resource property that you want to make available to room or equipment mailboxes. This parameter uses the syntax Room/\<Text\> or Equipment/\<Text\> where the \<Text\> value doesn't contain spaces. For example, Room/Whiteboard or Equipment/Van. You can specify multiple values separated by commas.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -214,4 +134,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7570aaf0-2cbe-46b6-92ea-cdd704f4eecc.aspx)
-

@@ -24,7 +24,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-SupervisoryReviewPolicyV2 -Name "EU Brokers Policy" -Reviewers laura@contoso.com,julia@contoso.com -Comment "Created by the compliance team"
 ```
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

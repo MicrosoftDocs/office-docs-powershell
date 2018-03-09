@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-Mailflow cmdlet to diagnose whether mail can be successfully sent from and delivered to the system mailbox on a Mailbox server. You can also use this cmdlet to verify that email is sent between Mailbox servers within a defined latency threshold.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ### Set5

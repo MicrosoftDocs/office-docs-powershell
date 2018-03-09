@@ -6,15 +6,11 @@ schema: 2.0.0
 # Get-SenderIdConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-SenderIdConfig cmdlet to view the configuration information for the Sender ID configuration for the computer on which the command is run.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-SenderIdConfig cmdlet to view the Sender ID configuration information for the computer on which the command is run.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -23,35 +19,18 @@ Get-SenderIdConfig [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-SenderIdConfig | Format-List
 ```
 
 This example returns detailed information about the Sender ID configuration for the computer on which the command is run.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-SenderIdConfig | Format-List
-```
-
-This example returns detailed information about the Sender ID configuration for the computer on which the command is run.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-SenderIdConfig | Format-List
 ```
@@ -96,4 +75,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/88191407-e739-4913-8170-4bd951f63f58.aspx)
-

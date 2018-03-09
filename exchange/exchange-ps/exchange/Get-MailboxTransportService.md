@@ -20,42 +20,20 @@ Get-MailboxTransportService [[-Identity] <MailboxTransportServerIdParameter>] [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Mailbox Transport service runs on all Mailbox servers and is responsible for delivering messages to and accepting messages from local mailbox databases using remote procedure calls (RPC). The Mailbox Transport service also uses SMTP to send messages to and from the Transport service that runs on all Mailbox servers for routing their ultimate destinations.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Transport service" entries in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Mailbox Transport service runs on all Mailbox servers and is responsible for delivering messages to and accepting messages from local mailbox databases using remote procedure calls (RPC). The Mailbox Transport service also uses SMTP to send messages to and from the Transport service that runs on all Mailbox servers for routing their ultimate destinations.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-MailboxTransportService
 ```
 
 This example displays a list of all Mailbox servers in your organization.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxTransportService
-```
-
-This example displays a list of all Mailbox servers in your organization.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxTransportService Mailbox01 | Format-List
-```
-
-This example retrieves the detailed transport configuration information for the Mailbox Transport service on the Mailbox server named Mailbox01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-MailboxTransportService Mailbox01 | Format-List
 ```
@@ -114,4 +92,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/54f1d3b1-a1d6-4438-900b-c77e94f1f6d7.aspx)
-

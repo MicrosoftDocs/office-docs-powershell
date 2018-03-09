@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-ExchangeServerAccessLicense
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-ExchangeServerAccessLicense cmdlet to return a list of licenses in use in your Microsoft Exchange Server 2013 organization. This refers to the specific legal name of the license, as defined in the Microsoft Product List and is representative of your licenses when you run this cmdlet.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ExchangeServerAccessLicense cmdlet to return a list of licenses in use in your Exchange organization. This refers to the specific legal name of the license, as defined in the Microsoft Product List and is representative of your licenses when you run this cmdlet.
@@ -29,22 +19,6 @@ Get-ExchangeServerAccessLicense [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-ExchangeServerAccessLicense cmdlet returns a list of licenses in use in your Exchange 2013 organization. The cmdlet returns a collection of these license names:
-
-- Exchange 15 Standard CAL
-
-- Exchange 15 Enterprise CAL
-
-- Exchange 15 Server Standard Edition
-
-- Exchange 15 Enterprise Edition
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Shell Infrastructure Permissions" section in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 The Get-ExchangeServerAccessLicense cmdlet returns a collection of these license names:
 
 - Exchange Server 2016 Standard CAL
@@ -59,14 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ExchangeServerAccessLicense
-```
-
-This example retrieves a list of Exchange 2013 licenses in your organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ExchangeServerAccessLicense
 ```
@@ -93,4 +60,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fbe3cf4a-167c-47b4-9074-a4561711be6e.aspx)
-

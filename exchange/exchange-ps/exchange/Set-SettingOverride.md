@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-SettingOverride
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-SettingOverride cmdlet to modify setting overrides that were created using the New-SettingOverride cmdlet.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-SettingOverride cmdlet to modify setting overrides that store Exchange 2016 customizations in Active Directory instead of in text files on the server.
@@ -31,12 +21,6 @@ Set-SettingOverride [-Identity] <SettingOverrideIdParameter> [-Confirm] [-Domain
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange workload throttling" entry in the Server health and performance permissions topic.
-
-!!! Exchange Server 2016
-
 You use setting overrides to configure and store Exchange 2016 server customizations in Active Directory. In previous versions of Exchange, these customizations were stored in web.config or exe.config XML application configuration files. The customizations in these files were lost when you installed the next Exchange Cumulative Update (CU) or Service Pack (SP). The customizations that are associated with the \*-SettingOverride cmdlets persist in Active Directory across Exchange 2016 CUs and SPs.
 
 Incorrect usage of the \*-SettingOverride cmdlets can cause serious damage to your Exchange organization. This damage could require you to reinstall Exchange. Only use these cmdlets as instructed by product documentation or under the direction of Microsoft Customer Service and Support.
@@ -45,14 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-SettingOverride -Identity "Change Processor Discretionary Values" -Parameters @("DiscretionaryUnderloaded=65")
-```
-
-This example modifies the setting override named Change Processor Discretionary Values by changing one of the Discretionary parameter threshold values for the Processor section of the WorkloadManagement component.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-SettingOverride -Identity "Change OAB Generation" -Server Mailbox01 -Component TimeBasedAssistants -Section OABGeneratorAssistant -Parameters @("WorkCycle=03:00:00")
 ```
@@ -136,23 +113,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxVersion
-!!! Exchange Server 2013
-
-The MaxVersion parameter specifies the latest version of Exchange that this override applies to (up to and including the specified value). Valid input for this parameter is a number in the format 15.0.xxxx.x.
-
-To remove a configured version value so the override applies to all versions of Exchange, use the value $null.
-
-
-
-!!! Exchange Server 2016
-
 The MaxVersion parameter specifies the latest version of Exchange 2016 that this override applies to (up to and including the specified value).
 
 Valid input for this parameter is an Exchange 2016 version value in the format 15.1.xxx.xx. You can use values with leading zeros, but the leading zeros are removed from the results. For example, 15.01.0225.042 is stored as 15.1.225.42.
 
 To remove a configured version value so the override applies to all versions of Exchange 2016, use the value $null.
-
-
 
 ```yaml
 Type: Version
@@ -168,23 +133,11 @@ Accept wildcard characters: False
 ```
 
 ### -MinVersion
-!!! Exchange Server 2013
-
-The MinVersion parameter specifies the earliest version of Exchange that this override applies to (up to and including the specified value). Valid input for this parameter is a number in the format 15.0.xxxx.x.
-
-To remove a configured version value so the override applies to all versions of Exchange, use the value $null.
-
-
-
-!!! Exchange Server 2016
-
 The MinVersion parameter specifies the earliest version of Exchange 2016 that this override applies to (up to and including the specified value).
 
 Valid input for this parameter is an Exchange 2016 version value in the format 15.1.xxx.xx. You can use values with leading zeros, but the leading zeros are removed from the results. For example, 15.01.0225.042 is stored as 15.1.225.42.
 
 To remove a configured version value so the override applies to all versions of Exchange 2016, use the value $null.
-
-
 
 ```yaml
 Type: Version
@@ -200,22 +153,6 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-!!! Exchange Server 2013
-
-The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section property values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...).
-
-For example:
-
-- @("Enabled=true")
-
-- @("Classification=InternalMaintenance")
-
-- @("DiscretionaryUnderloaded=60","DiscretionaryOverloaded=75","DiscretionaryCritical=90")
-
-
-
-!!! Exchange Server 2016
-
 The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...).
 
 For example:
@@ -223,8 +160,6 @@ For example:
 - @("Enabled=true")
 
 - @("IMServerName=\<SkypePoolFQDN\>","IMCertificateThumbprint=\<ThumbprintGUID\>")
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -256,19 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the name of the Exchange where you want the override applied. You can specify a single Exchange name, or an array of Exchange server name wildcards. For example, if you have 3 exExchangeNoVersion servers named Exchange01, Exchange02, and Exchange03, specify the value Exchange\* to apply the override to all of them.
-
-
-
-!!! Exchange Server 2016
-
-The Server parameter specifies the name of the Exchange 2016 server where you want the override applied. You can specify a single Exchange 2016 server name, or an array of Exchange 2016 server name wildcards. For example, if you have three Exchange 2016 servers named Exchange01, Exchange02, and Exchange03, specify the value Exchange\* to apply the override to all of them.
+The Server parameter specifies the name of the Exchange 2016 server where you want the override applied. You can specify a single Exchange 2016 server name, or an array of Exchange 2016 server name wildcards. For example, if you have three Exchange 2016 servers named Exchange01, Exchange02 and Exchange03, specify the value Exchange\* to apply the override to all of them.
 
 To remove the specified server so the override applies to all Exchange 2016 servers in the Active Directory forest, use the value $null.
-
-
 
 ```yaml
 Type: String[]
@@ -333,4 +258,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/eaa7f08c-cc7e-4700-8784-ebe2d586f3fb.aspx)
-

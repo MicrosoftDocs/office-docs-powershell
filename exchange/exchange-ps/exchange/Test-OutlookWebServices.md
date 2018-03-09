@@ -6,7 +6,11 @@ schema: 2.0.0
 # Test-OutlookWebServices
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Test-OutlookWebServices cmdlet to verify the Autodiscover service settings for Microsoft Outlook on a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -19,11 +23,11 @@ Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
 ## DESCRIPTION
 The Test-OutlookWebServices cmdlet uses a specified e-mail address to verify that the Outlook provider is configured correctly.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test Outlook Web services" entry in the Client Access Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Test-OutlookWebServices -Identity:holly@contoso.com
 ```

@@ -23,10 +23,10 @@ Get-SPOTenantCdnPolicies -CdnType <SPOTenantCdnType> [<CommonParameters>]
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-SPOTenantCdnPolicies -CdnType Public
 ```
 
-{{ Add example description here }}
+This example returns public CDN policies of your tenant.
 
 ## PARAMETERS
 

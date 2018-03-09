@@ -6,15 +6,11 @@ schema: 2.0.0
 # Remove-ForeignConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ForeignConnector cmdlet to delete a Foreign connector on a computer running Microsoft Exchange Server 2010 that has the Hub Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-ForeignConnector cmdlet to delete a Foreign connector in the Transport service of a Mailbox server.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -24,24 +20,6 @@ Remove-ForeignConnector [-Identity] <ForeignConnectorIdParameter> [-Confirm] [-D
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-ForeignConnector cmdlet deletes the object and the configuration information for a Foreign connector.
-
-Although a Foreign connector is configured on a local Hub Transport server or an Edge Transport server, if you delete a Foreign connector, you may affect mail flow throughout the organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Foreign connectors" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-ForeignConnector cmdlet deletes the object and the configuration information for a Foreign connector.
-
-Although a Foreign connector is configured on a local Mailbox server, if you delete a Foreign connector, you may affect mail flow throughout the organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Foreign connectors" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Remove-ForeignConnector cmdlet deletes the object and the configuration information for a Foreign connector.
 
 Although a Foreign connector is configured on a local Mailbox server, if you delete a Foreign connector, you may affect mail flow throughout the organization.
@@ -50,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-ForeignConnector "Fax Connector"
-```
-
-This example deletes the Foreign connector Fax Connector.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-ForeignConnector "Fax Connector"
-```
-
-This example deletes the Foreign connector named Fax Connector.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-ForeignConnector "Fax Connector"
 ```
@@ -90,25 +54,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -175,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e0d69dab-1e9b-4e2b-b615-5d12cb24f792.aspx)
-

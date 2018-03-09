@@ -6,27 +6,11 @@ schema: 2.0.0
 # Remove-EcpVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-EcpVirtualDirectory cmdlet to remove Exchange Control Panel virtual directories located in the Internet Information Services (IIS) Web site on a server running Microsoft Exchange Server 2010.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-EcpVirtualDirectory cmdlet to remove Exchange Control Panel (ECP) virtual directories located in the Internet Information Services (IIS) website on a server running Exchange. The ECP virtual directory manages the Exchange Administration Center.
-
-The ECP is the web-based user interface developed for Microsoft Exchange Server 2010. The Exchange Server 2013 Exchange Administration Center cmdlets for virtual directory still use ECP in the name, and the ECP cmdlets can be used to manage Exchange 2010 and Exchange 2013 ECP virtual directories.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-EcpVirtualDirectory cmdlet to remove Exchange Control Panel (ECP) virtual directories from Internet Information Services (IIS) on Microsoft Exchange servers. The ECP virtual directory manages the Exchange admin center.
 
-The ECP web management interface was introduced in MicrosoftExchange Server 2010. In Exchange Server 2013 and Exchange Server 2016, the EAC virtual directories and the corresponding management cmdlets still use ECP in the name. You can use these cmdlets to manage ECP virtual directories on Exchange 2010, Exchange 2013, and Exchange 2016 servers.
+The ECP web management interface was introduced in Exchange Server 2010. In Exchange Server 2013 and Exchange Server 2016, the EAC virtual directories and the corresponding management cmdlets still use ECP in the name. You can use these cmdlets to manage ECP virtual directories on Exchange 2010, Exchange 2013 and Exchange 2016 servers.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -38,35 +22,11 @@ Remove-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Confirm] 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Control Panel (ECP) virtual directory settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Administration Center connectivity" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-EcpVirtualDirectory -Identity "Server01\ecp (default Web site)"
-```
-
-This example removes the Exchange Control Panel virtual directory ecp that's located on the default IIS Web site on the Exchange server Server01.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-EcpVirtualDirectory -Identity "Server01\ecp (default Web site)"
-```
-
-This example removes the ECP virtual directory ecp located on the default IIS website on the Exchange server Server01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-EcpVirtualDirectory -Identity "Server01\ecp (Default Web site)"
 ```
@@ -76,20 +36,6 @@ This example removes the ECP virtual directory named ecp located on the default 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the name or GUID of an Exchange Control Panel virtual directory. The Identity parameter is represented as: ServerName\\ECP (WebsiteName). Remote removal of an Exchange Control Panel virtual directory isn't supported. You must run this command from the local computer.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the name or GUID of an ECP virtual directory. The Identity parameter is represented as: ServerName\\ECP (WebsiteName). Remote removal of an ECP virtual directory isn't supported. You must run this command from the local computer.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the virtual directory that you want to remove.
 
 You can use any value that uniquely identifies the virtual directory. For example:
@@ -103,8 +49,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
 
 Remote removal of an ECP virtual directory isn't supported. You need run this command from the local computer.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -189,4 +133,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cbf3d4ae-1a73-4bb3-9c20-47880d84f18f.aspx)
-

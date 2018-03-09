@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-MRSHealth
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-MRSHealth cmdlet to test the health of an instance of the Microsoft Exchange Mailbox Replication service.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-MRSHealth cmdlet to test the health of an instance of the Microsoft Exchange Mailbox Replication service.
@@ -27,62 +21,20 @@ Test-MRSHealth [[-Identity] <ServerIdParameter>] [-Confirm] [-DomainController <
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Microsoft Exchange Mailbox Replication service runs on Client Access servers. This command ensures that the Mailbox Replication service is running and that it responds to a remote procedure call (RPC) ping check.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Microsoft Exchange Mailbox Replication service runs on Mailbox servers. This command ensures that the Mailbox Replication service is running and that it responds to a remote procedure call (RPC) ping check.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Microsoft Exchange Mailbox Replication service runs on Mailbox servers. This command ensures that the Mailbox Replication service is running and that it responds to a remote procedure call (RPC) ping check.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-ClientAccessServer | Test-MRSHealth
-```
-
-This example tests the health of the Mailbox Replication service on all Client Access servers.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-MailboxServer | Test-MRSHealth
 ```
 
 This example tests the health of the Mailbox Replication service on all Mailbox servers.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxServer | Test-MRSHealth
-```
-
-This example tests the health of the Mailbox Replication service on all Mailbox servers.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Test-MRSHealth -Identity CAS01
-```
-
-This example tests the health of the Mailbox Replication service on the Client Access server CAS01.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Test-MRSHealth MBX01
-```
-
-This example tests the health of the Mailbox Replication service on the Mailbox server named MBX01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Test-MRSHealth MBX01
 ```
@@ -128,14 +80,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the server on which to perform the health test. If you don't specify the server, the command runs on the server to which you're connected.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the server on which to perform the health test. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -147,8 +91,6 @@ The Identity parameter specifies the server on which to perform the health test.
 - GUID
 
 If you don't specify the server, the command runs on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -180,23 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter specifies whether the results of the command include monitoring events and performance counters. The two possible values for this parameter are $true or $false. If you specify $true, the results include monitoring events and performance counters in addition to the information about services.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext parameter includes or excludes the associated monitoring events and performance counters in the results. Valid input for this parameter is $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM).
-
-
 
 ```yaml
 Type: $true | $false
@@ -228,21 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -MRSProxyCredentials
-!!! Exchange Server 2013
-
-The MRSProxyCredentials parameter specifies the credentials that are required for the MRSProxyPingCheck test on the server that's specified by the MRSProxyServer parameter.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016
-
 The MRSProxyCredentials parameter specifies the credentials that are required for the MRSProxyPingCheck test on the server that's specified by the MRSProxyServer parameter.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -262,9 +176,9 @@ The MRSProxyServer parameter specifies the fully qualified domain name (FQDN) of
 
 The Microsoft Replication proxy service is part of the Mailbox Replication service, and is used for remote mailbox moves. However, the Mailbox Replication proxy service communicates only with the Mailbox Replication service on another server. You can test the Mailbox Replication proxy service in the following ways:
 
-- If you specify an MRSProxyServer value, and you specify the source server by using the Identity parameter, the test is performed between that server and the target server specified by the MRSProxyServer parameter.
+- If you specify an MRSProxyServer value and you specify the source server by using the Identity parameter, the test is performed between that server and the target server specified by the MRSProxyServer parameter.
 
-- If you specify an MRSProxyServer value, and you don't specify a source server by using the Identity parameter, the test is performed between the local server and the target server specified by the MRSProxyServer parameter.
+- If you specify an MRSProxyServer value and you don't specify a source server by using the Identity parameter, the test is performed between the local server and the target server specified by the MRSProxyServer parameter.
 
 - If you don't specify an MRSProxyServer value or an Identity value, the test is performed between the Mailbox Replication service and the Mailbox Replication proxy service on the local server.
 
@@ -299,4 +213,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/42de31ff-ba85-4e47-9da9-00a9a5f7a29f.aspx)
-

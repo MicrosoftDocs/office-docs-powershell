@@ -6,15 +6,11 @@ schema: 2.0.0
 # Test-SenderId
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-SenderId cmdlet to test whether a specified IP address is the legitimate sending address for a specified SMTP address.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-SenderId cmdlet to test whether a specified IP address is the legitimate sending address for a specified SMTP address.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -25,41 +21,13 @@ Test-SenderId -IPAddress <IPAddress> -PurportedResponsibleDomain <SmtpDomain> [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Test-SenderId cmdlet provides the results of a Sender ID check for the IP address and the corresponding domain name that you specify. For more information about Sender ID in Microsoft Exchange Server 2010, see Understanding Sender ID.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Test-SenderId cmdlet provides the results of a Sender ID check for the IP address and the corresponding domain name that you specify.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 The Test-SenderId cmdlet provides the results of a Sender ID check for the IP address and the corresponding domain name that you specify.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-SenderId -IPAddress 192.168.0.1 -PurportedResponsibleDomain contoso.com
-```
-
-This example checks whether the IP address 192.168.0.1 is the legitimate sender address for the domain contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-SenderId -IPAddress 192.168.0.1 -PurportedResponsibleDomain contoso.com
-```
-
-This example checks whether the IP address 192.168.0.1 is the legitimate sender address for the domain contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Test-SenderId -IPAddress 192.168.0.1 -PurportedResponsibleDomain contoso.com
 ```
@@ -155,30 +123,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies the server on which you run this command. If you don't use the Server parameter, the command is run on the local server where the task is executed.
-
-
-
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -190,8 +134,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -240,4 +182,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/66505371-f756-412f-8d74-49d7a4b73344.aspx)
-

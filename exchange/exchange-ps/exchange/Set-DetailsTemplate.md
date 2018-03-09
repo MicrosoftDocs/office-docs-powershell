@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-DetailsTemplate
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-DetailsTemplate cmdlet to modify the attributes of a details template. To make changes to the details template format and layout, you need to use the Details Templates Editor in the Exchange Toolbox.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-DetailsTemplate cmdlet to modify the attributes of a details template. To make changes to the details template format and layout, you need to use the Details Templates Editor in the Exchange Toolbox.
@@ -26,35 +20,11 @@ Set-DetailsTemplate [-Identity] <DetailsTemplateIdParameter> [-Confirm] [-Domain
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Details templates" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Details templates" entry in the Email address and address book permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-DetailsTemplate -Identity en-us\User
-```
-
-This example sets attributes for the User details template for the U.S. English language.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-DetailsTemplate -Identity en-us\User
-```
-
-This example sets attributes for the User details template for the U.S. English language.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-DetailsTemplate -Identity en-us\User
 ```
@@ -64,26 +34,6 @@ This example sets attributes for the User details template for the U.S. English 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the details template using a GUID or specifies a template type and language separated by a slash. The following is an example of the user template type and U.S. English language: en-us\\user. Details template types include:
-
-- User
-
-- Group
-
-- PublicFolder
-
-- SearchDialog
-
-- MailboxAgent
-
-- Contact
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the details template using a GUID or specifies a template type and language separated by a slash. The following is an example of the user template type and U.S. English language: en-us\\User. Details template types include:
 
 - User
@@ -97,8 +47,6 @@ The Identity parameter specifies the details template using a GUID or specifies 
 - MailboxAgent
 
 - Contact
-
-
 
 ```yaml
 Type: DetailsTemplateIdParameter
@@ -150,17 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pages
-!!! Exchange Server 2010
-
-The Pages parameter is reserved for internal use only.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -209,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2e2ec63c-fd46-48c5-b21f-f1dc113f1b05.aspx)
-

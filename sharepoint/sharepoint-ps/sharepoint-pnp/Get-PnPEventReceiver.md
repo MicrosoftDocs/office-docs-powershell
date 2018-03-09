@@ -20,9 +20,9 @@ Get-PnPEventReceiver [-List <ListPipeBind>]
 
 ### 
 ```powershell
-Get-PnPEventReceiver [-Identity <EventReceiverPipeBind>]
+Get-PnPEventReceiver [-Includes <String[]>]
+                     [-Identity <EventReceiverPipeBind>]
                      [-Web <WebPipeBind>]
-                     [-Includes <String[]>]
                      [-Connection <SPOnlineConnection>]
 ```
 
@@ -33,42 +33,42 @@ Returns all registered or a specific eventreceiver
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPEventReceiver
+Get-PnPEventReceiver
 ```
 
 This will return all registered event receivers on the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPEventReceiver -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
+Get-PnPEventReceiver -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
 ```
 
 This will return the event receiver with the provided ReceiverId "fb689d0e-eb99-4f13-beb3-86692fd39f22" from the current web
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPEventReceiver -Identity MyReceiver
+Get-PnPEventReceiver -Identity MyReceiver
 ```
 
 This will return the event receiver with the provided ReceiverName "MyReceiver" from the current web
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPEventReceiver -List "ProjectList"
+Get-PnPEventReceiver -List "ProjectList"
 ```
 
 This will return all registered event receivers in the provided "ProjectList" list
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPEventReceiver -List "ProjectList" -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
+Get-PnPEventReceiver -List "ProjectList" -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
 ```
 
 This will return the event receiver in the provided "ProjectList" list with with the provided ReceiverId "fb689d0e-eb99-4f13-beb3-86692fd39f22"
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPEventReceiver -List "ProjectList" -Identity MyReceiver
+Get-PnPEventReceiver -List "ProjectList" -Identity MyReceiver
 ```
 
 This will return the event receiver in the "ProjectList" list with the provided ReceiverName "MyReceiver"
@@ -92,7 +92,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -124,7 +124,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -137,7 +137,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.EventReceiverDefinition](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.eventreceiverdefinition.aspx)
+### Microsoft.SharePoint.Client.EventReceiverDefinition
 
 ## RELATED LINKS
 

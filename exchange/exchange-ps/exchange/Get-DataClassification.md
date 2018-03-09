@@ -8,7 +8,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-DataClassification cmdlet to view the data classification rules in your organization. This cmdlet shows built-in data classification rules, and rules that you created that use document fingerprints.
+Use the Get-DataClassification cmdlet to view the data classification rules in your organization. This cmdlet shows built-in data classification rules and rules that you created that use document fingerprints.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -27,77 +27,27 @@ Get-DataClassification [[-Identity] <DataClassificationIdParameter>] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-DataClassification
 ```
 
 This example returns a summary list of all data classification rules in the organization.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-DataClassification
-```
-
-This example returns a summary list of all data classification rules in the organization.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-DataClassification
-```
-
-This example returns a summary list of all data classification rules in the organization.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-DataClassification -ClassificationRuleCollectionIdentity "Fingerprint Classification Collection"
 ```
 
 This example returns a summary list of all new data classification rules based on document fingerprints that you created.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-DataClassification -ClassificationRuleCollectionIdentity "Fingerprint Classification Collection"
-```
-
-This example returns a summary list of all new data classification rules based on document fingerprints that you created.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-DataClassification -ClassificationRuleCollectionIdentity "Fingerprint Classification Collection"
-```
-
-This example returns a summary list of all new data classification rules based on document fingerprints that you created.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-DataClassification "SWIFT Code" | Format-List
-```
-
-This example returns details of the built-in data classification rule named SWIFT Code.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-DataClassification "SWIFT Code" | Format-List
-```
-
-This example returns details of the built-in data classification rule named SWIFT Code.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-DataClassification "SWIFT Code" | Format-List
 ```
@@ -180,4 +130,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7f1daf42-8805-4313-831c-f473ddfd6371.aspx)
-

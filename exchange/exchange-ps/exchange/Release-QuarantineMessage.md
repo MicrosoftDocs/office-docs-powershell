@@ -44,52 +44,31 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-QuarantineMessage -MessageID "<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com>" | Release-QuarantineMessage -User julia@contoso.com
 ```
 
 This example uses the Get-QuarantineMessage cmdlet to release the quarantined message with the Message-ID value \<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com\> to an original recipient julia@contoso.com.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-QuarantineMessage -MessageID "<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com>" | Release-QuarantineMessage -User julia@contoso.com
-```
-
-This example uses the Get-QuarantineMessage cmdlet to release the quarantined message with the Message-ID value \<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com\> to an original recipient julia@contoso.com.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Release-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7 -ReleaseToAll
 ```
 
 This example releases the quarantined message with the specified Identity value to all original recipients.
 
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 3
 ```
-Release-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7 -ReleaseToAll
-```
-
-This example releases the quarantined message with the specified Identity value to all original recipients.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-QuarantineMessage | Release-QuarantineMessage -ReleaseToAll -Delete
+Get-QuarantineMessage | Release-QuarantineMessage -ReleaseToAll
 ```
 
-This example releases all messages to all original recipients, and deletes all released messages from quarantine.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Get-QuarantineMessage | Release-QuarantineMessage -ReleaseToAll -Delete
-```
-
-This example releases all messages to all original recipients, and deletes all released messages from quarantine.
+This example releases all messages to all original recipients.
 
 ## PARAMETERS
 
 ### -Identities
-The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: value1,value2.... The value is a unique quarantined message identifier in the format GUID1\\GUID2 (for example c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7.
+The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: value1,value2,...valueN. The value is a unique quarantined message identifier in the format GUID1\\GUID2 (for example c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7).
 
 You can find the identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
 
@@ -231,9 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -Delete
-The Delete switch specifies whether to delete a message from quarantine after it's been released to all original recipients. You don't need to specify a value with this switch.
+**This parameter has been deprecated and is no longer used.**
 
-You can only use this switch with the ReleaseToAll parameter.
+To delete quarantined messages, use the Delete-QuarantineMessage cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -318,4 +297,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4a3aa05c-238f-46f2-b8dd-b0e3c38eab3e.aspx)
-

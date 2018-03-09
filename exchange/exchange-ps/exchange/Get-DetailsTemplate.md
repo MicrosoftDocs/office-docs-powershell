@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-DetailsTemplate
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-DetailsTemplate cmdlet to retrieve the attributes for details templates.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-DetailsTemplate cmdlet to retrieve the attributes for details templates.
@@ -26,83 +20,27 @@ Get-DetailsTemplate [[-Identity] <DetailsTemplateIdParameter>] [-Confirm] [-Doma
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-DetailsTemplate cmdlet retrieves the attributes for one or more details templates. Wildcard characters can be used when specifying the type and language of the details templates.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Details templates" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-DetailsTemplate cmdlet retrieves the attributes for one or more details templates. Wildcard characters can be used when specifying the type and language of the details templates.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Details templates" entry in the Email address and address book permissions topic.
-
-!!! Exchange Server 2016
-
 The Get-DetailsTemplate cmdlet retrieves the attributes for one or more details templates. Wildcard characters can be used when specifying the type and language of the details templates.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-DetailsTemplate -Identity en-us\User
 ```
 
 This example retrieves all attributes for the User details template for the English language.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-DetailsTemplate -Identity en-us\User
-```
-
-This example retrieves all attributes for the User details template for the English language.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-DetailsTemplate -Identity en-us\User
-```
-
-This example retrieves all attributes for the User details template for the English language.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-DetailsTemplate -Identity *\*
 ```
 
 This example retrieves all attributes for all details template types in all languages.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-DetailsTemplate -Identity *\*
-```
-
-This example retrieves all attributes for all details template types in all languages.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-DetailsTemplate -Identity *\*
-```
-
-This example retrieves all attributes for all details template types in all languages.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-DetailsTemplate -Identity *\User
-```
-
-This example retrieves all attributes for all User details template types in all languages.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-DetailsTemplate -Identity *\User
-```
-
-This example retrieves all attributes for all User details template types in all languages.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-DetailsTemplate -Identity *\User
 ```
@@ -148,26 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the GUID of the details template or specifies the details template type and language separated by a slash, for example, en-us\\user. Details template types are:
-
-- User
-
-- Group
-
-- PublicFolder
-
-- SearchDialog
-
-- MailboxAgent
-
-- Contact
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the GUID of the details template or specifies the details template type and language separated by a backslash, for example, en-us\\User. Details template types are:
 
 - User
@@ -181,8 +99,6 @@ The Identity parameter specifies the GUID of the details template or specifies t
 - MailboxAgent
 
 - Contact
-
-
 
 ```yaml
 Type: DetailsTemplateIdParameter
@@ -231,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/55efbcfc-838c-404c-a5b2-bbd7270ff0c5.aspx)
-

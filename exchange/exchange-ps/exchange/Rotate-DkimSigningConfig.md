@@ -10,8 +10,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Rotate-DkimSigningConfig cmdlet to rotate the public and private DomainKeys Identified Mail (DKIM) signing policy keys for domains in a cloud-based organization. This cmdlet creates new DKIM keys and uses the alternate DKIM selector. Typically, you don't need to use this cmdlet, because Microsoft Office 365 automatically rotates your DKIM keys.
 
-
-
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
@@ -26,14 +24,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Rotate-DkimSigningConfig -Identity contoso.com
-```
-
-This example rotates the DKIM signing policy for the contoso.com domain.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Rotate-DkimSigningConfig -Identity contoso.com
 ```
@@ -134,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/88ba21af-c860-4106-b305-c30f9b4697e1.aspx)
-

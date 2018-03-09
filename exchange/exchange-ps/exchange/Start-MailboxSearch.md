@@ -6,14 +6,6 @@ schema: 2.0.0
 # Start-MailboxSearch
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Start-MailboxSearch cmdlet to restart or resume a mailbox search that's been stopped.
-
-When restarting a search, any previous results returned by the same search are removed. To preserve previous search results and resume the search from the point it was stopped, use the Resume switch.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Start-MailboxSearch cmdlet to restart or resume a mailbox search that's been stopped.
@@ -28,28 +20,6 @@ Start-MailboxSearch [-Identity] <SearchObjectIdParameter> [-Confirm] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can use Multi-Mailbox Search to search one or more specified mailboxes or all mailboxes across the Microsoft Exchange Server 2010 organization. A search is created by using the New-MailboxSearch cmdlet or the Web management interface for Microsoft Office Outlook Web App.
-
-To learn more about Multi-Mailbox Search, see Understanding Multi-Mailbox Search.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Multi-Mailbox Search" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-You can use In-Place eDiscovery to search one or more specified mailboxes or all mailboxes across the Microsoft Exchange Server 2013 organization. A search is created by using the Exchange Administration Center (EAC) or the New-MailboxSearch cmdlet.
-
-When restarting a search, any previous results returned by the same search and copied to a Discovery mailbox are removed. To preserve previous search results and resume the search from the point it was stopped, use the Resume switch.
-
-In Exchange 2013, mailbox searches are also used for In-Place Hold. However, you can't start or stop In-Place Hold using the Start-MailboxSearch and Stop-MailboxSearch cmdlets.
-
-For more details, see In-Place Hold and Litigation Hold and In-Place eDiscovery.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "In-Place eDiscovery" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can use In-Place eDiscovery to search one or more specified mailboxes or all mailboxes across the Exchange organization. A search is created by using the Exchange admin center (EAC) or the New-MailboxSearch cmdlet.
 
 When restarting a search, any previous results returned by the same search and copied to a Discovery mailbox are removed. To preserve previous search results and resume the search from the point it was stopped, use the Resume switch.
@@ -62,28 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Start-MailboxSearch -Identity "ProjectContoso"
-```
-
-This example starts the mailbox search ProjectContoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Start-MailboxSearch -Identity "ProjectContoso"
-```
-
-This example starts the mailbox search ProjectContoso.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Start-MailboxSearch -Identity "ProjectContoso"
-```
-
-This example starts the mailbox search ProjectContoso.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Start-MailboxSearch -Identity "ProjectContoso"
 ```
@@ -129,19 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -157,17 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Force switch suppresses the confirmation prompt displayed before the command is executed.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -183,19 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -Resume
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Resume switch resumes a stopped, failed, or partially succeeded search from the point it stopped. If you use the Resume switch to resume a search, previous search results aren't removed from the target mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Resume switch resumes a stopped, failed, or partially succeeded search from the point it stopped. You don't need to specify a value with this switch.
 
 If you use this switch to resume a search, previous search results aren't removed from the target mailbox.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -227,17 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatisticsStartIndex
-!!! Exchange Server 2013
-
-The StatisticsStartIndex parameter is used by the Exchange Administration Center (EAC) to retrieve keyword statistics in a paged operation.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The StatisticsStartIndex parameter is used by the EAC to retrieve keyword statistics in a paged operation.
-
-
 
 ```yaml
 Type: Int32
@@ -270,4 +179,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f0c4e047-7eca-4310-bfad-1ecfe1420ceb.aspx)
-

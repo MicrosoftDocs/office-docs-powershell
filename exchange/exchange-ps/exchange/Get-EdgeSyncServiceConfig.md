@@ -6,15 +6,11 @@ schema: 2.0.0
 # Get-EdgeSyncServiceConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-EdgeSyncServiceConfig cmdlet to retrieve the edge synchronization services settings that control the general synchronization behavior shared by all Microsoft Exchange EdgeSync services.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-EdgeSyncServiceConfig cmdlet to retrieve the edge synchronization services settings that control the general synchronization behavior shared by all Microsoft Exchange EdgeSync services.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -24,35 +20,11 @@ Get-EdgeSyncServiceConfig [[-Identity] <EdgeSyncServiceConfigIdParameter>] [-Dom
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-EdgeSyncServiceConfig "Primary EdgeSync Settings" | Format-List
-```
-
-This example reads the configuration of the Microsoft Exchange EdgeSync service settings Primary EdgeSync Settings from Active Directory and displays all its properties in a list format.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-EdgeSyncServiceConfig "Primary EdgeSync Settings" | Format-List
-```
-
-This example reads the configuration of the Microsoft Exchange EdgeSync service settings named Primary EdgeSync Settings from Active Directory and displays all its properties in a list format.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-EdgeSyncServiceConfig "Primary EdgeSync Settings" | Format-List
 ```
@@ -127,4 +99,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0864f701-484d-4a57-9291-ea63e25c1f1b.aspx)
-

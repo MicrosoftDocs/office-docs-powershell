@@ -6,7 +6,11 @@ schema: 2.0.0
 # Update-PublicFolder
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Update-PublicFolder cmdlet to start content synchronization of a public folder.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -16,18 +20,18 @@ Update-PublicFolder [-Identity] <PublicFolderIdParameter> -Server <ServerIdParam
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Offline address books" entry in the Mailbox Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Update-PublicFolder "\Legal\Cases\My Public Folder" -Server "My Server"
 ```
 
 This example starts content replication of the public folder My Public Folder in the \\Legal\\Cases path from the server My Server to all of the servers on the replication list for My Public Folder.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-PublicFolder "\Legal\Cases\My Public Folder" | Update-PublicFolder -Server "My Server"
 ```

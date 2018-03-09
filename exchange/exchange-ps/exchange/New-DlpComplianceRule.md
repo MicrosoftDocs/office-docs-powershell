@@ -41,7 +41,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-DlpComplianceRule -Name "SocialSecurityRule" -Policy "USFinancialChecks" -ContentContainsSensitiveInformation @{Name="U.S. Social Security Number (SSN)"} -BlockAccess $True
 ```
@@ -169,7 +169,9 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 
 - All: Block access to everyone except the owner and the last modifier.
 
-- PerUser: Block access to external users.### -Comment
+- PerUser: Block access to external users.
+
+### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
@@ -228,7 +230,7 @@ Accept wildcard characters: False
 ### -ContentPropertyContainsWords
 The ContentPropertyContainsWords parameter specifies a condition for the DLP rule that's based on a property match in content. The rule is applied to content that contains the specified property.
 
-This parameter accepts values in the format: "\<Property1\>:\<Value1\>,\<Value2\>","\<Property2\>:\<Value3\>,\<Value4\>"....
+This parameter accepts values in the format: "\<Property1\>:\<Value1\>,\<Value2\>","\<Property2\>:\<Value3\>,\<Value4\>",..."\<PropertyN\>:\<ValueN\>,\<ValueN\>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -722,7 +724,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

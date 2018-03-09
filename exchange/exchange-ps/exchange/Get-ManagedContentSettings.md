@@ -6,7 +6,11 @@ schema: 2.0.0
 # Get-ManagedContentSettings
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Get-ManagedContentSettings cmdlet to retrieve managed content settings associated with managed folders.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -27,25 +31,25 @@ The Get-ManagedContentSettings cmdlet retrieves from one to all of the managed c
 
 If only the Identity parameter is present, the folder content settings and all associated attributes are returned. If the Identity parameter isn't present, the command returns all content settings. If the FolderName parameter is present, the command returns all content settings contained in the specified managed folder and all the attributes of each setting.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-ManagedContentSettings | Format-List
 ```
 
 This example uses the Get-ManagedContentSettings cmdlet without parameters to obtain all managed content settings. The output of the Get-ManagedContentSettings cmdlet is piped to the Format-List cmdlet so that all the available information is displayed in the result.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-ManagedContentSettings -Identity "Inbox Settings"
 ```
 
 This example retrieves the managed content settings Inbox Settings.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-ManagedContentSettings -FolderName "Inbox"
 ```

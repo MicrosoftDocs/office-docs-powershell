@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-UMActiveCalls
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-UMActiveCalls cmdlet to return information about the calls that are active and being processed by the Unified Messaging (UM) server.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-UMActiveCalls cmdlet to return information about the calls that are active and being processed by the Mailbox server running the Microsoft Exchange Unified Messaging service.
@@ -41,28 +35,6 @@ Get-UMActiveCalls [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<Com
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-UMActiveCalls cmdlet returns information about the active calls being processed. If the Get-UMActiveCalls cmdlet specifies either the UM dial plan or UM IP gateway, it looks in Active Directory to determine which Unified Messaging servers must be contacted. If the Unified Messaging server is specified at a command prompt, the Get-UMActiveCalls cmdlet returns the active calls being processed by the server specified.
-
-When a Unified Messaging server is process cycling, the Get-UMActiveCalls cmdlet doesn't return a list of all calls for both the discontinued process and the active process. It returns the active calls only for the new process.
-
-After this task is completed, you can see the list of active calls being processed by a Unified Messaging server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM server" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-UMActiveCalls cmdlet returns information about the active calls being processed. If the Get-UMActiveCalls cmdlet specifies either the UM dial plan or UM IP gateway, it looks in Active Directory to determine which Mailbox server running the Microsoft Exchange Unified Messaging service must be contacted. If the Mailbox server is specified at a command prompt, the Get-UMActiveCalls cmdlet returns the active calls being processed by the server specified.
-
-When a Mailbox server is process cycling, the Get-UMActiveCalls cmdlet doesn't return a list of all calls for both the discontinued process and the active process. It returns the active calls only for the new process.
-
-After this task is completed, you can see the list of active calls being processed by a Mailbox server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Server (UM service)" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016
-
 The Get-UMActiveCalls cmdlet returns information about the active calls being processed. If the Get-UMActiveCalls cmdlet specifies either the UM dial plan or UM IP gateway, it looks in Active Directory to determine which Mailbox server running the Microsoft Exchange Unified Messaging service must be contacted. If the Mailbox server is specified at a command prompt, the Get-UMActiveCalls cmdlet returns the active calls being processed by the server specified.
 
 When a Mailbox server is process cycling, the Get-UMActiveCalls cmdlet doesn't return a list of all calls for both the discontinued process and the active process. It returns the active calls only for the new process.
@@ -73,84 +45,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-UMActiveCalls
-```
-
-This example displays the details of all active calls on the local Unified Messaging server.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-UMActiveCalls
 ```
 
 This example displays the details of all active calls on the local Mailbox server.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-UMActiveCalls
-```
-
-This example displays the details of all active calls on the local Mailbox server.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-UMActiveCalls -Server MyUMServer
-```
-
-This example displays the details of all active calls on a Unified Messaging server named MyUMServer.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-UMActiveCalls -Server MyUMServer
 ```
 
 This example displays the details of all active calls on the Mailbox server MyUMServer.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-UMActiveCalls -Server MyUMServer
-```
-
-This example displays the details of all active calls on the Mailbox server MyUMServer.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-UMActiveCalls -IPGateway MyUMIPGateway
-```
-
-This example displays the details of all active calls being processed by a UM IP gateway named MyUMIPGateway.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Get-UMActiveCalls -IPGateway MyUMIPGateway
 ```
 
 This example displays the details of all active calls being processed by the UM IP gateway MyUMIPGateway.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-UMActiveCalls -IPGateway MyUMIPGateway
-```
-
-This example displays the details of all active calls being processed by the UM IP gateway MyUMIPGateway.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Get-UMActiveCalls -DialPlan MyUMDialPlan
-```
-
-This example displays a list of active calls associated with the UM dial plan named MyUMDialPlan.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Get-UMActiveCalls -DialPlan MyUMDialPlan
-```
-
-This example displays a list of active calls associated with the UM dial plan MyUMDialPlan.
-
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 4
 ```
 Get-UMActiveCalls -DialPlan MyUMDialPlan
 ```
@@ -176,17 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceServer
-!!! Exchange Server 2010
-
-The InstanceServer parameter specifies the Unified Messaging server for which you want to retrieve active calls.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The InstanceServer parameter specifies the Mailbox server running the Microsoft Exchange Unified Messaging service for which you want to retrieve active calls.
-
-
 
 ```yaml
 Type: UMServer
@@ -234,17 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies the Unified Messaging server for which you want to retrieve active calls.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Server parameter specifies the Mailbox server running the Microsoft Exchange Unified Messaging service for which you want to retrieve active calls.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -277,4 +173,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4c7418a5-783c-4db7-82da-49ceaa3d534f.aspx)
-

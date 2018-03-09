@@ -6,15 +6,11 @@ schema: 2.0.0
 # Remove-SendConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-SendConnector cmdlet to delete a Send connector on a computer that has the Hub Transport server role or the Edge Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-SendConnector cmdlet to delete a Send connector.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -24,24 +20,6 @@ Remove-SendConnector [-Identity] <SendConnectorIdParameter> [-Confirm] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-SendConnector cmdlet deletes the object and the configuration information for the Send connector.
-
-Although a Send connector is configured on a local Hub Transport server or on an Edge Transport server, deleting a Send connector may affect mail flow throughout the organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Send connectors" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-SendConnector cmdlet deletes the object and the configuration settings for the Send connector.
-
-Although a Send connector is configured locally in the Transport service on a Mailbox server or on an Edge server, deleting a Send connector may affect mail flow throughout the organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Send connectors" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Remove-SendConnector cmdlet deletes the object and the configuration settings for the Send connector.
 
 Although a Send connector is configured locally in the Transport service on a Mailbox server or on an Edge server, deleting a Send connector may affect mail flow throughout the organization.
@@ -50,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-SendConnector "Contoso.com Send Connector"
-```
-
-This example deletes the Send connector Contoso.com Send Connector.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-SendConnector "Contoso.com Send Connector"
-```
-
-This example deletes the Send connector named Contoso.com Send Connector.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-SendConnector "Contoso.com Send Connector"
 ```
@@ -74,17 +38,7 @@ This example deletes the Send connector named Contoso.com Send Connector.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the GUID or connector name that represents a specific Send connector. You can also include the server name by using the format ServerName\\ConnectorName.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the name, or GUID of the Send connector. If the Identity name contains spaces, enclose the name in quotation marks ("). You can omit the Identity parameter label. You can also include the server name by using the format ServerName\\ConnectorName.
-
-
 
 ```yaml
 Type: SendConnectorIdParameter
@@ -100,25 +54,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -185,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cf131dc1-6067-4952-a6c3-7d6651a326da.aspx)
-

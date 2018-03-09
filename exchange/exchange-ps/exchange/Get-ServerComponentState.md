@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-ServerComponentState
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-ServerComponentState cmdlet to retrieve configuration settings for Microsoft Exchange Server 2013 components and endpoints.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ServerComponentState cmdlet to retrieve configuration settings for Microsoft Exchange components and endpoints.
@@ -30,31 +20,18 @@ Get-ServerComponentState [-Identity] <ServerIdParameter> [-Component <String>] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test system health" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ServerComponentState -Component UnifiedMessaging
-```
-
-This example retrieves the component state for the Unified Messaging component.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ServerComponentState -Identity Mailbox01
 ```
 
 This example returns a summary list of all component and endpoint states on the server named Mailbox01.
 
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-ServerComponentState -Identity Mailbox01 -Component UnifiedMessaging | Format-List
 ```
@@ -64,14 +41,6 @@ This example returns detailed information for the component state of the Unified
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the requester.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Exchange server where you want to view the configuration settings. You can use the following values:
 
 - Name
@@ -79,8 +48,6 @@ The Identity parameter specifies the Exchange server where you want to view the 
 - Distinguished name (DN)
 
 - FQDN
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -96,17 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Component
-!!! Exchange Server 2013
-
-The Component parameter specifies the component or endpoint for which you want to retrieve the state.
-
-
-
-!!! Exchange Server 2016
-
 The Component parameter specifies the component or endpoint for which you want to retrieve the state. To see the available values, run the following command: Get-ServerComponentState \<ServerName\>.
-
-
 
 ```yaml
 Type: String
@@ -157,4 +114,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/da7214fe-c641-4c6a-a479-df95a4136929.aspx)
-

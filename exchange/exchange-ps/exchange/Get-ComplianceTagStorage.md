@@ -23,14 +23,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-ComplianceTagStorage
-```
-
-This example confirms that you've created the label policy in your organization.
-
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-ComplianceTagStorage
 ```
@@ -81,4 +74,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/18d8ecc1-8084-4905-bc6a-a1f5199d280b.aspx)
-

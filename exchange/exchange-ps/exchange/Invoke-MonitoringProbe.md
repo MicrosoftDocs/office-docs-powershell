@@ -10,9 +10,9 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Invoke-MonitoringProbe cmdlet to run a Managed Availability probe on a selected server.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
 This cmdlet cannot be used to run every Managed Availability probe. Only some probes (mainly the deep test probes) can be run manually using this cmdlet. Probes that cannot be run with this cmdlet will generate an error message when Invoke-MonitoringProbe is used to run them.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -24,24 +24,11 @@ Invoke-MonitoringProbe [-Identity] <String> -Server <ServerIdParameter> [-Accoun
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Shell infrastructure permissions" section in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Invoke-MonitoringProbe -Identity ActiveSync.Protocol\ActiveSyncSelfTestProbe -Server EX1
-```
-
-This example creates an Exchange ActiveSync monitoring probe on the EX1 server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Invoke-MonitoringProbe -Identity ActiveSync.Protocol\ActiveSyncSelfTestProbe -Server EX1
 ```
@@ -67,26 +54,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-You can't use this parameter to configure other Edge Transport servers remotely.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -100,8 +67,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 If you don't use this parameter, the command is run on the local server.
 
 You can't use this parameter to configure other Edge Transport servers remotely.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -278,4 +243,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/932fada2-3d7a-4caa-b925-b7bfbae3ae51.aspx)
-

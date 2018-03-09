@@ -31,33 +31,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-SafeAttachmentRule -Name "Research Department URL Rule" -SafeAttachmentPolicy "Research Block URL" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
 ```
 
 This example creates a new Safe Links rule named Research Department URL Rule with the following conditions:
 
+- The rule is associated with the Safe Links policy named Research Block URL.
 
-The rule is associated with the Safe Links policy named Research Block URL.
+- The rule applies to members of the group named Research Department.
 
-The rule applies to members of the group named Research Department.
-
-The rule doesn't apply to members of the group named Research Department Managers.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-SafeAttachmentRule -Name "Research Department URL Rule" -SafeAttachmentPolicy "Research Block URL" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
-```
-
-This example creates a new Safe Links rule named Research Department URL Rule with the following conditions:
-
-
-The rule is associated with the Safe Links policy named Research Block URL.
-
-The rule applies to members of the group named Research Department.
-
-The rule doesn't apply to members of the group named Research Department Managers.
+- The rule doesn't apply to members of the group named Research Department Managers.
 
 ## PARAMETERS
 
@@ -78,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -SafeLinksPolicy
-The SafeLinksPolicy parameter specifies the Safe Links policy that's associated with this Safe Links rule. The rule defines the conditions, and the policy defines the actions.
+The SafeLinksPolicy parameter specifies the Safe Links policy that's associated with this Safe Links rule. The rule defines the conditions and the policy defines the actions.
 
 You can use any value that uniquely identifies the policy. For example:
 
@@ -371,4 +356,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/47a06afc-98ed-4ed7-98f5-ca8f20ef58d9.aspx)
-

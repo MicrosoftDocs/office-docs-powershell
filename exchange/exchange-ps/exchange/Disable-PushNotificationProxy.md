@@ -19,28 +19,13 @@ Disable-PushNotificationProxy [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The push notification proxy relays event notifications (for example, new email or calendar updates) for on-premises mailboxes through Office 365 to OWA for Devices on the user's device.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Push notification proxy settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The push notification proxy relays event notifications (for example, new email or calendar updates) for on-premises mailboxes through Office 365 to Outlook on the web for devices on the user's device.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-PushNotificationProxy
-```
-
-This example disables the push notification proxy in the on-premises Exchange organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Disable-PushNotificationProxy
 ```
@@ -50,25 +35,11 @@ This example disables the push notification proxy in the on-premises Exchange or
 ## PARAMETERS
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -117,4 +88,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/917432cc-85d6-4505-9608-51ce0608eb6e.aspx)
-

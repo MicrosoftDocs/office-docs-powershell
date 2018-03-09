@@ -6,7 +6,11 @@ schema: 2.0.0
 # new-ManagedFolderMailboxPolicy
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the New-ManagedFolderMailboxPolicy cmdlet to create a managed folder mailbox policy.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -19,13 +23,13 @@ new-ManagedFolderMailboxPolicy [-Name] <String> [-Confirm] [-DomainController <F
 ## DESCRIPTION
 Managed folder mailbox policies are applied to user mailboxes to control message retention settings.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 Managed custom folders are a premium feature of messaging records management (MRM). Mailboxes with policies that include managed custom folders require an Exchange Server Enterprise client access license (CAL).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-ManagedFolderMailboxPolicy -Name "My Managed Folder Mailbox Policy" -ManagedFolderLinks Inbox, MyFolder
 ```

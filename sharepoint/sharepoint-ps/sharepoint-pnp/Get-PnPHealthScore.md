@@ -15,14 +15,14 @@ Retrieves the current health score value of the server which is a value between 
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPHealthScore
+Get-PnPHealthScore
 ```
 
 This will retrieve the current health score of the server.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPHealthScore -Url https://contoso.sharepoint.com
+Get-PnPHealthScore -Url https://contoso.sharepoint.com
 ```
 
 This will retrieve the current health score for the url https://contoso.sharepoint.com.

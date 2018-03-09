@@ -6,15 +6,11 @@ schema: 2.0.0
 # Get-RecipientFilterConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-RecipientFilterConfig cmdlet to view the configuration information for the recipient filter configuration for the computer on which the command is run.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-RecipientFilterConfig cmdlet to view the recipient filter configuration information for the computer on which the command is run.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -24,35 +20,11 @@ Get-RecipientFilterConfig [[-Identity] <OrganizationIdParameter>] [-DomainContro
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-RecipientFilterConfig | Format-List
-```
-
-This example returns detailed information about the recipient filter configuration for the computer on which the command is run.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-RecipientFilterConfig | Format-List
-```
-
-This example returns detailed information about the recipient filter configuration for the computer on which the command is run.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-RecipientFilterConfig | Format-List
 ```
@@ -80,17 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: OrganizationIdParameter
@@ -123,4 +85,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4c8dfaf1-721f-4f5a-9a85-4ff63cac3534.aspx)
-

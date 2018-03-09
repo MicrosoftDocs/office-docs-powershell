@@ -20,28 +20,13 @@ Get-ActiveSyncDeviceAutoblockThreshold [[-Identity] <ActiveSyncDeviceAutoblockTh
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Microsoft Exchange and Exchange ActiveSync have the capability to block Exchange ActiveSync mobile devices if these devices display any of a defined list of behaviors that have the capability to cause issues with the server. The Get-ActiveSyncDeviceAutoblockThreshold cmdlet returns the settings for the requested threshold rule.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync Autoblock settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 Microsoft Exchange and Exchange ActiveSync have the capability to block Exchange ActiveSync mobile devices if these devices display any of a defined list of behaviors that have the capability to cause issues with the server. The Get-ActiveSyncDeviceAutoblockThreshold cmdlet returns the settings for the requested threshold rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ActiveSyncDeviceAutoblockThreshold -Identity "UserAgentChanges"
-```
-
-This example retrieves the threshold settings for the Autoblock threshold rule for UserAgentChanges.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ActiveSyncDeviceAutoblockThreshold -Identity "UserAgentChanges"
 ```
@@ -100,4 +85,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1dc9974b-de67-47d2-a177-c358c9fe366b.aspx)
-

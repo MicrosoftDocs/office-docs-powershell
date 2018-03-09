@@ -21,9 +21,12 @@ Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 ```
 
 ## DESCRIPTION
-Lists all hub sites found on the SharePoint tenant. If you provide **-Identity** the cmdlet returns detailed information about the specific hub.
+Lists all hub sites found on the SharePoint tenant. If you provide **-Identity** the cmdlet returns detailed information about the specific hub. You can find which hub a site is associated with by providing the site's identity with this cmdlet.
 
-If the site doesn’t exist, this cmdlet returns a “File not found” error.
+> [!IMPORTANT]
+> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
+
+If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
 ## EXAMPLES
 
@@ -38,7 +41,7 @@ This example lists all hub sites in the tenant.
 ### Example 2
 
 ```
-Get-SPOHubSite https://contoso.sharepoint.com/sites/Research
+Get-SPOHubSite https://contoso.sharepoint.com/sites/online-marketing
 
 ID          : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
 Title       : Marketing Hub
@@ -49,7 +52,7 @@ Description : Hub for the Marketing division
 Rights     : nestorw@contoso.onmicrosoft.com
 ```
 
-This example provides property information about the research hub site.
+This example begins with the online-marketing site. The cmdlet finds the associated hub site, which is marketing. Then it lists all the details about the marketing hub site.
 
 ## PARAMETERS
 

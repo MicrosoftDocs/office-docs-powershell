@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-AdministrativeUnit
 ```
 
 This example returns a summary list of all Azure Active Directory administrative units.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-AdministrativeUnit -Identity "West Coast" | Format-List
 ```

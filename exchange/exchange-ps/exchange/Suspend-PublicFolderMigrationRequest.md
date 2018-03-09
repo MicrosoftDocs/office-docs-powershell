@@ -20,57 +20,23 @@ Suspend-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestId
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Suspend-PublicFolderMigrationRequest -Identity PFMigReq1
 ```
 
 This example suspends the public folder migration request PFMigReq1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Suspend-PublicFolderMigrationRequest -Identity PFMigReq1
-```
-
-This example suspends the public folder migration request PFMigReq1.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Suspend-PublicFolderMigrationRequest -Identity PFMigReq1
-```
-
-This example suspends the public folder migration request PFMigReq1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-PublicFolderMigrationRequest -Status InProgress | Suspend-PublicFolderMigrationRequest
 ```
 
-This example suspends all migration requests that are in progress by using the Get-PublicFolderMigrationRequest cmdlet to retrieve all migration requests with a Status value of InProgress, and then pipelining the output to the Suspend-PublicFolderMigrationRequest cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMigrationRequest -Status InProgress | Suspend-PublicFolderMigrationRequest
-```
-
-This example suspends all migration requests that are in progress by using the Get-PublicFolderMigrationRequest cmdlet to retrieve all migration requests with a Status value of InProgress, and then pipelining the output to the Suspend-PublicFolderMigrationRequest cmdlet.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-PublicFolderMigrationRequest -Status InProgress | Suspend-PublicFolderMigrationRequest
-```
-
-This example suspends all migration requests that are in progress by using the Get-PublicFolderMigrationRequest cmdlet to retrieve all migration requests with a Status value of InProgress, and then pipelining the output to the Suspend-PublicFolderMigrationRequest cmdlet.
+This example suspends all migration requests that are in progress by using the Get-PublicFolderMigrationRequest cmdlet to retrieve all migration requests with a Status value of InProgress and then pipelining the output to the Suspend-PublicFolderMigrationRequest cmdlet.
 
 ## PARAMETERS
 
@@ -95,25 +61,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -196,4 +148,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ccb89e00-a90d-4324-b066-15bd733a78db.aspx)
-

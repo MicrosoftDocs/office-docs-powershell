@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-UnifiedGroup
 ```
 
 This example returns a summary list of all Office 365 groups.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-UnifiedGroup | Format-List DisplayName,EmailAddresses,Notes,ManagedBy,AccessType
 ```
@@ -58,7 +58,7 @@ Owners
 
 Privacy
 
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-UnifiedGroup -Identity "Marketing Department" | Format-List
 ```
@@ -142,7 +142,9 @@ Accept wildcard characters: False
 ### -IncludeAllProperties
 The IncludeAllProperties switch specifies whether to include the values of all properties in the results. You don't need to specify a value with this switch.
 
-If you don't use this switch, the values of some properties (for example, CalendarMemeberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.### -IncludeSoftDeletedGroups
+If you don't use this switch, the values of some properties (for example, CalendarMemeberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.
+
+### -IncludeSoftDeletedGroups
 The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 groups in the results. You don't need to specify a value with this switch.
 
 This switch is required to return soft-deleted Office 365 groups.

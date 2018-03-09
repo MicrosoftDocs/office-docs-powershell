@@ -27,7 +27,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-CaseHoldRule -Name "2016 Budget Spreadsheets" -Policy "Internal Company Policy" -ContentMatchQuery "filename:2016 budget filetype:xlsx"
 ```
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

@@ -23,14 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
-```
-Remove-AntiPhishRule -Identity "Research Department Phishing Rule"
-```
-
-This examples removes the antiphishing rule named Research Department Phishing Rule.
-
-### Example 1 (Exchange Online Protection)
+### Example 1
 ```
 Remove-AntiPhishRule -Identity "Research Department Phishing Rule"
 ```

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-PublicFolderClientPermission
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-PublicFolderClientPermission cmdlet to remove permissions from public folders.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-PublicFolderClientPermission cmdlet to remove permissions from public folders.
@@ -27,42 +21,18 @@ Remove-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter> -Acces
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-PublicFolderClientPermission -Identity \"My Public Folder" -User Chris -AccessRights CreateItems -Server "My Server"
 ```
 
-This example removes permission for the user Chris to create items in the public folder My Public Folder on the server My Server.
+In Exchange Server 2010, this example removes permission for the user Chris to create items in the public folder My Public Folder on the server My Server.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-PublicFolderClientPermission -Identity "\My Public Folder" -User Contoso\Chris
-```
-
-This example removes permission for the user Chris to the public folder My Public Folder.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-PublicFolderClientPermission -Identity "\My Public Folder" -User Contoso\Chris
-```
-
-This example removes permission for the user Chris to the public folder My Public Folder.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 2
 ```
 Remove-PublicFolderClientPermission -Identity "\My Public Folder" -User Contoso\Chris
 ```
@@ -72,47 +42,49 @@ This example removes permission for the user Chris to the public folder My Publi
 ## PARAMETERS
 
 ### -AccessRights
+This parameter is available only in on-premises Exchange Server 2010.
+
 The AccessRights parameter specifies the rights being removed. This parameter accepts the following values:
 
-- ReadItems The user has the right to read items within the specified public folder.
+- ReadItems: The user has the right to read items within the specified public folder.
 
-- CreateItems The user has the right to create items within the specified public folder.
+- CreateItems: The user has the right to create items within the specified public folder.
 
-- EditOwnedItems The user has the right to edit the items that the user owns in the specified public folder.
+- EditOwnedItems: The user has the right to edit the items that the user owns in the specified public folder.
 
-- DeleteOwnedItems The user has the right to delete items that the user owns in the specified public folder.
+- DeleteOwnedItems: The user has the right to delete items that the user owns in the specified public folder.
 
-- EditAllItems The user has the right to edit all items in the specified public folder.
+- EditAllItems: The user has the right to edit all items in the specified public folder.
 
-- DeleteAllItems The user has the right to delete all items in the specified public folder.
+- DeleteAllItems: The user has the right to delete all items in the specified public folder.
 
-- CreateSubfolders The user has the right to create subfolders in the specified public folder.
+- CreateSubfolders: The user has the right to create subfolders in the specified public folder.
 
-- FolderOwner The user is the owner of the specified public folder. The user has the right to view and move the public folder and create subfolders. The user can't read items, edit items, delete items, or create items.
+- FolderOwner: The user is the owner of the specified public folder. The user has the right to view and move the public folder and create subfolders. The user can't read items, edit items, delete items, or create items.
 
-- FolderContact The user is the contact for the specified public folder.
+- FolderContact: The user is the contact for the specified public folder.
 
-- FolderVisible The user can view the specified public folder, but can't read or edit items within the specified public folder.
+- FolderVisible: The user can view the specified public folder, but can't read or edit items within the specified public folder.
 
 In addition to the access rights, you can create rights based upon roles, which includes multiple access rights. This parameter accepts the following values for roles:
 
-- NoneFolderVisible
+- None: FolderVisible
 
-- OwnerCreateItems, ReadItems, CreateSubfolders, FolderOwner, FolderContact, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
+- Owner: CreateItems, ReadItems, CreateSubfolders, FolderOwner, FolderContact, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
 
-- PublishingEditorCreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
+- PublishingEditor: CreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
 
-- EditorCreateItems, ReadItems, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
+- Editor: CreateItems, ReadItems, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
 
-- PublishingAuthorCreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, DeleteOwnedItems
+- PublishingAuthor: CreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, DeleteOwnedItems
 
-- AuthorCreateItems, ReadItems, FolderVisible, EditOwnedItems, DeleteOwnedItems
+- Author: CreateItems, ReadItems, FolderVisible, EditOwnedItems, DeleteOwnedItems
 
-- NonEditingAuthorCreateItems, ReadItems, FolderVisible
+- NonEditingAuthor: CreateItems, ReadItems, FolderVisible
 
-- ReviewerReadItems, FolderVisible
+- Reviewer: ReadItems, FolderVisible
 
-- ContributorCreateItems, FolderVisible
+- Contributor: CreateItems, FolderVisible
 
 ```yaml
 Type: MultiValuedProperty
@@ -128,21 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path by using the format TopLevelPublicFolder\\PublicFolder.
-
-You can omit the parameter label so that only the public folder name or GUID is supplied.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path by using the format \\TopLevelPublicFolder\\PublicFolder.
 
 You can omit the parameter label so that only the public folder name or GUID is supplied.
-
-
 
 ```yaml
 Type: PublicFolderIdParameter
@@ -174,25 +134,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -208,25 +154,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -236,7 +172,19 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the server on which to perform the selected operations.
+This parameter is available only in on-premises Exchange Server 2010.
+
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifes the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter
@@ -285,4 +233,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cc35b182-d90d-4f0a-9e4c-cd97bd81b4f3.aspx)
-

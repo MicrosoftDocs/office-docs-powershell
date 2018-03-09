@@ -23,28 +23,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-HostedConnectionFilterPolicy
 ```
 
-This example shows a summary list of all the connection filter policies in your cloud-based organization
+This example shows a summary list of all the connection filter policies in your cloud-based organization.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-HostedConnectionFilterPolicy
-```
-
-This example shows a summary list of all the connection filter policies in your cloud-based organization
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-HostedConnectionFilterPolicy Default | Format-List
-```
-
-This example retrieves details about the connection filter policy named Default.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-HostedConnectionFilterPolicy Default | Format-List
 ```
@@ -54,7 +40,7 @@ This example retrieves details about the connection filter policy named Default.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the connection filter policy that you want to view. You can use any value that uniquely identifies the policy. For example, you can specify the name, GUID, or distinguished name (DN) of the connection filter policy.
+The Identity parameter specifies the connection filter policy that you want to view. You can use any value that uniquely identifies the policy. For example, you can specify the name, GUID or distinguished name (DN) of the connection filter policy.
 
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter
@@ -87,4 +73,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bd751db2-3f26-495b-8e5a-4fcab53b17fd.aspx)
-

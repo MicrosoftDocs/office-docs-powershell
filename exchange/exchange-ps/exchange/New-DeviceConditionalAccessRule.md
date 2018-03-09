@@ -57,7 +57,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-DeviceConditionalAccessRule -Policy "Secure Email" -TargetGroups 5bff73eb-0ba7-461b-b7c9-9b4c173cc266
 ```
@@ -1550,7 +1550,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

@@ -6,21 +6,11 @@ schema: 2.0.0
 # Get-ReceiveConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ReceiveConnector cmdlet to view the configuration information for a Receive connector on a computer that has the Hub Transport server role or the Edge Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-ReceiveConnector cmdlet to view the configuration information for a Receive connector.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ReceiveConnector cmdlet to view Receive connectors on Mailbox servers and Edge Transport servers. Receive connectors listen for inbound SMTP connections on the Exchange server.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -36,58 +26,20 @@ Get-ReceiveConnector [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Receive connectors" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Receive connectors" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You can view Receive connectors on Mailbox servers and Edge Transport servers.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-ReceiveConnector "Receive Connector for Contoso.com" | Format-List
-```
-
-This example displays detailed configuration information for the Receive connector Receive Connector for Contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ReceiveConnector "Receive Connector for Contoso.com" | Format-List
-```
-
-This example displays detailed configuration information for the Receive Connector for Contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ReceiveConnector -Server Exchange01
 ```
 
 This example returns a summary list of all Receive connectors on the server named Exchange01.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-ReceiveConnector -Server Hub1
-```
-
-This example lists all the Receive connectors configured on server Hub1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ReceiveConnector -Server Hub1
-```
-
-This example lists all the Receive connectors on Hub1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-ReceiveConnector -Identity "Receive Connector for Contoso.com" | Format-List
 ```
@@ -115,24 +67,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the GUID or connector name that represents a specific Receive connector. You can also include the server name using the format ServerName\\ConnectorName.
-
-You can omit the parameter label so that only the connector name or GUID is supplied.
-
-
-
-!!! Exchange Server 2013
-
-Specifies the GUID or connector name that represents a specific Receive connector. You can also include the server name using the format ServerName\\ConnectorName.
-
-You can omit the parameter label so that only the connector name or GUID is supplied.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Receive connector that you want to view. You can use any value that uniquely identifies the Receive connector. For example:
 
 - Name
@@ -144,8 +78,6 @@ The Identity parameter specifies the Receive connector that you want to view. Yo
 - \<ServerName\>\\\<Name\>
 
 You can't use this parameter with the Server parameter.
-
-
 
 ```yaml
 Type: ReceiveConnectorIdParameter
@@ -161,20 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies the name of the server to query when the command is run. Only the Receive connectors configured on the server that you specify are displayed.
-
-
-
-!!! Exchange Server 2013
-
-Specifies the name of the server to query when the command is run. Only Receive connectors configured on the server you specify are displayed.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter filters the results by the specified Mailbox server or Edge Transport server. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -186,8 +104,6 @@ The Server parameter filters the results by the specified Mailbox server or Edge
 - Exchange Legacy DN
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -220,4 +136,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6801411c-6faf-449f-aa8b-f4c105791d89.aspx)
-

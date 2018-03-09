@@ -20,16 +20,6 @@ Disable-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter> [-Confi
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Disable-UMCallAnsweringRule cmdlet disables the call answering rule by modifying its status variable. Disabling a call answering rule prevents it from being retrieved and processed when an incoming call is received. With this cmdlet, you can disable an existing call answering rule that's enabled.
-
-When the call answering rule is created, you should disable the call answering rule when you're setting up conditions and actions. This prevents the call answering rule from being processed when an incoming call is received until you've correctly configured the call answering rule. After this task is completed, the cmdlet sets the parameters and the values specified.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call answering rules entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Disable-UMCallAnsweringRule cmdlet disables the call answering rule by modifying its status variable. Disabling a call answering rule prevents it from being retrieved and processed when an incoming call is received. With this cmdlet, you can disable an existing call answering rule that's enabled.
 
 When the call answering rule is created, you should disable the call answering rule when you're setting up conditions and actions. This prevents the call answering rule from being processed when an incoming call is received until you've correctly configured the call answering rule. After this task is completed, the cmdlet sets the parameters and the values specified.
@@ -38,63 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Disable -UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
 ```
 
 This example disables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable -UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
-```
-
-This example disables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Disable -UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
-```
-
-This example disables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Disable -UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -WhatIf
 ```
 
 This example uses the WhatIf switch to test whether the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith is ready to be disabled and if there are any errors within the command.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Disable -UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -WhatIf
-```
-
-This example uses the WhatIf switch to test whether the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith is ready to be disabled and if there are any errors within the command.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Disable -UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -WhatIf
-```
-
-This example uses the WhatIf switch to test whether the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith is ready to be disabled and if there are any errors within the command.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Disable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -Confirm
-```
-
-This example disables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith and prompts the user logged on to confirm that they're disabling the call answering rule.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Disable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -Confirm
-```
-
-This example disables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith and prompts the user logged on to confirm that they're disabling the call answering rule.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Disable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -Confirm
 ```
@@ -207,4 +155,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0368911a-7c22-4182-9a9b-921a48cafa7c.aspx)
-

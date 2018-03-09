@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-LinkedUser
 ```
 
 This example lists all linked users in the organization.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-RemoteMailbox -Identity laura@contoso.com | Format-List
 ```

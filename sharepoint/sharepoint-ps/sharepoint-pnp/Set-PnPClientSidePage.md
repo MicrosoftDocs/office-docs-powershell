@@ -13,11 +13,11 @@ Sets parameters of a Client-Side Page
 ```powershell
 Set-PnPClientSidePage -Identity <ClientSidePagePipeBind>
                       [-Name <String>]
+                      [-Title <String>]
                       [-LayoutType <ClientSidePageLayoutType>]
                       [-PromoteAs <ClientSidePagePromoteType>]
                       [-CommentsEnabled [<SwitchParameter>]]
                       [-Publish [<SwitchParameter>]]
-                      [-PublishMessage <String>]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
 ```
@@ -26,21 +26,21 @@ Set-PnPClientSidePage -Identity <ClientSidePagePipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPClientSidePage -Identity "MyPage" -LayoutType Home
+Set-PnPClientSidePage -Identity "MyPage" -LayoutType Home -Title "My Page"
 ```
 
 Updates the properties of the Client-Side page named 'MyPage'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPClientSidePage -Identity "MyPage" -CommentsEnabled
+Set-PnPClientSidePage -Identity "MyPage" -CommentsEnabled
 ```
 
 Enables the comments on the Client-Side page named 'MyPage'
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPClientSidePage -Identity "MyPage" -CommentsEnabled:$false
+Set-PnPClientSidePage -Identity "MyPage" -CommentsEnabled:$false
 ```
 
 Disables the comments on the Client-Side page named 'MyPage'
@@ -119,8 +119,8 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -PublishMessage
-Sets the message for publishing the page.
+### -Title
+Sets the title of the page.
 
 ```yaml
 Type: String
@@ -132,7 +132,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

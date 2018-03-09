@@ -20,17 +20,7 @@ Remove-IntraOrganizationConnector [-Identity] <IntraOrganizationConnectorIdParam
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Intra-Organizational connectors enable features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations, or between tenants hosted in the same or different datacenters.
-
-The Remove-IntraOrganizationConnector cmdlet removes the connector objects. To stop feature or service connectivity without removing the connector object, run the command Set-IntraOrganizationConnector \<ConnectorIdentity\> -Enabled $false.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Intra-Organization connectors" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-Intra-Organizational connectors enable features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations, or between tenants hosted in the same or different datacenters.
+Intra-Organizational connectors enable features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations or between tenants hosted in the same or different datacenters.
 
 The Remove-IntraOrganizationConnector cmdlet removes the connector objects. To stop feature or service connectivity without removing the connector object, run the command Set-IntraOrganizationConnector \<ConnectorIdentity\> -Enabled $false.
 
@@ -38,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-IntraOrganizationConnector "Contoso On-premises-Exchange Online"
-```
-
-This example removes the existing Intra-Organization connector named "Contoso On-premises-Exchange Online".
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-IntraOrganizationConnector "Contoso On-premises-Exchange Online"
-```
-
-This example removes the existing Intra-Organization connector named "Contoso On-premises-Exchange Online".
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-IntraOrganizationConnector "Contoso On-premises-Exchange Online"
 ```
@@ -155,4 +131,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/41d1fc57-9ff8-4a4c-bdc2-1875d8996500.aspx)
-

@@ -6,7 +6,13 @@ schema: 2.0.0
 # Add-PublicFolderAdministrativePermission
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
+This cmdlet is available only in on-premises Exchange Server 2010.
+
 Use the Add-PublicFolderAdministrativePermission cmdlet to add administrative permissions to a public folder or a public folder hierarchy.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -35,18 +41,18 @@ Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder administrative permissions" entry in the Mailbox Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Add-PublicFolderAdministrativePermission -User Chris -Identity \MyPublicFolder -AccessRights ViewInformationStore
 ```
 
 This example grants the user Chris the ViewInformationStore permission on the public folder MyPublicFolder.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Add-PublicFolderAdministrativePermission -User Chris -Identity \MyPublicFolder -AccessRights ViewInformationStore -Deny
 ```
@@ -217,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-The Deny switch specifies whether to deny the permission specified.
+The Deny switch specifies whether to deny the permission specified. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -275,7 +281,17 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter specifies the server on which to perform the selected operations.
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifes the server. For example:
+
+- Name
+
+- FQDN
+
+- Distinguished name (DN)
+
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
 
 ```yaml
 Type: ServerIdParameter

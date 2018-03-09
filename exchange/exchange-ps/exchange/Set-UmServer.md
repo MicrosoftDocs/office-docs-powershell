@@ -6,7 +6,11 @@ schema: 2.0.0
 # Set-UMServer
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Set-UMServer cmdlet to set the properties on a Unified Messaging (UM) server.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -26,32 +30,32 @@ The Set-UMServer cmdlet sets specific properties on a Unified Messaging server. 
 
 After this task is completed, the cmdlet sets the parameters and the values specified.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM server" entry in the Unified Messaging Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-UMServer -Identity MyUMServer -Status NoNewCalls
 ```
 
 This example prevents the Unified Messaging server MyUMServer from accepting new calls.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-UMServer -Identity MyUMServer -DialPlans $null
 ```
 
 This example removes the Unified Messaging server MyUMServer from all UM dial plans.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Set-UMServer -Identity MyUMServer -DialPlans MyUMDialPlanName -MaxCallsAllowed 50
 ```
 
 This example adds the Unified Messaging server MyUMServer to the UM dial plan MyUMDialPlanName and also sets the maximum number of incoming voice calls to 50.
 
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 4
 ```
 Set-UMServer -Identity MyUMServer -GrammarGenerationSchedule 0.02:30-1.03:00, 1.02:30-1.03:00, 2.02:30-2.03:00, 3.02:30-3.03:00, 4.02:30-4.03:00, 5.02:30-5.03:00, 6.02:30-6.03:00
 ```

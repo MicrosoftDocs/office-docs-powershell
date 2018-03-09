@@ -6,7 +6,11 @@ schema: 2.0.0
 # New-RpcClientAccess
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the New-RpcClientAccess cmdlet to create configuration information for the Exchange RPC Client Access service on a Client Access server. This setup task is performed by default on new installations of the Client Access server role on Microsoft Exchange Server 2010.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -19,11 +23,11 @@ New-RpcClientAccess -Server <ServerIdParameter> [-BlockedClientVersions <String>
 ## DESCRIPTION
 After you run this command, you must start the Exchange RPC Client Access service on the Exchange Client Access server to enable RPC client access.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "RPC Client Access settings" entry in the Client Access Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-RpcClientAccess -Server CAS01
 ```

@@ -24,28 +24,28 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 $Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example replaces the existing terms in the DLP keyword dictionary named Diseases with the specified values.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); $Terms += "Achylia","Acidemia","Acidocytopenia","Acidocytosis","Acidopenia","Acidosis","Aciduria","Acladiosis","Aclasis"; $Keywords = $Terms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example adds the specified terms to the DLP keyword dictionary named Diseases without affecting other existing terms.
 
-### Example 3 -------------------------- (Office 365 Security & Compliance Center)
+### Example 3
 ```
 $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); $TermsToRemove = @('abandonment', 'ablatio'); $UpdatedTerms = $Terms | Where-Object {$_ -NotIn $TermsToRemove}; $Keywords = $UpdatedTerms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
 This example removes the specified terms from the DLP keyword dictionary named Diseases without affecting other existing terms.
 
-### Example 4 -------------------------- (Office 365 Security & Compliance Center)
+### Example 4
 ```
 $Dictionary = Get-DlpKeywordDictionary -Name "Inappropriate Language"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"; $UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"; $Keywords = $UpdatedTerms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
 ```
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter

@@ -6,21 +6,11 @@ schema: 2.0.0
 # Set-IPBlockListConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-IPBlockListConfig cmdlet to modify the IP Block list configuration on a computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Set-IPBlockListConfig cmdlet to modify the IP Block list configuration that's used by the Connection Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Set-IPBlockListConfig cmdlet to modify the IP Block list configuration that's used by the Connection Filtering agent on Edge Transport servers.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -32,41 +22,13 @@ Set-IPBlockListConfig [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The IP Block list is used by the Connection Filter agent. The Connection Filter agent acts on the IP address of the remote server that initiates the SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-On Edge Transport servers, the Connection Filtering agent acts on the IP address of the incoming SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, the Connection Filtering agent acts on the IP address of the incoming SMTP connection to determine what action, if any, to take on an incoming message.
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-IPBlockListConfig -InternalMailEnabled $true
-```
-
-This example enables the IP Block list on messages that come from internal domains.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-IPBlockListConfig -InternalMailEnabled $true
-```
-
-This example configures connection filtering to use the IP Block list on messages that come from internal connections.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-IPBlockListConfig -InternalMailEnabled $true
 ```
@@ -114,17 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-!!! Exchange Server 2010
-
-The Enabled parameter specifies whether the IP Block list is used for content filtering on the computer on which you're running the command. Valid input for the Enabled parameter is $true or $false. The default setting is $true. When the Enabled parameter is set to $true, the IP Block list is used for content filtering on the computer on which you're running the command.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Enabled parameter specifies whether the IP Block list is used for content filtering. Valid input for this parameter is $true or $false. The default value is $true. By default, the IP Block list is used for content filtering.
-
-
 
 ```yaml
 Type: $true | $false
@@ -140,17 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalMailEnabled
-!!! Exchange Server 2010
-
-The ExternalMailEnabled parameter specifies whether the IP Block list is used for content filtering for all messages from connections external to the Exchange organization. Valid input for the ExternalMailEnabled parameter is $true or $false. The default setting is $true. When the ExternalMailEnabled parameter is set to $true, the IP Block list is used for content filtering for all messages from connections external to the Exchange organization.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ExternalMailEnabled parameter specifies whether messages from connections outside of the Exchange organization are evaluated by the IP Block list. Valid input for this parameter is $true or $false. The default value is $true. By default, messages from external connections are evaluated by the IP Block list.
-
-
 
 ```yaml
 Type: $true | $false
@@ -166,17 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalMailEnabled
-!!! Exchange Server 2010
-
-The InternalMailEnabled parameter specifies whether the IP Block list is used for content filtering for all messages from senders internal to the Exchange organization. Valid input for the InternalMailEnabled parameter is $true or $false. The default setting is $false. When the InternalMailEnabled parameter is set to $true, the IP Block list is used for content filtering for all messages from senders internal to the Exchange organization. Authenticated partner messages aren't considered internal mail.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The InternalMailEnabled parameter specifies whether messages from connections inside the Exchange organization are evaluated by the IP Block list. Valid input for this parameter is $true or $false. The default value is $false. By default, messages from internal connections are not evaluated by the IP Block list. Authenticated partner messages aren't considered internal mail.
-
-
 
 ```yaml
 Type: $true | $false
@@ -192,19 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -MachineEntryRejectionResponse
-!!! Exchange Server 2010
-
-The MachineEntryRejectionResponse parameter specifies customized responses for messages received from IP addresses that were added to the IP Block list by sender reputation.
-
-Enter the message body that you want delivered in the non-delivery report (NDR) to senders. Don't exceed 240 characters in the argument. When you pass an argument, you must enclose the MachineEntryRejectionResponse parameter in quotation marks (") if the phrase contains spaces, for example: "Message rejected".
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The MachineEntryRejectionResponse parameter specifies customized text in the non-delivery report (NDR) for messages that are blocked by connection filtering due to IP addresses in the IP Block list that were added by sender reputation. The value can't exceed 240 characters. If the value contains spaces, enclose the value in double quotation marks (").
-
-
 
 ```yaml
 Type: AsciiString
@@ -220,17 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -StaticEntryRejectionResponse
-!!! Exchange Server 2010
-
-The StaticEntryRejectionResponse parameter specifies a customized response for messages blocked by the IP Block list on the Connection Filter agent. Don't exceed 240 characters in the argument. When you pass an argument, you must enclose the StaticEntryRejectionResponse parameter in quotation marks (") if the phrase contains spaces, for example: "Message rejected".
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The StaticEntryRejectionResponse parameter specifies a customized text in the NDR for messages that are blocked by connection filtering due to IP addresses in the IP Block list. The value can't exceed 240 characters. If the value contains spaces, enclose the value in double quotation marks (").
-
-
 
 ```yaml
 Type: AsciiString
@@ -279,4 +189,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/87e30029-0349-4d9a-a9a4-cb25686ccb7c.aspx)
-

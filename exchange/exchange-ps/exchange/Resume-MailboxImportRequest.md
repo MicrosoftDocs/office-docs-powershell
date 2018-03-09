@@ -6,27 +6,11 @@ schema: 2.0.0
 # Resume-MailboxImportRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Resume-MailboxImportRequest cmdlet to resume an import request that was suspended or failed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Resume-MailboxImportRequest cmdlet to resume an import request that was suspended or failed.
-
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Resume-MailboxImportRequest cmdlet to resume an import request that was suspended or failed.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+This cmdlet is available only in the Mailbox Import Export role and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -38,76 +22,20 @@ Resume-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-This cmdlet can be pipelined with the Get-MailboxImportRequest cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-This cmdlet can be pipelined with the Get-MailboxImportRequest cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet can be pipelined with the Get-MailboxImportRequest cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Resume-MailboxImportRequest -Identity kweku\MailboxImport1
 ```
 
 This example resumes the second import request for Kweku's mailbox kweku\\MailboxImport1
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Resume-MailboxImportRequest -Identity kweku\MailboxImport1
-```
-
-This example resumes the second import request for Kweku's mailbox kweku\\MailboxImport1
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Resume-MailboxImportRequest -Identity kweku\MailboxImport1
-```
-
-This example resumes the second import request for Kweku's mailbox kweku\\MailboxImport1
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Resume-MailboxImportRequest -Identity kweku\MailboxImport1
-```
-
-This example resumes the second import request for Kweku's mailbox kweku\\MailboxImport1
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxImportRequest -Status Failed | Resume-MailboxImportRequest
-```
-
-This example resumes all failed import requests.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxImportRequest -Status Failed | Resume-MailboxImportRequest
-```
-
-This example resumes all failed import requests.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxImportRequest -Status Failed | Resume-MailboxImportRequest
-```
-
-This example resumes all failed import requests.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MailboxImportRequest -Status Failed | Resume-MailboxImportRequest
 ```
@@ -153,19 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -214,4 +132,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4175a9af-6651-4094-bb6b-ef292d753107.aspx)
-

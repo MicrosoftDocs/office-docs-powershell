@@ -6,15 +6,11 @@ schema: 2.0.0
 # Get-EdgeSubscription
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-EdgeSubscription cmdlet to retrieve information about Edge Subscriptions in a Microsoft Exchange Server 2010 organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-EdgeSubscription cmdlet to retrieve information about Edge Subscriptions in your organization.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -23,62 +19,20 @@ Get-EdgeSubscription [[-Identity] <TransportServerIdParameter>] [-DomainControll
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Run the Get-EdgeSubscription cmdlet on a computer running Microsoft Exchange 2010 in the organization. This cmdlet retrieves the list of Edge Subscriptions. Each computer that has the Edge Transport server role installed and that's subscribed to the Exchange organization has a separate Edge Subscription. You can use this cmdlet to view the Edge Subscription information for a specific Edge Transport server. You can also use this cmdlet to view the Edge Subscription information for all Edge Transport servers subscribed to Active Directory sites.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-Run the Get-EdgeSubscription cmdlet on an Exchange server in your organization. This cmdlet retrieves the list of Edge Subscriptions. Each Edge Transport server that's subscribed to the Exchange organization has a separate Edge Subscription. You can use this cmdlet to view the Edge Subscription information for a specific Edge Transport server. You can also use this cmdlet to view the Edge Subscription information for all Edge Transport servers subscribed to Active Directory sites.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 Run the Get-EdgeSubscription cmdlet on an Exchange server in your organization. This cmdlet retrieves the list of Edge Subscriptions. Each Edge Transport server that's subscribed to the Exchange organization has a separate Edge Subscription. You can use this cmdlet to view the Edge Subscription information for a specific Edge Transport server. You can also use this cmdlet to view the Edge Subscription information for all Edge Transport servers subscribed to Active Directory sites.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-EdgeSubscription | Format-List
 ```
 
 This example retrieves detailed Edge Subscription information for all Edge Transport servers subscribed to your Exchange organization.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-EdgeSubscription | Format-List
-```
-
-This example retrieves detailed Edge Subscription information for all Edge Transport servers subscribed to your Exchange organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-EdgeSubscription | Format-List
-```
-
-This example retrieves detailed Edge Subscription information for all Edge Transport servers subscribed to your Exchange organization.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-EdgeSubscription -DomainController DC1.contoso.com -Identity Edge1
-```
-
-This example retrieves the Edge Subscription information for the Edge Transport server Edge1 from the domain controller DC1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-EdgeSubscription Edge1 -DomainController DC1.contoso.com
-```
-
-This example retrieves the Edge Subscription information for the Edge Transport server name Edge1 from the domain controller named DC1.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-EdgeSubscription Edge1 -DomainController DC1.contoso.com
 ```
@@ -139,4 +93,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dc05b43c-ddc3-468b-97ff-5e915f56c751.aspx)
-

@@ -6,7 +6,11 @@ schema: 2.0.0
 # Enable-OutlookAnywhere
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Enable-OutlookAnywhere cmdlet to enable Outlook Anywhere on a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed. Running the Enable-OutlookAnywhere cmdlet enables the server to accept requests from Microsoft Office Outlook 2007 and Outlook 2003 client computers from the Internet by using Outlook Anywhere, also known as RPC over HTTP.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -37,25 +41,25 @@ This cmdlet can be successfully run only if the RPC over HTTP proxy Windows netw
 
 When you run this cmdlet, it can take as long as an hour for the settings to become effective, depending on how long it takes for Active Directory to replicate.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Anywhere configuration (enable, disable, change, view)" entry in the Client Access Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Enable-OutlookAnywhere -Server:Server01 -ExternalHostname:mail.contoso.com -ClientAuthenticationMethod:Ntlm -SSLOffloading:$true
 ```
 
 This example enables the server Server01 for Outlook Anywhere. The external host name is set to mail.contoso.com, both Basic and NTLM authentication are used, and SSL offloading is set to $true.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Enable-OutlookAnywhere -DefaultAuthenticationMethod:Ntlm -ExternalHostname:mail.contoso.com -SSLOffloading:$false
 ```
 
 This example enables Outlook Anywhere on the server that has the Client Access role installed. The SSLOffloading parameter is set to $false, the ExternalHostname parameter is specified as mail.contoso.com, and the DefaultAuthenticationMethod parameter is set to NTLM.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Enable-Outlookanywhere -IISAuthenticationMethods NTLM -SSlOffloading:$false -ClientAuthenticationMethod:Basic -ExternalHostname:mail.contoso.com
 ```

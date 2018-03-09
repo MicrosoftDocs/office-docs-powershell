@@ -6,19 +6,9 @@ schema: 2.0.0
 # Add-GlobalMonitoringOverride
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Add-GlobalMonitoringOverride cmdlet to override the thresholds and parameters of managed availability probes, monitors, and responders on all Exchange 2013 servers in your organization. The cmdlet enables monitoring changes and threshold tuning to the environment.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Add-GlobalMonitoringOverride cmdlet to override the thresholds and parameters of the managed availability probes, monitors, and responders on all Exchange 2013or later servers in your organization. The cmdlet enables monitoring changes and threshold tuning to the environment.
+Use the Add-GlobalMonitoringOverride cmdlet to override the thresholds and parameters of the managed availability probes, monitors and responders on all Exchange 2013 or later servers in your organization. The cmdlet enables monitoring changes and threshold tuning to the environment.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -39,66 +29,32 @@ Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | R
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Shell infrastructure permissions" section in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Add-GlobalMonitoringOverride -Identity "FrontendTransport\OnPremisesInboundProxy" -PropertyName Enabled -PropertyValue 0 -Duration 30.00:00:00 -ItemType Probe
 ```
 
 This example adds a global monitoring override that disables the OnPremisesInboundProxy probe for 30 days. Note that the value of Identity is case-sensitive.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Add-GlobalMonitoringOverride -Identity "FrontendTransport\OnPremisesInboundProxy" -PropertyName Enabled -PropertyValue 0 -Duration 30.00:00:00 -ItemType Probe
-```
-
-This example adds a global monitoring override that disables the OnPremisesInboundProxy probe for 30 days. Note that the value of Identity is case-sensitive.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Add-GlobalMonitoringOverride -Identity "MailboxSpace\StorageLogicalDriveSpaceEscalate" -PropertyName Enabled -PropertyValue 0 -ItemType Responder -ApplyVersion "15.00.0847.032"
-```
-
-This example adds a global monitoring override that disables the StorageLogicalDriveSpaceEscalate responder for all servers running version 15.00.0847.032. Note that the value of Identity is case-sensitive.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Add-GlobalMonitoringOverride -Identity "MailboxSpace\StorageLogicalDriveSpaceEscalate" -PropertyName Enabled -PropertyValue 0 -ItemType Responder -ApplyVersion "15.01.0225.0422"
 ```
 
-This example adds a global monitoring override that disables the StorageLogicalDriveSpaceEscalate responder for all Exchange 2016servers running version 15.01.0225.0422. Note that the value of Identity is case-sensitive.
+This example adds a global monitoring override that disables the StorageLogicalDriveSpaceEscalate responder for all Exchange 2016 servers running version 15.01.0225.0422. Note that the value of Identity is case-sensitive.
 
 ## PARAMETERS
 
 ### -ApplyVersion
-!!! Exchange Server 2013
-
-The ApplyVersion parameter specifies the version of Exchange that gets the override. If an Exchange server is older or newer than the version you specify, the override isn't applied to the server. Typically, you increase the Exchange version by applying Cumulative Updates or Service Packs.
-
-Valid input for this parameter is an Exchange version number in the format 15.00.xxxx.xxx.
-
-You can't use this parameter with the Duration parameter.
-
-
-
-!!! Exchange Server 2016
-
 The ApplyVersion parameter specifies the version of Exchange that gets the override. If an Exchange server is older or newer than the version you specify, the override isn't applied to the server. Typically, you increase the Exchange version by applying Cumulative Updates or Service Packs.
 
 Valid input for this parameter is an Exchange version number in the format 15.0x.xxxx.xxx.
 
 You can't use this parameter with the Duration parameter.
-
-
 
 ```yaml
 Type: Version
@@ -222,29 +178,13 @@ Accept wildcard characters: False
 ```
 
 ### -Duration
-!!! Exchange Server 2013
-
 The Duration parameter specifies the length of time that the override is active.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 For example, 30.10:00:00 specifies 30 days and 10 hours.
 
 You can't use this parameter with the ApplyVersion parameter.
-
-
-
-!!! Exchange Server 2016
-
-The Duration parameter specifies the length of time that the override is active.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-For example, 30.10:00:00 specifies 30 days and 10 hours.
-
-You can't use this parameter with the ApplyVersion parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -325,4 +265,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9d5ec0ec-a7bc-4bea-a62e-6252407ed7e8.aspx)
-

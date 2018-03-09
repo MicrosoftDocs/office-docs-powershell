@@ -6,29 +6,13 @@ schema: 2.0.0
 # remove-ActiveSyncMailboxPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ActiveSyncMailboxPolicy cmdlet to remove a specific Microsoft Exchange ActiveSync mailbox policy from a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-ActiveSyncMailboxPolicy cmdlet to remove a specific Microsoft Mobile Device mailbox policy from a computer running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-The Remove-ActiveSyncMailboxPolicy cmdlet will be removed in a future version of Exchange. Use the Remove-MobileDeviceMailboxPolicy cmdlet instead. If you have any scripts that use the Remove-ActiveSyncMailboxPolicy cmdlet, update them to use the Remove-MobileDeviceMailboxPolicy cmdlet.
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-ActiveSyncMailboxPolicy cmdlet to remove mobile device mailbox policies.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
 The Remove-ActiveSyncMailboxPolicy cmdlet will be removed in a future version of Exchange. Use the Remove-MobileDeviceMailboxPolicy cmdlet instead. If you have any scripts that use the Remove-ActiveSyncMailboxPolicy cmdlet, update them to use the Remove-MobileDeviceMailboxPolicy cmdlet.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -38,107 +22,29 @@ remove-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-An Exchange ActiveSync mailbox policy is a group of settings that specifies how mobile phones connect to Exchange. Exchange supports multiple Exchange ActiveSync mailbox policies. The Remove-ActiveSyncMailboxPolicy cmdlet enables you to remove a specific Exchange ActiveSync mailbox policy from the Client Access server. If any users are assigned to the policy when you remove it, the Remove-ActiveSyncMailboxPolicy cmdlet fails.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync mailbox policy settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-A Mobile Device mailbox policy is a group of settings that specifies how mobile phones connect to Exchange. Exchange supports multiple Mobile Device mailbox policies. The Remove-ActiveSyncMailboxPolicy cmdlet enables you to remove a specific Mobile Device mailbox policy. If any users are assigned to the policy when you remove it, the Remove-ActiveSyncMailboxPolicy cmdlet fails.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mobile Device mailbox policy settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 A mobile device mailbox policy is a group of settings that specifies how mobile phones connect to Exchange. Exchange supports multiple mobile device mailbox policies. If any users are assigned to the policy when you attempt to remove it, the command fails.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncMailboxPolicy -Identity "SalesPolicy"
-```
-
-This example removes the Exchange ActiveSync mailbox policy SalesPolicy.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-ActiveSyncMailboxPolicy -Identity "SalesPolicy"
-```
-
-This example removes the Mobile Device mailbox policy SalesPolicy.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-ActiveSyncMailboxPolicy -Identity "SalesPolicy"
 ```
 
 This example removes the mobile device mailbox policy SalesPolicy.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-ActiveSyncMailboxPolicy -Identity "SalesPolicy"
-```
-
-This example removes the mobile device mailbox policy SalesPolicy.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncMailboxPolicy -Identity "Default" -Confirm $true
-```
-
-This example removes the Exchange ActiveSync mailbox policy Default after confirmation is given.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-ActiveSyncMailboxPolicy -Identity "Default" -Confirm $true
-```
-
-This example removes the Mobile Device mailbox policy Default after confirmation is given.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Remove-ActiveSyncMailboxPolicy -Identity "Management" -Confirm:$false -Force $true
 ```
 
 This example removes the mobile device mailbox policy named Management and bypasses any confirmation prompts.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Remove-ActiveSyncMailboxPolicy -Identity "Management" -Confirm:$false -Force $true
-```
-
-This example removes the mobile device mailbox policy named Management and bypasses any confirmation prompts.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncMailboxPolicy -Identity "Management" -Force $true
-```
-
-This example removes the Exchange ActiveSync mailbox policy Management and bypasses any confirmation prompts.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Remove-ActiveSyncMailboxPolicy -Identity "Management" -Force $true
-```
-
-This example removes the Mobile Device mailbox policy Management and bypasses any confirmation prompts.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the policy name.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mobile device mailbox policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -146,8 +52,6 @@ The Identity parameter specifies the mobile device mailbox policy that you want 
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -183,19 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -211,17 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Force parameter specifies that the command should run immediately and bypass confirmation prompts.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -270,4 +154,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/acfe84cc-acb1-4840-9986-d6dc07e16620.aspx)
-

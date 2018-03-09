@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-ThrottlingPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ThrottlingPolicy cmdlet to remove a non-default Microsoft Exchange throttling policy.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-ThrottlingPolicy cmdlet to remove a non-default Microsoft Exchange throttling policy.
@@ -26,24 +20,6 @@ Remove-ThrottlingPolicy [-Identity] <ThrottlingPolicyIdParameter> [-Confirm] [-D
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can't remove the default client throttling policy. Also, you can't remove a policy that's associated with any users. For more information, see "Example 2" later in this topic.
-
-For more information about client throttling, see Understanding Client Throttling Policies. For more information about managing performance by using client throttling policies, see Managing Performance with Client Throttling Policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client throttling settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You can't remove the default client throttling policy. Also, you can't remove a policy associated with any users. For more information, see Example 2.
-
-For more information about how to control the resources consumed by individual users, see Exchange workload management.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "User throttling" entry in the Server health and performance permissions topic.
-
-!!! Exchange Server 2016
-
 You can't remove the default client throttling policy. Also, you can't remove a policy associated with any users. For more information, see Example 2.
 
 For more information about how to control the resources consumed by individual users, see User workload management in Exchange 2016.
@@ -52,42 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-ThrottlingPolicy -Identity ClientThrottlingPolicy2
-```
-
-This example removes the client throttling policy ClientThrottlingPolicy2.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Remove-ThrottlingPolicy -Identity ClientThrottlingPolicy2
 ```
 
 This example removes the user throttling policy ClientThrottlingPolicy2.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-ThrottlingPolicy -Identity ClientThrottlingPolicy2
-```
-
-This example removes the user throttling policy ClientThrottlingPolicy2.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-$policy = Get-ThrottlingPolicy ClientThrottlingPolicy2; $mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}; $defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}; foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}; Remove-ThrottlingPolicy ClientThrottlingPolicy2
-```
-
-You can't remove a policy that's associated with any users. This example reassigns the users subject to ClientThrottlingPolicy2 to the default policy. Then, it removes ClientThrottlingPolicy2.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-$policy = Get-ThrottlingPolicy ClientThrottlingPolicy2; $mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}; $defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}; foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}; Remove-ThrottlingPolicy ClientThrottlingPolicy2
-```
-
-You can't remove a policy that's associated with any users. This example reassigns the users subject to ClientThrottlingPolicy2 to the default policy. Then, it removes ClientThrottlingPolicy2.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 $policy = Get-ThrottlingPolicy ClientThrottlingPolicy2; $mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}; $defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}; foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}; Remove-ThrottlingPolicy ClientThrottlingPolicy2
 ```
@@ -133,19 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -177,17 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -220,4 +148,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d98b709b-672e-42ad-afc4-c6e860d33bc9.aspx)
-

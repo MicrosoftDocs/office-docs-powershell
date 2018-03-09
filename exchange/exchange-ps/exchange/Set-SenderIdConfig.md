@@ -6,15 +6,11 @@ schema: 2.0.0
 # Set-SenderIdConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-SenderIdConfig cmdlet to modify the Sender ID configuration on a computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-SenderIdConfig cmdlet to modify the configuration of the Sender ID agent.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -26,72 +22,25 @@ Set-SenderIdConfig [-BypassedRecipients <MultiValuedProperty>] [-BypassedSenderD
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-SenderIdConfig -SpoofedDomainAction Reject -BypassedRecipients user1@contoso.com,user2@contoso.com
-```
-
-This example makes the following modifications to the Sender ID configuration:
-
-
-It sets the Sender ID agent to reject all messages sent from spoofed domains.
-
-It specifies two recipients for the Sender ID agent to exclude when it processes messages.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-SenderIdConfig -SpoofedDomainAction Delete -BypassedRecipients user1@contoso.com,user2@contoso.com
 ```
 
 This example makes the following modifications to the Sender ID configuration:
 
+- It sets the Sender ID agent to delete all messages sent from spoofed domains.
 
-It sets the Sender ID agent to delete all messages sent from spoofed domains.
-
-It specifies two recipients for the Sender ID agent to exclude when it processes messages.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-SenderIdConfig -SpoofedDomainAction Delete -BypassedRecipients user1@contoso.com,user2@contoso.com
-```
-
-This example makes the following modifications to the Sender ID configuration:
-
-
-It sets the Sender ID agent to delete all messages sent from spoofed domains.
-
-It specifies two recipients for the Sender ID agent to exclude when it processes messages.
+- It specifies two recipients for the Sender ID agent to exclude when it processes messages.
 
 ## PARAMETERS
 
 ### -BypassedRecipients
-!!! Exchange Server 2010
-
-The BypassedRecipients parameter specifies one or more SMTP addresses. Messages bound for the SMTP addresses listed in this parameter are excluded from processing by the Sender ID agent. To enter multiple SMTP addresses, separate the addresses by using a comma, for example: recipient1@contoso.com,recipient2@contoso.com
-
-The maximum number of recipients that you can input is 100.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The BypassedRecipients parameter specifies one or more SMTP email addresses. Messages bound for the email addresses listed in this parameter are excluded from processing by the Sender ID agent. You can specify multiple values separated by commas. You can enter a maximum of 100 email addresses.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -107,19 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassedSenderDomains
-!!! Exchange Server 2010
-
-The BypassedSenderDomains parameter specifies one or more domain names. Messages that originate from the domains listed in this parameter are excluded from processing by the Sender ID agent. To enter multiple domains, separate the domains by using a comma, for example: contoso.com,fabrikam.com
-
-The maximum number of domain names that you can input is 100.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The BypassedSenderDomains parameter specifies one or more domain names. Messages that originate from the domains listed in this parameter are excluded from processing by the Sender ID agent. You can specify multiple values separated by commas. You can enter a maximum of 100 domain names.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -221,17 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpoofedDomainAction
-!!! Exchange Server 2010
-
-The SpoofedDomainAction parameter specifies the action that the Sender ID agent takes on the message when the sender domain shows evidence of being spoofed. The SpoofedDomainAction parameter takes the following values: StampStatus or Reject. The default value is StampStatus.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
-The SpoofedDomainAction parameter specifies the action that the Sender ID agent takes on the message when the sender domain shows evidence of being spoofed. The SpoofedDomainAction parameter takes the following values: StampStatus, Reject, or Delete. The default value is StampStatus.
-
-
+The SpoofedDomainAction parameter specifies the action that the Sender ID agent takes on the message when the sender domain shows evidence of being spoofed. The SpoofedDomainAction parameter takes the following values: StampStatus, Reject or Delete. The default value is StampStatus.
 
 ```yaml
 Type: StampStatus | Reject | Delete
@@ -247,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -TempErrorAction
-The TempErrorAction parameter specifies the action that the Sender ID agent takes on the message when a Sender ID status of TempError is returned. The TempErrorAction parameter takes the following values: StampStatus, Reject, or Delete. The default value is StampStatus.
+The TempErrorAction parameter specifies the action that the Sender ID agent takes on the message when a Sender ID status of TempError is returned. The TempErrorAction parameter takes the following values: StampStatus, Reject or Delete. The default value is StampStatus.
 
 ```yaml
 Type: StampStatus | Reject | Delete
@@ -296,4 +223,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/754e925b-bfa2-43f4-b0ac-3b51cb720e64.aspx)
-

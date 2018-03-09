@@ -6,7 +6,11 @@ schema: 2.0.0
 # Remove-AvailabilityReportOutage
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Remove-AvailabilityReportOutage cmdlet to remove existing outages that have been added with the New-AvailabilityReportOutage cmdlet. Other outages must be modified with the Set-AvailabilityReportOutage cmdlet.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -16,11 +20,11 @@ Remove-AvailabilityReportOutage [-SiteName] <String> -ReportDate <ExDateTime> [-
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test system health" entry in the Exchange and Shell Infrastructure Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-AvailabilityReportOutage -ReportDate:"2009-12-02" -SiteName:"Site1"
 ```

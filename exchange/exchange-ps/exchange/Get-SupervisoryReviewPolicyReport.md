@@ -38,28 +38,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-SupervisoryReviewPolicyReport -StartDate 03/01/2017 -EndDate 03/31/2017
 ```
 
 This example returns the supervisory review policy events for the month of March, 2017.
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-SupervisoryReviewPolicyReport -StartDate 03/01/2017 -EndDate 03/31/2017
-```
-
-This example returns the supervisory review policy events for the month of March, 2017.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-SupervisoryReviewPolicyReport -Policies "EU Brokers Policy"
-```
-
-This example returns the supervisory review policy events for the policy named EU Brokers Policy.
-
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-SupervisoryReviewPolicyReport -Policies "EU Brokers Policy"
 ```
@@ -172,4 +158,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cdd3cf55-6319-47ef-bcf8-12b6d4dc29e7.aspx)
-

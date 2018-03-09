@@ -21,28 +21,13 @@ New-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Extension <String
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-After running the New-SearchDocumentFormat cmdlet, your must run the following cmdlet to restart the search service. There will be a brief search outage.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Search - diagnostics" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 After running the New-SearchDocumentFormat cmdlet, your must run the following cmdlet to restart the search service. There will be a brief search outage.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-SearchDocumentFormat -Name "Proprietary SCT Formats" -MimeType text/scriptlet -Extension .sct -Identity ProprietarySCT1
-```
-
-This example creates a new search document format with an extension of .sct and a MIME type of text/scriptlet.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-SearchDocumentFormat -Name "Proprietary SCT Formats" -MimeType text/scriptlet -Extension .sct -Identity ProprietarySCT1
 ```
@@ -52,7 +37,7 @@ This example creates a new search document format with an extension of .sct and 
 ## PARAMETERS
 
 ### -Extension
-The Extension parameter specifies the file type to be processed by the filter, and is designated by the common file extension associated with the file type. Examples include .MP3, .JPG, and .PNG. Note the leading period.
+The Extension parameter specifies the file type to be processed by the filter and is designated by the common file extension associated with the file type. Examples include .MP3, .JPG and .PNG. Note the leading period.
 
 ```yaml
 Type: String
@@ -100,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name specifies a friendly name for the format, but does not need to be unique. For example, you might have several different formats (supported by custom IFilters) that are used to index output from a proprietary system called "My Business Output". You could use the Name parameter to create a category of formats called "My Business Output Formats", and uniquely identify each format within that group using the Identity parameter.
+The Name specifies a friendly name for the format, but does not need to be unique. For example, you might have several different formats (supported by custom IFilters) that are used to index output from a proprietary system called "My Business Output". You could use the Name parameter to create a category of formats called "My Business Output Formats" and uniquely identify each format within that group using the Identity parameter.
 
 ```yaml
 Type: String
@@ -154,24 +139,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -183,8 +150,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -233,4 +198,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0a00f1e7-15d2-4a3e-a6a6-0d1f8661ebcb.aspx)
-

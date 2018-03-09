@@ -25,14 +25,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Enable-SafeLinksRule -Identity "Marketing Department URL Rule"
-```
-
-This example enables the disabled Safe Links rule named Marketing Department URL Rule.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Enable-SafeLinksRule -Identity "Marketing Department URL Rule"
 ```
@@ -119,4 +112,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/31461bc5-4da9-4f5f-b6ef-4b16aa65e8c4.aspx)
-

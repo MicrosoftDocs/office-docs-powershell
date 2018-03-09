@@ -26,7 +26,7 @@ If you delete the only trusted publishing domain, all RMS features are disabled 
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-RMSTrustedPublishingDomain "Contoso TPD"
 ```

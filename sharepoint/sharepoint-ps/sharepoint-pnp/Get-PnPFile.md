@@ -36,8 +36,8 @@ Get-PnPFile -Url <String>
 
 ### Save to local path
 ```powershell
-Get-PnPFile -AsFile [<SwitchParameter>]
-            -Url <String>
+Get-PnPFile -Url <String>
+            -AsFile [<SwitchParameter>]
             [-Path <String>]
             [-Filename <String>]
             [-Force [<SwitchParameter>]]
@@ -49,42 +49,42 @@ Get-PnPFile -AsFile [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor
 ```
 
 Retrieves the file and downloads it to the current folder
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor -AsFile
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor -AsFile
 ```
 
 Retrieves the file and downloads it to c:\temp\company.spcolor
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsString
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsString
 ```
 
 Retrieves the file and outputs its contents to the console
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsFile
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsFile
 ```
 
 Retrieves the file and returns it as a File object
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsListItem
+Get-PnPFile -Url /sites/project/_catalogs/themes/15/company.spcolor -AsListItem
 ```
 
 Retrieves the file and returns it as a ListItem object
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Get-PnPFile -Url _catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor -AsFile
+Get-PnPFile -Url _catalogs/themes/15/company.spcolor -Path c:\temp -FileName company.spcolor -AsFile
 ```
 
 Retrieves the file by site relative URL and downloads it to c:\temp\company.spcolor
@@ -180,7 +180,7 @@ The URL (server or site relative) to the file
 
 ```yaml
 Type: String
-Parameter Sets: Return as file object
+Parameter Sets: Return as file object, Return as list item, Save to local path, Return as string
 Aliases: ServerRelativeUrl,SiteRelativeUrl
 
 Required: True
@@ -189,7 +189,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -214,7 +214,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.File](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.file.aspx)
+### Microsoft.SharePoint.Client.File
 
 ## RELATED LINKS
 

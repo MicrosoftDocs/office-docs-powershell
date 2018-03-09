@@ -6,21 +6,11 @@ schema: 2.0.0
 # Get-IPAllowListEntry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-IPAllowListEntry cmdlet to obtain the IP address configuration information for the Connection Filter agent on the computer on which the command is run.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Get-IPAllowListEntry cmdlet to view the IP address entries in the IP Allow list that's used by the Connection Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Get-IPAllowListEntry cmdlet to view the IP address entries in the IP Allow list that's used by the Connection Filtering agent on Edge Transport servers.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -37,56 +27,18 @@ Get-IPAllowListEntry [[-Identity] <IPListEntryIdentity>] [-ResultSize <Unlimited
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-IPAllowListEntry
-```
-
-This example returns all entries in the IP Allow list for the computer on which the command is run.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-IPAllowListEntry
 ```
 
 This example returns all entries in the IP Allow list on the local Edge Transport server.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-IPAllowListEntry
-```
-
-This example returns all entries in the IP Allow list on the local Edge Transport server.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-IPAllowListEntry -IPAddress 192.168.0.1
-```
-
-This example returns an IP Allow list entry in which the specified IP address is included.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-IPAllowListEntry -IPAddress 192.168.0.1
-```
-
-This example returns an IP Allow list entry in which the specified IP address is included.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-IPAllowListEntry -IPAddress 192.168.0.1
 ```
@@ -112,17 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the configuration number for a specific IP Allow list entry you want to view. When you add an IP address to the IP Allow list, the Identity parameter is automatically incremented.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the identity integer value of the IP Allow list entry that you want to view. When you add an entry to the IP Allow list, the Identity value is automatically assigned.
-
-
 
 ```yaml
 Type: IPListEntryIdentity
@@ -138,17 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-!!! Exchange Server 2010
-
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all entries, use unlimited for the value of this parameter. The default value is 1000.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Unlimited
@@ -164,34 +96,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies a server on which to run this command. If you don't use the Server parameter, the command is run on the local server.
-
-You can't use this command to configure other Edge Transport servers remotely.
-
-
-
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-You can't use this parameter to configure other Edge Transport servers remotely.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -205,8 +109,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 If you don't use this parameter, the command is run on the local server.
 
 You can't use this parameter to configure other Edge Transport servers remotely.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -239,4 +141,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8787482a-bf36-4700-bf8a-5b1530545da4.aspx)
-

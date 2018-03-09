@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-ExchangeAssistanceConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ExchangeAssistanceConfig cmdlet to view the configuration information for the URLs that Microsoft Exchange Help uses to connect to the source of the documentation.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ExchangeAssistanceConfig cmdlet to view the configuration information for the URLs that Microsoft Exchange Help uses to connect to the source of the documentation.
@@ -26,56 +20,18 @@ Get-ExchangeAssistanceConfig [[-Identity] <OrganizationIdParameter>] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Help settings" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Help settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-ExchangeAssistanceConfig -Identity Contoso.com
-```
-
-This example shows the configuration information that the Web management interface uses to locate the source of the documentation for Contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-ExchangeAssistanceConfig -Identity Contoso.com
 ```
 
 This example shows the configuration information that the web management interface uses to locate the source of the documentation for Contoso.com.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ExchangeAssistanceConfig -Identity Contoso.com
-```
-
-This example shows the configuration information that the web management interface uses to locate the source of the documentation for Contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-ExchangeAssistanceConfig | Format-Table
-```
-
-This example shows the configuration information for all organizations and formats the information into a table.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ExchangeAssistanceConfig | Format-Table
-```
-
-This example shows the configuration information for all organizations and formats the information into a table.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-ExchangeAssistanceConfig | Format-Table
 ```
@@ -85,19 +41,9 @@ This example shows the configuration information for all organizations and forma
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -146,4 +92,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5b060db2-edaf-40ff-9ae3-1d36c65a3234.aspx)
-

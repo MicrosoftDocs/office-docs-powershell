@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-PublicFolderDatabase
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-PublicFolderDatabase cmdlet to view public folder database settings.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-PublicFolderDatabase cmdlet to view public folder database settings for Microsoft Exchange Server 2010 or earlier public folders.
@@ -23,35 +17,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Get-PublicFolderDatabase -Server <ServerIdParameter> [-DomainController <Fqdn>] [-IncludePreExchange2010]
- [-Organization <OrganizationIdParameter>] [-Status] [-IncludeCorrupted] [<CommonParameters>]
+ [-Status] [-IncludeCorrupted] [<CommonParameters>]
 ```
 
 ### Set1
 ```
 Get-PublicFolderDatabase [[-Identity] <DatabaseIdParameter>] [-DomainController <Fqdn>]
- [-IncludePreExchange2010] [-Organization <OrganizationIdParameter>] [-Status] [-IncludeCorrupted]
+ [-IncludePreExchange2010] [-Status] [-IncludeCorrupted]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can specify either the Server or Identity parameter, but not both. Only the Server and Identity parameters can be piped.
-
-When you run the Get-PublicFolderDatabase cmdlet with no parameters, it returns attributes of all of the public folder databases in the Exchange organization. To return specific database properties (including backup and mount status information) where the Get-PublicFolderDatabase cmdlet has to contact servers directly or perform a complex or slow calculation, make sure you use the Status parameter.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder database" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You can specify either the Server or Identity parameter, but not both. Only the Server and Identity parameters can be piped.
-
-When you run the Get-PublicFolderDatabase cmdlet with no parameters, it returns attributes of all of the public folder databases in the Exchange organization. To return specific database properties (including backup and mount status information) where the Get-PublicFolderDatabase cmdlet has to contact servers directly or perform a complex or slow calculation, make sure you use the Status parameter.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 You can specify either the Server or Identity parameter, but not both. Only the Server and Identity parameters can be piped.
 
 When you run the Get-PublicFolderDatabase cmdlet with no parameters, it returns attributes of all of the public folder databases in the Exchange organization. To return specific database properties (including backup and mount status information) where the Get-PublicFolderDatabase cmdlet has to contact servers directly or perform a complex or slow calculation, make sure you use the Status parameter.
@@ -60,63 +36,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-PublicFolderDatabase | Format-List
 ```
 
 This example returns all the attributes of all the public folder databases in the organization by piping the results of the Get-PublicFolderDatabase command to the Format-List command.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolderDatabase | Format-List
-```
-
-This example returns all the attributes of all the public folder databases in the organization by piping the results of the Get-PublicFolderDatabase command to the Format-List command.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderDatabase | Format-List
-```
-
-This example returns all the attributes of all the public folder databases in the organization by piping the results of the Get-PublicFolderDatabase command to the Format-List command.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-PublicFolderDatabase -Identity "Server01\PFDatabase"
 ```
 
 This example returns information about the public folder database PFDatabase that resides on Server01.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolderDatabase -Identity "Server01\PFDatabase"
-```
-
-This example returns information about the public folder database PFDatabase that resides on Server01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderDatabase -Identity "Server01\PFDatabase"
-```
-
-This example returns information about the public folder database PFDatabase that resides on Server01.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-PublicFolderDatabase -Server Server01
-```
-
-This example returns information about all public folders on Server01.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolderDatabase -Server Server01
-```
-
-This example returns information about all public folders on Server01.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-PublicFolderDatabase -Server Server01
 ```
@@ -158,22 +92,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies a public folder database. You can use the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Database name
-
-If you don't specify the server name, the cmdlet searches for databases on the local server. If you have multiple databases with the same name, the cmdlet retrieves all databases with the same name in the specified scope.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies a public folder database. You can use the following values:
 
 - GUID
@@ -183,8 +101,6 @@ The Identity parameter specifies a public folder database. You can use the follo
 - Database name
 
 If you don't specify the server name, the cmdlet searches for databases on the local server. If you have multiple databases with the same name, the cmdlet retrieves all databases with the same name in the specified scope. This parameter can't be used with the Server parameter.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -204,22 +120,6 @@ The IncludePreExchange2010 parameter specifies whether information about all the
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -283,4 +183,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 [Online Version](https://technet.microsoft.com/library/7008b70b-607c-4802-871c-e0cb09f4673e.aspx)
 
 [Online Version](https://technet.microsoft.com/library/e2c9e769-ddfb-4981-906f-085834bc790f.aspx)
-

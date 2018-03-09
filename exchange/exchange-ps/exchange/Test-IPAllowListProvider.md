@@ -6,21 +6,11 @@ schema: 2.0.0
 # Test-IPAllowListProvider
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-IPAllowListProvider cmdlet to test the configuration for a specific IP Allow list provider on a computer that has the Hub Transport server role or Edge Transport server role installed. This configuration is used by the Connection Filter agent.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Test-IPAllowListProvider cmdlet to test IP Allow list providers on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Test-IPAllowListProvider cmdlet to test IP Allow list providers on Edge Transport servers.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -30,41 +20,13 @@ Test-IPAllowListProvider [-Identity] <IPAllowListProviderIdParameter> -IPAddress
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Test-IPAllowListProvider cmdlet checks connectivity to the specified IP Allow list provider and then issues a lookup request to the IP Allow list provider. When you test the connection and functionality of the IP Allow list provider, you must enter a known allowed IP address in the IPAddress parameter.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-On Edge Transport servers, the Test-IPAllowListProvider cmdlet checks connectivity to the specified allow list provider and then issues a lookup request to the allow list provider.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, the Test-IPAllowListProvider cmdlet checks connectivity to the specified allow list provider and then issues a lookup request to the allow list provider.
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-IPAllowListProvider -IPAddress 192.168.0.1 -Identity ExampleProviderName
-```
-
-This example tests the connectivity to the fictitious IP Allow list provider ExampleProviderName, and then issues a lookup request to that provider using the IP address 192.168.0.1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-IPAllowListProvider Contoso.com -IPAddress 192.168.0.1
-```
-
-This example tests the existing IP Allow list provider named Contoso,com by sending a lookup request to that provider for the IP address 192.168.0.1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Test-IPAllowListProvider Contoso.com -IPAddress 192.168.0.1
 ```
@@ -74,14 +36,6 @@ This example tests the existing IP Allow list provider named Contoso,com by send
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the IP Allow list provider name. The Identity parameter must match either the name or GUID of the IP Allow list provider that you want to test.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the IP Allow list provider that you want to test. You can use any value that uniquely identifies the IP Allow list provider. For example:
 
 - Name
@@ -89,8 +43,6 @@ The Identity parameter specifies the IP Allow list provider that you want to tes
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: IPAllowListProviderIdParameter
@@ -106,17 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddress
-!!! Exchange Server 2010
-
-The IPAddress parameter specifies an IP address to be used in testing the IP Allow list provider. The IPAddress parameter is used to verify and test the IP Allow list providers that you've configured.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The IPAddress parameter specifies an IP address to be used in testing the IP Allow list provider. You need to use a known allowed IP address.
-
-
 
 ```yaml
 Type: IPAddress
@@ -170,32 +112,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies the server on which you run the command. If you don't use the Server parameter, the command is run on the local server where the task is executed.
-
-
-
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-You can't use this parameter to configure other Edge Transport servers remotely.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -209,8 +125,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 If you don't use this parameter, the command is run on the local server.
 
 You can't use this parameter to configure other Edge Transport servers remotely.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -259,4 +173,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/921b36a2-21a5-48df-aa83-f9ea9c771787.aspx)
-

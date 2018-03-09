@@ -6,15 +6,11 @@ schema: 2.0.0
 # Clear-TextMessagingAccount
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Clear-TextMessagingAccount cmdlet to remove the text messaging settings from a user's account.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 The Clear-TextMessagingAccount cmdlet allows a user to remove the text messaging settings from their own mailbox. An administrator can't use this cmdlet to remove the text messaging settings from another user's mailbox.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -24,103 +20,22 @@ Clear-TextMessagingAccount [-Identity] <MailboxIdParameter> [-Confirm] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Clear-TextMessagingAccount cmdlet clears all of a user's text messaging settings, including communication and notification settings.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Text messaging settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Clear-TextMessagingAccount cmdlet clears all of a user's text messaging settings, including communication and notification settings.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Text messaging user settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Clear-TextMessagingAccount cmdlet clears all of a user's text messaging settings, including communication and notification settings.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Clear-TextMessagingAccount -Identity "TonySmith"
-```
-
-This example clears the text messaging account settings and notification settings from Tony Smith's mailbox.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Clear-TextMessagingAccount -Identity "TonySmith"
-```
-
-This example clears the text messaging account settings and notification settings from Tony Smith's mailbox.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Clear-TextMessagingAccount -Identity tony@contoso.com
 ```
 
 This example clears the text messaging account settings and notification settings from Tony's mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Clear-TextMessagingAccount -Identity tony@contoso.com
-```
-
-This example clears the text messaging account settings and notification settings from Tony's mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Clear-TextMessagingAccount -Identity "Contoso\TonySmith" -Confirm $true
-```
-
-This example clears the text messaging account settings and notification settings from Tony Smith's mailbox and displays a confirmation message.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Clear-TextMessagingAccount -Identity "Contoso\TonySmith" -Confirm $true
-```
-
-This example clears the text messaging account settings and notification settings from Tony Smith's mailbox and displays a confirmation message.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Clear-TextMessagingAccount -Identity "tony@contoso.com"
-```
-
-This example clears the text messaging account settings and notification settings from Tony Smith's mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Clear-TextMessagingAccount -Identity "tony@contoso.com"
-```
-
-This example clears the text messaging account settings and notification settings from Tony Smith's mailbox.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the target mailbox. You can use one of the following values:
-
-- CommonName
-
-- DisplayName
-
-- FirstName
-
-- LastName
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the target mailbox. You can any value that uniquely identifies the mailbox.
 
 For example:
@@ -146,8 +61,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -183,19 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -211,25 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -278,4 +169,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ebc17689-0c30-4d0b-9a53-d81a909458d3.aspx)
-
