@@ -19,7 +19,7 @@ Stop-SPDistributedCacheServiceInstance [-Graceful] [-AssignmentCollection <SPAss
 ```
 
 ## DESCRIPTION
-Use the `Stop-SPDistributedCacheServiceInstance` cmdlet to stop an instance of the Distributed Cache service on a local server. While a `-Graceful` switch does exist, this cmdlet is not capable of properly transferring cached items to another Distributed Cache host within the farm. Follow the guidance available at https://technet.microsoft.com/en-us/library/jj219613.aspx#graceful to properly issue a graceful shutdown of the Distributed Cache service.
+Use the `Stop-SPDistributedCacheServiceInstance` cmdlet to stop an instance of the Distributed Cache service on a local server. While a `-Graceful` switch does exist, this cmdlet is not capable of properly transferring cached items to another Distributed Cache host within the farm. Follow the guidance available at [Manage the Distributed Cache service in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/jj219613.aspx#graceful) to properly issue a graceful shutdown of the Distributed Cache service.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831.
 
