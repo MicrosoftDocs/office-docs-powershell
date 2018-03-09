@@ -49,7 +49,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-O365ClientBrowserDetailReport -WindowsLiveID john@contoso.com -StartDate 05/01/2016 -EndDate 05/03/2016
 ```
@@ -58,7 +58,7 @@ This example retrieves the browser details for the user john@contoso.com between
 
 
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-O365ClientBrowserDetailReport -Browser Chrome
 ```

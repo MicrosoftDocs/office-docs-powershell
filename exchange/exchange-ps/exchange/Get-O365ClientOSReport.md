@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-O365ClientOSReport -OS Windows
 ```
@@ -50,7 +50,7 @@ This example gets the summary report of client Windows use for the 366 day data 
 
 
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-O365ClientOSReport -StartDate 06/13/2013 -EndDate 06/15/2013
 ```

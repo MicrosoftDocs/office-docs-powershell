@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-O365ClientBrowserReport -Browser IE
 ```
@@ -50,7 +50,7 @@ This example gets the summary report of client Internet Explorer use for the 366
 
 
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-O365ClientBrowserReport -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
