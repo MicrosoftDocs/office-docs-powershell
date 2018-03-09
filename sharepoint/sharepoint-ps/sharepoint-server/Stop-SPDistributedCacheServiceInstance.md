@@ -24,8 +24,19 @@ Use the `Stop-SPDistributedCacheServiceInstance` cmdlet to stop an instance of t
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831.
 
 ## EXAMPLES
+// for every example
+    ### {Example Name}
 
-### 
+    {{Example introduction text}}
+    
+    // one or more times, codesnippet
+    // it's useful to put the ```powershell code
+    // before the plain text command exectution output
+        ```{Syntax language, i.e. PowerShell or nothing for plain text}
+        {{Example body}}
+        ```
+    
+    {{Example remarks}} // not a mandatory, i.e. TechNet articles don't use remarks
 
 ## PARAMETERS
 
