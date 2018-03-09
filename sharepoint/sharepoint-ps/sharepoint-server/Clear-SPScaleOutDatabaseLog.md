@@ -30,9 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -----------EXAMPLE------- 
 ```
 C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
 C:\PS>$database = $databases[0]
-
 C:\PS>Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
 ```
 
