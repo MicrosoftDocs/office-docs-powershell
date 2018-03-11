@@ -13,7 +13,7 @@ Deploys the dictionary to the thesaurus component in the query processing flow.
 ## SYNTAX
 
 ```
-Import-SPEnterpriseSearchThesaurus -FileName <String> -SearchApplication <SearchServiceApplicationPipeBind>
+PS C:\>Import-SPEnterpriseSearchThesaurus -FileName <String> -SearchApplication <SearchServiceApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
