@@ -32,12 +32,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-C:\PS>$ssa=Get-SPEnterpriseSearchServiceapplication
-$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
-$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
-$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
-$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
-$ssa | Repartition-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
+PS> C:\>$ssa = Get-SPEnterpriseSearchServiceapplication
+PS> C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
+PS> C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
+PS> C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
+PS> C:\>$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
+PS> C:\>$ssa | Repartition-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
 ```
 
 This example adds 3 new links databases and uses Move-SPEnterpriseSearchLinksDatabases to move data from the current links databases into new databases.
