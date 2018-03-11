@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Enables automatic provisioning of an app.
 
-
-
 ## SYNTAX
 
 ```
@@ -39,12 +37,11 @@ This setting overrides site subscription level setting.
 ### --------------EXAMPLE 2-------- 
 ```
 C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
-
 C:\PS>Enable-SPAppAutoProvision -SiteSubscription $subscription
 ```
 
 This example enables app auto provisioning for the site subscription for Contoso.Com site.
-The app auto provisioning is  enabled by default.
+The app auto provisioning is enabled by default.
 
 ## PARAMETERS
 
