@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 ### ------------------EXAMPLE-----------------------
 ```
 PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
-PS C:\>$psi = Get-SPProjectWebInstance -ServiceApplication $sa
+PS C:\>$instance = Get-SPProjectWebInstance -ServiceApplication $sa
 PS C:\>Pause-SPProjectWebInstance -Identity $instance
 ```
 
