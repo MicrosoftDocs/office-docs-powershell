@@ -27,19 +27,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- 
+### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPSiteSubscription http://contoso.com | Backup-SPSiteSubscriptionSettings -path "c:/backups"
+C:\PS>Export-SPSiteSubscriptionSettings -Identity "http://siteCollection" -Path "C:\siteCollection_sitesubscriptionsettings.txt"
 ```
 
-The example backs up the subscription settings store of http://www.contoso.com.
+The example backs up the subscription settings store of http://siteCollection.
+
+
+### --------------EXAMPLE 2----------------- 
+```
+C:\PS>$site = Get-SPSite http://siteCollection
+C:\PS>Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
+```
+
+The example backs up the subscription settings store of http://siteCollection using the Site Subscription object.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the ID of the site subscription from which to back up data.
 
-The type must be a valid URL, in the form http://server_name or a GUID in the form 1234-4567-985tg.
+The type must be a valid URL, in the form http://server_name or a Site Subscription object.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
