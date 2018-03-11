@@ -8,7 +8,7 @@ schema: 2.0.0
 # Dismount-SPSiteMapDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Dismounts the Site Map database. Do not use.
 
 ## SYNTAX
 
@@ -18,21 +18,22 @@ Dismount-SPSiteMapDatabase [-DatabaseId] <Guid> [-AssignmentCollection <SPAssign
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Dismount-SPSiteMapDatabase -DatabaseId 6543d4a2-2d53-411c-9143-51ddf4cd46ca
 ```
-
-{{ Add example description here }}
+Dismounts the Site Map database with the database ID of 6543d4a2-2d53-411c-9143-51ddf4cd46ca. Do not use.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -64,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseId
-{{Fill DatabaseId Description}}
+A valid GUID of a Site Map database. Do not use.
 
 ```yaml
 Type: Guid
