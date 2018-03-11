@@ -30,7 +30,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$entityToEnable = Get-SPBusinessDataCatalogMetadataObject -Namespace "Contoso" -Name "Customer" -BdcObjectType "Entity" -ServiceContext http://contoso
-
 C:\PS>Enable-SPBusinessDataCatalogEntity -Identity $entityToEnable
 ```
 
