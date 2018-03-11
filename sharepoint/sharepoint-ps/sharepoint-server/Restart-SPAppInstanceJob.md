@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Restart-SPAppInstanceJob
 schema: 2.0.0
 ---
@@ -8,8 +8,7 @@ schema: 2.0.0
 # Restart-SPAppInstanceJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+Restarts an app instance.
 
 ## SYNTAX
 
@@ -19,30 +18,30 @@ Restart-SPAppInstanceJob -AppInstance <SPAppInstance> [-AssignmentCollection <SP
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Restart-SPAppInstanceJob cmdlet to restart an app instance.
 
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference (http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$instance = Get-SPAppInstance -Web http://site_url | ?{$_.Title -eq 'Contoso App'}
+PS C:\>Restart-SPAppInstanceJob -AppInstance $instance
 ```
 
-{{ Add example description here }}
-
+Restarts the App Instance for the App named 'Contoso App' on http://site_url.
 
 ## PARAMETERS
 
 ### -AppInstance
-{{Fill AppInstance Description}}
-
+Specifies the app instance object to restart.
 
 ```yaml
 Type: SPAppInstance
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -52,14 +51,19 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal.
+Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
+When the Global parameter is used, all objects are contained in the global store.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -71,12 +75,11 @@ Accept wildcard characters: False
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -89,12 +92,11 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
