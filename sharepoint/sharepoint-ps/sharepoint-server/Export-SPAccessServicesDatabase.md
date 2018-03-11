@@ -18,7 +18,7 @@ Export-SPAccessServicesDatabase [-AssignmentCollection <SPAssignmentCollection>]
 ```
 
 ## DESCRIPTION
-This cmdlet exporst an Access Services Database to a DACPAC. The cmdlet requires the Access Services database to reside on a SQL Server 2012 server in order to function. The cmdlet also requires the Data-Tier Framework to be installed on the SharePoint server where the cmdlet is run. The Data-Tier Framework packages can be found at [Microsoft® SQL Server® 2012 Data-Tier Application Framework (March 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=36842). Install the following MSIs from the download:
+This cmdlet exports an Access Services Database to a DACPAC. The cmdlet requires the Access Services database to reside on a SQL Server 2012 server in order to function. The cmdlet also requires the Data-Tier Framework to be installed on the SharePoint server where the cmdlet is run. The Data-Tier Framework packages can be found at [Microsoft® SQL Server® 2012 Data-Tier Application Framework (March 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=36842). Install the following MSIs from the download:
 
 ENU\x64\DACFramework.msi
 
