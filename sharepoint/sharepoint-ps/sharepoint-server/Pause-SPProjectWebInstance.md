@@ -19,9 +19,7 @@ Pause-SPProjectWebInstance [-Identity] <ProjectInstancePipeBind>
 ```
 
 ## DESCRIPTION
-Switches the specified instance of Project Web App to read-only, preventing any changes from being made through the Project Server Interface (PSI) or Client Server Object Model (CSOM).
-While in this state the database is not actually read-only and the Queue service can still write to the database, but it will not pick up any new jobs to process.
-This cmdlet is used to allow the queue to empty out before an administrator switches the database to read-only.
+Switches the specified instance of Project Web App to read-only, preventing any changes from being made through the Project Server Interface (PSI) or Client Server Object Model (CSOM). While in this state the database is not actually read-only and the Queue service can still write to the database, but it will not pick up any new jobs to process. This cmdlet is used to allow the queue to empty out before an administrator switches the database to read-only.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
@@ -30,11 +28,12 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+PS C:\>$psi = Get-SPProjectWebInstance -ServiceApplication $sa
+PS C:\>Pause-SPProjectWebInstance -Identity $instance
 ```
 
-{{ Add example description here }}
-
+Pauses the Project Web Server Instance in the Project Web Application Service Application.
 
 ## PARAMETERS
 
