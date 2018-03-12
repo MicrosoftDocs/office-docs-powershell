@@ -379,13 +379,13 @@ Accept wildcard characters: False
 ### -PhishThresholdLevel
 The PhishThresholdLevel parameter specifies the tolerance level that's used by machine learning in the handling of phishing messages. Valid values are:
 
-1. Standard (this is the default value)
+- 1: Standard (this is the default value)
 
-2. Aggressive
+- 2: Aggressive
 
-3. More agressive
+- 3: More agressive
 
-4. Most aggressive
+- 4: Most aggressive
 
 ```yaml
 Type: Int32

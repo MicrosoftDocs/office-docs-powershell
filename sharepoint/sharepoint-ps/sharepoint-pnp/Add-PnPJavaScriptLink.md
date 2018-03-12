@@ -26,14 +26,14 @@ Creates a custom action that refers to a JavaScript file
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js -Sequence 9999 -Scope Site
+Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js -Sequence 9999 -Scope Site
 ```
 
 Injects a reference to the latest v1 series jQuery library to all pages within the current site collection under the name jQuery and at order 9999
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js
+Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js
 ```
 
 Injects a reference to the latest v1 series jQuery library to all pages within the current web under the name jQuery
@@ -90,7 +90,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

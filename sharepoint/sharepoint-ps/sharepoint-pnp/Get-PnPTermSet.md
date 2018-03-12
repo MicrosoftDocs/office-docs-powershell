@@ -13,9 +13,9 @@ Returns a taxonomy term set
 ### 
 ```powershell
 Get-PnPTermSet -TermGroup <Id, Title or TermGroup>
+               [-Includes <String[]>]
                [-Identity <Id, Name or Object>]
                [-TermStore <Id, Name or Object>]
-               [-Includes <String[]>]
                [-Connection <SPOnlineConnection>]
 ```
 
@@ -23,21 +23,21 @@ Get-PnPTermSet -TermGroup <Id, Title or TermGroup>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPTermSet -TermGroup "Corporate"
+Get-PnPTermSet -TermGroup "Corporate"
 ```
 
 Returns all termsets in the group "Corporate" from the site collection termstore
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPTermSet -Identity "Departments" -TermGroup "Corporate"
+Get-PnPTermSet -Identity "Departments" -TermGroup "Corporate"
 ```
 
 Returns the termset named "Departments" from the termgroup called "Corporate" from the site collection termstore
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPTermSet -Identity ab2af486-e097-4b4a-9444-527b251f1f8d -TermGroup "Corporate
+Get-PnPTermSet -Identity ab2af486-e097-4b4a-9444-527b251f1f8d -TermGroup "Corporate
 ```
 
 Returns the termset with the given id from the termgroup called "Corporate" from the site collection termstore
@@ -61,7 +61,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -93,7 +93,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -106,7 +106,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.Taxonomy.TermSet](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.taxonomy.termset.aspx)
+### Microsoft.SharePoint.Client.Taxonomy.TermSet
 
 ## RELATED LINKS
 

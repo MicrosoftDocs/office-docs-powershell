@@ -13,13 +13,13 @@ Set site information.
 ```powershell
 Set-PnPTenantSite -Url <String>
                   [-Title <String>]
-                  [-Sharing <Nullable`1>]
-                  [-StorageMaximumLevel <Nullable`1>]
-                  [-StorageWarningLevel <Nullable`1>]
-                  [-UserCodeMaximumLevel <Nullable`1>]
-                  [-UserCodeWarningLevel <Nullable`1>]
-                  [-AllowSelfServiceUpgrade <Nullable`1>]
-                  [-Owners <List`1>]
+                  [-Sharing <SharingCapabilities>]
+                  [-StorageMaximumLevel <Int>]
+                  [-StorageWarningLevel <Int>]
+                  [-UserCodeMaximumLevel <Double>]
+                  [-UserCodeWarningLevel <Double>]
+                  [-AllowSelfServiceUpgrade [<SwitchParameter>]]
+                  [-Owners <String>]
                   [-LockState <SiteLockState>]
                   [-NoScriptSite [<SwitchParameter>]]
                   [-Wait [<SwitchParameter>]]
@@ -33,35 +33,35 @@ Sets site properties for existing sites.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPTenantSite -Url https://contoso.sharepoint.com -Title "Contoso Website" -Sharing Disabled
+Set-PnPTenantSite -Url https://contoso.sharepoint.com -Title "Contoso Website" -Sharing Disabled
 ```
 
 This will set the title of the site collection with the URL 'https://contoso.sharepoint.com' to 'Contoso Website' and disable sharing on this site collection.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPTenantSite -Url https://contoso.sharepoint.com -Title "Contoso Website" -StorageWarningLevel 8000 -StorageMaximumLevel 10000
+Set-PnPTenantSite -Url https://contoso.sharepoint.com -Title "Contoso Website" -StorageWarningLevel 8000 -StorageMaximumLevel 10000
 ```
 
 This will set the title of the site collection with the URL 'https://contoso.sharepoint.com' to 'Contoso Website', set the storage warning level to 8GB and set the storage maximum level to 10GB.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -Owners "user@contoso.onmicrosoft.com"
+Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -Owners "user@contoso.onmicrosoft.com"
 ```
 
 This will add user@contoso.onmicrosoft.com as an additional site collection owner at 'https://contoso.sharepoint.com/sites/sales'.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -Owners @("user1@contoso.onmicrosoft.com", "user2@contoso.onmicrosoft.com")
+Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -Owners @("user1@contoso.onmicrosoft.com", "user2@contoso.onmicrosoft.com")
 ```
 
 This will add user1@contoso.onmicrosoft.com and user2@contoso.onmicrosoft.com as additional site collection owners at 'https://contoso.sharepoint.com/sites/sales'.
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -NoScriptSite:$false
+Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -NoScriptSite:$false
 ```
 
 This will enable script support for the site 'https://contoso.sharepoint.com/sites/sales' if disabled.
@@ -72,7 +72,7 @@ This will enable script support for the site 'https://contoso.sharepoint.com/sit
 Specifies if the site administrator can upgrade the site collection
 
 ```yaml
-Type: Nullable`1
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
@@ -108,7 +108,7 @@ Accept pipeline input: False
 Specifies owner(s) to add as site collection adminstrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
 
 ```yaml
-Type: List`1
+Type: String
 Parameter Sets: (All)
 
 Required: False
@@ -120,7 +120,7 @@ Accept pipeline input: False
 Specifies what the sharing capablilites are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
 
 ```yaml
-Type: Nullable`1
+Type: SharingCapabilities
 Parameter Sets: (All)
 
 Required: False
@@ -132,7 +132,7 @@ Accept pipeline input: False
 Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
 
 ```yaml
-Type: Nullable`1
+Type: Int
 Parameter Sets: (All)
 
 Required: False
@@ -144,7 +144,7 @@ Accept pipeline input: False
 Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageMaximumLevel parameter
 
 ```yaml
-Type: Nullable`1
+Type: Int
 Parameter Sets: (All)
 
 Required: False
@@ -180,7 +180,7 @@ Accept pipeline input: True
 Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint 2010 : http://msdn.microsoft.com/en-us/library/gg615462.aspx.
 
 ```yaml
-Type: Nullable`1
+Type: Double
 Parameter Sets: (All)
 
 Required: False
@@ -192,7 +192,7 @@ Accept pipeline input: False
 Specifies the warning level for the resource quota. This value must not exceed the value set for the UserCodeMaximumLevel parameter
 
 ```yaml
-Type: Nullable`1
+Type: Double
 Parameter Sets: (All)
 
 Required: False
@@ -213,7 +213,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

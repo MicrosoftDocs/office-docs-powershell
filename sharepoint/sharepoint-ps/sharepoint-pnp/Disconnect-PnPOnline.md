@@ -21,7 +21,7 @@ Disconnects the current context and requires you to build up a new connection in
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Disconnect-PnPOnline
+Disconnect-PnPOnline
 ```
 
 This will disconnect you from the server.

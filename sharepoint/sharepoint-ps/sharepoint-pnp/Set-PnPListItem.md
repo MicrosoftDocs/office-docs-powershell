@@ -11,8 +11,8 @@ Updates a list item
 ## SYNTAX 
 
 ```powershell
-Set-PnPListItem -Identity <ListItemPipeBind>
-                -List <ListPipeBind>
+Set-PnPListItem -List <ListPipeBind>
+                -Identity <ListItemPipeBind>
                 [-ContentType <ContentTypePipeBind>]
                 [-Values <Hashtable>]
                 [-SystemUpdate [<SwitchParameter>]]
@@ -84,6 +84,8 @@ Accept pipeline input: True
 ### -SystemUpdate
 Update the item without creating a new version.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -144,7 +146,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -169,7 +171,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.ListItem](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.listitem.aspx)
+### Microsoft.SharePoint.Client.ListItem
 
 ## RELATED LINKS
 

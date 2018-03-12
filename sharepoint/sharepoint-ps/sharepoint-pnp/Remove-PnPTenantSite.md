@@ -24,21 +24,21 @@ Removes a site collection which is listed in your tenant administration site.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso
+Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso
 ```
 
 This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso'  and put it in the recycle bin.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso -Force -SkipRecycleBin
+Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso -Force -SkipRecycleBin
 ```
 
 This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso' with force and it will skip the recycle bin.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso -FromRecycleBin
+Remove-PnPTenantSite -Url https://tenant.sharepoint.com/sites/contoso -FromRecycleBin
 ```
 
 This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso' from the recycle bin.
@@ -83,7 +83,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

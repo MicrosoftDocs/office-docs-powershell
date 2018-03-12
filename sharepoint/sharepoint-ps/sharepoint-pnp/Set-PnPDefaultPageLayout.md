@@ -28,21 +28,21 @@ Set-PnPDefaultPageLayout -InheritFromParentSite [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPDefaultPageLayout -Title projectpage.aspx
+Set-PnPDefaultPageLayout -Title projectpage.aspx
 ```
 
 Sets projectpage.aspx to be the default page layout for the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPDefaultPageLayout -Title test/testpage.aspx
+Set-PnPDefaultPageLayout -Title test/testpage.aspx
 ```
 
 Sets a page layout in a folder in the Master Page & Page Layout gallery, such as _catalog/masterpage/test/testpage.aspx, to be the default page layout for the current web
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPDefaultPageLayout -InheritFromParentSite
+Set-PnPDefaultPageLayout -InheritFromParentSite
 ```
 
 Sets the default page layout to be inherited from the parent site
@@ -74,7 +74,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

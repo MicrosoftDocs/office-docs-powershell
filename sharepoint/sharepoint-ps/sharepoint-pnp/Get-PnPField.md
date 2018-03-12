@@ -12,11 +12,11 @@ Returns a field from a list or site
 
 ### 
 ```powershell
-Get-PnPField [-List <ListPipeBind>]
+Get-PnPField [-Includes <String[]>]
+             [-List <ListPipeBind>]
+             [-Identity <FieldPipeBind>]
              [-Group <String>]
              [-Web <WebPipeBind>]
-             [-Includes <String[]>]
-             [-Identity <FieldPipeBind>]
              [-Connection <SPOnlineConnection>]
 ```
 
@@ -24,14 +24,14 @@ Get-PnPField [-List <ListPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPField
+Get-PnPField
 ```
 
 Gets all the fields from the current site
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPField -List "Demo list" -Identity "Speakers"
+Get-PnPField -List "Demo list" -Identity "Speakers"
 ```
 
 Gets the speakers field from the list Demo list
@@ -67,7 +67,7 @@ Specify properties to include when retrieving objects from the server.
 
 ```yaml
 Type: String[]
-Parameter Sets: 
+Parameter Sets: (All)
 
 Required: False
 Position: 0
@@ -99,7 +99,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -112,7 +112,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.Field](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.field.aspx)
+### Microsoft.SharePoint.Client.Field
 
 ## RELATED LINKS
 

@@ -25,28 +25,28 @@ This command will allow the removal of a specific user from the User Information
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPUser -Identity 23
+Remove-PnPUser -Identity 23
 ```
 
 Remove the user with Id 23 from the User Information List of the current site collection
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPUser -Identity i:0#.f|membership|user@tenant.onmicrosoft.com
+Remove-PnPUser -Identity i:0#.f|membership|user@tenant.onmicrosoft.com
 ```
 
 Remove the user with LoginName i:0#.f|membership|user@tenant.onmicrosoft.com from the User Information List of the current site collection
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPUser | ? Email -eq "user@tenant.onmicrosoft.com" | Remove-PnPUser
+Get-PnPUser | ? Email -eq "user@tenant.onmicrosoft.com" | Remove-PnPUser
 ```
 
 Remove the user with e-mail address user@tenant.onmicrosoft.com from the User Information List of the current site collection
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Remove-PnPUser -Identity i:0#.f|membership|user@tenant.onmicrosoft.com -Confirm:$false
+Remove-PnPUser -Identity i:0#.f|membership|user@tenant.onmicrosoft.com -Confirm:$false
 ```
 
 Remove the user with LoginName i:0#.f|membership|user@tenant.onmicrosoft.com from the User Information List of the current site collection without asking to confirm the removal first
@@ -90,7 +90,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -115,7 +115,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.User](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.user.aspx)
+### Microsoft.SharePoint.Client.User
 
 ## RELATED LINKS
 

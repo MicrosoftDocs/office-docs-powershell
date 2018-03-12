@@ -25,7 +25,7 @@ Add-PnPMasterPage -SourceFilePath <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPMasterPage -SourceFilePath "page.master" -Title "MasterPage" -Description "MasterPage for Web" -DestinationFolderHierarchy "SubFolder"
+Add-PnPMasterPage -SourceFilePath "page.master" -Title "MasterPage" -Description "MasterPage for Web" -DestinationFolderHierarchy "SubFolder"
 ```
 
 Adds a MasterPage from the local file "page.master" to the folder "SubFolder" in the Masterpage gallery.
@@ -105,7 +105,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -130,7 +130,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.File](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.file.aspx)
+### Microsoft.SharePoint.Client.File
 
 ## RELATED LINKS
 

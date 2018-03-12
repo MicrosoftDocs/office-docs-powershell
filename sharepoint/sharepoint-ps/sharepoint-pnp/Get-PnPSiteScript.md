@@ -20,14 +20,14 @@ Get-PnPSiteScript [-Identity <TenantSiteScriptPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPSiteScript
+Get-PnPSiteScript
 ```
 
 Returns all registered site scripts
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPSiteScript -Identity 5c73382d-9643-4aa0-9160-d0cba35e40fd
+Get-PnPSiteScript -Identity 5c73382d-9643-4aa0-9160-d0cba35e40fd
 ```
 
 Returns a specific registered site script
@@ -59,7 +59,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

@@ -21,13 +21,13 @@ Sets the Client Context to use by the cmdlets, which allows easy context switchi
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Connect-PnPOnline -Url $siteAurl -Credentials $credentials
-PS:> $ctx = Get-PnPContext
-PS:> Get-PnPList # returns the lists from site specified with $siteAurl
-PS:> Connect-PnPOnline -Url $siteBurl -Credentials $credentials
-PS:> Get-PnPList # returns the lists from the site specified with $siteBurl
-PS:> Set-PnPContext -Context $ctx # switch back to site A
-PS:> Get-PnPList # returns the lists from site A
+Connect-PnPOnline -Url $siteAurl -Credentials $credentials
+$ctx = Get-PnPContext
+Get-PnPList # returns the lists from site specified with $siteAurl
+Connect-PnPOnline -Url $siteBurl -Credentials $credentials
+Get-PnPList # returns the lists from the site specified with $siteBurl
+Set-PnPContext -Context $ctx # switch back to site A
+Get-PnPList # returns the lists from site A
 ```
 
 

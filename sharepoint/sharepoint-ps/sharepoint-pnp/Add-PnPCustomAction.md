@@ -62,6 +62,8 @@ Adds a new custom action to the custom list template, and sets the Title, Name a
 ### -ClientSideComponentId
 The Client Side Component Id of the custom action
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: GuidPipeBind
 Parameter Sets: Client Side Component Id
@@ -73,6 +75,8 @@ Accept pipeline input: False
 
 ### -ClientSideComponentProperties
 The Client Side Component Properties of the custom action. Specify values as a json string : "{Property1 : 'Value1', Property2: 'Value2'}"
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -136,7 +140,7 @@ The actual location where this custom action need to be added like 'CommandUI.Ri
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: True
 Position: Named
@@ -148,7 +152,7 @@ The name of the custom action
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: True
 Position: Named
@@ -160,7 +164,7 @@ The identifier of the object associated with the custom action.
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: False
 Position: Named
@@ -172,7 +176,7 @@ Specifies the type of object associated with the custom action
 
 ```yaml
 Type: UserCustomActionRegistrationType
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: False
 Position: Named
@@ -196,7 +200,7 @@ The scope of the CustomAction to add to. Either Web or Site; defaults to Web. 'A
 
 ```yaml
 Type: CustomActionScope
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: False
 Position: Named
@@ -220,7 +224,7 @@ The title of the custom action
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: True
 Position: Named
@@ -240,7 +244,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

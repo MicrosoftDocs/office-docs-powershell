@@ -12,8 +12,8 @@ Adds a text element to a client-side page.
 
 ### Default
 ```powershell
-Add-PnPClientSideText -Text <String>
-                      -Page <ClientSidePagePipeBind>
+Add-PnPClientSideText -Page <ClientSidePagePipeBind>
+                      -Text <String>
                       [-Order <Int>]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
@@ -21,10 +21,10 @@ Add-PnPClientSideText -Text <String>
 
 ### Positioned
 ```powershell
-Add-PnPClientSideText -Text <String>
+Add-PnPClientSideText -Page <ClientSidePagePipeBind>
+                      -Text <String>
                       -Section <Int>
                       -Column <Int>
-                      -Page <ClientSidePagePipeBind>
                       [-Order <Int>]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
@@ -37,7 +37,7 @@ Adds a new text element to a section on a client-side page.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPClientSideText -Page "MyPage" -Text "Hello World!"
+Add-PnPClientSideText -Page "MyPage" -Text "Hello World!"
 ```
 
 Adds the text 'Hello World!' to the Client-Side Page 'MyPage'
@@ -61,7 +61,7 @@ Sets the order of the text control. (Default = 1)
 
 ```yaml
 Type: Int
-Parameter Sets: Default
+Parameter Sets: Default, Positioned
 
 Required: False
 Position: Named
@@ -73,7 +73,7 @@ The name of the page.
 
 ```yaml
 Type: ClientSidePagePipeBind
-Parameter Sets: Default
+Parameter Sets: Default, Positioned
 
 Required: True
 Position: 0
@@ -97,7 +97,7 @@ Specifies the text to display in the text area.
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Positioned
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

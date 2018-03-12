@@ -354,13 +354,25 @@ Accept wildcard characters: False
 ### -PhishThresholdLevel
 The PhishThresholdLevel parameter specifies the tolerance level that's used by machine learning in the handling of phishing messages. Valid values are:
 
-1. Standard (this is the default value)
+- 1: Standard (this is the default value)
 
-2. Aggressive
+- 2: Aggressive
 
-3. More agressive
+- 3: More agressive
 
-4. Most aggressive
+- 4: Most aggressive
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 
 ### -TargetedDomainActionRecipients
 The TargetedDomainActionRecipients parameter specifies the recipients to add to detected phishing messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
