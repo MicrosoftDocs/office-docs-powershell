@@ -22,7 +22,7 @@ Get-MailUser [<CommonParameters>]
 ### Set3
 ```
 Get-MailUser [-AccountPartition <AccountPartitionIdParameter>] [-Anr <String>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-ResultSize <Unlimited>]
  [-SoftDeletedMailUser] [-SortBy <String>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
 ```
@@ -31,7 +31,7 @@ Get-MailUser [-AccountPartition <AccountPartitionIdParameter>] [-Anr <String>] [
 ```
 Get-MailUser [-AccountPartition <AccountPartitionIdParameter>] [-ArchiveDatabase <DatabaseIdParameter>]
  [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController] [-ResultSize <Unlimited>] [-SoftDeletedMailUser] [-SortBy <String>]
  [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
 ```
@@ -40,7 +40,7 @@ Get-MailUser [-AccountPartition <AccountPartitionIdParameter>] [-ArchiveDatabase
 ```
 Get-MailUser [[-Identity] <MailUserIdParameter>] [-AccountPartition <AccountPartitionIdParameter>]
  [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController] [-ResultSize <Unlimited>] [-SoftDeletedMailUser] [-SortBy <String>]
  [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
 ```
@@ -190,22 +190,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-```yaml
-Type:
-Parameter Sets: Set3, Set2, Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: false
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type:

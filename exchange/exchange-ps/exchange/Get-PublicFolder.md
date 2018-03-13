@@ -17,27 +17,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-GetChildren] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-ResultSize <Unlimited>] [-Server <ServerIdParameter>]
+ [-ResultSize <Unlimited>] [-Server <ServerIdParameter>]
  [-Mailbox <MailboxIdParameter>] [-ResidentFolders] [-Recurse] [<CommonParameters>]
 ```
 
 ### Set3
 ```
 Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-Recurse] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-ResultSize <Unlimited>] [-Server <ServerIdParameter>]
+ [-ResultSize <Unlimited>] [-Server <ServerIdParameter>]
  [-Mailbox <MailboxIdParameter>] [-ResidentFolders] [-GetChildren] [<CommonParameters>]
 ```
 
 ### Set4
 ```
 Get-PublicFolder [-LostAndFound] [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
- [-Organization <OrganizationIdParameter>] [-ResidentFolders] [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-ResidentFolders] [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
 ### Set1
 ```
 Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>] [-Organization <OrganizationIdParameter>] [-ResidentFolders]
+ [-Mailbox <MailboxIdParameter>] [-ResidentFolders]
  [<CommonParameters>]
 ```
 
@@ -135,7 +135,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -159,22 +159,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

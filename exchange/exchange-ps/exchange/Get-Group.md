@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Get-Group [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
- [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
  [-AccountPartition <AccountPartitionIdParameter>] [<CommonParameters>]
@@ -26,7 +26,7 @@ Get-Group [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>
 ### Set1
 ```
 Get-Group [[-Identity] <GroupIdParameter>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
  [-AccountPartition <AccountPartitionIdParameter>] [<CommonParameters>]
@@ -245,22 +245,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
