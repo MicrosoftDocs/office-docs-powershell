@@ -22,7 +22,7 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> [-Alias <Stri
  [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
  [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
  [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-OverrideRecipientQuotas] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>] [-UsePreferMessageFormat <$true | $false>]
@@ -43,7 +43,7 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> -Password <Se
  [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
  [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
  [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-OverrideRecipientQuotas] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>] [-UsePreferMessageFormat <$true | $false>]
@@ -61,7 +61,7 @@ New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] -Password <
  -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
  [-DisplayName <String>] [-DomainController <Fqdn>] [-EvictLiveId] [-FirstName <String>]
  [-ImmutableId <String>] [-Initials <String>] [-LastName <String>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-Organization <OrganizationIdParameter>]
+ [-ModerationEnabled <$true | $false>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
@@ -81,7 +81,7 @@ New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] [-UseExisti
  -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
  [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>]
  [-Initials <String>] [-LastName <String>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-Organization <OrganizationIdParameter>]
+ [-ModerationEnabled <$true | $false>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
@@ -100,7 +100,7 @@ New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] -FederatedI
  -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
  [-DisplayName <String>] [-DomainController <Fqdn>] [-EvictLiveId] [-FirstName <String>]
  [-ImmutableId <String>] [-Initials <String>] [-LastName <String>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-Organization <OrganizationIdParameter>]
+ [-ModerationEnabled <$true | $false>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
@@ -118,7 +118,7 @@ New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] [-ImportLiv
  -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
  [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>]
  [-Initials <String>] [-LastName <String>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-Organization <OrganizationIdParameter>]
+ [-ModerationEnabled <$true | $false>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
@@ -138,7 +138,7 @@ New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] -FederatedI
  [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
  [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
  [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-NetID <NetID>] [-Organization <OrganizationIdParameter>]
+ [-ModerationEnabled <$true | $false>] [-NetID <NetID>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
@@ -155,7 +155,7 @@ New-MailUser [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServic
  [-DomainController <Fqdn>] [-ExternalDirectoryObjectId <String>] [-FirstName <String>] [-ImmutableId <String>]
  [-Initials <String>] [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
  [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-NetID <NetID>] [-Organization <OrganizationIdParameter>]
+ [-ModerationEnabled <$true | $false>] [-NetID <NetID>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
@@ -171,7 +171,7 @@ New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>] [-Ali
  [-ExternalDirectoryObjectId <String>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
  [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
  [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-Organization <OrganizationIdParameter>]
+ [-ModerationEnabled <$true | $false>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
  [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
@@ -480,7 +480,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -708,22 +708,6 @@ You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection

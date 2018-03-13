@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Get-Contact [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
- [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
  [-AccountPartition <AccountPartitionIdParameter>] [<CommonParameters>]
@@ -26,7 +26,7 @@ Get-Contact [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqd
 ### Set1
 ```
 Get-Contact [[-Identity] <ContactIdParameter>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
  [-AccountPartition <AccountPartitionIdParameter>] [<CommonParameters>]
@@ -117,7 +117,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -185,22 +185,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection

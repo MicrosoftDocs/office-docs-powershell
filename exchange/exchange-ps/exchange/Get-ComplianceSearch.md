@@ -61,13 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016
 
 Required: False
 Position: Named
