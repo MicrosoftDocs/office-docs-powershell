@@ -26,7 +26,7 @@ New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf]
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

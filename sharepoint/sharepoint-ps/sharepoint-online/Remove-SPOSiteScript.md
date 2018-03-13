@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Removes a site script. <!-- TBD how is dependency problem handled so you don't delete a script that a design depends on. this currently creates an error when running the design.) -->
+Removes a site script. 
 
 ## SYNTAX
 
@@ -19,9 +19,19 @@ Remove-SPOSiteScript
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1
+
+This example shows how to remove a site design. 
+
+```powershell
+Remove-SPOSiteScript 5ea28194-6fe7-4e2c-ba84-c409368278e2
+```
+
 ## DESCRIPTION
 
-Removes a site script. <!-- TBD how is dependency problem handled so you don't delete a script that a design depends on. this currently creates an error when running the design.) -->
+Removes a site script. 
 
 ## PARAMETERS
 

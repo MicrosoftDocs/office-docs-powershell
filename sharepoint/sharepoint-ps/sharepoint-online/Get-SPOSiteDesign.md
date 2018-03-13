@@ -30,7 +30,7 @@ Gets details about site designs that are on the SharePoint tenant. You can speci
 This example and sample response show how to get site design details.
 
 ```powershell
-PS C:\> Get-SPOSiteDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+Get-SPOSiteDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863
 
 Id                  : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
 Title               : Contoso - Team Project

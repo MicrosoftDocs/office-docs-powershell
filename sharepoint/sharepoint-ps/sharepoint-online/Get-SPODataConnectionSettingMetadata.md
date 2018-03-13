@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-C:\PS>Get-SPODataConnectionSettingMetadata -ServiceContext "http://contoso" -Name "ContosoServiceApp"
+Get-SPODataConnectionSettingMetadata -ServiceContext "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example displays metadata properties of BCS connection named ContosoServiceApp

@@ -34,14 +34,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-C:\PS>Get-SPODataConnectionSetting -ServiceContext  "http://contoso" -Name "ContosoServiceApp"
+Get-SPODataConnectionSetting -ServiceContext  "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example returns properties of the BCS connection named ContosoServiceApp
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-C:\PS>Get-SPODataConnectionSetting -ServiceContext "http://contoso"
+Get-SPODataConnectionSetting -ServiceContext "http://contoso"
 ```
 
 This example returns a list of BCS connections for the service context named http://contoso

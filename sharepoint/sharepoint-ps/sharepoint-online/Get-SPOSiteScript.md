@@ -30,7 +30,7 @@ Displays information about existing site scripts. When no parameter is provided,
 This example shows how to get script information for a specific script ID.
 
 ```powershell
-PS C:\scripts> Get-SPOSiteScript 07702c07-0485-426f-b710-4704241caad9
+Get-SPOSiteScript 07702c07-0485-426f-b710-4704241caad9
 
 Id          : 07702c07-0485-426f-b710-4704241caad9
 Title       : Contoso theme

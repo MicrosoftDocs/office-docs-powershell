@@ -36,7 +36,7 @@ Creates a new site design available to users when they create a new site from th
 This example creates a new site design.
 
 ```powershell
-C:\> Add-SPOSiteDesign `
+Add-SPOSiteDesign `
   -Title "Contoso customer tracking" `
   -WebTemplate "64" `
   -SiteScripts "<ID>" `
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 An array of one or more site scripts. Each is identified by an ID. The scripts run in the order listed.
 
 ```yaml
-Type: SPOSiteScriptPipeBind
+Type: SPOSiteScriptPipeBind[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/customize-default-site-design). 
 
 ```yaml
-Type: CommonParameters
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online

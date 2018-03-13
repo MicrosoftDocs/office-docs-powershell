@@ -39,7 +39,7 @@ This example adds a new site logo from the following script in a file.
 ```
 
 ```powershell
-C:\> Get-Content 'c:\scripts\site-script.json' -Raw | Add-SPOSiteScript -Title "Customer logo" -Description "Applies customer logo for customer sites"
+Get-Content 'c:\scripts\site-script.json' -Raw | Add-SPOSiteScript -Title "Customer logo" -Description "Applies customer logo for customer sites"
 ```
 
 ## PARAMETERS

@@ -30,7 +30,7 @@ Displays a list of principals and their rights for usage of the site design. Thi
 This example gets the rights for a site design.
 
 ```powershell
-PS C:\> Get-SPOSiteDesignRights 607aed52-6d61-490a-b692-c0f58a6981a1
+Get-SPOSiteDesignRights 607aed52-6d61-490a-b692-c0f58a6981a1
 
 DisplayName  PrincipalName                                      Rights
 -----------  -------------                                      ------

@@ -32,7 +32,7 @@ Used to apply permissions to a set of users or a security group, effectively sco
 This example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
 
 ```powershell
-PS C:\> Grant-SPOSiteDesignRights `
+Grant-SPOSiteDesignRights `
          -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
          -Principals "nestorw@contoso.onmicrosoft.com" `
          -Rights View
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 One or more principles to add permissions for. 
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Always set to the value **View**. Any user or group with view permissions can view and use the site design.
 
 ```yaml
-Type: 
+Type: SPOSiteDesignPrincipalRights
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online

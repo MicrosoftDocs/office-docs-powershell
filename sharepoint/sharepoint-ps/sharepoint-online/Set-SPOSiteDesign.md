@@ -32,7 +32,7 @@ Set-SPOSiteDesign
 This example updates a previously created site design.
 
 ```powershell
-C:\> Set-SPOSiteDesign `
+Set-SPOSiteDesign `
   -Title "Contoso customer tracking - version 2" `
   -WebTemplate "68" `
   -Description "Updated site design for list schema that tracks key customer data in a list" `
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 An array of one or more site scripts. Each is identified by an ID. The scripts run in the order listed.
 
 ```yaml
-Type: SPOSiteScriptPipeBind
+Type: SPOSiteScriptPipeBind[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/customize-default-site-design). 
 
 ```yaml
-Type: CommonParameters
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
