@@ -23,7 +23,7 @@ Grant-SPOSiteDesignRights
 
 ## PARAMETERS
 
-### [-Identity]
+### -Identity
 The ID of the site design to get scoping information.
 
 ```yaml
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### Example 1
 
-The following example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
+This example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
 
 ```powershell
 PS C:\> Grant-SPOSiteDesignRights `

@@ -53,7 +53,7 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-### [-Description]
+### -Description
 A description of the script.
 
 ```yaml
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### Example 1 
 
-The following example updates a previously created site script. Any site designs referencing it will execute the updated script. 
+This example updates a previously created site script. Any site designs referencing it will execute the updated script. 
 
 ```json
 {

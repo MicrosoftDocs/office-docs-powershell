@@ -21,7 +21,7 @@ Get-SPOSiteDesign
 
 ## PARAMETERS
 
-### [-Identity]
+### -Identity
 The ID of the site design to retrieve.
 
 ```yaml
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 
 ### Example 1 
 
-The following example and sample response shows how to get site design details.
+This example and sample response show how to get site design details.
 
 ```powershell
 PS C:\> Get-SPOSiteDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863

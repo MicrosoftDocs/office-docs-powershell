@@ -21,7 +21,7 @@ Get-SPOSiteScript
 
 ## PARAMETERS
 
-### [-Identity]
+### -Identity
 The ID of the site script to get information about.
 
 ```yaml
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 
 ### Example 1
 
-The following example shows how to get script information for a specific script ID.
+This example shows how to get script information for a specific script ID.
 
 ```powershell
 PS C:\scripts> Get-SPOSiteScript 07702c07-0485-426f-b710-4704241caad9

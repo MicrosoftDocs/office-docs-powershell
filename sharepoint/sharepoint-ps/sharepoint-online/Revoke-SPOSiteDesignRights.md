@@ -22,7 +22,7 @@ Revoke-SPOSiteDesignRights
 
 ## PARAMETERS
 
-### [-Identity]
+### -Identity
 The ID of the site design from which to revoke rights.
 
 ```yaml
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### Example 1 
 
-The following example shows how to revoke rights to a site design for Nestor.
+This example shows how to revoke rights to a site design for Nestor.
 
 ```powershell
 PS C:\> Revoke-SPOSiteDesignRights 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `

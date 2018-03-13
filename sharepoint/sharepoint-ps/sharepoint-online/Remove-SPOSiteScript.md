@@ -21,7 +21,7 @@ Remove-SPOSiteScript
 
 ## PARAMETERS
 
-### [-Identity]
+### -Identity
 The ID of the site script to remove.
 
 ```yaml

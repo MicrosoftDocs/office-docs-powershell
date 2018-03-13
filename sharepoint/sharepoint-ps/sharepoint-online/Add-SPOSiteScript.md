@@ -53,7 +53,7 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-### [-Description]
+### -Description
 A description of the script.
 
 ```yaml
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### Example 1
 
-The following example adds a new site logo from the following script in a file.
+This example adds a new site logo from the following script in a file.
 
 ```json
 {

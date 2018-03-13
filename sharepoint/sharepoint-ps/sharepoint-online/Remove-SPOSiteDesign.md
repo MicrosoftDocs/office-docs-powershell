@@ -22,7 +22,7 @@ Removes a site design. It no longer appears in the UI for creating a new site.
 
 ## PARAMETERS
 
-### [-Identity]
+### -Identity
 The ID of the site design to remove.
 
 ```yaml
@@ -41,7 +41,7 @@ Accept wildcard characters: False
 
 ### Example 1
 
-The following example shows how to remove a site design. 
+This example shows how to remove a site design. 
 
 ```powershell
 C:\> Remove-SPOSiteDesign 21209d88-38de-4844-9823-f1f600a1179a

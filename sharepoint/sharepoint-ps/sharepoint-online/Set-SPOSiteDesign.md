@@ -15,7 +15,6 @@ Updates a previously uploaded site design.
 
 ```powershell
 Set-SPOSiteDesign
-  -Identity <SPOSiteDesignPipeBind[]>
   [-Title <string>]
   [-WebTemplate <string>]
   [-SiteScripts <SPOSiteScriptPipeBind[]>]
@@ -36,7 +35,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -51,7 +50,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -66,14 +65,14 @@ Type: SPOSiteScriptPipeBind
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-### [-Description]
+### -Description
 The display description of the site design.
 
 ```yaml
@@ -88,7 +87,7 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-### [-PreviewImageUrl] 
+### -PreviewImageUrl 
 The URL of a preview image. If none is specified, SharePoint uses a generic image.
 
 ```yaml
@@ -103,7 +102,7 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-### [-PreviewImageAltText] 
+### -PreviewImageAltText
 The alt text description of the image for accessibility.
 
 ```yaml
@@ -118,7 +117,7 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-### [-IsDefault]
+### -IsDefault
 A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](customize-default-site-design.md). 
 
 ```yaml
@@ -137,7 +136,7 @@ Accept wildcard characters: False
 
 ### Example 1 
 
-The following example updates a previously created site design.
+This example updates a previously created site design.
 
 ```powershell
 C:\> Set-SPOSiteDesign `
