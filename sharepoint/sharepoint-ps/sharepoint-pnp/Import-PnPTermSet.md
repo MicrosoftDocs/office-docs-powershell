@@ -15,7 +15,7 @@ Import-PnPTermSet -GroupName <String>
                   -Path <String>
                   [-TermSetId <Guid>]
                   [-SynchronizeDeletions [<SwitchParameter>]]
-                  [-IsOpen <Nullable`1>]
+                  [-IsOpen <Boolean>]
                   [-Contact <String>]
                   [-Owner <String>]
                   [-TermStoreName <String>]
@@ -41,21 +41,21 @@ The import file also supports an expanded syntax for the Term Set Name and term 
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -SynchronizeDeletions
+Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -SynchronizeDeletions
 ```
 
 Creates (or updates) the term set specified in the import file, in the group specified, removing any existing terms not in the file.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Import-PnPTermSet -TermStoreName 'My Term Store' -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -TermSetId '{15A98DB6-D8E2-43E6-8771-066C1EC2B8D8}' 
+Import-PnPTermSet -TermStoreName 'My Term Store' -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -TermSetId '{15A98DB6-D8E2-43E6-8771-066C1EC2B8D8}' 
 ```
 
 Creates (or updates) the term set specified in the import file, in the term store and group specified, using the specified ID.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -IsOpen $true -Contact 'user@example.org' -Owner 'user@example.org'
+Import-PnPTermSet -GroupName 'Standard Terms' -Path 'C:\\Temp\\ImportTermSet.csv' -IsOpen $true -Contact 'user@example.org' -Owner 'user@example.org'
 ```
 
 Creates (or updates) the term set specified in the import file, setting the IsOpen, Contact, and Owner properties as specified.
@@ -90,7 +90,7 @@ Accept pipeline input: False
 Whether the term set should be marked open; if not specified, then the existing setting is not changed.
 
 ```yaml
-Type: Nullable`1
+Type: Boolean
 Parameter Sets: (All)
 
 Required: False
@@ -159,7 +159,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

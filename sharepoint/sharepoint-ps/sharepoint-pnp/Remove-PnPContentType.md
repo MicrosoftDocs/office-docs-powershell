@@ -21,14 +21,14 @@ Remove-PnPContentType -Identity <ContentTypePipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPContentType -Identity "Project Document"
+Remove-PnPContentType -Identity "Project Document"
 ```
 
 This will remove a content type called "Project Document" from the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPContentType -Identity "Project Document" -Force
+Remove-PnPContentType -Identity "Project Document" -Force
 ```
 
 This will remove a content type called "Project Document" from the current web with force
@@ -60,7 +60,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

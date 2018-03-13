@@ -28,14 +28,14 @@ Restore-PnPRecycleBinItem -All [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Restore-PnpRecycleBinItem -Identity 72e4d749-d750-4989-b727-523d6726e442
+Restore-PnpRecycleBinItem -Identity 72e4d749-d750-4989-b727-523d6726e442
 ```
 
 Restores the recycle bin item with Id 72e4d749-d750-4989-b727-523d6726e442 to its original location
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPRecycleBinItems | ? FileLeafName -like "*.docx" | Restore-PnpRecycleBinItem
+Get-PnPRecycleBinItems | ? FileLeafName -like "*.docx" | Restore-PnpRecycleBinItem
 ```
 
 Restores all the items in the first and second stage recycle bins to their original location of which the filename ends with the .docx extension
@@ -79,7 +79,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

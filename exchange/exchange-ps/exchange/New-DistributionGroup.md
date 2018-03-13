@@ -21,7 +21,7 @@ New-DistributionGroup [-Name] <String> [-Alias <String>] [-ArbitrationMailbox <M
  [-MemberDepartRestriction <Closed | Open | ApprovalRequired>]
  [-MemberJoinRestriction <Closed | Open | ApprovalRequired>] [-Members <MultiValuedProperty>]
  [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>] [-Notes <String>]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-OverrideRecipientQuotas] [-PrimarySmtpAddress <SmtpAddress>] [-RoomList] [-SamAccountName <String>]
  [-SendModerationNotifications <Never | Internal | Always>] [-Type <Distribution | Security>] [-WhatIf]
  [-ExternalDirectoryObjectId <String>] [-RequireSenderAuthenticationEnabled <$true | $false>]
@@ -236,7 +236,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -462,22 +462,6 @@ The Notes parameters specifies additional information about the object. If the v
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection

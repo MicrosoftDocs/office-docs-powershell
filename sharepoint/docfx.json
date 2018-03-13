@@ -66,9 +66,6 @@
       },
       "ms.prod":{
         "sharepoint-ps/sharepoint-server/*.md":"sharepoint-2016-powershell"
-      },
-      "ROBOTS":{
-        "sharepoint-ps/sharepoint-pnp/*.md":"NOINDEX,NOFOLLOW"
       }
     },
     "template": [],

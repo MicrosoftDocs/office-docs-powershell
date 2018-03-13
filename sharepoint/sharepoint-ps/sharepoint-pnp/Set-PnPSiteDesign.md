@@ -27,15 +27,15 @@ Set-PnPSiteDesign -Identity <TenantSiteDesignPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPSiteDesign -Identity 046e2e76-67ba-46ca-a5f6-8eb418a7821e -Title "My Updated Company Design"
+Set-PnPSiteDesign -Identity 046e2e76-67ba-46ca-a5f6-8eb418a7821e -Title "My Updated Company Design"
 ```
 
 Updates an existing Site Design and sets a new title.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> $design = Get-PnPSiteDesign -Identity 046e2e76-67ba-46ca-a5f6-8eb418a7821e
-PS:> Set-PnPSiteDesign -Identity $design -Title "My Updated Company Design"
+$design = Get-PnPSiteDesign -Identity 046e2e76-67ba-46ca-a5f6-8eb418a7821e
+Set-PnPSiteDesign -Identity $design -Title "My Updated Company Design"
 ```
 
 Updates an existing Site Design and sets a new title.
@@ -151,7 +151,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

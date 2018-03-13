@@ -19,14 +19,14 @@ Get-PnPSiteDesign [-Identity <TenantSiteDesignPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPSiteDesign
+Get-PnPSiteDesign
 ```
 
 Returns all registered site designs
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPSiteDesign -Identity 5c73382d-9643-4aa0-9160-d0cba35e40fd
+Get-PnPSiteDesign -Identity 5c73382d-9643-4aa0-9160-d0cba35e40fd
 ```
 
 Returns a specific registered site designs
@@ -46,7 +46,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

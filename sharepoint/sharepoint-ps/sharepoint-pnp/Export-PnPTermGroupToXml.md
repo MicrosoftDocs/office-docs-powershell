@@ -23,29 +23,29 @@ Export-PnPTermGroupToXml [-Identity <Id, Title or TermGroup>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Export-PnPTermGroupToXml
+Export-PnPTermGroupToXml
 ```
 
 Exports all term groups in the default site collection term store to the standard output
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Export-PnPTermGroupToXml -Out output.xml
+Export-PnPTermGroupToXml -Out output.xml
 ```
 
 Exports all term groups in the default site collection term store to the file 'output.xml' in the current folder
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Export-PnPTermGroupToXml -Out c:\output.xml -Identity "Test Group"
+Export-PnPTermGroupToXml -Out c:\output.xml -Identity "Test Group"
 ```
 
 Exports the term group with the specified name to the file 'output.xml' located in the root folder of the C: drive.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> $termgroup = Get-PnPTermGroup -GroupName Test
-PS:> $termgroup | Export-PnPTermGroupToXml -Out c:\output.xml
+$termgroup = Get-PnPTermGroup -GroupName Test
+$termgroup | Export-PnPTermGroupToXml -Out c:\output.xml
 ```
 
 Retrieves a termgroup and subsequently exports that term group to a the file named 'output.xml'
@@ -113,7 +113,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

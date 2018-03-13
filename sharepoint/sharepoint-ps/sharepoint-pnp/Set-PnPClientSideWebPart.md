@@ -11,8 +11,8 @@ Set Client-Side Web Part properties
 ## SYNTAX 
 
 ```powershell
-Set-PnPClientSideWebPart -Identity <ClientSideWebPartPipeBind>
-                         -Page <ClientSidePagePipeBind>
+Set-PnPClientSideWebPart -Page <ClientSidePagePipeBind>
+                         -Identity <ClientSideWebPartPipeBind>
                          [-Title <String>]
                          [-PropertiesJson <String>]
                          [-Web <WebPipeBind>]
@@ -20,13 +20,13 @@ Set-PnPClientSideWebPart -Identity <ClientSideWebPartPipeBind>
 ```
 
 ## DESCRIPTION
-Sets specific client side webpart properties. Notice that the title parameter will only set the -internal- title of webpart. The title which is shown in the UI will, if possible, have to be set using the PropertiesJson parameter. Use Get-PnPClientSideWebPart to retrieve the instance id and properties of a webpart.
+Sets specific client side webpart properties. Notice that the title parameter will only set the -internal- title of webpart. The title which is shown in the UI will, if possible, have to be set using the PropertiesJson parameter. Use Get-PnPClientSideComponent to retrieve the instance id and properties of a webpart.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPClientSideWebPart -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -PropertiesJson $myproperties
+Set-PnPClientSideWebPart -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -PropertiesJson $myproperties
 ```
 
 Sets the properties of the client side webpart given in the $myproperties variable.
@@ -82,7 +82,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

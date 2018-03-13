@@ -21,7 +21,7 @@ New-MailContact [-Name] <String> -ExternalEmailAddress <ProxyAddress> [-Alias <S
  [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
  [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
  [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-OverrideRecipientQuotas] [-PrimarySmtpAddress <SmtpAddress>]
  [-SendModerationNotifications <Never | Internal | Always>] [-UsePreferMessageFormat <$true | $false>]
  [-WhatIf] [-ExternalDirectoryObjectId <String>] [<CommonParameters>]
@@ -196,7 +196,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -386,22 +386,6 @@ You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection

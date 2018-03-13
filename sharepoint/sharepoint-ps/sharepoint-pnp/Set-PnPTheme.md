@@ -27,28 +27,28 @@ Set-PnPTheme [-ColorPaletteUrl <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPTheme
+Set-PnPTheme
 ```
 
 Removes the current theme and resets it to the default.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPTheme -ColorPaletteUrl /_catalogs/theme/15/company.spcolor
+Set-PnPTheme -ColorPaletteUrl _catalogs/theme/15/company.spcolor
 ```
 
 
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPTheme -ColorPaletteUrl /_catalogs/theme/15/company.spcolor -BackgroundImageUrl '/sites/Team Site/style library/background.png'
+Set-PnPTheme -ColorPaletteUrl _catalogs/theme/15/company.spcolor -BackgroundImageUrl 'style library/background.png'
 ```
 
 
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPTheme -ColorPaletteUrl /_catalogs/theme/15/company.spcolor -BackgroundImageUrl '/sites/Team Site/style library/background.png' -ResetSubwebsToInherit
+Set-PnPTheme -ColorPaletteUrl _catalogs/theme/15/company.spcolor -BackgroundImageUrl 'style library/background.png' -ResetSubwebsToInherit
 ```
 
 Sets the theme to the web, and updates all subwebs to inherit the theme from this web.
@@ -56,7 +56,7 @@ Sets the theme to the web, and updates all subwebs to inherit the theme from thi
 ## PARAMETERS
 
 ### -BackgroundImageUrl
-Specifies the Background Image Url based on the server relative url
+Specifies the Background Image Url based on the site or server relative url
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept pipeline input: False
 ```
 
 ### -ColorPaletteUrl
-Specifies the Color Palette Url based on the site relative url
+Specifies the Color Palette Url based on the site or server relative url
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept pipeline input: False
 ```
 
 ### -FontSchemeUrl
-Specifies the Font Scheme Url based on the server relative url
+Specifies the Font Scheme Url based on the site or server relative url
 
 ```yaml
 Type: String
@@ -116,7 +116,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

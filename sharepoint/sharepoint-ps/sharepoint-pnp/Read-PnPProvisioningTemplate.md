@@ -3,15 +3,15 @@ external help file:
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 schema: 2.0.0
 ---
-# Load-PnPProvisioningTemplate
+# Read-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Loads a PnP file from the file systems
+Loads/Reads a PnP file from the file system
 
 ## SYNTAX 
 
 ```powershell
-Load-PnPProvisioningTemplate -Path <String>
+Read-PnPProvisioningTemplate -Path <String>
                              [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
 ```
 
@@ -19,14 +19,14 @@ Load-PnPProvisioningTemplate -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Load-PnPProvisioningTemplate -Path template.pnp
+Read-PnPProvisioningTemplate -Path template.pnp
 ```
 
 Loads a PnP file from the file systems
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Load-PnPProvisioningTemplate -Path template.pnp -TemplateProviderExtensions $extensions
+Read-PnPProvisioningTemplate -Path template.pnp -TemplateProviderExtensions $extensions
 ```
 
 Loads a PnP file from the file systems using some custom template provider extenions while loading the file.

@@ -11,23 +11,23 @@ Adds one ore more site classification values to the list of possible values. Req
 ## SYNTAX 
 
 ```powershell
-Add-PnPSiteClassification -Classifications <List`1>
+Add-PnPSiteClassification -Classifications <String>
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Add-PnPSiteClassification -Classifications "Top Secret"
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Add-PnPSiteClassification -Classifications "Top Secret"
 ```
 
 Adds the "Top Secret" classification to the already existing classification values.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Add-PnPSiteClassification -Classifications "Top Secret","HBI"
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Add-PnPSiteClassification -Classifications "Top Secret","HBI"
 ```
 
 Adds the "Top Secret" and the "For Your Eyes Only" classification to the already existing classification values.
@@ -38,7 +38,7 @@ Adds the "Top Secret" and the "For Your Eyes Only" classification to the already
 
 
 ```yaml
-Type: List`1
+Type: String
 Parameter Sets: (All)
 
 Required: True

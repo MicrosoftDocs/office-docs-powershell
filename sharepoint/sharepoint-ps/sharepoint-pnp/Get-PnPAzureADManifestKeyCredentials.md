@@ -21,14 +21,14 @@ Creates the JSON snippet that is required for the manifest JSON file for Azure W
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPAzureADManifestKeyCredentials -CertPath .\mycert.cer
+Get-PnPAzureADManifestKeyCredentials -CertPath .\mycert.cer
 ```
 
 Output the JSON snippet which needs to be replaced in the application manifest file
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPAzureADManifestKeyCredentials -CertPath .\mycert.cer | Set-Clipboard
+Get-PnPAzureADManifestKeyCredentials -CertPath .\mycert.cer | Set-Clipboard
 ```
 
 Output the JSON snippet which needs to be replaced in the application manifest file and copies it to the clipboard

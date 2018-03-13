@@ -70,7 +70,7 @@ New-TransportRule [-Name] <String>
  [-ManagerAddresses <RecipientIdParameter[]>] [-ManagerForEvaluatedUser <Sender | Recipient>]
  [-MessageTypeMatches <OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt>]
  [-ModerateMessageByManager <$true | $false>] [-ModerateMessageByUser <RecipientIdParameter[]>]
- [-Organization <OrganizationIdParameter>] [-PrependSubject <SubjectPrefix>] [-Priority <Int32>]
+ [-PrependSubject <SubjectPrefix>] [-Priority <Int32>]
  [-Quarantine <$true | $false>] [-RecipientADAttributeContainsWords <Word[]>]
  [-RecipientADAttributeMatchesPatterns <Pattern[]>] [-RecipientAddressContainsWords <Word[]>]
  [-RecipientAddressMatchesPatterns <Pattern[]>] [-RecipientInSenderList <Word[]>]
@@ -1129,7 +1129,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

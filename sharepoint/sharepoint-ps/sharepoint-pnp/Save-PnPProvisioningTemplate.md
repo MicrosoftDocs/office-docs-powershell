@@ -21,7 +21,7 @@ Save-PnPProvisioningTemplate -InputInstance <ProvisioningTemplate>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Save-PnPProvisioningTemplate -InputInstance $template -Out .\template.pnp
+Save-PnPProvisioningTemplate -InputInstance $template -Out .\template.pnp
 ```
 
 Saves a PnP file to the file systems

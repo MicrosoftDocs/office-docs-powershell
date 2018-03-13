@@ -69,28 +69,28 @@ Submit-PnPSearchQuery -Query <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Submit-PnPSearchQuery -Query "finance"
+Submit-PnPSearchQuery -Query "finance"
 ```
 
 Returns the top 500 items with the term finance
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Submit-PnPSearchQuery -Query "Title:Intranet*" -MaxResults 10
+Submit-PnPSearchQuery -Query "Title:Intranet*" -MaxResults 10
 ```
 
 Returns the top 10 items indexed by SharePoint Search of which the title starts with the word Intranet
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Submit-PnPSearchQuery -Query "Title:Intranet*" -All
+Submit-PnPSearchQuery -Query "Title:Intranet*" -All
 ```
 
 Returns absolutely all items indexed by SharePoint Search of which the title starts with the word Intranet
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Submit-PnPSearchQuery -Query "Title:Intranet*" -Refiners "contentclass,FileType(filter=6/0/*)"
+Submit-PnPSearchQuery -Query "Title:Intranet*" -Refiners "contentclass,FileType(filter=6/0/*)"
 ```
 
 Returns absolutely all items indexed by SharePoint Search of which the title starts with the word Intranet, and return refiners for contentclass and FileType managed properties
@@ -114,7 +114,7 @@ Specifies the name of the client which issued the query.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ The locale for the query.
 
 ```yaml
 Type: Int
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ Specifies whether the phonetic forms of the query terms are used to find matches
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ Specifies whether Query Rules are enabled for this query.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ Specifies whether stemming is enabled.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -174,7 +174,7 @@ The keyword query’s hidden constraints.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ Determines whether Best Bets are enabled.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ Determines whether personal favorites data is processed or not.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ Extra query properties. Can for example be used for Office Graph queries.
 
 ```yaml
 Type: Hashtable
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ Search query in Keyword Query Language (KQL).
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: 0
@@ -246,7 +246,7 @@ Specifies the query template that is used at run time to transform the query bas
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ The identifier (ID) of the ranking model to use for the query.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -270,7 +270,7 @@ The set of refinement filters used.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ The list of refiners to be returned in a search result.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -294,7 +294,7 @@ Specifies whether only relevant results are returned
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -306,7 +306,7 @@ The list of properties to return in the search results.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -318,7 +318,7 @@ The list of properties by which the search results are ordered.
 
 ```yaml
 Type: Hashtable
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -330,7 +330,7 @@ Specifies the identifier (ID or name) of the result source to be used to run the
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -354,7 +354,7 @@ The identifier for the search query time zone.
 
 ```yaml
 Type: Int
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -366,7 +366,7 @@ Specifies whether near duplicate items should be removed from the search results
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -374,7 +374,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

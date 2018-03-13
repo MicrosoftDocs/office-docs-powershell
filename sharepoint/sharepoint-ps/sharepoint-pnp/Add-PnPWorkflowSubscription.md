@@ -19,7 +19,7 @@ Add-PnPWorkflowSubscription -Name <String>
                             [-StartManually [<SwitchParameter>]]
                             [-StartOnCreated [<SwitchParameter>]]
                             [-StartOnChanged [<SwitchParameter>]]
-                            [-AssociationValues <Dictionary`2>]
+                            [-AssociationValues <String>]
                             [-Web <WebPipeBind>]
                             [-Connection <SPOnlineConnection>]
 ```
@@ -28,21 +28,21 @@ Add-PnPWorkflowSubscription -Name <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPWorkflowSubscription -Name MyWorkflow -DefinitionName SendMessageWf -list $list
+Add-PnPWorkflowSubscription -Name MyWorkflow -DefinitionName SendMessageWf -list $list
 ```
 
 Adds an Workflow with the name 'SendMessageWf' to the list $list.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> $list | Add-PnPWorkflowSubscription -Name MyWorkflow -DefinitionName SendMessageWf
+$list | Add-PnPWorkflowSubscription -Name MyWorkflow -DefinitionName SendMessageWf
 ```
 
 Adds an Workflow with the name "SendMessageWf" to the list $list.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPList -Identity "MyCustomList" | Add-PnPWorkflowSubscription -Name MyWorkflow -DefinitionName SendMessageWf
+Get-PnPList -Identity "MyCustomList" | Add-PnPWorkflowSubscription -Name MyWorkflow -DefinitionName SendMessageWf
 ```
 
 Adds an Workflow with the name "SendMessageWf" to the list "MyCustomList".
@@ -53,7 +53,7 @@ Adds an Workflow with the name "SendMessageWf" to the list "MyCustomList".
 
 
 ```yaml
-Type: Dictionary`2
+Type: String
 Parameter Sets: (All)
 
 Required: False
@@ -158,7 +158,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

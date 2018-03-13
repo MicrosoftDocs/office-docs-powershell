@@ -15,7 +15,7 @@ Returns a PnP PowerShell Connection for use with the -Connection parameter on ot
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> $ctx = Get-PnPConnection
+$ctx = Get-PnPConnection
 ```
 
 This will put the current connection for use with the -Connection parameter on other cmdlets.

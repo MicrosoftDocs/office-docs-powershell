@@ -25,21 +25,21 @@ Deactives a feature that was active on a site
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Disable-PnPFeature -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
+Disable-PnPFeature -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
 ```
 
 This will disable the feature with the id "99a00f6e-fb81-4dc7-8eac-e09c6f9132fe"
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Disable-PnPFeature -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Force
+Disable-PnPFeature -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Force
 ```
 
 This will disable the feature with the id "99a00f6e-fb81-4dc7-8eac-e09c6f9132fe" with force.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Disable-PnPFeature -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Scope Web
+Disable-PnPFeature -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Scope Web
 ```
 
 This will disable the feature with the id "99a00f6e-fb81-4dc7-8eac-e09c6f9132fe" with the web scope.
@@ -47,11 +47,11 @@ This will disable the feature with the id "99a00f6e-fb81-4dc7-8eac-e09c6f9132fe"
 ## PARAMETERS
 
 ### -Force
-Forcibly disable the feature.
+Specifies whether to continue if an error occurs when deactivating the feature.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -63,7 +63,7 @@ The id of the feature to disable.
 
 ```yaml
 Type: GuidPipeBind
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: 0
@@ -83,7 +83,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
