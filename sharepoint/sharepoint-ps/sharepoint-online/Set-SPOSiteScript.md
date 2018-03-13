@@ -92,7 +92,7 @@ This example updates a previously created site script. Any site designs referenc
             },
             {
                 "verb": "applyTheme",
-                themeName: "Contoso Explorers"
+                "themeName": "Contoso Explorers"
             }
         ],
             "bindata": { },
