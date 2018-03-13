@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Content
-The JSON value that describes the script. For more information, see the [JSON reference](site-design-json-schema.md).
+The JSON value that describes the script. For more information, see the [JSON reference](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-json-schema).
 
 ```yaml
 Type: String

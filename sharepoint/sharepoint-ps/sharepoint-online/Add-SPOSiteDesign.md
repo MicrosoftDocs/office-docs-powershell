@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](customize-default-site-design.md). 
+A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/customize-default-site-design). 
 
 ```yaml
 Type: CommonParameters
