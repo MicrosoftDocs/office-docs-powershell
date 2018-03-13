@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-Set-PerimeterConfig [-Confirm [<SwitchParameter>]] [-GatewayIPAddresses <MultiValuedProperty>] [-WhatIf [<SwitchParameter>]] [<CommonParameters>]
+Set-PerimeterConfig [-Confirm] [-GatewayIPAddresses <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

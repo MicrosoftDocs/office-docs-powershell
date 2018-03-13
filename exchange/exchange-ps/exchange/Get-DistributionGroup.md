@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set3
 ```
 Get-DistributionGroup [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
  [-AccountPartition <AccountPartitionIdParameter>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
@@ -26,7 +26,7 @@ Get-DistributionGroup [-Anr <String>] [-Credential <PSCredential>] [-DomainContr
 ### Set1
 ```
 Get-DistributionGroup [[-Identity] <DistributionGroupIdParameter>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
  [-AccountPartition <AccountPartitionIdParameter>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
@@ -35,7 +35,7 @@ Get-DistributionGroup [[-Identity] <DistributionGroupIdParameter>] [-Credential 
 ### Set2
 ```
 Get-DistributionGroup [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
- [-IgnoreDefaultScope] [-ManagedBy <GeneralRecipientIdParameter>] [-Organization <OrganizationIdParameter>]
+ [-IgnoreDefaultScope] [-ManagedBy <GeneralRecipientIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
  [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
  [-AccountPartition <AccountPartitionIdParameter>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
@@ -122,7 +122,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -227,22 +227,6 @@ For example:
 ```yaml
 Type: GeneralRecipientIdParameter
 Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 

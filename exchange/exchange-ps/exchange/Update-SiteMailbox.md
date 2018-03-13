@@ -16,7 +16,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Update-SiteMailbox [-Identity] <RecipientIdParameter> [-BypassOwnerCheck] [-Confirm] [-FullSync]
- [-Organization <OrganizationIdParameter>] [-Server <String>]
+ [-Server <String>]
  [-Target <All | Document | Membership | Maintenance>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -108,22 +108,6 @@ The FullSync parameter specifies full sync is expensive and will have a performa
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
