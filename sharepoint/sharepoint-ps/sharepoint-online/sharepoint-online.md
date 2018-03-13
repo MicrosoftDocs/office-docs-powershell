@@ -302,9 +302,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Set-SPOSiteGroup](Set-SPOSiteGroup.md)
 {{Manually Enter Set-SPOSiteGroup Description Here}}
 
-### [Set-SPOSiteScript](Set-SPOSiteScript.md)
-{{Manually Enter Set-SPOSiteScript Description Here}}
-
 ### [Set-SPOTenant](Set-SPOTenant.md)
 {{Manually Enter Set-SPOTenant Description Here}}
 
