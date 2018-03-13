@@ -40,6 +40,10 @@ C:\> Set-SPOSiteDesign `
   -PreviewImageAltText "site preview - version 2"
 ```
 
+## DESCRIPTION
+
+Updates a previously uploaded site design. 
+
 ## PARAMETERS
 
 ### -Title

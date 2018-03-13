@@ -21,6 +21,10 @@ Add-SPOSiteScript
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Uploads a new site script for use either directly or in a site design.
+
 ## EXAMPLES
 
 ### Example 1

@@ -19,6 +19,10 @@ Get-SPOSiteDesign
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Gets details about site designs that are on the SharePoint tenant. You can specify an ID of a specific site design to retrieve. If there are no parameters listed, details about all site designs are listed.
+
 ## EXAMPLES
 
 ### Example 1 

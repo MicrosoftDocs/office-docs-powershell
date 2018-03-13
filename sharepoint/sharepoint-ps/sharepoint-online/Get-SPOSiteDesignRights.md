@@ -19,6 +19,10 @@ Get-SPOSiteDesignRights
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Displays a list of principals and their rights for usage of the site design. This can be used to determine the scope that your site design has with users on the tenant.
+
 ## EXAMPLES
 
 ### Example 1 

@@ -20,6 +20,10 @@ Invoke-SPOSiteDesign
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Applies a published site design to a specified site collection target. This allows a site design to be applied to an existing site collection.
+
 ## EXAMPLES
 
 ### Example 1

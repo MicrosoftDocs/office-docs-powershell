@@ -19,6 +19,10 @@ Removes a site design. It no longer appears in the UI for creating a new site.
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Removes a site design. It no longer appears in the UI for creating a new site.
+
 ## EXAMPLES
 
 ### Example 1

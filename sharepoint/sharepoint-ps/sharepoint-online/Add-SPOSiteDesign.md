@@ -25,6 +25,10 @@ Add-SPOSiteDesign
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Creates a new site design available to users when they create a new site from the SharePoint home page.
+
 ## EXAMPLES
 
 ### Example 1

@@ -21,6 +21,10 @@ Grant-SPOSiteDesignRights
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Used to apply permissions to a set of users or a security group, effectively scoping the visibility of the site design in the UX. They start off public, but after you set permissions, only those groups or users with permissions can access the site design.
+
 ## EXAMPLES
 
 ### Example 1

@@ -20,6 +20,10 @@ Revoke-SPOSiteDesignRights
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Revokes rights for specified principals from a site design.
+
 ## EXAMPLES
 
 ### Example 1 

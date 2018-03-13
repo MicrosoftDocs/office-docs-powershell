@@ -19,6 +19,10 @@ Remove-SPOSiteScript
   [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Removes a site script. <!-- TBD how is dependency problem handled so you don't delete a script that a design depends on. this currently creates an error when running the design.) -->
+
 ## PARAMETERS
 
 ### -Identity
