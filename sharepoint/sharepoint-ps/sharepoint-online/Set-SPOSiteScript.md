@@ -100,13 +100,13 @@ This example updates a previously created site script. Any site designs referenc
 }
 ```
 
-Copy to clipboard
+<!--Copy to clipboard
 
 ```powershell
-$script = Get-Clipboard -Raw
-Set-SPOSiteScript `
+C:\> $script = Get-Clipboard -Raw
+C:\> Set-SPOSiteScript `
     -Identity 7647d3d6-1046-41fe-a798-4ff66b099d12 `
     -Content $script `
     -Description "Update site script to change links and apply Contoso Explorers theme"
 ```
-
+-->
