@@ -127,9 +127,8 @@ The DomainType parameter specifies the accepted domain type. Valid values are:
 
 - ExternalRelay: This is a type of non-authoritative domain that's available only in on-premises Exchange organizations. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external messaging system that's completely outside of your control. The external messaging system is responsible for generating NDRs for unresolved recipients.
 
-Note:
-
-For the value InternalRelay or ExternalRelay you typically use mail users or mail contacts to relay the messages to the external messaging system. Address rewriting is also available on Edge Transport servers in on-premises Exchange organizations.
+> [!NOTE]  
+> For the value InternalRelay or ExternalRelay you typically use mail users or mail contacts to relay the messages to the external messaging system. Address rewriting is also available on Edge Transport servers in on-premises Exchange organizations.
 
 ```yaml
 Type: Authoritative | ExternalRelay | InternalRelay

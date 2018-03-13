@@ -21,6 +21,19 @@ Grant-SPOSiteDesignRights
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1
+
+This example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
+
+```powershell
+PS C:\> Grant-SPOSiteDesignRights `
+         -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
+         -Principals "nestorw@contoso.onmicrosoft.com" `
+         -Rights View
+```
+
 ## PARAMETERS
 
 ### -Identity
@@ -68,15 +81,10 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-## EXAMPLES
+## INPUTS
 
-### Example 1
+## OUTPUTS
 
-This example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
+## NOTES
 
-```powershell
-PS C:\> Grant-SPOSiteDesignRights `
-         -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
-         -Principals "nestorw@contoso.onmicrosoft.com" `
-         -Rights View
-```
+## RELATED LINKS

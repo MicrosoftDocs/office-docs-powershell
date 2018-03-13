@@ -40,7 +40,8 @@ You can use this cmdlet in deployments with Lync Server or Skype for Business Se
 
 When you run the cmdlet, it states the reason and possible solutions for issues that have been detected. It also outputs general audio quality metrics for diagnosing audio quality issues related to network connectivity such as jitter and average packet loss. The Test-ExchangeUMCallFlow cmdlet supports testing UM components and services in Secured, SIP Secured, and Unsecured calls, and it can be run either in Gateway or SIPClient modes.
 
-**Important**: You use the Test-ExchangeUMCallFlow cmdlet to test only the voice mail functionality of an Exchange server. 
+> [!IMPORTANT] 
+> You use the Test-ExchangeUMCallFlow cmdlet to test only the voice mail functionality of an Exchange server. 
 
 ## EXAMPLES
 

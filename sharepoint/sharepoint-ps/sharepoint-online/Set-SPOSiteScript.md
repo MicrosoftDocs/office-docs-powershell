@@ -21,6 +21,49 @@ Set-SPOSiteScript
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1 
+
+This example updates a previously created site script. Any site designs referencing it will execute the updated script. 
+
+```json
+{
+    "$schema": "schema.json",
+        "actions": [
+            {
+                "verb": "addNavLink",
+                "url": "/Custom Library",
+                "displayName": "Custom Library Updated",
+                "isWebRelative": true
+            },
+            {
+                "verb": "addNavLink",
+                "url": "/Lists/Custom List",
+                "displayName": "Custom List Updated",
+                "isWebRelative": true
+            },
+            {
+                "verb": "applyTheme",
+                "themeName": "Contoso Explorers"
+            }
+        ],
+            "bindata": { },
+    "version": 2
+}
+```
+
+Copy to clipboard
+
+```powershell
+C:\> $script = Get-Clipboard -Raw
+C:\> Set-SPOSiteScript `
+    -Identity 7647d3d6-1046-41fe-a798-4ff66b099d12 `
+    -Content $script `
+    -Description "Update site script to change links and apply Contoso Explorers theme"
+```
+
+
 ## PARAMETERS
 
 ### -Title
@@ -68,45 +111,10 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-## EXAMPLES
+## INPUTS
 
-### Example 1 
+## OUTPUTS
 
-This example updates a previously created site script. Any site designs referencing it will execute the updated script. 
+## NOTES
 
-```json
-{
-    "$schema": "schema.json",
-        "actions": [
-            {
-                "verb": "addNavLink",
-                "url": "/Custom Library",
-                "displayName": "Custom Library Updated",
-                "isWebRelative": true
-            },
-            {
-                "verb": "addNavLink",
-                "url": "/Lists/Custom List",
-                "displayName": "Custom List Updated",
-                "isWebRelative": true
-            },
-            {
-                "verb": "applyTheme",
-                "themeName": "Contoso Explorers"
-            }
-        ],
-            "bindata": { },
-    "version": 2
-}
-```
-
-<!--Copy to clipboard
-
-```powershell
-C:\> $script = Get-Clipboard -Raw
-C:\> Set-SPOSiteScript `
-    -Identity 7647d3d6-1046-41fe-a798-4ff66b099d12 `
-    -Content $script `
-    -Description "Update site script to change links and apply Contoso Explorers theme"
-```
--->
+## RELATED LINKS

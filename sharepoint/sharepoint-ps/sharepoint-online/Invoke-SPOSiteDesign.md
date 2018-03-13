@@ -20,6 +20,31 @@ Invoke-SPOSiteDesign
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1
+
+This example applies a site design whose script creates two lists, formats several of the columns, adds the lists to the site navigation, and then joins the site to an existing hub site.
+
+```powershell
+C:\> Invoke-SPOSiteDesign -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectgo”
+
+Title                                             Outcome
+----------------------------------------------    -------
+Create or update list Project Activities          Success
+Update list description                           Success
+Create column Project Status                      Success
+Create column Effort (days)                       Success
+Set custom formatter for field Project Status     Success
+Set custom formatter for field Effort (days)      Success
+Create or update list Project Collateral          Success
+Create column Due Date                            Success
+Set custom formatter for field Due Date           Success
+Add Project Activities to left nav                Success
+Add Project Collateral to left nav                Success
+Add to Hub Site                                   Success
+```
+
 ## PARAMETERS
 
 ### -Identity
@@ -52,27 +77,10 @@ Accept pipeline input: False
 Accept wildcard characters: False  
 ```
 
-## EXAMPLES
+## INPUTS
 
-### Example 1
+## OUTPUTS
 
-This example applies a site design whose script creates two lists, formats several of the columns, adds the lists to the site navigation, and then joins the site to an existing hub site.
+## NOTES
 
-```powershell
-C:\> Invoke-SPOSiteDesign -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectgo”
-
-Title                                             Outcome
-----------------------------------------------    -------
-Create or update list Project Activities          Success
-Update list description                           Success
-Create column Project Status                      Success
-Create column Effort (days)                       Success
-Set custom formatter for field Project Status     Success
-Set custom formatter for field Effort (days)      Success
-Create or update list Project Collateral          Success
-Create column Due Date                            Success
-Set custom formatter for field Due Date           Success
-Add Project Activities to left nav                Success
-Add Project Collateral to left nav                Success
-Add to Hub Site                                   Success
-```
+## RELATED LINKS

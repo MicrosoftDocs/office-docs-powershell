@@ -19,23 +19,6 @@ Get-SPOSiteScript
   [<CommonParameters>]
 ```
 
-## PARAMETERS
-
-### -Identity
-The ID of the site script to get information about.
-
-```yaml
-Type: SPOSiteScriptPipeBind
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Online
-Required: False 
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False 
-```
-
 ## EXAMPLES
 
 ### Example 1
@@ -61,3 +44,28 @@ Content     : {
               }
 Version     : 1
 ```
+
+## PARAMETERS
+
+### -Identity
+The ID of the site script to get information about.
+
+```yaml
+Type: SPOSiteScriptPipeBind
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: False 
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False 
+```
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS

@@ -25,6 +25,21 @@ Set-SPOSiteDesign
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1 
+
+This example updates a previously created site design.
+
+```powershell
+C:\> Set-SPOSiteDesign `
+  -Title "Contoso customer tracking - version 2" `
+  -WebTemplate "68" `
+  -Description "Updated site design for list schema that tracks key customer data in a list" `
+  -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
+  -PreviewImageAltText "site preview - version 2"
+```
+
 ## PARAMETERS
 
 ### -Title
@@ -132,17 +147,10 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-## EXAMPLES
+## INPUTS
 
-### Example 1 
+## OUTPUTS
 
-This example updates a previously created site design.
+## NOTES
 
-```powershell
-C:\> Set-SPOSiteDesign `
-  -Title "Contoso customer tracking - version 2" `
-  -WebTemplate "68" `
-  -Description "Updated site design for list schema that tracks key customer data in a list" `
-  -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
-  -PreviewImageAltText "site preview - version 2"
-```
+## RELATED LINKS

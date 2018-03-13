@@ -19,6 +19,24 @@ Get-SPOSiteDesign
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1 
+
+This example and sample response show how to get site design details.
+
+```powershell
+PS C:\> Get-SPOSiteDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+
+Id                  : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+Title               : Contoso - Team Project
+WebTemplate         : 64
+SiteScriptIds       : {1306913c-8463-42ca-bd63-efad0fcdbba4}
+Description         : Use this design to apply Contoso theme and create
+                      custom lists and add to nav
+```
+
+
 ## PARAMETERS
 
 ### -Identity
@@ -36,19 +54,10 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-## EXAMPLES
+## INPUTS
 
-### Example 1 
+## OUTPUTS
 
-This example and sample response show how to get site design details.
+## NOTES
 
-```powershell
-PS C:\> Get-SPOSiteDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863
-
-Id                  : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
-Title               : Contoso - Team Project
-WebTemplate         : 64
-SiteScriptIds       : {1306913c-8463-42ca-bd63-efad0fcdbba4}
-Description         : Use this design to apply Contoso theme and create
-                      custom lists and add to nav
-```
+## RELATED LINKS

@@ -21,6 +21,23 @@ Add-SPOSiteScript
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1
+
+This example adds a new site logo from the following script in a file.
+
+```json
+{
+  "verb": "setSiteLogo",
+  "url": "https://contoso.sharepoint.com/SiteAssets/company-logo.png"
+},
+```
+
+```powershell
+C:\> Get-Content 'c:\scripts\site-script.json' -Raw | Add-SPOSiteScript -Title "Customer logo" -Description "Applies customer logo for customer sites"
+```
+
 ## PARAMETERS
 
 ### -Title
@@ -68,20 +85,10 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
+## INPUTS
 
-## EXAMPLES
+## OUTPUTS
 
-### Example 1
+## NOTES
 
-This example adds a new site logo from the following script in a file.
-
-```json
-{
-  "verb": "setSiteLogo",
-  "url": "https://contoso.sharepoint.com/SiteAssets/company-logo.png"
-},
-```
-
-```powershell
-C:\> Get-Content 'c:\scripts\site-script.json' -Raw | Add-SPOSiteScript -Title "Customer logo" -Description "Applies customer logo for customer sites"
-```
+## RELATED LINKS

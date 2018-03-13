@@ -19,6 +19,21 @@ Get-SPOSiteDesignRights
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1 
+
+This example gets the rights for a site design.
+
+```powershell
+PS C:\> Get-SPOSiteDesignRights 607aed52-6d61-490a-b692-c0f58a6981a1
+
+DisplayName  PrincipalName                                      Rights
+-----------  -------------                                      ------
+Nestor Wilke i:0#.f|membership|nestorw@contoso.onmicrosoft.com   View
+```
+
+
 ## PARAMETERS
 
 ### -Identity
@@ -36,16 +51,10 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-## EXAMPLES
+## INPUTS
 
-### Example 1 
+## OUTPUTS
 
-This example gets the rights for a site design.
+## NOTES
 
-```powershell
-PS C:\> Get-SPOSiteDesignRights 607aed52-6d61-490a-b692-c0f58a6981a1
-
-DisplayName  PrincipalName                                      Rights
------------  -------------                                      ------
-Nestor Wilke i:0#.f|membership|nestorw@contoso.onmicrosoft.com   View
-```
+## RELATED LINKS

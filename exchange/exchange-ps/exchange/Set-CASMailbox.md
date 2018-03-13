@@ -1037,7 +1037,8 @@ The MAPIBlockOutlookExternalConnectivity parameter enables or disables external 
 
 - $false: External Outlook clients can use Outlook Anywhere, MAPI over HTTP, or EWS to access the mailbox.
 
-Note: If your organization uses the same Autodiscover URL values for internal and external clients, setting this parameter to $true won't block access for external clients.
+> [!NOTE]  
+> If your organization uses the same Autodiscover URL values for internal and external clients, setting this parameter to $true won't block access for external clients.
 
 ```yaml
 Type: $true | $false

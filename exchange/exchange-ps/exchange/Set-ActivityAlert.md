@@ -38,7 +38,8 @@ $NU = Get-ActivityAlert "Contoso Elevation of Privilege"; $NU.NotifyUser.Add("ch
 This example adds the external user chris@fabrikam.com to the list of recipients that email notifications are sent to for the activity alert named Contoso Elevation of Privilege.
 
 
-Note: To remove an existing email address from the list of recipients, change the value NotifyUser.Add to NotifyUser.Remove.
+> [!NOTE]  
+> To remove an existing email address from the list of recipients, change the value NotifyUser.Add to NotifyUser.Remove.
 
 ### Example 2
 ```

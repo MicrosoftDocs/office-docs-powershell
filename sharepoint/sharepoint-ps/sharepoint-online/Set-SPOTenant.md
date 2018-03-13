@@ -511,8 +511,8 @@ Lets administrators choose what type of link appears is selected in the “Get a
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
 
-Note:  
-Setting this value to “none” will default “get a link” to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.  
+> [!NOTE] 
+> Setting this value to “none” will default “get a link” to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.  
 
 The values are: 
 None
@@ -556,8 +556,8 @@ Accept wildcard characters: False
 ### -EnableGuestSignInAcceleration
 Accelerates guest-enabled site collections as well as member-only site collections when the SignInAccelerationDomain parameter is set. 
 
-Note:  
-If enabled, your identity provider must be capable of authenticating guest users. If it is not, guest users will be unable to log in and access content that was shared with them.  
+> [!NOTE] 
+> If enabled, your identity provider must be capable of authenticating guest users. If it is not, guest users will be unable to log in and access content that was shared with them.  
 
 
 ```yaml
@@ -612,8 +612,8 @@ Configures multiple IP addresses or IP address ranges (IPv4 or IPv6).
 
 Use commas to separate multiple IP addresses or IP address ranges. Verify there are no overlapping IP addresses and ensure IP ranges use Classless Inter-Domain Routing (CIDR) notation. For example, 172.16.0.0, 192.168.1.0/27.
 
-Note:  
-The IPAddressAllowList parameter only lets administrators set IP addresses or ranges that are recognized as trusted. To only grant access from these IP addresses or ranges, set the IPAddressEnforcement parameter to $true.  
+> [!NOTE] 
+> The IPAddressAllowList parameter only lets administrators set IP addresses or ranges that are recognized as trusted. To only grant access from these IP addresses or ranges, set the IPAddressEnforcement parameter to $true.  
 
 
 ```yaml
@@ -676,8 +676,8 @@ A value of True- Enables Office clients using non-modern authentication protocol
 
 A value of False-Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
-Note:  
-This may also prevent third-party apps from accessing SharePoint Online resources.
+> [!NOTE] 
+> This may also prevent third-party apps from accessing SharePoint Online resources.
 Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class.  
 
 
@@ -1077,8 +1077,8 @@ Accept wildcard characters: False
 ### -SpecialCharactersStateInFileFolderNames
 Permits the use of special characters in file and folder names in SharePoint Online and OneDrive for Business document libraries. 
 
-Note:  
-The only two characters that can be managed at this time are the # and % characters.  
+> [!NOTE] 
+> The only two characters that can be managed at this time are the # and % characters.  
 
 The following are the valid values: 
 
@@ -1103,8 +1103,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseFindPeopleInPeoplePicker
-Note:  
-When set to $true, users aren't able to share with security groups or SharePoint groups.  
+
+> [!NOTE] 
+> When set to $true, users aren't able to share with security groups or SharePoint groups.  
 
 
 ```yaml

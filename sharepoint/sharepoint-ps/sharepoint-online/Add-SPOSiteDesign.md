@@ -25,6 +25,22 @@ Add-SPOSiteDesign
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1
+
+This example creates a new site design.
+
+```powershell
+C:\> Add-SPOSiteDesign `
+  -Title "Contoso customer tracking" `
+  -WebTemplate "64" `
+  -SiteScripts "<ID>" `
+  -Description "Tracks key customer data in a list" `
+  -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
+  -PreviewImageAltText "site preview"
+```
+
 ## PARAMETERS
 
 ### -Title
@@ -132,18 +148,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## EXAMPLES
+## INPUTS
 
-### Example 1
+## OUTPUTS
 
-This example creates a new site design.
+## NOTES
 
-```powershell
-C:\> Add-SPOSiteDesign `
-  -Title "Contoso customer tracking" `
-  -WebTemplate "64" `
-  -SiteScripts "<ID>" `
-  -Description "Tracks key customer data in a list" `
-  -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
-  -PreviewImageAltText "site preview"
-```
+## RELATED LINKS

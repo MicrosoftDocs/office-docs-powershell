@@ -19,6 +19,16 @@ Removes a site design. It no longer appears in the UI for creating a new site.
   [<CommonParameters>]
 ```
 
+## EXAMPLES
+
+### Example 1
+
+This example shows how to remove a site design. 
+
+```powershell
+C:\> Remove-SPOSiteDesign 21209d88-38de-4844-9823-f1f600a1179a
+```
+
 
 ## PARAMETERS
 
@@ -37,12 +47,10 @@ Accept pipeline input: False
 Accept wildcard characters: False  
 ```
 
-## EXAMPLES
+## INPUTS
 
-### Example 1
+## OUTPUTS
 
-This example shows how to remove a site design. 
+## NOTES
 
-```powershell
-C:\> Remove-SPOSiteDesign 21209d88-38de-4844-9823-f1f600a1179a
-```
+## RELATED LINKS

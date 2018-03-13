@@ -54,7 +54,8 @@ The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to enable the feat
 
 The **Set-SPOTenantSyncClientRestriction** cmdlet applies both to existing Microsoft OneDrive for Business sync client (Groove.exe) and the Microsoft OneDrive for Business Next Generation Sync Client (OneDrive.exe).   OneDrive.exe is the new sync client that will sync both consumer and business accounts. 
 
-**IMPORTANT**: The new OneDrive for Business Next Generation Sync Client lets you connect and sync files from your OneDrive for Business. You can add a work or school account to the new OneDrive for Business sync client and sync all your files in OneDrive to your computer.  For more information, see [Improve your OneDrive sync experience](https://go.microsoft.com/fwlink/p/?LinkId=717436).
+> [!IMPORTANT] 
+> The new OneDrive for Business Next Generation Sync Client lets you connect and sync files from your OneDrive for Business. You can add a work or school account to the new OneDrive for Business sync client and sync all your files in OneDrive to your computer.  For more information, see [Improve your OneDrive sync experience](https://go.microsoft.com/fwlink/p/?LinkId=717436).
 
 When the feature is enabled the following will occur:
 
@@ -73,15 +74,19 @@ When the feature is enabled the following will occur:
           
 * Microsoft  OneDrive for Business sync client prior to version 15.0.4693.1000 will stop syncing existing libraries.          
 
-**IMPORTANT**: In order to explicitly block Microsoft OneDrive client for Mac or OneDrive for Business Next Generation Sync Client on Mac OS X, please run the **Set-SPOTenantSyncClientRestriction** cmdlet with the **BlockMacSync** parameter set to true.  For more information about the Next Generation Sync Client for Mac OS X, see [Get started with the new OneDrive sync client on Mac OS X](https://go.microsoft.com/fwlink/?LinkID=717727).
+> [!IMPORTANT] 
+> In order to explicitly block Microsoft OneDrive client for Mac or OneDrive for Business Next Generation Sync Client on Mac OS X, please run the **Set-SPOTenantSyncClientRestriction** cmdlet with the **BlockMacSync** parameter set to true.  For more information about the Next Generation Sync Client for Mac OS X, see [Get started with the new OneDrive sync client on Mac OS X](https://go.microsoft.com/fwlink/?LinkID=717727).
 
-**IMPORTANT**: There is a known OneDrive for Business sync client issue where syncing is being  blocked even if a computer is joined to a domain which is  set in the Safe Recipient List. To resolve this behavior, obtain the 15.0.4719.1000 version or higher of the sync client, see [May 12, 2015, update for OneDrive for Business](https://support.microsoft.com/en-us/kb/2986244/).
+> [!IMPORTANT] 
+> There is a known OneDrive for Business sync client issue where syncing is being  blocked even if a computer is joined to a domain which is  set in the Safe Recipient List. To resolve this behavior, obtain the 15.0.4719.1000 version or higher of the sync client, see [May 12, 2015, update for OneDrive for Business](https://support.microsoft.com/en-us/kb/2986244/).
 
-**Note**: To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
+> [!NOTE] 
+> To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
 
 * The latest OneDrive for Business sync client can be downloaded from [Download OneDrive for Windows](http://go.microsoft.com/fwlink/?LinkID=404119&clcid=0x409) or [How to install OneDrive for Business for SharePoint and SharePoint Online](http://go.microsoft.com/fwlink/?LinkID=321300&amp;clcid=0x409).
 
-**IMPORTANT**: This capability doesn’t support Microsoft Azure Active Directory (AD) Joined or Workplace Joined devices.
+> [!IMPORTANT] 
+> This capability doesn’t support Microsoft Azure Active Directory (AD) Joined or Workplace Joined devices.
 
 For additional information about how to troubleshoot the OneDrive for Business sync client, see [How to switch from an MSI installation of OneDrive for Business (formerly SkyDrive Pro) standalone to a Click-To-Run installation of OneDrive for Business (formerly SkyDrive Pro) standalone](http://go.microsoft.com/fwlink/?LinkId=526386&clcid=0x409).
 
@@ -91,7 +96,8 @@ The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to configure a lis
 
 Any file extension may be blocked using this feature, but note that it may take up to 24 hours for a change to take affect across all user devices. When this feature is enabled, users syncing any file that is in the exclusion list will see an error message informing them of the block.
 
-**IMPORTANT**: This feature is only supported by the new OneDrive for Business sync client. To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
+> [!IMPORTANT] 
+> This feature is only supported by the new OneDrive for Business sync client. To determine the version of your Sync client, see [What version of the sync client am I using?](https://support.office.com/en-us/article/Which-version-of-OneDrive-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba).
 
 **Control whether users can use the old OneDrive for Business sync client**
 
@@ -104,7 +110,8 @@ When this feature is enabled, the old OneDrive for Business sync client will sto
 If you opt out, users will be able to resume syncing with the old OneDrive for Business Sync client.
 Note that it may take up to an hour for this change to be reflected.
 
-**Note: This feature only applies to syncing a user’s own OneDrive for Business sites. Team Sites and shared content from other people’s OneDrive for Business sites will continue to sync with the old OneDrive for Business sync client.
+> [!NOTE] 
+> This feature only applies to syncing a user’s own OneDrive for Business sites. Team Sites and shared content from other people’s OneDrive for Business sites will continue to sync with the old OneDrive for Business sync client.
 
 
 
@@ -231,7 +238,9 @@ Accept wildcard characters: False
 
 ### -ExcludedFileExtensions
 Blocks certain file types from syncing with the new sync client (OneDrive.exe).
-**Note**: It may take up to one hour for changes to take effect.
+
+> [!NOTE] 
+> It may take up to one hour for changes to take effect.
 
 ```yaml
 Type: String

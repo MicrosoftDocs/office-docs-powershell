@@ -980,7 +980,8 @@ The ZapEnabled parameter specifies whether to enable zero-hour auto purge (ZAP) 
 
 - $false: ZAP for spam is disabled.
 
-Note: ZAP for spam requires that the following action parameters are set to the value MoveToJmf:
+> [!NOTE] 
+> ZAP for spam requires that the following action parameters are set to the value MoveToJmf:
 
 - BulkSpamAction
 

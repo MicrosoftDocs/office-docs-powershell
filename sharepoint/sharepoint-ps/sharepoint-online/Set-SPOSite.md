@@ -94,8 +94,8 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuo
 
 This example sets the quota for the site.
 
-Note:  
-If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
+> [!NOTE] 
+> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
 
 ## PARAMETERS
