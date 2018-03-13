@@ -24,7 +24,12 @@ Retrieves a Teams messaging policy.
 ## EXAMPLES
 
 ### Example 1
-For in depth examples of how to customize retrieving messaging policies, look at the examples provided for the Get-CsConferencingPolicy cmdlet.
+```
+powershell
+PS C:\> Get-CsTeamsMessagingPolicy
+```
+
+In this example all teams messaging policies that have been configured in the organization will be returned.
 
 ## PARAMETERS
 
