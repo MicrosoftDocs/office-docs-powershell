@@ -66,10 +66,3 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
