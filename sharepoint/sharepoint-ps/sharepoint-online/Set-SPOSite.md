@@ -51,7 +51,7 @@ For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates 
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
 
 
 ## EXAMPLES
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies the language of this site collection.
-For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911) (http://go.microsoft.com/fwlink/p/?LinkId=242911).
+For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911).
 
 
 ```yaml
@@ -283,7 +283,7 @@ Accept wildcard characters: False
 ### -ResourceQuota
 Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
-For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx) (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
+For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
 
 
 ```yaml
