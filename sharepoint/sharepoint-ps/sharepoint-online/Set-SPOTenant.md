@@ -22,7 +22,8 @@ Set-SPOTenant [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInv
  [-ShowAllUsersClaim <Boolean>] [-ShowEveryoneClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>] [-SignInAccelerationDomain <String>]
  [-StartASiteFormUrl <String>] [-UsePersistentCookiesForExplorerView <Boolean>]
- [-CommentsOnSitePagesDisabled <Boolean>] [-DefaultSharingLinkType <SharingLinkType>]
+ [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>]
  [-DisallowInfectedFileDownload <Boolean>] [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>] [-IPAddressEnforcement <Boolean>] [-IPAddressWACTokenLifetime <Int32>]
@@ -502,6 +503,27 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SocialBarOnSitePagesDisabled
+Disables or enables the Social Bar.
+
+The Social Bar will appear on all modern SharePoint pages with the exception of the home page of a site. It will give users the ability to like a page, see the number of views, likes, and comments on a page, and see the people who have liked a page.
+
+PARAMVALUE: $true | $false
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
