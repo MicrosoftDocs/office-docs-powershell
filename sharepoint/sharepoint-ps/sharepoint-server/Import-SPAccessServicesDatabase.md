@@ -18,13 +18,11 @@ Import-SPAccessServicesDatabase [-AssignmentCollection <SPAssignmentCollection>]
 ```
 
 ## DESCRIPTION
-This cmdlet imports an Access Services Database from a DACPAC. The cmdlet requires the Access Services database to reside on a SQL Server 2012 server in order to function. The cmdlet also requires the Data-Tier Framework to be installed on the SharePoint server where the cmdlet is run. The Data-Tier Framework packages can be found at [Microsoft® SQL Server® 2012 Data-Tier Application Framework (March 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=36842). Install the following MSIs from the download:
+This cmdlet exports an Access Services Database to a DACPAC. The cmdlet requires the Data-Tier Framework to be installed on the SharePoint server where the cmdlet is run. The Data-Tier Framework packages can be found at [Microsoft® SQL Server® Data-Tier Application Framework (17.4.1 GA DacFx)](https://www.microsoft.com/en-us/download/details.aspx?id=56508). Install the following MSI from the download:
 
-ENU\x64\DACFramework.msi
+EN\x86\DacFramework.msi
 
-ENU\x64\SqlDom.msi
-
-ENU\x64\SQLSysClrTypes.msi
+Note: The x86 package is required. The x64 package is not compatible with this cmdlet.
 
 See more information about Data-Tier Framework at [Data-tier Applications](https://docs.microsoft.com/en-us/sql/relational-databases/data-tier-applications/data-tier-applications).
 
@@ -32,9 +30,8 @@ See more information about Data-Tier Framework at [Data-tier Applications](https
 
 ### Example 1 
 ```
-PS C:\>$serverReferenceId = Get-SPAccessServicesDatabaseServer -ServiceContext http://site_url -DatabaseServer SQLSERVERNAME -DatabaseServerGroup DEFAULT
-PS C:\>[byte[]]$bacPacBytes = [IO.File]::ReadAllBytes('C:\bacPacPackage.bacpac')
-PS C:\>Import-SPAccessServicesDatabase -DatabaseName accessDatabaseName -ServerReferenceId $serverReferenceId -Bacpac $bacPacBytes
+PS C:\>$accessDb = Get-SPAccessServicesDatabaseServer -ServiceContext http://site_url -DatabaseServer SQLSERVERNAME -DatabaseServerGroup DEFAULT
+PS C:\>Import-SPAccessServicesDatabase -DatabaseName accessDatabaseName -ServerReferenceId $accessDb.ServerReferenceId -Bacpac (Get-Content -Path C:\accessDb.bacpac -Encoding Byte)
 ```
 
 This example gets the ServerReferenceId value of the SQL Server for the Access Services Service Application; -DatabaseServerGroup is set to the value DEFAULT by default. The next step is to import the bacpac file to a byte array and finally, import the Access Services Database as the specified SQL database name to the specified SQL Server.
