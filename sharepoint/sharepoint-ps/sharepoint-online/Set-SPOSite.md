@@ -26,7 +26,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
  [-Title <String>] [-WhatIf] [-AllowLimitedAccess <Boolean>] [-BlockDownloadOfNonViewableFiles <Boolean>]
- [-CommentsOnSitePagesDisabled <Boolean>] [-DisableAppViews <AppViewsPolicy>]
+ [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
@@ -50,7 +51,7 @@ For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates 
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
 
 
 ## EXAMPLES
@@ -208,7 +209,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies the language of this site collection.
-For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911) (http://go.microsoft.com/fwlink/p/?LinkId=242911).
+For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911).
 
 
 ```yaml
@@ -282,7 +283,7 @@ Accept wildcard characters: False
 ### -ResourceQuota
 Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
-For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx) (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
+For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
 
 
 ```yaml
@@ -465,6 +466,28 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -SocialBarOnSitePagesDisabled
+Disables or enables the Social Bar for Site Collection.
+
+The Social Bar will appear on all modern SharePoint pages with the exception of the home page of a site. It will give users the ability to like a page, see the number of views, likes, and comments on a page, and see the people who have liked a page.
+
+PARAMVALUE: $true | $false
+
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
