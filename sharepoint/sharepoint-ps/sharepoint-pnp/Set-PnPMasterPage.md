@@ -33,28 +33,28 @@ Sets the default master page of the current web.
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPMasterPage -MasterPageServerRelativeUrl /sites/projects/_catalogs/masterpage/oslo.master
+Set-PnPMasterPage -MasterPageServerRelativeUrl /sites/projects/_catalogs/masterpage/oslo.master
 ```
 
 Sets the master page based on a server relative URL
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPMasterPage -MasterPageServerRelativeUrl /sites/projects/_catalogs/masterpage/oslo.master -CustomMasterPageServerRelativeUrl /sites/projects/_catalogs/masterpage/oslo.master
+Set-PnPMasterPage -MasterPageServerRelativeUrl /sites/projects/_catalogs/masterpage/oslo.master -CustomMasterPageServerRelativeUrl /sites/projects/_catalogs/masterpage/oslo.master
 ```
 
 Sets the master page and custom master page based on a server relative URL
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPMasterPage -MasterPageSiteRelativeUrl _catalogs/masterpage/oslo.master
+Set-PnPMasterPage -MasterPageSiteRelativeUrl _catalogs/masterpage/oslo.master
 ```
 
 Sets the master page based on a site relative URL
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPMasterPage -MasterPageSiteRelativeUrl _catalogs/masterpage/oslo.master -CustomMasterPageSiteRelativeUrl _catalogs/masterpage/oslo.master
+Set-PnPMasterPage -MasterPageSiteRelativeUrl _catalogs/masterpage/oslo.master -CustomMasterPageSiteRelativeUrl _catalogs/masterpage/oslo.master
 ```
 
 Sets the master page and custom master page based on a site relative URL
@@ -112,7 +112,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

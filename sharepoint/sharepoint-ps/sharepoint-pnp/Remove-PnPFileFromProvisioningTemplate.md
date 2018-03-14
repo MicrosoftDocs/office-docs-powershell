@@ -20,7 +20,7 @@ Remove-PnPFileFromProvisioningTemplate -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPFileFromProvisioningTemplate -Path template.pnp -FilePath filePath
+Remove-PnPFileFromProvisioningTemplate -Path template.pnp -FilePath filePath
 ```
 
 Removes a file from an in-memory PnP Provisioning Template

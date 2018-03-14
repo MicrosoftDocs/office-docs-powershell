@@ -11,7 +11,7 @@ Removes one or more users as site collection administrators from the site collec
 ## SYNTAX 
 
 ```powershell
-Remove-PnPSiteCollectionAdmin -Owners <List`1>
+Remove-PnPSiteCollectionAdmin -Owners <UserPipeBind>
                               [-Connection <SPOnlineConnection>]
 ```
 
@@ -22,28 +22,28 @@ This command allows removing one to many users as site collection administrators
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPSiteCollectionAdmin -Owners "user@contoso.onmicrosoft.com"
+Remove-PnPSiteCollectionAdmin -Owners "user@contoso.onmicrosoft.com"
 ```
 
 This will remove user@contoso.onmicrosoft.com as a site collection owner from the site collection in the current context
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPSiteCollectionAdmin -Owners @("user1@contoso.onmicrosoft.com", "user2@contoso.onmicrosoft.com")
+Remove-PnPSiteCollectionAdmin -Owners @("user1@contoso.onmicrosoft.com", "user2@contoso.onmicrosoft.com")
 ```
 
 This will remove user1@contoso.onmicrosoft.com and user2@contoso.onmicrosoft.com as site collection owners from the site collection in the current context
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPUser | ? Title -Like "*Doe" | Remove-PnPSiteCollectionAdmin
+Get-PnPUser | ? Title -Like "*Doe" | Remove-PnPSiteCollectionAdmin
 ```
 
 This will remove all users with their title ending with "Doe" as site collection owners from the site collection in the current context
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPSiteCollectionAdmin | Remove-PnPSiteCollectionAdmin
+Get-PnPSiteCollectionAdmin | Remove-PnPSiteCollectionAdmin
 ```
 
 This will remove all existing site collection administrators from the site collection in the current context
@@ -54,7 +54,7 @@ This will remove all existing site collection administrators from the site colle
 Specifies owner(s) to remove as site collection adminstrators. Can be both users and groups.
 
 ```yaml
-Type: List`1
+Type: UserPipeBind
 Parameter Sets: (All)
 
 Required: True
@@ -63,7 +63,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

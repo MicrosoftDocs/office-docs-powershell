@@ -30,35 +30,35 @@ Get-PnPSearchConfiguration [-OutputFormat <OutputFormat>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPSearchConfiguration
+Get-PnPSearchConfiguration
 ```
 
 Returns the search configuration for the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPSearchConfiguration -Scope Site
+Get-PnPSearchConfiguration -Scope Site
 ```
 
 Returns the search configuration for the current site collection
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Get-PnPSearchConfiguration -Scope Subscription
+Get-PnPSearchConfiguration -Scope Subscription
 ```
 
 Returns the search configuration for the current tenant
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPSearchConfiguration -Path searchconfig.xml -Scope Subscription
+Get-PnPSearchConfiguration -Path searchconfig.xml -Scope Subscription
 ```
 
 Returns the search configuration for the current tenant and saves it to the specified file
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Get-PnPSearchConfiguration -Scope Site -OutputFormat ManagedPropertyMappings
+Get-PnPSearchConfiguration -Scope Site -OutputFormat ManagedPropertyMappings
 ```
 
 Returns all custom managed properties and crawled property mapping at the current site collection
@@ -94,7 +94,7 @@ Scope to use. Either Web, Site, or Subscription. Defaults to Web
 
 ```yaml
 Type: SearchConfigurationScope
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

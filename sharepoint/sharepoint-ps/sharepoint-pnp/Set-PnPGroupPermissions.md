@@ -24,35 +24,35 @@ Set-PnPGroupPermissions -Identity <GroupPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPGroupPermissions -Identity 'My Site Members' -AddRole Contribute
+Set-PnPGroupPermissions -Identity 'My Site Members' -AddRole Contribute
 ```
 
 Adds the 'Contribute' permission to the SharePoint group with the name 'My Site Members'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPGroupPermissions -Identity 'My Site Members' -RemoveRole 'Full Control' -AddRole 'Read'
+Set-PnPGroupPermissions -Identity 'My Site Members' -RemoveRole 'Full Control' -AddRole 'Read'
 ```
 
 Removes the 'Full Control' from and adds the 'Contribute' permissions to the SharePoint group with the name 'My Site Members'
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPGroupPermissions -Identity 'My Site Members' -AddRole @('Contribute', 'Design')
+Set-PnPGroupPermissions -Identity 'My Site Members' -AddRole @('Contribute', 'Design')
 ```
 
 Adds the 'Contribute' and 'Design' permissions to the SharePoint group with the name 'My Site Members'
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPGroupPermissions -Identity 'My Site Members' -RemoveRole @('Contribute', 'Design')
+Set-PnPGroupPermissions -Identity 'My Site Members' -RemoveRole @('Contribute', 'Design')
 ```
 
 Removes the 'Contribute' and 'Design' permissions from the SharePoint group with the name 'My Site Members'
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Set-PnPGroupPermissions -Identity 'My Site Members' -List 'MyList' -RemoveRole @('Contribute')
+Set-PnPGroupPermissions -Identity 'My Site Members' -List 'MyList' -RemoveRole @('Contribute')
 ```
 
 Removes the 'Contribute' permissions from the list 'MyList' for the group with the name 'My Site Members'
@@ -109,7 +109,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

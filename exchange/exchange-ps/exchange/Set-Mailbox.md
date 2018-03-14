@@ -1392,7 +1392,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -4488,7 +4488,9 @@ Accept wildcard characters: False
 ### -RemoveDisabledArchive
 This parameter is available only in the cloud-based service.
 
-The RemoveDisabledArchive switch specifies whether to remove the disabled archive that's associated with the mailbox. You don't need to specify a value with this switch.### -AccountDisabled
+The RemoveDisabledArchive switch specifies whether to remove the disabled archive that's associated with the mailbox. You don't need to specify a value with this switch.
+
+### -AccountDisabled
 The AccountDisabled switch specifies whether to disable the account that's associated with the mailbox. Valid values are:
 
 - $true: The associated account is disabled. The user can't log in to the mailbox.

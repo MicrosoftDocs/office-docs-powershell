@@ -28,31 +28,38 @@ Adds a menu item to either the quicklaunch or top navigation
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPNavigationNode -Title "Contoso" -Url "http://contoso.sharepoint.com/sites/contoso/" -Location "QuickLaunch"
+Add-PnPNavigationNode -Title "Contoso" -Url "http://contoso.sharepoint.com/sites/contoso/" -Location "QuickLaunch"
 ```
 
 Adds a navigation node to the quicklaunch. The navigation node will have the title "Contoso" and will link to the url "http://contoso.sharepoint.com/sites/contoso/"
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPNavigationNode -Title "Contoso USA" -Url "http://contoso.sharepoint.com/sites/contoso/usa/" -Location "QuickLaunch" -Header "Contoso"
+Add-PnPNavigationNode -Title "Contoso USA" -Url "http://contoso.sharepoint.com/sites/contoso/usa/" -Location "QuickLaunch" -Header "Contoso"
 ```
 
 Adds a navigation node to the quicklaunch. The navigation node will have the title "Contoso USA", will link to the url "http://contoso.sharepoint.com/sites/contoso/usa/" and will have "Contoso" as a parent navigation node.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Add-PnPNavigationNode -Title "Contoso" -Url "http://contoso.sharepoint.com/sites/contoso/" -Location "QuickLaunch" -First
+Add-PnPNavigationNode -Title "Contoso" -Url "http://contoso.sharepoint.com/sites/contoso/" -Location "QuickLaunch" -First
 ```
 
 Adds a navigation node to the quicklaunch, as the first item. The navigation node will have the title "Contoso" and will link to the url "http://contoso.sharepoint.com/sites/contoso/"
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Add-PnPNavigationNode -Title "Contoso Pharmaceuticals" -Url "http://contoso.sharepoint.com/sites/contosopharma/" -Location "QuickLaunch" -External
+Add-PnPNavigationNode -Title "Contoso Pharmaceuticals" -Url "http://contoso.sharepoint.com/sites/contosopharma/" -Location "QuickLaunch" -External
 ```
 
 Adds a navigation node to the quicklaunch. The navigation node will have the title "Contoso Pharmaceuticals" and will link to the external url "http://contoso.sharepoint.com/sites/contosopharma/"
+
+### ------------------EXAMPLE 5------------------
+```powershell
+Add-PnPNavigationNode -Title "Wiki" -Location "QuickLaunch" -Url "wiki/"
+```
+
+Adds a navigation node to the quicklaunch. The navigation node will have the title "Wiki" and will link to Wiki library on the selected Web.
 
 ## PARAMETERS
 
@@ -117,7 +124,7 @@ Accept pipeline input: False
 ```
 
 ### -Url
-The url to navigate to when clicking the new menu item.
+The url to navigate to when clicking the new menu item. This can either be absolute or relative to the Web. Fragments are not supported.
 
 ```yaml
 Type: String
@@ -129,7 +136,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -151,6 +158,10 @@ Required: False
 Position: Named
 Accept pipeline input: False
 ```
+
+## OUTPUTS
+
+### Microsoft.SharePoint.Client.NavigationNode
 
 ## RELATED LINKS
 

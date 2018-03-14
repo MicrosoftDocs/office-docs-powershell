@@ -12,8 +12,8 @@ Sets list item permissions
 
 ### Inherit
 ```powershell
-Set-PnPListItemPermission -Identity <ListItemPipeBind>
-                          -List <ListPipeBind>
+Set-PnPListItemPermission -List <ListPipeBind>
+                          -Identity <ListItemPipeBind>
                           [-InheritPermissions [<SwitchParameter>]]
                           [-Web <WebPipeBind>]
                           [-Connection <SPOnlineConnection>]
@@ -22,8 +22,8 @@ Set-PnPListItemPermission -Identity <ListItemPipeBind>
 ### Group
 ```powershell
 Set-PnPListItemPermission -Group <GroupPipeBind>
-                          -Identity <ListItemPipeBind>
                           -List <ListPipeBind>
+                          -Identity <ListItemPipeBind>
                           [-AddRole <String>]
                           [-RemoveRole <String>]
                           [-ClearExisting [<SwitchParameter>]]
@@ -34,8 +34,8 @@ Set-PnPListItemPermission -Group <GroupPipeBind>
 ### User
 ```powershell
 Set-PnPListItemPermission -User <String>
-                          -Identity <ListItemPipeBind>
                           -List <ListPipeBind>
+                          -Identity <ListItemPipeBind>
                           [-AddRole <String>]
                           [-RemoveRole <String>]
                           [-ClearExisting [<SwitchParameter>]]
@@ -47,28 +47,28 @@ Set-PnPListItemPermission -User <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute'
+Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute'
 ```
 
 Adds the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents'
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -RemoveRole 'Contribute'
+Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -RemoveRole 'Contribute'
 ```
 
 Removes the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents'
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute' -ClearExisting
+Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute' -ClearExisting
 ```
 
 Adds the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents' and removes all other permissions
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Set-PnPListItemPermission -List 'Documents' -Identity 1 -InheritPermissions
+Set-PnPListItemPermission -List 'Documents' -Identity 1 -InheritPermissions
 ```
 
 Resets permissions for listitem with id 1 to inherit permissions from the list 'Documents'
@@ -80,7 +80,7 @@ The role that must be assigned to the group or user
 
 ```yaml
 Type: String
-Parameter Sets: User
+Parameter Sets: User, Group
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Clear all existing permissions
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: User
+Parameter Sets: User, Group
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ The ID of the listitem, or actual ListItem object
 
 ```yaml
 Type: ListItemPipeBind
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: Named
@@ -140,7 +140,7 @@ The ID, Title or Url of the list.
 
 ```yaml
 Type: ListPipeBind
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 
 Required: True
 Position: 0
@@ -152,7 +152,7 @@ The role that must be removed from the group or user
 
 ```yaml
 Type: String
-Parameter Sets: User
+Parameter Sets: User, Group
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

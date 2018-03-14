@@ -49,7 +49,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-O365ClientOSDetailReport -WindowsLiveID john@contoso.com -StartDate 05/01/2016 -EndDate 05/03/2016
 ```
@@ -58,7 +58,7 @@ This example retrieves the operating system details for user John between May 1,
 
 
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-O365ClientOSDetailReport -OperatingSystem Android
 ```

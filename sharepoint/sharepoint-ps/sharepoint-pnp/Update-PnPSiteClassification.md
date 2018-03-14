@@ -12,7 +12,7 @@ Updates Site Classifications for the tenant. Requires a connection to the Micros
 
 ### Specific
 ```powershell
-Update-PnPSiteClassification [-Classifications <List`1>]
+Update-PnPSiteClassification [-Classifications <String>]
                              [-DefaultClassification <String>]
                              [-UsageGuidelinesUrl <String>]
 ```
@@ -26,24 +26,24 @@ Update-PnPSiteClassification -Settings <SiteClassificationsSettings>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Update-PnPSiteClassification -Classifications "HBI","Top Secret"
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Update-PnPSiteClassification -Classifications "HBI","Top Secret"
 ```
 
 Replaces the existing values of the site classification settings
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Update-PnPSiteClassification -DefaultClassification "LBI"
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Update-PnPSiteClassification -DefaultClassification "LBI"
 ```
 
 Sets the default classification value to "LBI". This value needs to be present in the list of classification values.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
-PS:> Update-PnPSiteClassification -UsageGuidelinesUrl http://aka.ms/sppnp
+Connect-PnPOnline -Scopes "Directory.ReadWrite.All"
+Update-PnPSiteClassification -UsageGuidelinesUrl http://aka.ms/sppnp
 ```
 
 sets the usage guideliness URL to the specified URL.
@@ -54,7 +54,7 @@ sets the usage guideliness URL to the specified URL.
 A list of classifications, separated by commas. E.g. "HBI","LBI","Top Secret"
 
 ```yaml
-Type: List`1
+Type: String
 Parameter Sets: Specific
 
 Required: False

@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set3
 ```
 Get-Recipient [-Anr <String>] [-AuthenticationType <Managed | Federated>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>] [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>] [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>]
@@ -32,7 +32,7 @@ Get-Recipient [-Anr <String>] [-AuthenticationType <Managed | Federated>] [-Cred
 ```
 Get-Recipient [[-Identity] <RecipientIdParameter>] [-AuthenticationType <Managed | Federated>]
  [-BookmarkDisplayName <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
- [-IgnoreDefaultScope] [-IncludeBookmarkObject <$true | $false>] [-Organization <OrganizationIdParameter>]
+ [-IgnoreDefaultScope] [-IncludeBookmarkObject <$true | $false>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>] [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>] [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>]
@@ -43,7 +43,7 @@ Get-Recipient [[-Identity] <RecipientIdParameter>] [-AuthenticationType <Managed
 ### Set2
 ```
 Get-Recipient [-AuthenticationType <Managed | Federated>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>] [-ReadFromDomainController]
  [-RecipientPreviewFilter <String>] [-RecipientType <RecipientType[]>]
@@ -56,7 +56,7 @@ Get-Recipient [-AuthenticationType <Managed | Federated>] [-Credential <PSCreden
 ```
 Get-Recipient [-AccountPartition <AccountPartitionIdParameter>] [-Anr <String>]
  [-AuthenticationType <Managed | Federated>] [-Capabilities <MultiValuedProperty>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
+ [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-Properties <String[]>]
  [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>] [-ReadFromDomainController]
  [-RecipientType <RecipientType[]>] [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>]
@@ -186,7 +186,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -275,22 +275,6 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: $true | $false
 Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 

@@ -31,14 +31,14 @@ Set-PnPGroup -Identity <GroupPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPGroup -Identity 'My Site Members' -SetAssociatedGroup Members
+Set-PnPGroup -Identity 'My Site Members' -SetAssociatedGroup Members
 ```
 
 Sets the SharePoint group with the name 'My Site Members' as the associated members group
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPGroup -Identity 'My Site Members' -Owner 'site owners'
+Set-PnPGroup -Identity 'My Site Members' -Owner 'site owners'
 ```
 
 Sets the SharePoint group with the name 'site owners' as the owner of the SharePoint group with the name 'My Site Members'
@@ -190,7 +190,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

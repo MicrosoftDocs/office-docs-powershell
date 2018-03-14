@@ -15,16 +15,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AntiPhishPolicy [-Identity] <AntiPhishPolicyIdParameter> [-AdminDisplayName <String>] [-Confirm]
+Set-AntiPhishPolicy [-Identity] <AntiPhishPolicyIdParameter> [-AdminDisplayName <String>] [-AuthenticationFailAction <MoveToJmf | Quarantine>] [-Confirm] [-EnableAuthenticationSafetyTip <$true | $false>] [-EnableAuthenticationSoftPassSafetyTip <$true | $false>]
  [-Enabled <$true | $false>] [-EnableMailboxIntelligence <$true | $false>]
  [-EnableOrganizationDomainsProtection <$true | $false>] [-EnableSimilarDomainsSafetyTips <$true | $false>]
  [-EnableSimilarUsersSafetyTips <$true | $false>] [-EnableTargetedDomainsProtection <$true | $false>]
  [-EnableTargetedUserProtection <$true | $false>] [-EnableUnusualCharactersSafetyTips <$true | $false>]
- [-ExcludedDomains <MultiValuedProperty>] [-ExcludedSenders <MultiValuedProperty>]
+ [-ExcludedDomains <MultiValuedProperty>] [-ExcludedSenders <MultiValuedProperty>] [-PhishThresholdLevel <Int32>]
  [-TargetedDomainActionRecipients <MultiValuedProperty>]
  [-TargetedDomainProtectionAction <MultiValuedProperty>] [-TargetedDomainsToProtect <MultiValuedProperty>]
  [-TargetedUserActionRecipients <MultiValuedProperty>] [-TargetedUserProtectionAction <MultiValuedProperty>]
- [-TargetedUsersToProtect <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-TargetedUsersToProtect <MultiValuedProperty>] [-TreatSoftPassAsAuthenticated <$true | $false>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,17 +34,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```
-{{ Add example code here }}
+Set-AntiPhishPolicy -Identity "Contoso Antiphish" -TargetedDomainProtectionAction BccMessage -TargetedUserProtectionAction BccMessage -EnableTargetedUserProtection $true -TargetedDomainActionRecipients reviewer@contoso.com-TargetedUserActionRecipients reviewer@contoso.com
 ```
 
-{{ Add example description here }}
-
-### Example 1 (Exchange Online Protection)
-```
-{{ Add example code here }}
-```
-
-{{ Add example description here }}
+This example modifies the existing antiphishing policy named Contoso Antiphish by changing the notification action to Bcc, and specifies reviewer@contoso.com as the recipient of the messages.
 
 ## PARAMETERS
 
@@ -86,6 +79,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuthenticationFailAction
+The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication. Valid values are:
+
+- MoveToJmf: Move the message to the user's Junk Email folder. This is the default value.
+
+- Quarantine: Move the message to quarantine.
+
+```yaml
+Type: MoveToJmf | Quarantine
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -106,9 +119,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Enabled
+### -EnableAuthenticationSafetyTip
+The EnableAuthenticationSafetyTip parameter specifies whether to enable safety tips that are shown to recipients when a message fails composite authentication. Valid values are:
+
+- $true: Safety tips are enabled for messages that fail composite authentication. This is the default value, and we strongly recommend that you don't change it.
+
+- $false: Safety tips are disabled for messages that fail composite authentication.
+
 ```yaml
-Type:
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -116,13 +135,59 @@ Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAuthenticationSoftPassSafetyTip
+The EnableAuthenticationSoftPassSafetyTip parameter specifies whether to enable safety tips that are shown to recipients when a message fails composite authentication with low to medium confidence. Valid values are:
+
+- $true: Safety tips are enabled for messages that fail composite authentication with low to medium confidence. If you use this value, you might want to restrict the policy to a smaller number of users to avoid displaying too many of these types of safety tips to users.
+
+- $false: Safety tips are disabled for messages that fail composite authentication with low to medium confidence. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Enabled
+This parameter specifies whether the policy is enabled. Valid values are:
+
+- $true: The policy is enabled.
+
+- $false: The policy is disabled.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -EnableMailboxIntelligence
+The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph) in antiphishing protection. Valid values are:
+
+- $true: Use mailbox intelligence in antiphishing protection.
+
+- $false: Don't use mailbox intelligence in antiphishing protection. This is the default value.
+
 ```yaml
-Type:
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -130,16 +195,16 @@ Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: false
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -EnableOrganizationDomainsProtection
 The EnableOrganizationDomainsProtection parameter specifies whether to enable antiphishing protection for all registered domains in the Office 365 organization. Valid values are:
 
-- $true: Antiphishing protection is enabled for all registered domains in the Office 365 organization. This is the default value.
+- $true: Antiphishing protection is enabled for all registered domains in the Office 365 organization.
 
-- $false: Antiphishing protection protection isn't enabled for all registered domains in the Office 365 organization. You can enable antiphishing protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
+- $false: Antiphishing protection protection isn't enabled for all registered domains in the Office 365 organization. This is the default value. You can enable antiphishing protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
 
 ```yaml
 Type: $true | $false
@@ -157,9 +222,9 @@ Accept wildcard characters: False
 ### -EnableSimilarDomainsSafetyTips
 The EnableSimilarDomainsSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for similar domains antiphishing detections. Valid values are:
 
-- $true: Safety tips for similar domains are enabled. This is the default value.
+- $true: Safety tips for similar domains are enabled.
 
-- $false: Safety tips for similar domains are disabled.
+- $false: Safety tips for similar domains are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -177,9 +242,9 @@ Accept wildcard characters: False
 ### -EnableSimilarUsersSafetyTips
 The EnableSimilarUsersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for similar users antiphishing detections. Valid values are:
 
-- $true: Safety tips for similar users are enabled. This is the default value.
+- $true: Safety tips for similar users are enabled.
 
-- $false: Safety tips for similar users are disabled.
+- $false: Safety tips for similar users are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -197,9 +262,9 @@ Accept wildcard characters: False
 ### -EnableTargetedDomainsProtection
 The EnableTargetedDomainsProtection parameter specifies whether to enable antiphishing protection for a list of specified domains. Valid values are:
 
-- $true: Antiphishing protection is enabled for the domains specified by the TargetedDomainsToProtect parameter. This is the default value.
+- $true: Antiphishing protection is enabled for the domains specified by the TargetedDomainsToProtect parameter.
 
-- $false: The TargetedDomainsToProtect parameter isn't used.
+- $false: The TargetedDomainsToProtect parameter isn't used. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -237,9 +302,9 @@ Accept wildcard characters: False
 ### -EnableUnusualCharactersSafetyTips
 The EnableUnusualCharactersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for unusual characters antiphishing detections. Valid values are:
 
-- $true: Safety tips for unusual characters are enabled. This is the default value.
+- $true: Safety tips for unusual characters are enabled.
 
-- $false: Safety tips for unusual characters are disabled.
+- $false: Safety tips for unusual characters are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -285,6 +350,29 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -PhishThresholdLevel
+The PhishThresholdLevel parameter specifies the tolerance level that's used by machine learning in the handling of phishing messages. Valid values are:
+
+- 1: Standard (this is the default value)
+
+- 2: Aggressive
+
+- 3: More agressive
+
+- 4: Most aggressive
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 
 ### -TargetedDomainActionRecipients
 The TargetedDomainActionRecipients parameter specifies the recipients to add to detected phishing messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
@@ -397,7 +485,7 @@ Accept wildcard characters: False
 ### -TargetedUsersToProtect
 The TargetedUsersToProtect parameter specifies the users that are included in antiphishing protection when the EnableTargetedUserProtection parameter is set to $true.
 
-This parameter uses the syntax DisplayNameEmailAddress.
+This parameter uses the syntax "Display;NameEmailAddress".
 
 - DisplayName specifies the display name of the user that could be a target of impersonation. This value can contain special characters.
 
@@ -407,6 +495,28 @@ This parameter uses the syntax DisplayNameEmailAddress.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TreatSoftPassAsAuthenticated
+The TreatSoftPassAsAuthenticated parameter specifies whether or not to respect the composite authentication softpass result. Valid values are:
+
+- $true: This is the default value.
+
+- $false: Only use this value when you want to enable more restrictive antispoofing filtering, because this value might cause false positives.
+
+**Note**: This parameter corresponds to the **Strict filtering** value in the Office 365 admin center.
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

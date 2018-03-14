@@ -33,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-CsPSTNConferenceTimeReport -ReportType Monthly 11/01/2015 -EndDate 12/30/2015
 ```

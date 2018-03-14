@@ -26,14 +26,14 @@ Set-PnPAppSideLoading -Off [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPAppSideLoading -On
+Set-PnPAppSideLoading -On
 ```
 
 This will turn on App side loading
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPAppSideLoading -Off
+Set-PnPAppSideLoading -Off
 ```
 
 This will turn off App side loading
@@ -65,7 +65,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
