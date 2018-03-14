@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Upgrade-SPSite
 schema: 2.0.0
 ---
@@ -9,7 +9,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Starts the upgrade process on a site collection.
-
 
 ## SYNTAX
 
@@ -24,6 +23,7 @@ The `Upgrade-SPSite` cmdlet starts the upgrade process on a site collection.
 The `Upgrade-SPSite` cmdlet activates the upgrade process for the specified SPSite object.
 You can also use this cmdlet to resume failed upgrades.
 When you use this cmdlet to initiate upgrade on an SPSite object, the object can be either a build-to-build or version-to-version upgrade.
+
 By default, the `Upgrade-SPSite` cmdlet operates as a build-to-build upgrade.
 This prevents unexpected version upgrades of site collections if you use this cmdlet after a patching operation.
 When in version-to-version upgrade mode, site collection health checks are run in repair mode to ensure that the site collection is healthy enough to upgrade successfully.
@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE 1----------
 ```
-C:\PS>Upgrade-SPSite http://<site name>/sites/testsite
+PS C:\>Upgrade-SPSite http://<site name>/sites/testsite
 ```
 
 This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
@@ -43,7 +43,7 @@ The SPSite.CompatibilityLevel will not be changed by this operation.
 
 ### -------------EXAMPLE 2----------
 ```
-C:\PS>Upgrade-SPSite http://<site name>/sites/testsite -VersionUpgrade
+PS C:\>Upgrade-SPSite http://<site name>/sites/testsite -VersionUpgrade
 ```
 
 This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
@@ -58,7 +58,7 @@ Specifies the SPSite object to run upgrade operations against.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -80,7 +80,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Specifies whether to send mail on completion of the site collection upgrade.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -123,11 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -QueueOnly
+Specifies to put the site into the queue for a delayed upgrade that is managed by a timer job. 
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -143,7 +145,7 @@ Specifies a farm administrator to bypass the throttle which permits a site colle
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -162,7 +164,7 @@ When this parameter is not set, it triggers only available build-to-build upgrad
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -179,7 +181,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -189,7 +191,15 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{Fill Priority Description}}
+Specifies what priority to upgrade the site.
+
+The valid values are:
+
+* 128 - 255 (Low Priority)
+
+* 11 - 127 (Normal Priority)
+
+* 0 - 10 (High Priority)
 
 ```yaml
 Type: Byte
