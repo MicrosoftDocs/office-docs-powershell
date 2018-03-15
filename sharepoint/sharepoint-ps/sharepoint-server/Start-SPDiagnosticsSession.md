@@ -29,9 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE-------
 ```
-C:\PS>$correlationId = [guid]::NewGuid()
-
-C:\PS>Start-SPDiagnosticsSession -CorrelationId $correlationId -Dashboard:$true -TraceLevel Verbose
+PS C:\>$correlationId = [guid]::NewGuid()
+PS C:\>Start-SPDiagnosticsSession -CorrelationId $correlationId -Dashboard:$true -TraceLevel Verbose
 ```
 
 This example starts a diagnostic session for a specified correlation ID with the trace level of verbose.
