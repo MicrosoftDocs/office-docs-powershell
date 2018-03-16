@@ -1,6 +1,7 @@
 ---
 title: Exchange PowerShell 
-description: "Learn about the Exchange PowerShell environments that are available in on-premises Exchange and Office 365."
+description: Learn about the Exchange PowerShell environments that are available in on-premises Exchange and Office 365.
+services: exchange-online
 author: chrisda
 manager: serdars
 layout: LandingPage
@@ -9,16 +10,16 @@ ms.service: exchange-online
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: landing-page
-ms.date: 3/13/2018
+ms.date: 3/16/2018
 ms.author: chrisda
 ---
 # Exchange PowerShell
 
-Exchange PowerShell enables you to manage your on-premises Exchange and Office 365 organizations from the command line. For more information, select your environment:
+Exchange PowerShell enables you to manage your Exchange Server and Office 365 organizations from the command line. For more information, select your environment:
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/powershell/module/exchange-server/">
+        <a href="/powershell/exchange/exchange-server/exchange-management-shell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -36,7 +37,7 @@ Exchange PowerShell enables you to manage your on-premises Exchange and Office 3
         </a>
     </li>
     <li>
-        <a href="/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell">
+        <a href="/powershell/exchange/exchange-online/exchange-online-powershell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -54,7 +55,7 @@ Exchange PowerShell enables you to manage your on-premises Exchange and Office 3
         </a>
     </li>
     <li>
-        <a href="/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets">
+        <a href="/powershell/exchange/office-365-scc/office-365-scc-powershell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -72,7 +73,7 @@ Exchange PowerShell enables you to manage your on-premises Exchange and Office 3
         </a>
     </li>
     <li>
-        <a href="/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell">
+        <a href="/powershell/exchange/exchange-eop/exchange-online-protection-powershell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -88,40 +89,5 @@ Exchange PowerShell enables you to manage your on-premises Exchange and Office 3
             </div>
         </div>
         </a>
-    </li>
-</ul>
-
----
-
-<h2>Top Solutions</h2>
-<ul class="panelContent cardsW">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>SharePoint Server</h3>
-                        <p><a href="/powershell/sharepoint/overview? view=sharepoint-ps&branch=master#permissions">Permissions</a></p>
-                        <p><a href="/powershell/module/sharepoint-server/install-spsolution?view=sharepoint-ps">Install-SPSolution</a></p>
-                        <p><a href="/powershell/module/sharepoint-server/restore-spsite?view=sharepoint-ps">Restore-SPSite</a></p>
-                        <p><a href="/powershell/module/sharepoint-server/get-spsite?view=sharepoint">Get-SPSite</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>SharePoint Online</h3>
-						<p><a href="/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps">Connect to SharePoint Online</a></p>
-                        <p><a href="/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=share">Introduction to the SharePoint Online Management Shell</a></p>
-                        <p><a href="https://technet.microsoft.com/en-us/library/fp161362(v=office.16).aspx">Office 365 PowerShell for SharePoint Online</a></p>
-                     </div>
-                </div>
-            </div>
-        </div>
     </li>
 </ul>
