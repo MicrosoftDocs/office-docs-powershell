@@ -59,35 +59,6 @@
       ]
     },
     {
-      "docset_name": "exchange-ps",
-      "build_source_folder": "exchange",
-      "build_output_subfolder": "exchange-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePsModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
       "docset_name": "skype-ps",
       "build_source_folder": "skype",
       "build_output_subfolder": "skype-ps",
