@@ -31,7 +31,7 @@ Get-SPOSiteContentMoveState [-SourceSiteUrl] <String> [<CommonParameters>]
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

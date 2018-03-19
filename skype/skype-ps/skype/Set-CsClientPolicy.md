@@ -1239,7 +1239,9 @@ Accept wildcard characters: False
 ```
 
 ### -MAPIPollInterval
-Important: This parameter has been deprecated for use with Skype for Business Server.
+
+> [!IMPORTANT] 
+> This parameter has been deprecated for use with Skype for Business Server.
 
 For users of Microsoft Exchange Server 2003, MAPIPollInterval specifies how often Skype for Business retrieves calendar data from the Exchange public folders.
 MAPIPollInterval can be set to any value between 1 second and 1 hour; inclusive.

@@ -64,8 +64,8 @@ Accept wildcard characters: False
 ### -PermissionLevels
 Specifies the permission levels to grant to the newly created group. It can be any permission level that exists on the site collection on which the group is being created.
 
-Note:  
-Permission levels are defined by SharePoint Online administrators in the SharePoint Online Administration Center.  
+> [!NOTE] 
+> Permission levels are defined by SharePoint Online administrators in the SharePoint Online Administration Center.  
 
 
 ```yaml

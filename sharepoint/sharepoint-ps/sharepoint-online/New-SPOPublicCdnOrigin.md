@@ -26,7 +26,7 @@ New-SPOPublicCdnOrigin [-Url] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\> New-SPOPublicCdnOrigin –URL https://contoso.sharepoint.com/sites/CDN/CDNFilesLibrary/
+New-SPOPublicCdnOrigin –URL https://contoso.sharepoint.com/sites/CDN/CDNFilesLibrary/
 ```
 
 This example shows how to you can setup a new Public CDN on a document library in your SharePoint online tenant.

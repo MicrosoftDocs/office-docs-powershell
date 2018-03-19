@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$security = Get-SPServiceApplicationSecurity $serviceApp -Admin
+$security = Get-SPServiceApplicationSecurity $serviceApp -Admin
 Revoke-SPObjectSecurity $security "domain\user"
 Set-SPServiceApplicationSecurity $serviceApp -Admin $security
 ```
