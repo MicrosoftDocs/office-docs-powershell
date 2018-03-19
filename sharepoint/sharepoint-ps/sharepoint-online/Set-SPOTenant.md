@@ -14,7 +14,8 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ```
-Set-SPOTenant [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
+Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] 
+ [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>] 
  [-DisplayStartASiteOption <Boolean>] [-ExternalServicesEnabled <Boolean>] [-MaxCompatibilityLevel <Int32>]
  [-MinCompatibilityLevel <Int32>] [-NoAccessRedirectUrl <String>] [-OfficeClientADALDisabled <Boolean>]
  [-ProvisionSharedWithEveryoneFolder <Boolean>] [-RequireAcceptingAccountMatchInvitedAccount <Boolean>]
@@ -80,6 +81,27 @@ This example enables the use of special persisted cookie for Open with Explorer.
 
 
 ## PARAMETERS
+
+### -ApplyAppEnforcedRestrictionsToAdHocRecipients
+When the feature is enabled, all guest users are subject to conditional access policy. By default guest users who are accessing SharePoint Online files with pass code are exempt from the conditional access policy.
+
+The valid values are:  
+False (default) - Guest access users are exempt from conditional access policy.  
+True - Conditional access policy is applieda also to guest users.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -BccExternalSharingInvitations
 When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList.
