@@ -28,7 +28,9 @@ You can also ensure that the objects remain as long as you need them, even throu
 There are three levels of assignment:
 
 -- No assignment -- The object is not assigned to a variable and is disposed of after each iteration of the command.
+
 -- Simple assignment -- All objects are assigned to the global assignment store. This is done by using the Global parameter. When using this level, all objects are assigned to a global store and are disposed of when the Stop-SPAssignment cmdlet is called.
+
 -- Advanced assignment -- Objects are assigned to named stores for disposal. You can dispose of objects by using the Identity parameter with the `Stop-SPAssignment` cmdlet.
 
 Regardless of the assignment level used, all objects are disposed of when the Windows PowerShell run space is closed.
@@ -39,13 +41,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Start-SPAssignment -global
-
-C:\PS>$w = Get-SPWeb http://MyWeb
-
-C:\PS>$w | Set-SPWeb -title "Accounting"
-
-C:\PS>Stop-SPAssignment -global
+PS C:\>Start-SPAssignment -global
+PS C:\>$w = Get-SPWeb http://MyWeb
+PS C:\>$w | Set-SPWeb -title "Accounting"
+PS C:\>Stop-SPAssignment -global
 ```
 
 This example uses simple assignment.
@@ -55,13 +54,10 @@ Ensure that you run `Stop-SPAssignment` before you attempt any iterations of mul
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>$gc = Start-SPAssignment
-
-C:\PS>$web = $gc | Get-SPWeb http://MyWeb
-
-C:\PS>$web | Set-SPWeb -title "Accounting"
-
-C:\PS>Stop-SPAssignment -Identity $gc
+PS C:\>$gc = Start-SPAssignment
+PS C:\>$web = $gc | Get-SPWeb http://MyWeb
+PS C:\>$web | Set-SPWeb -title "Accounting"
+PS C:\>Stop-SPAssignment -Identity $gc
 ```
 
 This example sets the title of the SPWeb object in multiple lines and controls the rate of disposal.
