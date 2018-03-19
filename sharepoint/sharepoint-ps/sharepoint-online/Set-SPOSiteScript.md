@@ -55,13 +55,8 @@ This example updates a previously created site script. Any site designs referenc
             "bindata": { },
     "version": 2
 }
-```
 
-Copy the following to the Clipboard.
 
-```powershell
-Set-SPOSiteScript -Identity 7647d3d6-1046-41fe-a798-4ff66b099d12 -Content $script -Description "Update site script to change links and apply Contoso Explorers theme"
-```
 
 ## PARAMETERS
 
