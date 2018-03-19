@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>New-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -ServiceAddressURL "https://expensereporting.cloudapp.net/expensereporting.svc" -AuthenticationMode "Credentials" -SecureStoreTargetApplicationId "DallasUserName"
+New-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -ServiceAddressURL "https://expensereporting.cloudapp.net/expensereporting.svc" -AuthenticationMode "Credentials" -SecureStoreTargetApplicationId "DallasUserName"
 ```
 
 This example creates a new Business Data Connectivity service connection named ContosoServiceApp.

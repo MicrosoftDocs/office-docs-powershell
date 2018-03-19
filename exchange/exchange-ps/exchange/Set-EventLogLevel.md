@@ -31,7 +31,8 @@ Set-EventLogLevel -Identity "Exchange01\MSExchangeTransport\SmtpReceive" -Level 
 
 This example sets the event log level to High for the MSExchangeTransport\\SmtpReceive event logging category on the Exchange server Exchange01.
 
-Note: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see Get-EventLogLevel.
+> [!NOTE]  
+> Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see Get-EventLogLevel.
 
 ## PARAMETERS
 

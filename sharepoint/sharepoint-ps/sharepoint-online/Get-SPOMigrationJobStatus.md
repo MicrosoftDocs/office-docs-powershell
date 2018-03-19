@@ -26,9 +26,9 @@ Get-SPOMigrationJobStatus -Credentials <CredentialCmdletPipeBind> [-JobId <Guid>
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> $targetWebUrl = "https://contoso.sharepoint.com/sites/migrationtest"
-PS C:\> $credentials = Get-Credential
-PS C:\> Get-SPOMigrationJobStatus -TargetWebUrl $targetWebUrl -Credentials $credentials -JobId "779c4b3b-ec24-4705-bb58-c38f4329418c"
+$targetWebUrl = "https://contoso.sharepoint.com/sites/migrationtest"
+$credentials = Get-Credential
+Get-SPOMigrationJobStatus -TargetWebUrl $targetWebUrl -Credentials $credentials -JobId "779c4b3b-ec24-4705-bb58-c38f4329418c"
 ```
 
 Get the status of your SPO Migration Job. You can obtain the Job id when submit package data to create new SPO migration job via the Invoke-SPOMigrationEncryptUploadSubmit cmdlet

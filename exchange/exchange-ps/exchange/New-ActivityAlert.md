@@ -219,7 +219,8 @@ The Type parameter specifies the type alert. Valid values are:
 
 - AnomalousAggregation: An alert is created based the activities defined by the Operation and Condition parameters, and the number of activities specified by the Multiplier parameter.
 
-Note: You can't change the Type value in an existing activity alert.
+> [!NOTE] 
+> You can't change the Type value in an existing activity alert.
 
 ```yaml
 Type: Custom | ElevationOfPrivilege | SimpleAggregation | AnomalousAggregation

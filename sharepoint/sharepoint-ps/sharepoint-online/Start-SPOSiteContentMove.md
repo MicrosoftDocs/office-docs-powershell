@@ -41,7 +41,7 @@ Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-Preferred
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
