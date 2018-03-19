@@ -116,8 +116,8 @@ The valid values are: Default | ITAR | Germany | China
 
 The default value is "default".
 
-Note:  
-The ITAR value is for United States Government cloud tenancies only.  
+> [!NOTE] 
+> The ITAR value is for United States Government cloud tenancies only.  
 
 
 ```yaml

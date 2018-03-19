@@ -38,8 +38,8 @@ The `Get-SPOTenantLogEntry` cmdlet cannot retrieve all SharePoint Online errors.
 
 For Beta 2, the only company logs available are for Business Connectivity Services (BCS).
 
-Note:  
-If you do not use any parameter, the first 1000 rows in descending time range are returned.  
+> [!NOTE] 
+> If you do not use any parameter, the first 1000 rows in descending time range are returned.  
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 

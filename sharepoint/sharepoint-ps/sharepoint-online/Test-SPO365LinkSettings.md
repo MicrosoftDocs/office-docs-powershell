@@ -24,7 +24,7 @@ Test-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] -MySite
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

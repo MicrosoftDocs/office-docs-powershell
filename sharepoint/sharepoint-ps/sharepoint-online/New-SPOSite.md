@@ -58,8 +58,8 @@ Example 3 creates a new site collection for the current company with specified s
 ### -CompatibilityLevel
 Specifies the version of templates to use when you are creating a new site collection. This value sets the initial CompatibilityLevel value for the site collection. The values for this parameter can be SharePoint Server. When this parameter is not specified, the CompatibilityLevel will be by default the highest possible version for the Web application.
 
-Note:  
-For SharePoint Online Preview, it can only be set to "14" or "15". "14" indicates SharePoint 2010 Products, "15" indicates SharePoint 2013. Other values are not valid and will cause error.
+> [!NOTE] 
+> For SharePoint Online Preview, it can only be set to "14" or "15". "14" indicates SharePoint 2010 Products, "15" indicates SharePoint 2013. Other values are not valid and will cause error.
 
 
 ```yaml

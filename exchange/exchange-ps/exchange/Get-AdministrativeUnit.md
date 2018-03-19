@@ -10,7 +10,8 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-AdministrativeUnit cmdlet to view administrative units, which are Azure Active Directory containers of resources. You can use administrative units to delegate administrative permissions and apply policies to different groups of users.
 
-Note: Administrative units are only available in Azure Active Directory Premium. You create and manage administrative units in Azure AD PowerShell.
+> [!NOTE] 
+> Administrative units are only available in Azure Active Directory Premium. You create and manage administrative units in Azure AD PowerShell.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
