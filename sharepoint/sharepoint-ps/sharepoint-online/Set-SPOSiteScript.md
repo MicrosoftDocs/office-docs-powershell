@@ -13,7 +13,7 @@ Updates a previously uploaded site script.
 
 ## SYNTAX
 
-```powershell
+```
 Set-SPOSiteScript
   -Title <string>
   -Content <string>
@@ -31,7 +31,7 @@ Updates a previously uploaded site script.
 
 This example updates a previously created site script. Any site designs referencing it execute the updated script. 
 
-```json
+```
 {
     "$schema": "schema.json",
         "actions": [
@@ -55,6 +55,7 @@ This example updates a previously created site script. Any site designs referenc
             "bindata": { },
     "version": 2
 }
+```
 
 
 
