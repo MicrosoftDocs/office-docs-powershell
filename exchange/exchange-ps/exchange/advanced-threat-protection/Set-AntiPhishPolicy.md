@@ -3,71 +3,46 @@ applicable: Exchange Online, Exchange Online Protection
 schema: 2.0.0
 ---
 
-# New-AntiPhishPolicy
+# Set-AntiPhishPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-AntiPhishPolicy cmdlet to create antiphishing policies in your cloud-based organization.
+Use the Set-AntiPhishPolicy cmdlet to modify antiphishing policies in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-AntiPhishPolicy -Name <String> [-AdminDisplayName <String>] [-AuthenticationFailAction <MoveToJmf | Quarantine>] [-Confirm] [-EnableAuthenticationSafetyTip <$true | $false>] [-EnableAuthenticationSoftPassSafetyTip <$true | $false>] [-Enabled <$true | $false>] [-EnableMailboxIntelligence <$true | $false>] [-EnableOrganizationDomainsProtection <$true | $false>] [-EnableSimilarDomainsSafetyTips <$true | $false>] [-EnableSimilarUsersSafetyTips <$true | $false>] [-EnableTargetedDomainsProtection <$true | $false>] [-EnableTargetedUserProtection <$true | $false>] [-EnableUnusualCharactersSafetyTips <$true | $false>] [-ExcludedDomains <MultiValuedProperty>] [-ExcludedSenders <MultiValuedProperty>] [-PhishThresholdLevel <Int32>] [-TargetedDomainActionRecipients <MultiValuedProperty>] [-TargetedDomainProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedDomainsToProtect <MultiValuedProperty>] [-TargetedUserActionRecipients <MultiValuedProperty>] [-TargetedUserProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedUsersToProtect <MultiValuedProperty>] [-TreatSoftPassAsAuthenticated <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter> [-AdminDisplayName <String>] [-AuthenticationFailAction <MoveToJmf | Quarantine>] [-Confirm] [-EnableAntispoofEnforcement <$true | $false>] [-EnableAuthenticationSafetyTip <$true | $false>] [-EnableAuthenticationSoftPassSafetyTip <$true | $false>] [-Enabled <$true | $false>] [-EnableMailboxIntelligence <$true | $false>] [-EnableOrganizationDomainsProtection <$true | $false>] [-EnableSimilarDomainsSafetyTips <$true | $false>] [-EnableSimilarUsersSafetyTips <$true | $false>] [-EnableSuspiciousSafetyTip <$true | $false>] [-EnableTargetedDomainsProtection <$true | $false>] [-EnableTargetedUserProtection <$true | $false>] [-EnableUnusualCharactersSafetyTips <$true | $false>] [-ExcludedDomains <MultiValuedProperty>] [-ExcludedSenders <MultiValuedProperty>] [-PhishThresholdLevel <Int32>] [-TargetedDomainActionRecipients <MultiValuedProperty>] [-TargetedDomainProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedDomainsToProtect <MultiValuedProperty>] [-TargetedUserActionRecipients <MultiValuedProperty>] [-TargetedUserProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedUsersToProtect <MultiValuedProperty>] [-TreatSoftPassAsAuthenticated <$true | $false>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Phishing messages contain fraudulent links or spoofed domains in an effort to get personal information from the recipients.
-
-New antiphishing policies aren't valid and aren't applied until you add an antiphishing rule to the policy by using the New-AntiPhishRule cmdlet.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
 ### Example 1
 ```
-New-AntiPhishPolicy -Name "Monitor Policy" -AdminDisplayName "Default monitoring policy" -Enabled $true -EnableOrganizationDomainsProtection $true -EnableTargetedDomainsProtection $true -TargetedDomainsToProtect fabrikam.com -TargetedUsersToProtect "Mai Fujito;mfujito@fabrikam.com" -EnableMailboxIntelligence $true -EnableSimilarUsersSafetyTips $false -EnableSimilarDomainsSafetyTips $false -TargetedDomainProtectionAction BccMessage -TargetedUserProtectionAction BccMessage -EnableTargetedUserProtection $true -TargetedDomainActionRecipients reviewer@contoso.com-TargetedUserActionRecipients reviewer@contoso.com
+Set-AntiPhishPolicy -Identity "Contoso Antiphish" -TargetedDomainProtectionAction BccMessage -TargetedUserProtectionAction BccMessage -EnableTargetedUserProtection $true -TargetedDomainActionRecipients reviewer@contoso.com -TargetedUserActionRecipients reviewer@contoso.com
 ```
 
-This example creates and enables an antiphishing policy named Monitor Policy with the following settings:
-- Admin display name: Default monitoring policy
-
-- Enables organization domains protection for all accepted domains, and targeted domains protection for the domain fabrikam.com.
-
-- Specifies Mai Fujito (mfujito@fabrikam.com) as the user to protect from impersonation.
-
-- Enables mailbox intelligence.
-
-- Disables safety tips and set the notification actions to Bcc the email address reviewer@contoso.com.
-
-### Example 2
-```
-New-AntiPhishPolicy -Name "Test Policy" -EnableTargetedDomainsProtection $true -AdminDisplayName "Default policy for all users" -Enabled $true -EnableOrganizationDomainsProtection $true -TargetedDomainsToProtect fabrikam.com -EnableTargetedUserProtection $true -TargetedUsersToProtect "Rick Hoferrhofer@fabrikam.com" -EnableMailboxIntelligence $true -EnableSimilarUsersSafetyTips $true -EnableSimilarDomainsSafetyTips $true -TargetedDomainProtectionAction Quarantine -TargetedUserProtectionAction Quarantine
-```
-
-This example creates and enables an antiphishing policy named Test Policy with the following settings:
-
-- Admin display name: Default policy for all users
-
-- Enables organization domains protection for all accepted domains, and targeted domains protection for the domain fabrikam.com.
-
-- Specifies Rick Hofer (rhofer@fabrikam.com) as the user to protect from impersonation.
-
-- Enables mailbox intelligence.
-
-- Enables safety tips and set the notification actions to quarantine messages.
-
+This example modifies the existing antiphishing policy named Contoso Antiphish by changing the notification action to Bcc, and specifies reviewer@contoso.com as the recipient of the messages.
 
 ## PARAMETERS
 
-### -Name
-The Name parameter specifies a unique name for the antiphishing policy. If the value contains spaces, enclose the value in quotation marks (").
+### -Identity
+The Identity parameter specifies the antiphishing policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
-Type: String
+Type: AntiPhishPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -98,9 +73,11 @@ Accept wildcard characters: False
 ### -AuthenticationFailAction
 The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication. Valid values are:
 
+- Delete: Delete the message during filtering. Use caution with this value, because the deleted messages are not recoverable.
+
 - MoveToJmf: Move the message to the user's Junk Email folder. This is the default value.
 
-- Quarantine: Move the message to quarantine.
+- Quarantine: Move the message to the phishing quarantine.
 
 ```yaml
 Type: Delete | MoveToJmf | Quarantine
@@ -126,6 +103,26 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAntispoofEnforcement
+The EnableAntispoofEnforcement parameter specifies whether to enable or disable antispoofing protection for the policy. Valid values are:
+
+- $true: Antispoofing is enabled for the policy. This is the default value, and is recommended.
+
+- $false: Antispoofing is disabled for the policy. We only recommend this value if you have a domain that's protected by another email filtering service.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
@@ -176,14 +173,8 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
-
-- $true: The rule or policy is enabled.
-
-- $false: The rule or policy is disabled.
-
 ```yaml
-Type: $true | $false
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -191,17 +182,17 @@ Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: false
 Accept wildcard characters: False
 ```
 
 ### -EnableMailboxIntelligence
-The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph) in antiphishing protection. Valid values are:
+The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph) in domain and user impersonation protection. Valid values are:
 
-- $true: Use mailbox intelligence in antiphishing protection.
+- $true: Use mailbox intelligence in domain and user impersonation protection.
 
-- $false: Don't use mailbox intelligence in antiphishing protection. This is the default value.
-
+- $false: Don't use mailbox intelligence in domain and user impersonation protection. This is the default value.
+- 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -216,11 +207,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOrganizationDomainsProtection
-The EnableOrganizationDomainsProtection parameter specifies whether to enable antiphishing protection for all registered domains in the Office 365 organization. Valid values are:
+The EnableOrganizationDomainsProtection parameter specifies whether to enable domain impersonation protection for all registered domains in the Office 365 organization. Valid values are:
 
-- $true: Antiphishing protection is enabled for all registered domains in the Office 365 organization.
+- $true: Domain impersonation protection is enabled for all registered domains in the Office 365 organization.
 
-- $false: Antiphishing protection protection isn't enabled for all registered domains in the Office 365 organization. This is the default value. You can enable antiphishing protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters. This is the default value.
+- $false: Domain impersonation protection protection isn't enabled for all registered domains in the Office 365 organization. This is the default value. You can enable domain impersonation protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
 
 ```yaml
 Type: $true | $false
@@ -236,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimilarDomainsSafetyTips
-The EnableSimilarDomainsSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for similar domains antiphishing detections. Valid values are:
+The EnableSimilarDomainsSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for domain impersonation detections. Valid values are:
 
 - $true: Safety tips for similar domains are enabled.
 
@@ -256,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimilarUsersSafetyTips
-The EnableSimilarUsersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for similar users antiphishing detections. Valid values are:
+The EnableSimilarUsersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for user impersonation detections. Valid values are:
 
 - $true: Safety tips for similar users are enabled.
 
@@ -276,9 +267,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTargetedDomainsProtection
-The EnableTargetedDomainsProtection parameter specifies whether to enable antiphishing protection for a list of specified domains. Valid values are:
+The EnableTargetedDomainsProtection parameter specifies whether to enable domain impersonation protection for a list of specified domains. Valid values are:
 
-- $true: Antiphishing protection is enabled for the domains specified by the TargetedDomainsToProtect parameter.
+- $true: Domain impersonation protection is enabled for the domains specified by the TargetedDomainsToProtect parameter.
 
 - $false: The TargetedDomainsToProtect parameter isn't used. This is the default value.
 
@@ -296,9 +287,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTargetedUserProtection
-The EnableTargetedUserProtection parameter specifies whether to enable antiphishing protection for the users specified by the TargetedUsersToProtect parameter. Valid values are:
+The EnableTargetedUserProtection parameter specifies whether to enable user impersonation protection for the users specified by the TargetedUsersToProtect parameter. Valid values are:
 
-- $true: Antiphishing protection is enabled for the specified users.
+- $true: User impersonation protection is enabled for the specified users.
 
 - $false: The TargetedUsersToProtect parameter isn't used. This is the default value.
 
@@ -316,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUnusualCharactersSafetyTips
-The EnableUnusualCharactersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for unusual characters antiphishing detections. Valid values are:
+The EnableUnusualCharactersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for unusual characters in domain and user impersonation detections. Valid values are:
 
 - $true: Safety tips for unusual characters are enabled.
 
@@ -392,7 +383,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainActionRecipients
-The TargetedDomainActionRecipients parameter specifies the recipients to add to detected phishing messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
+The TargetedDomainActionRecipients parameter specifies the recipients to add to detected domain impersonation messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
 
 A valid value for this parameter is an email address. You can specify multiple email addresses separated by commas.
 
@@ -410,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainProtectionAction
-The TargetedDomainProtectionAction parameter specifies the action to take on detected phishing messages for the domains specified by the TargetedDomainsToProtect. Valid values are:
+The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages for the domains specified by the TargetedDomainsToProtect parameter. Valid values are:
 
 - NoAction (This is the default value)
 
@@ -420,7 +411,7 @@ The TargetedDomainProtectionAction parameter specifies the action to take on d
 
 - MoveToJmf: Move the message to the user's Junk Email folder.
 
-- Quarantine: Quarantine the message.
+- Quarantine: Move the message to the phishing quarantine.
 
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
@@ -439,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainsToProtect
-The TargetedDomainsToProtect parameter specifies the domains that are included in antiphishing protection when the EnableTargetedDomainsProtection parameter is set to $true.
+The TargetedDomainsToProtect parameter specifies the domains that are included in domain impersonaton protection when the EnableTargetedDomainsProtection parameter is set to $true.
 
 You can specify multiple domains separated by commas.
 
@@ -457,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUserActionRecipients
-The TargetedUserActionRecipients parameter specifies the replacement or additional recipients for detected phishing messages when the TargetedUserProtectionAction parameter is set to the value Redirect or BccMessage.
+The TargetedUserActionRecipients parameter specifies the replacement or additional recipients for detected user impersonation messages when the TargetedUserProtectionAction parameter is set to the value Redirect or BccMessage.
 
 A valid value for this parameter is an email address. You can specify multiple email addresses separated by commas.
 
@@ -475,7 +466,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUserProtectionAction
-The TargetedUserProtectionAction parameter specifies the action to take on detected phishing messages for the users specified by the TargetedUsersToProtect parameter. Valid values are:
+The TargetedUserProtectionAction parameter specifies the action to take on detected user impersonation messages for the users specified by the TargetedUsersToProtect parameter. Valid values are:
 
 - NoAction (This is the default value)
 
@@ -485,7 +476,7 @@ The TargetedUserProtectionAction parameter specifies the action to take on det
 
 - MoveToJmf: Move the message to the user's Junk Email folder.
 
-- Quarantine: Quarantine the message.
+- Quarantine: Move the message to the phishing quarantine.
 
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
@@ -504,7 +495,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUsersToProtect
-The TargetedUsersToProtect parameter specifies the users that are included in antiphishing protection when the EnableTargetedUserProtection parameter is set to $true.
+The TargetedUsersToProtect parameter specifies the users that are included in user impersonation protection when the EnableTargetedUserProtection parameter is set to $true.
 
 This parameter uses the syntax "DisplayName;EmailAddress".
 
@@ -582,4 +573,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/b80f94e3-9b8c-45b1-b48e-68438742255c.aspx)
+[Online Version](https://technet.microsoft.com/library/bb2aca7b-69e9-4767-afaf-0b59f14a448a.aspx)
