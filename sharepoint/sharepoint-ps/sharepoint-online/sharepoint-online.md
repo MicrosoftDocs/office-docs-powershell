@@ -5,8 +5,10 @@ title: sharepoint-online
 Locale: en-US
 ---
 
-# SharePoint Online PowerShell 
+# SharePoint Online PowerShell
+
 ## Description
+
 The following cmdlet references are for SharePoint Online.
 
 ## sharepoint-online Cmdlets
@@ -301,6 +303,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Set-SPOSiteGroup](Set-SPOSiteGroup.md)
 {{Manually Enter Set-SPOSiteGroup Description Here}}
+
+### [Set-SPOSiteScript](Set-SPOSiteScript.md)
+{{Manually Enter Set-SPOSiteScript Description Here}}
 
 ### [Set-SPOTenant](Set-SPOTenant.md)
 {{Manually Enter Set-SPOTenant Description Here}}
