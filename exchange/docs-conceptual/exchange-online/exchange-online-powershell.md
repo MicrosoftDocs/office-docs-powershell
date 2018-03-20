@@ -24,6 +24,6 @@ Exchange Online PowerShell is the administrative interface that enables you to m
   
    **Note:** This video applies to Exchange Online and Exchange Online Protection (EOP) organizations. When you connect to your organization, be careful to specify the correct URL (*ConnectionUri* value). The required URL is different for Exchange Online and EOP organizations.
   
-  ![Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9.](media/MSN_Video_Widget.gif)
+  [Use Remote PowerShell in EOP](https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=9cb28006-c2cb-45b6-b72e-eeed8767dee7&AutoPlayVideo=false)
   
 

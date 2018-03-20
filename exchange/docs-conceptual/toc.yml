@@ -28,21 +28,23 @@
     items:
     - name: Connect to Exchange Online PowerShell
       href: exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md
-    - name: Connect to Exchange Online PowerShell using multi-factor authentication
-      href: eexchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell.md
+      items:
+      - name: Connect to Exchange Online PowerShell using multi-factor authentication
+        href: exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell.md
     - name: Find the permissions required to run any Exchange cmdlet
       href: exchange-server/find-exchange-cmdlet permissions.md
     - name: Enable or disable access to Exchange Online PowerShell
       href: exchange-online/disable-access-to-exchange-online-powershell.md
-  - name: Office 365 Security &amp; Compliance Center PowerShell
+  - name: Office 365 Security & Compliance Center PowerShell
     href: office-365-scc/office-365-scc-powershell.md
     items:
-    - name: Connect to Office 365 Security &amp; Compliance Center PowerShell
-      href: office-365-scc/connect-to-o365-scc-powershell/connect-to-office-365-scc-powershell.md
-    - name: Connect to Office 365 Security &amp; Compliance Center PowerShell using multi-factor authentication
-      href: office-365-scc/connect-to-o365-scc-powershell/mfa-connect-to-office-365-scc-powershell.md
+    - name: Connect to Office 365 Security & Compliance Center PowerShell
+      href: office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell.md
+      items:
+      - name: Connect to Office 365 Security & Compliance Center PowerShell using multi-factor authentication
+        href: office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell.md
   - name: Exchange Online Protection PowerShell
     href: exchange-eop/exchange-online-protection-powershell.md
     items:
     - name: Connect to Exchange Online Protection PowerShell
-      href: exchange-eop/connect-to-exchange-online--protection-powershell.md
+      href: exchange-eop/connect-to-exchange-online-protection-powershell.md

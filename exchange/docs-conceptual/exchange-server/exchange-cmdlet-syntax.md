@@ -23,21 +23,7 @@ Exchange cmdlet reference topics use a standardized method that describes key as
     
 This topic explains these conventions, and also the syntax that's required to run commands in Exchange PowerShell.
   
- **Contents**:
-  
-[Command conventions in Exchange PowerShell](#convention)
-  
-[Parameter sets in Exchange PowerShell](#param)
-  
-[Quotation marks in Exchange PowerShell](#quote)
-  
-[Escape characters in Exchange PowerShell](exchange-cmdlet-syntax.md#escape)
-  
-[Command operators in Exchange PowerShell](#operator)
-  
 ## Command conventions in Exchange PowerShell
-<a name="convention"> </a>
-
 Exchange PowerShell help follows conventions that indicate what's required or optional, and how to enter parameters and values when you run a command. These command conventions are listed in the following table.
   
 |**Symbol**|**Description**|
@@ -50,8 +36,6 @@ Exchange PowerShell help follows conventions that indicate what's required or op
 These command conventions help you understand how a command is constructed. With the exception of the hyphen that indicates a parameter, you don't use these symbols as they're described in the table when you run cmdlets in Exchange PowerShell. 
   
 ## Parameter sets in Exchange PowerShell
-<a name="param"> </a>
-
 Parameter sets are groups of parameters that can be used with each other in the same command. Parameters that exist different parameter sets are mutually exclusive (they can't be used together in the same command).
   
 Many cmdlets have only one parameter set, which means that all available parameters can be used with each other. Other cmdlets have several parameter sets, which indicates some parameters perform functions that are incompatible with other parameters. For example, suppose the following parameter sets are available on the **New-SystemMessage** cmdlet:
@@ -101,8 +85,6 @@ But you can't use these parameters together in the same command:
 The `<COMMON PARAMETERS>` entry indicates the cmdlet supports the basic Windows PowerShell parameters that are available on virtually any cmdlet (for example, _Debug_). You can use common parameters with parameters from any parameter set. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
   
 ## Quotation marks in Exchange PowerShell
-<a name="quote"> </a>
-
 In Exchange PowerShell, you use single quotation marks ( ' ) or double quotation marks ( " ) to enclose parameter values that contain spaces. For example, the following commands behave the same:
   
 -  `Get-ReceiveConnector -Identity "Contoso Receive Connector"`
@@ -122,8 +104,6 @@ If the value contains variables, you need choose carefully between single quotes
 For more information about variables, see [User-Defined Variables](https://technet.microsoft.com/library/8af62634-2e0b-4da0-ae94-a890f6f24d8a.aspx) and [Shell Variables](https://technet.microsoft.com/library/a601c3d9-534d-4155-9a8e-73ef2c2229f2.aspx).
   
 ## Escape characters in Exchange PowerShell
-<a name="escape"> </a>
-
 In any programming language, an escape character is used to identify special characters literally, and not by their normal function in that language. In Exchange PowerShell, when you enclose a text string in double quotation marks, the escape character is the back quotation mark escape character ( \` ).
   
 For example, if you want the output  `The price is $23`, enter the value  **"The price is \`$23"**. The escape character is required because the dollar sign character ( $ ) defines variables in Exchange PowerShell.
@@ -133,9 +113,7 @@ If you enclose the string in single quotation marks, the only special character 
  For example, if you want the output `Don't confuse two single quotation marks with a double quotation mark!`, enter the value  **'Don''t confuse two single quotation marks with a double quotation mark!'**.
   
 ## Command operators in Exchange PowerShell
-<a name="operator"> </a>
-
-The following table shows the valid operators that you can use in an Exchange command. Some of these symbols were also described in the earlier [Command conventions in Exchange PowerShell](exchange-cmdlet-syntax.md#convention) section. However, these symbols have different meanings when they're used on the command line as operators. For example, the minus sign that's used to indicate a parameter can also be used in a command as a mathematical operator.
+The following table shows the valid operators that you can use in an Exchange command. Some of these symbols were also described in the earlier Command conventions in Exchange PowerShell section. However, these symbols have different meanings when they're used on the command line as operators. For example, the minus sign that's used to indicate a parameter can also be used in a command as a mathematical operator.
   
 |**Operator**|**Description**|
 |:-----|:-----|
