@@ -26,9 +26,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-C:\PS>Uninstall-SPDataConnectionFile -Identity "Sample.udcx
-
-C:\PS>"Sample1.udcx", "Sample2.udcx", "Sample3.udcx" | Uninstall-SPDataConnectionFile
+PS C:\>Uninstall-SPDataConnectionFile -Identity "Sample.udcx
+PS C:\>"Sample1.udcx", "Sample2.udcx", "Sample3.udcx" | Uninstall-SPDataConnectionFile
 ```
 
 This example uninstalls a specified data connection file in two different ways.
