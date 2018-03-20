@@ -17,7 +17,7 @@ description: "Use Windows PowerShell on a local computer to connect to an Exchan
 If you don't have the Exchange management tools installed on your local computer, you can use Windows PowerShell to create a remote PowerShell session to an Exchange server. It's a simple three-step process, where you enter your credentials, provide the required connection settings, and then import the Exchange cmdlets into your local Windows PowerShell session so that you can use them.
   
 > [!NOTE]
-> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://technet.microsoft.com/library/71fcbe4c-783b-4f77-aabb-a21aa7a4ef23.aspx) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). > For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md). 
+> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://technet.microsoft.com/library/71fcbe4c-783b-4f77-aabb-a21aa7a4ef23.aspx) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md). 
   
 ## What do you need to know before you begin?
 
@@ -28,8 +28,10 @@ If you don't have the Exchange management tools installed on your local computer
   - Windows 10
     
   - Windows 8.1\*
+
+  - Windows Server 2016
     
-  -  Windows Server 2012 R2\*
+  - Windows Server 2012 R2\*
     
   - Windows Server 2012\*\*
     
@@ -91,7 +93,7 @@ If you receive errors, check the following requirements:
   
 - A common problem is an incorrect password. Run the three steps again, and pay close attention to the user name and password you enter in Step 1.
     
-- The account you use to connect to the Exchange server needs to be enabled for remote PowerShell access. For more information, see [Control users' access to remote PowerShell](control-users-access-to-remote-powershell.md).
+- The account you use to connect to the Exchange server needs to be enabled for remote PowerShell access. For more information, see [Control remote PowerShell access to Exchange servers](control-remote-powershell-access-to-exchange-servers.md).
     
 - TCP port 80 traffic needs to be open between your local computer and the Exchange server. It's probably open, but it's something to consider if your organization has a restrictive network access policy.
     

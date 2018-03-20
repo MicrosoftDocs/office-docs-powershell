@@ -1,5 +1,5 @@
 ---
-title: "Filterable properties for the -RecipientFilter parameter"
+title: "Filterable properties for the RecipientFilter parameter"
 ms.author: chrisda
 author: chrisda
 manager: serdars

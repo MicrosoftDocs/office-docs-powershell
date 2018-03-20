@@ -66,7 +66,7 @@ What if there are no results?
     
 - You might have entered too many parameters, and all of the parameters on the cmdlet aren't defined in a single role. Try specifying only the cmdlet name in Step 2, and run Step 3 to verify that the cmdlet is available in your environment. Then, add parameters one at a time to Step 2 before running Step 3.
     
-- These possible causes have the same solution.
+- These possible causes have the same solution:
     
   - You might have entered a cmdlet or parameters that are defined in a role that isn't assigned to anyone by default.
     
