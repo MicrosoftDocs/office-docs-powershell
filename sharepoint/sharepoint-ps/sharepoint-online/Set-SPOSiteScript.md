@@ -57,8 +57,6 @@ This example updates a previously created site script. Any site designs referenc
 }
 ```
 
-
-
 ## PARAMETERS
 
 ### -Title
