@@ -11,7 +11,7 @@ schema: 2.0.0
 
 Specifies whether the default themes should be available.
 
-Note that this cmdlet was named `Set-HideDefaultThemes` until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
+Note that this cmdlet was named **Set-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
 
 ## DESCRIPTION
 
