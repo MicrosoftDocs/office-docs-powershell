@@ -28,7 +28,7 @@ Specify the setting as either `$true` to hide the default themes, or `$false` (t
 
 In this example, the cmdlet hides the default themes.
 
-```powershell
+```
 Set-SPOHideDefaultThemes $true
 ```
 
@@ -36,7 +36,7 @@ Set-SPOHideDefaultThemes $true
 
 In this example, the cmdlet restores the default themes to the theme picker list.
 
-```powershell
+```
 Set-SPOHideDefaultThemes $false
 ```
 
