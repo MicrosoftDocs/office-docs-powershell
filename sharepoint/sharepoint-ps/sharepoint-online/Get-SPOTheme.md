@@ -25,10 +25,8 @@ This example shows how to use the **Get-SPOTheme** cmdlet to return the settings
 Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
 ```
 
-<br/>
 
-
-```json
+```
 {
     "Name":  "Custom Cyan",
     "Palette":  {
