@@ -55,20 +55,8 @@ $themepallette = @{
 Add-SPOTheme -Name "Custom Cyan" -Palette $themepallette -IsInverted $false
 ```
 
-<!--> [!NOTE]
-> Prior to the December 2017 release of the SPO Management Shell, the **Add-SPOTheme** cmdlet required that color pallette settings be passed as a dictionary. We recommend that you use the latest version of the SPO Management Shell; however, the following `HashToDictionary` function can be used to convert a hash table to a dictionary if needed.
-
-```
-function HashToDictionary {
-    Param ([Hashtable]$ht)
-    $dictionary = New-Object "System.Collections.Generic.Dictionary``2[System.String,System.String]"
-    foreach ($entry in $ht.GetEnumerator()) {
-        $dictionary.Add($entry.Name, $entry.Value)
-    }
-    return $dictionary
-}
-```
--->
+> [!NOTE]
+> Prior to the December 2017 release of the SPO Management Shell, the **Add-SPOTheme** cmdlet required that color pallette settings be passed as a dictionary. We recommend that you use the latest version of the SPO Management Shell, or use the `HashToDictionary` function to convert a hash table to a dictionary if needed.
 
 ### Example 2
 
