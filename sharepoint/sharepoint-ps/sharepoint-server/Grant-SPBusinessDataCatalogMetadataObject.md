@@ -31,11 +31,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$claimJohn = New-SPClaimsPrincipal -Identity "CONTOSO\johndoe" -IdentityType WindowsSamAccountName
-
-C:\PS>$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -ServiceContext http://contoso -Name "ContosoModel"
-
-C:\PS>Grant-SPBusinessDataCatalogMetadataObject -Identity $Model -Principal $claimJohn -Right Edit
+PS C:\>$claimJohn = New-SPClaimsPrincipal -Identity "CONTOSO\johndoe" -IdentityType WindowsSamAccountName
+PS C:\>$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -ServiceContext http://contoso -Name "ContosoModel"
+PS C:\>Grant-SPBusinessDataCatalogMetadataObject -Identity $Model -Principal $claimJohn -Right Edit
 ```
 
 This example gives Edit permissions to the user with the identity johndoe on domain CONTOSO, for the model metadata object with the name ContosoModel.
