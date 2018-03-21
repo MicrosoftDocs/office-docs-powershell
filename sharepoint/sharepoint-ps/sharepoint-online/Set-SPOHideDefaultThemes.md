@@ -7,10 +7,10 @@ schema: 2.0.0
 
 # Set-SPOHideDefaultThemes
 
+## SYNOPSIS
+
 > [!NOTE] 
 > This cmdlet was named `Set-HideDefaultThemes` until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
-
-## SYNOPSIS
 
 Specifies whether the default themes should be available.
 
