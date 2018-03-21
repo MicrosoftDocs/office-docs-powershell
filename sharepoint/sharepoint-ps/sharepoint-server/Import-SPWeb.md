@@ -190,6 +190,10 @@ Accept wildcard characters: False
 ### -IncludeUserCustomAction
 Specifies whether User Custom Actions are included during import.
 
+Valid values are:
+
+All, None
+
 ```yaml
 Type: SPIncludeUserCustomAction
 Parameter Sets: (All)
@@ -206,8 +210,6 @@ Accept wildcard characters: False
 ### -IncludeUserSecurity
 
 Preserves the user security settings.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -275,6 +277,10 @@ The type must be any one of the following:
 -Ignore the file if it exists on the destination
 
 The default value is Add new versions to the current file.
+
+Valid values are:
+
+Append, Ignore, Overwrite
 
 ```yaml
 Type: SPUpdateVersions
