@@ -16,11 +16,14 @@ Queries the current SPOHideDefaultThemes setting.
 
 ## DESCRIPTION
 
-The **Get-SPOHideDefaultThemes** cmdlet retrieves the currrent **Set-SPOHideDefaultThemes** setting. You might want to use this cmdlet in a PowerShell script to read the setting and then take different actions based on whether the default themes are hidden. This cmdlet does not have any parameters.
+The **Get-SPOHideDefaultThemes** cmdlet retrieves the current **Set-SPOHideDefaultThemes** setting. You might want to use this cmdlet in a PowerShell script to read the setting and then take different actions based on whether the default themes are hidden. This cmdlet does not have any parameters.
+
+## EXAMPLES
+
+### Example 1
 
 ```
-Get-SPOHideDefaultThemes
-False
+Get-SPOHideDefaultThemes $false
 ```
 
 ## INPUTS
