@@ -110,7 +110,7 @@ The recipient filter parameter is available for the following cmdlets:
 
 - [Set-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/set-globaladdresslist.md)
 
-For more information about the filterable properties you can use with the _RecipientFilter_ parameter, see [Filterable properties for the RecipientFilter parameter](filterable-properties-for-recipientfilter.md).
+For more information about the filterable properties you can use with the _RecipientFilter_ parameter, see [Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md).
 
 ### Example
 
@@ -163,7 +163,7 @@ The _Filter_ parameter is available for the following recipient cmdlets:
 
 - [Get-User](../../../exchange-ps/users-and-groups/get-user.md)
 
-For more information about the filterable properties you can use with the _Filter_ parameter, see [Filterable properties for the Filter parameter](filterable-properties-for-filter.md).
+For more information about the filterable properties you can use with the _Filter_ parameter, see [Filterable properties for the Filter parameter](filter-properties.md).
 
 ### Example
 
@@ -223,5 +223,5 @@ The following table contains links to topics that will help you learn more about
 
 |**Topic**|**Description**|
 |:-----|:-----|
-|[Filterable properties for the RecipientFilter parameter](filterable-properties-for-recipientfilter.md) |Learn more about the filterable properties for the _RecipientFilter_ parameter. |
-|[Filterable properties for the Filter parameter](filterable-properties-for-filter.md) |Learn more about the filterable properties for the _Filter_ parameter. |
+|[Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md) |Learn more about the filterable properties for the _RecipientFilter_ parameter. |
+|[Filterable properties for the Filter parameter](filter-properties.md) |Learn more about the filterable properties for the _Filter_ parameter. |

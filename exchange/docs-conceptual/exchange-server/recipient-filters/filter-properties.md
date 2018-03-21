@@ -45,7 +45,7 @@ You use the _Filter_ parameter to create OPATH filters based on the properties o
     
 - [Get-User](../../../exchange-ps/users-and-groups/get-user.md)
     
-For more information, see [Recipient filters in Exchange Management Shell commands](filters-in-recipient-commands.md).
+For more information, see [Recipient filters in Exchange Management Shell commands](recipient-filters.md).
   
  **Note**: The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message** ). However, the property values that are accepted by the _Filter_ parameter on these cmdlets aren't similar to the user and group properties that are described in this topic.
   

@@ -12,18 +12,18 @@
     - name: Control remote PowerShell access to Exchange servers
       href: exchange-server/control-remote-powershell-access-to-exchange-servers.md
     - name: Find the permissions required to run any Exchange cmdlet
-      href: exchange-server/find-exchange-cmdlet permissions.md
+      href: exchange-server/find-exchange-cmdlet-permissions.md
     - name: Exchange cmdlet syntax
       href: exchange-server/exchange-cmdlet-syntax.md
     - name: Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers
       href: exchange-server/use-update-exchangehelp.md
     - name: Recipient filters in Exchange Management Shell commands
-      href: exchange-server/filters-in-recipient-commands/filters-in-recipient-commands.md
+      href: exchange-server/recipient-filters/recipient-filters.md
       items:
       - name: Filterable properties for the Filter parameter
-        href: exchange-server/filters-in-recipient-commands/filterable-properties-for-filter.md
+        href: exchange-server/recipient-filters/filter-properties.md
       - name: Filterable properties for the RecipientFilter parameter
-        href: exchange-server/filters-in-recipient-commands/filterable-properties-for-recipientfilter.md   
+        href: exchange-server/recipient-filters/recipientfilter-properties.md   
   - name: Exchange Online PowerShell
     href: exchange-online/exchange-online-powershell.md
     items:
@@ -33,7 +33,7 @@
       - name: Connect to Exchange Online PowerShell using multi-factor authentication
         href: exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell.md
     - name: Find the permissions required to run any Exchange cmdlet
-      href: exchange-server/find-exchange-cmdlet permissions.md
+      href: exchange-server/find-exchange-cmdlet-permissions.md
     - name: Enable or disable access to Exchange Online PowerShell
       href: exchange-online/disable-access-to-exchange-online-powershell.md
   - name: Office 365 Security & Compliance Center PowerShell

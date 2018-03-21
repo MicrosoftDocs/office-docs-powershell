@@ -75,5 +75,5 @@ The following table provides links to topics that can help you learn about and u
 |[Control remote PowerShell access to Exchange servers](control-remote-powershell-access-to-exchange-servers.md)|Learn how to block or allow users' remote PowerShell access to Exchange servers.|
 |[Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md)|Find the permissions you need to run a specific cmdlet, or one or more parameters on the cmdlet.|
 |[Exchange cmdlet systax](exchange-cmdlet-syntax.md)|Learn about the structure and syntax of cmdlets in Exchange PowerShell.|
-|[Recipient filters in Exchange Management Shell commands](filters-in-recipient-commands/filters-in-recipient-commands.md)|Learn about recipient filters in the Exchange Management Shell.|
+|[Recipient filters in Exchange Management Shell commands](recipient-filters/recipient-filters.md)|Learn about recipient filters in the Exchange Management Shell.|
 |[Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers](use-update-exchangehelp.md)|Learn how to use Update-ExchangeHelp to update help for Exchange cmdlet reference topics on Exchange servers.|
