@@ -29,6 +29,3 @@ Remove-SPOTheme -Name "Custom Cyan"
 
 ## OUTPUTS
 
-## NOTES
-
-## RELATED LINKS

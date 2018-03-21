@@ -13,7 +13,7 @@ Creates a new custom theme, or overwrites an existing theme to modify its settin
 
 ## DESCRIPTION
 
-The **Add-SPOTheme** cmdlet creates a new theme or updates an existing theme. The color pallette settings can be passed as either a hash table or a dictionary.
+The **Add-SPOTheme** cmdlet creates a new theme or updates an existing theme. The color palette settings can be passed as either a hash table or a dictionary.
 
 Adding a theme does not apply the theme to any sites. It adds the theme to your tenant store, and then the theme is available in the list of themes under the **Change the look** option for modern pages.
 
@@ -21,7 +21,7 @@ Adding a theme does not apply the theme to any sites. It adds the theme to your 
 
 ### Example 1
 
-In this example, a new theme named `"Custom Cyan"` is created, with color pallette settings that are various shades of cyan. Note that the settings are passed as a hash table.
+In this example, a new theme named `"Custom Cyan"` is created, with color palette settings that are various shades of cyan. Note that the settings are passed as a hash table.
 
 ```powershell
 $themepallette = @{
@@ -56,7 +56,7 @@ Add-SPOTheme -Name "Custom Cyan" -Palette $themepallette -IsInverted $false
 ```
 
 > [!NOTE]
-> Prior to the December 2017 release of the SPO Management Shell, the **Add-SPOTheme** cmdlet required that color pallette settings be passed as a dictionary. We recommend that you use the latest version of the SPO Management Shell, or use the `HashToDictionary` function to convert a hash table to a dictionary if needed.
+> Prior to the December 2017 release of the SPO Management Shell, the **Add-SPOTheme** cmdlet required that color palette settings be passed as a dictionary. We recommend that you use the latest version of the SPO Management Shell, or use the `HashToDictionary` function to convert a hash table to a dictionary if needed.
 
 ### Example 2
 
@@ -70,6 +70,3 @@ Add-SPOTheme -Name "Custom Cyan" -Palette $themepallette -IsInverted $false -Ove
 
 ## OUTPUTS
 
-## NOTES
-
-## RELATED LINKS

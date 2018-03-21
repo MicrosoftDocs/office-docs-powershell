@@ -11,8 +11,9 @@ schema: 2.0.0
 
 Queries the current SPOHideDefaultThemes setting.
 
-> [!NOTE]
+> [!NOTE] 
 > This cmdlet was named `Get-HideDefaultThemes` until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
+
 
 ## DESCRIPTION
 
@@ -30,6 +31,3 @@ Get-SPOHideDefaultThemes $false
 
 ## OUTPUTS
 
-## NOTES
-
-## RELATED LINKS

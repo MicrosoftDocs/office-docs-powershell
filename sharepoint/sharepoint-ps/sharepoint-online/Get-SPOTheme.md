@@ -62,7 +62,7 @@ Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
 
 ### Example 2
 
-To return all uploaded themes, use the **Get-SPOTheme** command with no arguments:
+To return all uploaded themes, use the **Get-SPOTheme** command with no arguments.
 
 ```
 Get-SPOTheme
@@ -78,6 +78,3 @@ This is an example of the output from this command.
 
 ## OUTPUTS
 
-## NOTES
-
-## RELATED LINKS
