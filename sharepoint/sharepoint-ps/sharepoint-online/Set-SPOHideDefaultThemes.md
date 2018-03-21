@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Specifies whether the default themes should be available.
 
-Note that this cmdlet was named **Set-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
-
 ## DESCRIPTION
 
 The **Set-SPOHideDefaultThemes** cmdlet is used to specify whether the default themes that come with SharePoint should be included in the theme picker list. For example, you might want to create custom themes for your sites and then remove the default themes to ensure that all pages use your custom themes.
@@ -20,6 +18,8 @@ The **Set-SPOHideDefaultThemes** cmdlet is used to specify whether the default t
 After creating the `"Custom Cyan"` theme, hiding the default themes leaves only the one custom theme in the themes list under **Change the look**.
 
 Specify the setting as either `$true` to hide the default themes, or `$false` (the default setting) to allow use of the default themes. 
+
+Note that this cmdlet was named **Set-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
 
 ## EXAMPLES
 
