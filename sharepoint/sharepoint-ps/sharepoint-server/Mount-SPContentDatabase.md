@@ -131,11 +131,13 @@ Accept wildcard characters: False
 ```
 
 ### -ChangeSyncKnowledge
+Database attach will cause all Groove sync client to re-synchronize their content.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -231,6 +233,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UpdateUserExperience
+Determines whether the content databases should upgrade to the latest user interface. By default, the user interface will not change during upgrade.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -NoB2BSiteUpgrade
 Specifies not to upgrade all child objects when performing a build-to-build upgrade.
 This parameter has no effect when a version-to-version upgrade is specified.
@@ -249,6 +268,8 @@ Accept wildcard characters: False
 ```
 
 ### -SkipIntegrityChecks
+Specifies the upgrade process not to run the internal integrity checks such as missing templates, and orphan detection as part of the upgrade process.
+        
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -298,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseAccessCredentials
-{{Fill DatabaseAccessCredentials Description}}
+Specifies the credential that belong to SPDataAccess role.
 
 ```yaml
 Type: PSCredential
@@ -314,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseFailoverServer
-{{Fill DatabaseFailoverServer Description}}
+Specifies the name of the database server to be mirrored.
 
 ```yaml
 Type: String
@@ -330,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipSiteUpgrade
-{{Fill SkipSiteUpgrade Description}}
+Specifies to not upgrade all site objects when performing upgrade.
 
 ```yaml
 Type: SwitchParameter
@@ -346,7 +367,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseLatestSchema
-{{Fill UseLatestSchema Description}}
+Specifies to use the latest schema. In an on-premises environment, this parameter has no effect.
+
+There are two values $True and $False.
+
+The default value is False.
 
 ```yaml
 Type: SwitchParameter
