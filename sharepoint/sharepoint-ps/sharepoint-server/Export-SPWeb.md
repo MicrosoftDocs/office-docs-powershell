@@ -205,8 +205,6 @@ Accept wildcard characters: False
 
 Preserves the user security settings.
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -233,6 +231,10 @@ The type must be any one of the following versions:
 -Last major and last minor version for files and list items
 
 -All versions for files and list items
+
+Valid values are:
+
+All, CurrentVersion, LastMajor, LastMajorAndMinor
 
 ```yaml
 Type: SPIncludeVersions
@@ -340,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeAlerts
-{{Fill IncludeAlerts Description}}
+Indicates if alerts are turned on.
 
 ```yaml
 Type: SwitchParameter
