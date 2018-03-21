@@ -39,6 +39,7 @@ In this example, the cmdlet restores the default themes to the theme picker list
 Set-SPOHideDefaultThemes $false
 ```
 
+
 ## INPUTS
 
 ## OUTPUTS

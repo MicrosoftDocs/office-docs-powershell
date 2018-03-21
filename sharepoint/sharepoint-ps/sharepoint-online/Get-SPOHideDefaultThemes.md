@@ -25,6 +25,7 @@ The **Get-SPOHideDefaultThemes** cmdlet retrieves the current **Set-SPOHideDefau
 Get-SPOHideDefaultThemes $false
 ```
 
+
 ## INPUTS
 
 ## OUTPUTS
