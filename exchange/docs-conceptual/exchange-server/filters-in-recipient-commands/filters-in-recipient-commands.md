@@ -26,8 +26,6 @@ You can use several Exchange Management Shell commands to filter a set of recipi
 Older versions of Exchange used LDAP filtering syntax to create custom address lists, global address lists (GALs), email address policies, and distribution groups. In Exchange Server 2007 and later versions, OPATH filtering syntax replaced LDAP filtering syntax. 
 
 ## Precanned filters
-<a name="PF"> </a>
-
 A precanned filter is a commonly used Exchange filter that you can use to meet a variety of recipient-filtering criteria for creating dynamic distribution groups, email address policies, address lists, or GALs. With precanned filters, you can use either the Exchange Management Shell or the Exchange admin center (EAC). Using precanned filters, you can do the following:
 
 - Determine the scope of recipients.
@@ -50,21 +48,21 @@ The following parameters are considered precanned filters:
 
 Precanned filters are available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](../../exchange-ps/users-and-groups-cmdlets/new-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/new-dynamicdistributiongroup.md)
 
-- [Set-DynamicDistributionGroup](../../exchange-ps/users-and-groups-cmdlets/set-dynamicdistributiongroup.md)
+- [Set-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/set-dynamicdistributiongroup.md)
 
-- [New-EmailAddressPolicy](../../exchange-ps/email-address-and-address-book-cmdlets/new-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/new-emailaddresspolicy.md)
 
-- [Set-EmailAddressPolicy](../../exchange-ps/email-address-and-address-book-cmdlets/set-emailaddresspolicy.md)
+- [Set-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/set-emailaddresspolicy.md)
 
-- [New-AddressList](../../exchange-ps/email-address-and-address-book-cmdlets/new-addresslist.md)
+- [New-AddressList](../../../exchange-ps/email-addresses-and-address-books/new-addresslist.md)
 
-- [Set-AddressList](../../exchange-ps/email-address-and-address-book-cmdlets/set-addresslist.md)
+- [Set-AddressList](../../../exchange-ps/email-addresses-and-address-books/set-addresslist.md)
 
-- [New-GlobalAddressList](../../exchange-ps/email-address-and-address-book-cmdlets/new-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/new-globaladdresslist.md)
 
-- [Set-GlobalAddressList](../../exchange-ps/email-address-and-address-book-cmdlets/set-globaladdresslist.md)
+- [Set-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/set-globaladdresslist.md)
 
 ### Example
 
@@ -91,30 +89,26 @@ This example displays the properties of this new dynamic distribution group.
 Get-DynamicDistributionGroup -Identity "Contoso Finance" | Format-List Recipient*,Included*
 ```
 
-[Precanned filters](#PF)
-
 ## Custom filters using the RecipientFilter parameter
-<a name="RFP"> </a>
-
 If precanned filters don't meet your needs for creating or modifying dynamic distribution groups, email address policies, and address lists, you can create a custom filter by using the _RecipientFilter_ parameter.
 
 The recipient filter parameter is available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](../../exchange-ps/users-and-groups-cmdlets/new-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/new-dynamicdistributiongroup.md)
 
-- [Set-DynamicDistributionGroup](../../exchange-ps/users-and-groups-cmdlets/set-dynamicdistributiongroup.md)
+- [Set-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/set-dynamicdistributiongroup.md)
 
-- [New-EmailAddressPolicy](../../exchange-ps/email-address-and-address-book-cmdlets/new-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/new-emailaddresspolicy.md)
 
-- [Set-EmailAddressPolicy](../../exchange-ps/email-address-and-address-book-cmdlets/set-emailaddresspolicy.md)
+- [Set-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/set-emailaddresspolicy.md)
 
-- [New-AddressList](../../exchange-ps/email-address-and-address-book-cmdlets/new-addresslist.md)
+- [New-AddressList](../../../exchange-ps/email-addresses-and-address-books/new-addresslist.md)
 
-- [Set-AddressList](../../exchange-ps/email-address-and-address-book-cmdlets/set-addresslist.md)
+- [Set-AddressList](../../../exchange-ps/email-addresses-and-address-books/set-addresslist.md)
 
-- [New-GlobalAddressList](../../exchange-ps/email-address-and-address-book-cmdlets/new-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/new-globaladdresslist.md)
 
-- [Set-GlobalAddressList](../../exchange-ps/email-address-and-address-book-cmdlets/set-globaladdresslist.md)
+- [Set-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/set-globaladdresslist.md)
 
 For more information about the filterable properties you can use with the _RecipientFilter_ parameter, see [Filterable properties for the RecipientFilter parameter](filterable-properties-for-recipientfilter.md).
 
@@ -128,11 +122,7 @@ This example uses custom filters to create a dynamic distribution group for user
 New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.com/Users -RecipientFilter { ((RecipientType -eq 'UserMailbox') -and (Company -eq 'Contoso') -and (Office -eq 'North Building')) }
 ```
 
-[Precanned filters](#PF)
-
 ## Custom filters using the Filter parameter
-<a name="FP"> </a>
-
 You can use the _Filter_ parameter to filter the results of a command to specify which objects to retrieve. For example, instead of retrieving all users or groups, you can specify a set of users or groups by using a filter string. This type of filter doesn't modify any configuration or attributes of objects. It only modifies the set of objects that the command returns.
 
 Using the _Filter_ parameter to modify command results is known as server-side filtering. Server-side filtering submits the command and the filter to the server for processing. The Exchange Management Shell also supports client-side filtering, in which the command retrieves all objects from the server and then applies the filter in the local console window. To perform client-side filtering, use the **Where-Object** cmdlet. For more information about server-side and client-side filtering, see "How to Filter Data" in [Working with Command Output](https://technet.microsoft.com/library/8320e1a5-d3f5-4615-878d-b23e2aaa6b1e.aspx).
@@ -145,33 +135,33 @@ Get-Mailbox -Identity Ayla | Format-List
 
 The _Filter_ parameter is available for the following recipient cmdlets:
 
-- [Get-CASMailbox](../../exchange-ps/client-access-cmdlets/get-casmailbox.md)
+- [Get-CASMailbox](../../../exchange-ps/client-access/get-casmailbox.md)
 
-- [Get-Contact](../../exchange-ps/users-and-groups-cmdlets/get-contact.md)
+- [Get-Contact](../../../exchange-ps/users-and-groups/get-contact.md)
 
-- [Get-DistributionGroup](../../exchange-ps/users-and-groups-cmdlets/get-distributiongroup.md)
+- [Get-DistributionGroup](../../../exchange-ps/users-and-groups/get-distributiongroup.md)
 
-- [Get-DynamicDistributionGroup](../../exchange-ps/users-and-groups-cmdlets/get-dynamicdistributiongroup.md)
+- [Get-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/get-dynamicdistributiongroup.md)
 
-- [Get-Group](../../exchange-ps/users-and-groups-cmdlets/get-group.md)
+- [Get-Group](../../../exchange-ps/users-and-groups/get-group.md)
 
-- [Get-Mailbox](../../exchange-ps/mailbox-cmdlets/get-mailbox.md)
+- [Get-Mailbox](../../../exchange-ps/mailboxes/get-mailbox.md)
 
-- [Get-MailContact](../../exchange-ps/users-and-groups-cmdlets/get-mailcontact.md)
+- [Get-MailContact](../../../exchange-ps/users-and-groups/get-mailcontact.md)
 
-- [Get-MailPublicFolder](../../exchange-ps/sharing-and-collaboration-cmdlets/get-mailpublicfolder.md)
+- [Get-MailPublicFolder](../../../exchange-ps/sharing-and-collaboration/get-mailpublicfolder.md)
 
-- [Get-MailUser](../../exchange-ps/users-and-groups-cmdlets/get-mailuser.md)
+- [Get-MailUser](../../../exchange-ps/users-and-groups/get-mailuser.md)
 
-- [Get-Recipient](../../exchange-ps/users-and-groups-cmdlets/get-recipient.md)
+- [Get-Recipient](../../../exchange-ps/users-and-groups/get-recipient.md)
 
-- [Get-RemoteMailbox](../../exchange-ps/federation-and-hybrid-cmdlets/get-remotemailbox.md)
+- [Get-RemoteMailbox](../../../exchange-ps/federation-and-hybrid/get-remotemailbox.md)
 
-- [Get-SecurityPrincipal](../../exchange-ps/users-and-groups-cmdlets/get-securityprincipal.md)
+- [Get-SecurityPrincipal](../../../exchange-ps/users-and-groups/get-securityprincipal.md)
 
-- [Get-UMMailbox](../../exchange-ps/unified-messaging-cmdlets/get-ummailbox.md)
+- [Get-UMMailbox](../../../exchange-ps/unified-messaging/get-ummailbox.md)
 
-- [Get-User](../../exchange-ps/users-and-groups-cmdlets/get-user.md)
+- [Get-User](../../../exchange-ps/users-and-groups/get-user.md)
 
 For more information about the filterable properties you can use with the _Filter_ parameter, see [Filterable properties for the Filter parameter](filterable-properties-for-filter.md).
 
@@ -183,15 +173,10 @@ This example uses the _Filter_ parameter to return information about users whose
 Get-User -Filter {Title -like 'Manager*'}
 ```
 
-[Precanned filters](#PF)
-
 ## Custom filters using the ContentFilter parameter
-<a name="CFP"> </a>
-
-You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](../../exchange-ps/mailbox-cmdlets/new-mailboxexportrequest.md) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
+You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](../../../exchange-ps/mailboxes/new-mailboxexportrequest.md) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
 
 ### Example
-
 This example creates an export request that searches Ayla's mailbox for messages where the body contains the phrase "company prospectus". If that phrase is found, the command exports all messages with that phrase to a .pst file.
 
 ```
@@ -200,11 +185,7 @@ New-MailboxExportRequest -Mailbox Ayla -ContentFilter {Body -like "company prosp
 
 For more information about the filterable properties you can use with the _ContentFilter_ parameter, see [Filterable Properties for the ContentFilter Parameter](https://technet.microsoft.com/library/cf504a59-1938-489c-bb48-b27b2ac3234e.aspx).
 
-[Precanned filters](#PF)
-
 ## Additional OPATH syntax information
-<a name="OPATH"> </a>
-
 When creating your own custom filters, be aware of the following:
 
 - Use braces { } around the entire OPATH filter string with the _Filter_ or _RecipientFilter_ parameters.
@@ -238,8 +219,6 @@ When creating your own custom filters, be aware of the following:
   - [About Comparison Operators](https://technet.microsoft.com/library/hh847759.aspx)
 
 ## Recipient filter documentation
-<a name="documentation"> </a>
-
 The following table contains links to topics that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
 
 |**Topic**|**Description**|

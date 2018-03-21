@@ -19,10 +19,11 @@
       href: exchange-server/use-update-exchangehelp.md
     - name: Recipient filters in Exchange Management Shell commands
       href: exchange-server/filters-in-recipient-commands/filters-in-recipient-commands.md
-    - name: Filterable properties for the Filter parameter
-      href: exchange-server/filters-in-recipient-commands/filterable-properties-for-filter.md
-    - name: Filterable properties for the RecipientFilter parameter
-      href: exchange-server/filters-in-recipient-commands/filterable-properties-for-recipientfilter.md   
+      items:
+      - name: Filterable properties for the Filter parameter
+        href: exchange-server/filters-in-recipient-commands/filterable-properties-for-filter.md
+      - name: Filterable properties for the RecipientFilter parameter
+        href: exchange-server/filters-in-recipient-commands/filterable-properties-for-recipientfilter.md   
   - name: Exchange Online PowerShell
     href: exchange-online/exchange-online-powershell.md
     items:
