@@ -39,12 +39,6 @@ Add-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com
 
 Add user dmx@example.com to group.
 
-### ---------------------------Example 2 ----------------------------
-```
-Add-Teamuser -GroupId 491fe528-b813-4fb1-925e-54e93b65ab5d -User vltd@example.com -Role guest
-```
-Add user vltd@example.com to group as guest.
-
 ## PARAMETERS
 
 ### -GroupId
