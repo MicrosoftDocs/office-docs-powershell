@@ -19,7 +19,7 @@ Move-SPAppManagementData [-AssignmentCollection <SPAssignmentCollection>] [-Conf
 ```
 
 ## DESCRIPTION
-PS C:\>#Do Not Use
+Do Not Use
 
 ## EXAMPLES
 
