@@ -25,7 +25,8 @@ Search-AdminAuditLog [[-Cmdlets <MultiValuedProperty>]
 ## DESCRIPTION
 If you run the Search-AdminAuditLog cmdlet without any parameters, up to 1,000 log entries are returned by default.
 
-Note: In Exchange Online, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
+> [!NOTE]  
+> In Exchange Online, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -101,7 +102,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE 1-----------
 ```
-C:\PS>Set-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough"
+Set-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough"
 ```
 
 This example updates the properties of Business Connectivity Services connection named ContosoServiceApp.
@@ -54,9 +54,9 @@ This example updates the properties of Business Connectivity Services connection
 
 ### -------------EXAMPLE 2-----------
 ```
-C:\PS>$ConnectionVariable = Get-SPODataConnectionSetting -ServiceContext http://contoso -Name "ContosoServiceApp"
+$ConnectionVariable = Get-SPODataConnectionSetting -ServiceContext http://contoso -Name "ContosoServiceApp"
 
-C:\PS>Set-SPODataConnectionSetting -Identity $ConnectionVariable -AuthenticationMode "PassThrough"
+Set-SPODataConnectionSetting -Identity $ConnectionVariable -AuthenticationMode "PassThrough"
 ```
 
 This example updates the properties of the Business Connectivity Services service connection named ContosoServiceApp.
@@ -64,7 +64,7 @@ This example updates the properties of the Business Connectivity Services servic
 
 ### -------------EXAMPLE 3-----------
 ```
-C:\PS>Set-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough" -ExtensionProvider ""
+Set-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough" -ExtensionProvider ""
 ```
 
 This example updates the properties of Business Connectivity Services connection named ContosoServiceApp, the authentication mode has been changed and extension provider value has been cleared.

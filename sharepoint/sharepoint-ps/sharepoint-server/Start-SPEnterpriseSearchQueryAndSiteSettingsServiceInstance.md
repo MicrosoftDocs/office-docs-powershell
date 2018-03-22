@@ -28,8 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$qssInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
-Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity $qssInstance
+PS C:\>$qssInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
+PS C:\>Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity $qssInstance
 ```
 
 This example starts the local query and site settings instance.

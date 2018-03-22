@@ -21,7 +21,7 @@ New-RoleGroup [-Name] <String> -LinkedDomainController <String>
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Description <String>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-LinkedCredential <PSCredential>] [-ManagedBy <MultiValuedProperty>]
- [-Members <MultiValuedProperty>] [-Organization <OrganizationIdParameter>]
+ [-Members <MultiValuedProperty>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>] [-Roles <RoleIdParameter[]>]
  [-SamAccountName <String>] [-WhatIf] [<CommonParameters>]
 ```
@@ -144,7 +144,8 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies the name of the new role group. The name can have a maximum of 64 characters. If the name contains spaces, enclose the name in quotation marks (").
 
-Note: If you create a linked role group, we recommend that you include the name of the foreign forest in the name of the role group so that you can more easily associate the linked role group and the associated foreign forest. This is especially important if you have multiple forests.
+> [!NOTE] 
+> If you create a linked role group, we recommend that you include the name of the foreign forest in the name of the role group so that you can more easily associate the linked role group and the associated foreign forest. This is especially important if you have multiple forests.
 
 ```yaml
 Type: String
@@ -258,7 +259,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -333,24 +334,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named

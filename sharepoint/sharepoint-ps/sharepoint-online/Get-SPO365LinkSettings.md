@@ -23,7 +23,7 @@ Get-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] [<Common
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

@@ -26,14 +26,14 @@ Set-SPOTenantCdnPolicy -CdnType <SPOTenantCdnType> -PolicyType <SPOTenantCdnPoli
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\> Set-SPOTenantCdnPolicy -CdnType Public -PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF,BMP"
+Set-SPOTenantCdnPolicy -CdnType Public -PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF,BMP"
 ```
 
 This example sets a CDN to a public type with a policy value of listed extensions.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\> Set-SPOTenantCdnPolicy -CdnType Public -PolicyType ExcludeRestrictedSiteClassifications -PolicyValue "Confidential,Restricted"
+Set-SPOTenantCdnPolicy -CdnType Public -PolicyType ExcludeRestrictedSiteClassifications -PolicyValue "Confidential,Restricted"
 ```
 
 This example sets a CDN to a public type with a policy value of valid site classifications.

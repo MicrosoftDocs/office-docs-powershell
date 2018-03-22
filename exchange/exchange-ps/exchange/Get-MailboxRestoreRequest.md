@@ -17,14 +17,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set1
 ```
 Get-MailboxRestoreRequest [[-Identity] <MailboxRestoreRequestIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-ResultSize <Unlimited>]
+ [-ResultSize <Unlimited>]
  [-AccountPartition <AccountPartitionIdParameter>] [<CommonParameters>]
 ```
 
 ### Set2
 ```
 Get-MailboxRestoreRequest [-BatchName <String>] [-DomainController <Fqdn>] [-HighPriority <$true | $false>]
- [-Name <String>] [-Organization <OrganizationIdParameter>] [-ResultSize <Unlimited>]
+ [-Name <String>] [-ResultSize <Unlimited>]
  [-SourceDatabase <DatabaseIdParameter>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
  [-Suspend <$true | $false>] [-TargetDatabase <DatabaseIdParameter>]
@@ -114,7 +114,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -159,22 +159,6 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2016, Exchange Online
 
 Required: False
 Position: Named

@@ -184,7 +184,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -344,7 +344,8 @@ Accept wildcard characters: False
 ### -Schedule
 This parameter is available only in on-premises Exchange.
 
-Note: In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see Change the offline address book generation schedule in Exchange 2016.
+> [!NOTE]  
+> In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see Change the offline address book generation schedule in Exchange 2016.
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
@@ -368,7 +369,8 @@ The following are examples:
 
 - "Sun.1:15 AM-Monday.23:00"
 
-Note: In Office 365, the read only value of this property is displayed in Coordinated Universal Time (UTC).
+> [!NOTE]  
+> In Office 365, the read only value of this property is displayed in Coordinated Universal Time (UTC).
 
 ```yaml
 Type: Schedule

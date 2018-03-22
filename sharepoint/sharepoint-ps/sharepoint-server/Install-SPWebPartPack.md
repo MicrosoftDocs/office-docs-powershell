@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Installs the specified Web Part package to the specified location.
 
-
-
 ## SYNTAX
 
 ### UseFileName
@@ -51,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>Install-SPWebPartPack "MyCustomWebPartPack" -LiteralPath "C:\mywebpart.wpp" -GlobalInstall
+PS C:\>Install-SPWebPartPack "MyCustomWebPartPack" -LiteralPath "C:\mywebpart.wpp" -GlobalInstall
 ```
 
 This example installs the Web Part Package with the name MyCustomWebPartPack globally in the farm from the path c:/mywebpart.wpp.

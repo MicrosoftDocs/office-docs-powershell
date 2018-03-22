@@ -178,13 +178,15 @@ Accept wildcard characters: False
 ```
 
 ### -CopyEvents
-{{Fill CopyEvents Description}}
+Specifies if events need to be copied.
+
+The valid values are True or False.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: False
 Position: Named

@@ -259,7 +259,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -1037,7 +1037,8 @@ The MAPIBlockOutlookExternalConnectivity parameter enables or disables external 
 
 - $false: External Outlook clients can use Outlook Anywhere, MAPI over HTTP, or EWS to access the mailbox.
 
-Note: If your organization uses the same Autodiscover URL values for internal and external clients, setting this parameter to $true won't block access for external clients.
+> [!NOTE]  
+> If your organization uses the same Autodiscover URL values for internal and external clients, setting this parameter to $true won't block access for external clients.
 
 ```yaml
 Type: $true | $false

@@ -267,13 +267,13 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveSiteID
-{{Fill PreserveSiteID Description}}
+Preserves the original Site ID instead of creating a new one.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

@@ -54,9 +54,8 @@ Set-MailboxSearch -Identity "Legal-ProjectX" -AllPublicFolderSources $true
 
 In on-premises Exchange, this example adds all public folders to the existing mailbox search named Legal-ProjectX.
 
-Note:
-
-If we wanted to place the results of this search on In-Place Hold, the AllSourceMailboxes parameter must be set to $false. We could still include specific mailboxes in the search by using the SourceMailboxes parameter.
+> [!NOTE]  
+> If we wanted to place the results of this search on In-Place Hold, the AllSourceMailboxes parameter must be set to $false. We could still include specific mailboxes in the search by using the SourceMailboxes parameter.
 
 ## PARAMETERS
 
@@ -105,7 +104,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

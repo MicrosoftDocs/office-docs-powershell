@@ -23,6 +23,7 @@ Use the `New-SPWorkManagementServiceApplication` cmdlet to create a new Work Man
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+Note: This functionality has been removed from SharePoint Server 2016, but the cmdlet is still present in the product.
 
 ## EXAMPLES
 

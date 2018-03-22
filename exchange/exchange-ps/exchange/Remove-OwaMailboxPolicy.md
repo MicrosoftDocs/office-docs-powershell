@@ -58,8 +58,6 @@ The Identity parameter specifies the mailbox policy that you want to remove. You
 
 - GUID
 
-In multi-tenant environments, you can use the path to the policy including the name, for example, \<Organization\>\\\<ResellerA\>\\\<Reseller...n\>\\\<Tenant\>\\\<Policy Name\>.
-
 ```yaml
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
@@ -102,7 +100,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

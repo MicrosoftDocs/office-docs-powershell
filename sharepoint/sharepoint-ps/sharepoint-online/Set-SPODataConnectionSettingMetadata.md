@@ -45,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------------
 ```
-C:\PS>Set-SPODataConnectionSettingMetadata -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough"
+Set-SPODataConnectionSettingMetadata -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough"
 ```
 
 This example updates the authentication mode of the metadata of Business Connectivity Services connection named ContosoServiceApp.
@@ -53,9 +53,9 @@ This example updates the authentication mode of the metadata of Business Connect
 
 ### --------------EXAMPLE 2-------------
 ```
-C:\PS>$ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext  http://contoso -Name "ContosoServiceApp"
+$ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext  http://contoso -Name "ContosoServiceApp"
 
-C:\PS>Set-SPODataConnectionSettingMetadata -Identity $ConnectionVariable -AuthenticationMode "PassThrough"
+Set-SPODataConnectionSettingMetadata -Identity $ConnectionVariable -AuthenticationMode "PassThrough"
 ```
 
 This example updates the Metadata properties of the Business Connectivity Services connection named ContosoServiceApp.

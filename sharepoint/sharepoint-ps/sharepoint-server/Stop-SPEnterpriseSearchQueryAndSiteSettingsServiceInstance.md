@@ -27,8 +27,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$qssInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
-Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity $qssInstance
+PS C:\>$qssInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
+PS C:\>Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity $qssInstance
 ```
 
 This example stops the local query and site settings service instance.

@@ -717,7 +717,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -731,7 +731,8 @@ The Priority parameter specifies the order that the email address policies are e
 
 If you set this parameter to a value that's the same as another email address policy, the priority of the policy that you added first is incremented by 1.
 
-Note: The first email address policy that identifies a recipient configures the recipient's email addresses. All other policies are ignored, even if the first policy is unapplied and can't configure the recipient's email addresses.
+> [!NOTE] 
+> The first email address policy that identifies a recipient configures the recipient's email addresses. All other policies are ignored, even if the first policy is unapplied and can't configure the recipient's email addresses.
 
 ```yaml
 Type: EmailAddressPolicyPriority

@@ -25,8 +25,9 @@ New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf]
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
+
 ```
-PS C:\> New-SPOSdnProvider -ID "Hive" -License "<Hive license key>"
+New-SPOSdnProvider -ID "Hive" -License "<Hive license key>"
 ```
 
 This example activates the Hive SDN Provider.

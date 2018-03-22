@@ -29,7 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE-----------
 ```
-C:\PS>Update-SPRepopulateMicroblogLMTCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\>Update-SPRepopulateMicroblogLMTCache -ProfileServiceApplicationProxy $proxy
 ```
 
 This example refreshes the cache for the specified proxy.
@@ -41,8 +42,11 @@ Specifies the User Profile Service application proxy to update.
 
 The type must be in one of the following forms:
 
+
 --A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
+
 --A valid name of a service application proxy (for example, UserProfileSvcProxy1)
+
 --An instance of a valid SPServiceApplicationProxy object
 
 ```yaml

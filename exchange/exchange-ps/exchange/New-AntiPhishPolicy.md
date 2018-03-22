@@ -15,7 +15,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-AntiPhishPolicy -Name <String> [-AdminDisplayName <String>] [-AuthenticationFailAction <MoveToJmf | Quarantine>] [-Confirm [<SwitchParameter>]] [-EnableAuthenticationSafetyTip <$true | $false>] [-EnableAuthenticationSoftPassSafetyTip <$true | $false>] [-Enabled <$true | $false>] [-EnableMailboxIntelligence <$true | $false>] [-EnableOrganizationDomainsProtection <$true | $false>] [-EnableSimilarDomainsSafetyTips <$true | $false>] [-EnableSimilarUsersSafetyTips <$true | $false>] [-EnableTargetedDomainsProtection <$true | $false>] [-EnableTargetedUserProtection <$true | $false>] [-EnableUnusualCharactersSafetyTips <$true | $false>] [-ExcludedDomains <MultiValuedProperty>] [-ExcludedSenders <MultiValuedProperty>] [-PhishThresholdLevel <Int32>] [-SimilarUsersSafetyTipsCustomText <String>] [-TargetedDomainActionRecipients <MultiValuedProperty>] [-TargetedDomainProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedDomainsToProtect <MultiValuedProperty>] [-TargetedUserActionRecipients <MultiValuedProperty>] [-TargetedUserProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedUsersToProtect <MultiValuedProperty>] [-TreatSoftPassAsAuthenticated <$true | $false>] [-UnusualCharactersSafetyTipsCustomText <String>] [-WhatIf [<SwitchParameter>]] [<CommonParameters>]
+New-AntiPhishPolicy [-Name] <String> [-AdminDisplayName <String>] [-AuthenticationFailAction <MoveToJmf | Quarantine>] [-Confirm] [-EnableAuthenticationSafetyTip <$true | $false>] [-EnableAuthenticationSoftPassSafetyTip <$true | $false>] [-Enabled <$true | $false>]
+ [-EnableMailboxIntelligence <$true | $false>] [-EnableOrganizationDomainsProtection <$true | $false>]
+ [-EnableSimilarDomainsSafetyTips <$true | $false>] [-EnableSimilarUsersSafetyTips <$true | $false>]
+ [-EnableTargetedDomainsProtection <$true | $false>] [-EnableTargetedUserProtection <$true | $false>]
+ [-EnableUnusualCharactersSafetyTips <$true | $false>] [-ExcludedDomains <MultiValuedProperty>]
+ [-ExcludedSenders <MultiValuedProperty>] [-PhishThresholdLevel <Int32>] [-TargetedDomainActionRecipients <MultiValuedProperty>]
+ [-TargetedDomainProtectionAction <MultiValuedProperty>] [-TargetedDomainsToProtect <MultiValuedProperty>]
+ [-TargetedUserActionRecipients <MultiValuedProperty>] [-TargetedUserProtectionAction <MultiValuedProperty>]
+ [-TargetedUsersToProtect <MultiValuedProperty>] [-TreatSoftPassAsAuthenticated <$true | $false>] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,6 +42,7 @@ New-AntiPhishPolicy -Name "Monitor Policy" -AdminDisplayName "Default monitoring
 ```
 
 This example creates and enables an antiphishing policy named Monitor Policy with the following settings:
+
 - Admin display name: Default monitoring policy
 
 - Enables organization domains protection for all accepted domains, and targeted domains protection for the domain fabrikam.com.
@@ -59,7 +69,6 @@ This example creates and enables an antiphishing policy named Test Policy with t
 - Enables mailbox intelligence.
 
 - Enables safety tips and set the notification actions to quarantine messages.
-
 
 ## PARAMETERS
 
@@ -98,7 +107,7 @@ Accept wildcard characters: False
 ### -AuthenticationFailAction
 The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication. Valid values are:
 
-- MoveToJmf: Move the message to the user's Junk Email folder.
+- MoveToJmf: Move the message to the user's Junk Email folder. This is the default value.
 
 - Quarantine: Move the message to quarantine.
 
@@ -176,11 +185,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-This parameter specifies whether the rule or policy is enabled. Valid values are:
+This parameter specifies whether the policy is enabled. Valid values are:
 
-- $true: The rule or policy is enabled.
+- $true: The policy is enabled. This is the default value
 
-- $false: The rule or policy is disabled.
+- $false: The policy is disabled.
 
 ```yaml
 Type: $true | $false
@@ -218,9 +227,9 @@ Accept wildcard characters: False
 ### -EnableOrganizationDomainsProtection
 The EnableOrganizationDomainsProtection parameter specifies whether to enable antiphishing protection for all registered domains in the Office 365 organization. Valid values are:
 
-- $true: Antiphishing protection is enabled for all registered domains in the Office 365 organization. This is the default value.
+- $true: Antiphishing protection is enabled for all registered domains in the Office 365 organization.
 
-- $false: Antiphishing protection protection isn't enabled for all registered domains in the Office 365 organization. You can enable antiphishing protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
+- $false: Antiphishing protection protection isn't enabled for all registered domains in the Office 365 organization. This is the default value. You can enable antiphishing protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
 
 ```yaml
 Type: $true | $false
@@ -238,9 +247,9 @@ Accept wildcard characters: False
 ### -EnableSimilarDomainsSafetyTips
 The EnableSimilarDomainsSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for similar domains antiphishing detections. Valid values are:
 
-- $true: Safety tips for similar domains are enabled. This is the default value.
+- $true: Safety tips for similar domains are enabled.
 
-- $false: Safety tips for similar domains are disabled.
+- $false: Safety tips for similar domains are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -258,9 +267,9 @@ Accept wildcard characters: False
 ### -EnableSimilarUsersSafetyTips
 The EnableSimilarUsersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for similar users antiphishing detections. Valid values are:
 
-- $true: Safety tips for similar users are enabled. This is the default value.
+- $true: Safety tips for similar users are enabled.
 
-- $false: Safety tips for similar users are disabled.
+- $false: Safety tips for similar users are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -278,9 +287,9 @@ Accept wildcard characters: False
 ### -EnableTargetedDomainsProtection
 The EnableTargetedDomainsProtection parameter specifies whether to enable antiphishing protection for a list of specified domains. Valid values are:
 
-- $true: Antiphishing protection is enabled for the domains specified by the TargetedDomainsToProtect parameter. This is the default value.
+- $true: Antiphishing protection is enabled for the domains specified by the TargetedDomainsToProtect parameter.
 
-- $false: The TargetedDomainsToProtect parameter isn't used.
+- $false: The TargetedDomainsToProtect parameter isn't used. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -298,9 +307,9 @@ Accept wildcard characters: False
 ### -EnableTargetedUserProtection
 The EnableTargetedUserProtection parameter specifies whether to enable antiphishing protection for the users specified by the TargetedUsersToProtect parameter. Valid values are:
 
-- $true: Antiphishing protection is enabled for the specified users. This is the default value.
+- $true: Antiphishing protection is enabled for the specified users.
 
-- $false: The TargetedUsersToProtect parameter isn't used.
+- $false: The TargetedUsersToProtect parameter isn't used. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -318,9 +327,9 @@ Accept wildcard characters: False
 ### -EnableUnusualCharactersSafetyTips
 The EnableUnusualCharactersSafetyTips parameter specifies whether to enable safety tips that are shown to recipients in messages for unusual characters antiphishing detections. Valid values are:
 
-- $true: Safety tips for unusual characters are enabled. This is the default value.
+- $true: Safety tips for unusual characters are enabled.
 
-- $false: Safety tips for unusual characters are disabled.
+- $false: Safety tips for unusual characters are disabled. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -380,24 +389,6 @@ The PhishThresholdLevel parameter specifies the tolerance level that's used by m
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SimilarUsersSafetyTipsCustomText
-The SimilarUsersSafetyTipsCustomText parameter specifies the custom text to use in safety tips for similar users detections, which replaces the default safety tip that's shown to recipients in detected phishing messages. If the value includes spaces, enclose the value in quotation marks (").
-
-You can only use this parameter when the SimilarUsersSafetyTipsEnabled parameter is set to $true.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -520,7 +511,7 @@ Accept wildcard characters: False
 ### -TargetedUsersToProtect
 The TargetedUsersToProtect parameter specifies the users that are included in antiphishing protection when the EnableTargetedUserProtection parameter is set to $true.
 
-This parameter uses the syntax DisplayNameEmailAddress.
+This parameter uses the syntax "Display;NameEmailAddress".
 
 - DisplayName specifies the display name of the user that could be a target of impersonation. This value can contain special characters.
 
@@ -548,28 +539,10 @@ The TreatSoftPassAsAuthenticated parameter specifies whether or not to respect t
 
 - $false: Only use this value when you want to enable more restrictive antispoofing filtering, because this value might cause false positives.
 
-Note: This parameter corresponds to the Strict filtering value in the Office 365 admin center.
+**Note**: This parameter corresponds to the **Strict filtering** value in the Office 365 admin center.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UnusualCharactersSafetyTipsCustomText
-The UnusualCharactersSafetyTipsCustomText parameter specifies the custom text to use in safety tips for unusual characters detections, which replaces the default safety tip that's shown to recipients in detected phishing messages. If the value includes spaces, enclose the value in quotation marks (").
-
-You can only use this parameter when the UnusualCharactersSafetyTipsEnabled parameter is set to $true.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

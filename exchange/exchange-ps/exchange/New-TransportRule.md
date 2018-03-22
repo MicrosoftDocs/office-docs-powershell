@@ -70,7 +70,7 @@ New-TransportRule [-Name] <String>
  [-ManagerAddresses <RecipientIdParameter[]>] [-ManagerForEvaluatedUser <Sender | Recipient>]
  [-MessageTypeMatches <OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt>]
  [-ModerateMessageByManager <$true | $false>] [-ModerateMessageByUser <RecipientIdParameter[]>]
- [-Organization <OrganizationIdParameter>] [-PrependSubject <SubjectPrefix>] [-Priority <Int32>]
+ [-PrependSubject <SubjectPrefix>] [-Priority <Int32>]
  [-Quarantine <$true | $false>] [-RecipientADAttributeContainsWords <Word[]>]
  [-RecipientADAttributeMatchesPatterns <Pattern[]>] [-RecipientAddressContainsWords <Word[]>]
  [-RecipientAddressMatchesPatterns <Pattern[]>] [-RecipientInSenderList <Word[]>]
@@ -351,7 +351,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -393,7 +394,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -417,7 +419,8 @@ The AnyOfRecipientAddressContainsWords parameter specifies a condition that look
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: Word[]
@@ -441,7 +444,8 @@ The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition that lo
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: Pattern[]
@@ -483,7 +487,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -525,7 +530,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -567,7 +573,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -609,7 +616,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this condition applies the rule action to all recipients of the message. For example, if the action is to reject the message, the message is rejected for all recipients of the message, not just for the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1121,7 +1129,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -1281,7 +1289,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1323,7 +1332,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1347,7 +1357,8 @@ The ExceptIfAnyOfRecipientAddressContainsWords parameter specifies an exception 
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: Word[]
@@ -1371,7 +1382,8 @@ The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exceptio
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: Pattern[]
@@ -1413,7 +1425,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1455,7 +1468,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1497,7 +1511,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1539,7 +1554,8 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 A match for this exception prevents the rule action from being applied to all recipients of the message. For example, if the action is to reject the message, the message is delivered to all recipients of the message, not just to the specified recipients.
 
-Note: This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
+> [!NOTE]  
+> This condition or exception doesn't consider messages that are sent to recipient proxy addresses. It only matches messages that are sent to the recipient's primary email address.
 
 ```yaml
 Type: RecipientIdParameter[]

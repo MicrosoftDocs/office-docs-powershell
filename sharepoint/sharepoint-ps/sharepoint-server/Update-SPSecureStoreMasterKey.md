@@ -22,9 +22,13 @@ The `Update-SPSecureStoreApplicationServerKey` cmdlet changes the master key of 
 
 Updating the master key is required when:
 
+
 --A new instance of a service application is created and the database for the Secure Store service application is new or empty.
+
 --The master key or passphrase has been compromised.
+
 --Security guidelines require that the passphrase or key be replaced.
+
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
@@ -32,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$newPassPhrase = "abcDEF123!"
-
-C:\PS>Update-SPSecureStoreMasterKey -ServiceApplicationProxy $contosoProxy -Passphrase $newPassPhrase
+PS C:\>$newPassPhrase = "abcDEF123!"
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
+C:\PS>Update-SPSecureStoreMasterKey -ServiceApplicationProxy $proxy -Passphrase $newPassPhrase
 ```
 
 This example creates a new master key for the given service application.

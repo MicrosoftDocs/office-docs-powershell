@@ -41,12 +41,10 @@ You run this cmdlet on the first server in the Office Online Server farm and the
 
 ### ------------------EXAMPLE 1---------------------
 ```
-New-OfficeWebAppsFarm -InternalUrl "https://server.corp.contoso.com" -ExternalUrl "https://server.external.contoso.com" -EditingEnabled:$true -SSLOffloaded
+New-OfficeWebAppsFarm -ExternalUrl "https://office.contoso.com" -CertificateName "Office Server Cert" -EditingEnabled:$true
 ```
 
-This example creates an Office Online Server farm on the local server that has editing enabled for Office Online.
-The farm is configured for load balancing by enabling SSLOffloaded, which automatically enables AllowHttp.
-If you are not using a load balancer, make sure that you set CertificateName.
+This example creates an Office Online Server farm on the local server that has editing enabled for Office Online. With this example, only a single URL is used for both internal and external users. The Certificate Name value is the Friendly Name of the certificate as it appears in the Computer's certificate store.
 
 ## PARAMETERS
 

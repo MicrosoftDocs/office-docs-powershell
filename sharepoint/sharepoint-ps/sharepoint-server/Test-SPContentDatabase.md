@@ -45,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Test-SPContentDatabase -name WSS_Content_DB -webapplication http://sitename
+PS C:\>Test-SPContentDatabase -name WSS_Content_DB -webapplication http://sitename
 ```
 
 This example tests the WSS_Content_DB content database against the sitename Web application and returns a list of issues.
@@ -53,9 +53,8 @@ This example tests the WSS_Content_DB content database against the sitename Web 
 
 ### ----------------------------EXAMPLE 2-----------------------
 ```
-C:\PS>$DB = Get-SPContentDatabase -site http://contoso.com
-
-C:\PS>Test-SPContentDatabase $DB -showrowcounts
+PS C:\>$DB = Get-SPContentDatabase -site http://contoso.com
+PS C:\>Test-SPContentDatabase $DB -showrowcounts
 ```
 
 This example gets the content database that contains the site collection at http://contoso.com and then tests the database against the Web application that hosts it to determine issues.

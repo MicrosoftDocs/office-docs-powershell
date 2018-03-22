@@ -76,11 +76,9 @@ Get-CalendarDiagnosticLog -Identity "Jasen Kozma" -Subject "Budget Meeting" -Exa
 
 This example exports all calendar items in the Calendar Diagnostic log for Jasen Kozma's mailbox that have "Budget Meeting" anywhere in the subject to the specified folder.
 
-Notes:
-
-In this example, the message files are written to C:\\My Documents\\Calendar Diagnostic Export\\jkozma@contoso.com.
-
-In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
+> [!NOTE] 
+> In this example, the message files are written to C:\\My Documents\\Calendar Diagnostic Export\\jkozma@contoso.com.
+> In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
 
 ## PARAMETERS
 
@@ -204,7 +202,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -220,7 +218,8 @@ In the location you specify, a subfolder is automatically created for the specif
 
 In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
 
-Note: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (\> "C:\\My Documents\\Calendar Export") or substitute the output to a PowerShell variable.
+> [!NOTE] 
+> Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (\> "C:\\My Documents\\Calendar Export") or substitute the output to a PowerShell variable.
 
 ```yaml
 Type: String
