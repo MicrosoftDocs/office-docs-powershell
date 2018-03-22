@@ -10,7 +10,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Resumes a search service application that was suspended.
 
-
 ## SYNTAX
 
 ```
@@ -28,12 +27,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity MySSA
-$ssa | Resume-SPEnterpriseSearchServiceApplication
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity MySSA
+PS C:\>$ssa | Resume-SPEnterpriseSearchServiceApplication
 ```
 
 This example obtains a reference to a search service application named MySSA and then resumes it.
-
 
 ## PARAMETERS
 
