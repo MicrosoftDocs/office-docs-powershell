@@ -12,7 +12,7 @@ Adds an availability group
 
 ## SYNTAX
 
-### Default
+#### Default
 ```
 Add-DatabaseToAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
  -DatabaseName <String> [-FileShare <String>] [<CommonParameters>]
