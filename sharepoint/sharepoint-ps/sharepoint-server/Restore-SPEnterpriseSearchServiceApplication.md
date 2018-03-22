@@ -31,15 +31,16 @@ Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
+
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
 This cmdlet is used by third parties to create a search application that uses existing data.
 
-Some third parties back up the application data and have to restore the application later.
-So, the data is restored and uses the `Restore-SPEnterpriseSearchServiceApplication` cmdlet to create a new search application that uses the restored data.
+Some third parties back up the application data and have to restore the application later. So, the data is restored and uses the `Restore-SPEnterpriseSearchServiceApplication` cmdlet to create a new search application that uses the restored data.
 
 This cmdlet supports parameter sets.
+
 The first set of parameters is for Application Configuration Attach mode and the second set of parameters is for Search Application Attach mode.
 
 Application Configuration Attach mode only restores configuration data that is stored in the administration database.
@@ -52,10 +53,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-C:\PS>$searchInstance = Get-SPEnterpriseSearchServiceInstance -local
-$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-
-C:\PS>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
+PS C:\>$searchInstance = Get-SPEnterpriseSearchServiceInstance -local
+PS C:\>$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+PS C:\>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
 ```
 
 This example uses Application Configuration Attach mode to restore configuration data.
@@ -63,9 +63,8 @@ This example uses Application Configuration Attach mode to restore configuration
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-C:\PS>$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-
-C:\PS>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
+PS C:\>$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+PS C:\>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
 ```
 
 This example uses Search Application Attach mode to restore topology data in the file that is named topology.xml.
@@ -90,8 +89,6 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationPool
-Specifies the application pool for the query web service.
-
 Specifies the application pool for the query web service.
 
 ```yaml
@@ -299,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeferUpgradeActions
-{{Fill DeferUpgradeActions Description}}
+Prevents database schema update during restore. Do not use.
 
 ```yaml
 Type: SwitchParameter

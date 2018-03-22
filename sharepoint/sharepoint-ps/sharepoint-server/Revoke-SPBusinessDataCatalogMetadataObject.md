@@ -29,11 +29,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$claimJohn = New-SPClaimsPrincipal -Identity "CONTOSO\johndoe" -IdentityType WindowsSamAccountName
-
-C:\PS>$MetadataObject = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "LobSystem" -ServiceContext http://contoso -Name "ContosoDatabase"
-
-C:\PS>Revoke-SPBusinessDataCatalogMetadataObject -Identity $MetadataObject -Principal $claimJohn -Right "Execute"
+PS C:\>$claimJohn = New-SPClaimsPrincipal -Identity "CONTOSO\johndoe" -IdentityType WindowsSamAccountName
+PS C:\>$MetadataObject = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "LobSystem" -ServiceContext http://contoso -Name "ContosoDatabase"
+PS C:\>Revoke-SPBusinessDataCatalogMetadataObject -Identity $MetadataObject -Principal $claimJohn -Right "Execute"
 ```
 
 This example removes the execute right from the External System with the name ContosoDatabase for the user with the identity of johndoe on the domain CONTOSO.

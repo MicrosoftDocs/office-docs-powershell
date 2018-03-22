@@ -8,7 +8,7 @@ schema: 2.0.0
 # Update-SPRepopulateMicroblogFeedCache
 
 ## SYNOPSIS
-Refreshes the cache.
+Refreshes the microblog feed cache.
 
 ## SYNTAX
 
@@ -47,14 +47,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1------------
 ```
-C:\PS>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606 -AccountName contoso\<user>
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
 ```
 
 This example refreshes the feeds for a specific user by using the AccountName parameter.
 
 ### ------------EXAMPLE 2------------
 ```
-C:\PS>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606 -AccountName contoso\<user> -SiteSubscription 0C37852B-34D0-418e-91C6-2AC25AF4BE5B
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName -SiteSubscription 0C37852B-34D0-418e-91C6-2AC25AF4BE5B
 ```
 
 This example refreshes the feeds for a specific user by using the AccountName parameter.
@@ -152,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteUrl
-{{Fill SiteUrl Description}}
+Specifies the Site's URL to repopulate the site feeds. If you don't specify this parameter, you must specify the AccountName parameter. If neither parameter is specified, an error message is displayed.
 
 ```yaml
 Type: String
@@ -168,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListId
-{{Fill ListId Description}}
+The ListId of the FollowableList.
 
 ```yaml
 Type: Guid
@@ -184,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListRootFolderUrl
-{{Fill ListRootFolderUrl Description}}
+The RootFolderUrl of the FollowableList.
 
 ```yaml
 Type: String
@@ -200,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteId
-{{Fill SiteId Description}}
+The SiteId containing the FollowableList.
 
 ```yaml
 Type: Guid
@@ -216,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebId
-{{Fill WebId Description}}
+The WebId containing the FollowableList.
 
 ```yaml
 Type: Guid

@@ -25,7 +25,7 @@ When you contribute your work will go directly into the Microsoft Office product
 **Note** that since you are likely not a maintainer of the Git repository GitHub will automatically 'Fork' the project into your personal GitHub account. A fork is just an exact copy of the repository in your own account so that you have total access to make edits. You are now 'editing' a copy of the project in your own GitHub account. You can always find it again by looking at your GitHub Repositories in your GitHub Profile (drop-down from your name in top right).
 ![Image of Automatic Fork message on Github](images/auto_fork.png)
 
-5. You can click the Preview changes link to see what the changes will look like. 
+5. You can click the Preview changes link to see what the changes will look like.
 
    **IMPORTANT** The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
    Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
