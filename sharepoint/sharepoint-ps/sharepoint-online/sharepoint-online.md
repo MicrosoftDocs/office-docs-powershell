@@ -5,8 +5,10 @@ title: sharepoint-online
 Locale: en-US
 ---
 
-# SharePoint Online PowerShell 
+# SharePoint Online PowerShell
+
 ## Description
+
 The following cmdlet references are for SharePoint Online.
 
 ## sharepoint-online Cmdlets
@@ -25,6 +27,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Add-SPOTenantCdnOrigin](Add-SPOTenantCdnOrigin.md)
 {{Manually Enter Add-SPOTenantCdnOrigin Description Here}}
+
+### [Add-SPOTheme](Add-SPOTheme.md)
+{{Manually Enter Add-SPOTheme Description Here}}
 
 ### [Add-SPOUser](Add-SPOUser.md)
 {{Manually Enter Add-SPOUser Description Here}}
@@ -85,6 +90,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOGeoStorageQuota](Get-SPOGeoStorageQuota.md)
 {{Manually Enter Get-SPOGeoStorageQuota Description Here}}
+
+### [Get-SPOHideDefaultThemes](Get-SPOHideDefaultThemes.md)
+{{Manually Enter Get-SPOHideDefaultThemes Description Here}}
 
 ### [Get-SPOHubSite](Get-SPOHubSite.md)
 {{Manually Enter Get-SPOHubSite Description Here}}
@@ -148,6 +156,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOTenantTaxonomyReplicationParameters](Get-SPOTenantTaxonomyReplicationParameters.md)
 {{Manually Enter Get-SPOTenantTaxonomyReplicationParameters Description Here}}
+
+### [Get-SPOTheme](Get-SPOTheme.md)
+{{Manually Enter Get-SPOTheme Description Here}}
 
 ### [Get-SPOUser](Get-SPOUser.md)
 {{Manually Enter Get-SPOUser Description Here}}
@@ -242,6 +253,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Remove-SPOTenantSyncClientRestriction](Remove-SPOTenantSyncClientRestriction.md)
 {{Manually Enter Remove-SPOTenantSyncClientRestriction Description Here}}
 
+### [Remove-SPOTheme](Remove-SPOTheme.md)
+{{Manually Enter Remove-SPOTheme Description Here}}
+
 ### [Remove-SPOUser](Remove-SPOUser.md)
 {{Manually Enter Remove-SPOUser Description Here}}
 
@@ -287,6 +301,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Set-SPOGeoStorageQuota](Set-SPOGeoStorageQuota.md)
 {{Manually Enter Set-SPOGeoStorageQuota Description Here}}
 
+### [Set-SPOHideDefaultThemes](Set-SPOHideDefaultThemes.md)
+{{Manually Enter Set-SPOHideDefaultThemes Description Here}}
+
 ### [Set-SPOHubSite](Set-SPOHubSite.md)
 {{Manually Enter Set-SPOHubSite Description Here}}
 
@@ -301,6 +318,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Set-SPOSiteGroup](Set-SPOSiteGroup.md)
 {{Manually Enter Set-SPOSiteGroup Description Here}}
+
+### [Set-SPOSiteScript](Set-SPOSiteScript.md)
+{{Manually Enter Set-SPOSiteScript Description Here}}
 
 ### [Set-SPOTenant](Set-SPOTenant.md)
 {{Manually Enter Set-SPOTenant Description Here}}
