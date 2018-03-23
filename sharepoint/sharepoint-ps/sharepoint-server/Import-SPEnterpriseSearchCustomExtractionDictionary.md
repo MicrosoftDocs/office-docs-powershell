@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Imports a custom extraction dictionary.
 
-
-
 ## SYNTAX
 
 ```
@@ -27,14 +25,12 @@ This cmdlet imports a custom extraction dictionary from a .cvs file and deploys 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
-
-
 ## EXAMPLES
 
 ### ------------------EXAMPLE----------------- 
 ```
-C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication
-Import-SPEnterpriseSearchCustomExtractionDictionary -SearchApplication $searchApp -Filename c:\transfer\entity_extraction.csv -DictionaryName Microsoft.UserDictionaries.EntityExtraction.Custom.Word.1
+PS C:\>$searchApp = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Import-SPEnterpriseSearchCustomExtractionDictionary -SearchApplication $searchApp -Filename c:\transfer\entity_extraction.csv -DictionaryName Microsoft.UserDictionaries.EntityExtraction.Custom.Word.1
 ```
 
 This example imports the custom extraction dictionary that is located at c:\transfer to the default search service application.
