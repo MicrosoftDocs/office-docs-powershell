@@ -19,7 +19,7 @@ Copy-SPContentTypes [-AssignmentCollection <SPAssignmentCollection>] [-AuthEndpo
 ```
 
 ## DESCRIPTION
-This cmdlet is used in hybrid scenarios with SharePoint Online to copy Content Types from an on-premesis farm to SharePoint Online.
+This cmdlet is used in hybrid scenarios with SharePoint Online to copy Content Types from an on-premises farm to SharePoint Online.
 
 ## EXAMPLES
 
