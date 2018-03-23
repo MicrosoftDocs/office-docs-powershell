@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Uploads a SharePoint solution package to the farm.
 
-
-
 ## SYNTAX
 
 ```
