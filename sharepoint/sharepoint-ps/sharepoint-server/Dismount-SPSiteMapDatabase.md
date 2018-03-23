@@ -22,7 +22,6 @@ Do not use.
 
 ## EXAMPLES
 
-### Example 1 
 Do not use.
 
 ## PARAMETERS
