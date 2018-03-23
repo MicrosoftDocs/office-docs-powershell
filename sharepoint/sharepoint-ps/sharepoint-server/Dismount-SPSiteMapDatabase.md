@@ -8,7 +8,7 @@ schema: 2.0.0
 # Dismount-SPSiteMapDatabase
 
 ## SYNOPSIS
-Dismounts the Site Map database. Do not use.
+Do not use.
 
 ## SYNTAX
 
@@ -23,17 +23,12 @@ Do not use.
 ## EXAMPLES
 
 ### Example 1 
-```
-PS C:\>Dismount-SPSiteMapDatabase -DatabaseId 6543d4a2-2d53-411c-9143-51ddf4cd46ca
-```
-Dismounts the Site Map database with the database ID of 6543d4a2-2d53-411c-9143-51ddf4cd46ca. Do not use.
+Do not use.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
-
-When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+Do not use.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -49,7 +44,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -65,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseId
-A valid GUID of a Site Map database. Do not use.
+Do not use.
 
 ```yaml
 Type: Guid
@@ -81,8 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Do not use.
 
 ```yaml
 Type: SwitchParameter
