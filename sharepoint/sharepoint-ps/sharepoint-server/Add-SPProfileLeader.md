@@ -19,26 +19,25 @@ Add-SPProfileLeader [-ProfileServiceApplicationProxy] <SPServiceApplicationProxy
 ```
 
 ## DESCRIPTION
-This cmdlet was introduced in SharePoint Server 2013 with Service Pack 1 (SP1) and SharePoint Foundation 2013 with Service Pack 1 (SP1).
+This cmdlet was introduced in SharePoint Server 2010 Service Pack 1 (SP1).
 
-Use the Add-SPProfileLeader cmdlet to add a user as the company leader.
+Use the `Add-SPProfileLeader` cmdlet to add a user as the company leader in the User Profile Service Application.
 
-For additional information about SPProfileLeader cmdlets, see The *-SPProfileLeader Windows PowerShell cmdlets in SharePoint Server SP1 (http://go.microsoft.com/fwlink/p/?LinkId=226295) (http://go.microsoft.com/fwlink/p/?LinkId=226295).
+For additional information about SPProfileLeader cmdlets, see the \*-SPProfileLeader Windows PowerShell cmdlets in SharePoint Server http://go.microsoft.com/fwlink/p/?LinkId=226295.
 
-After you use the Add-SPProfileLeader cmdlet to add a company leader, you have to complete a full crawl of your content sources for the changes to take effect.
+After you use the `Add-SPProfileLeader` cmdlet to add a company leader, you have to complete a full crawl of your content sources for the changes to take effect.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831.
 
 ## EXAMPLES
 
 ### ---------EXAMPLE------------ 
 ```
-C:\PS>$upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
-
-          C:\PS>Add-SPProfileLeader -ProfileServiceApplicationProxy $upaProxy -Name "contoso\janedow"
+C:\PS>$upaProxy = Get-SPServiceApplicationProxy | where {$_.TypeName -eq 'User Profile Service Application Proxy'}
+C:\PS>Add-SPProfileLeader -ProfileServiceApplicationProxy $upaProxy -Name "contoso\janedoe"
 ```
 
-This example adds a company leader named, Jane Dow.
+This example adds a company leader named Jane Doe.
 
 ## PARAMETERS
 
@@ -60,7 +59,7 @@ Accept wildcard characters: False
 
 ### -Name
 Specifies the account name to be added as a leader for the new User Profile Service application.
-For example, Contoso\Joe.
+For example, contoso\janedoe.
 
 ```yaml
 Type: SPProfileLeaderPipeBind
