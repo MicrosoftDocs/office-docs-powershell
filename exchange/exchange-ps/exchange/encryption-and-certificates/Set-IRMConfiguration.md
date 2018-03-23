@@ -240,7 +240,7 @@ The PublishingLocation parameter specifies the AD RMS publishing URL.
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -260,7 +260,7 @@ Clearing RACs, CLCs, and cached templates might be required during troubleshooti
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -298,7 +298,7 @@ The ServiceLocation parameter specifies the AD RMS service URL.
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -354,7 +354,7 @@ The RMSOnlineKeySharingLocation parameter specifies the Azure Rights Management 
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -368,15 +368,15 @@ This parameter is available only in the cloud-based service.
 
 The AzureRMSLicensingEnabled parameter specifies whether the Exchange Online organization can to connect directly to Azure Rights Management. Valid values are:
 
-- $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables data encryption policies.
+- $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables Office 365 Message Encryption.
 
-- $false: The Exchange Online organization can't connect directly to Azure Rights Management.
+- $false: The Exchange Online organization can't connect directly to Azure Rights Management. Do not configure this value unless you're directed to do so by Microsoft Customer Service and Support.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -398,7 +398,7 @@ The SimplifiedClientAccessEnabled parameter specifies whether to enable the Prot
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
