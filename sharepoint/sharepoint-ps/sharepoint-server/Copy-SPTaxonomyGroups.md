@@ -8,7 +8,7 @@ schema: 2.0.0
 # Copy-SPTaxonomyGroups
 
 ## SYNOPSIS
-Copies Managed Metadata Taxonomy Groups from SharePoint on-premesis to SharePoint Online.
+Copies Managed Metadata Taxonomy Groups from SharePoint on-premises to SharePoint Online.
 
 ## SYNTAX
 
