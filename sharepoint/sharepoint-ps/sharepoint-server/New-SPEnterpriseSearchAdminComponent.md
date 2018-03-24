@@ -28,9 +28,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------- 
 ```
+PS C:\>$si = Get-SPEnterpriseSearchServiceInstance
 PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
 PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
-PS C:\>New-SPEnterpriseSearchAdminComponent -SearchTopology $topology -SearchServiceInstance 56e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa
+PS C:\>New-SPEnterpriseSearchAdminComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa
 ```
 
 This example adds a new Search Administration Component to the active topology for the existing Search Service Application.
@@ -40,8 +41,6 @@ This example adds a new Search Administration Component to the active topology f
 ### -SearchServiceInstance
 
 Specifies the search service instance that will host the new admin component.
-
-
 
 ```yaml
 Type: SearchServiceInstancePipeBind
