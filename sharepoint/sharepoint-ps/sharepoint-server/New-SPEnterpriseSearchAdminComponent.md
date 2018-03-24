@@ -34,7 +34,7 @@ PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
 PS C:\>New-SPEnterpriseSearchAdminComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa
 ```
 
-This example adds a new Search Administration Component to the active topology for the existing Search Service Application.
+This example adds a new Search Administration Component to the inactive topology for the existing Search Service Application.
 
 ## PARAMETERS
 
