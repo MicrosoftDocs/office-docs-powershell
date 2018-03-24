@@ -34,7 +34,7 @@ PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
 PS C:\>New-SPEnterpriseSearchAnalyticsProcessingComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa
 ```
 
-This example adds a new Search Analytics Processing Component to the active topology for the existing Search Service Application.
+This example adds a new Search Analytics Processing Component to the inactive topology for the existing Search Service Application.
 
 ## PARAMETERS
 
