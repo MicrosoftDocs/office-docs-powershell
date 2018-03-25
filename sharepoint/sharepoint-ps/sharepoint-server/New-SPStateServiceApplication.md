@@ -31,6 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 PS C:\>$db = New-SPStateServiceDatabase -Name 'State Service'
 PS C:\>New-SPStateServiceApplication -Name 'State Service' -Database $db
+```
 
 This example creates a new state service database, a new state service application associated with the database.
 
