@@ -32,24 +32,27 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>New-SPSiteSubscription |%{ New-SPSite http://contoso.com/sites/admin -SiteSubscription $_ -Template "TenantAdmin#0"}
-
-C:\PS>
+PS C:\>$subscription = New-SPSiteSubscription
 ```
 
-This example creates a new site subscription and applies it to a new Tenant Administration site collection.
+This example creates a new site subscription.
 
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>$s = New-SPSiteSubscription
-
-C:\PS>Get-SPSite http://sitename | Set-SPSite -SiteSubscription $s
-
-C:\PS>Set-SPSite http://sitename -SiteSubscription {New-SPSiteSubscription}
+PS C:\>$subscription = New-SPSiteSubscription
+PS C:\>Set-SPSite -Identity http://siteUrl -SiteSubscription $subscription
 ```
 
-This example adds a new subscription to an existing site collection at http://sitename.
+This example creates a new Site Subscription and sets it on the site collection http://siteUrl.
+
+
+### ------------------EXAMPLE 3-----------------------
+```
+PS C:\>New-SPSite -URL http://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
+```
+
+This example creates a new Site Collection at http://siteUrl along with a new Site Subscription.
 
 
 ## PARAMETERS
