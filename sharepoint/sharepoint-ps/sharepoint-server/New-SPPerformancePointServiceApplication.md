@@ -628,13 +628,15 @@ Accept wildcard characters: False
 ```
 
 ### -AnalyticResultCacheMinimumHitCount
-{{Fill AnalyticResultCacheMinimumHitCount Description}}
+The minimum number of times an analytic report needs to be accessed before caching starts happening.
+
+The default value is 0.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: harePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -644,13 +646,13 @@ Accept wildcard characters: False
 ```
 
 ### -DataSourceUnattendedServiceAccountTargetApplication
-{{Fill DataSourceUnattendedServiceAccountTargetApplication Description}}
+The name of the Secure Store Application that will be used by default to access data sources.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -660,13 +662,15 @@ Accept wildcard characters: False
 ```
 
 ### -FilterSearchResultsMax
-{{Fill FilterSearchResultsMax Description}}
+The maximum number of items to return on a Dashboard when viewing a filter.
+
+The default value is 5000.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -676,13 +680,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseEffectiveUserName
-{{Fill UseEffectiveUserName Description}}
+Enables the use of the Analysis Services Effective User Name feature.
 
+The type must be one of the following: True or False. The default value is False.
+        
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: False
 Position: Named
