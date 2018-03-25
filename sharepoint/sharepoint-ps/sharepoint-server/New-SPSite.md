@@ -72,6 +72,7 @@ This example creates an English 14 mode site collection by using the Team site t
 
 ### -Url
 Specifies the URL that the new site collection uses.
+
 If the URL is not a host header site, the URL must start with the web application URL.
 
 ```yaml
@@ -147,8 +148,9 @@ Accept wildcard characters: False
 
 ### -CompatibilityLevel
 Specifies the version of templates to use when creating a new SPSite object.
+
 This value sets the initial CompatibilityLevel value for the site collection.
-The values for this parameter can be either SharePoint Server.
+
 When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the SiteCreationMode setting.
 
 
@@ -156,7 +158,7 @@ When this parameter is not specified, the CompatibilityLevel will default to the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -183,8 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
-Specifies the name or GUID of the content database in which to create the new site.
-If no content database is specified, the site collection is selected automatically.
+Specifies the name or GUID of the content database in which to create the new site. If no content database is specified, the site collection is selected automatically.
 
 The type must be a valid database name in the form, SiteContent1212, or a GUID in the form, 1234-5678-9807.
 
@@ -203,6 +204,7 @@ Accept wildcard characters: False
 
 ### -Description
 Describes the new site.
+
 If no value is specified, the value is left blank.
 
 ```yaml
@@ -220,12 +222,15 @@ Accept wildcard characters: False
 
 ### -HostHeaderWebApplication
 Specifies that if the URL provided is to be a host-named site collection, the HostHeaderWebApplication parameter must be the name, URL, GUID, or SPWebApplication object for the web application in which this site collection is created.
+
 If no value is specified, the value is left blank.
 
 The type must be a valid name in one of the following forms:
 
 --WebApplication-1212
+
 --A URL (for example, http://server_name)
+
 --A GUID (for example, 1234-5678-9876-0987)
 
 
@@ -244,6 +249,7 @@ Accept wildcard characters: False
 
 ### -Language
 Specifies the language ID for the new site collection.
+
 If no language is specified, the site collection is created with the same language that was specified when the product was installed.
 
 This must be a valid language identifier (LCID).
@@ -263,6 +269,7 @@ Accept wildcard characters: False
 
 ### -Name
 Specifies the title of the new site collection.
+
 If no name is specified, the default name is applied.
 
 ```yaml
@@ -279,7 +286,9 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideCompatibilityRestriction
-{{ Fill OverrideCompatibilityRestriction Description}}
+Specifies whether to use compatibility restriction for site.
+
+The valid values are True or False.
 
 ```yaml
 Type: SwitchParameter
@@ -314,8 +323,8 @@ Accept wildcard characters: False
 ```
 
 ### -QuotaTemplate
-Specifies the quota template for the new site.
-The template must exist already.
+Specifies the quota template for the new site.The template must exist already.
+
 If no template is specified, no quota is applied.
 
 ```yaml
@@ -332,8 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryEmail
-Specifies the email address of the secondary site owner.
-If no value is specified, the value is left blank.
+Specifies the email address of the secondary site owner. If no value is specified, the value is left blank.
 
 The type must be a email address, in the form, someone@example.com.
 
@@ -352,6 +360,7 @@ Accept wildcard characters: False
 
 ### -SecondaryOwnerAlias
 Specifies the user login credentials of the secondary site owner.
+
 If no value is specified, the value is left blank.
 
 The type must be a valid user alias, in the form, Domain\username.
@@ -387,7 +396,9 @@ Accept wildcard characters: False
 
 ### -Template
 Specifies the Web template for the root web of the new site collection.
+
 The template must be already installed.
+
 If no template is specified, no template is provisioned.
 
 ```yaml
@@ -421,7 +432,9 @@ Accept wildcard characters: False
 ```
 
 ### -CreateFromSiteMaster
-{{Fill CreateFromSiteMaster Description}}
+Specifies whether to create a new site using the Site Master.
+
+The valid values are True or False.
 
 ```yaml
 Type: SwitchParameter
