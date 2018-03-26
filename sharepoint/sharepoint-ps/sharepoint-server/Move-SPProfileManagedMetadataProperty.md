@@ -30,19 +30,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1------------------ 
+### ---------------EXAMPLE------------------ 
 ```
-C:\PS>Move-SPProfileManagedMetadataProperty -Identity SPS-Interests -TermSetName Interests -AvailableForTagging -ProfileServiceApplicationProxy dbc4ccf5-b245-4e0f-8696-235402f83260
-```
-
-This example moves values from the SPS-Interests property into a new term set called Interests, and marks that term set as available for tagging.
-
-### ---------------EXAMPLE 2------------------ 
-```
-C:\PS>Get-SPServiceApplicationProxy | ?{$_.DisplayName.Contains("User Profile Service")} | Move-SPProfileManagedMetadataProperty -Identity SPS-Interests -TermSetName Interests -AvailableForTagging
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\>Move-SPProfileManagedMetadataProperty -ProfileServiceApplicationProxy $proxy -Identity SPS-Interests -TermSetName Interests -AvailableForTagging
 ```
 
-This example performs the same task as Example 1, but pipes the result for the ProfileServiceApplicationProxy parameter by using the Get-SPServiceApplicationProxy cmdlet.
+This example moves values from the SPS-Interests property into a new term set called Interests and marks that term set as available for tagging.
 
 ## PARAMETERS
 

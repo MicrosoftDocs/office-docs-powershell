@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Restores a backup of subscription site settings to the given subscription identifier.
 
-
-
 ## SYNTAX
 
 ```
@@ -30,7 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-C:\PS>Get-SPSiteSubscription http://contoso.com | Import-SPSiteSubscriptionSettings -path "c:/backups/contoso_settings_file.bak" -force
+PS C:\>$subscription = Get-SPSiteSubscription http://site_url
+PS C:\>Import-SPSiteSubscriptionSettings -Identity $subscription -Path "C:\backups\contoso_settings_file.bak" -Force
 ```
 
 This example restores the subscription settings store of contoso.com.
@@ -40,7 +39,7 @@ This example restores the subscription settings store of contoso.com.
 ### -Identity
 Specifies the ID of the subscription to restore .
 
-The type must be a valid URL, in the form http://server_name, or a GUID, in the form 1234-4567-985tg.
+The type must be a valid URL, in the form http://site_url, or a GUID, in the form XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind

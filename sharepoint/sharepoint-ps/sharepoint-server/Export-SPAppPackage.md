@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Exports an app package.
 
-
-
 ## SYNTAX
 
 ```
@@ -30,7 +28,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------EXAMPLE----------- 
 ```
 C:\PS>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
-
 C:\PS>Export-SPAppPackage -App $instance.App -Path .\exported.spapp
 ```
 

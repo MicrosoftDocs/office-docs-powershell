@@ -37,7 +37,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------EXAMPLE 1------------------- 
 ```
 C:\PS>$a = New-SPUserLicenseMapping -SecurityGroup yoursecuritygroup -License Enterprise
-
 C:\PS>Add-SPUserLicenseMapping -Mapping $a
 ```
 
@@ -47,7 +46,7 @@ This example adds user mappings for the entire farm.
 
 ### -Mapping
 ```yaml
-Type: System.Collections.Generic.List`1[Microsoft.SharePoint.PowerShell.SPUserLicenseMapping]
+Type: List<Microsoft.SharePoint.PowerShell.SPUserLicenseMapping>
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Server 2013, SharePoint Server 2016

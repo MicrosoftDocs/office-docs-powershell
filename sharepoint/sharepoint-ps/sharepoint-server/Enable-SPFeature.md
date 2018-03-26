@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Enables an installed SharePoint Feature at the given scope.
 
-
-
 ## SYNTAX
 
 ### SiteFeature
@@ -52,7 +50,6 @@ This example enables the "MyCustom" site scoped SharePoint Feature at http://som
 ### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>$w = Get-SPWeb http://somesite/myweb | ForEach{ $_.URL }
-
 C:\PS>Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
 ```
 

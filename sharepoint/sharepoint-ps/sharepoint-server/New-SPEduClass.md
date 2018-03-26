@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013
+applicable: SharePoint Server 2013
 title: New-SPEduClass
 schema: 2.0.0
 ---
@@ -39,7 +39,7 @@ Do not use
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -55,7 +55,7 @@ Do not use
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -71,7 +71,7 @@ Do not use
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -103,7 +103,7 @@ Do not use
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Do not use
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Do not use
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Do not use
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ Do not use
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -183,7 +183,7 @@ Do not use
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ Do not use
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -215,7 +215,7 @@ Do not use
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named

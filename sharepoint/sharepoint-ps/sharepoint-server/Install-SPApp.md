@@ -29,9 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE------------ 
 ```
-C:\PS>$spapp = Import-SPAppPackage -Path .\feature-upgrade-v1.spapp -Site http://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
-
-C:\PS>$instance = Install-SPApp -Web http://localhost -Identity $spapp
+PS C:\>$spapp = Import-SPAppPackage -Path .\feature-upgrade-v1.spapp -Site http://site_url -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
+PS C:\>Install-SPApp -Web http://site_url -Identity $spapp
 ```
 
 This example installs an app by first importing the app package, and then installing it.
@@ -112,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Web
-{{Fill Web Description}}
+Specifies the SPWeb object of the app.
 
 ```yaml
 Type: SPWebPipeBind
