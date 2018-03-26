@@ -18,13 +18,13 @@ Learn about the recipient properties that you can use with the _RecipientFilter_
   
 You use the _RecipientFilter_ parameter to create OPATH filters based on the properties of recipient objects in Exchange Server 2016. The _RecipientFilter_ parameter is available in the following cmdlets:
   
-- [New-AddressList](../../../exchange-ps/email-addresses-and-address-books/new-addresslist.md) and [Set-AddressList](../../../exchange-ps/email-addresses-and-address-books/set-addresslist.md)
+- [New-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-addresslist.md) and [Set-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-addresslist.md)
     
-- [New-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/new-dynamicdistributiongroup.md) and [Set-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/set-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/new-dynamicdistributiongroup.md) and [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/set-dynamicdistributiongroup.md)
     
-- [New-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/new-emailaddresspolicy.md) and [Set-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/set-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/new-emailaddresspolicy.md) and [Set-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/set-emailaddresspolicy.md)
     
-- [New-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/new-globaladdresslist.md) and [Set-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/set-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-globaladdresslist.md) and [Set-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-globaladdresslist.md)
     
 ## Filterable recipient properties
 
@@ -169,10 +169,10 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _LitigationHoldOwner_ <br/> | _msExchLitigationHoldOwner_ <br/> |String (wildcards accepted).  <br/> ||
 | _LocaleID_ <br/> | _localeID_ <br/> |Integer  <br/> |For valid values, [Microsoft Locale ID Values](https://go.microsoft.com/fwlink/p/?linkid=229656).  <br/> |
 | _MailboxMoveBatchName_ <br/> | _msExchMailboxMoveBatchName_ <br/> |String (wildcards accepted).  <br/> ||
-| _MailboxMoveFlags_ <br/> | _msExchMailboxMoveFlags_ <br/> |For valid values, see the description of the _Flags_ parameter in[Get-MoveRequest](../../../exchange-ps/move-and-migration/get-moverequest.md).  <br/> ||
+| _MailboxMoveFlags_ <br/> | _msExchMailboxMoveFlags_ <br/> |For valid values, see the description of the _Flags_ parameter in[Get-MoveRequest](../../../exchange-ps/exchange/move-and-migration/get-moverequest.md).  <br/> ||
 | _MailboxMoveRemoteHostName_ <br/> | _msExchMailboxMoveRemoteHostName_ <br/> |String (wildcards accepted).  <br/> ||
 | _MailboxMoveSourceMDB_ <br/> | _msExchMailboxMoveSourceMDBLink_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> ||
-| _MailboxMoveStatus_ <br/> | _msExchMailboxMoveStatus_ <br/> |For valid values, see the description of the _MoveStatus_ parameter in[Get-MoveRequest](../../../exchange-ps/move-and-migration/get-moverequest.md).  <br/> ||
+| _MailboxMoveStatus_ <br/> | _msExchMailboxMoveStatus_ <br/> |For valid values, see the description of the _MoveStatus_ parameter in[Get-MoveRequest](../../../exchange-ps/exchange/move-and-migration/get-moverequest.md).  <br/> ||
 | _MailboxMoveTargetMDB_ <br/> | _msExchMailboxMoveTargetMDBLink_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> ||
 | _MailboxPlan_ <br/> | _msExchParentPlanLink_ <br/> |String (wildcards accepted).  <br/> |Mailbox plans correspond to Office 365 license types. The availability of a license plans is determined by the selections that you make when you enroll your domain.  <br/> |
 | _MailboxRelease_ <br/> | _msExchMailboxRelease_ <br/> |String (wildcards accepted).  <br/> ||
@@ -223,7 +223,7 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _PopEnabled_ <br/> |n/a  <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _PostalCode_ <br/> | _postalCode_ <br/> |String (wildcards accepted).  <br/> ||
 | _PostOfficeBox_ <br/> | _postOfficeBox_ <br/> |String (wildcards accepted).  <br/> ||
-| _PreviousRecipientTypeDetails_ <br/> | _msExchPreviousRecipientTypeDetails_ <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in[Get-Recipient](../../../exchange-ps/users-and-groups/get-recipient.md).  <br/> ||
+| _PreviousRecipientTypeDetails_ <br/> | _msExchPreviousRecipientTypeDetails_ <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
 | _PrimaryGroupId_ <br/> | _primaryGroupId_ <br/> |Integer  <br/> |For domain users, the value of this property is typically 513, which corresponds to the Domain Users group.  <br/> |
 | _PrimarySmtpAddress_ <br/> |n/a  <br/> |String (wildcards accepted).  <br/> ||
 | _ProhibitSendQuota_ <br/> | _mDBOverQuotaLimit_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
@@ -239,8 +239,8 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _RecipientDisplayType_ <br/> | _msExchRecipientDisplayType_ <br/> | `MailboxUser` (0), `DistributionGroup` (1), `PublicFolder` (2), `DynamicDistributionGroup` (3), `Organization` (4), `PrivateDistributionList` (5), `RemoteMailUser` (6). `ConferenceRoomMailbox` (7), or `EquipmentMailbox` (8). <br/> ||
 | _RecipientFilter_ <br/> | _msExchQueryFilter_ <br/> |String (wildcards accepted).  <br/> ||
 | _RecipientLimits_ <br/> | _msExchRecipLimit_ <br/> | `Unlimited` or an integer. <br/> |This property specifies the maximum number of recipients that are allowed in messages sent by the mailbox.  <br/> |
-| _RecipientType_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientType_ parameter in[Get-Recipient](../../../exchange-ps/users-and-groups/get-recipient.md).  <br/> ||
-| _RecipientTypeDetails_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in[Get-Recipient](../../../exchange-ps/users-and-groups/get-recipient.md).  <br/> ||
+| _RecipientType_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientType_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
+| _RecipientTypeDetails_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
 | _RecoverableItemsQuota_ <br/> | _msExchDumpsterQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _RecoverableItemsWarningQuota_ <br/> | _msExchDumpsterWarningQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _RejectMessagesFrom_ <br/> | _unauthOrig_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Blank or non-blank.  <br/> ||

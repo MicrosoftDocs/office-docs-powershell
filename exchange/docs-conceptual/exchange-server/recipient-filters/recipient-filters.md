@@ -48,21 +48,21 @@ The following parameters are considered precanned filters:
 
 Precanned filters are available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/new-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/new-dynamicdistributiongroup.md)
 
-- [Set-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/set-dynamicdistributiongroup.md)
+- [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/set-dynamicdistributiongroup.md)
 
-- [New-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/new-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/new-emailaddresspolicy.md)
 
-- [Set-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/set-emailaddresspolicy.md)
+- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/set-emailaddresspolicy.md)
 
-- [New-AddressList](../../../exchange-ps/email-addresses-and-address-books/new-addresslist.md)
+- [New-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-addresslist.md)
 
-- [Set-AddressList](../../../exchange-ps/email-addresses-and-address-books/set-addresslist.md)
+- [Set-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-addresslist.md)
 
-- [New-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/new-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-globaladdresslist.md)
 
-- [Set-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/set-globaladdresslist.md)
+- [Set-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-globaladdresslist.md)
 
 ### Example
 
@@ -94,21 +94,21 @@ If precanned filters don't meet your needs for creating or modifying dynamic dis
 
 The recipient filter parameter is available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/new-dynamicdistributiongroup.md)
+- [New-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/new-dynamicdistributiongroup.md)
 
-- [Set-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/set-dynamicdistributiongroup.md)
+- [Set-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/set-dynamicdistributiongroup.md)
 
-- [New-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/new-emailaddresspolicy.md)
+- [New-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/new-emailaddresspolicy.md)
 
-- [Set-EmailAddressPolicy](../../../exchange-ps/email-addresses-and-address-books/set-emailaddresspolicy.md)
+- [Set-EmailAddressPolicy](../../../exchange-ps/exchange/email-addresses-and-address-books/set-emailaddresspolicy.md)
 
-- [New-AddressList](../../../exchange-ps/email-addresses-and-address-books/new-addresslist.md)
+- [New-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-addresslist.md)
 
-- [Set-AddressList](../../../exchange-ps/email-addresses-and-address-books/set-addresslist.md)
+- [Set-AddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-addresslist.md)
 
-- [New-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/new-globaladdresslist.md)
+- [New-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/new-globaladdresslist.md)
 
-- [Set-GlobalAddressList](../../../exchange-ps/email-addresses-and-address-books/set-globaladdresslist.md)
+- [Set-GlobalAddressList](../../../exchange-ps/exchange/email-addresses-and-address-books/set-globaladdresslist.md)
 
 For more information about the filterable properties you can use with the _RecipientFilter_ parameter, see [Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md).
 
@@ -135,33 +135,33 @@ Get-Mailbox -Identity Ayla | Format-List
 
 The _Filter_ parameter is available for the following recipient cmdlets:
 
-- [Get-CASMailbox](../../../exchange-ps/client-access/get-casmailbox.md)
+- [Get-CASMailbox](../../../exchange-ps/exchange/client-access/get-casmailbox.md)
 
-- [Get-Contact](../../../exchange-ps/users-and-groups/get-contact.md)
+- [Get-Contact](../../../exchange-ps/exchange/users-and-groups/get-contact.md)
 
-- [Get-DistributionGroup](../../../exchange-ps/users-and-groups/get-distributiongroup.md)
+- [Get-DistributionGroup](../../../exchange-ps/exchange/users-and-groups/get-distributiongroup.md)
 
-- [Get-DynamicDistributionGroup](../../../exchange-ps/users-and-groups/get-dynamicdistributiongroup.md)
+- [Get-DynamicDistributionGroup](../../../exchange-ps/exchange/users-and-groups/get-dynamicdistributiongroup.md)
 
-- [Get-Group](../../../exchange-ps/users-and-groups/get-group.md)
+- [Get-Group](../../../exchange-ps/exchange/users-and-groups/get-group.md)
 
-- [Get-Mailbox](../../../exchange-ps/mailboxes/get-mailbox.md)
+- [Get-Mailbox](../../../exchange-ps/exchange/mailboxes/get-mailbox.md)
 
-- [Get-MailContact](../../../exchange-ps/users-and-groups/get-mailcontact.md)
+- [Get-MailContact](../../../exchange-ps/exchange/users-and-groups/get-mailcontact.md)
 
-- [Get-MailPublicFolder](../../../exchange-ps/sharing-and-collaboration/get-mailpublicfolder.md)
+- [Get-MailPublicFolder](../../../exchange-ps/exchange/sharing-and-collaboration/get-mailpublicfolder.md)
 
-- [Get-MailUser](../../../exchange-ps/users-and-groups/get-mailuser.md)
+- [Get-MailUser](../../../exchange-ps/exchange/users-and-groups/get-mailuser.md)
 
-- [Get-Recipient](../../../exchange-ps/users-and-groups/get-recipient.md)
+- [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md)
 
-- [Get-RemoteMailbox](../../../exchange-ps/federation-and-hybrid/get-remotemailbox.md)
+- [Get-RemoteMailbox](../../../exchange-ps/exchange/federation-and-hybrid/get-remotemailbox.md)
 
-- [Get-SecurityPrincipal](../../../exchange-ps/users-and-groups/get-securityprincipal.md)
+- [Get-SecurityPrincipal](../../../exchange-ps/exchange/users-and-groups/get-securityprincipal.md)
 
-- [Get-UMMailbox](../../../exchange-ps/unified-messaging/get-ummailbox.md)
+- [Get-UMMailbox](../../../exchange-ps/exchange/unified-messaging/get-ummailbox.md)
 
-- [Get-User](../../../exchange-ps/users-and-groups/get-user.md)
+- [Get-User](../../../exchange-ps/exchange/users-and-groups/get-user.md)
 
 For more information about the filterable properties you can use with the _Filter_ parameter, see [Filterable properties for the Filter parameter](filter-properties.md).
 
@@ -174,7 +174,7 @@ Get-User -Filter {Title -like 'Manager*'}
 ```
 
 ## Custom filters using the ContentFilter parameter
-You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](../../../exchange-ps/mailboxes/new-mailboxexportrequest.md) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
+You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](../../../exchange-ps/exchange/mailboxes/new-mailboxexportrequest.md) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
 
 ### Example
 This example creates an export request that searches Ayla's mailbox for messages where the body contains the phrase "company prospectus". If that phrase is found, the command exports all messages with that phrase to a .pst file.
