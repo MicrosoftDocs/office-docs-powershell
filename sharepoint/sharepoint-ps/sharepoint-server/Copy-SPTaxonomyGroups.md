@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Copy-SPTaxonomyGroups
 schema: 2.0.0
 ---
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Copy-SPTaxonomyGroups
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Copies Managed Metadata Taxonomy Groups from SharePoint on-premises to SharePoint Online.
 
 ## SYNTAX
 
@@ -19,27 +19,35 @@ Copy-SPTaxonomyGroups [-AssignmentCollection <SPAssignmentCollection>] [-AuthEnd
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Copy-SPTaxonomyGroups cmdlet to copy specified Metadata groups from an on-premises environment to SharePoint Online in a Hybrid SharePoint setup. SharePoint Online becomes the authoritative source for the copied Taxonomy Group. All updates to the Taxonomy Group must be made in SharePoint Online.  Once a Taxonomy Group is copied, it cannot be re-copied.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$credential = Get-Credential
+PS C:\>Copy-SPTaxonomyGroups -LocalTermStoreName "Managed Metadata Service Application Proxy" -LocalSiteUrl "http://sharepoint" -RemoteSiteUrl "http://contoso.sharepoint.com" -GroupNames "Group1","Group2" -Credential $credential
 ```
 
-{{ Add example description here }}
+This example copies two taxonomy groups "Group1" and "Group2" from local Term Store to the remote Term Store in "http://contoso.com". These two sites have been enabled with Hybrid Taxonomy.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+
+Manages objects for the purpose of proper disposal.
+Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store.
+If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -49,13 +57,13 @@ Accept wildcard characters: False
 ```
 
 ### -AuthEndpoint
-{{Fill AuthEndpoint Description}}
+Specifies the Azure Active Directory Graph API authentication endpoint. By default, the well-known endpoint will be used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -65,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{Fill Credential Description}}
+Specifies the Taxonomy Term Store administrator credential of remote SharePoint Online Term Store.
+
+Writes data to remote Term Store, so a Term Store Administrator's credential is needed to perform the operations.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -81,13 +91,13 @@ Accept wildcard characters: False
 ```
 
 ### -GraphApiEndpoint
-{{Fill GraphApiEndpoint Description}}
+Specifies the Azure Active Directory Graph API endpoint. By default, the well-known endpoint will be used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -97,13 +107,13 @@ Accept wildcard characters: False
 ```
 
 ### -GroupNames
-{{Fill GroupNames Description}}
+Specifies the name array of Taxonomy groups in local on-premises term store that will be copied to remote SharePoint Online Term store.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -113,13 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalSiteUrl
-{{Fill LocalSiteUrl Description}}
+Specifies the Url of local SharePoint on-premises site that contains the local Taxonomy Term Store.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -129,13 +139,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalTermStoreName
-{{Fill LocalTermStoreName Description}}
+Specifies the name of local Taxonomy Term Store in the SharePoint on-premises farm.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -145,13 +155,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteSiteUrl
-{{Fill RemoteSiteUrl Description}}
+Specifies the Url of remote SharePoint Online site that contains remote Taxonomy Term Store.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named

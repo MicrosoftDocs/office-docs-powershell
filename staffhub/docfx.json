@@ -59,7 +59,10 @@
       "ms.date" : "09/25/2017",
       "ms.topic" : "reference",
       "ms.service" : "staffhub-powershell",
-      "ms.devlang" : "powershell"
+      "ms.devlang" : "powershell",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
+      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {},
     "template": [],

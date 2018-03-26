@@ -27,22 +27,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1-------------------- 
 ```
-C:\PS>$pr = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")}
-
-          C:\PS>Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $pr.Id -PlugInId 0
+C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+C:\PS>Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $proxy.Id -PlugInId 0
 ```
 
 This example adds a pluggable security trimmer that is related to the User Profile service application proxy.
-
-
-### -----------------EXAMPLE 2---------------------- 
-```
-C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")} $proxy.Id
-
-          C:\PS>Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $proxy.Id -PlugInId 0
-```
-
-This example turns on security trimming in a User Profile Service Application.
 
 ## PARAMETERS
 

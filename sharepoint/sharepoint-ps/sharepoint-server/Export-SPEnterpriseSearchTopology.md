@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-Export-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename topology.xml
+C:\PS>Export-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename topology.xml
 ```
 
 This example exports the topology to a file named topology.xml in the search service application referenced by $ssa.

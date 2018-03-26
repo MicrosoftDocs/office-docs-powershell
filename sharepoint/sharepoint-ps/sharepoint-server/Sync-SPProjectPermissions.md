@@ -35,18 +35,17 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Sync-SPProjectPermissions -Url http://pwa_site -Type Full
 ```
 
-{{ Add example description here }}
-
+Performs a full sync against the PWA site http://pwa_site.
 
 ## PARAMETERS
 
 ### -Url
 Specifies the URL of the Project Web App instance for which you want to synch permissions.
 
-The type must be a valid URL, in the form http://\<ServerName\>/\<PWAName\>.
+The type must be a valid URL, in the form http://pwa_site.
 
 ```yaml
 Type: Uri
@@ -83,6 +82,10 @@ Accept wildcard characters: False
 Specifies the type of sync to perform: full or incremental.
 
 This parameter is used with SharePoint permission mode.
+
+Valid values are:
+
+Full, Incremental, AllGroups
 
 ```yaml
 Type: SharePointPermissionModeSyncType

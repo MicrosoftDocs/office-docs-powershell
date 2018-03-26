@@ -28,7 +28,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE---------------------- 
 ```
-C:\PS>Import-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -Path "\\server_name\folder_name\file_name.cab"
+PS C:\>$subscription = Get-SPSIteSubscription -Identity http://site_url
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Managed Metadata Service Connection'}
+PS C:\>Import-SPMetadataWebServicePartitionData -Identity $subscription -ServiceProxy $proxy -Path "\\server_name\folder_name\file_name.cab"
 ```
 
 This example restores a backup of Metadata Service application data for a specific site subscription on a Metadata Service application.

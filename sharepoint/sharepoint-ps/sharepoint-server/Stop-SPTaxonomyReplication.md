@@ -8,7 +8,7 @@ schema: 2.0.0
 # Stop-SPTaxonomyReplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Terminates Hybrid SharePoint Taxonomy replication from SharePoint Online site to local SharePoint on-premises site.
 
 ## SYNTAX
 
@@ -18,21 +18,23 @@ Stop-SPTaxonomyReplication [-AssignmentCollection <SPAssignmentCollection>] -Cre
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Stop-SPTaxonomyReplication cmdlet to terminate Hybrid SharePoint Taxonomy replication from SharePoint Online site to local SharePoint on-premises site. The Taxonomy Groups Replication timer job will be killed and a full replication from SharePoint Online Taxonomy store to local SharePoint on-premises store will be performed.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Stop-SPTaxonomyReplication -Credential (Get-Credential)
 ```
 
-{{ Add example description here }}
+This example performs a full replication and deletes the Taxonomy Groups Replication timer job. If the full replication fails, you can run the cmdlet again.  The credential is a SharePoint Online tenant administrator credential.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -48,7 +50,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{Fill Credential Description}}
+This is the Taxonomy Term Store administrator credential of remote SharePoint Online Term Store.
+
+Fetches full taxonomy data properties, so a Term Store Administrator's credential is needed to perform the operations.
 
 ```yaml
 Type: PSCredential

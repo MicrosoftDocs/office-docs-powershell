@@ -216,13 +216,13 @@ Accept wildcard characters: False
 ```
 
 ### -FullTrustBinDeployment
-{{Fill FullTrustBinDeployment Description}}
+Specifies whether to deploy using fully trusted bin.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: False
 Position: Named

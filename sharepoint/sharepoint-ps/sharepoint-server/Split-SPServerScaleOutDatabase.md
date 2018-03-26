@@ -40,20 +40,17 @@ Use the Split-SPServerScaleOutDatabase cmdlet to move a specified percentage of 
 
 ### ---------------EXAMPLE---------------
 ```
-$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-database = $databases[0]
-Split-SPServerScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
+PS C:\>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+PS C:\>$database = $databases[0]
+PS C:\>Split-SPServerScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
 ```
 
 This example creates a new scale-out database named Database2 on the MyDatabaseServer database server in the given service application. The example also moves 30 percent of the data from the upper side of the data range in the first scale-out database of the given service application.
-
 
 ## PARAMETERS
 
 ### -NewDatabaseName
 Specifies the name of a new scale-out database that you are creating.
-
-
 
 ```yaml
 Type: String
