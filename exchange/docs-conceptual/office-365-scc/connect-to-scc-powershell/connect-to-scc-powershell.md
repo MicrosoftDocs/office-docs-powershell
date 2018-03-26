@@ -16,7 +16,7 @@ description: "Learn how to connect to Security &amp; Compliance Center PowerShel
 Office 365 Security &amp; Compliance Center PowerShell allows you to manage your Office 365 Security &amp; Compliance Center settings from the command line. You use Windows PowerShell on your local computer to create a remote PowerShell session to the Security &amp; Compliance Center. It's a simple three-step process where you enter your Office 365 credentials, provide the required connection settings, and then import the Security &amp; Compliance Center cmdlets into your local Windows PowerShell session so that you can use them.
   
 > [!NOTE]
-> If you want to use multi-factor authentication (MFA) to connect to Security &amp; Compliance Center PowerShell, or if your organization uses federated authentication, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Office 365 Security &amp; Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md). For some features (for example, mailbox archiving), the Security &amp; Compliance Center links to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online instead of the Security &amp; Compliance Center. For more information, see [Connect to Exchange Online PowerShell](../../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md). 
+> If you want to use multi-factor authentication (MFA) to connect to Security &amp; Compliance Center PowerShell, or if your organization uses federated authentication, you need to download and use the Exchange Online Remote PowerShell Module. For more information, see [Connect to Office 365 Security &amp; Compliance Center PowerShell using multi-factor authentication](mfa-connect-to-scc-powershell.md). For some features (for example, mailbox archiving), the Security &amp; Compliance Center links to existing functionality in the Exchange admin center (EAC). To use PowerShell with these features, you need to connect to Exchange Online instead of the Security &amp; Compliance Center. For more information, see [Connect to Exchange Online PowerShell](../../../exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md). 
   
 For more information about the Security &amp; Compliance Center, see [Office 365 Security &amp; Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=627054).
   
@@ -40,7 +40,7 @@ For more information about the Security &amp; Compliance Center, see [Office 365
     
   - Windows Server 2008 R2 SP1\*
     
-    \* You need to install the Microsoft.NET Framework 4.5 or later and then either the Windows Management Framework 3.0 or the Windows Management Framework 4.0. For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868) and[Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757) or[Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344).
+    \* You need to install the Microsoft.NET Framework 4.5 or later and then either the Windows Management Framework 3.0 or the Windows Management Framework 4.0. For more information, see [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=257868) and [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?LinkId=272757) or [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344).
     
 - Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You get the following error when you try to connect:
     
@@ -70,7 +70,7 @@ For more information about the Security &amp; Compliance Center, see [Office 365
     $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
-    **Note**: For Office 365 Germany, use the  _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`
+    **Note**: For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`
     
 3. Run the following command.
     
