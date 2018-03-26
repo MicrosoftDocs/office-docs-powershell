@@ -27,11 +27,11 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
     
   2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
     
-     ![Download the Exchange Online PowerShell Module from the Hybrid tab in the EAC](../media/24645e56-8b11-4c0f-ace4-09bdb2703562.png)
+     ![Download the Exchange Online PowerShell Module from the Hybrid tab in the EAC](../../../media/24645e56-8b11-4c0f-ace4-09bdb2703562.png)
   
   3. In the **Application Install** window that opens, click **Install**.
     
-     ![Click Install in the Exchange Online PowerShell Module window](../media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
+     ![Click Install in the Exchange Online PowerShell Module window](../../../media/0fd389a1-a32d-4e2f-bf5f-78e9b6407d4c.png)
   
 - Windows Remote Management (WinRM) on your computer needs to allow basic authentication (it's enabled by default). To verify that basic authentication is enabled, run this command in a Command Prompt:
     
@@ -86,13 +86,13 @@ If your account uses multi-factor authentication (MFA) or federated authenticati
 
 3. In the sign-in window that opens, enter your password, and then click **Sign in**.
     
-     ![Enter your password in the Exchange Online Remote PowerShell window.](../media/b85d80d9-1043-4c7c-8f14-d87d8d56b188.png)
+     ![Enter your password in the Exchange Online Remote PowerShell window.](../../../media/b85d80d9-1043-4c7c-8f14-d87d8d56b188.png)
   
     For MFA, a verification code is generated and delivered based on the verification response option that's configured for your account (for example, a text message or the Azure Authenticator app on your mobile phone).
     
 4. **(MFA only)**: In the verification window that opens, enter the verification code, and then click **Sign in**.
     
-     ![Enter your verification code in the Exchange Online Remote PowerShell window.](../media/d3a405ce-5364-4732-a7bb-2cc9c678da2d.png)
+     ![Enter your verification code in the Exchange Online Remote PowerShell window.](../../../media/d3a405ce-5364-4732-a7bb-2cc9c678da2d.png)
   
 ## How do you know this worked?
 
