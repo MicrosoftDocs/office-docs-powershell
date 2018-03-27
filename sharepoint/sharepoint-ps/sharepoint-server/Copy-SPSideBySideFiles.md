@@ -24,7 +24,7 @@ In SharePoint Server 2016, zero down time in-place upgrade is available. If the 
 
 ### Example 1 
 ```
-Copy-SPSideBySideFiles -LogFile "C:\CopySideBySideFiles.log"
+PS C:\>Copy-SPSideBySideFiles -LogFile "C:\CopySideBySideFiles.log"
 ```
 
 This example copies SideBySide files and writes a log data of the copy process to the CopySideBySideFiles.log file.

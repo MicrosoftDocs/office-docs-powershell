@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Imports a Business Data Connectivity Model.
 
-
-
 ## SYNTAX
 
 ### Catalog
@@ -43,7 +41,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$MetadataStore = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Catalog" -ServiceConext http://contoso
-
 C:\PS>Import-SPBusinessDataCatalogModel -Path "C:\folder\model.bdcm" -Identity $MetadataStore
 ```
 
@@ -252,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
-{{Fill ServiceContext Description}}
+Specifies the service context to set.
 
 ```yaml
 Type: SPServiceContextPipeBind
