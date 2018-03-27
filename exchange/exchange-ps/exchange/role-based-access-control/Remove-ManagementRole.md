@@ -20,7 +20,7 @@ Remove-ManagementRole [-Identity] <RoleIdParameter> [-Confirm] [-DomainControlle
 ```
 
 ## DESCRIPTION
-You need to remove all the management role assignments from a role before you delete it. If the role is the parent of child roles, the child roles must be removed before you remove the parent role, or you must use the Recurse parameter when you remove the parent role. You can only remove custom roles. Built-in roles, such as the Mail Recipients role, can't be removed. For more information about how to remove a custom role, see Remove a role.
+You need to remove all the management role assignments from a role before you delete it. If the role is the parent of child roles, the child roles must be removed before you remove the parent role, or you must use the Recurse parameter when you remove the parent role. You can only remove custom roles. Built-in roles, such as the Mail Recipients role, can't be removed. For more information about how to remove a custom role, see Remove a role (https://technet.microsoft.com/library/dd335178.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -56,7 +56,7 @@ Remove-ManagementRole "In-house scripts" -UnScopedTopLevel
 
 This example removes the In-house scripts unscoped top-level management role. Because this is an unscoped top-level role, the UnScopedTopLevel switch must be used.
 
-For more information about unscoped top-level management roles, see Understanding management roles (Exchange 2016).
+For more information about unscoped top-level management roles, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 ## PARAMETERS
 

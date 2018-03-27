@@ -331,7 +331,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 
 - GUID
 
-For more information about address book policies, see Address book policies in Exchange 2016.
+For more information about address book policies, see Address book policies (https://technet.microsoft.com/library/hh529948.aspx).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter

@@ -47,7 +47,7 @@ Get-App -OrganizationApp
 
 This example displays the summary list of apps installed by administrators for the entire organization.
 
-For information about installing or removing apps for Outlook, see Install or remove apps for Outlook for your organization.
+For information about installing or removing apps for Outlook, see Install or remove add-ins for Outlook for your organization (https://technet.microsoft.com/library/jj943752.aspx).
 
 ## PARAMETERS
 

@@ -53,7 +53,7 @@ Get-MailboxSearch "Project Hamilton" | Format-List
 
 This example retrieves all properties for the mailbox search Project Hamilton.
 
-The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters.
+The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters (https://technet.microsoft.com/library/bb124388.aspx).
 
 ### Example 3
 ```

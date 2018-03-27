@@ -80,7 +80,7 @@ Throttling policy settings are stored in Active Directory.
 
 By default, there is one default user throttling policy named GlobalThrottlingPolicy with a throttling scope of Global. Microsoft Setup creates this policy as part of the Client Access server role. You shouldn't replace, re-create, or remove the existing default throttling policy. However, you can edit any additional throttling policies with the scope of Organization or Regular if you want to change your user throttling settings. You can create polices with the scope of Organization or Regular using the New-ThrottlingPolicy cmdlet.
 
-For more information about how to control the resources consumed by individual users, see User workload management in Exchange 2016.
+For more information about how to control the resources consumed by individual users, see User workload management (https://technet.microsoft.com/library/jj150503.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -1266,7 +1266,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxStatsSearchMailboxes
-The DiscoveryMaxStatsSearchMailboxes parameter specifies the maximum number of mailboxes that a user can search in an In-Place eDiscovery search and still be able to view the keyword statistics. When the number of mailboxes configured with the DiscoveryMaxStatsSearchMailboxes parameter is exceeded, these keyword statistics won't be available. In this case, a user must copy the search results to a discovery mailbox to view the keyword statistics for the discovery search. For more information, see In-Place eDiscovery in Exchange 2016.
+The DiscoveryMaxStatsSearchMailboxes parameter specifies the maximum number of mailboxes that a user can search in an In-Place eDiscovery search and still be able to view the keyword statistics. When the number of mailboxes configured with the DiscoveryMaxStatsSearchMailboxes parameter is exceeded, these keyword statistics won't be available. In this case, a user must copy the search results to a discovery mailbox to view the keyword statistics for the discovery search. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
 ```yaml
 Type: Unlimited
@@ -2390,7 +2390,7 @@ The ThrottlingPolicyScope parameter specifies the scope of the throttling policy
 
 - Global: This scope is reserved for the default throttling policy.
 
-For more information about throttling policy scopes, see User workload management in Exchange 2016.
+For more information about throttling policy scopes, see User workload management (https://technet.microsoft.com/library/jj150503.aspx).
 
 ```yaml
 Type: Regular | Organization | Global

@@ -143,7 +143,7 @@ The CircularLoggingEnabled parameter specifies whether circular logging is enabl
 
 - $false: Circular logging is disabled. This is the default value.
 
-For more information about circular logging, see .
+For more information about circular logging, see Exchange Native Data Protection (https://technet.microsoft.com/library/dd876874.aspx#ENDP).
 
 ```yaml
 Type: $true | $false
@@ -187,7 +187,7 @@ The DataMoveReplicationConstraint parameter specifies the throttling behavior fo
 
 - SecondDatacenter: At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
 
-Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see Active Manager.
+Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see Active Manager (https://technet.microsoft.com/library/dd776123.aspx).
 
 ```yaml
 Type: None | SecondCopy | SecondDatacenter | AllDatacenters | AllCopies
@@ -211,7 +211,7 @@ Valid values are 00:00:00 to 24855.03:14:07. The default value is 14.00:00:00 (1
 
 This setting applies to all mailboxes in the database that don't have their own deleted item retention value configured.
 
-For more information, see Recoverable Items folder in Exchange 2016.
+For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
 
 ```yaml
 Type: EnhancedTimeSpan

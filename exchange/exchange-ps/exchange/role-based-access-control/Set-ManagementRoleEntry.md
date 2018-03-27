@@ -23,7 +23,7 @@ Set-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-AddParameter] [-Con
 ## DESCRIPTION
 The Set-ManagementRoleEntry cmdlet changes the available parameters on an existing role entry. If you want to add parameters to a role entry, the parameters must exist in the role entry in the parent management role. If you want to remove parameters from a role entry, there can be no role entries in child roles that inherit those parameters from the role entry you want to change. You can't change role entries associated with built-in roles.
 
-For more information about management role entries, see Understanding management roles (Exchange 2016).
+For more information about management role entries, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -62,7 +62,7 @@ This example adds the Location parameter to the MailboxAudit custom script on th
 ### -Identity
 The Identity parameter specifies the role entry to change. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
 
-For more information about how management role entries work, see Understanding management roles (Exchange 2016).
+For more information about how management role entries work, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 If the role entry name contains spaces, enclose it in quotation marks (").
 

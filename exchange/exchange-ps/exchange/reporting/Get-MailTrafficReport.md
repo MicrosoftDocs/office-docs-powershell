@@ -44,11 +44,11 @@ Spam detections
 
 Spam analysis - content-filtered spam
 
-- Spam\_AdditionalSpamFiltered: Messages filtered based on advanced spam filters that have been enabled. For details about the advanced spam filter, see Advanced Spam Filtering Options.
+- Spam\_AdditionalSpamFiltered: Messages filtered based on advanced spam filters that have been enabled. For details about the advanced spam filter, see Advanced spam filtering \(ASF\) options (https://technet.microsoft.com/library/jj200750.aspx) Options.
 
-- Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see Configure your content filter policies.
+- Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see Configure your spam filter policies (https://technet.microsoft.com/library/jj200684.aspx).
 
-- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see What's the difference between junk email and bulk email?
+- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see What's the difference between junk email and bulk email? (https://technet.microsoft.com/library/dn720441.aspx)
 
 - Spam\_ContentScanFiltered: Messages that were filtered based on the message content.
 
@@ -58,9 +58,9 @@ Spam analysis - content-filtered spam
 
 Spam analysis - non-spam messages
 
-- NonSpam\_AdditionalSpamFilterPassed: Messages that were passed based on advanced spam filters that have been enabled. For details about the advanced spam filters, see Advanced Spam Filtering Options.
+- NonSpam\_AdditionalSpamFilterPassed: Messages that were passed based on advanced spam filters that have been enabled. For details about the advanced spam filters, see Advanced spam filtering \(ASF\) options (https://technet.microsoft.com/library/jj200750.aspx) Options.
 
-- NonSpam\_AllowList: Messages that were passed because the sender was on a spam filter allow list. For more details on how to configure these lists, see Configure your content filter policies.
+- NonSpam\_AllowList: Messages that were passed because the sender was on a spam filter allow list. For more details on how to configure these lists, see Configure your spam filter policies (https://technet.microsoft.com/library/jj200684.aspx).
 
 - NonSpam\_BulkPassed: Messages that were determined not to be bulk mail.
 
@@ -76,7 +76,7 @@ Spam analysis - non-spam messages
 
 Bulk mail
 
-- BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see Use transport rules to configure bulk email filtering.
+- BCL0: Messages that are not bulk mail are marked with Bulk Complaint Level (BCL) value of 0. For details on how to use BCL to mark messages as spam, see Use transport rules to configure bulk email filtering (https://technet.microsoft.com/library/dn720438.aspx).
 
 - BCL1 through BCL9: Messages with BCL rating of 1 through 9.
 

@@ -24,7 +24,7 @@ New-OutlookProtectionRule [-Name] <String> -ApplyRightsProtectionTemplate <RmsTe
 ## DESCRIPTION
 Outlook protection rules are administrator-created rules applied before a user sends a message using Outlook. Outlook inspects message content and protects messages by applying Active Directory Rights Management Services (AD RMS) rights templates.
 
-For more information, see Outlook protection rules.
+For more information, see Outlook protection rules (https://technet.microsoft.com/library/dd638178.aspx).
 
 Outlook protection rules created without a condition apply to all messages.
 

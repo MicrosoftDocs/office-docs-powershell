@@ -33,7 +33,7 @@ Enable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
 
 This example enables the default Bing Maps app installed for user Tony.
 
-For more information, see Manage user access to apps for Outlook.
+For more information, see Manage user access to add-ins for Outlook (https://technet.microsoft.com/library/jj943757.aspx).
 
 ### Example 2
 ```
@@ -42,7 +42,7 @@ Enable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
 
 This example enables the administrator-installed app FinanceTestApp for user Tony.
 
-For more information, see Manage user access to apps for Outlook.
+For more information, see Manage user access to add-ins for Outlook (https://technet.microsoft.com/library/jj943757.aspx).
 
 ## PARAMETERS
 

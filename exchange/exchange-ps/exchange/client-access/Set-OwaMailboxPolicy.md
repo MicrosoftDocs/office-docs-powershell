@@ -895,6 +895,8 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The SMimeEnabled parameter specifies whether users can download the S/MIME control for Outlook Web App and use it to read and compose signed and encrypted messages. By default, the SMimeEnabled parameter is set to $true. If the SMimeEnabled parameter is set to $false, users are unable to read or compose messages that are opaque-signed or encrypted. Messages that are clear-signed can be read but not composed, and their signatures aren't validated.
 
+**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see S/MIME for message signing and encryption (https://technet.microsoft.com/library/dn626158.aspx).
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)

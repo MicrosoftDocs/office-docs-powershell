@@ -20,7 +20,7 @@ Get-PartnerApplication [[-Identity] <PartnerApplicationIdParameter>] [-DomainCon
 ```
 
 ## DESCRIPTION
-You can configure partner applications such as Microsoft SharePoint to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business.
+You can configure partner applications such as Microsoft SharePoint to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business (https://technet.microsoft.com/en-us/library/jj150480.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

@@ -37,7 +37,7 @@ $a= Get-DistributionGroupMember -Identity "Finance Team"; Set-App -OrganizationA
 
 This example changes the organization app named FinanceTestApp, which was installed to everyone in the organization, to be provided to members of the Finance Team group and to be enabled by default.
 
-For more information, see Manage user access to apps for Outlook.
+For more information, see Manage user access to add-ins for Outlook (https://technet.microsoft.com/library/jj943757.aspx).
 
 ### Example 2
 ```
@@ -46,7 +46,7 @@ Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -Enabled
 
 This example disables the organization app named FinanceTestApp across the organization and hides it from end user view.
 
-For more information, see Manage user access to apps for Outlook.
+For more information, see Manage user access to add-ins for Outlook (https://technet.microsoft.com/library/jj943757.aspx).
 
 ## PARAMETERS
 

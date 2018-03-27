@@ -28,7 +28,7 @@ If the ManagedBy property has been populated with role group managers, the user 
 
 If the role group is a linked role group, you can't use the Update-RoleGroupMember cmdlet to modify members on the role group. Instead, you need to modify members on the foreign universal security group (USG) that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
 
-For more information about role groups, see Understanding management role groups.
+For more information about role groups, see Understanding management role groups (https://technet.microsoft.com/library/dd638105.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -53,7 +53,7 @@ This example sets the Recipient Administrators role group membership list to Mar
 Update-RoleGroupMember "Organization Management" -Members @{Add=(Get-Mailbox David).Identity, (Get-Group "Help Desk Managers").Identity; Remove=(Get-Mailbox "Christine").Identity, (Get-Mailbox "Isabel").Identity}
 ```
 
-This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic Modifying multivalued properties. When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:
+This example adds multiple members to, and removes multiple members from, a role group without replacing all the existing members on the role group. This example makes use of multivalued property syntax that's described in the topic Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx). When you use this multivalued property syntax, you must manually retrieve the Identity of the mailbox or security group that you want to add to or remove from the role group. Use the syntax that matches the type of object you want to add or remove:
 
 Mailbox: If you want to add or remove a mailbox, use the syntax (Get-Mailbox "\<Alias or Name\>").Identity
 

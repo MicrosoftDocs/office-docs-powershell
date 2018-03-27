@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-The Language parameter specifies the language of the message. (for example, en for English or ja for Japanese). For the complete list of supported languages, see https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages.
+The Language parameter specifies the language of the message \(for example, en for English or ja for Japanese). For the list of supported language codes, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages).
 
 You need to use this parameter with the DsnCode or QuotaMessageType parameters.
 

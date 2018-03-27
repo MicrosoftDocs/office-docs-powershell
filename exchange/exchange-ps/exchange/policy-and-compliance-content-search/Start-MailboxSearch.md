@@ -26,7 +26,7 @@ When restarting a search, any previous results returned by the same search and c
 
 In Exchange 2013 or later, mailbox searches are also used for In-Place Hold. However, you can't start or stop In-Place Hold using the Start-MailboxSearch and Stop-MailboxSearch cmdlets.
 
-For more details, see In-Place Hold and Litigation Hold in Exchange 2016 and In-Place eDiscovery in Exchange 2016.
+For more details, see In-Place Hold and Litigation Hold (https://technet.microsoft.com/library/ff637980.aspx) and In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

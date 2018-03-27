@@ -20,7 +20,7 @@ Remove-PartnerApplication [-Identity] <PartnerApplicationIdParameter> [-Confirm]
 ```
 
 ## DESCRIPTION
-You can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the Remove-PartnerApplication cmdlet to remove a partner application configuration if the application no longer needs to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business.
+You can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the Remove-PartnerApplication cmdlet to remove a partner application configuration if the application no longer needs to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business (https://technet.microsoft.com/en-us/library/jj150480.aspx).
 
 We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
 

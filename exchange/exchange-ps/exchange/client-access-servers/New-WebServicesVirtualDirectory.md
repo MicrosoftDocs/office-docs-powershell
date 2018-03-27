@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSProxyEnabled
-The MRSProxyEnabled parameter specifies whether to enable MRSProxy for the Mailbox server. MRSProxy is a service that runs on Mailbox servers in a remote forest and helps to proxy a mailbox move. For more information, see Mailbox moves in Exchange 2016.
+The MRSProxyEnabled parameter specifies whether to enable MRSProxy for the Mailbox server. MRSProxy is a service that runs on Mailbox servers in a remote forest and helps to proxy a mailbox move. For more information, see Mailbox moves (https://technet.microsoft.com/library/jj150543.aspx).
 
 ```yaml
 Type: $true | $false

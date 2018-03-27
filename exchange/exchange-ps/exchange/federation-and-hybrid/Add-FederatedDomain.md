@@ -24,7 +24,7 @@ Add-FederatedDomain [[-Identity] <OrganizationIdParameter>] -DomainName <SmtpDom
 ## DESCRIPTION
 You can add any registered Internet domain to the federated organization identifier. You must prove domain ownership by creating a TXT record in the Domain Name System (DNS) zone of each domain you add.
 
-For more details, see Federation.
+For more details, see Federation (https://technet.microsoft.com/library/dd335047.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

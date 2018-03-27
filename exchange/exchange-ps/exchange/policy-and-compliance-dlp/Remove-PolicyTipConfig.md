@@ -43,7 +43,7 @@ This example removes all the custom Russian Policy Tips.
 ### -Identity
 The Identity parameter specifies the custom Policy Tip you want to remove. You can use any value that uniquely identifies the custom Policy Tip. For example:
 
-- \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see Supported languages for DSNs and NDRs in Exchange 2016. Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
+- \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
 
 - The value Url
 

@@ -39,7 +39,7 @@ Get-TransportRuleAction -Name DeleteMessage | Format-List
 
 This example retrieves detailed information about the action named DeleteMessage.
 
-For more information about pipelining, see Pipelining. For more information about how to work with the output of a command, see Working with command output.
+For more information about pipelining, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx). For more information about how to work with the output of a command, see Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ## PARAMETERS
 

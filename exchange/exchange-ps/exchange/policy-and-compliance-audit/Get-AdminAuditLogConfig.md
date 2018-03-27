@@ -32,9 +32,9 @@ Get-AdminAuditLogConfig | Format-List
 
 This example displays the administrator audit logging settings. The output of the Get-AdminAuditLogConfig cmdlet is piped to the Format-List cmdlet. For more information about piping and the Format-List cmdlet, see the following topics:
 
-- Pipelining
+- Pipelining (https://technet.microsoft.com/library/aa998260.aspx)
 
-- Working with command output
+- Working with command output (https://technet.microsoft.com/library/bb123533.aspx)
 
 ## PARAMETERS
 

@@ -41,7 +41,7 @@ This example retrieves a list of global catalog servers in the corp.contoso.com 
 
 The first command displays a prompt to the user that accepts the user name and password. The credentials are then stored in the $UserCredentials variable. The second command uses the $UserCredentials variable for the Credential parameter value. To make the list more readable, the output is piped to the Format-Table cmdlet and only the Name and ADSite properties are displayed.
 
-For more information about pipelining and the Format-Table cmdlet, see Pipelining and Working with command output.
+For more information about pipelining and the Format-Table cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ## PARAMETERS
 

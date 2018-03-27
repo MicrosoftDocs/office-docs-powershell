@@ -30,7 +30,7 @@ Get-AdServerSettings | Format-List
 
 This example displays the session settings for the current session.
 
-For more information about pipelining and the Format-List cmdlet, see Pipelining and Working with command output.
+For more information about pipelining and the Format-List cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ## PARAMETERS
 

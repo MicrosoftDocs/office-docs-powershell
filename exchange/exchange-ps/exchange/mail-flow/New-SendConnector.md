@@ -149,7 +149,7 @@ If you specify a non-SMTP address space type on a Send connector configured in t
 
 - The DNSRoutingEnabled parameter must be set to $false.
 
-Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see Foreign connectors.
+Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see Foreign connectors (https://technet.microsoft.com/library/aa996779.aspx).
 
 ```yaml
 Type: MultiValuedProperty
@@ -249,7 +249,7 @@ The Custom parameter specifies the Custom usage type. The usage type specifies t
 
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors.
+For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
 
 ```yaml
 Type: SwitchParameter
@@ -457,7 +457,7 @@ The Internal parameter specifies the Internal usage type. The usage type specifi
 
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors.
+For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
 
 ```yaml
 Type: SwitchParameter
@@ -483,7 +483,7 @@ The Internet parameter specifies the Internet usage type. The usage type specifi
 
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors.
+For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
 
 ```yaml
 Type: SwitchParameter
@@ -607,7 +607,7 @@ The Partner parameter specifies the Partner usage type. The usage type specifies
 
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors.
+For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
 
 ```yaml
 Type: SwitchParameter
@@ -831,7 +831,7 @@ If you use the Usage parameter, you can't use any of the following parameters:
 
 - Partner
 
-For more information about Send connector usage types, permissions, and authentication methods, see Send connectors.
+For more information about Send connector usage types, permissions, and authentication methods, see Send connectors (https://technet.microsoft.com/library/aa998662.aspx).
 
 ```yaml
 Type: Custom | Internal | Internet | Partner

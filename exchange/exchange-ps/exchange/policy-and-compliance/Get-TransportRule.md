@@ -42,7 +42,7 @@ Get-TransportRule "Ethical Wall - Sales and Brokerage Departments" | Format-List
 This example returns detailed information for the rule named "Ethical Wall - Sales and Brokerage Departments".
 
 
-For more information about pipelining, see Pipelining. For more information about how to work with the output of a command, see Working with command output.
+For more information about pipelining, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx). For more information about how to work with the output of a command, see Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ### Example 3
 ```

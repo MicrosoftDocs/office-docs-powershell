@@ -20,7 +20,7 @@ Remove-ManagementScope [-Identity] <ManagementScopeIdParameter> [-Confirm] [-Dom
 ```
 
 ## DESCRIPTION
-You can't remove a management scope if it's associated with a management role assignment. Use the Get-ManagementScope cmdlet to retrieve a list of orphaned scopes. For more information about regular and exclusive scopes, see Understanding management role scopes.
+You can't remove a management scope if it's associated with a management role assignment. Use the Get-ManagementScope cmdlet to retrieve a list of orphaned scopes. For more information about regular and exclusive scopes, see Understanding management role scopes (https://technet.microsoft.com/library/dd335146.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

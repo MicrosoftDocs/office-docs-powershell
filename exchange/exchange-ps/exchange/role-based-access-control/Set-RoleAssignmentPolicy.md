@@ -22,7 +22,7 @@ Set-RoleAssignmentPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-Des
 ## DESCRIPTION
 You can use the Set-RoleAssignmentPolicy cmdlet to change the name of an assignment policy or to set the assignment policy as the default assignment policy.
 
-For more information about assignment policies, see Understanding management role assignment policies.
+For more information about assignment policies, see Understanding management role assignment policies (https://technet.microsoft.com/library/dd638100.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

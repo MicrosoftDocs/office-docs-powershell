@@ -22,7 +22,7 @@ Get-ManagementScope [[-Identity] <ManagementScopeIdParameter>] [-DomainControlle
 ## DESCRIPTION
 You can retrieve one scope or many, retrieve only scopes that aren't associated with management role assignments, or retrieve scopes that are exclusive or regular scopes.
 
-For more information about regular and exclusive scopes, see Understanding management role scopes.
+For more information about regular and exclusive scopes, see Understanding management role scopes (https://technet.microsoft.com/library/dd335146.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -40,7 +40,7 @@ This example retrieves all the management scopes that start with the string Redm
 Get-ManagementScope "Redmond Servers Scope" | Format-List
 ```
 
-This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
+This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ### Example 3
 ```

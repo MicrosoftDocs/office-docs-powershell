@@ -189,7 +189,7 @@ You can filter by the following properties:
 
 - WindowsEmailAddress
 
-For more information, see Filterable properties for the -Filter parameter.
+For more information, see Filterable properties for the -Filter parameter (https://technet.microsoft.com/library/bb738155.aspx).
 
 ```yaml
 Type: String

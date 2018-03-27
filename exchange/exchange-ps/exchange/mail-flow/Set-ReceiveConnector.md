@@ -955,7 +955,7 @@ The default permission groups that are assigned to a Receive connector depend on
 
 When you use the value Custom, you need to configure individual permissions by using the Add-ADPermission cmdlet.
 
-For more information about the default permissions and security principals for permission groups, see https://technet.microsoft.com/library/bb125140.aspx.
+For more information about the default permissions and security principals for permission groups, see Receive connector permission groups (https://technet.microsoft.com/library/aa996395.aspx#PermissionGroups).
 
 ```yaml
 Type: None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom
@@ -999,7 +999,7 @@ The ProtocolLoggingLevel parameter specifies whether to enable or disable protoc
 
 - Verbose: Protocol logging is enabled on the Receive connector.
 
-For more information about protocol logging, see Protocol logging.
+For more information about protocol logging, see Protocol logging (https://technet.microsoft.com/library/aa997624.aspx).
 
 ```yaml
 Type: None | Verbose

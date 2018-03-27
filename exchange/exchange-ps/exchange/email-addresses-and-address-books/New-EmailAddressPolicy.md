@@ -823,7 +823,7 @@ This parameter is an OPath filter that's based on the value of any available rec
 
 For more information, see Multi-domain support for Office 365 groups - Admin help (https://go.microsoft.com/fwlink/p/?linkid=838413).
 
-For a list of the filterable properties, see Filterable properties for the -RecipientFilter parameter.
+For a list of the filterable properties, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
 
 You need to use this parameter with the IncludeUnifiedGroupRecipients switch.
 

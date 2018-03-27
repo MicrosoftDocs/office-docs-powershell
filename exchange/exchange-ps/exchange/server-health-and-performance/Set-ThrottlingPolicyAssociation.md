@@ -25,7 +25,7 @@ The Set-ThrottlingPolicyAssociation cmdlet defines quota limits for specific obj
 
 In data center deployments, the object referred to by the Identity and ThrottlingPolicy parameters must be in the same tenant.
 
-For more information about how to control the resources consumed by individual users, see User workload management in Exchange 2016.
+For more information about how to control the resources consumed by individual users, see User workload management (https://technet.microsoft.com/library/jj150503.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

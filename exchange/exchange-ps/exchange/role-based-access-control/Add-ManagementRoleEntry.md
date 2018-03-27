@@ -32,7 +32,7 @@ The cmdlet and its parameters that you add to a role entry must exist in the par
 
 You can only add a role entry to a management role if the role entry exists in the role's parent role. For example, if you try to add the Search-Mailbox role entry to a role that's a child of the Mail Recipients role, you'll receive an error. This error occurs because the Search-Mailbox role entry doesn't exist in the Mail Recipients role. To add the Search-Mailbox role entry to a role, you need to create a role that's a child of the Mailbox Import Export role, which contains the Search-Mailbox role entry. Then you can use the Add-ManagementRoleEntry cmdlet to add the Search-Mailbox role entry to the new child role.
 
-For more information about management role entries, see Understanding management roles (Exchange 2016).
+For more information about management role entries, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -71,7 +71,7 @@ This example adds the MailboxAudit script with the Department and Location param
 ### -Identity
 The Identity parameter specifies the role entry to add. You must specify the value of the Identity parameter in the format: \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
 
-For more information about how management role entries work, see Understanding management roles (Exchange 2016).
+For more information about how management role entries work, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 The role entry you want to add must exist in the parent role. If the role entry name contains spaces, you must enclose the name in quotation marks (").
 

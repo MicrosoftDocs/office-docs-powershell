@@ -12,7 +12,7 @@ Use the Remove-FederatedDomain cmdlet to remove a federated domain from the fede
 
 If you remove a domain configured for federated sharing, federated sharing for that domain is disabled.
 
-For more information, see Federation.
+For more information, see Federation (https://technet.microsoft.com/library/dd335047.aspx).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

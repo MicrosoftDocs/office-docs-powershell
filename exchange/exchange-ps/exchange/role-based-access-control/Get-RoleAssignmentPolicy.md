@@ -20,7 +20,7 @@ Get-RoleAssignmentPolicy [[-Identity] <MailboxPolicyIdParameter>]
 ```
 
 ## DESCRIPTION
-For more information about assignment policies, see Understanding management role assignment policies.
+For more information about assignment policies, see Understanding management role assignment policies (https://technet.microsoft.com/library/dd638100.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -41,7 +41,7 @@ Get-RoleAssignmentPolicy "End User Policy" | Format-List
 This example returns the details of the specified assignment policy. The output of the Get-RoleAssignmentPolicy cmdlet is piped to the Format-List cmdlet.
 
 
-For more information about pipelining and the Format-List cmdlet, see Pipelining and Working with command output.
+For more information about pipelining and the Format-List cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ### Example 3
 ```
@@ -52,7 +52,7 @@ This example returns the default assignment policy.
 
 The output of the Get-RoleAssignmentPolicy cmdlet is piped to the Where cmdlet. The Where cmdlet filters out all of the policies except the policy that has the IsDefault property set to $True.
 
-For more information about pipelining and the Format-List cmdlet, see Pipelining and Working with command output.
+For more information about pipelining and the Format-List cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ## PARAMETERS
 

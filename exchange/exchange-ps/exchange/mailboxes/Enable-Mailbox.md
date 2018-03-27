@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ### -Discovery
 The Discoveryswitch specifies that the mailbox is a Discovery mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a Discovery mailbox.
 
-Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be converted to another type of mailbox. For more information, see In-Place eDiscovery in Exchange 2016.
+Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be converted to another type of mailbox. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
 ```yaml
 Type: SwitchParameter
@@ -428,7 +428,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 
 - GUID
 
-For more information about address book policies, see Address book policies in Exchange 2016.
+For more information about address book policies, see Address book policies (https://technet.microsoft.com/library/hh529948.aspx).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
@@ -774,7 +774,7 @@ The RoleAssignmentPolicy parameter specifies the management role assignment poli
 
 - GUID
 
-If you don't use this parameter, the default role assignment policy is used. If the assignment policy name contains spaces, enclose the name in quotation marks ("). If you don't want to assign an assignment policy when a mailbox is created or enabled, specify a value of $null. For more information about assignment policies, see Understanding management role assignment policies.
+If you don't use this parameter, the default role assignment policy is used. If the assignment policy name contains spaces, enclose the name in quotation marks ("). If you don't want to assign an assignment policy when a mailbox is created or enabled, specify a value of $null. For more information about assignment policies, see Understanding management role assignment policies (https://technet.microsoft.com/library/dd638100.aspx).
 
 ```yaml
 Type: MailboxPolicyIdParameter

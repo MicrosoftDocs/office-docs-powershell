@@ -22,7 +22,7 @@ Set-OutlookProtectionRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
-Outlook protection rules are used to automatically rights-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To rights-protect messages based on message content, use transport protection rules. For more information, see Outlook protection rules.
+Outlook protection rules are used to automatically rights-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To rights-protect messages based on message content, use transport protection rules. For more information, see Outlook protection rules (https://technet.microsoft.com/library/dd638178.aspx).
 
 Not specifying any conditions results in an Outlook protection rule being applied to all messages.
 

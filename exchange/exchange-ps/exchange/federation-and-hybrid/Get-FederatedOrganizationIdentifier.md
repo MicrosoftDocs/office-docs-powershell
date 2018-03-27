@@ -10,7 +10,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-FederatedOrganizationIdentifier cmdlet to retrieve the Exchange organization's federated organization identifier and related details, such as federated domains, organization contact and status.
 
-For more information, see Federation.
+For more information, see Federation (https://technet.microsoft.com/library/dd335047.aspx).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

@@ -24,7 +24,7 @@ Restore-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParame
 ## DESCRIPTION
 You can also use this cmdlet for disaster recovery purposes to restore functionality to a DAG that has lost quorum due to one or more DAG members being offline for an extended period. Before running this cmdlet, you must first run the Stop-DatabaseAvailabilityGroup cmdlet.
 
-The Restore-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode parameter value of DagOnly. For more information about the DatacenterActivationMode parameter, see Datacenter Activation Coordination mode.
+The Restore-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode parameter value of DagOnly. For more information about the DatacenterActivationMode parameter, see Datacenter Activation Coordination mode (https://technet.microsoft.com/library/dd979790.aspx).
 
 You can use the Set-DatabaseAvailabilityGroup cmdlet to configure the value for the DatacenterActivationMode parameter.
 

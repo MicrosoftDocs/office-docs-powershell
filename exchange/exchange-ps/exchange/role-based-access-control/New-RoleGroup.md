@@ -42,7 +42,7 @@ You don't have to add members or assign management roles to the role group when 
 
 When you create a role group, you can create the group and add members to it directly, or you can create a linked role group. A linked role group links the role group to a universal security group (USG) in another forest. Creating a linked role group is useful if your servers running Exchange reside in a resource forest and your users and administrators reside in a separate user forest. If you create a linked role group, you can't add members directly to it. You must add the members to the USG in the foreign forest.
 
-For more information about role groups, see Understanding management role groups.
+For more information about role groups, see Understanding management role groups (https://technet.microsoft.com/library/dd638105.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -90,7 +90,7 @@ This example takes an existing role group and copies the roles from that role gr
 The first command stores the existing role group in a variable, and the second command creates the custom role group.
 
 
-This example uses variables to store information. For more information about variables, see User-defined variables.
+This example uses variables to store information. For more information about variables, see User-defined variables (https://technet.microsoft.com/library/bb123690.aspx).
 
 ### Example 6
 ```
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ### -Roles
 The Roles parameter specifies the management roles to assign to the role group when it's created. If a role name contains spaces, enclose the name in quotation marks ("). If you want to assign more that one role, separate the role names with commas.
 
-For a list of built-in management roles that you can assign to a role group, see Built-in management roles.
+For a list of built-in management roles that you can assign to a role group, see Built-in management roles (https://technet.microsoft.com/library/dd638077.aspx).
 
 ```yaml
 Type: RoleIdParameter[]

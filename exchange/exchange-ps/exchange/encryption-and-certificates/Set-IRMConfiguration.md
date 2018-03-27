@@ -60,7 +60,7 @@ This example enables licensing for external messages.
 ### -ClientAccessServerEnabled
 The ClientAccessServerEnabled parameter specifies whether to enable IRM for Outlook on the web (formerly known as Outlook Web App) and Exchange ActiveSync. Valid values are:
 
-- $true: IRM is enabled for Outlook on the web and Exchange ActiveSync. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see Information Rights Management in Outlook Web App.
+- $true: IRM is enabled for Outlook on the web and Exchange ActiveSync. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see Information Rights Management in Outlook Web App (https://technet.microsoft.com/library/dd876891.aspx).
 
 - $false: IRM is disabled for Outlook on the web and Exchange ActiveSync.
 
@@ -122,7 +122,7 @@ The EDiscoverySuperUserEnabled parameter specifies whether members of the Discov
 
 - $false: Members of the Discovery Management role group can't access IRM-protected messages in discovery mailboxes.
 
-For more information about In-Place eDiscovery and IRM-protected messages, see In-Place eDiscovery in Exchange 2016.
+For more information about In-Place eDiscovery and IRM-protected messages, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
 ```yaml
 Type: $true | $false
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ### -JournalReportDecryptionEnabled
 The JournalReportDecryptionEnabled parameter specifies whether to enable journal report decryption. Valid values are:
 
-- $true: Journal report encryption is enabled. A decrypted copy of the IRM-protected message is attached to the journal report. This is the default value. Note that journal report decryption requires additional configuration on AD RMS servers. For more information, see Journal report decryption.
+- $true: Journal report encryption is enabled. A decrypted copy of the IRM-protected message is attached to the journal report. This is the default value. Note that journal report decryption requires additional configuration on AD RMS servers. For more information, see Journal report decryption (https://technet.microsoft.com/library/dd876936.aspx).
 
 - $false: Journal report decryption is disabled.
 

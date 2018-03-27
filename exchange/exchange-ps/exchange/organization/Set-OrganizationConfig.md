@@ -1104,7 +1104,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-For more information about configuring AD FS claims based authentication in Exchange, see Use AD FS claims-based authentication with Outlook on the web.
+For more information about configuring AD FS claims based authentication in Exchange, see Use AD FS claims-based authentication with Outlook on the web (https://technet.microsoft.com/library/dn635116.aspx).
 
 ```yaml
 Type: MultiValuedProperty

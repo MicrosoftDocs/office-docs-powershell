@@ -53,9 +53,9 @@ New-ManagementScope [-Name] <String> -ServerRestrictionFilter <String> [-Confirm
 ```
 
 ## DESCRIPTION
-After you create a regular or exclusive scope, you need to associate the scope with a management role assignment. To associate a scope with a role assignment, use the New-ManagementRoleAssignment cmdlet. For more information about adding new management scopes, see Create a regular or exclusive scope.
+After you create a regular or exclusive scope, you need to associate the scope with a management role assignment. To associate a scope with a role assignment, use the New-ManagementRoleAssignment cmdlet. For more information about adding new management scopes, see Create a regular or exclusive scope (https://technet.microsoft.com/library/dd351083.aspx).
 
-For more information about regular and exclusive scopes, see Understanding management role scopes.
+For more information about regular and exclusive scopes, see Understanding management role scopes (https://technet.microsoft.com/library/dd335146.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ### -DatabaseRestrictionFilter
 This parameter is available only in on-premises Exchange.
 
-The DatabaseRestrictionFilter parameter specifies the filter to apply to database objects. Only database objects that match the filter are included in the scope. If you use the DatabaseRestrictionFilter parameter, you can't use the RecipientRestrictionFilter, ServerRestrictionFilter, RecipientRoot, DatabaseList, or ServerList parameters. For a list of filterable database properties, see Understanding management role scopes.
+The DatabaseRestrictionFilter parameter specifies the filter to apply to database objects. Only database objects that match the filter are included in the scope. If you use the DatabaseRestrictionFilter parameter, you can't use the RecipientRestrictionFilter, ServerRestrictionFilter, RecipientRoot, DatabaseList, or ServerList parameters. For a list of filterable database properties, see Understanding management role scopes (https://technet.microsoft.com/library/dd335146.aspx).
 
 ```yaml
 Type: String
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ### -ServerRestrictionFilter
 This parameter is available only in on-premises Exchange.
 
-The ServerRestrictionFilter parameter specifies the filter to apply to server objects. Only server objects that match the filter are included in the scope. If you use the ServerRestrictionFilter parameter, you can't use the RecipientRestrictionFilter, RecipientRoot, DatabaseRestrictionFilter, DatabaseList, or ServerList parameters. For a list of filterable server properties, see Understanding management role scopes.
+The ServerRestrictionFilter parameter specifies the filter to apply to server objects. Only server objects that match the filter are included in the scope. If you use the ServerRestrictionFilter parameter, you can't use the RecipientRestrictionFilter, RecipientRoot, DatabaseRestrictionFilter, DatabaseList, or ServerList parameters. For a list of filterable server properties, see Understanding management role scopes (https://technet.microsoft.com/library/dd335146.aspx).
 
 ```yaml
 Type: String

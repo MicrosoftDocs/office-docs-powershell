@@ -32,7 +32,7 @@ Set-ManagedFolderMailboxPolicy "PM Storage Template1" -Name "PM Storage Template
 This example changes the name of the managed folder mailbox policy PM Storage Template1 to PM Storage Template2.
 
 
-The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters.
+The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters (https://technet.microsoft.com/library/bb124388.aspx).
 
 ### Example 2
 ```

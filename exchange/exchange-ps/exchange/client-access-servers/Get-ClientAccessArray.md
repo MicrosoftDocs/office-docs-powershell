@@ -26,7 +26,7 @@ Changes in the Exchange server architecture that were introduced in Exchange Ser
 
 - Outlook clients can't use RPC over TCP to access mailboxes on Exchange Server 2013 or later versions and RPC Client Access arrays only work with RPC over TCP.
 
-- Because the Client Access server role is now a stateless proxy, you use different and less complex methods to configure load balancing and high availability for internal and external client connections. For more information, see Load balancing in Exchange 2016.
+- Because the Client Access server role is now a stateless proxy, you use different and less complex methods to configure load balancing and high availability for internal and external client connections. For more information, see Load balancing in Exchange 2016 (https://technet.microsoft.com/library/jj898588.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

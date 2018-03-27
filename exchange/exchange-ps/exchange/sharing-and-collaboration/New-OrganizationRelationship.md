@@ -27,7 +27,7 @@ New-OrganizationRelationship [-Name] <String> -DomainNames <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-Before you can create an organization relationship, you must first create a federation trust. For more information, see Federation.
+Before you can create an organization relationship, you must first create a federation trust. For more information, see Federation (https://technet.microsoft.com/library/dd335047.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

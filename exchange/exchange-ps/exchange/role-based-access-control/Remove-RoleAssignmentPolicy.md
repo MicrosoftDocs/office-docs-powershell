@@ -28,7 +28,7 @@ The assignment policy you want to remove can't be assigned to any mailboxes or m
 
 - Use the Remove-ManagementRoleAssignment cmdlet to remove any management role assignments assigned to the policy.
 
-For more information about assignment policies, see Understanding management role assignment policies.
+For more information about assignment policies, see Understanding management role assignment policies (https://technet.microsoft.com/library/dd638100.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -49,7 +49,7 @@ Remove all management role assignments that are assigned to the End User policy.
 
 Remove the End User role assignment policy.
 
-For more information about the Where cmdlet and pipelining, see Working with command output and Pipelining.
+For more information about the Where cmdlet and pipelining, see Working with command output (https://technet.microsoft.com/library/bb123533.aspx) and Pipelining (https://technet.microsoft.com/library/aa998260.aspx).
 
 ## PARAMETERS
 

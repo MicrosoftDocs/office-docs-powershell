@@ -757,7 +757,7 @@ The Discoveryswitch specifies that the mailbox is a Discovery mailbox. You don't
 
 This switch is required only if you're creating a Discovery mailbox.
 
-Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be repurposed or converted to another type of mailbox. For more information, see In-Place eDiscovery in Exchange 2016.
+Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be repurposed or converted to another type of mailbox. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
 ```yaml
 Type: SwitchParameter
@@ -1051,7 +1051,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 
 - GUID
 
-For more information about address book policies, see Address book policies in Exchange 2016 (https://technet.microsoft.com/library/hh529948.aspx).
+For more information about address book policies, see Address book policies (https://technet.microsoft.com/library/hh529948.aspx).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
@@ -1701,7 +1701,7 @@ The RoleAssignmentPolicy parameter specifies the role assignment policy that's a
 
 In Office 365, if you don't use this parameter, the default role assignment policy named Default Role Assignment Policy is automatically applied to the mailbox. In on-premises Exchange, no role assignment policy is automatically applied to the mailbox.
 
-Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment policies. For more information about assignment policies, see Understanding management role assignment policies.
+Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment policies. For more information about assignment policies, see Understanding management role assignment policies (https://technet.microsoft.com/library/dd638100.aspx).
 
 ```yaml
 Type: MailboxPolicyIdParameter

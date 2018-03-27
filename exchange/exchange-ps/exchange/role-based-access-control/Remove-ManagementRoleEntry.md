@@ -22,7 +22,7 @@ Remove-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-Confirm] [-Domai
 ## DESCRIPTION
 The Remove-ManagementRoleEntry cmdlet removes existing role entries. However, you can't remove role entries from built-in management roles.
 
-For more information about management role entries, see Understanding management roles (Exchange 2016).
+For more information about management role entries, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -49,7 +49,7 @@ After you verify that the correct role entries will be removed, run the same com
 ### -Identity
 The Identity parameter specifies the role entry to remove. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
 
-For more information about how management role entries work, see Understanding management roles (Exchange 2016).
+For more information about how management role entries work, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 If the role entry name contains spaces, enclose the name in quotation marks (").
 

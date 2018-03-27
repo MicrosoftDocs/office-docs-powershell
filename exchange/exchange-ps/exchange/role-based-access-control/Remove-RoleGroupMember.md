@@ -26,7 +26,7 @@ If the ManagedBy property has been populated with role group managers, the user 
 
 If the role group is a linked role group, you can't use the Remove-RoleGroupMember cmdlet to remove members from the role group. Instead, you need to remove members from the foreign universal security group (USG) linked to the linked role group. To find the foreign USG linked to a role group, use the Get-RoleGroup cmdlet.
 
-For more information about role groups, see Understanding management role groups.
+For more information about role groups, see Understanding management role groups (https://technet.microsoft.com/library/dd638105.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -50,7 +50,7 @@ After you've verified that the correct members will be removed the role group, r
 
 For more information about pipelining, and the WhatIf parameter, see the following topics:
 
-- 0Pipelining
+- Pipelining (https://technet.microsoft.com/library/aa998260.aspx)
 
 - WhatIf, Confirm and ValidateOnly switches
 

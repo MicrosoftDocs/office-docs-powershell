@@ -32,7 +32,7 @@ Set-RetentionPolicy "MyPolicy" -RetentionPolicyTagLinks "MyRetentionPolicyTag"
 
 This example modifies the policy MyPolicy to link the retention policy tag MyRetentionPolicyTag with it.
 
-The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters.
+The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters (https://technet.microsoft.com/library/bb124388.aspx).
 
 ## PARAMETERS
 

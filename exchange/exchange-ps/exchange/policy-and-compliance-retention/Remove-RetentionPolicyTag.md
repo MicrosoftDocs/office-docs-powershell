@@ -24,7 +24,7 @@ Retention tags are added to a retention policy, which is applied to a mailbox.
 
 When you use the Remove-RetentionPolicyTag cmdlet to remove a retention tag, it removes the tag definition stored in Active Directory. The next time the Managed Folder Assistant runs, it processes all items that have the removed tag applied and restamps them. Depending on the number of mailboxes and messages, this process may result in significant resource consumption on all Mailbox servers that contain mailboxes with a retention policy that includes the removed tag.
 
-For more information about retention tags, see Retention tags and retention policies in Exchange 2016.
+For more information about retention tags, see Retention tags and retention policies (https://technet.microsoft.com/library/dd297955.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

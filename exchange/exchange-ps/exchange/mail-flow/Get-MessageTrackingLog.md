@@ -35,7 +35,7 @@ The field names displayed in the results from the Get-MessageTrackingLog cmdlet 
 
 - The sender-address field is displayed as Sender.
 
-For more information about the message tracking log files, see Message tracking.
+For more information about the message tracking log files, see Message tracking (https://technet.microsoft.com/library/bb124375.aspx).
 
 The Get-MessageTrackingLog results are displayed on-screen. You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding "\> \<filename\>" to the command. For example:
 
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-The Source parameter filters the message tracking log entries by the value of the Source field. These values indicate the transport component that's responsible for the message tracking event. For more information, see .
+The Source parameter filters the message tracking log entries by the value of the Source field. These values indicate the transport component that's responsible for the message tracking event. For more information, see Source values in the message tracking log (https://technet.microsoft.com/library/bb124375.aspx#Source).
 
 ```yaml
 Type: String

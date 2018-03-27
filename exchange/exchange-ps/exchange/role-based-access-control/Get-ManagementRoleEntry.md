@@ -22,7 +22,7 @@ Get-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-DomainController <F
 ## DESCRIPTION
 The Get-ManagementRoleEntry cmdlet retrieves role entries that have been configured on roles. You can retrieve specific role entries that match specific criteria such as role name, cmdlet name, parameter name, or a combination of each, or role entry type or the associated Windows PowerShell snap-in.
 
-For more information about management role entries, see Understanding management roles (Exchange 2016).
+For more information about management role entries, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -54,7 +54,7 @@ This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes th
 ### -Identity
 The Identity parameter specifies the role entry to retrieve. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
 
-For more information about how management role entries work, see Understanding management roles (Exchange 2016).
+For more information about how management role entries work, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 You can use the wildcard character (\*) instead of the role, cmdlet name or both.
 

@@ -20,7 +20,7 @@ Stop-MailboxSearch [-Identity] <SearchObjectIdParameter> [-Confirm] [-DomainCont
 ```
 
 ## DESCRIPTION
-In Microsoft Exchange, mailbox searches are used for In-Place eDiscovery and In-Place Hold. You can start and stop a mailbox search. For more information, see In-Place eDiscovery in Exchange 2016.
+In Microsoft Exchange, mailbox searches are used for In-Place eDiscovery and In-Place Hold. You can start and stop a mailbox search. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

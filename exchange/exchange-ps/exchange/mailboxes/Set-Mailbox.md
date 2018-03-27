@@ -494,7 +494,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 
 - GUID
 
-For more information about address book policies, see Address book policies in Exchange 2016 (https://technet.microsoft.com/library/hh529948.aspx).
+For more information about address book policies, see Address book policies (https://technet.microsoft.com/library/hh529948.aspx).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
@@ -3018,7 +3018,7 @@ The RoleAssignmentPolicy parameter specifies the role assignment policy that's a
 
 In Office 365, a role assignment policy must be assigned to the mailbox. In on-premises Exchange, to configure the mailbox so there's no role assignment policy assigned, use the value $null.
 
-Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment policies. For more information, see Understanding management role assignment policies.
+Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment policies. For more information, see Understanding management role assignment policies (https://technet.microsoft.com/library/dd638100.aspx).
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -3178,7 +3178,7 @@ The SCLQuarantineEnabled parameter specifies whether messages that meet or excee
 
 - $null (blank): The value isn't configured. This is the default value.
 
-To configure the quarantine mailbox, see Configure a spam quarantine mailbox.
+To configure the quarantine mailbox, see Configure a spam quarantine mailbox (https://technet.microsoft.com/library/bb123746.aspx).
 
 ```yaml
 Type: $true | $false

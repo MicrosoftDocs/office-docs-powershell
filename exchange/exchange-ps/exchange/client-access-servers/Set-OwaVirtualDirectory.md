@@ -94,7 +94,7 @@ Before you run the Set-OwaVirtualDirectory cmdlet, consider the following items:
 
 - You can run the Set-OwaVirtualDirectory cmdlet on any server that has the Exchange Server administration tools installed.
 
-- Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see Modifying multivalued properties.
+- Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
 
 - Many of the Outlook on the web virtual directory settings require you to run the IISReset /noforce command before the change takes effect. For example, when you enable or disable forms-based authentication, or when you enable or disable the Private computer option on the sign-in page.
 
@@ -1529,6 +1529,8 @@ Accept wildcard characters: False
 This parameter is available or functional only in Exchange Server 2010.
 
 The SMimeEnabled parameter specifies whether users can download the S/MIME control for Outlook Web App and use it to read and compose signed and encrypted messages. By default, the SMimeEnabled parameter is set to $true. If the SMimeEnabled parameter is set to $false, users are unable to read or compose messages that are opaque-signed or encrypted. Messages that are clear-signed can be read but not composed, and their signatures aren't validated.
+
+**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see S/MIME for message signing and encryption (https://technet.microsoft.com/library/dn626158.aspx).
 
 ```yaml
 Type: $true | $false

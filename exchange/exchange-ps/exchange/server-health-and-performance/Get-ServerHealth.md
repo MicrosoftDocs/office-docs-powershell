@@ -21,7 +21,7 @@ Get-ServerHealth [-Identity] <ServerIdParameter> [-HaImpactingOnly] [-HealthSet 
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-The cmdlet returns health values that you can use to determine the state of the server. See Server health and performance in Exchange 2016 for related information.
+The cmdlet returns health values that you can use to determine the state of the server. See Server health and performance (https://technet.microsoft.com/library/jj150551.aspx) for related information.
 
 The cmdlet also returns an alert value that provides the specific state of your server. The following values may be returned:
 

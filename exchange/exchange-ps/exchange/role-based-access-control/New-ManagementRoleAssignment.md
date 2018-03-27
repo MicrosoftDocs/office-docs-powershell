@@ -71,7 +71,7 @@ When you add a new role assignment, you can specify a built-in or custom role th
 
 You can create custom management scopes using the New-ManagementScope cmdlet and can view a list of existing scopes using the Get-ManagementScope cmdlet. If you choose not to specify an OU, or predefined or custom scope, the implicit write scope of the role applies to the role assignment.
 
-For more information about management role assignments, see Understanding management role assignments.
+For more information about management role assignments, see Understanding management role assignments (https://technet.microsoft.com/library/dd335131.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

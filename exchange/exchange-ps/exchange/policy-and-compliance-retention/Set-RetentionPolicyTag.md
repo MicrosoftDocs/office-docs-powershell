@@ -10,7 +10,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-RetentionPolicyTag cmdlet to modify the properties of a retention tag.
 
-For more information about retention tags, see Retention tags and retention policies in Exchange 2016.
+For more information about retention tags, see Retention tags and retention policies (https://technet.microsoft.com/library/dd297955.aspx).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

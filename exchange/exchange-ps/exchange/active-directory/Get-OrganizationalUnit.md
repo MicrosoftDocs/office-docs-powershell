@@ -46,7 +46,7 @@ Get-OrganizationalUnit "North America" -SingleNodeOnly | Format-Table Name, Dist
 
 This example retrieves a list of the first level child OUs beneath the North America OU and formats the output so that only the Name and DistinguishedName properties are displayed.
 
-For more information about pipelining and the Format-Table cmdlet, see Pipelining and Working with command output.
+For more information about pipelining and the Format-Table cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ### Example 2
 ```
@@ -55,7 +55,7 @@ Get-OrganizationalUnit -SearchText "Executives" | Format-Table Name, Distinguish
 
 This example retrieves a list of OUs that match the text string "Executives" and formats the output so that only the Name and DistinguishedName properties are displayed.
 
-For more information about pipelining and the Format-Table cmdlet, see Pipelining and Working with command output.
+For more information about pipelining and the Format-Table cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
 ## PARAMETERS
 

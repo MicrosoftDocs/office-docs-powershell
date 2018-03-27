@@ -62,7 +62,7 @@ New-App -FileData ([Byte[]](Get-Content -Encoding Byte -Path "C:\Apps\FinanceTes
 
 This example installs the Finance Test app manifest file that has been copied to the local hard disk.
 
-For more information, see Install or remove apps for Outlook for your organization.
+For more information, see Install or remove add-ins for Outlook for your organization (https://technet.microsoft.com/library/jj943752.aspx).
 
 ### Example 2
 ```
@@ -71,7 +71,7 @@ New-App -OrganizationApp -Url https://Server01.Contoso.com/apps/ContosoCRMApp/ma
 
 This example installs the Contoso CRM app manifest.xml from a URL on the Contoso corporate network. The Exchange server must be able to reach the target URL. This app is installed as an organization app,is made available to a specific list of users, and is enabled for those users by default.
 
-For more information, see Install or remove apps for Outlook for your organization.
+For more information, see Install or remove add-ins for Outlook for your organization (https://technet.microsoft.com/library/jj943752.aspx).
 
 ## PARAMETERS
 

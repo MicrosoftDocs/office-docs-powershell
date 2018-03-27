@@ -344,7 +344,7 @@ Accept wildcard characters: False
 ### -Schedule
 This parameter is available only in on-premises Exchange.
 
-Note: In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see Change the offline address book generation schedule in Exchange 2016.
+Note: In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see Change the offline address book generation schedule (https://technet.microsoft.com/library/bb124719.aspx).
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 

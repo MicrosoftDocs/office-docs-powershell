@@ -37,7 +37,7 @@ Get-OrganizationConfig Export-Cli c:\myFile.xml
 
 This example gets the configuration information for the tenant organization.
 
-For more information, see Troubleshoot a hybrid deployment.
+For more information, see Troubleshoot a hybrid deployment (https://technet.microsoft.com/library/jj659053.aspx).
 
 ### Example 3
 ```

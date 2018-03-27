@@ -20,7 +20,7 @@ Get-OutlookProtectionRule [[-Identity] <RuleIdParameter>]
 ```
 
 ## DESCRIPTION
-Outlook protection rules are used to automatically Information Rights Management (IRM)-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To IRM-protect messages based on message content, use transport protection rules. For more information, see Outlook protection rules.
+Outlook protection rules are used to automatically Information Rights Management (IRM)-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To IRM-protect messages based on message content, use transport protection rules. For more information, see Outlook protection rules (https://technet.microsoft.com/library/dd638178.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

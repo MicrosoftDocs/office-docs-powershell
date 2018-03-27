@@ -32,11 +32,11 @@ You can either create a management role based on an existing role, or you can cr
 
 An unscoped role doesn't have any scope restrictions applied. Scripts or third-party cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
 
-The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see Create an unscoped role.
+The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see Create an unscoped role (https://technet.microsoft.com/library/dd876886.aspx).
 
 After you create a role, you can change the management role entries on the role and assign the role with a management scope to a user or universal security group (USG).
 
-For more information about management roles, see Understanding management roles (Exchange 2016).
+For more information about management roles, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -55,9 +55,9 @@ After confirmation that the command removes the correct role entries, the second
 
 For more information about pipelining and the Where cmdlet, see the following topics:
 
-- Pipelining
+- Pipelining (https://technet.microsoft.com/library/aa998260.aspx)
 
-- Working with command output
+- Working with command output (https://technet.microsoft.com/library/bb123533.aspx)
 
 ### Example 2
 ```
