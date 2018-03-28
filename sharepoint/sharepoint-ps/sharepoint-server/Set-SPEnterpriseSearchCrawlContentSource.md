@@ -604,6 +604,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+```diff
+NB! WhatIf does not seem to be working as of March 28th 2018  
+https://github.com/MicrosoftDocs/office-docs-powershell/issues/506
+```
+
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
