@@ -6,42 +6,76 @@ schema: 2.0.0
 # Grant-PnPHubSiteRights
 
 ## SYNOPSIS
-Retrieve all or a specific hubsite.
+Grants rights to users or mail-enabled security groups to access the hub site.
 
 ## SYNTAX 
 
 ```powershell
-Grant-PnPHubSiteRights [-Connection <SPOnlineConnection>]
+Grant-PnPHubSiteRights [-Identity] <SitePipeBind> -Principals
+    <string[]> -Rights {Join}  [<CommonParameters>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPStorageEntity
+PS C:\> Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/MarketingHub/ -Principals alexw@contoso.o
+nmicrosoft.com -Rights Join
 ```
 
-Returns all site storage entities/farm properties
-
-### ------------------EXAMPLE 2------------------
-```powershell
-Get-PnPTenantSite -Key MyKey
-```
-
-Returns the storage entity/farm property with the given key.
+This example shows how to grant rights to user Alexw to associate his sites with the marketing hub site.
 
 ## PARAMETERS
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+### -Identity
+
+URL of the hub site.
 
 ```yaml
-Type: SPOnlineConnection
+Type: SpoSitePipeBind
 Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
 
 Required: False
 Position: Named
+Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Principals
+
+One or more principles to add permissions for.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rights
+
+Always set to the value **Join**. Any user or group with **Join** permissions can view and join the hub site.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
