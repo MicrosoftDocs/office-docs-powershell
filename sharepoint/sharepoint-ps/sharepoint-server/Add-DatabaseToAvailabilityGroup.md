@@ -12,7 +12,7 @@ Adds one or more SharePoint databases to a SQL Server Availability Group
 
 ## SYNTAX
 
-### Default
+#### Default
 ```
 Add-DatabaseToAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
  -DatabaseName <String> [-FileShare <String>] [<CommonParameters>]
