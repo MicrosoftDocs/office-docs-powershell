@@ -39,6 +39,7 @@
           "**/*.png",
           "**/*.jpg"
         ],
+        "version": "exchange-ps",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
