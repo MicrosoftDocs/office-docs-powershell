@@ -20,10 +20,10 @@ Import-StaffHubMember [-Path] <String> [[-Encoding] <String>]
 ```
 
 ## DESCRIPTION
-Import a list of members and add them to teams
-Format of the file context - TeamId,FirstName,LastName,Email,PhoneNumber,IsManager. Either of Email or PhoneNumber is required
-Eg: TEAM_1234,Staff,five,abc@contoso.com,,True
-Failure in adding one member does not stop the other members from getting added.
+Import a list of members and add them to teams<br>
+Format of the file context - TeamId,FirstName,LastName,Email,PhoneNumber,IsManager. Either of Email or PhoneNumber is required<br>
+Eg: TEAM_1234,Staff,five,abc@contoso.com,,True<br>
+Failure in adding one member does not stop the other members from getting added.<br>
 
 ## EXAMPLES
 
