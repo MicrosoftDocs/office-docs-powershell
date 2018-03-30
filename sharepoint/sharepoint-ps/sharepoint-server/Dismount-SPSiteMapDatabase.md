@@ -22,6 +22,11 @@ Do not use.
 
 ## EXAMPLES
 
+### ------------EXAMPLE------------------
+```
+PS C:\>
+```
+
 Do not use.
 
 ## PARAMETERS
