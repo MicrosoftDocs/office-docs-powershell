@@ -704,7 +704,11 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch specifies that the mailbox you're creating is an arbitration mailbox. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
+
+Note: To create an arbitration mailbox that's used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -2065,7 +2069,13 @@ Accept wildcard characters: False
 ```
 
 ### -AuditLog
-This parameter is reserved for internal Microsoft use.
+The AuditLog switch specifies the mailbox is an arbitration mailbox that's used to store audit log settings. You don't need to specify a value with this switch.
+
+Notes: 
+
+- This switch is required only if you're creating this type of arbitration mailbox.
+
+- The Arbitration switch doesn't work for creating this type of arbitration mailbox.
 
 ```yaml
 Type: SwitchParameter
@@ -2081,7 +2091,14 @@ Accept wildcard characters: False
 ```
 
 ### -AuxAuditLog
-This parameter is reserved for internal Microsoft use.
+The AuxAuditLog switch specifies the mailbox is an arbitration mailbox that's used to store audit log data. You don't need to specify a value with this switch.
+
+Notes: 
+
+- This switch is required only if you're creating this type of arbitration mailbox.
+
+- The Arbitration switch doesn't work for creating this type of arbitration mailbox.
+
 
 ```yaml
 Type: SwitchParameter
