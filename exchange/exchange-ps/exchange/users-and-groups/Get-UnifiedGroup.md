@@ -6,11 +6,12 @@ schema: 2.0.0
 # Get-UnifiedGroup
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+이 cmdlet은 클라우드 기반 서비스에서만 사용할 수 있습니다.
 
-Use the Get-UnifiedGroup cmdlet to view Office 365 groups in your cloud-based organization. To view members, owners and subscribers for Office 365 groups, use the Get-UnifiedGroupLinks cmdlet.
+Get-UnifiedGroup cmdlet을 사용하면 클라우드 기반 조직에서 Office 365 그룹을 볼 수 있습니다. 
+Office 365 그룹의 구성원, 소유자 및 구독자를 보려면 Get-UnifiedGroupLinks cmdlet을 사용하십시오.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+아래 구문 섹션의 매개 변수 집합에 대한 자세한 내용은 Exchange cmdlet 구문을 참조하십시오. (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -27,9 +28,10 @@ Get-UnifiedGroup [[-Identity] <UnifiedGroupIdParameter>] [-Filter <String>] [-In
 ```
 
 ## DESCRIPTION
-Office 365 groups are group objects that are available across Office 365 services.
+Office 365 그룹은 Office 365 서비스에서 사용할 수있는 그룹 개체입니다.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+이 cmdlet을 실행하려면 먼저 사용 권한을 할당 받아야합니다. 이 항목에서는 cmdlet의 모든 매개 변수를 나열하지만 할당 된 사용 권한에 포함되지 않은 경우 일부 매개 변수에 액세스하지 못할 수도 있습니다. 조직에서 cmdlet 또는 매개 변수를 실행하는 데 필요한 사용 권한을 확인하려면 모든 Exchange cmdlet을 실행하는 데 필요한 사용 권한 찾기를 참조하십시오.
+(https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
@@ -38,14 +40,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-UnifiedGroup
 ```
 
-This example returns a summary list of all Office 365 groups.
+이 예에서는 모든 Office 365 그룹의 요약 목록을 반환합니다.
 
 ### Example 2
 ```
 Get-UnifiedGroup | Format-List DisplayName,EmailAddresses,Notes,ManagedBy,AccessType
 ```
 
-This example returns the following information about all Office 365 groups:
+이 예에서는 아래 필드에 대한 모든 Office 365 그룹의 요약 목록을 반환합니다:
 
 
 Display name
@@ -63,12 +65,12 @@ Privacy
 Get-UnifiedGroup -Identity "Marketing Department" | Format-List
 ```
 
-This example returns detailed information about the Office 365 Group named Marketing Department.
+이 예에서는 Marketing Department라는 Office 365 그룹에 대한 자세한 정보를 반환합니다.
 
 ## PARAMETERS
 
 ### -Anr
-This parameter is reserved for internal Microsoft use.
+이 매개 변수는 Microsoft 내부에서 사용하도록 예약되어 있습니다.
 
 ```yaml
 Type: String
@@ -84,15 +86,15 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax {\<Property\> -\<Comparison operator\> '\<Value\>'}.
+Filter 매개 변수는 OPATH 필터 구문을 사용하여 지정된 속성 및 값으로 결과를 필터링합니다. 검색 기준은 구문을 사용합니다. {\<Property\> -\<Comparison operator\> '\<Value\>'}.
 
-- \<Property\> is a filterable property.
+- \<Property\> 필터링 할 수 있는 속성입니다.
 
-- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see about\_Comparison\_Operators (https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- -\<Comparison Operator\> OPATH 비교 연산자입니다. 예를 들어 equals는 -eq이고 문자열 비교는 -like입니다. 비교 연산자에 대한 자세한 내용은 \ _Comparison \ _Operators를 참조하십시오. (https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-- \<Value\> is the property value. Text values with or without spaces need to be enclosed in quotation marks ('\<Value\>'). Don't use quotation marks with integers or the system values $true, $false, or $null.
+- \<Value\> 속성 값입니다. 공백이 있거나없는 텍스트 값은 따옴표로 묶어야합니다 ( '\ <Value \>'). 정수 또는 시스템 값에 따옴표를 사용하지 마십시오. $true, $false, or $null.
 
-You can chain multiple search criteria together using the logical operators -and and -or. For example, {\<Criteria1\>) -and \<Criteria2\>} or {(\<Criteria1\> -and \<Criteria2\>) -or \<Criteria3\>}.
+논리 연산자 인 -and 및 -or를 사용하여 여러 검색 기준을 함께 연결할 수 있습니다. 예를 들어, {\<Criteria1\>) -and \<Criteria2\>} or {(\<Criteria1\> -and \<Criteria2\>) -or \<Criteria3\>}.
 
 ```yaml
 Type: String
@@ -108,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the Office 365 Group that you want to view. You can use any value that uniquely identifies the Office 365 Group.
+보려고 하는 Office 365 그룹에 특정한 identity 매개 변수를 지정합니다. Office 365 그룹을 고유하게 식별하는 값을 사용할 수 있습니다.
 
 For example:
 
@@ -140,16 +142,16 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeAllProperties
-The IncludeAllProperties switch specifies whether to include the values of all properties in the results. You don't need to specify a value with this switch.
+IncludeAllProperties 스위치는 결과에 모든 속성 값을 포함할지 여부를 지정합니다. 이 스위치로 값을 지정할 필요가 없습니다.
 
-If you don't use this switch, the values of some properties (for example, CalendarMemeberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.
+이 스위치를 사용하지 않으면 일부 속성 (예 : CalendarMemeberReadOnly, CalendarUrl, InboxUrl, PeopleUrl 및 PhotoUrl)의 값이 비어있을 수 있습니다.
 
 ### -IncludeSoftDeletedGroups
-The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 groups in the results. You don't need to specify a value with this switch.
+IncludeSoftDeletedGroups 스위치는 연쇄 적으로 삭제 된 Office 365 그룹을 결과에 포함할지 여부를 지정합니다. 이 스위치로 값을 지정할 필요가 없습니다.
 
-This switch is required to return soft-deleted Office 365 groups.
+이 스위치는 삭제 된 Office 365 그룹을 반환하는 데 필요합니다.
 
-Soft-deleted Office 365 groups are deleted groups that are still recoverable.
+삭제 된 Office 365 그룹은 여전히 복구 할 수있는 삭제 된 그룹입니다.
 
 ```yaml
 Type: SwitchParameter
@@ -165,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+ResultSize 매개 변수는 반환 할 최대 결과 수를 지정합니다. 쿼리와 일치하는 모든 요청을 반환하려면이 매개 변수의 값으로 unlimited를 사용합니다. 기본값은 1000 입니다.
 
 ```yaml
 Type: Unlimited
@@ -181,11 +183,11 @@ Accept wildcard characters: False
 ```
 
 ### -SortBy
-The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
+SortBy 매개 변수는 결과를 정렬 할 속성을 지정합니다. 한 번에 하나의 속성으로 만 정렬 할 수 있습니다. 결과는 오름차순으로 정렬 됩니다.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+기본 뷰에 정렬 기준으로 등록 정보가 포함되어 있지 않으면 | Format-Table -Auto \ <Property1 \>, \ <Property2 \> ... 보려는 모든 속성이 포함 된 새보기를 만듭니다. 속성 이름의 와일드 카드 (\ *)가 지원됩니다.
 
-You can sort by the following properties:
+다음 속성별로 정렬 할 수 있습니다:
 
 - Name
 
@@ -207,17 +209,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+이 cmdlet은 -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction 및 -WarningVariable 매개 변수를 지원합니다. 자세한 내용은 about_CommonParameters를 참조하십시오. (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
 ###  
-To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+이 cmdlet에서 허용되는 입력 형식을 확인하려면 Cmdlet 입력 및 출력 형식을 참조하십시오. (https://go.microsoft.com/fwlink/p/?linkId=616387).cmdlet의 입력 유형 필드가 비어 있으면 cmdlet은 입력 데이터를 허용하지 않습니다.
 
 ## OUTPUTS
 
 ###  
-To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+이 cmdlet에서 허용되는 반환 유형 (출력 유형이라고도 함)을 보려면 Cmdlet 입력 및 출력 형식을 참조하십시오. (https://go.microsoft.com/fwlink/p/?linkId=616387). 출력 형식 필드가 비어 있으면 cmdlet에서 데이터를 반환하지 않습니다.
 
 ## NOTES
 
