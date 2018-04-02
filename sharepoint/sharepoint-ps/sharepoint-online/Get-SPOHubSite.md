@@ -13,10 +13,7 @@ Lists hub sites or hub site information.
 ## SYNTAX
 
 ```
-Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
-[-Title <string>]
-[-LogoUrl <string>]
-[-Description <string>]
+Get-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 [<CommonParameters>]
 ```
 

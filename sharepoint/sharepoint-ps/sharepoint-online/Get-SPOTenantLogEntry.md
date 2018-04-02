@@ -50,14 +50,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Get-SPOTenantLogLastAvailableTimeInUtc
+Get-SPOTenantLogEntry
 ```
 This example retrieves all logs that are available.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-Get-SPOTenantLogLastAvailableTimeInUtc -MaxRows 500
+Get-SPOTenantLogEntry -MaxRows 500
 ```
 This example retrieves the first 500 log entries.
 
@@ -65,7 +65,7 @@ This example retrieves the first 500 log entries.
 ### -----------------------EXAMPLE 3-----------------------------
 ```
 $endTimeinUTC = Get-SPOTenantLogLastAvailableTimeInUtc
-$startTimeinUTC = $endTimeinUTC.AddDays (-14)
+$startTimeinUTC = $endTimeinUTC.AddDays(-14)
 $tenantlogs = Get-SPOTenantLogEntry -StartTimeinUtc $startTimeinUTC -EndTimeinUTC $endTimeinUTC
 ```
 This example retrieves log entries recorded over that previous 14 days.
@@ -74,7 +74,7 @@ This example retrieves log entries recorded over that previous 14 days.
 ### -----------------------EXAMPLE 4-----------------------------
 ```
 $endTimeinUTC = Get-SPOTenantLogLastAvailableTimeInUtc
-$startTimeinUTC = $endTimeinUTC.AddDays (-14)
+$startTimeinUTC = $endTimeinUTC.AddDays(-14)
 $tenantlogs = Get-SPOTenantLogEntry -StartTimeinUtc $startTimeinUTC -EndTimeinUTC $endTimeinUTC -CorrelationId e2c2be70-6382-4ce7-8a44-ae7dadff5597
 ```
 This example retrieves log entries recorded over that previous 14 days that have the CorrelationId of “e2c2be70-6382-4ce7-8a44-ae7dadff5597”.
