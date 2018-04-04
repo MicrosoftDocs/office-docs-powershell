@@ -604,10 +604,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```  
 
-```
-NB! WhatIf and Confirm parameters do not seem to be working as of March 28th 2018  
+[!NOTE]
+WhatIf and Confirm parameters do not seem to be working as of March 28th 2018  
 https://github.com/MicrosoftDocs/office-docs-powershell/issues/506
-```
 
 
 ### CommonParameters
