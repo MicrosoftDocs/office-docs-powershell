@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
+title: Get-PhishFilterPolicy
 schema: 2.0.0
 ---
 

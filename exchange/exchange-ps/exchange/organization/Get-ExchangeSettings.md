@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2016
+title: Get-ExchangeSettings
 schema: 2.0.0
 ---
 

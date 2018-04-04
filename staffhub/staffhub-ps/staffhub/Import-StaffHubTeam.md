@@ -21,6 +21,7 @@ Import-StaffHubTeam [-Path] <String> [[-Encoding] <String>]
 ```
 
 ## DESCRIPTION
+
 Imports a set of teams from a specified file.
 Format of the File content - Name,TimeZone,ManagerEmail
 Eg: CmdletTestTeam,Asia/Calcutta,abc@contoso.com

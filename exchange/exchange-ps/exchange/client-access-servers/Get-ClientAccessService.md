@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2016
+title: Get-ClientAccessService
 schema: 2.0.0
 ---
 

@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+title: Get-Mailbox
 schema: 2.0.0
 ---
 
@@ -137,7 +139,15 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch filters the results by arbitration mailboxes. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
+
+Notes:
+
+- If you don't use this switch, the command can't find arbitration mailboxes.
+
+- To return arbitration mailboxes that are used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -641,13 +651,21 @@ Accept wildcard characters: False
 ```
 
 ### -AuditLog
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log settings. You don't need to specify a value with this switch.
+
+Notes: 
+
+- If you don't use this switch, the command can't find this type of arbitration mailbox.
+
+- The Arbitration switch doesn't return this type of arbitration mailbox.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016
 
 Required: False
 Position: Named
@@ -657,13 +675,21 @@ Accept wildcard characters: False
 ```
 
 ### -AuxAuditLog
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log data. You don't need to specify a value with this switch.
+
+Notes: 
+
+- If you don't use this switch, the command can't find this type of arbitration mailbox.
+
+- The Arbitration switch doesn't return this type of arbitration mailbox.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016
 
 Required: False
 Position: Named

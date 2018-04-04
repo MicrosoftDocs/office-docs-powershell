@@ -63,7 +63,7 @@ To do this you clone your GitHub repository to your local computer. Here is a di
 
 Tip: You can clone your repository to muliple computers if you choose. 
 You just have to make sure you save your local work by pushing it back up to your repository.
-And vice versa, when you start workign on a new computer you have to remember to pull any changes down to your local work computer. 
+And vice versa, when you start working on a new computer you have to remember to pull any changes down to your local work computer. 
 This will be described in more detail later on.
 
 There are many tools that can be used to work with GitHub. 
@@ -116,7 +116,7 @@ git checkout -b [name of your branch]
 
 Note the -b flag creates the branch if it doesn't exist and switches to it. To checkout an existing branch leave out the -b flag.
 
-### Make edits to the relevant PowerShell cmdlet markdown.
+### Make edits to the relevant PowerShell cmdlet markdown
 
 Open your favorite Markdown editor and edit the Markdown in your working branch. 
 Tip: Visual Studio Code provides a nice side-by-side view for editing Markdown content. 

@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
+title: Get-CsConferenceReport
 schema: 2.0.0
 ---
 

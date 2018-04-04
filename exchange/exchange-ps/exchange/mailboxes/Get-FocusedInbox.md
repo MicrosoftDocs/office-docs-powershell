@@ -1,5 +1,6 @@
 ---
 applicable: Exchange Online
+title: Get-FocusedInbox
 schema: 2.0.0
 ---
 

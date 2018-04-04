@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
+title: Remove-InboundConnector
 schema: 2.0.0
 ---
 
