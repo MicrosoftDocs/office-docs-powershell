@@ -104,7 +104,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
+Aliases: cf cf
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False

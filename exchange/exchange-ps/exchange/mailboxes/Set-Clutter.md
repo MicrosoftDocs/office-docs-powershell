@@ -114,5 +114,5 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/a4ba8627-b774-460f-9793-3d741c115b2e.aspx)
+[Online version](https://technet.microsoft.com/library/0c91b858-5bbe-4d2f-abff-d1503bcd6864.aspx)
 
