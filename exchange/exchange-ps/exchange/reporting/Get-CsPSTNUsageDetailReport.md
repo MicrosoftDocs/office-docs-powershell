@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
+title: Get-CsPSTNUsageDetailReport
 schema: 2.0.0
 ---
 

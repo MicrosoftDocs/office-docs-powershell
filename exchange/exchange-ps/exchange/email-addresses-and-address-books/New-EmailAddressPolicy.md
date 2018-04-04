@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+title: New-EmailAddressPolicy
 schema: 2.0.0
 ---
 

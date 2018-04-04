@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2016, Exchange Online
+title: Get-OnlineMeetingConfiguration
 schema: 2.0.0
 ---
 

@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2016, Exchange Online
+title: Resume-PublicFolderMigrationRequest
 schema: 2.0.0
 ---
 

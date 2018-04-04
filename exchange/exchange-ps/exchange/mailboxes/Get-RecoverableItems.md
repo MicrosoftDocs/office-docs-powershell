@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Online
+title: Get-RecoverableItems
 schema: 2.0.0
 ---
 # Get-RecoverableItems

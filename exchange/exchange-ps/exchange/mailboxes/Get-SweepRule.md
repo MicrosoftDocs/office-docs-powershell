@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+title: Get-SweepRule
 schema: 2.0.0
 ---
 

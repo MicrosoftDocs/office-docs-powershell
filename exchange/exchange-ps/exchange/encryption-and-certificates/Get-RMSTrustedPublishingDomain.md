@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
+title: Get-RMSTrustedPublishingDomain
 schema: 2.0.0
 ---
 

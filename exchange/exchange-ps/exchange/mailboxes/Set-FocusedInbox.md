@@ -1,5 +1,6 @@
 ---
 applicable: Exchange Online
+title: Set-FocusedInbox
 schema: 2.0.0
 ---
 
