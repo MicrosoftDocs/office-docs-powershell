@@ -10,8 +10,9 @@ schema: 2.0.0
 # Import-StaffHubShift
 
 ## SYNOPSIS
+Imports a list of shifts and adds them to members in the specified teams.
+
 Note: This cmdlet is currently in Beta.
-Imports a list of shifts and adds them to members in the specified teams
 
 ## SYNTAX
 
@@ -20,19 +21,19 @@ Import-StaffHubShift [-Path] <String> [[-Encoding] <String>]
 ```
 
 ## DESCRIPTION
-Imports a list of shifts and adds them to members in the specified teams
+Imports a list of shifts and adds them to members in the specified teams.
 Format of the file content - Title,Notes,StartDateTime,EndDateTime,ShiftType,MemberId,TeamId
 Eg: Title,Notes,2018-11-28T00:00:00Z,2018-11-28T02:00:00Z,Working,MBER_1234,TEAM_1234
 Failure in adding one shift does not stop the other shifts from getting added.
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Import-StaffHubShift -Path "C:\shift.txt"
 ```
 
-Imports the list of shifts from the file in the specified path
+Imports the list of shifts from the file in the specified path.
 
 ## PARAMETERS
 
@@ -53,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Location of the file
+Location of the file.
 
 ```yaml
 Type: String
@@ -71,12 +72,14 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
 
 ## NOTES
 
+This cmdlet is currently in Beta.
+
 ## RELATED LINKS
 
+[Online Version](https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha)

@@ -10,8 +10,9 @@ schema: 2.0.0
 # Add-StaffHubTeam
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 Creates a team.
+
+Note: This cmdlet is currently in Beta.
 
 ## SYNTAX
 
@@ -24,24 +25,24 @@ Creates a team.
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Add-StaffHubTeam -Name "TeamFromCmdletTest" -TimeZone "Asia/Calcutta" -ManagerEmail "abc@contoso.com"
 ```
 
-Creates a team with abc@contoso.com as manager
+Creates a team with abc@contoso.com as manager.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Add-StaffHubTeam -Name "TeamFromCmdletTest" -TimeZone "Asia/Calcutta"
 ```
 
-Creates a team with the logged in user as manager
+Creates a team with the logged in user as manager.
 
 ## PARAMETERS
 
 ### -ManagerEmail
-Organizational email of the member who should be the manager of the team. If not specified, the logged in user is assigned as the manager
+Organizational email of the member who should be the manager of the team. If not specified, the logged in user is assigned as the manager.
 
 ```yaml
 Type: String
@@ -56,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the team to be created
+Name of the team to be created.
 
 ```yaml
 Type: String
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZone
-TimeZone of the team. Format - tz database
+TimeZone of the team. Format - tz database.
 Reference: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 ```yaml
@@ -90,12 +91,14 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
 
 ## NOTES
 
+This cmdlet is currently in Beta.
+
 ## RELATED LINKS
 
+[Online Version](https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha)
