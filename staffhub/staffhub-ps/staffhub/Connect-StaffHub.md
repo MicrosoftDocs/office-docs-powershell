@@ -120,4 +120,4 @@ The cmdlet is currently in Beta.
 
 ## RELATED LINKS
 
-[Online Version](https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha)
+[MicrosoftStaffHub Module in Gallery](https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha)
