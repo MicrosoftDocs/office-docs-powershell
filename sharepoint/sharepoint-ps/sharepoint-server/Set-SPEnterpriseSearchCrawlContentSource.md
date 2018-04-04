@@ -602,10 +602,10 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
+```  
 
-```diff
-NB! WhatIf does not seem to be working as of March 28th 2018  
+```
+NB! WhatIf and Confirm parameters do not seem to be working as of March 28th 2018  
 https://github.com/MicrosoftDocs/office-docs-powershell/issues/506
 ```
 
