@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
+title: Set-DeviceConfigurationPolicy
 schema: 2.0.0
 ---
 

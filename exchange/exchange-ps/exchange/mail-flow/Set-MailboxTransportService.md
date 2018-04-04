@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
+title: Set-MailboxTransportService
 schema: 2.0.0
 ---
 

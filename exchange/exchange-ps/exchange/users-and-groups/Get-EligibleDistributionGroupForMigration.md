@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Online
+title: Get-EligibleDistributionGroupForMigration
 schema: 2.0.0
 ---
 

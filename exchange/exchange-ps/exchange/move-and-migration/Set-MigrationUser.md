@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
+title: Set-MigrationUser
 schema: 2.0.0
 ---
 

@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online Protection
+title: Set-EOPMailUser
 schema: 2.0.0
 ---
 
