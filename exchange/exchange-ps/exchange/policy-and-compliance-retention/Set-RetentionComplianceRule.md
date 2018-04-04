@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedItemClasses
-The ExcludedItemClasses parameter specifies the types of messages to exclude from the rule. Typically, you use this parameter to exclude voicemail messages, IM conversations, and other Skype for Business Online content in mailboxes. Common Skype for Business values include:
+The ExcludedItemClasses parameter specifies the types of messages to exclude from the rule. You can use this parameter only to exclude items from a hold policy, which excludes the specified item class from being held. Using this parameter won't exclude items from deletion policies. Typically, you use this parameter to exclude voicemail messages, IM conversations, and other Skype for Business Online content from being held by a hold policy. Common Skype for Business values include:
 
 - IPM.Note.Microsoft.Conversation
 

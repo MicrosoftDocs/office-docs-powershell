@@ -5,7 +5,7 @@
   - name: Exchange Server PowerShell
     href: exchange-server/exchange-management-shell.md
     items:
-    - name: Open the Exchanage Management Shell
+    - name: Open the Exchange Management Shell
       href: exchange-server/open-the-exchange-management-shell.md
     - name: Connect to Exchange servers using remote PowerShell
       href: exchange-server/connect-to-exchange-servers-using-remote-powershell.md

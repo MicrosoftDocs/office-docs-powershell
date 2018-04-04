@@ -42,6 +42,37 @@ This example adds a new site logo from the following script in a file.
 Get-Content 'c:\scripts\site-script.json' -Raw | Add-SPOSiteScript -Title "Customer logo" -Description "Applies customer logo for customer sites"
 ```
 
+### Example 2
+
+This example sets the external sharing capabilities of the site to the ExternalUserAndGuestSharing option. We also add a site design for a Communication site (68) which uses this script.
+
+```powershell
+PS C:\> $script = @'
+>> {
+>>     "$schema": "schema.json",
+>>         "actions": [
+>> {
+>>    "verb": "setSiteExternalSharingCapability",
+>>    "capability": "ExternalUserAndGuestSharing"
+>> }
+>>         ],
+>>         "bindata": { },
+>>         "version": 1
+>> };
+>> '@
+
+PS C:\> Add-SPOSiteScript -Title "External User and Guest Sharing site script" -Description "A site script to manage the
+guest access of a site" -Content $script
+
+Id          : ea9e3a52-7c12-4da8-a901-4912be8a76bc
+Title       : External User and Guest Sharing site script
+Description : A site script to manage theguest access of a site
+Content     :
+Version     : 0
+
+PS C:\> Add-SPOSiteDesign -Title "Communication Site with External Users and Guest Sharing" -WebTemplate "68" -SiteScripts "ea9e3a52-7c12-4da8-a901-4912be8a76bc"
+```
+
 ## PARAMETERS
 
 ### -Title
