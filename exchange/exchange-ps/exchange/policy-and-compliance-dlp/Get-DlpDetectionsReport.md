@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Office 365 Security & Compliance Center
+title: Get-DlpDetectionsReport
 schema: 2.0.0
 ---
 

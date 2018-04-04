@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
+title: Remove-PublicFolderMoveRequest
 schema: 2.0.0
 ---
 

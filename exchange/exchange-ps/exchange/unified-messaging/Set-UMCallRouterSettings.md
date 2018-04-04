@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
+title: Set-UMCallRouterSettings
 schema: 2.0.0
 ---
 

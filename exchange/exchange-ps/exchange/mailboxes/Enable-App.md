@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+title: Enable-App
 schema: 2.0.0
 ---
 

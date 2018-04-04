@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
+title: New-ManagedFolderMailboxPolicy
 schema: 2.0.0
 ---
 
