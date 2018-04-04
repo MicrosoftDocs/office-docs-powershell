@@ -32,9 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
 ```
 
-This example displays all timer jobs for a specified Web application.  
+This example displays all timer jobs for a specified Web application.
 
-```
+```powershell
 Get-SPTimerJob | select -ExpandProperty HistoryEntries
 ```
 The above example will show you timer job run history
