@@ -33,7 +33,7 @@ Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
 ```
 
 This example displays all timer jobs for a specified Web application.
-### ---------------------EXAMPLE 01---------------------
+### ---------------------EXAMPLE 02---------------------
 ```powershell
 Get-SPTimerJob | select -ExpandProperty HistoryEntries
 ```
