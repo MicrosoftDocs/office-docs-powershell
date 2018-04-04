@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
+title: Update-StoreMailboxState
 schema: 2.0.0
 ---
 

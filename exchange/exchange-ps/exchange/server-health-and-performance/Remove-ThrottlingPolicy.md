@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+title: Remove-ThrottlingPolicy
 schema: 2.0.0
 ---
 

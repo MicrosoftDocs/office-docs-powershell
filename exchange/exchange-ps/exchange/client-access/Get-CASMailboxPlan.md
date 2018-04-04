@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
+title: Get-CASMailboxPlan
 schema: 2.0.0
 ---
 

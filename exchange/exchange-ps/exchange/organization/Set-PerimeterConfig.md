@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online
+title: Set-PerimeterConfig
 schema: 2.0.0
 ---
 

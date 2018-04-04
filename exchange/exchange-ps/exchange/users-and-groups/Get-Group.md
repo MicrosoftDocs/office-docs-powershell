@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+title: Get-Group
 schema: 2.0.0
 ---
 

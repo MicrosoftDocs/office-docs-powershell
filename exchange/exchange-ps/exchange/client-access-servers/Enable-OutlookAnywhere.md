@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010
+title: Enable-OutlookAnywhere
 schema: 2.0.0
 ---
 

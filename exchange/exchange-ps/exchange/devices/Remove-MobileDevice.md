@@ -1,5 +1,7 @@
 ---
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+title: Remove-MobileDevice
 schema: 2.0.0
 ---
 
