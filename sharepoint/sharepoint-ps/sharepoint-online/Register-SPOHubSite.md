@@ -23,6 +23,9 @@ Use this cmdlet to register an existing site collection as a hub site.
 > [!IMPORTANT]
 > This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
+> [!IMPORTANT]
+> A maximum of 50 hub sites may be created per tenant.
+
 ## EXAMPLES
 
 ### Example 1

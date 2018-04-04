@@ -53,6 +53,13 @@ C:\PS>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name
 
 This example backs up a site collection using database snapshots to ensure backup integrity.
 
+### -------------------EXAMPLE 4-------------------- 
+```
+C:\PS>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
+```
+
+This example backs up a site collection and prevents placing the site into a read only mode during the backup phase. Use the -NoSiteLock parameter when backing up a site in production where it is desirable to not place the site into a read only mode while the backup takes place.
+
 ## PARAMETERS
 
 ### -Identity

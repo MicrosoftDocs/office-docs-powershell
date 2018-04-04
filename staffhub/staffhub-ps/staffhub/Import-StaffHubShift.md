@@ -20,10 +20,10 @@ Import-StaffHubShift [-Path] <String> [[-Encoding] <String>]
 ```
 
 ## DESCRIPTION
-Imports a list of shifts and adds them to members in the specified teams
-Format of the file content - Title,Notes,StartDateTime,EndDateTime,ShiftType,MemberId,TeamId
-Eg: Title,Notes,2018-11-28T00:00:00Z,2018-11-28T02:00:00Z,Working,MBER_1234,TEAM_1234
-Failure in adding one shift does not stop the other shifts from getting added.
+Imports a list of shifts and adds them to members in the specified teams<br>
+Format of the file content - Title,Notes,StartDateTime,EndDateTime,ShiftType,MemberId,TeamId<br>
+Eg: Title,Notes,2018-11-28T00:00:00Z,2018-11-28T02:00:00Z,Working,MBER_1234,TEAM_1234<br>
+Failure in adding one shift does not stop the other shifts from getting added.<br>
 
 ## EXAMPLES
 

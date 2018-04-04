@@ -8,7 +8,7 @@ schema: 2.0.0
 # Migrate-SPDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use.
 
 ## SYNTAX
 
@@ -28,21 +28,23 @@ Migrate-SPDatabase [-Identity] <SPDatabasePipeBind> [-SiteCollection] <SPSitePip
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>#Do not use.
 ```
 
-{{ Add example description here }}
+Do not use.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -74,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationDatabase
-{{Fill DestinationDatabase Description}}
+Do not use.
 
 ```yaml
 Type: SPContentDatabasePipeBind
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Do not use.
 
 ```yaml
 Type: SPDatabasePipeBind
@@ -106,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
-{{Fill Overwrite Description}}
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceType
-{{Fill ServiceType Description}}
+Do not use.
 
 ```yaml
 Type: ServiceExtensionType
@@ -139,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCollection
-{{Fill SiteCollection Description}}
+Do not use.
 
 ```yaml
 Type: SPSitePipeBind
@@ -155,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
-{{Fill SiteSubscription Description}}
+Do not use.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
@@ -171,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseLinkedSqlServer
-{{Fill UseLinkedSqlServer Description}}
+Do not use.
 
 ```yaml
 Type: SwitchParameter

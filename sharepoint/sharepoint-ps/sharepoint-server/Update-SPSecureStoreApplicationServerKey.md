@@ -33,9 +33,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$newPassPhrase = "abcDEF123!"
-
-Update-SPSecureStoreApplicationServerKey -ServiceApplicationProxy $contosoProxy -Passphrase $newPassPhrase
+PS C:\>$newPassPhrase = "abcDEF123!"
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
+PS C:\>Update-SPSecureStoreApplicationServerKey -ServiceApplicationProxy $proxy -Passphrase $newPassPhrase
 ```
 
 This example synchronizes the passphrase of the server key on a SharePoint server with the master key for the Secure Store service database.

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: Add-SPShellAdmin
 schema: 2.0.0
 ---
@@ -29,6 +29,7 @@ There is no need to use this cmdlet for databases that use SQL authentication; i
 Use the Add-SPShellAdmin cmdlet to add a user to the SharePoint_Shell_Access role as follows:
 
 --If you specify only the user, the user is added to the role for the farm configuration database.
+
 --If you use the database parameter, the user is added to the role on the farm configuration database, the Central Administration content database, and the specified database. Using the database parameter is the preferred method because most of the administrative operations require access to the Central Administration content database.
 
 The user is added to the WSS_Admin_WPG group on all Web servers when the user is added to the SharePoint_Shell_Access role.
@@ -79,7 +80,7 @@ Specifies the name of the user to add to the SharePoint_Shell_Access role in the
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -101,7 +102,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -136,7 +137,7 @@ The farm configuration database is always included, even if you specify another 
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -153,7 +154,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
