@@ -78,7 +78,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Online
 
 Required: False
@@ -110,7 +110,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Online
 
 Required: False

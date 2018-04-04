@@ -108,7 +108,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2016, Exchange Online
 
 Required: False
@@ -142,7 +142,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2016, Exchange Online
 
 Required: False

@@ -253,7 +253,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
 
 Required: False
@@ -421,7 +421,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
 
 Required: False
