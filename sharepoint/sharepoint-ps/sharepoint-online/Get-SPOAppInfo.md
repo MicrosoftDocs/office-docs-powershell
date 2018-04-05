@@ -48,7 +48,7 @@ Get-SPOAppInfo -Name " " | Sort Name
 ```
 Example 3 returns the installed application that have a space in the name and sorts the in ascending order. 
 
-## REQUIRED PARAMETERS
+## PARAMETERS
 
 ### -Name
 Specifies the application’s name.
