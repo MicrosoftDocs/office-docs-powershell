@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-Module Name: SkypeForBusiness
-online version:
+external help file:
+applicable: Skype for Business Server 2015
+title: Get-CsAdditionalInternalDomain
 schema: 2.0.0
 ---
 
@@ -43,6 +43,7 @@ PS C:\> {{ Add example code here }}
 Type: String
 Parameter Sets: Filter
 Aliases:
+Applicable: Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -58,6 +59,7 @@ Accept wildcard characters: False
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases:
+Applicable: Skype for Business Server 2015
 
 Required: False
 Position: 1
@@ -73,6 +75,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Server 2015
 
 Required: False
 Position: Named

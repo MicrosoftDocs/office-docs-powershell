@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-Module Name: SkypeForBusiness
-online version:
+external help file:
+applicable: Skype for Business Server 2015
+title: Remove-CsHybridApplicationEndpoint
 schema: 2.0.0
 ---
 
@@ -37,6 +37,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -52,6 +53,7 @@ Accept wildcard characters: False
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Server 2015
 
 Required: True
 Position: 0
@@ -68,6 +70,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Server 2015
 
 Required: False
 Position: Named
