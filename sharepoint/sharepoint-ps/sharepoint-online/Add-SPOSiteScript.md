@@ -33,9 +33,14 @@ This example adds a new site logo from the following script in a file.
 
 ```json
 {
-  "verb": "setSiteLogo",
-  "url": "https://contoso.sharepoint.com/SiteAssets/company-logo.png"
-},
+  "$schema": "schema.json",
+  "actions": [
+      {
+        "verb": "setSiteLogo",
+        "url": "https://contoso.sharepoint.com/SiteAssets/company-logo.png"
+      }
+  ]
+}
 ```
 
 ```powershell
