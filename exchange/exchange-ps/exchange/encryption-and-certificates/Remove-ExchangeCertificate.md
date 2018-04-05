@@ -45,14 +45,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e
 ```
 
 This example removes the certificate with the specified thumbprint from the local Exchange server.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-ExchangeCertificate -Server Mailbox01 -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e
 ```

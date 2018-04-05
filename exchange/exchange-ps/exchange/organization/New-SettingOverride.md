@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-SettingOverride -Name "IM Override" -Component OwaServer -Section IMSettings -Parameters @("IMServerName=skype01.contoso.com","IMCertificateThumbprint=CDF34A740E9D225A1A06193A9D44B2CE22775308") -Reason "Configure IM"
 ```
@@ -40,7 +40,7 @@ This example creates a new setting override named IM Server Integration. This ov
 
 For more information, see the topic Configure instant messaging integration with Outlook on the web in Exchange 2016.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-SettingOverride -Name "Change OAB Generation" -Server Mailbox01 -Component TimeBasedAssistants -Section OABGeneratorAssistant -Parameters @("WorkCycle=02:00:00") -Reason "Generate OAB Every 2 hours"
 ```

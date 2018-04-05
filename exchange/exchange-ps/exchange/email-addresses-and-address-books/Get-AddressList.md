@@ -42,14 +42,14 @@ By default in Exchange Online, the Address List role isn't assigned to any role 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AddressList
 ```
 
 This example returns a summary list of all the address lists.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AddressList -Identity "All Users\Sales\building4" | Format-List
 ```

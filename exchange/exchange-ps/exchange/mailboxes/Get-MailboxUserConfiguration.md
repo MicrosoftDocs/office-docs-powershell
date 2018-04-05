@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxUserConfiguration -Mailbox laura@contoso.com -Identity Configuration\* | Format-Table -Auto Identity
 ```
 
 This example returns a summary list of all user configuration items in the Configuration folder in the mailbox laura@contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxUserConfiguration -Mailbox julia@contoso.com -Identity Configuration\IPM.Configuration.Aggregated.OwaUserConfiguration
 ```

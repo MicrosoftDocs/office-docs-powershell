@@ -5,7 +5,7 @@ title: Update-EmailAddressPolicy
 schema: 2.0.0
 ---
 
-# update-EmailAddressPolicy
+# Update-EmailAddressPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-update-EmailAddressPolicy [-Identity] <EmailAddressPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Update-EmailAddressPolicy [-Identity] <EmailAddressPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-FixMissingAlias] [-WhatIf] [-UpdateSecondaryAddressesOnly] [<CommonParameters>]
 ```
 
@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-EmailAddressPolicy -Identity "Northwest Executives"
 ```

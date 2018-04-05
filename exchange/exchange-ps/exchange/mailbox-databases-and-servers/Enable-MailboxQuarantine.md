@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-MailboxQuarantine "Brian Johnson"
 ```
@@ -77,7 +77,6 @@ For example:
 - User ID or user principal name (UPN)
 
 You can't use this parameter with the Database parameter.
-
 
 ```yaml
 Type: GeneralMailboxIdParameter

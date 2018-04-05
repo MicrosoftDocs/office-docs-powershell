@@ -60,21 +60,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxPermission -Identity john@contoso.com | Format-List
 ```
 
 This example returns permissions on the mailbox by its SMTP address john@contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxPermission -Identity john@contoso.com -User "Ayla"
 ```
 
 This example returns permissions that the user Ayla has on John's mailbox.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxPermission -Identity Room222 -Owner
 ```

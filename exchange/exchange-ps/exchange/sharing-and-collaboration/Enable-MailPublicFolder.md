@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-MailPublicFolder "\My Public Folder"
 ```
 
 This example mail-enables the top-level public folder My Public Folder.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Enable-MailPublicFolder "\Marketing\Reports"
 ```

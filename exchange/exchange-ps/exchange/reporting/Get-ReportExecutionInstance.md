@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ReportExecutionInstance | Format-Table -Auto Identity,ScheduleId,ReportStartDate,ReportEndDate
 ```
 
 This example returns a summary list of all report execution instances.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ReportExecutionInstance -Identity 277df7c3-5b73-4409-6264-08d4a8052836
 ```
@@ -92,4 +92,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/55a0227e-633a-4e4b-b68e-e05f60f84c83.aspx)
-

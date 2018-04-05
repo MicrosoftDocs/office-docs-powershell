@@ -26,21 +26,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RemoteDomain
 ```
 
 This example returns all remote domains configured in the Active Directory forest in which you run the command.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RemoteDomain Contoso
 ```
 
 This example returns the configuration for the remote domain Contoso.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-RemoteDomain | Where {$_.TNEFEnabled -eq $false}
 ```

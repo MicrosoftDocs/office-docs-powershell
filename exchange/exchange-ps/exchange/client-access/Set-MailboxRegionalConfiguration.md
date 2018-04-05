@@ -27,21 +27,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MailboxRegionalConfiguration -Identity "Marcelo Teixeira" -Language pt-br -LocalizeDefaultFolderName
 ```
 
 This example sets Marcelo Teixeira's mailbox language to Brazilian Portuguese, and localizes the default folder names in Portuguese.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-MailboxRegionalConfiguration -Identity "Ella Lack's" -DateFormat "d/m/yyyy"
 ```
 
 This example sets the date format for Ella Lack's mailbox.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-MailboxRegionalConfiguration -Identity "Alice Jakobsen" -Language da-dk -DateFormat "dd-mm-yyyy" -LocalizeDefaultFolderName
 ```

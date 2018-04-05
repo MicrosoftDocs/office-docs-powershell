@@ -28,17 +28,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-HotmailSubscription -Name "Ayla's Hotmail" -EmailAddress ayla@fabrikam.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
 ```
 
 This example creates the Hotmail subscription Ayla's Hotmail in the mailbox of the user Ayla Kol. The Hotmail account has the following details:
 
+- Email address: ayla@fabrikam.com
 
-Email address: ayla@fabrikam.com
-
-Password: Pa$$word1
+- Password: Pa$$word1
 
 ## PARAMETERS
 
@@ -200,4 +199,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/04990a05-da71-43e7-9ba8-859a088891d4.aspx)
-

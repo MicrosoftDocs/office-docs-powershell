@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxServer | Test-MRSHealth
 ```
 
 This example tests the health of the Mailbox Replication service on all Mailbox servers.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-MRSHealth MBX01
 ```

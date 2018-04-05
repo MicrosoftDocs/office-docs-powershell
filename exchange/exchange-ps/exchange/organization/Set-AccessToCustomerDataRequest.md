@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-AccessToCustomerDataRequest -ApprovalDecision Approve -RequestId EXSR123456 -Comment "Troubleshoot issues in Rick Hofer mailbox"
 ```
@@ -109,4 +109,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b3d866b1-628f-4d66-8114-1798934a2fcf.aspx)
-

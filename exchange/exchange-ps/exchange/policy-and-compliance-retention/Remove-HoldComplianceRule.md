@@ -30,7 +30,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-HoldComplianceRule -Identity "One Year Standard"
 ```
@@ -131,4 +131,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/eb136136-3334-4e2b-b442-5664e22c1dbf.aspx)
-

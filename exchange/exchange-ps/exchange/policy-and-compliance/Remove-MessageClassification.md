@@ -5,7 +5,7 @@ title: Remove-MessageClassification
 schema: 2.0.0
 ---
 
-# remove-MessageClassification
+# Remove-MessageClassification
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-remove-MessageClassification [-Identity] <MessageClassificationIdParameter> [-Confirm]
+Remove-MessageClassification [-Identity] <MessageClassificationIdParameter> [-Confirm]
  [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-MessageClassification MyMessageClassification
 ```

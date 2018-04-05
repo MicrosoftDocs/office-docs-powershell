@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Export-RecipientDataProperty -Identity tony@contoso.com -SpokenName | ForEach { $_.FileData | Add-Content C:\tonysmith.wma -Encoding Byte}
 ```
 
 This example exports Tony Smith's spoken name audio file and saves it to the local computer.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Export-RecipientDataProperty -Identity "Ayla" -Picture | ForEach { $_.FileData | Add-Content C:\aylakol.jpg -Encoding Byte}
 ```

@@ -51,14 +51,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-QueueDigest -Forest
 ```
 
 This example returns information about all queues in the Active Directory forest.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-QueueDigest -Dag DAG01
 ```

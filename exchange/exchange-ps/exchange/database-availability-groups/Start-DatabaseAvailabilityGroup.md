@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Start-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer MBX2
 ```
 
 This example starts the Mailbox server MBX2 in the DAG DAG1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Start-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
 ```

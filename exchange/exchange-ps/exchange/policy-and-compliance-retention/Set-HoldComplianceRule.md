@@ -30,7 +30,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-HoldComplianceRule -Identity "Internal Company Rule" -HoldContent 180
 ```
@@ -245,4 +245,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/12a4397c-3369-43d2-9c52-a6e39956e7e4.aspx)
-

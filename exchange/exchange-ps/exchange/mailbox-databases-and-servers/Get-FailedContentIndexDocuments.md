@@ -48,14 +48,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-FailedContentIndexDocuments -Identity "Terry Adams"
 ```
 
 This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox of user Terry Adams.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-FailedContentIndexDocuments -MailboxDatabase "Mailbox Database MDB2"
 ```

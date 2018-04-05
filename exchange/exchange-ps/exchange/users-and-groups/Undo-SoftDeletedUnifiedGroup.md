@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Undo-SoftDeletedUnifiedGroup -SoftDeletedObject "Marketing Department"
 ```
@@ -135,4 +135,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/89f09bfc-43d6-457c-978f-b699c27ea325.aspx)
-

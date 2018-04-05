@@ -29,7 +29,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-eDiscoveryCaseAdmin -User chris@contoso.com
 ```
@@ -120,4 +120,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b419dc9c-a5fd-446f-988f-ac2de4d633fb.aspx)
-

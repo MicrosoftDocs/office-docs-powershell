@@ -41,14 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Resume-MailboxDatabaseCopy -Identity DB1\MBX3
 ```
 
 This example resumes replication and replay activity for the copy of the database DB1 hosted on the Mailbox server MBX3.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Resume-MailboxDatabaseCopy -Identity DB2\MBX4 -ReplicationOnly
 ```

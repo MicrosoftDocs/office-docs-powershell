@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DistributionGroupMember -Identity "Marketing USA"
 ```
 
 This example returns the existing distribution group members for the distribution group named Marketing USA.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ADServerSettings -ViewEntireForest $true; Get-DistributionGroupMember -Identity "Marketing Worldwide"
 ```

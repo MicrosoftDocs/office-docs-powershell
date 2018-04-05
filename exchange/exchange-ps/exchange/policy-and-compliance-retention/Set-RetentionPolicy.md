@@ -5,7 +5,7 @@ title: Set-RetentionPolicy
 schema: 2.0.0
 ---
 
-# set-RetentionPolicy
+# Set-RetentionPolicy
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-set-RetentionPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
+Set-RetentionPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
  [-Name <String>] [-RetentionId <Guid>] [-RetentionPolicyTagLinks <RetentionPolicyTagIdParameter[]>] [-WhatIf]
  [-IsDefault] [-IsDefaultArbitrationMailbox] [<CommonParameters>]
 ```
@@ -27,7 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RetentionPolicy "MyPolicy" -RetentionPolicyTagLinks "MyRetentionPolicyTag"
 ```

@@ -5,7 +5,7 @@ title: New-ManagedFolderMailboxPolicy
 schema: 2.0.0
 ---
 
-# new-ManagedFolderMailboxPolicy
+# New-ManagedFolderMailboxPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-new-ManagedFolderMailboxPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
+New-ManagedFolderMailboxPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
  [-ManagedFolderLinks <ELCFolderIdParameter[]>] [-Organization <OrganizationIdParameter>] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -31,7 +31,7 @@ Managed custom folders are a premium feature of messaging records management (MR
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ManagedFolderMailboxPolicy -Name "My Managed Folder Mailbox Policy" -ManagedFolderLinks Inbox, MyFolder
 ```
@@ -160,4 +160,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/14423cb5-b93a-466f-b7b2-7f37f14fb896.aspx)
-

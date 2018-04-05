@@ -25,7 +25,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-CaseHoldRule -Identity "30 Day Rule"
 ```
@@ -98,4 +98,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/54cf2ae2-5bde-4630-a4cc-3e730b0d5a41.aspx)
-

@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-TenantAnalyticsConfig -MinRecipients 10
 ```
@@ -120,4 +120,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3f34a5c1-350f-4f1f-92dd-d16587a0097b.aspx)
-

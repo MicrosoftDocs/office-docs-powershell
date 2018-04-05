@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-EdgeSubscription | Format-List
 ```
 
 This example retrieves detailed Edge Subscription information for all Edge Transport servers subscribed to your Exchange organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-EdgeSubscription Edge1 -DomainController DC1.contoso.com
 ```

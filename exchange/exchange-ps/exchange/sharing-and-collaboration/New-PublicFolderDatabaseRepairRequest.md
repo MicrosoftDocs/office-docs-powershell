@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-PublicFolderDatabaseRepairRequest -Database PFDB01 -CorruptionType ReplState
 ```
 
 This example detects and repairs replication issues in the public folder database PFDB01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-PublicFolderDatabaseRepairRequest -Database PFDB02 -CorruptionType ReplState -DetectOnly
 ```
@@ -169,4 +169,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9ad7ebc3-4a12-4af7-bbdf-ae1a6c2a7a84.aspx)
-

@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-Message -Server Server1 -Filter {FromAddress -eq "Kweku@contoso.com"} -WithNDR $false
 ```

@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MobileDeviceMailboxPolicy -Identity "SalesPolicy"
 ```
 
 This example returns the policy settings for the Mobile Device mailbox policy SalesPolicy.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MobileDeviceMailboxPolicy -Identity "Default"
 ```

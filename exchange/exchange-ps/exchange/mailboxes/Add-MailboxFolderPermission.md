@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User ed@contoso.com -AccessRights Owner
 ```
 
 This example grants the Owner role to Ed on the Marketing folder in Ayla's mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User julia@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate
 ```
 
 In Office 365, this example adds Julia as a calendar delegate to Ayla's mailbox, but without access to private items.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User laura@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate,CanViewPrivateItems
 ```

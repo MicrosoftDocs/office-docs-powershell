@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-AntiPhishRule -Identity "Engineering Department Phishing Rule" -ExceptIfRecipientDomainIs fabrikam.com
 ```
@@ -178,7 +178,6 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 - GUID
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
 
 ```yaml
 Type: RecipientIdParameter[]

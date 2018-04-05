@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-SupervisoryReviewPolicyV2 -Identity "EU Brokers Policy"
 ```
@@ -127,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/79ded575-edac-49bc-b47e-df1ee5503a18.aspx)
-

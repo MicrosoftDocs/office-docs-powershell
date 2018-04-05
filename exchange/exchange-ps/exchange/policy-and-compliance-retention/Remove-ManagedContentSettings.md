@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ManagedContentSettings -Identity MyManagedContentSettings
 ```
@@ -123,4 +123,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dbf7f047-87b8-4d8d-bb9b-e2809db1d8b5.aspx)
-

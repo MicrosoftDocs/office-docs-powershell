@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-AuditConfig -Workload Exchange,SharePoint
 ```
@@ -127,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2b9b8795-2f4d-496a-bb36-e3b8511c7e1c.aspx)
-

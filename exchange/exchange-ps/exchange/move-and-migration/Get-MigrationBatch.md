@@ -49,14 +49,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MigrationBatch -Identity LocalMove2
 ```
 
 This example displays status information for the migration batch LocalMove2.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MigrationBatch -Endpoint exsrv1.contoso.com
 ```

@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-IntraorganizationConnector -DiscoveryEndpoint http://ExternalDiscovery.Contoso.com -Name MainCloudConnector -TargetAddressDomains Cloud1.contoso.com,Cloud2.contoso.com
 ```

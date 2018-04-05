@@ -5,7 +5,7 @@ title: Get-ManagedFolderMailboxPolicy
 schema: 2.0.0
 ---
 
-# get-ManagedFolderMailboxPolicy
+# Get-ManagedFolderMailboxPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-get-ManagedFolderMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
+Get-ManagedFolderMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
  [-Organization <OrganizationIdParameter>] [<CommonParameters>]
 ```
 
@@ -28,13 +28,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ManagedFolderMailboxPolicy "PM Storage Template"
 ```
 
 This example returns all the attributes of the managed folder mailbox policy PM Storage Template.
-
 
 The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters (https://technet.microsoft.com/library/bb124388.aspx).
 
@@ -108,4 +107,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3a151aa9-ff32-46a9-a3b8-8fbd043cedc3.aspx)
-

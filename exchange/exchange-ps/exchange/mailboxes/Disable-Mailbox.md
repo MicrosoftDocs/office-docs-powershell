@@ -5,7 +5,7 @@ title: Disable-Mailbox
 schema: 2.0.0
 ---
 
-# disable-Mailbox
+# Disable-Mailbox
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -18,26 +18,26 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set4
 ```
-disable-Mailbox [-Identity] <MailboxIdParameter> [-Arbitration] [-Confirm]
+Disable-Mailbox [-Identity] <MailboxIdParameter> [-Arbitration] [-Confirm]
  [-DisableLastArbitrationMailboxAllowed] [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-IgnoreLegalHold]
  [-WhatIf] [-DisableArbitrationMailboxWithOABsAllowed] [-PermanentlyDisable] [<CommonParameters>]
 ```
 
 ### Set2
 ```
-disable-Mailbox [-Identity] <MailboxIdParameter> [-Archive] [-Confirm] [-DomainController <Fqdn>]
+Disable-Mailbox [-Identity] <MailboxIdParameter> [-Archive] [-Confirm] [-DomainController <Fqdn>]
  [-IgnoreDefaultScope] [-IgnoreLegalHold] [-WhatIf] [-PermanentlyDisable] [<CommonParameters>]
 ```
 
 ### Set3
 ```
-disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
+Disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
  [-IgnoreLegalHold] [-RemoteArchive] [-WhatIf] [-PermanentlyDisable] [<CommonParameters>]
 ```
 
 ### Set5
 ```
-disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
+Disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
  [-IgnoreLegalHold] [-PublicFolder] [-WhatIf] [-PermanentlyDisable] [<CommonParameters>]
 ```
 
@@ -52,14 +52,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Disable-Mailbox -Identity "John Woods"
 ```
 
 This example disables the mailbox of the user named John Woods and removes all mailbox attributes from John's user account..
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Disable-Mailbox -Identity "John Woods" -RemoteArchive
 ```

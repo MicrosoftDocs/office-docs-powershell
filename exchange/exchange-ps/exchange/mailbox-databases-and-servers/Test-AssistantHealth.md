@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-AssistantHealth -ServerName MBXSVR01 -IncludeCrashDump -ResolveProblems | Format-List
 ```
 
 This example detects and repairs the mailbox assistant's health on MBXSVR01, includes the error information, and formats the output to a list.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-AssistantHealth -MaxProcessingTimeInMinutes 30 | Format-List
 ```

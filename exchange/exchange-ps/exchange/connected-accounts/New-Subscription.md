@@ -29,17 +29,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-Subscription -Name Contoso -EmailAddress brian@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
 ```
 
 This example creates the subscription Contoso in the mailbox of the user Brian Johnson. The remote mailbox has the following details:
 
+- Email address: brian@contoso.com
 
-Email address: brian@contoso.com
-
-Password: Pa$$word1
+- Password: Pa$$word1
 
 ## PARAMETERS
 
@@ -267,4 +266,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/25da87cf-f0bc-4de5-b03a-51bb77263c18.aspx)
-

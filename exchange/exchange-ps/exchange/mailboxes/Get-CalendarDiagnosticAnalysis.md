@@ -69,7 +69,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F; Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced> "C:\My Documents\Oscar Evans Analysis.csv"
 ```
@@ -78,7 +78,7 @@ This example gets the specified calendar item from Oscar Evans' mailbox, stores 
 
 For basic analysis of the item, don't include the DetailLevel parameter, or use the value Basic instead of Advanced.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-CalendarDiagnosticAnalysis -LogLocation "C:\My Documents\Exported Calendar Logs\jkozma@contoso.com" -DetailLevel Advanced -OutputAs HTML > "C:\My Documents\Jasen Kozma Analysis.html"
 ```

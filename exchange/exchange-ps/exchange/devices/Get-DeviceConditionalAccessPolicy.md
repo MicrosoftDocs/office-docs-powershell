@@ -35,14 +35,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DeviceConditionalAccessPolicy | Format-Table Name,Enabled,Priority
 ```
 
 This example shows summary information for all mobile device conditional access policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DeviceConditionalAccessPolicy -Identity "Human Resources"
 ```
@@ -91,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ce78b63e-885e-4888-9b08-33f8affb50a9.aspx)
-

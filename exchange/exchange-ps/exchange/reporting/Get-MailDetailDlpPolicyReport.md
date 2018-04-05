@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailDetailDlpPolicyReport -StartDate 06/13/2015 -EndDate 06/15/2015 -SenderAddress john@contoso.com
 ```
@@ -321,4 +321,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3eb34454-65f8-4741-9c9b-bba087bc9cb2.aspx)
-

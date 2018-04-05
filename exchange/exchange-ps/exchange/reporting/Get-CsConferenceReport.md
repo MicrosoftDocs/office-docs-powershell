@@ -42,17 +42,14 @@ You can use the Get-CsConferenceReport to query information about the type and n
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsConferenceReport -ReportType Monthly -StartDate 06/01/2015 -EndDate 06/30/2015
 ```
 
 This example shows information about conferences held by Skype for Business Online users for the month of June 2015.
-
-
 
 ## PARAMETERS
 
@@ -125,17 +122,13 @@ Accept wildcard characters: False
 ### 
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
-
 ## OUTPUTS
 
 ### 
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4b46de5b-9d1c-44eb-86bb-70d5e8339fdf.aspx)
-

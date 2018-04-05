@@ -25,14 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OrganizationConfig -DomainController ContosoDC
 ```
 
 This example gets the organization configuration information for the domain controller ContosoDC.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-OrganizationConfig Export-Cli c:\myFile.xml
 ```
@@ -41,7 +41,7 @@ This example gets the configuration information for the tenant organization.
 
 For more information, see Troubleshoot a hybrid deployment (https://technet.microsoft.com/library/jj659053.aspx).
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-OrganizationConfig | Format-List EwsApplicationAccessPolicy,Ews*List
 ```

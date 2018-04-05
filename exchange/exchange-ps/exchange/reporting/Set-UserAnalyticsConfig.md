@@ -33,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-UserAnalyticsConfig -Identity "Kathleen Reiter" -PrivacyMode OptIn
 ```
@@ -159,4 +159,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f8f0b66c-dcd2-43ef-88f0-0cc760ce7602.aspx)
-

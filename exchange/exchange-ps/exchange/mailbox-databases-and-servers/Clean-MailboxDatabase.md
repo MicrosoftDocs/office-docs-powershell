@@ -5,7 +5,7 @@ title: Clean-MailboxDatabase
 schema: 2.0.0
 ---
 
-# clean-MailboxDatabase
+# Clean-MailboxDatabase
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-clean-MailboxDatabase [-Identity] <DatabaseIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Clean-MailboxDatabase [-Identity] <DatabaseIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Clean-MailboxDatabase MBD01
 ```
@@ -135,4 +135,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a68d31b6-4f32-4a73-b9d9-5d5a6fc1c2f0.aspx)
-

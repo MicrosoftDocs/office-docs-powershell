@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PublicFolderMigrationRequest | Remove-PublicFolderMigrationRequest
 ```
 
 This example cancels any public folder migration request that's actively running.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-PublicFolderMigrationRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```

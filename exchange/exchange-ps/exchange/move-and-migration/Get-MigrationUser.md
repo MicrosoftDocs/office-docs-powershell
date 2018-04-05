@@ -41,14 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MigrationUser -Identity TonySmith@contoso.com
 ```
 
 This example retrieves status information about the recently migrated user, Tony Smith.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MigrationUser -MailboxGuid b6a6795c-a010-4f67-aaaa-da372d56fcb9 | Get-MigrationUserStatistics
 ```

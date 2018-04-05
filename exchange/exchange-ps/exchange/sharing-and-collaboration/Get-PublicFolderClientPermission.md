@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PublicFolderClientPermission "\My Public Folder"
 ```
 
 This example retrieves the permissions for all users of \\My Public Folder.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PublicFolderClientPermission -Identity "\My Public Folder" -User Chris | Format-List
 ```

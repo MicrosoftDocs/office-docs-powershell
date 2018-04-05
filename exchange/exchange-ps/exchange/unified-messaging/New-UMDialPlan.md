@@ -38,21 +38,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-UMDialplan -Name MyUMDialPlan -NumberOfDigitsInExtension 4
 ```
 
 This example creates the UM dial plan MyUMDialPlan that uses four-digit extension numbers.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-UMDialplan -Name MyUMDialPlan -URIType SipName -NumberOfDigitsInExtension 5
 ```
 
 This example creates the UM dial plan MyUMDialPlan that uses five-digit extension numbers that support SIP URIs.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Unsecured
 ```

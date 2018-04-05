@@ -40,14 +40,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-AdServerSettings -RecipientViewRoot "contoso.com/Marketing Users"
 ```
 
 This example sets the recipient scope to the Marketing Users OU in the contoso.com domain for the current session.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-AdServerSettings -ViewEntireForest $true -PreferredGlobalCatalog gc1.contoso.com
 ```

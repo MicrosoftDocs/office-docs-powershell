@@ -79,21 +79,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-UMConnectivity
 ```
 
 This example performs connectivity and operational tests on the local Mailbox server, and then displays the Voice over IP (VoIP) connectivity information.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
 ```
 
 This example tests the ability of the local Mailbox server to use an unsecured TCP connection instead of a secured mutual TLS connection to place a call through the UM IP gateway MyUMIPGateway by using the telephone number 56780.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Test-UMConnectivity -Phone sip:sipdp.contoso.com@contoso.com -UMIPGateway MyUMIPGateway -Secured $true -From sip:user1@contoso.com -MediaSecured $true
 ```

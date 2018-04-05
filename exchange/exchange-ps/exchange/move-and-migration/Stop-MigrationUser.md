@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Stop-MigrationUser -Identity laura@contoso.com
 ```
@@ -139,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ad058a5c-b114-4e64-bc1f-dc627ef8c08c.aspx)
-

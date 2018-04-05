@@ -40,14 +40,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ManagedContentSettings -Name "CS-Exec-DeletedItems" -FolderName "Exec-DeletedItems" -MessageClass * -RetentionEnabled $true -RetentionAction DeleteAndAllowRecovery -AgeLimitForRetention 30.00:00:00 -TriggerForRetention WhenDelivered
 ```
 
 This example creates managed content settings for the managed default folder Exec-DeletedItems. When added to a managed folder mailbox policy and applied to a mailbox, items in the Deleted Items folder will be permanently deleted 30 days from the date of delivery.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ManagedContentSettings -Name CS-Exec-Calendar -FolderName Exec-Calendar -MessageClass Calendar -RetentionEnabled $true -RetentionAction MoveToDeletedItems -AgeLimitForRetention 180
 ```
@@ -404,4 +404,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cbb71121-b857-4d1f-8806-952e42841a9b.aspx)
-

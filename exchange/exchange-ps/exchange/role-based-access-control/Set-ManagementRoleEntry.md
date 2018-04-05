@@ -31,28 +31,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ManagementRoleEntry "Help Desk Personnel\Get-Mailbox" -Parameters Anr, Database -RemoveParameter
 ```
 
 This example removes the Anr and Database parameters from the Get-Mailbox role entry on the Help Desk Personnel role.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ManagementRoleEntry "Help Desk Personnel\*" | Set-ManagementRoleEntry -Parameters WhatIf -AddParameter
 ```
 
 This example retrieves a list of role entries on the Help Desk Personnel role and adds the WhatIf switch to each role entry using the Set-ManagementRoleEntry cmdlet.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-ManagementRoleEntry "Tier 1 Help Desk\Set-Mailbox" -Parameters DisplayName, ForwardingAddress
 ```
 
 This example adds the DisplayName and ForwardingAddress parameters to the Set-Mailbox role entry on the Tier 1 Help Desk role and removes all other parameters from the role entry.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Set-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Location -AddParameter -UnScopedTopLevel
 ```

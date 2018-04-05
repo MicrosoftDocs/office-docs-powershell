@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
 ```
 
 This example creates the UM IP gateway MyUMIPGateway that enables a Mailbox server to start accepting calls from an IP gateway with an IP address of 10.10.10.1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
 ```
 
 This example creates the UM IP gateway MyUMIPGateway and prevents it from accepting incoming calls and outgoing calls, sets an IPv6 address and allows the UM IP gateway to use IPv4 and IPV6 addresses.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
 ```

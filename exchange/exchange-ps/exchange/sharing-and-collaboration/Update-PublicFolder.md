@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-PublicFolder "\Legal\Cases\My Public Folder" -Server "My Server"
 ```
 
 This example starts content replication of the public folder My Public Folder in the \\Legal\\Cases path from the server My Server to all of the servers on the replication list for My Public Folder.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PublicFolder "\Legal\Cases\My Public Folder" | Update-PublicFolder -Server "My Server"
 ```
@@ -146,4 +146,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3c04f37a-bee1-4d3e-b673-843f8fa0c337.aspx)
-

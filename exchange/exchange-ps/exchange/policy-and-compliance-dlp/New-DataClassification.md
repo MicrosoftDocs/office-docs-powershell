@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $Employee_Template = Get-Content "C:\My Documents\Contoso Employee Template.docx" -Encoding byte; $Employee_Fingerprint = New-Fingerprint -FileData $Employee_Template -Description "Contoso Employee Template"; $Customer_Template = Get-Content "D:\Data\Contoso Customer Template.docx" -Encoding byte; $Customer_Fingerprint = New-Fingerprint -FileData $Customer_Template -Description "Contoso Customer Template"; New-DataClassification -Name "Contoso Employee-Customer Confidential" -Fingerprints $Employee_Fingerprint,$Customer_Fingerprint -Description "Message contains Contoso employee or customer information."
 ```

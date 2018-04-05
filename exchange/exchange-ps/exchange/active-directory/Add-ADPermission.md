@@ -50,14 +50,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Add-ADPermission -Identity "Terry Adams" -User AaronPainter -AccessRights ExtendedRight -ExtendedRights "Send As"
 ```
 
 This example grants Send As permissions for Aaron Painter to Terry Adams's mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Add-AdPermission "IP Secured Inbound" -User "NT AUTHORITY\ANONYMOUS LOGON" -ExtendedRights ms-Exch-SMTP-Submit,ms-Exch-SMTP-Accept-Any-Recipient,ms-Exch-Bypass-Anti-Spam
 ```
@@ -200,7 +200,6 @@ The AccessRights parameter specifies the rights needed to perform the operation.
 - GenericAll
 
 - Synchronize
-
 
 ```yaml
 Type: ActiveDirectoryRights[]

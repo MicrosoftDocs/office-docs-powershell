@@ -49,14 +49,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-FrontEndTransportService MBX01 -TransientFailureRetryCount 3 -TransientFailureRetryInterval 00:00:30
 ```
 
 This example sets the TransientFailureRetryCount parameter to 3 and sets the TransientFailureRetryInterval parameter to 30 seconds for the Front End Transport service on the Mailbox server named MBX01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-FrontEndTransportService MBX01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```

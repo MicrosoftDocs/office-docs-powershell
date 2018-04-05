@@ -50,28 +50,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-CalendarDiagnosticLog -Identity "Shannon Steele" -Subject "Weekly development meeting" -ExactMatch $true
 ```
 
 This example retrieves the Calendar Diagnostic log entries for Shannon Steele's mailbox by using the subject Weekly development meeting.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-CalendarDiagnosticLog -Identity oevans -StartDate "6/1/2015 6:00:00 AM" -EndDate "6/30/2015 5:00:00 PM"
 ```
 
 This example retrieves the Calendar Diagnostic log entries for Oscar Evans' mailbox from 6/1/2015 to 6/30/2015.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-CalendarDiagnosticLog -Identity jkozma@contoso.com -Subject "Weekly development meeting" -Latest
 ```
 
 This example retrieves the Calendar Diagnostic log data only for the most recent calendar item in Jasen Kozma's mailbox with a message subject of "Weekly development meeting".
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-CalendarDiagnosticLog -Identity "Jasen Kozma" -Subject "Budget Meeting" -ExactMatch $true -LogLocation "C:\My Documents\Calendar Diagnostic Export"
 ```

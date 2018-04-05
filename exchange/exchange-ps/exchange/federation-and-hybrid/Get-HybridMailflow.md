@@ -27,7 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-HybridMailflow
 ```
@@ -54,4 +54,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/751fe9b7-7529-4bbf-a20e-3defff6cfb16.aspx)
-

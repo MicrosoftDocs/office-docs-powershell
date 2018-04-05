@@ -45,35 +45,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MoveRequestStatistics -Identity Tony@contoso.com
 ```
 
 This example returns the default statistics for Tony Smith's mailbox, which include the status, mailbox size, archive mailbox size, and the percentage complete.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MoveRequestStatistics -Identity "contoso\tony" | Format-List
 ```
 
 This example returns the detailed statistics for Tony Smith's mailbox by pipelining the results to the Format-List command.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MoveRequestStatistics -Identity Tony@contoso.com -IncludeReport | Export-CSV C:\MRStats.csv
 ```
 
 This example returns additional information about the mailbox move for Tony Smith's mailbox and exports the report to a .csv file.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-MoveRequestStatistics -MoveRequestQueue "MBXDB02"
 ```
 
 This example returns default statistics for all mailboxes whose move requests are in progress or haven't been cleared for the database MBXDB02.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Get-MoveRequestStatistics -MRSInstance CAS01.contoso.com -MailboxGuid b6a6795c-a010-4f67-aaaa-da372d56fcb9
 ```

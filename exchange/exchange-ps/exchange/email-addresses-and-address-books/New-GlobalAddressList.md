@@ -55,14 +55,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-GlobalAddressList -Name "NewGAL"
 ```
 
 This example creates the GAL named NewGAL.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-GlobalAddressList -Name GAL_AgencyB -RecipientFilter {((RecipientType -eq "UserMailbox") -and (CustomAttribute15 -eq "AgencyB"))}
 ```

@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-PowerShellVirtualDirectory -Name "Contoso Certificates Required" -BasicAuthentication $false -WindowsAuthentication $false -CertificateAuthentication $true
 ```

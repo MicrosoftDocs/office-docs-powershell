@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-LinkedUser
 ```
 
 This example lists all linked users in the organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RemoteMailbox -Identity laura@contoso.com | Format-List
 ```
@@ -210,4 +210,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7c425c78-f2eb-4971-b0d7-cfb7f67ddb17.aspx)
-

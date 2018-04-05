@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-EOPDistributionGroup -Name Managers -Type Security -ManagedBy "Kitty Petersen"
 ```
 
 This example creates a mail-enabled universal security group named Managers that's managed by Kitty Petersen.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-EOPDistributionGroup -Name "Security Team" -ManagedBy "Tyson Fawcett" -Alias SecurityTeamThree -DisplayName "Security Team" -Notes "Security leads from each division" -PrimarySmtpAddress SecTeamThree@contoso.com -Type Distribution -Members @("Tyson Fawcett","Kitty Petersen")
 ```
@@ -251,4 +251,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4610dfe5-fca8-4ba8-be3c-535d1753e0f4.aspx)
-

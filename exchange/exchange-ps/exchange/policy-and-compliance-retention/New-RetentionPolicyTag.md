@@ -49,21 +49,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-RetentionPolicyTag "Finance-DeletedItems" -Type DeletedItems -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction PermanentlyDelete
 ```
 
 This example creates the retention policy tag Finance-DeletedItems for the Deleted Items default folder. When applied to a mailbox as a part of a retention policy, the tag permanently deletes items of all types in the Deleted Items folder in 30 days.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-RetentionPolicyTag "Finance-Default" -Type All -RetentionEnabled $true -AgeLimitForRetention 365 -RetentionAction PermanentlyDelete
 ```
 
 This example creates the default policy tag Finance-Default. When applied to a mailbox as part of a retention policy, the tag permanently deletes all items without a retention tag within 365 days. Items of a particular message class such as Voicemail, for which a default tag (a retention tag of type All) exists, aren't impacted.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-RetentionPolicyTag "Business Critical" -Type Personal -Comment "Use this tag for all business critical mail" -RetentionEnabled $true -AgeLimitForRetention 2556 -RetentionAction PermanentlyDelete
 ```

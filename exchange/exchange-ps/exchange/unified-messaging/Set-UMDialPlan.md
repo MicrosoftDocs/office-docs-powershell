@@ -55,21 +55,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-UMDialplan -Identity MyDialPlan -OutsideLineAccessCode 9
 ```
 
 This example configures the UM dial plan MyDialPlan to use 9 for the outside line access code.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-UMDialplan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
 ```
 
 This example configures the UM dial plan MyDialPlan to use a welcome greeting.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 $csv=import-csv "C:\MyInCountryGroups.csv"; Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv; Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
 ```

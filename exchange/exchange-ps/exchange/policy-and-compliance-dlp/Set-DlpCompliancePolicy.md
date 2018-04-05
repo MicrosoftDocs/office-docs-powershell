@@ -42,14 +42,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-DlpCompliancePolicy -Identity "Main PII" -AddSharePointLocation "https://my.url1","https://my.url2" -AddOneDriveLocation "https://my.url3","https://my.url4"
 ```
 
 This example adds the specified URLs to the SharePoint Online and OneDrive for Business locations for the DLP policy named Main PII without affecting the existing URL values.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-DlpCompliancePolicy -Identity MainPII -Mode Disable
 ```
@@ -418,4 +418,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d62d4466-5a16-4206-8105-aed442b6fa9e.aspx)
-

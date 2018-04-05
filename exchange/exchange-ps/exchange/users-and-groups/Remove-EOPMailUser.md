@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-EOPMailUser -Identity "Ed Meadows"
 ```
@@ -112,4 +112,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cb91dc26-ed22-4d3c-9f64-df9df1754edb.aspx)
-

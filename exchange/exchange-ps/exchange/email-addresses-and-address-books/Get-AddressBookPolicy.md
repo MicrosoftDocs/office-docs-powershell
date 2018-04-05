@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AddressBookPolicy | Format-List
 ```
 
 This example returns detailed information about all address book policies in your organization by pipelining the Format-List cmdlet.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AddressBookPolicy -Identity "All Fabrikam"
 ```
 
 This example returns default information about the address book policy All Fabrikam
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-AddressBookPolicy | where {$_.OfflineAddressBook eq "\Fabrikam All OAB"}
 ```

@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith | Format-List
 ```
 
 This example returns a formatted list of call answering rules in a user's UM-enabled mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-UMCallAnsweringRule -Identity MyUMCallAnsweringRule
 ```

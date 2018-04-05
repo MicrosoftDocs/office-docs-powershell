@@ -33,28 +33,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SystemMessage
 ```
 
 This example displays a summary list of all custom system messages in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SystemMessage En\Internal\5.3.2 | Format-List
 ```
 
 This example displays detailed information for the specified custom NDR (combination of language, audience, and enhanced status code values).
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-SystemMessage En\WarningMailbox | Format-List
 ```
 
 This example displays detailed information for the specified custom quota message (combination of language and quota values).
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html > "C:\My Documents\Default System Messages.html"
 ```

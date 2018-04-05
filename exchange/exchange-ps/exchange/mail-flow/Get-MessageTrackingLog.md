@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MessageTrackingLog -Server Mailbox01 -Start "03/13/2015 09:00:00" -End "03/15/2015 17:00:00" -Sender "john@contoso.com"
 ```

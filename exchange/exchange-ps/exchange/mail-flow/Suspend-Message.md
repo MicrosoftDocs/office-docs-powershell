@@ -37,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Suspend-Message -Server Server1 -Filter {FromAddress -eq "kweku@contoso.com"}
 ```

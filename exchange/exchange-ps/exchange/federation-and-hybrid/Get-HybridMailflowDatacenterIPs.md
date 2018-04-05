@@ -27,7 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-HybridMailflowDatacenterIPs
 ```
@@ -54,4 +54,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d055d1e1-7f5d-4233-bd68-d449937fb674.aspx)
-

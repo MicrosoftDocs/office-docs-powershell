@@ -37,21 +37,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-WebServicesVirtualDirectory -ServerMBX01
 ```
 
 This example returns a summary list of all EWS virtual directories on the server named MBX01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-WebServicesVirtualDirectory -Identity "MBX01\EWS*" | Format-List
 ```
 
 This example returns detailed information for the EWS virtual directory named "EWS (Default Web Site)" on the server named MBX01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-WebServicesVirtualDirectory
 ```

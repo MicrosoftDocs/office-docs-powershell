@@ -26,21 +26,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OwaMailboxPolicy
 ```
 
 This example retrieves a summary list of all mailbox policies in the organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-OwaMailboxPolicy -Identity Executives | Format-List
 ```
 
 This example retrieves detailed information for the mailbox policy named Executives.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-OwaMailboxPolicy -Identity Proseware\Contoso\Corporate
 ```

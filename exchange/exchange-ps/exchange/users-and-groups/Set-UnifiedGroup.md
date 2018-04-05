@@ -46,19 +46,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-UnifiedGroup -Identity "Marketing Department" -PrimarySmtpAddress marketing@contoso.com -RequireSenderAuthenticationEnabled $false
 ```
 
 This example makes the following changes to the Office 365 Group named Marketing Department:
 
+- The primary email address is changed to marketing@contoso.com.
 
-The primary email address is changed to marketing@contoso.com.
+- The Office 365 Group is allowed to receive mail from unauthenticated (external) senders.
 
-The Office 365 Group is allowed to receive mail from unauthenticated (external) senders.
-
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-UnifiedGroup -Identity "Legal Department" -AccessType Private
 ```
@@ -1017,4 +1016,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e120e5c5-8643-4623-a15d-f97811f58e99.aspx)
-

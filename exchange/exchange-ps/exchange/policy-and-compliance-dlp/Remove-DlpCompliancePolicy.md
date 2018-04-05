@@ -26,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-DlpCompliancePolicy -Identity 7e640345-1a7f-4f4e-9c17-681c070ed5e2
 ```
 
 This example removes a DLP policy specified by its GUID.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-DlpCompliancePolicy -Identity "PII Main Policy"
 ```
@@ -136,4 +136,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ec054c7f-f5b9-44b9-91e6-674bfc5b845c.aspx)
-

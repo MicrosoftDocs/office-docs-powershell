@@ -5,7 +5,7 @@ title: Connect-Mailbox
 schema: 2.0.0
 ---
 
-# connect-Mailbox
+# Connect-Mailbox
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set3
 ```
-connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Equipment]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Equipment]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>] [-WhatIf] [-Shared] [-Force]
@@ -27,7 +27,7 @@ connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 
 ### Set5
 ```
-connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
  -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
  [-LinkedCredential <PSCredential>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
@@ -37,7 +37,7 @@ connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 
 ### Set6
 ```
-connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Room]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Room]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>] [-WhatIf]
@@ -47,7 +47,7 @@ connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 
 ### Set4
 ```
-connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Shared]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Shared]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>] [-WhatIf] [-Room] [-Force]
@@ -57,13 +57,13 @@ connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 
 ### Set2
 ```
-connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-ValidateOnly]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-ValidateOnly]
  [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-Force] [<CommonParameters>]
 ```
 
 ### Set1
 ```
-connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive] [-Confirm]
  [-DomainController <Fqdn>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
@@ -73,7 +73,7 @@ connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 
 ### Set7
 ```
-connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
  [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>] [-WhatIf] [<CommonParameters>]
@@ -106,28 +106,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Connect-Mailbox -Database "Mailbox Database" -Identity "John Evans"
 ```
 
 This example connects John Evans' disconnected mailbox. The example doesn't specify a user to connect the mailbox to, so the command attempts to find a uniquely matched user object.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Connect-Mailbox -Identity "John Evans" -Database "MBXDB02" -LinkedDomainController FabrikamDC01 -LinkedMasterAccount john@fabrikam.com
 ```
 
 This example connects a linked mailbox.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Connect-Mailbox -Identity "CAR001" -Database "MBXResourceDB" -Equipment -User "CAR001"
 ```
 
 This example connects an equipment mailbox.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Connect-Mailbox -Identity "ConfRm212" -Database "MBXResourceDB" -Room -User "Conference Room 212"
 ```

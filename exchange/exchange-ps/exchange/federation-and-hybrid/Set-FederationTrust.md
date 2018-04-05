@@ -41,14 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
 ```
 
 This example configures the federation trust Microsoft Federation Gateway to use the certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17 as the next certificate.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
 ```

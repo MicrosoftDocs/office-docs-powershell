@@ -43,21 +43,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ComplianceSearch -Identity "Project X" -ExchangeLocation All
 ```
 
 This example changes the existing compliance search named Project X. The scope of the Exchange search is changed to all mailboxes.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ComplianceSearch -Identity "Contoso Case Search 1" -HoldNames All -ExchangeLocation $null -SharePointLocation $null
 ```
 
 This example changes an existing compliance search that's associated with an eDiscovery case in the Office 365 Security & Compliance Center. The scope of the search is changed from searching selected mailboxes and SharePoint sites to searching all content locations that have been placed on hold in the eDiscovery case.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-ComplianceSearch -Identity "China Subsidiary Search" -Language zh-CN
 ```
