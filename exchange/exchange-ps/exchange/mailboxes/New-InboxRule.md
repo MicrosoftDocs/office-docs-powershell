@@ -66,7 +66,7 @@ New-InboxRule -FromMessageId <MailboxStoreObjectIdParameter> [-ValidateOnly] [-A
 ```
 
 ## DESCRIPTION
-When you create, modify, remove, enable, or disable an Inbox rule in Exchange PowerShell, any client-side rules created by MicrosoftOutlook are removed.
+When you create, modify, remove, enable, or disable an Inbox rule in Exchange PowerShell, any client-side rules disabled by Microsoft Outlook and outbound rules are removed.
 
 Parameters that are used for conditions also have corresponding exception parameters. When conditions specified in an exception are matched, the rule isn't applied to the message. Exception parameters begin with ExceptIf. For example, the exception parameter for SubjectOrBodyContainsWords is ExceptIfSubjectOrBodyContainsWords.
 
