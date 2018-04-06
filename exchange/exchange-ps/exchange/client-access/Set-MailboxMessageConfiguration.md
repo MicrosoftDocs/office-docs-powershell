@@ -48,14 +48,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MailboxMessageConfiguration kai@contoso.com -HideDeletedItems $true
 ```
 
 This example sets items deleted from a conversation thread to not show in the list view of the conversation in Outlook on the web for Kai's mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-MailboxMessageConfiguration kai@contoso.com -AlwaysShowBcc $true
 ```

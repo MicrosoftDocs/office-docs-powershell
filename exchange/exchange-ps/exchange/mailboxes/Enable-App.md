@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
 ```
@@ -37,7 +37,7 @@ This example enables the default Bing Maps app installed for user Tony.
 
 For more information, see Manage user access to add-ins for Outlook (https://technet.microsoft.com/library/jj943757.aspx).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Enable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
 ```

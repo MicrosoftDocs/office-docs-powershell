@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-TransportAgent
 ```
 
 This example displays a summary list of all transport agents installed on all Exchange servers in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-TransportAgent "Transport Rule Agent" -TransportService Hub | Format-List
 ```

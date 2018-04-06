@@ -35,7 +35,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-DeviceConditionalAccessRule "Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}"
 ```
@@ -114,4 +114,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bf943a1a-2fc8-4636-ac36-74acbf3f7640.aspx)
-

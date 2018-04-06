@@ -37,21 +37,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ManagedContentSettings | Format-List
 ```
 
 This example uses the Get-ManagedContentSettings cmdlet without parameters to obtain all managed content settings. The output of the Get-ManagedContentSettings cmdlet is piped to the Format-List cmdlet so that all the available information is displayed in the result.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ManagedContentSettings -Identity "Inbox Settings"
 ```
 
 This example retrieves the managed content settings Inbox Settings.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ManagedContentSettings -FolderName "Inbox"
 ```
@@ -146,4 +146,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/08082cfe-b820-493e-bddd-a0befb465972.aspx)
-

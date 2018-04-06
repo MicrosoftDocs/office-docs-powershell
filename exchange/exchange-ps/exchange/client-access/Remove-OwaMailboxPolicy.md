@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-OwaMailboxPolicy -Identity Executives
 ```
 
 This example removes the mailbox policy named Executives.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-OwaMailboxPolicy -Identity Fabrikam\Employees
 ```
 
 This example removes the mailbox policy named Employees for the organization Fabrikam.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Remove-OwaMailboxPolicy -Identity Litware\Contoso\Corporate
 ```

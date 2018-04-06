@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OutlookProvider
 ```
 
 This example returns a summary list of all available Outlook providers.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-OutlookProvider -Identity WEB | Format-List
 ```

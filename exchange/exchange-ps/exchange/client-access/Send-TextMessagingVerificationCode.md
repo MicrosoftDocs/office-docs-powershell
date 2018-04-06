@@ -30,21 +30,21 @@ This cmdlet returns an error if the user requests a verification code more than 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Send-TextMessagingVerificationCode -Identity "TonySmith"
 ```
 
 This example sends the text messaging verification code to Tony Smith's mobile phone.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Send-TextMessagingVerificationCode -Identity "TonySmith" -Confirm $true
 ```
 
 This example sends the text messaging verification code to Tony Smith's mobile phone after confirmation is given.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Send-TextMessagingVerificationCode -Identity "tony@contoso.com"
 ```

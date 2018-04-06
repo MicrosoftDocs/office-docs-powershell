@@ -34,13 +34,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-InboundConnector "Contoso Inbound Connector" -RequireTls $true -TlsSenderCertificateName contoso.com
 ```
 
 This example makes the following configuration changes to the existing Inbound connector named Contoso.com Inbound Connector.
-
 
 Require TLS transmission for all incoming messages on the connector.
 

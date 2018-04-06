@@ -31,14 +31,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-DlpCompliancePolicy -Name "GlobalPolicy" -SharePointLocation All
 ```
 
 This example creates a DLP policy named GlobalPolicy that will be enforced across all SharePoint Online locations.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-DlpCompliancePolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePointLocation "https://my.url","https://my.url2" -OneDriveLocation "https://my.url3","https://my.url4" -Mode Enable
 ```
@@ -309,4 +309,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4a1d614a-08cf-4495-83c0-d0ed797d202a.aspx)
-

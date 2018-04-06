@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $file = Export-TransportRuleCollection; Set-Content -Path "C:\MyDocs\Rules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\MyDocs folder.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $file = Export-TransportRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
 ```

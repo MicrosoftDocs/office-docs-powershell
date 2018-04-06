@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RemoteDomain Contoso -AllowedOOFType None -DeliveryReportEnabled $false -TNEFEnabled $true
 ```
@@ -52,7 +52,7 @@ This example performs the following actions:
 
 - It enables TNEF message data on messages sent to the remote domain.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RemoteDomain | Where {$_.AutoReplyEnabled -eq $false} | Set-RemoteDomain -AutoForwardEnabled $false -NDREnabled $false
 ```

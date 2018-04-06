@@ -38,21 +38,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-Mailbox | Get-MailboxAutoReplyConfiguration
 ```
 
 This example returns Automatic Replies settings for all mailboxes in the Exchange organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxAutoReplyConfiguration -Identity 'contoso.com/Users/Tony Smith'
 ```
 
 This example retrieves Automatic Replies settings for Tony's mailbox at contoso.com.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-Mailbox | Get-MailboxAutoReplyConfiguration -ResultSize unlimited
 ```

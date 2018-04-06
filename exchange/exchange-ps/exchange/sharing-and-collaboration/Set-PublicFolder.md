@@ -44,21 +44,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-PublicFolder "\Customer Service Requests" -UseDatabaseReplicationSchedule $false
 ```
 
 In Exchange 2010, this example changes a public folder so that it doesn't use the database default replication schedule.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-PublicFolder "\Customer Service Requests" -OverrideContentMailbox North_America
 ```
 
 This example changes the content location of the public folder hierarchy mailbox to North\_America.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-PublicFolder \MyPublicFolder -ReplicationSchedule "Saturday.12:00 AM-Monday.12:00 AM"
 ```

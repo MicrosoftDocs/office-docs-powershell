@@ -35,32 +35,31 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UnifiedGroup
 ```
 
 This example returns a summary list of all Office 365 groups.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-UnifiedGroup | Format-List DisplayName,EmailAddresses,Notes,ManagedBy,AccessType
 ```
 
 This example returns the following information about all Office 365 groups:
 
+- Display name
 
-Display name
+- Email address
 
-Email address
+- Description
 
-Description
+- Owners
 
-Owners
+- Privacy
 
-Privacy
-
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-UnifiedGroup -Identity "Marketing Department" | Format-List
 ```
@@ -226,4 +225,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9ff9204a-cc18-4e39-9159-1d16314217cd.aspx)
-

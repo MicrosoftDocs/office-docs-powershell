@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-ServiceEmailChannel -Identity "fourthcoffee\tony"
 ```
 
 This example enables the .NET service channel for the user Tony Smith.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Enable-ServiceEmailChannel -Identity "tony@contoso.com"
 ```
 
 This example enables the .NET service channel for the user Tony Smith.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Enable-ServiceEmailChannel -Identity "TonySmith"
 ```

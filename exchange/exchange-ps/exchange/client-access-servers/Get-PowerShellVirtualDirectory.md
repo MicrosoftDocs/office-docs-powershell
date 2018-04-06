@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PowerShellVirtualDirectory -Server Server01
 ```
 
 This example retrieves a summary list of all PowerShell virtual directories on the server named Server01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PowerShellVirtualDirectory -Identity "Server01\PowerShell*" | Format-List
 ```
 
 This example returns detailed information for the PowerShell virtual directory named "PowerShell (Default Web site)" on the server named Server01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-PowerShellVirtualDirectory
 ```

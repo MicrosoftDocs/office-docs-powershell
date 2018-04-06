@@ -129,35 +129,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-MigrationServerAvailability -Imap -RemoteServer imap.contoso.com -Port 143
 ```
 
 For IMAP migrations, this example verifies the connection to the IMAP mail server imap.contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
 This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to verify the connection to an on-premises Exchange server in preparation for migrating on-premises mailboxes to Exchange Online. You can use a similar example to test the connection settings for a staged Exchange migration or a cutover Exchange migration.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 $Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
 ```
 
 This example verifies the connection to a server running Microsoft Exchange Server 2003 named exch2k3.contoso.com and uses NTLM for the authentication method.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Test-MigrationServerAvailability -Endpoint endpoint.contoso.com
 ```
 
 This example verifies the connection settings to a remote server using the settings stored in an existing migration endpoint in Exchange Online.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 $MRSEndpoints = (Get-MigrationEndpoint).RemoteServer; Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
 ```

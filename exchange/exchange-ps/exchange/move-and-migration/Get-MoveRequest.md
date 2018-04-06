@@ -45,21 +45,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MoveRequest -Identity 'tony@contoso.com'
 ```
 
 This example retrieves the status of the ongoing mailbox move for Tony Smith's mailbox (tony@contoso.com).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MoveRequest -MoveStatus InProgress -TargetDatabase DB05
 ```
 
 This example retrieves the status of ongoing mailbox moves to the target database DB05.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MoveRequest -BatchName "FromDB01ToDB02" -MoveStatus CompletedWithWarning
 ```

@@ -29,7 +29,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-CaseHoldRule -Name "2016 Budget Spreadsheets" -Policy "Internal Company Policy" -ContentMatchQuery "filename:2016 budget filetype:xlsx"
 ```
@@ -220,4 +220,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f477b3fe-a293-4803-9af5-ae451b24057f.aspx)
-

@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-FrontEndTransportService
 ```
 
 This example returns a list of all Exchange servers that have the Client Access server role installed.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-FrontEndTransportService MBX01 | Format-List
 ```

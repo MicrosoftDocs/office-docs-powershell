@@ -37,14 +37,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-HoldCompliancePolicy
 ```
 
 This example displays summary information for all preservation policies in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-HoldCompliancePolicy -Identity "Regulation 123 Compliance" | Format-List
 ```
@@ -109,4 +109,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e408a718-5b70-43e2-bca4-7645df4bc83a.aspx)
-

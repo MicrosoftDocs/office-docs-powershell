@@ -5,7 +5,7 @@ title: Get-User
 schema: 2.0.0
 ---
 
-# get-User
+# Get-User
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set2
 ```
-get-User [-Anr <String>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
+Get-User [-Anr <String>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
  [-Filter <String>] [-IgnoreDefaultScope] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] 
  [-ResultSize <Unlimited>] [-Sortby <String>] [-AuditLog]
  [-PublicFolder] [-AuxAuditLog] [-SupervisoryReviewPolicy] [<CommonParameters>]
@@ -26,7 +26,7 @@ get-User [-Anr <String>] [-Arbitration] [-Credential <PSCredential>] [-DomainCon
 
 ### Set1
 ```
-get-User [[-Identity] <UserIdParameter>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
+Get-User [[-Identity] <UserIdParameter>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
  [-Filter <String>] [-IgnoreDefaultScope] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] 
  [-ResultSize <Unlimited>] [-Sortby <String>] [-AuditLog]
  [-PublicFolder] [-AuxAuditLog] [-SupervisoryReviewPolicy] [<CommonParameters>]
@@ -39,28 +39,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-User -ResultSize unlimited
 ```
 
 This example returns a summary list of all users in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-User -Identity "Coy Damon" | Format-List
 ```
 
 This example returns detailed information for the user named Coy Damon.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-User -OrganizationalUnit "Marketing"
 ```
 
 This example retrieves information about users in the Marketing OU.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-User -Filter "Title -like '*Manager'"
 ```

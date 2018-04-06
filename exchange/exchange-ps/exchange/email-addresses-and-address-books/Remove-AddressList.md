@@ -34,7 +34,7 @@ By default in Exchange Online, the Address List role isn't assigned to any role 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-AddressList -Identity "AddressList1" -Recursive
 ```

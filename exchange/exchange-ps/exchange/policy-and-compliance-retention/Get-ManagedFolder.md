@@ -43,7 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ManagedFolder MyManagedFolder | Format-List
 ```
@@ -136,4 +136,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a30939b7-1291-48d8-b19a-512a0a031121.aspx)
-

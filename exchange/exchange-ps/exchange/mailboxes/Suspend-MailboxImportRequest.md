@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Suspend-MailboxImportRequest -Identity "Ayla\MailboxImport1"
 ```
 
 This example suspends the second import request for Ayla's mailbox with the identity Ayla\\MailboxImport1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxImportRequest -Status InProgress | Suspend-MailboxImportRequest -SuspendComment "Resume after 22:00 (10 P.M.)"
 ```

@@ -27,19 +27,18 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ComplianceTag -Name "HR Content" -RetentionAction Keep -RetentionDuration 1825 -RetentionType ModificationAgeInDays
 ```
 
 This example creates a new label named HR Content with the following settings:
 
+- Action: Keep.
 
-Action: Keep.
+- Duration: 5 years (1825 days)
 
-Duration: 5 years (1825 days)
-
-Type: Modification age in days.
+- Type: Modification age in days.
 
 ## PARAMETERS
 
@@ -255,4 +254,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2414a7c4-57d2-4f90-a1bc-3dc14643155d.aspx)
-

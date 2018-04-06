@@ -38,7 +38,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DataRetentionReport -StartDate 04/01/2017 -EndDate 04/30/2017
 ```

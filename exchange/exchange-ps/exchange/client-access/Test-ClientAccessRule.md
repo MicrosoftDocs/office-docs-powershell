@@ -40,23 +40,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-ClientAccessRule -AuthenticationType BasicAuthentication -Protocol OutlookWebApp -RemoteAddress 172.17.17.26 -RemotePort 443 -User julia@contoso.com
 ```
 
 This example tests client access by using the following client properties:
 
+- Authentication type: Basic
 
-Authentication type: Basic
+- Protocol:OutlookWebApp
 
-Protocol:OutlookWebApp
+- Remote address: 172.17.17.26
 
-Remote address: 172.17.17.26
+- Remote port: 443
 
-Remote port: 443
-
-User: julia@contoso.com
+- User: julia@contoso.com
 
 ## PARAMETERS
 
@@ -278,4 +277,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d17ee6d8-e5f4-4b5d-977c-85e8dadeaf48.aspx)
-

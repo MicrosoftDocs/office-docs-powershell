@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-DlpKeywordDictionary -Identity "Financial Data"
 ```
@@ -105,4 +105,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/525e3c6d-a315-4f0b-88f6-5704eb09e31c.aspx)
-

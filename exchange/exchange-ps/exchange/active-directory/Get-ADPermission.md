@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ADPermission -Identity Ed
 ```
 
 This example returns the permissions that have been applied to the user Ed.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ADPermission "Contoso.com" -User Chris
 ```

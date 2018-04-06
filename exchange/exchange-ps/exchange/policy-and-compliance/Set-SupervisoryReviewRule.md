@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-SupervisoryReviewRule -Identity "EU Brokers Rule" -AddReviewers julia@contoso.com
 ```
@@ -161,4 +161,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8ed4a806-ffab-497a-bfea-22aaf05870bb.aspx)
-

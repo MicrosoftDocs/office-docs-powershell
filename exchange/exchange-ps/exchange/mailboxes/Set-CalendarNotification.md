@@ -31,21 +31,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-CalendarNotification -Identity "tony@contoso.com" -CalendarUpdateNotification $true
 ```
 
 This example enables calendar updates to be sent in text messages to the user Tony Smith.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-CalendarNotification -Identity "TonySmith" -CalendarUpdateNotification $true -MeetingReminderNotification $true -MeetingReminderSendDuringWorkHour $true
 ```
 
 This example enables calendar updates and meeting reminders to be sent in text messages to the user Tony Smith.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-CalendarNotification -Identity contoso\tonysmith -DailyAgendaNotification $true
 ```

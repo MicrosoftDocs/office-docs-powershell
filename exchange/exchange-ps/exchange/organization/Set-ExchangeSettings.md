@@ -116,7 +116,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ExchangeSettings Audit -UpdateSetting -ConfigName AuditLogPumperEnabled -ConfigValue $true -Reason "Enable Unified Audit Logging"
 ```
@@ -731,4 +731,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/09882525-a579-4af6-9565-4e44a24c8786.aspx)
-

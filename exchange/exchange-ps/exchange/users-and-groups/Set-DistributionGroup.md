@@ -54,21 +54,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-DistributionGroup -Identity "Accounting" -DisplayName "Accounting Group"
 ```
 
 This example changes the display name of an existing distribution group from Accounting to Accounting Group.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-DistributionGroup -Identity "Bldg34 Conf Rooms" -RoomList
 ```
 
 This example converts the Bldg34 Conf Rooms distribution group to a room list.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-DistributionGroup -Identity Ed_DirectReports -Name Ayla_DirectReports -IgnoreNamingPolicy
 ```

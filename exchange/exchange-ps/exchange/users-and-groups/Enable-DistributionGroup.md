@@ -5,7 +5,7 @@ title: Enable-DistributionGroup
 schema: 2.0.0
 ---
 
-# enable-DistributionGroup
+# Enable-DistributionGroup
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-enable-DistributionGroup [-Identity] <GroupIdParameter> [-Alias <String>] [-Confirm] [-DisplayName <String>]
+Enable-DistributionGroup [-Identity] <GroupIdParameter> [-Alias <String>] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-DistributionGroup -Identity "Distribution Group1"
 ```

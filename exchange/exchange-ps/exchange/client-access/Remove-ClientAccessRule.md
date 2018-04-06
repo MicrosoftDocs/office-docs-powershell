@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ClientAccessRule "Block Client Connections from 192.168.1.0/24"
 ```
@@ -147,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2ef2eabd-08bf-4f0d-879c-4e9a4c707903.aspx)
-

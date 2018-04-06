@@ -27,14 +27,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SupervisoryReviewReport -StartDate 03/01/2017 -EndDate 03/31/2017
 ```
 
 This example returns the supervisory review events for the month of March, 2017.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SupervisoryReviewPolicyReport -Policies "US Brokers Policy"
 ```
@@ -165,4 +165,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a871ed0a-30fe-4b53-9084-1d45d0d70b75.aspx)
-

@@ -26,21 +26,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxRegionalConfiguration -Identity "Marcelo Teixeira"
 ```
 
 This example returns the regional settings for Marcelo Teixeira's mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxRegionalConfiguration -Identity "Ella Lack" -DomainController dc01.contoso.com
 ```
 
 In on-premises Exchange, this example returns the regional settings for Ella Lack's mailbox by using the specified domain controller.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxRegionalConfiguration -Identity "Alice Jakobsen" -VerifyDefaultFolderNameLanguage | Format-List
 ```

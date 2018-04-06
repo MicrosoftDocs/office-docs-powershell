@@ -28,7 +28,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-RetentionComplianceRule -Identity "One Year Standard"
 ```
@@ -129,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/20a3d391-fdd7-40cd-89f6-03649c65ee00.aspx)
-

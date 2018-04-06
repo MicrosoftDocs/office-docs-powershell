@@ -80,14 +80,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-Mailflow Mailbox1 -TargetMailboxServer Mailbox2
 ```
 
 This example tests message flow from the server name Mailbox1 to the server named Mailbox2. Note that you need to run this command while connected to Mailbox1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-Mailflow -TargetEmailAddress john@contoso.com
 ```

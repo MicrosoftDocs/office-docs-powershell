@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "http://www.contoso.com/powershell"
 ```
@@ -197,7 +197,6 @@ The WindowsAuthentication parameter specifies whether Integrated Windows authent
 - $true: Integrated Windows authentication is enabled. This is the default value.
 
 - $false: Integrated Windows authentication is disabled.
-
 
 ```yaml
 Type: $true | $false

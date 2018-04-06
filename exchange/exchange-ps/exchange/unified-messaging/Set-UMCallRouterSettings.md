@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-UMCallRouterSettings -DialPlans MySIPDialPlan -IPAddressFamily Any -Server MyUMCallRouter.northwindtraders.com -UMStartupMode TLS
 ```
@@ -43,7 +43,7 @@ This example creates the following configuration on the Exchange server named My
 
 - Enables the Microsoft Exchange Unified Messaging Call Router service to start up using TLS mode.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-UMCallRouterSettings -DialPlans $null -Server UMCallRouter001.contoso.com
 ```

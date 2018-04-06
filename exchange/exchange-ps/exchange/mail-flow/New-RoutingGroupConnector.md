@@ -31,21 +31,20 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-RoutingGroupConnector -Name "Interop RGC" -SourceTransportServers "Hub2010.contoso.com" -TargetTransportServers "Bridgehead2003.contoso.com" -Cost 100 -Bidirectional $true
 ```
 
 This example creates the routing group connector Interop RGC with the following properties:
 
+- The Exchange 2010 server is Hub2010.contoso.com.
 
-The Exchange 2010 server is Hub2010.contoso.com.
+- The Exchange 2003 bridgehead server is Bridghead2003.contoso.com.
 
-The Exchange 2003 bridgehead server is Bridghead2003.contoso.com.
+- The routing group connector is a two-way connector between the Exchange 2010 routing group and the routing group associated with the specified Exchange 2003 server.
 
-The routing group connector is a two-way connector between the Exchange 2010 routing group and the routing group associated with the specified Exchange 2003 server.
-
-The cost is 100.
+- The cost is 100.
 
 ## PARAMETERS
 
@@ -215,4 +214,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6297510c-7022-4702-83e6-a213a93d46e1.aspx)
-

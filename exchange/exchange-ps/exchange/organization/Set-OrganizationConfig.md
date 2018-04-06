@@ -164,7 +164,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-OrganizationConfig -DistributionGroupDefaultOU Users\Groups -DistributionGroupNameBlockedWordsList curse,bad,offensive -DistributionGroupNamingPolicy "DL_<GroupName>_<Department><CountryCode>"
 ```
@@ -177,28 +177,28 @@ The words curse, bad, and offensive will be blocked from being used in distribut
 
 All distribution groups will be prefixed with "DL\_" and suffixed with an underscore (\_) and the user's department and country code.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceBlockList -EwsBlockList $null
 ```
 
 This example allows all client applications to use REST and EWS.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceBlockList -EwsBlockList "OtherApps*"
 ```
 
 This example allows all client applications to use REST and EWS, except those that are specified by the EwsBlockList parameter.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList $null
 ```
 
 This example prevents all client applications from using REST and EWS.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList "CorpApp*"
 ```

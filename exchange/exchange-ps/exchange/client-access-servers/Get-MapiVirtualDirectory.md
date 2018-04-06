@@ -32,21 +32,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MapiVirtualDirectory -Server ContosoMail
 ```
 
 This example returns a summary list of the MAPI virtual directories on the server named ContosoMail.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory ContosoMai\mapi* | Format-List
 ```
 
 These examples return detailed information for the MAPI virtual directory named "mapi (Default Web Site)" on the server named ContosoMail. All three commands do the same thing.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MapiVirtualDirectory
 ```
@@ -67,7 +67,6 @@ The Server parameter specifies the Exchange server that hosts the virtual direct
 - ExchangeLegacyDN
 
 You can't use the Server and Identity parameters in the same command.
-
 
 ```yaml
 Type: ServerIdParameter
@@ -128,7 +127,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
 
 You can't use the Identity and Server parameters in the same command.
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter

@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-PolicyTipConfig en\NotifyOnly "This message contains content that is restricted by Contoso company policy."
 ```
 
 This example modifies the custom English Policy Tip with the action value NotifyOnly. The text of this custom Policy Tip is changed to the following value: "This message contains content that is restricted by Contoso company policy."
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PolicyTipConfig -Locale es | Set-PolicyTipConfig -Value "Este mensaje contiene contenido que está restringida por la política de Contoso."
 ```

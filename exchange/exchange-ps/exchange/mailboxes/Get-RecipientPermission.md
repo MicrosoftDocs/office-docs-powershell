@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RecipientPermission -Trustee "Kim Akers"
 ```
 
 This example lists the recipients for whom the user Kim Akers has SendAs permission. Kim can send messages that appear to come directly from the recipients.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RecipientPermission "Help Desk"
 ```
@@ -209,4 +209,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a80d1ec7-2504-44f1-b6b4-2e65310b4c6e.aspx)
-

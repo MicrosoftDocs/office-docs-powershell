@@ -5,7 +5,7 @@ title: Set-AddressRewriteEntry
 schema: 2.0.0
 ---
 
-# set-addressrewriteentry
+# Set-AddressRewriteEntry
 
 ## SYNOPSIS
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-set-addressrewriteentry [-Identity] <AddressRewriteEntryIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Set-AddressRewriteEntry [-Identity] <AddressRewriteEntryIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-ExceptionList <MultiValuedProperty>] [-ExternalAddress <String>] [-InternalAddress <String>]
  [-Name <String>] [-OutboundOnly <$true | $false>] [-WhatIf] [<CommonParameters>]
 ```
@@ -27,7 +27,7 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-AddressRewriteEntry "Address rewrite entry for contoso.com" -Name "Address rewrite entry for northwindtraders.com" -InternalAddress northwindtraders.com
 ```
@@ -38,7 +38,7 @@ Changes the original email addresses that are affected by the address rewrite en
 
 Changes the Name value to "Address rewrite entry for northwindtraders.com".
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-AddressRewriteEntry "Address rewrite entry for all contoso.com email addresses" -OutboundOnly $true
 ```

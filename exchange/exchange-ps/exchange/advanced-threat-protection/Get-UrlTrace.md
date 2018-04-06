@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UrlTrace -RecipientAddress "michelle@contoso.com" -StartDate "5/9/2016" -EndDate "5/11/2016"
 ```

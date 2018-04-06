@@ -27,7 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-AvailabilityReportOutage -ReportDate:"2009-12-02" -Site:"Site1" -DowntimeMinutes:120 -Comment:"Downtime not recorded by System Center Operations Manager 2007"
 ```
@@ -202,4 +202,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2383aa16-5993-4555-8ab8-9a09eea2d8e9.aspx)
-

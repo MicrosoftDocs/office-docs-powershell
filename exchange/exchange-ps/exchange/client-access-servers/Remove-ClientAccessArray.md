@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ClientAccessArray -Identity "CASArray1"
 ```
 
 This example removes the existing client access array CASArray1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-ClientAccessArray -Identity "CASArray1" -Confirm $true
 ```
 
 This example removes the existing client access array CASArray1 after confirmation is specified.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Remove-ClientAccessArray -Identity "NLBArray2"
 ```
@@ -137,4 +137,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c0e7cf59-400f-4462-95b7-984cf2e4ba4e.aspx)
-

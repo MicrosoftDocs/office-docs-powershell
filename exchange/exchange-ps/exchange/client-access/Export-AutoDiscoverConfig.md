@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Export-AutoDiscoverConfig -TargetForestDomainController targetForestName
 ```
 
 This example creates a service connection point object to connect to another Active Directory forest so that Outlook 2010 clients can automatically connect to their mailbox without having to set up a profile.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Export-AutoDiscoverConfig -TargetForestDomainController targetForestName -MultipleExchangeDeployments $true
 ```

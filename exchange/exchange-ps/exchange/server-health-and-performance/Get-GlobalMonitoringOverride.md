@@ -25,14 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-GlobalMonitoringOverride
 ```
 
 This example returns a summary list of all global monitoring overrides that are configured in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-GlobalMonitoringOverride | Format-List
 ```

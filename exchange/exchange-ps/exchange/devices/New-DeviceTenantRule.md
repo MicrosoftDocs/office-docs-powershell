@@ -37,13 +37,12 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-DeviceTenantRule -ExclusionList
 ```
 
 This example creates a new mobile device tenant rule with the security groups named Engineering and Research and Development on the exclusion list. Members of these groups are allowed access even if they use non-compliant devices
-
 
 You can have only one mobile device tenant rule in your organization.
 
@@ -181,4 +180,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0d83cff9-087f-492e-8320-734257e72bce.aspx)
-

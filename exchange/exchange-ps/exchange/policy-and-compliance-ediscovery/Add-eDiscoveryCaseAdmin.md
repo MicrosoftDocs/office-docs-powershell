@@ -29,7 +29,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Add-eDiscoveryCaseAdmin -User michelle@contoso.com
 ```
@@ -120,4 +120,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ffa9ff06-96da-43e2-997f-c0c49fbcdf4d.aspx)
-

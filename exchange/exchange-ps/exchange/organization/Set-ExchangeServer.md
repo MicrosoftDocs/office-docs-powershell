@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ExchangeServer -Identity TestServer.Contoso.com -ErrorReportingEnabled $false
 ```
 
 This example disables error reporting on the specified server.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ExchangeServer -Identity 'SERVER01' -CustomerFeedbackEnabled $true
 ```
 
 This example enrolls an Exchange server into the Customer Experience Improvement Program. In this example, the server name is SERVER01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-ExchangeServer -Identity 'SERVER01' -CustomerFeedbackEnabled $false
 ```

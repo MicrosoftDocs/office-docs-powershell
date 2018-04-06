@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-EOPMailUser -Name EdMeadows -MicrosoftOnlineServicesID EdMeadows@Contoso.onmicrosoft.com -ExternalEmailAddress EdMeadows@tailspintoys.com -Password (ConvertTo-SecureString -String 'Pa$$w0rd' -AsPlainText -Force) -FirstName Ed -LastName Meadows -DisplayName "Ed Meadows" -Alias edm
 ```
@@ -206,4 +206,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0520cf33-4ad0-44e4-99a3-1b485739fc05.aspx)
-

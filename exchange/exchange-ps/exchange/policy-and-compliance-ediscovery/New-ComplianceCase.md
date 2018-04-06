@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ComplianceCase -Name "Fabrikam Litigation"
 ```
@@ -153,4 +153,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f7f39f50-65d6-4a14-a26a-0d36f42e99a7.aspx)
-

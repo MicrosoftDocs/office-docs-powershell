@@ -28,7 +28,7 @@ This cmdlet is available in the Mailbox Search role. By default, this role is as
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ComplianceSearchAction -Identity "Project X_Export" -ChangeExportKey
 ```
@@ -129,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cadf2068-ed32-49a3-98f1-da5a516689cc.aspx)
-

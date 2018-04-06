@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 14.0.0-14.32767.65535
 ```
 
 This example prevents Outlook Anywhere connections by Outlook 2010 clients on the server named MBX01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 15.0.0-15.4737.999
 ```

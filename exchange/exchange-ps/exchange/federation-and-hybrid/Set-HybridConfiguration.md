@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-HybridConfiguration -SecureMailCertificateThumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
 ```
 
 In Exchange Server 2010, this example specifies that the hybrid configuration will use the certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17 as the certificate for Secure Mail messaging.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-HybridConfiguration -Features OnlineArchive,MailTips,OWARedirection,FreeBusy,MessageTracking
 ```
 
 This example disables the secure mail and centralized transport hybrid deployment features, but keeps the Exchange Online Archive, MailTips, Outlook on the web redirection, free/busy and message tracking features enabled between the on-premises Exchange and Exchange Online organizations.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-HybridConfiguration -TlsCertificateName "<I>CN=A. Datum Corporation CA-3, OU=www.adatum.com, O=A.Datum Corp, C=US<S>CN=mail.contoso.com, O=Barbara Zighetti, L=Seattle, S=WA, C=US"
 ```

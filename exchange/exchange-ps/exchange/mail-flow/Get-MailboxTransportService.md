@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxTransportService
 ```
 
 This example displays a list of all Mailbox servers in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxTransportService Mailbox01 | Format-List
 ```

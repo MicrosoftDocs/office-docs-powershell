@@ -42,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-Recipient -Identity "John Smith"
 ```
 
 This example adds Exchange attributes to the mail contact that represents John Smith's mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailContact -OrganizationalUnit "contoso.com/fabrikam.com Users" | Update-Recipient
 ```

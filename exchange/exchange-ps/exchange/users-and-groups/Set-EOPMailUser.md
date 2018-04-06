@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-EOPMailUser -Identity "Edward Meadows" -DisplayName "Ed Meadows"
 ```
@@ -196,4 +196,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/834c3de6-1485-4d50-bb96-262a2c0c8619.aspx)
-

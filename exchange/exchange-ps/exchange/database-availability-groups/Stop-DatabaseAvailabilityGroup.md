@@ -37,21 +37,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Stop-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer MBX2
 ```
 
 This example stops the Mailbox server MBX2 in the DAG DAG1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Stop-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
 ```
 
 This example stops all members in the DAG DAG1 in the Active Directory site Redmond.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Stop-DatabaseAvailabilityGroup -Identity DAG2 -MailboxServer MBX3 -ConfigurationOnly
 ```

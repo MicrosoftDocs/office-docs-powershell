@@ -45,21 +45,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-Mailbox -Identity "John Rodman"
 ```
 
 This example removes the mailbox and the user account for the user named John Rodman. The mailbox remains in the mailbox database for the deleted mailbox retention period that's configured for the database.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-Mailbox -Identity "John Rodman" -Permanent $true
 ```
 
 This example removes the mailbox and the user account for the user named John Rodman. The mailbox is immediately and permanently removed from the mailbox database.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 $Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}; Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
 ```

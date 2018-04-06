@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Disable-OutlookAnywhere -Server:CAS01
 ```
 
 This example disables Outlook Anywhere on the Client Access server CAS01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Disable-OutlookAnywhere -Identity: "exch01\rpc (Default Web Site)" -Confirm:$false
 ```
@@ -157,4 +157,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6d345ef5-771e-43d5-8a15-28ac7c597d1f.aspx)
-

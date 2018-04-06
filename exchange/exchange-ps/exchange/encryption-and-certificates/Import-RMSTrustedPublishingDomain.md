@@ -59,23 +59,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $([byte[]](Get-Content -Encoding byte -Path "C:\My Documents\Contoso.xml" -ReadCount 0)) -Password (ConvertTo-SecureString -String 'Pa$$word1' -AstPlainText -Force)-ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -IntranetLicensingUrl https://RMS01/_wmcs/licensing
 ```
 
 This example imports a TPD from an AD RMS server into a cloud-based organization. The TPD uses the following values:
 
+- Path to exported XML file: C:\\My Documents\\Contoso.xml
 
-Path to exported XML file: C:\\My Documents\\Contoso.xml
+- Password of exported XML file: Pa$$word1
 
-Password of exported XML file: Pa$$word1
+- External licensing URL: https://rms.contoso.com/\_wmcs/licensing
 
-External licensing URL: https://rms.contoso.com/\_wmcs/licensing
+- Internal licensing URL: https://RMS01/\_wmcs/licensing
 
-Internal licensing URL: https://RMS01/\_wmcs/licensing
-
-TPD name: Contoso TPD
+- TPD name: Contoso TPD
 
 ## PARAMETERS
 
@@ -417,4 +416,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7c5e7a0f-9c9d-4863-bab8-bcc729cc16a6.aspx)
-

@@ -50,14 +50,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-OwaConnectivity -URL:https://mail.contoso.com/owa -MailboxCredential:(get-credential contoso\kweku)
 ```
 
 This example tests the connectivity for the URL https://mail.contoso.com/owa using the credentials for the user contoso\\kweku.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-OwaConnectivity -ClientAccessServer:Contoso12 -AllowUnsecureAccess
 ```
@@ -354,4 +354,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/44808bba-56b3-45bc-8cab-b45f52758636.aspx)
-

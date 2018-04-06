@@ -46,7 +46,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AdvancedThreatProtectionTrafficReport -StartDate "4/26/2016" -EndDate "4/28/2016" | Format-Table
 ```

@@ -5,7 +5,7 @@ title: Remove-AddressRewriteEntry
 schema: 2.0.0
 ---
 
-# remove-addressrewriteentry
+# Remove-AddressRewriteEntry
 
 ## SYNOPSIS
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-remove-addressrewriteentry [-Identity] <AddressRewriteEntryIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Remove-AddressRewriteEntry [-Identity] <AddressRewriteEntryIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -26,14 +26,14 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-AddressRewriteEntry "Address rewrite entry for contoso.com"
 ```
 
 This example removes a specific address rewrite entry.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AddressRewriteEntry | Where {$_.InternalAddress -like '*contoso.com'} | Remove-AddressRewriteEntry
 ```

@@ -106,14 +106,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-OwaVirtualDirectory -Identity "Contoso\owa (default Web site)" -DirectFileAccessOnPublicComputersEnabled $false
 ```
 
 This example sets the DirectFileAccessOnPublicComputersEnabled parameter to $false on the Outlook on the web virtual directory owa on the default Internet Information Services (IIS) website on the Exchange server Contoso.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-OwaVirtualDirectory -Identity "Contoso\owa (default Web site)" -ActionForUnknownFileAndMIMETypes Block
 ```
@@ -1392,7 +1392,6 @@ Accept wildcard characters: False
 This parameter is available or functional only in Exchange Server 2010.
 
 The RemoteDocumentsActionForUnknownServers parameter isn't available in this release.
-
 
 ```yaml
 Type: Allow | Block

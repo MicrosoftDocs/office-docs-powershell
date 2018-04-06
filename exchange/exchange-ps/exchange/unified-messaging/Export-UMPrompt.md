@@ -77,21 +77,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $prompt = Export-UMPrompt -PromptFileName "customgreeting.mp3" -UMDialPlan MyUMDialPlan; Set-Content -Path "d:\DialPlanPrompts\welcomegreeting.mp3" -Value $prompt.AudioData -Encoding Byte
 ```
 
 This example exports the welcome greeting for the UM dial plan MyUMDialPlan and saves it as the file welcomegreeting.mp3.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoAttendant; Set-Content -Path "e:\UMPromptsBackup\welcomegreetingbackup.mp3" -Value $prompt.AudioData -Encoding Byte
 ```
 
 This example exports a custom greeting for the UM auto attendant MyUMAutoAttendant and saves it to the file welcomegreetingbackup.mp3.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Export-UMPrompt -AfterHoursWelcomeGreeting -UMAutoAttendant MyUMAutoAttendant -TestBusinessName "Northwind Traders"; set-content -Path "d:\ AfterHoursWelcomeGreeting.mp3" -Value $prompt.AudioData -Encoding Byte
 ```

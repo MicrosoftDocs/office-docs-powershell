@@ -63,21 +63,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ComplianceSearchAction -SearchName "Project X" -Preview
 ```
 
 This example creates a preview search action for the compliance search named Project X.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ComplianceSearchAction -SearchName "Project X" -Export
 ```
 
 This example creates an export search action for the compliance search named Project X.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
 ```

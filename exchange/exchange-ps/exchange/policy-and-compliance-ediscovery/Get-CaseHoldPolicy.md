@@ -26,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-CaseHoldPolicy -Case "Contoso Legal"
 ```
 
 This example displays detailed information for the policy that's associated with the eDiscovery case named Contoso Legal.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-CaseHoldPolicy -Identity "Regulation 123 Compliance"
 ```
@@ -136,4 +136,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ea8d4be5-bb31-4db3-a49e-08861561f402.aspx)
-

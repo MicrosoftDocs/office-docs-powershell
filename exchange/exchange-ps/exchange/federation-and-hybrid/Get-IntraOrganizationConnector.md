@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-IntraOrganizationConnector
 ```
 
 This example returns a summary list of all Intra-Organization connectors.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-IntraOrganizationConnector "MainCloudConnector" | Format-List
 ```

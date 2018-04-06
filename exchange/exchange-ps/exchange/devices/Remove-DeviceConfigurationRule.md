@@ -35,7 +35,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-DeviceConfigurationRule "Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}"
 ```
@@ -114,4 +114,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1c50327e-1bba-44df-ba06-dda384382e15.aspx)
-

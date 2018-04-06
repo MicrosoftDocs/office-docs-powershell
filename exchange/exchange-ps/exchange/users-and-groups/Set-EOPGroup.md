@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-Group -Identity "Legal Department" -Notes "Group members updated June 1, 2014"
 ```
@@ -157,4 +157,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bed90147-4ff9-4b9d-b9fc-3e7843397818.aspx)
-

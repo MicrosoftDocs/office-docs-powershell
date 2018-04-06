@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $file = Export-JournalRuleCollection; Set-Content -Path "C:\MyDocs\JournalRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports journal rules in a two-step process. In the first step, the Export-JournalRuleCollection cmdlet exports journal rules to the variable $file. In the second step, the Set-Content cmdlet saves the exported data to the XML file JournalRules.xml.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $file = Export-JournalRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\Ex2007-JournalRules.xml" -Value $file.FileData -Encoding Byte
 ```

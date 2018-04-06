@@ -55,14 +55,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-MapiConnectivity -Server "Server01"
 ```
 
 This example tests connectivity to the server Server01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-MapiConnectivity -Identity "midwest\john"
 ```

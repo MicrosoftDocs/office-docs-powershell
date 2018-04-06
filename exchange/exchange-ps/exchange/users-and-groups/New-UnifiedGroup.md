@@ -63,7 +63,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-UnifiedGroup -DisplayName "Engineering Department" -Alias engineering
 ```
@@ -316,7 +316,6 @@ To specify the primary SMTP email address, you can use any of the following meth
 - If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
-
 
 ```yaml
 Type: ProxyAddressCollection
@@ -649,4 +648,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/187acc17-10de-4f38-8efc-7c95d2b3df00.aspx)
-

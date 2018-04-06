@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Suspend-MoveRequest -Identity "Ayla@humongousinsurance.com"
 ```
 
 This example suspends the move request for Ayla's mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MoveRequest -MoveStatus InProgress | Suspend-MoveRequest
 ```

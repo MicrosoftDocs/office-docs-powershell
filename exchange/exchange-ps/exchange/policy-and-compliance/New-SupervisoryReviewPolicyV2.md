@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-SupervisoryReviewPolicyV2 -Name "EU Brokers Policy" -Reviewers laura@contoso.com,julia@contoso.com -Comment "Created by the compliance team"
 ```
@@ -153,4 +153,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5296dc8c-0412-4b10-a464-fe6d403ff3a3.aspx)
-

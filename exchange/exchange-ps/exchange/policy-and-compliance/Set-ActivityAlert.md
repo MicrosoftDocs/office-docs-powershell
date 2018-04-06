@@ -32,17 +32,16 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $NU = Get-ActivityAlert "Contoso Elevation of Privilege"; $NU.NotifyUser.Add("chris@fabrikam.com"); Set-ActivityAlert "Contoso Elevation of Privilege" -NotifyUser $NU.NotifyUser
 ```
 
 This example adds the external user chris@fabrikam.com to the list of recipients that email notifications are sent to for the activity alert named Contoso Elevation of Privilege.
 
-
 Note: To remove an existing email address from the list of recipients, change the value NotifyUser.Add to NotifyUser.Remove.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ActivityAlert -Identity "External Sharing Alert" -Disabled $true
 ```
@@ -497,4 +496,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/798baa99-ff27-45e2-a19a-8c3d7b288a3d.aspx)
-

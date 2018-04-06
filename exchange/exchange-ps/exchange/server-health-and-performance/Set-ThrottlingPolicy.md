@@ -88,21 +88,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $a = Get-ThrottlingPolicy RemoteSiteUserPolicy; $a | Set-ThrottlingPolicy -EwsMaxConcurrency 4
 ```
 
 This example modifies a throttling policy so that users associated with this policy can have a maximum of four concurrent requests running in Exchange Web Services.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ThrottlingPolicy RemoteSiteUserPolicy -PowerShellMaxConcurrency 3 -PowerShellMaxCmdletQueueDepth 12
 ```
 
 This example modifies a throttling policy so that it restricts the number of connections for a user to three. The users associated with this policy are only able to create three Exchange Management Shell sessions. This policy also restricts to three the number of Exchange admin center operations or Exchange Web Services operations that can be executed at the same time. In addition, the PowerShellMaxCmdletQueueDepth parameter specifies that 12 operations maximum are allowed to be executed by the user.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-ThrottlingPolicy <ThrottlingPolicyName> -PowerShellMaxDestructiveCmdlets 10 -PowerShellMaxDestructiveCmdletsTimePeriod 60
 ```

@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AdministrativeUnit
 ```
 
 This example returns a summary list of all Azure Active Directory administrative units.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AdministrativeUnit -Identity "West Coast" | Format-List
 ```
@@ -140,4 +140,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cadcbb11-66a3-4f22-a169-161c15f1e315.aspx)
-

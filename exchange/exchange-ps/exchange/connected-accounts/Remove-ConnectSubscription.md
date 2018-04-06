@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ConnectSubscription -Identity <Aggregation subscription identity>
 ```
@@ -107,4 +107,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6a4e7267-e3e9-42ec-b1be-7d1d9e2ea40c.aspx)
-
