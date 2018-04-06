@@ -25,7 +25,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Suspend-PublicFolderReplication
 ```
@@ -104,4 +104,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ce2a7c81-1884-4b4a-8382-8a8b5f0862ff.aspx)
-

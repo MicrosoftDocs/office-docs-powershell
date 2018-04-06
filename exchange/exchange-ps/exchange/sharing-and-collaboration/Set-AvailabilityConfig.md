@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-AvailabilityConfig -PerUserAccount <>
 ```
 
 This example is useful with a trusted cross-forest Availability service. If the remote forest is trusted, and a per-user free/busy proxy account or group in the remote forest is configured to use the service account, the configuration is added to the current forest to authorize the Microsoft ActiveSync request from the remote forest.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-AvailabilityConfig -OrgWideAccount <ExampleCredentials>
 ```

@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ConnectSubscription -LinkedIn $true -OAuthVerifier <OAuthVerifier value> -RequestSecret <Request Secret value> -RequestToken <RequestToken value>
 ```
@@ -226,4 +226,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a13fdafb-1ad8-47ee-b57f-2377d67c01ae.aspx)
-

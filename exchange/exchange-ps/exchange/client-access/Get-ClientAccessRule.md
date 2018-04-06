@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ClientAccessRule
 ```
 
 This example shows a summary list of all client access rules.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ClientAccessRule "Block Client Connections from 192.168.1.0/24" | Format-List
 ```
@@ -138,4 +138,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4787d6dc-d38b-427a-83f8-7c57d604dff0.aspx)
-

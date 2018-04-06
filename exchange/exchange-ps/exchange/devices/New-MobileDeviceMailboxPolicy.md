@@ -56,21 +56,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MobileDeviceMailboxPolicy -Name "Sales Policy" -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -IsDefault $false -AttachmentsEnabled $false -AllowStorageCard $true
 ```
 
 This example creates the mobile device mailbox policy Sales Policy that has several preconfigured values.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-MobileDeviceMailboxPolicy -Name Management -AllowBluetooth $true -AllowBrowser $true -AllowCamera $true -AllowPOPIMAPEmail $false -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -MaxEmailAgeFilter TwoWeeks -AllowWiFi $true -AllowStorageCard $true
 ```
 
 This example creates the mobile device mailbox policy Management that has several preconfigured values. Users assigned to this policy should have an Enterprise client access license (CAL) to use many of these features.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-MobileDeviceMailboxPolicy -Name "Contoso Policy" -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -MinPasswordComplexCharacters 3 -IsDefault $true -PasswordHistory 10
 ```

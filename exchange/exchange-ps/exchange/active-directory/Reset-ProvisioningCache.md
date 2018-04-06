@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Reset-ProvisioningCache -Server EXSRV1.contoso.com -Application Powershell -GlobalCache
 ```
 
 This example resets the provisioning cache for Windows PowerShell running on the server EXSRV1.contoso.com in an on-premises Exchange organization and specifies that all cache keys are cleared.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Reset-ProvisioningCache -Application Powershell-Proxy -Server datacenter1.adatum.com -GlobalCache
 ```

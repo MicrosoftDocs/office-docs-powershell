@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ActiveSyncDeviceAccessRule 'ContosoPhone(DeviceModel)' -AccessLevel Quarantine
 ```
 
 This example changes the access level granted to phones covered by the rule ContosoPhone (DeviceModel) to Quarantine.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ActiveSyncDeviceAccessRule | Where {$_.AccessLevel -eq 'Allow'} | Set-ActiveSyncDeviceAccessRule -AccessLevel Quarantine
 ```

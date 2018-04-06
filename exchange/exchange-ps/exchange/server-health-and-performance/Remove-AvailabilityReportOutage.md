@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-AvailabilityReportOutage -ReportDate:"2009-12-02" -SiteName:"Site1"
 ```
@@ -169,4 +169,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ef11332e-dfbf-464e-9174-ef24129b72e9.aspx)
-

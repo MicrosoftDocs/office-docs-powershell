@@ -25,14 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-TransportService
 ```
 
 This example provides different results depending on the server role on which it's run. When you run this command on an Edge Transport server, it provides a configuration summary for the local server. Otherwise, it displays a list of all Mailbox servers in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-TransportService Mailbox1 | Format-List
 ```

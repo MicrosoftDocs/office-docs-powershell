@@ -88,49 +88,49 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ThrottlingPolicy -Name <NewPolicyName> -EWSPercentTimeInCAS 80 -EWSPercentTimeInAD $null
 ```
 
 In Exchange Server 2010, this example creates a non-default throttling policy. Any parameters that you omit inherit the values from the default throttling policy.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ThrottlingPolicy -Name ITUserPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
 ```
 
 This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>. After you create this policy, you must associate it with specific users.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-ThrottlingPolicy -Name <NewPolicyName > EWSPercentTimeInCAS 80
 ```
 
 In Exchange Server 2010, this example creates a policy for a tenant that sets the EWSPercentTimeInCAS parameter value to 80.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 New-ThrottlingPolicy -Name AllUsersEWSPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
 ```
 
 This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 New-ThrottlingPolicy -Name RemoteSiteUserPolicy -PowerShellMaxConcurrency 3 -PowerShellMaxCmdletQueueDepth 12
 ```
 
 This example creates a throttling policy RemoteSiteUserPolicy that restricts the number of connections for a user to three. The users associated with this policy are only able to create three remote Exchange Management Shell sessions. This policy also restricts to three the number of Exchange admin center (EAC) operations or Exchange Web Services (EWS) operations that can be executed at the same time.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 New-ThrottlingPolicy -Name ITStaffUserPolicyCmdletMax -PowerShellMaxCmdlets 10 -PowerShellMaxCmdletsTimePeriod 5
 ```
 
 This example creates a throttling policy that restricts a user to be able to only execute 10 cmdlets in a period of five seconds. If the users associated with this policy exceed this number, the cmdlet pipeline execution is stopped with a throttling error message. The user needs to wait for and then resubmit the execution of cmdlets on the open connection.
 
-### Example 7
+### -------------------------- Example 7 --------------------------
 ```
 New-ThrottlingPolicy -Name ITStaffUserPolicyDestructiveCmdlets -PowerShellMaxDestructiveCmdlets 10 -PowerShellMaxDestructiveCmdletsTimePeriod 60
 ```

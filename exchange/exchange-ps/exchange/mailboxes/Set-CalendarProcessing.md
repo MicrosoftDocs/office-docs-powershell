@@ -41,49 +41,49 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-CalendarProcessing -Identity "Conf 212" -AutomateProcessing AutoAccept -DeleteComments $true -AddOrganizerToSubject $true -AllowConflicts $false
 ```
 
 This example automates the processing of calendar requests to the resource mailbox Conf 212.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-CalendarProcessing -Identity "Car 53" -AutomateProcessing None
 ```
 
 This example disables automatic processing for the resource mailbox Car 53.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-CalendarProcessing -Identity "5th Floor Conference Room" -AutomateProcessing AutoAccept -AllBookInPolicy $true
 ```
 
 This example allows the Calendar Attendant to approve in-policy requests from all users.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Set-CalendarProcessing -Identity "5th Floor Conference Room" -AutomateProcessing AutoAccept -AllRequestInPolicy $true -AllBookInPolicy $false -ResourceDelegates "chris@contoso.com","michelle@contoso.com"
 ```
 
 This example allows all users to submit in-policy requests, but the request is still subject to approval by one of the specified delegates.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -RequestOutOfPolicy DavidPelton@contoso.com -ResourceDelegates "chris@contoso.com","michelle@contoso.com"
 ```
 
 This example allows the Calendar Attendant to accept out-of-policy requests from David Pelton. The request is still subject to approval by one of the specified delegates.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 Set-CalendarProcessing -Identity "Car 53" -AutomateProcessing AutoAccept -BookInPolicy "ayla@contoso.com","tony@contoso.com" -AllBookInPolicy $false
 ```
 
 This example allows a list of users to submit in-policy meeting requests to the equipment mailbox for Car 53.
 
-### Example 7
+### -------------------------- Example 7 --------------------------
 ```
 Set-CalendarProcessing -Identity "Room 221" -ProcessExternalMeetingMessages $false
 ```

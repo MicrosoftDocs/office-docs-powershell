@@ -43,14 +43,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-PublicFolderMailbox -Identity PF_marketing -SuppressStatus
 ```
 
 This example updates the public folder hierarchy on the public folder mailbox PF\_marketing and suppresses the command's output.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-Mailbox -PublicFolder | Update-PublicFolderMailbox -SuppressStatus
 ```

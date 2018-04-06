@@ -47,21 +47,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-StoreUsageStatistics -Server EX1 | ft -auto
 ```
 
 This example retrieves store usage statistics for all active databases on server EX1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-StoreUsageStatistics -Server EX1 -IncludePassive | ft -auto
 ```
 
 This example retrieves store usage statistics for all active and passive databases on server EX1.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-StoreUsageStatistics -Database DB1 | Sort-Object LogRecordBytes -desc | Select-Object -First 10 | ft DigestCategory, *guid, LogRecordBytes, *time* -auto
 ```

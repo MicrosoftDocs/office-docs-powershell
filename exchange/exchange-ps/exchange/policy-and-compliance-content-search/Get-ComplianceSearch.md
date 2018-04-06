@@ -30,14 +30,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ComplianceSearch
 ```
 
 This example shows a summary list of all compliance searches.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ComplianceSearch -Identity "Case 1234" | Format-List
 ```

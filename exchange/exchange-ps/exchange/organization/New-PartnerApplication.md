@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-PartnerApplication -Name HRApp -ApplicationIdentifier 00000006-0000-0dd1-ac00-000000000000
 ```

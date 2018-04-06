@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MessageClassification -Name MyMessageClassification -DisplayName "New Message Classification" -SenderDescription "This is the description text"
 ```
@@ -53,7 +53,7 @@ This example creates the message classification named MyMessageClassification wi
 
 - The sender description is "This is the description text".
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-MessageClassification MyMessageClassification -Locale es-ES -DisplayName "España Example" -SenderDescription "Este es el texto de la descripción"
 ```

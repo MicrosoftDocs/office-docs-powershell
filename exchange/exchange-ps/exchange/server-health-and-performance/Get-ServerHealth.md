@@ -41,7 +41,7 @@ The cmdlet also returns an alert value that provides the specific state of your 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ServerHealth -Identity Server01
 ```

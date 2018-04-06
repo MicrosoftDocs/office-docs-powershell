@@ -47,28 +47,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UMActiveCalls
 ```
 
 This example displays the details of all active calls on the local Mailbox server.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-UMActiveCalls -Server MyUMServer
 ```
 
 This example displays the details of all active calls on the Mailbox server MyUMServer.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-UMActiveCalls -IPGateway MyUMIPGateway
 ```
 
 This example displays the details of all active calls being processed by the UM IP gateway MyUMIPGateway.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-UMActiveCalls -DialPlan MyUMDialPlan
 ```

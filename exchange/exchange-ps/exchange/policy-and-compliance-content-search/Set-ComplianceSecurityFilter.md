@@ -27,14 +27,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"; $filterusers.users.add("pilarp@contoso.com"); Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
 ```
 
 This example adds user pilarp@contoso.com to the compliance security filter named Ottawa Users Filter without affecting other users assigned to the filter.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"; $filterusers.users.remove("annb@contoso.com"); Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
 ```
@@ -221,4 +221,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9e47c29a-abbe-4e9a-8e3f-cd210793273b.aspx)
-

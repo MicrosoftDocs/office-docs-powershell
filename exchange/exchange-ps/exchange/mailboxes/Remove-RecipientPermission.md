@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-RecipientPermission "Help Desk" -AccessRights SendAs -Trustee "Ayla Kol"
 ```
@@ -205,4 +205,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5a772687-ca3b-4753-8dea-bf4c571e9e16.aspx)
-

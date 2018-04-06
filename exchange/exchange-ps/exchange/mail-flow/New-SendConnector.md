@@ -55,7 +55,7 @@ New-SendConnector [-Name] <String> [-AuthenticationCredential <PSCredential>] [-
 
 ###  (Default)
 ```
-New-SendConnector [-Name] <String> -AddressSpaces <MultiValuedProperty>
+New-SendConnector -Name <String> -AddressSpaces <MultiValuedProperty>
  [-AuthenticationCredential <PSCredential>] [-CloudServicesMailEnabled <$true | $false>] [-Comment <String>]
  [-Confirm] [-ConnectionInactivityTimeOut <EnhancedTimeSpan>] [-Custom] [-DNSRoutingEnabled <$true | $false>]
  [-DomainController <Fqdn>] [-DomainSecureEnabled <$true | $false>] [-Enabled <$true | $false>]
@@ -78,31 +78,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-SendConnector -Internet -Name MySendConnector -AddressSpaces contoso.com,fabrikam.com
 ```
 
 This example creates the Send connector named MySendConnector with the following properties:
 
+- It sends email messages over the Internet.
 
-It sends email messages over the Internet.
+- It processes messages addressed only to Contoso.com and Fabrikam.com domains.
 
-It processes messages addressed only to Contoso.com and Fabrikam.com domains.
-
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $CredentialObject = Get-Credential; New-SendConnector -Name "Secure Email to Contoso.com" -AddressSpaces contoso.com -AuthenticationCredential $CredentialObject -SmartHostAuthMechanism BasicAuth
 ```
 
 This example creates the Send connector Secure Email to Contoso.com with the following properties:
 
+- It processes messages only for the Contoso.com domain.
 
-It processes messages only for the Contoso.com domain.
+- It uses Basic authentication.
 
-It uses Basic authentication.
-
-It uses a specific authentication credential.
+- It uses a specific authentication credential.
 
 To assign a specific authentication credential for the Send connector, you must first run the Get-Credential command and store the user input in a temporary variable. When you run the Get-Credential command, the command asks for the user name and password of the account used during authentication with the Contoso.com email server. The temporary variable can then be used in the New-SendConnector cmdlet to create the new connector.
 

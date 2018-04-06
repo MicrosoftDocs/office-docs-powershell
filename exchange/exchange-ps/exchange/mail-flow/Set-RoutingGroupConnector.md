@@ -32,19 +32,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RoutingGroupConnector -Identity "Exchange Administrative Group (FYDIBOHF23SPDLT)\Exchange Routing Group (DWBGZMFD01QNBJR)\Ex2010 to Ex2003 RGC" -Cost 70 -MaxMessageSize 10MB -SourceTransportServers 2010Hub1.contoso.com -TargetTransportServers 2003BH1.contoso.com
 ```
 
 This example makes the following configuration changes to the routing group connector Ex2010 to Ex2003 RGC:
 
+- Sets the cost to 70.
 
-Sets the cost to 70.
+- Sets a maximum message size limit of 10 MB.
 
-Sets a maximum message size limit of 10 MB.
-
-Specifies new source and target servers for the connector.
+- Specifies new source and target servers for the connector.
 
 ## PARAMETERS
 
@@ -240,4 +239,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/63311a62-c2b6-46a3-91ba-c9fa9af16573.aspx)
-

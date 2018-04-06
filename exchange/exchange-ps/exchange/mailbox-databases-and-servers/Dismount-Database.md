@@ -5,7 +5,7 @@ title: Dismount-Database
 schema: 2.0.0
 ---
 
-# dismount-Database
+# Dismount-Database
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-dismount-Database [-Identity] <DatabaseIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Dismount-Database [-Identity] <DatabaseIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Dismount-Database -Identity MyDatabase
 ```

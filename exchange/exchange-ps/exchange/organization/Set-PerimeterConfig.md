@@ -12,7 +12,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-PerimeterConfig cmdlet to modify the list of gateway server IP addresses that have been added to the cloud-based safelists.
 
-
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
@@ -25,17 +24,14 @@ Set-PerimeterConfig [-Confirm] [-GatewayIPAddresses <MultiValuedProperty>] [-Wha
 ## DESCRIPTION
 If you have an on-premises email system, you can use the Set-PerimeterConfig cmdlet to add the IP addresses of your gateway servers to cloud-based safelists (also known as whitelists) to make sure that messages sent from your on-premises email system aren't treated as spam.
 
-
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-PerimeterConfig -GatewayIPAddresses 123.0.0.1
 ```
 
 This example shows how to add an IP address to cloud-based safelists where the gateway server relays email to the cloud-based service from internal email servers only.
-
-
 
 ## PARAMETERS
 
@@ -96,17 +92,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### 
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
-
 ## OUTPUTS
 
 ### 
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4f40a5fc-3275-42a0-b12f-a199bd42c8d5.aspx)
-

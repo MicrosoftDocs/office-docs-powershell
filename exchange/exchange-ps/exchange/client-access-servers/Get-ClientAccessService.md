@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ClientAccessService | Format-Table Name
 ```
 
 This example returns a summary list of all Exchange servers in your organization that have theClient Access server role installed.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ClientAccessService -Identity mail.contoso.com | Format-List
 ```
@@ -139,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b46d6c59-6e46-4089-a984-09b280dcb1ba.aspx)
-

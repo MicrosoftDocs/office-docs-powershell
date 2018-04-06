@@ -44,21 +44,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter { City -Eq "Seattle" -And RecipientType -Eq "UserMailbox" }
 ```
 
 This example changes the recipient restriction filter on the Seattle Mailboxes management scope to match all mailboxes that have Seattle in the City mailbox property.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ManagementScope "Sales Recipients" -RecipientRoot contoso.com/Sales
 ```
 
 This example changes the recipient root for the Sales Recipients management scope to match only recipient objects contained under the contoso.com/Sales OU.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter {ServerSite -Eq "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com"}
 ```

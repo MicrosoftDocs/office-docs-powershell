@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-OabVirtualDirectory -Identity "OAB (Default Web Site)"
 ```
 
 This example removes the default OAB virtual directory from the local server.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-OabVirtualDirectory -Identity "Server1\OAB (Default Web Site)"
 ```

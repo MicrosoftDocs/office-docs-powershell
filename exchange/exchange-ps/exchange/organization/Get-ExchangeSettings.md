@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ExchangeSettings
 ```
 
 This example returns a summary list of all Exchange setting objects.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ExchangeSettings -Identity Audit | Format-List
 ```
@@ -313,4 +313,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/40557a97-7cc0-45b7-8b49-7fee2a1d7dc3.aspx)
-

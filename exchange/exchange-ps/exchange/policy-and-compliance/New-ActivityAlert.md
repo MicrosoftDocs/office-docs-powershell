@@ -69,21 +69,20 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ActivityAlert -Name "External Sharing Alert" -Operation sharingset,sharinginvitationcreated -NotifyUser chrisda@contoso.com,michelle@contoso.com -UserId laura@contoso.com,julia@contoso.com -Description "Notification for external sharing events by laura@contoso.com and julia@contoso.com"
 ```
 
 This example creates a new activity alert named External Sharing Alert that has the following properties:
 
+- Operation: sharingset and sharinginvitationcreated.
 
-Operation: sharingset and sharinginvitationcreated.
+- NotifyUser: chrisda@contoso.com and michelle@contoso.com.
 
-NotifyUser: chrisda@contoso.com and michelle@contoso.com.
+- UserId: laura@contoso.com and julia@contoso.com.
 
-UserId: laura@contoso.com and julia@contoso.com.
-
-Description: Notification for external sharing events by laura@contoso.com and julia@contoso.com.
+- Description: Notification for external sharing events by laura@contoso.com and julia@contoso.com.
 
 ## PARAMETERS
 
@@ -557,4 +556,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c84fb3ae-c608-4ff2-9d1b-3c423a815d9e.aspx)
-

@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ComplianceTag -Identity "HR Content" -RetentionDuration 2555 -Comment "Retain HR content for 7 years"
 ```
@@ -163,4 +163,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/76d2fc0e-676d-4005-9ce8-c1cdb274a7e6.aspx)
-

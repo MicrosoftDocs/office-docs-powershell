@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Suspend-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1"
 ```
 
 This example suspends the second restore request for Ayla's mailbox with the identity Ayla\\MailboxRestore1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxRestoreRequest -Status InProgress | Suspend-MailboxRestoreRequest -SuspendComment "Resume after 10:00 PM"
 ```

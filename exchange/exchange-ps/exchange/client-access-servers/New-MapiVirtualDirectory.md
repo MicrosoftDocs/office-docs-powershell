@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MapiVirtualDirectory -InternalUrl https://contoso.com/mapi -IISAuthenticationMethods NTLM,Negotiate,OAuth
 ```
@@ -110,7 +110,6 @@ You can specify multiple values separated by commas.
 
 The default values are NTLM, OAuth, and Negotiate. We recommend that you always have the virtual directory configured for OAuth.
 
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -154,7 +153,6 @@ The Server parameter specifies the Exchange server that hosts the virtual direct
 - Distinguished name (DN)
 
 - ExchangeLegacyDN
-
 
 ```yaml
 Type: ServerIdParameter

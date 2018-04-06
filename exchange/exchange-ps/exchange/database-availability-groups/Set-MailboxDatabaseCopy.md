@@ -46,14 +46,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MailboxDatabaseCopy -Identity DB2\MBX1 -ReplayLagTime 3.0:0:0
 ```
 
 This example configures the replay lag time with a value of 3 days for a copy of the database DB2 hosted on the Mailbox server MBX1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-MailboxDatabaseCopy -Identity DB1\MBX2 -ActivationPreference 3
 ```

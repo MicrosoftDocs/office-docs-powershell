@@ -49,21 +49,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
 ```
 
 This example sets the PIN settings for users associated with the UM mailbox policy MyUMMailboxPolicy.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -AllowDialPlanSubscribers $true -AllowedInCountryOrRegionGroups InCountry/RegionGroup1,InCountry/RegionGroup2 -AllowedInternationalGroups InternationalGroup1,InternationalGroup2 -AllowExtensions $true
 ```
 
 This example selects the in-country or region groups and international groups from those configured on the UM dial plan associated with the UM mailbox policy. UM-enabled users associated with this UM mailbox policy can place outbound calls according to the rules defined on these groups.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -UMEnabledText "You have been enabled for Unified Messaging." -VoiceMailText "You have received a voice mail message from Microsoft Exchange Unified Messaging."
 ```

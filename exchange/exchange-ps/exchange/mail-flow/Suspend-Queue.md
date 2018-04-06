@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Suspend-Queue -Filter {NextHopDomain -eq "contoso.com" -and Status -eq "Retry"}
 ```
 
 This example suspends processing on all queues holding messages for delivery to the domain contoso.com and that currently have a status of Retry.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Suspend-Queue -Server Server1.contoso.com -Filter {MessageCount -gt 100}
 ```

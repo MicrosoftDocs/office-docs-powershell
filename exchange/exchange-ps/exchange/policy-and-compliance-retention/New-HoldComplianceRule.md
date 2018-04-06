@@ -32,7 +32,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-HoldComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -ContentDateFrom "09/10/14 5:00 PM" -ContentDateTo "09/10/15 5:00 PM" -HoldContent Unlimited
 ```
@@ -257,4 +257,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e177cc45-e29a-4352-8c4d-dfcc6f9d3b75.aspx)
-

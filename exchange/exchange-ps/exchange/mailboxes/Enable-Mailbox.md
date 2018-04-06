@@ -5,7 +5,7 @@ title: Enable-Mailbox
 schema: 2.0.0
 ---
 
-# enable-Mailbox
+# Enable-Mailbox
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set8
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm]
  [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
@@ -29,7 +29,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
 
 ### Set10
 ```
-enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
+Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
@@ -39,7 +39,7 @@ enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
 
 ### Set4
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Discovery] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
@@ -49,7 +49,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Discovery] [-ActiveSyncMailboxPol
 
 ### Set2
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Equipment] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
@@ -60,7 +60,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Equipment] [-ActiveSyncMailboxPol
 
 ### Set5
 ```
-enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>
  -LinkedMasterAccount <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>]
  [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-LinkedCredential <PSCredential>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
@@ -71,7 +71,7 @@ enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>
 
 ### Set6
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Room] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Room] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
@@ -82,7 +82,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Room] [-ActiveSyncMailboxPolicy <
 
 ### Set7
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Shared] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Shared] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
@@ -92,7 +92,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Shared] [-ActiveSyncMailboxPolicy
 
 ### Set1
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Confirm]
  [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
@@ -103,7 +103,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set9
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-ArchiveGuid <Guid>]
  [-ArchiveName <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
@@ -115,7 +115,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set3
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
  [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
@@ -125,7 +125,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set13
 ```
-enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
+Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
@@ -135,7 +135,7 @@ enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
 
 ### Set12
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-ArchiveGuid <Guid>]
  [-ArchiveName <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
@@ -145,7 +145,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set11
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
@@ -154,7 +154,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set15
 ```
-enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
+Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
@@ -163,7 +163,7 @@ enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
 
 ### Set14
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-AutoExpandingArchive] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
  [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf] [<CommonParameters>]
@@ -178,21 +178,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-Mailbox -Identity Ayla
 ```
 
 This example creates a mailbox for the existing user named Ayla.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Enable-Mailbox -Identity Ayla -Archive
 ```
 
 This example creates an In-Place archive for the existing user name Ayla who already has a mailbox.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Enable-Mailbox -Identity ayla@contoso.com -RemoteArchive -ArchiveDomain "archive.contoso.com"
 ```

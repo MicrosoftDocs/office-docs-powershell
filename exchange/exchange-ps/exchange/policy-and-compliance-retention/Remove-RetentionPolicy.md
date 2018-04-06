@@ -5,7 +5,7 @@ title: Remove-RetentionPolicy
 schema: 2.0.0
 ---
 
-# remove-RetentionPolicy
+# Remove-RetentionPolicy
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-remove-RetentionPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
+Remove-RetentionPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-RetentionPolicy -Identity "Business Critical"
 ```
 
 This example removes the retention policy Business Critical.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false
 ```
 
 This example removes the retention policy Business Critical and suppresses the confirmation prompt.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false -Force
 ```

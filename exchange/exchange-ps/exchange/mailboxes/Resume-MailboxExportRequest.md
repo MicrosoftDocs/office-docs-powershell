@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Resume-MailboxExportRequest -Identity kweku\export
 ```
 
 This example resumes the export request kweku\\export.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxExportRequest -Status Failed | Resume-MailboxExportRequest
 ```

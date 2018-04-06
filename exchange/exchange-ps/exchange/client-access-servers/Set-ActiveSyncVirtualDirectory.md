@@ -39,21 +39,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -BasicAuthEnabled $false
 ```
 
 This example disables Basic authentication on the default Exchange ActiveSync virtual directory on the server Contoso.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -BadItemReportingEnabled $true -SendWatsonReport:$true
 ```
 
 This example enables bad item reporting and turns on the option to send Watson reports for errors on the server Contoso.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -ExternalUrl "http://contoso.com/mail"
 ```

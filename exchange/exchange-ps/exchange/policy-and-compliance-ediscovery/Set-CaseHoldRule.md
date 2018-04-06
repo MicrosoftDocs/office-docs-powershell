@@ -27,7 +27,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-CaseHoldRule -Identity "Internal Company Rule" -Disabled $true
 ```
@@ -202,4 +202,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/42021435-189d-44f6-99b9-3a171bd3f667.aspx)
-

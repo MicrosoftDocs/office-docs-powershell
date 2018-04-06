@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-LinkedUser "GALSync-ServiceAccount" -CertificateSubject "X509:<I>CN=3rdPartyCAExample.com<S>C=US,O=Contoso Corp, CN=contoso.com"
 ```
@@ -127,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9252ba30-a3b3-484f-9750-6103f246cbbf.aspx)
-

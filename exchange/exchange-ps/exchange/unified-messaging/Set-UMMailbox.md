@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
 ```
@@ -54,7 +54,7 @@ Prevents him from receiving incoming faxes
 
 Enables voice mail notifications but not missed call notifications using text messaging
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-UMMailbox -Identity tony@contoso.com -TUIAccessToCalendarEnabled $false -TUIAccessToEmailEnabled $false
 ```

@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PublicFolderMoveRequest -Identity \PublicFolderMove
 ```
 
 This example returns the status of an in-progress public folder move request with the identity \\PublicFolderMove, which is the default name assigned to public folder moves.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PublicFolderMoveRequest -RequestQueue MBD01
 ```

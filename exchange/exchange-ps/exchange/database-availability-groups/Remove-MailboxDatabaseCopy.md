@@ -36,7 +36,7 @@ Running this cmdlet removes the mailbox database copy configuration, but doesn't
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-MailboxDatabaseCopy -Identity DB1\MBX3
 ```

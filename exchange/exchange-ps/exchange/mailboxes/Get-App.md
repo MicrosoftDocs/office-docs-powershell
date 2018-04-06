@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-App -Mailbox Tony
 ```
 
 This example returns the summary list of apps installed for user Tony. The command returns the name of the app, whether the app is enabled, and the app version number.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b | Format-List
 ```
 
 This example displays detailed information for the Bing Maps app for the currently logged on user.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-App -OrganizationApp
 ```

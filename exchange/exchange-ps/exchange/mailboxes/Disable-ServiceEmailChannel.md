@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Disable-ServiceEmailChannel -Identity JeffHay
 ```
 
 This example disables the .NET service channel for the user Jeff Hay.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Disable-ServiceEmailChannel -Identity JeffHay -Confirm $true
 ```
 
 This example disables the .NET service channel for the user Jeff Hay after confirmation is given.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Disable-ServiceEmailChannel -Identity JeffHay -Confirm $false
 ```

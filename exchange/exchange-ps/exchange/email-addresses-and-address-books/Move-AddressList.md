@@ -28,7 +28,7 @@ By default in Exchange Online, the Address List role isn't assigned to any role 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Move-AddressList -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -Target "\All Users\Sales\building4"
 ```

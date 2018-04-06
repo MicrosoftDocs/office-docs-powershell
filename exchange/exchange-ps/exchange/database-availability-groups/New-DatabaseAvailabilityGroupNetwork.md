@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-DatabaseAvailabilityGroupNetwork -DatabaseAvailabilityGroup DAG1 -Name DAG1Repl -Subnets 10.0.0.0/8 -ReplicationEnabled:$true
 ```

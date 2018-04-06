@@ -43,14 +43,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-DataEncryptionPolicy -Identity "US Mailboxes" -Enabled $false
 ```
 
 This example disabled the data encryption policy named US Mailboxes.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-DataEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
 ```

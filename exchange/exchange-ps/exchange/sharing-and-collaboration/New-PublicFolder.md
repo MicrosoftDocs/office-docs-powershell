@@ -27,28 +27,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-PublicFolder -Name Marketing
 ```
 
 This example creates the public folder Marketing in the root of the public folder.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-PublicFolder -Name FY2010 -Path \Legal\Cases -Server MBXSVR01
 ```
 
 In Exchange Server 2010, this example creates the public folder FY2010 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2010 on the server MBXSVR01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-PublicFolder -Name FY2013 -Path \Legal\Cases
 ```
 
 This example creates the public folder FY2013 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2013.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 New-PublicFolder -Name Support -Mailbox North_America
 ```

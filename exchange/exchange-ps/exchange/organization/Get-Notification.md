@@ -40,21 +40,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-Notification
 ```
 
 This example displays a summary list of all notification events.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-Notification -ProcessType Migration
 ```
 
 This example displays a summary list of all mailbox move and migration notification events.
 
-### Example 3 
+### -------------------------- Example 3 --------------------------
 ```
 Get-Notification -Identity 0259ec74-3539-4195-ab4f-de93e654ceaf | Format-List
 ```

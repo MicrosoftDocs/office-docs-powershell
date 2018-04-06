@@ -53,14 +53,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-EmailAddressPolicy -Identity "Southeast Executives" -ConditionalStateOrProvince @{Add="TX"}
 ```
 
 In on-premises Exchange, this example modifies the existing email address policy named Southeast Executives by adding the State or province value TX (Texas) to the precanned recipient filter.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-EmailAddressPolicy -Identity "Contoso Corp" -DisabledEmailAddressTemplates $null
 ```

@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-AutodiscoverVirtualDirectory -Identity 'Autodiscover(Default Web Site)' -WindowsAuthentication $false -BasicAuthentication $false -DigestAuthentication $true
 ```
 
 This example sets the authentication method to Digest authentication for the Autodiscover virtual directory.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-AutodiscoverVirtualDirectory -Identity 'autodiscover (default Web site)' -ExternalUrl 'http://www.contoso.com'
 ```
 
 In Exchange Server 2010, this example sets the external URL for the Autodiscover virtual directory.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-AutodiscoverVirtualDirectory -Identity 'Autodiscover (Default Web Site)' -WindowsAuthentication $true
 ```

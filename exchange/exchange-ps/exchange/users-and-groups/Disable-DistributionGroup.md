@@ -5,7 +5,7 @@ title: Disable-DistributionGroup
 schema: 2.0.0
 ---
 
-# disable-DistributionGroup
+# Disable-DistributionGroup
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-disable-DistributionGroup [-Identity] <DistributionGroupIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Disable-DistributionGroup [-Identity] <DistributionGroupIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Disable-DistributionGroup -Identity "Distribution Group1"
 ```

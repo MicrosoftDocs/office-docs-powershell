@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-Subscription Contoso -Mailbox "Kim Akers"
 ```
@@ -153,4 +153,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a1463ac7-6874-4b6a-92b6-4a7a044c344f.aspx)
-

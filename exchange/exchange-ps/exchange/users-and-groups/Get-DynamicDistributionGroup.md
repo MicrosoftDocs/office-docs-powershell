@@ -46,34 +46,33 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DynamicDistributionGroup
 ```
 
 This example returns a summary list of all dynamic distribution groups in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DynamicDistributionGroup -Identity "Marketing Department" | Format-List
 ```
 
 This example returns detailed information about the dynamic distribution group named Marketing Department.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-DynamicDistributionGroup -Anr *research* | Format-Table Name, ManagedBy -Auto
 ```
 
 This example returns all dynamic distribution groups whose names contain the string "research" and shows the group owners.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 $FTE = Get-DynamicDistributionGroup "Full Time Employees"; Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
 ```
 
 This example returns the members for the dynamic distribution group named Full Time Employees. The first command stores the dynamic distribution group object in the variable $FTE. The second command uses the Get-Recipient cmdlet to list the recipients that match the criteria defined for the dynamic distribution group.
-
 
 ## PARAMETERS
 

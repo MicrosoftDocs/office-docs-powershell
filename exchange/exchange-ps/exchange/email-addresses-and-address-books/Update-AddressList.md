@@ -5,7 +5,7 @@ title: Update-AddressList
 schema: 2.0.0
 ---
 
-# update-AddressList
+# Update-AddressList
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-update-AddressList [-Identity] <AddressListIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
+Update-AddressList [-Identity] <AddressListIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ By default in Exchange Online, the Address List role isn't assigned to any role 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-AddressList -Identity "All Users\Sales\building4"
 ```

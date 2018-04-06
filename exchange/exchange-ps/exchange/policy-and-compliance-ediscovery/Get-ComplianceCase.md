@@ -26,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ComplianceCase
 ```
 
 This example returns a summary list of all eDiscovery cases in the organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ComplianceCase -Identity "Contoso Legal" | Format-List
 ```
@@ -112,4 +112,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/899cba6c-7709-4861-8f5f-e1c9d614d5c5.aspx)
-

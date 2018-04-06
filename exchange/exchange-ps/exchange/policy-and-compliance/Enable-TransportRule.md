@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-TransportRule -Identity "Disclaimer-Finance"
 ```
 
 This example enables the transport rule named Disclaimer Finance.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Enable-TransportRule -Identity "Require approval of messages to contoso.com" -Mode Audit
 ```

@@ -164,49 +164,49 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2; Start-MigrationBatch -Identity LocalMove1
 ```
 
 This example creates a migration batch for a local move, where the mailboxes in the specified CSV file are moved to a different mailbox database. This CSV file contains a single column with the email address for the mailboxes that will be moved. The header for this column must be named EmailAddress. The migration batch in this example must be started manually by using the Start-MigrationBatch cmdlet or the Exchange admin center. Alternatively, you can use the AutoStart parameter to start the migration batch automatically.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $Credentials = Get-Credential; $MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials; $CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")); Start-MigrationBatch -Identity $CrossForestBatch.Identity
 ```
 
 This example creates a migration batch for a cross-forest enterprise move, where the mailboxes for the mail users specified in the CSV file are moved to a different forest. A new migration endpoint is created, which identifies the domain where the mailboxes are currently located. The endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet. Note that cross-forest moves are initiated from the target forest, which is the forest that you want to move the mailboxes to.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 $Credentials = Get-Credential; $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")); Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
 This example creates a migration batch for an onboarding remote move migration from an on-premises Exchange organization to Exchange Online. The syntax is similar to that of a cross-forest move, but it's initiated from the Exchange Online organization. A new migration endpoint is created, which points to the on-premises organization as the source location of the mailboxes that will be migrated. This endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 $Credentials = Get-Credential; $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials; $OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv")); Start-MigrationBatch -Identity $OffboardingBatch.Identity
 ```
 
 This example creates a migration batch for an offboarding remote move migration from Exchange Online to an on-premises Exchange organization. Like an onboarding remote move, it's initiated from the Exchange Online organization. First a Migration Endpoint is created that contains information about how to connect to the on-premises organization. The endpoint is used as the TargetEndpoint when creating the migration batch, which is then started with the Start-MigrationBatch cmdlet. The TargetDatabases parameter specifies multiple on-premises databases that the migration service can select as the target database to move the mailbox to.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 $credentials = Get-Credential; $SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials; New-MigrationBatch -Name CutoverBatch -SourceEndpoint $SourceEndpoint.Identity -TimeZone "Pacific Standard Time" -AutoStart
 ```
 
 This example creates a migration batch for the cutover Exchange migration CutoverBatch that's automatically started. The example obtains the connection settings to the on-premises Exchange server, and then uses those connection settings to create a migration endpoint. The endpoint is then used to create the migration batch. This example also includes the optional TimeZone parameter.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 $Credentials = Get-Credential; $MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials; $StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv")); Start-MigrationBatch -Identity $StagedBatch1.Identity
 ```
 
 This example creates and starts a migration batch for a staged Exchange migration. The example uses the New-MigrationEndpoint cmdlet to create a migration endpoint for the on-premises Exchange server, and then uses that endpoint to create the migration batch. The migration batch is started with the Start-MigrationBatch cmdlet.
 
-### Example 7
+### -------------------------- Example 7 --------------------------
 ```
 New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993; New-MigrationBatch -Name IMAPbatch1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\IMAPmigration_1.csv")) -SourceEndpoint IMAPEndpoint1 -ExcludeFolders "Deleted Items","Junk Email"
 ```

@@ -35,14 +35,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DeviceConfigurationPolicy | Format-Table Name,Enabled,Priority
 ```
 
 This example shows summary information for all mobile device configuration policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DeviceConfigurationPolicy -Identity "Engineering Group"
 ```
@@ -91,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/821cd39f-5bd5-4568-b154-eaff712fa658.aspx)
-

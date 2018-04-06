@@ -39,28 +39,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxRestoreRequest -Identity "ayla\MailboxRestore"
 ```
 
 This example returns the status of the in-progress and queued restore request with the identity ayla\\MailboxRestore.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxRestoreRequest -TargetDatabase MBD01
 ```
 
 In Exchange Server 2010, this example returns the status of in progress and queued restore requests that are being restored to the target database MBD01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxRestoreRequest -RequestQueue MBD01
 ```
 
 This example returns the status of in-progress and queued restore requests that are being restored to the mailbox database MBD01.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-MailboxRestoreRequest -Name "RestoreToMBD01" -Suspend $true
 ```

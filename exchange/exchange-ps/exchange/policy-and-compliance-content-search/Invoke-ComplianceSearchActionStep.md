@@ -30,7 +30,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Insert example commands for example 1.
 ```
@@ -109,4 +109,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ec43ec77-ae00-4873-afb9-6ec17cb1b3f2.aspx)
-

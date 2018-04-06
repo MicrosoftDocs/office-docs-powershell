@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-JournalRule
 ```
 
 This example retrieves all journal rules configured in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-JournalRule "Brokerage Communications" | Format-List
 ```

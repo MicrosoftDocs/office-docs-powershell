@@ -43,7 +43,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-DeviceConfigurationPolicy -Identity "Engineering Group" -Enabled $false
 ```
@@ -212,4 +212,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ef963f3d-8d4e-4dfe-b93e-f0e6343307ee.aspx)
-

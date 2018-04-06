@@ -38,14 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Disable-UMServer -Identity MyUMServer
 ```
 
 This example disables Unified Messaging on the Unified Messaging server named MyUMServer but doesn't disconnect calls that are being processed.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Disable-UMServer -Identity MyUMServer -Immediate $true
 ```
@@ -156,4 +156,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f5d77b6c-7229-4ffb-a9e5-ec4ddf98f838.aspx)
-

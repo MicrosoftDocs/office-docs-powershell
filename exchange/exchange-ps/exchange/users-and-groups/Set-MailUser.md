@@ -5,7 +5,7 @@ title: Set-MailUser
 schema: 2.0.0
 ---
 
-# set-MailUser
+# Set-MailUser
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-set-MailUser [-Identity] <MailUserIdParameter> [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+Set-MailUser [-Identity] <MailUserIdParameter> [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-Alias <String>]
  [-ArbitrationMailbox <MailboxIdParameter>] [-ArchiveGuid <Guid>] [-ArchiveName <MultiValuedProperty>]
@@ -70,7 +70,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MailUser -Identity "John Woods" -ExternalEmailAddress john@tailspintoys.com
 ```

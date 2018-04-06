@@ -44,21 +44,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RoleGroup "London Recipient Administrators" -ManagedBy "David", "Christine"
 ```
 
 This example sets the role group managers list to David and Christine on the London Recipient Administrators role group.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-RoleGroup "Seattle Administrators" -ManagedBy "Seattle Role Administrators" -BypassSecurityGroupManagerCheck
 ```
 
 This example sets the role group managers list to the Seattle Role Administrators USG on the Seattle Administrators role group. Because the user running the command wasn't added to the ManagedBy property of the role group, the BypassSecurityGroupManagerCheck switch must be used. The user is assigned the Role Management role, which enables the user to bypass the security group manager check.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 $Credentials = Get-Credential; Set-RoleGroup "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Tier 2 Administrators"
 ```

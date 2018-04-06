@@ -25,7 +25,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ComplianceSecurityFilter -FilterName "HR Filter"
 ```
@@ -104,4 +104,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fa62d1f1-22a5-4cfa-b1ca-0120b3bb2564.aspx)
-

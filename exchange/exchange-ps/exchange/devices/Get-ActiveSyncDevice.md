@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ActiveSyncDevice -Identity "TonySmith"
 ```
 
 This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ActiveSyncDevice -Mailbox "Redmond\TonySmith"
 ```

@@ -32,21 +32,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PolicyTipConfig -Action NotifyOnly
 ```
 
 This example returns a summary list of the custom Policy Tips in all languages that have the action value NotifyOnly.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PolicyTipConfig -Original -Locale fr
 ```
 
 This example returns a summary list of all built-in French Policy Tips.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-PolicyTipConfig en\RejectOverride | Format-List
 ```

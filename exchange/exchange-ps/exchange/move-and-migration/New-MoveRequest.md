@@ -128,21 +128,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01" -WhatIf
 ```
 
 This example tests a mailbox's readiness to move to the new database DB01 within the same forest and for completeness of the command by using the WhatIf switch. When you use the WhatIf switch, the system performs checks on the mailbox, and if the mailbox isn't ready, you receive an error.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
 ```
 
 This example moves Tony Smith's mailbox to the new database DB01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-Mailbox -Database DB01 | New-MoveRequest -TargetDatabase DB02 -BatchName "DB01toDB02"
 ```

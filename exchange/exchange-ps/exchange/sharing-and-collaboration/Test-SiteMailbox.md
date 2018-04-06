@@ -29,21 +29,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-SiteMailbox -BypassOwnerCheck -SharePointUrl "https://myserver/teams/edu"
 ```
 
 The example tests a SharePoint site's connectivity only. You can use this command before creating a site mailbox or if you're having a problem creating a site mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-SiteMailbox -BypassOwnerCheck -Identity mysitemailbox@contoso.com -UseAppTokenOnly
 ```
 
 This example tests the Exchange server connectivity with an existing site mailbox using the Identity and UseAppTokenOnly parameters. The Identity parameter specifies the site mailbox and the UseAppTokenOnly parameter specifies that you want to test under the identity of the Exchange server. Run this command for troubleshooting documentation synchronization issues.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Test-SiteMailbox -BypassOwnerCheck -RequestorIdentity "kweku@contoso.com" -SharePointUrl "https://myserver/teams/edu"
 ```

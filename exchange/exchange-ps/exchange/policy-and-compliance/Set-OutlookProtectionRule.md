@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-OutlookProtectionRule -Identity "OPR-DG-Finance" -SentTo "DG-Finance"
 ```
 
 This example modifies the Outlook protection rule OPR-DG-Finance to apply to messages sent to the DG-Finance distribution group.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-OutlookProtectionRule -Identity "OPR-DG-Finance" -Priority 2
 ```

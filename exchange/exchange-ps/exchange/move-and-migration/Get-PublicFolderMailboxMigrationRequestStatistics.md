@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PublicFolderMailboxMigrationRequestStatistics -Identity \PublicFolderMailboxMigration4ce124b0-d760-4364-94bc-40d7918fd171
 ```

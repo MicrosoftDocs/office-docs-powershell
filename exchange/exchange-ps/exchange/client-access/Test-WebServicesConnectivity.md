@@ -67,14 +67,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-WebServicesConnectivity -AllowUnsecureAccess
 ```
 
 In Exchange 2010, this example tests Exchange Web Services on the local Client Access server and allows the test to use an unsecured connection that doesn't require SSL. A default test account is used.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-WebServicesConnectivity -ClientAccessServer MBX01
 ```

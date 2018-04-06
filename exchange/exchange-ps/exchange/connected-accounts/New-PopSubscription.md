@@ -30,25 +30,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-PopSubscription -Name "Contoso POP" -EmailAddress bjohnson@contoso.com -IncomingUserName bjohnson -IncomingPassword (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force) -IncomingServer pop.contoso.com -IncomingSecurity Ssl -IncomingPort 995
 ```
 
 This example creates the POP subscription Contoso POP in the mailbox of the user Brian Johnson. The remote POP mailbox has the following details:
 
+- Email address: bjohnson@contoso.com
 
-Email address: bjohnson@contoso.com
+- User name: bjohnson
 
-User name: bjohnson
+- Password: Pa$$word1
 
-Password: Pa$$word1
+- POP server: pop.contoso.com
 
-POP server: pop.contoso.com
+- Authentication method: SSL
 
-Authentication method: SSL
-
-TCP port: 995
+- TCP port: 995
 
 ## PARAMETERS
 
@@ -322,4 +321,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a8405b09-04aa-4b31-866a-3361bb1ad8b4.aspx)
-

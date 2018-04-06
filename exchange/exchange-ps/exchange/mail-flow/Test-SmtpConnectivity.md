@@ -42,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-SmtpConnectivity Mailbox01
 ```
 
 This example verifies SMTP connectivity for all Receive connectors on the Mailbox server named Mailbox01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-TransportService | Test-SmtpConnectivity
 ```

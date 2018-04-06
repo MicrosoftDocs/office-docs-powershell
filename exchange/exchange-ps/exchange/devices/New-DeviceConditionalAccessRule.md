@@ -59,17 +59,16 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-DeviceConditionalAccessRule -Policy "Secure Email" -TargetGroups 5bff73eb-0ba7-461b-b7c9-9b4c173cc266
 ```
 
 This example creates a new mobile device conditional access rule with the following settings:
 
+- Policy: Secure Email
 
-Policy: Secure Email
-
-TargetGroups:5bff73eb-0ba7-461b-b7c9-9b4c173cc266
+- TargetGroups:5bff73eb-0ba7-461b-b7c9-9b4c173cc266
 
 ## PARAMETERS
 
@@ -114,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountName
-The AccountName parameter ???. Valid values for this parameter are:
+The AccountName parameter specifies the account name. Valid values for this parameter are:
 
 - A text value.
 
@@ -134,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountUserName
-The AccountUserName parameter specifies ???. Valid values for this parameter are:
+The AccountUserName parameter specifies the account user name. Valid values for this parameter are:
 
 - A text value.
 
@@ -400,9 +399,9 @@ The AllowScreenshot parameter specifies whether to allow screenshots on devices.
 
 - $true: Screenshots are allowed.
 
-- $false: Screenshots aren't allowed.$null
+- $false: Screenshots aren't allowed.
 
-- (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This is the default value.
 
 This setting is available on the following types of devices:
 
@@ -526,7 +525,7 @@ Accept wildcard characters: False
 ```
 
 ### -AntiVirusSignatureStatus
-The AntiVirusSignatureStatus parameter specifies ???. Valid values for this parameter are:
+The AntiVirusSignatureStatus parameter specifies the antivirus signature status. Valid values for this parameter are:
 
 - An integer.
 
@@ -548,7 +547,7 @@ Accept wildcard characters: False
 ```
 
 ### -AntiVirusStatus
-The AntiVirusStatus parameter specifies ???. Valid values for this parameter are:
+The AntiVirusStatus parameter specifies the antivirus status. Valid values for this parameter are:
 
 - An integer.
 
@@ -764,7 +763,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeActiveSyncHost
-The ExchangeActiveSyncHost parameter specifies ???. Valid values for this parameter are:
+The ExchangeActiveSyncHost parameter specifies the Exchange ActiveSync host. Valid values for this parameter are:
 
 - A text value.
 
@@ -1052,7 +1051,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordComplexity
-The PasswordComplexity parameter specifies ???. Valid values for this parameter are:
+The PasswordComplexity parameter specifies the password complexity. Valid values for this parameter are:
 
 - An integer.
 
@@ -1629,4 +1628,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5b41bd8c-bb38-4c57-b98d-37cf609f7400.aspx)
-

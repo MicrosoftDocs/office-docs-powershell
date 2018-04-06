@@ -37,28 +37,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-Queue | Format-List
 ```
 
 This example displays detailed information for all queues on the Mailbox server on which the command is run.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-Queue -Filter {MessageCount -gt 100}
 ```
 
 This example lists the queues that contain more than 100 messages.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-Queue Server1\contoso.com | Format-List
 ```
 
 This example displays detailed information for a specific queue that exists on the Mailbox server named Server1.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-Queue -Exclude Internal
 ```

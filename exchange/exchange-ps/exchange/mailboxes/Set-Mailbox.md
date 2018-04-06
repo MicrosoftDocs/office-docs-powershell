@@ -281,42 +281,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-Mailbox -Identity "John Woods" -DeliverToMailboxAndForward $true -ForwardingSMTPAddress manuel@contoso.com
 ```
 
 This example delivers John Woods's email messages to John's mailbox and also forwards them to Manuel Oliveira's (manuel@contoso.com) mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-Mailbox -OrganizationalUnit "Marketing" | Set-Mailbox -UseDatabaseQuotaDefaults $false -IssueWarningQuota 200MB -ProhibitSendQuota 250MB -ProhibitSendReceiveQuota 280MB
 ```
 
 This example uses the Get-Mailbox cmdlet to find all the mailboxes in the Marketing organizational unit, and then uses the Set-Mailbox cmdlet to configure these mailboxes. The custom warning, prohibit send, and prohibit send and receive limits are set to 200 megabytes (MB), 250 MB, and 280 MB respectively, and the mailbox database's default limits are ignored.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-User -Filter "Department -eq 'Customer Service'" | Set-Mailbox -MaxSendSize 2MB
 ```
 
 This example uses the Get-User command to find all users in the Customer Service department, and then uses the Set-Mailbox command to change the maximum message size for sending messages to 2 MB.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Set-Mailbox John@contoso.com -MailTipTranslations ("FR: C'est la langue française", "CHT: 這是漢語語言")
 ```
 
 This example sets the MailTip translation in French and Chinese.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 $password = Read-Host "Enter password" -AsSecureString; Set-Mailbox florencef -Password $password -ResetPasswordOnNextLogon $true
 ```
 
 In on-premises Exchange, this example resets the password for Florence Flipo's mailbox. The next time she signs in to her mailbox, she'll have to change her password.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 Set-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -MessageTracking $false; Set-Mailbox -Arbitration -Identity "SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}" -MessageTracking $true
 ```

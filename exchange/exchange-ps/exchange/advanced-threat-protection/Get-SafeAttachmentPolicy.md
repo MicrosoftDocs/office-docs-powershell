@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SafeAttachmentPolicy
 ```
 
 This example shows a summary list of all Safe Attachments policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SafeAttachmentPolicy -Identity Default | Format-List
 ```

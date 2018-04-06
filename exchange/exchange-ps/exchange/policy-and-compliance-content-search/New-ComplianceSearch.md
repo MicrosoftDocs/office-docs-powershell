@@ -40,21 +40,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ComplianceSearch -Name "Hold Project X" -ExchangeLocation "Finance Department"
 ```
 
 This example creates a new compliance search named Hold-Project X that searches all members of the distribution group named Finance Department. Because the search doesn't use the ContentMatchQuery parameter, all items in the mailboxes are searched.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ComplianceSearch -Name "Hold-Tailspin Toys" -ExchangeLocation "Research Department" -ContentMatchQuery "'Patent' AND 'Project Tailspin Toys'"
 ```
 
 This example creates a new compliance search named Hold-Tailspin Toys that searches all member of the distribution group named Research Department. Because the search uses the ContentMatchQuery parameter, only messages that match the query are searched.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-ComplianceSearch -Name "AnnBeebe-InactiveMailbox" -ExchangeLocation .annb@contoso.onmicrosoft.com -AllowNotFoundExchangeLocationsEnabled $true
 ```

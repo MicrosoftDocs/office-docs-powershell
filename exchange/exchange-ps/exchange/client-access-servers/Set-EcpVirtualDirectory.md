@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-EcpVirtualDirectory -Identity "Server01\ecp (Default Web site)" -BasicAuthentication:$false
 ```
 
 This example disables Basic authentication on the default ECP virtual directory on the server named Server01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-EcpVirtualDirectory -Identity "Server01\ecp (Default Web site)" -AdminEnabled $false
 ```

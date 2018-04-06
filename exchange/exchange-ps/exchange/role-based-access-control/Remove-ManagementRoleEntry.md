@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ManagementRoleEntry "Tier 1 Help Desk\New-Mailbox"
 ```
 
 This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ManagementRoleEntry "Tier 1 Help Desk\New-*" | Remove-ManagementRoleEntry -WhatIf
 ```

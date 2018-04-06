@@ -25,7 +25,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 IRemove-ComplianceTag -Identity "HR Content"
 ```
@@ -126,4 +126,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7a1012fe-ca84-483f-b7c9-80e8605f090b.aspx)
-

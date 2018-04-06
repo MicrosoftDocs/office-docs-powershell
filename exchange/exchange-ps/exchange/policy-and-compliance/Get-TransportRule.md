@@ -29,31 +29,30 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-TransportRule
 ```
 
 This example returns a summary list of all rules in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-TransportRule "Ethical Wall - Sales and Brokerage Departments" | Format-List
 ```
 
 This example returns detailed information for the rule named "Ethical Wall - Sales and Brokerage Departments".
 
-
 For more information about pipelining, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx). For more information about how to work with the output of a command, see Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-TransportRule -DlpPolicy "PII (U.S.)"
 ```
 
 This example returns a summary list of the rules that enforce the DLP policy named PII (U.S.) in your organization.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-TransportRule | Where {$_.DlpPolicy -ne $null}
 ```

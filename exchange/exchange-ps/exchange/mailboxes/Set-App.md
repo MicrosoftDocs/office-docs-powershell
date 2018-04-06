@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $a= Get-DistributionGroupMember -Identity "Finance Team"; Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
 ```
@@ -41,7 +41,7 @@ This example changes the organization app named FinanceTestApp, which was instal
 
 For more information, see Manage user access to add-ins for Outlook (https://technet.microsoft.com/library/jj943757.aspx).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-App -OrganizationApp -Identity 3f10017a-9bbe-4a23-834b-6a8fe3af0e37 -Enabled $false
 ```

@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
 ```
 
 This example removess the specified Sweep rule.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SweepRule -Mailbox laura@contoso.com | Remove-SweepRule
 ```

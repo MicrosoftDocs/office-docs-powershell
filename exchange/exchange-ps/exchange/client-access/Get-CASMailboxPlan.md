@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-CASMailboxPlan | Format-Table -Auto DisplayName,ActiveSyncEnabled,ImapEnabled,PopEnabled,OwaMailboxPolicy
 ```
 
 This example returns a summary list of all CAS mailbox plans in the organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-CASMailboxPlan -Identity ExchangeOnlineEnterprise
 ```
@@ -215,4 +215,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c8df374b-db7c-4dbc-b6d5-3ffcbbe4274b.aspx)
-

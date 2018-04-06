@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([Byte[]]$(Get-Content -Path "M:\AudioFiles\TonySmith.wma" -Encoding Byte -ReadCount 0))
 ```
 
 This example imports the audio file for Tony Smith's spoken name.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([Byte[]]$(Get-Content -Path "M:\Employee Photos\AylaKol.jpg" -Encoding Byte -ReadCount 0))
 ```

@@ -5,7 +5,7 @@ title: Test-ActiveSyncConnectivity
 schema: 2.0.0
 ---
 
-# test-ActiveSyncConnectivity
+# Test-ActiveSyncConnectivity
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>] [[-URL] <String>]
+Test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>] [[-URL] <String>]
  [-AllowUnsecureAccess] [-Confirm] [-DomainController <Fqdn>] [-LightMode] [-MailboxCredential <PSCredential>]
  [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-MonitoringInstance <String>]
  [-ResetTestAccountCredentials] [-Timeout <UInt32>] [-TrustAnySSLCertificate]
@@ -51,21 +51,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
-```
-Test-ActiveSyncConnectivity -ClientAccessServer contoso\CAS01 -URL "http://contoso.com/mail" -MailboxCredential (get-credential PaulS)
-```
-
-This example tests the Exchange ActiveSync connectivity for the mailbox PaulS on the Client Access server computer CAS01.
-
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-ActiveSyncConnectivity -ClientAccessServer MBX01
 ```
 
 This example tests Exchange ActiveSync client connectivity for the server named MBX01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-ActiveSyncConnectivity -UseAutodiscoverForClientAccessServer $true -URL "http://contoso.com/mail" -MailboxCredential (Get-Credential pauls@contoso.com)
 ```

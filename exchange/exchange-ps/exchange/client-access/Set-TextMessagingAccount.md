@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-TextMessagingAccount -Identity 'JeffHay' -NotificationPhoneNumber 4255550100
 ```
 
 This example sets the notification phone number for the text messaging account for Jeff Hay.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-TextMessagingAccount -Identity 'JeffHay' -CountryRegionId US -MobileOperatorId 15001 -NotificationPhoneNumber +14255550199
 ```

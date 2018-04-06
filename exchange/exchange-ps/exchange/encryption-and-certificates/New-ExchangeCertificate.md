@@ -47,7 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ExchangeCertificate
 ```
@@ -66,7 +66,7 @@ The Services value SMTP and the Subject value that contains the server name publ
 
 If you don't want this certificate to replace the existing self-signed certificate that was created during Exchange setup, be sure to select "No" in the prompt that asks you overwrite the existing default SMTP certificate.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ExchangeCertificate -GenerateRequest -RequestFile "C:\Cert Requests\woodgrovebank.req" -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
 ```
@@ -85,14 +85,14 @@ After you create the certificate request, you send the output to the CA. After y
 
 If the CA requires the certificate request in a file that's encoded by DER, use the BinaryEncoding switch.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ExchangeCertificate -Thumbprint c4248cd7065c87cb942d60f7293feb7d533a4afc | New-ExchangeCertificate -PrivateKeyExportable $true
 ```
 
 This example renewsthe existing self-signed certificate that has the thumbprint value c4248cd7065c87cb942d60f7293feb7d533a4afc. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet. Setting the PrivateKeyExportable parameter to the value $true allows the renewed self-signed certificate to be exported from the server (and imported on other servers).
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-ExchangeCertificate -Thumbprint 8A141F7F2BBA8041973399723BD2598D2ED2D831 | New-ExchangeCertificate -GenerateRequest -RequestFile "C:\Cert Requests\fabrikam_renewal.req"
 ```
@@ -107,7 +107,7 @@ The output is displayed onscreen and is also written to the text file C:\\Cert R
 
 After you create the certificate renewal request, you send the output to the CA. After you receive the renewed certificate from the CA, you install the certificate by using the Import-ExchangeCertificate cmdlet.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Get-ExchangeCertificate -Thumbprint c4248cd7065c87cb942d60f7293feb7d533a4afc | New-ExchangeCertificate
 ```

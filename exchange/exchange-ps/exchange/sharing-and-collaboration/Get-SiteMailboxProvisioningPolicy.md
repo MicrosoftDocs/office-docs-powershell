@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SiteMailboxProvisioningPolicy
 ```
 
 This example returns a summary list of all site mailbox provisioning policies in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SiteMailboxProvisioningPolicy -Identity SM_NewPolicy | Format-List
 ```

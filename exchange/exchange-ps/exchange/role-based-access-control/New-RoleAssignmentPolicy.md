@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-RoleAssignmentPolicy -Name "End User Policy"; Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
 ```
 
 This example creates an assignment policy. After the assignment policy is created, you can assign the assignment policy to a mailbox using the Set-Mailbox cmdlet.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-RoleAssignmentPolicy -Name "Default End User Policy" -IsDefault
 ```
 
 This example creates an assignment policy using the IsDefault switch.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault; Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
 ```

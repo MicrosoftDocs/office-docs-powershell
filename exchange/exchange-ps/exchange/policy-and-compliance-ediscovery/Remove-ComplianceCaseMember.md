@@ -25,7 +25,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ComplianceCaseMember -Case "Case OU812" -Member "Jan Dryml"
 ```
@@ -134,4 +134,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4af77b17-e758-4577-bb7d-575a6cd77350.aspx)
-

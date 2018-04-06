@@ -27,7 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MigrationUser -Identity laura@contoso.com -LargeItemLimit 15 -BadItemLimit 15
 ```
@@ -200,4 +200,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4c8642ad-0844-457a-af41-45feec280906.aspx)
-

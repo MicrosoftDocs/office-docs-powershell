@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-EligibleDistributionGroupForMigration -ResultSize unlimited
 ```
@@ -170,4 +170,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ae182f13-dacb-471b-a5a3-9bedb58d3b44.aspx)
-

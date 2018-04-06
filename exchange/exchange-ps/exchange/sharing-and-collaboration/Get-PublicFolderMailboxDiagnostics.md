@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PublicFolderMailboxDiagnostics -Identity "Customer Escalations"
 ```
 
 This example returns the diagnostic information for the public folder mailbox Customer Escalations.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PublicFolderMailboxDiagnostics -Identity "Sales Forecasts" | Export-CSV C:\Diagnostics\SalesForecasts.csv
 ```

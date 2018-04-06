@@ -5,7 +5,7 @@ title: Set-CASMailbox
 schema: 2.0.0
 ---
 
-# set-CASMailbox
+# Set-CASMailbox
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-set-CASMailbox [-Identity] <MailboxIdParameter> [-ActiveSyncAllowedDeviceIDs <MultiValuedProperty>]
+Set-CASMailbox [-Identity] <MailboxIdParameter> [-ActiveSyncAllowedDeviceIDs <MultiValuedProperty>]
  [-ActiveSyncBlockedDeviceIDs <MultiValuedProperty>] [-ActiveSyncDebugLogging <$true | $false>]
  [-ActiveSyncEnabled <$true | $false>] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Confirm]
  [-DisplayName <String>] [-DomainController <Fqdn>] [-ECPEnabled <$true | $false>]
@@ -49,21 +49,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-CASMailbox adam@contoso.com -OWAEnabled $false -PopEnabled $false
 ```
 
 This example disables Outlook on the web and POP3 access for the user adam@contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-CASMailbox adam@contoso.com -ActiveSyncDebugLogging $true -ActiveSyncMailboxPolicy Management
 ```
 
 This example enables Exchange ActiveSync debug logging and specifies the Exchange ActiveSync mailbox policy named Management for the user adam@contoso.com.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-CASMailbox tony@contoso.com -DisplayName "Tony Smith" -MAPIBlockOutlookRpcHttp $true
 ```

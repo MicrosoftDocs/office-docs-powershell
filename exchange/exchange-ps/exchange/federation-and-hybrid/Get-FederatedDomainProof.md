@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-FederatedDomainProof -DomainName "contoso.com"
 ```
 
 This example generates a cryptographically secure string for the domain contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-FederatedDomainProof -DomainName "contoso.com" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
 ```

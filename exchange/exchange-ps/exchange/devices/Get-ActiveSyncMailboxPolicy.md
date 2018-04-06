@@ -5,7 +5,7 @@ title: Get-ActiveSyncMailboxPolicy
 schema: 2.0.0
 ---
 
-# get-ActiveSyncMailboxPolicy
+# Get-ActiveSyncMailboxPolicy
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-get-ActiveSyncMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] 
+Get-ActiveSyncMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] 
 [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ActiveSyncMailboxPolicy -Identity "SalesPolicy"
 ```
 
 This example returns the policy settings for the Mobile Device mailbox policy named SalesPolicy.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ActiveSyncMailboxPolicy -Identity "Default"
 ```
 
 This example returns the policy settings for the Mobile Device mailbox policy named Default.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ActiveSyncMailboxPolicy -Identity "Management"
 ```

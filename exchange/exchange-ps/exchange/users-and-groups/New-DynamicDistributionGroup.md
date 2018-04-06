@@ -63,14 +63,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-DynamicDistributionGroup -Name "Marketing Group" -IncludedRecipients "MailboxUsers,MailContacts" -ConditionalDepartment "Marketing","Sales"
 ```
 
 This example creates a dynamic distribution group named Marketing Group that contains all recipients who have a Department field that equals the strings "Marketing" or "Sales". Because we didn't use the OrganizationalUnit or RecipientContainer parameters, the group looks for recipients in the default location (typically, the Users container).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-DynamicDistributionGroup -Name "Washington Management Team" -RecipientFilter {(RecipientType -eq 'UserMailbox') -and (Title -like 'Director*' -or Title -like 'Manager*') -and (StateOrProvince -eq 'WA')} -RecipientContainer "North America"
 ```

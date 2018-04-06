@@ -25,14 +25,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ComplianceTag | Format-Table -Auto Name,Priority,RetentionAction,RetentionDuration,Workload
 ```
 
 This example returns a summary list of all labels.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ComplianceTag -Identity "HR Content"
 ```

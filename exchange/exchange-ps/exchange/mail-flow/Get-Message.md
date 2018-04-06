@@ -47,21 +47,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-Message -Filter {FromAddress -like "*@contoso.com"} | Format-List
 ```
 
 This example displays detailed information about all messages queued on the local server and received from any sender at the contoso.com domain.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-Message -Filter {FromAddress -like "*@contoso.com" -and SCL -gt 3}
 ```
 
 This example lists all messages queued on the local server, received from any sender at the contoso.com domain and that have an SCL value greater than 3.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-Message -Server Server01.contoso.com -SortOrder: +FromAddress,-Size
 ```
