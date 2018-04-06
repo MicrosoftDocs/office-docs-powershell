@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalizedComment
-The LocalizedComment parameter specifies localized comments and their languages. When the user's language setting matches a language specified for this parameter, MicrosoftOutlook and Outlook on the web display the corresponding localized comment. Comments are specified in the form of ISO Language Code:Comment, for example, LocalizedComment EN-US:"This is a localized comment in U.S. English".
+The LocalizedComment parameter specifies localized comments and their languages. When the user's language setting matches a language specified for this parameter, Microsoft Outlook and Outlook on the web display the corresponding localized comment. Comments are specified in the form of ISO Language Code:Comment, for example, LocalizedComment EN-US:"This is a localized comment in U.S. English".
 
 ```yaml
 Type: MultiValuedProperty
