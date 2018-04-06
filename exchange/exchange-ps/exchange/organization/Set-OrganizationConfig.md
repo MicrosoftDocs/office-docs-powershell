@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
- [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
+  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
@@ -75,6 +75,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
 ### Set3
 ```
 Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguration <OrganizationIdParameter>
+ [-ACLableSyncedObjectEnabled <true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
@@ -132,6 +133,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
 ### Set1
 ```
 Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
+ [-ACLableSyncedObjectEnabled <true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
@@ -1082,13 +1084,15 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The ACLableSyncedObjectEnabled parameter specfies whether remote mailboxes in hybrid environments are stamped as ACLableSyncedMailboxUser.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

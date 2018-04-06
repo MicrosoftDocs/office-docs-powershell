@@ -1324,7 +1324,7 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-This parameter is reserved for internal Microsoft use.
+The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. To enable this, use this switch without a value. To disable this, use this exact syntax: -ACLableSyncedObjectEnabled:$false.
 
 ```yaml
 Type: SwitchParameter
