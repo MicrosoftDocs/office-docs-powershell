@@ -18,13 +18,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVData <Byte[]> [-Confirm] [-WhatIf]
+Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVData <Byte[]> [-DateCultureName] <String> [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Set2
 ```
-Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVStream <Stream> [-Confirm] [-WhatIf]
+Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVStream <Stream> [-DateCultureName] <String> [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -37,10 +37,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Import-ContactList -CSV -CSVData ([System.IO.File]::ReadAllBytes("D:\Users\Administrator\Desktop\TerryAdams.csv")) -Identity terrya@contoso.edu
+Import-ContactList -CSV -CSVData ([System.IO.File]::ReadAllBytes("D:\Users\Administrator\Desktop\TerryAdams.csv")) -DateCultureName "en-GB" -Identity terrya@contoso.edu
 ```
 
-This example imports a list of contacts in a .csv file named TerryAdams.csv to a mailbox for a user whose email address is terrya@contoso.edu.
+This example imports a list of contacts in a .csv file named TerryAdams.csv to a mailbox for a user whose email address is terrya@contoso.edu. The date fields are parsed using the date format of "en-GB" locale (dd/MM/YYYY).
 
 ## PARAMETERS
 
@@ -86,6 +86,22 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DateCultureName
+The DateCultureName parameter specifies the culture to use for parsing date fields (e.g. Birthday and Anniversary). For example, setting the parameter to "en-GB" would lead to 01/02/2018 being parsed as February 1st, 2018, whereas setting it to "en-US" would lead to the same date being parsed as January 2nd, 2018. If the parameter is not provided, the culture of the current user is assumed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
