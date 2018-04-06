@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPGroup
 
 ## SYNOPSIS
-Returns a specific group or all groups.
+Returns a specific SharePoint group or all SharePoint groups.
 
 ## SYNTAX 
 
