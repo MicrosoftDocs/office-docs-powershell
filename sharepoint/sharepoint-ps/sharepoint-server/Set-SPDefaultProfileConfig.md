@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPDefaultProfileConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Changes the MySitesPublicEnabled property of the User Profile Application Proxy.
 
 
 ## SYNTAX
@@ -20,23 +20,28 @@ Set-SPDefaultProfileConfig [-AssignmentCollection <SPAssignmentCollection>] [-Co
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-SPDefaultProfileConfig cmdlet to change the MySitesPublicEnabled property of a User Profile Application Proxy from whatever was set at the time of Proxy creation to whatever is defined by using this cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715)](http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\>Set-SPDefaultProfileConfig $proxy -MySitesPublicEnabled $true
 ```
 
-{{ Add example description here }}
+This example changes the MySitesPublicEnabled property of the specified user profile service application.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -68,7 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -MySitesPublicEnabled
-{{Fill MySitesPublicEnabled Description}}
+Enables or disables public MySites.
+
+The valid values are $True or $False.
 
 ```yaml
 Type: Boolean
@@ -84,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileServiceApplicationProxy
-{{Fill ProfileServiceApplicationProxy Description}}
+Specifies the proxy of the User Profile Service application that contains the site subscription to delete.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a service application proxy (for example, UserProfileSvcProxy1); or an instance of a valid SPServiceApplicationProxy object.
 
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
