@@ -111,7 +111,11 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
-{{Fill SecureSocketsLayer Description}}
+Enables Secure Socket Layer (SSL) encryption for the specified port. If you choose to use SSL, you must assign a server certificate to the Central Administration IIS web site by using the IIS administration tools. The Central Administration web application won't be accessible until you do this.
+
+The default value is False.
+
+If this parameter is omitted or set to False the Central Administration site will use HTTP for the specified port.
 
 ```yaml
 Type: SwitchParameter
