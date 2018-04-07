@@ -41,35 +41,30 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1------------
 ```
-C:\PS>Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
+PS C:\>Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
 ```
 
 This example enables IRM for the farm and configures it to use the default RMS server configured in Active Directory.
 
-
 ### --------------EXAMPLE 2------------
 ```
-C:\PS>Set-SPIRMSettings -RmsEnabled -CertificateServerUrl http://myrmsserver
+PS C:\>Set-SPIRMSettings -RmsEnabled -CertificateServerUrl http://myrmsserver
 ```
 
 This example enables IRM for the farm and specifies the URL of the RMS server to use.
 
-
 ### --------------EXAMPLE 3------------
 ```
-C:\PS>site = Get-SPSite http://myspserver
-
-C:\PS>$subscription = $site.SiteSubscription
-
-C:\PS>Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl http://myrmsserver
+PS C:\>site = Get-SPSite http://myspserver
+PS C:\>$subscription = $site.SiteSubscription
+PS C:\>Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl http://myrmsserver
 ```
 
 This example enables IRM for the specified tenant and specifies the URL of the RMS server to use.
 
-
 ### --------------EXAMPLE 4------------
 ```
-C:\PS>Set-SPIRMSettings -RmsEnabled:$false
+PS C:\>Set-SPIRMSettings -RmsEnabled:$false
 ```
 
 This example disables IRM for the farm.
@@ -238,7 +233,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseOauth
-{{Fill UseOauth Description}}
+Specifies whether OAuth should be used.
+
+The valid values are True and False.
 
 ```yaml
 Type: SwitchParameter
