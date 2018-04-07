@@ -21,14 +21,14 @@ Set-SPCentralAdministration -Port <Int32> [-AssignmentCollection <SPAssignmentCo
 ## DESCRIPTION
 The `Set-SPCentralAdministration` cmdlet sets the port for the Central Administration site.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>Set-SPCentralAdministration -Port 8282
+PS C:\>Set-SPCentralAdministration -Port 8282
 ```
 
 This example sets the port for the Central Administration web application on the local farm to 8282.
