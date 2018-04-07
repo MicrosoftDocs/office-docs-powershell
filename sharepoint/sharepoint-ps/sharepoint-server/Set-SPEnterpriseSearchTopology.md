@@ -29,9 +29,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
-Set-SPEnterpriseSearchTopology -Identity $topology
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
+PS C:\>Set-SPEnterpriseSearchTopology -Identity $topology -SearchApplication $ssa
 ```
 
 This example enables a search topology with the Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e.
@@ -39,12 +39,12 @@ This example enables a search topology with the Identity 10fa59cb-4b32-4fe6-8f8d
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-Set-SPEnterpriseSearchTopology -Identity $topo -SearchApplication $ssa
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa | ?{$_.State -eq 'Inactive'}
+PS C:\>Set-SPEnterpriseSearchTopology -Identity $topology -SearchApplication $ssa
 ```
 
-This example enables the search topology referenced by $topo in the search service application referenced by $ssa.
-
+This example retreives an inactive topology and sets it to the active topology.
 
 ## PARAMETERS
 
