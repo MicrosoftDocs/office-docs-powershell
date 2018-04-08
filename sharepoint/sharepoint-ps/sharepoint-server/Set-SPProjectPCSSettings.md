@@ -207,13 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -NetTcpPort
-{{Fill NetTcpPort Description}}
+The TCP port to use with the PCS service.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2016
 
 Required: False
 Position: Named
