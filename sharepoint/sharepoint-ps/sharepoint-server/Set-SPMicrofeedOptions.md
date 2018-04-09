@@ -28,10 +28,11 @@ Use the Set-SPMicrofeedOptions cmdlet to set the feed cache settings for the cur
 
 ### --------------------EXAMPLE---------------------
 ```
-Set-SPMicrofeedOptions -ProfileServiceApplicationProxy c6681d53-e6c4-432f-9f31-22d3de81b00c
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\>Set-SPMicrofeedOptions -ProfileServiceApplicationProxy $proxy -MaxTags 4
 ```
 
-This example sets the settings for the specified User Profile Service Application Proxy.
+This example sets the maximum tags per post and reply to 4 for the specified User Profile Service Application Proxy.
 
 
 ## PARAMETERS
