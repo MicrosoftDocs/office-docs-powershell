@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1-------------
 ```
-C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp1" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB1"
+PS C:\>New-SPMetadataServiceApplication -Name "MetadataServiceApp1" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB1"
 ```
 
 This example creates a new managed metadata service application.
@@ -54,7 +54,7 @@ This example creates a new managed metadata service application.
 
 ### -------------------EXAMPLE 2-------------
 ```
-C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB2" -HubUri "http://sitename" -SyndicationErrorReportEnabled
+PS C:\>New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB2" -HubUri "http://sitename" -SyndicationErrorReportEnabled
 ```
 
 This example creates a new managed metadata service application and specifies a content type hub to be used for syndication.
@@ -291,10 +291,10 @@ Accept wildcard characters: False
 
 ### -MaxChannelCache
 Specifies the maximum number of Windows Communication Foundation (WCF) channels that a front-end Web server should hold open to the application server.
+
 This value is set per timer job, client application, or Web application.
 
-The minimum value is 0, and there is no maximum value.
-The default value is 4.
+The minimum value is 0, and there is no maximum value. The default value is 4.
 
 ```yaml
 Type: Int32
@@ -329,6 +329,7 @@ Accept wildcard characters: False
 
 ### -ReadAccessAccount
 Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given read-only permission to the managed metadata service's term store and content type gallery.
+
 The accounts must already exist.
 
 ```yaml
@@ -346,6 +347,7 @@ Accept wildcard characters: False
 
 ### -RestrictedAccount
 Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given permission to read the managed metadata service's term store and content type gallery; and permission to write to open term sets and local term sets and to create new enterprise keywords. 
+
 The accounts must already exist.
 
 ```yaml
@@ -395,13 +397,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePartitionQuota
-{{Fill DisablePartitionQuota Description}}
+Disables partition quotas.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NoQuota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -411,13 +413,13 @@ Accept wildcard characters: False
 ```
 
 ### -GroupsPerPartition
-{{Fill GroupsPerPartition Description}}
+Sets the maximum number of Term Groups per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -427,13 +429,13 @@ Accept wildcard characters: False
 ```
 
 ### -LabelsPerPartition
-{{Fill LabelsPerPartition Description}}
+Sets the maximum number of Labels per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -443,13 +445,13 @@ Accept wildcard characters: False
 ```
 
 ### -PropertiesPerPartition
-{{Fill PropertiesPerPartition Description}}
+Sets the maximum number of Properties per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -459,13 +461,13 @@ Accept wildcard characters: False
 ```
 
 ### -TermSetsPerPartition
-{{Fill TermSetsPerPartition Description}}
+Sets the maximum number of Term Sets per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -475,13 +477,12 @@ Accept wildcard characters: False
 ```
 
 ### -TermsPerPartition
-{{Fill TermsPerPartition Description}}
-
+Sets the maximum number of Terms per partition.
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -491,7 +492,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeferUpgradeActions
-{{Fill DeferUpgradeActions Description}}
+Specifies if the upgrade process is to be deferred and manually completed.
 
 ```yaml
 Type: SwitchParameter
