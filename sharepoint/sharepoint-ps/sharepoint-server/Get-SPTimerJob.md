@@ -27,13 +27,17 @@ If no parameters are specified, this cmdlet returns all timer job definitions fo
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
-
-### ---------------------EXAMPLE--------------------- 
+### ---------------------EXAMPLE 01--------------------- 
 ```
-C:\PS>Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
+Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
 ```
 
 This example displays all timer jobs for a specified Web application.
+### ---------------------EXAMPLE 02---------------------
+```powershell
+Get-SPTimerJob | select -ExpandProperty HistoryEntries
+```
+The above example will show you timer job run history
 
 ## PARAMETERS
 
