@@ -29,8 +29,8 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-EmailAddresses <ProxyAddressCollection>] [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>] [-ExtensionCustomAttribute3 <MultiValuedProperty>]
  [-ExtensionCustomAttribute4 <MultiValuedProperty>] [-ExtensionCustomAttribute5 <MultiValuedProperty>]
- [-ForceUpgrade] [-GrantSendOnBehalfTo <MultiValuedProperty>] [-HiddenFromAddressListsEnabled <$true | $false>]
- [-Language <CultureInfo>] [-MailboxRegion <String>] [-MailTip <String>]
+ [-ForceUpgrade] [-GrantSendOnBehalfTo <MultiValuedProperty>] [-HiddenFromAddressListsEnabled <$true | $false>] 
+ [-HideFromExchangeClients <$true | $false>] [-Language <CultureInfo>] [-MailboxRegion <String>] [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>] [-Notes <String>] [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-RequireSenderAuthenticationEnabled <$true | $false>] [-UnifiedGroupWelcomeMessageEnabled] [-WhatIf]
@@ -767,11 +767,31 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-The HiddenFromAddressListsEnabled specifies whether the Office 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
+The HiddenFromAddressListsEnabled parameter specifies whether the Office 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
 
 - $true: The Office 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Office 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web.
 
 - $false: The Office 365 Group is visible in the GAL and other address lists. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideFromExchangeClients
+The HideFromExchangeClients parameter specifies whether the Office 365 Group is hidden from Outlook clients connected to Office 365. When this value is set to true, the group will no longer be visible in the Outlook left hand navigation and the group will not resolve when attempting to resolve the address while authoring a new mail message in Outlook. Additionally, the parameter HiddenFromAddressListsEnabled will also be set to true to prevent the group from showing in the Global Address Book (GAL) and Offline Address Book (OAB). Valid values are:
+
+- $true: The Office 365 Group is hidden from Outlook experiences. The group will not be visible in the Outlook left hand navigation and will not be visible in the address book. Additionally, the group name will not resolve when attempting to resolve the address while authoring a new mail message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. 
+
+- $false: The Office 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
 
 ```yaml
 Type: $true | $false
