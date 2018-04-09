@@ -22,7 +22,7 @@ Remove-InboxRule [-Identity] <InboxRuleIdParameter> [-AlwaysDeleteOutlookRulesBl
 ```
 
 ## DESCRIPTION
-When you create, modify, remove, enable, or disable an Inbox rule in Exchange PowerShell, any client-side rules created by MicrosoftOutlook are removed.
+When you create, modify, remove, enable, or disable an Inbox rule in Exchange PowerShell, any client-side rules created by Microsoft Outlook are removed.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
