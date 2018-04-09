@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
 title: Get-OMEConfiguration
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-OMEConfiguration

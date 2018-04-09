@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2016, Exchange Online
 title: Suspend-PublicFolderMailboxMigrationRequest
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Suspend-PublicFolderMailboxMigrationRequest

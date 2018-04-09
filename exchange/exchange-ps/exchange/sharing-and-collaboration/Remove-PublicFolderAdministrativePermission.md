@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010
 title: Remove-PublicFolderAdministrativePermission
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Remove-PublicFolderAdministrativePermission

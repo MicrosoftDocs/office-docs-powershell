@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Stop-MigrationUser
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Stop-MigrationUser

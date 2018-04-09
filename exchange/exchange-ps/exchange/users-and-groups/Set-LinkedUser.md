@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-LinkedUser
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-LinkedUser

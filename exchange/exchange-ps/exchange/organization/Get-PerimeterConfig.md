@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online
 title: Get-PerimeterConfig
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-PerimeterConfig

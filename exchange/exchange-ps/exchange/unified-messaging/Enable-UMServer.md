@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010
 title: Enable-UMServer
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Enable-UMServer

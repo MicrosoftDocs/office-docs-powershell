@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DlpComplianceRuleV2
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpComplianceRuleV2

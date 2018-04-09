@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Online
 title: Remove-CalendarEvents
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Remove-CalendarEvents

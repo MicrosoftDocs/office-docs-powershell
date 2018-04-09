@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: Get-ManagedFolder
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-ManagedFolder

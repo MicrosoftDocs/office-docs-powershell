@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Add-UnifiedGroupLinks
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Add-UnifiedGroupLinks

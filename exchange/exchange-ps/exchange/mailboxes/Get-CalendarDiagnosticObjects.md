@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Online
 title: Get-CalendarDiagnosticObjects
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-CalendarDiagnosticObjects

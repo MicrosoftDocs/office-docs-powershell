@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Add-ComplianceCaseMember
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Add-ComplianceCaseMember

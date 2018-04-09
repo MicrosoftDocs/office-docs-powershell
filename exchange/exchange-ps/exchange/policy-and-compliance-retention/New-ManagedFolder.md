@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: New-ManagedFolder
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # New-ManagedFolder

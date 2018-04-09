@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-LinkedUser
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-LinkedUser

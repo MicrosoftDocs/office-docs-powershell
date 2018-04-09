@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: Get-Subscription
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-Subscription

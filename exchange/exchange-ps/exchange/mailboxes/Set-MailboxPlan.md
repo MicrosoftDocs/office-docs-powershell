@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Set-MailboxPlan
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-MailboxPlan

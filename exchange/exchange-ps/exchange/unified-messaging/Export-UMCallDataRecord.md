@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010, Exchange Server 2013
 title: Export-UMCallDataRecord
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013"
 ---
 
 # Export-UMCallDataRecord

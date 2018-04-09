@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: set-CASMailboxPlan
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-CASMailboxPlan

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010
 title: Suspend-PublicFolderReplication
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Suspend-PublicFolderReplication

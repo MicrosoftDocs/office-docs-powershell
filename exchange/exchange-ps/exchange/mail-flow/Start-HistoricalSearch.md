@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Start-HistoricalSearch
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Start-HistoricalSearch

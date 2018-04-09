@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
 title: New-DataEncryptionPolicy
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # New-DataEncryptionPolicy

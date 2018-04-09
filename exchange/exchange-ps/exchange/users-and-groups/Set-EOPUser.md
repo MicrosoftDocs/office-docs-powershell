@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online Protection
 title: Set-EOPUser
 schema: 2.0.0
+monikerRange: "eop-ps"
 ---
 
 # Set-EOPUser

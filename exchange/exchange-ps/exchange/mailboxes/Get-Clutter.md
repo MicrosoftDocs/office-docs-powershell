@@ -1,7 +1,9 @@
 ---
+external help file: 
 applicable: Exchange Online
 title: Get-Clutter
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-Clutter

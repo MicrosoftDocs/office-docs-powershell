@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010
 title: Remove-AvailabilityReportOutage
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Remove-AvailabilityReportOutage

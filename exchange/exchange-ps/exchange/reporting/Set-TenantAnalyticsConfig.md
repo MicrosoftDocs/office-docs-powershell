@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-TenantAnalyticsConfig
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-TenantAnalyticsConfig

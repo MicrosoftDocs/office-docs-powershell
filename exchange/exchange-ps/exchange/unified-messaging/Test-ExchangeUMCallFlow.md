@@ -4,6 +4,7 @@ Module Name: Microsoft.Exchange.UM.TroubleshootingTool.dll
 online version: https://technet.microsoft.com/library/2616c271-82cb-495e-97dc-d789a5f7a41f.aspx
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Test-UMConnectivity

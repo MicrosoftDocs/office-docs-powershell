@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2016
 title: New-ExchangeSettings
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016"
 ---
 
 # New-ExchangeSettings

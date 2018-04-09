@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010
 title: Set-ClientAccessArray
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Set-ClientAccessArray

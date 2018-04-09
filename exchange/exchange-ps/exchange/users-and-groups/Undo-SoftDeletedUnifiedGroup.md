@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Undo-SoftDeletedUnifiedGroup
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Undo-SoftDeletedUnifiedGroup

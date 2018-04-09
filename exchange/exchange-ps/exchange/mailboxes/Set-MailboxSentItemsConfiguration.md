@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010
 title: Set-MailboxSentItemsConfiguration
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Set-MailboxSentItemsConfiguration

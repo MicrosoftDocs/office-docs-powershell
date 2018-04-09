@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Remove-UnifiedGroup
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Remove-UnifiedGroup

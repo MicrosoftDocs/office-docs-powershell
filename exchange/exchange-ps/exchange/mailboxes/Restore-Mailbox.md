@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010
 title: Restore-Mailbox
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Restore-Mailbox

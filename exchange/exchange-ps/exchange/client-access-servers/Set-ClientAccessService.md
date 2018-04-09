@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2016
 title: Set-ClientAccessService
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016"
 ---
 
 # Set-ClientAccessService
