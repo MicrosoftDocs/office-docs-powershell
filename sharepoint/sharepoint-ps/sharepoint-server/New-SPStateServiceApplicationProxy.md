@@ -33,7 +33,7 @@ PS C:\>$sa = New-SPStateServiceApplication -Name 'State Service' -Database $db
 PS C:\>New-SPStateServiceApplicationProxy -Name 'State Service Proxy' -ServiceApplication $sa -DefaultProxyGroup
 ```
 
-This example creates a State Service database and Service Application. It then associates a new State Service Proxy with the State Service application and add its to the Default proxy group.
+This example creates a State Service database and Service Application. It then associates a new State Service Proxy with the State Service application and adds it to the Default proxy group.
 
 
 ## PARAMETERS
