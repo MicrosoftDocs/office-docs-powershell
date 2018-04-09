@@ -591,6 +591,7 @@ Displays a message that describes the effect of the command instead of executing
 For more information, type the following command: `get-help about_commonparameters`
 
 
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -602,7 +603,13 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
+```  
+
+
+[!NOTE]
+WhatIf and Confirm parameters do not seem to be working as of March 28th 2018  
+https://github.com/MicrosoftDocs/office-docs-powershell/issues/506
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
