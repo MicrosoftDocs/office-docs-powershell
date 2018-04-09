@@ -29,9 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-C:\PS>$cred = Get-Credential
-
-C:\PS>New-SPManagedAccount -Credential $cred
+PS C:\>$cred = Get-Credential
+PS C:\>New-SPManagedAccount -Credential $cred
 ```
 
 This example adds a new managed account to the farm by using credentials that are prompted.

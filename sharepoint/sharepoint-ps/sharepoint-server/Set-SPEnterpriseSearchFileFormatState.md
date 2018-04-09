@@ -32,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa PDF $FALSE
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa -Identity PDF -Enable $false
 ```
 
 This example uses the `Set-SPEnterpriseSearchFileFormatState` cmdlet to disable the parser for the file format "PDF".
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseIFilter
-{{Fill UseIFilter Description}}
+Specifies use of a third-party iFilter when parsing the file format. UseIFilter can be $false (built-in format handler is used) or $TRUE (third-party iFilter is used). $false is the default value.
 
 ```yaml
 Type: Boolean

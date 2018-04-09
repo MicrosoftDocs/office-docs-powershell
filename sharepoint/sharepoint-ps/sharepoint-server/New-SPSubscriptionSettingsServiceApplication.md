@@ -32,18 +32,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE---------------
 ```
-C:\PS>$AppPool = New-SPServiceApplicationPool -Name SettingsServiceAppPool -Account (Get-SPManagedAccount DOMAIN\jdoe)
-
-C:\PS>$App = New-SPSubscriptionSettingsServiceApplication -ApplicationPool $appPool -Name SettingsServiceApp -DatabaseName SettingsServiceDB
-
-C:\PS>$proxy = New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $App
-
-C:\PS>Get-SPServiceInstance | where{$_.TypeName -eq "Microsoft SharePoint Foundation Subscription Settings Service"} | Start-SPServiceInstance
+PS C:\>New-SPSubscriptionSettingsServiceApplication -ApplicationPool 'SharePoint Web Services Default' -Name 'Subscriptions Settings Service Application' -DatabaseName 'Subscription'
 ```
 
-This example creates an application pool, a new subscription settings service application, a subscription settings service application proxy and starts the service instance on the local machine.
-This example assumes that a managed account for DOMAIN\jdoe already exists.
-
+This example creates a Subscriptions Settings Service application.
 
 ## PARAMETERS
 
@@ -217,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeferUpgradeActions
-{{Fill DeferUpgradeActions Description}}
+Specifies if the upgrade process is to be deferred and manually completed.
 
 ```yaml
 Type: SwitchParameter

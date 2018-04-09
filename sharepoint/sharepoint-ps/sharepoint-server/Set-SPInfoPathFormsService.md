@@ -35,19 +35,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-C:\PS>Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
+PS C:\>Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
 ```
 
 This example modifies the AllowUserFormBrowserEnabling and AllowUserFormBrowserRendering parameter values.
 
-
 ### --------------EXAMPLE 2-----------------
 ```
-C:\PS>Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
+PS C:\>Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
 ```
 
 This example modifies the AllowViewState and ViewStateThreshold parameter values.
-
 
 ## PARAMETERS
 
@@ -441,7 +439,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSizeOfUserFormState
-{{Fill MaxSizeOfUserFormState Description}}
+Specifies the value of the maximum size in kilobytes of session state an instance of a browser-enabled InfoPath form template can use. The default value is 4096.
+
+The type must be a non-negative integer and less than or equal to 999999.
 
 ```yaml
 Type: Int32
