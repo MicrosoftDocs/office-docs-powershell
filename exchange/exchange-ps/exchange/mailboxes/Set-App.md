@@ -191,8 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-The UserList parameter specifies who can usean organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
-This parameter is currently limited to 1.000 users. This will not change in the future as we are planning on moving to Centralized Deployment (https://docs.microsoft.com/en-us/office/dev/add-ins/publish/centralized-deployment)
+The UserList parameter specifies who can use an organizational app. This parameter is currently limited to 1000 users. This will not change in the future as we are planning on moving to Centralized Deployment (https://docs.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
+
+Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
 
 For example:
 
