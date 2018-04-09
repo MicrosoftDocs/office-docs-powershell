@@ -31,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchTopology -SearchApplication $ssa
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>New-SPEnterpriseSearchTopology -SearchApplication $ssa
 ```
 
 This example creates a new, empty search topology in the search service application referenced by $ssa.
@@ -40,11 +40,12 @@ This example creates a new, empty search topology in the search service applicat
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchTopology -SearchApplication $ssa -Clone -SearchTopology $topo
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+PS C:\>New-SPEnterpriseSearchTopology -SearchApplication $ssa -Clone -SearchTopology $topology
 ```
 
-This example creates a new search topology in the search service application referenced by $ssa by cloning the existing topology referenced by $topo.
+This example creates a new search topology in the search service application referenced by $ssa by cloning the existing topology referenced by $topology.
 
 
 ## PARAMETERS
@@ -68,14 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
-
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
@@ -90,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Clone
-{{ Fill Clone Description }}
+Specifies that the new search topology is to be created by cloning an existing search topology.
 
 ```yaml
 Type: SwitchParameter
