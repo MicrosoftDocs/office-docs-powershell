@@ -29,23 +29,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-C:\PS>New-SPStateServiceApplication -Name "State Service Application 1"
+PS C:\>$db = New-SPStateServiceDatabase -Name 'State Service'
+PS C:\>New-SPStateServiceApplication -Name 'State Service' -Database $db
 ```
 
-This example creates a new state service application, named State Service Application 1, on the farm.
-
-State service applications are the container for databases.
-State service applications must have a proxy and a database created to be usable.
-
-### --------------EXAMPLE 2-----------------
-```
-C:\PS>New-SPStateServiceDatabase -Name "State Service Database" | New-SPStateServiceApplication -Name "StateServiceApp1" | New-SPStateServiceApplicationProxy -DefaultProxyGroup
-```
-
-This example creates a new state service database, a new state service application associated with the database and a new state service application proxy associated with the state service application proxy.
-
-This example configures all the objects required to have State Service operational on a farm.
-
+This example creates a new state service database, a new state service application associated with the database.
 
 ## PARAMETERS
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPSiteMaster
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a site master.
 
 
 ## SYNTAX
@@ -20,23 +20,25 @@ New-SPSiteMaster [-ContentDatabase] <SPContentDatabasePipeBind>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the New-SPSiteMaster cmdlet to create a site master information in the farm.
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
 ```
 
-{{ Add example description here }}
+This example creates a site master in the database WSS_Content.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -52,7 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
-{{Fill CompatibilityLevel Description}}
+Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection.
+
+When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the SiteCreationMode setting.
 
 ```yaml
 Type: Int32
@@ -84,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
-{{Fill ContentDatabase Description}}
+Specifies the name of the database to create the site master in. For example, WSS_Content.
 
 ```yaml
 Type: SPContentDatabasePipeBind
@@ -100,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-{{Fill Language Description}}
+Specifies the locale ID to use. For example, use 1033 for English.
 
 ```yaml
 Type: UInt32
@@ -116,7 +120,23 @@ Accept wildcard characters: False
 ```
 
 ### -Template
-{{Fill Template Description}}
+Specifies the name of the template.
+
+The values are the following:
+
+-- SPSPERS#2
+
+-- SPSPERS#6
+
+-- SPSPERS#7
+
+-- SPSPERS#8
+
+-- SPSPERS#9
+
+-- SPSPERS#10
+
+-- STS#0
 
 ```yaml
 Type: SPWebTemplatePipeBind

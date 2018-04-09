@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------
 ```
-C:\PS>PS> New-SPUser - UserAlias 'Contoso\Jdow'-displayname 'Jane Dow' -web http://contoso.com
+PS C:\>New-SPUser -UserAlias 'Contoso\Jdow'-DisplayName 'Jane Dow' -Web http://contoso.com
 ```
 
 This example adds a new user named Jane Dow to the Contoso domain.
@@ -42,7 +42,7 @@ This example adds a new user named Jane Dow to the Contoso domain.
 
 ### ------------------EXAMPLE 2----------------------
 ```
-C:\PS>Get-SPWeb http://sitename | New-SPUser -UserAlias Contoso\Jdow
+PS C:\>Get-SPWeb http://sitename | New-SPUser -UserAlias Contoso\Jdow
 ```
 
 This example adds Contoso\Jdow to all webs in the http://sitename site collection.
@@ -52,7 +52,7 @@ Because this site collection uses inherited permissions, only the top-level web 
 ## PARAMETERS
 
 ### -UserAlias
-{{ Fill UserAlias Description}}
+Specifies the user alias from Active Directory Domain Services (AD DS).
 
 ```yaml
 Type: String
