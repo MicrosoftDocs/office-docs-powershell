@@ -30,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------
 ```
-C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication
-Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $searchApp -SpellingDictionary dynamic
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $ssa -SpellingDictionary dynamic
 ```
 
 This example sets the dictionary named dynamic to be used for query spelling correction for the default search service application.
