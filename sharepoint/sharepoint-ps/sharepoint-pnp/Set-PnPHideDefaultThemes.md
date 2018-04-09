@@ -3,57 +3,49 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Remove-PnPApp
+# Set-PnPHideDefaultThemes
 
 ## SYNOPSIS
-Removes an app from the app catalog
+Defines if the default / OOTB themes should be visible to users or not.
 
 ## SYNTAX 
 
 ```powershell
-Remove-PnPApp -Identity <AppMetadataPipeBind>
-              [-Scope <AppCatalogScope>]
-              [-Connection <SPOnlineConnection>]
+Set-PnPHideDefaultThemes -HideDefaultThemes <Boolean>
+                         [-Connection <SPOnlineConnection>]
 ```
+
+## DESCRIPTION
+Use this cmdlet to hide or show the default themes to users
+
+You must be a SharePoint Online global administrator to run the cmdlet.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Remove-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
+Set-PnPHideDefaultThemes -HideDefaultThemes $true
 ```
 
-This will remove the specified app from the tenant scoped app catalog
+This example hides the default themes
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Remove-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Scope Site
+Set-PnPHideDefaultThemes -HideDefaultThemes $false
 ```
 
-This will remove the specified app from the site collection scoped app catalog
+This example shows the default themes
 
 ## PARAMETERS
 
-### -Identity
-Specifies the Id of the Addin Instance
+### -HideDefaultThemes
+Defines if the default themes should be visible or hidden
 
 ```yaml
-Type: AppMetadataPipeBind
+Type: Boolean
 Parameter Sets: (All)
 
 Required: True
-Position: 0
-Accept pipeline input: True
-```
-
-### -Scope
-Defines which app catalog to use. Defaults to Tenant
-
-```yaml
-Type: AppCatalogScope
-Parameter Sets: (All)
-
-Required: False
 Position: Named
 Accept pipeline input: False
 ```

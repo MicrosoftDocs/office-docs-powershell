@@ -3,58 +3,73 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Set-PnPWebTheme
+# Set-PnPListRecordDeclaration
 
 ## SYNOPSIS
-Sets the theme of the current web.
+The RecordDeclaration parameter supports 4 values:
+
+AlwaysAllowManualDeclaration
+NeverAllowManualDeclaration
+UseSiteCollectionDefaults
+
 
 ## SYNTAX 
 
 ```powershell
-Set-PnPWebTheme [-Theme <ThemePipeBind>]
-                [-WebUrl <String>]
-                [-Web <WebPipeBind>]
-                [-Connection <SPOnlineConnection>]
+Set-PnPListRecordDeclaration -List <ListPipeBind>
+                             [-ManualRecordDeclaration <EcmListManualRecordDeclaration>]
+                             [-AutoRecordDeclaration <Boolean>]
+                             [-Web <WebPipeBind>]
+                             [-Connection <SPOnlineConnection>]
 ```
-
-## DESCRIPTION
-Sets the theme of the current web. * Requires Tenant Administration Rights *
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPWebTheme -Theme MyTheme
+Set-PnPListRecordDeclaration -List "Documents" -ManualRecordDeclaration NeverAllowManualDeclaration
 ```
 
-Sets the theme named "MyTheme" to the current web
+Sets the manual record declaration to never allow
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPTenantTheme -Name "MyTheme" | Set-PnPTheme
+Set-PnPListRecordDeclaration -List "Documents" -AutoRecordDeclaration $true
 ```
 
-Sets the theme named "MyTheme" to the current web
+Turns on auto record declaration for the list
 
 ## PARAMETERS
 
-### -Theme
-Specifies the Color Palette Url based on the site or server relative url
+### -AutoRecordDeclaration
+Defines if you want to set auto record declaration on the list
 
 ```yaml
-Type: ThemePipeBind
+Type: Boolean
 Parameter Sets: (All)
 
 Required: False
-Position: 0
-Accept pipeline input: True
+Position: Named
+Accept pipeline input: False
 ```
 
-### -WebUrl
-The URL of the web to apply the theme to. If not specified it will default to the current web based upon the URL specified with Connect-PnPOnline.
+### -List
+The List to set the manual record declaration settings for
 
 ```yaml
-Type: String
+Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -ManualRecordDeclaration
+Defines the manual record declaration setting for the lists
+
+```yaml
+Type: EcmListManualRecordDeclaration
 Parameter Sets: (All)
 
 Required: False
