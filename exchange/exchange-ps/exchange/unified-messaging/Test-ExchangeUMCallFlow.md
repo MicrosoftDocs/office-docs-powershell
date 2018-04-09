@@ -44,22 +44,21 @@ When you run the cmdlet, it states the reason and possible solutions for issues 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Unsecured -NextHop 10.1.1.1 -Diversion 12345
 ```
 
 This example uses Gateway mode and tests the call flow in a non-Skype for Business environment. This example sets the VoIP security mode to Unsecured, uses the IP address 10.1.1.1 as the next hop, and includes an extension number in the diversion information.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-ExchangeUMCallFlow -Mode SIPClient -CallingParty tony@contoso.com -CalledParty david@contoso.com -Credential $get
 ```
 
 This example uses SIPClient mode and tests the call flow with a Secured UM dial plan in an environment that contains servers running Skype for Business. By default, when you run the cmdlet, the cmdlet uses the credentials of the user currently logged onto the computer.
 
-
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Secured -CertificateThumbprint a909502dd82ae41433e6f83886b00d4277a32a7b -NextHop gateway.contoso.com -HuntGroup 10000 -Diversion "History-Info: <sip:10001@10.176.10.194;user=phone?Reason=SIP%3Bcause%3D487%3Btext%3DTimeout>;index=1,<sip:10000@10.176.10.194;user=phone?Reason=SIP>;index=1.1"
 ```
@@ -131,7 +130,6 @@ When you provide diversion information as a History-Info header, verify the foll
 
 - The second to last entry should include the UM-enabled user's extension number. This entry must also include the appropriate Reason text. This text must be properly escaped in accordance with standard URL parameter escaping rules.
 
-
 ```yaml
 Type: String
 Parameter Sets: Set1
@@ -192,7 +190,6 @@ The Credential parameter specifies the credentials that will be used to run the 
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see [Get-Credential](https://go.microsoft.com/fwlink/p/?linkId=142122). 
 
-
 ```yaml
 Type: PSCredential
 Parameter Sets: Set2
@@ -208,7 +205,6 @@ Accept wildcard characters: False
 
 ### -HuntGroup
 The HuntGroup parameter specifies the UM hunt group associated with the VoIP gateway being emulated. This is typically an extension number. Use this parameter if you're running the tool in Gateway mode.
-
 
 ```yaml
 Type: String
@@ -261,4 +257,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2616c271-82cb-495e-97dc-d789a5f7a41f.aspx)
-

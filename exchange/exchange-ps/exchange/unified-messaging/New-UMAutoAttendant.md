@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 55000 -Status Enabled
 ```
 
 This example creates the UM auto attendant MyUMAutoAttendant that can accept incoming calls using the extension number 55000 but isn't speech-enabled.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 56000,56100 -SpeechEnabled $true -Status Enabled
 ```

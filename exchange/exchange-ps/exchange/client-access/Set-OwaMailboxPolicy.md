@@ -79,28 +79,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-OwaMailboxPolicy -Identity EMEA\Contoso\Corporate -CalendarEnabled $false
 ```
 
 This example disables access to the calendar for the mailbox policy named Corporate for the tenant Contoso in the organization EMEA.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-OwaMailboxPolicy -Identity Default -TasksEnabled $false
 ```
 
 This example disables access to the Tasks folder for the default mailbox policy in an on-premises Exchange organization.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -AllowedFileTypes '.doc', '.pdf'
 ```
 
 This example sets the allowed file type extensions to .doc and .pdf for the default mailbox policy in an Office 365 organization, allowing users to save files with those extensions locally or view them from a web browser.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -UserVoiceEnabled $false
 ```
@@ -757,7 +757,6 @@ Accept wildcard characters: False
 This parameter is available or functional only in Exchange Server 2010.
 
 The PremiumClientEnabled parameter specifies whether a user can access Outlook Web App. This parameter doesn't apply to the light version of Outlook Web App.
-
 
 ```yaml
 Type: $true | $false

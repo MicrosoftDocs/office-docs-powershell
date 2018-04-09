@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-PublicFolderDatabase -Name "My Public Folder Database" -EdbFilePath "C:\Program Files\Microsoft\Exchange Server\V14\Mailbox\PFDB01.edb" -LogFolderPath "C:\Program Files\Microsoft\Exchange Server\V14\Mailbox\PFDB01"
 ```
@@ -190,4 +190,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/88e7257d-d219-44e6-a23e-ba78c84545ac.aspx)
-

@@ -27,7 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example
+### -------------------------- Example 1 --------------------------
 ```
 Remove-InboundConnector "Contoso Inbound Connector"
 ```

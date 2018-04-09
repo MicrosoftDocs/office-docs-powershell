@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ClientAccessArray -Fqdn server.contoso.com -Site "Redmond" -Name "server.contoso.com"
 ```
 
 This example creates the Client Access server array server.contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ClientAccessArray -Fqdn ClientArray.contoso.com -Site "China" -Name "clientarray.contoso.com"
 ```
 
 This example creates a Client Access server array in the China site.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-ClientAccessArray -Fqdn server.contoso.com -Site "Japan" -Name "server.contoso.com" -Confirm
 ```
@@ -169,4 +169,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cc0a1328-5931-4160-8310-76f17b54d074.aspx)
-

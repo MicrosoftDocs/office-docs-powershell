@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-OnPremisesOrganization -Name "ExchangeMail" -OrganizationGuid "a1bc23cb-3456-bcde-abcd-feb363cacc88" -HybridDomains contoso.com, sales.contoso.com -InboundConnector "Inbound to ExchangeMail" -OutboundConnector "Outbound to ExchangeMail"
 ```
@@ -174,8 +174,6 @@ Accept wildcard characters: False
 ### -OrganizationRelationship
 The OrganizationRelationship parameter specifies the organization relationship configured by the Hybrid Configuration wizard on the Office 365 tenant as part of a hybrid deployment with an on-premises Exchange organization. This organization relationship defines the federated sharing features enabled on the Office 365 tenant.
 
-
-
 ```yaml
 Type: OrganizationRelationshipIdParameter
 Parameter Sets: (All)
@@ -223,4 +221,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/38f16e33-605c-4a4d-87a8-559845f32b50.aspx)
-

@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MigrationConfig -MaxNumberOfBatches 50
 ```
 
 This example sets the migration system to have a maximum of 50 batches at any time.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-MigrationConfig -MaxConcurrentMigrations 100
 ```

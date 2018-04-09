@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ThrottlingPolicy | Format-List
 ```
 
 This example returns the settings for all throttling policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ThrottlingPolicy -Identity ThrottlingPolicy2 | Format-List
 ```

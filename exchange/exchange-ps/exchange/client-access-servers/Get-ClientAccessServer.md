@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ClientAccessServer
 ```
 
 This example returns a summary list of all Exchange servers in your organization that have the Client Access server role installed.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ClientAccessServer -Identity mail.contoso.com | Format-List
 ```

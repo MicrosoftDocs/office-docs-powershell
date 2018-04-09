@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ResourceConfig -ResourcePropertySchema Room/Whiteboard,Equipment/Van
 ```
 
 This example adds the custom resource properties Room/Whiteboard and Equipment/Van. These values replace any existing custom resource properties that are already configured.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ResourceConfig -ResourcePropertySchema @{Add="Room/TV"; Remove="Equipment/Laptop"}
 ```

@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UMCallRouterSettings
 ```
 
 This example displays a summary list of the Microsoft Exchange Unified Messaging Call Router service settings on all Exchange servers in the Active Directory forest.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-UMCallRouterSettings -Server EXCH01 | Format-List
 ```

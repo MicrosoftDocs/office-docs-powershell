@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-PolicyTipConfig en\NotifyOnly
 ```
 
 This example removes the custom English Policy Tip for the action value NotifyOnly.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PolicyTipConfig -Locale ru | Remove-PolicyTipConfig
 ```

@@ -92,7 +92,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
 ```
@@ -103,7 +103,7 @@ The first command stores the password to use with the new remote mailbox in a va
 
 After the new mail user is created, directory synchronization synchronizes the new mail user to the service and the associated mailbox is created.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
 ```
@@ -651,7 +651,7 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-This parameter is reserved for internal Microsoft use.
+The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

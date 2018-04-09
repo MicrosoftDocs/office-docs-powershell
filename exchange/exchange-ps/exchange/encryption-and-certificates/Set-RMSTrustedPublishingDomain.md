@@ -28,19 +28,18 @@ A TPD contains the settings needed to use RMS features in your organization. For
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RMSTrustedPublishingDomain "Contoso TPD" -Default -ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -ExtranetCertificationUrl https://rms.contoso.com/_wmcs/certification/servercertification.asmx
 ```
 
 This example makes the following changes to the existing TPD Contoso TPD:
 
+- Sets Contoso TPD as the default TPD for the organization.
 
-Sets Contoso TPD as the default TPD for the organization.
+- Sets the external licensing URL to https://rms.contoso.com/\_wmcs/licensing.
 
-Sets the external licensing URL to https://rms.contoso.com/\_wmcs/licensing.
-
-Sets the external certification URL to https://rms.contoso.com/\_wmcs/certification/servercertification.asmx
+- Sets the external certification URL to https://rms.contoso.com/\_wmcs/certification/servercertification.asmx
 
 ## PARAMETERS
 
@@ -232,4 +231,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/89af98c7-b6cb-4aa5-8ffa-d438579b7aa2.aspx)
-

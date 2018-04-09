@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-UMCallAnsweringRule -Identity MyUMCallAnsweringRule
 ```
 
 This example removes the call answering rule MyUMCallAnsweringRule from a user's mailbox. The user's mailbox is the mailbox of the user running the cmdlet.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
 ```

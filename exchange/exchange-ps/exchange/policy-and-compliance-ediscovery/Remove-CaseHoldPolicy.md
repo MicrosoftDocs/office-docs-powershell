@@ -28,7 +28,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CaseHoldPolicy -Identity "Regulation 123 Compliance"
 ```
@@ -129,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d0a97d1a-b1e2-42f9-9eef-c1071cf0c999.aspx)
-

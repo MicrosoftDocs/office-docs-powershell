@@ -30,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-AntiPhishRule -Name "Research Department Phishing Rule" -AntiPhishPolicy "Research Quarantine" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
 ```
@@ -127,7 +127,6 @@ This parameter specifies whether the rule or policy is enabled. Valid values are
 - $true: The rule or policy is enabled.
 
 - $false: The rule or policy is disabled.
-
 
 ```yaml
 Type: $true | $false

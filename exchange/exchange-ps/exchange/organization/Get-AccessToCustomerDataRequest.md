@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AccessToCustomerDataRequest
 ```
 
 This example returns a summary list of all customer lockbox request.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AccessToCustomerDataRequest -ApprovalStatus Pending
 ```
 
 This example returns a summary list of all customer lockbox requests that have the status value Pending.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-AccessToCustomerDataRequest -RequestId EXSR123456 | Format-List
 ```
@@ -131,4 +131,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2ad3b776-f81b-4fdc-895b-a1ac98832286.aspx)
-

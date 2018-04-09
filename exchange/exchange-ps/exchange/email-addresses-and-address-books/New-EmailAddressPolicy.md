@@ -102,7 +102,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-EmailAddressPolicy -Name "Southeast Offices" -IncludedRecipients MailboxUsers -ConditionalStateorProvince "GA","AL","LA" -EnabledEmailAddressTemplates "SMTP:%s%2g@southeast.contoso.com","smtp:%s%2g@southeast.contoso.net"
 ```
@@ -119,7 +119,7 @@ Additional proxy email addresses:\<last name\>.\<first two letters of the first 
 
 Priority:N+1, where N is the number of manually created email address policies that already exist (we didn't use the Priority parameter, and the default value is N+1).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-EmailAddressPolicy -Name "Northwest Executives" -RecipientFilter {(RecipientType -eq 'UserMailbox') -and (Title -like '*Director*' -or Title -like '*Manager*') -and (StateOrProvince -eq 'WA' -or StateOrProvince -eq 'OR' -or StateOrProvince -eq 'ID')} -EnabledEmailAddressTemplates "SMTP:%2g%s@contoso.com" -Priority 2
 ```

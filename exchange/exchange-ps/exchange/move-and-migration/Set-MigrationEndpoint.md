@@ -52,14 +52,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MigrationEndpoint -Identity CutoverExchangeEndpoint01 -MaxConcurrentIncrementalSyncs 50 -NspiServer Server01.contoso.com
 ```
 
 This example changes the MaxConcurrentIncrementalSyncs setting to 50 on the CutoverExchangeEndpoint01 migration endpoint using the NSPI server Server01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-MigrationEndpoint -Identity Onboardingmigrationendpoint01 -MaxConcurrentMigrations 10 -RemoteServer Server01.contoso.com
 ```
@@ -126,7 +126,6 @@ Accept wildcard characters: False
 The Credentials parameter specifies the credentials to use for connecting to the remote endpoint. Credentials should be used when creating either a staged or cutover Exchange endpoint or a RemoteMove endpoint.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
 
 ```yaml
 Type: PSCredential

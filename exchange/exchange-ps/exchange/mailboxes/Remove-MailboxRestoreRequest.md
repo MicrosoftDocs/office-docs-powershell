@@ -37,21 +37,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1"
 ```
 
 This example removes the second restore request Ayla\\MailboxRestore1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
 ```
 
 This example removes all restore requests that have the status of Completed.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```

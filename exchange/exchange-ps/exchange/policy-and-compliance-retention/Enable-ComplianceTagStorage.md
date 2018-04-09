@@ -27,7 +27,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-ComplianceTagStorage
 ```
@@ -90,4 +90,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c85eeadf-7d63-4e23-b1ff-07af5811b703.aspx)
-

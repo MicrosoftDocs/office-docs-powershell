@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxDatabaseCopyStatus -Identity DB1 | Format-List
 ```
 
 This example returns status information for all copies of the database DB1. The status results are displayed in a list format.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxDatabaseCopyStatus -Server MBX1 | Format-List
 ```
 
 This example returns the status for all database copies on the Mailbox server MBX1. The status results are also displayed in a list format.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxDatabaseCopyStatus -Identity DB1\MBX2 | Format-List
 ```

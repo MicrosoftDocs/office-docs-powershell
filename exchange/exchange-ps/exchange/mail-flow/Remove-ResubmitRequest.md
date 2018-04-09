@@ -26,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ResubmitRequest 5
 ```
 
 This example removes the resubmit request with the identity 5.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ResubmitRequest | Remove-ResubmitRequest
 ```

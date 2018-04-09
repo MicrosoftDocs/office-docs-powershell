@@ -38,21 +38,20 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-HoldCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchangeLocation "Kitty Petersen" -AddSharePointLocation "http://contoso.sharepoint.com/sites/teams/finance" -RemovePublicFolderLocation All -Comment "Added new counsel, 9/9/14"
 ```
 
 This example makes the following changes to the existing preservation policy named "Regulation 123 Compliance":
 
+- Adds the mailbox for the user named Kitty Petersen.
 
-Adds the mailbox for the user named Kitty Petersen.
+- Adds the SharePoint Online site http://contoso.sharepoint.com/sites/teams/finance.
 
-Adds the SharePoint Online site http://contoso.sharepoint.com/sites/teams/finance.
+- Removes public folders.
 
-Removes public folders.
-
-Updates the comment.
+- Updates the comment.
 
 ## PARAMETERS
 
@@ -334,4 +333,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/32731a42-6c45-4574-bc1a-538a91013189.aspx)
-

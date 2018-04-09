@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-JournalRule "Consolidated Messenger" -JournalEmailAddress "ArchiveMailbox@contoso.com"
 ```
 
 This example modifies the journal email address to which journal reports are sent by the existing journal rule Consolidated Messenger.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-JournalRule | Set-JournalRule -JournalEmailAddress "Archive Mailbox"
 ```

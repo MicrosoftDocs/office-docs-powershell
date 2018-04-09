@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-AuditConfigurationRule 989a3a6c-dc40-4fa4-8307-beb3ece992e9
 ```
@@ -121,4 +121,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6ae51088-7037-4380-81c0-33ea562c995a.aspx)
-

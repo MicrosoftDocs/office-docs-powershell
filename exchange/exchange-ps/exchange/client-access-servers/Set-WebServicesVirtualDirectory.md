@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-WebServicesVirtualDirectory -Identity Contoso\EWS(Default Web Site) -ExternalUrl https://www.contoso.com/EWS/exchange.asmx -BasicAuthentication $true -InternalUrl https://contoso.internal.com/EWS/exchange.asmx
 ```
 
 This example sets the authentication method to Basic authentication for the virtual directory EWS on the server Contoso. This example also sets the external and internal URLs for this virtual directory.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-WebServicesVirtualDirectory -Identity Contoso\EWS* -ExternalUrl https://www.contoso.com/EWS/exchange.asmx
 ```
 
 This example uses a wildcard character instead of "Default Web site" as was used in Example 1.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-WebServicesVirtualDirectory -Identity "EWS (Default Web Site)" -MRSProxyEnabled $true
 ```

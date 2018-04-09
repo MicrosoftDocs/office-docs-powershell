@@ -28,42 +28,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report" -Mailbox tony
 ```
 
 In Exchange Server 2010, this example creates an e-mail message in the Drafts folder of Tony's mailbox, with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report"
 ```
 
 This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-MailMessage -Mailbox tony@contoso.com
 ```
 
 In Exchange Server 2010, this example creates an empty e-mail message in the Drafts folder of Tony's mailbox because no subject or message body is specified.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 New-MailMessage
 ```
 
 This example creates an empty email message in the Drafts folder because no subject or message body is specified.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -Mailbox tony -BodyFormat Html
 ```
 
 In Exchange Server 2010, this example creates an e-mail message in the Drafts folder of Tony's mailbox with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -BodyFormat Html
 ```

@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AutodiscoverVirtualDirectory -Server MBX01
 ```
 
 This example returns a summary list of all Autodiscover virtual directories on the server named MBX01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AutodiscoverVirtualDirectory -Identity "MBX01\Autodiscover*" | Format-List
 ```
 
 This example returns detailed information for the Autodiscover virtual directory named "Autodiscover (Default Web Site)" on the server named MBX01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-AutodiscoverVirtualDirectory
 ```

@@ -62,7 +62,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com"
 ```
@@ -73,7 +73,7 @@ To mail-enable an existing user and create an associated mailbox in the service,
 
 After the user is mail-enabled, directory synchronization synchronizes the mail-enabled user to the service and the associated mailbox is created.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Enable-RemoteMailbox "Kim Akers" -RemoteRoutingAddress "kima@contoso.mail.onmicrosoft.com" -Archive
 ```
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-This parameter is reserved for internal Microsoft use.
+The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

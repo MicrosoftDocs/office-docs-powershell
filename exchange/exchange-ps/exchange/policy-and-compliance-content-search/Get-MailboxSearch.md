@@ -41,14 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxSearch -ResultSize "unlimited"
 ```
 
 This example retrieves a list of all mailbox searches.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxSearch "Project Hamilton" | Format-List
 ```
@@ -57,7 +57,7 @@ This example retrieves all properties for the mailbox search Project Hamilton.
 
 The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters (https://technet.microsoft.com/library/bb124388.aspx).
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 (Get-Mailbox Mark).InPlaceHolds; Get-MailboxSearch -InPlaceHoldIdentity 9953d0f0fd03415e949d4b41c5a28cbb
 ```

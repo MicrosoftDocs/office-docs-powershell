@@ -5,7 +5,7 @@ title: Restore-Mailbox
 schema: 2.0.0
 ---
 
-# restore-Mailbox
+# Restore-Mailbox
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdParameter>
+Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdParameter>
  -RecoveryMailbox <StoreMailboxIdParameter> -TargetFolder <String> [-AllowDuplicates]
  [-AllContentKeywords <String[]>] [-AttachmentFilenames <String[]>] [-BadItemLimit <Int32>] [-Confirm]
  [-ContentKeywords <String[]>] [-EndDate <DateTime>] [-ExcludeFolders <MapiFolderPath[]>]
@@ -35,28 +35,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase
 ```
 
 This example restores a mailbox for user Scott from the database MyRecoveryDatabase.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase -RecoveryMailbox John -TargetFolder Recovery
 ```
 
 This example restores John's mailbox content into Scott's mailbox under the Recovery folder.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase -SubjectKeywords "Meeting" -ContentKeywords "business" -IncludeFolders \Inbox,\Calendar
 ```
 
 This example restores only the mail with the subject Meeting, with the message body containing the word business, and with the message location either in the Inbox or Calendar folder. This example assumes that the mailbox is in English.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-Mailbox -Database MyDatabase | Restore-Mailbox -RecoveryDatabase MyRecoveryDatabase
 ```
@@ -493,4 +493,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f7205547-b2c5-4429-bae6-43c1bc4dce75.aspx)
-

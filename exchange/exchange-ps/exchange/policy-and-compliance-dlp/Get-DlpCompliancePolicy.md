@@ -26,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DlpCompliancePolicy
 ```
 
 This example displays summary information for all DLP policies in the Security & Compliance Center.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DlpCompliancePolicy -Identity "PII Limited" | Format-List
 ```
@@ -116,4 +116,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a03a2ec9-f80a-403e-bc3d-e169484e28eb.aspx)
-

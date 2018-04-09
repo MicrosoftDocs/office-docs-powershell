@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-AntiPhishPolicy [-Identity <AntiPhishPolicyIdParameter>] [-Advanced <SwitchParameter>] [-Impersonation <SwitchParameter>] [-Spoof <SwitchParameter>] [<CommonParameters>]
+Get-AntiPhishPolicy [-Identity <AntiPhishPolicyIdParameter>] [-Advanced] [-Impersonation] [-Spoof] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,14 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AntiPhishPolicy
 ```
 
 This example shows a summary list of all antiphish policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AntiPhishPolicy  -Identity Default | Format-List
 ```

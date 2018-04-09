@@ -44,14 +44,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ImapSubscription "Fabrikam IMAP" -Mailbox "Kim Akers" -DisplayName "Kim's Fabrikam Mail"
 ```
 
 This example modifies the display name of the IMAP subscription Fabrikam IMAP that's configured in the cloud-based mailbox of the user Kim Akers.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ImapSubscription "Brian Contoso Mail" -Mailbox "Brian Johnson" -IncomingServer imap.contoso.com -Force
 ```
@@ -372,4 +372,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2d7f36c8-38db-4318-879c-8f77cfd09b06.aspx)
-

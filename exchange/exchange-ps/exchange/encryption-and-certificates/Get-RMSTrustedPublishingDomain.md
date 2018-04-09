@@ -26,7 +26,7 @@ A trusted publishing domain contains the settings needed to use RMS features in 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RMSTrustedPublishingDomain | Format-List
 ```
@@ -107,4 +107,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/69499195-f08f-41bd-b0ed-443688410b12.aspx)
-

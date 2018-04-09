@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Train
 ```
 
 This example sets user Joe Healy's mailbox to train.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -CrossValidate -NumberOfSegments 15
 ```
 
 This example sets user Joe Healy's mailbox to cross-validate and sets the number of segments for cross-validation to 15.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Clear
 ```
@@ -228,4 +228,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b760ee59-89f0-4d73-94e4-ac816584b13c.aspx)
-

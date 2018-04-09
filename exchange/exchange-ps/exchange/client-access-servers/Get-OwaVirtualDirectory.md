@@ -37,21 +37,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OwaVirtualDirectory -Server Contoso
 ```
 
 This example returns a summary list of all Outlook on the web virtual directories on the server named Contoso.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-OwaVirtualDirectory -Identity "Contoso\owa*" | Format-List
 ```
 
 This example returns detailed information for the Outlook on the web virtual directory named "owa (Default Web site)" on the server named Contoso.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-OwaVirtualDirectory
 ```

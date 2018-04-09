@@ -28,21 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ClientAccessArray -Identity "ContosoArray" -Name "CASArray"
 ```
 
 This example names the Client Access server array CASArray.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ClientAccessArray -Identity "ContosoArray" -FQDN "mail.contoso.com"
 ```
 
 This example returns the Client Access server array associated with the site for the FQDN mail.contoso.com.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-ClientAccessArray -Identity "ContosoArray" -Site "SiteEU"
 ```
@@ -185,4 +185,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d8682149-2822-4a6d-ac54-e4898f89a633.aspx)
-

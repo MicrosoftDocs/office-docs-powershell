@@ -64,7 +64,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DlpDetailReport -StartDate 11/01/2015 -EndDate 11/07/2015
 ```
@@ -305,4 +305,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/241165c2-7488-4e82-bdd1-4e580b2e381f.aspx)
-

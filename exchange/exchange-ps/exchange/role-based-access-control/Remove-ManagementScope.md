@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ManagementScope "Redmond Servers"
 ```
 
 This example removes the Redmond Servers scope.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ManagementScope -Orphan | Remove-ManagementScope -WhatIf
 ```

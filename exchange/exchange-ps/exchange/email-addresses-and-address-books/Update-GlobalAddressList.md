@@ -5,7 +5,7 @@ title: Update-GlobalAddressList
 schema: 2.0.0
 ---
 
-# update-GlobalAddressList
+# Update-GlobalAddressList
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-update-GlobalAddressList [-Identity] <GlobalAddressListIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Update-GlobalAddressList [-Identity] <GlobalAddressListIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ By default in Exchange Online, the Address List role isn't assigned to any role 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-GlobalAddressList -Identity "Default Global Address List"
 ```

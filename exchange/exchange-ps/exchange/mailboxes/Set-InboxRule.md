@@ -5,7 +5,7 @@ title: Set-InboxRule
 schema: 2.0.0
 ---
 
-# set-InboxRule
+# Set-InboxRule
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-set-InboxRule [-Identity] <InboxRuleIdParameter> [-AlwaysDeleteOutlookRulesBlob]
+Set-InboxRule [-Identity] <InboxRuleIdParameter> [-AlwaysDeleteOutlookRulesBlob]
  [-ApplyCategory <MultiValuedProperty>] [-BodyContainsWords <MultiValuedProperty>] [-Confirm]
  [-CopyToFolder <MailboxFolderIdParameter>] [-DeleteMessage <$true | $false>] [-DomainController <Fqdn>]
  [-ExceptIfBodyContainsWords <MultiValuedProperty>] [-ExceptIfFlaggedForAction <String>]
@@ -63,7 +63,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-InboxRule ProjectContoso -MarkImportance "High"
 ```

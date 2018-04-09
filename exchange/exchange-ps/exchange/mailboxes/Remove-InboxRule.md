@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-InboxRule -Mailbox Joe@Contoso.com -Identity "ProjectA-MoveToFolderA"
 ```
 
 This example removes the Inbox rule ProjectA-MoveToFolderA from the mailbox Joe@Contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-InboxRule -Mailbox "Joe@Contoso.com" | Remove-InboxRule
 ```

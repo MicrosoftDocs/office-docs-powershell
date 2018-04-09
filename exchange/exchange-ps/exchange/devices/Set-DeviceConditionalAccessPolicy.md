@@ -43,7 +43,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-DeviceConditionalAccessPolicy -Identity Executives -Enabled $false
 ```
@@ -212,4 +212,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a4365cf4-8ac5-4cee-97ee-28232c191a51.aspx)
-

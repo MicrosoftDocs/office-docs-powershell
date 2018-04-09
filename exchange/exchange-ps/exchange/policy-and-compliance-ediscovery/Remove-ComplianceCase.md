@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ComplianceCase -Identity "Case 5150"
 ```
@@ -125,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d170738b-2c5c-4adf-8e96-22bdd1dae378.aspx)
-

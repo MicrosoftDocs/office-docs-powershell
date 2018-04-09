@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PopSubscription -Mailbox "Kim Akers" | Format-List
 ```
 
 This example shows detailed information for all the POP subscriptions configured in the mailbox of the user Kim Akers.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PopSubscription -Mailbox "Kim Akers" -IncludeReport | Export-CSV C:\KimAkersPopReport
 ```
@@ -219,4 +219,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/961266ab-21f2-4410-896b-9ede09ba20cd.aspx)
-

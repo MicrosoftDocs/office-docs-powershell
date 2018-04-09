@@ -26,7 +26,7 @@ RMS templates exist in one or more trusted publishing domains (TPDs) that have b
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RMSTemplate "Contoso Confidential" -Type Archived
 ```
@@ -151,4 +151,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4637f6b8-751a-4f5e-8869-428250230382.aspx)
-

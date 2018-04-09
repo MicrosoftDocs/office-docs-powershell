@@ -25,7 +25,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AuditConfig
 ```
@@ -68,4 +68,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/251598e2-fd69-4b78-816c-d0e60ee9bede.aspx)
-

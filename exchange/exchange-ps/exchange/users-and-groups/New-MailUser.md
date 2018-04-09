@@ -188,14 +188,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -MicrosoftOnlineServicesID ed@tailspintoys -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
 
 This example creates a new mail user for Ed Meadows in the contoso.com cloud-based organization. The mail user gives Ed an account and email address in the contoso.com domain, but messages sent to Ed are delivered to his tailspintoys.com email address.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $password = Read-Host "Enter password" -AsSecureString; New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
 ```

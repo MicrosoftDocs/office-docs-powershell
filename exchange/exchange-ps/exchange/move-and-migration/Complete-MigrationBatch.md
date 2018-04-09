@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Complete-MigrationBatch -Identity LocalMove1 -NotificationEmails admin@contoso.com,lucio@contoso.com
 ```

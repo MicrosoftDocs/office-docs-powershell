@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ActiveSyncDeviceClass -Filter {DeviceType -eq "WP"}
 ```
 
 This example returns a list of all Windows Phones.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ActiveSyncDeviceClass | group-object -property DeviceType
 ```

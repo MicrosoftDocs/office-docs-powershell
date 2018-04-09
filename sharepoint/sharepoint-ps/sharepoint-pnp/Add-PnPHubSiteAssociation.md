@@ -3,7 +3,7 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Connect-PnPHubSite
+# Add-PnPHubSiteAssociation
 
 ## SYNOPSIS
 Connects a site to a hubsite.
@@ -11,9 +11,9 @@ Connects a site to a hubsite.
 ## SYNTAX 
 
 ```powershell
-Connect-PnPHubSite -Site <SitePipeBind>
-                   -HubSite <SitePipeBind>
-                   [-Connection <SPOnlineConnection>]
+Add-PnPHubSiteAssociation -Site <SitePipeBind>
+                          -HubSite <SitePipeBind>
+                          [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
@@ -23,7 +23,7 @@ Connects an existing site to a hubsite
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Connect-PnPHubSite -Site https://tenant.sharepoint.com/sites/mysite -HubSite https://tenant.sharepoint.com/sites/hubsite
+Add-PnPHubSiteAssociation -Site https://tenant.sharepoint.com/sites/mysite -HubSite https://tenant.sharepoint.com/sites/hubsite
 ```
 
 This example adds the specified site to the hubsite.

@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-MailboxSentItemsConfiguration -Identity "Customer Support Feedback" -SendAsItemsCopiedTo SenderAndFrom
 ```
@@ -184,4 +184,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d0ecab5b-45db-4bc3-8ce3-8bbea1ef9033.aspx)
-

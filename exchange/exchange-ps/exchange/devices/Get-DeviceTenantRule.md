@@ -35,7 +35,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DeviceTenantRule
 ```
@@ -94,4 +94,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/66b8d3d6-ae5a-4a31-b69d-c974d475a6ce.aspx)
-

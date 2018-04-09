@@ -57,20 +57,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MailboxDatabase "Mailbox Database01" -DeletedItemRetention 7.00:00:00
 ```
 
 This example sets the length of time that deleted items are retained. If a specific mailbox has its own item retention set, that value is used instead of this value, which is set on the mailbox database.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-MailboxDatabase <Mailbox Database Name> -RpcClientAccessServer <ClientAccessServer or ClientAccessServerArrayID>
 ```
 
 In Exchange Server 2010, this example updates a mailbox database so that all client connections for mailboxes on the database come through the Client Access server or Client Access server array. You can also use this command to change the Client Access server or Client Access server array through which the client is connecting to the Mailbox server.
-
 
 For more information about RPC access through Client Access servers, see Set-RpcClientAccess and Set-ClientAccessArray.
 

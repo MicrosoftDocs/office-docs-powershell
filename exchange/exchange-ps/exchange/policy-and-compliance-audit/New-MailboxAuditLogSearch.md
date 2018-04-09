@@ -33,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MailboxAuditLogSearch "Admin and Delegate Access" -Mailboxes "Ken Kwok","April Stewart" -LogonTypes Admin,Delegate -StartDate 1/1/2015 -EndDate 12/31/2015 -StatusMailRecipients auditors@contoso.com
 ```
 
 This example creates a mailbox audit log search to search Ken Kwok and April Stewart's mailboxes for administrator and delegate logons from 1/1/2015 to 12/31/2015. Search results are sent to auditors@contoso.com by email.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-MailboxAuditLogSearch -ExternalAccess $true -StartDate 09/01/2015 -EndDate 10/24/2015 -StatusMailRecipients admin@contoso.com
 ```

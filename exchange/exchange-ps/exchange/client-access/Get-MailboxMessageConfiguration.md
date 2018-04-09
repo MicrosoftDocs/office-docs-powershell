@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxMessageConfiguration tony@contoso.com
 ```
 
 This example returns the Outlook on the web settings for Tony's mailbox.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxMessageConfiguration tony@contoso.com -DomainController DC1
 ```

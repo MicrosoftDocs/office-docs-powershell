@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ActiveSyncDeviceAccessRule | where {$_.AccessLevel -eq 'Block'}
 ```
 
 This example lists all the rules currently blocking mobile phones.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ActiveSyncDeviceAccessRule | Format-List Characteristic, QueryString, AccessLevel
 ```

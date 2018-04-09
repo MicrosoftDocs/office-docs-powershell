@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
 ```
 
 This example changes the site mailbox provisioning policy named Default to allow the maximum size of email messages that can be received by the site mailbox to 25 MB.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-SiteMailboxProvisioningPolicy -Identity Default -IssueWarningQuota 9GB -ProhibitSendReceiveQuota 10GB
 ```
 
 This example changes the warning quota to 9.5 GB and the prohibit send and receive quota to 10 GB.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-SiteMailboxProvisioningPolicy -Identity SM_DefaultPolicy -AliasPrefix Project
 ```

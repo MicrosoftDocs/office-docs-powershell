@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 12345 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
 ```
 
 This example creates the UM hunt group MyUMHuntGroup that has a pilot identifier of 12345.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 5551234,55555 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
 ```

@@ -30,17 +30,14 @@ You can use the Get-CsAVConferenceTimeReport to query information about the leng
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsAVConferenceTimeReport -ReportType Monthly -StartDate 06/01/2015 -EndDate 06/30/2015
 ```
 
 This example shows the time in minutes that was used during all audio and video conferences that were held by Skype for Business Online users for the month of June 2015
-
-
 
 ## PARAMETERS
 
@@ -113,17 +110,13 @@ Accept wildcard characters: False
 ### 
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
-
 ## OUTPUTS
 
 ### 
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9bed5675-2cdd-4ebb-a555-8d83afa66659.aspx)
-

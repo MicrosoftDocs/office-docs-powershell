@@ -28,7 +28,7 @@ If you delete the only trusted publishing domain, all RMS features are disabled 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-RMSTrustedPublishingDomain "Contoso TPD"
 ```
@@ -145,4 +145,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/778b4b91-0079-462b-b58d-3b3507ed8f69.aspx)
-

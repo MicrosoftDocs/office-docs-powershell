@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-PublicFolderClientPermission -Identity \"My Public Folder" -User Chris -AccessRights CreateItems -Server "My Server"
 ```
 
 In Exchange Server 2010, this example removes permission for the user Chris to create items in the public folder My Public Folder on the server My Server.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-PublicFolderClientPermission -Identity "\My Public Folder" -User Contoso\Chris
 ```

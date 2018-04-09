@@ -26,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-DistributionGroupMember -Identity "Research Reports" -Members chris@contoso.com,michelle@contoso.com,laura@contoso.com,julia@contoso.com
 ```

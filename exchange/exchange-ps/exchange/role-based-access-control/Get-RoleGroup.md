@@ -37,28 +37,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RoleGroup
 ```
 
 This example retrieves a list of role groups.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RoleGroup "Recipient Administrators" | Format-List
 ```
 
 This example retrieves the details for the Recipient Administrators role group.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-RoleGroup -ReadFromDomainController
 ```
 
 This example retrieves a list of role groups as seen by the domain controller closest to the user.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-RoleGroup -Filter { RoleGroupType -Eq "Linked" } | Format-Table Name, LinkedGroup
 ```

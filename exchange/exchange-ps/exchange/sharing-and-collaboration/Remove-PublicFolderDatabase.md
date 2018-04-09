@@ -28,7 +28,7 @@ Removing a public folder database can have a broad range of serious consequences
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-PublicFolderDatabase "Public Folder Database"
 ```
@@ -147,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/11289582-170b-445e-94a4-8f73df6ccb13.aspx)
-

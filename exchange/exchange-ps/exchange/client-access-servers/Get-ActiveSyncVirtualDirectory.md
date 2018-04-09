@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ActiveSyncVirtualDirectory -Server "MBX01"
 ```
 
 This example returns a summary list of all Exchange ActiveSync virtual directories on the server named MBX01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ActiveSyncVirtualDirectory -Identity "MBX01\Microsoft-Server-ActiveSync*" | Format-List
 ```
 
 This example returns detailed information for the Exchange ActiveSync virtual directory named "Microsoft-Server-ActiveSync (Default Web Site)" on the server named MBX01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ActiveSyncVirtualDirectory
 ```

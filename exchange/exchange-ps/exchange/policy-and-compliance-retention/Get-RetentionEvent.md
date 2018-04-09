@@ -25,14 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RetentionEvent
 ```
 
 This example returns a summary list of all retention events.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RetentionEvent -Identity x | Format-List
 ```
@@ -91,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/32aced21-3693-490a-a9ca-64cb766d15ed.aspx)
-

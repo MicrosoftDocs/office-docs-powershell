@@ -34,21 +34,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-StoreMailbox -Database MBD01 -Identity Ayla -MailboxState SoftDeleted
 ```
 
 This example purges the soft-deleted mailbox for Ayla Kol from mailbox database MBD01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-StoreMailbox -Database MBD01 -Identity "2ab32ce3-fae1-4402-9489-c67e3ae173d3" -MailboxState Disabled
 ```
 
 This example permanently purges the disconnected mailbox with the GUID 2ab32ce3-fae1-4402-9489-c67e3ae173d3 from mailbox database MBD01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.database -Identity $_.mailboxguid -MailboxState SoftDeleted}
 ```

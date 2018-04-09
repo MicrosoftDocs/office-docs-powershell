@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-OfflineAddressBook -Identity "Default Offline Address Book" -VirtualDirectories $null -GlobalWebDistributionEnabled $true
 ```
 
 This example configures the OAB named Default Offline Address Book to be available for download requests from all OAB virtual directories in the organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-OfflineAddressBook -Identity "\Default Offline Address Book" -GeneratingMailbox OABGen2
 ```

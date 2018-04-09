@@ -40,28 +40,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ThrottlingPolicyAssociation -OrganizationalUnit Users
 ```
 
 In Exchange Server 2010 and 2013, this example returns a list of all the mailboxes in your organization in the Users OU.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ThrottlingPolicyAssociation -ResultSize unlimited
 ```
 
 This example retrieves a summary list of all throttling policy associations in your organization.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ThrottlingPolicyAssociation -Anr Chr -DomainController DC01
 ```
 
 In Exchange Server 2010 and 2013, this example returns all the mailboxes that resolve from the ambiguous name resolution search on the string "Chr" that are in the domain DC01. This example returns mailboxes for users such as Chris Ashton, Christian Hess, and Christa Geller.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-Group -Identity "Courtney Sweet" | Format-List
 ```

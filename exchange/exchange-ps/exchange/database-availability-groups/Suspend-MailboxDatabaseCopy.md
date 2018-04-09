@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Suspend-MailboxDatabaseCopy -Identity DB1\MBX3 -SuspendComment "Maintenance on MBX3"
 ```
 
 This example suspends replication and replay activity for the copy of the database DB1 hosted on the Mailbox server MBX3. An optional administrative reason for the suspension is specified.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Suspend-MailboxDatabaseCopy -Identity DB3\MBX2 -ActivationOnly
 ```

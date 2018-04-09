@@ -31,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UMServer
 ```
 
 This example displays a list of all the Unified Messaging servers in the Active Directory forest.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-UMServer -Identity MyUMServer | Format-List
 ```
@@ -97,4 +97,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/af1f90d6-a2b1-437b-aeaa-f1324bfd0731.aspx)
-

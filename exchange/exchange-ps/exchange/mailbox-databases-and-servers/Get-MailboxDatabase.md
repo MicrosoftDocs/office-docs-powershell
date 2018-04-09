@@ -45,21 +45,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxDatabase -IncludePreExchange2010
 ```
 
 In Exchange Server 2010, this example retrieves information about all the mailbox databases in the Exchange organization, including the mailbox databases that reside on computers running Exchange 2010 and earlier versions of Exchange.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxDatabase -IncludePreExchange2013
 ```
 
 This example retrieves information about all the mailbox databases in the Exchange organization, including Exchange 2010 mailbox databases.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxDatabase -Identity MailboxDatabase01 -Server Server01 -Status | Format-List
 ```

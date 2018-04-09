@@ -24,7 +24,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-Clutter -Identity "Constancia Pena"
 ```
@@ -79,4 +79,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online version] (https://technet.microsoft.com/library/e9dbe496-f4f5-4632-893a-2a6b83aaf2dc.aspx)
-

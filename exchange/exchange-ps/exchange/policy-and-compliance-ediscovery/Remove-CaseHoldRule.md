@@ -27,7 +27,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CaseHoldRule -Identity "One Year Standard"
 ```
@@ -128,4 +128,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e8c1cb76-248f-419e-9457-32c0656cb37a.aspx)
-

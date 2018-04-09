@@ -36,7 +36,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-DeviceConfigurationPolicy -Name "Engineering Group"
 ```
@@ -167,4 +167,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d286fd8f-7695-4b4c-a24f-51975d939a60.aspx)
-

@@ -28,14 +28,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ComplianceSecurityFilter | Format-Table -Auto FilterName,Action
 ```
 
 This example returns a summary list of all compliance security filters.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ComplianceSecurityFilter -FilterName "HR Filter"
 ```
@@ -162,4 +162,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5e1f0433-c062-4c58-8832-0ff0021cdc99.aspx)
-

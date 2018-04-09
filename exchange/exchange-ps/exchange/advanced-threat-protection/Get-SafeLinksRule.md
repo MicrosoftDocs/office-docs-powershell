@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SafeLinksRule | Format-Table -Auto Name,State,Priority,SafeLinksPolicy,Comments
 ```
 
 This example returns a summary list of all Safe Links rules in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SafeLinksRule -Identity "Research Department URL Rule"
 ```

@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UMAutoAttendant | Format-List
 ```
 
 This example returns a formatted list of all UM auto attendants in the Active Directory forest.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-UMAutoAttendant -Identity MyUMAutoAttendant
 ```
 
 This example displays the properties of the UM auto attendant MyUMAutoAttendant.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-UMAutoAttendant -UMDialPlan MyUMDialPlan
 ```

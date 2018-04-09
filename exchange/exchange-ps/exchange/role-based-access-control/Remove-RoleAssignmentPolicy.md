@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-Mailbox | Where {$_.RoleAssignmentPolicy -Eq "End User"}; Get-Mailbox | Where {$_.RoleAssignmentPolicy -Eq "End User"} | Set-Mailbox -RoleAssignmentPolicy "Seattle End User"; Get-ManagementRoleAssignment -RoleAssignee "End User" | Remove-ManagementRoleAssignment; Remove-RoleAssignmentPolicy "End User"
 ```

@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-EOPUser -Identity "Kitty Petersen" -Company Contoso -DisplayName "Kitty Petersen" -Title "Vice President"
 ```
@@ -409,4 +409,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/497785d1-c2ae-4ddd-af28-a96cb3e62332.aspx)
-

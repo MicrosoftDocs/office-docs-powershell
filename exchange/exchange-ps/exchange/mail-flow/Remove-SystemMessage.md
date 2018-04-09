@@ -28,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-SystemMessage En\Internal\5.7.9
 ```
 
 This example removes the specified custom NDR (combination of language, audience, and enhanced status code values).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-SystemMessage En\WarningMailbox
 ```

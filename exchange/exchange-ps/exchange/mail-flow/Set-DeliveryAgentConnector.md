@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-DeliveryAgentConnector "Contoso X.400 Connector" -MaxMessageSize 10MB -MaxMessagesPerConnection 100 -MaxConcurrentConnections 10
 ```
@@ -44,7 +44,7 @@ Sets the maximum number of messages allowed per connection to 100.
 
 Sets the maximum concurrent connections to 10.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $ConnectorConfig = Get-DeliveryAgentConnector "Contoso X.400 Connector"; $ConnectorConfig.AddressSpaces += "X400:c=US;p=Fabrikam;a=Contoso;o=Sales;1"; $ConnectorConfig.SourceTransportServers += Hub04; Set-DeliveryAgentConnector "Contoso X.400 Connector" -AddressSpaces $ConnectorConfig.AddressSpaces -SourceTransportServers $ConnectorConfig.SourceTransportServers
 ```

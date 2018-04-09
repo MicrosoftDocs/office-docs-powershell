@@ -27,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-InboundConnector "Inbound Connector for Contoso.com" | Format-List
 ```
 
 This example displays detailed configuration information for the Inbound connector named Inbound Connector for Contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-InboundConnector
 ```

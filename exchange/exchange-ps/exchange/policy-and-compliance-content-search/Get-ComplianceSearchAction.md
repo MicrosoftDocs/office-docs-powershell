@@ -51,14 +51,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ComplianceSearchAction
 ```
 
 This example shows a summary list of all compliance search actions.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ComplianceSearchAction -Identity "Case 1234_Preview" | Format-List
 ```

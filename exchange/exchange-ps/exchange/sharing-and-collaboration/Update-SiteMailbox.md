@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-SiteMailbox -BypassOwnerCheck -Identity "MarketingEvents 2013"
 ```
 
 This example updates the site mailbox MarketingEvents 2013. If you don't specify the target, this triggers both document and membership synchronization. Because the BypassOwnerCheck parameter is used, it isn't necessary to be an owner or member of the site mailbox to run this cmdlet.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Update-SiteMailbox -BypassOwnerCheck -Identity WinterHoliday@tailspintoys.com -FullSync
 ```

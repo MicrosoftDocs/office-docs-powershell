@@ -30,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DataEncryptionPolicy
 ```
 
 This example returns a summary list of all data encryption policies in the organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DataEncryptionPolicy -Identity "Europe Mailboxes"
 ```
@@ -138,4 +138,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/198d07a9-6163-4230-9b34-523a6a2107ea.aspx)
-

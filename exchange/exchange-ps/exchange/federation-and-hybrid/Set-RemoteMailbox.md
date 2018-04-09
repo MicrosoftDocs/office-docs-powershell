@@ -5,7 +5,7 @@ title: Set-RemoteMailbox
 schema: 2.0.0
 ---
 
-# set-RemoteMailbox
+# Set-RemoteMailbox
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-set-RemoteMailbox [-Identity] <RemoteMailboxIdParameter> [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+Set-RemoteMailbox [-Identity] <RemoteMailboxIdParameter> [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-Alias <String>] [-ArchiveGuid <Guid>]
  [-ArchiveName <MultiValuedProperty>] [-BypassModerationFromSendersOrMembers <MultiValuedProperty>] [-Confirm]
@@ -55,14 +55,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RemoteMailbox davids -Type Room
 ```
 
 This example configures the mailbox in the service that's associated with the specified mail user as a room resource mailbox. This example assumes that directory synchronization has been configured.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-RemoteMailbox kima -AcceptMessagesOnlyFrom davids, "Executive Team", bill@contoso.com
 ```
@@ -1324,7 +1324,7 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-This parameter is reserved for internal Microsoft use.
+The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. To enable this, use this switch without a value. To disable this, use this exact syntax: -ACLableSyncedObjectEnabled:$false.
 
 ```yaml
 Type: SwitchParameter

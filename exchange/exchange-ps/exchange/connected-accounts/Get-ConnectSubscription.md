@@ -29,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ConnectSubscription -Mailbox "Kim Akers" | Format-List
 ```
 
 This example shows detailed information for all the contact subscriptions that are configured in the mailbox of the user Kim Akers.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ConnectSubscription -Mailbox "Kim Akers" -IncludeReport | Export-CSV C:\KimAkersConnectReport
 ```
@@ -213,4 +213,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/89f2566b-cf64-437b-af09-4d495e52b25b.aspx)
-

@@ -43,7 +43,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-DeviceTenantPolicy -Enabled $false
 ```
@@ -206,4 +206,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b78bc86e-343a-4f0c-ae17-1fb2dcb1f080.aspx)
-

@@ -29,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-UnifiedGroupLinks -Identity "Legal Department" -LinkType Members -Links laura@contoso.com,julia@contoso.com
 ```
@@ -184,4 +184,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5c2b4a0e-a8cb-4b29-a771-e6ebd13957a3.aspx)
-

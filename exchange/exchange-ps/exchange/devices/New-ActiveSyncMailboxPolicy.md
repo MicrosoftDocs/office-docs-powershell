@@ -5,7 +5,7 @@ title: New-ActiveSyncMailboxPolicy
 schema: 2.0.0
 ---
 
-# new-ActiveSyncMailboxPolicy
+# New-ActiveSyncMailboxPolicy
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-new-ActiveSyncMailboxPolicy [-Name] <String> [-AllowBluetooth <Disable | HandsfreeOnly | Allow>]
+New-ActiveSyncMailboxPolicy [-Name] <String> [-AllowBluetooth <Disable | HandsfreeOnly | Allow>]
  [-AllowBrowser <$true | $false>] [-AllowCamera <$true | $false>] [-AllowConsumerEmail <$true | $false>]
  [-AllowDesktopSync <$true | $false>] [-AllowExternalDeviceManagement <$true | $false>]
  [-AllowHTMLEmail <$true | $false>] [-AllowInternetSharing <$true | $false>] [-AllowIrDA <$true | $false>]
@@ -62,21 +62,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ActiveSyncMailboxPolicy -Name:"SalesPolicy" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -IsDefault:$false -AttachmentsEnabled:$false -AllowStorageCard:$true
 ```
 
 This example creates the Mobile Device mailbox policy SalesPolicy that has several preconfigured values.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ActiveSyncMailboxPolicy -Name:"Management" -AllowBluetooth:Allow -AllowBrowser:$true -AllowCamera:$true -AllowPOPIMAPEmail:$false -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:OneWeek -AllowWiFi:$true -AllowStorageCard:$true
 ```
 
 This example creates the Mobile Device mailbox policy Management that has several preconfigured values. Users assigned to this policy should have an Enterprise client access license (CAL) to use many of these features.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-ActiveSyncMailboxPolicy -Name:"Contoso" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MinDevicePasswordComplexCharacters:3 -IsDefault:$true -DevicePasswordHistory:10
 ```

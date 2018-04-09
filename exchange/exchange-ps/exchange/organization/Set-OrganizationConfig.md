@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
- [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
+  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
@@ -75,6 +75,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
 ### Set3
 ```
 Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguration <OrganizationIdParameter>
+ [-ACLableSyncedObjectEnabled <true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
@@ -132,6 +133,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
 ### Set1
 ```
 Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
+ [-ACLableSyncedObjectEnabled <true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
@@ -164,7 +166,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-OrganizationConfig -DistributionGroupDefaultOU Users\Groups -DistributionGroupNameBlockedWordsList curse,bad,offensive -DistributionGroupNamingPolicy "DL_<GroupName>_<Department><CountryCode>"
 ```
@@ -177,28 +179,28 @@ The words curse, bad, and offensive will be blocked from being used in distribut
 
 All distribution groups will be prefixed with "DL\_" and suffixed with an underscore (\_) and the user's department and country code.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceBlockList -EwsBlockList $null
 ```
 
 This example allows all client applications to use REST and EWS.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceBlockList -EwsBlockList "OtherApps*"
 ```
 
 This example allows all client applications to use REST and EWS, except those that are specified by the EwsBlockList parameter.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList $null
 ```
 
 This example prevents all client applications from using REST and EWS.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList "CorpApp*"
 ```
@@ -1082,13 +1084,15 @@ Accept wildcard characters: False
 ```
 
 ### -ACLableSyncedObjectEnabled
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The ACLableSyncedObjectEnabled parameter specfies whether remote mailboxes in hybrid environments are stamped as ACLableSyncedMailboxUser.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

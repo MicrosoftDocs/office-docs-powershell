@@ -27,7 +27,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-AuditConfigurationRule -Workload SharePoint -AuditOperation Delete
 ```
@@ -178,4 +178,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b9184a6b-6a5e-400f-926e-96f6e0a166fa.aspx)
-

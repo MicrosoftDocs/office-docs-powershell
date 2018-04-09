@@ -35,7 +35,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-DeviceConditionalAccessPolicy -Identity "Human Resources"
 ```
@@ -120,4 +120,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/72f09025-da9c-447e-8d86-2e2ca591abb0.aspx)
-

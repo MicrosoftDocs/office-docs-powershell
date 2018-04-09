@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-EcpVirtualDirectory -Server SERVER01 -ExternalURL https://mail.contoso.com/ecp -InternalURL https://mail.contoso.com/ecp
 ```

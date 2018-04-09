@@ -5,7 +5,7 @@ title: New-JournalRule
 schema: 2.0.0
 ---
 
-# new-journalrule
+# New-JournalRule
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-new-journalrule [-Name] <String> -JournalEmailAddress <RecipientIdParameter> [-Confirm]
+New-JournalRule -Name <String> -JournalEmailAddress <RecipientIdParameter> [-Confirm]
  [-DomainController <Fqdn>] [-Enabled <$true | $false>]
  [-Recipient <SmtpAddress>]
  [-Scope <Internal | External | Global>] [-WhatIf] [<CommonParameters>]
@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-JournalRule -Name "Brokerage Communications" -JournalEmailAddress "Brokers Journal Mailbox" -Scope Global -Recipient brokers@contoso.com -Enabled $true
 ```

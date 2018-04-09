@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UMHuntGroup
 ```
 
 This example displays all the UM hunt groups in the Active Directory forest.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-UMHuntGroup -Identity MyUMIPGateway\MyUMHuntGroup | Format-List
 ```
 
 This example displays the details of the UM hunt group MyUMHuntGroup in a formatted list.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-UMHuntGroup -UMDialPlan MyUMDialPlan
 ```

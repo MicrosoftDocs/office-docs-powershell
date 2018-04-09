@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OrganizationalUnit "North America" -SingleNodeOnly | Format-Table Name, DistinguishedName
 ```
@@ -50,7 +50,7 @@ This example retrieves a list of the first level child OUs beneath the North Ame
 
 For more information about pipelining and the Format-Table cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-OrganizationalUnit -SearchText "Executives" | Format-Table Name, DistinguishedName
 ```

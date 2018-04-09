@@ -36,14 +36,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RetentionComplianceRule
 ```
 
 This example displays summary information for all retention rules in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RetentionComplianceRule -Identity "30DayRule" | Format-List
 ```
@@ -116,4 +116,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9eabf25a-8519-4c40-8977-b1d46e6acb3e.aspx)
-

@@ -50,14 +50,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-MailboxImportRequest -Identity "Kweku\Import" -BadItemLimit 5
 ```
 
 This example changes the import request Kweku\\Import to accept up to five corrupted mailbox items.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxImportRequest -Status Suspended | Set-MailboxImportRequest -BatchName April14
 ```

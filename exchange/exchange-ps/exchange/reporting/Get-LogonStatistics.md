@@ -47,7 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-LogonStatistics -Server Server01
 ```

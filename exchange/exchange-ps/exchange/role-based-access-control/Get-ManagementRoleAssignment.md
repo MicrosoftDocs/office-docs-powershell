@@ -60,49 +60,49 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ManagementRoleAssignment "Denver Help Desk" | Format-List
 ```
 
 This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ManagementRoleAssignment -Enabled $true -Delegating $true
 ```
 
 This example retrieves all the role assignments that are enabled and have been designated as delegating role assignments.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ManagementRoleAssignment -RecipientWriteScope MyGAL
 ```
 
 This example retrieves all the role assignments that include the MyGAL recipient-based scope restriction type.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-ManagementRoleAssignment -Role "Mail Recipients"
 ```
 
 This example retrieves all the role assignments associated with the Mail Recipients management role.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Get-ManagementRoleAssignment -WritableRecipient Bob -GetEffectiveUsers
 ```
 
 This example retrieves a list of all the users and the role assignments that can modify the recipient Bob.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Redmond Executive Servers" -GetEffectiveUsers
 ```
 
 This example retrieves a list of all exclusive scopes that can modify server objects that match Redmond Executive Servers. The command also lists the users who are effectively assigned the role assignments through role groups or USGs.
 
-### Example 7
+### -------------------------- Example 7 --------------------------
 ```
 Get-ManagementRoleAssignment -WritableDatabase "Contoso Sales"
 ```

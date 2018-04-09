@@ -41,7 +41,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-DlpComplianceRule -Identity 25bf67b6-3783-4f74-bde9-98dd40333082 -AccessScope NotInOrganization -BlockAccess $true
 ```
@@ -741,4 +741,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7c819665-e1cb-4097-90b7-2530bea69c1c.aspx)
-

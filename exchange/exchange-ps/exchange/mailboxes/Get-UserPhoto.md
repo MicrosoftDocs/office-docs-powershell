@@ -39,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UserPhoto "Susan Burk"
 ```
 
 This example displays information about the user photo configured for Susan Burk.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-UserPhoto "Pilar Pinilla" -Preview
 ```

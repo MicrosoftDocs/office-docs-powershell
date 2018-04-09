@@ -35,35 +35,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-OutlookAnywhere -Identity:CAS01\Rpc (Default Web Site) -ClientAuthenticationMethod:Ntlm
 ```
 
 In Exchange 2010, this example sets the client authentication method to NTLM for the /rpc virtual directory on the Client Access server CAS01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-OutlookAnywhere -Identity: "EXCH1\rpc (Default Web Site)" -ExternalClientAuthenticationMethod NTLM
 ```
 
 This example sets the client authentication method to NTLM for the Outlook Anywhere virtual directory on the server named EXCH1.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -SSLOffloading $false -InternalClientsRequireSsl $true -ExternalClientsRequireSsl $true
 ```
 
 This example sets the SSLOffloading parameter to $false for the Outlook Anywhere virtual directory on the server named EXCH1. This setting informs Outlook Anywhere to expect no SSL decryption between clients and the server, and enables the Require SSL value on the virtual directory. Because SSL is now required for Outlook Anywhere connections, we need to configure internal and external clients to use SSL.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -IISAuthenticationMethods NTLM
 ```
 
 This example sets the authentication method for the Outlook Anywhere virtual directory setting in IIS to NTLM.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -IISAuthenticationMethods Basic,NTLM
 ```
@@ -152,7 +152,6 @@ The DefaultAuthenticationMethod parameter specifies the default authentication m
 - Negotiate
 
 You can't use this parameter with the ExternalClientAuthenticationMethod, InternalClientAuthenticationMethod and IISAuthenticationMethods parameters.
-
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured

@@ -30,25 +30,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ImapSubscription -Name "Contoso IMAP" -EmailAddress kakers@contoso.com -IncomingUserName kakers -IncomingPassword (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force) -IncomingServer imap.contoso.com -IncomingSecurity Ssl -IncomingPort 993
 ```
 
 This example creates the IMAP subscription Contoso IMAP in the mailbox of the user Kim Akers. The remote IMAP mailbox has the following details:
 
+- Email address: kakers@contoso.com
 
-Email address: kakers@contoso.com
+- User name: kakers
 
-User name: kakers
+- Password: Pa$$word1
 
-Password: Pa$$word1
+- IMAP server: imap.contoso.com
 
-IMAP server: imap.contoso.com
+- Authentication method: SSL
 
-Authentication method: SSL
-
-TCP port: 993
+- TCP port: 993
 
 ## PARAMETERS
 
@@ -306,4 +305,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cb002b53-c307-40a6-aca2-a7f29dc740d8.aspx)
-

@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-set-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+Set-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-AllowBluetooth <Disable | HandsfreeOnly | Allow>] [-AllowBrowser <$true | $false>]
  [-AllowCamera <$true | $false>] [-AllowConsumerEmail <$true | $false>] [-AllowDesktopSync <$true | $false>]
  [-AllowExternalDeviceManagement <$true | $false>] [-AllowHTMLEmail <$true | $false>]
@@ -62,21 +62,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ActiveSyncMailboxPolicy -Identity:SalesPolicy -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -AttachmentsEnabled:$true -MaxInactivityTimeDeviceLock:15:00 -IsDefault:$false
 ```
 
 This example sets several policy settings for the Mobile Device mailbox policy SalesPolicy.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ActiveSyncMailboxPolicy -Identity:Management -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -AllowCamera:$true -AllowWiFi:$false -AllowStorageCard:$true -AllowPOPIMAPEmail:$false
 ```
 
 This example sets several policy settings for the Mobile Device mailbox policy Management.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Set-ActiveSyncMailboxPolicy -Identity:Default -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:ThreeDays -AllowWiFi:$false -AllowStorageCard:$true -AllowPOPIMAPEmail:$false -IsDefault:$true -AllowTextMessaging:$true -Confirm:$true
 ```

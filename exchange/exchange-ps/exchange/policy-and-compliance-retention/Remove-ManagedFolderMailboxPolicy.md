@@ -5,7 +5,7 @@ title: Remove-ManagedFolderMailboxPolicy
 schema: 2.0.0
 ---
 
-# remove-ManagedFolderMailboxPolicy
+# Remove-ManagedFolderMailboxPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-remove-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Remove-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ManagedFolderMailboxPolicy -Identity "My Managed Folder Mailbox Policy"
 ```
@@ -139,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/439967b5-7297-4d39-a962-0e9d0eda16c4.aspx)
-

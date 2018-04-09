@@ -54,7 +54,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2015" -EndDate "12/31/2015" -Recipients "@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
 ```
@@ -73,21 +73,21 @@ TargetMailbox: This parameter specifies that search results should be copied to 
 
 StatusMailRecipeints: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-MailboxSearch -Name "Hold-ProjectX" -SourceMailboxes DG-Finance -InPlaceHoldEnabled $true
 ```
 
 This example creates an In-Place Hold Hold-ProjectX and places all members of the distribution group DG-Finance on hold. Because the search doesn't specify the SearchQuery and ItemHoldPeriod parameters, all messages in mailboxes returned are placed on indefinite In-Place Hold.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-MailboxSearch -Name "Hold-tailspintoys" -SourceMailboxes DG-Research -SearchQuery "'Patent' AND 'Project tailspintoys'" -InPlaceHoldEnabled $true
 ```
 
 This example creates an In-Place Hold Hold-tailspintoys and places all members of the distribution group DG-Research on hold. Because the search specifies the SearchQuery parameter, only messages that match the search query are placed on indefinite In-Place Hold.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 New-MailboxSearch -Name "Hold for all PFs" -AllPublicFolderSources $true -InPlaceHoldEnabled $true
 ```

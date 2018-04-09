@@ -38,14 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-EdgeSynchronization -MaxReportSize 500 -MonitoringContext $true
 ```
 
 This example diagnoses the synchronization status of subscribed Edge Transport servers, outputs only the first 500 data inconsistencies, and generates events and performance counters for use by System Center Operations Manager 2007.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-EdgeSynchronization -VerifyRecipient kate@contoso.com
 ```

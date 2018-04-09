@@ -33,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OabVirtualDirectory
 ```
 
 This example returns all OAB virtual directory web distribution points.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-OabVirtualDirectory -Server MBX-01-007
 ```
 
 This example returns all OAB virtual directory web distribution points on the server named MBX-01-007.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-OabVirtualDirectory -Identity "MBX-01-007\OAB*" | Format-List
 ```

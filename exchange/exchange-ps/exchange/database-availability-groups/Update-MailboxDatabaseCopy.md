@@ -63,35 +63,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-MailboxDatabaseCopy -Identity DB1\MBX1
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1 using MBX2 as the source Mailbox server for the seed.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1 without seeding the content index catalog.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
 ```
 
 This example seeds the content index catalog for the copy of the database DB1 on the Mailbox server MBX1 without seeding the database file. The content index catalog seeding occurs over the MAPI network.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Update-MailboxDatabaseCopy -Server MBX1
 ```

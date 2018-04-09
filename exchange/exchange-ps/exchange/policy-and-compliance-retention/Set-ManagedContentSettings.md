@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ManagedContentSettings -Identity MyManagedContentSettings -AddressForJournaling MySmtpAddress@contoso.com
 ```
@@ -317,4 +317,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/25a7d9d2-97f1-41aa-b24e-0c95cb0aded1.aspx)
-

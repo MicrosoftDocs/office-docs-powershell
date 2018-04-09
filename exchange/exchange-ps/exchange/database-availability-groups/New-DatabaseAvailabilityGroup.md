@@ -50,21 +50,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-DatabaseAvailabilityGroup -Name DAG1 -WitnessServer SERVER1 -WitnessDirectory C:\DAG1
 ```
 
 This example creates a DAG named DAG1 that's configured to use a witness server of SERVER1, and a local directory of C:\\DAG1. This example requires Windows Server 2012 R2 or later.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-DatabaseAvailabilityGroup -Name DAG2 -WitnessServer SERVER2 -DatabaseAvailabilityGroupIpAddresses ([])::Any
 ```
 
 This example creates the DAG named DAG2 with a witness server named SERVER2. The system automatically selects an Exchange server in the same site as the DAG to use as the witness server. DAG2 is configured to use DHCP for the DAG's IP address.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-DatabaseAvailabilityGroup -Name DAG3 -WitnessServer SERVER1 -WitnessDirectory C:\DAG3 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8,192.168.0.8
 ```

@@ -32,14 +32,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Start-ManagedFolderAssistant -Identity "Chris"
 ```
 
 This example processes the mailbox for a user with the alias Chris.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-Mailbox -Anr Chr -DomainController DC01 | Start-ManagedFolderAssistant
 ```

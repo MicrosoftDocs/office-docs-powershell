@@ -35,21 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-EcpVirtualDirectory -Server Server01
 ```
 
 This example returns a summary list of all Exchange Control Panel virtual directories on the server named Server01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-EcpVirtualDirectory -Identity "Server01\ecp*" | Format-List
 ```
 
 This example returns detailed information for the Exchange Control Panel virtual directory named "ecp (Default Web Site)" on the server named Server01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-EcpVirtualDirectory
 ```

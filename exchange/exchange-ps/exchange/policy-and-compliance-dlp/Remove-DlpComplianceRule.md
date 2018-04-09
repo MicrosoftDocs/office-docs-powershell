@@ -26,7 +26,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-DlpComplianceRule -Identity "PII SS# Custom"
 ```
@@ -129,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1e09f210-e067-4455-a0ed-852bb4a87dec.aspx)
-
