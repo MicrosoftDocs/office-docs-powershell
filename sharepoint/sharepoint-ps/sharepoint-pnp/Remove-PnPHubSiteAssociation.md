@@ -3,7 +3,7 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Disconnect-PnPHubSite
+# Remove-PnPHubSiteAssociation
 
 ## SYNOPSIS
 Disconnects a site from a hubsite.
@@ -11,8 +11,8 @@ Disconnects a site from a hubsite.
 ## SYNTAX 
 
 ```powershell
-Disconnect-PnPHubSite -Site <SitePipeBind>
-                      [-Connection <SPOnlineConnection>]
+Remove-PnPHubSiteAssociation -Site <SitePipeBind>
+                             [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
@@ -22,7 +22,7 @@ Disconnects an site from a hubsite
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Disconnect-PnPHubSite -Site https://tenant.sharepoint.com/sites/mysite -HubSite https://tenant.sharepoint.com/sites/hubsite
+Remove-PnPHubSiteAssociation -Site https://tenant.sharepoint.com/sites/mysite -HubSite https://tenant.sharepoint.com/sites/hubsite
 ```
 
 This example adds the specified site to the hubsite.

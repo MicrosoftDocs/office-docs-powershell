@@ -61,6 +61,12 @@ To use the library you first need to connect to your tenant:
 Connect-PnPOnline –Url https://yoursite.sharepoint.com –Credentials (Get-Credential)
 ```
 
+Notice: if you use multi-factor authentication on your tenant, use 
+
+```powershell
+Connect-PnPOnline -Url https://yoursite.sharepoint.com -UseWebLogin
+```
+
 To view all cmdlets, enter
 
 ```powershell
@@ -236,11 +242,15 @@ Cmdlet|Description|Platform
 **[Rename&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Rename-PnPFolder.md)** |Renames a folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Resolve&#8209;PnPFolder](../../sharepoint-ps/sharepoint-pnp/Resolve-PnPFolder.md)** |Returns a folder from a given site relative path, and will create it if it does not exist.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPFolderItem](../../sharepoint-ps/sharepoint-pnp/Get-PnPFolderItem.md)** |List content in folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Copy&#8209;PnPItemProxy](../../sharepoint-ps/sharepoint-pnp/Copy-PnPItemProxy.md)** |Proxy cmdlet for using Copy-Item between SharePoint provider and FileSystem provider|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Move&#8209;PnPItemProxy](../../sharepoint-ps/sharepoint-pnp/Move-PnPItemProxy.md)** |Proxy cmdlet for using Move-Item between SharePoint provider and FileSystem provider|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 
 
 ### Information Management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
+**[Get&#8209;PnPListInformationRightsManagement](../../sharepoint-ps/sharepoint-pnp/Get-PnPListInformationRightsManagement.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Set&#8209;PnPListInformationRightsManagement](../../sharepoint-ps/sharepoint-pnp/Set-PnPListInformationRightsManagement.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPSiteClosure](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteClosure.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPSiteClosure](../../sharepoint-ps/sharepoint-pnp/Set-PnPSiteClosure.md)** |Opens or closes a site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPSitePolicy](../../sharepoint-ps/sharepoint-pnp/Set-PnPSitePolicy.md)** |Sets a site policy|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
@@ -327,12 +337,15 @@ Cmdlet|Description|Platform
 ### Records Management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
+**[Get&#8209;PnPInPlaceRecordsManagement](../../sharepoint-ps/sharepoint-pnp/Get-PnPInPlaceRecordsManagement.md)** |Returns if the place records management feature is enabled.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPInPlaceRecordsManagement](../../sharepoint-ps/sharepoint-pnp/Set-PnPInPlaceRecordsManagement.md)** |Activates or deactivates in the place records management feature.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Disable&#8209;PnPInPlaceRecordsManagementForSite](../../sharepoint-ps/sharepoint-pnp/Disable-PnPInPlaceRecordsManagementForSite.md)** |Disables in place records management for a site.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Enable&#8209;PnPInPlaceRecordsManagementForSite](../../sharepoint-ps/sharepoint-pnp/Enable-PnPInPlaceRecordsManagementForSite.md)** |Enables in place records management for a site.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Clear&#8209;PnPListItemAsRecord](../../sharepoint-ps/sharepoint-pnp/Clear-PnPListItemAsRecord.md)** |Undeclares a list item as a record|SharePoint Online
 **[Set&#8209;PnPListItemAsRecord](../../sharepoint-ps/sharepoint-pnp/Set-PnPListItemAsRecord.md)** |Declares a list item as a record|SharePoint Online
 **[Test&#8209;PnPListItemIsRecord](../../sharepoint-ps/sharepoint-pnp/Test-PnPListItemIsRecord.md)** |Checks if a list item is a record|SharePoint Online
+**[Get&#8209;PnPListRecordDeclaration](../../sharepoint-ps/sharepoint-pnp/Get-PnPListRecordDeclaration.md)** |Returns the manual record declaration settings for a list|SharePoint Online
+**[Set&#8209;PnPListRecordDeclaration](../../sharepoint-ps/sharepoint-pnp/Set-PnPListRecordDeclaration.md)** |The RecordDeclaration parameter supports 4 values:  AlwaysAllowManualDeclaration NeverAllowManualDeclaration UseSiteCollectionDefaults |SharePoint Online
 
 
 ### Search 
@@ -408,12 +421,14 @@ Cmdlet|Description|Platform
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#8209;PnPAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAccessToken.md)** |Returns the current OAuth Access token|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Connect&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Connect-PnPHubSite.md)** |Connects a site to a hubsite.|SharePoint Online
-**[Disconnect&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Disconnect-PnPHubSite.md)** |Disconnects a site from a hubsite.|SharePoint Online
+**[Get&#8209;PnPHideDefaultThemes](../../sharepoint-ps/sharepoint-pnp/Get-PnPHideDefaultThemes.md)** |Returns if the default / OOTB themes should be visible to users or not.|SharePoint Online
+**[Set&#8209;PnPHideDefaultThemes](../../sharepoint-ps/sharepoint-pnp/Set-PnPHideDefaultThemes.md)** |Defines if the default / OOTB themes should be visible to users or not.|SharePoint Online
 **[Get&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPHubSite.md)** |Retrieve all or a specific hubsite.|SharePoint Online
 **[Register&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Register-PnPHubSite.md)** |Registers a site as a hubsite|SharePoint Online
 **[Set&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPHubSite.md)** |Sets hubsite properties|SharePoint Online
 **[Unregister&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Unregister-PnPHubSite.md)** |Unregisters a site as a hubsite|SharePoint Online
+**[Add&#8209;PnPHubSiteAssociation](../../sharepoint-ps/sharepoint-pnp/Add-PnPHubSiteAssociation.md)** |Connects a site to a hubsite.|SharePoint Online
+**[Remove&#8209;PnPHubSiteAssociation](../../sharepoint-ps/sharepoint-pnp/Remove-PnPHubSiteAssociation.md)** |Disconnects a site from a hubsite.|SharePoint Online
 **[Grant&#8209;PnPHubSiteRights](../../sharepoint-ps/sharepoint-pnp/Grant-PnPHubSiteRights.md)** |Retrieve all or a specific hubsite.|SharePoint Online
 **[Add&#8209;PnPOffice365GroupToSite](../../sharepoint-ps/sharepoint-pnp/Add-PnPOffice365GroupToSite.md)** |Groupifies a classic team site by creating an Office 365 group for it and connecting the site with the newly created group|SharePoint Online
 **[New&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/New-PnPSite.md)** |BETA: This cmdlet is using early release APIs. Notice that functionality and parameters can change. Creates a new site collection|SharePoint Online
@@ -435,7 +450,7 @@ Cmdlet|Description|Platform
 **[Remove&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Remove-PnPStorageEntity.md)** |Remove Storage Entities / Farm Properties.|SharePoint Online
 **[Set&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Set-PnPStorageEntity.md)** |Set Storage Entities / Farm Properties.|SharePoint Online
 **[Get&#8209;PnPTenant](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenant.md)** |Returns organization-level site collection properties|SharePoint Online
-**[Set&#8209;PnPTenant](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenant.md)** |Returns organization-level site collection properties|SharePoint Online
+**[Set&#8209;PnPTenant](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenant.md)** |Sets organization-level site collection properties|SharePoint Online
 **[Get&#8209;PnPTenantAppCatalogUrl](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantAppCatalogUrl.md)** |Retrieves the url of the tenant scoped app catalog.|SharePoint Online
 **[Get&#8209;PnPTenantCdnEnabled](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantCdnEnabled.md)** |Retrieves if the Office 365 Content Delivery Network has been enabled.|SharePoint Online
 **[Set&#8209;PnPTenantCdnEnabled](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenantCdnEnabled.md)** |Enables or disabled the public or private Office 365 Content Delivery Network (CDN).|SharePoint Online
@@ -478,6 +493,8 @@ Cmdlet|Description|Platform
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[New&#8209;PnPPersonalSite](../../sharepoint-ps/sharepoint-pnp/New-PnPPersonalSite.md)** |Office365 only: Creates a personal / OneDrive For Business site|SharePoint Online
+**[New&#8209;PnPUPABulkImportJob](../../sharepoint-ps/sharepoint-pnp/New-PnPUPABulkImportJob.md)** |Submit up a new user profile bulk import job.|SharePoint Online
+**[Get&#8209;PnPUPABulkImportStatus](../../sharepoint-ps/sharepoint-pnp/Get-PnPUPABulkImportStatus.md)** |Get user profile bulk import status.|SharePoint Online
 **[Get&#8209;PnPUserProfileProperty](../../sharepoint-ps/sharepoint-pnp/Get-PnPUserProfileProperty.md)** |You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.  |SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPUserProfileProperty](../../sharepoint-ps/sharepoint-pnp/Set-PnPUserProfileProperty.md)** |Office365 only: Uses the tenant API to retrieve site information.  You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this command.  |SharePoint Online
 
