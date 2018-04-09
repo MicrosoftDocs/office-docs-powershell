@@ -24,15 +24,18 @@ When you contribute your work will go directly into the Microsoft Office product
 4. Your browser will then open the file in an edit window. We want to add a link so we scroll down to the Related Links section and add the link in the correct format.
 ![Image of Edit button on Github](images/add_related_link.png)
 
-**Note** that since you are likely not a maintainer of the Git repository GitHub will automatically 'Fork' the project into your personal GitHub account. A fork is just an exact copy of the repository in your own account so that you have total access to make edits. You are now 'editing' a copy of the project in your own GitHub account. You can always find it again by looking at your GitHub Repositories in your GitHub Profile (drop-down from your name in top right).
+**Note** Since you are likely not a maintainer of the Git repository GitHub will automatically 'Fork' the project into your personal GitHub account. A fork is just an exact copy of the repository in your own account so that you have total access to make edits. You are now 'editing' a copy of the project in your own GitHub account. You can always find it again by looking at your GitHub Repositories in your GitHub Profile (drop-down from your name in top right).
 ![Image of Automatic Fork message on Github](images/auto_fork.png)
 
 5. You can click the Preview changes link to see what the changes will look like.
 
    **IMPORTANT** The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
    Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
-6. Once you are satisified with your work you submit a Pull Request which asks the maintainer of the main repository (known as Upstream) to pull your edits up. To submit a Pull Request you navigate back to the main repository, https://github.com/microsoftdocs/office-docs-powershell, and click the '''New pull request''' button. You will then request your edits to be pulled up into the main repo. Make sure to click the **compare across forks** link since you are request a pull from the edits you made that reside in your own personal repsitory. To learn more about pull requests and forking, see https://help.github.com/articles/creating-a-pull-request-from-a-fork/.
 
+6. Once you are satisified with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title title and other description informaton and then click **Propose file change**.
+![Image of Propose file change on Github](images/propose_file_change.png)
+
+7. On the next screen, click **Create pull request**.
 
 Looking for more in-depth content? Check out the following:
 * [Frequently Asked Questions (FAQ)](repo_docs/FAQ.md)
