@@ -60,7 +60,8 @@ Accept pipeline input: False
 ```
 
 ### -EnableVersioning
-Switch parameter if versioning should be enabled
+Switch parameter if minor versioning should be enabled.
+If not enabled, the default value will be used, meaning major versioning will be enabled either way.
 
 ```yaml
 Type: SwitchParameter
