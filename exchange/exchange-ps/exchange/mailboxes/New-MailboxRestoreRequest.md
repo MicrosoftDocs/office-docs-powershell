@@ -227,11 +227,11 @@ Accept wildcard characters: False
 ### -AssociatedMessagesCopyOption
 The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages are copied. This parameter accepts the following values:
 
-- DoNotCopy: The associated messages aren't copied.
+- DoNotCopy: The associated messages aren't copied. This is the default option.
 
 - MapByMessageClass: This option finds the corresponding associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
 
-- Copy: This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default option.
+- Copy: This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated.
 
 Content filtering doesn't apply to associated messages.
 
