@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPProfileServiceApplication
 
 ## SYNOPSIS
-Adds a User Profile Service application to a farm.
+Adds a User Profile Service Application to a farm.
 
 
 ## SYNTAX
@@ -38,6 +38,7 @@ New-SPProfileServiceApplication -ApplicationPool <SPIisWebServiceApplicationPool
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
+
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
@@ -50,8 +51,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$appPool = New-SPIisWebServiceApplicationPool -Name HostedAppPool -Account (Get-SPManagedAccount "contoso\AppPoolAccount")
-          New-SPProfileServiceApplication -Name PartitionedUserProfileApplication -PartitionMode -ApplicationPool $appPool
+PS C:\>New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
 ```
 
 This example creates a new User Profile Service application.
@@ -460,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeferUpgradeActions
-{{Fill DeferUpgradeActions Description}}
+Specifies if the upgrade process is to be deferred and manually completed.
 
 ```yaml
 Type: SwitchParameter

@@ -30,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
-New-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Language en-us -Type QuerySuggestionBlockList -Name secret
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>New-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $ssa -Language en-us -Type QuerySuggestionBlockList -Name secret
 ```
 
 This example adds a new entry to the QuerySuggestionBlockList for the en-us language.

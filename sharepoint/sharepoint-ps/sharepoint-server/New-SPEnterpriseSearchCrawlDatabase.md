@@ -29,9 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
-New-SPEnterpriseSearchCrawlDatabase -SearchApplication $searchApp 
--DatabaseName newCrawlDB
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>New-SPEnterpriseSearchCrawlDatabase -SearchApplication $ssa -DatabaseName newCrawlDB
 ```
 
 This example creates a new crawl database named newCrawlDB for the mySearchServiceApp search service application.

@@ -23,6 +23,9 @@ Use this cmdlet to register an existing site collection as a hub site.
 > [!IMPORTANT]
 > This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
+> [!IMPORTANT]
+> A maximum of 50 hub sites may be created per tenant.
+
 ## EXAMPLES
 
 ### Example 1
@@ -51,13 +54,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
 ## NOTES
 
 If the site doesn’t exist, this cmdlet returns a “File not found” error.
@@ -65,5 +61,3 @@ If the site doesn’t exist, this cmdlet returns a “File not found” error.
 If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
 
 If the site is already associated with another hub site, this cmdlet returns a "This site is currently associated with a HubSite" error. You'll need to run the [Remove-SPOHubSiteAssociation](Remove-SPOHubSiteAssociation.md) cmdlet first before you can make the site a hub site.
-
-## RELATED LINKS

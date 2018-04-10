@@ -8,7 +8,7 @@ schema: 2.0.0
 # Dismount-SPSiteMapDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use.
 
 ## SYNTAX
 
@@ -18,21 +18,21 @@ Dismount-SPSiteMapDatabase [-DatabaseId] <Guid> [-AssignmentCollection <SPAssign
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use.
 
 ## EXAMPLES
 
-### Example 1 
+### ------------EXAMPLE------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>
 ```
 
-{{ Add example description here }}
+Do not use.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseId
-{{Fill DatabaseId Description}}
+Do not use.
 
 ```yaml
 Type: Guid
@@ -80,8 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Do not use.
 
 ```yaml
 Type: SwitchParameter

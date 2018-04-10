@@ -32,10 +32,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
+
 PS C:\>$fs = New-SPSiteSubscriptionFeaturePack
+
 ```
 
-This example creates a new SharePoint Feature set and stores it in a variable.
+This example creates a new SharePoint Feature Pack and stores it in a variable.
 
 
 ## PARAMETERS

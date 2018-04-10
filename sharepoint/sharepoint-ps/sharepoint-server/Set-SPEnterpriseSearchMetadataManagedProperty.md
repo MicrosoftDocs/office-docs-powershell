@@ -35,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication
-Set-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity UserName -EnabledForScoping $true
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Set-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName -EnabledForScoping $true
 ```
 
 This example sets the EnabledForScoping property to true for the managed property named UserName in the default search service application.
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeInAlertSignature
-{{Fill IncludeInAlertSignature Description}}
+Specifies whether this managed property should be included in alert signature.
 
 ```yaml
 Type: Boolean
@@ -360,7 +360,7 @@ Accept wildcard characters: False
 ```
 
 ### -SafeForAnonymous
-{{Fill SafeForAnonymous Description}}
+Specifies whether it is acceptable to display the contents of the property in search results for anonymous searches.
 
 ```yaml
 Type: Boolean

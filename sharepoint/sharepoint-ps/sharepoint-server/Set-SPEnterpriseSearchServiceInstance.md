@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPEnterpriseSearchServiceInstance
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the properties of a search service instance.
 
 
 ## SYNTAX
@@ -20,23 +20,26 @@ Set-SPEnterpriseSearchServiceInstance [-Identity] <SearchServiceInstancePipeBind
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet updates properties of the search service instance for a farm.
+
+    For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$si = Get-SPEnterpriseSearchServiceInstance -Local
+PS C:\>Set-SPEnterpriseSearchServiceInstance -Identity $si -DefaultIndexLocation F:\SearchIndex
 ```
-
-{{ Add example description here }}
-
+Sets the default index location to F:\SearchIndex.
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the search service instance to update.
+
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a query server (for example, MyQueryServer); or an instance of a valid SearchServiceInstance object.
 
 
 ```yaml
@@ -53,7 +56,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 ```yaml
@@ -87,7 +92,16 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultIndexLocation
-{{Fill DefaultIndexLocation Description}}
+> [!NOTE]
+> On SharePoint Server 2013 and SharePoint Server 2016 this parameter is obsolete and has no function. You should not use this parameter.
+
+Specifies the default path to use for creating an index of content.
+
+The type must be a valid path in either of the following forms:
+
+- C:\folder_name
+
+- \\\\server_name\folder_name
 
 
 ```yaml

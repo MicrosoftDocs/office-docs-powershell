@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPDistributedCacheClientSetting
 schema: 2.0.0
 ---
@@ -30,11 +30,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$settings = Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
-
-C:\PS>$settings.MaxConnectionsToServer = 10
-
-C:\PS>Set-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache -DistributedCacheClientSettings $settings
+PS C:\>$settings = Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
+PS C:\>$settings.MaxConnectionsToServer = 10
+PS C:\>Set-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache -DistributedCacheClientSettings $settings
 ```
 
 This example updates the MaxConnectionsToServer to 10 for DistributedLogonTokenCache.
@@ -72,7 +70,7 @@ The valid values are the following:
 Type: SPDistributedCacheContainerType
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -89,7 +87,7 @@ It is recommended to use the default settings.
 Type: SPDistributedCacheClientSettings
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -111,7 +109,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

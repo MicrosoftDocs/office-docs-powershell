@@ -13,6 +13,7 @@ Returns all or a specific navigation node
 ### All nodes by location
 ```powershell
 Get-PnPNavigationNode [-Location <NavigationType>]
+                      [-Tree [<SwitchParameter>]]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
 ```
@@ -20,6 +21,7 @@ Get-PnPNavigationNode [-Location <NavigationType>]
 ### A single node by ID
 ```powershell
 Get-PnPNavigationNode [-Id <Int>]
+                      [-Tree [<SwitchParameter>]]
                       [-Web <WebPipeBind>]
                       [-Connection <SPOnlineConnection>]
 ```
@@ -75,6 +77,20 @@ The location of the nodes to retrieve. Either TopNavigationBar, QuickLaunch
 ```yaml
 Type: NavigationType
 Parameter Sets: All nodes by location
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Tree
+Show a tree view of all navigation nodes
+
+Only applicable to: SharePoint Online, SharePoint Server 2013
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 
 Required: False
 Position: Named

@@ -177,7 +177,7 @@ Accept pipeline input: False
 ### -Formula
 Specify the formula. Only available if the field type is Calculated
 
-Only applicable to: SharePoint Online
+Only applicable to: SharePoint Online, SharePoint Server 2013
 
 ```yaml
 Type: String

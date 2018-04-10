@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Creates a new Business Data Connectivity service application proxy in the farm.
 
-
-
 ## SYNTAX
 
 ### PipeBind
@@ -42,7 +40,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>New-SPBusinessDataCatalogServiceApplicationProxy -Name "ContosoServiceAppProxy" -ServiceApplication $serviceApplication
+PS C:\>$sa = New-SPBusinessDataCatalogServiceApplication -ApplicationPool "SharePoint Web Services Default" -DatabaseName "ContosoBdcDB" -DatabaseServer "CONTOSO\SharePoint" -Name "ContosoServiceApp"
+PS C:\>New-SPBusinessDataCatalogServiceApplicationProxy -Name "ContosoServiceAppProxy" -ServiceApplication $sa
 ```
 
 This example creates a new Business Data Connectivity service application proxy with the name ContosoServiceAppProxy for the given service application.
@@ -172,7 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionMode
-{{Fill PartitionMode Description}}
+Specifies if partition mode is to be turned on.
+
+The valid values are True and False. The default value is False.
 
 ```yaml
 Type: SwitchParameter

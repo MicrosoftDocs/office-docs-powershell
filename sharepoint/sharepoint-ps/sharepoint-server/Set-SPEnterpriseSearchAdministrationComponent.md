@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPEnterpriseSearchAdministrationComponent
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets properties of an administration component for a search service application.
 
 
 ## SYNTAX
@@ -22,23 +22,29 @@ Set-SPEnterpriseSearchAdministrationComponent [[-Identity] <AdminComponentPipeBi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Set-SPEnterpriseSearchAdministrationComponent cmdlet updates properties of an AdministrationComponent object for a search service application.
+
+For permissions and the most current information about search cmdlets, see the online documentation, [http://go.microsoft.com/fwlink/?LinkId=163185](http://go.microsoft.com/fwlink/?LinkId=163185).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+ PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication "Search Service Application" 
+ PS C:\>$admin = Get-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
+ PS C:\>$admin | Set-SPEnterpriseSearchAdministrationComponent -SearchServiceInstance SP02 -Force
 ```
 
-{{ Add example description here }}
+This example moves the administration component to a different server.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -70,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Specifies that the admin component must be moved to the new search service instance.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the administration component to update.
+
+The type must be a valid name (GUID), such as 12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid AdminComponent object.
 
 ```yaml
 Type: AdminComponentPipeBind
@@ -102,7 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-{{Fill SearchApplication Description}}
+Specifies the search application that contains the administration component.
+
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
@@ -118,7 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchServiceInstance
-{{Fill SearchServiceInstance Description}}
+Specifies the search service instance to host the administration component.
+
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a search server (for example, MyQueryServer); or an instance of a valid SearchServiceInstance object.
 
 ```yaml
 Type: SearchServiceInstancePipeBind
@@ -134,7 +146,13 @@ Accept wildcard characters: False
 ```
 
 ### -StoragePath
-{{Fill StoragePath Description}}
+Specifies the path for storing data for the administration component. The path must contain a valid file share and use valid registry characters.
+
+The type must be a valid path in either of the following forms:
+
+- C:\folder_name
+
+- \\\\server_name\folder_name
 
 ```yaml
 Type: String
