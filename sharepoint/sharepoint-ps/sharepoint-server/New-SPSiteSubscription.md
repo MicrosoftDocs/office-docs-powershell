@@ -32,7 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
+
 PS C:\>$subscription = New-SPSiteSubscription
+
 ```
 
 This example creates a new site subscription.

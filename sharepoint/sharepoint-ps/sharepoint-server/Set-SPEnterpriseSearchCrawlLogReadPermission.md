@@ -32,10 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-$crawlLogPermission = Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant "00000000-0000-0000-0000-000000000001"
-
-Set-SPEnterpriseSearchCrawlLogReadPermission -Identity $crawlLogPermission -SearchApplication $ssa -UserNames "user1;user2" -Tenant "00000000-0000-0000-0000-000000000001"
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$crawlLogPermission = Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant  "00000000-0000-0000-0000-000000000001"
+PS C:\>Set-SPEnterpriseSearchCrawlLogReadPermission -Identity $crawlLogPermission -SearchApplication $ssa -UserNames "user1;user2" -Tenant "00000000-0000-0000-0000-000000000001"
 ```
 
 This example first defines $crawlLogPermission, which is the list of users who have permission to view the crawl log information from the tenant with id "00000000-0000-0000-0000-000000000001" on the search application referenced by $ssa.

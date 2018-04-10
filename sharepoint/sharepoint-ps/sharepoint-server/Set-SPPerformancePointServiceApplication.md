@@ -40,7 +40,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE----------------------
 ```
-C:\PS>Set-SPPerformancePointServiceApplication -Identity PPSApp_01 -DataSourceQueryTimeoutSeconds 5000
+PS C:\>$sa = Get-SPPerformancePointServiceApplication
+PS C:\>Set-SPPerformancePointServiceApplication -Identity $sa -DataSourceQueryTimeoutSeconds 5000
 ```
 
 This example sets the Data Source Query Timeout setting to a value of 5000.
@@ -644,7 +645,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnalyticResultCacheMinimumHitCount
-{{Fill AnalyticResultCacheMinimumHitCount Description}}
+The minimum number of times an analytic report needs to be accessed before caching starts happening. The default value is 0.
 
 ```yaml
 Type: Int32
@@ -660,7 +661,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseUseWindowsAuthentication
-{{Fill DatabaseUseWindowsAuthentication Description}}
+When this value is set to true, Performance Point Services disables from using SQL authentication against all data sources.
+
+The type must be one of the following: $True, $False. The default value is $False.
 
 ```yaml
 Type: Boolean
@@ -676,13 +679,13 @@ Accept wildcard characters: False
 ```
 
 ### -DataSourceUnattendedServiceAccountTargetApplication
-{{Fill DataSourceUnattendedServiceAccountTargetApplication Description}}
+The name of the Secure Store Application that will be used by default to access data sources.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -692,13 +695,13 @@ Accept wildcard characters: False
 ```
 
 ### -FilterSearchResultsMax
-{{Fill FilterSearchResultsMax Description}}
+The maximum number of items to return on a Dashboard when viewing a filter.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -708,13 +711,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseEffectiveUserName
-{{Fill UseEffectiveUserName Description}}
+Enables the use of the Analysis Services Effective User Name feature.
+
+The type must be one of the following: True, False. The default value is False.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

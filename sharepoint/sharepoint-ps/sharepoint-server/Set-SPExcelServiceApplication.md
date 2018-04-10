@@ -52,18 +52,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1--------------
 ```
-C:\PS>Set-SPExcelServiceApplication ExcelServiceTestApplication -sessionsperusermax 10
+PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+PS C:\>Set-SPExcelServiceApplication -Identity $sa -SessionsPerUserMax 10
 ```
 
-This example sets the Excel Services Application Web service application named ExcelServiceTestApplication to enable each user to open no more than 10 sessions at one time on a back-end application server that runs Excel Services Application.
+This example sets the Excel Services Application to enable each user to open no more than 10 sessions at one time on a back-end application server that runs Excel Services Application.
 
 
 ### --------------EXAMPLE 2--------------
 ```
-C:\PS>Get-SPExcelServiceApplication | where{ $_.privatebytesmax -ne -1 } | Set-SPExcelServiceApplication -PrivateBytesMax -1
+PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+PS C:\>Set-SPExcelServiceApplication -Identity $sa -PrivateBytesMax -1
 ```
-
-This example displays every Excel Services Application application that runs in the farm that is using a user-specified value for the maximum number of private bytes of memory on the computer and then sets that value to -1, which indicates that Excel Services Application will consume 50 percent of the available memory resources.
+This example sets the maximum number of private bytes of memory on the computer to a value of -1, which indicates that Excel Services Application will consume 50 percent of the available memory resources.
 
 
 ## PARAMETERS
@@ -467,13 +468,13 @@ Accept wildcard characters: False
 ```
 
 ### -UnattendedServiceAccount
-{{Fill UnattendedServiceAccount Description}}
+The Unattended Service Account is a single account that all workbooks can use to refresh data. This account is required to refresh data when workbook connections specify "Use the Unattended Service Account" without using Windows Credentials. 
 
 ```yaml
 Type: PSCredential
 Parameter Sets: NewTargetApplicationParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -483,13 +484,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseEffectiveUserName
-{{Fill UseEffectiveUserName Description}}
+The UseEffectiveUserName  property is an alternative to Windows delegation for allowing users to securely access Analysis Services data. 
+
+The setting will only impact external data connections based on Analysis Services workbook connections with an authentication setting of "Use the authenticated user's account". 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -505,7 +508,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named

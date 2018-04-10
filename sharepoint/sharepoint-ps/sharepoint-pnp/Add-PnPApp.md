@@ -13,6 +13,7 @@ Add/uploads an available app to the app catalog
 ### Add only
 ```powershell
 Add-PnPApp -Path <String>
+           [-Scope <AppCatalogScope>]
            [-Overwrite [<SwitchParameter>]]
            [-Connection <SPOnlineConnection>]
 ```
@@ -22,6 +23,7 @@ Add-PnPApp -Path <String>
 Add-PnPApp -Path <String>
            -Publish [<SwitchParameter>]
            [-SkipFeatureDeployment [<SwitchParameter>]]
+           [-Scope <AppCatalogScope>]
            [-Overwrite [<SwitchParameter>]]
            [-Connection <SPOnlineConnection>]
 ```
@@ -41,6 +43,13 @@ Add-PnPApp -Path ./myapp.sppkg -Publish
 ```
 
 This will upload the specified app package to the app catalog and deploy/trust it at the same time.
+
+### ------------------EXAMPLE 3------------------
+```powershell
+Add-PnPApp -Path ./myapp.sppkg -Scope Site -Publish
+```
+
+This will upload the specified app package to the site collection app catalog and deploy/trust it at the same time.
 
 ## PARAMETERS
 
@@ -76,6 +85,18 @@ Type: SwitchParameter
 Parameter Sets: Add and Publish
 
 Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -Scope
+Defines which app catalog to use. Defaults to Tenant
+
+```yaml
+Type: AppCatalogScope
+Parameter Sets: (All)
+
+Required: False
 Position: Named
 Accept pipeline input: False
 ```

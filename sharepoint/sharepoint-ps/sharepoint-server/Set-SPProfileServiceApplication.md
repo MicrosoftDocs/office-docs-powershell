@@ -51,13 +51,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE---------------------
 ```
-C:\PS>$ap = Get-SPServiceApplication -Name PartitionedUserProfileApplication
-
-          C:\PS>#Change the name of the application
-          Set-SPProfileServiceApplication -Identity $ap -Name PartitionedUserProfileApplication2
+PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
+PS C:\>Set-SPProfileServiceApplication -Identity $sa -PurgeNonImportedObjects:$true
 ```
 
-This example sets profile information by using the specified identity.
+This example purges objects from the Profile database which are not in scope of the User Profile import.
 
 
 ## PARAMETERS
@@ -393,7 +391,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileDBFailoverServer
-{{Fill ProfileDBFailoverServer Description}}
+Specifies the name of the failover SQL server for Profile database. It is used to build the connection string for the Profile database.
 
 ```yaml
 Type: String

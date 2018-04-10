@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchMetadataManagedProperty -Name AboutMeUpdate -SearchApplication $searchapp -Type 4
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>New-SPEnterpriseSearchMetadataManagedProperty -Name AboutMeUpdate -SearchApplication $ssa -Type 4
 ```
 
 This example creates a new managed property named AboutMeUpdate in the default search service application and sets it type to DateTime.

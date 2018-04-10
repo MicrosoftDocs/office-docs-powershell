@@ -30,23 +30,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-SPStateServiceApplication -name "State Service Application 1" | New-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost"
+PS C:\>New-SPStateServiceDatabase -Name 'State Service'
 ```
 
-This example creates a new state service database by using Windows authentication and associates it with the provided service application.
-
-
-### --------------EXAMPLE 2-----------------
-```
-C:\PS>$cred = Get-Credential
-
-C:\PS>Get-SPStateServiceApplication -name "State Service Application 1" | New-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost" -DatabaseCredentials $cred
-```
-
-This example creates a new state service database, a new state service application associated with the database and a new state service application proxy associated with the state service application proxy.
-
-This example configures all the objects required to have State Service operational on a farm.
-
+This example creates a new state service database.
 
 ## PARAMETERS
 

@@ -43,9 +43,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-C:\PS>$passphrase = ConvertTo-SecureString -asPlainText -Force
-
-C:\PS>Set-SPPassPhrase -PassPhrase $passphrase -Confirm
+PS C:\>$passphrase = ConvertTo-SecureString -asPlainText -Force
+PS C:\>Set-SPPassPhrase -PassPhrase $passphrase -Confirm
 ```
 
 This example queries for a string to use as a passphrase and sets the farm passphrase to a new value.
@@ -127,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfirmPassPhrase
-{{ Fill ConfirmPassPhrase Description }}
+Passphrase is typed a second time to confirm that it matches the first entry.
 
 ```yaml
 Type: SecureString

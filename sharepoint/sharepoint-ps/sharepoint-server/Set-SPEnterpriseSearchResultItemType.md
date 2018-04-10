@@ -45,25 +45,20 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$web = Get-SPWeb "UrlOfTheSite"
-$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
-$searchapp = Get-SPEnterpriseSearchServiceApplication
-$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $searchapp
-$resultType.BuiltIn
-
-$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
-$rule.AddValue( "0x010063C2F478ACC511DFB869B5BFDFD720851252" )
-
-$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
-$ruleCollection.Add( $rule )
-
-$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
-
-$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-
-Set-SPEnterpriseSearchResultItemType 
+PS C:\>$web = Get-SPWeb http://webUrl
+PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
+PS C:\>$resultType.BuiltIn
+PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
+PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+PS C:\>$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
+PS C:\>$ruleCollection.Add($rule)
+PS C:\>$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
+PS C:\>$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
+PS C:\>Set-SPEnterpriseSearchResultItemType 
 -Identity $resultType `
--SearchApplication $searchapp `
+-SearchApplication $ssa `
 -Name "CustomResultType" `
 -Rules $ruleCollection `
 -RulePriority 1 

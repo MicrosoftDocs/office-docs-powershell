@@ -1,4 +1,4 @@
----
+ ---
 external help file: 
 applicable: SharePoint Online
 title: Add-SPOHubSiteAssociation
@@ -71,17 +71,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
 ## NOTES
 
 If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
 If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
-
-## RELATED LINKS

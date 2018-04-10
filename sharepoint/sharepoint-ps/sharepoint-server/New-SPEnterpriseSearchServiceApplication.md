@@ -34,14 +34,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$appPool = New-SPServiceApplicationPool -name "SsaAppPool" -account contoso\adminUser
-$ssa = New-SPEnterpriseSearchServiceApplication -Name "NewSSA" -ApplicationPool $appPool
-$searchInstance = Get-SPEnterpriseSearchServiceInstance -Local
-$ssa | get-SPEnterpriseSearchAdministrationComponent | set-SPEnterpriseSearchAdministrationComponent -SearchServiceInstance $searchInstance
-$ssa | Get-SPEnterpriseSearchAdministrationComponent
+PS C:\>$appPool = New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account 'CONTOSO\ServiceApps'
+PS C:\>New-SPEnterpriseSearchServiceApplication -Name "Search Service Application" -ApplicationPool $appPool
 ```
 
-This example creates a new search service application named NewSSA in a new application pool and initializes its administration component.
+This example creates a new search service application named NewSSA in a new application pool.
+
 A search service application that is created in this manner will have active search topology, but no search components.
 
 
@@ -229,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminApplicationPool
-{{Fill AdminApplicationPool Description}}
+Specifies the application pool to be used with the SearchAdminWebServiceApplication that is associated with SearchServiceApplication. If not specified, ApplicationPool will be used.
 
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
@@ -245,13 +243,13 @@ Accept wildcard characters: False
 ```
 
 ### -CloudIndex
-{{Fill CloudIndex Description}}
+When CloudIndex is true, this becomes a cloud Search service application that crawls on premises content in a cloud hybrid search solution.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -261,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverDatabaseServer
-{{Fill FailoverDatabaseServer Description}}
+Specifies the name of the SQL server that hosts the mirror instances of search databases.
 
 ```yaml
 Type: String
