@@ -8,7 +8,9 @@ schema: 2.0.0
 # Copy-SPActivitiesToWorkflowService
 
 ## SYNOPSIS
-Copies SharePoint 2013 workflow activities from SharePoint to Workflow Manager.
+This cmdlet copies the Workflow Activities from SharePoint Server to the Workflow Manager farm. Activities are defined within Microsoft provided or custom coded assemblies.
+
+
 
 ## SYNTAX
 
@@ -19,31 +21,32 @@ Copy-SPActivitiesToWorkflowService [-ActivityName <String>] [-AssignmentCollecti
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Copies Workflow activites from SharePoint Server to Workflow Manager.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
 PS C:\>$credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
-PS C:\>$site = Get-SPSite(https://siteCollection)
-PS C:\>$proxy = Get-SPWorkflowServiceApplicationProxy
-PS C:\>$svcAddress = $proxy.GetWorkflowServiceAddress($site)
-PS C:\>Copy-SPActivitiesToWorkflowService -WorkflowServiceAddress $svcAddress -Credential $credential -Force $true
-```
+PS C:\>$site = Get-SPSite <siteurl>
 
-Copies Worklow Activities from the specified Site Collection to Workflow Manager.
+
+
+Copies the Workflow activities from SharePoint to the Workflow Manager farm using the specified Site Collection URL as a reference.
+
 
 ## PARAMETERS
 
 ### -ActivityName
-{{Fill ActivityName Description}}
+Copies a specific ActivityName. If not specified, all Activities are copied.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable:  SharePoint Server 2013, SharePoint Server 2016
+
+Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 
 Required: False
 Position: Named
@@ -53,13 +56,15 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable:  SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -75,7 +80,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable:  SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -85,13 +90,13 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{Fill Credential Description}}
+The credential used to connect to Workflow Manager.
 
 ```yaml
 Type: ICredentials
 Parameter Sets: (All)
 Aliases: 
-Applicable:  SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -101,13 +106,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces a specific Activity to be copied to Workflow Manager.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable:  SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -124,7 +129,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable:  SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -134,13 +139,14 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowServiceAddress
-The URL of the registered Workflow Manager service.
+The Workflow Manager farm endpoint URL.
+
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable:  SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
