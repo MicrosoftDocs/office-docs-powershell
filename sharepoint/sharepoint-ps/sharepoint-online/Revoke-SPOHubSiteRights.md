@@ -38,14 +38,14 @@ This example shows how to revoke rights so that Nestor can no longer join sites 
 
 ## PARAMETERS
 
-### -SiteUrl
+### -Identity
 
 URL of the hub site.
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases: HubSite
 Applicable: SharePoint Online
 
 Required: True
@@ -71,14 +71,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS
