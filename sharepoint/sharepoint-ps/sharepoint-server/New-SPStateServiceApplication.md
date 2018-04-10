@@ -33,7 +33,7 @@ PS C:\>$db = New-SPStateServiceDatabase -Name 'State Service'
 PS C:\>New-SPStateServiceApplication -Name 'State Service' -Database $db
 ```
 
-This example creates a new state service database, a new state service application associated with the database.
+This example creates a new state service database and a state service application associated with the database.
 
 ## PARAMETERS
 
