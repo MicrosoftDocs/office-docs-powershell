@@ -25,7 +25,7 @@ Remove-SPOGeoAdministrator [-LoginName] <String> [<CommonParameters>]
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

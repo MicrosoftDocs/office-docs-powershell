@@ -30,23 +30,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$usernameField = New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
-
-$passwordField = New-SPSecureStoreApplicationField -Name "Password" -Type WindowsPassword -Masked:$true
-
-$fields = $usernameField,$passwordField
-
-
-$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
-
-$contosoTargetApp = New-SPSecureStoreTargetApplication -Name "ContosoTargetApplication" -FriendlyName "Contoso Target Application" -ApplicationType Group
-
-New-SPSecureStoreApplication -ServiceContext http://contoso -TargetApplication $contosoTargetApp -Fields $fields -Administrator $claimUser
+PS C:\>$usernameField = New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
+PS C:\>$passwordField = New-SPSecureStoreApplicationField -Name "Password" -Type WindowsPassword -Masked:$true
+PS C:\>$fields = $usernameField,$passwordField
+PS C:\>$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
+PS C:\>$contosoTargetApp = New-SPSecureStoreTargetApplication -Name "ContosoTargetApplication" -FriendlyName "Contoso Target Application" -ApplicationType Group
+PS C:\>New-SPSecureStoreApplication -ServiceContext http://contoso -TargetApplication $contosoTargetApp -Fields $fields -Administrator $claimUser
 ```
 
-This example creates a new group target application ContosoTargetApplication and then a new application for that target application.
-This new application has two fields; UserName of type WindowsUserName and Password of type WindowsPassword.
-The user with identity janedoe on the CONTOSO domain is set as the target application administrator.
+This example creates a new group target application ContosoTargetApplication and then a new application for that target application. This new application has two fields; UserName of type WindowsUserName and Password of type WindowsPassword. The user with identity janedoe on the CONTOSO domain is set as the target application administrator.
 
 
 ## PARAMETERS

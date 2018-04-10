@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPAppStoreConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets SharePoint Store settings for an app.
 
 
 ## SYNTAX
@@ -19,31 +19,41 @@ Set-SPAppStoreConfiguration [-Url <String>] [-AssignmentCollection <SPAssignment
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-SPAppStoreConfiguration cmdlet to set SharePoint Store settings for a specified app.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Set-SPAppStoreConfiguration -Url http://office.microsoft.com -Enable $true
 ```
 
-{{ Add example description here }}
+This example sets the URL to the Office.com server.
 
 
 ### --------------------EXAMPLE 2---------------------
+```
+C:\PS>Set-SPAppStoreConfiguration -Enable $false
+```
+
+This example turns off the SharePoint Store.
+
+### --------------------EXAMPLE 3---------------------
 ```
 C:\PS>Set-SPAppStoreConfiguration -Enable $true
 ```
 
 This example turns on the SharePoint Store.
 
-
 ## PARAMETERS
 
 ### -Url
-{{Fill Url Description}}
+Specifies the URL of the app for which to set SharePoint Store settings.
+
+The SharePoint store value should not be changed unless instructed by a Microsoft representative.
 
 
 ```yaml
@@ -60,7 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 ```yaml
@@ -112,7 +124,13 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-{{Fill Enable Description}}
+pecifies whether the Office Store services lets third- party add-ins to be found or downloaded.
+
+This is intended for administrators to disable discovery and downloads of third-party add-ins on their SharePoint tenants and site collections.
+
+The valid values are True and False.
+
+The default value is False.
 
 ```yaml
 Type: Boolean

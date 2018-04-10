@@ -8,7 +8,7 @@ schema: 2.0.0
 # Disable-SPWebTemplateForSiteMaster
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables the site master in the farm.
 
 ## SYNTAX
 
@@ -18,21 +18,23 @@ Disable-SPWebTemplateForSiteMaster [-AssignmentCollection <SPAssignmentCollectio
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Disable-SPWebTemplateForSiteMaster cmdlet to disable a site master in the farm.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Disable-SPWebTemplateForSiteMaster -Template STS#0
 ```
 
-{{ Add example description here }}
+This example disables the template in the site master of a farm.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -48,7 +50,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
-{{Fill CompatibilityLevel Description}}
+Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection.
+
+When this parameter is not specified, the CompatibilityLevel parameter will default to the highest possible version for the web application depending on the SiteCreationMode setting.
 
 ```yaml
 Type: Int32
@@ -64,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Template
-{{Fill Template Description}}
+Specifies the name of the template. For example, SPSPERS#2.
 
 ```yaml
 Type: SPWebTemplatePipeBind

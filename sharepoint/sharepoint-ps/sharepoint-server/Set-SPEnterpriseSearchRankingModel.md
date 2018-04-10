@@ -31,12 +31,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-$owner = Get-SPEnterpriseSearchOwner -Level ssa
-$rankingModel = Get-SPEnterpriseSearchRankingModel -Identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4 -SearchApplication $ssa -Owner $owner 
-$newrankmodel = Get-Content .\newRankModel.xml
-$newrankmodel = [String]$newrankmodel
-Set-SPEnterpriseSearchRankingModel -Identity $rankingModel -SearchApplication $ssa -Owner $owner -RankingModelXML $newrankmodel
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level ssa
+PS C:\>$rankingModel = Get-SPEnterpriseSearchRankingModel -Identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4 -SearchApplication $ssa -Owner $owner 
+PS C:\>$newrankmodel = Get-Content .\newRankModel.xml
+PS C:\>$newrankmodel = [String]$newrankmodel
+PS C:\>Set-SPEnterpriseSearchRankingModel -Identity $rankingModel -SearchApplication $ssa -Owner $owner -RankingModelXML $newrankmodel
 ```
 
 This example reconfigures the ranking model with the identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4 with the new ranking model specified in newRankModel.xml.

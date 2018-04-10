@@ -28,10 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE---------
 ```
-C:\PS>$spapp = Import-SPAppPackage -Path .\feature-upgrade-v2.spapp -Site http://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
-
-C:\PS>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
-
+PS C:\>$spapp = Import-SPAppPackage -Path .\feature-upgrade-v2.spapp -Site http://localhost -Source ([microsoft.sharepoint.administration.spappsource]::ObjectModel)
+C:\S>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
 C:\PS>Update-SPAppInstance -Identity $instance -App $spapp
 ```
 

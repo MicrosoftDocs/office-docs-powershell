@@ -442,7 +442,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationLogSizeMax
-{{Fill ApplicationLogSizeMax Description}}
+Specifies the maximum number of records for an Access Services Application Log list. Valid valies: -1 to maxint.  0 means none are allowed. The default value is 3000.
 
 ```yaml
 Type: Int32

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: Add-SPSiteSubscriptionFeaturePackMember
 schema: 2.0.0
 ---
@@ -33,11 +33,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE---------------- 
 ```
-C:\PS>$fs = New-SPFeatureSet
-
-C:\PS>Get-SPFeature -limit all | Where{ $_.Scope -eq "WEB" } | Add-SPSiteSubscriptionFeaturePackMember -id $fs
-
-C:\PS>$fs = Get-SPFeatureSet $fs
+C:\PS>$fp = New-SPSiteSubscriptionFeaturePack
+C:\PS>Get-SPFeature -limit all | Where{ $_.Scope -eq "WEB" } | Add-SPSiteSubscriptionFeaturePackMember -id $fp
+C:\PS>$fp = Get-SPSiteSubscriptionFeaturePack $fp
 ```
 
 This example creates a Feature set and adds all Web site scoped Features to the set.
@@ -55,7 +53,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSiteSubscriptionFeaturePackPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -71,7 +69,7 @@ Specifies the Feature definition, name, or GUID to add to the Feature set.
 Type: SPFeatureDefinitionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -93,7 +91,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -110,7 +108,7 @@ For more information, type the following command: get-help about_commonparameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -127,7 +125,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

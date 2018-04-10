@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: Add-SPServiceApplicationProxyGroupMember
 schema: 2.0.0
 ---
@@ -30,7 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-C:\PS>Add-SPServiceApplicationProxyGroupMember RemoteProxyGroup -Member babab30e-8e3a-428b-8ff4-4d5c8f455e6d
+C:\PS>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -match 'User Profile Service Application Proxy'}
+C:\PS>Add-SPServiceApplicationProxyGroupMember RemoteProxyGroup -Member $proxy
 ```
 
 This example adds a select service application proxy to the service application proxy group named RemoteProxyGroup.
@@ -48,7 +49,7 @@ Specifies the service application proxy group to which to add the member.
 Type: SPServiceApplicationProxyGroupPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -64,7 +65,7 @@ Specifies an array of members to add to the service application proxy group.
 Type: SPServiceApplicationProxyPipeBind[]
 Parameter Sets: (All)
 Aliases: Proxy
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 2
@@ -86,7 +87,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -103,7 +104,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -120,7 +121,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

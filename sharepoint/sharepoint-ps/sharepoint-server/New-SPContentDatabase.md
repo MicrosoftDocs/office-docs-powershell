@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-------------------- 
 ```
-C:\PS>New-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename
+PS C:\>New-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename
 ```
 
 This example creates a new content database for the sitename Web application.
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangeSyncKnowledge
-{{Fill ChangeSyncKnowledge Description}}
+Specifies Groove sync client to resync their content when a Content Database attach is used.
 
 ```yaml
 Type: SwitchParameter
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseAccessCredentials
-{{Fill DatabaseAccessCredentials Description}}
+Specifies the credential for the SPDataAccess role.
 
 ```yaml
 Type: PSCredential
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseLatestSchema
-{{Fill UseLatestSchema Description}}
+Specifies to use the latest schema. In an on-premises environment, this parameter will have no effect at all.
 
 ```yaml
 Type: SwitchParameter

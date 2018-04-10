@@ -25,7 +25,7 @@ Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocat
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

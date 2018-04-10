@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: Backup-SPConfigurationDatabase
 schema: 2.0.0
 ---
@@ -40,7 +40,7 @@ However, using the Backup-SPFarm cmdlet with the ConfigurationOnly parameter is 
 
 An example of a configuration backup is an administrator creates a farm configuration template which then can be applied to other SharePoint farms by performing a restore using the Restore-SPFarm cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831.
 
 ## EXAMPLES
 
@@ -80,7 +80,7 @@ The spbr* folders are automatically created.
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ If Windows authentication is used to connect to the database, then this paramete
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ Specifies the configuration database name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ The type must be a valid database server; for example, DS.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ If the Item parameter is not specified, the entire farm configuration is backed 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ A backup will not be performed if the ShowTree parameter is present.
 Type: SwitchParameter
 Parameter Sets: ShowTree
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named

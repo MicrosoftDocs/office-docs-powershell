@@ -31,12 +31,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1 ------------------
 ```
-C:\PS>$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
-$config.Endpoint = "http://server/service"
-$config.InputProperties = "Title", "Url"
-$config.OutputProperties = "Title", "Url"
-$ssa = Get-SPEnterpriseSearchServiceApplication
-Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
+PS C:\>$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
+PS C:\>$config.Endpoint = "http://server/service"
+PS C:\>$config.InputProperties = "Title", "Url"
+PS C:\>$config.OutputProperties = "Title", "Url"
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
 ```
 
 This example creates a new ContentEnrichmentConfiguration object.

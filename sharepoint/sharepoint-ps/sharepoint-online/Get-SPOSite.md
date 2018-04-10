@@ -42,15 +42,15 @@ The Detailed parameter has been deprecated. It will continue to work with earlie
 
 You may see an impact on performance when the Filter parameter is used.
 
-Note:  
-Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
+> [!NOTE] 
+> Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.  
 
 You need to be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
 
-Note:  
-If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
+> [!NOTE] 
+> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
 
 ## EXAMPLES
@@ -128,8 +128,8 @@ Accept wildcard characters: False
 ### -DisableSharingForNonOwnersStatus
 This parameter prevents non-owners from sharing.
 
-Note:  
-This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.  
+> [!NOTE] 
+> his parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.  
 
 
 ```yaml
@@ -148,8 +148,8 @@ Accept wildcard characters: False
 ### -Filter
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form {$_PropertyName <operator> "filterValue"}. Valid operators are as follows: eq, ne, like, notlike.
 
-Note:  
-The operator values are case-sensitive.  
+> [!NOTE] 
+> The operator values are case-sensitive.  
 
 
 ```yaml

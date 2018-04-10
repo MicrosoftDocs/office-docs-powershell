@@ -24,11 +24,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------- 
-```
-C:\PS>Install-SPInfoPathFormTemplate -Path c:\Form.xsn
 
-C:\PS>"FormTemplateFirst.xsn", "FormTemplateSecond.xsn", "FormTemplateThird.xsn" | Install-SPInfoPathFormTemplate
+### ---------------EXAMPLE 1-------------- 
+```
+PS C:\>Install-SPInfoPathFormTemplate -Path c:\Form.xsn
+```
+
+This example installs a single form template to the farm.
+
+### ---------------EXAMPLE 2-------------- 
+```
+PS C:\>"FormTemplateFirst.xsn", "FormTemplateSecond.xsn", "FormTemplateThird.xsn" | Install-SPInfoPathFormTemplate
 ```
 
 This example installs multiple form templates on a farm.

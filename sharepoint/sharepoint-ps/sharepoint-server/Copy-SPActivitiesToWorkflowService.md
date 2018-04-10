@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet copies the Workflow Activities from SharePoint Server to the Workflow Manager farm. Activities are defined within Microsoft provided or custom coded assemblies.
 
+
+
 ## SYNTAX
 
 ```
@@ -27,12 +29,11 @@ Copies Workflow activites from SharePoint Server to Workflow Manager.
 ```
 PS C:\>$credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
 PS C:\>$site = Get-SPSite <siteurl>
-PS C:\>$proxy = Get-SPWorkflowServiceApplicationProxy
-PS C:\>$svcAddress = $proxy.GetWorkflowServiceAddress($site)
-PS C:\>Copy-SPActivitiesToWorkflowService -WorkflowServiceAddress $svcAddress -Credential $credential -Force $true
-```
+
+
 
 Copies the Workflow activities from SharePoint to the Workflow Manager farm using the specified Site Collection URL as a reference.
+
 
 ## PARAMETERS
 
@@ -43,7 +44,9 @@ Copies a specific ActivityName. If not specified, all Activities are copied.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
 Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 
 Required: False
 Position: Named
@@ -137,6 +140,7 @@ Accept wildcard characters: False
 
 ### -WorkflowServiceAddress
 The Workflow Manager farm endpoint URL.
+
 
 ```yaml
 Type: String

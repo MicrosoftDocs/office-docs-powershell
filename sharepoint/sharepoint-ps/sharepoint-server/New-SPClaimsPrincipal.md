@@ -59,46 +59,44 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------------EXAMPLE 1----------------------------- 
 ```
-C:\PS>New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal contoso\johndoe -TrustedIdentityTokenIssuer "NTLM")
+PS C:\>New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal contoso\johndoe -TrustedIdentityTokenIssuer "NTLM")
 ```
 
 This example creates a claim principal for a Windows user.
 
 ### -------------------------EXAMPLE 2----------------------------- 
 ```
-C:\PS>New-SPSite http://localhost/sites/newsite -owner (New-SPClaimsPrincipal contoso\allusers -TrustedIdentityTokenIssuer "NTLM")
+PS C:\>New-SPSite http://localhost/sites/newsite -owner (New-SPClaimsPrincipal contoso\allusers -TrustedIdentityTokenIssuer "NTLM")
 ```
 
 This example creates a claim principal for a Windows group.
 
 ### -------------------------EXAMPLE 3----------------------------- 
 ```
-C:\PS>New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal -ClaimValue "john@contoso.com" -ClaimType Email -TrustedIdentityTokenIssuer "LiveID STS" -IdentifierClaim Yes)
+PS C:\>New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal -ClaimValue "john@contoso.com" -ClaimType Email -TrustedIdentityTokenIssuer "LiveID STS" -IdentifierClaim Yes)
 ```
 
 This example creates a claim principal for a trusted identity token issuer claim.
 
 ### -------------------------EXAMPLE 4----------------------------- 
 ```
-C:\PS>$ip = New-SPIdentityProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"
-
-C:\PS>New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@contoso.com" -TrustedIdentityTokenIssuer $ip)
+PS C:\>$ip = New-SPIdentityProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"
+PS C:\>New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@contoso.com" -TrustedIdentityTokenIssuer $ip)
 ```
 
 This example creates a claim principal for a ASPNet Membership User.
 
 ### -------------------------EXAMPLE 5----------------------------- 
 ```
-C:\PS>New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal "Sales Manager Role" -IdentityProvider "myRoleProvider")
+PS C:\>New-SPSite http://sitename/sites/newsite -owner (New-SPClaimsPrincipal "Sales Manager Role" -IdentityProvider "myRoleProvider")
 ```
 
 This example creates a claim principal for a ASPNet Role.
 
 ### -------------------------EXAMPLE 6----------------------------- 
 ```
-C:\PS> $cp = New-SPClaimsPrincipal -Identity "redmond\SiteOwner" -IdentityType 1
-
-C:\PS>New-SPSite http://servername:port -OwnerAlias $cp.ToEncodedString() -Template "STS#0"
+PS C:\>$cp = New-SPClaimsPrincipal -Identity "redmond\SiteOwner" -IdentityType 1
+PS C:\>New-SPSite http://servername:port -OwnerAlias $cp.ToEncodedString() -Template "STS#0"
 ```
 
 This example creates a claim principal for a Basic Claim Role, which is also called an encoded claim).
@@ -267,7 +265,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClaimProvider
-{{Fill ClaimProvider Description}}
+Specifies the security token service identity provider that will contain the claims principal.
+
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of identity provider (for example, MyIDprovider1); or an instance of a valid SPIdentityProvider object.
 
 ```yaml
 Type: SPClaimProvider

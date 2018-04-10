@@ -11,10 +11,6 @@ schema: 2.0.0
 
 Specifies a description for an existing BI server for Excel Services.
 
-
-
-
-
 ## SYNTAX
 
 ```
@@ -27,17 +23,13 @@ Set-SPExcelBIServer [-Identity] <SPExcelBIServerPipeBind> [-AssignmentCollection
 Use the Set-SPExcelBIServer cmdlet to specify a description for an existing BI server for Excel Services.
 
 
-
-
-
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-Set-SPExcelBIServer -Identity "ExcelServices" -ExcelServiceApplication "MyExcel"
+PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+PS C:\>Set-SPExcelBIServer -Identity "ExcelServices" -ExcelServiceApplication $sa
 ```
-
-
 
 ## PARAMETERS
 

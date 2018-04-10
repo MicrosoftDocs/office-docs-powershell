@@ -14,7 +14,7 @@ Adds an item to a navigation element
 Add-PnPNavigationNode -Location <NavigationType>
                       -Title <String>
                       [-Url <String>]
-                      [-Header <String>]
+                      [-Parent <Int>]
                       [-First [<SwitchParameter>]]
                       [-External [<SwitchParameter>]]
                       [-Web <WebPipeBind>]
@@ -90,6 +90,8 @@ Accept pipeline input: False
 ### -Header
 Optionally value of a header entry to add the menu item to.
 
+Only applicable to: SharePoint Server 2016
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -100,13 +102,27 @@ Accept pipeline input: False
 ```
 
 ### -Location
-The location of the node to add. Either TopNavigationBar, QuickLaunch or SearchNav
+The location of the node to add. Either TopNavigationBar, QuickLaunch, SearchNav
 
 ```yaml
 Type: NavigationType
 Parameter Sets: (All)
 
 Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -Parent
+The key of the parent. Leave empty to add to the top level
+
+Only applicable to: SharePoint Online, SharePoint Server 2013
+
+```yaml
+Type: Int
+Parameter Sets: (All)
+
+Required: False
 Position: Named
 Accept pipeline input: False
 ```

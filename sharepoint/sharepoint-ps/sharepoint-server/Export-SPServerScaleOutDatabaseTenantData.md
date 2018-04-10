@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Exports the data of the specified subscription.
 
-
-
 ## SYNTAX
 
 ```
@@ -30,7 +28,7 @@ Use the Export-SPServerScaleOutDatabaseTenantData cmdlet to export the data of t
 
 ### ----------EXAMPLE------- 
 ```
-C:\PS>Export-SPServerScaleOutDatabaseTenantData -FilePath "C:\ TenantData.dat" -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
+C:\PS>Export-SPServerScaleOutDatabaseTenantData -FilePath "C:\TenantData.dat" -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
 ```
 
 This example exports data for the site subscription with id 5CAF2F99-A75F-4239-B9CD-7FE63D1CE904 to the file at C:\ TenantData.dat, from the specified service application.

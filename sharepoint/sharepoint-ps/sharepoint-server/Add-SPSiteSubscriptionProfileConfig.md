@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: Add-SPSiteSubscriptionProfileConfig
 schema: 2.0.0
 ---
@@ -41,14 +41,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------------
 ```
-C:\PS>#Get UPA Proxy
-          $pr = Get-SPServiceApplicationProxy | ? {$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
-
-          C:\PS>#Add tenant to UPA
-          Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $pr -MySiteHostLocation http://contoso/my
-
-          C:\PS>#Create new site subscription
-          $sub = New-SPSiteSubscription
+C:\PS>$sub = Get-SPSiteSubscription http://contoso/my
+C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+C:\PS>Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $proxy -MySiteHostLocation http://contoso/my
+C:\PS>$sub = New-SPSiteSubscription
 ```
 
 This example creates a new User Profile Service application tenant.
@@ -64,7 +60,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -82,7 +78,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSitePipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -95,7 +91,7 @@ Accept wildcard characters: False
 Type: SPSitePipeBind
 Parameter Sets: MySiteSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -111,7 +107,7 @@ Specifies the identifier for the User Profile Service Application proxy where th
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -133,7 +129,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -150,7 +146,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -168,7 +164,7 @@ The type must be a valid URL, in the form http://server_name.
 Type: SPPrefixPipeBind
 Parameter Sets: MySiteSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

@@ -8,7 +8,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Revokes a permission that was previously granted to the "SharePoint Online Client" service principal
 
-> **Note** - This is a preview feature and should not be used in production.
+> [!NOTE] 
+> This is a preview feature and should not be used in production.
 
 ## SYNTAX
 
