@@ -30,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchQueryAuthority -SearchApplication $ssa -Url http://contoso.com -Level 1.5
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>New-SPEnterpriseSearchQueryAuthority -SearchApplication $ssa -Url http://contoso.com -Level 1.5
 ```
 
 This example designates the URL http://contoso.com as an authoritative page with a relative importance of 1.5.

@@ -28,10 +28,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-------------------
 ```
-C:\PS>Get-SPServiceApplication -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b | New-SPStateServiceApplicationProxy -DefaultProxyGroup
+PS C:\>$db = New-SPStateServiceDatabase -Name 'State Service'
+PS C:\>$sa = New-SPStateServiceApplication -Name 'State Service' -Database $db
+PS C:\>New-SPStateServiceApplicationProxy -Name 'State Service Proxy' -ServiceApplication $sa -DefaultProxyGroup
 ```
 
-This example creates a new service application proxy, associates it with a provided service application and adds it to the farm's default proxy group.
+This example creates a State Service database and Service Application. It then associates a new State Service Proxy with the State Service application and adds it to the Default proxy group.
 
 
 ## PARAMETERS

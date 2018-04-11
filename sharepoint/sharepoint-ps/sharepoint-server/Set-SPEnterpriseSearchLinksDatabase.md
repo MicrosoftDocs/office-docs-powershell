@@ -32,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
-Set-SPEnterpriseSearchLinksDatabase -Identity SearchApp_LinksStore -SearchApplication $searchApp -FailoverDatabaseServer \\failoverServer
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
+PS C:\>Set-SPEnterpriseSearchLinksDatabase -Identity SearchApp_LinksStore -SearchApplication $ssa -FailoverDatabaseServer \\failoverServer
 ```
 
 This example sets the failover database server to \\\\failoverServer for the links database SearchApp_LinksStore in the search service application mySearchServiceApp.

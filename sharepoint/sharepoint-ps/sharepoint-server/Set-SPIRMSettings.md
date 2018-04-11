@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPIRMSettings
 schema: 2.0.0
 ---
@@ -41,35 +41,30 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1------------
 ```
-C:\PS>Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
+PS C:\>Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
 ```
 
 This example enables IRM for the farm and configures it to use the default RMS server configured in Active Directory.
 
-
 ### --------------EXAMPLE 2------------
 ```
-C:\PS>Set-SPIRMSettings -RmsEnabled -CertificateServerUrl http://myrmsserver
+PS C:\>Set-SPIRMSettings -RmsEnabled -CertificateServerUrl http://myrmsserver
 ```
 
 This example enables IRM for the farm and specifies the URL of the RMS server to use.
 
-
 ### --------------EXAMPLE 3------------
 ```
-C:\PS>site = Get-SPSite http://myspserver
-
-C:\PS>$subscription = $site.SiteSubscription
-
-C:\PS>Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl http://myrmsserver
+PS C:\>site = Get-SPSite http://myspserver
+PS C:\>$subscription = $site.SiteSubscription
+PS C:\>Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl http://myrmsserver
 ```
 
 This example enables IRM for the specified tenant and specifies the URL of the RMS server to use.
 
-
 ### --------------EXAMPLE 4------------
 ```
-C:\PS>Set-SPIRMSettings -RmsEnabled:$false
+PS C:\>Set-SPIRMSettings -RmsEnabled:$false
 ```
 
 This example disables IRM for the farm.
@@ -84,7 +79,7 @@ Specifies the address of the RMS certificate server to use for the tenant.
 Type: Uri
 Parameter Sets: UseSpecifiedCertificateUrl
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -102,7 +97,7 @@ The default value is false.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -124,7 +119,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -141,7 +136,7 @@ This password is required in order to install the certificate in the machine cer
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -158,7 +153,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -177,7 +172,7 @@ If the parameter is not specified, the local farm connects to RMS server using i
 Type: X509Certificate2
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -195,7 +190,7 @@ Site subscriptions can only configure custom IRM settings if IRM is enabled at t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -211,7 +206,7 @@ Specifies whether or not the RMS service should be used for discovery that will 
 Type: SwitchParameter
 Parameter Sets: UseServiceDiscovery
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -228,7 +223,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -238,7 +233,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseOauth
-{{Fill UseOauth Description}}
+Specifies whether OAuth should be used.
+
+The valid values are True and False.
 
 ```yaml
 Type: SwitchParameter

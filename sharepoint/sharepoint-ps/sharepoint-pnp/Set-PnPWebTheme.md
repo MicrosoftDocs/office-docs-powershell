@@ -12,6 +12,7 @@ Sets the theme of the current web.
 
 ```powershell
 Set-PnPWebTheme [-Theme <ThemePipeBind>]
+                [-WebUrl <String>]
                 [-Web <WebPipeBind>]
                 [-Connection <SPOnlineConnection>]
 ```
@@ -47,6 +48,18 @@ Parameter Sets: (All)
 Required: False
 Position: 0
 Accept pipeline input: True
+```
+
+### -WebUrl
+The URL of the web to apply the theme to. If not specified it will default to the current web based upon the URL specified with Connect-PnPOnline.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
 ```
 
 ### -Connection

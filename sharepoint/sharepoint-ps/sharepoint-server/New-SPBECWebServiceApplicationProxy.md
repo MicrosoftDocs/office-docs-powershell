@@ -8,10 +8,7 @@ schema: 2.0.0
 # New-SPBECWebServiceApplicationProxy
 
 ## SYNOPSIS
-
-Do not use this cmdlet.
-
-
+Do not use.
 
 ## SYNTAX
 
@@ -21,7 +18,7 @@ New-SPBECWebServiceApplicationProxy [-AssignmentCollection <SPAssignmentCollecti
 ```
 
 ## DESCRIPTION
-Do not use this cmdlet.
+Do not use.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
@@ -35,7 +32,7 @@ C:\PS>
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -51,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -67,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProxyGroup
-{{Fill DefaultProxyGroup Description}}
+Do not use.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Do not use.
 
 ```yaml
 Type: String
@@ -99,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceEndpointUri
-{{Fill ServiceEndpointUri Description}}
+Do not use.
 
 ```yaml
 Type: String

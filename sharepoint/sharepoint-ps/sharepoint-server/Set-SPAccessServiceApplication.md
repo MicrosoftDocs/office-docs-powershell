@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1------------------
 ```
-C:\PS>Set-SPAccessServiceApplication -identity "MyAccessService" -requestDurationMax 100
+PS C:\>Set-SPAccessServiceApplication -identity "MyAccessService" -RequestDurationMax 100
 ```
 
 This example sets the Access Services application named MyAccessService to let requests take up to 100 seconds before they time out.
@@ -42,7 +42,7 @@ This example sets the Access Services application named MyAccessService to let r
 
 ### ------------EXAMPLE 2------------------
 ```
-C:\PS>Get-SPAccessServiceApplication | Set-SPAccessServiceApplication -sessionsPerUserMax 5
+PS C:\>Get-SPAccessServiceApplication | Set-SPAccessServiceApplication -SessionsPerUserMax 5
 ```
 
 This example sets every Access Services application in the farm to allow up to five sessions per user on each back-end application server computer on which Access Services runs.
@@ -52,7 +52,7 @@ First, every Access Services application is retrieved and then a new value is se
 
 ### ------------EXAMPLE 3------------------
 ```
-C:\PS>Get-SPAccessServiceApplication | where {$_.rowsMax -gt 50000 } | Set-SPAccessServiceApplication -rowsMax 50000
+PS C:\>Get-SPAccessServiceApplication | where {$_.RowsMax -gt 50000 } | Set-SPAccessServiceApplication -RowsMax 50000
 ```
 
 This example sets every Access Services application in the farm that allows more than 50,000 rows to be returned from, or used in, a query and then sets the service application to allow up to 50,000 rows only.
@@ -423,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationLogSizeMax
-{{Fill ApplicationLogSizeMax Description}}
+The maximum number of records for an Access Services Application Log list. Valid valies: -1 to maxint. A value of zero means none is allowed. The default value is 3000.
 
 ```yaml
 Type: Int32

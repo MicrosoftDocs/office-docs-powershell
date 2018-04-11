@@ -17,6 +17,7 @@ Apply-PnPProvisioningTemplate [-InputInstance <ProvisioningTemplate>]
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
                               [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
+                              [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
                               [-ClearNavigation [<SwitchParameter>]]
                               [-Parameters <Hashtable>]
                               [-Handlers <Handlers>]
@@ -34,6 +35,7 @@ Apply-PnPProvisioningTemplate [-GalleryTemplateId <Guid>]
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
                               [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
+                              [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
                               [-ClearNavigation [<SwitchParameter>]]
                               [-Parameters <Hashtable>]
                               [-Handlers <Handlers>]
@@ -51,6 +53,7 @@ Apply-PnPProvisioningTemplate -Path <String>
                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
                               [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
+                              [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
                               [-ClearNavigation [<SwitchParameter>]]
                               [-Parameters <Hashtable>]
                               [-Handlers <Handlers>]
@@ -248,6 +251,20 @@ Accept pipeline input: True
 
 ### -ProvisionContentTypesToSubWebs
 If set content types will be provisioned if the target web is a subweb.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -ProvisionFieldsToSubWebs
+If set fields will be provisioned if the target web is a subweb.
+
+Only applicable to: SharePoint Online, SharePoint Server 2013
 
 ```yaml
 Type: SwitchParameter

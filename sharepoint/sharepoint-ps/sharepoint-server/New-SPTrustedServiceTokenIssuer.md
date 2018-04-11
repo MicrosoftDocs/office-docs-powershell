@@ -37,9 +37,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-
-C:\PS>New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1" -Certificate $cert
+PS C:\>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
+PS C:\>New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1" -Certificate $cert
 ```
 
 This example shows how to create a new SharePoint Farm trust using the trust certificate from a file.
@@ -140,13 +139,13 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndPoint
-{{Fill MetadataEndPoint Description}}
+Specifies the URI for the metadata endpoint of the trusted provider.
 
 ```yaml
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named

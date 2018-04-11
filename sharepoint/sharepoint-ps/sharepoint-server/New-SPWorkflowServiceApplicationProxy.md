@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPWorkflowServiceApplicationProxy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a proxy to connect to Workflow Manager.
 
 
 ## SYNTAX
@@ -19,23 +19,27 @@ New-SPWorkflowServiceApplicationProxy [-AssignmentCollection <SPAssignmentCollec
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a proxy to connect to Workflow Manager.
+
+Note: Consider using the cmdlet `Register-SPWorkflowService` instead which binds a Workflow Manager farm and creates the Workflow Service Proxy.
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>New-SPWorkflowServiceApplicationProxy
 ```
 
-{{ Add example description here }}
+Creates a Workflow Service Application Proxy.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -67,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionMode
-{{Fill PartitionMode Description}}
+Specifies that the service application restrict data by subscription.
+
 
 ```yaml
 Type: SwitchParameter

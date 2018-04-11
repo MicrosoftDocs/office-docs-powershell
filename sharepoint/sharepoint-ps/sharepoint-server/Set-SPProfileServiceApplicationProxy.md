@@ -29,14 +29,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE---------------------
 ```
-C:\PS>#Get UPA Proxy
-          $pr = Get-SPServiceApplicationProxy | ? {$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
-
-          C:\PS>#Change the name of the proxy
-          Set-SPProfileServiceApplicationProxy -Identity $pr -Name PartitionedUserProfileApplication_Proxy2
+PS C:\>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\>Set-SPProfileServiceApplicationProxy -Identity $proxy -SiteNamingConflictResolution 2
 ```
 
-This example sets a proxy for the User Profile Service application.
+This example sets the User Profile Service Application Proxy to use a site naming conflict resolution to use domain names prefixed to usernames.
 
 
 ## PARAMETERS

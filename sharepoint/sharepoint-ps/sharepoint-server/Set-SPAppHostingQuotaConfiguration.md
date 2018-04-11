@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPAppHostingQuotaConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets hosting quotas for an app.
 
 
 ## SYNTAX
@@ -20,22 +20,24 @@ Set-SPAppHostingQuotaConfiguration -AppHostingLicenseQuota <Double> -AppInstance
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-SPAppHostingQuotaConfiguration cmdlet to set hosting quotas for a specified app by using the Identity parameter.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference (http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
 
 ### ----------------EXAMPLE 1----------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Set-SPAppHostingQuotaConfiguration -Identity 586d4a32-98c3-42ce-80be-3c76c10c250c -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
 ```
 
-{{ Add example description here }}
+This example sets hosting Quotas for the SiteSubscriptionId "586d4a32-98c3-42ce-80be-3c76c10c250c" with hosted appinstance limit as 50 and hosted apps licenses assigned as 25.
 
 
 ### ----------------EXAMPLE 2----------
 ```
-C:\PS>Get-SPSiteSubscription | Set-SPAppHostingQuotaConfiguration -Identity $_ -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
+PS C:\>Get-SPSiteSubscription | Set-SPAppHostingQuotaConfiguration -Identity $_ -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
 ```
 
 This example sets hosting Quotas for all SiteSubscriptions in the farm with hosted apps limit as 50 and hosted apps licenses assigned as 25.
@@ -44,7 +46,7 @@ This example sets hosting Quotas for all SiteSubscriptions in the farm with host
 ## PARAMETERS
 
 ### -AppHostingLicenseQuota
-{{Fill AppHostingLicenseQuota Description}}
+Specifies the app licensing quota.
 
 
 ```yaml
@@ -61,8 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppInstanceCountQuota
-{{Fill AppInstanceCountQuota Description}}
-
+Specifies the number instances of an app.
 
 ```yaml
 Type: Double
@@ -78,7 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 ```yaml
@@ -130,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
-{{Fill SiteSubscription Description}}
+Specifies the Site Subscription.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
