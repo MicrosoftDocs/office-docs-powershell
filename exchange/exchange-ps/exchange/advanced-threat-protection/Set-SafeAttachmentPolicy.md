@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Set-SafeAttachmentPolicy
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Set-SafeAttachmentPolicy
@@ -55,7 +56,6 @@ Type: SafeAttachmentPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: True
 Position: 1
 Default value: None
@@ -79,7 +79,6 @@ Type: Block | Replace | Allow | DynamicDelivery
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +98,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +113,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +132,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -155,7 +151,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +170,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +185,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +200,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

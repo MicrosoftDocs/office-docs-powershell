@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
 title: Get-DataEncryptionPolicy
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-DataEncryptionPolicy
@@ -58,7 +59,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -74,7 +74,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +95,6 @@ Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -112,7 +110,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

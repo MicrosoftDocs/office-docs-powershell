@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: New-PopSubscription
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # New-PopSubscription
@@ -59,7 +60,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -75,7 +75,6 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -91,7 +90,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -107,7 +105,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -123,7 +120,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -143,7 +139,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +154,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +169,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +184,6 @@ Type: Basic | Spa
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +199,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +214,6 @@ Type: None | Ssl | Tls
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +229,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -279,7 +268,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +283,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

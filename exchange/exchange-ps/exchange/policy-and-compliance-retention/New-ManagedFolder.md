@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: New-ManagedFolder
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # New-ManagedFolder
@@ -125,7 +126,6 @@ Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal 
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +143,6 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -161,7 +160,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -177,7 +175,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +190,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +209,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -229,7 +224,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +239,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -261,7 +254,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +269,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +286,6 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -311,7 +301,6 @@ Type: Unlimited
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -327,7 +316,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None

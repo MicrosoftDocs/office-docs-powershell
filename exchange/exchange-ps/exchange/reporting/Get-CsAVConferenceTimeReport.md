@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Get-CsAVConferenceTimeReport
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-CsAVConferenceTimeReport

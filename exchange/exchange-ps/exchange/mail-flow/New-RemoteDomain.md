@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: New-RemoteDomain
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # New-RemoteDomain
@@ -43,7 +44,6 @@ Type: SmtpDomainWithSubdomains
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -59,7 +59,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -79,7 +78,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +97,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +112,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

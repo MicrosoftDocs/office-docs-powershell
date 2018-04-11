@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010
 title: Get-MailboxSentItemsConfiguration
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-MailboxSentItemsConfiguration
@@ -45,7 +46,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -85,7 +85,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None

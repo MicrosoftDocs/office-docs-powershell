@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-DynamicDistributionGroup
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-DynamicDistributionGroup
@@ -94,7 +95,6 @@ Type: String
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +112,6 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -130,7 +129,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +146,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +177,6 @@ Type: DynamicGroupIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -204,7 +200,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +231,6 @@ Type: GeneralRecipientIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -260,7 +254,6 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -280,7 +273,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -296,7 +288,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -322,7 +313,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -338,7 +328,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

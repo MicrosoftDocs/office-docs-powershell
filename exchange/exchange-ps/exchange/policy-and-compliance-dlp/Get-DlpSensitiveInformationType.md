@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DlpSensitiveInformationType
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpSensitiveInformationType
@@ -55,7 +56,6 @@ Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None

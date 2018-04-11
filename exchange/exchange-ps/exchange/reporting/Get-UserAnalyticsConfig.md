@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-UserAnalyticsConfig
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-UserAnalyticsConfig
@@ -58,7 +59,6 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-AccessToCustomerDataRequest
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-AccessToCustomerDataRequest
@@ -67,7 +68,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +89,6 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +104,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

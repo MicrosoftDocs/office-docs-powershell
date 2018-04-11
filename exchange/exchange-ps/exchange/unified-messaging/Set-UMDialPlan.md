@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Set-UMDialPlan
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Set-UMDialPlan
@@ -86,7 +87,6 @@ Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -102,7 +102,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +117,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -134,7 +132,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +147,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -166,7 +162,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +177,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -198,7 +192,6 @@ Type: G711 | Wma | Gsm | Mp3
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -214,7 +207,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -230,7 +222,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -246,7 +237,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -270,7 +260,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -294,7 +283,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -314,7 +302,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -330,7 +317,6 @@ Type: AddressListIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -346,7 +332,6 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -362,7 +347,6 @@ Type: DialPlan | GlobalAddressList | Extension | AutoAttendantLink | AddressList
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -378,7 +362,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -394,7 +377,6 @@ Type: UMLanguage
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -410,7 +392,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -426,7 +407,6 @@ Type: LastFirst | FirstLast | SMTPAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -442,7 +422,6 @@ Type: LastFirst | FirstLast | SMTPAddress | None
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -460,7 +439,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -476,7 +454,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -492,7 +469,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -508,7 +484,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -524,7 +499,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -540,7 +514,6 @@ Type: NumberFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -556,7 +529,6 @@ Type: True | False | Uninterruptible
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -572,7 +544,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -588,7 +559,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -604,7 +574,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -620,7 +589,6 @@ Type: NumberFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -636,7 +604,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -652,7 +619,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -678,7 +644,6 @@ Type: Title | Department | Location | None | PromptForAlias
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -694,7 +659,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -710,7 +674,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -726,7 +689,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -742,7 +704,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -758,7 +719,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -774,7 +734,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -790,7 +749,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -806,7 +764,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -822,7 +779,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -838,7 +794,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -854,7 +809,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -870,7 +824,6 @@ Type: UMAutoAttendantIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -888,7 +841,6 @@ Type: SIPSecured | Unsecured | Secured
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -904,7 +856,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -920,7 +871,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -936,7 +886,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

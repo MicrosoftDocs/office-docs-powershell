@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online Protection
 title: Remove-EOPMailUser
 schema: 2.0.0
+monikerRange: "eop-ps"
 ---
 
 # Remove-EOPMailUser
@@ -46,7 +47,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +86,6 @@ Type: MailUserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

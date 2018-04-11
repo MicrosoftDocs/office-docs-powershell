@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Set-OutboundConnector
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Set-OutboundConnector
@@ -58,7 +59,6 @@ Type: OutboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: True
 Position: 1
 Default value: None
@@ -78,7 +78,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +101,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +116,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -138,7 +135,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +156,6 @@ Type: Default | Migrated | HybridWizard | AdminUI
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +175,6 @@ Type: OnPremises | Partner
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +194,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -222,7 +215,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +234,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +255,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -280,7 +270,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -298,7 +287,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -318,7 +306,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -334,7 +321,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -354,7 +340,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -370,7 +355,6 @@ Type: SmtpDomainWithSubdomains
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -394,7 +378,6 @@ Type: EncryptionOnly | CertificateValidation | DomainValidation
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -414,7 +397,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -430,7 +412,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -446,7 +427,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

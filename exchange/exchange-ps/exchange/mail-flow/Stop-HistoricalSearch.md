@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Stop-HistoricalSearch
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Stop-HistoricalSearch
@@ -46,7 +47,6 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None

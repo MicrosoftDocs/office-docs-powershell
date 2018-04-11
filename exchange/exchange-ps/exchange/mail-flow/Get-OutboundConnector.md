@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-OutboundConnector
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-OutboundConnector
@@ -51,7 +52,6 @@ Type: OutboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -73,7 +73,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +94,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

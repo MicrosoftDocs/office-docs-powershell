@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
 title: Set-PublicFolderMoveRequest
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Set-PublicFolderMoveRequest
@@ -49,7 +50,6 @@ Type: PublicFolderMoveRequestIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: 1
 Default value: None
@@ -65,7 +65,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -85,7 +84,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +99,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +118,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -137,7 +133,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +148,6 @@ Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +173,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -211,7 +204,6 @@ Type: Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -227,7 +219,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -243,7 +234,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -267,7 +257,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

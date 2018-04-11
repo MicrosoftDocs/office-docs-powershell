@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2016, Office 365 Security & Compliance Center
 title: Get-ComplianceSearchAction
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016 || o365scc-ps"
 ---
 
 # Get-ComplianceSearchAction
@@ -75,7 +76,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +91,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +108,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +123,6 @@ Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -145,7 +142,6 @@ Type: ComplianceSearchActionIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -161,7 +157,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +172,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +187,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -209,7 +202,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

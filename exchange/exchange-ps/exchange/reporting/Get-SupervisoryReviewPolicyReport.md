@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-SupervisoryReviewPolicyReport
 schema: 2.0.0
+monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-SupervisoryReviewPolicyReport
@@ -66,7 +67,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +82,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +97,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -116,7 +114,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -134,7 +131,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

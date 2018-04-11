@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2016, Office 365 Security & Compliance Center
 title: Get-ComplianceSearch
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016 || o365scc-ps"
 ---
 
 # Get-ComplianceSearch
@@ -54,7 +55,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +72,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -114,7 +113,6 @@ Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -130,7 +128,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

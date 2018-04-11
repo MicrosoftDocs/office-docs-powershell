@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Online
 title: Upgrade-DistributionGroup
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Upgrade-DistributionGroup
@@ -45,7 +46,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -61,7 +61,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +76,6 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

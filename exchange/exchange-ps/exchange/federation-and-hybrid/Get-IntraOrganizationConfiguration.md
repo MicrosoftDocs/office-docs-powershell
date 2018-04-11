@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-IntraOrganizationConfiguration
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-IntraOrganizationConfiguration
@@ -49,7 +50,6 @@ Type: OnPremisesOrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 2
 Default value: None

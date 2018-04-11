@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Get-ReportExecutionInstance
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-ReportExecutionInstance
@@ -50,7 +51,6 @@ Type: InstanceIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -66,7 +66,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010
 title: Get-RoutingGroupConnector
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-RoutingGroupConnector
@@ -45,7 +46,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -61,7 +61,6 @@ Type: RoutingGroupConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: 1
 Default value: None

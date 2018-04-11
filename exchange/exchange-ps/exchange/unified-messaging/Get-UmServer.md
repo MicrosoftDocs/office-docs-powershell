@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010
 title: Get-UmServer
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-UMServer
@@ -55,7 +56,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +71,6 @@ Type: UMServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: 1
 Default value: None

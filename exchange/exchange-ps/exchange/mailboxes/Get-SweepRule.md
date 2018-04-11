@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2016, Exchange Online
 title: Get-SweepRule
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-SweepRule
@@ -57,7 +58,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +75,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +96,6 @@ Type: SweepRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -137,7 +135,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +150,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

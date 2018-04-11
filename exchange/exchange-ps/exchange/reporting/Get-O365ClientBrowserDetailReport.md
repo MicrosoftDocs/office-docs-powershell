@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Get-O365ClientBrowserDetailReport
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-O365ClientBrowserDetailReport

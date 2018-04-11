@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Add-MailboxPermission
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Add-MailboxPermission
@@ -119,7 +120,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set1, Set2, Set4, Set5
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -132,7 +132,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -162,7 +161,6 @@ Type: MailboxRights[]
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -175,7 +173,6 @@ Type: MailboxRights[]
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +188,6 @@ Type: MailboxAcePresentationObject
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -221,7 +217,6 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -251,7 +246,6 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -264,7 +258,6 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -286,7 +279,6 @@ Type: $true | $false
 Parameter Sets: Set1, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -306,7 +298,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -322,7 +313,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -340,7 +330,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -362,7 +351,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -386,7 +374,6 @@ Type: None | All | Descendents | SelfAndChildren | Children
 Parameter Sets: Set1, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -402,7 +389,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

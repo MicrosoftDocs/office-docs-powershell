@@ -1,7 +1,9 @@
 ---
+external help file: 
 applicable: Exchange Online
 title: Get-FocusedInbox
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-FocusedInbox
@@ -67,7 +69,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None

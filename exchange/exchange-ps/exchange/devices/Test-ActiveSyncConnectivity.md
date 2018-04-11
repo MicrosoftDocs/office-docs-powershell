@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Test-ActiveSyncConnectivity
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Test-ActiveSyncConnectivity
@@ -75,7 +76,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +103,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None
@@ -123,7 +122,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +137,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +156,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +173,6 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -205,7 +200,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +215,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -237,7 +230,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -253,7 +245,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -269,7 +260,6 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +277,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -305,7 +294,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None
@@ -321,7 +309,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -337,7 +324,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

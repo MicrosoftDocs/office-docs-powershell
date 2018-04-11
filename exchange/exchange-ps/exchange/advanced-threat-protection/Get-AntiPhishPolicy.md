@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-AntiPhishPolicy
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-AntiPhishPolicy
@@ -49,7 +50,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +71,6 @@ Type: AntiPhishPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 0
 Default value: None
@@ -87,7 +86,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +101,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

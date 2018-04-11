@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Remove-MigrationBatch
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Remove-MigrationBatch
@@ -58,7 +59,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +76,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +93,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +108,6 @@ Type: MigrationBatchIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -126,7 +123,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +138,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

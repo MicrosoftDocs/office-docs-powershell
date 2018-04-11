@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-ServiceDeliveryReport
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-ServiceDeliveryReport
@@ -43,7 +44,6 @@ Type: Expression
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -59,7 +59,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +74,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

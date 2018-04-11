@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-AuditLogSearch
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-AuditLogSearch
@@ -54,7 +55,6 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +72,6 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +87,6 @@ Type: AuditLogSearchIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -104,7 +102,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +117,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

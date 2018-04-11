@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
 title: Get-MailboxTransportService
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-MailboxTransportService
@@ -52,7 +53,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -68,7 +68,6 @@ Type: MailboxTransportServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
 title: Get-AuthConfig
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-AuthConfig
@@ -42,7 +43,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

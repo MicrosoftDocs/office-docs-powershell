@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Online
 title: Stop-MigrationUser
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Stop-MigrationUser
@@ -47,7 +48,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -63,7 +63,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -81,7 +80,6 @@ Type: MigrationUserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -97,7 +95,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +110,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
