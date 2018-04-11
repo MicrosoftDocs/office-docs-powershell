@@ -78,7 +78,6 @@ Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -96,7 +95,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +110,6 @@ Type: EwsStoreObjectIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -138,7 +135,6 @@ Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -151,7 +147,6 @@ Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +162,6 @@ Type: Unlimited
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -185,7 +179,6 @@ Type: ExDateTime
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +196,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

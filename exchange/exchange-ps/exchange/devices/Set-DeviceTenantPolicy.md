@@ -61,7 +61,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: Named
 Default value: None
@@ -77,7 +76,6 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +95,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +114,6 @@ Type: $true | $false
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +129,6 @@ Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +144,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +159,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +174,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

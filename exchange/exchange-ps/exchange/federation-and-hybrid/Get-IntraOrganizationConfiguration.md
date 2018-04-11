@@ -50,7 +50,6 @@ Type: OnPremisesOrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 2
 Default value: None

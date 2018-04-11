@@ -50,7 +50,6 @@ Type: Int32
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -63,7 +62,6 @@ Type: Int32
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +77,6 @@ Type: Int32
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -95,7 +92,6 @@ Type: $true | $false
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None

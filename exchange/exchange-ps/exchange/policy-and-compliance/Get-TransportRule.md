@@ -74,7 +74,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +95,6 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -118,7 +116,6 @@ Type: Enabled | Disabled
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +133,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -154,7 +150,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -170,7 +165,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

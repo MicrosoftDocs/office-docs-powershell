@@ -78,7 +78,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -96,7 +95,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +112,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -132,7 +129,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -148,7 +144,6 @@ Type: None | Normal | Verbose
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -166,7 +161,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +196,6 @@ Type: NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | Ris
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +211,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +226,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -252,7 +243,6 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

@@ -103,7 +103,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -121,7 +120,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -139,7 +137,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -157,7 +154,6 @@ Type: PublicFolderIdParameter
 Parameter Sets: Set2, Set3, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -173,7 +169,6 @@ Type: Unlimited
 Parameter Sets: Set2, Set3, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -189,7 +184,6 @@ Type: ServerIdParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -229,7 +223,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +238,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -265,7 +257,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None

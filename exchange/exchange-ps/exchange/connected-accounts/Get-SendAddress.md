@@ -75,7 +75,6 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -101,7 +100,6 @@ Type: SendAddressIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -141,7 +139,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

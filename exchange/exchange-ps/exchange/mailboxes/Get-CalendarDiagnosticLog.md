@@ -119,7 +119,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -139,7 +138,6 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -157,7 +155,6 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -170,7 +167,6 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -190,7 +186,6 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +203,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -230,7 +224,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +243,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -259,14 +251,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+This parameter is reserved for internal Microsoft use. A maximum of 1000 results are returned by this cmdlet.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -284,7 +275,6 @@ Type: ExDateTime
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -300,7 +290,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -318,7 +307,6 @@ Type: ExDateTime
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -334,7 +322,6 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -345,18 +332,21 @@ Accept wildcard characters: False
 ### -ExactMatch
 The ExactMatch parameter specifies whether to use an exact match or a partial match for text values that you specify for the Subject parameter. Valid values are:
 
-- $true: The subject search uses an exact match. For example, if you search for "budget", the command returns all calendar items that have "budget" anywhere in the subject, but not "budgeting".
+- $true: The subject search uses an exact match and searches all calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" anywhere in the subject, but not "budgeting".
 
-- $false: The subject search uses a partial match. For example, if you search for "budget", the command returns all calendar items that have "budget" and "budgeting" anywhere in the subject. This is the default value.
+- $false: The subject search uses a partial match and searches a maximum of 1000 calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" and "budgeting" anywhere in the subject. This is the default value.
 
 A partial subject match search may not return all of the relevant calendar items. Try using an exact subject match search for more accurate results.
+
+You only use this parameter with the Subject parameter. 
+
+The value of this parameter is ignored when you use the MeetingId parameter.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -365,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -ItemClass
-The ItemClass parameter filters the results by item class . You can specify multiple values separated by commas..
+The ItemClass parameter filters the results by the specified MessageClass property value of the calendar item (for example, IPM.Appointment). You can specify multiple values separated by commas.
 
 You can only use this parameter with the MeetingID parameter.
 
@@ -374,7 +364,6 @@ Type: String[]
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -390,31 +379,10 @@ Type: String[]
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MeetingID
-The MeetingID parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGloablObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
-
-To find this value, it's easiest to first search for the calendar item by using the Subject, StartDate, and EndDate parameters. After you find the calendar item that you want, you can use its CleanGloablObjectId value for the MeetingID parameter in future commands.
-
-Don't use this parameter with the Subject parameter, because the value of the MeetingID parameter takes precedence.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

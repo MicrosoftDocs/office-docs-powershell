@@ -107,7 +107,6 @@ Type: SwitchParameter
 Parameter Sets: Set3, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -123,7 +122,6 @@ Type: SwitchParameter
 Parameter Sets: Set3, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -139,7 +137,6 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -155,7 +152,6 @@ Type: String[]
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +169,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -189,7 +184,6 @@ Type: RoleIdParameter
 Parameter Sets: Set3, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: 1
 Default value: None
@@ -202,7 +196,6 @@ Type: RoleIdParameter
 Parameter Sets: Set1, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -218,7 +211,6 @@ Type: Custom | UnScoped | OrganizationManagement | RecipientManagement | ViewOnl
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +226,6 @@ Type: String
 Parameter Sets: Set3, Set2, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +241,6 @@ Type: String[]
 Parameter Sets: Set3, Set2, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

@@ -78,7 +78,6 @@ Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +95,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +110,6 @@ Type: SmtpAddress
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

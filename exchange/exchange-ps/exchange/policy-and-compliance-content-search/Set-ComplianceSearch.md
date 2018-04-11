@@ -85,7 +85,6 @@ Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: True
 Position: 1
 Default value: None
@@ -117,7 +116,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +147,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +162,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +177,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +192,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +207,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -231,7 +224,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -249,7 +241,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -269,7 +260,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -289,7 +279,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -307,7 +296,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -323,7 +311,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +344,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -389,7 +375,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -405,7 +390,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -425,7 +409,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +426,6 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -459,7 +441,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -475,7 +456,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -491,7 +471,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -507,7 +486,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -523,7 +501,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -539,7 +516,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -571,7 +547,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -603,7 +578,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -619,7 +593,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -635,7 +608,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -651,7 +623,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -667,7 +638,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -685,7 +655,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -703,7 +672,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -719,7 +687,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -737,7 +704,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -755,7 +721,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -773,7 +738,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

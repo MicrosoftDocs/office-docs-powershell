@@ -60,7 +60,6 @@ Type: SafeAttachmentPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None

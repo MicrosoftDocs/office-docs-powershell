@@ -48,7 +48,6 @@ Type: PSObject
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: Named
 Default value: None
@@ -64,7 +63,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: Named
 Default value: None
@@ -84,7 +82,6 @@ Type: ComplianceSearchActionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None

@@ -92,7 +92,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +104,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -123,7 +121,6 @@ Type: PublicFolderIdParameter
 Parameter Sets: Set1, Set2
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -136,7 +133,6 @@ Type: PublicFolderIdParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: 1
 Default value: None
@@ -152,7 +148,6 @@ Type: PublicFolderAdministrativeAceObject
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -168,7 +163,6 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -184,7 +178,6 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -197,7 +190,6 @@ Type: SecurityPrincipalIdParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +209,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +224,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -249,7 +239,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -275,7 +264,6 @@ Type: None | All | Descendents | SelfAndChildren | Children
 Parameter Sets: Set1, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -301,7 +289,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -317,7 +304,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None

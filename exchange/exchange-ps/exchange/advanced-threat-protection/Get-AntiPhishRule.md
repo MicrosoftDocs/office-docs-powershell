@@ -56,7 +56,6 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 0
 Default value: None
@@ -73,7 +72,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: Enabled, Disabled
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
