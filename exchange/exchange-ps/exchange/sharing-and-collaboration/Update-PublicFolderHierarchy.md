@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010
 title: Update-PublicFolderHierarchy
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Update-PublicFolderHierarchy
@@ -43,7 +44,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -63,7 +63,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +78,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +93,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None

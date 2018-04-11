@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Get-SPOActiveUserReport
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-SPOActiveUserReport
@@ -47,7 +48,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -63,7 +63,6 @@ Type: Daily | Weekly | Monthly | Yearly
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +78,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +95,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

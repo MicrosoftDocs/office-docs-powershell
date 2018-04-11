@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Online
 title: Restore-RecoverableItems
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Restore-RecoverableItems
@@ -97,7 +98,6 @@ Type: GeneralMailboxOrMailUserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -115,7 +115,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +132,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +157,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +174,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +189,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -209,7 +204,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -232,7 +226,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: DeletedItems, RecoverableItems
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -248,7 +241,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

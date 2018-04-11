@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online Protection
 title: Set-EOPUser
 schema: 2.0.0
+monikerRange: "eop-ps"
 ---
 
 # Set-EOPUser
@@ -51,7 +52,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -67,7 +67,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Type: CountryInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +97,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +112,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +127,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +142,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +157,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +172,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +199,6 @@ Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +214,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +229,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +244,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -271,7 +259,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +274,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -303,7 +289,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -319,7 +304,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -335,7 +319,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -351,7 +334,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -367,7 +349,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -383,7 +364,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

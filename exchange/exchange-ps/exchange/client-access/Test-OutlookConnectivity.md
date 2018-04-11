@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Test-OutlookConnectivity
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Test-OutlookConnectivity
@@ -147,7 +148,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: 1
 Default value: None
@@ -163,7 +163,6 @@ Type: $true | $false
 Parameter Sets: Set2, Set4
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -179,7 +178,6 @@ Type: HTTP | TCP | WS
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -195,7 +193,6 @@ Type: Array | Server
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -219,7 +216,6 @@ Type: Unknown | Internal | External
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -235,7 +231,6 @@ Type: $true | $false
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +250,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -271,7 +265,6 @@ Type: PSCredential
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +280,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -311,7 +303,6 @@ Type: Negotiate | NTLM | Kerberos
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -327,7 +318,6 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -343,7 +333,6 @@ Type: Basic | NTLM | Negotiate
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -359,7 +348,6 @@ Type: ServerIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -375,7 +363,6 @@ Type: External | Internal
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -391,7 +378,6 @@ Type: Int32
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -407,7 +393,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -423,7 +408,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +427,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: 1
 Default value: None
@@ -459,7 +442,6 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -475,7 +457,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -491,7 +472,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -507,7 +487,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -523,7 +502,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

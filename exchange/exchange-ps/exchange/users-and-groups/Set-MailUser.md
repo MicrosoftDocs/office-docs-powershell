@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 title: Set-MailUser
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
 ---
 
 # Set-MailUser
@@ -103,7 +104,6 @@ Type: MailUserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: True
 Position: 1
 Default value: None
@@ -143,7 +143,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +182,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +223,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +252,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -297,7 +293,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -313,7 +308,6 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -329,7 +323,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -367,7 +360,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -387,7 +379,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -407,7 +398,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -423,7 +413,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -439,7 +428,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -455,7 +443,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -471,7 +458,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -487,7 +473,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -503,7 +488,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -519,7 +503,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -535,7 +518,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -551,7 +533,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -567,7 +548,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -583,7 +563,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -599,7 +578,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -615,7 +593,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -631,7 +608,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -647,7 +623,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -663,7 +638,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -681,7 +655,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -721,7 +694,6 @@ Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -743,7 +715,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -759,7 +730,6 @@ Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -779,7 +749,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -799,7 +768,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -819,7 +787,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -839,7 +806,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -859,7 +825,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -879,7 +844,6 @@ Type: ProxyAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -897,7 +861,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -913,7 +876,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -961,7 +923,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -981,7 +942,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1005,7 +965,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1023,7 +982,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1053,7 +1011,6 @@ Type: BinHex | UuEncode | AppleSingle | AppleDouble
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1075,7 +1032,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1099,7 +1055,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1137,7 +1092,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1175,7 +1129,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1203,7 +1156,6 @@ Type: Text | Html | TextAndHtml
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1231,7 +1183,6 @@ Type: Text | Mime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1269,7 +1220,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1291,7 +1241,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1307,7 +1256,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1329,7 +1277,6 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1351,7 +1298,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1373,7 +1319,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1413,7 +1358,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1453,7 +1397,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1495,7 +1438,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1515,7 +1457,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1535,7 +1476,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1555,7 +1495,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1579,7 +1518,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1597,7 +1535,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1613,7 +1550,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1629,7 +1565,6 @@ Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1653,7 +1588,6 @@ Type: Never | Internal | Always
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1677,7 +1611,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1707,7 +1640,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1731,7 +1663,6 @@ Type: Never | Always | UseDefaultSettings
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1751,7 +1682,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1769,7 +1699,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1785,7 +1714,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1807,7 +1735,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1823,7 +1750,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1839,7 +1765,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1855,7 +1780,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1871,7 +1795,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1887,7 +1810,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1903,7 +1825,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1919,7 +1840,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1935,7 +1855,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1951,7 +1870,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1967,7 +1885,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1983,7 +1900,6 @@ Type: MailboxProvisioningConstraint
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -1999,7 +1915,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2015,7 +1930,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2031,7 +1945,6 @@ Type: NetID
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2067,7 +1980,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2103,7 +2015,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2119,7 +2030,6 @@ Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2135,7 +2045,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2151,7 +2060,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2167,7 +2075,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2183,7 +2090,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2199,7 +2105,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2215,7 +2120,6 @@ Type: None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Arch
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2231,7 +2135,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2247,7 +2150,6 @@ Type: CountryInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2263,7 +2165,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2279,7 +2180,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2297,7 +2197,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2323,7 +2222,6 @@ Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2339,7 +2237,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2355,7 +2252,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2371,7 +2267,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2387,7 +2282,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2403,7 +2297,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -2419,7 +2312,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

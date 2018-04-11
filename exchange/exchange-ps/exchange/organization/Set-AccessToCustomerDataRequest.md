@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-AccessToCustomerDataRequest
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-AccessToCustomerDataRequest
@@ -51,7 +52,6 @@ Type: Approve | Deny | Cancel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -67,7 +67,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

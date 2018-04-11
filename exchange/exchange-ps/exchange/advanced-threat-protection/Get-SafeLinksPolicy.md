@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-SafeLinksPolicy
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-SafeLinksPolicy
@@ -59,7 +60,6 @@ Type: SafeLinksPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None

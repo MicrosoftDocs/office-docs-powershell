@@ -1,7 +1,9 @@
 ---
+external help file: 
 applicable: Exchange Online
 title: Set-FocusedInbox
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-FocusedInbox
@@ -67,7 +69,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -87,7 +88,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

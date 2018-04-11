@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-OnPremisesOrganization
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-OnPremisesOrganization
@@ -59,7 +60,6 @@ Type: OnPremisesOrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None

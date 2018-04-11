@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: New-Mailbox
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # New-Mailbox
@@ -675,7 +676,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -695,7 +695,6 @@ Type: SwitchParameter
 Parameter Sets: Set5, Set12, Set7
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -717,7 +716,6 @@ Type: SwitchParameter
 Parameter Sets: Set15, Set16, Set22
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -730,7 +728,6 @@ Type: SwitchParameter
 Parameter Sets: Set23
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -750,7 +747,6 @@ Type: SmtpDomain
 Parameter Sets: Set9, Set13
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -770,7 +766,6 @@ Type: SwitchParameter
 Parameter Sets: Set16, Set14, Set24
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -788,7 +783,6 @@ Type: SwitchParameter
 Parameter Sets: Set13, Set17
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -806,7 +800,6 @@ Type: String
 Parameter Sets: Set8, Set11, Set12, Set7
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -826,7 +819,6 @@ Type: SwitchParameter
 Parameter Sets: Set5, Set8, Set6
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -846,7 +838,6 @@ Type: String
 Parameter Sets: Set15, Set11, Set3, Set20
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -874,7 +865,6 @@ Type: UserIdParameter
 Parameter Sets: Set15, Set11, Set3, Set20
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -892,7 +882,6 @@ Type: SecureString
 Parameter Sets: Set5, Set15, Set16, Set13, Set6, Set11, Set2, Set3, Set12, Set14, Set7, Set23, Set17, Set20, Set18, Set19, Set21, Set22, Set24
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -905,7 +894,6 @@ Type: SecureString
 Parameter Sets: Set9, Set1, Set10, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -925,7 +913,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set23, Set25
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -945,7 +932,6 @@ Type: SwitchParameter
 Parameter Sets: Set14, Set19, Set21
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -965,7 +951,6 @@ Type: SwitchParameter
 Parameter Sets: Set5, Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -983,7 +968,6 @@ Type: String
 Parameter Sets: Set5, Set16, Set13, Set11, Set2, Set3, Set12, Set14, Set23, Set17, Set20, Set18, Set19, Set21, Set22, Set25, Set27, Set28
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -996,7 +980,6 @@ Type: String
 Parameter Sets: Set15, Set9, Set6, Set1, Set7, Set26, Set24
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -1014,7 +997,6 @@ Type: WindowsLiveId
 Parameter Sets: Set5, Set13, Set8, Set6, Set11, Set10, Set4, Set7
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -1038,7 +1020,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1064,7 +1045,6 @@ Type: AddressBookMailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1094,7 +1074,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1136,7 +1115,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1152,7 +1130,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1176,7 +1153,6 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1196,7 +1172,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1222,7 +1197,6 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1240,7 +1214,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1258,7 +1231,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1278,7 +1250,6 @@ Type: SwitchParameter
 Parameter Sets: Set13, Set8, Set11, Set10, Set4, Set7
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1294,7 +1265,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1310,7 +1280,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1328,7 +1297,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1344,7 +1312,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1360,7 +1327,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1380,7 +1346,6 @@ Type: PSCredential
 Parameter Sets: Set15, Set11, Set3, Set20
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1412,7 +1377,6 @@ Type: MailboxPlanIdParameter
 Parameter Sets: Set5, Set9, Set13, Set8, Set6, Set11, Set1, Set10, Set3, Set12, Set14, Set4, Set7
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1428,7 +1392,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -1446,7 +1409,6 @@ Type: SwitchParameter
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -1482,7 +1444,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1504,7 +1465,6 @@ Type: $true | $false
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1520,7 +1480,6 @@ Type: String
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1546,7 +1505,6 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1562,7 +1520,6 @@ Type: String
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1580,7 +1537,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1598,7 +1554,6 @@ Type: SwitchParameter
 Parameter Sets: Set9, Set13
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1622,7 +1577,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1642,7 +1596,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1658,7 +1611,6 @@ Type: Int32
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1688,7 +1640,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1714,7 +1665,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1732,7 +1682,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1756,7 +1705,6 @@ Type: Never | Internal | Always
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1784,7 +1732,6 @@ Type: SharingPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1812,7 +1759,6 @@ Type: ThrottlingPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -1828,7 +1774,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1854,7 +1799,6 @@ Type: $true | $false
 Parameter Sets: Set23, Set25
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -1874,7 +1818,6 @@ Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -1892,7 +1835,6 @@ Type: WindowsLiveId
 Parameter Sets: Set8, Set10, Set12, Set14
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -1905,7 +1847,6 @@ Type: WindowsLiveId
 Parameter Sets: Set23, Set25
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1925,7 +1866,6 @@ Type: SwitchParameter
 Parameter Sets: Set26, Set30
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -1945,7 +1885,6 @@ Type: SwitchParameter
 Parameter Sets: Set26, Set30
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1961,7 +1900,6 @@ Type: $true | $false
 Parameter Sets: Set26, Set30
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1977,7 +1915,6 @@ Type: MailboxProvisioningConstraint
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1993,7 +1930,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2009,7 +1945,6 @@ Type: RemovedMailboxIdParameter
 Parameter Sets: Set5, Set9, Set13, Set8, Set11, Set1, Set10, Set12, Set14, Set4, Set7
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2022,7 +1957,6 @@ Type: RemovedMailboxIdParameter
 Parameter Sets: Set6
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -2046,7 +1980,6 @@ Type: SecureString
 Parameter Sets: Set23, Set25
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2062,7 +1995,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2084,7 +2016,6 @@ Type: SwitchParameter
 Parameter Sets: Set26
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -2106,7 +2037,6 @@ Type: SwitchParameter
 Parameter Sets: Set27
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -2124,7 +2054,6 @@ Type: SwitchParameter
 Parameter Sets: Set23
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -2140,7 +2069,6 @@ Type: SwitchParameter
 Parameter Sets: Set18
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -2156,7 +2084,6 @@ Type: SwitchParameter
 Parameter Sets: Set28
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -2174,7 +2101,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set5, Set1, Set14, Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2187,7 +2113,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set10
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -2203,7 +2128,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2219,7 +2143,6 @@ Type: SwitchParameter
 Parameter Sets: Set22
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2235,7 +2158,6 @@ Type: SwitchParameter
 Parameter Sets: Set22
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -2251,7 +2173,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Online
 title: Remove-AvailabilityConfig
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Remove-AvailabilityConfig
@@ -47,7 +48,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -63,7 +63,6 @@ Type: AvailabilityConfigIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -79,7 +78,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online
 title: Get-PerimeterConfig
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-PerimeterConfig
@@ -42,7 +43,6 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None

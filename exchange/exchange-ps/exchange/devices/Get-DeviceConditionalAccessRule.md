@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DeviceConditionalAccessRule
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DeviceConditionalAccessRule
@@ -60,7 +61,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +76,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +91,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None

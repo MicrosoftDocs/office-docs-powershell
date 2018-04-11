@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-eDiscoveryCaseAdmin
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-eDiscoveryCaseAdmin
@@ -44,7 +45,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -60,7 +60,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

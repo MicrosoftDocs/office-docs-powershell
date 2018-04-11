@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-ComplianceCase
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-ComplianceCase
@@ -50,7 +51,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -70,7 +70,6 @@ Type: ComplianceCaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -86,7 +85,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

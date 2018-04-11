@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Set-ActivityAlert
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Set-ActivityAlert
@@ -64,7 +65,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: 1
 Default value: None
@@ -92,7 +92,6 @@ Type: None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGove
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -108,7 +107,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +126,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -144,7 +141,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +160,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +175,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -198,7 +192,6 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -216,7 +209,6 @@ Type: Double
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -232,7 +224,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -252,7 +243,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -274,7 +264,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -348,7 +337,6 @@ Type: ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticP
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -368,7 +356,6 @@ Type: SingleUser | AllUsers
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -392,7 +379,6 @@ Type: Low | Medium | High | None
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -410,7 +396,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -428,7 +413,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -454,7 +438,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -470,7 +453,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

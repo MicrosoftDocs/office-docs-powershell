@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Install-UnifiedCompliancePrerequisite
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Install-UnifiedCompliancePrerequisite
@@ -77,7 +78,6 @@ Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +95,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +110,6 @@ Type: SmtpAddress
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

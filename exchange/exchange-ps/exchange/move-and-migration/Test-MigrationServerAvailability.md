@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Test-MigrationServerAvailability
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Test-MigrationServerAvailability
@@ -174,7 +175,6 @@ Type: SwitchParameter
 Parameter Sets: Set7, Set8, Set11, Set12
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -192,7 +192,6 @@ Type: PSCredential
 Parameter Sets: Set7, Set8, Set4, Set5, Set6, Set9, Set11, Set12, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -205,7 +204,6 @@ Type: PSCredential
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +219,6 @@ Type: SmtpAddress
 Parameter Sets: Set7, Set8, Set11, Set12
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -234,7 +231,6 @@ Type: SmtpAddress
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +246,6 @@ Type: MigrationEndpointIdParameter
 Parameter Sets: Set9, Set13
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -268,7 +263,6 @@ Type: SwitchParameter
 Parameter Sets: Set8, Set5, Set11
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -284,7 +278,6 @@ Type: SwitchParameter
 Parameter Sets: Set7, Set3, Set12
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -302,7 +295,6 @@ Type: String
 Parameter Sets: Set8, Set5
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -320,7 +312,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -340,7 +331,6 @@ Type: Int32
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -356,7 +346,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -378,7 +367,6 @@ Type: Fqdn
 Parameter Sets: Set7, Set4, Set6, Set3, Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -391,7 +379,6 @@ Type: Fqdn
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -409,7 +396,6 @@ Type: Fqdn
 Parameter Sets: Set8, Set5, Set6, Set9, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -427,7 +413,6 @@ Type: String
 Parameter Sets: Set8, Set5, Set11
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -440,7 +425,6 @@ Type: String
 Parameter Sets: Set6, Set9, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -460,7 +444,6 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: Set8, Set5, Set6, Set9, Set2, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -480,7 +463,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -496,7 +478,6 @@ Type: String
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -522,7 +503,6 @@ Type: Admin | FullAccess
 Parameter Sets: Set8, Set5, Set11
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -540,7 +520,6 @@ Type: None | Ssl | Tls
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -558,7 +537,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set7, Set8, Set5, Set6, Set9, Set11, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -574,7 +552,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -590,7 +567,6 @@ Type: SwitchParameter
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -606,7 +582,6 @@ Type: SwitchParameter
 Parameter Sets: Set6, Set9
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -622,7 +597,6 @@ Type: String
 Parameter Sets: Set9, Set10
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -638,7 +612,6 @@ Type: SwitchParameter
 Parameter Sets: Set7, Set10
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -654,7 +627,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

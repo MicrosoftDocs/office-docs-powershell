@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DlpKeywordDictionary
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpKeywordDictionary
@@ -49,7 +50,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

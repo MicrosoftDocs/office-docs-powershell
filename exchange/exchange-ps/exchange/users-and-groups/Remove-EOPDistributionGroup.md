@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online Protection
 title: Remove-EOPDistributionGroup
 schema: 2.0.0
+monikerRange: "eop-ps"
 ---
 
 # Remove-EOPDistributionGroup
@@ -47,7 +48,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +79,6 @@ Type: DistributionGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

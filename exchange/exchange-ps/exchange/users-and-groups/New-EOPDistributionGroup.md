@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online Protection
 title: New-EOPDistributionGroup
 schema: 2.0.0
+monikerRange: "eop-ps"
 ---
 
 # New-EOPDistributionGroup
@@ -65,7 +66,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +83,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +98,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +133,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +174,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +189,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -209,7 +204,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +219,6 @@ Type: Distribution | Security
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Validate-RetentionRuleQuery
 schema: 2.0.0
+monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Validate-RetentionRuleQuery
@@ -44,7 +45,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: True
 Position: Named
 Default value: None

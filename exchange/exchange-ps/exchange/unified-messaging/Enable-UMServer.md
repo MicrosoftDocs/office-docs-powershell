@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010
 title: Enable-UMServer
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Enable-UMServer
@@ -47,7 +48,6 @@ Type: UMServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -67,7 +67,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +97,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
