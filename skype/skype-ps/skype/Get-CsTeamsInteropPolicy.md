@@ -48,7 +48,6 @@ Grant TeamsInteropPolicy and TeamsUpgradePolicy together as noted below to manag
 |TeamsOnly                                               |DisallowOverrideCallingTeamsChatTeams           |
 +--------------------------------------------------------+------------------------------------------------+
 
-
 In particular, if you grant the TeamsUpgradePolicy instance “UpgradeToTeams” (Mode =TeamsOnly) to any user, you must also grant the DisallowOverrideCallingTeamsChatTeams instance of TeamsInteropPolicy to ensure the user can receive chats and calls.
 
 
@@ -80,7 +79,7 @@ For comprehensive documentation on this policy and it’s settings, see [Microso
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -172,7 +171,6 @@ Accept wildcard characters: False
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
