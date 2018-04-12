@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Imoportant: 
+Important: 
 - This cmdlet will be replaced by TeamsUpgradePolicy. As some components honor interop and others honor upgrade, during the transition this cmdlet must be used in combination with TeamsUpgradePolicy.
 - Use only 1 of the 3 instances where the values for chat and calling preferred clients are the same and allow end user override = false. The others are no longer valid configurations.
 - Use `remove-csteamsinteorppolicy` to undo customization of global interoppolicy.
