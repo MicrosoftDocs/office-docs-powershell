@@ -9,11 +9,16 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Determines how calls are routed between Skype for Business and Microsoft Teams. This cmdlet s typically used by organizations that have users on both Skype for Business and Microsoft Teams and want to configure how calls are handled in their organization.
+Imoportant: 
+- This cmdlet will be replaced by TeamsUpgradePolicy. As some components honor interop and others honor upgrade, during the transition this cmdlet must be used in combination with TeamsUpgradePolicy.
+- Use only 1 of the 3 instances where the values for chat and calling preferred clients are the same and allow end user override = false. The others are no longer valid configurations.
+- Use remove- csteamsinteorppolicy to undo customization of global interoppolicy.
+
+
+This cmdlet Determines how calls are routed between Skype for Business and Microsoft Teams. This cmdlet s typically used by organizations that have users on both Skype for Business and Microsoft Teams and want to configure how calls are handled in their organization.
 
 
 Note: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings and the current implementation may change in the future.
-
 
 Get-CsTeamsInteropPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
 
