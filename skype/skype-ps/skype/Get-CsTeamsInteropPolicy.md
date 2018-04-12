@@ -17,26 +17,22 @@ Ensure users with TeamsInteropPolicy are assigned only one of these 3 built-in i
 
 The valid instances are:
 
-```Instance
-Identity: DisallowOverrideCallingDefaultChatDefault
-AllowEndUserClientOverride: False
-CallingDefaultClient: Default
-ChatDefaultClient: Default
-```
 
-```Instance
-Identity: DisallowOverrideCallingSfbChatSfb
-AllowEndUserClientOverride: False
-CallingDefaultClient: Sfb
-ChatDefaultClient: Sfb
-```
+**Identity: DisallowOverrideCallingDefaultChatDefault**   
+**AllowEndUserClientOverride: False**   
+**CallingDefaultClient: Default**   
+**ChatDefaultClient: Default**
 
-```Instance
-Identity: DisallowOverrideCallingTeamsChatTeams
-AllowEndUserClientOverride: False
-CallingDefaultClient: Teams
-ChatDefaultClient: Teams
-```
+**Identity: DisallowOverrideCallingSfbChatSfb**   
+**AllowEndUserClientOverride: False**   
+**CallingDefaultClient: Sfb**   
+**ChatDefaultClient: Sfb**
+
+**Identity: DisallowOverrideCallingTeamsChatTeams**   
+**AllowEndUserClientOverride: False**   
+**CallingDefaultClient: Teams**     
+**ChatDefaultClient: Teams**
+
 
 Use the following cmdlet syntax, where $policy is one of the above values of identity:
 `Grant-CsTeamsInteropPolicy -PolicyName $policy -Identity $SipAddress`
@@ -50,20 +46,14 @@ Grant TeamsInteropPolicy and TeamsUpgradePolicy together as noted below to manag
 - Coordinate granting of TeamsUpgradePolicy and TeamsInteropPolicy:
 
 
-```Instance
-Grant instance of TeamsUpgradePolicy using mode: Islands
-Grant instance of TeamsInteropPolicy: DisallowOverrideCallingDefaultChatDefault
-```
+    **Grant instance of TeamsUpgradePolicy using mode: Islands**  
+    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingDefaultChatDefault**
 
-```Instance
-Grant instance of TeamsUpgradePolicy using mode: SfBonly, SfBWithTeamsCollab
-Grant instance of TeamsInteropPolicy: DisallowOverrideCallingSfbChatSfb
-```
+    **Grant instance of TeamsUpgradePolicy using mode: SfBonly, SfBWithTeamsCollab**  
+    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingSfbChatSfb**
 
-```Instance
-Grant instance of TeamsUpgradePolicy using mode: TeamsOnly 
-Grant instance of TeamsInteropPolicy: DisallowOverrideCallingTeamsChatTeams
-```
+    **Grant instance of TeamsUpgradePolicy using mode: TeamsOnly**    
+    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingTeamsChatTeams**
 
 
 In particular, if you grant the TeamsUpgradePolicy instance “UpgradeToTeams” (Mode =TeamsOnly) to any user, you must also grant the DisallowOverrideCallingTeamsChatTeams instance of TeamsInteropPolicy to ensure the user can receive chats and calls.
