@@ -9,6 +9,24 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
+This cmdlet Determines how calls are routed between Skype for Business and Microsoft Teams. This cmdlet s typically used by organizations that have users on both Skype for Business and Microsoft Teams and want to configure how calls are handled in their organization.
+
+
+Note: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings and the current implementation may change in the future.
+
+`Get-CsTeamsInteropPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]`
+
+`Get-CsTeamsInteropPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]`
+
+
+## SYNTAX
+
+```
+Get-CsTeamsInteropPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+```
+
+## DESCRIPTION
+
 Important:
 
 TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. During the transition, some components will honor TeamsInteropPolicy while others honor TeamsUpgradePolicy. Therefore, use of these 2 policies must be coordinated during the transition. After transition is complete, TeamsInteorpPolicy will be removed. To prepare for these upcoming changes, customers should do the following:
@@ -59,23 +77,6 @@ Grant TeamsInteropPolicy and TeamsUpgradePolicy together as noted below to manag
 In particular, if you grant the TeamsUpgradePolicy instance “UpgradeToTeams” (Mode =TeamsOnly) to any user, you must also grant the DisallowOverrideCallingTeamsChatTeams instance of TeamsInteropPolicy to ensure the user can receive chats and calls.
 
 
-This cmdlet Determines how calls are routed between Skype for Business and Microsoft Teams. This cmdlet s typically used by organizations that have users on both Skype for Business and Microsoft Teams and want to configure how calls are handled in their organization.
-
-
-Note: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings and the current implementation may change in the future.
-
-`Get-CsTeamsInteropPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]`
-
-`Get-CsTeamsInteropPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]`
-
-
-## SYNTAX
-
-```
-Get-CsTeamsInteropPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
-```
-
-## DESCRIPTION
 Interoperability (interop for short) enables Skype for Business and Teams users to chat and call with one another, ensuring that communications remain fluid across your organization. 
 This policy helps IT pros manage the adoption of Teams by determining how to route calls across apps and whether to enable users to choose which app to use for calling. 
 Teams interop policy can be defined at the tenant or per-user level.
