@@ -13,21 +13,33 @@ Important:
 
 TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. During the transition, some components will honor TeamsInteropPolicy while others honor TeamsUpgradePolicy. Therefore, use of these 2 policies must be coordinated during the transition. After transition is complete, TeamsInteorpPolicy will be removed. To prepare for these upcoming changes, customers should do the following:
  
-Ensure users with TeamsInteropPolicy are assigned only one of these 3 built-in instances for which CallingDefaultClient = ChatDefaultClient, and for which AllowEndUserClientOverride = false. The other instances are no longer valid configurations and will not be supported. The valid instances are:
+Ensure users with TeamsInteropPolicy are assigned only one of these 3 built-in instances for which CallingDefaultClient = ChatDefaultClient, and for which AllowEndUserClientOverride = false. The other instances are no longer valid configurations and will not be supported. 
 
-+-----------------------------------------+---------------------------+------------------------+---------------------+
-|               Identity                  | AllowEndUserClientOverride|   CallingDefaultClient |  ChatDefaultClient  |
-+-----------------------------------------+---------------------------+------------------------+---------------------+
-|DisallowOverrideCallingDefaultChatDefault|           False           |         Default        |       Default       |
-+-----------------------------------------+---------------------------+------------------------+---------------------+
-|DisallowOverrideCallingSfbChatSfb        |           False           |           Sfb          |         Sfb         |
-+-----------------------------------------+---------------------------+------------------------+---------------------+
-|DisallowOverrideCallingTeamsChatTeams    |           False           |          Teams         |        Teams        |
-+-----------------------------------------+---------------------------+------------------------+---------------------+
- 
+The valid instances are:
+
+```
+Identity: DisallowOverrideCallingDefaultChatDefault
+AllowEndUserClientOverride: False
+CallingDefaultClient: Default
+ChatDefaultClient: Default
+```
+
+```
+Identity: DisallowOverrideCallingSfbChatSfb
+AllowEndUserClientOverride: False
+CallingDefaultClient: Sfb
+ChatDefaultClient: Sfb
+```
+
+```
+Identity: DisallowOverrideCallingTeamsChatTeams
+AllowEndUserClientOverride: False
+CallingDefaultClient: Teams
+ChatDefaultClient: Teams
+```
 
 Use the following cmdlet syntax, where $policy is one of the above values of identity:
-Grant-CsTeamsInteropPolicy -PolicyName $policy -Identity $SipAddress
+`Grant-CsTeamsInteropPolicy -PolicyName $policy -Identity $SipAddress`
 
 
 If you customized the built-in global policy, undo this by running `Remove-CsTeamsInteropPolicy`. This will remove the tenant-specific global policy and revert back to the system-wide built-in policy (which cannot be removed). Use the following syntax:
@@ -37,16 +49,22 @@ Grant TeamsInteropPolicy and TeamsUpgradePolicy together as noted below to manag
  
 - Coordinate granting of TeamsUpgradePolicy and TeamsInteropPolicy:
 
-+----------------------------------------------------------+----------------------------------------------+
-|If you grant an instance of TeamsUpgradePolicy          |Then grant this instance of TeamsInteropPolicy  |
-|with this value of Mode                                 |                                                |
-+--------------------------------------------------------+------------------------------------------------+
-|Islands                                                 |DisallowOverrideCallingDefaultChatDefault       |
-+--------------------------------------------------------+------------------------------------------------+
-|SfBonly, SfBWithTeamsCollab                             |DisallowOverrideCallingSfbChatSfb               |
-+--------------------------------------------------------+------------------------------------------------+
-|TeamsOnly                                               |DisallowOverrideCallingTeamsChatTeams           |
-+--------------------------------------------------------+------------------------------------------------+
+
+```
+Grant instance of TeamsUpgradePolicy using mode: Islands
+Grant instance of TeamsInteropPolicy: DisallowOverrideCallingDefaultChatDefault
+```
+
+```
+Grant instance of TeamsUpgradePolicy using mode: SfBonly, SfBWithTeamsCollab
+Grant instance of TeamsInteropPolicy: DisallowOverrideCallingSfbChatSfb
+```
+
+```
+Grant instance of TeamsUpgradePolicy using mode: TeamsOnly 
+Grant instance of TeamsInteropPolicy: DisallowOverrideCallingTeamsChatTeams
+```
+
 
 In particular, if you grant the TeamsUpgradePolicy instance “UpgradeToTeams” (Mode =TeamsOnly) to any user, you must also grant the DisallowOverrideCallingTeamsChatTeams instance of TeamsInteropPolicy to ensure the user can receive chats and calls.
 
@@ -56,9 +74,9 @@ This cmdlet Determines how calls are routed between Skype for Business and Micro
 
 Note: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings and the current implementation may change in the future.
 
-Get-CsTeamsInteropPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+`Get-CsTeamsInteropPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]`
 
-Get-CsTeamsInteropPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+`Get-CsTeamsInteropPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]`
 
 
 ## SYNTAX
