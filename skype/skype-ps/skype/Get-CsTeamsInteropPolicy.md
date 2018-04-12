@@ -17,21 +17,21 @@ Ensure users with TeamsInteropPolicy are assigned only one of these 3 built-in i
 
 The valid instances are:
 
-```
+```Instance
 Identity: DisallowOverrideCallingDefaultChatDefault
 AllowEndUserClientOverride: False
 CallingDefaultClient: Default
 ChatDefaultClient: Default
 ```
 
-```
+```Instance
 Identity: DisallowOverrideCallingSfbChatSfb
 AllowEndUserClientOverride: False
 CallingDefaultClient: Sfb
 ChatDefaultClient: Sfb
 ```
 
-```
+```Instance
 Identity: DisallowOverrideCallingTeamsChatTeams
 AllowEndUserClientOverride: False
 CallingDefaultClient: Teams
@@ -50,17 +50,17 @@ Grant TeamsInteropPolicy and TeamsUpgradePolicy together as noted below to manag
 - Coordinate granting of TeamsUpgradePolicy and TeamsInteropPolicy:
 
 
-```
+```Instance
 Grant instance of TeamsUpgradePolicy using mode: Islands
 Grant instance of TeamsInteropPolicy: DisallowOverrideCallingDefaultChatDefault
 ```
 
-```
+```Instance
 Grant instance of TeamsUpgradePolicy using mode: SfBonly, SfBWithTeamsCollab
 Grant instance of TeamsInteropPolicy: DisallowOverrideCallingSfbChatSfb
 ```
 
-```
+```Instance
 Grant instance of TeamsUpgradePolicy using mode: TeamsOnly 
 Grant instance of TeamsInteropPolicy: DisallowOverrideCallingTeamsChatTeams
 ```
