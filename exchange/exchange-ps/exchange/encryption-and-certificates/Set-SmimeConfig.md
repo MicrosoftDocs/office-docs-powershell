@@ -568,7 +568,7 @@ Accept wildcard characters: False
 ### -SMIMECertificateIssuingCA
 The SMIMECertificateIssuingCA parameter specifies the serialized certificate store (SST) that contains the Certificate Authority (CA) signing and intermediate certificate information.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For example: -SMIMECertificateIssuingCA $([byte[]](Get-Content -Encoding byte -Path "C:\\Temp\\CACertificateSerializedStore.sst" -ReadCount 0)
+You need to read the file to a byte-encoded object using the Get-Content cmdlet. For example: -SMIMECertificateIssuingCA $\(\[byte\[\]\]\(Get-Content -Encoding byte -Path "C:\\Temp\\CACertificateSerializedStore.sst" -ReadCount 0\)
 
 Each certificate is checked, and if any certificates are expired, the operation will fail.
 
