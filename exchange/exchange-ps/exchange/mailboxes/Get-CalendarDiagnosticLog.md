@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-This parameter is reserved for internal Microsoft use. A maximum of 1000 results are returned by this cmdlet.
+This parameter determines the number of results returned by the cmdlet. The maximum value is 1000.
 
 ```yaml
 Type: Unlimited
