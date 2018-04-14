@@ -24,9 +24,9 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityUserFilter -Identity ln1 -User user1
+PS C:\>Get-FASTSearchSecurityUserFilter -Identity ln1 -User user1
 ```
 
 This example gets the search security filter for user "user1" in user store "ln1".
