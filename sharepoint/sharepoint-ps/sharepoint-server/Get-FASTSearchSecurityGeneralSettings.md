@@ -20,19 +20,24 @@ Get-FASTSearchSecurityGeneralSettings [[-Worker] <WorkerPoolNode>] [<CommonParam
 This cmdlet retrieves configuration information for general security settings, such as:
 
 -- Default user store ID
+
 -- CCTK server port number
+
 -- CCTK server enabled
+
 -- Default log level
+
 -- Log level namespaces
+
 -- Public Filter FQL
 
 For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityGeneralSettings | fl
+PS C:\>Get-FASTSearchSecurityGeneralSettings | fl
 ```
 
 This example retrieves the configuration setting for all the general security settings and formats the information as a list.
