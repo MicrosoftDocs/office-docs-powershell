@@ -30,14 +30,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
 C:\PS>Get-FASTSearchMetadataCrawledPropertyMapping -Name title
 ```
 
 This example returns a list of crawled properties that are mapped to the managed property named "title".
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
 PS C:\>$managedproperty = Get-FASTSearchMetadataManagedProperty -name title
 PS C:\>Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty $managedproperty
@@ -46,7 +46,7 @@ PS C:\>Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty $managedpro
 This example first retrieves a ManagedPropertyImpl object, and then uses it to look up the corresponding crawled property mappings.
 It returns all crawled properties that are set up to map content into this managed property.
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 3-----------------
 ```
 PS C:\>$crawledproperty = Get-FASTSearchmetadataCrawledProperty -name title
 PS C:\>$crawledproperty.GetMappedManagedProperties()
