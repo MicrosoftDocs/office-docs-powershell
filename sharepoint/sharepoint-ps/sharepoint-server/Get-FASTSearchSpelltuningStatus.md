@@ -23,9 +23,9 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-###   (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>
+PS C:\>Get-FASTSearchSpelltuningStatus
 ```
 
 ## PARAMETERS
