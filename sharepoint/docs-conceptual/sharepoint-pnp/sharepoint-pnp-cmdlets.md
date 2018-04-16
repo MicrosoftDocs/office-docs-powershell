@@ -74,7 +74,7 @@ Get-Command -Module *PnP*
 ```
 
 <br />
-> [!Video https://www.youtube.com/embed/VLGj-kV0Pw]
+> [!Video https://www.youtube.com/embed/-VLGj-kV0Pw]
 
 At the following links you will find a few videos on how to get started with the cmdlets:
 
