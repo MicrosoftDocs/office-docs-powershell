@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-ActiveSyncDeviceStatistics -Identity TonySmith
+Get-ActiveSyncDeviceStatistics -mailbox TonySmith
 ```
 
 This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
