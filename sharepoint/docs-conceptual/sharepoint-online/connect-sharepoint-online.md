@@ -6,6 +6,9 @@ Install the SharePoint Online Management Shell by downloading and running the [S
 
 To open the SharePoint Online Management Shell command prompt, from the **Start** screen, type **sharepoint**, and then click **SharePoint Online Management Shell**.
 
+<br />
+<br />
+
 > [!Video https://www.youtube.com/embed/DbyF4y4te80]
 
 ## To connect with a user name and password ##
