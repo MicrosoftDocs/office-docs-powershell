@@ -1,4 +1,4 @@
----
+--
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-ActiveSyncDeviceStatistics
@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-ActiveSyncDeviceStatistics -Identity TonySmith
+Get-ActiveSyncDeviceStatistics -Mailbox TonySmith
 ```
 
 This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
