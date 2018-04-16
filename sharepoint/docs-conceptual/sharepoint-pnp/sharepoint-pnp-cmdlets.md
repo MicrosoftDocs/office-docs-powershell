@@ -73,11 +73,12 @@ To view all cmdlets, enter
 Get-Command -Module *PnP*
 ```
 
+> [!Video https://www.youtube.com/watch?v=-VLGj-kV0Pw]
+
 At the following links you will find a few videos on how to get started with the cmdlets:
 
-* https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Web-Cast-Introduction-to-Office-365-PnP-PowerShell
-* https://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-PnP-PowerShell-Cmdlets
-* https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Webcast-PnP-PowerShell-Getting-started-with-latest-updates
+* [Getting started with PnP PowerShell](https://www.youtube.com/watch?v=-VLGj-kV0Pw)
+* [Introduction to PnP PowerShell cmdlets](https://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-PnP-PowerShell-Cmdlets)
 
 ### Setting up credentials ##
 See this [wiki page](https://github.com/SharePoint/PnP-PowerShell/wiki/How-to-use-the-Windows-Credential-Manager-to-ease-authentication-with-PnP-PowerShell) for more information on how to use the Windows Credential Manager to setup credentials that you can use in unattended scripts
