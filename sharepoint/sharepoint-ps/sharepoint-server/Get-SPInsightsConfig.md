@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPInsightsConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns the uploader.xml and Microsoft.Office.BigData.DataLoader.exe.config files from the Configuration database.
 
 ## SYNTAX
 
@@ -17,21 +17,41 @@ Get-SPInsightsConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns the uploader.xml and Microsoft.Office.BigData.DataLoader.exe.config files from the Configuration database.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$config = Get-SPInsightsConfig
+PS C:\>$xml = $config.UploaderXml
+PS C:\>$config.UploaderXml = $xml
+PS C:\>$config.Update()
+PS C:\>Stop-SPService -Identity "Microsoft SharePoint Insights"
+PS C:\>Start-SPService -Identity "Microsoft SharePoint Insights"
 ```
 
-{{ Add example description here }}
+This example returns and modifies the config.uploader.xml file. It then restarts the SharePoint Insights service on all servers in order to commit the changes.
+
+### Example 2
+```
+PS C:\>$config = Get-SPInsightsConfig
+PS C:\>PS C:\>$odlExeConfig = $config.OdlExeConfig
+PS C:\>$config.OdlExeConfig = $odlExeConfig
+PS C:\>$config.Update()
+PS C:\>Stop-SPService -Identity "Microsoft SharePoint Insights"
+PS C:\>Start-SPService -Identity "Microsoft SharePoint Insights"
+```
+
+This example returns and modifies the config.uploader.xml file. It then restarts the SharePoint Insights service on all servers in order to commit the changes.
+
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
