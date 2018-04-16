@@ -4,7 +4,7 @@
   - name: Overview
     href: overview.md
   - name: SharePoint Online Cmdlets
-    href: harepoint-online/introduction-sharepoint-online-management-shell.md
+    href: sharepoint-online/introduction-sharepoint-online-management-shell.md
     items:
     - name: Connect to SharePoint Online
       href: sharepoint-online/connect-sharepoint-online.md
