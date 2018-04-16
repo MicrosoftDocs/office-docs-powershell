@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPExcelBlockedFileType
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns a file type or list of file types that are prevented from loading.
 
 ## SYNTAX
 
@@ -19,21 +19,26 @@ Get-SPExcelBlockedFileType [[-Identity] <SPExcelBlockedFileTypePipeBind>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-SPExcelBlockedFileType cmdlet reads a file type or a list of file types that cannot be loaded in Excel Services Application.  Excel Services Application does not load any files that correspond to a file type in this list.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
+
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Get-SPExcelBlockedFileType -ExcelServiceApplication 'Excel Service Application'
 ```
 
-{{ Add example description here }}
+This example retrieves all blocked file types for the service application named 'Excel Service Application'.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -49,7 +54,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelServiceApplication
-{{Fill ExcelServiceApplication Description}}
+Specifies the Excel Services Application Web service application that contains the SPBlockedExcelFileType list object.
+
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel
+Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
 
 ```yaml
 Type: SPExcelServiceApplicationPipeBind
@@ -65,7 +73,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the Excel Services Application Web service application that contains the SPBlockedExcelFileType list object.
+
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel
+Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
 
 ```yaml
 Type: SPExcelBlockedFileTypePipeBind
