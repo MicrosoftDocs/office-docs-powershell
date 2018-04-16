@@ -21,8 +21,3 @@ After you get familiar with SharePoint Online sites and users, try using SharePo
 To use SharePoint Online PowerShell commands, you must be a SharePoint Online global administrator.
 
 Before you can run SharePoint Online commands, you must install the SharePoint Online Management Shell module and connect to the SharePoint Online service. For more information, see [Connect SharePoint Online](connect-sharepoint-online.md)
-
-
-
-
-
