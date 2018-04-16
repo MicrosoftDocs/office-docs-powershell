@@ -42,18 +42,20 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
-Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
+PS C:\>Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
 ```
 
 This example retrieves the result item types that are defined for the owner referenced by $tenantowner for the search application referenced by $ssa.
+
 Although SearchApplication and SearchApplicationProxy are optional parameters, this cmdlet requires use of one of them.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the result item type to update.
+
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
@@ -86,13 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -109,6 +107,7 @@ Accept wildcard characters: False
 
 ### -SearchApplication
 Specifies the name of the search application.
+
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
 
 ```yaml
@@ -126,6 +125,7 @@ Accept wildcard characters: False
 
 ### -SearchApplicationProxy
 Specifies the proxy of the search application that contains the result item type.
+
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application proxy name (for example, SearchAppProxy1); or an instance of a valid SearchServiceApplicationProxy object.
 
 ```yaml
