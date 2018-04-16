@@ -54,6 +54,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "apiPlatform": "powershell",
       "author" : "chrisda",
       "ms.author" : "chrisda",
       "manager" : "serdars",
