@@ -60,7 +60,7 @@ This example requires you to connect to Security & Compliance Center PowerShell 
 
 ### Example 5
 ```
-$DG = Get-DistributionGroup "Executive Team"; New-ComplianceSecurityFilter -FilterName NoExecutivesPreview -Users all -Filters "Mailbox_MemberOfGroup -ne '$($DG.DistinguishedName)'" -Action Destroy
+$DG = Get-DistributionGroup "Executive Team"; New-ComplianceSecurityFilter -FilterName NoExecutivesPreview -Users all -Filters "Mailbox_MemberOfGroup -ne '$($DG.DistinguishedName)'" -Action Purge
 ```
 
 This example prevents any user from deleting content from the mailboxes of members of the Executive Team distribution group.
