@@ -104,7 +104,7 @@ Currency: -Values @{"Number" = "10"}
 
 Currency: -Values @{"Currency" = "10"}
 
-Date and Time: -Values @{"DateAndTime" = "03/10/2015 14:16"}
+Date and Time: -Values @{"DateAndTime" = "03/13/2015 14:16"}
 
 Lookup (id of lookup value): -Values @{"Lookup" = "2"}
 
