@@ -24,6 +24,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
+ [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>] [-DomainController <Fqdn>]
@@ -81,6 +82,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
+ [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>] [-DomainController <Fqdn>]
@@ -139,6 +141,7 @@ Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
+ [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>] [-DomainController <Fqdn>]
@@ -376,6 +379,27 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultGroupAccessType
+This parameter is available only in the cloud-based service.
+
+The DefaultGroupAccessType parameter specifies the default access type for Office 365 groups. Valid values are:
+
+- Public
+
+- Private (this is the default value)
+
+```yaml
+Type: Private | Public
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: Private
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

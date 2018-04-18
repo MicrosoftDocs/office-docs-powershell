@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ### -TemplateData
 The TemplateData parameter specifies an external DLP policy template file from which you can create a new DLP policy. You can't use the TemplateData and Template parameters in the same command.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
 
 ```yaml
 Type: Byte[]
