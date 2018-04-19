@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictDomainsToCertificate
-The RestrictDomainsToCertificate parameter, when set to $true, causes the connector to reject mail that originates from a namespace not specified by the SenderDomains parameter.
+The RestrictDomainsToCertificate parameter specifies that Office 365 should identify incoming messages that are eligible for this connector by verifying that the remote server authenticates using a TLS certificate that has the TlsSenderCertificateName in the Subject. Valid values are $true or $false.
 
 ```yaml
 Type: $true | $false
