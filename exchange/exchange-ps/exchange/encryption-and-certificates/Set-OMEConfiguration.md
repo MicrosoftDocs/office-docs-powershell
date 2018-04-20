@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-ClientEncryptionEnabled <$true | $false>]
+Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-ClientEncryptionEnabled <$true | $false>]
  [-DisclaimerText <String>] [-EmailText <String>] [-ExpirationOptionEnabled <$true | $false>] [-Image <Byte[]>]
  [-OTPEnabled <$true | $false>] [-PortalText <String>] [<CommonParameters>]
 ```
@@ -49,6 +49,25 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -BackgroundColor
+The BackgroundColor parameter specifies the background color. Valid values are:
+
+- An HTML hexadecimal \(hex triplet\) color code value (for example, #FFFFFF is white).
+
+- $null \(blank\). This is the default value.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
