@@ -37,15 +37,15 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchMetadataRankProfile -Name webcontent
+PS C:\>Remove-FASTSearchMetadataRankProfile -Name webcontent
 ```
 
 This example removes the rank profile "webcontent".
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>$rankprofile = Get-FASTSearchMetadataRankProfile -Name newrankprofile
-Remove-FASTSearchMetadataRankProfile -Force -RankProfile $rankprofile
+PS C:\>$rankprofile = Get-FASTSearchMetadataRankProfile -Name newrankprofile
+PS C:\>Remove-FASTSearchMetadataRankProfile -Force -RankProfile $rankprofile
 ```
 
 This example deletes the rank profile object which represents the rank profile named "newrankprofile".
