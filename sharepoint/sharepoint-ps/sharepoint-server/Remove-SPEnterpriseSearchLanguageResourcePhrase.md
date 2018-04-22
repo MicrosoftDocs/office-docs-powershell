@@ -30,9 +30,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
-$obsoletephrase = Get-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Language en-us -Type QuerySuggestionBlockList -Identity secret
-$obsoletephrase | Remove-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Type QuerySuggestionBlockList -Language en-us
+PS C:\>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
+PS C:\>$obsoletephrase = Get-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Language en-us -Type QuerySuggestionBlockList -Identity secret
+PS C:\>$obsoletephrase | Remove-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Type QuerySuggestionBlockList -Language en-us
 ```
 
 This example removes a language resource item on the QuerySuggestionBlockList for the en-us language.
@@ -41,13 +41,9 @@ This example removes a language resource item on the QuerySuggestionBlockList fo
 ## PARAMETERS
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 ```yaml
@@ -145,8 +141,11 @@ Specifies the search object owner that defines the scope at which the correspond
 The owner must be one of the following valid levels:
 
 - Search Service Application
+
 - Site Subscription
+
 - Site Collection
+
 - Site
 
 
@@ -205,8 +204,11 @@ Constrains to delete phrases of specified type.
 The type must be one of the following valid types of phrases:
 
 - QuerySuggestionBlockList
+
 - QuerySuggestionAlwaysSuggest
+
 - Nickname
+
 - QuerySuggestionSubstitution
 
 
