@@ -30,7 +30,7 @@ However, you can convert local scopes to result sources, which serve a similar p
 The `Remove-SPEnterpriseSearchQueryScope` cmdlet deletes one or more specified shared scopes from the query scope collection.
 A query scope represents a query results scope used by all shared search applications on the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
