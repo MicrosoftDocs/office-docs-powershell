@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPAccessServicesDatabaseServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns SQL Server instances associated with Access Services.
 
 ## SYNTAX
 
@@ -27,21 +27,32 @@ Get-SPAccessServicesDatabaseServer [-ServiceContext] <SPServiceContextPipeBind>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns the SQL Server instances that are available for use with Access Services.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Get-SPAccessServicesDatabaseServer
 ```
 
-{{ Add example description here }}
+Returns all SQL Server instances available for use.
+
+
+### Example 2 
+```
+PS C:\>Get-SPAccessServicesDatabaseServer -DatabaseServer ACCSQL -ServiceContext http://siteUrl -DatabaseServergroup DEFAULT
+```
+
+Returns the database server ACCSQL from the DEFAULT database server group using the service context from http://siteUrl.
+
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -57,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
-{{Fill DatabaseServer Description}}
+Specifies an existing Database Server associated with Access Services.
 
 ```yaml
 Type: AccessServicesDatabaseServerPipeBind
@@ -73,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerGroup
-{{Fill DatabaseServerGroup Description}}
+Specifies the database server group.
 
 ```yaml
 Type: AccessServicesDatabaseServerGroupPipeBind
@@ -102,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
-{{Fill ServiceContext Description}}
+Specifies the service context to retrieve Access Services database server information from.
 
 ```yaml
 Type: SPServiceContextPipeBind
