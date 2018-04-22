@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerGroup
-Specifies the database server group.
+The name of the database server group.
 
 ```yaml
 Type: AccessServicesDatabaseServerGroupPipeBind
