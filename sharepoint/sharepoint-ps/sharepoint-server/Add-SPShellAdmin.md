@@ -36,7 +36,9 @@ The user is added to the WSS_Admin_WPG group on all Web servers when the user is
 If the target database does not have a SharePoint_Shell_Access role, the role is automatically created.
 
 In order to use Windows PowerShell for SharePoint Products, a user must be a member of the SharePoint_Shell_Access role on the configuration database and a member of the WSS_ADMIN_WPG local group on the computer where SharePoint Products is installed.
-However, the result of running this cmdlet is that the user specified with the UserName parameter will have the dbo_owner role access on the affected databases as described above.
+
+However, the result of running this cmdlet is that the user specified with the UserName parameter will have the **SPDataAccess** role, if it exists, or db_owner role, if the SPDataAccess role does not exist, on the affected databases as described above. Therefore, you should carefully plan which users are given this access.
+
 Therefore, you should carefully plan which users are given this access.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
