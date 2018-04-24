@@ -29,16 +29,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1---------- 
 ```
-C:\PS>Get-SpAppAutoProvisionConnection
+PS C:\>Get-SpAppAutoProvisionConnection
 ```
 
 This example returns the entire app auto provisioning connection information for the default site subscription.
 
 ### ---------------EXAMPLE 2---------- 
 ```
-C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
-
-C:\PS>Get-SPAppAutoProvisionConnection -SiteSubscription $subscription -ConnectionType RemoteWebHost
+PS C:\>$subscription = Get-SPSiteSubscription http://Contoso.com
+PS C:\>Get-SPAppAutoProvisionConnection -SiteSubscription $subscription -ConnectionType RemoteWebHost
 ```
 
 This example returns the remote web host app auto provisioning connection information for the site subscription for Contoso.com site
