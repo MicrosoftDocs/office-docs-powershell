@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Returns the authentication realms.
 
-
-
 ## SYNTAX
 
 ```
@@ -29,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE------------- 
 ```
-C:\PS>Get-SPAuthenticationRealm
+PS C:\>Get-SPAuthenticationRealm
 ```
 
 This example displays the authentication realms in the entire farm.

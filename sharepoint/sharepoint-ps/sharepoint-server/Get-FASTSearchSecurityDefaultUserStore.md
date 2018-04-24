@@ -24,16 +24,16 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityDefaultUserStore
+PS C:\>Get-FASTSearchSecurityDefaultUserStore
 ```
 
 This example gets the identity of the default user store.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityDefaultUserStore
+PS C:\>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityDefaultUserStore
 ```
 
 This example gets the default user store's general setting information for the security worker with a server name of "workerserver".
