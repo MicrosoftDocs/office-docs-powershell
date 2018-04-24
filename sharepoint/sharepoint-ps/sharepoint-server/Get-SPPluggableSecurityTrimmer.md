@@ -26,9 +26,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE--------------------- 
 ```
-C:\PS>$pr = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")}
-
-          C:\PS>Get-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $pr.Id
+PS C:\>$pr = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\>Get-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $pr.Id
 ```
 
 This example gets a list of the pluggable security trimmers that are associated with the User Profile service application proxy.

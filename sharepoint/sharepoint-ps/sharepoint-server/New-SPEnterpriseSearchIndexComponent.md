@@ -29,11 +29,13 @@ The change is effectuated when the search topology is enabled.
 
 ### ------------------EXAMPLE-----------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchIndexComponent -SearchTopology 06e6651d-ecdd-4105-bb65-6a83b6155525 -SearchServiceInstance 56e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa -IndexPartition 1 -RootDirectory E:\Index
+PS C:\>$si = Get-SPEnterpriseSearchServiceInstance
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+PS C:\>New-SPEnterpriseSearchIndexComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa -IndexPartition 1 -RootDirectory E:\Index
 ```
 
-This example adds a new search index component to the search topology with identity 06e6651d-ecdd-4105-bb65-6a83b6155525 in the search service instance with identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the default search service application referenced by $ssa, with index partition 1 and root directory E:\Index.
+This example adds a new Search Index Component to the inactive topology for the existing Search Service Application. The directory of the Index Component is set to E:\Index with a Partition number of 1.
 
 
 ## PARAMETERS

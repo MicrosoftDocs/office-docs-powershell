@@ -22,6 +22,57 @@ Remove-CsTeamsInteropPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant
 ```
 
 ## DESCRIPTION
+
+Important:
+
+TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. During the transition, some components will honor TeamsInteropPolicy while others honor TeamsUpgradePolicy. Therefore, use of these 2 policies must be coordinated during the transition. After transition is complete, TeamsInteorpPolicy will be removed. To prepare for these upcoming changes, customers should do the following:
+ 
+Ensure users with TeamsInteropPolicy are assigned only one of these 3 built-in instances for which CallingDefaultClient = ChatDefaultClient, and for which AllowEndUserClientOverride = false. The other instances are no longer valid configurations and will not be supported. 
+
+The valid instances are:
+
+
+**Identity: DisallowOverrideCallingDefaultChatDefault**   
+**AllowEndUserClientOverride: False**   
+**CallingDefaultClient: Default**   
+**ChatDefaultClient: Default**
+
+**Identity: DisallowOverrideCallingSfbChatSfb**   
+**AllowEndUserClientOverride: False**   
+**CallingDefaultClient: Sfb**   
+**ChatDefaultClient: Sfb**
+
+**Identity: DisallowOverrideCallingTeamsChatTeams**   
+**AllowEndUserClientOverride: False**   
+**CallingDefaultClient: Teams**     
+**ChatDefaultClient: Teams**
+
+
+Use the following cmdlet syntax, where $policy is one of the above values of identity:
+`Grant-CsTeamsInteropPolicy -PolicyName $policy -Identity $SipAddress`
+
+
+If you customized the built-in global policy, undo this by running `Remove-CsTeamsInteropPolicy`. This will remove the tenant-specific global policy and revert back to the system-wide built-in policy (which cannot be removed). Use the following syntax:
+Remove-CsTeamsInteropPolicy -Identity Global
+ 
+Grant TeamsInteropPolicy and TeamsUpgradePolicy together as noted below to manage users:
+ 
+- Coordinate granting of TeamsUpgradePolicy and TeamsInteropPolicy:
+
+
+    **Grant instance of TeamsUpgradePolicy using mode: Islands**  
+    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingDefaultChatDefault**
+
+    **Grant instance of TeamsUpgradePolicy using mode: SfBonly, SfBWithTeamsCollab**  
+    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingSfbChatSfb**
+
+    **Grant instance of TeamsUpgradePolicy using mode: TeamsOnly**    
+    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingTeamsChatTeams**
+
+
+In particular, if you grant the TeamsUpgradePolicy instance “UpgradeToTeams” (Mode =TeamsOnly) to any user, you must also grant the DisallowOverrideCallingTeamsChatTeams instance of TeamsInteropPolicy to ensure the user can receive chats and calls.
+
+
 Interoperability (interop for short) enables Skype for Business and Teams users to chat and call with one another, ensuring that communications remain fluid across your organization. 
 This policy helps IT pros manage the adoption of Teams by determining how to route calls across apps and whether to enable users to choose which app to use for calling. 
 Teams interop policy can be defined at the tenant or per-user level.
@@ -30,9 +81,10 @@ Teams interop policy can be configured to keep voice communications in Teams and
 
 For comprehensive documentation on this policy and it’s settings, see [Microsoft Teams and Skype for Business Interoperability](https://docs.microsoft.com/MicrosoftTeams/teams-and-skypeforbusiness-interoperability).
 
+
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -142,7 +194,6 @@ Accept wildcard characters: False
 
 ### Microsoft.Rtc.Management.Xds.XdsIdentity
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -160,11 +211,9 @@ Interop support for Skype for Business Hybrid does not include Hybrid Voice capa
 Teams users cannot be enabled for PSTN calling capabilities using CCE or OPCH.
 
 **IP Phone Support**
-**IP Phone Support**
 Currently, changing CallingDefaultClient to Teams will also affect calls to Skype for Business IP phones. 
 Incoming calls will not be received on the phones and will only ring Teams clients. 
 Please consult the [Skype for Business to Microsoft Teams Capabilities Roadmap](https://aka.ms/skype2teamsroadmap) for information about support for existing certified SIP phones.
-
 
 ## RELATED LINKS
 

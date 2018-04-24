@@ -45,14 +45,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPAlternateURL -WebApplication http://sitename
+PS C:\>Get-SPAlternateURL -WebApplication http://sitename
 ```
 
 This example displays all the alternate URLs on a given Web application.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>Get-SPAlternateURL -ResourceName "MyResource"
+PS C:\>Get-SPAlternateURL -ResourceName "MyResource"
 ```
 
 This example displays all the alternate URLs for a given resource.

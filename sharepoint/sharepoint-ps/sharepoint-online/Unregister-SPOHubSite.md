@@ -38,14 +38,14 @@ This example disables the hub feature on the marketing site.
 
 ## PARAMETERS
 
-### -Site
+### -Identity
 
 URL of the site to disable the hub site feature.
 
 ```yaml
-Type: SpoSitePipeBind
+Type: SpoHubSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases: HubSite
 Applicable: SharePoint Online
 
 Required: True
@@ -55,13 +55,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+### -WhatIf
 
-## INPUTS
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
-## OUTPUTS
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: SharePoint Online
 
-## NOTES
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-## RELATED LINKS
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```

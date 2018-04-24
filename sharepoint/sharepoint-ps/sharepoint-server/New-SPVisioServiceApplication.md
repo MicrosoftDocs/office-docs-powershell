@@ -28,19 +28,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1---------------------
 ```
-C:\PS>New-SPVisioServiceApplication -Identity "VGS2" -ServiceApplicationPool "SharePoint Web Services Default" -CreateDefaultProxy
+PS C:\>New-SPVisioServiceApplication -Identity 'Visio Graphics Service Application' -ApplicationPool 'SharePoint Web Services Default' -CreateDefaultProxy
 ```
 
-This example creates a new Visio Services application VGS2 and also creates a service application proxy associated with it.
-
-
-### ----------------EXAMPLE 2---------------------
-```
-C:\PS>Get-SPIISWebServiceApplicationPool "SharePoint Web Services System Default" | New-SPVisioServiceApplication "VGS3"
-```
-
-This example creates a new Visio Services application VGS3 without creating an associated service application proxy.
-You can pipe the results from the `Get-SPIISWebServiceApplicationPool` cmdlet.
+This example creates a new Visio Services application named 'Visio Graphics Service Application' and also creates a service application proxy associated with it.
 
 
 ## PARAMETERS

@@ -27,22 +27,24 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>$ssi = Get-SPEnterpriseSearchServiceInstance -Local 
-Set-SPEnterpriseSearchPrimaryHostController $ssi
+PS C:\>$si = Get-SPEnterpriseSearchServiceInstance -Local 
+PS C:\>Set-SPEnterpriseSearchPrimaryHostController $si
 ```
 
 This example sets the local SearchHostController instance as the new primary SearchHostController.
 It is up to the user to select the HostController with latest version available.
+
 If you choose a SearchHostController that is not running the latest version of the repository, you will have to confirm before you continue.
 
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>$ssi = Get-SPEnterpriseSearchServiceInstance -Local 
-Set-SPEnterpriseSearchPrimaryHostController $ssi -Force
+PS C:\>$si = Get-SPEnterpriseSearchServiceInstance -Local 
+PS C:\>Set-SPEnterpriseSearchPrimaryHostController $si -Force
 ```
 
 This example sets the local SearchHostController instance as the new primary SearchHostController.
+
 If you choose a SearchHostController that is not running the latest version of the repository, you will not get a confirmation message before you continue.
 
 

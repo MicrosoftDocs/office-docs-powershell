@@ -12,6 +12,8 @@ Sets the CDN Policies for the specified CDN (Public | Private).
 
 ```powershell
 Set-PnPTenantCdnPolicy -CdnType <SPOTenantCdnType>
+                       -PolicyType <SPOTenantCdnPolicyType>
+                       -PolicyValue <String>
                        [-Connection <SPOnlineConnection>]
 ```
 
@@ -22,7 +24,7 @@ Sets the CDN Policies for the specified CDN (Public | Private).
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPTenantCdnPolicies -CdnType Public -PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF"
+Set-PnPTenantCdnPolicy -CdnType Public -PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF"
 ```
 
 This example sets the IncludeFileExtensions policy to the specified value.
@@ -34,6 +36,30 @@ The type of cdn to retrieve the policies from
 
 ```yaml
 Type: SPOTenantCdnType
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -PolicyType
+The type of the policy to set
+
+```yaml
+Type: SPOTenantCdnPolicyType
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -PolicyValue
+The value of the policy to set
+
+```yaml
+Type: String
 Parameter Sets: (All)
 
 Required: True

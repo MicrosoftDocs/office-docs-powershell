@@ -8,7 +8,7 @@ schema: 2.0.0
 # Enable-SPProjectEmailNotification
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Turns on the Project Web App site level setting for email notifications in Project Server.
 
 ## SYNTAX
 
@@ -18,21 +18,23 @@ Enable-SPProjectEmailNotification [-Url] <Uri> [-AssignmentCollection <SPAssignm
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Turns on the Project Web App site level setting for email notifications in Project Server.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Enable-SPProjectEmailNotification -Url http://pwa_site
 ```
 
-{{ Add example description here }}
+Enables Project Server email notifications on the Project Web App site, http://pwa_site.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+NOTE: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -48,8 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-{{Fill Url Description}}
-
+The URL of the Project Web App site.
 ```yaml
 Type: Uri
 Parameter Sets: (All)

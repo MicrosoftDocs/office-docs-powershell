@@ -23,9 +23,6 @@ Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 ## DESCRIPTION
 Use this cmdlet to set properties such as name, logo, and description. These properties appear for the hub in the SharePoint user interface.
 
-> [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
-
 If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
 ## EXAMPLES
@@ -50,7 +47,7 @@ URL of the hub site.
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases: HubSite
 Applicable: SharePoint Online
 
 Required: True
@@ -110,14 +107,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS

@@ -39,6 +39,7 @@
           "**/*.png",
           "**/*.jpg"
         ],
+        "version": "exchange-ps",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -64,7 +65,11 @@
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "apiPlatform":{
+        "exchange-ps/exchange" : [ "PowerShell" ]
+      }
+    },
     "template": [],
     "dest": "exchange-ps"
   }

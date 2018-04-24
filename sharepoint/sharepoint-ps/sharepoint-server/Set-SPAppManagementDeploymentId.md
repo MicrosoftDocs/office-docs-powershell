@@ -30,9 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE 1----------
 ```
-C:\PS>$appManagementServiceApplication = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
-
-C:\PS>Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $appManagementServiceApplication
+PS C:\>$sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
+PS C:\>Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
 ```
 
 This example sets the deployment identifier of the current farm to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.
@@ -40,9 +39,8 @@ This example sets the deployment identifier of the current farm to 3102B7C3-1866
 
 ### -----------EXAMPLE 2----------
 ```
-C:\PS>$appManagementServiceApplication = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
-
-C:\PS>Get-SPSiteSubscription | where{$_.Id.Id -eq "88f16a50-0530-4f3f-b749-24ef0b30d685"} | Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $appManagementServiceApplication
+PS C:\>$sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
+PS C:\>Get-SPSiteSubscription | where{$_.Id -eq "88f16a50-0530-4f3f-b749-24ef0b30d685"} | Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
 ```
 
 This example sets the deployment identifier of the tenant with the site subscription identifier 88f16a50-0530-4f3f-b749-24ef0b30d685 to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.

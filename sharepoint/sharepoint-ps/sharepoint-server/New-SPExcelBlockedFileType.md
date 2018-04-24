@@ -30,7 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelBlockedExcelFileType -FileType XLSM
+C:\PS>$sa = Get-SPExcelServiceApplication 
+PS C:\>New-SPExcelBlockedExcelFileType -FileType XLSM -ExcelServiceApplication $sa
 ```
 
 This example adds an entry for XLSM to the list of file types that Excel Services Application currently prevents from loading.

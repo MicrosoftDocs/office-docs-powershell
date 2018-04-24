@@ -3010,11 +3010,38 @@ The following cmdlet references are for Skype for Business.
 ### [Grant-CsTeamsInteropPolicy](Grant-CsTeamsInteropPolicy.md)
 {{Manually Enter Grant-CsTeamsInteropPolicy Description Here}}
 
-### [New-CsTeamsInteropPolicy](New-CsTeamsInteropPolicy.md)
-{{Manually Enter New-CsTeamsInteropPolicy Description Here}}
-
 ### [Remove-CsTeamsInteropPolicy](Remove-CsTeamsInteropPolicy.md)
 {{Manually Enter Remove-CsTeamsInteropPolicy Description Here}}
 
-### [Set-CsTeamsInteropPolicy](Set-CsTeamsInteropPolicy.md)
-{{Manually Enter Set-CsTeamsInteropPolicy Description Here}}
+### [Set-CsPlatformServiceSettings](Set-CsPlatformServiceSettings.md)
+{{Manually Enter Set-CsPlatformServiceSettings Description Here}}
+
+### [Get-CsPlatformServiceSettings](Get-CsPlatformServiceSettings.md)
+{{Manually Enter Get-CsPlatformServiceSettings Description Here}}
+
+### [New-CsPlatformServiceSettings](New-CsPlatformServiceSettings.md)
+{{Manually Enter New-CsPlatformServiceSettings Description Here}}
+
+### [Remove-CsPlatformServiceSettings](Remove-CsPlatformServiceSettings.md)
+{{Manually Enter Remove-CsPlatformServiceSettings Description Here}}
+
+### [Get-CsAdditionalInternalDomain](Get-CsAdditionalInternalDomain.md)
+{{Manually Enter Get-CsAdditionalInternalDomain Description Here}}
+
+### [New-CsAdditionalInternalDomain](New-CsAdditionalInternalDomain.md)
+{{Manually Enter New-CsAdditionalInternalDomain Description Here}}
+
+### [Remove-CsAdditionalInternalDomain](Remove-CsAdditionalInternalDomain.md)
+{{Manually Enter Remove-CsAdditionalInternalDomain Description Here}}
+
+### [Get-CsHybridApplicationEndpoint](Get-CsHybridApplicationEndpoint.md)
+{{Manually Enter Get-CsHybridApplicationEndpoint Description Here}}
+
+### [New-CsHybridApplicationEndpoint](New-CsHybridApplicationEndpoint.md)
+{{Manually Enter New-CsHybridApplicationEndpoint Description Here}}
+
+### [Set-CsHybridApplicationEndpoint](Set-CsHybridApplicationEndpoint.md)
+{{Manually Enter Set-CsHybridApplicationEndpoint Description Here}}
+
+### [Remove-CsHybridApplicationEndpoint](Remove-CsHybridApplicationEndpoint.md)
+{{Manually Enter Remove-CsHybridApplicationEndpoint Description Here}}

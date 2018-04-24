@@ -47,30 +47,31 @@ Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
+
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets [http://go.microsoft.com/fwlink/?LinkID=18781](http://go.microsoft.com/fwlink/?LinkID=187810).
 
 All parameter sets take the Identity parameter, which can be either the relative path of the SharePoint Feature (considered the feature name) or the GUID of a Feature definition.
+
 If the Identity parameter is provided, the cmdlets attempt to find the given Feature definition or instance for the given scope.
 If no parameters are specified, all installed features are returned.
 
 The Get-SPFeature cmdlet behaves differently at each scope, returning the enabled Features at each level.
 If no scope is provided, all installed Features are returned.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPFeature -Limit ALL | Where-Object {$_.Scope -eq "SITE"}
+PS C:\>Get-SPFeature -Limit ALL | Where-Object {$_.Scope -eq "SITE"}
 ```
-
 This example returns a list of all installed SITE scoped Features.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>Get-SPSite http://somesite | Get-SPWeb -Limit ALL |%{ Get-SPFeature -Web $_ } | Select DisplayName,ID -Unique
+PS C:\>Get-SPSite http://somesite | Get-SPWeb -Limit ALL |%{ Get-SPFeature -Web $_ } | Select DisplayName,ID -Unique
 ```
 
 This example returns the name and identifier (ID) of each uniquely enabled Feature on every SPWeb object in the site collection at http://somesite.
@@ -80,7 +81,7 @@ This example returns the name and identifier (ID) of each uniquely enabled Featu
 ### -Identity
 Specifies the name of the Feature to retrieve.
 
-The type must be the full or partial name, in the form  Feature1, or a GUID, in the form  1234-4567-9879, of the Feature to get .
+The type must be the full or partial name, in the form  Feature1, or a GUID, in the form  1234-4567-9879, of the Feature to get.
 
 ```yaml
 Type: SPFeatureDefinitionPipeBind
@@ -96,13 +97,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -134,11 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -Limit
-Limits the display results.
-If "All" is specified, all Features are displayed.
+Limits the display results. If "All" is specified, all Features are displayed.
 
-The type must be a valid number greater than 0.
-The default value is 200.
+The type must be a valid number greater than 0. The default value is 200.
 
 ```yaml
 Type: String
@@ -208,13 +203,13 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
-{{Fill CompatibilityLevel Description}}
+Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection. When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the CompatibilityRange setting.
 
 ```yaml
 Type: Int32
 Parameter Sets: FarmFeatureDefinitions
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -224,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sandboxed
-{{Fill Sandboxed Description}}
+Specifies to retrieve Sandbox features.
 
 ```yaml
 Type: SwitchParameter

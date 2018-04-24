@@ -28,11 +28,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------- 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchContentProcessingComponent -SearchTopology 06e6651d-ecdd-4105-bb65-6a83b6155525 -SearchServiceInstance 56e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa
+PS C:\>$si = Get-SPEnterpriseSearchServiceInstance
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+PS C:\>New-SPEnterpriseSearchContentProcessingComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa
 ```
 
-This example adds a new content processing component to the search topology with identity 06e6651d-ecdd-4105-bb65-6a83b6155525 in the search service instance with identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the default search service application referenced by $ssa.
+This example adds a new Search Content Processing Component to the inactive topology for the existing Search Service Application.
 
 ## PARAMETERS
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPAppStoreWebServiceConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets properties of a SharePoint Store app.
 
 
 ## SYNTAX
@@ -19,23 +19,28 @@ Set-SPAppStoreWebServiceConfiguration [-AssignmentCollection <SPAssignmentCollec
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-SPAppStoreWebServiceConfiguration cmdlet to set the product type (On-Premises or Online) and the version used to access the SharePoint Store when SharePoint is configured to access the .
+
+This cmdlet is not intended for the ITPro audience.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Set-SPAppStoreWebServiceConfiguration -Client=SP -ProxyVersion=16.1
 ```
 
-{{ Add example description here }}
-
+This example set the product type and version for a SharePoint Store app.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -51,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Client
-{{Fill Client Description}}
+Specifies the client value of the SharePoint Store app.
 
 ```yaml
 Type: String
@@ -83,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyVersion
-{{Fill ProxyVersion Description}}
+Specifies the proxy version value of the SharePoint Store app.
 
 ```yaml
 Type: Version

@@ -32,9 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$crawlRule = Get-SPEnterpriseSearchCrawlRule -Identity
-file://fileserver/root -SearchApplication mySearchServiceApp
-Set-SPEnterpriseSearchCrawlRule -Identity $crawlRule -Type "ExclusionRule"
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$crawlRule = Get-SPEnterpriseSearchCrawlRule -Identity 'file://fileserver/root' -SearchApplication $ssa
+PS C:\>Set-SPEnterpriseSearchCrawlRule -Identity $crawlRule -Type "ExclusionRule"
 ```
 
 This example sets the type of the crawl rule pertaining to the URL, file://fileserver/root, to exclude this path from future crawls.
@@ -43,7 +43,7 @@ This example sets the type of the crawl rule pertaining to the URL, file://files
 ## PARAMETERS
 
 ### -AccountName
-{{Fill AccountName Description}}
+Specifies the name of the account to be used to crawl content identified by the crawl rule.
 
 ```yaml
 Type: String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountPassword
-{{Fill AccountPassword Description}}
+Specifies the password for AccountName.
 
 ```yaml
 Type: SecureString
@@ -100,11 +100,11 @@ Accept wildcard characters: False
 ### -AuthenticationType
 Specifies one of the following authentication types:
 
-BasicAccountRuleAccess   Specifies basic authentication.
+- BasicAccountRuleAccess   -Specifies basic authentication.
 
-CertificateRuleAccess   Specifies the X.509 certificate name.
+- CertificateRuleAccess   -Specifies the X.509 certificate name.
 
-NTLMAccountRuleAccess   Specifies the account name for integrated authentication.
+- NTLMAccountRuleAccess   -Specifies the account name for integrated authentication.
 
 
 ```yaml

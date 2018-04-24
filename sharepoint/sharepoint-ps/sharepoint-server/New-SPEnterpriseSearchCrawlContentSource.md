@@ -30,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
-New-SPEnterpriseSearchCrawlContentSource -SearchApplication $searchapp -Type file -name somename -StartAddresses file://someserver/public
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>New-SPEnterpriseSearchCrawlContentSource -SearchApplication $ssa -Type File -name FileServer -StartAddresses file://someserver/public
 ```
 
 This example creates a new content source of type file to crawl a file system.

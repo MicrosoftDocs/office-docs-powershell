@@ -60,9 +60,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-C:\PS>$m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
-
-C:\PS>Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
+PS C:\>$m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
+PS C:\>Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
 ```
 
 This example displays an explicit managed account if it exists and then attempts to update it to use automatically generated passwords.

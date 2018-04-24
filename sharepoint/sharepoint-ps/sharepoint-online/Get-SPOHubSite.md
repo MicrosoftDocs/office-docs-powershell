@@ -13,10 +13,7 @@ Lists hub sites or hub site information.
 ## SYNTAX
 
 ```
-Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
-[-Title <string>]
-[-LogoUrl <string>]
-[-Description <string>]
+Get-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 [<CommonParameters>]
 ```
 
@@ -58,7 +55,7 @@ This example begins with the online-marketing site. The cmdlet finds the associa
 
 ### -Identity
 
-URL of the hub site. If not specified, the cmdlet lists all site hubs in the tenant.
+URL of the hub site. If not specified, the cmdlet lists all hub sites in the tenant.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -72,14 +69,3 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
-
-## RELATED LINKS

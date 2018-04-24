@@ -42,6 +42,11 @@ Get-SPOAppInfo -ProductId 6751729b-e017-409d-681a-66f1dd18f0ff
 ```
 Example 2 returns the installed application that has the GUID 6751729b-e017-409d-681a-66f1dd18f0ff. 
 
+###   ------------ Example 3 --------------------
+```
+Get-SPOAppInfo -Name " " | Sort Name
+```
+Example 3 returns the installed application that have a space in the name and sorts the in ascending order. 
 
 ## PARAMETERS
 

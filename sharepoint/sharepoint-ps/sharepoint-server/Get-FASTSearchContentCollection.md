@@ -24,16 +24,16 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchContentCollection
+PS C:\>Get-FASTSearchContentCollection
 ```
 
 This example retrieves all FAST Search Server 2010 for SharePoint content collections.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchContentCollection -Name newscollection
+PS C:\>Get-FASTSearchContentCollection -Name newscollection
 ```
 
 This example retrieves the "newscollection" content collection.

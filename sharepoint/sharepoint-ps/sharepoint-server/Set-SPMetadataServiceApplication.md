@@ -46,7 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-C:\PS>Set-SPMetadataServiceApplication -Identity "MetadataServiceApp1" -HubUri "http://sitename" -SyndicationErrorReportEnabled
+PS C:\>$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
+PS C:\>Set-SPMetadataServiceApplication -Identity $sa -HubUri 'http://sitename' -SyndicationErrorReportEnabled
 ```
 
 This example adds a content type hub to an existing managed metadata service application.
@@ -55,7 +56,8 @@ It also enables error reporting when content types are imported.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>Set-SPMetadataServiceApplication -Identity "MetadataServiceApp1" -AdministratorAccount "contoso\username1" -FullAccessAccount "contoso\AppPoolAccount1,contoso\AppPoolAccount2" -RestrictedAccount "contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5" -ReadAccessAccount "contoso\AppPoolAccount6"
+PS C:\>$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
+PS C:\>Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
 ```
 
 This example sets permissions on an existing managed metadata service application.
@@ -421,13 +423,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePartitionQuota
-{{Fill DisablePartitionQuota Description}}
+When in partitioned mode, disables the partition quota.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NoQuota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -437,13 +439,13 @@ Accept wildcard characters: False
 ```
 
 ### -GroupsPerPartition
-{{Fill GroupsPerPartition Description}}
+When in partitioned mode, sets the maximum number of groups per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -453,13 +455,13 @@ Accept wildcard characters: False
 ```
 
 ### -LabelsPerPartition
-{{Fill LabelsPerPartition Description}}
+When in partitioned mode, sets the maximum number of labels per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -469,13 +471,13 @@ Accept wildcard characters: False
 ```
 
 ### -PropertiesPerPartition
-{{Fill PropertiesPerPartition Description}}
+When in partitioned mode, sets the maximum number of properties per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -485,13 +487,13 @@ Accept wildcard characters: False
 ```
 
 ### -TermSetsPerPartition
-{{Fill TermSetsPerPartition Description}}
+When in partitioned mode, sets the maximum number of term sets per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -501,13 +503,13 @@ Accept wildcard characters: False
 ```
 
 ### -TermsPerPartition
-{{Fill TermsPerPartition Description}}
+When in partitioned mode, sets the maximum number of terms per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named

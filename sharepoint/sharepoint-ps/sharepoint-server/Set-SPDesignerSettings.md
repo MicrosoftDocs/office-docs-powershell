@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE--------------------
 ```
-C:\PS>Set-SPDesignerSettings -WebApplication http://constoso -AllowRevertFromTemplate $False -AllowMasterPageEditing $False
+PS C:\>Set-SPDesignerSettings -WebApplication http://constoso -AllowRevertFromTemplate $False -AllowMasterPageEditing $False
 ```
 
 This example disables the ability to detach pages from existing site definitions and to edit master pages and page layouts.
@@ -181,13 +181,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCreateDeclarativeWorkflow
-{{Fill AllowCreateDeclarativeWorkflow Description}}
+Allows the creation of declarative workflows.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -197,13 +197,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSaveDeclarativeWorkflowAsTemplate
-{{Fill AllowSaveDeclarativeWorkflowAsTemplate Description}}
+Allows saving declarative workflows as a template.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSavePublishDeclarativeWorkflow
-{{Fill AllowSavePublishDeclarativeWorkflow Description}}
+Allows saving of published declarative workflows.
 
 ```yaml
 Type: Boolean
@@ -229,13 +229,15 @@ Accept wildcard characters: False
 ```
 
 ### -DesignerDownloadUrl
-{{Fill DesignerDownloadUrl Description}}
+Sets the URL to the SharePoint Designer download. The default value is:
+
+http://go.microsoft.com/fwlink/?LinkId=328584
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -245,13 +247,15 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredDesignerVersion
-{{Fill RequiredDesignerVersion Description}}
+Sets the required version of SharePoint Designer. The default value is 
+
+15.0.0.0
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
