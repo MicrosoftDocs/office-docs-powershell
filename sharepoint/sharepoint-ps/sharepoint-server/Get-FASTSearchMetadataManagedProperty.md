@@ -28,17 +28,17 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchMetadataManagedProperty -name title
+PS C:\>Get-FASTSearchMetadataManagedProperty -name title
 ```
 
 This example retrieves a managed property named "title".
 It returns an object representing the managed property.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchMetadataManagedProperty -name content*
+PS C:\>Get-FASTSearchMetadataManagedProperty -name content*
 ```
 
 This example returns all managed properties with names starting with "content".
