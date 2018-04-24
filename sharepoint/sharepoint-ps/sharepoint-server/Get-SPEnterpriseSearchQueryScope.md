@@ -39,8 +39,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$ssa = Get-SPenterpriseSearchServiceApplication -Identity MySSA
-Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa | Set-SPEnterpriseSearchQueryScope -Description "Business critical sites to index" -CompilationType 1 -AlternateResultsPage http://altServer
+PS C:\>$ssa = Get-SPenterpriseSearchServiceApplication -Identity 'Search service Application'
+PS C:\>Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa | Set-SPEnterpriseSearchQueryScope -Description "Business critical sites to index" -CompilationType 1 -AlternateResultsPage http://altServer
 ```
 
 This example obtains a reference to the scope named MustCrawl on the search application named MySSA, and changes the description, compilation type, and alternate access URL.
@@ -84,13 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
