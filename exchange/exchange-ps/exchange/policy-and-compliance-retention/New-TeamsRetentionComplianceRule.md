@@ -1,25 +1,25 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: Remove-RetentionCompliancePolicy
+title: New-TeamsRetentionComplianceRule
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Remove-RetentionCompliancePolicy
+# New-TeamsRetentionComplianceRule
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Remove-HoldCompliancePolicy cmdlet to remove retention policies from the Security & Compliance Center. This cmdlet also removes the corresponding retention rule.
+Use the New-TeamsRetentionComplianceRule cmdlet to create retention rules for Microsoft Teams in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Remove-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf]
- [<CommonParameters>]
+New-TeamsRetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter> -RetentionComplianceAction <String> -RetentionDuration <Unlimited>
+ [-Comment <String>] [-Confirm] [-WhatIf]
 ```
 
 ## DESCRIPTION
@@ -29,31 +29,42 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-RetentionCompliancePolicy -Identity "Regulation 123 Compliance"
+New-TeamsRetentionComplianceRule -Name "Teams - SeptOneYear" -Policy "Teams - Internal Company Policy" -RetentionDuration Unlimited
 ```
 
-This example removes the retention policy named "Regulation 123 Compliance".
+This example creates a new retention rule for Microsoft Teams named "Teams - SeptOneYear" and adds it to the existing retention policy for Microsoft Teams named "Teams - Internal Company Policy". Content will be held indefinitely.
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the retention policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
+### -Name
+The Name parameter specifies a unique name for the retention rule. If the value contains spaces, enclose the value in quotation marks.
 
-- Name
-
-- Distinguished name (DN)
-
-- GUID
+You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag parameters.
 
 ```yaml
-Type: PolicyIdParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Comment
+The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -76,11 +87,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceDeletion
-The ForceDeletion switch forces the removal of the retention policy. You don't need to specify a value with this switch.
+### -Policy
+The Policy parameter specifies the policy to contain the rule.
 
 ```yaml
-Type: SwitchParameter
+Type: PolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionComplianceAction
+The RetentionComplianceAction parameter specifies the retention action for the rule. Valid values are:
+
+- Delete
+
+- Keep
+
+- KeepAndDelete
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionDuration
+The RetentionDuration parameter specifies the hold duration for the retention rule. Valid values are:
+
+- An integer: The hold duration in days.
+
+- Unlimited: The content is held indefinitely.
+
+```yaml
+Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -111,16 +162,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### 
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### 
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/89463548-6484-43f0-8a85-2605e38d430d.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/New-TeamsRetentionComplianceRule)
