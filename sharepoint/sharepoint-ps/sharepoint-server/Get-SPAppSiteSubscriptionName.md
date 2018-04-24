@@ -29,14 +29,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1------- 
 ```
-C:\PS>Get-SPAppSiteSubscriptionName
+PS C:\>Get-SPAppSiteSubscriptionName
 ```
 
 This example returns the name of the default site subscription.
 
 ### ------------EXAMPLE 2------- 
 ```
-C:\PS>Get-SPAppSiteSubscriptionName -SiteSubscription https://www.contoso.com
+PS C:\>Get-SPAppSiteSubscriptionName -SiteSubscription https://www.contoso.com
 ```
 
 This example returns the name of the site subscription for SPSite https://www.contoso.com
