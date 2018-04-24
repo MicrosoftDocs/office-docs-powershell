@@ -31,9 +31,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication
-$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $searchapp -Identity People
-Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $searchapp -Category $cat -Limit 1
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
+PS C:\>Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
 ```
 
 This example returns the first crawled property in the PeopleSearch_Scope metadata category for the default search service application.
@@ -42,15 +42,9 @@ This example returns the first crawled property in the PeopleSearch_Scope metada
 
 ### -AssignmentCollection
 
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
-
-
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -71,8 +65,6 @@ Specifies the metadata category of the crawled property to return.
 
 The type must be a valid GUID in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid name of a metadata category, for example, MetadataCategory1, or an instance of a valid Category object.
 
-
-
 ```yaml
 Type: CategoryPipeBind
 Parameter Sets: (All)
@@ -89,9 +81,8 @@ Accept wildcard characters: False
 ### -Limit
 
 Specifies the maximum number of items to return.
+
 Specify ALL to return all possible results.
-
-
 
 ```yaml
 Type: String
@@ -111,8 +102,6 @@ Accept wildcard characters: False
 Specifies the crawled property to retrieve.
 
 The type must be a valid crawled property name, for example "urn:schemas-microsoft-com:sharepoint:portal:profile:UserName"
-
-
 
 ```yaml
 Type: String
@@ -134,8 +123,6 @@ A property set belongs to one crawled property category.
 
 The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
-
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
@@ -154,8 +141,6 @@ Accept wildcard characters: False
 Specifies the search application that contains the crawled property.
 
 The type must be a valid search application name, for example, SearchApp1, or an instance of a valid SearchServiceApplication object.
-
-
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
@@ -176,8 +161,6 @@ Specifies that the crawled properties returned are to be within the scope of a s
 
 The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
-
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
@@ -196,8 +179,6 @@ Accept wildcard characters: False
 Specifies that the crawled properties returned are to be within the scope of a tenant.
 
 The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
-
-
 
 ```yaml
 Type: Guid
