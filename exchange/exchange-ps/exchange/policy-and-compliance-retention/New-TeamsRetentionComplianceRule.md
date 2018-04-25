@@ -29,7 +29,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-TeamsRetentionComplianceRule -Name "Teams - SeptOneYear" -Policy "Teams - Internal Company Policy" -RetentionDuration Unlimited
+New-TeamsRetentionComplianceRule -Name "Teams - SeptOneYear" -Policy "Teams - Internal Company Policy" -RetentionComplianceAction Keep -RetentionDuration Unlimited
 ```
 
 This example creates a new retention rule for Microsoft Teams named "Teams - SeptOneYear" and adds it to the existing retention policy for Microsoft Teams named "Teams - Internal Company Policy". Content will be held indefinitely.
