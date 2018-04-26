@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPAccessServicesDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns an Access Services database.
 
 ## SYNTAX
 
@@ -19,21 +19,26 @@ Get-SPAccessServicesDatabase [[-Identity] <AccessServicesDatabasePipeBind>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns an Access Services database.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Get-SPAccessServicesDatabase -Identity https://apps-eec88dc5f597c6.contoso-apps.com/sites/team/accessApp
 ```
+Using the App Web, this example returns the Access database named 'accessApp'.
 
-{{ Add example description here }}
+### Example 2 
+```
+PS C:\>Get-SPAccessServicesDatabase -ContentDb WSS_Content
+```
+This example returns all Access databases associated with sites in the content database, WSS_Content.
 
 ## PARAMETERS
 
 ### -AccessAppsOnly
-{{Fill AccessAppsOnly Description}}
+Returns only Access Apps.
 
 ```yaml
 Type: Boolean
@@ -49,7 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -65,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDb
-{{Fill ContentDb Description}}
+The Content Database to return Access Apps from.
 
 ```yaml
 Type: SPContentDatabasePipeBind
@@ -81,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+The URL to the Access App. Must be the App Web URL.
 
 ```yaml
 Type: AccessServicesDatabasePipeBind
