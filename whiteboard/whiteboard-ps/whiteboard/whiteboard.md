@@ -15,4 +15,4 @@ The following cmdlet references are for Microsoft Whiteboard.
 
 ### [Set-WhiteboardOwner](Set-WhiteboardOwner.md)
 
-### [Invoke-TransferAllWhiteboard](Invoke-TransferAllWhiteboard.md)
+### [Invoke-TransferAllWhiteboard](Invoke-TransferAllWhiteboards.md)
