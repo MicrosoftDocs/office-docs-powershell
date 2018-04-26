@@ -34,7 +34,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchMetadataManagedProperty -Name title
+PS C:\>Remove-FASTSearchMetadataManagedProperty -Name title
 ```
 
 This example removes the managed property named "title" from the system.
@@ -42,8 +42,8 @@ It will ask for confirmation before going through with the removal unless Force 
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>$createdby = Get-FASTSearchMetadataManagedProperty -name CreatedBy
-Remove-FASTSearchMetadataManagedProperty -ManagedProperty $createdby -Force
+PS C:\>$createdby = Get-FASTSearchMetadataManagedProperty -name CreatedBy
+PS C:\>Remove-FASTSearchMetadataManagedProperty -ManagedProperty $createdby -Force
 ```
 
 This example removes the managed property represented by the object $managedproperty.
