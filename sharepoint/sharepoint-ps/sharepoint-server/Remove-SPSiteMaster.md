@@ -8,34 +8,33 @@ schema: 2.0.0
 # Remove-SPSiteMaster
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+Removes a site master.
 
 ## SYNTAX
-
 ```
 Remove-SPSiteMaster [-ContentDatabase] <SPContentDatabasePipeBind> [-SiteId] <Guid>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
-
+Use the Remove-SPSiteMaster cmdlet to remove a site master from the database.
 
 ## EXAMPLES
-
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$master = Get-SPSiteMaster -ContentDatabase WSS_Content | Select -First 1
+PS C:\>Remove-SPSiteMaster -ContentDatabase WSS_Content -SiteId $master.SiteId
 ```
 
-{{ Add example description here }}
+This example removes the first Site Master found in the WSS_Content database.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -67,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
-{{Fill ContentDatabase Description}}
+Specifies the name of the database to remove the site master. For example, WSS_Content.
 
 ```yaml
 Type: SPContentDatabasePipeBind
@@ -83,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteId
-{{Fill SiteId Description}}
+Specifies the ID of the Site Master to remove. For example, ff480534-7e64-44a5-b7e3-7c418624cdf6.
 
 ```yaml
 Type: Guid

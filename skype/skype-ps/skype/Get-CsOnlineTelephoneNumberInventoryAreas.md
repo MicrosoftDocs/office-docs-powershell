@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOnlineTelephoneNumberInventoryAreas
 
 ## SYNOPSIS
-Use the Get-CsOnlineTelephoneNumberInventoryAreas cmdlet to retrieve the geographical areas where specified inventory types are supported.
+Use the `Get-CsOnlineTelephoneNumberInventoryAreas` cmdlet to retrieve the geographical areas where specified inventory types are supported.
 
 ## SYNTAX
 
@@ -69,7 +69,6 @@ This example returns the areas with Subscriber inventory in the specified region
 
 ### -CountryOrRegion
 Specifies the target country for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -107,7 +106,6 @@ Accept wildcard characters: False
 
 ### -RegionalGroup
 Specifies the target geographical region for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -124,7 +122,6 @@ Accept wildcard characters: False
 
 ### -Area
 Specifies the target geographical area for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -228,14 +225,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
-
 ## OUTPUTS
 
 ### Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.InventoryArea
 Instance or array of the objects.
 
-
 ## NOTES
-
 
 ## RELATED LINKS

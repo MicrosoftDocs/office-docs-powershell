@@ -8,7 +8,9 @@ schema: 2.0.0
 # Get-SPAccessServicesApplication
 
 ## SYNOPSIS
-Returns an Access Services application or a collection of Access Services applications.
+
+Gets an Access Services Service Application.
+
 
 ## SYNTAX
 
@@ -18,28 +20,34 @@ Get-SPAccessServicesApplication [[-Identity] <SPServiceApplicationPipeBind>]
 ```
 
 ## DESCRIPTION
-The `Get-SPAccessServicesApplication` cmdlet retrieves an Access Services Service Applications. If an identity is not specified, the cmdlet returns the collection of Access Services applications that are in the farm. The properties returned from this cmdlet are read-only.
+
+Returns Access Services service applications available in the farm.
+
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesApplication
-```
-Gets all Access Services Service Applications in the farm
 
-### Example 2
+PS C:\>$sa = Get-SPServiceApplication| ?{$_.TypeName -eq 'Access Services Web Service Application'}
+PS C:\>Get-SPAccessServicesApplication -Identity $sa
+
 ```
-PS C:\>Get-SPAccessServicesApplication -Identity 'Access Services Application'
+Returns the Access Services application using a service application pipebind.
+
+### Example 2 
+```
+PS C:\>Get-SPAccessServicesApplication -Identity 0d1da6e4-5cd6-4ccf-9ae1-ace2e964223a
 ```
 
-Gets the Access Services Service Application named 'Access Services Application'.
+Returns the Access Services application with the specified GUID.
+
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the
-objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
@@ -57,7 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The identity of the Access Services Service Application. This can be in the format of a string, GUID, or a pipe bind object.
+
+Must be in the form of a Service Application pipe bind or a GUID.
+
 
 ```yaml
 Type: SPServiceApplicationPipeBind
