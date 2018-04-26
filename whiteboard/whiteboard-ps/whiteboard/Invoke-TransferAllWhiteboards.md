@@ -32,6 +32,7 @@ Position:                    1
 Default value:               None               
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -OldOwnerId
@@ -45,6 +46,7 @@ Position:                    3
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -NewOwnerId
@@ -58,6 +60,7 @@ Position:                    4
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -WhatIf
@@ -69,6 +72,7 @@ Position:                    named
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -Confirm [<SwitchParameter>]
@@ -80,6 +84,7 @@ Position:                    named
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ## EXAMPLES

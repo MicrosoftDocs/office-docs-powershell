@@ -34,6 +34,7 @@ Position:                    named
 Default value:               None               
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -UserId
@@ -47,6 +48,7 @@ Position:                    named
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
         
 ### -WhiteboardId
@@ -60,6 +62,7 @@ Position:                    named
 Default value:               None       
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ## EXAMPLES
