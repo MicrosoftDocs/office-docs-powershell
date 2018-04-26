@@ -42,11 +42,11 @@ This example uses the Get-SPEnterpriseSearchFileFormat to retrieve all parseable
 
 ### -------------EXAMPLE 2------------- 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa doc
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa -Identity DOCX
 ```
 
-This example uses the Get-SPEnterpriseSearchFileFormat cmdlet to retrieve information about the file format doc in the search service application referenced by $ssa.
+This example uses the Get-SPEnterpriseSearchFileFormat cmdlet to retrieve information about the file format DOCX in the search service application referenced by `$ssa`.
 
 ## PARAMETERS
 
@@ -69,9 +69,8 @@ Accept wildcard characters: False
 ### -SearchApplication
 
 Specifies the search application for which to retrieve file format information.
+
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
-
-
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
@@ -87,13 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection

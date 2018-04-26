@@ -24,16 +24,16 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityPublicFilter
+PS C:\>Get-FASTSearchSecurityPublicFilter
 ```
 
 This example gets the security public filter's general setting configuration information.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityPublicFilter
+PS C:\>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityPublicFilter
 ```
 
 This example gets the security public filter's general setting configuration information for a security worker with the server name of "workerserver".

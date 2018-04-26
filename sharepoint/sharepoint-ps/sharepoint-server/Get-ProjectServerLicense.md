@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-ProjectServerLicense
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Retrieves the status of the license for Project Server. If the current license is a trial, it will also indicate the expiry date and if it has expired.
 
 ## SYNTAX
 
@@ -17,22 +17,24 @@ Get-ProjectServerLicense [-AssignmentCollection <SPAssignmentCollection>] [<Comm
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Retrieves the status of the license for Project Server. If the current license is a trial, it will also indicate the expiry date and if it has expired.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Get-ProjectServerLicense
 ```
 
-{{ Add example description here }}
+Gets the status of the Project Server license and when it was activated.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the
+objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)

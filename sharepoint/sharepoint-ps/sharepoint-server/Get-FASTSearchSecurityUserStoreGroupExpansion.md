@@ -24,17 +24,17 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
+PS C:\>Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
 ```
 
 This example gets all the groups in the "ln1" user store that are parents, grand-parents, etc.
 of the "user1" user.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln2 -User user1
+PS C:\>Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln2 -User user1
 ```
 
 This example gets all the groups in the "ln2" user store from the worker with a server name of "workerserver" that are parents, grand-parents, etc.

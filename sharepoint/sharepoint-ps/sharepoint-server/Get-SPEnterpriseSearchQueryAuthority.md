@@ -29,18 +29,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "MySSA"
-$qAuth = $ssa | Get-SPEnterpriseSearchQueryAuthority -Identity "http://contoso.com"
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+PS C:\>Get-SPEnterpriseSearchQueryAuthority -Identity 'http://contoso.com' -SearchApplication $ssa
 ```
 
-This example obtains the authoritative page for the URL http://contoso.com from the search service application named MySSA.
+This example obtains the authoritative page for the URL http://contoso.com from the search service application named 'Search Service Application'.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>$qaCollection = Get-SPEnterpriseSearchQueryAuthority -SearchApplication "MySSA"
+PS C:\>Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
 ```
 
-This example obtains the collection of query authority pages from a search service application named MySSA.
+This example obtains the collection of query authority pages from a search service application named 'Search Service Application'.
 
 ## PARAMETERS
 

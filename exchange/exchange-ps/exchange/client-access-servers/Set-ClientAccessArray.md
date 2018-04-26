@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the Set-ClientAccessArray cmdlet to specify an object that represents a load-balanced array of Client Access servers within a single Active Directory site.
+Use the Set-ClientAccessArray cmdlet to modify RPC Client Access arrays (load-balanced arrays of Client Access servers within a single Active Directory site).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -23,8 +23,6 @@ Set-ClientAccessArray [-Identity] <ClientAccessArrayIdParameter> [-Confirm] [-Do
 ```
 
 ## DESCRIPTION
-The Set-ClientAccessArray cmdlet configures a load-balanced array of Client Access servers within an Active Directory site.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -34,26 +32,36 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-ClientAccessArray -Identity "ContosoArray" -Name "CASArray"
 ```
 
-This example names the Client Access server array CASArray.
+This example changes the names the name of the existing Client Access array named ContosoArray to CASArray.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Set-ClientAccessArray -Identity "ContosoArray" -FQDN "mail.contoso.com"
+Set-ClientAccessArray -Identity "ContosoArray" -FQDN "casarrayeu.contoso.com"
 ```
 
-This example returns the Client Access server array associated with the site for the FQDN mail.contoso.com.
+This example changes the fully qualified domain name of the existing Client Access array named ContosoArray to casarrayeu.contoso.com.
 
 ### -------------------------- Example 3 --------------------------
 ```
 Set-ClientAccessArray -Identity "ContosoArray" -Site "SiteEU"
 ```
 
-This example associates the existing array object ContosoArray with the Active Directory site SiteEU.
+This example associates the existing Client Access array named ContosoArray with the Active Directory site named SiteEU.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the unique identifier of the Client Access server array.
+The Identity parameter specifies the Client Access array that you want to modify.  You can use these values:
+
+- Name (if the value doesn't contain spaces)
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
+
+- Fully qualified domain name (FQDN)
+
+- GUID
 
 ```yaml
 Type: ClientAccessArrayIdParameter
@@ -102,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fqdn
-The Fqdn parameter specifies the FQDN of the Client Access server array.
+The Fqdn parameter specifies the fully qualified domain name of the Client Access array (for example, casarray01.contoso.com). This is the value that RPC over TCP clients use to connect to the Client Access servers in the array.
 
 ```yaml
 Type: Fqdn
@@ -117,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the Client Access server array.
+The Name parameter specifies the descriptive name of the Client Access array. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks ("). If the value contains spaces, you can't use the Name value to identify the Client Access array for the Get-ClientAccessArray, Remove-ClientAccessArray, or Set-ClientAccessArray cmdlets.
 
 ```yaml
 Type: String
@@ -132,7 +140,15 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-The Site parameter specifies the Active Directory site that contains the Client Access server array.
+The Site parameter specifies the Active Directory site that contains the Client Access array.  You can use any value that uniquely identifies the site. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To see a list of available sites, use the Get-ADSite cmdlet.
 
 ```yaml
 Type: AdSiteIdParameter

@@ -46,7 +46,7 @@ This example displays summary information for all retention rules in your organi
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-RetentionComplianceRule -Identity "30DayRule" | Format-List
+Get-RetentionComplianceRule -Identity "30 Day Rule" | Format-List
 ```
 
 This example displays detailed information for the retention rule named "30 Day Rule".

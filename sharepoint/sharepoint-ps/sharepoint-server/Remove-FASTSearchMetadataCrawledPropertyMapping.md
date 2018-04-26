@@ -31,11 +31,11 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>$title = Get-FASTSearchMetadataManagedProperty -name title
-$crawledproperties = $title.GetCrawledPropertyMappings()
-$crawledproperties # To List the output before the removal
-Remove-FASTSearchMetadataCrawledPropertyMapping -managedproperty $title -crawledproperty $crawledproperties[4]
-$crawledproperties # To list the output after the removal
+PS C:\>$title = Get-FASTSearchMetadataManagedProperty -name title
+PS C:\>$crawledproperties = $title.GetCrawledPropertyMappings()
+PS C:\>$crawledproperties # To List the output before the removal
+PS C:\>Remove-FASTSearchMetadataCrawledPropertyMapping -managedproperty $title -crawledproperty $crawledproperties[4]
+PS C:\>$crawledproperties # To list the output after the removal
 ```
 
 This example removes the mapping of the crawled property "sitemap.title" to the managed property "title".

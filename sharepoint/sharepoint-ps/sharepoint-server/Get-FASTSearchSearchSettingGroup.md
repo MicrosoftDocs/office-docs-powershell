@@ -24,16 +24,16 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSearchSettingGroup
+PS C:\>Get-FASTSearchSearchSettingGroup
 ```
 
 This example retrieves all FAST Search Server 2010 for SharePoint search setting groups.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchSearchSettingGroup -Name marketinggroup
+PS C:\>Get-FASTSearchSearchSettingGroup -Name marketinggroup
 ```
 
 This example retrieves the "marketinggroup" search setting group.
