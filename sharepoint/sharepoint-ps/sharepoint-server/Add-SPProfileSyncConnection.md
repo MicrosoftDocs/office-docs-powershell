@@ -38,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------EXAMPLE----------- 
 ```
-C:\PS>Add-SPProfileSyncConnection -ProfileServiceApplication 888ds256-9ad9-53a9-f135-99eecd245670b -ConnectionForestName "fabrikam.com"-ConnectionDomain "Fabrikam" -ConnectionUserName "Testupa" -ConnectionPassword convertto-securestring "Password1" -asplaintext -force -ConnectionSynchronizationOU "OU=SharePoint Users,DC=fabrikam,DC=com"
+PS C:\>Add-SPProfileSyncConnection -ProfileServiceApplication 888ds256-9ad9-53a9-f135-99eecd245670b -ConnectionForestName "fabrikam.com"-ConnectionDomain "Fabrikam" -ConnectionUserName "Testupa" -ConnectionPassword convertto-securestring "Password1" -asplaintext -force -ConnectionSynchronizationOU "OU=SharePoint Users,DC=fabrikam,DC=com"
 ```
 
 This example adds a user from the fabrikam domain using a specific user profile service application.
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionFilterOutUnlicensed
-{{Fill ConnectionFilterOutUnlicensed Description}}
+Do not use.
 
 ```yaml
 Type: Boolean
@@ -332,13 +332,15 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUseDisabledFilter
-{{Fill ConnectionUseDisabledFilter Description}}
+Filters out disabled accounts.
+
+>[!NOTE] This will only filter out accounts which are in a disabled state prior to being imported. It will not filter out accounts which have been disabled after importing.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
