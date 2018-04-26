@@ -30,10 +30,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-TeamsRetentionCompliancePolicy -Name "Teams - Regulation 123 Compliance" -TeamsChannelLocation "Kitty Petersen", "Scott Nakamura" -TeamsChatLocation "Kitty Petersen", "Scott Nakamura"
+New-TeamsRetentionCompliancePolicy -Name "Teams - Regulation 123 Compliance" -TeamsChannelLocation "Engineering Team", "UX Design Team" -TeamsChatLocation "Kitty Petersen", "Scott Nakamura"
 ```
 
-This example creates a retention policy named "Teams - Regulation 123 Compliance" for the Microsoft Teams channels and chats in the mailboxes of Kitty Petersen and Scott Nakamura.
+This example creates a retention policy named "Teams - Regulation 123 Compliance" for the Teams channel messages in the teams by the names of Engineering Team and UX Design Team and Teams chats in the mailboxes of Kitty Petersen and Scott Nakamura.
 
 
 ## PARAMETERS
@@ -145,9 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocation
-TThe TeamsChannelLocation parameter specifies the Microsoft Teams channels to include in the policy. You identify the channel by the mailbox, or you can use the value All to include all channels from all mailboxes.
+The TeamsChannelLocation parameter specifies the Team (group) mailbox for the team whose channel messages you want to include in the policy. You identify the channels by the parent team's (group) mailbox, or you can use the value All to include all Teams in the tenant. 
 
-You can use any value that uniquely identifies the mailbox. For example:
+You can use any value that uniquely identifies the group (team) mailbox. For example:
 
 - Name
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChannelLocationException
-The TeamsChannelLocationException parameter specifies the Microsoft Teams channels to exclude when you use the value All for the TeamsChannelLocation parameter. You identify the channel the mailbox.
+The TeamsChannelLocationException parameter specifies the Team (group) mailbox for the team whose channel messages you want to exclude in the policy when you use the value All in the TeamsChannelLocation parameter. You can use any value that uniquely identifies the group (team) mailbox. 
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
@@ -189,9 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChatLocation
-The TeamsChatLocation parameter specifies the Microsoft Teams chats to include in the policy. You identify the chat by the mailbox, or you can use the value All to include all chats from all mailboxes.
+The TeamsChatLocation parameter specifies the Microsoft Teams chats to include in the policy. You identify the chat by the user mailbox, or you can use the value All to include all chats for all users from all user mailboxes.
 
-You can use any value that uniquely identifies the mailbox user. For example:
+You can use any value that uniquely identifies the user mailbox. For example:
 
 - Name
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsChatLocationException
-The TeamsChatLocationException parameter specifies the Microsoft Teams chat locations to exclude when you use the value All for the TeamsChatLocation parameter.  You identify the chat by the mailbox.
+The TeamsChatLocationException parameter specifies the Microsoft Teams chat locations to exclude when you use the value All for the TeamsChatLocation parameter.  You identify the chat by the user mailbox.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
