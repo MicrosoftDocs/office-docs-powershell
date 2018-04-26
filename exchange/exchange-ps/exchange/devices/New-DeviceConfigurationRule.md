@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: New-DeviceConfigurationRule
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # New-DeviceConfigurationRule
@@ -59,17 +60,16 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-DeviceConfigurationRule -Policy "Engineering Group" -TargetGroups 5bff73eb-0ba7-461b-b7c9-9b4c173cc266
 ```
 
 This example creates a new mobile device configuration rule with the following settings:
 
+- Policy: Engineering Group
 
-Policy: Engineering Group
-
-TargetGroups:5bff73eb-0ba7-461b-b7c9-9b4c173cc266
+- TargetGroups:5bff73eb-0ba7-461b-b7c9-9b4c173cc266
 
 ## PARAMETERS
 
@@ -87,7 +87,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +104,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountName
-The AccountName parameter ???. Valid values for this parameter are:
+The AccountName parameter specifies the account name. Valid values for this parameter are:
 
 - A text value.
 
@@ -125,7 +123,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -134,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountUserName
-The AccountUserName parameter specifies ???. Valid values for this parameter are:
+The AccountUserName parameter specifies the account user name. Valid values for this parameter are:
 
 - A text value.
 
@@ -145,7 +142,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +169,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +192,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +215,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -251,7 +244,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -279,7 +271,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -307,7 +298,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -335,7 +325,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -359,7 +348,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -372,9 +360,9 @@ The AllowScreenshot parameter specifies whether to allow screenshots on devices.
 
 - $true: Screenshots are allowed.
 
-- $false: Screenshots aren't allowed.$null
+- $false: Screenshots aren't allowed.
 
-- (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This is the default value.
 
 This setting is available on the following types of devices:
 
@@ -387,7 +375,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -417,7 +404,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -441,7 +427,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -465,7 +450,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -489,7 +473,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -498,7 +481,7 @@ Accept wildcard characters: False
 ```
 
 ### -AntiVirusSignatureStatus
-The AntiVirusSignatureStatus parameter specifies ???. Valid values for this parameter are:
+The AntiVirusSignatureStatus parameter specifies the antivirus signature status. Valid values for this parameter are:
 
 - An integer.
 
@@ -511,7 +494,6 @@ Type: Int64
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -520,7 +502,7 @@ Accept wildcard characters: False
 ```
 
 ### -AntiVirusStatus
-The AntiVirusStatus parameter specifies ???. Valid values for this parameter are:
+The AntiVirusStatus parameter specifies the antivirus status. Valid values for this parameter are:
 
 - An integer.
 
@@ -533,7 +515,6 @@ Type: Int64
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -563,7 +544,6 @@ Type: DontAllow | Rating4plus | Rating9plus | Rating12plus | Rating17plus | Allo
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -593,7 +573,6 @@ Type: AutomaticUpdatesRequired | AutomaticCheckForUpdates | AutomaticDownloadUpd
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -617,7 +596,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -647,7 +625,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -665,9 +642,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -683,7 +659,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -703,7 +678,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -727,7 +701,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -736,7 +709,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeActiveSyncHost
-The ExchangeActiveSyncHost parameter specifies ???. Valid values for this parameter are:
+The ExchangeActiveSyncHost parameter specifies the Exchange ActiveSync host. Valid values for this parameter are:
 
 - A text value.
 
@@ -747,7 +720,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -769,7 +741,6 @@ Type: Required
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -793,7 +764,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -821,7 +791,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -851,7 +820,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -871,7 +839,6 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1015,7 +982,6 @@ Type: DontAllow | AllowAll | USRatingG | USRatingPG | USRatingPG13 | USRatingR |
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1024,7 +990,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordComplexity
-The PasswordComplexity parameter specifies ???. Valid values for this parameter are:
+The PasswordComplexity parameter specifies the password complexity. Valid values for this parameter are:
 
 - An integer.
 
@@ -1035,7 +1001,6 @@ Type: Int64
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1065,7 +1030,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1095,7 +1059,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1115,7 +1078,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1145,7 +1107,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1169,7 +1130,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1199,7 +1159,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1227,7 +1186,6 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1255,7 +1213,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1295,7 +1252,6 @@ Type: us | au | ca | de | fr | ie | jp | nz | gb
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1317,7 +1273,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1341,7 +1296,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1365,7 +1319,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1487,7 +1440,6 @@ Type: DontAllow | AllowAll | USRatingTVY | USRatingTVY7 | USRatingTVG | USRating
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1515,7 +1467,6 @@ Type: AlwaysNotify | NotifyAppChanges | NotifyAppChangesDoNotDimdesktop | NeverN
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1529,9 +1480,8 @@ The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1555,7 +1505,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1575,7 +1524,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -1601,4 +1549,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/426ab6b0-8c66-4ec0-9120-0128c8ca5232.aspx)
-

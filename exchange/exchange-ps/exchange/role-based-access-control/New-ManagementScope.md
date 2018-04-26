@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 title: New-ManagementScope
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
 ---
 
 # New-ManagementScope
@@ -63,28 +64,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ManagementScope -Name "Mailbox Servers 1 through 3" -ServerList MailboxServer1, MailboxServer2, MailboxServer3
 ```
 
 This example creates a scope that includes only the servers MailboxServer1, MailboxServer2, and MailboxServer3. Users assigned roles using management role assignments that have the scope in this example can only perform against the servers included in the scope.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ManagementScope -Name "Redmond Site Scope" -ServerRestrictionFilter {ServerSite -eq "CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com"}
 ```
 
 This example creates the Redmond Site Scope scope and sets a server restriction filter that matches only the servers located in the "CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com" Active Directory Domain Services (AD DS) site.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-ManagementScope -Name "Executive Mailboxes" -RecipientRoot "contoso.com/Executives" -RecipientRestrictionFilter {RecipientType -eq "UserMailbox"}
 ```
 
 This example creates the Executive Mailboxes scope. Only mailboxes located within the Executives OU in the contoso.com domain match the recipient restriction filter.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 New-ManagementScope -Name "Protected Exec Users" -RecipientRestrictionFilter { Title -Like "*VP*" } -Exclusive; New-ManagementRoleAssignment -SecurityGroup "Executive Administrators" -Role "Mail Recipients" -CustomRecipientWriteScope "Protected Exec Users"
 ```
@@ -93,7 +94,7 @@ This example creates the Protected Exec Users exclusive scope. Users that contai
 
 The exclusive scope is then associated with a management role assignment that assigns the Mail Recipients management role to the Executive Administrators role group. This role group contains administrators who are allowed to modify the mailboxes of high-profile executives. Only the administrators of the Executive Administrators role group can modify users with the string "VP" in their title.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 New-ManagementScope -Name "Seattle Databases" -DatabaseRestrictionFilter {Name -Like "SEA*" }
 ```
@@ -112,7 +113,6 @@ Type: DatabaseIdParameter[]
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -130,7 +130,6 @@ Type: String
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -146,7 +145,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: True
 Position: 1
 Default value: None
@@ -162,7 +160,6 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -180,7 +177,6 @@ Type: ServerIdParameter[]
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -198,7 +194,6 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -216,9 +211,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +230,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -254,7 +247,6 @@ Type: SwitchParameter
 Parameter Sets: Set4, Set5, Set1, Set3, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -270,7 +262,6 @@ Type: SwitchParameter
 Parameter Sets: Set4, Set5, Set1, Set3, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -286,7 +277,6 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -300,9 +290,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

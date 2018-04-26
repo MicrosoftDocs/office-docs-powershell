@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: New-ManagedFolder
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # New-ManagedFolder
@@ -54,21 +55,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ManagedFolder -Name NewFolder -FolderName "New Folder" -StorageQuota "1 MB"
 ```
 
 This example creates a managed folder that has a maximum capacity of 1 MB.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-ManagedFolder -Name MyFolder -FolderName "My Folder" -LocalizedFolderName Spanish:"Mi Carpeta", French:"Mon Dossier" -Comment "My comment" -LocalizedComment Spanish:"Mi comentario", French:"Mon annotation"
 ```
 
 This example creates a managed folder that has a default folder name and comment in English, localized folder name in Spanish and French, and localized comment in Spanish and French.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-ManagedFolder -Name AnotherInbox -DefaultFolderType Inbox
 ```
@@ -125,7 +126,6 @@ Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal 
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +143,6 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -161,7 +160,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -177,7 +175,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +190,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -211,9 +207,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -229,7 +224,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +239,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -261,7 +254,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +269,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +286,6 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -311,7 +301,6 @@ Type: Unlimited
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -325,9 +314,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -353,4 +341,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fcc46b8b-0ceb-495a-b9e7-264bb96dc050.aspx)
-

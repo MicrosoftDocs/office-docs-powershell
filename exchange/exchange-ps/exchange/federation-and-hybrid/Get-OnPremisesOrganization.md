@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-OnPremisesOrganization
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-OnPremisesOrganization
@@ -29,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OnPremisesOrganization -Identity ExchangeMail | Format-List
 ```
 
 This example retrieves the on-premises organization settings for ExchangeMail using the Identity parameter.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-OnPremisesOrganization -DomainController 'mail.contoso.com' | Format-List
 ```
@@ -59,7 +60,6 @@ Type: OnPremisesOrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -85,4 +85,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c58eedcf-2b80-4022-971d-fce6365b6e75.aspx)
-

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Remove-DlpKeywordDictionary
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Remove-DlpKeywordDictionary
@@ -26,7 +27,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-DlpKeywordDictionary -Identity "Financial Data"
 ```
@@ -43,7 +44,6 @@ Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: 1
 Default value: None
@@ -61,9 +61,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -77,9 +76,8 @@ The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -105,4 +103,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/525e3c6d-a315-4f0b-88f6-5704eb09e31c.aspx)
-

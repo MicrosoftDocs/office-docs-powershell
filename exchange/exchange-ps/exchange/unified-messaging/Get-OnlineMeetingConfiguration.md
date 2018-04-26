@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 applicable: Exchange Server 2016, Exchange Online
 title: Get-OnlineMeetingConfiguration
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-OnlineMeetingConfiguration
@@ -41,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OnlineMeetingConfiguration -Identity carlam@fourthcoffee.com
 ```
@@ -82,7 +83,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -98,7 +98,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

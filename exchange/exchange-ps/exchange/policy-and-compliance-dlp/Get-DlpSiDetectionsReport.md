@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-DlpSiDetectionsReport
 schema: 2.0.0
+monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-DlpSiDetectionsReport
@@ -25,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Insert example commands for example 2.
 ```
@@ -51,7 +52,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -67,7 +67,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

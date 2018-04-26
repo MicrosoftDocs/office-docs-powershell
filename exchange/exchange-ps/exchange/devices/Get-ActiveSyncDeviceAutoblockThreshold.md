@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2013, Exchange Server 2016
 title: Get-ActiveSyncDeviceAutoblockThreshold
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-ActiveSyncDeviceAutoblockThreshold
@@ -28,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ActiveSyncDeviceAutoblockThreshold -Identity "UserAgentChanges"
 ```
@@ -45,7 +46,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -61,7 +61,6 @@ Type: ActiveSyncDeviceAutoblockThresholdIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None

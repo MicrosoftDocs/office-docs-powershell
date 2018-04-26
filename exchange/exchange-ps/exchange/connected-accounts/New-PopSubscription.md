@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: New-PopSubscription
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # New-PopSubscription
@@ -30,25 +31,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-PopSubscription -Name "Contoso POP" -EmailAddress bjohnson@contoso.com -IncomingUserName bjohnson -IncomingPassword (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force) -IncomingServer pop.contoso.com -IncomingSecurity Ssl -IncomingPort 995
 ```
 
 This example creates the POP subscription Contoso POP in the mailbox of the user Brian Johnson. The remote POP mailbox has the following details:
 
+- Email address: bjohnson@contoso.com
 
-Email address: bjohnson@contoso.com
+- User name: bjohnson
 
-User name: bjohnson
+- Password: Pa$$word1
 
-Password: Pa$$word1
+- POP server: pop.contoso.com
 
-POP server: pop.contoso.com
+- Authentication method: SSL
 
-Authentication method: SSL
-
-TCP port: 995
+- TCP port: 995
 
 ## PARAMETERS
 
@@ -60,7 +60,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -76,7 +75,6 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -92,7 +90,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -108,7 +105,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -124,7 +120,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -142,9 +137,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +154,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +169,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +184,6 @@ Type: Basic | Spa
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +199,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -224,7 +214,6 @@ Type: None | Ssl | Tls
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +229,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -280,7 +268,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -294,9 +281,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -322,4 +308,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a8405b09-04aa-4b31-866a-3361bb1ad8b4.aspx)
-

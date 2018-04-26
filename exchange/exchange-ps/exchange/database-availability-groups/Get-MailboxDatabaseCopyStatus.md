@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Get-MailboxDatabaseCopyStatus
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-MailboxDatabaseCopyStatus
@@ -35,21 +36,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxDatabaseCopyStatus -Identity DB1 | Format-List
 ```
 
 This example returns status information for all copies of the database DB1. The status results are displayed in a list format.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxDatabaseCopyStatus -Server MBX1 | Format-List
 ```
 
 This example returns the status for all database copies on the Mailbox server MBX1. The status results are also displayed in a list format.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxDatabaseCopyStatus -Identity DB1\MBX2 | Format-List
 ```
@@ -66,7 +67,6 @@ Type: MailboxServerIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -82,7 +82,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +97,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -114,7 +112,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -130,7 +127,6 @@ Type: DatabaseCopyIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None
@@ -146,7 +142,6 @@ Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +157,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +172,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2016
 title: Get-ClientAccessService
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016"
 ---
 
 # Get-ClientAccessService
@@ -27,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ClientAccessService | Format-Table Name
 ```
 
 This example returns a summary list of all Exchange servers in your organization that have theClient Access server role installed.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ClientAccessService -Identity mail.contoso.com | Format-List
 ```
@@ -51,7 +52,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +77,6 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None
@@ -95,7 +94,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +111,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -139,4 +136,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b46d6c59-6e46-4089-a984-09b280dcb1ba.aspx)
-

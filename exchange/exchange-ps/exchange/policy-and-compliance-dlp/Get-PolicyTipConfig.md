@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-PolicyTipConfig
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-PolicyTipConfig
@@ -32,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PolicyTipConfig -Action NotifyOnly
 ```
 
 This example returns a summary list of the custom Policy Tips in all languages that have the action value NotifyOnly.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PolicyTipConfig -Original -Locale fr
 ```
 
 This example returns a summary list of all built-in French Policy Tips.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-PolicyTipConfig en\RejectOverride | Format-List
 ```
@@ -73,7 +74,6 @@ Type: NotifyOnly | RejectOverride | Reject | Url
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +91,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +116,6 @@ Type: PolicyTipConfigIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -137,7 +135,6 @@ Type: CultureInfo
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +150,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

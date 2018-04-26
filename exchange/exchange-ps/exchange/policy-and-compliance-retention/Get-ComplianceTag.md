@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-ComplianceTag
 schema: 2.0.0
+monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-ComplianceTag
@@ -25,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ComplianceTag | Format-Table -Auto Name,Priority,RetentionAction,RetentionDuration,Workload
 ```
 
 This example returns a summary list of all labels.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ComplianceTag -Identity "HR Content"
 ```
@@ -55,7 +56,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None

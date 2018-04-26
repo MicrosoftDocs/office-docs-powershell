@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-UserAnalyticsConfig
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-UserAnalyticsConfig
@@ -25,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UserAnalyticsConfig -Identity "Kathleen Reiter"
 ```
@@ -58,7 +59,6 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -84,4 +84,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c10fd535-627a-4e9e-be13-5dda9820979e.aspx)
-

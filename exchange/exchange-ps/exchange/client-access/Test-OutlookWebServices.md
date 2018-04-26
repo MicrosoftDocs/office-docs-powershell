@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010
 title: Test-OutlookWebServices
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Test-OutlookWebServices
@@ -29,23 +30,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-OutlookWebServices -Identity:holly@contoso.com
 ```
 
 This example verifies the service information that's returned to the Outlook client from the Autodiscover service for the user holly@contoso.com. The code example verifies information for the following services:
 
+- Availability service
 
-Availability service
+- Outlook Anywhere
 
-Outlook Anywhere
+- Offline address book
 
-Offline address book
+- Unified Messaging
 
-Unified Messaging
-
-This example tests for a connection to each service. This example also submits a request to the Availability service for the user holly@contoso.com to determine whether the user's free/busy information is being returned correctly from the Client Access server to the Outlook client.
+The example tests for a connection to each service. The example also submits a request to the Availability service for the user holly@contoso.com to determine whether the user's free/busy information is being returned correctly from the Client Access server to the Outlook client.
 
 ## PARAMETERS
 
@@ -57,7 +57,6 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -75,9 +74,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +91,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +106,6 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: 1
 Default value: None
@@ -125,7 +121,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +136,6 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -155,9 +149,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -183,4 +176,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c41152b0-b304-4b13-b8ea-a24e2c2c3ea8.aspx)
-

@@ -3,9 +3,10 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: Set-ManagedFolderMailboxPolicy
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
-# set-ManagedFolderMailboxPolicy
+# Set-ManagedFolderMailboxPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -17,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-set-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Set-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-ManagedFolderLinks <ELCFolderIdParameter[]>] [-Name <String>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -26,17 +27,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-ManagedFolderMailboxPolicy "PM Storage Template1" -Name "PM Storage Template2"
 ```
 
 This example changes the name of the managed folder mailbox policy PM Storage Template1 to PM Storage Template2.
 
-
 The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters (https://technet.microsoft.com/library/bb124388.aspx).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Set-ManagedFolderMailboxPolicy -Identity "My Managed Folder Mailbox Policy" -ManagedFolderLinks "Custom Folder 1", "Custom Folder 2"
 ```
@@ -53,7 +53,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -71,9 +70,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +87,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +102,6 @@ Type: ELCFolderIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +117,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -135,9 +130,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -163,4 +157,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bc60f748-2ab6-47a2-b4af-e9b7fb9bae3f.aspx)
-

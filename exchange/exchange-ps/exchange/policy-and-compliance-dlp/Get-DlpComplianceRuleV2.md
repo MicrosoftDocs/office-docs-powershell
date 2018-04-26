@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DlpComplianceRuleV2
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpComplianceRuleV2
@@ -26,21 +27,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DlpComplianceRuleV2
 ```
 
 This example displays summary information for all DLP rules in the Security & Compliance Center.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DlpComplianceRuleV2 -Identity "PII SS# Custom" | Format-List
 ```
 
 This example displays detailed information for the DLP rule named "PII SS# Custom".
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-DlpComplianceRuleV2 -Policy "PII Limited"
 ```
@@ -57,7 +58,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -81,7 +81,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -105,7 +104,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -131,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4566b601-104e-4843-b1d0-110b33ba1311.aspx)
-

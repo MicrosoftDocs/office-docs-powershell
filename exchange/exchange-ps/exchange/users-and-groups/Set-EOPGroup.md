@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online Protection
 title: Set-EOPGroup
 schema: 2.0.0
+monikerRange: "eop-ps"
 ---
 
 # Set-EOPGroup
@@ -30,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-Group -Identity "Legal Department" -Notes "Group members updated June 1, 2014"
 ```
@@ -47,7 +48,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -79,7 +79,6 @@ Type: GroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +114,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +129,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -157,4 +154,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bed90147-4ff9-4b9d-b9fc-3e7843397818.aspx)
-

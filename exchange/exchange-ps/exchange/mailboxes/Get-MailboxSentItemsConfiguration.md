@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010
 title: Get-MailboxSentItemsConfiguration
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-MailboxSentItemsConfiguration
@@ -28,7 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxSentItemsConfiguration -Identity "Customer Support Feedback"
 ```
@@ -45,7 +46,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -85,7 +85,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -111,4 +110,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/40da2911-2503-4655-a92b-78deec069cb0.aspx)
-

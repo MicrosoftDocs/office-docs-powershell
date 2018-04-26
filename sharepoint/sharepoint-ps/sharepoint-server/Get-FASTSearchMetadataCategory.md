@@ -26,33 +26,33 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCategory
+PS C:\>Get-FASTSearchMetadataCategory
 ```
 
 This example returns all available categories.
 This is the default behavior if you do not specify any parameters.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCategory -Name SharePoint
+PS C:\>Get-FASTSearchMetadataCategory -Name SharePoint
 ```
 
 This example returns one specific category, the "SharePoint" category.
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 3-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCategory -Name m*
+PS C:\>Get-FASTSearchMetadataCategory -Name m*
 ```
 
 This example returns all categories with a name that begins with "m".
 Matching is case-insensitive.
 
-### ---------------EXAMPLE 4----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 4-----------------
 ```
-C:\PS>$category = Get-FASTSearchMetadataCategory -Name &quot;Enterprise Crawler&quot;
-$category.GetAllCrawledProperties()|ForEach-Object {$_.Name}
+PS C:\>$category = Get-FASTSearchMetadataCategory -Name &quot;Enterprise Crawler&quot;
+PS C:\>$category.GetAllCrawledProperties()|ForEach-Object {$_.Name}
 ```
 
 This example returns all crawled properties that are mapped to the category named "Enterprise Crawler".

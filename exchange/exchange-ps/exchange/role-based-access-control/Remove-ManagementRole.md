@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 title: Remove-ManagementRole
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
 ---
 
 # Remove-ManagementRole
@@ -28,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Remove-ManagementRole ExampleRole1
 ```
 
 This example removes the single role ExampleRole1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Remove-ManagementRole ExampleRole2 -Recurse -WhatIf
 ```
@@ -44,14 +45,14 @@ This example runs the Remove-ManagementRole cmdlet with the WhatIf switch. The W
 
 If the results are as expected, remove the WhatIf switch and run the command again to remove the ExampleRole2 parent role and all its child roles.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ManagementRole *Example* | Remove-ManagementRole -WhatIf
 ```
 
 This example uses the Get-ManagementRole cmdlet to get a list of roles that contain the string "Example" in the role name, and then pipes the list to the Remove-ManagementRole cmdlet. The Remove-ManagementRole cmdlet, because the WhatIf switch is specified, displays the roles that would have been removed but doesn't commit any changes. If the results are as expected, the command can be run again without the WhatIf switch to remove the roles.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Remove-ManagementRole "In-house scripts" -UnScopedTopLevel
 ```
@@ -70,7 +71,6 @@ Type: RoleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: True
 Position: 1
 Default value: None
@@ -88,9 +88,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -108,7 +107,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +122,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +139,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +154,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -172,9 +167,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

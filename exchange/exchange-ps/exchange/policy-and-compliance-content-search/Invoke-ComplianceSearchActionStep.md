@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Invoke-ComplianceSearchActionStep
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Invoke-ComplianceSearchActionStep
@@ -30,7 +31,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Insert example commands for example 1.
 ```
@@ -47,7 +48,6 @@ Type: PSObject
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: Named
 Default value: None
@@ -63,7 +63,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Type: ComplianceSearchActionIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -109,4 +107,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ec43ec77-ae00-4873-afb9-6ec17cb1b3f2.aspx)
-

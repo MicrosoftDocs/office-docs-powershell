@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-ActivityAlert
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-ActivityAlert
@@ -25,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ActivityAlert | Format-List Disabled,Name,Description,Operation,UserId,NotifyUser
 ```
 
 This example returns a summary list of all activity alerts.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ActivityAlert -Identity "All Mailbox Activities"
 ```
@@ -49,7 +50,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +71,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -97,4 +96,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3ae133df-cd0e-4782-b41a-973ca9578776.aspx)
-

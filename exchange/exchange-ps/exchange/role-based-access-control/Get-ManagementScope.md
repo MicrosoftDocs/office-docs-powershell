@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 title: Get-ManagementScope
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
 ---
 
 # Get-ManagementScope
@@ -30,28 +31,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ManagementScope Redmond*
 ```
 
 This example retrieves all the management scopes that start with the string Redmond.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ManagementScope "Redmond Servers Scope" | Format-List
 ```
 
 This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ManagementScope -Orphan
 ```
 
 This example retrieves a list of management scopes that aren't associated with any role assignments.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-ManagementScope -Exclusive $True
 ```
@@ -70,7 +71,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +86,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +101,6 @@ Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -118,7 +116,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

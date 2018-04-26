@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DlpKeywordDictionary
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpKeywordDictionary
@@ -25,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DlpKeywordDictionary | Format-Table -Auto Name,Description
 ```
 
 This example returns a summary list of all DLP keyword dictionaries.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DlpKeywordDictionary -Name "Financial Data"
 ```
@@ -49,7 +50,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -75,4 +75,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b6e1fd1a-7766-4bd5-b842-ada59c8c941c.aspx)
-

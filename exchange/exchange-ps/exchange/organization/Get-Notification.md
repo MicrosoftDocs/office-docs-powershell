@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-Notification
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-Notification
@@ -40,21 +41,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-Notification
 ```
 
 This example displays a summary list of all notification events.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-Notification -ProcessType Migration
 ```
 
 This example displays a summary list of all mailbox move and migration notification events.
 
-### Example 3 
+### -------------------------- Example 3 --------------------------
 ```
 Get-Notification -Identity 0259ec74-3539-4195-ab4f-de93e654ceaf | Format-List
 ```
@@ -77,7 +78,6 @@ Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -95,7 +95,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +110,6 @@ Type: EwsStoreObjectIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -137,7 +135,6 @@ Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -150,7 +147,6 @@ Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -166,7 +162,6 @@ Type: Unlimited
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -184,7 +179,6 @@ Type: ExDateTime
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +196,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

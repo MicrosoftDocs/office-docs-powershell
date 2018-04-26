@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-MailboxImportRequestStatistics
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-MailboxImportRequestStatistics
@@ -46,35 +47,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1
 ```
 
 This example returns the default statistics for the second import request for Tony Smith. The type of information returned by default includes name, mailbox and status.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1 | Export-CSV \\SERVER01\ImportRequest_Reports\Tony_Importstats.csv
 ```
 
 This example returns the detailed statistics for the second import request for Tony Smith's mailbox and exports the report to a .csv file.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxImportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
 ```
 
 This example returns additional information about the import request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-MailboxImportRequestStatistics -MRSInstance CAS01.contoso.com
 ```
 
 In Exchange Server 2010, this example returns default statistics for an import request that was processed by the instance of MRS running on the server CAS01.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Get-MailboxImportRequest -Status Failed | Get-MailboxImportRequestStatistics -IncludeReport | Format-List > AllImportReports.txt
 ```
@@ -91,7 +92,6 @@ Type: MailboxImportRequestIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -109,7 +109,6 @@ Type: Fqdn
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -133,7 +132,6 @@ Type: DatabaseIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -151,7 +149,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +164,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -187,7 +183,6 @@ Type: Guid
 Parameter Sets: Set3, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +198,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -219,7 +213,6 @@ Type: String
 Parameter Sets: Set1, Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -235,7 +228,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set2
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

@@ -3,9 +3,10 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Server 2010
 title: New-ManagedFolderMailboxPolicy
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
-# new-ManagedFolderMailboxPolicy
+# New-ManagedFolderMailboxPolicy
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -17,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-new-ManagedFolderMailboxPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
+New-ManagedFolderMailboxPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
  [-ManagedFolderLinks <ELCFolderIdParameter[]>] [-Organization <OrganizationIdParameter>] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -31,7 +32,7 @@ Managed custom folders are a premium feature of messaging records management (MR
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ManagedFolderMailboxPolicy -Name "My Managed Folder Mailbox Policy" -ManagedFolderLinks Inbox, MyFolder
 ```
@@ -48,7 +49,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -66,9 +66,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +83,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -100,7 +98,6 @@ Type: ELCFolderIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +115,6 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -132,9 +128,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -160,4 +155,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/14423cb5-b93a-466f-b7b2-7f37f14fb896.aspx)
-

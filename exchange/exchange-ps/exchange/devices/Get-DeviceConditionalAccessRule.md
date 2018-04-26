@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DeviceConditionalAccessRule
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DeviceConditionalAccessRule
@@ -36,14 +37,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DeviceConditionalAccessRule | Format-List Name,Disabled,Priority
 ```
 
 This example shows a summary list of all mobile device conditional access rules.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DeviceConditionalAccessRule -Identity "Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}"
 ```
@@ -60,7 +61,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +76,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +91,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -118,4 +116,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/840dc154-bcf1-40de-a207-5d87213420d0.aspx)
-

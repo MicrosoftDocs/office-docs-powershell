@@ -1,7 +1,9 @@
 ---
+external help file: 
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Get-ExchangeDiagnosticInfo
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-ExchangeDiagnosticInfo
@@ -25,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ExchangeDiagnosticInfo
 ```
 
 This example returns a summary list of all Exchange processes that are running on the server.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 [xml]$edi = Get-ExchangeDiagnosticInfo; $edi.Diagnostics.Processlocator.Process | Format-Table -Auto Name,ID,Guid
 ```
@@ -53,7 +55,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +72,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +89,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +114,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +129,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

@@ -26,16 +26,16 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchMetadataRankProfile -Name newdefault
+PS C:\>Get-FASTSearchMetadataRankProfile -Name newdefault
 ```
 
 This example retrieves the rank profile named "newdefault".
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchMetadataRankProfile -Name *?default
+PS C:\>Get-FASTSearchMetadataRankProfile -Name *?default
 ```
 
 This example retrieves all rank profiles that match the pattern "*?default".

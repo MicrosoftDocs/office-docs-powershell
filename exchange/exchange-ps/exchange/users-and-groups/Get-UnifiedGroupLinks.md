@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Get-UnifiedGroupLinks
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-UnifiedGroupLinks
@@ -29,7 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-UnifiedGroupLinks -Identity "Human Resources Department" -LinkType Members
 ```
@@ -62,7 +63,6 @@ Type: UnifiedGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -86,7 +86,6 @@ Type: Members | Owners | Subscribers | Aggregators | EventSubscribers
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -102,7 +101,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -128,4 +126,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b7f00aad-61ae-4ca8-8a3d-9efd28bbbbd0.aspx)
-

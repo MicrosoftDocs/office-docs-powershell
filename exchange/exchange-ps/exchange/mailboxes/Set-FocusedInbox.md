@@ -1,7 +1,9 @@
 ---
+external help file: 
 applicable: Exchange Online
 title: Set-FocusedInbox
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-FocusedInbox
@@ -26,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-FocusedInbox -Identity laura@contoso.com -FocusedInboxOn $false
 ```
@@ -67,7 +69,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -87,7 +88,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -113,4 +113,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online version](https://technet.microsoft.com/library/29f40631-f393-47ec-8081-464aacb1eb14.aspx)
-

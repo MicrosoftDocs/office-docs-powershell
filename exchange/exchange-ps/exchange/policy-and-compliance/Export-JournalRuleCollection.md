@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Export-JournalRuleCollection
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Export-JournalRuleCollection
@@ -28,14 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $file = Export-JournalRuleCollection; Set-Content -Path "C:\MyDocs\JournalRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports journal rules in a two-step process. In the first step, the Export-JournalRuleCollection cmdlet exports journal rules to the variable $file. In the second step, the Set-Content cmdlet saves the exported data to the XML file JournalRules.xml.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $file = Export-JournalRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\Ex2007-JournalRules.xml" -Value $file.FileData -Encoding Byte
 ```
@@ -54,9 +55,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +72,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +87,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +102,6 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None
@@ -118,9 +115,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

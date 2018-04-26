@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Send-TextMessagingVerificationCode
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Send-TextMessagingVerificationCode
@@ -30,21 +31,21 @@ This cmdlet returns an error if the user requests a verification code more than 
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Send-TextMessagingVerificationCode -Identity "TonySmith"
 ```
 
 This example sends the text messaging verification code to Tony Smith's mobile phone.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Send-TextMessagingVerificationCode -Identity "TonySmith" -Confirm $true
 ```
 
 This example sends the text messaging verification code to Tony Smith's mobile phone after confirmation is given.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Send-TextMessagingVerificationCode -Identity "tony@contoso.com"
 ```
@@ -63,9 +64,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +83,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +98,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -113,9 +111,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

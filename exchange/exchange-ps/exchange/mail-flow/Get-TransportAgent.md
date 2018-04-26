@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Get-TransportAgent
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-TransportAgent
@@ -26,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-TransportAgent
 ```
 
 This example displays a summary list of all transport agents installed on all Exchange servers in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-TransportAgent "Transport Rule Agent" -TransportService Hub | Format-List
 ```
@@ -52,7 +53,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -68,7 +68,6 @@ Type: TransportAgentObjectId
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None
@@ -94,7 +93,6 @@ Type: Hub | Edge | FrontEnd | MailboxSubmission | MailboxDelivery
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

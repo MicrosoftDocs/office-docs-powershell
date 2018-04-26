@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 title: Get-MailUser
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
 ---
 
 # Get-MailUser
@@ -52,14 +53,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailUser
 ```
 
 This example returns a summary list of all mail users in the organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailUser -Identity Ed | Format-List
 ```
@@ -86,7 +87,6 @@ Type:
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +106,6 @@ Type:
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +123,6 @@ Type:
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +140,6 @@ Type:
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -174,7 +171,6 @@ Type:
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -198,7 +194,6 @@ Type:
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -222,7 +217,6 @@ Type:
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +236,6 @@ Type:
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -258,7 +251,6 @@ Type:
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -284,7 +276,6 @@ Type:
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -300,7 +291,6 @@ Type: AccountPartitionIdParameter
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -316,7 +306,6 @@ Type: DatabaseIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -338,7 +327,6 @@ Type: SwitchParameter
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -354,7 +342,6 @@ Type: Int64
 Parameter Sets: Set3, Set2, Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

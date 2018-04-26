@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: New-MailMessage
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # New-MailMessage
@@ -28,42 +29,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report" -Mailbox tony
 ```
 
 In Exchange Server 2010, this example creates an e-mail message in the Drafts folder of Tony's mailbox, with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report"
 ```
 
 This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-MailMessage -Mailbox tony@contoso.com
 ```
 
 In Exchange Server 2010, this example creates an empty e-mail message in the Drafts folder of Tony's mailbox because no subject or message body is specified.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 New-MailMessage
 ```
 
 This example creates an empty email message in the Drafts folder because no subject or message body is specified.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -Mailbox tony -BodyFormat Html
 ```
 
 In Exchange Server 2010, this example creates an e-mail message in the Drafts folder of Tony's mailbox with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -BodyFormat Html
 ```
@@ -96,7 +97,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -112,7 +112,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -128,7 +127,6 @@ Type: PlainText | Html | Rtf
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -146,9 +144,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -166,7 +163,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +178,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -196,9 +191,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

@@ -3,9 +3,10 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2010
 title: Restore-Mailbox
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
-# restore-Mailbox
+# Restore-Mailbox
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -19,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdParameter>
+Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdParameter>
  -RecoveryMailbox <StoreMailboxIdParameter> -TargetFolder <String> [-AllowDuplicates]
  [-AllContentKeywords <String[]>] [-AttachmentFilenames <String[]>] [-BadItemLimit <Int32>] [-Confirm]
  [-ContentKeywords <String[]>] [-EndDate <DateTime>] [-ExcludeFolders <MapiFolderPath[]>]
@@ -35,28 +36,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase
 ```
 
 This example restores a mailbox for user Scott from the database MyRecoveryDatabase.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase -RecoveryMailbox John -TargetFolder Recovery
 ```
 
 This example restores John's mailbox content into Scott's mailbox under the Recovery folder.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase -SubjectKeywords "Meeting" -ContentKeywords "business" -IncludeFolders \Inbox,\Calendar
 ```
 
 This example restores only the mail with the subject Meeting, with the message body containing the word business, and with the message location either in the Inbox or Calendar folder. This example assumes that the mailbox is in English.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-Mailbox -Database MyDatabase | Restore-Mailbox -RecoveryDatabase MyRecoveryDatabase
 ```
@@ -115,7 +116,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -135,7 +135,6 @@ Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -151,7 +150,6 @@ Type: StoreMailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -167,7 +165,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -183,7 +180,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +203,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +218,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +233,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -257,9 +250,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -275,7 +267,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -291,7 +282,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -307,7 +297,6 @@ Type: MapiFolderPath[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -323,7 +312,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -339,7 +327,6 @@ Type: MapiFolderPath[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -355,7 +342,6 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +357,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -387,7 +372,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -403,7 +387,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -419,7 +402,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -435,7 +417,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -451,7 +432,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -465,9 +445,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -493,4 +472,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f7205547-b2c5-4429-bae6-43c1bc4dce75.aspx)
-

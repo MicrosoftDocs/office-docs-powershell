@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2016, Exchange Online
 title: Test-ClientAccessRule
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Test-ClientAccessRule
@@ -40,23 +41,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-ClientAccessRule -AuthenticationType BasicAuthentication -Protocol OutlookWebApp -RemoteAddress 172.17.17.26 -RemotePort 443 -User julia@contoso.com
 ```
 
 This example tests client access by using the following client properties:
 
+- Authentication type: Basic
 
-Authentication type: Basic
+- Protocol:OutlookWebApp
 
-Protocol:OutlookWebApp
+- Remote address: 172.17.17.26
 
-Remote address: 172.17.17.26
+- Remote port: 443
 
-Remote port: 443
-
-User: julia@contoso.com
+- User: julia@contoso.com
 
 ## PARAMETERS
 
@@ -82,7 +82,6 @@ Type: BasicAuthentication | NonBasicAuthentication | AdfsAuthentication | Certif
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -124,7 +123,6 @@ Type: ExchangeWebServices | RemotePowerShell | OutlookAnywhere | POP3 | IMAP4 | 
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -142,7 +140,6 @@ Type: IPAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +155,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -200,7 +196,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -218,9 +213,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +230,6 @@ Type: Hashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -250,9 +243,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -278,4 +270,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d17ee6d8-e5f4-4b5d-977c-85e8dadeaf48.aspx)
-

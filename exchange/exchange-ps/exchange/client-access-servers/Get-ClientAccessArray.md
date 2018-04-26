@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Get-ClientAccessArray
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-ClientAccessArray
@@ -10,7 +11,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-ClientAccessArray cmdlet to view legacy RPC Client Access arrays that exist in your Exchange organization.
+Use the Get-ClientAccessArray cmdlet to view legacy RPC Client Access arrays (load-balanced arrays of Client Access servers within a single Active Directory site) that exist in your Exchange organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -22,7 +23,7 @@ Get-ClientAccessArray [[-Identity] <ClientAccessArrayIdParameter>] [-DomainContr
 ```
 
 ## DESCRIPTION
-Client Access arrays were introduced in Exchange Server 2010 so Outlook clients in an Active Directory site could access the Client Access servers in the array by using RPC over TCP to a single, unified fully qualified domain name (FQDN). The RpcClientAccessServer property of new mailbox databases was automatically populated with the FQDN of the Client Access array and this value was used during the creation of Outlook profiles for mailboxes in those databases.
+Client Access arrays were introduced in Exchange Server 2010 so Outlook clients in an Active Directory site could access the Client Access servers in the array by using RPC over TCP to a single, unified, fully qualified domain name (FQDN). The RpcClientAccessServer property of new mailbox databases was automatically populated with the FQDN of the Client Access array and this value was used during the creation of Outlook profiles for mailboxes in those databases.
 
 Changes in the Exchange server architecture that were introduced in Exchange Server 2013 removed the need for RPC Client Access arrays:
 
@@ -34,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ClientAccessArray
 ```
 
 This example returns a summary list of all Client Access arrays that exist in the local Active Directory site.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ClientAccessArray -Identity CASArray01 | Format-List
 ```
@@ -58,7 +59,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -67,11 +67,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the Client Access that you want to view. You can use any value that uniquely identifies the array. For example:
+The Identity parameter specifies the Client Access array that you want to view. You can use these values:
 
-- Name
+- Name (if the value doesn't contain spaces)
 
 - Distinguished name (DN)
+
+- ExchangeLegacyDN
+
+- Fully qualified domain name (FQDN)
 
 - GUID
 
@@ -80,7 +84,6 @@ Type: ClientAccessArrayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None
@@ -96,13 +99,14 @@ The Site parameter filters the results by Active Directory site. You can use any
 - Distinguished name (DN)
 
 - GUID
+- 
+- To see a list of available sites, use the Get-ADSite cmdlet.
 
 ```yaml
 Type: AdSiteIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

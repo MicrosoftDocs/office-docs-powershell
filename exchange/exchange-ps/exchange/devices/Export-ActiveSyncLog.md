@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Export-ActiveSyncLog
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Export-ActiveSyncLog
@@ -28,21 +29,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex060812.log" -StartDate:"06/08/12" -EndDate:"06/09/12" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
 ```
 
 This example exports the Exchange ActiveSync log for the date range 06/08/12 to 06/09/12. The times on the report are in Coordinated Universal Time (UTC) and the report is saved in c:\\exreports\\easreports.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Dir D:\Logs\*.log | Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex072012.log" -StartDate:"06/20/12" -EndDate:"07/20/12" -UseGMT:$true -Force $true -Confirm -OutputPath:"c:\exreports\easreports"
 ```
 
 This example exports the Exchange ActiveSync log for the date range 06/20/12 to 07/20/12 by reading all log files in the D:\\logs directory. All prompts are suppressed while running the report and a confirmation message is displayed. The times on the report are in UTC and the report is saved in c:\\exreports\\easreports.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex020912.log" -StartDate:"02/01/12" -EndDate:"02/09/12" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
 ```
@@ -59,7 +60,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -77,9 +77,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +94,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +109,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -127,7 +124,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +139,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +154,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +169,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -189,9 +182,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

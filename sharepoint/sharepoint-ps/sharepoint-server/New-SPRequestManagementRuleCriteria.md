@@ -39,11 +39,10 @@ Use the `New-SPRequestManagementRuleCriteria` cmdlet to create criteria for the 
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>New-SPRequestManagementRuleCriteria -Property Host -Value Client01 -MatchType Equals
 ```
 
-{{ Add example description here }}
-
+This example creates a new rule that matches the Host 'Client01'.
 
 ## PARAMETERS
 
@@ -64,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomHeader
-{{ Fill CustomHeader Description}}
+Specifies the custom header for the rule.
 
 ```yaml
 Type: String
@@ -85,12 +84,19 @@ Specifies a header for a value to match.
 The following are the valid values:
 
 --Url
+
 --Urlreferrer
+
 --UserAgent
+
 --Host
+
 --IP
+
 --HttpMethod
+
 --SoapAction
+
 --CustomHeader
 
 ```yaml
@@ -128,8 +134,11 @@ Defines operators for the match.
 The following are the valid values:
 
 --Equals
+
 --Regex
+
 --StartsWith
+
 --EndsWith
 
 ```yaml

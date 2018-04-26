@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: New-ImapSubscription
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # New-ImapSubscription
@@ -30,25 +31,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-ImapSubscription -Name "Contoso IMAP" -EmailAddress kakers@contoso.com -IncomingUserName kakers -IncomingPassword (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force) -IncomingServer imap.contoso.com -IncomingSecurity Ssl -IncomingPort 993
 ```
 
 This example creates the IMAP subscription Contoso IMAP in the mailbox of the user Kim Akers. The remote IMAP mailbox has the following details:
 
+- Email address: kakers@contoso.com
 
-Email address: kakers@contoso.com
+- User name: kakers
 
-User name: kakers
+- Password: Pa$$word1
 
-Password: Pa$$word1
+- IMAP server: imap.contoso.com
 
-IMAP server: imap.contoso.com
+- Authentication method: SSL
 
-Authentication method: SSL
-
-TCP port: 993
+- TCP port: 993
 
 ## PARAMETERS
 
@@ -60,7 +60,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -76,7 +75,6 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -92,7 +90,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -108,7 +105,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -124,7 +120,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -142,9 +137,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +154,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +169,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +184,6 @@ Type: Basic | Ntlm
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +199,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -224,7 +214,6 @@ Type: None | Ssl | Tls
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +253,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -278,9 +266,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -306,4 +293,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cb002b53-c307-40a6-aca2-a7f29dc740d8.aspx)
-

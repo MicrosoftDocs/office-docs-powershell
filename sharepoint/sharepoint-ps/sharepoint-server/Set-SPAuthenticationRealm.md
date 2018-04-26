@@ -28,9 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$c = Get-SPServiceContext -Site "https://<websiteurl>"
-
-C:\PS>Set-SPAuthenticationRealm -ServiceContext $c -Realm "t686d436-9f16-42db-09b7-cb578e110ccd"
+PS C:\>$c = Get-SPServiceContext -Site "https://<websiteurl>"
+PS C:\>Set-SPAuthenticationRealm -ServiceContext $c -Realm "t686d436-9f16-42db-09b7-cb578e110ccd"
 ```
 
 This example sets the authentication realm as specified by the realm parameter.

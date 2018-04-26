@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPEnterpriseSearchStatus
 schema: 2.0.0
 ---
@@ -48,29 +48,28 @@ If you do not use the Text parameter, the cmdlet will output a set of objects th
 - string Message: additional information that is provided as a text string
 - ReadOnlyDictionary\<string,string\>Details: dictionary name/value pairs that provide additional diagnostic information
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-C:\PS>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
+PS C:\>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
 ```
 
 This example retrieves a list that has diagnostics information about all search components of the default Search Service Application.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>Get-SPEnterpriseSearchStatus -SearchApplication "Search Service Application" -JobStatus -Text
+PS C:\>Get-SPEnterpriseSearchStatus -SearchApplication 'Search Service Application' -JobStatus -Text
 ```
 
 This example retrieves the background activity job status for the search analytics timer jobs.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-C:\PS>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
+PS C:\>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
 ```
 
 This example retrieves the diagnostic information for the index component named IndexComponent1.
@@ -84,7 +83,7 @@ Specifies the search service application that contains the search components.
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -94,19 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -126,7 +121,7 @@ This parameter is only used in association with the HealthReport and Primary par
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -146,7 +141,7 @@ This parameter should only be used for debugging.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -163,7 +158,7 @@ When this parameter is used, the cmdlet will also output verbose diagnostic info
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -183,7 +178,7 @@ This parameter should only be used for debugging.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -203,7 +198,7 @@ When using this parameter, you must specify the component name using the Compone
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -219,7 +214,7 @@ Specifies if status information for the Search Analytics and Usage Analytics tim
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -240,7 +235,7 @@ Returns true if the Admin Component has the Primary role.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -262,7 +257,7 @@ When using this parameter, the output is printed to the console and cannot be pi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

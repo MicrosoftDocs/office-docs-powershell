@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-RoleGroup
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Get-RoleGroup
@@ -37,28 +38,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RoleGroup
 ```
 
 This example retrieves a list of role groups.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RoleGroup "Recipient Administrators" | Format-List
 ```
 
 This example retrieves the details for the Recipient Administrators role group.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-RoleGroup -ReadFromDomainController
 ```
 
 This example retrieves a list of role groups as seen by the domain controller closest to the user.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-RoleGroup -Filter { RoleGroupType -Eq "Linked" } | Format-Table Name, LinkedGroup
 ```
@@ -77,7 +78,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +95,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +112,6 @@ Type: RoleGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -133,7 +131,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +146,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +163,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +186,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

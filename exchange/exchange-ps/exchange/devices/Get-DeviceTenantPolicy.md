@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DeviceTenantPolicy
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DeviceTenantPolicy
@@ -35,7 +36,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DeviceTenantPolicy
 ```
@@ -52,7 +53,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -78,4 +78,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/eeaa034a-5e6f-4c4c-ac4c-37130b0a6843.aspx)
-

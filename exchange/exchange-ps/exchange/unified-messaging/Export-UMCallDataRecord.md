@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
 applicable: Exchange Server 2010, Exchange Server 2013
 title: Export-UMCallDataRecord
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013"
 ---
 
 # Export-UMCallDataRecord
@@ -32,14 +33,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Export-UMCallDataRecord -Date 02/01/12
 ```
 
 This example returns all Unified Messaging call data records on February 1, 2012, and exports them to a CSV file.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Export-UMCallDataRecord -Date 02/01/12 -UMDialPlan MyUMDialPlan
 ```
@@ -56,7 +57,6 @@ Type: Stream
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
-
 Required: True
 Position: Named
 Default value: None
@@ -72,7 +72,6 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
-
 Required: True
 Position: Named
 Default value: None
@@ -90,9 +89,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +108,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +123,6 @@ Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +138,6 @@ Type: UMIPGatewayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
-
 Required: False
 Position: Named
 Default value: None
@@ -156,9 +151,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013
-
 Required: False
 Position: Named
 Default value: None

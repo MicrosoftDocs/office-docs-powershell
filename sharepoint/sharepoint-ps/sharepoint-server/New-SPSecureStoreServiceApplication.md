@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>New-SPSecureStoreServiceApplication -ApplicationPool "SharePoint Web Services Default" -AuditingEnabled:$false -DatabaseServer "CONTOSO\SharePoint" -DatabaseName "ContosoSSDatabase"-Name "Contoso Secure Store"
+PS C:\>New-SPSecureStoreServiceApplication -ApplicationPool 'SharePoint Web Services Default' -AuditingEnabled:$false -DatabaseName 'Secure Store' -Name 'Secure Store Service Application'
 ```
 
 This example creates a new Secure Store Service application with the name Contoso Secure Store with auditing disabled and creates a database with the name ContosoSSDatabase on the given database server for use with the service application.
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeferUpgradeActions
-{{Fill DeferUpgradeActions Description}}
+Specifies if the upgrade process is to be deferred and manually completed.
 
 ```yaml
 Type: SwitchParameter

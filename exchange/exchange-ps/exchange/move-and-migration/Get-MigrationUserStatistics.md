@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-MigrationUserStatistics
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-MigrationUserStatistics
@@ -27,42 +28,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeReport | FL Status,Error,Report
 ```
 
 This example uses the IncludeReport parameter to display detailed information about the migration status for the user.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com | FL SkippedItemCount,SkippedItems
 ```
 
 This example displays the number of mailbox items that failed to migrate, which are called skipped items, and information about each skipped item.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | FL SkippedItemCount,SkippedItems
 ```
 
 This example displays results information in the SkippedItems property for a maximum of 20 skipped items.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-MigrationUser -BatchId StagedBatch1 | Get-MigrationUserStatistics
 ```
 
 This example displays detailed information about users in the migration batch named StagedBatch1.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Get-MigrationUser | Get-MigrationUserStatistics
 ```
 
 This example displays detailed information about users from all current migration batches.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -Diagnostic | FL Status,Error,DiagnosticInfo
 ```
@@ -79,7 +80,6 @@ Type: MigrationUserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -95,7 +95,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +110,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +127,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -145,7 +142,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +157,6 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +172,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -193,7 +187,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -209,7 +202,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

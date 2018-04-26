@@ -39,47 +39,47 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCrawledProperty
+PS C:\>Get-FASTSearchMetadataCrawledProperty
 ```
 
 Calling Get-FASTSearchMetadataCrawledProperty without any parameters returns all known crawled properties in the FAST Search Server 2010 for SharePoint system.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCrawledProperty -Name viewurl
+PS C:\>Get-FASTSearchMetadataCrawledProperty -Name viewurl
 ```
 
 This example retrieves a crawled property with the exact name "viewurl".
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 3-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCrawledProperty -filter 4
+PS C:\>Get-FASTSearchMetadataCrawledProperty -filter 4
 ```
 
 This example retrieves and returns any crawled property that includes a "4" in its name.
 
-### ---------------EXAMPLE 4----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 4-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCrawledproperty -filter url -count 2
+PS C:\>Get-FASTSearchMetadataCrawledproperty -filter url -count 2
 ```
 
 This example retrieves the first two crawled properties with the name "url".
 
-### ---------------EXAMPLE 5----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 5-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCrawledproperty |ForEach-Object{ if ($_.IsMappedToContents) {$_.Name} }
+PS C:\>Get-FASTSearchMetadataCrawledproperty |ForEach-Object{ if ($_.IsMappedToContents) {$_.Name} }
 ```
 
 This example returns the names of all crawled properties that have the IsMappedToContents parameter set to "true".
 The example first retrieves all configured crawled properties, and then iterates over them to find those with IsMappedToContents set to "true"
 
-### ---------------EXAMPLE 6----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 6-----------------
 ```
-C:\PS>Get-FASTSearchMetadataCrawledproperty -offset 0 -count 2
-Get-FASTSearchMetadataCrawledproperty -offset 2 -count 2
-Get-FASTSearchMetadataCrawledproperty -offset 4 -count 2
+PS C:\>Get-FASTSearchMetadataCrawledproperty -offset 0 -count 2
+PS C:\>Get-FASTSearchMetadataCrawledproperty -offset 2 -count 2
+PS C:\>Get-FASTSearchMetadataCrawledproperty -offset 4 -count 2
 ```
 
 This example generates a list of two crawled properties each time the cmdlet is run.
@@ -87,7 +87,7 @@ The Offset is increased by the Count value to start returning crawled properties
 
 ### ---------------EXAMPLE 7----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchMetadataCrawledProperty -filter url| where-object {($_.Name -eq "url") -and ($_.VariantType -eq 31) -and ($_.Propset -eq "63e90878-0292-490d-8b7c-f3905a8b65fd")}
+PS C:\>Get-FASTSearchMetadataCrawledProperty -filter url| where-object {($_.Name -eq "url") -and ($_.VariantType -eq 31) -and ($_.Propset -eq "63e90878-0292-490d-8b7c-f3905a8b65fd")}
 ```
 
 This example lists all potential matches to a named crawled property, and then selects the exact crawled property by iterating over the result set and picking out the result that also matches both the requested property set and variant type.

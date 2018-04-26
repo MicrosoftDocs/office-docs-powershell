@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
 title: Set-OMEConfiguration
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-OMEConfiguration
@@ -17,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-ClientEncryptionEnabled <$true | $false>]
+Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-ClientEncryptionEnabled <$true | $false>]
  [-DisclaimerText <String>] [-EmailText <String>] [-ExpirationOptionEnabled <$true | $false>] [-Image <Byte[]>]
  [-OTPEnabled <$true | $false>] [-PortalText <String>] [<CommonParameters>]
 ```
@@ -27,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image (Get-Content "C:\Temp\OME Logo.gif" -Encoding byte)
 ```
@@ -44,11 +45,29 @@ Type: OMEConfigurationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -BackgroundColor
+The BackgroundColor parameter specifies the background color. Valid values are:
+
+- An HTML hexadecimal \(hex triplet\) color code value (for example, #FFFFFF is white).
+
+- $null \(blank\). This is the default value.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -60,7 +79,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +96,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +113,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +128,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -138,7 +153,6 @@ Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +172,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +189,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -202,4 +214,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3ef0aec0-ce28-411d-abe8-7236f082af1b.aspx)
-

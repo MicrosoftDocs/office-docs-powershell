@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-MailboxStatistics
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-MailboxStatistics
@@ -58,63 +59,63 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxStatistics -Identity AylaKol
 ```
 
 This example retrieves the mailbox statistics for the mailbox of the user Ayla Kol by using its associated alias AylaKol.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxStatistics -Server MailboxServer01
 ```
 
 This example retrieves the mailbox statistics for all mailboxes on the server MailboxServer01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MailboxStatistics -Identity contoso\chris
 ```
 
 This example retrieves the mailbox statistics for the specified mailbox.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-MailboxStatistics -Database "Mailbox Database"
 ```
 
 This example retrieves the mailbox statistics for all mailboxes in the specified mailbox database.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Get-MailboxDatabase | Get-MailboxStatistics -Filter 'DisconnectDate -ne $null'
 ```
 
 This example retrieves the mailbox statistics for the disconnected mailboxes for all mailbox databases in the organization. The -ne operator means not equal.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 Get-MailboxStatistics -Database "Mailbox Database" -StoreMailboxIdentity 3b475034-303d-49b2-9403-ae022b43742d
 ```
 
 This example retrieves the mailbox statistics for a single disconnected mailbox. The value for the StoreMailboxIdentity parameter is the mailbox GUID of the disconnected mailbox. You can also use the LegacyDN.
 
-### Example 7
+### -------------------------- Example 7 --------------------------
 ```
 Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory | Format-List
 ```
 
 This example returns the summary move history for the completed move request for Ayla Kol's mailbox. If you don't pipeline the output to the Format-List cmdlet, the move history doesn't display.
 
-### Example 8
+### -------------------------- Example 8 --------------------------
 ```
 $temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory; $temp.MoveHistory[0]
 ```
 
 This example returns the detailed move history for the completed move request for Ayla Kol's mailbox. This example uses a temporary variable to store the mailbox statistics object. If the mailbox has been moved multiple times, there are multiple move reports. The last move report is always MoveReport[0].
 
-### Example 9
+### -------------------------- Example 9 --------------------------
 ```
 $temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport; $temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
 ```
@@ -141,7 +142,6 @@ Type: DatabaseIdParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -181,7 +181,6 @@ Type: GeneralMailboxOrMailUserIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -194,7 +193,6 @@ Type: GeneralMailboxOrMailUserIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -218,7 +216,6 @@ Type: ServerIdParameter
 Parameter Sets: Set3, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -236,7 +233,6 @@ Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -254,7 +250,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -270,7 +265,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -288,7 +282,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -304,7 +297,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -322,7 +314,6 @@ Type: ServerIdParameter
 Parameter Sets: Set1, Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -340,7 +331,6 @@ Type: String
 Parameter Sets: Set3, Set4
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -358,7 +348,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -378,7 +367,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -396,7 +384,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -420,7 +407,6 @@ Type: StoreMailboxIdParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None

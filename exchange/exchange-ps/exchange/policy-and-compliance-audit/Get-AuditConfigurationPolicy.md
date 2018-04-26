@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-AuditConfigurationPolicy
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-AuditConfigurationPolicy
@@ -25,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AuditConfigurationPolicy | Format-List Name,Enabled,Workload,Priority,*Location
 ```
 
 This example lists summary information about all audit configuration policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AuditConfigurationPolicy -Identity 8d4d2060-ee8e-46a8-8d72-24922956fba5
 ```
@@ -49,7 +50,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -65,7 +65,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -91,4 +90,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9f594d2a-8bdc-48b7-90f0-b355948f2e27.aspx)
-

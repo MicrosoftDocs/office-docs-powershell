@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
 title: Get-MapiVirtualDirectory
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-MapiVirtualDirectory
@@ -32,21 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MapiVirtualDirectory -Server ContosoMail
 ```
 
 This example returns a summary list of the MAPI virtual directories on the server named ContosoMail.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory "ContosoMail\mapi (Default Web Site)" | Format-List; Get-MapiVirtualDirectory ContosoMai\mapi* | Format-List
 ```
 
 These examples return detailed information for the MAPI virtual directory named "mapi (Default Web Site)" on the server named ContosoMail. All three commands do the same thing.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-MapiVirtualDirectory
 ```
@@ -68,13 +69,11 @@ The Server parameter specifies the Exchange server that hosts the virtual direct
 
 You can't use the Server and Identity parameters in the same command.
 
-
 ```yaml
 Type: ServerIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -90,7 +89,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +104,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -129,13 +126,11 @@ The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from
 
 You can't use the Identity and Server parameters in the same command.
 
-
 ```yaml
 Type: VirtualDirectoryIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None

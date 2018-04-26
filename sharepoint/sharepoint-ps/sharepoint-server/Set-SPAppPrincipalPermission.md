@@ -30,13 +30,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------
 ```
-C:\PS>$appPrincipal= Get-SPApplicationPrincipal -nameIdentifier $spTrustedIssuer.nameIdentifier - web $site.rootWeb
-
-C:\PS>Set-AppPrincipalPermission -appPrincipal $appPrincipal -site $site.rootweb -scope "spweb" -level "WRITE"
+PS C:\>$clientID = "11111111-2222-3333-4444-555555555555"
+PS C:\>$site = Get-SPSite http://siteUrl
+PS C:\>$realm = Get-SPAuthenticationRealm -ServiceContext $site
+PS C:\>$appIdentifier = $clientID + "@" + $realm
+PS C:\>$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb
+PS C:\>Set-AppPrincipalPermission -AppPrincipal $appPrincipal -Site $site.RootWeb -Scope Site -Level Manage
 ```
 
-This example sets the Write permission level of  to the SPWeb scope.
-
+This example sets the App Principal permission to Manage with a scope of Site.
 
 ## PARAMETERS
 
@@ -61,9 +63,12 @@ Specifies the permission level for the principal object.
 
 The value is any of the following levels:
 
-----Read
+--Read
+
 --Write
+
 --Manage
+
 --Full Control
 
 ```yaml
@@ -84,11 +89,11 @@ Specifies the scope to which to apply the principal permission.
 
 The value is any of the following scopes:
 
---Farm
---Site collection
---SharePoint Online
---Web
---Documents, List, or Library
+--Site
+
+--SiteCollection
+
+--SiteSubscription
 
 ```yaml
 Type: SPCmdletAppPrincipalPermissionScope
@@ -104,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{ Fill Site Description}}
+Specifies the site (that is, SPWeb object) that the AppPrincipalPermission is being set.a
 
 ```yaml
 Type: SPWebPipeBind
@@ -176,7 +181,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAppOnlyPolicy
-{{Fill EnableAppOnlyPolicy Description}}
+Specifies if the app only policy is turned on for the app principal.
+
+The valid values are True and False. The default value is False.
 
 ```yaml
 Type: SwitchParameter

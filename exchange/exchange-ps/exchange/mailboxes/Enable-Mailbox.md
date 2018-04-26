@@ -3,9 +3,10 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Enable-Mailbox
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
-# enable-Mailbox
+# Enable-Mailbox
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -18,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set8
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm]
  [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
@@ -29,7 +30,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Arbitration]
 
 ### Set10
 ```
-enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
+Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
@@ -39,7 +40,7 @@ enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
 
 ### Set4
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Discovery] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Discovery] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
@@ -49,7 +50,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Discovery] [-ActiveSyncMailboxPol
 
 ### Set2
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Equipment] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Equipment] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
@@ -60,7 +61,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Equipment] [-ActiveSyncMailboxPol
 
 ### Set5
 ```
-enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>
  -LinkedMasterAccount <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>]
  [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-LinkedCredential <PSCredential>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
@@ -71,7 +72,7 @@ enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>
 
 ### Set6
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Room] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Room] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
@@ -82,7 +83,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Room] [-ActiveSyncMailboxPolicy <
 
 ### Set7
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-Shared] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-Shared] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
  [-ManagedFolderMailboxPolicyAllowed] [-PrimarySmtpAddress <SmtpAddress>]
@@ -92,7 +93,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-Shared] [-ActiveSyncMailboxPolicy
 
 ### Set1
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Confirm]
  [-Database <DatabaseIdParameter>] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
@@ -103,7 +104,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set9
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-ArchiveGuid <Guid>]
  [-ArchiveName <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
@@ -115,7 +116,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set3
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
  [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
@@ -125,7 +126,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set13
 ```
-enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
+Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
@@ -135,7 +136,7 @@ enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
 
 ### Set12
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Archive] [-ArchiveDatabase <DatabaseIdParameter>] [-ArchiveGuid <Guid>]
  [-ArchiveName <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>] [-Force]
  [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
@@ -145,7 +146,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set11
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-Confirm] [-Database <DatabaseIdParameter>] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
@@ -154,7 +155,7 @@ enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxP
 
 ### Set15
 ```
-enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
+Enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DisplayName <String>]
  [-DomainController <Fqdn>] [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteArchive]
  [-RetentionPolicy <MailboxPolicyIdParameter>] [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf]
@@ -163,7 +164,7 @@ enable-Mailbox [-Identity] <UserIdParameter> -ArchiveDomain <SmtpDomain>
 
 ### Set14
 ```
-enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+Enable-Mailbox [-Identity] <UserIdParameter> [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>] [-AutoExpandingArchive] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
  [-Force] [-PrimarySmtpAddress <SmtpAddress>] [-RetentionPolicy <MailboxPolicyIdParameter>]
  [-RoleAssignmentPolicy <MailboxPolicyIdParameter>] [-WhatIf] [<CommonParameters>]
@@ -178,21 +179,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Enable-Mailbox -Identity Ayla
 ```
 
 This example creates a mailbox for the existing user named Ayla.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Enable-Mailbox -Identity Ayla -Archive
 ```
 
 This example creates an In-Place archive for the existing user name Ayla who already has a mailbox.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Enable-Mailbox -Identity ayla@contoso.com -RemoteArchive -ArchiveDomain "archive.contoso.com"
 ```
@@ -221,7 +222,6 @@ Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -239,7 +239,6 @@ Type: SwitchParameter
 Parameter Sets: Set8, Set4, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -259,7 +258,6 @@ Type: SmtpDomain
 Parameter Sets: Set10, Set13, Set15
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -277,7 +275,6 @@ Type: SwitchParameter
 Parameter Sets: Set4, Set6
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -295,7 +292,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set5, Set7
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -315,7 +311,6 @@ Type: String
 Parameter Sets: Set8, Set2, Set5, Set6, Set9
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -347,7 +342,6 @@ Type: UserIdParameter
 Parameter Sets: Set8, Set2, Set5, Set6, Set9
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -365,7 +359,6 @@ Type: SwitchParameter
 Parameter Sets: Set6, Set7, Set9
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -385,7 +378,6 @@ Type: SwitchParameter
 Parameter Sets: Set10, Set7
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -411,7 +403,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -437,7 +428,6 @@ Type: AddressBookMailboxPolicyIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -469,7 +459,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -485,7 +474,6 @@ Type: SwitchParameter
 Parameter Sets: Set9, Set13, Set12
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -509,7 +497,6 @@ Type: DatabaseIdParameter
 Parameter Sets: Set9, Set13, Set12
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -525,7 +512,6 @@ Type: Guid
 Parameter Sets: Set9, Set13, Set12
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -543,7 +529,6 @@ Type: MultiValuedProperty
 Parameter Sets: Set9, Set13, Set12
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -561,9 +546,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -587,7 +571,6 @@ Type: DatabaseIdParameter
 Parameter Sets: Set8, Set10, Set4, Set2, Set5, Set6, Set7, Set1, Set9, Set3, Set12, Set11
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -605,7 +588,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -623,7 +605,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -639,7 +620,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -659,7 +639,6 @@ Type: PSCredential
 Parameter Sets: Set8, Set2, Set5, Set6, Set9
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -675,7 +654,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: Set8, Set10, Set4, Set2, Set5, Set6, Set7, Set1, Set9, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -693,7 +671,6 @@ Type: SwitchParameter
 Parameter Sets: Set8, Set10, Set4, Set2, Set5, Set6, Set7, Set1, Set9, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -713,7 +690,6 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -733,7 +709,6 @@ Type: SwitchParameter
 Parameter Sets: Set10, Set13, Set15
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -759,7 +734,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -783,7 +757,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -797,9 +770,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -819,7 +791,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set9
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -839,7 +810,6 @@ Type: SwitchParameter
 Parameter Sets: Set5, Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -855,7 +825,6 @@ Type: SwitchParameter
 Parameter Sets: Set3, Set12
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -877,7 +846,6 @@ Type: SwitchParameter
 Parameter Sets: Set5, Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -895,7 +863,6 @@ Type: SwitchParameter
 Parameter Sets: Set14
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

@@ -26,16 +26,16 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchDocumentProcessingPipeline
+PS C:\>Get-FASTSearchDocumentProcessingPipeline
 ```
 
 This example retrieves all FAST Search Server 2010 for SharePoint document processing pipelines.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchDocumentProcessingPipeline -Name "Office14 (webcluster)"
+PS C:\>Get-FASTSearchDocumentProcessingPipeline -Name "Office14 (webcluster)"
 ```
 
 This example retrieves a single FAST Search Server 2010 for SharePoint document processing pipeline named "Office14 (webcluster)".

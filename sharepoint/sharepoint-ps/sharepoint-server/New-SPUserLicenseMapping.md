@@ -58,12 +58,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------- EXAMPLE---------------------------)
 ```
-C:\PS>$a = New-SPUserLicenseMapping -SecurityGroup yoursecuritygroup -License Enterprise
-
-C:\PS>$a | Add-SPUserLicenseMapping
+PS C:\>$a = New-SPUserLicenseMapping -SecurityGroup EntSecGroup -License Enterprise
+PS C:\>$a | Add-SPUserLicenseMapping
 ```
 
-This example creates a license mapping object and then pipes the result to the `Add-SPUserLicenseMapping` cmdlet.
+This example creates a license mapping object for the Active Directory secured group named 'EntSecGroup' and then pipes the result to the `Add-SPUserLicenseMapping` cmdlet.
 
 
 ## PARAMETERS

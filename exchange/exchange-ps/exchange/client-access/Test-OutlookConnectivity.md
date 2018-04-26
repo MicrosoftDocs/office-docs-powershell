@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Test-OutlookConnectivity
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Test-OutlookConnectivity
@@ -87,42 +88,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-OutlookConnectivity -Protocol:HTTP -GetDefaultsFromAutoDiscover:$true
 ```
 
 In Exchange 2010, this example tests the most common end-to-end Outlook connectivity scenario for Outlook Anywhere. This includes testing for connectivity through the Autodiscover service, creating a user profile, and logging on to the user mailbox. All of the required values are retrieved from the Autodiscover service. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. This example command can be run to test TCP/IP connectivity by setting the Protocol parameter to RPC.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Test-OutlookConnectivity -ProbeIdentity "OutlookRpcSelfTestProbe"
 ```
 
 This example runs an OutlookRpcSelfTestProbe on the mailbox server that you're currently connected to.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Test-OutlookConnectivity -RpcProxyTestType:Internal -RpcTestType:Server
 ```
 
 In Exchange 2010, this example tests for Outlook Anywhere connectivity using the local server as the RpcProxy endpoint as well as the RPC endpoint. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. Modify this example to use the public external URL by setting the RpcProxyTestType parameter to External. Additionally, the example command can use the Client Access server array as the RPC endpoint by setting the RpcTestType parameter to Array. To only validate TCP/IP connectivity, omit the RpcProxyTestType parameter.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Test-OutlookConnectivity "OutlookRpcDeepTestProbe\Mailbox Database 1234512345" -RunFromServerId PrimaryMailbox -MailboxId johnd@contoso.com
 ```
 
 This example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Test-OutlookConnectivity -RpcProxyServer:RpcProxySrv01 -RpcProxyAuthenticationType:Basic -RpcClientAccessServer:CAS01 -RpcAuthenticationType:NTLM
 ```
 
 In Exchange 2010, this example validates Outlook connectivity through RpcProxy on one server to a different server running the Client Access server role with Basic for the outer authentication layer and NTLM for the inner authentication layer. Using these parameters should allow you to validate most types of Outlook connectivity configurations. This command can also be used with the GetDefaultsFromAutoDiscover parameter set to $true if you only need to override one or two parameters. This following command is similar to running a connectivity test using the RPC Ping utility but provides stronger validation.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 $TestCredentials = Get-Credential; 
 Test-OutlookConnectivity -ProbeIdentity OutlookRpcCtpProbe -MailboxId johnd@contoso.com -Credential $TestCredentials
@@ -130,7 +131,7 @@ Test-OutlookConnectivity -ProbeIdentity OutlookRpcCtpProbe -MailboxId johnd@cont
 
 This example runs the OutlookRpcCtpProbe and verifies the log-on credentials for the "johnd@contoso.com" mailbox.
 
-### Example 7
+### -------------------------- Example 7 --------------------------
 ```
 Test-OutlookConnectivity -ProbeIdentity "OutlookRpcCTPProbe" -MailboxID johnd@contoso.com
 ```
@@ -147,7 +148,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: 1
 Default value: None
@@ -163,7 +163,6 @@ Type: $true | $false
 Parameter Sets: Set2, Set4
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -179,7 +178,6 @@ Type: HTTP | TCP | WS
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -195,7 +193,6 @@ Type: Array | Server
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -219,7 +216,6 @@ Type: Unknown | Internal | External
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: Named
 Default value: None
@@ -235,7 +231,6 @@ Type: $true | $false
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -253,9 +248,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -271,7 +265,6 @@ Type: PSCredential
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +280,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -311,7 +303,6 @@ Type: Negotiate | NTLM | Kerberos
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -327,7 +318,6 @@ Type: ClientAccessServerIdParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -343,7 +333,6 @@ Type: Basic | NTLM | Negotiate
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -359,7 +348,6 @@ Type: ServerIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -375,7 +363,6 @@ Type: External | Internal
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -391,7 +378,6 @@ Type: Int32
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -407,7 +393,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -421,9 +406,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set2, Set4, Set1, Set3, Set5
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +427,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: 1
 Default value: None
@@ -454,13 +437,11 @@ Accept wildcard characters: False
 ### -Credential
 The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default. This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
-
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -476,7 +457,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -492,7 +472,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -508,7 +487,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -524,7 +502,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

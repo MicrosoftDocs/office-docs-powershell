@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-SupervisoryReviewRule
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-SupervisoryReviewRule
@@ -26,21 +27,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SupervisoryReviewRule
 ```
 
 This example returns a summary list of all supervisory review rules.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SupervisoryReviewRule -Identity "EU Brokers Rule" | Format-List
 ```
 
 This example returns detailed information for the supervisory review rule named EU Brokers Rule.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-SupervisoryReviewRule -Policy "EU Brokers Policy"
 ```
@@ -63,7 +64,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -85,7 +85,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -111,4 +110,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ea53db29-829e-4a5d-9874-a0e135a26720.aspx)
-

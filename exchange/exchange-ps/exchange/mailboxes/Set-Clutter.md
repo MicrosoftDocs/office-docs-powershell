@@ -1,7 +1,9 @@
 ---
+external help file: 
 applicable: Exchange Online
 title: Set-Clutter
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-Clutter
@@ -24,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-Clutter -Identity "Alexander Martinez" -Enable $false
 ```
@@ -53,7 +55,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -69,7 +70,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +89,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -114,5 +113,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online version](https://technet.microsoft.com/library/a4ba8627-b774-460f-9793-3d741c115b2e.aspx)
-
+[Online version](https://technet.microsoft.com/library/0c91b858-5bbe-4d2f-abff-d1503bcd6864.aspx)

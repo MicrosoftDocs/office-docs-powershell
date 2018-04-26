@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online
 title: Get-RetentionEvent
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-RetentionEvent
@@ -25,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RetentionEvent
 ```
 
 This example returns a summary list of all retention events.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RetentionEvent -Identity x | Format-List
 ```
@@ -49,7 +50,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -65,7 +65,6 @@ Type: EwsStoreObjectIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -91,4 +90,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/32aced21-3693-490a-a9ca-64cb766d15ed.aspx)
-

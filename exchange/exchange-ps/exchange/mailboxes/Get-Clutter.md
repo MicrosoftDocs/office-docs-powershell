@@ -1,7 +1,9 @@
 ---
+external help file: 
 applicable: Exchange Online
 title: Get-Clutter
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-Clutter
@@ -16,15 +18,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-Clutter -Identity <MailboxIdParameter> [<CommonParameters>]
-```
+Get-Clutter -Identity <MailboxIdParameter> [<CommonParameters>]```
 
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-Clutter -Identity "Constancia Pena"
 ```
@@ -53,7 +54,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -78,5 +78,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online version] (https://technet.microsoft.com/library/4787d6dc-d38b-427a-83f8-7c57d604dff0.aspx)
-
+[Online version](https://technet.microsoft.com/library/e9dbe496-f4f5-4632-893a-2a6b83aaf2dc.aspx)

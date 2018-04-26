@@ -55,31 +55,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
-$rule.AddValue( "0x010063C2F478ACC511DFB869B5BFDFD720851252" )
-
-$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
-$ruleCollection.Add( $rule )
-
-$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
+PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
+PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+PS C:\>$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
+PS C:\>$ruleCollection.Add($rule)
+PS C:\>$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
 $displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-
-$web = Get-SPWeb "UrlOfTheSite"
-$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
-
-$svcAppProxy = Get-SPEnterpriseSearchServiceApplicationProxy
-
-New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $svcAppProxy `
--Name "CustomResultType" `
--Rules $ruleCollection `
--RulePriority 1 
--DisplayProperties $displayProperties `
--DisplayTemplateUrl $displaytemplateUrl `
--Owner $tenantOwner
+PS C:\>$web = Get-SPWeb http://webUrl
+PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
+PS C:\>$proxy = Get-SPEnterpriseSearchServiceApplicationProxy
+PS C:\>New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $proxy `
+>> -Name "CustomResultType" `
+>> -Rules $ruleCollection `
+>> -RulePriority 1 `
+>> -DisplayProperties $displayProperties `
+>> -DisplayTemplateUrl $displaytemplateUrl `
+>> -Owner $tenantOwner
 ```
 
 This example first defines the rule to apply to the search results in order to target results with a specific property and adds the rule to the rule collection.
+
 Thereafter the example defines the properties of the result that shall be displayed and the URL to the display template governing the appearance of the rendered results.
+
 Finally, the example defines the rule item type by its name, the rule collection, the display properties, the display template and the tenant owner.
 
 ## PARAMETERS

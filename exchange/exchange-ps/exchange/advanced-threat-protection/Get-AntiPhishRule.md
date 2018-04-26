@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-AntiPhishRule
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-AntiPhishRule
@@ -25,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AntiPhishRule
 ```
 
 This example returns a summary list of all antiphishing rules in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AntiPhishRule -Identity "Research Department Phishing Rule" | Format-List
 ```
@@ -55,7 +56,6 @@ Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 0
 Default value: None
@@ -72,7 +72,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: Enabled, Disabled
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-ManagementRole
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Get-ManagementRole
@@ -54,42 +55,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ManagementRole
 ```
 
 This example lists all the roles that have been created in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ManagementRole "Mail Recipients" -Recurse
 ```
 
 This example lists all the roles that are children of the Mail Recipients management role. The command performs a recursive query of all the child roles of the specified parent role. This recursive query finds every child role from the immediate children of the parent to the last child role in the hierarchy. In a recursive list, the parent role is also returned in the list.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-ManagementRole -CmdletParameters Identity, Database
 ```
 
 This example lists all the roles that contain both the Identity and Database parameters. Roles that contain only one parameter or the other aren't returned.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-ManagementRole -RoleType UnScopedTopLevel
 ```
 
 This example lists all the roles that have a type of UnScopedTopLevel. These roles contain custom scripts or non-Exchange cmdlets.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Get-ManagementRole "Transport Rules" | Format-List Name, RoleType
 ```
 
 This example retrieves only the Transport Rules role and passes the output of the Get-ManagementRole cmdlet to the Format-List cmdlet. The Format-List cmdlet then shows only the Name and RoleType properties of the Transport Rules role. For more information about pipelining and the Format-List cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 Get-ManagementRole "Mail Recipients" -GetChildren
 ```
@@ -106,7 +107,6 @@ Type: SwitchParameter
 Parameter Sets: Set3, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -122,7 +122,6 @@ Type: SwitchParameter
 Parameter Sets: Set3, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -138,7 +137,6 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -154,7 +152,6 @@ Type: String[]
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +169,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +184,6 @@ Type: RoleIdParameter
 Parameter Sets: Set3, Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: 1
 Default value: None
@@ -201,7 +196,6 @@ Type: RoleIdParameter
 Parameter Sets: Set1, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -217,7 +211,6 @@ Type: Custom | UnScoped | OrganizationManagement | RecipientManagement | ViewOnl
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +226,6 @@ Type: String
 Parameter Sets: Set3, Set2, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -249,7 +241,6 @@ Type: String[]
 Parameter Sets: Set3, Set2, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

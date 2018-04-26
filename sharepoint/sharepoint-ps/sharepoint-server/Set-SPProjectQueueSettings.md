@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-C:\PS>Set-SPProjectQueueSettings -ServiceApplication "Project Service Application" -MaxDegreeOfConcurrency 6
+PS C:\>Set-SPProjectQueueSettings -ServiceApplication "Project Service Application" -MaxDegreeOfConcurrency 6
 ```
 
 This example sets a maximum of 6 for the number of jobs that can be processed at one time by the specified service application.
@@ -296,13 +296,13 @@ Accept wildcard characters: False
 ```
 
 ### -NetTcpPort
-{{Fill NetTcpPort Description}}
+Sets the TCP port the Project Queue service uses.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2016
 
 Required: False
 Position: Named

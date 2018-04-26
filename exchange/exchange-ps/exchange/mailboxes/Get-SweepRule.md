@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2016, Exchange Online
 title: Get-SweepRule
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-SweepRule
@@ -26,21 +27,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SweepRule
 ```
 
 This example returns a summary list of all Sweep rules.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SweepRule -Mailbox julia@contoso.com
 ```
 
 This example returns a summary list of all Sweep rules in the specified mailbox.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
 ```
@@ -57,7 +58,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +75,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +96,6 @@ Type: SweepRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -137,7 +135,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +150,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

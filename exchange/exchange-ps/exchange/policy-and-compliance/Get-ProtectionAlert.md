@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-ProtectionAlert
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-ProtectionAlert
@@ -25,14 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-ProtectionAlert | Format-List Name,Category,Comment,NotifyUser
 ```
 
 This example returns a summary list of all alert policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-ProtectionAlert -Identity "Malicious Email Campaign"
 ```
@@ -55,7 +56,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -81,4 +81,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/82b4af4c-2ea5-4f0f-854f-4811f4072043.aspx)
-

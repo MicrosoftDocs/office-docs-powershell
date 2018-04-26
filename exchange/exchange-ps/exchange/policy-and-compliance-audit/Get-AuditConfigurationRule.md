@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-AuditConfigurationRule
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-AuditConfigurationRule
@@ -26,14 +27,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AuditConfigurationRule | Format-List Name,Workload,AuditOperation,Policy
 ```
 
 This example lists summary information about all audit configuration rules.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AuditConfigurationRule 989a3a6c-dc40-4fa4-8307-beb3ece992e9
 ```
@@ -50,7 +51,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -66,7 +66,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -92,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7a1cdf79-8e70-41c8-85fd-7c359c9e8f91.aspx)
-

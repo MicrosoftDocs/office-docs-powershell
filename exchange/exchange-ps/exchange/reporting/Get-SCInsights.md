@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online, Office 365 Security & Compliance Center
 title: Get-SCInsights
 schema: 2.0.0
+monikerRange: "exchonline-ps || o365scc-ps"
 ---
 
 # Get-SCInsights
@@ -37,14 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SCInsights
 ```
 
 This example returns all insights data.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SCInsights -EndDate (Get-Date "3/3/2017 9:30 AM").ToUniversalTime()
 ```
@@ -67,7 +68,6 @@ Type: DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None

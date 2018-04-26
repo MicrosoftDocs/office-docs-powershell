@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2016, Exchange Online
 title: Resume-PublicFolderMigrationRequest
 schema: 2.0.0
+monikerRange: "exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Resume-PublicFolderMigrationRequest
@@ -26,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Resume-PublicFolderMigrationRequest -Identity "PublicFolderMigration"
 ```
 
 This example resumes the migration request PublicFolderMigration.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PublicFolderMigrationRequest -Status Failed | Resume-PublicFolderMigrationRequest
 ```
@@ -54,7 +55,6 @@ Type: PublicFolderMigrationRequestIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -72,9 +72,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +91,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -106,9 +104,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

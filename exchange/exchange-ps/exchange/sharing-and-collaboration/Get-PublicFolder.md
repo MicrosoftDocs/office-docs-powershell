@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-PublicFolder
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-PublicFolder
@@ -48,42 +49,42 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PublicFolder
 ```
 
 This example uses the Get-PublicFolder command without parameters to return the root public folder object (IPM\_SUBTREE).
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-PublicFolder -Identity \NON_IPM_SUBTREE -Recurse | Format-List Name
 ```
 
 This example returns the names of all the system folders (which aren't shown by default), starting at the system folder root (\\NON\_IPM\_SUBTREE).
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation"
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder. Because the result size isn't specified, the command returns up to the maximum number of public folders, which is 10,000.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse -ResultSize Unlimited
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder, without a limit on the number returned.
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 Get-PublicFolder -Mailbox "Legal Department" -ResidentFolders
 ```
@@ -102,7 +103,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -120,7 +120,6 @@ Type: SwitchParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -138,7 +137,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +154,6 @@ Type: PublicFolderIdParameter
 Parameter Sets: Set2, Set3, Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -172,7 +169,6 @@ Type: Unlimited
 Parameter Sets: Set2, Set3, Set4
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +184,6 @@ Type: ServerIdParameter
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -228,7 +223,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -244,7 +238,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +257,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None

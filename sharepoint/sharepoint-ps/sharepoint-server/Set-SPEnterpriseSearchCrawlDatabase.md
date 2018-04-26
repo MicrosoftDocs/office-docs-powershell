@@ -32,9 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
-Set-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore
--SearchApplication $searchApp -FailoverDatabaseServer \\failoverServer
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Set-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore -SearchApplication $ssa -FailoverDatabaseServer \\failoverServer
 ```
 
 This example sets the failover database server for the crawl database, SearchApp_CrawlStore, to the \\\\failoverServer server.
@@ -152,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-{{Fill DatabaseName Description}}
+Specifies the name of the database to create for the crawl database. The type must be a valid name of a SQL Server database; for example, CrawlStoreDB1.
 
 ```yaml
 Type: String
@@ -168,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabasePassword
-{{Fill DatabasePassword Description}}
+Specifies the password for the Microsoft SQL Server database server.
 
 ```yaml
 Type: SecureString
@@ -184,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
-{{Fill DatabaseServer Description}}
+Specifies the name of the host server for the database specified in DatabaseName. The type must be a valid SQL Server host name; for example, SQLServerHost1.
 
 ```yaml
 Type: String
@@ -200,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseUsername
-{{Fill DatabaseUsername Description}}
+Specifies the account name on the Database Server.
 
 ```yaml
 Type: String

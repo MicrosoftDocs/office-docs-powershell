@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online
 title: Get-PerimeterConfig
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-PerimeterConfig
@@ -25,7 +26,7 @@ If you have an on-premises email system, you can use the Set-PerimeterConfig cmd
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-PerimeterConfig
 ```
@@ -42,7 +43,6 @@ Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: 1
 Default value: None
@@ -68,4 +68,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/34ef07d4-b055-4f33-bb88-15e41e0386db.aspx)
-

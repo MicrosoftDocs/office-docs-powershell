@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Get-StaleMailboxReport
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-StaleMailboxReport
@@ -26,17 +27,14 @@ Get-StaleMailboxReport [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDa
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-StaleMailboxReport
 ```
 
 This example retrieves the number of mailboxes that haven't been accessed for at least 30 days.
-
-
 
 ## PARAMETERS
 
@@ -94,17 +92,13 @@ Accept wildcard characters: False
 ### 
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
-
 ## OUTPUTS
 
 ### 
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cb42b081-092c-4239-ad93-eb8beee4c68a.aspx)
-

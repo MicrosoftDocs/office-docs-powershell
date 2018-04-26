@@ -51,11 +51,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-C:\PS>#create the public URL
-New-SPAlternateURL https://www.contoso.com -Zone "Internet"
+PS C:\>#create the public URL
+PS C:\>New-SPAlternateURL https://www.contoso.com -Zone "Internet"
 
-C:\PS>#create the internal URL
-New-SPAlternateURL http://sharepoint.contoso.com -Zone "Internet" -internal
+PS C:\>#create the internal URL
+PS C:\>New-SPAlternateURL http://sharepoint.contoso.com -Zone "Internet" -internal
 ```
 
 This example translates incoming requests for https://www.contoso.com into http://sharepoint.contoso.com (on the Internet zone).

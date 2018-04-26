@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Get-AutodiscoverVirtualDirectory
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-AutodiscoverVirtualDirectory
@@ -33,21 +34,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AutodiscoverVirtualDirectory -Server MBX01
 ```
 
 This example returns a summary list of all Autodiscover virtual directories on the server named MBX01.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AutodiscoverVirtualDirectory -Identity "MBX01\Autodiscover*" | Format-List
 ```
 
 This example returns detailed information for the Autodiscover virtual directory named "Autodiscover (Default Web Site)" on the server named MBX01.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-AutodiscoverVirtualDirectory
 ```
@@ -74,7 +75,6 @@ Type: ServerIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: Named
 Default value: None
@@ -90,7 +90,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +105,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -134,7 +132,6 @@ Type: VirtualDirectoryIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 1
 Default value: None
@@ -154,7 +151,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None

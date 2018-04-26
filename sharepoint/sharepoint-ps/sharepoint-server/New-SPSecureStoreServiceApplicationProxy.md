@@ -46,27 +46,22 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>New-SPSecureStoreServiceApplicationProxy -Name "Contoso Service Application Proxy" -ServiceApplication $SSServiceApp
+PS C:\>$sa = New-SPSecureStoreServiceApplication -ApplicationPool 'SharePoint Web Services Default' -AuditingEnabled:$false -DatabaseName 'Secure Store' -Name 'Secure Store Service Application'
+PS C:\>New-SPSecureStoreServiceApplicationProxy -Name 'Secure Store Service Application Proxy' -ServiceApplication $sa
 ```
 
-This example creates a new Secure Store Service application proxy with the name Contoso Service Application Proxy for the given service application.
+This example creates a new Secure Store Service application and proxy.
 
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>$nameofproxy = "Connection to: HostedSecureStoreInParentFarm"
-
-C:\PS>$proxy = Get-SPServiceApplicationProxy | where {$_ -match $nameofproxy}
-
-C:\PS>$prop = $proxy.Properties
-
-C:\PS>$type = $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"].GetType()
-
-C:\PS>$partition = [enum]::Parse( $type, 1 )
-
-C:\PS>$prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = $partition
-
-C:\PS>$proxy.Update()
+PS C:\>$nameofproxy = "Connection to: HostedSecureStoreInParentFarm"
+PS C:\>$proxy = Get-SPServiceApplicationProxy | where {$_ -match $nameofproxy}
+PS C:\>$prop = $proxy.Properties
+PS C:\>$type = $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"].GetType()
+PS C:\>$partition = [enum]::Parse( $type, 1 )
+PS C:\>$prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = $partition
+PS C:\>$proxy.Update()
 ```
 
 This example converts an unpartitioned secure store service application proxy in the child to a partitioned one.

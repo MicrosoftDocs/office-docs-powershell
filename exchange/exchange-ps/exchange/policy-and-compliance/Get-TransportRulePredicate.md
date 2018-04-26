@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
 title: Get-TransportRulePredicate
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
 ---
 
 # Get-TransportRulePredicate
@@ -29,14 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-TransportRulePredicate
 ```
 
 This example returns a summary list of all predicates.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-TransportRulePredicate -Name SubjectMatches | Format-List
 ```
@@ -45,7 +46,7 @@ This example returns detailed information about the predicate named SubjectMatch
 
 For more information about pipelining, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx). For more information about how to work with the output of a command, see Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-TransportRulePredicate | Where {$_.Name -like "*Attachment*"}
 ```
@@ -64,7 +65,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None

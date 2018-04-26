@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DeviceConfigurationRule
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DeviceConfigurationRule
@@ -36,14 +37,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DeviceConfigurationRule | Format-List Name,Disabled,Priority
 ```
 
 This example shows summary information for all mobile device configuration rules.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DeviceConfigurationRule -Identity "Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}"
 ```
@@ -60,7 +61,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +76,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +91,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -118,4 +116,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e1c9741e-b926-4656-b171-bf974034f76e.aspx)
-

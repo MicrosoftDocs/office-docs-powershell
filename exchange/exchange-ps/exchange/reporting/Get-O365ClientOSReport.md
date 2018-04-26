@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Get-O365ClientOSReport
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-O365ClientOSReport
@@ -40,26 +41,21 @@ The report displays the client use statistics for the five most recent versions 
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-O365ClientOSReport -OS Windows
 ```
 
 This example gets the summary report of client Windows use for the 366 day data retention period (no start and end date are specified).
 
-
-
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-O365ClientOSReport -StartDate 06/13/2013 -EndDate 06/15/2013
 ```
 
 This example retrieves the client operating system information between June 13, 2013 and June 15, 2013.
-
-
 
 ## PARAMETERS
 
@@ -140,17 +136,13 @@ Accept wildcard characters: False
 ### 
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
-
 ## OUTPUTS
 
 ### 
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a0266b64-2455-4037-bbc5-34730691247b.aspx)
-

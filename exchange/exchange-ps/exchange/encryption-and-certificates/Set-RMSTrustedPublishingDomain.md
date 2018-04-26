@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: Set-RMSTrustedPublishingDomain
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Set-RMSTrustedPublishingDomain
@@ -28,19 +29,18 @@ A TPD contains the settings needed to use RMS features in your organization. For
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Set-RMSTrustedPublishingDomain "Contoso TPD" -Default -ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -ExtranetCertificationUrl https://rms.contoso.com/_wmcs/certification/servercertification.asmx
 ```
 
 This example makes the following changes to the existing TPD Contoso TPD:
 
+- Sets Contoso TPD as the default TPD for the organization.
 
-Sets Contoso TPD as the default TPD for the organization.
+- Sets the external licensing URL to https://rms.contoso.com/\_wmcs/licensing.
 
-Sets the external licensing URL to https://rms.contoso.com/\_wmcs/licensing.
-
-Sets the external certification URL to https://rms.contoso.com/\_wmcs/certification/servercertification.asmx
+- Sets the external certification URL to https://rms.contoso.com/\_wmcs/certification/servercertification.asmx
 
 ## PARAMETERS
 
@@ -58,7 +58,6 @@ Type: RmsTrustedPublishingDomainIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -76,9 +75,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +92,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +107,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +122,6 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +137,6 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +152,6 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -174,7 +167,6 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +182,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -204,9 +195,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -232,4 +222,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/89af98c7-b6cb-4aa5-8ffa-d438579b7aa2.aspx)
-

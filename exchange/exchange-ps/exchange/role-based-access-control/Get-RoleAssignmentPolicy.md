@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Get-RoleAssignmentPolicy
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Get-RoleAssignmentPolicy
@@ -28,24 +29,23 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RoleAssignmentPolicy
 ```
 
 This example returns a list of all the existing role assignment policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-RoleAssignmentPolicy "End User Policy" | Format-List
 ```
 
 This example returns the details of the specified assignment policy. The output of the Get-RoleAssignmentPolicy cmdlet is piped to the Format-List cmdlet.
 
-
 For more information about pipelining and the Format-List cmdlet, see Pipelining (https://technet.microsoft.com/library/aa998260.aspx) and Working with command output (https://technet.microsoft.com/library/bb123533.aspx).
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-RoleAssignmentPolicy | Where { $_.IsDefault -eq $True }
 ```
@@ -70,7 +70,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +85,6 @@ Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: 1
 Default value: None

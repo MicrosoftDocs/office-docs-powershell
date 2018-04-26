@@ -3,9 +3,10 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-User
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
-# get-User
+# Get-User
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -18,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set2
 ```
-get-User [-Anr <String>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
+Get-User [-Anr <String>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
  [-Filter <String>] [-IgnoreDefaultScope] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] 
  [-ResultSize <Unlimited>] [-Sortby <String>] [-AuditLog]
  [-PublicFolder] [-AuxAuditLog] [-SupervisoryReviewPolicy] [<CommonParameters>]
@@ -26,7 +27,7 @@ get-User [-Anr <String>] [-Arbitration] [-Credential <PSCredential>] [-DomainCon
 
 ### Set1
 ```
-get-User [[-Identity] <UserIdParameter>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
+Get-User [[-Identity] <UserIdParameter>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
  [-Filter <String>] [-IgnoreDefaultScope] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] 
  [-ResultSize <Unlimited>] [-Sortby <String>] [-AuditLog]
  [-PublicFolder] [-AuxAuditLog] [-SupervisoryReviewPolicy] [<CommonParameters>]
@@ -39,28 +40,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-User -ResultSize unlimited
 ```
 
 This example returns a summary list of all users in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-User -Identity "Coy Damon" | Format-List
 ```
 
 This example returns detailed information for the user named Coy Damon.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Get-User -OrganizationalUnit "Marketing"
 ```
 
 This example retrieves information about users in the Marketing OU.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Get-User -Filter "Title -like '*Manager'"
 ```
@@ -87,7 +88,6 @@ Type: String
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +113,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +132,6 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -151,7 +149,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +166,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +193,6 @@ Type: UserIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None
@@ -221,7 +216,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +239,6 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -265,7 +258,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -323,7 +315,6 @@ Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -339,7 +330,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +361,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -395,7 +384,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -411,7 +399,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +430,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -467,7 +453,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -483,7 +468,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

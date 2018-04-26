@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Test-MigrationServerAvailability
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 ---
 
 # Test-MigrationServerAvailability
@@ -129,35 +130,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Test-MigrationServerAvailability -Imap -RemoteServer imap.contoso.com -Port 143
 ```
 
 For IMAP migrations, this example verifies the connection to the IMAP mail server imap.contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
 This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to verify the connection to an on-premises Exchange server in preparation for migrating on-premises mailboxes to Exchange Online. You can use a similar example to test the connection settings for a staged Exchange migration or a cutover Exchange migration.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 $Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
 ```
 
 This example verifies the connection to a server running Microsoft Exchange Server 2003 named exch2k3.contoso.com and uses NTLM for the authentication method.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 Test-MigrationServerAvailability -Endpoint endpoint.contoso.com
 ```
 
 This example verifies the connection settings to a remote server using the settings stored in an existing migration endpoint in Exchange Online.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 $MRSEndpoints = (Get-MigrationEndpoint).RemoteServer; Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
 ```
@@ -174,7 +175,6 @@ Type: SwitchParameter
 Parameter Sets: Set7, Set8, Set11, Set12
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -192,7 +192,6 @@ Type: PSCredential
 Parameter Sets: Set7, Set8, Set4, Set5, Set6, Set9, Set11, Set12, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -205,7 +204,6 @@ Type: PSCredential
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +219,6 @@ Type: SmtpAddress
 Parameter Sets: Set7, Set8, Set11, Set12
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -234,7 +231,6 @@ Type: SmtpAddress
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +246,6 @@ Type: MigrationEndpointIdParameter
 Parameter Sets: Set9, Set13
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -268,7 +263,6 @@ Type: SwitchParameter
 Parameter Sets: Set8, Set5, Set11
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -284,7 +278,6 @@ Type: SwitchParameter
 Parameter Sets: Set7, Set3, Set12
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -302,7 +295,6 @@ Type: String
 Parameter Sets: Set8, Set5
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -320,7 +312,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -340,7 +331,6 @@ Type: Int32
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -356,7 +346,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -378,7 +367,6 @@ Type: Fqdn
 Parameter Sets: Set7, Set4, Set6, Set3, Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -391,7 +379,6 @@ Type: Fqdn
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -409,7 +396,6 @@ Type: Fqdn
 Parameter Sets: Set8, Set5, Set6, Set9, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -427,7 +413,6 @@ Type: String
 Parameter Sets: Set8, Set5, Set11
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -440,7 +425,6 @@ Type: String
 Parameter Sets: Set6, Set9, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -460,7 +444,6 @@ Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic 
 Parameter Sets: Set8, Set5, Set6, Set9, Set2, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -478,9 +461,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -496,7 +478,6 @@ Type: String
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -522,7 +503,6 @@ Type: Admin | FullAccess
 Parameter Sets: Set8, Set5, Set11
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -540,7 +520,6 @@ Type: None | Ssl | Tls
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -558,7 +537,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set7, Set8, Set5, Set6, Set9, Set11, Set10
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -572,9 +550,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -590,7 +567,6 @@ Type: SwitchParameter
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -606,7 +582,6 @@ Type: SwitchParameter
 Parameter Sets: Set6, Set9
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -622,7 +597,6 @@ Type: String
 Parameter Sets: Set9, Set10
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -638,7 +612,6 @@ Type: SwitchParameter
 Parameter Sets: Set7, Set10
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -654,7 +627,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
-
 Required: False
 Position: Named
 Default value: None

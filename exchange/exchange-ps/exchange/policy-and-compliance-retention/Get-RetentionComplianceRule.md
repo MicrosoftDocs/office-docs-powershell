@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-RetentionComplianceRule
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-RetentionComplianceRule
@@ -36,16 +37,16 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-RetentionComplianceRule
 ```
 
 This example displays summary information for all retention rules in your organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
-Get-RetentionComplianceRule -Identity "30DayRule" | Format-List
+Get-RetentionComplianceRule -Identity "30 Day Rule" | Format-List
 ```
 
 This example displays detailed information for the retention rule named "30 Day Rule".
@@ -66,7 +67,6 @@ Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -90,7 +90,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -116,4 +115,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9eabf25a-8519-4c40-8977-b1d46e6acb3e.aspx)
-

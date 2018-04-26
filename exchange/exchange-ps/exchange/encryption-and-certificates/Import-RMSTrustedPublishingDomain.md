@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 applicable: Exchange Online
 title: Import-RMSTrustedPublishingDomain
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Import-RMSTrustedPublishingDomain
@@ -59,23 +60,22 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $([byte[]](Get-Content -Encoding byte -Path "C:\My Documents\Contoso.xml" -ReadCount 0)) -Password (ConvertTo-SecureString -String 'Pa$$word1' -AstPlainText -Force)-ExtranetLicensingUrl https://rms.contoso.com/_wmcs/licensing -IntranetLicensingUrl https://RMS01/_wmcs/licensing
 ```
 
 This example imports a TPD from an AD RMS server into a cloud-based organization. The TPD uses the following values:
 
+- Path to exported XML file: C:\\My Documents\\Contoso.xml
 
-Path to exported XML file: C:\\My Documents\\Contoso.xml
+- Password of exported XML file: Pa$$word1
 
-Password of exported XML file: Pa$$word1
+- External licensing URL: https://rms.contoso.com/\_wmcs/licensing
 
-External licensing URL: https://rms.contoso.com/\_wmcs/licensing
+- Internal licensing URL: https://RMS01/\_wmcs/licensing
 
-Internal licensing URL: https://RMS01/\_wmcs/licensing
-
-TPD name: Contoso TPD
+- TPD name: Contoso TPD
 
 ## PARAMETERS
 
@@ -89,7 +89,6 @@ Type: Uri
 Parameter Sets: Set1, Set2
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -100,14 +99,13 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the XML file you want to import. The XML file contains the TPD you exported from the on-premises AD RMS server.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
 
 ```yaml
 Type: Byte[]
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -125,7 +123,6 @@ Type: Uri
 Parameter Sets: Set1, Set2
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -141,7 +138,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: 1
 Default value: None
@@ -159,7 +155,6 @@ Type: SecureString
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -177,7 +172,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -193,7 +187,6 @@ Type: Byte[]
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -209,7 +202,6 @@ Type: Hashtable
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -227,9 +219,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -249,7 +240,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -265,7 +255,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -283,7 +272,6 @@ Type: Uri
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -301,7 +289,6 @@ Type: Uri
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -327,7 +314,6 @@ Type: SwitchParameter
 Parameter Sets: Set3, Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -343,7 +329,6 @@ Type: String
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -359,7 +344,6 @@ Type: Hashtable
 Parameter Sets: Set5
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -375,7 +359,6 @@ Type: Guid
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -389,9 +372,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -417,4 +399,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7c5e7a0f-9c9d-4863-bab8-bcc729cc16a6.aspx)
-

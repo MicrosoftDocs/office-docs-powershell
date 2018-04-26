@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Install-UnifiedCompliancePrerequisite
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Install-UnifiedCompliancePrerequisite
@@ -44,21 +45,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Install-UnifiedCompliancePrerequisite
 ```
 
 This example creates the Compliance Policy Center in SharePoint Online. If it has already been created, the command displays the current configuration information.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Install-UnifiedCompliancePrerequisite -LoadOnly
 ```
 
 This example loads the Compliance Policy Center using the current settings.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Install-UnifiedCompliancePrerequisite -ForceInitialize
 ```
@@ -77,7 +78,6 @@ Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +95,6 @@ Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +110,6 @@ Type: SmtpAddress
 Parameter Sets: Set1
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -137,4 +135,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bd658b86-a548-4172-8a76-36c1508b72b5.aspx)
-

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
 title: Get-OMEConfiguration
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-OMEConfiguration
@@ -25,7 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-OMEConfiguration
 ```
@@ -52,4 +53,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/48814519-35a5-4202-906a-9ce37e075fca.aspx)
-

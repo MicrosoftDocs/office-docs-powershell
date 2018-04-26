@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010
 title: Remove-ClientAccessArray
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Remove-ClientAccessArray
@@ -10,7 +11,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the Remove-ClientAccessArray cmdlet to remove an existing client access array from Active Directory.
+Use the Remove-ClientAccessArray cmdlet to remove RPC Client Access arrays (load-balanced arrays of Client Access servers within a single Active Directory site).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -22,44 +23,37 @@ Remove-ClientAccessArray [-Identity] <ClientAccessArrayIdParameter> [-Confirm] [
 ```
 
 ## DESCRIPTION
-A client access array is a grouping of Client Access servers in a load balanced array. You can use the Remove-ClientAccessArray cmdlet to remove an existing client access array.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-Remove-ClientAccessArray -Identity "CASArray1"
-```
-
-This example removes the existing client access array CASArray1.
-
-### Example 2
-```
-Remove-ClientAccessArray -Identity "CASArray1" -Confirm $true
+Remove-ClientAccessArray -Identity casarray01.contoso.com
 ```
 
-This example removes the existing client access array CASArray1 after confirmation is specified.
-
-### Example 3
-```
-Remove-ClientAccessArray -Identity "NLBArray2"
-```
-
-This example removes the existing client access array NLBArray2.
+This example removes the existing Client Access array with the FQDN value casarray01.contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the client access array.
+The Identity parameter specifies the Client Access array that you want to remove. You can use these values:
+
+- Name (if the value doesn't contain spaces)
+
+- ExchangeLegacyDN
+
+- Fully qualified domain name (FQDN)
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: ClientAccessArrayIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -77,9 +71,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +88,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -109,9 +101,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -137,4 +128,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c0e7cf59-400f-4462-95b7-984cf2e4ba4e.aspx)
-

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DevicePolicy
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DevicePolicy
@@ -35,14 +36,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DevicePolicy | Format-Table Name,Type,Enabled,Priority
 ```
 
 This example shows summary information for all mobile device policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DevicePolicy -Identity "Engineering Group"
 ```
@@ -65,7 +66,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -91,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2bbcb1ef-f86f-46ff-aff0-33b875c1f88e.aspx)
-

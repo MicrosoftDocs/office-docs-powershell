@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Server 2010
 title: Get-AvailabilityReportOutage
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Get-AvailabilityReportOutage
@@ -26,14 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AvailabilityReportOutage
 ```
 
 This example returns all outages that occurred the previous day. This cmdlet always returns outages for one day.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AvailabilityReportOutage -ReportDate:"2009-12-05" -Identity:"Outlook*"
 ```
@@ -50,7 +51,6 @@ Type: AvailabilityReportOutageIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: 1
 Default value: None
@@ -66,7 +66,6 @@ Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +81,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +96,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -124,4 +121,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6fe8a74c-743d-462f-8720-9d8a79b69014.aspx)
-

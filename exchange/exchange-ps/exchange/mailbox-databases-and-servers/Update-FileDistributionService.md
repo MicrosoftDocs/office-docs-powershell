@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010
 title: Update-FileDistributionService
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010"
 ---
 
 # Update-FileDistributionService
@@ -30,21 +31,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-FileDistributionService -Identity Server1 -Type "OAB"
 ```
 
 This example polls Server1 to check for updated OAB files for OABs associated with Server1.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Update-FileDistributionService -Identity Server1
 ```
 
 This example polls Server1 for changes to OAB, Group Metrics, and Unified Messaging files associated with Server1.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 Update-FileDistributionService -Identity Server1 -Type GM
 ```
@@ -63,7 +64,6 @@ Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: True
 Position: 1
 Default value: None
@@ -81,9 +81,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -99,7 +98,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -123,7 +121,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -137,9 +134,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010
-
 Required: False
 Position: Named
 Default value: None
@@ -165,4 +161,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cf98ab73-1448-455f-842d-f0d2aa3a2a79.aspx)
-

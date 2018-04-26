@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-InboundConnector
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-InboundConnector
@@ -27,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-InboundConnector "Inbound Connector for Contoso.com" | Format-List
 ```
 
 This example displays detailed configuration information for the Inbound connector named Inbound Connector for Contoso.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-InboundConnector
 ```
@@ -51,7 +52,6 @@ Type: InboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None

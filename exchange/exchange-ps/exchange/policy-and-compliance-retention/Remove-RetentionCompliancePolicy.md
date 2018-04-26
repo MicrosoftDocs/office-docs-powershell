@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Remove-RetentionCompliancePolicy
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Remove-RetentionCompliancePolicy
@@ -26,9 +27,9 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-Remove-HoldCompliancePolicy -Identity "Regulation 123 Compliance"
+Remove-RetentionCompliancePolicy -Identity "Regulation 123 Compliance"
 ```
 
 This example removes the retention policy named "Regulation 123 Compliance".
@@ -36,7 +37,7 @@ This example removes the retention policy named "Regulation 123 Compliance".
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the retention policy to remove. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the retention policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -49,7 +50,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: True
 Position: 1
 Default value: None
@@ -67,9 +67,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -85,7 +84,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -99,9 +97,8 @@ The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -127,4 +124,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/89463548-6484-43f0-8a85-2605e38d430d.aspx)
-

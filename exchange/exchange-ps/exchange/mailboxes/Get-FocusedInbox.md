@@ -1,7 +1,9 @@
 ---
+external help file: 
 applicable: Exchange Online
 title: Get-FocusedInbox
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-FocusedInbox
@@ -26,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-FocusedInbox -Identity julia@contoso.com
 ```
@@ -67,7 +69,6 @@ Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -93,4 +94,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online version](https://technet.microsoft.com/library/752ea258-b6e7-41bd-89cc-88eb368d3838.aspx)
-

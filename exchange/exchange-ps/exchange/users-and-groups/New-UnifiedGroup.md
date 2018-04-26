@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: New-UnifiedGroup
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # New-UnifiedGroup
@@ -63,7 +64,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-UnifiedGroup -DisplayName "Engineering Department" -Alias engineering
 ```
@@ -102,7 +103,6 @@ Type: DistributionGroupIdParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: True
 Position: Named
 Default value: None
@@ -126,7 +126,6 @@ Type: Public | Private
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +147,6 @@ Type: String
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +170,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +187,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -206,7 +202,6 @@ Type: String
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -224,9 +219,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -248,7 +242,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -266,7 +259,6 @@ Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -284,7 +276,6 @@ Type: String
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -317,13 +308,11 @@ To specify the primary SMTP email address, you can use any of the following meth
 
 To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
 
-
 ```yaml
 Type: ProxyAddressCollection
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -339,7 +328,6 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +345,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -377,7 +364,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -395,7 +381,6 @@ Type: CultureInfo
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -411,7 +396,6 @@ Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -427,7 +411,6 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -461,7 +444,6 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -479,7 +461,6 @@ Type: String
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -495,7 +476,6 @@ Type: String
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -539,7 +519,6 @@ Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -555,7 +534,6 @@ Type: SmtpAddress
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -575,7 +553,6 @@ Type: $true | $false
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -591,7 +568,6 @@ Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -607,7 +583,6 @@ Type: SwitchParameter
 Parameter Sets: Set1, Set2, Set3
 Aliases:
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -621,9 +596,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Online
-
 Required: False
 Position: Named
 Default value: None
@@ -649,4 +623,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/187acc17-10de-4f38-8efc-7c95d2b3df00.aspx)
-

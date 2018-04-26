@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
 title: Get-DlpCompliancePolicy
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Get-DlpCompliancePolicy
@@ -26,14 +27,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-DlpCompliancePolicy
 ```
 
 This example displays summary information for all DLP policies in the Security & Compliance Center.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-DlpCompliancePolicy -Identity "PII Limited" | Format-List
 ```
@@ -50,7 +51,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -66,7 +66,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +89,6 @@ Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-
 Required: False
 Position: 1
 Default value: None
@@ -116,4 +114,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a03a2ec9-f80a-403e-bc3d-e169484e28eb.aspx)
-

@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-SafeLinksPolicy
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-SafeLinksPolicy
@@ -27,14 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-SafeLinksPolicy | Format-Table Name,IsEnabled,IsDefault
 ```
 
 This example shows a summary list of all Safe Links policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-SafeLinksPolicy -Identity Default
 ```
@@ -59,7 +60,6 @@ Type: SafeLinksPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 1
 Default value: None

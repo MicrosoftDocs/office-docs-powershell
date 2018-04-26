@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Exchange Online, Exchange Online Protection
 title: Get-AntiPhishPolicy
 schema: 2.0.0
+monikerRange: "exchonline-ps || eop-ps"
 ---
 
 # Get-AntiPhishPolicy
@@ -17,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-AntiPhishPolicy [-Identity <AntiPhishPolicyIdParameter>] [-Advanced <SwitchParameter>] [-Impersonation <SwitchParameter>] [-Spoof <SwitchParameter>] [<CommonParameters>]
+Get-AntiPhishPolicy [-Identity <AntiPhishPolicyIdParameter>] [-Advanced] [-Impersonation] [-Spoof] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,14 +26,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-AntiPhishPolicy
 ```
 
 This example shows a summary list of all antiphish policies.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-AntiPhishPolicy  -Identity Default | Format-List
 ```
@@ -49,7 +50,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -71,7 +71,6 @@ Type: AntiPhishPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: 0
 Default value: None
@@ -87,7 +86,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +101,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

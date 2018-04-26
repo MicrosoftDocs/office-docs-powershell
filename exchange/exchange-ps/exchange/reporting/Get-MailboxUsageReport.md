@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Get-MailboxUsageReport
 schema: 2.0.0
+monikerRange: "exchonline-ps"
 ---
 
 # Get-MailboxUsageReport
@@ -26,17 +27,14 @@ Get-MailboxUsageReport [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDa
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxUsageReport -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
 
 This example retrieves the number of mailboxes that were near or over the maximum mailbox size between June 13, 2015 and June 15, 2015.
-
-
 
 ## PARAMETERS
 
@@ -94,17 +92,13 @@ Accept wildcard characters: False
 ### 
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
-
 ## OUTPUTS
 
 ### 
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b77a73f5-7cf2-4adb-bcdf-02f86f1a1666.aspx)
-

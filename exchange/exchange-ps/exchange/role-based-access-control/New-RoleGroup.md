@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: New-RoleGroup
 schema: 2.0.0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # New-RoleGroup
@@ -50,51 +51,48 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 New-RoleGroup -Name "Limited Recipient Management" -Roles "Mail Recipients", "Mail Enabled Public Folders" -Members Kim, Martin
 ```
 
 This example creates a role group. The Mail Recipients and Mail Enabled Public Folders roles are assigned to the role group, and the users Kim and Martin are added as members. Because no scopes were provided, Kim and Martin can manage any recipient and reset passwords for any users in the organization.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 New-RoleGroup -Name "Seattle Limited Recipient Management" -Roles "Mail Recipients", "Mail Enabled Public Folders" -Members John, Carol -CustomRecipientWriteScope "Seattle Recipients"
 ```
 
 This example creates a role group with a custom recipient scope. The custom recipient scope, Seattle Recipients, limits the scope of the roles assigned to the role group to recipients who have their City property set to Seattle. The Mail Recipients and Mail Enabled Public Folders roles are assigned to the role group, and the users John and Carol are added as members.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 New-RoleGroup -Name "Transport Rules Management" -Roles "Transport Rules" -Members "Compliance Group" -ManagedBy Isabel
 ```
 
 This example creates a role group and enables Isabel to add or remove members to or from the role group by adding her to the ManagedBy property. The Transport Rules role is assigned to the role group, and the Compliance Group USG is added as a member.
 
-### Example 4
+### -------------------------- Example 4 --------------------------
 ```
 $Credentials = Get-Credential; New-RoleGroup -Name "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Administrators" -CustomRecipientWriteScope "Toronto Recipients" -Roles "Mail Recipients"
 ```
 
 This example creates a linked role group that enables the members of the Toronto Administrators USG in the Contoso user forest to manage recipients located in the Toronto office. The custom recipient scope, Toronto Recipients, limits the scope of the roles assigned to the role group to recipients who have their City property set to Toronto. The Mail Recipients role is assigned to the role group.
 
-
 The first command retrieves the credentials using the Get-Credential cmdlet and stores them in the $Credentials variable. Then the linked role group is created using the second command.
 
-### Example 5
+### -------------------------- Example 5 --------------------------
 ```
 $RoleGroup = Get-RoleGroup "Recipient Management"; New-RoleGroup "Limited Recipient Management" -Roles $RoleGroup.Roles
 ```
 
 This example takes an existing role group and copies the roles from that role group into a new custom role group. This can be useful if you want to create a role group similar to an existing role group but don't want to manually create all the role assignments. For example, you might want to create a role group that has most, but not all, of the management roles assigned to the Recipient Management role group.
 
-
 The first command stores the existing role group in a variable, and the second command creates the custom role group.
-
 
 This example uses variables to store information. For more information about variables, see User-defined variables (https://technet.microsoft.com/library/bb123690.aspx).
 
-### Example 6
+### -------------------------- Example 6 --------------------------
 ```
 Remove-ManagementRoleAssignment "Distribution Groups-Limited Recipient Management"
 ```
@@ -115,7 +113,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -135,7 +132,6 @@ Type: UniversalSecurityGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: Named
 Default value: None
@@ -153,7 +149,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: True
 Position: 1
 Default value: None
@@ -171,9 +166,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +185,6 @@ Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -211,7 +204,6 @@ Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -227,7 +219,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -243,7 +234,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -261,7 +251,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +266,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -297,7 +285,6 @@ Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -317,7 +304,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -335,7 +321,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -353,7 +338,6 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +355,6 @@ Type: RoleIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -389,7 +372,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -405,9 +387,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None

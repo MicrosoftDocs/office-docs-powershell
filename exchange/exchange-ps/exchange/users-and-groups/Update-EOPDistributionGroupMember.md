@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online Protection
 title: Update-EOPDistributionGroupMember
 schema: 2.0.0
+monikerRange: "eop-ps"
 ---
 
 # Update-EOPDistributionGroupMember
@@ -30,14 +31,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Update-EOPDistributionGroupMember -Identity "Security Team" -Members @("Kitty Petersen","Tyson Fawcett")
 ```
 
 This example replaces the current members of the Security Team distribution group with Kitty Petersen and Tyson Fawcett.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 $CurrentMemberObjects = Get-DistributionGroupMember "Security Team"; $CurrentMemberNames = $CurrentMemberObjects | % {$_.name}; $CurrentMemberNames += "Tyson Fawcett"; Update-EOPDistributionGroupMember -Identity "Security Team" -Members $CurrentMemberNames
 ```
@@ -54,7 +55,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +86,6 @@ Type: DistributionGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +127,6 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
-
 Required: False
 Position: Named
 Default value: None
@@ -154,4 +152,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a6d4f790-1b94-42f8-af6f-fa79c504d8ec.aspx)
-

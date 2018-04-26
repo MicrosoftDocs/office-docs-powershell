@@ -6,7 +6,7 @@ schema: 2.0.0
 # Set-PnPTenant
 
 ## SYNOPSIS
-Returns organization-level site collection properties
+Sets organization-level site collection properties
 
 ## SYNTAX 
 
@@ -68,14 +68,13 @@ Set-PnPTenant [-MinCompatibilityLevel <Int>]
               [-FilePickerExternalImageSearchEnabled <Boolean>]
               [-EmailAttestationRequired <Boolean>]
               [-EmailAttestationReAuthDays <Int>]
+              [-HideDefaultThemes <Boolean>]
               [-Connection <SPOnlineConnection>]
 ```
 
 ## DESCRIPTION
-Returns organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota,
+Sets organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota,
 ResourceQuotaAllocated, and SiteCreationMode.
-
-Currently, there are no parameters for this cmdlet.
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
@@ -353,6 +352,18 @@ Accept pipeline input: False
 
 ```yaml
 Type: AnonymousLinkType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -HideDefaultThemes
+Defines if the default themes are visible or hidden
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 
 Required: False

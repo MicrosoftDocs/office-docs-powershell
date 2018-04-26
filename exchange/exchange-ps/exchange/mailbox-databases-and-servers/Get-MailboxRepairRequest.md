@@ -3,6 +3,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
 title: Get-MailboxRepairRequest
 schema: 2.0.0
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ---
 
 # Get-MailboxRepairRequest
@@ -53,21 +54,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Get-MailboxDatabase | Get-MailboxRepairRequest | Format-Table Identity; Get-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5\374289de-b899-42dc-8391-4f8579935f1f | Format-List
 ```
 
 This example displays the value of the Identity property for all mailbox repair requests for all mailbox servers in your organization; the second command displays information about a specific mailbox repair request that was returned by the first command.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxRepairRequest -Mailbox "Ann Beebe" | Format-List
 ```
 
 This example displays repair request information for the mailbox of Ann Beebe using the Mailbox parameter.
 
-### Example 3
+### -------------------------- Example 3 --------------------------
 ```
 $MailboxGuid = Get-MailboxStatistics annb; Get-MailboxRepairRequest -Database $MailboxGuid.Database -StoreMailbox $MailboxGuid.MailboxGuid | Format-List Identity
 ```
@@ -90,7 +91,6 @@ Type: DatabaseIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: 1
 Default value: None
@@ -106,7 +106,6 @@ Type: StoreIntegrityCheckJobIdParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: 1
 Default value: None
@@ -138,7 +137,6 @@ Type: MailboxIdParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: True
 Position: 1
 Default value: None
@@ -156,7 +154,6 @@ Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +169,6 @@ Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +184,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: Named
 Default value: None
@@ -206,7 +201,6 @@ Type: StoreMailboxIdParameter
 Parameter Sets: Set2
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
 Required: False
 Position: 2
 Default value: None
