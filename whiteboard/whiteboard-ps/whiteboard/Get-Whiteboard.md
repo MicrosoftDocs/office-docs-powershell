@@ -38,9 +38,8 @@ Applicable: Microsoft Whiteboard
 ```
 
 ### -UserId
-
-(Optional) The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned.
-
+Optional: The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned.
+ 
 ```yaml
 Type:                        Guid
 Required:                    true
@@ -52,7 +51,6 @@ Applicable: Microsoft Whiteboard
 ```
         
 ### -WhiteboardId
-
 (Optional) The ID of a specific Whiteboard.
         
 ```yaml
