@@ -7,8 +7,9 @@ ms.date: 7/10/2017
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
-localization_priority: Normal
-ms.custom: Strat_EX_Admin
+localization_priority: Priority
+ms.collection: Strat_EX_Admin
+ms.custom: 
 ms.assetid: c8bea338-6c1a-4bdf-8de0-7895d427ee5b
 description: "Learn how to use remote PowerShell to connect to Exchange Online."
 ---
