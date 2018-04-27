@@ -11,6 +11,7 @@ Locale: en-US
 The following cmdlet references are for Microsoft Whiteboard.
 
 ## Cmdlets
+
 ### [Get-Whiteboard](Get-Whiteboard.md)
 
 ### [Set-WhiteboardOwner](Set-WhiteboardOwner.md)
