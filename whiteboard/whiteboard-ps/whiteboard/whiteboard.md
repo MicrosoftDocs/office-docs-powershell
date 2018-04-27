@@ -1,7 +1,7 @@
 ---
 Module Name: Microsoft Whiteboard Admin
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-title: whiteboard
+title: Microsoft Whiteboard
 Locale: en-US
 ---
 
