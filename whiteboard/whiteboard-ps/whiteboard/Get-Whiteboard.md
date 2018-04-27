@@ -52,9 +52,24 @@ Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
 ```
 
+### -MemberId
+Remove this param. just a schema test.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserId
-Optional. The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned.
- 
+Optional. The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned. 
+
 ```yaml
 Type:                        Guid
 Required:                    true
@@ -64,7 +79,7 @@ Accept pipeline input:       false
 Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
 ```
-        
+
 ### -WhiteboardId
 
 Optional. The ID of a specific Whiteboard.
