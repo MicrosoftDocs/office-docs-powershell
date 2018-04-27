@@ -8,9 +8,8 @@ schema: 2.0.0
 ---
 
 # Set-WhiteboardOwner
-    
-## SYNOPSIS
 
+## SYNOPSIS
 Sets the owner for a Whiteboard.
 
 ## SYNTAX
