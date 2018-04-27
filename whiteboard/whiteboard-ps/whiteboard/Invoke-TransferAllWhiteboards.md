@@ -19,6 +19,29 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 Invoke-TransferAllWhiteboards [[-Token] <AuthenticationResult>] [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Transfer ownership of all Whiteboards owned by a user to another user.
+
+## EXAMPLES
+
+### -------------------------- EXAMPLE 1 --------------------------
+
+```
+PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhatIf
+```
+
+Check how many Whiteboards will be transferred without transferring them.
+
+### -------------------------- EXAMPLE 2 --------------------------
+
+```
+PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
+```
+
+Transfer (and prompt before performing any write actions).
+
+
 ## PARAMETERS
 
 ### -Token
@@ -87,20 +110,14 @@ Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
 ```
 
-## EXAMPLES
+## INPUTS
 
-### -------------------------- EXAMPLE 1 --------------------------
+### None
 
-```
-PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhatIf
-```
+## OUTPUTS
 
-Check how many Whiteboards will be transferred without transferring them.
+### System.Object
 
-### -------------------------- EXAMPLE 2 --------------------------
+## NOTES
 
-```
-PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
-```
-
-Transfer (and prompt before performing any write actions).
+## RELATED LINKS

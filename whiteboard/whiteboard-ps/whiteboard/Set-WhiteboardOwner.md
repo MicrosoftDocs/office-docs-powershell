@@ -19,6 +19,20 @@ Sets the owner for a Whiteboard.
 Set-WhiteboardOwner [[-Token] <AuthenticationResult>] [-WhiteboardId] <Guid> [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Sets the owner for a Whiteboard.
+
+## EXAMPLES
+
+### -------------------------- EXAMPLE 1 --------------------------
+
+```
+PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
+```
+
+Move a Whiteboard from one user to another.
+
 ## PARAMETERS
 
 ### -Token
@@ -101,12 +115,15 @@ Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
 ```
 
-## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+## INPUTS
 
-```
-PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
-```
+### None
 
-Move a Whiteboard from one user to another.
+## OUTPUTS
+
+### System.Object
+
+## NOTES
+
+## RELATED LINKS

@@ -21,6 +21,22 @@ Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Gui
 Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Gets one or more Whiteboards from the Microsoft Whiteboard service and returns them as objects.
+
+
+## EXAMPLES
+
+### -------------------------- EXAMPLE 1 --------------------------
+
+```
+PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
+```
+
+Get all of a user's Whiteboards.
+
+
 ## PARAMETERS
 
 ### -Token
@@ -38,7 +54,7 @@ Applicable: Microsoft Whiteboard
 ```
 
 ### -UserId
-Optional: The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned.
+(Optional) The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned.
  
 ```yaml
 Type:                        Guid
@@ -63,12 +79,14 @@ Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
 ```
 
-## EXAMPLES
+## INPUTS
 
-### -------------------------- EXAMPLE 1 --------------------------
+### None
 
-```
-PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
-```
+## OUTPUTS
 
-Get all of a user's Whiteboards.
+### System.Object
+
+## NOTES
+
+## RELATED LINKS
