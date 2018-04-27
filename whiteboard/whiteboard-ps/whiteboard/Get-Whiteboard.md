@@ -40,7 +40,6 @@ Get all of a user's Whiteboards.
 ## PARAMETERS
 
 ### -Token
-
 The Azure AD bearer token corresponding to the specified credentials. If unspecified, a new token will be generated.
 
 ```yaml
@@ -54,7 +53,7 @@ Applicable: Microsoft Whiteboard
 ```
 
 ### -UserId
-(Optional) The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned.
+Optional. The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned.
  
 ```yaml
 Type:                        Guid
@@ -67,7 +66,8 @@ Applicable: Microsoft Whiteboard
 ```
         
 ### -WhiteboardId
-(Optional) The ID of a specific Whiteboard.
+
+Optional. The ID of a specific Whiteboard.
         
 ```yaml
 Type:                        Guid
