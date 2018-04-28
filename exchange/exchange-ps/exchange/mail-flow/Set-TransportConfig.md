@@ -259,7 +259,7 @@ The valid input range for this parameter is from 0 through 2147483647 bytes. If 
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016 
 Required: False
 Position: Named
 Default value: None
@@ -442,7 +442,7 @@ The valid input range for this parameter is from 0 through 2147483647 bytes. If 
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
