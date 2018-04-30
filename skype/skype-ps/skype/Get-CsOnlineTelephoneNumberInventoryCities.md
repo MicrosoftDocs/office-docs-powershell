@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOnlineTelephoneNumberInventoryCities
 
 ## SYNOPSIS
-Use the Get-CsOnlineTelephoneNumberInventoryCities to retrieve the cities that support a given inventory type within a geographical area.
+Use the `Get-CsOnlineTelephoneNumberInventoryCities` to retrieve the cities that support a given inventory type within a geographical area.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-CsOnlineTelephoneNumberInventoryCities [-Area <Object>] [-CountryOrRegion <O
 ```
 
 ## DESCRIPTION
-Following is an example of the Get-CsOnlineTelephoneNumberInventoryCities cmdlet's console output.
+Following is an example of the `Get-CsOnlineTelephoneNumberInventoryCities` cmdlet's console output.
 
 Get-CsOnlineTelephoneNumberInventoryCities -InventoryType Service -RegionalGroup NOAM -CountryOrRegion US -Area NY
 
@@ -52,7 +52,6 @@ The following example retrieves the cities defined as supporting "Subscriber" in
 
 ### -Area
 Specifies the target geographical area for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -69,7 +68,6 @@ Accept wildcard characters: False
 
 ### -CountryOrRegion
 Specifies the target country for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -107,7 +105,6 @@ Accept wildcard characters: False
 
 ### -RegionalGroup
 Specifies the target geographical region for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -140,7 +137,6 @@ Accept wildcard characters: False
 
 ### -CapitalOrMajorCity
 Specifies the target geographical city for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object

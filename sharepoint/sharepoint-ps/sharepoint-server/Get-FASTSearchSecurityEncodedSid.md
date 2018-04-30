@@ -23,16 +23,16 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityEncodedSid -SID S-1-5-7
+PS C:\>Get-FASTSearchSecurityEncodedSid -SID S-1-5-7
 ```
 
 This example returns an encoded security identifier and user name for the Windows SID, "5-1-5-7".
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchSecurityEncodedSid -User users
+PS C:\>Get-FASTSearchSecurityEncodedSid -User users
 ```
 
 This example returns the encoded security identifier for the Windows built-in "Users" group.

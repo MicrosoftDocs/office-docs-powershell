@@ -3010,14 +3010,8 @@ The following cmdlet references are for Skype for Business.
 ### [Grant-CsTeamsInteropPolicy](Grant-CsTeamsInteropPolicy.md)
 {{Manually Enter Grant-CsTeamsInteropPolicy Description Here}}
 
-### [New-CsTeamsInteropPolicy](New-CsTeamsInteropPolicy.md)
-{{Manually Enter New-CsTeamsInteropPolicy Description Here}}
-
 ### [Remove-CsTeamsInteropPolicy](Remove-CsTeamsInteropPolicy.md)
 {{Manually Enter Remove-CsTeamsInteropPolicy Description Here}}
-
-### [Set-CsTeamsInteropPolicy](Set-CsTeamsInteropPolicy.md)
-{{Manually Enter Set-CsTeamsInteropPolicy Description Here}}
 
 ### [Set-CsPlatformServiceSettings](Set-CsPlatformServiceSettings.md)
 {{Manually Enter Set-CsPlatformServiceSettings Description Here}}

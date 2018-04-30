@@ -39,14 +39,18 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-RetentionCompliancePolicy -Identity "Teams - Regulation 123 Compliance" -AddTeamsChannelLocation "Kitty Petersen" -AddTeamsChatLocation "Kitty Petersen" -RemoveTeamsChannelLocation "Scott Nakamura" -RemoveTeamsChatLocation "Scott Nakamura" -Comment "Added new counsel, 4/24/18"
+Set-RetentionCompliancePolicy -Identity "Teams - Regulation 123 Compliance" -AddTeamsChannelLocation "Build and Quality" -AddTeamsChatLocation "Kitty Petersen" -RemoveTeamsChannelLocation "UX Design" -RemoveTeamsChatLocation "Scott Nakamura" -Comment "Added new counsel, 4/24/18"
 ```
 
 This example makes the following changes to the existing retention policy named "Teams - Regulation 123 Compliance":
 
-- Adds the mailbox for the user named Kitty Petersen to Microsoft Teams channels and chats.
+- Adds the mailbox for the user named Kitty Petersen to Microsoft Teams chat locations
 
-- Remove the mailbox for the user name Scott Nakamura from Microsoft Teams channels and chats.
+- Removes the mailbox for the user named Scott Nakamura from Microsoft Teams chat locations
+
+- Adds the group (team) mailbox named Build and Quality to Microsoft Teams channel locations
+
+- Removes the group (team) mailbox named UX Design from Microsoft Teams channel locations
 
 - Updates the comment.
 
@@ -97,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsChannelLocation
-The AddTeamsChannelLocation parameter specifies the Microsoft Teams channels (mailboxes) to add to the list of included channels when you aren't using the value All for the TeamsChannelLocation parameter.
+The AddTeamsChannelLocation parameter specifies the teams (group mailboxes) to add to the list of included teams whose channel messages are targeted by this policy, when you aren't using the value All for the TeamsChannelLocation parameter.
 
 You can use any value that uniquely identifies the mailbox. For example:
 
@@ -112,7 +116,7 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ### -AddTeamsChannelLocationException
-The AddTeamsChannelLocationException parameter specifies the Microsoft Teams channels (mailboxes) to add to the list of excluded mailboxes when you're using the value All for the TeamsChannelLocation parameter.
+The AddTeamsChannelLocationException parameter specifies the teams (group mailboxes) to add to the list of excluded teams whose channel messages are targeted by this policy, when you aren't using the value All for the TeamsChannelLocation parameter.
 
 You can use any value that uniquely identifies the mailbox. For example:
 
@@ -261,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChannelLocation
-The RemoveTeamChannelLocation parameter specifies the Microsft Teams channels (mailboxes) to remove from the list of included channels when you aren't using the value All for the TeamsChannelLocation parameter.
+The RemoveTeamChannelLocation parameter specifies the teams (group mailboxes) to remove from the list of included teams whose channel messages are targeted by this policy, when you aren't using the value All for the TeamsChannelLocation parameter.
 
 You can use any value that uniquely identifies the mailbox. For example:
 
@@ -286,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChannelLocationException
-The RemoveTeamsChannelLocationException parameter specifies the Microsoft Teams channels (mailboxes) to remove from the list of excluded channels when you're using the value All for the TeamsChannelLocation parameter.
+The RemoveTeamsChannelLocationException parameter specifies the teams (group mailboxes) to remove from the list of excluded teams whose channel messages are targeted by this policy, when you aren't using the value All for the TeamsChannelLocation parameter.
 
 You can use any value that uniquely identifies the mailbox. For example:
 

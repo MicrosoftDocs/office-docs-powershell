@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPAccessServicesDatabaseServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a server to host Access Services databases.
 
 ## SYNTAX
 
@@ -23,21 +23,23 @@ New-SPAccessServicesDatabaseServer [-ServiceContext] <SPServiceContextPipeBind>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet adds additional Access Services database servers to host Access Services databases.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>New-SPAccessServicesDatabaseServer -ServiceContext http://siteUrl -DatabaseServerName SQLSVR01 -ValidateServer:$true
 ```
 
-{{ Add example description here }}
+This example adds the SQL Server named SQLSVR01 as an Access Services database server using the context of the site, http://siteUrl. This also validates SQLSVR01 is capable of hosting Access Services databases.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -53,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -AvailableForCreate
-{{Fill AvailableForCreate Description}}
+Indicates whether or not the SQL Server is available to create Access Services databases on. The default value is true.
 
 ```yaml
 Type: Boolean
@@ -85,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerCredentials
-{{Fill DatabaseServerCredentials Description}}
+Specifies the credentials used to connect to the SQL Server.
 
 ```yaml
 Type: PSCredential
@@ -101,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerGroupName
-{{Fill DatabaseServerGroupName Description}}
+Specifies the Access Services database group name. The default value is DEFAULT.
 
 ```yaml
 Type: String
@@ -117,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerName
-{{Fill DatabaseServerName Description}}
+Specifies the name of the SQL Server to add.
 
 ```yaml
 Type: String
@@ -133,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Encrypt
-{{Fill Encrypt Description}}
+Specifies to use SSL encryption between Access Services and the SQL Server hosting Access Services databases.
 
 ```yaml
 Type: Boolean
@@ -149,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Exclusive
-{{Fill Exclusive Description}}
+If the SQL Server has AvaliableForCreate set to False, this will update it to True. If the SQL Server Id does not match the database server Id and the server has AvailableForCreate set to True, this will set AvailableForCreate to False.
 
 ```yaml
 Type: Boolean
@@ -165,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryDatabaseServerName
-{{Fill SecondaryDatabaseServerName Description}}
+Specifies a secondary SQL Server to associate to the new SQL Server. This is used for disaster recovery purposes.
 
 ```yaml
 Type: String
@@ -181,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerReferenceId
-{{Fill ServerReferenceId Description}}
+Provide a specific Server Reference Id. By default, a Server Reference Id is generated automatically when the SQL Server is added.
 
 ```yaml
 Type: Guid
@@ -197,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
-{{Fill ServiceContext Description}}
+Specifies the service context to retrieve Access Services information from.
 
 ```yaml
 Type: SPServiceContextPipeBind
@@ -213,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustServerCertificate
-{{Fill TrustServerCertificate Description}}
+Sets a value that indicates whether the channel will be encrypted while bypassing walking the certificate chain to validate trust.
 
 ```yaml
 Type: Boolean
@@ -229,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserDomain
-{{Fill UserDomain Description}}
+Specifies the domain to use for credentials.
 
 ```yaml
 Type: String
@@ -245,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateServer
-{{Fill ValidateServer Description}}
+Validates the SQL Server is in a supported state to host Access Services databases.
 
 ```yaml
 Type: Boolean
@@ -278,7 +280,19 @@ Accept wildcard characters: False
 ```
 
 ### -LoginType
-{{Fill LoginType Description}}
+Indicates the login type. Valid values are:
+
+* ApplicationLogin 
+
+*LocalDBApplicationLogin 
+
+* ServerLogin 
+
+* StorageAccountLogon
+
+* WindowsAzureServerLogin
+
+The default value is ServerLogin.
 
 ```yaml
 Type: LoginType
@@ -295,7 +309,15 @@ Accept wildcard characters: False
 ```
 
 ### -State
-{{Fill State Description}}
+Indicates the availability of the SQL Server to be added. Valid values are:
+
+* Active
+
+* Locked
+
+* Reserved
+
+The default value is Active.
 
 ```yaml
 Type: DatabaseServerStates
@@ -312,7 +334,13 @@ Accept wildcard characters: False
 ```
 
 ### -StateOwner
-{{Fill StateOwner Description}}
+Specifies the state owner. Valid values are:
+
+* NoOwner
+
+* TenantMove
+
+The default value is NoOwner.
 
 ```yaml
 Type: ServerStateOwner

@@ -27,9 +27,9 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchMetadataFullTextIndex -Name content
+PS C:\>Get-FASTSearchMetadataFullTextIndex -Name content
 ```
 
 This example retrieves the full text index named "content".

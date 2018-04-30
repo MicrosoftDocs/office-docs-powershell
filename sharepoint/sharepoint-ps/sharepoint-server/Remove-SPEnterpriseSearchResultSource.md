@@ -30,9 +30,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-Remove-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source" -SearchApplication $ssa -Owner $owner
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
+PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\>Remove-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source" -SearchApplication $ssa -Owner $owner
 ```
 
 This example deletes the search service application level result source with the name "Custom SharePoint Result Source".
@@ -40,9 +40,9 @@ This example deletes the search service application level result source with the
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-Remove-SPEnterpriseSearchResultSource -Identity 12345678-90ab-cdef-1234-567890bcdefgh -SearchApplication $ssa -Owner $owner
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
+PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\>Remove-SPEnterpriseSearchResultSource -Identity 12345678-90ab-cdef-1234-567890bcdefgh -SearchApplication $ssa -Owner $owner
 ```
 
 This example deletes the search service application level result source with the id 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -50,10 +50,10 @@ This example deletes the search service application level result source with the
 
 ### ------------------EXAMPLE 3------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-$resultSource = Get-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source" -SearchApplication $ssa -Owner $owner
-Remove-SPEnterpriseSearchResultSource -Identity $resultSource -SearchApplication $ssa -Owner $owner
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
+PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\>$resultSource = Get-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source" -SearchApplication $ssa -Owner $owner
+PS C:\>Remove-SPEnterpriseSearchResultSource -Identity $resultSource -SearchApplication $ssa -Owner $owner
 ```
 
 This example deletes the search service application level result source with the name "Custom SharePoint Result Source", by specifying a Source instance.
@@ -116,13 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
-        
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 ```yaml

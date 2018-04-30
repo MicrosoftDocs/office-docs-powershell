@@ -9,10 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
-
-
-
+Returns app acquisition settings.
 
 ## SYNTAX
 
@@ -32,17 +29,15 @@ Get-SPAppAcquisitionConfiguration [-AssignmentCollection <SPAssignmentCollection
 
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets [http://go.microsoft.com/fwlink/?LinkID=187810](http://go.microsoft.com/fwlink/?LinkID=187810).
 
-Use the Get-SPAppAcquisitionConfiguration cmdlet to return app acquisition settings from the SharePoint Storeor App Catalog.
-
-
+Use the `Get-SPAppAcquisitionConfiguration` cmdlet to return app acquisition settings from the SharePoint Storeor App Catalog.
 
 ## EXAMPLES
 
 ### ------------EXAMPLE 1------- 
 ```
-C:\PS>Get-SPAppAcquisitionConfiguration -WebApplication http://localhost
+PS C:\>Get-SPAppAcquisitionConfiguration -WebApplication http://localhost
 ```
 
 This example returns app acquisition settings for the specified web application.
@@ -50,7 +45,7 @@ This example returns app acquisition settings for the specified web application.
 
 ### ------------EXAMPLE 2------- 
 ```
-C:\PS>Get-SPAppAcquisitionConfiguration -SiteSubscription http://localhost/sites/SharePointOnlineAdmin
+PS C:\>Get-SPAppAcquisitionConfiguration -SiteSubscription http://localhost/sites/SharePointOnlineAdmin
 ```
 
 This example returns app acquisition settings for the specified tenant.
@@ -60,10 +55,6 @@ This example returns app acquisition settings for the specified tenant.
 ### -SiteSubscription
 
 Specifies the site collection for which app acquisition settings are to be returned.
-
-
-
-
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
@@ -80,16 +71,9 @@ Accept wildcard characters: False
 
 ### -AssignmentCollection
 
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
-
-
-
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -107,9 +91,6 @@ Accept wildcard characters: False
 ### -WebApplication
 
 Specifies the web application for which app acquisition settings are to be returned.
-
-
-
 
 ```yaml
 Type: SPWebApplicationPipeBind

@@ -17,23 +17,22 @@ Get-FASTSearchSecurityUserStore [[-Identity] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet retrieves a security user store. 
-If the Identity parameter is not specified, it gets a list of all user stores.
+This cmdlet retrieves a security user store. If the Identity parameter is not specified, it gets a list of all user stores.
 
 For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityUserStore -Identity ln1
+PS C:\>Get-FASTSearchSecurityUserStore -Identity ln1
 ```
 
 This example gets the user store with an identity of "ln1".
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchSecurityUserStore
+PS C:\>Get-FASTSearchSecurityUserStore
 ```
 
 This example gets a list of all user stores.

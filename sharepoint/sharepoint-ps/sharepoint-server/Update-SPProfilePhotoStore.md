@@ -117,8 +117,8 @@ Accept wildcard characters: False
 
 ### -NoDelete
 When the value is set to true, imported user profile picture files will be preserverd after creating thumbnails for them.
-[!Note]
-This will only work when CreateThumbnailsForImportedPhotos is set to `$true`
+> [!NOTE]
+> This will only work when CreateThumbnailsForImportedPhotos is set to `$true`
 
 ```yaml
 Type: Boolean

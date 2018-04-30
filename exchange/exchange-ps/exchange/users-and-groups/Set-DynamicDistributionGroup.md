@@ -1625,7 +1625,7 @@ The RecipientFilter parameter specifies an OPath filter that's based on the valu
 
 - Include a hyphen before all operators.
 
-- In cloud-based environments, you can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
+- In cloud-based environments, you can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed. Wildcards are valid only at the end for cloud-based environments and only at the front or back of words for on-prem environments. 
 
 For more information, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
 

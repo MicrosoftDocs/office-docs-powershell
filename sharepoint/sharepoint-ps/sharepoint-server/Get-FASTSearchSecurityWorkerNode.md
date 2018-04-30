@@ -22,24 +22,27 @@ A security worker is the Windows service that generates user search security fil
 The cmdlet's function changes depending upon the parameter values:
 
 -- If Identity is specified, the command gets the worker associated with the given URI.
+
 -- If Active is specified, the command gets a list of all active workers.
+
 -- If Dead is specified, the command gets a list of all inactive workers.
+
 -- If none of these parameters are specified, the command returns a list of all workers.
 
 For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityWorkerNode -Identity localhost
+PS C:\>Get-FASTSearchSecurityWorkerNode -Identity localhost
 ```
 
 This example gets the status and complete URI for the worker with "localhost" in its URI.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchSecurityWorkerNode
+PS C:\>Get-FASTSearchSecurityWorkerNode
 ```
 
 This example returns a list of all workers, both active and inactive.

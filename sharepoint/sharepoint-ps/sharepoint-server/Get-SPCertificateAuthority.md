@@ -28,10 +28,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$signingCert = (Get-SPServiceApplication | where $_.Name -eq 'SecurityTokenServiceApplication').SigningCertificate
+PS C:\>Get-SPCertificateAuthority
 ```
 
-This example gets the security token service (STS) identity provider signing certificate.
+This example gets the certificate authority.
 
 ## PARAMETERS
 

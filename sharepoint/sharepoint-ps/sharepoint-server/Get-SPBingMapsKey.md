@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE----------- 
 ```
-C:\PS>Get-SPBingMapsKey
+PS C:\>Get-SPBingMapsKey
 ```
 
 This example returns the Bing Maps key for the farm.

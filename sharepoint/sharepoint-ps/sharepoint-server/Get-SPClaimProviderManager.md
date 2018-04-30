@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE-------- 
 ```
-C:\PS>Get-SPClaimProviderManager
+PS C:\>Get-SPClaimProviderManager
 ```
 
 This example returns a claim provider manager for the farm.
