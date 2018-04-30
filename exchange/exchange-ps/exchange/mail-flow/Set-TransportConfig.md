@@ -237,6 +237,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDsnMaxMessageAttachSize
+This parameter is available only in on-premises Exchange.
+
 The ExternalDsnMaxMessageAttachSize parameter specifies the maximum size of the original message attached to an external DSN message. If the original message exceeds this size, only the headers of the original message are included in the DSN message. The default value is 10 megabytes (MB).
 
 When you enter a value, qualify the value with one of the following units:
@@ -420,6 +422,8 @@ Accept wildcard characters: False
 ```
 
 ### -InternalDsnMaxMessageAttachSize
+This parameter is available only in on-premises Exchange.
+
 The InternalDsnMaxMessageAttachSize parameter specifies the maximum size of the original message that generated an internal DSN message. If the original message exceeds this size, only the headers of the original message are included in the DSN message. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
