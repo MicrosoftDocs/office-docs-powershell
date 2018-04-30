@@ -33,7 +33,7 @@ Set-User [-Identity] <UserIdParameter> [-AllowUMCallsFromNonUsers <None | Search
  [-TelephoneAssistant <String>] [-Title <String>] [-UMCallingLineIds <MultiValuedProperty>]
  [-UMDtmfMap <MultiValuedProperty>] [-UserPrincipalName <String>] [-WebPage <String>] [-WhatIf]
  [-WindowsEmailAddress <SmtpAddress>] [-GeoCoordinates <GeoCoordinates>] [-PublicFolder]
- [-AuthenticationPolicy <AuthPolicyIdParameter>] [-PermanentlyClearPreviousMailboxInfo] [-SkipDualWrite]
+ [-AuthenticationPolicy <AuthPolicyIdParameter>] [-PermanentlyClearPreviousMailboxInfo] [-SkipDualWrite] [-StsRefreshTokensValidFrom <DateTime>]
  [<CommonParameters>]
 ```
 
@@ -1000,6 +1000,25 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StsRefreshTokensValidFrom
+This parameter is available only in the cloud-based service.
+
+The StsRefreshTokensValidFrom specfies the date-time that the user's STS refresh tokens are valid from.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM". 
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
