@@ -29,9 +29,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE------------
 ```
-C:\PS>$appPrincipal= Get-SPApplicationPrincipal -nameIdentifier $spTrustedIssuer.nameIdentifier - web $site.rootWeb
-
-C:\PS>Remove-AppPrincipalPermission -appPrincipal $appPrincipal -site $site.rootweb -scope "spweb"
+PS C:\>$clientID = "11111111-2222-3333-4444-555555555555"
+PS C:\>$site = Get-SPSite http://siteUrl
+PS C:\>$realm = Get-SPAuthenticationRealm -ServiceContext $site
+PS C:\>$appIdentifier = $clientID + "@" + $realm
+PS C:\>$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb
+PS C:\>Remove-AppPrincipalPermission -AppPrincipal $appPrincipal -site $site.RootWeb -Scope Site
 ```
 
 This example removes the App Principal permission from the site collection scope.
@@ -61,9 +64,13 @@ Specifies the scope to which to apply the principal permission.
 The value is any of the following scopes:
 
 --Farm
+
 --Site collection
+
 --SharePoint Online
+
 --Web
+
 --Documents, List, or Library
 
 ```yaml
@@ -96,13 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -152,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAppOnlyPolicy
-{{Fill DisableAppOnlyPolicy Description}}
+Disables the app only policy.
 
 ```yaml
 Type: SwitchParameter
