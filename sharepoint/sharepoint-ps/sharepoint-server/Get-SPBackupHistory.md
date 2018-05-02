@@ -30,21 +30,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPBackupHistory -Directory \\file_server\share\Backup
+PS C:\>Get-SPBackupHistory -Directory \\file_server\share\Backup
 ```
 
 This example returns all farm backup and restore operations that have been run for the \\\\file_server\share\Backup directory.
 
 ### ------------------EXAMPLE 2----------------- 
 ```
-C:\PS>Get-SPBackupHistory -Directory C:\Backup -ShowBackup
+PS C:\>Get-SPBackupHistory -Directory C:\Backup -ShowBackup
 ```
 
 This example returns all of the farm backup operations that have been run for the C:\Backup directory.
 
 ### ------------------EXAMPLE 3----------------- 
 ```
-C:\PS>(Get-SPBackupHistory -Directory C:\Backup -ShowBackup)[0].SelfId | Restore-SPFarm -Directory C:\Backup -RestoreMethod overwrite
+PS C:\>(Get-SPBackupHistory -Directory C:\Backup -ShowBackup)[0].SelfId | Restore-SPFarm -Directory C:\Backup -RestoreMethod overwrite
 ```
 
 This example gets all of the farm backup operations that have been run for the C:\Backup directory, finds the most recent backup, and then passes its backup GUID to the Restore-SPFarm cmdlet.

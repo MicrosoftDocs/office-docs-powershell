@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Returns the interval in hours between updates of the app state update job.
 
-
-
 ## SYNTAX
 
 ```
@@ -29,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE------- 
 ```
-C:\PS>Get-SPAppStateUpdateInterval
+PS C:\>Get-SPAppStateUpdateInterval
 ```
 
 This example returns the app state update timer job invocation interval in hours.

@@ -40,7 +40,6 @@ This example reserves 10 Service type telephone numbers in New York, New York.
 
 ### -Area
 Specifies the target geographical area for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -57,7 +56,6 @@ Accept wildcard characters: False
 
 ### -CapitalOrMajorCity
 Specifies the target geographical city for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -74,7 +72,6 @@ Accept wildcard characters: False
 
 ### -CountryOrRegion
 Specifies the target country for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -129,7 +126,6 @@ Accept wildcard characters: False
 
 ### -RegionalGroup
 Specifies the target geographical region for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object

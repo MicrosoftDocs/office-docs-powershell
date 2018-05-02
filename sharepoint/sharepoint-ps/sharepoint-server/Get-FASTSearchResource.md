@@ -24,9 +24,9 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchResource dictionaries\spellcheck\check_en.aut c:\check_en.aut
+PS C:\>Get-FASTSearchResource dictionaries\spellcheck\check_en.aut c:\check_en.aut
 ```
 
 This example downloads dictionaries\spellcheck\check_en.aut from the resource store to c:\check_en.aut.

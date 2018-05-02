@@ -29,10 +29,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE------------ 
 ```
-C:\PS>Get-SPAppStateSyncLastRunTime
+PS C:\>Get-SPAppStateSyncLastRunTime
 ```
 
-This example returns the latest time the app state update job was invoked
+This example returns the latest time the app state update job was invoked.
 
 ## PARAMETERS
 

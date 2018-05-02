@@ -19,6 +19,29 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 Invoke-TransferAllWhiteboards [[-Token] <AuthenticationResult>] [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Transfer ownership of all Whiteboards owned by a user to another user.
+
+## EXAMPLES
+
+### -------------------------- EXAMPLE 1 --------------------------
+
+```
+PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhatIf
+```
+
+Check how many Whiteboards will be transferred without transferring them.
+
+### -------------------------- EXAMPLE 2 --------------------------
+
+```
+PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
+```
+
+Transfer (and prompt before performing any write actions).
+
+
 ## PARAMETERS
 
 ### -Token
@@ -32,6 +55,7 @@ Position:                    1
 Default value:               None               
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -OldOwnerId
@@ -45,6 +69,7 @@ Position:                    3
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -NewOwnerId
@@ -58,6 +83,7 @@ Position:                    4
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -WhatIf
@@ -69,6 +95,7 @@ Position:                    named
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -Confirm [<SwitchParameter>]
@@ -80,22 +107,17 @@ Position:                    named
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
-## EXAMPLES
+## INPUTS
 
-### -------------------------- EXAMPLE 1 --------------------------
+### None
 
-```powershell
-PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhatIf
-```
+## OUTPUTS
 
-Check how many Whiteboards will be transferred without transferring them.
+### System.Object
 
-### -------------------------- EXAMPLE 2 --------------------------
+## NOTES
 
-```powershell
-PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
-```
-
-Transfer (and prompt before performing any write actions).
+## RELATED LINKS

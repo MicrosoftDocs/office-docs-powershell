@@ -31,10 +31,24 @@ Returns all Whiteboards that a specific user has access to. This includes (but i
 Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
+Gets one or more Whiteboards from the Microsoft Whiteboard service and returns them as objects.
+
+## EXAMPLES
+
+### -------------------------- EXAMPLE 1 --------------------------
+
+```
+PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
+```
+
+Get all of a user's Whiteboards.
+
+
 ## PARAMETERS
 
 ### -Token
-
 The Azure AD bearer token corresponding to the specified credentials. If unspecified, a new token will be generated.
 
 ```yaml
@@ -44,11 +58,11 @@ Position:                    named
 Default value:               None               
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -UserId
-
-(Optional) The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned.
+Optional. The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned. 
 
 ```yaml
 Type:                        Guid
@@ -57,11 +71,12 @@ Position:                    named
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
-        
+
 ### -WhiteboardId
 
-(Optional) The ID of a specific Whiteboard.
+Optional. The ID of a specific Whiteboard.
         
 ```yaml
 Type:                        Guid
@@ -70,14 +85,17 @@ Position:                    named
 Default value:               None       
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
-## EXAMPLES
+## INPUTS
 
-### -------------------------- EXAMPLE 1 --------------------------
+### None
 
-```powershell
-PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
-```
+## OUTPUTS
 
-Get all of a user's Whiteboards.
+### System.Object
+
+## NOTES
+
+## RELATED LINKS

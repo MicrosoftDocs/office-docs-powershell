@@ -8,7 +8,7 @@ schema: 2.0.0
 ---
 
 # Set-WhiteboardOwner
-    
+
 ## SYNOPSIS
 
 Sets the owner for a Whiteboard.
@@ -18,6 +18,20 @@ Sets the owner for a Whiteboard.
 ```powershell
 Set-WhiteboardOwner [[-Token] <AuthenticationResult>] [-WhiteboardId] <Guid> [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+## DESCRIPTION
+
+Sets the owner for a Whiteboard.
+
+## EXAMPLES
+
+### -------------------------- EXAMPLE 1 --------------------------
+
+```
+PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
+```
+
+Move a Whiteboard from one user to another.
 
 ## PARAMETERS
 
@@ -32,6 +46,7 @@ Position:                    1
 Default value:               None               
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -WhiteboardId
@@ -45,6 +60,7 @@ Position:                    2
 Default value:               None       
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -OldOwnerId
@@ -58,6 +74,7 @@ Position:                    3
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -NewOwnerId
@@ -71,6 +88,7 @@ Position:                    4
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -WhatIf
@@ -82,6 +100,7 @@ Position:                    named
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
 ### -Confirm [<SwitchParameter>]
@@ -93,14 +112,17 @@ Position:                    named
 Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
 ```
 
-## EXAMPLES
+## INPUTS
 
-### -------------------------- EXAMPLE 1 --------------------------
+### None
 
-```powershell
-PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
-```
+## OUTPUTS
 
-Move a Whiteboard from one user to another.
+### System.Object
+
+## NOTES
+
+## RELATED LINKS

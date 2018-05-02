@@ -29,7 +29,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-HoldCompliancePolicy -Identity "Regulation 123 Compliance"
+Remove-RetentionCompliancePolicy -Identity "Regulation 123 Compliance"
 ```
 
 This example removes the retention policy named "Regulation 123 Compliance".
@@ -37,7 +37,7 @@ This example removes the retention policy named "Regulation 123 Compliance".
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the retention policy to remove. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the retention policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 

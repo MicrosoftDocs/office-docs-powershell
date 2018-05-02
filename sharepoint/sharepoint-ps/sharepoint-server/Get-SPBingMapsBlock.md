@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE----------- 
 ```
-C:\PS>Get-SPBingMapsBlock
+PS C:\>Get-SPBingMapsBlock
 ```
 
 This example returns an object, and BlockBingMapsInAllLocales property will return True or False on whether Bing Maps are blocked in all locales.

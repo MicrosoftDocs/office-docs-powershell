@@ -32,7 +32,7 @@ New-SPAccessServicesApplication -ApplicationPool <SPIisWebServiceApplicationPool
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates an Access Services Service Application.
 
 ## EXAMPLES
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Encrypt
-{{Fill Encrypt Description}}
+Specifies to use SSL encryption between Access Services and the SQL Server hosting Access Services databases.
 
 ```yaml
 Type: Boolean

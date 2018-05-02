@@ -27,26 +27,26 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1----------------- 
 ```
-C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication ExampleSearchServiceApplication 
-$crawlRule = Get-SPEnterpriseSearchCrawlRule -SearchApplication  $searchApp -Identity http://example
-$crawlRule | Set-SPEnterpriseSearchCrawlRule -Type InclusionRule
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application' 
+PS C:\>Get-SPEnterpriseSearchCrawlRule -SearchApplication  $ssa -Identity http://webAppUrl
 ```
 
-This example uses the Get-SPEnterpriseSearchCrawlRule cmdlet to retrieve a crawl rule in order to change its type from ExclusionRule to InclusionRule.
+This example uses the `Get-SPEnterpriseSearchCrawlRule` cmdlet to retrieve a crawl rule.
 
 ### ---------------EXAMPLE 2--------------- 
 ```
-C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication MySearchServiceApp Get-SPEnterpriseSearchCrawlRule -SearchApplication $searchApp | where 
-{$_.Path -like "*example*"}
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
+PS C:\>Get-SPEnterpriseSearchCrawlRule -SearchApplication $searchApp | ?{$_.Path -like '*example*'}
 ```
 
-This example returns a list of crawl rules with paths that contain the word example from the search service application named, MySearchServiceApp.
+This example returns a list of crawl rules with paths that contain the word example from the search service application named 'Search Service Application'.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the search crawl rule path.
-A valid URL, such as "http://server_name", or an instance of a valid CrawlRule object
+
+A valid URL, such as "http://webAppUrl", or an instance of a valid CrawlRule object
 
 ```yaml
 Type: CrawlRulePipeBind
@@ -63,6 +63,7 @@ Accept wildcard characters: False
 
 ### -SearchApplication
 Specifies the search application that contains the crawl rule.
+
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object
 
 ```yaml
@@ -79,13 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
