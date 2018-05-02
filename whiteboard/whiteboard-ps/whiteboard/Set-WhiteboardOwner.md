@@ -15,7 +15,7 @@ Sets the owner for a Whiteboard.
 
 ## SYNTAX
 
-```
+```powershell
 Set-WhiteboardOwner [[-Token] <AuthenticationResult>] [-WhiteboardId] <Guid> [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -99,7 +99,7 @@ Accept wildcard characters:  false
 
 ### -------------------------- EXAMPLE 1 --------------------------
 
-```
+```powershell
 PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
 ```
 

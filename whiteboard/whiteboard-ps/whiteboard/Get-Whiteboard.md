@@ -15,9 +15,19 @@ Gets one or more Whiteboards from the Microsoft Whiteboard service and returns t
 
 ## SYNTAX
 
-```
-Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
+### Get a specific Whiteboard
 
+Returns a single Whiteboard for a specific user.
+
+```powershell
+Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
+```
+
+### Get all Whiteboards for a user
+
+Returns all Whiteboards that a specific user has access to. This includes (but is not limited to) Whiteboards that they own.
+ 
+```powershell
 Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> [<CommonParameters>]
 ```
 
@@ -66,7 +76,7 @@ Accept wildcard characters:  false
 
 ### -------------------------- EXAMPLE 1 --------------------------
 
-```
+```powershell
 PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
 ```
 

@@ -15,7 +15,7 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 
 ## SYNTAX
 
-```
+```powershell
 Invoke-TransferAllWhiteboards [[-Token] <AuthenticationResult>] [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -86,7 +86,7 @@ Accept wildcard characters:  false
 
 ### -------------------------- EXAMPLE 1 --------------------------
 
-```
+```powershell
 PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhatIf
 ```
 
@@ -94,7 +94,7 @@ Check how many Whiteboards will be transferred without transferring them.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 
-```
+```powershell
 PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
 ```
 
