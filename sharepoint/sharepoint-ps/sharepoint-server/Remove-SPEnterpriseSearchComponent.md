@@ -29,9 +29,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
-Remove-SPEnterpriseSearchComponent -SearchTopology $topology -Identity c1642176-b9ae-4096-834c-080da5fba90e
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
+PS C:\>Remove-SPEnterpriseSearchComponent -SearchTopology $topology -Identity c1642176-b9ae-4096-834c-080da5fba90e
 ```
 
 This example removes the search component with identity c1642176-b9ae-4096-834c-080da5fba90e from the search topology with identity 10fa59cb-4b32-4fe6-8f8d-065388df201e from the default search application.
