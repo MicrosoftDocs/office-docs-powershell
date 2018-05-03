@@ -19,6 +19,9 @@ Remove-SPOUserProfile -LoginName <String> [<CommonParameters>]
 ## DESCRIPTION
 Can be used to remove the SharePoint user profile from the tenant.
 
+> [!NOTE]
+> The User must be first be deleted from AAD before the user profile can be deleted. You can use the Azure AD cmdlet Remove-AzureADUser for this action
+
 ## EXAMPLES
 
 ###   ------------ Example 1 --------------------

@@ -15,16 +15,21 @@ Gets one or more Whiteboards from the Microsoft Whiteboard service and returns t
 
 ## SYNTAX
 
-```
-Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
+### Get a specific Whiteboard
 
+```powershell
+Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
+```
+
+### Get all Whiteboards for a user
+
+```powershell
 Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 Gets one or more Whiteboards from the Microsoft Whiteboard service and returns them as objects.
-
 
 ## EXAMPLES
 

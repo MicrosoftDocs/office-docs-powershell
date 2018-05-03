@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 Restore-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/arecycledsite
 ```
-This example restores a SharePoint Online deleted site collection named HYPERLINK "https://contoso.sharepoint.com/sites/arecycledsite" https://contoso.sharepoint.com/sites/arecycledsite from the Recycle Bin.
+This example restores a SharePoint Online deleted site collection named "https://contoso.sharepoint.com/sites/arecycledsite" from the Recycle Bin.
 
 
 ## PARAMETERS

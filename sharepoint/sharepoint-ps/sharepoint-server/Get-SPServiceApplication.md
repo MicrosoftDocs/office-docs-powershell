@@ -28,12 +28,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE---------------------- 
+### ------------------EXAMPLE 1---------------------- 
 ```
-C:\PS>Get-SPServiceApplication
+PS C:\>Get-SPServiceApplication
 ```
 
 This example returns all service applications in the farm.
+
+### ------------------EXAMPLE 2---------------------- 
+```
+PS C:\>Get-SPServiceApplication -Identity e2c2be70-6382-4ce7-8a44-ae7dadff5597
+```
+
+This example returns the service application that has the Identity "e2c2be70-6382-4ce7-8a44-ae7dadff5597".
+
+### ------------------EXAMPLE 3---------------------- 
+```
+PS C:\>Get-SPServiceApplication -Name AccountingServiceApp
+```
+
+This example returns the service application that has the friendly name "AccountingServiceApp".
+
+You can use either the Identity or the Name parameter but if you use both, the command will process the Identity first and ignore the Name.
 
 ## PARAMETERS
 
@@ -76,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the friendly name of the new usage application.The type must be a valid name of a usage application; for example, UsageApplication1.
 
 ```yaml
 Type: String

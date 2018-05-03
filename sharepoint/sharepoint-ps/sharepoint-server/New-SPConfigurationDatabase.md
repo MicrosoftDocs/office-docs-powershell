@@ -252,7 +252,7 @@ Specifies the Server Role. Valid options for all versions of SharePoint Server 2
 `Custom`, `SingleServerFarm`, `Application`, `WebFrontEnd`, `DistributedCache`, `Search`
 
 With the addition of Feature Pack 1, new options include:
-`ApplicationWithSearch`, `WebApplicationWithDistributedCache`
+`ApplicationWithSearch`, `WebFrontEndWithDistributedCache `
 
 ```yaml
 Type: SPServerRole
