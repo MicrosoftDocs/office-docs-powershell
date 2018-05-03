@@ -72,27 +72,27 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1--------------------- 
 ```
-C:\PS>Get-SPSite 'http://<site name>' | Get-SPWeb -Limit All | Select Title
+PS C:\>Get-SPSite 'http://<site name>' | Get-SPWeb -Limit All | Select Title
 ```
 
 This example gets the collection of subweb titles in site collection at http://\<site name\>.
 
 ### ------------------EXAMPLE 2--------------------- 
 ```
-C:\PS>Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
+PS C:\>Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
 ```
 
 This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
 
 ### ------------------EXAMPLE 3--------------------- 
 ```
-C:\PS>Start-SPAssignment -Global
+PS C:\>Start-SPAssignment -Global
 
-C:\PS>$s = Get-SPSite -Identity http://<MyApp>/Sites/Site1
+PS C:\>$s = Get-SPSite -Identity http://<MyApp>/Sites/Site1
 
-C:\PS>$s.Url
+PS C:\>$s.Url
 
-C:\PS>Stop-SPAssignment -Global
+PS C:\>Stop-SPAssignment -Global
 ```
 
 This example gets the sites specified by the Identity parameter and inserts the results in the variable s
@@ -103,11 +103,9 @@ Be careful not to run a Get-SPSite command that returns many results while globa
 
 ### ------------------EXAMPLE 4--------------------- 
 ```
-C:\PS>$GC = Start-SPAssignment
-
-C:\PS>$Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
-
-C:\PS>Stop-SPAssignment $GC
+PS C:\>$GC = Start-SPAssignment
+PS C:\>$Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
+PS C:\>Stop-SPAssignment $GC
 ```
 
 This example gets the first 50 sites owned by user DOMAIN\JDow by using a server-side query, and assigns them to a local variable.
@@ -116,14 +114,14 @@ This example uses advanced assignment collection methods.
 
 ### ------------------EXAMPLE 5--------------------- 
 ```
-C:\PS>Get-SPWebApplication http://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
+PS C:\>Get-SPWebApplication http://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
 ```
 
 This example shows a command that returns the sum of the disk space usage for all sites in a given web application.
 
 ### ------------------EXAMPLE 6--------------------- 
 ```
-C:\PS>Get-SPSite -Identity "http://localserver/(my|personal)/sites" -Regex
+PS C:\>Get-SPSite -Identity "http://localserver/(my|personal)/sites" -Regex
 ```
 
 This example returns all sites that match the given regular expression.
@@ -132,21 +130,21 @@ The Quotes on the Identity parameter are required when the Regex parameter is us
 
 ### ------------------EXAMPLE 7--------------------- 
 ```
-C:\PS>Get-SPSite http://<site name>/sites/teams/* -Limit 100
+PS C:\>Get-SPSite http://<site name>/sites/teams/* -Limit 100
 ```
 
 This example gets up to 100 of the sites under the URL http://sitename/sites/teams.
 
 ### ------------------EXAMPLE 8--------------------- 
 ```
-C:\PS>Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
+PS C:\>Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
 ```
 
 This example gets the amount of storage used by a site collection, by using the storage field of the .UsageInfo property.
 
 ### ------------------EXAMPLE 9--------------------- 
 ```
-C:\PS>Get-SPSite -Limit all -CompatibilityLevel 14
+PS C:\>Get-SPSite -Limit all -CompatibilityLevel 14
 ```
 
 This example returns all SharePoint Server mode site collections.
@@ -208,13 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -357,7 +351,9 @@ Accept wildcard characters: False
 ```
 
 ### -NeedsB2BUpgrade
-{{Fill NeedsB2BUpgrade Description}}
+Specifies whether the site needs to be upgraded.
+
+The valid values are True and False.
 
 ```yaml
 Type: SwitchParameter
