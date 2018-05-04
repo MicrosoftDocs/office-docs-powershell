@@ -15,16 +15,21 @@ Gets one or more Whiteboards from the Microsoft Whiteboard service and returns t
 
 ## SYNTAX
 
-```
-Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
+### Get a specific Whiteboard
 
+```powershell
+Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
+```
+
+### Get all Whiteboards for a user
+
+```powershell
 Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 Gets one or more Whiteboards from the Microsoft Whiteboard service and returns them as objects.
-
 
 ## EXAMPLES
 
@@ -50,21 +55,6 @@ Default value:               None
 Accept pipeline input:       false
 Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
-```
-
-### -MemberId
-Remove this param. just a schema test.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
 ```
 
 ### -UserId

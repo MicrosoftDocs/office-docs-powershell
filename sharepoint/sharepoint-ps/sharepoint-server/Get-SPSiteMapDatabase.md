@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPSiteMapDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use
 
 ## SYNTAX
 
@@ -18,21 +18,21 @@ Get-SPSiteMapDatabase [-AssignmentCollection <SPAssignmentCollection>] [-Confirm
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Do not use
 ```
 
-{{ Add example description here }}
+Do not use
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use
 
 ```yaml
 Type: SPAssignmentCollection
