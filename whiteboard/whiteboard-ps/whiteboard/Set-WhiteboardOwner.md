@@ -8,14 +8,14 @@ schema: 2.0.0
 ---
 
 # Set-WhiteboardOwner
-    
+
 ## SYNOPSIS
 
 Sets the owner for a Whiteboard.
 
 ## SYNTAX
 
-```
+```powershell
 Set-WhiteboardOwner [[-Token] <AuthenticationResult>] [-WhiteboardId] <Guid> [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -114,7 +114,6 @@ Accept pipeline input:       false
 Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
 ```
-
 
 ## INPUTS
 

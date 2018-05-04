@@ -273,7 +273,7 @@ Accept wildcard characters: False
 
 ### -Path
 Specifies the physical directory for the new Web application in the virtual directories folder.
-The type is a valid path, in the form C:\Inutepub\wwwroot\MyWebApplication.
+The type is a valid path, in the form C:\Inetpub\wwwroot\MyWebApplication.
 If no value is specified, the value %wwwroot%\wss\VirtualDirectories\\\<portnumber\> is applied.
 
 ```yaml

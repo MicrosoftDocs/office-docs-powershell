@@ -46,8 +46,6 @@ You can use the Search-Mailbox cmdlet to search messages in a specified mailbox 
 
 - Delete messages from the source mailbox. You have to be assigned the Mailbox Import Export management role to delete messages.
 
-- Copy messages from the source mailbox and delete them from the target mailbox.
-
 - Perform single item recovery to recover items from a user's Recoverable Items folder.
 
 - Clean up the Recoverable Items folder for a mailbox when it has reached the Recoverable Items hard quota.
