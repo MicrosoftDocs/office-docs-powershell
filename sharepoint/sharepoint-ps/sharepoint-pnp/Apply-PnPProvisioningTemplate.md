@@ -264,8 +264,6 @@ Accept pipeline input: False
 ### -ProvisionFieldsToSubWebs
 If set fields will be provisioned if the target web is a subweb.
 
-Only applicable to: SharePoint Online, SharePoint Server 2013
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

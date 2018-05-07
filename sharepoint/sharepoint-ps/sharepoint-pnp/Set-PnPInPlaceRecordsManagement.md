@@ -17,20 +17,6 @@ Set-PnPInPlaceRecordsManagement -Enabled <Boolean>
                                 [-Connection <SPOnlineConnection>]
 ```
 
-### On
-```powershell
-Set-PnPInPlaceRecordsManagement -On [<SwitchParameter>]
-                                [-Web <WebPipeBind>]
-                                [-Connection <SPOnlineConnection>]
-```
-
-### Off
-```powershell
-Set-PnPInPlaceRecordsManagement -Off [<SwitchParameter>]
-                                [-Web <WebPipeBind>]
-                                [-Connection <SPOnlineConnection>]
-```
-
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
@@ -42,21 +28,7 @@ Activates In Place Records Management
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Set-PnPInPlaceRecordsManagement -On
-```
-
-Activates In Place Records Management
-
-### ------------------EXAMPLE 3------------------
-```powershell
 Set-PnPInPlaceRecordsManagement -Enabled $false
-```
-
-Deactivates In Place Records Management
-
-### ------------------EXAMPLE 4------------------
-```powershell
-Set-PnPInPlaceRecordsManagement -Off
 ```
 
 Deactivates In Place Records Management
@@ -66,42 +38,12 @@ Deactivates In Place Records Management
 ### -Enabled
 
 
-Only applicable to: SharePoint Online, SharePoint Server 2013
-
 ```yaml
 Type: Boolean
 Parameter Sets: Enable or Disable
 
 Required: True
 Position: Named
-Accept pipeline input: False
-```
-
-### -Off
-Turn records management off
-
-Only applicable to: SharePoint Server 2016
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Off
-
-Required: True
-Position: 0
-Accept pipeline input: False
-```
-
-### -On
-Turn records management on
-
-Only applicable to: SharePoint Server 2016
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: On
-
-Required: True
-Position: 0
 Accept pipeline input: False
 ```
 
