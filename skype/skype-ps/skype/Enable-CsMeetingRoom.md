@@ -14,6 +14,8 @@ To enable a meeting room you must first create an Active Directory user account 
 Note that, although meeting room objects are based on user accounts, these objects will not show up when you run the Get-CsUser cmdlet.
 This cmdlet was introduced in Lync Server 2013.
 
+The process for creating and updating meeting rooms differs depending on your deployment of Skype for Business Online and Skype for Business Server.  Make sure you are following the guidance here to set up your meeting rooms properly: https://docs.microsoft.com/en-us/skypeforbusiness/deploy/deploy-clients/with-office-365
+
 
 ## SYNTAX
 
@@ -37,6 +39,8 @@ In order to manage these new endpoint devices you must, among other things, crea
 Note that, for Skype for Business Server, there are no cmdlets for creating or removing meeting rooms.
 Instead, you use the Enable-CsMeetingRoom cmdlet to enable meeting rooms and the Disable-CsMeetingRoom cmdlet to disable meeting rooms.
 The resource account must already exist in order for you to enable the meeting room, and disabling a meeting room only removes that room from your collection of meeting rooms; it does not delete the resource mailbox account.
+
+The process for creating and updating meeting rooms differs depending on your deployment of Skype for Business Online and Skype for Business Server.  Make sure you are following the guidance here to set up your meeting rooms properly: https://docs.microsoft.com/en-us/skypeforbusiness/deploy/deploy-clients/with-office-365
 
 The functions carried out by the Enable-CsMeetingRoom cmdlet are not available in the Skype for Business Server Control Panel.
 
