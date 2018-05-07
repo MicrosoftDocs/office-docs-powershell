@@ -15,8 +15,7 @@ Use the Set-MailPublicFolder cmdlet to configure the mail-related settings of ma
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
-#### Note:
-Be aware that settings that are made on the public folders mailbox might interfere with existing settings on the public folder that is contained in the mailbox (MailPublicFolder).
+**NOTE:** Be aware that settings that are made on the public folders mailbox might interfere with existing settings on the public folder that is contained in the mailbox (MailPublicFolder).
 
 ## SYNTAX
 
