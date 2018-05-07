@@ -28,7 +28,7 @@ Gets statistics on the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Measure-PnPList $web -Recursive
+Measure-PnPWeb -Recursive
 ```
 
 Gets statistics on the chosen including all sub webs
