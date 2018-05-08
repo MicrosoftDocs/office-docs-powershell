@@ -1,3 +1,7 @@
+---
+localization_priority: Normal
+---
+
 #Microsoft Teams cmdlet reference
 
 Welcome to the Microsoft Teams PowerShell cmdlet help references. The Microsoft Teams cmdlets provide the command line interface for service administration and management.

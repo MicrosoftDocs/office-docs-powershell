@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPService
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets a service in the farm.
 
 ## SYNTAX
 
@@ -18,21 +18,21 @@ Get-SPService [[-Identity] <SPServicePipeBind>] [-All] [-AssignmentCollection <S
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-SPService cmdlet gets a service in the farm.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Get-SPService -Identity 'Microsoft SharePoint Server Diagnostics Service'
 ```
 
-{{ Add example description here }}
+This example gets the Microsoft SharePoint Server Diagnostics Service in the farm.
 
 ## PARAMETERS
 
 ### -All
-{{Fill All Description}}
+Specifies all services in the farm.
 
 ```yaml
 Type: SwitchParameter
@@ -48,8 +48,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
@@ -64,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the name of the service to get.
 
 ```yaml
 Type: SPServicePipeBind
