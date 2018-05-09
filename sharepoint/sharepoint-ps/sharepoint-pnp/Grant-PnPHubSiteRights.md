@@ -11,38 +11,58 @@ Retrieve all or a specific hubsite.
 ## SYNTAX 
 
 ```powershell
-Grant-PnPHubSiteRights [-Connection <SPOnlineConnection>]
+Grant-PnPHubSiteRights -Identity <HubSitePipeBind>
+                          -Principals <String[]>
+                          -Rights <SPOHubSiteUserRights>
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPStorageEntity
+Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com","myotheruser@mydomain.com" -Rights Join 
 ```
 
-Returns all site storage entities/farm properties
+This example shows how to grant right to myuser and myotheruser to associate their sites with hubsite.
 
-### ------------------EXAMPLE 2------------------
-```powershell
-Get-PnPTenantSite -Key MyKey
-```
-
-Returns the storage entity/farm property with the given key.
 
 ## PARAMETERS
 
-### -Connection
-Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+### -Identity
+URL of the hub site.
 
 ```yaml
-Type: SPOnlineConnection
+Type: HubSitePipeBind
 Parameter Sets: (All)
 
-Required: False
+Required: True
 Position: Named
 Accept pipeline input: False
 ```
+
+### -Principals
+One or more principals to add permissions for.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+### -Rights
+Always set to the value Join.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Accept pipeline input: False
+```
+
 
 ## RELATED LINKS
 
