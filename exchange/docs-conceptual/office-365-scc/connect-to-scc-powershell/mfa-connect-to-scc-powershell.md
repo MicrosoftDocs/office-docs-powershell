@@ -2,7 +2,7 @@
 title: "Connect to Office 365 Security &amp; Compliance Center PowerShell using multi-factor authentication"
 ms.author: chrisda
 author: chrisda
-ms.date: 12/13/2017
+ms.date: 5/9/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-security-and-compliance
@@ -106,4 +106,8 @@ If you receive errors, check the following requirements:
     
 - TCP port 80 traffic needs to be open between your local computer and Office 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
     
+- The **Connect-IPPSSession** command (Step 2) might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
 
+   `The request for the Windows Remote Shell with ShellId <ID> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.`
+
+   To fix the issue, use an SNAT pool that contains a single IP address, or force the use of a specific IP address for connections to the Security & Compliance PowerShell endpoint.
