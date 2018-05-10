@@ -3,7 +3,7 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: microsoft.online.sharepoint.powershell
 online version:
 applicable: SharePoint Online
-title: Export-SPOUserInfo
+title: Export-SPOQueryLogs
 schema: 2.0.0
 ---
 
@@ -16,11 +16,7 @@ Export query logs for a user in an Office 365 tenant.
 ## SYNTAX
 
 ```
-Export-SPOQueryLogs -LoginName <String> [-StartTime <DateTime>] [-OutputFolder <String>] [<CommonParameters>]
-```
-
-```
-Export-SPOUserInfo -LoginName <String> -Site <SpoSitePipeBind> -OutputFolder <String> [<CommonParameters>]
+Export-SPOQueryLogs [-StartTime <DateTime>] -LoginName <String> -OutputFolder <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,22 +31,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ###   ------------ Example 1 --------------------
 ```
-Export-SPOUserInfo -LoginName joe.healy@contoso.com -site https://contoso.sharepoint.com/sites/sc1 -OutputFolder "C:\users\admin\exportfolder"
+Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com
 ```
-Example 1 exports a user data who has the e-mail address joe.healy@contoso.com from the site collection https://contoso.sharepoint.com/sites/sc1 to folder C:\users\admin\exportfolder.
+Example 1 exports the query log for a user who has the e-mail address user1@contoso.harepoint.com to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the current working folder.
 
 
 ###   ------------ Example 2 --------------------
 ```
-$sites = Get-SPOSite -IncludePersonalSite $true
-$user = "joe.healy@contoso.com"
-foreach ($site in $sites)
-{
-Export-SPOUserInfo -LoginName $user -site $site.Url -OutputFolder
-"C:\users\admin\exportfolder"
-}
+Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com -StartTime “2018-10-21” -OutputFolder “c:\users\contosoadmin\Documents”
 ```
-Example 2 exports user data who has email address joe.healy@contoso.com from all site collections to folder C:\users\admin\exportfolder.
+Example 2 exports the query log from the starting time 21. October 2018, for a user who has the e-mail address user1@contoso.sharepoint.com, to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the folder c:\users\contosoadmin\Documents.
 
 ## PARAMETERS
 
@@ -70,24 +60,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Site
-Specifies the URL of the site collection to which you want to export the user.
-
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OutputFolder
-Target folder where teh CSV file is generated.
+Target folder where the CSV file is generated.
 
 ```yaml
 Type: String
@@ -103,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-{{Fill StartTime Description}}
+Specifies from which point of time to export the logs from. Use the date format YYYY-MM-DD.
 
 ```yaml
 Type: DateTime
@@ -138,12 +112,3 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 [Introduction to the SharePoint Online management shell]()
 
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
-
-[New-SPOSiteGroup](New-SPOSiteGroup.md)
-
-[Get-SPOUser](Get-SPOUser.md)
-
-[Set-SPOUser](Set-SPOUser.md)
-
-[Remove-SPOUser](Remove-SPOUser.md)
-
