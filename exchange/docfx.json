@@ -15,12 +15,6 @@
           "ThirdPartyNotices"]
       },
       {
-         "files": ["toc.yml"],
-        "src": "docs-conceptual",
-        "version": "exchserver-ps-2016",
-        "dest": "exchange/exchange-ps"
-      },
-      {
         "files": [
             "**/*.yml",
             "**/*.md"
@@ -67,12 +61,6 @@
             "docs-conceptual/**"
         ],
         "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "exchange-ps",
-      "version": "exchserver-ps-2016",
-      "dest": "module/exchange-ps"
     }
     ],
     "resource": [
@@ -123,16 +111,16 @@
     ],
     "versions": {
       "exchserver-ps-2016": {
-        "dest": "exchange-ps"
+        "dest": "exchserver-ps-2016"
       },
       "exchserver-ps-2013": {
-        "dest": "exchange-ps"
+        "dest": "exchserver-ps-2013"
       },
       "eop-ps": {
-        "dest": "exchange-ps"
+        "dest": "eop-ps"
       },
       "exchonline-ps": {
-        "dest": "exchange-ps"
+        "dest": "exchonline-ps"
       }
     },
     "overwrite": [],
