@@ -3,37 +3,31 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Add-PnPSiteCollectionAppCatalog
+# Enable-PnPTenantServicePrincipal
 
 ## SYNOPSIS
-Adds a Site Collection scoped App Catalog to a site
+Enables the current tenant's "SharePoint Online Client" service principal.
 
 ## SYNTAX 
 
 ```powershell
-Add-PnPSiteCollectionAppCatalog -Site <SitePipeBind>
-                                [-Connection <SPOnlineConnection>]
+Enable-PnPTenantServicePrincipal [-Force [<SwitchParameter>]]
+                                 [-Connection <SPOnlineConnection>]
 ```
 
-## EXAMPLES
-
-### ------------------EXAMPLE 1------------------
-```powershell
-Add-PnPSiteCollectionAppCatalog -Site "https://contoso.sharepoint.com/sites/FinanceTeamsite"
-```
-
-This will add a SiteCollection app catalog to the specified site
+## DESCRIPTION
+Enables the current tenant's "SharePoint Online Client" service principal.
 
 ## PARAMETERS
 
-### -Site
-Url of the site to add the app catalog to.
+### -Force
+Specifying the Force parameter will skip the confirmation question.
 
 ```yaml
-Type: SitePipeBind
+Type: SwitchParameter
 Parameter Sets: (All)
 
-Required: True
+Required: False
 Position: Named
 Accept pipeline input: False
 ```

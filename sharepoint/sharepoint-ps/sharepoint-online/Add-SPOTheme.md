@@ -1,4 +1,4 @@
----
+--
 external help file: 
 applicable: SharePoint Online
 title: Add-SPOTheme
@@ -24,7 +24,7 @@ Adding a theme does not apply the theme to any sites. It adds the theme to your 
 In this example, a new theme named `"Custom Cyan"` is created, with color palette settings that are various shades of cyan. Note that the settings are passed as a hash table.
 
 ```powershell
-$themepallette = @{
+$themepalette = @{
   "themePrimary" = "#00ffff";
   "themeLighterAlt" = "#f3fcfc";
   "themeLighter" = "#daffff";
@@ -52,7 +52,7 @@ $themepallette = @{
   "primaryText" = "#333"
  }
 
-Add-SPOTheme -Name "Custom Cyan" -Palette $themepallette -IsInverted $false
+Add-SPOTheme -Name "Custom Cyan" -Palette $themepalette -IsInverted $false
 ```
 
 > [!NOTE]

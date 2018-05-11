@@ -242,7 +242,7 @@ Single line of text: -Values @{"Title" = "Title New"}
 
 Multiple lines of text: -Values @{"MultiText" = "New text\n\nMore text"}
 
-Rich text: -Values @{"MultiText" = "<strong>New</strong> text"}
+Rich text: -Values @{"MultiText" = "&lt;strong&gt;New&lt;/strong&gt; text"}
 
 Choice: -Values @{"Choice" = "Value 1"}
 

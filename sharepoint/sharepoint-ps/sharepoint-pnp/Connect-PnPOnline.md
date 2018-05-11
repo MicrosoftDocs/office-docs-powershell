@@ -17,6 +17,7 @@ Connect-PnPOnline -Url <String>
                   [-Credentials <CredentialPipeBind>]
                   [-CurrentCredentials [<SwitchParameter>]]
                   [-UseAdfs [<SwitchParameter>]]
+                  [-LoginProviderName <String>]
                   [-MinimalHealthScore <Int>]
                   [-RetryCount <Int>]
                   [-RetryWait <Int>]
@@ -28,6 +29,7 @@ Connect-PnPOnline -Url <String>
                   [-TenantAdminUrl <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### Access Token
@@ -42,17 +44,20 @@ Connect-PnPOnline -AccessToken <String>
                   [-CreateDrive [<SwitchParameter>]]
                   [-DriveName <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### PnP Office 365 Management Shell to the Microsoft Graph
 ```powershell
 Connect-PnPOnline -Graph [<SwitchParameter>]
                   [-LaunchBrowser [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### Microsoft Graph using Scopes
 ```powershell
 Connect-PnPOnline -Scopes <String[]>
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### WebLogin
@@ -70,6 +75,7 @@ Connect-PnPOnline -Url <String>
                   [-TenantAdminUrl <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### SPO Management Shell Credentials
@@ -88,6 +94,7 @@ Connect-PnPOnline -Url <String>
                   [-TenantAdminUrl <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### PnP O365 Management Shell / DeviceLogin
@@ -96,6 +103,7 @@ Connect-PnPOnline -Url <String>
                   -PnPO365ManagementShell [<SwitchParameter>]
                   [-ReturnConnection [<SwitchParameter>]]
                   [-LaunchBrowser [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### Token
@@ -115,6 +123,7 @@ Connect-PnPOnline -Url <String>
                   [-TenantAdminUrl <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### Azure Active Directory
@@ -135,6 +144,7 @@ Connect-PnPOnline -Url <String>
                   [-TenantAdminUrl <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### Microsoft Graph using Azure Active Directory
@@ -142,6 +152,7 @@ Connect-PnPOnline -Url <String>
 Connect-PnPOnline -AppId <String>
                   -AppSecret <String>
                   -AADDomain <String>
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### High Trust using a X509Certificate2 object.
@@ -160,6 +171,7 @@ Connect-PnPOnline -Url <String>
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
                   [-HighTrustCertificateIssuerId <String>]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### App-Only with Azure Active Directory
@@ -181,6 +193,7 @@ Connect-PnPOnline -Url <String>
                   [-TenantAdminUrl <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### High Trust using a certificate from a PFX file.
@@ -200,6 +213,7 @@ Connect-PnPOnline -Url <String>
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
                   [-HighTrustCertificateIssuerId <String>]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ### App-Only with Azure Active Directory using certificate as PEM strings
@@ -221,6 +235,7 @@ Connect-PnPOnline -Url <String>
                   [-TenantAdminUrl <String>]
                   [-SkipTenantAdminCheck [<SwitchParameter>]]
                   [-IgnoreSslErrors [<SwitchParameter>]]
+                  [-NoTelemetry [<SwitchParameter>]]
 ```
 
 ## DESCRIPTION
@@ -274,70 +289,61 @@ This will prompt you for credentials and creates a context for the other PowerSh
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
-Connect-PnPOnline -Url https://yourserver -Credentials (Get-Credential) -CreateDrive
-cd SPO:\\
-dir
-```
-
-This will prompt you for credentials and creates a context for the other PowerShell commands to use. It will also create a SPO:\\ drive you can use to navigate around the site
-
-### ------------------EXAMPLE 8------------------
-```powershell
 Connect-PnPOnline -Url https://yourserver -Credentials (Get-Credential) -AuthenticationMode FormsAuthentication
 ```
 
 This will prompt you for credentials and creates a context for the other PowerShell commands to use. It assumes your server is configured for Forms Based Authentication (FBA)
 
-### ------------------EXAMPLE 9------------------
+### ------------------EXAMPLE 8------------------
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.de -AppId 344b8aab-389c-4e4a-8fa1-4c1ae2c0a60d -AppSecret a3f3faf33f3awf3a3sfs3f3ss3f4f4a3fawfas3ffsrrffssfd -AzureEnvironment Germany
 ```
 
 This will authenticate you to the German Azure environment using the German Azure endpoints for authentication
 
-### ------------------EXAMPLE 10------------------
+### ------------------EXAMPLE 9------------------
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com -SPOManagementShell
 ```
 
 This will authenticate you using the SharePoint Online Management Shell application
 
-### ------------------EXAMPLE 11------------------
+### ------------------EXAMPLE 10------------------
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com -PnPO365ManagementShell
 ```
 
 This will authenticate you using the PnP O365 Management Shell Multi-Tenant application. A browser window will have to be opened where you have to enter a code that is shown in your PowerShell window.
 
-### ------------------EXAMPLE 12------------------
+### ------------------EXAMPLE 11------------------
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com -PnPO365ManagementShell -LaunchBrowser
 ```
 
 This will authenticate you using the PnP O365 Management Shell Multi-Tenant application. A browser window will automatically open and the code you need to enter will be automatically copied to your clipboard.
 
-### ------------------EXAMPLE 13------------------
+### ------------------EXAMPLE 12------------------
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com -AccessToken $myaccesstoken
 ```
 
 This will authenticate you using the provided access token
 
-### ------------------EXAMPLE 14------------------
+### ------------------EXAMPLE 13------------------
 ```powershell
 Connect-PnPOnline -Scopes $arrayOfScopes
 ```
 
 Connects to Azure AD and gets and OAuth 2.0 Access Token to consume the Microsoft Graph API including the declared permission scopes. The available permission scopes are defined at the following URL: https://graph.microsoft.io/en-us/docs/authorization/permission_scopes
 
-### ------------------EXAMPLE 15------------------
+### ------------------EXAMPLE 14------------------
 ```powershell
 Connect-PnPOnline -AppId '<id>' -AppSecret '<secret>' -AADDomain 'contoso.onmicrosoft.com'
 ```
 
 Connects to the Microsoft Graph API using application permissions via an app's declared permission scopes. See https://github.com/SharePoint/PnP-PowerShell/tree/master/Samples/Graph.ConnectUsingAppPermissions for a sample on how to get started.
 
-### ------------------EXAMPLE 16------------------
+### ------------------EXAMPLE 15------------------
 ```powershell
 certutil.exe -csp 'Microsoft Enhanced RSA and AES Cryptographic Provider' -v -p 'password' -importpfx -user c:\HighTrust.pfx NoRoot
 Connect-PnPOnline -Url https://yourserver -ClientId <id> -HighTrustCertificate (Get-Item Cert:\CurrentUser\My\<thumbprint>)
@@ -345,14 +351,14 @@ Connect-PnPOnline -Url https://yourserver -ClientId <id> -HighTrustCertificate (
 
 Connect to an on-premises SharePoint environment using a high trust certificate, stored in the Personal certificate store of the current user.
 
-### ------------------EXAMPLE 17------------------
+### ------------------EXAMPLE 16------------------
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com -ClientId '<id>' -Tenant 'contoso.onmicrosoft.com' -PEMCertificate <PEM string> -PEMPrivateKey <PEM string>
 ```
 
 Connects to SharePoint using app-only tokens via an app's declared permission scopes. See https://github.com/SharePoint/PnP-PowerShell/tree/master/Samples/SharePoint.ConnectUsingAppPermissions for a sample on how to get started.
 
-### ------------------EXAMPLE 18------------------
+### ------------------EXAMPLE 17------------------
 ```powershell
 Connect-PnPOnline -Url https://yourserver -ClientId 763d5e60-b57e-426e-8e87-b7258f7f8188 -HighTrustCertificatePath c:\HighTrust.pfx -HighTrustCertificatePassword 'password' -HighTrustCertificateIssuerId 6b9534d8-c2c1-49d6-9f4b-cd415620bca8
 ```
@@ -648,12 +654,36 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -LoginProviderName
+The name of the ADFS trusted login provider
+
+```yaml
+Type: String
+Parameter Sets: Main
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -MinimalHealthScore
 Specifies a minimal server healthscore before any requests are executed.
 
 ```yaml
 Type: Int
 Parameter Sets: Main, Token, WebLogin, Azure Active Directory, App-Only with Azure Active Directory, App-Only with Azure Active Directory using certificate as PEM strings, SPO Management Shell Credentials, Access Token
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -NoTelemetry
+In order to help to make PnP PowerShell better, we can track anonymous telemetry. We track the version of the cmdlets you are using, which cmdlet you are executing and which version of SharePoint you are connecting to. Use Disable-PnPPowerShellTelemetry to turn this off in general or use the -NoTelemetry switch to turn it off for that session.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 
 Required: False
 Position: Named
