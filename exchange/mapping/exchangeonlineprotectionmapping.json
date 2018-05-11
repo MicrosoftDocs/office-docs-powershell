@@ -1,0 +1,6 @@
+{
+    "Disable-AntiPhishRule": "advanced-threat-protection",
+    "Enable-AntiPhishRule": "advanced-threat-protection",
+    "Get-Mailbox": "mailboxes",
+    "Enable-Mailbox": "mailboxes"
+}

@@ -21,10 +21,52 @@
         "dest": "exchange/exchange-ps"
       },
       {
-      "files": ["**/*.md"],
-      "src": "exchange-ps",
-      "version": "exchange-ps",
-      "dest": "module"
+        "files": [
+            "**/*.yml",
+            "**/*.md"
+        ],
+        "src": "exchange-ps",
+        "version": "exchserver-ps-2016",
+        "exclude": [
+            "docs-conceptual/**"
+        ],
+        "dest": "module"
+    },
+    {
+        "files": [
+            "**/*.yml",
+            "**/*.md"
+        ],
+        "src": "exchange-ps",
+        "version": "exchserver-ps-2013",
+        "exclude": [
+            "docs-conceptual/**"
+        ],
+        "dest": "module"
+    },
+    {
+        "files": [
+            "**/*.yml",
+            "**/*.md"
+        ],
+        "src": "exchange-ps",
+        "version": "eop-ps",
+        "exclude": [
+            "docs-conceptual/**"
+        ],
+        "dest": "module"
+    },
+    {
+        "files": [
+            "**/*.yml",
+            "**/*.md"
+        ],
+        "src": "exchange-ps",
+        "version": "exchonline-ps",
+        "exclude": [
+            "docs-conceptual/**"
+        ],
+        "dest": "module"
     },
     {
       "files": ["toc.yml"],
@@ -39,7 +81,40 @@
           "**/*.png",
           "**/*.jpg"
         ],
-        "version": "exchange-ps",
+        "version": "exchserver-ps-2016",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "exchserver-ps-2013",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "eop-ps",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "exchonline-ps",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -47,8 +122,17 @@
       }
     ],
     "versions": {
-      "exchange-ps": {
+      "exchserver-ps-2016": {
         "dest": "exchange-ps"
+      },
+      "exchserver-ps-2013": {
+        "dest": "exchange-ps"
+      },
+      "eop-ps": {
+        "dest": "exchange-ps"
+      },
+      "exchange-ps": {
+        "dest": "exchonline-ps"
       }
     },
     "overwrite": [],

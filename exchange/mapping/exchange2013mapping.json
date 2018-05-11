@@ -1,0 +1,8 @@
+{
+    "Add-ADPermission": "active-directory",
+    "Get-ADPermission": "active-directory",
+    "Get-AddressList": "email-addresses-and-address-books",
+    "Move-AddressList": "email-addresses-and-address-books",
+    "Get-Mailbox": "mailboxes",
+    "Enable-Mailbox": "mailboxes"
+}
