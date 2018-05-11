@@ -4,7 +4,7 @@
       {
         "files": ["**/*.md"],
         "src": "docs-conceptual",
-        "version": "exchange-ps",
+        "version": "exchserver-ps-2016",
         "dest": "exchange",
         "exclude": [
           "**/obj/**",
@@ -17,7 +17,7 @@
       {
          "files": ["toc.yml"],
         "src": "docs-conceptual",
-        "version": "exchange-ps",
+        "version": "exchserver-ps-2016",
         "dest": "exchange/exchange-ps"
       },
       {
@@ -71,7 +71,7 @@
     {
       "files": ["toc.yml"],
       "src": "exchange-ps",
-      "version": "exchange-ps",
+      "version": "exchserver-ps-2016",
       "dest": "module/exchange-ps"
     }
     ],
@@ -131,8 +131,8 @@
       "eop-ps": {
         "dest": "exchange-ps"
       },
-      "exchange-ps": {
-        "dest": "exchonline-ps"
+      "exchonline-ps": {
+        "dest": "exchange-ps"
       }
     },
     "overwrite": [],
