@@ -102,7 +102,7 @@ Single line of text: -Values @{"TextField" = "Title New"}
 
 Multiple lines of text: -Values @{"MultiTextField" = "New text\n\nMore text"}
 
-Rich text: -Values @{"MultiTextField" = "<strong>New</strong> text"}
+Rich text: -Values @{"MultiTextField" = "&lt;strong&gt;New&lt;/strong&gt; text"}
 
 Choice: -Values @{"ChoiceField" = "Value 1"}
 
@@ -112,7 +112,7 @@ Currency: -Values @{"NumberField" = "10"}
 
 Currency: -Values @{"CurrencyField" = "10"}
 
-Date and Time: -Values @{"DateAndTimeField" = "03/10/2015 14:16"}
+Date and Time: -Values @{"DateAndTimeField" = "03/13/2015 14:16"}
 
 Lookup (id of lookup value): -Values @{"LookupField" = "2"}
 
