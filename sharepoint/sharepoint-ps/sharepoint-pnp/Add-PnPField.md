@@ -59,17 +59,6 @@ Add-PnPField -DisplayName <String>
              [-Connection <SPOnlineConnection>]
 ```
 
-### Add field to Web
-```powershell
-Add-PnPField -DisplayName <String>
-             -InternalName <String>
-             -Type <FieldType>
-             [-Id <GuidPipeBind>]
-             [-Choices <String[]>]
-             [-Web <WebPipeBind>]
-             [-Connection <SPOnlineConnection>]
-```
-
 ## DESCRIPTION
 Adds a field to a list or as a site column
 
@@ -176,8 +165,6 @@ Accept pipeline input: False
 
 ### -Formula
 Specify the formula. Only available if the field type is Calculated
-
-Only applicable to: SharePoint Online, SharePoint Server 2013
 
 ```yaml
 Type: String
