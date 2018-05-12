@@ -15,6 +15,7 @@ Updates a previously uploaded site script.
 
 ```
 Set-SPOSiteScript
+  -Identity <SPOSiteScriptPipeBind>
   -Title <string>
   -Content <string>
   [-Description <string>]
@@ -59,6 +60,22 @@ This example updates a previously created site script. Any site designs referenc
 
 ## PARAMETERS
 
+### -Identity
+
+The id of the site design.
+
+```yaml
+Type: SPOSiteDesignPipeBind
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False  
+```
+
 ### -Title
 
 The display name of the site design.
@@ -68,7 +85,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -84,7 +101,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
