@@ -48,7 +48,7 @@ Type: SPOSiteDesignPipeBind
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
-Required: False 
+Required: True 
 Position: Named
 Default value: None
 Accept pipeline input: False
