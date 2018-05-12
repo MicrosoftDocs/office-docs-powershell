@@ -764,7 +764,7 @@ Aliases:
 Applicable: Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
