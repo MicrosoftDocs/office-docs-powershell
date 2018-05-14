@@ -192,12 +192,14 @@ Accept wildcard characters: False
 
 When you grant TeamsUpgradePolicy to a user, you must also grant the corresponding instance of TeamsInteropPolicy to the user as shown below. Until TeamsInteropPolicy is retired, you must coordinate granting of both TeamsUpgradePolicy and TeamsInteropPolicy:
 
-```yaml
-If you grant an instance of TeamsUpgradePolicy with this value of Mode…: …Then grant this instance of TeamsInteropPolicy
-Islands: DisallowOverrideCallingDefaultChatDefault
-SfBonly, SfBWithTeamsCollab: DisallowOverrideCallingSfbChatSfb
-TeamsOnly: DisallowOverrideCallingTeamsChatTeams
-```
+
+| If you grant an instance of TeamsUpgradePolicy with this value of Mode…| …Then grant this instance of TeamsInteropPolicy |
+| :------------- |:-------------|
+| Islands | DisallowOverrideCallingDefaultChatDefault |
+| SfBonly, SfBWithTeamsCollab | DisallowOverrideCallingSfbChatSfb |
+| TeamsOnly | DisallowOverrideCallingTeamsChatTeams |
+
+
 
 
 	
