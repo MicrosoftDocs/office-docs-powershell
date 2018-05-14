@@ -83,7 +83,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ### ------------------EXAMPLE 1------------------
 ```powershell
 Set-PnPTenantSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
-Set-PnPTenant -NoAcessRedirectUrl 'http://www.contoso.com'
+Set-PnPTenant -NoAccessRedirectUrl 'http://www.contoso.com'
 ```
 
 This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to http://www.contoso.com.

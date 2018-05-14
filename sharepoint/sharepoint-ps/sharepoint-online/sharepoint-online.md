@@ -52,6 +52,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
 {{Manually Enter Enable-SPOTenantServicePrincipal Description Here}}
 
+### [Export-SPOUserInfo](Export-SPOUserInfo.md)
+{{Manually Enter Export-SPOUserInfo Description Here}}
+
 ### [Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)
 {{Manually Enter Get-SPO365LinkSettings Description Here}}
 

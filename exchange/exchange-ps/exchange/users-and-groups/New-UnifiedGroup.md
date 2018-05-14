@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSubscribeNewMembers
-The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Office 365 Groupto conversations and calendar events. You don't need to specify a value with this switch.
+The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Office 365 Group to conversations and calendar events. You don't need to specify a value with this switch.
 
 You need to use this switch with the SubscriptionEnabled switch.
 

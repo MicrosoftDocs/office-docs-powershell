@@ -3,33 +3,33 @@ external help file:
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 schema: 2.0.0
 ---
-# Get-PnPAccessToken
+# Disable-PnPPowerShellTelemetry
 
 ## SYNOPSIS
-Returns the current OAuth Access token
+Disables PnP PowerShell telemetry tracking
 
 ## SYNTAX 
 
 ```powershell
-Get-PnPAccessToken [-Decoded [<SwitchParameter>]]
+Disable-PnPPowerShellTelemetry [-Force [<SwitchParameter>]]
 ```
 
 ## DESCRIPTION
-Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API
+Disables PnP PowerShell telemetry tracking
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPAccessToken
+Disable-PnPPowerShellTelemetry
 ```
 
-Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API
+Will prompt you to confirm to disable telemetry tracking.
 
 ## PARAMETERS
 
-### -Decoded
-Returns the access token in a decoded manner
+### -Force
+Specifying the Force parameter will skip the confirmation question.
 
 ```yaml
 Type: SwitchParameter

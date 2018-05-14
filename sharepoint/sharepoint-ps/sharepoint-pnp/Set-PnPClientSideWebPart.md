@@ -26,7 +26,7 @@ Sets specific client side webpart properties. Notice that the title parameter wi
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Set-PnPClientSideWebPart -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82 -PropertiesJson $myproperties
+Set-PnPClientSideWebPart -Page Home -Identity a2875399-d6ff-43a0-96da-be6ae5875f82 -PropertiesJson $myproperties
 ```
 
 Sets the properties of the client side webpart given in the $myproperties variable.

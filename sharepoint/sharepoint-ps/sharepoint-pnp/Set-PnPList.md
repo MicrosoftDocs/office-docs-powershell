@@ -17,8 +17,12 @@ Set-PnPList -Identity <ListPipeBind>
             [-CopyRoleAssignments [<SwitchParameter>]]
             [-ClearSubscopes [<SwitchParameter>]]
             [-Title <String>]
+            [-Description <String>]
             [-Hidden <Boolean>]
+            [-ForceCheckout <Boolean>]
+            [-ListExperience <ListExperience>]
             [-EnableAttachments <Boolean>]
+            [-EnableFolderCreation <Boolean>]
             [-EnableVersioning <Boolean>]
             [-EnableMinorVersions <Boolean>]
             [-MajorVersions <UInt32>]
@@ -110,6 +114,18 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -Description
+The description of the list
+
+```yaml
+Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -EnableAttachments
 Enable or disable attachments. Set to $true to enable, $false to disable.
 
@@ -124,6 +140,18 @@ Accept pipeline input: False
 
 ### -EnableContentTypes
 Set to $true to enable content types, set to $false to disable content types
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -EnableFolderCreation
+Enable or disable folder creation. Set to $true to enable, $false to disable.
 
 ```yaml
 Type: Boolean
@@ -170,6 +198,18 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -ForceCheckout
+Enable or disable force checkout. Set to $true to enable, $false to disable.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Hidden
 Hide the list from the SharePoint UI. Set to $true to hide, $false to show.
 
@@ -190,6 +230,20 @@ Type: ListPipeBind
 Parameter Sets: (All)
 
 Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -ListExperience
+Set the list experience: Auto, NewExperience or ClassExperience
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: ListExperience
+Parameter Sets: (All)
+
+Required: False
 Position: Named
 Accept pipeline input: False
 ```
