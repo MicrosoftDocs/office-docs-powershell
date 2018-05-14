@@ -29,15 +29,93 @@ IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy. Components that 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: List all instances of TeamsUpgradePolicy
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsTeamsUpgradePolicy
+
+Identity       : Global
+Description    : Users can use either Skype for Business client or Teams client
+Mode           : Legacy
+NotifySfbUsers : False
+Action         : None
+
+Identity       : Tag:NoUpgrade
+Description    : Users can use either Skype for Business client or Teams client
+Mode           : Legacy
+NotifySfbUsers : False
+Action         : None
+
+Identity       : Tag:NotifyForTeams
+Description    : Show notification of pending upgrade in Skype for Business client
+Mode           : Legacy
+NotifySfbUsers : True
+Action         : Notify
+
+Identity       : Tag:UpgradeToTeams
+Description    : Use Teams Only
+Mode           : TeamsOnly
+NotifySfbUsers : False
+Action         : Upgrade
+
+Identity       : Tag:Islands
+Description    : Use either Skype for Business client or Teams client
+Mode           : Islands
+NotifySfbUsers : False
+Action         : None
+
+Identity       : Tag:IslandsWithNotify
+Description    : Use either Skype for Business client or Teams client
+Mode           : Islands
+NotifySfbUsers : True
+Action         : Notify
+
+Identity       : Tag:SfBOnly
+Description    : Use only Skype for Business
+Mode           : SfBOnly
+NotifySfbUsers : False
+Action         : None
+
+Identity       : Tag:SfBOnlyWithNotify
+Description    : Use only Skype for Business
+Mode           : SfBOnly
+NotifySfbUsers : True
+Action         : Notify
+
+Identity       : Tag:SfBWithTeamsCollab
+Description    : Use Skype for Business and use Teams only for group collaboration
+Mode           : SfBWithTeamsCollab
+NotifySfbUsers : False
+Action         : None
+
+Identity       : Tag:SfBWithTeamsCollabWithNotify
+Description    : Use Skype for Business and use Teams only for group collaboration
+Mode           : SfBWithTeamsCollab
+NotifySfbUsers : True
+Action         : Notify
+
 ```
 
 {{ Add example description here }}
 
 ## PARAMETERS
 
+
+
+### -Identity
+If identity parameter is passed, this will return a specific instance. If no identity parameter is specified, the cmdlet returns all instances.
+
+```yaml
+Type: XdsIdentity
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Filter
 {{Fill Filter Description}}
 
@@ -49,22 +127,6 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{Fill Identity Description}}
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
