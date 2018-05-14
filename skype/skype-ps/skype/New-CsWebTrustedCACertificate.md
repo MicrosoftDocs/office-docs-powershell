@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Skype for Business Server 2019
 title: New-CsWebTrustedCACertificate
 schema: 2.0.0
 ---
