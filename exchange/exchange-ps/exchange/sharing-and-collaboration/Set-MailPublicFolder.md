@@ -13,9 +13,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailPublicFolder cmdlet to configure the mail-related settings of mail-enabled public folders. If you want to configure basic settings that aren't mail-related, use the Set-PublicFolder cmdlet.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+NOTE: The settings that you configure on a public folder mailbox might interfere with the existing settings on a public folder within in the mailbox.
 
-**NOTE:** Be aware that settings that are made on the public folders mailbox might interfere with existing settings on the public folder that is contained in the mailbox (MailPublicFolder).
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
