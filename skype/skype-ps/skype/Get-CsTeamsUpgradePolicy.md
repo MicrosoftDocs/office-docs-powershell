@@ -95,7 +95,22 @@ Action         : Notify
 
 ```
 
-{{ Add example description here }}
+List all instances of TeamsUpgradePolicy
+
+
+### Example 2: List the global instance of TeamsUpgradePolicy
+```
+PS C:\> Get-CsTeamsUpgradePolicy -Identity Global
+
+Identity       : Global
+Description    : Users can use either Skype for Business client or Teams client
+Mode           : Legacy
+NotifySfbUsers : False
+Action         : None
+
+```
+
+List the global instance of TeamsUpgradePolicy
 
 ## PARAMETERS
 
