@@ -167,13 +167,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
-The Approve-CsDeviceUpdateRule cmdlet accepts pipelined instances of the device update rule object.
+The `Approve-CsDeviceUpdateRule` cmdlet accepts pipelined instances of the device update rule object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, the Approve-CsDeviceUpdateRule cmdlet approves instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
+Instead, the `Approve-CsDeviceUpdateRule` cmdlet approves instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
 
 ## NOTES
 
