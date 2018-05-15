@@ -12,7 +12,6 @@ Converts exported user data to the data format used by Skype for Business Server
 This cmdlet was introduced in Lync Server 2013.
 
 
-
 ## SYNTAX
 
 ```
@@ -21,15 +20,14 @@ Convert-CsUserData -InputFile <String> -OutputFile <String> -TargetVersion <Conv
 ```
 
 ## DESCRIPTION
-The Convert-CsUserData cmdlet takes data exported by using the Export-CsUserData cmdlet and then converts that data to the user data format used by Skype for Business Server.
-In turn, that enables the Import-CsUserData cmdlet to import that data to the appropriate server version.
+The `Convert-CsUserData` cmdlet takes data exported by using the `Export-CsUserData` cmdlet and then converts that data to the user data format used by Skype for Business Server.
+In turn, that enables the `Import-CsUserData` cmdlet to import that data to the appropriate server version.
 
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Convert-CsUserData"}`
+Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Convert-CsUserData"}
 
-Skype for Business Server Control Panel: The functions carried out by the Convert-CsUserData cmdlet are not available in the Skype for Business Server Control Panel.
-
+Skype for Business Server Control Panel: The functions carried out by the `Convert-CsUserData` cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
@@ -77,11 +75,11 @@ Accept wildcard characters: False
 Full path to the file that will store the converted data.
 If you are outputting the data using the Microsoft Lync Server 2010 format then the output file must use a .XML file extension; for example:
 
-`-OutputFile "C:\Data\ConvertedLync2010Data.xml"`
+-OutputFile "C:\Data\ConvertedLync2010Data.xml"
 
 If you are using the Microsoft Lync Server 2013 Preview format, the output file must use a .ZIP file extension:
 
-`-OutputFile "C:\Data\ConvertedLyncData.zip"`
+-OutputFile "C:\Data\ConvertedLyncData.zip"
 
 
 ```yaml
@@ -121,11 +119,11 @@ Accept wildcard characters: False
 Enables you to convert conference directory data.
 To do this, include the ConfDirectoryFilter parameter and specify the Identity of the conference directory:
 
-`-ConfDirectoryFilter 13`
+-ConfDirectoryFilter 13
 
 You can retrieve conference directory Identities by using this command:
 
-`Get-CsConferenceDirectory | Select-Object Identity, ServiceId`
+Get-CsConferenceDirectory | Select-Object Identity, ServiceId
 
 ```yaml
 Type: String
@@ -161,7 +159,7 @@ Enables you to convert data for a single user.
 That user specified by using his or her SIP address, minus the sip: prefix.
 For example:
 
-`-UserFilter "kenmyer@litwareinc.com"`
+-UserFilter "kenmyer@litwareinc.com"
 
 ```yaml
 Type: String
@@ -183,12 +181,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The Convert-CsUserData cmdlet does not accept pipelined input.
+The `Convert-CsUserData` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-The Convert-CsUserData cmdlet creates either XML or ZIP files, depending on whether the converted data is to be used with Lync Server or with Skype for Business Server.
+The `Convert-CsUserData` cmdlet creates either XML or ZIP files, depending on whether the converted data is to be used with Lync Server or with Skype for Business Server.
 
 ## NOTES
 
