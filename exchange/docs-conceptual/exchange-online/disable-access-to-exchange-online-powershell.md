@@ -80,7 +80,7 @@ $<VariableName> = Get-Content <text file>
 ```
 
 ```
-$<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false
+$<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false}
 ```
 
 This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their email addresses. The text file must contain one email address on each line as follows:
