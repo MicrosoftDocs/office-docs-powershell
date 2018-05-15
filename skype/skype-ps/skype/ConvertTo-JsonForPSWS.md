@@ -21,7 +21,7 @@ ConvertTo-JsonForPSWS [[-InputObject] <Object>] [-Compress] [-Depth <Object>] [-
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -110,4 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [http://go.microsoft.com/fwlink/?LinkID=217032](http://go.microsoft.com/fwlink/?LinkID=217032)
-
