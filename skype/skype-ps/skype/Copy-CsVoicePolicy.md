@@ -8,7 +8,7 @@ schema: 2.0.0
 # Copy-CsVoicePolicy
 
 ## SYNOPSIS
-This cmdlet has been deprecated for use with Lync Server 2013 and Lync Online. Administrators should use the Grant-CsVoicePolicy cmdlet to assign voice policies to Lync Online tenant accounts.
+This cmdlet has been deprecated for use with Lync Server 2013 and Lync Online. Administrators should use the `Grant-CsVoicePolicy` cmdlet to assign voice policies to Lync Online tenant accounts.
 
 ## SYNTAX
 
@@ -17,14 +17,16 @@ This cmdlet has been deprecated for use with Lync Server 2013 and Lync Online. A
 ```
 
 ## DESCRIPTION
-This cmdlet has been deprecated for use with Lync Server 2013 and Lync Online. Administrators should use the Grant-CsVoicePolicy cmdlet to assign voice policies to Lync Online tenant accounts.
+This cmdlet has been deprecated for use with Lync Server 2013 and Lync Online. Administrators should use the `Grant-CsVoicePolicy` cmdlet to assign voice policies to Lync Online tenant accounts.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-
+PS C:\> {{ Add example code here }}
 ```
+
+{{ Add example description here }}
 
 
 ## PARAMETERS

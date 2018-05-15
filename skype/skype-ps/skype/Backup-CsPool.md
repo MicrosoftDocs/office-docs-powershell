@@ -21,16 +21,15 @@ Backup-CsPool -PoolFqdn <Fqdn> [-Category <BackupCategory>] [-Confirm] [-FailedO
 ```
 
 ## DESCRIPTION
-The Backup-CsPool cmdlet enables administrators to copy user data and conference data for a Registrar pool to a specified backup pool.
+The `Backup-CsPool` cmdlet enables administrators to copy user data and conference data for a Registrar pool to a specified backup pool.
 If the primary pool should fail or otherwise become unavailable, users homed on that primary pool can then be "failed over" to the backup pool.
-Those users can then log on to Skype for Business Server via the backup pool, and continue to use that pool until their home pool has been restored.
+Those users can then log on to Skype for Business Server via the backup pool and continue to use that pool until their home pool has been restored.
 
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
 `Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Backup-CsPool"}`
 
 Skype for Business Server Control Panel: The functions carried out by the Backup-CsPool cmdlet are not available in the Skype for Business Server Control Panel.
-
 
 
 ## EXAMPLES
@@ -215,7 +214,7 @@ Accept wildcard characters: False
 
 ### -SteadyState
 When present, backup will not begin until the backup service has reached a steady state.
-A "steady state" occurs when the pool switches to read-only or failover/failback mode, and no longer produces any new data that needs to be backed up.
+A "steady state" occurs when the pool switches to read-only or failover/failback mode and no longer produces any new data that needs to be backed up.
 
 ```yaml
 Type: SwitchParameter
@@ -269,7 +268,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The Backup-CsPool cmdlet does not accept pipelined data.
+The `Backup-CsPool` cmdlet does not accept pipelined data.
 
 ## OUTPUTS
 
