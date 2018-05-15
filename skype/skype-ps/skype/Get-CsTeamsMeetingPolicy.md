@@ -8,53 +8,60 @@ schema: 2.0.0
 # Get-CsTeamsMeetingPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+
+The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
+
+Get-CsTeamsMeetingPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+
+Get-CsTeamsMeetingPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
 
 ## SYNTAX
 
 ```
-Get-CsTeamsMeetingPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsTeamsMeetingPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
+
+Teams Meeting policies can be configured at the global and per-user scopes.
+The Get-CsTeamsMeetingPolicy cmdlet enables you to return information about all the meeting policies that have been configured for use in your organization.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-CsTeamsMeetingPolicy
 ```
 
-{{ Add example description here }}
+In Example 1, Get-CsTeamsMeetingPolicy is called without any additional parameters; this returns a collection of all the teams meeting policies configured for use in your organization.
+
+
+### -------------------------- Example 2 --------------------------
+```
+Get-CsTeamsMeetingPolicy -Identity SalesPolicy
+```
+
+In Example 2, Get-CsTeamsMeetingPolicy is used to return the per-user meeting policy that has an Identity SalesPolicy.
+Because identities are unique, this command will never return more than one item.
+
+### -------------------------- Example 3 --------------------------
+```
+Get-CsTeamsMeetingPolicy | Where-Object {$_.AllowMeetNow -eq $True}
+```
+
+The preceding command returns a collection of all the meeting policies where the AllowMeetNow property is True.
+To do this, Get-CsTeamsMeetingPolicy is first called without any parameters in order to return a collection of all the policies configured for use in the organization.
+This collection is then piped to the Where-Object cmdlet, which selects only those policies where the AllowMeetNow property is equal to True.
 
 ## PARAMETERS
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
-{{Fill Filter Description}}
-
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -64,13 +71,12 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
-
+Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: -Identity global. To refer to a per-user policy, use syntax similar to this: -Identity SalesDepartmentPolicy.
+If this parameter is omitted, then all the meeting policies configured for use in your organization will be returned.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: 1
@@ -80,13 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -96,13 +100,11 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -112,13 +114,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -126,9 +126,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,8 +136,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-
 ## NOTES
-
 
 ## RELATED LINKS
