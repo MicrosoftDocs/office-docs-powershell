@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+For this cmdlet the full UserPrincipleName/SIP address is required. If you don't provide the full UPN/SIP and instead provide an Alias then the cmdlet can throw an "Object reference not set to an instance of an object." error.
 
 ```yaml
 Type: Object

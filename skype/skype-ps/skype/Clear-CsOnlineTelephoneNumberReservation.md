@@ -8,7 +8,7 @@ schema: 2.0.0
 # Clear-CsOnlineTelephoneNumberReservation
 
 ## SYNOPSIS
-Use the Clear-CsOnlineTelephoneNumberReservation cmdlet to clear a reserved list of telephone numbers before they are acquired.
+Use the `Clear-CsOnlineTelephoneNumberReservation` cmdlet to clear a reserved list of telephone numbers before they are acquired.
 The telephone numbers will then be available for search and reservation again.
 
 ## SYNTAX

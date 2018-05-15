@@ -22,14 +22,13 @@ Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 

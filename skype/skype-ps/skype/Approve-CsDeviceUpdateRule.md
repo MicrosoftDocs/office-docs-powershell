@@ -32,18 +32,18 @@ Devices also check for updates every 24 hours after that initial sign on.
 
 Each new device update rule added to the system is marked as "Pending." That means that the update will be downloaded and installed by the appropriate test devices; however, it will not be downloaded and installed by client devices in general.
 This gives you an opportunity to test the updates and ensure that there are no adverse effects before you make this update widely available.
-As soon as you are convinced that the update has passed your tests and will work for your organization, you can then use the Approve-CsDeviceUpdateRule cmdlet to approve the update.
+As soon as you are convinced that the update has passed your tests and will work for your organization, you can then use the `Approve-CsDeviceUpdateRule` cmdlet to approve the update.
 
-When you approve an update, the PendingVersion of the associated update rule is assigned to the ApprovedVersion, and the PendingVersion property is cleared.
+When you approve an update, the PendingVersion of the associated update rule is assigned to the ApprovedVersion and the PendingVersion property is cleared.
 For example, suppose the PendingVersion of a new update rule is version 1.0.0.1.
-After you run the Approve-CsDeviceUpdateRule cmdlet, the PendingVersion will be set to a null value, and the ApprovedVersion will be set to 1.0.0.1.
+After you run the `Approve-CsDeviceUpdateRule` cmdlet, the PendingVersion will be set to a null value, and the ApprovedVersion will be set to 1.0.0.1.
 The next time a client device logs on, the device will automatically check to see if there are any newly-approved updates applicable for that device.
 If so, the update will automatically be downloaded and installed.
 
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Approve-CsDeviceUpdateRule cmdlet locally: RTCUniversalServerAdmins.
+Who can run this cmdlet: By default, members of the following groups are authorized to run the `Approve-CsDeviceUpdateRule` cmdlet locally: RTCUniversalServerAdmins.
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Approve-CsDeviceUpdateRule"}`
+Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Approve-CsDeviceUpdateRule"}
 
 
 ## EXAMPLES
@@ -61,8 +61,8 @@ Get-CsDeviceUpdateRule -Filter service:WebServer:atl-cs-001.litwareinc.com* | Ap
 ```
 
 Example 2 approves all the device update rules that have been configured for the service WebServer:atl-cs-001.litwareinc.com.
-To do this, the command first calls the Get-CsDeviceUpdateRule cmdlet along with the Filter parameter; the filter value "service:WebServer:atl-cs-001.litwareinc.com*" ensures that only those rules that have an Identity that begins with the string value "service:WebServer:atl-cs-001.litwareinc.com" will be returned.
-(By definition, these are all the device update rules that have been assigned to the service WebServer:atl-cs-001.litwareinc.com.) This filtered collection is then piped to the Approve-CsDeviceUpdateRule cmdlet, which approves each rule in the collection.
+To do this, the command first calls the `Get-CsDeviceUpdateRule` cmdlet along with the Filter parameter; the filter value "service:WebServer:atl-cs-001.litwareinc.com*" ensures that only those rules that have an Identity that begins with the string value "service:WebServer:atl-cs-001.litwareinc.com" will be returned.
+(By definition, these are all the device update rules that have been assigned to the service WebServer:atl-cs-001.litwareinc.com.) This filtered collection is then piped to the `Approve-CsDeviceUpdateRule` cmdlet, which approves each rule in the collection.
 
 
 ### -------------------------- Example 3 --------------------------
@@ -71,10 +71,9 @@ Get-CsDeviceUpdateRule | Where-Object {$_.Brand -eq "LG-Nortel"} | Approve-CsDev
 ```
 
 The command shown in Example 3 approves all the device update rules for the specified brand (LG-Nortel).
-To do this, the command first calls the Get-CsDeviceUpdateRule cmdlet to return a collection of all the device update rules currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those rules where the Brand property is equal to LG-Nortel.
-The filtered collection is then piped to the Approve-CsDeviceUpdateRule cmdlet, which approves each rule in the collection.
-
+To do this, the command first calls the `Get-CsDeviceUpdateRule` cmdlet to return a collection of all the device update rules currently in use in the organization.
+This collection is then piped to the `Where-Object` cmdlet, which picks out only those rules where the Brand property is equal to LG-Nortel.
+The filtered collection is then piped to the `Approve-CsDeviceUpdateRule` cmdlet, which approves each rule in the collection.
 
 
 ## PARAMETERS
@@ -168,13 +167,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
-The Approve-CsDeviceUpdateRule cmdlet accepts pipelined instances of the device update rule object.
+The `Approve-CsDeviceUpdateRule` cmdlet accepts pipelined instances of the device update rule object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, the Approve-CsDeviceUpdateRule cmdlet approves instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
+Instead, the `Approve-CsDeviceUpdateRule` cmdlet approves instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
 
 ## NOTES
 
