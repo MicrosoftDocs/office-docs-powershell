@@ -9,11 +9,11 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
+IMPORTANT: TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. See description for details.
+
 Determines how calls are routed between Skype for Business and Microsoft Teams. This cmdlet is typically used by organizations that have users on both Skype for Business and Microsoft Teams and want to configure how calls are handled in their organization.
 
 Note: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings, and the current implementation may change in the future.
-
-Remove-CsTeamsInteropPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 ## SYNTAX
 
@@ -23,9 +23,7 @@ Remove-CsTeamsInteropPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant
 
 ## DESCRIPTION
 
-Important:
-
-TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. During the transition, some components will honor TeamsInteropPolicy while others honor TeamsUpgradePolicy. Therefore, use of these two policies must be coordinated during the transition. After the transition is complete, TeamsInteropPolicy will be removed. To prepare for these upcoming changes, customers should do the following:
+IMPORTANT: TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. During the transition, some components will honor TeamsInteropPolicy while others honor TeamsUpgradePolicy. Therefore, use of these two policies must be coordinated during the transition. After the transition is complete, TeamsInteropPolicy will be removed. To prepare for these upcoming changes, customers should do the following:
  
 Ensure that users with TeamsInteropPolicy are assigned only one of these three built-in instances for which CallingDefaultClient = ChatDefaultClient, and for which AllowEndUserClientOverride = false. The other instances are no longer valid configurations and will not be supported. 
 
