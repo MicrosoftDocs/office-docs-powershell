@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Debug-CsAddressBookReplication
 schema: 2.0.0
 ---
@@ -75,7 +75,7 @@ If this parameter is not included then the cmdlet will use the first available d
 Type: String
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ To save the information stored in the logger variable to an XML file, use a comm
 Type: String
 Parameter Sets: (All)
 Aliases: olv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ Do not prepend a $ character when specifying the variable name.
 Type: String
 Parameter Sets: (All)
 Aliases: ovv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ If this parameter is not included then the Debug-CsAddressBookReplication cmdlet
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ The user account to be verified can be specified by using the user's SIP address
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ Normalization rules are used to convert phone numbers to the E.164 format used b
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Note that the user account modification is for testing purposes only, and will n
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -230,7 +230,7 @@ Among other things, that enables you to rerun the statement from within the SQL 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ Use the date-time formats specified by your Regional and Language Options settin
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ You can return the tenant ID for each of your tenants by running this command:
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -302,3 +302,4 @@ The Debug-CsAddressBookReplication cmdlet returns instances of the Microsoft.Rtc
 [Test-CsAddressBookService](Test-CsAddressBookService.md)
 
 [Test-CsAddressBookWebQuery](Test-CsAddressBookWebQuery.md)
+

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsTrustedApplicationEndpoint
 schema: 2.0.0
 ---
@@ -72,7 +72,7 @@ The Identity (distinguished name), SIP address, or display name of the applicati
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -92,7 +92,7 @@ For example, a filter that returns only contacts that have been enabled for Ente
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ The application ID of the trusted application for the endpoint you want to retri
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ You can retrieve a PSCredential object by calling the Get-Credential cmdlet.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ If no domain controller is specified, the first available will be used.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ The OU in which the endpoint resides.
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -174,7 +174,7 @@ The maximum number of endpoint records to retrieve.
 Type: Microsoft.Rtc.Management.ADConnect.Core.Unlimited`1[System.UInt32]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -190,7 +190,7 @@ The fully qualified domain name (FQDN) of the trusted application pool associate
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -223,3 +223,4 @@ Accepts a pipelined string value representing the Identity of a user account.
 [Remove-CsTrustedApplicationEndpoint](Remove-CsTrustedApplicationEndpoint.md)
 
 [Set-CsTrustedApplicationEndpoint](Set-CsTrustedApplicationEndpoint.md)
+

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsAddressBookNormalizationRule
 schema: 2.0.0
 ---
@@ -62,7 +62,7 @@ If you use the Identity parameter then you cannot use the Name or the Parent par
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -82,7 +82,7 @@ The Name parameter and the Identity parameter cannot be used in the same command
 Type: String
 Parameter Sets: ParentAndRelativeKey
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ If you include the Parent parameter, the Name parameter is also required.
 Type: String
 Parameter Sets: ParentAndRelativeKey
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ For example, the Description might explain how the rule converts phone numbers.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ If you assign the output of this cmdlet called with this parameter to a variable
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -190,7 +190,7 @@ This expression represents any set of numbers up to 11 digits.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ Note that, when you set a priority, any existing rules will renumber themselves 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ This prefixes the number with a plus sign (+).
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -277,3 +277,4 @@ The New-CsAddressBookNormalizationRule cmdlet creates instances of the Microsoft
 [Remove-CsAddressBookNormalizationRule](Remove-CsAddressBookNormalizationRule.md)
 
 [Set-CsAddressBookNormalizationRule](Set-CsAddressBookNormalizationRule.md)
+

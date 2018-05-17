@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsClientAccessLicense
 schema: 2.0.0
 ---
@@ -71,7 +71,7 @@ This parameter cannot be used with any other parameters; this is the only valid 
 Type: SwitchParameter
 Parameter Sets: LicenseSet
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -92,7 +92,7 @@ Device-based licensing is aimed at on-site users who typically access Skype for 
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -113,7 +113,7 @@ Valid values are:
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -137,7 +137,7 @@ If the monitoring database is in the default SQL Server instance then you only n
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -158,7 +158,7 @@ The StartDate must be earlier than the EndDate.
 Type: DateTime
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -175,7 +175,7 @@ If not specified, then license usage is summarized for the specified time period
 Type: SwitchParameter
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ Note that the end date does not appear in the output when you call the Get-CsCli
 Type: DateTime
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -227,3 +227,4 @@ The Get-CsClientAccessLicense cmdlet returns licensing information.
 ## RELATED LINKS
 
 [Get-CsUser](Get-CsUser.md)
+

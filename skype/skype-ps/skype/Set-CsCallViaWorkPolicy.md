@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsCallViaWorkPolicy
 schema: 2.0.0
 ---
@@ -53,7 +53,7 @@ For instance, "12068881234" or "+12068881234".
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -69,7 +69,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ The default at policy creation is false ($False).
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Suppresses the display of any non-fatal error messages and completes the cmdlet 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ Per-user syntax: `-Identity CallviaWorkStandard`
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -141,7 +141,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ The user might choose to change the call back number to a conference room or hom
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -191,7 +191,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -226,3 +226,4 @@ None.
 [Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)
 
 [Get-CsCallViaWorkPolicy](Get-CsCallViaWorkPolicy.md)
+

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Export-CsConfiguration
 schema: 2.0.0
 ---
@@ -68,7 +68,7 @@ Note that you must include either the FileName or the AsBytes parameters, but no
 Type: String
 Parameter Sets: FileName
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -85,7 +85,7 @@ You cannot use both AsBytes and FileName in the same command.
 Type: SwitchParameter
 Parameter Sets: AsBytes
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -104,7 +104,7 @@ To set the Force parameter to True use this syntax:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Retrieves the configuration data from the local computer rather than from the Ce
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -149,3 +149,4 @@ If called along with the AsBytes parameter, the Export-CsConfiguration cmdlet re
 ## RELATED LINKS
 
 [Import-CsConfiguration](Import-CsConfiguration.md)
+

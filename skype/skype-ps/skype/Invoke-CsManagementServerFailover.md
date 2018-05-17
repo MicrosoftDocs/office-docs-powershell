@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsManagementServerFailover
 schema: 2.0.0
 ---
@@ -81,7 +81,7 @@ This parameter is required if you are running the Invoke-CsManagementServerFailo
 Type: Fqdn
 Parameter Sets: DisasterRecovery
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ When the parameter is not used, the cmdlet will first make sure all replications
 Type: SwitchParameter
 Parameter Sets: DisasterRecovery
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -120,7 +120,7 @@ SQL Server instance for the mirror database.
 Type: String
 Parameter Sets: DisasterRecovery
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ Fully qualified domain name of the computer hosting the SQL Server mirror databa
 Type: Fqdn
 Parameter Sets: DisasterRecovery
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ SQL Server instance for the backup database.
 Type: String
 Parameter Sets: DisasterRecovery
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ For example: `-Report "C:\Logs\CMSFailover.html"`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ When specified, restores the existing Central Management Server database.
 Type: SwitchParameter
 Parameter Sets: Normal
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -245,3 +245,4 @@ None.
 ## RELATED LINKS
 
 [Invoke-CsDatabaseFailover](Invoke-CsDatabaseFailover.md)
+

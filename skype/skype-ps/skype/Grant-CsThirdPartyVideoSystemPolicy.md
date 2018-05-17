@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
 ---
@@ -79,7 +79,7 @@ This means you might find it easier to modify third-party video systems by using
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -98,7 +98,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -114,7 +114,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ If this parameter is not specified then the Grant-CsThirdPartyVideoSystemPolicy 
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ By default, the Grant-CsThirdPartyVideoSystemPolicy cmdlet does not pass objects
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -200,3 +200,4 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
 
 [Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)
+

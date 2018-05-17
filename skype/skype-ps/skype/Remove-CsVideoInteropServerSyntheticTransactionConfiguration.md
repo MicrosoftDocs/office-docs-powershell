@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsVideoInteropServerSyntheticTransactionConfiguration
 schema: 2.0.0
 ---
@@ -49,7 +49,7 @@ Use this syntax to refer to a collection at the site scope:
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -65,7 +65,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ Suppresses the display of any non-fatal error messages and completes the cmdlet 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -130,3 +130,4 @@ None
 [New-CsVideoInteropServerSyntheticTransactionConfiguration](New-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
 [Test-CsP2PVideoInteropServerSipTrunkAV](Test-CsP2PVideoInteropServerSipTrunkAV.md)
+

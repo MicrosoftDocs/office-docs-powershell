@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsQuestion
 schema: 2.0.0
 ---
@@ -90,7 +90,7 @@ Prompts must be created by using the New-CsRgsPrompt cmdlet.
 Type: Prompt
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ Answers must be created by using the New-CsRgsAnswer cmdlet.
 Type: PSListModifier
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Note that after the playing the InvalidAnswerPrompt the application will then re
 Type: Prompt
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ Question names, which do not have to be unique, are limited to a maximum of 128 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ The NoAnswerPrompt must be created by using the New-CsRgsPrompt cmdlet.
 Type: Prompt
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -188,4 +188,5 @@ New-CsRgsQuestion creates instances of the Microsoft.Rtc.Management.WriteableSet
 ## RELATED LINKS
 
 [New-CsRgsAnswer](New-CsRgsAnswer.md)
+
 

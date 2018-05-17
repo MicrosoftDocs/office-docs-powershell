@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSipProxyTCP
 schema: 2.0.0
 ---
@@ -68,7 +68,7 @@ For example: -IPAddress 192.168.0.240.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -98,4 +98,5 @@ The New-CsSipProxyTCP cmdlet creates new instances of the Microsoft.Rtc.Manageme
 [New-CsSipProxyTLS](New-CsSipProxyTLS.md)
 
 [New-CsSipProxyTransport](New-CsSipProxyTransport.md)
+
 

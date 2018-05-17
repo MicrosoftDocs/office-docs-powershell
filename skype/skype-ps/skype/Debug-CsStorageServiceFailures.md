@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Debug-CsStorageServiceFailures
 schema: 2.0.0
 ---
@@ -96,7 +96,7 @@ Specifies the GUID of the data adapter on which to gather the debugging informat
 Type: Guid
 Parameter Sets: (All)
 Aliases: g
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Valid values are:
 Type: String
 Parameter Sets: (All)
 Aliases: b
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ Acceptable values for the Component parameter are:
 Type: Component
 Parameter Sets: (All)
 Aliases: c
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ If you enter the date and time of day, you must enclose the argument in quotatio
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ Suppresses the display of any non-fatal error messages and completes the cmdlet 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ This parameter is required if the Binding parameter is set to NetTCP.
 Type: String
 Parameter Sets: (All)
 Aliases: h
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ Otherwise, they are written to the console.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -231,7 +231,7 @@ This is the SIPAddress property of the user as returned by the Get-CsUser cmdlet
 Type: String
 Parameter Sets: (All)
 Aliases: s
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -252,7 +252,7 @@ If you enter the date and time of day, you must enclose the argument in quotatio
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -277,3 +277,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
+

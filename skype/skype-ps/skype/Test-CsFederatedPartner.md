@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsFederatedPartner
 schema: 2.0.0
 ---
@@ -69,7 +69,7 @@ For example: `-Domain "fabrikam.com"`.
 Type: String
 Parameter Sets: (All)
 Aliases: d
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 3
@@ -86,7 +86,7 @@ The TargetFqdn must point to the internal edge of the proxy server to which fede
 Type: String
 Parameter Sets: (All)
 Aliases: t
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -102,7 +102,7 @@ Enables you to provide an X509 certificate for authentication purposes when conn
 Type: X509Certificate2
 Parameter Sets: (All)
 Aliases: ce
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ FQDN of the access proxy server used by the federated organization.
 Type: String
 Parameter Sets: (All)
 Aliases: pe
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ Do not prepend a $ character when specifying the variable name.
 Type: String
 Parameter Sets: (All)
 Aliases: ovv
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ To save the information stored in the logger variable to an XML file, use a comm
 Type: String
 Parameter Sets: (All)
 Aliases: olv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -229,3 +229,4 @@ None.
 ## RELATED LINKS
 
 [Get-CsAllowedDomain](Get-CsAllowedDomain.md)
+

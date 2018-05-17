@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsThirdPartyVideoSystem
 schema: 2.0.0
 ---
@@ -66,7 +66,7 @@ Because of that you might find it easier to retrieve video systems by using the 
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -82,7 +82,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -132,3 +132,4 @@ The `Remove-CsThirdPartyVideoSystem` cmdlet does not return any objects or data.
 [New-CsThirdPartyVideoSystem](New-CsThirdPartyVideoSystem.md)
 
 [Set-CsThirdPartyVideoSystem](Set-CsThirdPartyVideoSystem.md)
+

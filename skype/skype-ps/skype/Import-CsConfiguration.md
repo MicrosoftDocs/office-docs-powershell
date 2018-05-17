@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsConfiguration
 schema: 2.0.0
 ---
@@ -95,7 +95,7 @@ You cannot use both the ByteInput parameter and the FileName parameter in the sa
 Type: Byte[]
 Parameter Sets: ByteInput
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -116,7 +116,7 @@ Note that you must include either the FileName or the ByteInput parameter, but n
 Type: String
 Parameter Sets: FileName
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -135,7 +135,7 @@ To set the Force parameter to True, use this syntax:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Copies the configuration data to the local computer rather than the Central Mana
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -180,4 +180,5 @@ The Import-CsConfiguration cmdlet does not return any values or objects.
 ## RELATED LINKS
 
 [Export-CsConfiguration](Export-CsConfiguration.md)
+
 

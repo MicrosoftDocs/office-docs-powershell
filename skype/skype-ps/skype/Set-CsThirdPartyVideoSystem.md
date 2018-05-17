@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsThirdPartyVideoSystem
 schema: 2.0.0
 ---
@@ -60,7 +60,7 @@ In turn, that means that you might find it easier to modify third-party video sy
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -76,7 +76,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Configures the Active Directory display name of the video system.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ When set to True ($True) the video system can be used with Skype for Business Se
 Type: Boolean
 Parameter Sets: (All)
 Aliases: CsEnabled
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ ArchivingToExchange
 Type: ExchangeArchivingPolicyOptionsEnum
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ Any extension number should be added to the end of the line URI; for example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -174,7 +174,7 @@ By default, the `Set-CsThirdPartyVideoSystem` cmdlet does not pass objects throu
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -242,3 +242,4 @@ However, if you include the PassThru parameter the cmdlet will pass instances of
 [Remove-CsThirdPartyVideoSystem](Remove-CsThirdPartyVideoSystem.md)
 
 [Set-CsThirdPartyVideoSystem](Set-CsThirdPartyVideoSystem.md)
+

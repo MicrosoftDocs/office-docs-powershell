@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsOutboundCallingNumberTranslationRule
 schema: 2.0.0
 ---
@@ -89,7 +89,7 @@ To return all the translation rules configured at the site scope use this syntax
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ If neither the Identity parameter nor the Filter parameter is specified the Get-
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -130,7 +130,7 @@ Retrieves the outbound calling number translation rule data from the local repli
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -163,3 +163,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsOutboundCallingNumberTranslationRule](Remove-CsOutboundCallingNumberTranslationRule.md)
 
 [Set-CsOutboundCallingNumberTranslationRule](Set-CsOutboundCallingNumberTranslationRule.md)
+

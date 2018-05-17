@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsPersistentChatAddin
 schema: 2.0.0
 ---
@@ -78,7 +78,7 @@ If this parameter is not specified then the Get-CsPersistentChatAddin cmdlet ret
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -99,7 +99,7 @@ For example:
 Type: String
 Parameter Sets: Pool
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -132,3 +132,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsPersistentChatAddin](Remove-CsPersistentChatAddin.md)
 
 [Set-CsPersistentChatAddin](Set-CsPersistentChatAddin.md)
+

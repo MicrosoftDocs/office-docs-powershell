@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVoiceRegex
 schema: 2.0.0
 ---
@@ -89,7 +89,7 @@ You cannot enter values for both.
 Type: Int32
 Parameter Sets: AtLeastLength
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ You cannot enter values for both.
 Type: Int32
 Parameter Sets: ExactLength
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ For example, if the number matching the pattern is 5551212 and the DigitsToPrepe
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ For example, if the number 2065551212 is entered and the DigitsToStrip is 3, the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ For example, if you've specified an ExactLength of 10 and a StartsWith string of
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -241,3 +241,4 @@ Creates on object of type Microsoft.Rtc.Management.Voice.OcsVoiceRegex.
 [New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
 [New-CsVoiceRoute](New-CsVoiceRoute.md)
+

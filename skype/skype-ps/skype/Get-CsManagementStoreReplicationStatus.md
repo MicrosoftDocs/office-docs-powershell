@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsManagementStoreReplicationStatus
 schema: 2.0.0
 ---
@@ -94,7 +94,7 @@ If this parameter is not included, then replication status information for all y
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -110,7 +110,7 @@ Returns additional information about the current status of the Central Managemen
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -141,3 +141,4 @@ If the CentralManagementStoreStatus parameter is used, then the cmdlet returns i
 ## RELATED LINKS
 
 [Invoke-CsManagementStoreReplication](Invoke-CsManagementStoreReplication.md)
+

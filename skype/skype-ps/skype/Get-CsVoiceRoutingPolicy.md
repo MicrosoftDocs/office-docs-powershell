@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVoiceRoutingPolicy
 schema: 2.0.0
 ---
@@ -108,7 +108,7 @@ For example, to return all the policies configured at the per-user scope, use th
 Type: String
 Parameter Sets: Filter, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ If neither the Identity nor the Filter parameters are specified, then Get-CsVoic
 Type: XdsIdentity
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -154,7 +154,7 @@ Retrieves the voice policy data from the local replica of the Central Management
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -220,3 +220,4 @@ The Get-CsVoiceRoutingPolicy cmdlet returns instances of the Microsoft.Rtc.Manag
 [Remove-CsVoiceRoutingPolicy](Remove-CsVoiceRoutingPolicy.md)
 
 [Set-CsVoiceRoutingPolicy](Set-CsVoiceRoutingPolicy.md)
+

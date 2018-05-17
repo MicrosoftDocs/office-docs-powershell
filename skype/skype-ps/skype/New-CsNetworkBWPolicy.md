@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsNetworkBWPolicy
 schema: 2.0.0
 ---
@@ -69,7 +69,7 @@ The maximum total bandwidth, in kbps, for all concurrent sessions of the type sp
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -87,7 +87,7 @@ Valid values: Audio, Video
 Type: BWPolicyModality
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -103,7 +103,7 @@ The maximum bandwidth, in kbps, allowed for a single session of the type specifi
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -132,3 +132,4 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 [New-CsNetworkBandwidthPolicyProfile](New-CsNetworkBandwidthPolicyProfile.md)
 
 [Set-CsNetworkBandwidthPolicyProfile](Set-CsNetworkBandwidthPolicyProfile.md)
+

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsExStorageConnectivity
 schema: 2.0.0
 ---
@@ -63,7 +63,7 @@ SIP address of the Exchange mailbox where the test item should be created.
 Type: String
 Parameter Sets: (All)
 Aliases: s
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -86,7 +86,7 @@ NetTCP
 Type: String
 Parameter Sets: (All)
 Aliases: b
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ When present, the test item will be deleted from the Exchange mailbox at the end
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ Dumpster
 Type: ExchFolder
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ Suppresses the display of any non-fatal error message that might arise when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ This parameter is required if the Binding is set to NetTCP.
 Type: String
 Parameter Sets: (All)
 Aliases: h
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ When presents, instructs the cmdlet to used cached auto discovery results when a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -204,3 +204,4 @@ The `Test-CsExStorageConnectivity` cmdlet returns instances of the Microsoft.Rtc
 ## RELATED LINKS
 
 [Test-CsExStorageNotification](Test-CsExStorageNotification.md)
+
