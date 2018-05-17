@@ -26,7 +26,7 @@ Get-CsTeamsUpgradePolicy [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Obj
 TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. This cmdlet returns the set of instances of this policy. As an organization with Skype for Business starts to adopt Teams, administrators can manage client behavior for their end users using the concept of "mode," which determines the client in which chats and calls land. In the future, mode will also be used to define client behavior in Teams client in terms of what functionality will be available.  TeamsUpgradePolicy can be granted either on a per-user basis or a tenant-wide basis.  In addition, prior to upgrading to TeamsOnly mode, administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade. 
 
 NOTES: 
-   All relevant instances of TeamsUpgradePolicy are built into the system, so there is a corresponding New cmdlet.
+   All relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet.
    Instances with mode set to SfBWithTeamsCollab are not yet functional. From a routing perspective, this will behave like SfBOnly mode.
 
 IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy are being updated to honor TeamsUpgradePolicy instead. During the transition, use of these two policies must be coordinated during the transition. After the transition is complete, TeamsInteropPolicy will be removed.
