@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsCallViaWorkPolicy
 schema: 2.0.0
 ---
@@ -53,7 +53,7 @@ To return a collection of all the per-user policies, use this syntax: -Filter "t
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -76,7 +76,7 @@ Per-user syntax: -Identity CallviaWorkStandard
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -92,7 +92,7 @@ Retrieves the call via work policy data from the local replica of the Central Ma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -143,3 +143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)
 
 [Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)
+

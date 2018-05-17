@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
 ---
@@ -79,7 +79,7 @@ Note that you cannot use both the Filter parameter and the Identity parameter in
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ To return settings at the service level, use syntax similar to this:
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -128,7 +128,7 @@ Retrieves the storage service configuration data from the local replica of the C
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -160,3 +160,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsStorageServiceConfiguration](Remove-CsStorageServiceConfiguration.md)
 
 [Set-CsStorageServiceConfiguration](Set-CsStorageServiceConfiguration.md)
+

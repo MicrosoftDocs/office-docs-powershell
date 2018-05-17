@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSipProxyTransport
 schema: 2.0.0
 ---
@@ -81,7 +81,7 @@ For example: `-Port 7742`.
 Type: UInt16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -99,7 +99,7 @@ To use the TLS protocol, create a transport object by using the `New-CsSipProxyT
 Type: ITransportChoice
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -129,3 +129,4 @@ The `New-CsSipProxyTransport` cmdlet creates new instances of the Microsoft.Rtc.
 [New-CsSipProxyTCP](New-CsSipProxyTCP.md)
 
 [New-CsSipProxyTLS](New-CsSipProxyTLS.md)
+

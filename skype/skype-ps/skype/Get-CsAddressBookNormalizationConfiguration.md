@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAddressBookNormalizationConfiguration
 schema: 2.0.0
 ---
@@ -71,7 +71,7 @@ For example, to return a collection of all the settings configured at the site s
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ If this parameter is not specified, then the Get-CsAddressBookNormalizationConfi
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -111,7 +111,7 @@ Retrieves the Address Book normalization configuration data from the local repli
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -146,3 +146,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CsAddressBookNormalizationConfiguration](Set-CsAddressBookNormalizationConfiguration.md)
 
 [Import-CsCompanyPhoneNormalizationRules](Import-CsCompanyPhoneNormalizationRules.md)
+

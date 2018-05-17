@@ -187,3 +187,4 @@ These settings are only honored by newer versions of Skype for Business clients.
 [Get-CsTeamsUpgradePolicy](Get-CsTeamsUpgradePolicy.md)
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
+

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSipProxyCustom
 schema: 2.0.0
 ---
@@ -50,7 +50,7 @@ Name of the realm to be used for authentication purposes.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -80,4 +80,5 @@ The New-CsSipProxyCustom cmdlet creates new instances of the Microsoft.Rtc.Manag
 [New-CsSipProxyRealm](New-CsSipProxyRealm.md)
 
 [New-CsSipProxyUseDefault](New-CsSipProxyUseDefault.md)
+
 

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsTimeRange
 schema: 2.0.0
 ---
@@ -105,7 +105,7 @@ use this format: `-CloseTime "21:00".`
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -123,7 +123,7 @@ use this format: `-OpenTime "13:30".`
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -140,7 +140,7 @@ The Name is limited to a maximum of 128 characters.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -170,3 +170,4 @@ New-CsRgsTimeRange creates new instances of the Microsoft.Rtc.Rgs.Management.Wri
 [New-CsRgsHoursOfBusiness](New-CsRgsHoursOfBusiness.md)
 
 [Set-CsRgsHoursOfBusiness](Set-CsRgsHoursOfBusiness.md)
+

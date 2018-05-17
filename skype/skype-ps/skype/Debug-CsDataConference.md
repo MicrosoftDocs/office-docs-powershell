@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Debug-CsDataConference
 schema: 2.0.0
 ---
@@ -56,7 +56,7 @@ Suppresses the display of any nonfatal error message that might occur when runni
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -75,7 +75,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -93,7 +93,7 @@ If Conferencing Server is not installed on the local computer, an error will occ
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -119,3 +119,4 @@ The Debug-CsDataConference cmdlet does not accept pipelined input.
 ## RELATED LINKS
 
 [Test-CsDataConference](Test-CsDataConference.md)
+

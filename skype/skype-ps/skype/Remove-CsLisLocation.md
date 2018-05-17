@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsLisLocation
 schema: 2.0.0
 ---
@@ -78,7 +78,7 @@ The location city.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ The name of the company at this location.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ This value will contain two characters or less.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ For a company this is the number on the street where the company is located.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ For example, 1234 1/2 Oak Street or 1234 A Elm Street.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ The name for this location.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -255,7 +255,7 @@ The postal code associated with this location.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -285,7 +285,7 @@ For example, NE or NW for Main Street NE or 7th Avenue NW.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -315,7 +315,7 @@ For example, NE or NW for NE Main Street or NW 7th Avenue.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -328,7 +328,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -345,7 +345,7 @@ This value will be two characters or less.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -374,7 +374,7 @@ The name of the street for this location.
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -403,7 +403,7 @@ The type of street designated in a street name, such as Street, Avenue, or Court
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -416,7 +416,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -432,7 +432,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -448,7 +448,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -488,3 +488,4 @@ It removes an object of type System.Management.Automation.PSCustomObject.
 [Remove-CsLisWirelessAccessPoint](Remove-CsLisWirelessAccessPoint.md)
 
 [Get-CsLisCivicAddress](Get-CsLisCivicAddress.md)
+

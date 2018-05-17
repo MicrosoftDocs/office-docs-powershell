@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsDialPlan
 schema: 2.0.0
 ---
@@ -86,7 +86,7 @@ Full Data Type: Microsoft.Rtc.Management.Voice.PhoneNumber
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ Full Data Type: Microsoft.Rtc.Management.WritableConfig.Policy.Voice.LocationPro
 Type: LocationProfile
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -140,3 +140,4 @@ Returns an object of type Microsoft.Rtc.Management.Voice.LocationProfileTestResu
 [Get-CsDialPlan](Get-CsDialPlan.md)
 
 [Grant-CsDialPlan](Grant-CsDialPlan.md)
+

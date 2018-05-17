@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsWebOrigin
 schema: 2.0.0
 ---
@@ -72,7 +72,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -102,3 +102,4 @@ The `New-CsWebOrigin` cmdlet creates new instances of the Microsoft.Rtc.Manageme
 [New-CsWebServiceConfiguration](New-CsWebServiceConfiguration.md)
 
 [Set-CsWebServiceConfiguration](Set-CsWebServiceConfiguration.md)
+

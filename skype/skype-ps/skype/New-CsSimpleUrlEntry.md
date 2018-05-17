@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSimpleUrlEntry
 schema: 2.0.0
 ---
@@ -129,7 +129,7 @@ URLs must start with the "https:" prefix.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -158,4 +158,5 @@ The New-CsSimpleUrlEntry cmdlet creates new instances of the Microsoft.Rtc.Manag
 [New-CsSimpleUrl](New-CsSimpleUrl.md)
 
 [New-CsSimpleUrlConfiguration](New-CsSimpleUrlConfiguration.md)
+
 

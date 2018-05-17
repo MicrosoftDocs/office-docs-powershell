@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsPrompt
 schema: 2.0.0
 ---
@@ -102,7 +102,7 @@ The TTS prompt, which is used only if an audio file is not specified, can contai
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ The audio file must be imported by using the Import-CsRgsAudioFile cmdlet.
 Type: AudioFile
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -149,4 +149,5 @@ New-CsRgsPrompt creates instances of the Microsoft.Rtc.Management.WritableSettin
 [Import-CsRgsAudioFile](Import-CsRgsAudioFile.md)
 
 [New-CsRgsCallAction](New-CsRgsCallAction.md)
+
 

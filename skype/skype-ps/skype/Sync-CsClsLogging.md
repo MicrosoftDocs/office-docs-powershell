@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Sync-CsClsLogging
 schema: 2.0.0
 ---
@@ -62,7 +62,7 @@ When specified, information is returned using XML.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ If you do not include the Computers parameter or the Pools parameter, the `Sync-
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Multiple pools can be specified by separating the pool FQDNs using commas:
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -150,3 +150,4 @@ The `Sync-CsClsLogging` cmdlet does not return objects.
 [Stop-CsClsLogging](Stop-CsClsLogging.md)
 
 [Update-CsClsLogging](Update-CsClsLogging.md)
+
