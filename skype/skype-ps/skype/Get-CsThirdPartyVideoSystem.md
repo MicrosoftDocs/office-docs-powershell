@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsThirdPartyVideoSystem
 schema: 2.0.0
 ---
