@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Export-CsLisConfiguration
 schema: 2.0.0
 ---
@@ -95,7 +95,7 @@ If you're accessing this cmdlet remotely, you must use AsBytes rather than FileN
 Type: String
 Parameter Sets: FileName
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -113,7 +113,7 @@ The output of the command should be assigned to a variable for later import.
 Type: SwitchParameter
 Parameter Sets: AsBytes
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -150,3 +150,4 @@ Returns a byte array when the AsBytes parameter is used.
 [Unpublish-CsLisConfiguration](Unpublish-CsLisConfiguration.md)
 
 [Test-CsLisConfiguration](Test-CsLisConfiguration.md)
+

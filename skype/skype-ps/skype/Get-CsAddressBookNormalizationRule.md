@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAddressBookNormalizationRule
 schema: 2.0.0
 ---
@@ -81,7 +81,7 @@ To return all the rules in a given collection (such as the Redmond site) you can
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ If neither the Identity nor the Filter parameters are included in a command, the
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -115,7 +115,7 @@ Retrieves the Address book normalization rules from the local replica of the Cen
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -148,3 +148,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsAddressBookNormalizationRule](Remove-CsAddressBookNormalizationRule.md)
 
 [Set-CsAddressBookNormalizationRule](Set-CsAddressBookNormalizationRule.md)
+

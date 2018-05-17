@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVoiceTestConfiguration
 schema: 2.0.0
 ---
@@ -71,7 +71,7 @@ A string uniquely identifying the test configuration you want to retrieve.
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -88,7 +88,7 @@ This parameter provides a way to do a wildcard search of the defined voice test 
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ Retrieves the voice test configuration from the local replica of the Central Man
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -138,3 +138,4 @@ Returns one of more objects of type Microsoft.Rtc.Management.WritableConfig.Poli
 [Set-CsVoiceTestConfiguration](Set-CsVoiceTestConfiguration.md)
 
 [Test-CsVoiceTestConfiguration](Test-CsVoiceTestConfiguration.md)
+

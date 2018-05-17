@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsIssuedCertId
 schema: 2.0.0
 ---
@@ -82,7 +82,7 @@ Name of the certification authority (CA) that issued the certificate to be used 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -101,7 +101,7 @@ For example: `-SerialNumber 0x01, 0x23, 0x45, 0x67, 0x89.`
 Type: Byte[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -129,4 +129,5 @@ New-CsIssuedCertId creates instances of the Microsoft.Rtc.Management.WritableCon
 ## RELATED LINKS
 
 [New-CsSipProxyTLS](New-CsSipProxyTLS.md)
+
 

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Server 2015
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVideoTrunkConfiguration
 schema: 2.0.0
 ---
@@ -93,7 +93,7 @@ For example, to return all the settings that have been configured at the site sc
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ If neither the Identity nor the Filter parameter is specified then the Get-CsVid
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -134,7 +134,7 @@ Retrieves the Video Trunk configuration data from the local copy of the Central 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -166,3 +166,4 @@ The Get-CsVideoTrunkConfiguration cmdlet returns instances of the Microsoft.Rtc.
 [Set-CsVideoTrunkConfiguration](Set-CsVideoTrunkConfiguration.md)
 
 [Remove-CsVideoTrunkConfiguration](Remove-CsVideoTrunkConfiguration.md)
+

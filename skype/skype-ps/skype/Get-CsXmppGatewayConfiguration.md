@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsXmppGatewayConfiguration
 schema: 2.0.0
 ---
@@ -76,7 +76,7 @@ That syntax brings back all the XMPP gateway configuration settings that have an
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ If you prefer, however, you can use the following syntax to reference the global
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -115,7 +115,7 @@ Retrieves the XMPP gateway data from the local replica of the Central Management
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -143,3 +143,4 @@ The Get-CsXmppGatewayConfiguration cmdlet returns instances of the Microsoft.Rtc
 ## RELATED LINKS
 
 [Set-CsXmppGatewayConfiguration](Set-CsXmppGatewayConfiguration.md)
+

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsWatcherNodeConfiguration
 schema: 2.0.0
 ---
@@ -54,7 +54,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -72,7 +72,7 @@ By default, the `Test-CsWatcherNodeConfiguration` cmdlet looks for credentials i
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -106,3 +106,4 @@ The `Test-CsWatcherNodeConfiguration` cmdlet returns an instance of the Microsof
 [Remove-CsWatcherNodeConfiguration](Remove-CsWatcherNodeConfiguration.md)
 
 [Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)
+

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsCertificateConfiguration
 schema: 2.0.0
 ---
@@ -57,7 +57,7 @@ If this file already exists, it will be overwritten when you run the cmdlet.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -101,3 +101,4 @@ The `Test-CsCertificateConfiguration` cmdlet returns instances of the Microsoft.
 ## RELATED LINKS
 
 [Get-CsCertificate](Get-CsCertificate.md)
+

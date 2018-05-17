@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsTrustedApplicationPool
 schema: 2.0.0
 ---
@@ -198,7 +198,7 @@ The fully qualified domain name (FQDN) or service ID of the pool for which you w
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -215,7 +215,7 @@ For example, specifying the string *Redmond* would retrieve all trusted applicat
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ This behaves the same as the Identity parameter, except that Identity also accep
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -269,4 +269,5 @@ Retrieves one or more objects of type Microsoft.Rtc.Management.Xds.DisplayExtern
 [Online Version](http://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.15).aspx)
 
 [Online Version](http://technet.microsoft.com/EN-US/library/f8dc4ad7-fc32-482b-a1cb-5ba106df3344(OCS.16).aspx)
+
 

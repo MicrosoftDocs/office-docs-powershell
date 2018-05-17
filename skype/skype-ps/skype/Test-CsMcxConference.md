@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsMcxConference
 schema: 2.0.0
 ---
@@ -64,7 +64,7 @@ Allowed values are: TrustedServer; Negotiate; ClientCertificate; and LiveID.
 Type: AuthenticationMechanism
 Parameter Sets: (All)
 Aliases: Ath
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -86,7 +86,7 @@ You need to supply the user password when running this command.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: oc
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -107,7 +107,7 @@ The OrganizerSipAddress parameter must reference the same user account as the Or
 Type: String
 Parameter Sets: (All)
 Aliases: oa
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -123,7 +123,7 @@ Fully qualified domain name (FQDN) of the pool to be tested.
 Type: String
 Parameter Sets: (All)
 Aliases: t
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -145,7 +145,7 @@ You need to supply the user password when running this command.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: spc
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -166,7 +166,7 @@ The User2SipAddress parameter must reference the same user account as the User2C
 Type: String
 Parameter Sets: (All)
 Aliases: spa
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -188,7 +188,7 @@ You need to supply the user password when running this command.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: fpc
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -209,7 +209,7 @@ The UserSipAddress parameter must reference the same user account as the UserCre
 Type: String
 Parameter Sets: (All)
 Aliases: fpa
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -225,7 +225,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -256,7 +256,7 @@ To save the information stored in the logger variable to an XML file, use a comm
 Type: String
 Parameter Sets: (All)
 Aliases: olv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -277,7 +277,7 @@ Do not use prepend a $ character when specifying the variable name.
 Type: String
 Parameter Sets: (All)
 Aliases: ovv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -294,7 +294,7 @@ This parameter is not required if the Registrar uses the default port 5061.
 Type: Int32
 Parameter Sets: (All)
 Aliases: rp
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -320,3 +320,4 @@ The `Test-CsMcxConference` cmdlet returns an instance of the Microsoft.Rtc.Synth
 ## NOTES
 
 ## RELATED LINKS
+

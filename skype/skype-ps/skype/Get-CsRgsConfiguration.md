@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsRgsConfiguration
 schema: 2.0.0
 ---
@@ -78,7 +78,7 @@ If you do not include this parameter, Get-CsRgsConfiguration will prompt you to 
 Type: RgsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -109,3 +109,4 @@ A string value representing the Identity of the Response Group configuration set
 [Move-CsRgsConfiguration](Move-CsRgsConfiguration.md)
 
 [Set-CsRgsConfiguration](Set-CsRgsConfiguration.md)
+

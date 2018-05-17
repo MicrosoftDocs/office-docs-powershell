@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsService
 schema: 2.0.0
 ---
@@ -262,7 +262,7 @@ For example:
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -279,7 +279,7 @@ You cannot use both the Identity and the Filter parameters in the same command.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -296,7 +296,7 @@ Application databases are used by the Application service.
 Type: SwitchParameter
 Parameter Sets: ApplicationDatabase
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ The Application service provides a way to run applications created by using the 
 Type: SwitchParameter
 Parameter Sets: ApplicationServer
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -330,7 +330,7 @@ Archiving databases store transcripts of instant messaging sessions.
 Type: SwitchParameter
 Parameter Sets: ArchivingDatabase
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -347,7 +347,7 @@ Archiving Servers enable you to save the transcripts of instant messaging sessio
 Type: SwitchParameter
 Parameter Sets: ArchivingServer
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -364,7 +364,7 @@ The Central Management service is used to send configuration data to computers r
 Type: SwitchParameter
 Parameter Sets: CentralManagement
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -381,7 +381,7 @@ The Central Management store maintains configuration information for Skype for B
 Type: SwitchParameter
 Parameter Sets: CentralManagementDatabase
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -398,7 +398,7 @@ The A/V Conferencing service is used to conduct meetings and conferences.
 Type: SwitchParameter
 Parameter Sets: ConferenceServer
 Aliases: ConferenceServer
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -416,7 +416,7 @@ Directors are typically used to handle requests from external users.
 Type: SwitchParameter
 Parameter Sets: Director
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -433,7 +433,7 @@ Edge Servers provide connectivity between your internal network and the Internet
 Type: SwitchParameter
 Parameter Sets: EdgeServer
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -450,7 +450,7 @@ The File Store is used to maintain Skype for Business Server files, such as audi
 Type: SwitchParameter
 Parameter Sets: FileStore
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -467,7 +467,7 @@ The Central Management Server is commonly collocated with the Front End Servers 
 Type: SwitchParameter
 Parameter Sets: ManagementServer
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -484,7 +484,7 @@ Mediation Servers help provide a bridge between your Enterprise Voice network an
 Type: SwitchParameter
 Parameter Sets: MediationServer
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -501,7 +501,7 @@ Monitoring Servers are used to track Enterprise Voice phone usage and call quali
 Type: SwitchParameter
 Parameter Sets: MonitoringServer
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -518,7 +518,7 @@ Monitoring databases store Enterprise Voice phone usage and call quality informa
 Type: SwitchParameter
 Parameter Sets: MonitoringDatabase
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -535,7 +535,7 @@ If you use the PoolFqdn parameter without specifying a service-specific paramete
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -586,7 +586,7 @@ PSTN gateways translate signals from Enterprise Voice devices to signals that ca
 Type: SwitchParameter
 Parameter Sets: PstnGateway
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -603,7 +603,7 @@ Registrars are used to authenticate users and to keep track of a user's current 
 Type: SwitchParameter
 Parameter Sets: Registrar
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -620,7 +620,7 @@ Trusted applications pools host computers that run trusted applications.
 Type: SwitchParameter
 Parameter Sets: TrustedApplicationPool
 Aliases: ExternalServer
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -637,7 +637,7 @@ User databases store data needed by the User Server service.
 Type: SwitchParameter
 Parameter Sets: UserDatabase
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -654,7 +654,7 @@ The User Services service provides such things as user replication, in-band prov
 Type: SwitchParameter
 Parameter Sets: UserServer
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -671,7 +671,7 @@ The Web Services service host web-based applications such as the Address Book se
 Type: SwitchParameter
 Parameter Sets: WebServer
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -687,7 +687,7 @@ Returns information about the backup servers used in your organization.
 Type: SwitchParameter
 Parameter Sets: BackupServer
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -720,7 +720,7 @@ Returns information about the databases used for maintaining Persistent Chat com
 Type: SwitchParameter
 Parameter Sets: PersistentChatComplianceDatabase
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -736,7 +736,7 @@ Returns information about the databases used for maintaining Persistent Chat inf
 Type: SwitchParameter
 Parameter Sets: PersistentChatDatabase
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -752,7 +752,7 @@ Returns information about the Persistent Chat servers used in your organization.
 Type: SwitchParameter
 Parameter Sets: PersistentChatServer
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -769,7 +769,7 @@ Office Web Apps server was previously known as "WacServer".
 Type: SwitchParameter
 Parameter Sets: WacServer
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -786,7 +786,7 @@ Video gateways provide a way to connect Skype for Business users to video teleco
 Type: SwitchParameter
 Parameter Sets: VideoGateway
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -803,7 +803,7 @@ The video interoperability service provides a way to seamless connect Skype for 
 Type: SwitchParameter
 Parameter Sets: VideoInteropServer
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -858,3 +858,4 @@ For example:
 [Set-CsUserServer](Set-CsUserServer.md)
 
 [Set-CsWebServer](Set-CsWebServer.md)
+

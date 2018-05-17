@@ -284,3 +284,4 @@ Please consult the [Skype for Business to Microsoft Teams Capabilities Roadmap](
 [Skype for Business to Microsoft Teams Capabilities Roadmap](https://aka.ms/skype2teamsroadmap)
 
 [Microsoft Teams and Skype for Business Interoperability](https://docs.microsoft.com/MicrosoftTeams/teams-and-skypeforbusiness-interoperability)
+

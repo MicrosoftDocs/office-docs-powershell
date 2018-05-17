@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsDialInConferencing
 schema: 2.0.0
 ---
@@ -90,7 +90,7 @@ Fully qualified domain name (FQDN) of the pool to be tested.
 Type: String
 Parameter Sets: ServerPlatform
 Aliases: t
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ClientPlatform
 Aliases: t
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -126,7 +126,7 @@ This parameter is not required if you are conducting the test using the health m
 Type: PSCredential
 Parameter Sets: ClientPlatform
 Aliases: cc
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -145,7 +145,7 @@ This parameter is not required if you are conducting the test using the health m
 Type: String
 Parameter Sets: ServerPlatform
 Aliases: ca
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ClientPlatform
 Aliases: ca
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -175,7 +175,7 @@ This parameter is not required if the Registrar uses the default port 5061.
 Type: Int32
 Parameter Sets: (All)
 Aliases: rp
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -207,7 +207,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ Do not prepend a $ character when specifying the variable name.
 Type: String
 Parameter Sets: (All)
 Aliases: ovv
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -255,7 +255,7 @@ LiveID
 Type: AuthenticationMechanism
 Parameter Sets: (All)
 Aliases: Ath
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -284,7 +284,7 @@ To save the information stored in the logger variable to an XML file, use a comm
 Type: String
 Parameter Sets: (All)
 Aliases: olv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -305,7 +305,7 @@ Note that TargetPstnPhoneNumber should only be included when you are using the V
 Type: String
 Parameter Sets: (All)
 Aliases: rpn
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ If TargetPstnPhoneNumber is not included then the `Test-CsDialInConferencing` cm
 Type: Boolean
 Parameter Sets: (All)
 Aliases: vcj
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -352,3 +352,4 @@ The `Test-CsDialInConferencing` cmdlet returns an instance of the Microsoft.Rtc.
 ## RELATED LINKS
 
 [Test-CsAVConference](Test-CsAVConference.md)
+

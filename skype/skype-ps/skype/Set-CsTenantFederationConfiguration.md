@@ -369,3 +369,4 @@ Instead, the `Set-CsTenantFederationConfiguration` cmdlet modifies existing inst
 [Get-CsTenantFederationConfiguration](Get-CsTenantFederationConfiguration.md)
 
 [Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)
+
