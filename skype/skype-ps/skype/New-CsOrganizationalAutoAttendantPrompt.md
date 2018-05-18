@@ -1,6 +1,5 @@
 ---
 external help file: New-CsOrganizationalAutoAttendantPrompt.xml
-applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantPrompt
 schema: 2.0.0
 ---

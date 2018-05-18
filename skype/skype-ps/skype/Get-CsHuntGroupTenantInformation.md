@@ -1,6 +1,5 @@
 ---
 external help file: Get-CsHuntGroupTenantInformation.xml
-applicable: Skype for Business Online
 title: Get-CsHuntGroupTenantInformation
 schema: 2.0.0
 ---

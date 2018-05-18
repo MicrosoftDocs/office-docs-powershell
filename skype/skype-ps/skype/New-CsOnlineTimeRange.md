@@ -1,6 +1,5 @@
 ---
 external help file: New-CsOnlineTimeRange.xml
-applicable: Skype for Business Online
 title: New-CsOnlineTimeRange
 schema: 2.0.0
 ---

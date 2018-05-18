@@ -1,6 +1,5 @@
 ---
 external help file: Set-CsOrganizationalAutoAttendant.xml
-applicable: Skype for Business Online
 title: Set-CsOrganizationalAutoAttendant
 schema: 2.0.0
 ---

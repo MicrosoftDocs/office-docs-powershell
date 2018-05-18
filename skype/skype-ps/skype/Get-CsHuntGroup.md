@@ -1,6 +1,5 @@
 ---
 external help file: Get-CsHuntGroup.xml
-applicable: Skype for Business Online
 title: Get-CsHuntGroup
 schema: 2.0.0
 ---

@@ -1,6 +1,5 @@
 ---
 external help file: Get-CsOrganizationalAutoAttendantSupportedLanguage.xml
-applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantSupportedLanguage
 schema: 2.0.0
 ---

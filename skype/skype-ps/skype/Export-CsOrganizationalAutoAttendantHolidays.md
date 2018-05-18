@@ -1,6 +1,5 @@
 ---
 external help file: Export-CsOrganizationalAutoAttendantHolidays.xml
-applicable: Skype for Business Online
 title: Export-CsOrganizationalAutoAttendantHolidays
 schema: 2.0.0
 ---

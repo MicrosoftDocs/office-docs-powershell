@@ -1,6 +1,5 @@
 ---
 external help file: New-CsOrganizationalAutoAttendantMenuOption.xml
-applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantMenuOption
 schema: 2.0.0
 ---

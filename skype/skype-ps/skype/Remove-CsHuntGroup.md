@@ -1,6 +1,5 @@
 ---
 external help file: Remove-CsHuntGroup.xml
-applicable: Skype for Business Online
 title: Remove-CsHuntGroup
 schema: 2.0.0
 ---

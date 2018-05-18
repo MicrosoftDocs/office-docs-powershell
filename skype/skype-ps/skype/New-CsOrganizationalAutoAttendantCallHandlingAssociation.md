@@ -1,6 +1,5 @@
 ---
 external help file: New-CsOrganizationalAutoAttendantCallHandlingAssociation.xml
-applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallHandlingAssociation
 schema: 2.0.0
 ---
