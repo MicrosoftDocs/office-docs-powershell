@@ -1,6 +1,5 @@
 ---
 external help file: Get-CsOrganizationalAutoAttendantTenantInformation.xml
-applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantTenantInformation
 schema: 2.0.0
 ---

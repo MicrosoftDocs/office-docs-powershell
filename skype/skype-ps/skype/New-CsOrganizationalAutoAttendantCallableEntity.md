@@ -1,6 +1,5 @@
 ---
 external help file: New-CsOrganizationalAutoAttendantCallableEntity.xml
-applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallableEntity
 schema: 2.0.0
 ---

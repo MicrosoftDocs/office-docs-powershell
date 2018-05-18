@@ -1,6 +1,5 @@
 ---
 external help file: New-CsOrganizationalAutoAttendantDialScope.xml
-applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantDialScope
 schema: 2.0.0
 ---

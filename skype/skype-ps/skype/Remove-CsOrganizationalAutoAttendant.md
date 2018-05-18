@@ -1,6 +1,5 @@
 ---
 external help file: Remove-CsOrganizationalAutoAttendant.xml
-applicable: Skype for Business Online
 title: Remove-CsOrganizationalAutoAttendant
 schema: 2.0.0
 ---

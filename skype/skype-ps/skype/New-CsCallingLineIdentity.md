@@ -1,6 +1,5 @@
 ---
 external help file: 
-applicable: Skype for Business Online
 title: New-CsCallingLineIdentity
 schema: 2.0.0
 ---

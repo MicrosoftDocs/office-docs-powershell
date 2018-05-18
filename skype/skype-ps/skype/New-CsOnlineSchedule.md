@@ -1,6 +1,5 @@
 ---
 external help file: New-CsOnlineSchedule.xml
-applicable: Skype for Business Online
 title: New-CsOnlineSchedule
 schema: 2.0.0
 ---
