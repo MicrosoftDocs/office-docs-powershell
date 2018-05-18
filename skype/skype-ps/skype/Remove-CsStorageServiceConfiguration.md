@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsStorageServiceConfiguration
 schema: 2.0.0
