@@ -34,7 +34,7 @@ After a migration batch for a local or cross-forest move has successfully run an
 
 When the finalization process is complete, you can remove the batch by using the Remove-MigrationBatch cmdlet.
 
-If a migration batch has a status of Completed with Errors, you can rerun the Complete-MigrationBatch cmdlet. The cmdlet will attempt to finalize the failed users.
+If a migration batch has a status of Completed with Errors, you can re-attempt to finalize the failed users. In Exchange Online, use the Start-MigrationBatch cmdlet to retry migration for failed users. In Exchange 2013 or Exchange 2016, use the Complete-MigrationBatch to retry these failed users.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -101,6 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmails
+This parameter is applicable only to on-premises Exchange.
+
 The NotificationEmails parameter specifies one or more email addresses that status reports are sent to after the migration batch is completed. You can specify multiple email addresses separated by commas.
 
 If you don't use this parameter, the final status report is sent to the administrator who runs the Complete-MigrationBatch cmdlet.
