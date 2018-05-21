@@ -26,7 +26,7 @@ NOTE: Logging in with the account created for the SLA number is not supported. U
 
 By default, members of the RTCUniversalServerAdmins group are authorized to run the `Add-CsSlaDelegates`. To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt: 
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Add-CsSlaDelegates"}`
+Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Add-CsSlaDelegates"}
 
 ## EXAMPLES
 
