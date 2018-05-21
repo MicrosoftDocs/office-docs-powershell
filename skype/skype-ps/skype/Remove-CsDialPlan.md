@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsDialPlan
 schema: 2.0.0
 ---
@@ -62,7 +62,7 @@ The unique identifier of the dial plan you want to remove.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -78,7 +78,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -150,3 +150,4 @@ This cmdlet removes instances of the Microsoft.Rtc.Management.WritableConfig.Pol
 [Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
 [Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)
+

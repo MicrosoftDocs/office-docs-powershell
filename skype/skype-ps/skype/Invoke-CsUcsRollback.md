@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsUcsRollback
 schema: 2.0.0
 ---
@@ -86,7 +86,7 @@ For example, the Identity "* Smith" returns all the users who have a display nam
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -109,7 +109,7 @@ To prevent a confirmation prompt from appearing each time you roll back a user a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ To connect to a particular domain controller, include the DomainController param
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Suppresses the display of any non-fatal error message that might arise when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ By default, the Invoke-CsUcsRollback cmdlet does not pass objects through the pi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -189,7 +189,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -247,3 +247,4 @@ None.
 [Set-CsUserServicesPolicy](Set-CsUserServicesPolicy.md)
 
 [Test-CsUnifiedContactStore](Test-CsUnifiedContactStore.md)
+

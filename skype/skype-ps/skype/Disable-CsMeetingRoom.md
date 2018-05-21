@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Disable-CsMeetingRoom
 schema: 2.0.0
 ---
@@ -77,7 +77,7 @@ For example, the Identity "* Smith" returns all the user who have a display name
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -93,7 +93,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ To connect to a particular domain controller, include the DomainController param
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ By default, the Disable-CsMeetingRoom cmdlet does not pass objects through the p
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -194,3 +194,4 @@ Instead, Disable-CsMeetingRoom deletes instance of the Microsoft.Rtc.Management.
 [Move-CsMeetingRoom](Move-CsMeetingRoom.md)
 
 [Set-CsMeetingRoom](Set-CsMeetingRoom.md)
+

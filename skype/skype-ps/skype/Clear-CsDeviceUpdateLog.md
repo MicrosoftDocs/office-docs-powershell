@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Clear-CsDeviceUpdateLog
 schema: 2.0.0
 ---
@@ -50,7 +50,7 @@ For example, this syntax clears Device Update Web service log files from the Web
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -70,7 +70,7 @@ This parameter can be set to any integer value between 1 and 30, inclusive.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 3
@@ -86,7 +86,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -149,3 +149,4 @@ The `Clear-CsDeviceUpdateLog` cmdlet does not return any values.
 [Clear-CsDeviceUpdateFile](Clear-CsDeviceUpdateFile.md)
 
 [Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)
+

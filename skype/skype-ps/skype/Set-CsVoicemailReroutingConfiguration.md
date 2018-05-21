@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsVoicemailReroutingConfiguration
 schema: 2.0.0
 ---
@@ -65,7 +65,7 @@ For this cmdlet the Identity will be either Global or Site:\<site name\>, where 
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -84,7 +84,7 @@ This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.Exu
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ Value must be a number beginning with a digit 1 through 9, optionally preceded b
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Indicates whether attempts to access voice mail should be re-routed through PSTN
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ Value must be a number beginning with a digit 1 through 9, optionally preceded b
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -221,3 +221,4 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.E
 [Remove-CsVoicemailReroutingConfiguration](Remove-CsVoicemailReroutingConfiguration.md)
 
 [Get-CsVoicemailReroutingConfiguration](Get-CsVoicemailReroutingConfiguration.md)
+

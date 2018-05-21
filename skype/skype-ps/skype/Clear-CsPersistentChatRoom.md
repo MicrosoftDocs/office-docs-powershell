@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Clear-CsPersistentChatRoom
 schema: 2.0.0
 ---
@@ -78,7 +78,7 @@ You must specify an EndDate when running the `Clear-CsPersistentChatRoom` cmdlet
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -97,7 +97,7 @@ For example:
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -113,7 +113,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: ChatRoom
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -132,7 +132,7 @@ If you set the value of this parameter to False then you will not get a confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -175,3 +175,4 @@ None. Instead, `Clear-CsPersistentChatRoom` modifies existing instances of the M
 ## RELATED LINKS
 
 [Remove-CsPersistentChatMessage](Remove-CsPersistentChatMessage.md)
+

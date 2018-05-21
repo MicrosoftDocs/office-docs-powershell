@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsStaticRoute
 schema: 2.0.0
 ---
@@ -100,7 +100,7 @@ For example: `-Destination "192.168.0.240"`.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -122,7 +122,7 @@ For example: northamerica.litwareinc.com; asia.litwareinc.com and europe.litware
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -141,7 +141,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ If set to False (the default value) then all messages will be matched.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ For example: `-Port 7742`
 Type: UInt16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -195,7 +195,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Configures TCP as the transport protocol for the new route.
 Type: SwitchParameter
 Parameter Sets: TCP
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -230,7 +230,7 @@ If you include the TLSCertIssuer parameter then you must also use the TLSCertSer
 Type: String
 Parameter Sets: TLS
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ If you include the TLSCertSerialNumber parameter then you must also use the TLSC
 Type: Byte[]
 Parameter Sets: TLS
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -269,7 +269,7 @@ Configures TLS as the transport protocol for the new route.
 Type: SwitchParameter
 Parameter Sets: TLS
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -291,7 +291,7 @@ To view the default certificate, use the following command:
 Type: Boolean
 Parameter Sets: TLS
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -321,3 +321,4 @@ The `New-CsStaticRoute` cmdlet creates new instances of the Microsoft.Rtc.Manage
 [New-CsStaticRoutingConfiguration](New-CsStaticRoutingConfiguration.md)
 
 [Set-CsStaticRoutingConfiguration](Set-CsStaticRoutingConfiguration.md)
+

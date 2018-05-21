@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Request-CsCertificate
 schema: 2.0.0
 ---
@@ -169,7 +169,7 @@ You can specify multiple types in a single command by separating the certificate
 Type: CertType[]
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -191,7 +191,7 @@ The Config property returned by Certutil indicates the location of a CA.
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ If not specified, the `Request-CsCertificate` cmdlet will use the credentials of
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ Password for the user requesting the new certificate (as specified using the CaA
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -242,7 +242,7 @@ City where the certificate will be deployed.
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ When present, deletes any pending certificate requests made by using the `Reques
 Type: SwitchParameter
 Parameter Sets: ByClear
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -277,7 +277,7 @@ The EKU portion of the parameter name is short for extended key usage; the exten
 Type: Boolean
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -297,7 +297,7 @@ The `Request-CsCertificate` cmdlet will automatically add the pool name to the S
 Type: Fqdn
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ Country/region where the certificate will be deployed.
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -333,7 +333,7 @@ For example:
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -349,7 +349,7 @@ User-assigned name that makes it easier to identify the certificate.
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -367,7 +367,7 @@ This parameter is not required if you are running the `Request-CsCertificate` cm
 Type: Fqdn
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -386,7 +386,7 @@ If global settings are stored in the Configuration container then any domain con
 Type: Fqdn
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -411,7 +411,7 @@ ECDH_P521
 Type: KeyAlgorithmIdentifier
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -431,7 +431,7 @@ For example: `-KeySize 2048`.
 Type: Int32
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -448,7 +448,7 @@ When present, lists any pending certificate requests made by using the `Request-
 Type: SwitchParameter
 Parameter Sets: ByList
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -464,7 +464,7 @@ When present, indicates that you want to request a new certificate.
 Type: SwitchParameter
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -481,7 +481,7 @@ For example: `-Organization "Litwareinc"`.
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -497,7 +497,7 @@ Active Directory organizational unit for the computer that will be assigned the 
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -515,7 +515,7 @@ That will create a certificate request file that can then be emailed to a certif
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -532,7 +532,7 @@ When a private key is exportable, the certificate can be copied and used on mult
 Type: Boolean
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -549,7 +549,7 @@ When present, retrieves any pending certificate requests made by using the `Requ
 Type: SwitchParameter
 Parameter Sets: ByRetrieve
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -567,7 +567,7 @@ For example: `-State WA`.
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -585,7 +585,7 @@ Note that the value entered must be the template name, not the template display 
 Type: String
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -601,7 +601,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -618,7 +618,7 @@ For example: `-Report "C:\Logs\Certificates.html"`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -634,7 +634,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -650,7 +650,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -667,7 +667,7 @@ The RequestID parameter provides a way for you to list, retrieve, or clear an in
 Type: Int32
 Parameter Sets: ByClear, ByList, ByRetrieve
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -685,7 +685,7 @@ However, additional domains can be specified by using the DomainName parameter.
 Type: SwitchParameter
 Parameter Sets: ByNew
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -720,3 +720,4 @@ Instead, the `Request-CsCertificate` cmdlet helps manage instances of the Micros
 [Remove-CsCertificate](Remove-CsCertificate.md)
 
 [Set-CsCertificate](Set-CsCertificate.md)
+

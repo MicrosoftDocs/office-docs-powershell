@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsDialInConferencingConfiguration
 schema: 2.0.0
 ---
@@ -74,7 +74,7 @@ The sample command will fail if a collection of settings with the Identity site:
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -92,7 +92,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ If set to False (the default value), entry and exit announcements will not be pl
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Note that announcements are played only if the EntryExitAnnouncementsEnabledByDe
 Type: EntryExitAnnouncementsType
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ If you assign the output of this cmdlet called with this parameter to a variable
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -203,7 +203,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ The default is $False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -243,7 +243,7 @@ OrganizerOnly
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -275,4 +275,5 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Di
 [Remove-CsDialInConferencingConfiguration](Remove-CsDialInConferencingConfiguration.md)
 
 [Set-CsDialInConferencingConfiguration](Set-CsDialInConferencingConfiguration.md)
+
 

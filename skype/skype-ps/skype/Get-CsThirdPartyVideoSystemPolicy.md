@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
 ---
@@ -88,7 +88,7 @@ Note that you can only filter on the Identity property.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ If neither the Identity nor the Filter parameter is specified the Get-CsThirdPar
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -136,7 +136,7 @@ Retrieves the third-party video system policy data from the local replica of the
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ You can return the tenant ID for each of your tenants by running this command:
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -194,3 +194,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsThirdPartyVideoSystem](Remove-CsThirdPartyVideoSystem.md)
 
 [Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)
+

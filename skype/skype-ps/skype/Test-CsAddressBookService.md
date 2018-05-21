@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsAddressBookService
 schema: 2.0.0
 ---
@@ -107,7 +107,7 @@ You need to supply the user password when running this command.
 Type: PSCredential
 Parameter Sets: ClientPlatform
 Aliases: uc
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -124,7 +124,7 @@ If this parameter is not specified then `Test-CsAddressBookService` will conduct
 Type: String
 Parameter Sets: ClientPlatform, TargetUri
 Aliases: ua
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ServerPlatform
 Aliases: ua
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Enables you to verify that external users can use the Address Book Download Web 
 Type: SwitchParameter
 Parameter Sets: ClientPlatform, ServerPlatform
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ This parameter is not required if the Registrar uses the default port 5061.
 Type: Int32
 Parameter Sets: ClientPlatform, ServerPlatform
 Aliases: rp
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -189,7 +189,7 @@ You cannot use both the TargetUri parameter and the TargetFqdn parameter in the 
 Type: String
 Parameter Sets: ClientPlatform
 Aliases: t
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: ServerPlatform
 Aliases: t
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -221,7 +221,7 @@ You cannot use both the TargetUri parameter and the TargetFqdn parameter in the 
 Type: String
 Parameter Sets: TargetUri
 Aliases: twsu
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -237,7 +237,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ Do not prepend a $ character when specifying the variable name.
 Type: String
 Parameter Sets: (All)
 Aliases: ovv
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ This parameter is required if the TargetUri and UserSipAddress parameters are sp
 Type: PSCredential
 Parameter Sets: TargetUri
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -317,7 +317,7 @@ Allowed values are:
 Type: AuthenticationMechanism
 Parameter Sets: (All)
 Aliases: Ath
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -346,7 +346,7 @@ To save the information stored in the logger variable to an XML file, use a comm
 Type: String
 Parameter Sets: (All)
 Aliases: olv
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -376,3 +376,4 @@ The `Test-CsAddressBookService` cmdlet returns an instance of the Microsoft.Rtc.
 [Test-CsAddressBookWebQuery](Test-CsAddressBookWebQuery.md)
 
 [Update-CsAddressBook](Update-CsAddressBook.md)
+

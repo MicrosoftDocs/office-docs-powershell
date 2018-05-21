@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsAddressBookNormalizationConfiguration
 schema: 2.0.0
 ---
@@ -65,7 +65,7 @@ Note that you cannot use wildcards when specifying the collection to be removed.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -81,7 +81,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -147,3 +147,4 @@ Instead, the `Remove-CsAddressBookNormalizationConfiguration` cmdlet deletes exi
 [Set-CsAddressBookNormalizationConfiguration](Set-CsAddressBookNormalizationConfiguration.md)
 
 [Import-CsCompanyPhoneNormalizationRules](Import-CsCompanyPhoneNormalizationRules.md)
+

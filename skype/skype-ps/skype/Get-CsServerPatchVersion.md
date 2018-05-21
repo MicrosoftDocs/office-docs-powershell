@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsServerPatchVersion
 schema: 2.0.0
 ---
@@ -38,7 +38,7 @@ Get-CsServerPatchVersion [-Report <String>] [<CommonParameters>]
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -61,3 +61,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

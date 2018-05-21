@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Add-CsSlaDelegates
 schema: 2.0.0
 ---
@@ -46,7 +46,7 @@ Specifies a user that will respond to a call on the shared number specified by t
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ User identities can be specified using one of five formats:
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -89,7 +89,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ The presence of the passthru switch causes the cmdlet to pass the current object
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -142,3 +142,4 @@ The `Add-CsSlaDelegates` cmdlet returns a Microsoft.Rtc.Management.SlaConfigurat
 ## NOTES
 
 ## RELATED LINKS
+

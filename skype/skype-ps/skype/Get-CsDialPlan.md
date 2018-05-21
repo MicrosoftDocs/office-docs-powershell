@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsDialPlan
 schema: 2.0.0
 ---
@@ -102,7 +102,7 @@ The unique identifier designating the scope, and for per-user scope a name, to i
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -118,7 +118,7 @@ Performs a wildcard search that allows you to narrow down your results to only d
 Type: String
 Parameter Sets: Filter, (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ Retrieves the dial plan information from the local replica of the Central Manage
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -220,3 +220,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Test-CsDialPlan](Test-CsDialPlan.md)
 
 [Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)
+

@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAnalogDevice
 schema: 2.0.0
 ---
@@ -127,7 +127,7 @@ By default, analog devices use a GUID (globally unique identifier) as their comm
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -147,7 +147,7 @@ For details, see the Get-Credential cmdlet Help topic.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ To connect to a particular domain controller, include the DomainController param
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ For example, a filter that returns only fax machines would look like this, with 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ In the preceding filter, "l" represents the Active Directory attribute (locality
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ When specifying an OU, use the distinguished name of that container; for example
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ If set to 0 the command will run, but no data will be returned.
 Type: Microsoft.Rtc.Management.ADConnect.Core.Unlimited`1[System.UInt32]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -290,3 +290,4 @@ The Get-CsAnalogDevice cmdlet accepts a pipelined string value that represents t
 [Remove-CsAnalogDevice](Remove-CsAnalogDevice.md)
 
 [Set-CsAnalogDevice](Set-CsAnalogDevice.md)
+

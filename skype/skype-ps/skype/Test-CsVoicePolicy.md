@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsVoicePolicy
 schema: 2.0.0
 ---
@@ -71,7 +71,7 @@ This number should be in E.164 format (such as +14255551212).
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -89,7 +89,7 @@ Voice policy objects can be retrieved by calling the `Get-CsVoicePolicy` cmdlet.
 Type: VoicePolicy
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -107,7 +107,7 @@ The route settings can be retrieved with a call to the `Get-CsRoutingConfigurati
 Type: PstnRoutingSettings
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Suppresses any confirmation prompts or non-fatal error messages that might occur
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -160,3 +160,4 @@ Returns an object of type Microsoft.Rtc.Management.Voice.VoicePolicyTestResult.
 [Get-CsVoicePolicy](Get-CsVoicePolicy.md)
 
 [Grant-CsVoicePolicy](Grant-CsVoicePolicy.md)
+

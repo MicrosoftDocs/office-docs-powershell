@@ -26,7 +26,8 @@ IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy. Components that 
 
 
 NOTES: 
-   All relevant instances of TeamsUpgradePolicy are built-in to the system, so there is corresponding New cmdlet.
+   All relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet.
+
    Instances with mode set to SfBWithTeamsCollab are not yet functional. From a routing perspective, this will behave like SfBOnly mode.
    When granting TeamsUpgradePolicy, you must also grant the corresponding instances of TeamsInteropPolicy as described later below.
 
@@ -214,3 +215,4 @@ When you grant TeamsUpgradePolicy to a user, you must also grant the correspondi
 [Set-CsTeamsUpgradeConfiguration](Set-CsTeamsUpgradeConfiguration.md)
 
 [Get-CsTeamsUpgradePolicy](Get-CsTeamsUpgradePolicy.md)
+
