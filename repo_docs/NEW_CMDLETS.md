@@ -4,9 +4,11 @@
 1. Import the module you want to document.
     - Skype for Business Online: https://technet.microsoft.com/en-us/library/dn362795(v=ocs.15).aspx
     - Microsoft Teams: https://blogs.technet.microsoft.com/skypehybridguy/2017/11/07/microsoft-teams-powershell-support/
+    
     Hint: Might need to use Upgrade-Module and also Uninstall-Module depending on version and if you already have a version installed.
 1. Use PlatyPS to generate Markdown.
     - Skype for Business Online: `New-MarkdownHelp -module tmp_byivwzpq.e1k -OutputFolder .\docs`. 
+    
     TIP: You can see available modules with the command `Get-Module --listavailable`.
 1. Find the new cmdlet and you will see the stubbed markdown.
 1. Add the correct Applicable tags to the top metadata and also the parameters for the cmdlet. 
@@ -15,7 +17,7 @@
     
     You will need to add the title and also applicable metadata for the cmdlet and also for each parameter.
 
-    **Example metadata for each parameter:** Notice the Applicable tag is added with appropriate 'whitelisted' product name.
+    **Example metadata for each parameter:** Notice the `applicable` and `title` tag is added with appropriate 'whitelisted' product name.
 
     ```
     external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
@@ -26,7 +28,7 @@
     schema: 2.0.0
     ```
 
-    **Example metadata for each parameter:** Notice the Applicable tag is added with appropriate 'whitelisted' product name.
+    **Example metadata for each parameter:** Notice the `Applicable` tag is added with appropriate **whitelisted** product name.
 
     ```
     Type: String
