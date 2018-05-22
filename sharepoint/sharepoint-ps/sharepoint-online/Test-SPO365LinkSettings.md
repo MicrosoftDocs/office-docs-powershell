@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -MySiteHostUrl
-The URL of the on-premises MySite Host. This URL must point to a site that uses the SPS
+The URL of the on-premises MySite Host. This URL must be a site that uses the SPSMSITEHOST#0 template.
 
 ```yaml
 Type: Uri
