@@ -41,7 +41,7 @@
     ```
 
 
-1. Add the cmdlet to TOC. TOC file is the name of the module. 
+1. Add the cmdlet to Table of Contents (TOC) file. TOC file is the name of the module. 
     For example, for all Teams cmdlets the TOC file is teams.md.
     You can fill in a description or remove the template text line.
     However, if you leave the template text line make sure it is exactly in the right format so that it will not render as a template text.
