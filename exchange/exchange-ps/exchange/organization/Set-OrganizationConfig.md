@@ -1879,7 +1879,7 @@ Accept wildcard characters: False
 ### -IPListBlocked
 This parameter is available only in the cloud-based service.
 
-The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory. Please note that the new settings might take up to 4 hours to fully propagate across the service.
+The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory. Note that the new settings might take up to 4 hours to fully propagate across the service.
 
 This parameter accepts IPv4 or IPv6 addresses in the following formats:
 
