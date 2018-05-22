@@ -41,7 +41,8 @@ Office 365 email of the member to be added.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Microsoft StaffHub
 
 Required: False
 Position: 3
@@ -56,7 +57,8 @@ First name of the member to be added.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Microsoft StaffHub
 
 Required: True
 Position: 1
@@ -71,7 +73,8 @@ Should the person be added as a manager.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Microsoft StaffHub
 
 Required: True
 Position: 5
@@ -86,7 +89,8 @@ Last name of the member to be added.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Microsoft StaffHub
 
 Required: True
 Position: 2
@@ -101,7 +105,8 @@ Phone number of the member to be added.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Microsoft StaffHub
 
 Required: False
 Position: 4
@@ -116,7 +121,8 @@ ID of the team to which the member is to be added.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Microsoft StaffHub
 
 Required: True
 Position: 0
