@@ -25,8 +25,14 @@ The following cmdlet references are for Microsoft StaffHub.
 ### [Get-StaffHubMember](Get-StaffHubMember.md)
 {{Manually Enter Get-StaffHubMember Description Here}}
 
+### [Get-StaffHubShifts](Get-StaffHubShifts.md)
+{{Manually Enter Get-StaffHubShifts Description Here}}
+
 ### [Get-StaffHubTeamsForTenant](Get-StaffHubTeamsForTenant.md)
 {{Manually Enter Get-StaffHubTeamsForTenant Description Here}}
+
+### [Get-StaffHubUsersForTenant](Get-StaffHubUsersForTenant.md)
+{{Manually Enter Get-StaffHubUsersForTenant Description Here}}
 
 ### [Import-StaffHubMember](Import-StaffHubMember.md)
 {{Manually Enter Import-StaffHubMember Description Here}}
@@ -39,4 +45,7 @@ The following cmdlet references are for Microsoft StaffHub.
 
 ### [Remove-StaffHubMember](Remove-StaffHubMember.md)
 {{Manually Enter Remove-StaffHubMember Description Here}}
+
+### [Remove-StaffHubUser](Remove-StaffHubUser.md)
+{{Manually Enter Remove-StaffHubUser Description Here}}
 
