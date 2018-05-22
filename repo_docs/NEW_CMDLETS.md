@@ -1,5 +1,4 @@
 # Generate Your Own Markdown
-**SECTION IN PROGRESS**
 
 1. Open PowerShell as Administrator.
 1. Import the module you want to document.
@@ -53,7 +52,7 @@ If you want to merge multiple versions into a single version then use the PlatyP
 
 Note: If this is a brand new product you need to add metadata at the global level in order for it to show up in reporting.
 
-References:
+## References
 * https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
 * https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
 * https://github.com/PowerShell/platyPS
