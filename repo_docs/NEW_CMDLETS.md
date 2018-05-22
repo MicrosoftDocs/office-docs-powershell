@@ -13,31 +13,30 @@
     
     You will need to add the title and also applicable metadata for the cmdlet and also for each parameter.
 
-    **Example metadata at top of cmdlet:**
+    **Example metadata for each parameter:** Notice the Applicable tag is added with appropriate 'whitelisted' product name.
 
-```
-    external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml\
-    Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets\
-    online version:\
-    **applicable: Microsoft StaffHub**\
-    **title: Get-StaffHubUsersForTenant**\
+    ```
+    external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+    Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+    online version:
+    applicable: Microsoft StaffHub
+    title: Get-StaffHubUsersForTenant
     schema: 2.0.0
-```
+    ```
 
+    **Example metadata for each parameter:** Notice the Applicable tag is added with appropriate 'whitelisted' product name.
 
-    **Example metadata for each parameter:**
-
-```
-    Type: String\
-    Parameter Sets: (All)\
-    Aliases:\
-    **Applicable: Microsoft StaffHub**\
-    Required: False\
-    Position: 1\
-    Default value: None\
-    Accept pipeline input: False\
+    ```
+    Type: String
+    Parameter Sets: (All)
+    Aliases:
+    Applicable: Microsoft StaffHub
+    Required: False
+    Position: 1
+    Default value: None
+    Accept pipeline input: False
     Accept wildcard characters: False
-```
+    ```
 
 6. Add the correct Applicable tags to the top metadata and also the parameters for the cmdlet. 
     See others for details. 
