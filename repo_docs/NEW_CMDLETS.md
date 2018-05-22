@@ -6,7 +6,8 @@
     - Microsoft Teams: https://blogs.technet.microsoft.com/skypehybridguy/2017/11/07/microsoft-teams-powershell-support/
     Hint: Might need to use Upgrade-Module and also Uninstall-Module depending on version and if you already have a version installed.
 1. Use PlatyPS to generate Markdown.
-    - Skype for Business Online: `New-MarkdownHelp -module tmp_byivwzpq.e1k -OutputFolder .\docs`.
+    - Skype for Business Online: `New-MarkdownHelp -module tmp_byivwzpq.e1k -OutputFolder .\docs`. 
+    TIP: You can see available modules with the command `Get-Module --listavailable`.
 1. Find the new cmdlet and you will see the stubbed markdown.
 1. Add the correct Applicable tags to the top metadata and also the parameters for the cmdlet. 
     See others for details. 
@@ -56,3 +57,4 @@ Note: If this is a brand new product you need to add metadata at the global leve
 * https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
 * https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
 * https://github.com/PowerShell/platyPS
+* https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
