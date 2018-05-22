@@ -2,6 +2,8 @@
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 online version:
+applicable: Microsoft StaffHub
+title: Get-StaffHubUsersForTenant
 schema: 2.0.0
 ---
 
@@ -50,6 +52,7 @@ Continuation Token returned by the previous call
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft StaffHub
 
 Required: False
 Position: 1
@@ -65,6 +68,7 @@ Top 'n' items to be fetched sorted by ascending creation time order.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft StaffHub
 
 Required: False
 Position: 0

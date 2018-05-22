@@ -2,6 +2,8 @@
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 online version:
+applicable: Microsoft StaffHub
+title: Get-StaffHubShifts
 schema: 2.0.0
 ---
 
@@ -49,6 +51,7 @@ EndDateTime for the time window between which shifts are to be fetched
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft StaffHub
 
 Required: True
 Position: 2
@@ -64,6 +67,7 @@ MemberId of the member for which the shifts are to be fetched
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft StaffHub
 
 Required: False
 Position: 3
@@ -79,6 +83,7 @@ StartDateTime for the time window between which shifts are to be fetched
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft StaffHub
 
 Required: True
 Position: 1
@@ -94,6 +99,7 @@ TeamId of the team for which the shifts are to be fetched
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft StaffHub
 
 Required: True
 Position: 0

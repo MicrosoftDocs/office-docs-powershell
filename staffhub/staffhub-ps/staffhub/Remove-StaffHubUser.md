@@ -2,6 +2,8 @@
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 online version:
+applicable: Microsoft StaffHub
+title: Remote-StaffHubUser
 schema: 2.0.0
 ---
 
@@ -39,6 +41,7 @@ UserId of the user to be removed from StaffHub
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft StaffHub
 
 Required: True
 Position: 0
