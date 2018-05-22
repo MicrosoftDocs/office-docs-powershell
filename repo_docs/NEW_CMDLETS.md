@@ -15,17 +15,12 @@
 
     **Example metadata at top of cmdlet:**
 
-    external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-
-    Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
-
-    online version:
-
-    **applicable: Microsoft StaffHub**
-
-    **title: Get-StaffHubUsersForTenant**
-
-    schema: 2.0.0
+    external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml\
+    Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets\
+    online version:\
+    **applicable: Microsoft StaffHub**\
+    **title: Get-StaffHubUsersForTenant**\
+    schema: 2.0.0\
 
 
 
