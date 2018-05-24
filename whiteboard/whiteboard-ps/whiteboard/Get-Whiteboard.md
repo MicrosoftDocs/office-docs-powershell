@@ -73,12 +73,26 @@ Applicable: Microsoft Whiteboard
 ### -WhiteboardId
 
 Optional. The ID of a specific Whiteboard.
-        
+
 ```yaml
 Type:                        Guid
 Required:                    true
 Position:                    named
 Default value:               None       
+Accept pipeline input:       false
+Accept wildcard characters:  false
+Applicable: Microsoft Whiteboard
+```
+
+### -ForceAuthPrompt
+
+Optional. Always prompt for auth. Use to ignore cached credentials.
+
+```yaml
+Type:                        SwitchParameter
+Required:                    false
+Position:                    named
+Default value:               false       
 Accept pipeline input:       false
 Accept wildcard characters:  false
 Applicable: Microsoft Whiteboard
