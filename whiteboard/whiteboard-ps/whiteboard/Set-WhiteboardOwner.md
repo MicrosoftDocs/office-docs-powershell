@@ -139,4 +139,6 @@ Applicable: Microsoft Whiteboard
 
 ## NOTES
 
+For details on user IDs, see the [overview page](whiteboard.md).
+
 ## RELATED LINKS
