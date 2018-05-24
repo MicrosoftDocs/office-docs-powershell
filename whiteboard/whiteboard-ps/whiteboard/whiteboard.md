@@ -1,6 +1,6 @@
 ---
 Module Name: Microsoft Whiteboard Admin
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Module Guid: CC24F7D4-4CF7-46D3-BD87-30A3D44ECF96
 title: Microsoft Whiteboard
 Locale: en-US
 ---
