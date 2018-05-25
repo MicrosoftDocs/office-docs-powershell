@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsBusyOptions
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets up the processing of incoming calls for users is already in communication whether for a call, conference or placed call waiting. This cmdlet was introduced in Skype for Business Server 2015 June 2016 Cumulative Update.
 
 ## SYNTAX
 
@@ -18,21 +18,46 @@ Set-CsBusyOptions [-Identity] <UserIdParameter> -ActionType <ActionType> [-Confi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet sets the configuration for processing of incoming calls defined for a specific user. If Busy Options is enabled for the organization, all users in your organization, both Enterprise Voice and non-Enterprise Voice users, can use the following features:
+
+* Busy on Busy - In which new incoming calls will be rejected with a busy signal if the user is busy.
+
+* Voicemail on Busy - In which new incoming calls will be forwarded to voice mail if the user is busy.
+
+The Busy Options feature provides failover capability. If a problem occurs and users fail over to another Front End Server or to another pool in Skype for Business Server, their Busy Options settings will be preserved.
+
+Regardless of how their busy options are configured, users in a call or conference, or those with a call on hold, are not prevented from initiating new calls or conferences.
+
+After configuration, the Busy Options setting is in effect for all the user's Skype for Business call devices and clients. Based on the user's Busy Options settings, the call that is rejected or sent to voice mail would not ring on any of the user's call devices--including Macintosh, Windows Desktop, mobile clients, or IP phones--on which the user is signed in.
+
+Users will see missed-call notifications on their Skype for Business clients and devices, and they will be notified by email as well. Callers whose call was rejected due to Busy on Busy will see a notification in their Skype for Business client stating that the user they attempted to reach is busy on another call.
+
+For more information about how to enable Busy Options in your organization, see (https://docs.microsoft.com/en-us/skypeforbusiness/deploy/deploy-enterprise-voice/install-and-configure-busy-options).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-CsBusyOptions -Identity "Ken Myer" -ActionType BusyOnBusy
 ```
 
-{{ Add example description here }}
+This cmdlet configures busy options for the user "Ken Myer". In this configuration, any call to "Ken Myer" will return a busy signal when he is already in a call.
+
+### -------------------------- Example 2 --------------------------
+```
+Set-CsBusyOptions -Identity "Chrystal Velasquez" -ActionType VoicemailOnBusy
+```
+
+This cmdlet configures busy options for the user "Chrystal Velasquez". In this configuration, new incoming calls to "Chrystal Velasquez" will be forwarded to voice mail when she is already in a call.
 
 ## PARAMETERS
 
 ### -ActionType
-{{Fill ActionType Description}}
+There are two Action Type options:
+
+* BusyOnBusy - In which new incoming calls will be rejected with a busy signal if the user is busy.
+
+* VoicemailOnBusy - In which new incoming calls will be forwarded to voice mail if the user is busy.
 
 ```yaml
 Type: ActionType
@@ -65,7 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the user account to be modified. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
+
+You can use the asterisk (*) wildcard character when using the display name as the user Identity. For example, the Identity "*Smith" returns all the users who have a display name that ends with the string value "Smith".
 
 ```yaml
 Type: UserIdParameter
@@ -81,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -118,14 +145,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.Nullable`1[[Microsoft.Rtc.Management.Bob.Cmdlets.ActionType, Microsoft.Rtc.Management, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]
-Microsoft.Rtc.Management.AD.UserIdParameter
+### 
+Microsoft.Rtc.Management.Bob.Cmdlets.ActionType object.
+Microsoft.Rtc.Management.AD.UserIdParameter object.
 
 ## OUTPUTS
 
-### System.Object
+### 
+Microsoft.Rtc.Management.Bob.Cmdlets.ActionType object.
+Microsoft.Rtc.Management.AD.UserIdParameter object.
 
 ## NOTES
 
 ## RELATED LINKS
-
+* [Get-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/get-csbusyoptions?view=skype-ps)
+* [Remove-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
