@@ -23,6 +23,7 @@ This cmdlet retrieves configuration information about Busy Options for a specifi
 
 * VoicemailOnBusy - In which new incoming calls will be forwarded to voice mail if the user is busy.
 
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -31,6 +32,7 @@ Get-CsBusyOptions -Identity sip:KenMyer@Contoso.com
 ```
 
 This example returns the Busy Options setting for "KenMyer@Contoso.com".
+
 
 ## PARAMETERS
 
@@ -71,10 +73,12 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
 ### 
 Microsoft.Rtc.Management.AD.UserIdParameter object.
+
 
 ## OUTPUTS
 
@@ -82,7 +86,9 @@ Microsoft.Rtc.Management.AD.UserIdParameter object.
 Microsoft.Rtc.Management.Bob.Cmdlets.ActionType object.
 Microsoft.Rtc.Management.AD.UserIdParameter object.
 
+
 ## NOTES
+
 
 ## RELATED LINKS
 * [Remove-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
