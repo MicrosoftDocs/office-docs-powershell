@@ -112,7 +112,7 @@ The DatabaseList parameter specifies a list of databases to which the scope shou
 Type: DatabaseIdParameter[]
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -129,7 +129,7 @@ The DatabaseRestrictionFilter parameter specifies the filter to apply to databas
 Type: String
 Parameter Sets: Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -176,7 +176,7 @@ The ServerList parameter specifies a list of servers to which the scope should b
 Type: ServerIdParameter[]
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -193,7 +193,7 @@ The ServerRestrictionFilter parameter specifies the filter to apply to server ob
 Type: String
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None

@@ -173,7 +173,7 @@ The Instance parameter enables you to pass an entire object to the command to be
 Type: MailboxAcePresentationObject
 Parameter Sets: Set2, Set3, Set4
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -321,7 +321,7 @@ To re-add auto-mapping capability on the mailbox for other users, run the comman
 Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -346,7 +346,7 @@ Also, because this switch removes FullAccess permission from other users on the 
 Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None

@@ -225,7 +225,7 @@ The Local switch specifies a local move (mailboxes are moved to a different mail
 Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -257,7 +257,7 @@ The SourcePublicFolderDatabase parameter specifies the name of the source public
 Type: DatabaseIdParameter
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -565,7 +565,7 @@ For an IMAP migration, the ExcludeFolders parameter specifies mailbox folders th
 Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -607,7 +607,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None

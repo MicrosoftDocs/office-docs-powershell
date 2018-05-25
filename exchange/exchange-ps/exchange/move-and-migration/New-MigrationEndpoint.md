@@ -235,7 +235,7 @@ The ExchangeOutlookAnywhere switch specifies the type of endpoint for staged and
 Type: SwitchParameter
 Parameter Sets: Set4, Set3, Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -267,7 +267,7 @@ The IMAPswitch specifies the type of endpoint for IMAP migrations. You don't nee
 Type: SwitchParameter
 Parameter Sets: Set7, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -335,7 +335,7 @@ This parameter is required only when you don't use the Autodiscover parameter.
 Type: Fqdn
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -364,7 +364,7 @@ The SourceMailboxLegacyDN parameter specifies the LegacyExchangeDNvalue of an on
 Type: String
 Parameter Sets: Set4, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -393,7 +393,7 @@ The Authentication parameter specifies the authentication method used by the on-
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
 Parameter Sets: Set3, Set7, Set6, Set2, Set11, Set9
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -477,7 +477,7 @@ This parameter is required only when you don't use the Autodiscover parameter.
 Type: String
 Parameter Sets: Set3, Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -504,7 +504,7 @@ This parameter can't be used for creating non-Outlook Anywhere migration endpoin
 Type: Admin | FullAccess
 Parameter Sets: Set4, Set3, Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -551,7 +551,7 @@ The NspiServer parameter specifies the remote Name Service Provider Interface (N
 Type: String
 Parameter Sets: Set3, Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -568,7 +568,7 @@ For an IMAP migration, the Port parameter specifies the TCP port number used by 
 Type: Int32
 Parameter Sets: Set7, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -585,7 +585,7 @@ For an IMAP migration, the Security parameter specifies the encryption method us
 Type: None | Ssl | Tls
 Parameter Sets: Set7, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -619,7 +619,7 @@ This parameter is only used to create Outlook Anywhere migration endpoints.
 Type: MailboxIdParameter
 Parameter Sets: Set4, Set3, Set6, Set2, Set9, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

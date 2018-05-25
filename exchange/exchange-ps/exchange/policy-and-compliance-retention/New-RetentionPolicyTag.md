@@ -193,7 +193,7 @@ The ManagedFolderToUpgrade parameter specifies the name of a managed folder to u
 Type: ELCFolderIdParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
