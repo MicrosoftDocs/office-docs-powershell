@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ### -Authentication
 This parameter is available only in the cloud-based service.
 
-The Authentication parameter specifies the authentication method used by the on-premises mail server.
+The Authentication parameter specifies the authentication method used by the remote mail server.
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
@@ -295,7 +295,9 @@ Accept wildcard characters: False
 ```
 
 ### -Security
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in the cloud-based service.
+
+For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
 Type: None | Ssl | Tls

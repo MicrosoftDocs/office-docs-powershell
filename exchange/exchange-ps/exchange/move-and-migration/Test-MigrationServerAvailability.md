@@ -513,7 +513,7 @@ Accept wildcard characters: False
 ### -Security
 This parameter is available only in the cloud-based service.
 
-The Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl. Use this parameter only when testing the connection to an IMAP server or in preparation for creating a migration endpoint for an IMAP migration.
+For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
 Type: None | Ssl | Tls

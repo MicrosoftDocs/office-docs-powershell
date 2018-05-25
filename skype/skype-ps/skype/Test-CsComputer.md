@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsComputer
 schema: 2.0.0
 ---
@@ -60,7 +60,7 @@ If this file already exists, it will be overwritten when you run the cmdlet.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -108,3 +108,4 @@ The `Test-CsComputer` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 [Enable-CsComputer](Enable-CsComputer.md)
 
 [Get-CsComputer](Get-CsComputer.md)
+

@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsManagementServer
 schema: 2.0.0
 ---
@@ -48,7 +48,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -76,3 +76,4 @@ The `Test-CsManagementServer` cmdlet returns an instance of the Microsoft.Rtc.Sy
 ## RELATED LINKS
 
 [Set-CsManagementServer](Set-CsManagementServer.md)
+

@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Clear-CsDeviceUpdateLog
 schema: 2.0.0
 ---
@@ -22,13 +22,13 @@ Clear-CsDeviceUpdateLog [-Identity] <XdsIdentity> [-DaysBack] <Int32> [-Force] [
 ## DESCRIPTION
 The Device Update Web service keeps an extensive collection of log files; this collection includes both audit logs conducted by the service itself as well as log files uploaded from client devices such as cell phones.
 Depending on the amount of device update activity, and depending on the number of client devices used in your organization, your server could soon become "cluttered" with Device Update Web service logs.
-The Clear-CsDeviceUpdateLog cmdlet provides a way for you to reduce the number of log files stored on the server: all you have to do is run the cmdlet and specify the maximum age (in days) of the files that should not be deleted.
+The `Clear-CsDeviceUpdateLog` cmdlet provides a way for you to reduce the number of log files stored on the server: all you have to do is run the cmdlet and specify the maximum age (in days) of the files that should not be deleted.
 Any log files older than that maximum age will be removed from the system.
 
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Clear-CsDeviceUpdateLog cmdlet locally: RTCUniversalServerAdmins.
+Who can run this cmdlet: By default, members of the following groups are authorized to run the `Clear-CsDeviceUpdateLog` cmdlet locally: RTCUniversalServerAdmins.
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Clear-CsDeviceUpdateLog"}`
+Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Clear-CsDeviceUpdateLog"}
 
 ## EXAMPLES
 
@@ -50,7 +50,7 @@ For example, this syntax clears Device Update Web service log files from the Web
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -70,7 +70,7 @@ This parameter can be set to any integer value between 1 and 30, inclusive.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 3
@@ -86,7 +86,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -134,13 +134,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The Clear-CsDeviceUpdateLog cmdlet does not accept pipelined input.
+The `Clear-CsDeviceUpdateLog` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
 None.
-The Clear-CsDeviceUpdateLog cmdlet does not return any values.
+The `Clear-CsDeviceUpdateLog` cmdlet does not return any values.
 
 ## NOTES
 
@@ -149,3 +149,4 @@ The Clear-CsDeviceUpdateLog cmdlet does not return any values.
 [Clear-CsDeviceUpdateFile](Clear-CsDeviceUpdateFile.md)
 
 [Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)
+

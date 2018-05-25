@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsTeamsMessagingPolicy
 
 ## SYNOPSIS
-Deletes a previously created TeamsMessagingPolicy.
+Deletes a custom messaging policy. Teams messaging policies determine the features and capabilities that can be used in messaging within the teams client. 
 
 Remove-CsTeamsMessagingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
@@ -132,3 +132,4 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+

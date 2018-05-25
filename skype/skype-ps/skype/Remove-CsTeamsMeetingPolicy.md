@@ -8,44 +8,27 @@ schema: 2.0.0
 # Remove-CsTeamsMeetingPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Remove-CsTeamsMeetingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 ## SYNTAX
 
 ```
-Remove-CsTeamsMeetingPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
- [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Remove-CsTeamsMeetingPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force] [-AsJob]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Deletes a previously created TeamsMeetingPolicy.  Any users with no explicitly assigned policies will then fall back to the default policy in the organization.  You cannot delete the global policy from the organization. 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-PS C:\> {{ Add example code here }}
+### Example 1
+```powershell
+PS C:\> Remove-CsTeamsMeetingPolicy -Identity StudentMeetingPolicy
 ```
 
-{{ Add example description here }}
+In the example shown above, the command will delete the student meeting policy from the organization's list of policies and remove all assignments of this policy from users who have had the policy assigned.
 
 ## PARAMETERS
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -54,7 +37,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -64,13 +46,11 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -80,13 +60,12 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique identifier for the teams meeting policy to be removed. To remove the global policy, use this syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity StudentMeetingPolicy .
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: 1
@@ -96,13 +75,11 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +96,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -129,13 +105,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -144,12 +118,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## INPUTS
 
 ### Microsoft.Rtc.Management.Xds.XdsIdentity
+
 
 ## OUTPUTS
 
@@ -158,3 +130,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

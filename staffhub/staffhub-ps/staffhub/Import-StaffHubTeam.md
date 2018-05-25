@@ -46,7 +46,7 @@ https://msdn.microsoft.com/en-us/library/system.text.encoding(v=vs.110).aspx - E
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 1
 Default value: None
@@ -61,7 +61,7 @@ Location of the file.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: True
 Position: 0
 Default value: None

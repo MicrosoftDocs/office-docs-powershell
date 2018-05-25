@@ -20,7 +20,7 @@ Grant-CsTeamsMessagingPolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-
 ```
 
 ## DESCRIPTION
-Granular control over which messaging features your users can or cannot use is an important feature for many organizations.  This cmdlet lets you assign a teams messaging policy at the per-user scope. Teams messaging policies determine the features and capabilities that can be used in messaging within the teams client. After creating a messaging policy with the New-CsTeamsMessagingPolicy cmdlet, you can assign that policy to a particular user using the Grant-CsTeamsMessagingPolicy cmdlet.
+Granular control over which messaging features your users can or cannot use is an important feature for many organizations.  This cmdlet lets you assign a teams messaging policy at the per-user scope. Teams messaging policies determine the features and capabilities that can be used in messaging within the teams client.
 
 ## EXAMPLES
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name of the custom policy that is being assigned to the user.
+The name of the custom policy that is being assigned to the user.    To remove a specific assignment and fall back to the default tenant policy, you can assign to $Null.
 
 ```yaml
 Type: Object
@@ -162,3 +162,4 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+

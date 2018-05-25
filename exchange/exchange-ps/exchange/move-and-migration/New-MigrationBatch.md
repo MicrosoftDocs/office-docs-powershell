@@ -433,7 +433,19 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is reserved for internal Microsoft use.
+The CompleteAfter parameter specifies a delay before the batch is completed. The batch is started, but not completed until the date/time you specify with this parameter.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+
+In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
+
+This parameter should only be used in the cloud-based service.
 
 ```yaml
 Type: DateTime
@@ -640,7 +652,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportInterval
-This parameter is reserved for internal Microsoft use.
+The ReportInterval parameter specifies how frequently emailed reports should be sent to the email addresses listed within NotificationEmails.
+
+By default, emailed reports are sent every 24 hours for a batch. Setting this value to 0 indicates that reports should never be sent for this batch.
+
+This parameter should only be used in the cloud-based service.
 
 ```yaml
 Type: TimeSpan
@@ -697,7 +713,19 @@ Accept wildcard characters: False
 ```
 
 ### -StartAfter
-This parameter is reserved for internal Microsoft use.
+The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The batch is started, but the data migration for users within the batch isn't started until the date/time you specify with this parameter.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+
+In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
+
+This parameter should only be used in the cloud-based service.
 
 ```yaml
 Type: DateTime

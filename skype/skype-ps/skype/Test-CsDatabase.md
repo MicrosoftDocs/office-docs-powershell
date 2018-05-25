@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsDatabase
 schema: 2.0.0
 ---
@@ -90,7 +90,7 @@ This parameter cannot be used in conjunction with the ConfiguredDatabases parame
 Type: SwitchParameter
 Parameter Sets: ByCMS
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -109,7 +109,7 @@ In addition, this parameter cannot be used in the same command as the CentralMan
 Type: SwitchParameter
 Parameter Sets: ByConfigured
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -155,7 +155,7 @@ User
 Type: DatabaseNameType
 Parameter Sets: ByDatabase
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -173,7 +173,7 @@ This includes not only locally-installed databases but also databases installed 
 Type: SwitchParameter
 Parameter Sets: ByLocal
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -189,7 +189,7 @@ Fully qualified domain name of the computer whether the databases to be validate
 Type: Fqdn
 Parameter Sets: ByCMS
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 Type: Fqdn
 Parameter Sets: ByConfigured, ByDatabase
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -218,7 +218,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -256,7 +256,7 @@ For example:
 Type: String
 Parameter Sets: ByCMS, ByDatabase
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -304,3 +304,4 @@ The `Test-CsDatabase` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 [Get-CsService](Get-CsService.md)
 
 [Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)
+

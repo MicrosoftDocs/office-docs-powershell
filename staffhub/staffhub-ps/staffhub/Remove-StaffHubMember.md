@@ -41,7 +41,7 @@ MemberId of the member to be removed.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 1
 Default value: None
@@ -56,7 +56,7 @@ Entire member object returned from `Get-StaffHubMember`.
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 2
 Default value: None
@@ -71,7 +71,7 @@ TeamId from which the specified member is to be removed.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: True
 Position: 0
 Default value: None

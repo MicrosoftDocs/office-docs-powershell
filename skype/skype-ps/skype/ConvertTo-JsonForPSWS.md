@@ -21,7 +21,7 @@ ConvertTo-JsonForPSWS [[-InputObject] <Object>] [-Compress] [-Depth <Object>] [-
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```

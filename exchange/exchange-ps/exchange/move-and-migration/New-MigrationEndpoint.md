@@ -579,7 +579,7 @@ Accept wildcard characters: False
 ### -Security
 This parameter is available only in the cloud-based service.
 
-The Security parameter specifies the encryption method used by the IMAP server for an IMAP migration. Options are None, SSL (the default), or TLS. This parameter is required when you want to migrate data from an on-premises IMAP server to cloud-based mailboxes.
+For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
 Type: None | Ssl | Tls

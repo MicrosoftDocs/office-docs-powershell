@@ -8,47 +8,39 @@ schema: 2.0.0
 # Get-CsTeamsUpgradeConfiguration
 
 ## SYNOPSIS
-Get-CsTeamsUpgradeConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+Returns information related to managing the upgrade to Teams from Skype for Business. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
 
-Get-CsTeamsUpgradeConfiguration \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+
+Get-CsTeamsUpgradeConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[\<CommonParameters\>\]
+
+Get-CsTeamsUpgradeConfiguration \[-Tenant \<guid\>\] \[-Filter \<string\>\]  \[\<CommonParameters\>\]
 
 ## SYNTAX
 
 ```
-Get-CsTeamsUpgradeConfiguration [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
+Get-CsTeamsUpgradeConfiguration [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
  [-AsJob]
 ```
 
 ## DESCRIPTION
-NOTE: These cmdlets are in limited beta and not available to everyone.
-{{Fill in the Description}}
+TeamsUpgradeConfiguration is used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
+
+The DownloadTeams property allows admins to control whether the Skype for Business client should automatically download Teams in the background. This setting is only honored on Windows clients, and only for certain values of the user's TeamsUpgradePolicy. If NotifySfbUser=true or if Mode=TeamsOnly in TeamsUpgradePolicy, this setting is honored. Otherwise it is ignored. 
+
+The SfBMeetingJoinUx property allows admins to specify which app is used to join Skype for Business meetings, even after the user has been upgraded to Teams. Allowed values are: SkypeMeetingsApp and NativeLimitedClient.   "NativeLimitedClient"  means the existing Skype for Business rich client will be used, but since the user is upgraded, only meeting functionality is available. Calling and Messaging are done via Teams.  "SkypeMeetingsApp" means use the web-downloadable app. This setting can be useful for organizations that have upgraded to Teams and no longer want to install Skype for Business on their users' computers.
+
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsTeamsUpgradeConfiguration
 ```
 
-{{ Add example description here }}
+The above cmdlet lists the properties of TeamsUpgradeConfiguration.
 
 ## PARAMETERS
 
-### -Filter
-{{Fill Filter Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 {{Fill Identity Description}}
@@ -67,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+Do not use
 
 ```yaml
 Type: SwitchParameter
@@ -125,6 +117,8 @@ Accept wildcard characters: False
 
 ## NOTES
 
+These settings are only honored by newer versions of Skype for Business clients.
+
 ## RELATED LINKS
 
 [Set-CsTeamsUpgradeConfiguration](Set-CsTeamsUpgradeConfiguration.md)
@@ -132,3 +126,5 @@ Accept wildcard characters: False
 [Get-CsTeamsUpgradePolicy](Get-CsTeamsUpgradePolicy.md)
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
+
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

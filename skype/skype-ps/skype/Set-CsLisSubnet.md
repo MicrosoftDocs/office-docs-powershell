@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsLisSubnet
 schema: 2.0.0
 ---
@@ -84,7 +84,7 @@ This value should be entered as an IPv4 address (digits separated by periods, su
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet, SubnetSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ Maximum length: 64 characters.
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -133,7 +133,7 @@ Maximum length: 60 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -164,7 +164,7 @@ Maximum length: 2 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -193,7 +193,7 @@ A detailed description of this subnet location.
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet, SubnetSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -212,7 +212,7 @@ Maximum length: 10 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -247,7 +247,7 @@ Maximum length: 5 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -279,7 +279,7 @@ Maximum length: 20 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -310,7 +310,7 @@ Maximum length: 10 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -342,7 +342,7 @@ Maximum length: 2 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -355,7 +355,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -374,7 +374,7 @@ Maximum length: 2 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -405,7 +405,7 @@ Maximum length: 2 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -436,7 +436,7 @@ Maximum length: 60 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -467,7 +467,7 @@ Maximum length: 10 characters
 Type: String
 Parameter Sets: LocationEnumeratedOptionalSet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -480,7 +480,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: LocationEnumeratedMandatorySet
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -496,7 +496,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -512,7 +512,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -543,3 +543,4 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 [Get-CsLisSubnet](Get-CsLisSubnet.md)
 
 [Get-CsLisLocation](Get-CsLisLocation.md)
+

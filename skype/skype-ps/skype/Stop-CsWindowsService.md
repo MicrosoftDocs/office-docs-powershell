@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Stop-CsWindowsService
 schema: 2.0.0
 ---
@@ -32,7 +32,7 @@ If you need to stop a Skype for Business Server service, you can do so by using 
 
 Keep in mind that the `Stop-CsWindowsService` cmdlet can only stop Skype for Business Server services; an error will occur if you attempt to stop a non-Skype for Business Server service (such as the print spooler) using this cmdlet.
 
-Functionally, the `Stop-CsWindowsService` cmdlet is very similar to the generic Windows PowerShell Stop-Service cmdlet; if you wanted to, you could use the `Stop-Service` cmdlet to stop a Skype for Business Server service.
+Functionally, the `Stop-CsWindowsService` cmdlet is very similar to the generic Windows PowerShell `Stop-Service` cmdlet; if you wanted to, you could use the `Stop-Service` cmdlet to stop a Skype for Business Server service.
 However, the `Stop-CsWindowsService` cmdlet includes a ComputerName parameter that makes it easy to stop a service on a remote computer: you simply include the ComputerName parameter followed by the fully qualified domain name (FQDN) of the remote computer.
 The `Stop-Service` cmdlet does not have a comparable parameter.
 In addition, the `Stop-CsWindowsService` cmdlet has a Report parameter that enables you to keep a log of any errors that might occur when calling that cmdlet.
@@ -45,7 +45,6 @@ When you include the Graceful parameter, the `Stop-CsWindowsService` cmdlet will
 All existing service requests will remain as is; however, new requests will be rejected.
 As existing requests finish, those requests will not be replaced.
 Eventually, all the existing requests will be filled and the service will then shut down.
-
 
 ## EXAMPLES
 
@@ -94,7 +93,7 @@ For those services, you might be able to use the Windows PowerShell `Stop-Servic
 Type: String
 Parameter Sets: Name
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -112,7 +111,7 @@ The remote computer should be referenced using its FQDN; for example, atl-mcs-00
 Type: String
 Parameter Sets: Name
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -129,7 +128,7 @@ Instead of immediately shutting down a service, waits until all existing service
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -142,16 +141,15 @@ Accept wildcard characters: False
 Enables you to stop a service using an object reference rather than a service name.
 For example, if you use the `Get-CsWindowsService` cmdlet to return information about a service and if you store the returned object in a variable named $x, you can then stop the service using this command:
 
-`$x = Get-CsWindowsService -Name "RTCCPS"`
+$x = Get-CsWindowsService -Name "RTCCPS"
 
-`Stop-CsWindowsService -InputObject $x.Name`
-
+Stop-CsWindowsService -InputObject $x.Name
 
 ```yaml
 Type: NTService
 Parameter Sets: InputObject
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -168,7 +166,7 @@ If not present, control will not be returned until the command has completed and
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -184,7 +182,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -201,7 +199,7 @@ If this parameter is included, any errors that occur during the running of this 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -217,7 +215,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -233,7 +231,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -245,12 +243,11 @@ Accept wildcard characters: False
 ### -LeaveClsAgentRunning
 When specified, stops all the Skype for Business Server services except for the centralized logging agent service.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -266,7 +263,7 @@ When present, shuts down all services except the Web Server service on the speci
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

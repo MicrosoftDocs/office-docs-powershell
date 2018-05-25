@@ -14,7 +14,10 @@ Enables the hub site feature on a site to make it a hub site.
 ## SYNTAX
 
 ```
-Register-SPOHubSite [-Site] <SpoSitePipeBind>  [<CommonParameters>]
+Register-SPOHubSite 
+  -Site <SpoSitePipeBind>  
+  -Principals <string[]>
+  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +50,23 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 
-Required: False
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Principals
+Specifies One or more principles to be granted rights to the specified HubSite.
+
+```yaml
+Type: string[]
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

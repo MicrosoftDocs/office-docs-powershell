@@ -3053,3 +3053,9 @@ The following cmdlet references are for Skype for Business.
 ### [Get-CsTeamsUpgradePolicy](Get-CsTeamsUpgradePolicy.md)
 
 ### [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
+
+### [New-CsTeamsUpgradePolicy](New-CsTeamsUpgradePolicy.md)
+
+### [Remove-CsTeamsUpgradePolicy](Remove-CsTeamsUpgradePolicy.md)
+
+### [Set-CsTeamsUpgradePolicy](Set-CsTeamsUpgradePolicy.md)
