@@ -91,5 +91,6 @@ Microsoft.Rtc.Management.AD.UserIdParameter object.
 
 
 ## RELATED LINKS
-* [Remove-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
-* [Set-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/set-csbusyoptions?view=skype-ps)
+[Remove-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
+
+[Set-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/set-csbusyoptions?view=skype-ps)
