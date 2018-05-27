@@ -17,22 +17,23 @@ Get-CsServerPatchVersion [-Report <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet returns the Skype for Business Server version for each component installed on the server. It replaces the previous methods (Windows Registry and WMI Classes). 
+You should have installed at least November 2015 Cumulative Update (6.0.9319.102) for Skype for Business Server 2015.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-CsServerPatchVersion
 ```
 
-{{ Add example description here }}
+This example returns the Skype for Business Server version for each component installed on the server.
 
 
 ## PARAMETERS
 
 ### -Report
-{{Fill Report Description}}
+Generates a log file. You should specify the file name in html format.
 
 ```yaml
 Type: String
