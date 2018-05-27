@@ -98,12 +98,12 @@ This command shows how to use the `ConvertTo-JsonForPSWS` cmdlet to convert an o
 
 It uses the `ConvertTo-JsonForPSWS` cmdlet to convert a System.DateTime object from the Get-Date cmdlet to a JSON-formatted string for PowerShell Web Services. The command uses the Select-Object cmdlet to get all () of the properties of the **DateTime* object. The output shows the JSON string that `ConvertTo-JsonForPSWS` returned.
 
-### -------------------------- Example 2 --------------------------
+### -------------------------- Example 4 --------------------------
 ```
 PS C:\> $JsonSecurityHelp = Get-Content $Pshome\Modules\Microsoft.PowerShell.Security\en-US\Microsoft.PowerShell.Security.dll-Help.xml | ConvertTo-JsonForPSWS
 ```
 
-This command uses the `ConvertTo-JsonForPSWS` cmdlet to convert a Windows PowerShell Help file from XML format to JSON format for PowerShell Web Services. You can use a command like this to use the Help topic content in a web service application.
+This command uses the `ConvertTo-JsonForPSWS` cmdlet to convert a Windows PowerShell Help file from XML format to JSON format for PowerShell Web Services.
 
 ## PARAMETERS
 
