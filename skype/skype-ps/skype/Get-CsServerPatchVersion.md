@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsServerPatchVersion
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns the Skype for Business Server Component Version. This cmdlet was introduced in Skype for Business Server 2015 November 2015 Cumulative Update.
 
 ## SYNTAX
 
