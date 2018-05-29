@@ -1440,7 +1440,7 @@ The OAuth2ClientProfileEnabled parameter enables or disables modern authenticati
 
 - $true: Modern authentication is enabled.
 
-- $false: Modern authentication is disabled. This is the default value.
+- $false: Modern authentication is disabled. 
 
 Modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
 
@@ -1453,7 +1453,7 @@ Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1975,11 +1975,7 @@ Accept wildcard characters: False
 ### -PerTenantSwitchToESTSEnabled
 This parameter is available only in the cloud-based service.
 
-The PerTenantSwitchToESTSEnabled parameter specifies whether basic authentication requests use the Evolved Security Token Service (ESTS) in an Exchange Online organization. Valid values are:
-
-- $true: Basic authentication requests use ESTS.
-
-- $false: Basic authentication requests don't use ESTS. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: $true | $false
