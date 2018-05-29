@@ -1975,11 +1975,7 @@ Accept wildcard characters: False
 ### -PerTenantSwitchToESTSEnabled
 This parameter is available only in the cloud-based service.
 
-The PerTenantSwitchToESTSEnabled parameter specifies whether basic authentication requests use the Evolved Security Token Service (ESTS) in an Exchange Online organization. Valid values are:
-
-- $true: Basic authentication requests use ESTS.
-
-- $false: Basic authentication requests don't use ESTS. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: $true | $false

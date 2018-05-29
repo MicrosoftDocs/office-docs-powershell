@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-SafeAttachmentRule -Identity "Engineering Department URL Rule" -ExceptIfRecipientDomainIs fabrikam.com
+Set-SafeLinksRule -Identity "Engineering Department URL Rule" -ExceptIfRecipientDomainIs fabrikam.com
 ```
 
 This example modifies the existing Safe Links Rule named Engineering Department URL Rule to exclude messages sent to the fabrikam.com domain.
