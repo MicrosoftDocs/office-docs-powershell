@@ -262,7 +262,7 @@ The ExchangeOutlookAnywhere parameter specifies a migration type for migrating o
 Type: SwitchParameter
 Parameter Sets: Set8, Set5, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -294,7 +294,7 @@ The ExchangeServer parameter specifies the FQDN of the on-premises Exchange serv
 Type: String
 Parameter Sets: Set8, Set5
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -311,7 +311,7 @@ The Imap parameter specifies an IMAP migration as the migration type. This param
 Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -330,7 +330,7 @@ The standard is to use port 143 for unencrypted connections, port 143 for Transp
 Type: Int32
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -395,7 +395,7 @@ The RPCProxyServer parameter specifies the FQDN of the RPC proxy server for the 
 Type: Fqdn
 Parameter Sets: Set8, Set5, Set6, Set9, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -412,7 +412,7 @@ The SourceMailboxLegacyDN parameter specifies a mailbox on the target server. Us
 Type: String
 Parameter Sets: Set8, Set5, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +443,7 @@ The parameter is only used for cutover Exchange migrations and staged Exchange m
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
 Parameter Sets: Set8, Set5, Set6, Set9, Set2, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -502,7 +502,7 @@ This parameter isn't used for testing the connection to the remote server for a 
 Type: Admin | FullAccess
 Parameter Sets: Set8, Set5, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -519,7 +519,7 @@ For an IMAP migration, the Security parameter specifies the encryption method us
 Type: None | Ssl | Tls
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -536,7 +536,7 @@ The TestMailbox parameter specifies a mailbox on the target server. Use the prim
 Type: MailboxIdParameter
 Parameter Sets: Set7, Set8, Set5, Set6, Set9, Set11, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

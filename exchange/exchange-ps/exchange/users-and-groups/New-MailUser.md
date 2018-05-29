@@ -260,7 +260,7 @@ The FederatedIdentity parameter associates an on-premises Active Directory user 
 Type: String
 Parameter Sets: Set5, Set7, Set9, Set8
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None
@@ -279,7 +279,7 @@ An unmanaged Microsoft account was created in the domain before the domain was e
 Type: SwitchParameter
 Parameter Sets: Set5, Set6
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None
@@ -313,7 +313,7 @@ You don't need to specify a value with this switch.
 Type: SwitchParameter
 Parameter Sets: Set4, Set6, Set7
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None
@@ -330,7 +330,7 @@ The UserPrincipalName parameter specifies the name of a system user in an email 
 Type: String
 Parameter Sets: Set3, Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -347,7 +347,7 @@ The WindowsLiveID parameter creates a Microsoft account (formerly known as a Win
 Type: WindowsLiveId
 Parameter Sets: Set3, Set2, Set4, Set5, Set6, Set7
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None
@@ -417,7 +417,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -489,7 +489,7 @@ You don't need to specify a value with this switch.
 Type: SwitchParameter
 Parameter Sets: Set3, Set2, Set5, Set7
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -751,7 +751,7 @@ If you use the PrimarySmtpAddress parameter to specify the primary email address
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -791,7 +791,7 @@ The ResetPasswordOnNextLogon parameter specifies whether the user must change th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -808,7 +808,7 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
