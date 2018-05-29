@@ -983,7 +983,9 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - UpdateFolderPermissions (cloud-based service only)
 
-By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, and UpdateFolderPermissions actions performed by administrators are logged.
+- UpdateCalendarDelegation (cloud-based service only)
+
+By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, and UpdateCalendarDelegation actions performed by administrators are logged.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1107,7 +1109,9 @@ The AuditOwner parameter specifies the mailbox operations to log for mailbox own
 
 - UpdateFolderPermissions (cloud-based service only)
 
-In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions action performed by the owner is logged by default.
+- UpdateCalendarDelegation (cloud-based service only)
+
+In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions and UpdateCalendarDelegation action performed by the owner is logged by default.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
