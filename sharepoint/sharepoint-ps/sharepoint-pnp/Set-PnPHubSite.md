@@ -37,14 +37,12 @@ Position: Named
 Accept pipeline input: False
 ```
 
-## Optional Parameters
-
 ### Title
 -The display name of the hub.
 
 ```yaml
 Type:	String
-Position:	Named
+Position: Named
 Required: False
 Accept pipeline input:	False
 ```
@@ -53,7 +51,7 @@ Accept pipeline input:	False
 
 ```yaml
 Type:	String
-Position:	Named
+Position: Named
 Required: False
 Accept pipeline input:	False
 ```
@@ -62,7 +60,7 @@ Accept pipeline input:	False
 
 ```yaml
 Type:	String
-Position:	Named
+Position: Named
 Required: False
 Accept pipeline input:	False
 ```
