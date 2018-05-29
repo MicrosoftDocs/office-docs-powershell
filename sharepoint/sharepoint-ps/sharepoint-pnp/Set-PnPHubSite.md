@@ -32,15 +32,16 @@ Optional connection to be used by the cmdlet. Retrieve the value for this parame
 ```yaml
 Type: SPOnlineConnection
 Parameter Sets: (All)
-
 Required: False
 Position: Named
 Accept pipeline input: False
 ```
 
 ## Optional Parameters
+
 ### Title
 -The display name of the hub.
+
 ```yaml
 Type:	String
 Position:	Named
@@ -49,6 +50,7 @@ Accept pipeline input:	False
 ```
 ### LogoUrl
 -The URL of a logo to use in the hub navigation.
+
 ```yaml
 Type:	String
 Position:	Named
@@ -57,6 +59,7 @@ Accept pipeline input:	False
 ```
 ### Description
 -A description of the hub site.
+
 ```yaml
 Type:	String
 Position:	Named
