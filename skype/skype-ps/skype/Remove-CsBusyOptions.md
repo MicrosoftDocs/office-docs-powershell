@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsBusyOptions
 
 ## SYNOPSIS
-Removes the settings for processing of incoming calls for users is already in communication whether for a call, conference or placed call waiting. This cmdlet was introduced in Skype for Business Server 2015 June 2016 Cumulative Update.
+Removes the settings for processing of incoming calls for users who are already engaged in another communication stream. This cmdlet was introduced in Skype for Business Server 2015 June 2016 Cumulative Update.
 
 ## SYNTAX
 
