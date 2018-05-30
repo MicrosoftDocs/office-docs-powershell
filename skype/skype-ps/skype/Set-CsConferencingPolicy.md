@@ -554,6 +554,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PRecording
+Deprecated - Do Not Use
+
 If True, users will be able to record peer-to-peer communication sessions.
 The default value is False.
 
