@@ -554,11 +554,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PRecording
-If True, users will be able to record peer-to-peer communication sessions.
+If True, users will be able to record peer-to-peer audio communication sessions.
 The default value is False.
 
 This setting is enforced at the per-user level.
-That means that one user in a peer-to-peer communication session might be allowed to record the session while the other user is not.
+That means that one user in a peer-to-peer audio communication session might be allowed to record the session while the other user is not. Recording is not available in peer-to-peer communication sessions with video or screen sharing.
 
 
 ```yaml
