@@ -25,7 +25,7 @@ Get-MessageTrace [-EndDate <DateTime>] [-Expression <Expression>] [-FromIP <Stri
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 7 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
+You can use this cmdlet to search message data for the last 10 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
 
 This cmdlet returns a maximum of 1000000 results, and will timeout on very large queries. If your query returns too many results, consider splitting it up using smaller StartDate and EndDate intervals.
 
