@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-ComplianceSearch [-Name] <String> [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
  [-Case <String>] [-Confirm] [-ContentMatchQuery <String>] [-Description <String>]
- [-ExchangeLocation <String[]>] [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>]
+ [-ExchangeLocation <String[]>] [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>] [-IncludeUserAppContent <$true | $false>]
  [-Language <CultureInfo>] [-LogLevel <Suppressed | Basic | Full>] [-OneDriveLocation <String[]>]
  [-OneDriveLocationExclusion <String[]>] [-PublicFolderLocation <String[]>]
  [-PublicFolderLocationExclusion <String[]>] [-RefinerNames <String[]>] [-SearchNames <String[]>]
@@ -253,6 +253,27 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeUserAppContent
+This parameter is available onlyin the cloud-based service.
+
+The IncludeUserAppContent parameter specifies whether to. Valid values are:
+
+- $true: 
+
+- $false: 
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
