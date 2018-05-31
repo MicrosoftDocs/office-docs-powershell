@@ -17,11 +17,9 @@ ConvertTo-JsonForPSWS [[-InputObject] <Object>] [-Compress] [-Depth <Object>] [-
 ```
 
 ## DESCRIPTION
-The `ConvertTo-JsonForPSWS` cmdlet converts any object to a string in JavaScript Object Notation (JSON) format for PowerShell Web Services. The properties are converted to field names, the field values are converted to property values, and the methods are removed.
+The `ConvertTo-JsonForPSWS` cmdlet converts any object to a string in JavaScript Object Notation (JSON) format for PowerShell Web Services. The properties are converted to field names, the property values are converted to field values, and the methods are removed.
 
 You can then use the `ConvertTo-JsonForPSWS` cmdlet to convert a JSON-formatted string to a JSON object, which is easily managed in Windows PowerShell.
-
-Many web sites use JSON instead of XML to serialize data for communication between servers and web-based apps.
 
 ## EXAMPLES
 
