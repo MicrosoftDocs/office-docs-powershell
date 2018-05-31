@@ -452,9 +452,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the Office 365 Group. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-The value that you use for this is parameter is appended with an underscore character (\_) and a short GUID value.
+The Name parameter is no more honored.
+Earlier it was the name property was set to “Name_<RandomGuid>”. Now the recent change was “Alias_<ExternalDirectoryObjectId>”. 
 
 ```yaml
 Type: String
