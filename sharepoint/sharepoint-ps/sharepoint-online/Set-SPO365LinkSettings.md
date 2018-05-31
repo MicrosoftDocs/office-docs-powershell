@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPO365LinkSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This cmdlet allows the SharePoint administrator to configure hybrid settings.
 
 
 ## SYNTAX
@@ -20,23 +20,38 @@ Set-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] [-Audien
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet allows the SharePoint administrator to configure the following hybrid settings.
 
+* Hybrid OneDrive for Business
+* Hybrid Sites
+* Redirecting Everyone or one or more Audiences
+* Hybrid App Launcher
+* Default OneDrive to the Cloud
+* User Profile Redirection
+
+>[!NOTE]Microsoft recommends using the [Hybrid Picker](https://docs.microsoft.com/en-us/sharepoint/hybrid/hybrid-picker-in-the-sharepoint-online-admin-center) to configure these settings.
+
+> [!NOTE]Default OneDrive to the Cloud for SharePoint Server 2016 was first included in the [May 2018 Public Update] (https://support.microsoft.com/help/4018381).
+
+> [!NOTE]In SharePoint Server 2016, User Profile redirection is enabled when OneDrive for Business hybrid is configured.
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-{{ Add example code here }}
+PS C:\>Set-SPO365LinkSettings -MySiteHostUrl https://sharepoint-my.contoso.com -OnedriveDefaultToCloudEnabled $true -RedirectSites $true
 ```
 
-{{ Add example description here }}
+This cmdlet enables the redirection of OneDrive to the Cloud by default and enables redirection of Sites.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
 
 ```yaml
 Type: SPAssignmentCollection
@@ -52,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Audiences
-{{Fill Audiences Description}}
+Specify one or more SharePoint Audiences from the User Profile Service to target specific groups of users for the hybrid configuration. If this switch is omitted, everyone will be redirected.
 
 ```yaml
 Type: String[]
@@ -68,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -HybridAppLauncherEnabled
-{{Fill HybridAppLauncherEnabled Description}}
+Enables the Hybrid App Launcher.
 
 ```yaml
 Type: Boolean
@@ -84,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -MySiteHostUrl
-{{Fill MySiteHostUrl Description}}
+The URL of the on-premises MySite Host. This URL must be a site that uses the SPSMSITEHOST#0 template.
 
 ```yaml
 Type: String
@@ -100,13 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -OnedriveDefaultToCloudEnabled
-{{Fill OnedriveDefaultToCloudEnabled Description}}
+Enables redirection of OneDrive sites to the Cloud by default.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -116,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectSites
-{{Fill RedirectSites Description}}
+Redirects Sites to SharePonit Online.
 
 ```yaml
 Type: Boolean
@@ -132,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectUserProfileEnabled
-{{Fill RedirectUserProfileEnabled Description}}
+Redirects User Profiles to SharePoint Online.
 
 ```yaml
 Type: Boolean
