@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsExternalUserCommunicationPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies the property values of an existing external user communication policy.
 
 ## SYNTAX
 
