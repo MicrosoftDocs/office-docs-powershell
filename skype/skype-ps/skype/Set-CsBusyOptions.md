@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsBusyOptions
 
 ## SYNOPSIS
-Sets up the processing of incoming calls for users users who are already engaged in another communication stream. This cmdlet was introduced in Skype for Business Server 2015 June 2016 Cumulative Update.
+Sets up the processing of incoming calls for users who are already engaged in another communication stream. This cmdlet was introduced in Skype for Business Server 2015 June 2016 Cumulative Update.
 
 ## SYNTAX
 
