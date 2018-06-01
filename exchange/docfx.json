@@ -23,7 +23,7 @@
         "exclude": [
             "docs-conceptual/**"
         ],
-        "dest": "module"
+        "dest": "exchserver-ps-2016/module"
     },
     {
         "files": [
@@ -35,7 +35,7 @@
         "exclude": [
             "docs-conceptual/**"
         ],
-        "dest": "module"
+        "dest": "exchserver-ps-2013/module"
     },
     {
         "files": [
@@ -47,7 +47,7 @@
         "exclude": [
             "docs-conceptual/**"
         ],
-        "dest": "module"
+        "dest": "eop-ps/module"
     },
     {
         "files": [
@@ -59,7 +59,7 @@
         "exclude": [
             "docs-conceptual/**"
         ],
-        "dest": "module"
+        "dest": "exchonline-ps/module"
     }
     ],
     "resource": [
@@ -142,6 +142,6 @@
       }
     },
     "template": [],
-    "dest": "exchange-ps"
+    "dest": ""
   }
 }
