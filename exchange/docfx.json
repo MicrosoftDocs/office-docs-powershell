@@ -2,7 +2,9 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md"
+        ],
         "src": "docs-conceptual",
         "dest": "exchange",
         "exclude": [
@@ -11,56 +13,89 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
         "files": [
-            "**/*.yml",
-            "**/*.md"
+          "**/*.yml",
+          "**/*.md"
         ],
         "src": "exchange-ps",
         "version": "exchserver-ps-2016",
         "exclude": [
-            "docs-conceptual/**"
+          "toc.yml"
         ],
-        "dest": "exchserver-ps-2016/module"
-    },
-    {
+        "dest": "module"
+      },
+      {
         "files": [
-            "**/*.yml",
-            "**/*.md"
+          "toc.yml"
+        ],
+        "src": "exchange-ps",
+        "version": "exchserver-ps-2016",
+        "dest": "exchserver-ps-2016/module"
+      },
+      {
+        "files": [
+          "**/*.yml",
+          "**/*.md"
         ],
         "src": "exchange-ps",
         "version": "exchserver-ps-2013",
         "exclude": [
-            "docs-conceptual/**"
+          "toc.yml"
         ],
-        "dest": "exchserver-ps-2013/module"
-    },
-    {
+        "dest": "module"
+      },
+      {
         "files": [
-            "**/*.yml",
-            "**/*.md"
+          "toc.yml"
+        ],
+        "src": "exchange-ps",
+        "version": "exchserver-ps-2013",
+        "dest": "exchserver-ps-2013/module"
+      },
+      {
+        "files": [
+          "**/*.yml",
+          "**/*.md"
         ],
         "src": "exchange-ps",
         "version": "eop-ps",
         "exclude": [
-            "docs-conceptual/**"
+          "toc.yml"
         ],
-        "dest": "eop-ps/module"
-    },
-    {
+        "dest": "module"
+      },
+      {
         "files": [
-            "**/*.yml",
-            "**/*.md"
+          "toc.yml"
+        ],
+        "src": "exchange-ps",
+        "version": "eop-ps",
+        "dest": "eop-ps/module"
+      },
+      {
+        "files": [
+          "**/*.yml",
+          "**/*.md"
+        ],
+        "src": "exchange-ps",
+        "exclude": [
+          "toc.yml"
+        ],
+        "version": "exchonline-ps",
+        "dest": "exchonline-ps/module"
+      },
+      {
+        "files": [
+          "toc.yml"
         ],
         "src": "exchange-ps",
         "version": "exchonline-ps",
-        "exclude": [
-            "docs-conceptual/**"
-        ],
         "dest": "exchonline-ps/module"
-    }
+      }
     ],
     "resource": [
       {
@@ -125,20 +160,22 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "chrisda",
-      "ms.author" : "chrisda",
-      "manager" : "serdars",
-      "ms.date" : "09/25/2017",
-      "ms.topic" : "reference",
-      "ms.service" : "exchange-powershell",
-      "ms.devlang" : "powershell",
+      "author": "chrisda",
+      "ms.author": "chrisda",
+      "manager": "serdars",
+      "ms.date": "09/25/2017",
+      "ms.topic": "reference",
+      "ms.service": "exchange-powershell",
+      "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {
-      "apiPlatform":{
-        "exchange-ps/exchange" : [ "PowerShell" ]
+      "apiPlatform": {
+        "exchange-ps/exchange": [
+          "PowerShell"
+        ]
       }
     },
     "template": [],
