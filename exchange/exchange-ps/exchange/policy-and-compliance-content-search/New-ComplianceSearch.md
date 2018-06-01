@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeUserAppContent
-This parameter is available onlyin the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The IncludeUserAppContent parameter specifies that you want to search the cloud-based storage location for users who don't have a regular Office 365 user account in your organization. These types of users include users without an Exchange Online license who use Office applications, Office 365 guest users, and on-premises users whose identity is synchronized with your Office 365 organization. Valid values are:
 
