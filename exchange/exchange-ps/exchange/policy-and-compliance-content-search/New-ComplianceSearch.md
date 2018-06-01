@@ -89,8 +89,11 @@ The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to include
 The mailbox types that are affected by the value of this parameter include:
 
 - Inactive mailboxes
+
 - Users without an Exchange Online license who use Office applications
+
 - Office 365 guest users
+
 - On-premises users whose identity is synchronized with your Office 365 organization
 
 ```yaml
@@ -270,11 +273,11 @@ Accept wildcard characters: False
 ### -IncludeUserAppContent
 This parameter is available onlyin the cloud-based service.
 
-The IncludeUserAppContent parameter specifies that you want to search the cloud-based storage location for users who don’t have a regular Office 365 user account in your organization. These types of users include users without an Exchange Online license who use Office applications, Office 365 guest users, and on-premises users whose identity is synchronized with your Office 365 organization. Valid values are:
+The IncludeUserAppContent parameter specifies that you want to search the cloud-based storage location for users who don't have a regular Office 365 user account in your organization. These types of users include users without an Exchange Online license who use Office applications, Office 365 guest users, and on-premises users whose identity is synchronized with your Office 365 organization. Valid values are:
 
-- $true: The cloud-based storage location for the users specified in the ExchangeLocation parameter will be included in the search. If you use the value All for the ExchangeLocation parameter, then the cloud-based storage location for any guest or on-premises user will be included in the search.
+- $true: The cloud-based storage location for the users specified in the ExchangeLocation parameter will be included in the search. If you use the value All for the ExchangeLocation parameter, the cloud-based storage location for any guest or on-premises user will be included in the search.
 
-- $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter will not be included in the search. This is the default value.
+- $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
 
 ```yaml
 Type: $true | $false
