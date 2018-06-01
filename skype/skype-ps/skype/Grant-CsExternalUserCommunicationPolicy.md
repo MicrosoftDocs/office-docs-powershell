@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsExternalUserCommunicationPolicy
 
 ## SYNOPSIS
-Assigns a external user communication policy to one or more users or groups.
+Assigns an external user communication policy to one or more users or groups.
 
 ## SYNTAX
 
