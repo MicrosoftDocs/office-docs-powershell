@@ -32,6 +32,8 @@ After a migration batch for a local or cross-forest move has successfully run an
 
 - Converts the source mailbox to a mail-enabled user in the source domain.
 
+In the cloud-based service, this cmdlet sets the value of CompleteAfter to the current time.  It is important to remember that any CompleteAfter setting that has been applied to the individual users within the batch will override the setting on the batch, so the completion for some users may be delayed until their configured time.
+
 When the finalization process is complete, you can remove the batch by using the Remove-MigrationBatch cmdlet.
 
 If a migration batch has a status of Completed with Errors, you can re-attempt to finalize the failed users. In Exchange Online, use the Start-MigrationBatch cmdlet to retry migration for failed users. In Exchange 2013 or Exchange 2016, use the Complete-MigrationBatch to retry these failed users.
