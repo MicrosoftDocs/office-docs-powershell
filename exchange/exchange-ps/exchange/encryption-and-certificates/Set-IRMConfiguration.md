@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-IRMConfiguration [[-ClientAccessServerEnabled <$true | $false>]
+Set-IRMConfiguration [-AutomaticServiceUpdateEnabled <$true | $false>] [-ClientAccessServerEnabled <$true | $false>]
  [-Confirm] [-DomainController <Fqdn>] [-EDiscoverySuperUserEnabled <$true | $false>]
  [-ExternalLicensingEnabled <$true | $false>] [-Force] [-InternalLicensingEnabled <$true | $false>]
  [-JournalReportDecryptionEnabled <$true | $false>] [-LicensingLocation <MultiValuedProperty>]
@@ -59,6 +59,27 @@ Set-IRMConfiguration -ExternalLicensingEnabled $true
 This example enables licensing for external messages.
 
 ## PARAMETERS
+
+### -AutomaticServiceUpdateEnabled
+This parameter is available only in the cloud-based service.
+
+The AutomaticServiceUpdateEnabled parameter specifies whether to automatically enable the protection features in Azure Information Protection for your cloud-based organization. Valid values are:
+
+- $true: Starting July 1, 2018, the protection features in Azure Information Protection will be automatically enabled in your cloud-based organization. This means you can can start using the new Office 365 Message Encryption capabilities without additional set up steps. This is the default value.
+
+- $false: If you're using Active Directory Rights Management Services (AD RMS) in your on-premises environment, you must use this value to prevent the automatic enabling of the protection features in Azure Information Protection for your cloud-based organization. 
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ClientAccessServerEnabled
 The ClientAccessServerEnabled parameter specifies whether to enable IRM for Outlook on the web (formerly known as Outlook Web App) and Exchange ActiveSync. Valid values are:
