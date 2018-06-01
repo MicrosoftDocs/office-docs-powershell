@@ -4,7 +4,7 @@
         "packageRoot": "exchange-ps",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
-        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "exchange": {}     
         }
@@ -14,7 +14,7 @@
         "packageRoot": "exchange-ps",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
-        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "exchange": {}     
         }
@@ -25,7 +25,7 @@
         "packageRoot": "exchange-ps",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
-        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "exchange": {}     
         }
@@ -36,7 +36,7 @@
         "packageRoot": "exchange-ps",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
-        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/toc.json",
         "modules": {
             "exchange": {}     
         }
