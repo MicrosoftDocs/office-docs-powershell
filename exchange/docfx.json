@@ -3,9 +3,62 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "toc.yml"
         ],
         "src": "docs-conceptual",
+        "version":"exchserver-ps-2016",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"exchserver-ps-2013",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"exchonline-ps",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"eop-ps",
         "dest": "exchange",
         "exclude": [
           "**/obj/**",
@@ -34,7 +87,7 @@
         ],
         "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2016",
-        "dest": "exchserver-ps-2016/module"
+        "dest": "module/exchange-ps"
       },
       {
         "files": [
@@ -54,7 +107,7 @@
         ],
         "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2013",
-        "dest": "exchserver-ps-2013/module"
+        "dest": "module/exchange-ps"
       },
       {
         "files": [
@@ -74,7 +127,7 @@
         ],
         "src": "exchange-ps/exchange",
         "version": "eop-ps",
-        "dest": "eop-ps/module"
+        "dest": "module/exchange-ps"
       },
       {
         "files": [
@@ -86,7 +139,7 @@
           "toc.yml"
         ],
         "version": "exchonline-ps",
-        "dest": "exchonline-ps/module"
+        "dest": "module"
       },
       {
         "files": [
@@ -94,7 +147,7 @@
         ],
         "src": "exchange-ps/exchange",
         "version": "exchonline-ps",
-        "dest": "exchonline-ps/module"
+        "dest": "module/exchange-ps"
       }
     ],
     "resource": [

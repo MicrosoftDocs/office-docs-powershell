@@ -3,30 +3,30 @@
         "serviceMap": "mapping/exchange2016mapping.json",
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
-        "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
-        "referenceTocUrl": "/powershell/exchserver-ps-2016/module/toc.json"
+        "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     },
     "exchserver-ps-2013": {
         "serviceMap": "mapping/exchange2013mapping.json",
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
-        "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
-        "referenceTocUrl": "/powershell/exchserver-ps-2013/module/toc.json"
+        "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     },
 
     "eop-ps": {
         "serviceMap": "mapping/exchangeonlineprotectionmapping.json",
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
-        "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
-        "referenceTocUrl": "/powershell/eop-ps/module/toc.json"
+        "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     },
 
     "exchonline-ps": {
         "serviceMap": "mapping/exchangeonlinemapping.json",
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
-        "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
-        "referenceTocUrl": "/powershell/exchonline-ps/module/toc.json"
+        "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     }
 }
