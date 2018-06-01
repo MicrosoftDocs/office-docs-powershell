@@ -21,7 +21,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "exchange-ps",
+        "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2016",
         "exclude": [
           "toc.yml"
@@ -32,7 +32,7 @@
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps",
+        "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2016",
         "dest": "exchserver-ps-2016/module"
       },
@@ -41,7 +41,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "exchange-ps",
+        "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2013",
         "exclude": [
           "toc.yml"
@@ -52,7 +52,7 @@
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps",
+        "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2013",
         "dest": "exchserver-ps-2013/module"
       },
@@ -61,7 +61,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "exchange-ps",
+        "src": "exchange-ps/exchange",
         "version": "eop-ps",
         "exclude": [
           "toc.yml"
@@ -72,7 +72,7 @@
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps",
+        "src": "exchange-ps/exchange",
         "version": "eop-ps",
         "dest": "eop-ps/module"
       },
@@ -81,7 +81,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "exchange-ps",
+        "src": "exchange-ps/exchange",
         "exclude": [
           "toc.yml"
         ],
@@ -92,7 +92,7 @@
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps",
+        "src": "exchange-ps/exchange",
         "version": "exchonline-ps",
         "dest": "exchonline-ps/module"
       }
