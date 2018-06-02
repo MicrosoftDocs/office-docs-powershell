@@ -1,6 +1,6 @@
 ---
 external help file:Microsoft.Rtc.Management.dll-help.xml
-applicable: Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsHybridApplicationEndpoint
 schema: 2.0.0
 ---
@@ -8,7 +8,9 @@ schema: 2.0.0
 # New-CsHybridApplicationEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+{{Fill}}
+
+This cmdlet was introduced in the July 2017 cumulative update for the Lync Server 2013 and May 2017 cumulative update for Skype Business Server 2015.
 
 ## SYNTAX
 
