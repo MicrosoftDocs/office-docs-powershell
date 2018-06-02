@@ -13,7 +13,7 @@ Modifies the property values of an existing external user communication policy.
 ## SYNTAX
 
 ```
-Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Tenant <Object>] [-AsJob] [-WhatIf]
+Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Confirm] [-Tenant <Object>] [-AsJob] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -37,6 +37,22 @@ PS C:\> Set-CsExternalUserCommunicationPolicy -EnableP2PFileTransfer $False
 This example sets the EnableP2PFileTransfer property to False for the Global policy, meaning any users without assigned policy are not enabled to send files to Federated partners.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -EnableP2PFileTransfer
 Indicates whether file transfers to Federated partners are allowed. The default value is True.
