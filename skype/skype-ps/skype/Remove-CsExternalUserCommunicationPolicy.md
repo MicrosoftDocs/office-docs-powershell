@@ -33,7 +33,7 @@ This example removes the ExternalUserCommunicationPolicy1 policy.
 PS C:\> Get-CsExternalUserCommunicationPolicy -Filter tag* | Remove-CsExternalUserCommunicationPolicy
 ```
 
-This example removes all the external user communication policies that can be assigned to specific users. First the `Get-CsExternalUserCommunicationPolicy` cmdlet is called with a Filter of tag*, which retrieves all the per-user voice policies excluding Global policy. That collection of policies is then piped to the `Remove-CsExternalUserCommunicationPolicy` cmdlet to be removed.
+This example removes all the external user communication policies that can be assigned to specific users. First the `Get-CsExternalUserCommunicationPolicy` cmdlet is called with a Filter of tag*, which retrieves all the per-user policies excluding Global policy. That collection of policies is then piped to the `Remove-CsExternalUserCommunicationPolicy` cmdlet to be removed.
 
 ## PARAMETERS
 
