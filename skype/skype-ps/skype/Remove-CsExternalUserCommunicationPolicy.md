@@ -13,7 +13,7 @@ Removes the specified external user communication policy.
 ## SYNTAX
 
 ```
-Remove-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-Confirm] [-Force]  [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Remove-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-Confirm] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
