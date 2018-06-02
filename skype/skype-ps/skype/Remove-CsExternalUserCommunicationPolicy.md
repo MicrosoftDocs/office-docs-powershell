@@ -28,7 +28,7 @@ PS C:\> Remove-CsExternalUserCommunicationPolicy -Identity ExternalUserCommunica
 
 This example removes the ExternalUserCommunicationPolicy1 policy.
 
-### -------------------------- Example 1 ------------------------
+### -------------------------- Example 2 ------------------------
 ```
 PS C:\> Get-CsExternalUserCommunicationPolicy -Filter tag* | Remove-CsExternalUserCommunicationPolicy
 ```
