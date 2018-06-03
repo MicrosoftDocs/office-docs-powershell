@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Friendly name for the application endpoint is being modified.
+Friendly name for the application endpoint that is being modified.
 
 ```yaml
 Type: String
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The ApplicationId or Client Id for which the endpoint is being modified.
+The ApplicationId for the application endpoint that is being modified.
 
 ```yaml
 Type: UserIdParameter
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineUri
-Valid phone number for the application endpoint is being modified. (Not currently supported through BOT framework)
+Valid phone number for the application endpoint that is being modified. (Not currently supported through BOT framework)
 
 ```yaml
 Type: String
