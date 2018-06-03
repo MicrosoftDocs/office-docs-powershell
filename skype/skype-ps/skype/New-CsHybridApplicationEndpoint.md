@@ -38,7 +38,7 @@ This example creates a hybrid application endpoint named NewBot1 in Skype for Bu
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId or Client Id for which the endpoint is being created
+The ApplicationId or Client Id for which the endpoint is being created.
 
 ```yaml
 Type: Guid
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Friendly name for the application endpoint.
+Friendly name for the application endpoint is being created.
 
 ```yaml
 Type: String
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineUri
-Valid phone number for the application endpoint. (Not currently supported through BOT framework)
+Valid phone number for the application endpoint is being created. (Not currently supported through BOT framework)
 
 ```yaml
 Type: String
