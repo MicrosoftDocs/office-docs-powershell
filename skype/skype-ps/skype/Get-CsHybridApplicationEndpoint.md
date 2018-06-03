@@ -22,7 +22,7 @@ Get-CsHybridApplicationEndpoint [-Filter <String>] [-LdapFilter <String>] [-OU <
 ## DESCRIPTION
 This cmdlet returns information about one or more hybrid application endpoints in your organization along with their settings. Some of this settings are SipAddress, DisplayName and LineURI.
 
-The `Get-CsHybridApplicationEndpoint` cmdlet provides numerous ways for you to filter the collection of endpoints actually returned when you run the cmdlet. For example, if you don't want to return all your Skype for Business Server endpoints you can apply the optional parameters Filter or LdapFilter. (These parameters are mutually exclusive: if you use Filter in a command you cannot use LdapFilter in that same command, and vice-versa.) The Filter parameter enables you to limit the returned data to endpoints who meet the specified Skype for Business Server criteria; for example, you might decide to return only enabled endpoints, or only endpoints with a LineURI assigned. The LdapFilter parameter enables you to limit the returned data to users who fit other Active Directory-based criteria; for example, users who work in a specified state or province, users who do or do not have a pager, or users with a designated job title.
+The `Get-CsHybridApplicationEndpoint` cmdlet provides numerous ways for you to filter the collection of endpoints actually returned when you run the cmdlet. For example, if you don't want to return all your Skype for Business Server endpoints you can apply the optional parameters Filter or LdapFilter. (These parameters are mutually exclusive: if you use Filter in a command you cannot use LdapFilter in that same command, and vice-versa.) The Filter parameter enables you to limit the returned data to endpoints who meet the specified Skype for Business Server criteria; for example, you might decide to return only enabled endpoints, or only endpoints with a LineURI assigned. The LdapFilter parameter enables you to limit the returned data to users who fit other Active Directory-based criteria.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ This example displays all the hybrid application endpoints that have been define
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:\> Get-CsHybridApplicationEndpoint -Identity CN={4f6c99fe-7999-4088-ac4d-e88e0b3d3820},OU=Redmond,DC=litwareinc,DC=com
+PS C:\> Get-CsHybridApplicationEndpoint -Identity "CN={4f6c99fe-7999-4088-ac4d-e88e0b3d3820},OU=Redmond,DC=litwareinc,DC=com"
 ```
 
 This example uses the Identity parameter to retrieve the hybrid application endpoint settings for a specific endpoint.
@@ -84,7 +84,11 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-{{Fill Filter Description}}
+Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes. For example, you can limit returned data to enabled endpoints.
+
+The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet. For example, a filter that returns only enabled endpoints would look like this, with Enabled representing the Active Directory attribute, -eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
+
+{Enabled -eq $True}
 
 ```yaml
 Type: String
@@ -100,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Unique application Id for the endpoint you want to get.
 
 ```yaml
 Type: UserIdParameter
@@ -116,7 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-{{Fill LdapFilter Description}}
+Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015). For example, you can limit returned data to endpoints which work in a specific department, or endpoints which have a specified manager or job title.
+
+The LdapFilter parameter uses the LDAP query language when creating filters. For example, a filter that returns only endpoints which belongs in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
 
 ```yaml
 Type: String
@@ -132,7 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-{{Fill OU Description}}
+Enables you to return information about endpoints in a specific organizational unit (OU) or container. The OU parameter returns data from both the specified OU and any of its child OUs. For example, if the Finance OU has two child OUs--AccountsPayable and AccountsReceivable--endpoints will be returned from each of these three OUs.
+
+When specifying an OU, use the distinguished name (DN) of that container; for example: -OU "OU=Finance,dc=litwareinc,dc=com". To return endpoints accounts from the Users container, use this syntax:
+
+-OU "cn=Users,dc=litwareinc,dc=com"
 
 ```yaml
 Type: OUIdParameter
@@ -148,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-{{Fill ResultSize Description}}
+Enables you to limit the number of records returned by the cmdlet. For example, to return seven endpoints (regardless of the number of endpoints that are in your forest) include the ResultSize parameter and set the parameter value to 7. Note that there is no way to guarantee which seven endpoints will be returned.
+
+The result size can be set to any whole number between 0 and 2147483647, inclusive. If set to 0 the command will run, but no data will be returned. If you set the ResultSize to 7 but you have only three endpoints in your forest, the command will return those three endpoints, and then complete without error.
 
 ```yaml
 Type: Microsoft.Rtc.Management.ADConnect.Core.Unlimited`1[System.UInt32]
@@ -179,4 +191,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[New-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/new-cshybridapplicationendpoint?view=skype-ps)
 
+[Set-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/set-cshybridapplicationendpoint?view=skype-ps)
+
+[Remove-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/remove-cshybridapplicationendpoint?view=skype-ps)
