@@ -38,7 +38,7 @@ This example creates a hybrid application endpoint named NewBot1 in Skype for Bu
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId or Client Id for which the endpoint is being created.
+The ApplicationId for the application endpoint that is being created.
 
 ```yaml
 Type: Guid
