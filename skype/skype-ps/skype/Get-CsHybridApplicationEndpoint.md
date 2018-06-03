@@ -8,10 +8,11 @@ schema: 2.0.0
 # Get-CsHybridApplicationEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns information about one or more hybrid application endpoints in your organization along with their settings.
+
+This cmdlet was introduced in the July 2017 cumulative update for the Lync Server 2013 and May 2017 cumulative update for Skype Business Server 2015.
 
 ## SYNTAX
-
 ```
 Get-CsHybridApplicationEndpoint [-Filter <String>] [-LdapFilter <String>] [-OU <OUIdParameter>]
  [-DomainController <Fqdn>] [-Credential <PSCredential>] [[-Identity] <UserIdParameter>]
@@ -19,7 +20,7 @@ Get-CsHybridApplicationEndpoint [-Filter <String>] [-LdapFilter <String>] [-OU <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet returns information about one or more hybrid application endpoints in your organization along with their settings. 
 
 ## EXAMPLES
 
