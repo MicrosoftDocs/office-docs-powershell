@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies Skype for Business Server properties for an existing hybrid application endpoint.
 
+This cmdlet was introduced in the July 2017 cumulative update for the Lync Server 2013 and May 2017 cumulative update for Skype Business Server 2015.
+
 ## SYNTAX
 
 ```
