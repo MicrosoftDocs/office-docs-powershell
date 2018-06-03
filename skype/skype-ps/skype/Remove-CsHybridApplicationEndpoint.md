@@ -1,6 +1,6 @@
 ---
 external help file:Microsoft.Rtc.Management.dll-help.xml
-applicable: Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsHybridApplicationEndpoint
 schema: 2.0.0
 ---
@@ -8,7 +8,9 @@ schema: 2.0.0
 # Remove-CsHybridApplicationEndpoint
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes the specified hybrid application endpoint.
+
+This cmdlet was introduced in the July 2017 cumulative update for the Lync Server 2013 and May 2017 cumulative update for Skype Business Server 2015.
 
 ## SYNTAX
 
@@ -17,16 +19,16 @@ Remove-CsHybridApplicationEndpoint [-Identity] <UserIdParameter> [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet removes an existing hybrid application endpoint user object in Active Directory Domain Services. A hybrid application endpoint is an Active Directory user object that enables a trusted application endpoint like bots in hybrid environments.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### -------------------------- Example 1 --------------------------
+```
+PS C:\> Remove-CsHybridApplicationEndpoint -Identity "CN={4f6c99fe-7999-4088-ac4d-e88e0b3d3820},OU=Redmond,DC=litwareinc,DC=com"
 ```
 
-{{ Add example description here }}
+This example removes the specified hybrid application endpoint including the Active Directory user object.
 
 ## PARAMETERS
 
@@ -37,7 +39,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -47,13 +49,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+The ApplicationId for the endpoint that is being deleted.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 0
@@ -63,14 +65,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -95,4 +96,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[New-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/new-cshybridapplicationendpoint?view=skype-ps)
 
+[Get-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/get-cshybridapplicationendpoint?view=skype-ps)
+
+[Set-CsHybridApplicationEndpoint](https://docs.microsoft.com/en-us/powershell/module/skype/set-cshybridapplicationendpoint?view=skype-ps)
