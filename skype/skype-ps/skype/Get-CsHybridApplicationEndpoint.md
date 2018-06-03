@@ -42,10 +42,10 @@ This example uses the Identity parameter to retrieve the hybrid application endp
 
 ### -------------------------- Example 3 --------------------------
 ```
-PS C:\> Get-CsHybridApplicationEndpoint -Filter {Enabled -eq $true}
+PS C:\> Get-CsHybridApplicationEndpoint -Filter {DisplayName -like "*bot*"}
 ```
 
-This example uses the Filter parameter to retrieve all the enabled hybrid application endpoints along with the configuration for each one.
+This example uses the Filter parameter to retrieve all the hybrid application endpoints with the word "bot" in their DisplayName attribute along with the configuration for each one.
 
 ## PARAMETERS
 
@@ -84,11 +84,11 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes. For example, you can limit returned data to enabled endpoints.
+Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes. For example, you can limit returned data to endpoints with specific word in their DisplayName attribute.
 
-The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet. For example, a filter that returns only enabled endpoints would look like this, with Enabled representing the Active Directory attribute, -eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
+The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet. For example, a filter that returns only endpoints with a value in their LineURI attribute would look like this, with LineURI representing the Active Directory attribute, -ne representing the comparison operator (not equal to), and $null (a built-in Windows PowerShell variable) representing the filter value:
 
-{Enabled -eq $True}
+{LineURI -ne $null}
 
 ```yaml
 Type: String
