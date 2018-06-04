@@ -315,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchResolveExactEmailOrUPN
-Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired.
+Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired. This also does not allow SharePoint users to search for security groups or SharePoint groups.
 
 SharePoint Administrators will still be able to use starts with or partial name matching when enabled.
 
