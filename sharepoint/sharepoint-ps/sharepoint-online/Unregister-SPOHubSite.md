@@ -31,15 +31,15 @@ If the site doesn’t exist, this cmdlet returns a “File not found” error.
 ### Example 1
 
 ```
-Unregister-SPOHubSite <guid>
+Unregister-SPOHubSite -Identity <guid>
 ```
 
-This example removes a site from the hub site list based on unique identifier (<guid>) of the site
+This example removes a site from the hub site list based on unique hub identifier (<guid>).
 
 ### Example 2
 
 ```
-Unregister-SPOHubSite https://contoso.sharepoint.com/sites/Marketing
+Unregister-SPOHubSite -Identity https://contoso.sharepoint.com/sites/Marketing
 ```
 
 This example disables the hub feature on the marketing site.
