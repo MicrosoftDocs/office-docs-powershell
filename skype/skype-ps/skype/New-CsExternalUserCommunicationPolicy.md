@@ -13,7 +13,7 @@ Creates a new external user communication policy for use in your organization to
 ## SYNTAX
 
 ```
-New-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Tenant <Object>] [-AsJob] [-WhatIf]
+New-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Confirm] [-Tenant <Object>] [-AsJob] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -32,6 +32,22 @@ PS C:\> New-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTran
 This example creates a new policy to block external file transfer. Then you can use `Grant-CsExternalUserCommunicationPolicy` to assign it to an user account.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -EnableP2PFileTransfer
 Indicates whether file transfers to Federated partners are allowed. The default value is True.
