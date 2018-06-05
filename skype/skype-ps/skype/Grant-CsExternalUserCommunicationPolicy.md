@@ -22,7 +22,7 @@ Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
+### Example 1 
 ```
 Grant-CsExternalUserCommunicationPolicy -Identity "Ken Myer" -PolicyName  BlockExternalP2PFileTransfer
 ```
