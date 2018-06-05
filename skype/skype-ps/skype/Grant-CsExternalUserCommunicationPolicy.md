@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsExternalUserCommunicationPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Enables you to assgin external user communication policy  to a user or group of users. Communication policy determines whether or not your users can to block P2P file transfer.
 
 ## SYNTAX
 
@@ -25,16 +25,27 @@ Provide the detailed description here.
 ### -------------------------- Example 1 -------------------------- 
 ```
 
-Insert example commands for example 1.
+Grant-CsExternalUserCommunicationPolicy -Identity "Ken Myer" -PolicyName  BlockExternalP2PFileTransfer
 ```
 
-Insert descriptive text for example 1.
+Example 1 assigns the external communication policy BlockExternalP2PFileTransfer to the user with the Active Directory display name Ken Myer.  
+
+Note : Only user policy can be assigned to user. The command below will return the "Policy 'Global' is not a user policy. You can assign only a user policy to a specific user" message.
+
+```
+
+Grant-CsExternalUserCommunicationPolicy -Identity "Ken Myer" -PolicyName  Global
+```
+
+
 
 
 ## PARAMETERS
 
 ### -PolicyName
-PARAMVALUE: String
+"Name" of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; a policy with the Identity tag:RedmondAccessPolicy has a PolicyName equal to RedmondAccessPolicy.
+
+To unassign a per-user policy previously assigned to a user, set the PolicyName parameter to $Null.
 
 ```yaml
 Type: Object
