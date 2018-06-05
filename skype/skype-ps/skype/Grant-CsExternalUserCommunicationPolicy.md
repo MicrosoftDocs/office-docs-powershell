@@ -24,19 +24,10 @@ Provide the detailed description here.
 
 ### Example 1 
 ```
-Grant-CsExternalUserCommunicationPolicy -Identity "Ken Myer" -PolicyName  BlockExternalP2PFileTransfer
+PS C:\> Grant-CsExternalUserCommunicationPolicy -Identity "Ken Myer" -PolicyName  BlockExternalP2PFileTransfer
 ```
 
-Example 1 assigns the external communication policy BlockExternalP2PFileTransfer to the user with the Active Directory display name Ken Myer.  
-
-Note : Only user policy can be assigned to user. The command below will return the "Policy 'Global' is not a user policy. You can assign only a user policy to a specific user" message.
-
-```
-Grant-CsExternalUserCommunicationPolicy -Identity "Ken Myer" -PolicyName  Global
-```
-
-
-
+Example 1 assigns the external communication policy BlockExternalP2PFileTransfer to the user with the Active Directory display name Ken Myer. Note : Only user policy can be assigned to user.you can not assgin a global policy to an user
 
 ## PARAMETERS
 
