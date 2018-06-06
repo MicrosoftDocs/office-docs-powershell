@@ -295,7 +295,7 @@ The RemoteLegacy switch specifies that this mailbox move is from a remote forest
 Type: SwitchParameter
 Parameter Sets: Set3, Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -329,7 +329,7 @@ You can't use this switch with the LargeItemLimit parameter.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -384,7 +384,7 @@ You can use the following values for this parameter:
 Type: DatabaseIdParameter
 Parameter Sets: Set4, Set3, Set2, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -473,7 +473,7 @@ We recommend that you use this switch only if the move request fails because the
 Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -555,7 +555,7 @@ The Priority parameter specifies the order in which the request should be proces
 Type: Normal | High
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -687,7 +687,7 @@ You can use the following values:
 Type: DatabaseIdParameter
 Parameter Sets: Set4, Set3, Set2, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -824,7 +824,7 @@ You use this parameter only for local moves.
 Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -843,7 +843,7 @@ You use this parameter only for local moves.
 Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -879,7 +879,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -978,7 +978,7 @@ The WorkloadType parameter is reserved for internal Microsoft use.
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1081,7 +1081,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

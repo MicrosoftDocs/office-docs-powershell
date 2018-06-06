@@ -564,7 +564,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013
 Required: False
 Position: Named
 Default value: None
@@ -969,7 +969,7 @@ The AllowApplePushNotifications parameter specifies whether push notifications a
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

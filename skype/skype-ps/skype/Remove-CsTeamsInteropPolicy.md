@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-IMPORTANT: TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. See description for details.
+IMPORTANT: TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. See description for details. You can also find more guidance here: https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype
 
 Determines how calls are routed between Skype for Business and Microsoft Teams. This cmdlet is typically used by organizations that have users on both Skype for Business and Microsoft Teams and want to configure how calls are handled in their organization.
 

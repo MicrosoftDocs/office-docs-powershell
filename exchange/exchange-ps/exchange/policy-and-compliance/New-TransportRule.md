@@ -4138,7 +4138,7 @@ The ApplyOME parameter specifies an action that encrypts messages and their atta
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -4969,7 +4969,7 @@ The RemoveOME parameter specifies an action that removes Office 365 Message Encr
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -4994,7 +4994,7 @@ The RouteMessageOutboundConnector parameter specifies an action that routes mess
 Type: OutboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

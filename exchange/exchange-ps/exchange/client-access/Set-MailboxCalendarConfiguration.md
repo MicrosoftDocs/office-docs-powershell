@@ -461,7 +461,7 @@ The WeatherEnabled specifies whether weather is displayed in the calendar in Out
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -488,7 +488,7 @@ You can configure a maximum of 5 weather locations.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -511,7 +511,7 @@ The WeatherUnit parameter specifies the temperature scale that's used to display
 Type: Default | Celsius | Fahrenheit
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -532,7 +532,7 @@ The AgendaMailEnabled parameter specifies whether to enable or disable the daily
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -553,7 +553,7 @@ The AgendaPaneEnabled parameter specifies whether to enable the agenda pane in O
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -570,7 +570,7 @@ The CalendarFeedsPreferredLanguage parameter specifies the preferred language fo
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -587,7 +587,7 @@ The CalendarFeedsPreferredRegion specifies the preferred region for calendar fee
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -604,7 +604,7 @@ The CalendarFeedsRootPageId parameter specifies the root page ID for calendar fe
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -644,7 +644,7 @@ The CreateEventsFromEmailAsPrivate parameter specifies whether to create events 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -703,7 +703,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -726,7 +726,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -761,7 +761,7 @@ When this setting is enabled, you can enable or disable creating specific types 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: True
@@ -784,7 +784,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -807,7 +807,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -828,7 +828,7 @@ The InvoiceEventsFromEmailEnabled parameter specifies whether to allow creating 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -881,7 +881,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -904,7 +904,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -961,7 +961,7 @@ A valid value for this parameter depends on the number of weather locations that
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

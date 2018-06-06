@@ -170,7 +170,7 @@ The IsDefaultArbitrationMailbox switch configures this policy as the default ret
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

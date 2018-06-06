@@ -216,3 +216,4 @@ When you grant TeamsUpgradePolicy to a user, you must also grant the correspondi
 
 [Get-CsTeamsUpgradePolicy](Get-CsTeamsUpgradePolicy.md)
 
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

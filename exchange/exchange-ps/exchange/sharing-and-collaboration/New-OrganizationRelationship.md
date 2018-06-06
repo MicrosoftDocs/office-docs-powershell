@@ -92,7 +92,7 @@ The DomainNames parameter specifies the SMTP domains of the external organizatio
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None

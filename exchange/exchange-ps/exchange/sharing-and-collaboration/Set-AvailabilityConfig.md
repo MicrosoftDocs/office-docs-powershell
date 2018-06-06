@@ -107,7 +107,7 @@ The PerUserAccount parameter specifies an account or security group that has per
 Type: SecurityPrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None

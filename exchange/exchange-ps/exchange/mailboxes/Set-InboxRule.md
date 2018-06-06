@@ -346,7 +346,7 @@ The corresponding condition parameter to this exception is FromSubscription.
 Type: AggregationSubscriptionIdentity[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -988,7 +988,7 @@ The corresponding exception parameter to this condition is ExceptIfFromSubscript
 Type: AggregationSubscriptionIdentity[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

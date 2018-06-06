@@ -307,7 +307,7 @@ You can use this parameter only when the AutoReplyState parameter is set to Sche
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -328,7 +328,7 @@ The CreateOOFEvent parameter specifies whether to create a calendar event that c
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -353,7 +353,7 @@ You can't use this parameter with the EventsToDeleteIDs parameter.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -376,7 +376,7 @@ You can use this parameter only when the AutoReplyState parameter is set to Sche
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -401,7 +401,7 @@ To clear the value of this parameter, use the value $null.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -422,7 +422,7 @@ You can't use this parameter with the DeclineAllEventsForScheduledOOF parameter.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -441,7 +441,7 @@ If the value contains spaces, enclose the value in quotation marks ("). To clear
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

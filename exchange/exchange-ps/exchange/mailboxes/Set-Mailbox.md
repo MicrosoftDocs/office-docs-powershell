@@ -686,7 +686,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
@@ -725,7 +725,7 @@ The AntispamBypassEnabled parameter specifies whether to skip anti-spam processi
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -765,7 +765,7 @@ Notes:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -806,7 +806,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -829,7 +829,7 @@ The ArchiveDatabase parameter specifies the Exchange database that contains the 
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -848,7 +848,7 @@ Only use this parameter if the archive is hosted in the cloud-based service.
 Type: SmtpDomain
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -898,7 +898,7 @@ The ArchiveQuota value must be greater than or equal to the ArchiveWarningQuota 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -946,7 +946,7 @@ The ArchiveWarningQuota value must be less than or equal to the ArchiveQuota val
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -983,7 +983,9 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - UpdateFolderPermissions (cloud-based service only)
 
-By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, and UpdateFolderPermissions actions performed by administrators are logged.
+- UpdateCalendarDelegation (cloud-based service only)
+
+By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, and UpdateCalendarDelegation actions performed by administrators are logged.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1107,7 +1109,9 @@ The AuditOwner parameter specifies the mailbox operations to log for mailbox own
 
 - UpdateFolderPermissions (cloud-based service only)
 
-In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions action performed by the owner is logged by default.
+- UpdateCalendarDelegation (cloud-based service only)
+
+In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions and UpdateCalendarDelegation action performed by the owner is logged by default.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1482,7 +1486,7 @@ Use the Get-MailboxDatabase cmdlet to see the available mailbox databases.
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1556,7 +1560,7 @@ The DowngradeHighPriorityMessagesEnabled parameter specifies whether to prevent 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1616,7 +1620,7 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1972,7 +1976,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2064,7 +2068,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2081,7 +2085,7 @@ The LinkedDomainController parameter specifies the domain controller in the fore
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2110,7 +2114,7 @@ For example:
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2273,7 +2277,7 @@ The MaxBlockedSenders parameter specifies the maximum number of senders that can
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2314,7 +2318,7 @@ For any message size limit, you need to set a value that's larger than the actua
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2331,7 +2335,7 @@ The MaxSafeSenders parameter specifies the maximum number of senders that can be
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2502,7 +2506,7 @@ Use the Get-OfflineAddressBook cmdlet to see the available offline address books
 Type: OfflineAddressBookIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2542,7 +2546,7 @@ If you set the EmailAddressPolicyEnabled parameter to $false, you can specify th
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2633,7 +2637,7 @@ The value unlimited indicates the maximum number of recipients per message for t
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2670,7 +2674,7 @@ When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2707,7 +2711,7 @@ When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2860,7 +2864,7 @@ You don't need to specify a value with this switch.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2879,7 +2883,7 @@ You can add a picture to a mailbox by using the Import-RecipientDataProperty cmd
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2898,7 +2902,7 @@ You can add a sound file to a mailbox by using the Import-RecipientDataProperty 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -2940,7 +2944,7 @@ In Office 365, administrators can require users to reset their password the next
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3036,7 +3040,7 @@ The default value is configured by the value of the DeletedItemRetention paramet
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3185,7 +3189,7 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3208,7 +3212,7 @@ The SCLDeleteEnabled parameter specifies whether to silently delete messages tha
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3227,7 +3231,7 @@ A valid value is an integer from 0 through 9. This value should be greater than 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3250,7 +3254,7 @@ The SCLJunkEnabled parameter specifies whether messages that exceed(not meet) th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3269,7 +3273,7 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3294,7 +3298,7 @@ To configure the quarantine mailbox, see Configure a spam quarantine mailbox (ht
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3313,7 +3317,7 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3336,7 +3340,7 @@ The SCLRejectEnabled parameter specifies whether messages that meet or exceed th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3355,7 +3359,7 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3517,7 +3521,7 @@ Use the Get-ThrottlingPolicy cmdlet to see the available throttling policies.
 Type: ThrottlingPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3606,7 +3610,7 @@ The applicable quota values are:
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3627,7 +3631,7 @@ The UseDatabaseRetentionDefaults parameter specifies whether the mailbox uses th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3674,7 +3678,7 @@ The UserSMimeCertificate parameter specifies the S/MIME certificate that's used 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3727,7 +3731,7 @@ The WindowsLiveID parameter renames the Microsoft account (formerly known as a W
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -3750,7 +3754,7 @@ Notes:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3787,7 +3791,7 @@ When the UseDatabaseQuotaDefaults parameter is set to the value $true, the value
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3806,7 +3810,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3899,7 +3903,7 @@ The ExtendedPropertiesCountQuota property is used to configure the Named Propert
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3918,7 +3922,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3937,7 +3941,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3956,7 +3960,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3975,7 +3979,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -3994,7 +3998,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4013,7 +4017,7 @@ To see the current value of this property, run the command Get-MailboxStatistics
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4032,7 +4036,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4208,7 +4212,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4217,11 +4221,13 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSendOnBehalfEnabled
-The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send on behalf of" permission. Valid values are:
+**Note**: This parameter is available only for shared mailboxes.
 
-- $true: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
+The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a shared mailbox by users that have the "send on behalf of" permission. Valid values are:
 
-- $false: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $true: When a user sends a message from the shared mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
+
+- $false: When a user sends a message from the shared mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
 You give users permission to send on behalf of a mailbox by using the GrantSendOnBehalfTo parameter on the mailbox.
 
@@ -4238,15 +4244,17 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSentAsEnabled
-The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send as" permission. Valid values are:
+**Note**: This parameter is available only for shared mailboxes.
 
-- $true: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
+The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a shared mailbox by users that have the "send as" permission. Valid values are:
 
-- $false: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $true: When a user sends a message from the shared mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
 
-In Exchange Online, you give a user permission to send as a mailbox by running this command: Add-RecipientPermission \<Mailbox\> -AccessRights SendAs -Trustee \<User\>.
+- $false: When a user sends a message from the shared mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
-In on-premises Exchange, you give a user permission to send as a mailbox by running this command: Add-ADPermission \<Mailbox\> -ExtendedRights "Send As" -User \<User\>.
+In Exchange Online, you give a user permission to send as a mailbox by running this command: `Add-RecipientPermission <Mailbox> -AccessRights SendAs -Trustee <User>`.
+
+In on-premises Exchange, you give a user permission to send as a mailbox by running this command: `Add-ADPermission <Mailbox> -ExtendedRights "Send As" -User <User>`.
 
 ```yaml
 Type: $true | $false
@@ -4271,9 +4279,9 @@ Valid values are$true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: FalseNamed
+Position: 
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -4320,7 +4328,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4339,7 +4347,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4358,7 +4366,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4471,7 +4479,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4490,7 +4498,7 @@ Valid values are $true or $false.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4511,7 +4519,7 @@ You use this switch with the InactiveMailbox switch and the Identity parameter (
 Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -4530,7 +4538,7 @@ The removal of a hold from a mailbox is temporarily delayed to prevent the accid
 Type: SwitchParameter
 Parameter Sets: Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -4554,7 +4562,7 @@ The AccountDisabled switch specifies whether to disable the account that's assoc
 Type: $true | $false
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -4637,7 +4645,7 @@ Notes:
 Type: SwitchParameter
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -4662,7 +4670,7 @@ You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -4683,7 +4691,7 @@ The ElcProcessingDisabled parameter specifies whether to prevent the Managed Fol
 Type: $true | $false
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -4708,7 +4716,7 @@ You can't use this switch to modify other properties on inactive mailboxes.
 Type: SwitchParameter
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
