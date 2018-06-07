@@ -692,7 +692,7 @@ Direct - Sets the default sharing link for this site to the “Specific people�
 
 
 ```yaml
-Type: AppViewsPolicy
+Type: SharingLinkType
 Parameter Sets: ParamSet1
 Aliases: 
 Applicable: SharePoint Online
@@ -716,7 +716,7 @@ View - Sets the default link permission for the site to “view” permissions
 Edit - Sets the default link permission for the site to “edit” permissions
 
 ```yaml
-Type: AppViewsPolicy
+Type: SharingPermissionType
 Parameter Sets: ParamSet1
 Aliases: 
 Applicable: SharePoint Online
