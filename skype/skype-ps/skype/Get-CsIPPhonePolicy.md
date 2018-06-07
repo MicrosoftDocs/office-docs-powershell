@@ -13,7 +13,7 @@ Use the Get-CsIPPhonePolicy cmdlet to get all the settings of the Skype for Busi
 ## SYNTAX
 
 ```
-Get-CsIPPhonePolicy [[-Identity] <Object>] [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsIPPhonePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,38 @@ This example returns the global IP phone policy along with all their settings..
 
 ## PARAMETERS
 
+### -BypassDualWrite
+{{Fill BypassDualWrite Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+{{Fill Filter Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 Microsoft.Rtc.Management.Xds.XdsIdentity
 
@@ -43,6 +75,22 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocalStore
+{{Fill LocalStore Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
