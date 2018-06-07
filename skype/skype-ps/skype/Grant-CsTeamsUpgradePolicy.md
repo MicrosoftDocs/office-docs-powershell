@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Online
+applicable: Skype for Business Online, Skype for Business Server 2019
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 ---
@@ -10,13 +10,16 @@ schema: 2.0.0
 ## SYNOPSIS
 TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy.  Aspects of TeamsUpgradePolicy are still in preview mode as described below.
 
-Grant-CsTeamsUpgradePolicy \[\[-Identity\] \<UserIdParameter\>\] \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 ## SYNTAX
 
 ```
 Grant-CsTeamsUpgradePolicy  [[-PolicyName] <Object>] [[-Identity] <Object>]
  [-Tenant <Object>][-PassThru] [-Confirm] [-DomainController <Object>] [-WhatIf] [-AsJob]
+```
+
+```
+Grant-CsTeamsUpgradePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +61,7 @@ To grant a policy to all users in the org (except any that have an explicit poli
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 0
@@ -74,7 +77,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -90,7 +93,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -106,7 +109,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -122,7 +125,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -138,7 +141,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -155,7 +158,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -171,7 +174,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -199,12 +202,6 @@ When you grant TeamsUpgradePolicy to a user, you must also grant the correspondi
 | Islands | DisallowOverrideCallingDefaultChatDefault |
 | SfBonly, SfBWithTeamsCollab | DisallowOverrideCallingSfbChatSfb |
 | TeamsOnly | DisallowOverrideCallingTeamsChatTeams |
-
-
-
-
-	
- 	
 
 
 
