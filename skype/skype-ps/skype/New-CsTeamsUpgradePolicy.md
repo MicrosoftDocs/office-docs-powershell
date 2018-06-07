@@ -10,7 +10,7 @@ schema: 2.0.0
 # New-CsTeamsUpgradePolicy
 
 ## SYNOPSIS
-In on-premises deployments of Skype for Business Server, CsTeamsUpgradePolicy enables adminstrators to control whether user see a notification in their Skype for Business client of a pending upgrade to Teams. In addition, when this policy is assigned to a user, administrators can optionally have Win32 versions of Skype for Business clients silently download Teams based on the value of CsTeamsUpgradeConfiguration.
+In on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables adminstrators to control whether user see a notification in their Skype for Business client of a pending upgrade to Teams. In addition, when this policy is assigned to a user, administrators can optionally have Win32 versions of Skype for Business clients silently download Teams based on the value of CsTeamsUpgradeConfiguration.
 
 
 
@@ -18,8 +18,8 @@ In on-premises deployments of Skype for Business Server, CsTeamsUpgradePolicy en
 ## SYNTAX
 
 ```
-New-CsTeamsUpgradePolicy [-Tenant <Guid>] [-Description <String>] [-NotifySfbUsers <Boolean>]
- [-Identity] <XdsIdentity> 
+New-CsTeamsUpgradePolicy [-Identity] <XdsIdentity> [-NotifySfbUsers <Boolean>] [-Description <String>] 
+ 
 ```
 
 ## DESCRIPTION
