@@ -33,7 +33,7 @@ This example removes the specified hybrid application endpoint including the Act
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
