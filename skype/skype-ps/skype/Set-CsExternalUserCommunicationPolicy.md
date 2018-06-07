@@ -13,8 +13,7 @@ Modifies the property values of an existing external user communication policy.
 ## SYNTAX
 
 ```
-Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Confirm] [-Tenant <Object>] [-AsJob] [-WhatIf]
- [<CommonParameters>]
+Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-AllowPresenceVisibility <Object>] [-AllowTitleVisibility <Object>] [-BypassDualWrite <Object>] [-Confirm] [-EnableFileTransfer <Object>] [-EnableP2PFileTransfer <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
 ```
 
 ## DESCRIPTION
