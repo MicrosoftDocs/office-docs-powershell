@@ -67,3 +67,17 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+
+[Grant-CsTeamsUpgradePolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Grant-CsTeamsUpgradePolicy.md)
+
+[Get-CsTeamsUpgradePolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsUpgradePolicy.md)
+
+[New-CsTeamsUpgradePolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/New-CsTeamsUpgradePolicy.md)
+
+[Remove-CsTeamsUpgradePolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Remove-CsTeamsUpgradePolicy.md)
+
+[Set-CsTeamsUpgradePolicy](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Set-CsTeamsUpgradePolicy.md)
+
+[Get-CsTeamsUpgradeConfiguration](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Get-CsTeamsUpgradeConfiguration.md)
+
+[Set-CsTeamsUpgradeConfiguration](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/Set-CsTeamsUpgradeConfiguration.md)
