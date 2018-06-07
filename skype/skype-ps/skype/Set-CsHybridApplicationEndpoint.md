@@ -33,7 +33,7 @@ This example modify the DisplayName and LineURI attributes for the specified hyb
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
