@@ -10,13 +10,16 @@ schema: 2.0.0
 ## SYNOPSIS
 TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy.  Aspects of TeamsUpgradePolicy are still in preview mode as described below.
 
-Grant-CsTeamsUpgradePolicy \[\[-Identity\] \<UserIdParameter\>\] \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 ## SYNTAX
 
 ```
 Grant-CsTeamsUpgradePolicy  [[-PolicyName] <Object>] [[-Identity] <Object>]
  [-Tenant <Object>][-PassThru] [-Confirm] [-DomainController <Object>] [-WhatIf] [-AsJob]
+```
+
+```
+Grant-CsTeamsUpgradePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -199,12 +202,6 @@ When you grant TeamsUpgradePolicy to a user, you must also grant the correspondi
 | Islands | DisallowOverrideCallingDefaultChatDefault |
 | SfBonly, SfBWithTeamsCollab | DisallowOverrideCallingSfbChatSfb |
 | TeamsOnly | DisallowOverrideCallingTeamsChatTeams |
-
-
-
-
-	
- 	
 
 
 
