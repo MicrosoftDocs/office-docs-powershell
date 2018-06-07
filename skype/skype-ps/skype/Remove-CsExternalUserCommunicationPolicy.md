@@ -13,7 +13,8 @@ Removes the specified external user communication policy.
 ## SYNTAX
 
 ```
-Remove-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-Confirm] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Remove-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+
 ```
 
 ## DESCRIPTION
@@ -36,6 +37,22 @@ PS C:\> Get-CsExternalUserCommunicationPolicy -Filter tag* | Remove-CsExternalUs
 This example removes all the external user communication policies that can be assigned to specific users. First the `Get-CsExternalUserCommunicationPolicy` cmdlet is called with a Filter of tag*, which retrieves all the per-user policies excluding Global policy. That collection of policies is then piped to the `Remove-CsExternalUserCommunicationPolicy` cmdlet to be removed.
 
 ## PARAMETERS
+
+### -BypassDualWrite
+{{Fill BypassDualWrite Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
