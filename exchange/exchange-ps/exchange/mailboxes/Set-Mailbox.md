@@ -686,7 +686,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
@@ -4221,11 +4221,13 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSendOnBehalfEnabled
-The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send on behalf of" permission. Valid values are:
+**Note**: This parameter is available only for shared mailboxes.
 
-- $true: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
+The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a shared mailbox by users that have the "send on behalf of" permission. Valid values are:
 
-- $false: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $true: When a user sends a message from the shared mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
+
+- $false: When a user sends a message from the shared mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
 You give users permission to send on behalf of a mailbox by using the GrantSendOnBehalfTo parameter on the mailbox.
 
@@ -4242,15 +4244,17 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSentAsEnabled
-The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send as" permission. Valid values are:
+**Note**: This parameter is available only for shared mailboxes.
 
-- $true: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
+The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a shared mailbox by users that have the "send as" permission. Valid values are:
 
-- $false: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $true: When a user sends a message from the shared mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
 
-In Exchange Online, you give a user permission to send as a mailbox by running this command: Add-RecipientPermission \<Mailbox\> -AccessRights SendAs -Trustee \<User\>.
+- $false: When a user sends a message from the shared mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
-In on-premises Exchange, you give a user permission to send as a mailbox by running this command: Add-ADPermission \<Mailbox\> -ExtendedRights "Send As" -User \<User\>.
+In Exchange Online, you give a user permission to send as a mailbox by running this command: `Add-RecipientPermission <Mailbox> -AccessRights SendAs -Trustee <User>`.
+
+In on-premises Exchange, you give a user permission to send as a mailbox by running this command: `Add-ADPermission <Mailbox> -ExtendedRights "Send As" -User <User>`.
 
 ```yaml
 Type: $true | $false
