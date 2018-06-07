@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Online
+applicable: Skype for Business Online, Skype for Business Server 2019
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 ---
@@ -58,7 +58,7 @@ To grant a policy to all users in the org (except any that have an explicit poli
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 0
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -90,7 +90,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
