@@ -11,14 +11,18 @@ schema: 2.0.0
 TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy.  Aspects of TeamsUpgradePolicy are still in preview mode as described below.
 
 
-Get-CsTeamsUpgradePolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[\<CommonParameters\>\]
-
-Get-CsTeamsUpgradePolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
 ```
 Get-CsTeamsUpgradePolicy [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+```
+
+```
+Get-CsTeamsUpgradePolicy [[-Identity] <XdsIdentity>] [-Tenant <guid>] [<CommonParameters>]
+```
+
+```
+Get-CsTeamsUpgradePolicy [-Tenant <guid>] [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
