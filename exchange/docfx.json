@@ -98,7 +98,8 @@
           "**/Get-AddressList.md",
           "**/Move-AddressList.md",
           "**/Get-Mailbox.md",
-          "**/Enable-Mailbox.md"
+          "**/Enable-Mailbox.md",
+          "**/active-directory.md"
         ],
         "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2013",
