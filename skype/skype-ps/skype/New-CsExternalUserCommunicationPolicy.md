@@ -13,8 +13,7 @@ Creates a new external user communication policy for use in your organization to
 ## SYNTAX
 
 ```
-New-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Tenant <Object>] [-AsJob] [-WhatIf]
- [<CommonParameters>]
+New-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-AllowPresenceVisibility <Object>] [-AllowTitleVisibility <Object>] [-BypassDualWrite <Object>] [-Confirm] [-EnableFileTransfer <Object>] [-EnableP2PFileTransfer <Object>] [-Force] [-InMemory] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,7 +23,7 @@ This cmdlet allows you to block P2P file transfer with Federated partners only.
 
 ## EXAMPLES
 
-### Example 1 
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> New-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
 ```
@@ -33,11 +32,107 @@ This example creates a new policy to block external file transfer. Then you can 
 
 ## PARAMETERS
 
+### -AllowPresenceVisibility
+{{Fill AllowPresenceVisibility Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTitleVisibility
+{{Fill AllowTitleVisibility Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+{{Fill BypassDualWrite Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableP2PFileTransfer
 Indicates whether file transfers to Federated partners are allowed. The default value is True.
 
 ```yaml
 Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFileTransfer
+Indicates whether file transfers to Federated partners are allowed. The default value is True.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{Fill Force Description}}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -60,6 +155,22 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InMemory
+{{Fill InMemory Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Online
+applicable: Skype for Business Online, Skype for Business Server 2019
 title: Set-CsTeamsUpgradeConfiguration
 schema: 2.0.0
 ---
@@ -10,15 +10,19 @@ schema: 2.0.0
 ## SYNOPSIS
 Administrators can use Set-CsTeamsUpgradeConfiguration to manage certain aspects of client behavior for users being upgraded from Skype for Business to Teams. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
 
-Set-CsTeamsUpgradeConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-DownloadTeams \<bool\>\] \[-SfBMeetingJoinUx \<string\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsTeamsUpgradeConfiguration \[-Tenant \<guid\>\] \[-DownloadTeams \<bool\>\] \[-SfBMeetingJoinUx \<string\>\] \[-Instance \<psobject\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
 ```
 Set-CsTeamsUpgradeConfiguration [-WhatIf] [-SfBMeetingJoinUx <Object>] [-Confirm] [-DownloadTeams <Object>]
  [[-Identity] <Object>] [-Tenant <Object>] [-Force] [-Instance <Object>] [-AsJob]
+```
+
+```
+Set-CsTeamsUpgradeConfiguration [-Tenant <guid>] [-DownloadTeams <bool>] [-SfBMeetingJoinUx <string>] [-Instance <psobject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+```
+Set-CsTeamsUpgradeConfiguration [[-Identity] <XdsIdentity>] [-Tenant <guid>] [-DownloadTeams <bool>] [-SfBMeetingJoinUx <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +50,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -62,7 +66,7 @@ The DownloadTeams property allows admins to control whether the Skype for Busine
 Type: Bool
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -77,7 +81,7 @@ The SfBMeetingJoinUx property allows admins to specify which app is used to join
 Type: string
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +96,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +112,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -126,7 +130,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +147,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -159,7 +163,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named

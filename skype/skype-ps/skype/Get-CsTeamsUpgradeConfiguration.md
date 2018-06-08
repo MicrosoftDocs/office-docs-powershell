@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Skype for Business Online
+applicable: Skype for Business Online, Skype for Business Server 2019
 title: Get-CsTeamsUpgradeConfiguration
 schema: 2.0.0
 ---
@@ -11,15 +11,23 @@ schema: 2.0.0
 Returns information related to managing the upgrade to Teams from Skype for Business. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
 
 
-Get-CsTeamsUpgradeConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[\<CommonParameters\>\]
 
-Get-CsTeamsUpgradeConfiguration \[-Tenant \<guid\>\] \[-Filter \<string\>\]  \[\<CommonParameters\>\]
+
+
 
 ## SYNTAX
 
 ```
 Get-CsTeamsUpgradeConfiguration [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
  [-AsJob]
+```
+
+```
+Get-CsTeamsUpgradeConfiguration [-Tenant <guid>] [-Filter <string>]  [<CommonParameters>]
+```
+
+```
+Get-CsTeamsUpgradeConfiguration [[-Identity] <XdsIdentity>] [-Tenant <guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +57,7 @@ The above cmdlet lists the properties of TeamsUpgradeConfiguration.
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -65,7 +73,7 @@ Do not use
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -81,7 +89,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -97,7 +105,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
