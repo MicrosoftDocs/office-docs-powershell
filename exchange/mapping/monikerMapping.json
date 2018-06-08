@@ -4,6 +4,7 @@
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceToc": "exchange-ps/exchange/exchserver-ps-2016/toc.yml",
         "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     },
     "exchserver-ps-2013": {
@@ -11,6 +12,7 @@
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceToc": "exchange-ps/exchange/exchserver-ps-2013/toc.yml",
         "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     },
 
@@ -19,6 +21,7 @@
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceToc": "exchange-ps/exchange/eop-ps/toc.yml",
         "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     },
 
@@ -27,6 +30,7 @@
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/toc.json",
+        "referenceToc": "exchange-ps/exchange/exchonline-ps/toc.yml",
         "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     }
 }

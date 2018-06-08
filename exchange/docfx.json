@@ -71,73 +71,74 @@
       },
       {
         "files": [
-          "**/*.yml",
-          "**/*.md"
+          "**/Add-ADPermission.md",
+          "**/Get-ADPermission.md",
+          "**/Get-AddressList.md",
+          "**/Move-AddressList.md",
+          "**/Get-Mailbox.md",
+          "**/Enable-Mailbox.md",
+          "**/Get-MxRecordReport.md"          
         ],
         "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2016",
-        "exclude": [
-          "toc.yml"
-        ],
         "dest": "module"
       },
       {
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps/exchange",
+        "src": "exchange-ps/exchange/exchserver-ps-2016",
         "version": "exchserver-ps-2016",
         "dest": "module/exchange-ps"
       },
       {
         "files": [
-          "**/*.yml",
-          "**/*.md"
+          "**/Add-ADPermission.md",
+          "**/Get-ADPermission.md",
+          "**/Get-AddressList.md",
+          "**/Move-AddressList.md",
+          "**/Get-Mailbox.md",
+          "**/Enable-Mailbox.md"
         ],
         "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2013",
-        "exclude": [
-          "toc.yml"
-        ],
         "dest": "module"
       },
       {
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps/exchange",
+        "src": "exchange-ps/exchange/exchserver-ps-2013",
         "version": "exchserver-ps-2013",
         "dest": "module/exchange-ps"
       },
       {
         "files": [
-          "**/*.yml",
-          "**/*.md"
+          "**/Disable-AntiPhishRule.md",
+          "**/Enable-AntiPhishRule.md",
+          "**/Get-Mailbox.md",
+          "**/Enable-Mailbox.md"
         ],
         "src": "exchange-ps/exchange",
         "version": "eop-ps",
-        "exclude": [
-          "toc.yml"
-        ],
         "dest": "module"
       },
       {
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps/exchange",
+        "src": "exchange-ps/exchange/eop-ps",
         "version": "eop-ps",
         "dest": "module/exchange-ps"
       },
       {
         "files": [
-          "**/*.yml",
-          "**/*.md"
+          "**/Get-AddressList.md",
+          "**/Move-AddressList.md",
+          "**/Get-Mailbox.md",
+          "**/Enable-Mailbox.md"
         ],
         "src": "exchange-ps/exchange",
-        "exclude": [
-          "toc.yml"
-        ],
         "version": "exchonline-ps",
         "dest": "module"
       },
@@ -145,7 +146,7 @@
         "files": [
           "toc.yml"
         ],
-        "src": "exchange-ps/exchange",
+        "src": "exchange-ps/exchange/exchonline-ps",
         "version": "exchonline-ps",
         "dest": "module/exchange-ps"
       }
