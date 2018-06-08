@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmails
-This parameter is applicable only to on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 The NotificationEmails parameter specifies one or more email addresses that status reports are sent to after the migration batch is completed. You can specify multiple email addresses separated by commas.
 
@@ -113,7 +113,7 @@ If you don't use this parameter, the final status report is sent to the administ
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
