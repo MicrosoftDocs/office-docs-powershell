@@ -221,6 +221,7 @@
       "ms.topic": "reference",
       "ms.service": "exchange-powershell",
       "ms.devlang": "powershell",
+      "showPowerShellPicker": "true",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
