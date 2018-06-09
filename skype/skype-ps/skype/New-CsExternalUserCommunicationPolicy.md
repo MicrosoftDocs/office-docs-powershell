@@ -33,7 +33,7 @@ This example creates a new policy to block external file transfer. Then you can 
 ## PARAMETERS
 
 ### -AllowPresenceVisibility
-{{Fill AllowPresenceVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTitleVisibility
-{{Fill AllowTitleVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileTransfer
-Indicates whether file transfers to Federated partners are allowed. The default value is True.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-{{Fill InMemory Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
