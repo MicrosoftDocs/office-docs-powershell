@@ -14,12 +14,7 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 ## SYNTAX
 
 ```
-Grant-CsTeamsUpgradePolicy  [[-PolicyName] <Object>] [[-Identity] <Object>]
- [-Tenant <Object>][-PassThru] [-Confirm] [-DomainController <Object>] [-WhatIf] [-AsJob]
-```
-
-```
-Grant-CsTeamsUpgradePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsUpgradePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,12 +25,32 @@ This cmdlet enables admins to apply TeamsUpgradePolicy to either individual user
 
 IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy are being updated to honor TeamsUpgradePolicy instead. During the transition, use of these 2 policies must be coordinated during the transition. After transition is complete, TeamsInteropPolicy will be removed.
 
+|||||
+
+Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are listed below.
+</br>
+</br>
+|Identity|Mode|NotifySfbUsers|Action|Comments|
+|---|---|---|---|---|
+|Islands|Islands|False|None||
+|IslandsWithNotify|Islands|True|Notify||
+|SfBOnly|SfBOnly|False|None|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
+|SfBOnlyWithNotify|SfBOnly|True|Notify|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
+|SfBWithTeamsCollab|SfBWithTeamsCollab|False|None|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPolicy is available, this will only allow Channels in Teams app.|
+|SfBWithTeamsCollabWithNotify|SfBWithTeamsCollab|True|Notify|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPolicy is available, this will only allow Channels in Teams app.|
+|UpgradeToTeams|TeamsOnly|False|Upgrade|Use this mode to upgrade users to Teams and to prevent chat, calling, and meeting scheduling in Skype for Business.|
+|Global|Legacy|False|None|The mode will eventually be updated to Islands.|
+|NoUpgrade|Legacy|False|None|This instance will eventually be retired.|
+|NotifyForTeams|Legacy|True|Notify|This instance will eventually be retired.|
+||||||
+
+
 
 NOTES: 
 - TeamsUpgradePolicy is available in both Office 365 and in on-premises versions of Skype for Business Server, but there are differences: 
     - In Office 365, admins can specify both coexistence mode and whether to trigger notifications of pending upgrade.  
     - In on-premises with Skype for Business Server, the only availble option is to trigger notifications. 
- - TeamsUpgradePolicy in Office 365 can be granted to users homed on-premises in hybrid deployments of Skype for Business as follows:
+- TeamsUpgradePolicy in Office 365 can be granted to users homed on-premises in hybrid deployments of Skype for Business as follows:
     - Coexistence mode is honored by users homed on-premises, however on-premises users cannot be granted the UpgradeToTeams instance (mode=TeamsOnly) of TeamsUpgradePolicy.  Users must be either homed in Skype for Business Online or have no Skype account anywhere to be upgraded to TeamsOnly mode.    
     - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premise version of TeamsUpgradePolicy must be used. 
 - In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet avaiable. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
@@ -110,37 +125,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-{{Fill DomainController Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-{{Fill PassThru Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Tenant
 {{Fill Tenant Description}}
@@ -158,38 +142,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
 
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Skype for Business Online, Skype for Business Server 2019
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ## INPUTS
 
