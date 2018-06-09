@@ -53,7 +53,7 @@ This example uses the Filter parameter to retrieve all the external user communi
 ## PARAMETERS
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -100,7 +100,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -LocalStore
-{{Fill LocalStore Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
