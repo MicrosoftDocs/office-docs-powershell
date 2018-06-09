@@ -13,7 +13,7 @@ Use the Get-CsIPPhonePolicy cmdlet to get all the settings of the Skype for Busi
 ## SYNTAX
 
 ```
-Get-CsIPPhonePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-BypassDualWrite <Object>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -63,12 +63,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Microsoft.Rtc.Management.Xds.XdsIdentity
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -97,12 +95,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-System.Guid
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
