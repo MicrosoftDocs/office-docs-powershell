@@ -47,7 +47,11 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-{{Fill Filter Description}}
+Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes. For example, you can limit returned data to endpoints with specific word in their DisplayName attribute.
+
+The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet. For example, a filter that returns only endpoints with a value in their LineURI attribute would look like this, with LineURI representing the Active Directory attribute, -ne representing the comparison operator (not equal to), and $null (a built-in Windows PowerShell variable) representing the filter value:
+
+{LineURI -ne $null}
 
 ```yaml
 Type: Object
