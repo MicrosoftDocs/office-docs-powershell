@@ -47,12 +47,10 @@ This example sets the EnablePowerSaveModeproperty, EnableOneTouchVoicemailvalues
 ## PARAMETERS
 
 ### -BetterTogetherOverEthernetPairingMode
-System.String
-
 Auto – The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code. Manual – The user needs to enter the pairing code manually to pair with the BTOE app. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -65,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -81,8 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-System.Management.Automation.SwitchParameter
-
 Prompts you for confirmation before executing the command.
 
 ```yaml
@@ -99,12 +95,10 @@ Accept wildcard characters: False
 ```
 
 ### -DateTimeFormat
-System.Int32
-
 Specifies the time format to be used. The acceptable values are "24" for a 24 hour time format, or "12" for a 12 hour format. The default is "24".
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -117,12 +111,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBetterTogetherOverEthernet
-System.Boolean
-
 Specifies whether the Better Together Over Ethernet (BTOE) feature is enabled for users. If $true, and if the BTOE plugin is installed on the IP device, the user can tether the device to a PC and sign in to Skype for Business Online. The default is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -135,12 +127,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDeviceUpdate
-System.Boolean
-
 Specifies whether the IP device will be updated by the Skype for Business Online service. If set to $true, IP devices will get firmware updates from the service, if $false the device will not be updated. The default is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -153,12 +143,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeCalendaring
-System.Boolean
-
 Specifies whether an IP device is enabled to connect to the Exchange Online calendaring service. If $true, users are able to connect to their Exchange calendars. If $false, users will not be enabled to connect to their calendars. The default is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -171,12 +159,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOneTouchVoicemail
-System.Boolean
-
 Specifies whether the Visual Voicemail feature in Skype for Business Online is enabled. If set to $true, the feature is enabled, otherwise $false.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -189,12 +175,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePowerSaveMode
-System.Boolean
-
 If enabled, phone goes to power savings mode (display turns off) based on values of the PowerSaveDuringOfficeHoursTimeoutMS and PowerSavePostOfficeHoursTimeoutMS parameters.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -207,8 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-System.Management.Automation.SwitchParameter
-
 The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
@@ -225,12 +207,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Microsoft.Rtc.Management.Xds.XdsIdentity
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -243,12 +223,10 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-System.Management.Automation.PSObject
-
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -261,12 +239,10 @@ Accept wildcard characters: False
 ```
 
 ### -KeyboardLockMaxPinRetry
-System.UInt64
-
 Specifies the maximum number of retries allowed for phone unlock. The default is 5.
 
 ```yaml
-Type: Object
+Type: UInt64
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -279,12 +255,10 @@ Accept wildcard characters: False
 ```
 
 ### -LocalProvisioningServerAddress
-System.String
-
 Specifies the address of the provisioning server for your organization. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -297,12 +271,10 @@ Accept wildcard characters: False
 ```
 
 ### -LocalProvisioningServerPassword
-System.String
-
 Specifies the password for the provisioning server. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -315,12 +287,10 @@ Accept wildcard characters: False
 ```
 
 ### -LocalProvisioningServerType
-System.String
-
 Specifies the server type for the phone. The default is FTP.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -333,12 +303,10 @@ Accept wildcard characters: False
 ```
 
 ### -LocalProvisioningServerUser
-System.String
-
 Specifies a username for the provisioning server.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -351,12 +319,10 @@ Accept wildcard characters: False
 ```
 
 ### -PowerSaveDuringOfficeHoursTimeoutMS
-System.UInt64
-
 Specifies the time in milliseconds to wait during office hours before turning on Power Save mode. The default is 900,000.
 
 ```yaml
-Type: Object
+Type: UInt64
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -369,12 +335,10 @@ Accept wildcard characters: False
 ```
 
 ### -PowerSavePostOfficeHoursTimeoutMS
-System.UInt64
-
 Specifies the time in milliseconds to wait after office hours before turning on Power Save mode. The default is 300,000.
 
 ```yaml
-Type: Object
+Type: UInt64
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -387,12 +351,10 @@ Accept wildcard characters: False
 ```
 
 ### -PrioritizedCodecsList
-System.String
-
 Specifies the order in which to prioritize codecs. The default is: "G722_8000;PCMU;PCMA;G729"
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -405,12 +367,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-System.Guid
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -423,12 +383,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserDialTimeoutMS
-System.UInt64
-
 Specifies the time in milliseconds to wait in On-Hook mode before dialing out automatically. If a user enters a phone number and does not click dial, the system will dial the number after the number of milliseconds specified. The default is 5000. 
 
 ```yaml
-Type: Object
+Type: UInt64
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -441,8 +399,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-System.Management.Automation.SwitchParameter
-
 The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
