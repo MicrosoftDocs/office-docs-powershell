@@ -13,7 +13,7 @@ Modifies the property values of an existing external user communication policy.
 ## SYNTAX
 
 ```
-Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-AllowPresenceVisibility <Object>] [-AllowTitleVisibility <Object>] [-BypassDualWrite <Object>] [-Confirm] [-EnableFileTransfer <Object>] [-EnableP2PFileTransfer <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Set-CsExternalUserCommunicationPolicy [-EnableFileTransfer <Object>] [-AllowTitleVisibility <Object>]  [-Confirm] [-AllowPresenceVisibility <Object>] [-EnableP2PFileTransfer <Object>] [[-Identity] <Object>] [-Tenant <Object>] [-WhatIf] [-Force] [-Instance <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ This example sets the EnableP2PFileTransfer property to False for the Global pol
 ## PARAMETERS
 
 ### -AllowPresenceVisibility
-{{Fill AllowPresenceVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTitleVisibility
-{{Fill AllowTitleVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileTransfer
-{{Fill EnableFileTransfer Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -133,6 +133,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 Unique identifier for the external user communication policy to be created.
 
@@ -144,6 +159,21 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Instance
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
