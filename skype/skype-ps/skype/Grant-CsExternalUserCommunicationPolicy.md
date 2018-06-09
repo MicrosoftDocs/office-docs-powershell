@@ -25,7 +25,7 @@ You can check whether a user has been granted an external user communication pol
 
 ## EXAMPLES
 
-### Example 1 
+### -------------------------- Example 1 -------------------------- 
 
 ```
 PS C:\> Grant-CsExternalUserCommunicationPolicy -Identity "Ken Myer" -PolicyName BlockExternalP2PFileTransfer
@@ -40,13 +40,11 @@ PS C:\> Get-CsOnlineUser -Filter {City -eq "Redmond"} | Grant-CsExternalUserComm
 
 This example assigns the external user communication policy with the Identity BlockExternalP2PFileTransfer to all users in the city of Redmond. The first part of the command calls the Get-CsOnlineUser cmdlet to retrieve all users enabled for Skype for Business Online from the specified city. This collection of users is then piped to the Grant-CsExternalUserCommunicationPolicy cmdlet, which assigns the policy BlockExternalP2PFileTransfer to each of these users.
 
-
 ## PARAMETERS
 
 ### -PolicyName
 
 The name (Identity) of the external user communication policy to be assigned to the user. (Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName.)
-
 
 ```yaml
 Type: Object
@@ -78,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
