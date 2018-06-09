@@ -165,12 +165,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-This parameter is reserved for internal Microsoft use.
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
