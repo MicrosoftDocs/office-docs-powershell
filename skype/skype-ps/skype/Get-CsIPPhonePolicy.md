@@ -31,7 +31,7 @@ This example returns the global IP phone policy along with all their settings..
 ## PARAMETERS
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
