@@ -13,14 +13,14 @@ Use the Set-CsIPPhonePolicy cmdlet to modify the settings of the Skype for Busin
 ## SYNTAX
 
 ```
-Set-CsIPPhonePolicy [[-Identity] <Object>] [-BetterTogetherOverEthernetPairingMode <Object>]
- [-BypassDualWrite <Object>] [-Confirm] [-DateTimeFormat <Object>] [-EnableBetterTogetherOverEthernet <Object>]
- [-EnableDeviceUpdate <Object>] [-EnableExchangeCalendaring <Object>] [-EnableOneTouchVoicemail <Object>]
- [-EnablePowerSaveMode <Object>] [-Force] [-Instance <Object>] [-KeyboardLockMaxPinRetry <Object>]
- [-LocalProvisioningServerAddress <Object>] [-LocalProvisioningServerPassword <Object>]
- [-LocalProvisioningServerType <Object>] [-LocalProvisioningServerUser <Object>]
- [-PowerSaveDuringOfficeHoursTimeoutMS <Object>] [-PowerSavePostOfficeHoursTimeoutMS <Object>]
- [-PrioritizedCodecsList <Object>] [-Tenant <Object>] [-UserDialTimeoutMS <Object>] [-WhatIf] [-AsJob]
+Set-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-BetterTogetherOverEthernetPairingMode <String>]
+ [-BypassDualWrite <Object>] [-Confirm] [-DateTimeFormat <Int>] [-EnableBetterTogetherOverEthernet <Boolean>]
+ [-EnableDeviceUpdate <Boolean>] [-EnableExchangeCalendaring <Boolean>] [-EnableOneTouchVoicemail <Boolean>]
+ [-EnablePowerSaveMode <Boolean>] [-Force] [-Instance <PSObject>] [-KeyboardLockMaxPinRetry <UInt64>]
+ [-LocalProvisioningServerAddress <String>] [-LocalProvisioningServerPassword <String>]
+ [-LocalProvisioningServerType <String>] [-LocalProvisioningServerUser <String>]
+ [-PowerSaveDuringOfficeHoursTimeoutMS <UInt64>] [-PowerSavePostOfficeHoursTimeoutMS <UInt64>]
+ [-PrioritizedCodecsList <String>] [-Tenant <Guid>] [-UserDialTimeoutMS <UInt64>] [-WhatIf] [-AsJob]
  [<CommonParameters>]
 ```
 
