@@ -14,9 +14,7 @@ This cmdlet was introduced in the July 2017 cumulative update for the Lync Serve
 
 ## SYNTAX
 ```
-Get-CsHybridApplicationEndpoint [-Filter <String>] [-LdapFilter <String>] [-OU <OUIdParameter>]
- [-DomainController <Fqdn>] [-Credential <PSCredential>] [[-Identity] <UserIdParameter>]
- [-ResultSize <Microsoft.Rtc.Management.ADConnect.Core.Unlimited`1[System.UInt32]>] [<CommonParameters>]
+Get-CsHybridApplicationEndpoint [-Filter <String>] [-LdapFilter <String>] [-OU <OUIdParameter>] [-DomainController <Fqdn>] [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <Microsoft.Rtc.Management.ADConnect.Core.Unlimited`1[System.UInt32]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
