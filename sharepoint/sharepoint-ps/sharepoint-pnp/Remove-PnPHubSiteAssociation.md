@@ -22,7 +22,7 @@ Disconnects an site from a hubsite
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Remove-PnPHubSiteAssociation -Site https://tenant.sharepoint.com/sites/mysite -HubSite https://tenant.sharepoint.com/sites/hubsite
+Remove-PnPHubSiteAssociation -Site https://tenant.sharepoint.com/sites/mysite
 ```
 
 This example adds the specified site to the hubsite.

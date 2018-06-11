@@ -68,7 +68,7 @@ Accept pipeline input: True
 ```
 
 ### -Recycle
-
+Defines if the list should be moved to recycle bin or directly deleted.
 
 ```yaml
 Type: SwitchParameter

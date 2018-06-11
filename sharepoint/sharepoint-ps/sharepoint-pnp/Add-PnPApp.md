@@ -15,6 +15,7 @@ Add/uploads an available app to the app catalog
 Add-PnPApp -Path <String>
            [-Scope <AppCatalogScope>]
            [-Overwrite [<SwitchParameter>]]
+           [-Timeout <Int>]
            [-Connection <SPOnlineConnection>]
 ```
 
@@ -25,6 +26,7 @@ Add-PnPApp -Path <String>
            [-SkipFeatureDeployment [<SwitchParameter>]]
            [-Scope <AppCatalogScope>]
            [-Overwrite [<SwitchParameter>]]
+           [-Timeout <Int>]
            [-Connection <SPOnlineConnection>]
 ```
 
@@ -107,6 +109,18 @@ Accept pipeline input: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Add and Publish
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -Timeout
+Specifies the timeout in seconds. Defaults to 200.
+
+```yaml
+Type: Int
+Parameter Sets: (All)
 
 Required: False
 Position: Named
