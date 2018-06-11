@@ -25,6 +25,7 @@ Submit-PnPSearchQuery -Query <String>
                       [-SortList <Hashtable>]
                       [-RankingModelId <String>]
                       [-ClientType <String>]
+                      [-CollapseSpecification <String>]
                       [-HiddenConstraints <String>]
                       [-TimeZoneId <Int>]
                       [-EnablePhonetic <Boolean>]
@@ -52,6 +53,7 @@ Submit-PnPSearchQuery -Query <String>
                       [-SortList <Hashtable>]
                       [-RankingModelId <String>]
                       [-ClientType <String>]
+                      [-CollapseSpecification <String>]
                       [-HiddenConstraints <String>]
                       [-TimeZoneId <Int>]
                       [-EnablePhonetic <Boolean>]
@@ -111,6 +113,20 @@ Accept pipeline input: False
 
 ### -ClientType
 Specifies the name of the client which issued the query.
+
+```yaml
+Type: String
+Parameter Sets: __AllParameterSets
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -CollapseSpecification
+Limit the number of items per the collapse specification. See https://docs.microsoft.com/en-us/sharepoint/dev/general-development/customizing-search-results-in-sharepoint#collapse-similar-search-results-using-the-collapsespecification-property for more information.
+
+Only applicable to: SharePoint Online, SharePoint Server 2016
 
 ```yaml
 Type: String

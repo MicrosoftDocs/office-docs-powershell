@@ -120,7 +120,7 @@ Accept pipeline input: False
 ```
 
 ### -Members
-The array UPN values of members to add to the group.
+The array UPN values of members to set to the group. Note: Will replace members.
 
 ```yaml
 Type: String[]
@@ -132,7 +132,7 @@ Accept pipeline input: False
 ```
 
 ### -Owners
-The array UPN values of owners to add to the group.
+The array UPN values of owners to set to the group. Note: Will replace owners.
 
 ```yaml
 Type: String[]

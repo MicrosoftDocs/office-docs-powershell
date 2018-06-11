@@ -1,8 +1,3 @@
----
-title: PnP PowerShell overview 
-description: Introduction to PnP PowerShell cmdlets.
-ms.date: 5/12/2018
----
 # PnP PowerShell overview
 
 SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and can work against both SharePoint Online as SharePoint On-Premises.
@@ -104,6 +99,7 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppInstance.md)** |Returns a SharePoint AddIn Instance|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Uninstall&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPAppInstance.md)** |Removes an app from a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Import&#8209;PnPAppPackage](../../sharepoint-ps/sharepoint-pnp/Import-PnPAppPackage.md)** |Adds a SharePoint Addin to a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Grant&#8209;PnPTenantServicePrincipalPermission](../../sharepoint-ps/sharepoint-pnp/Grant-PnPTenantServicePrincipalPermission.md)** |Explicitely grants a specified permission to the "SharePoint Online Client" service principal|SharePoint Online
 
 
 ### Base Cmdlets 
@@ -358,6 +354,7 @@ Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#8209;PnPSearchConfiguration](../../sharepoint-ps/sharepoint-pnp/Get-PnPSearchConfiguration.md)** |Returns the search configuration|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPSearchConfiguration](../../sharepoint-ps/sharepoint-pnp/Set-PnPSearchConfiguration.md)** |Sets the search configuration|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Get&#8209;PnPSearchCrawlLog](../../sharepoint-ps/sharepoint-pnp/Get-PnPSearchCrawlLog.md)** |Returns entries from the SharePoint search crawl log|SharePoint Online
 **[Submit&#8209;PnPSearchQuery](../../sharepoint-ps/sharepoint-pnp/Submit-PnPSearchQuery.md)** |Executes an arbitrary search query against the SharePoint search index|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPSiteSearchQueryResults](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteSearchQueryResults.md)** |Executes a search query to retrieve indexed site collections|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 
@@ -434,7 +431,7 @@ Cmdlet|Description|Platform
 **[Unregister&#8209;PnPHubSite](../../sharepoint-ps/sharepoint-pnp/Unregister-PnPHubSite.md)** |Unregisters a site as a hubsite|SharePoint Online
 **[Add&#8209;PnPHubSiteAssociation](../../sharepoint-ps/sharepoint-pnp/Add-PnPHubSiteAssociation.md)** |Connects a site to a hubsite.|SharePoint Online
 **[Remove&#8209;PnPHubSiteAssociation](../../sharepoint-ps/sharepoint-pnp/Remove-PnPHubSiteAssociation.md)** |Disconnects a site from a hubsite.|SharePoint Online
-**[Grant&#8209;PnPHubSiteRights](../../sharepoint-ps/sharepoint-pnp/Grant-PnPHubSiteRights.md)** |Retrieve all or a specific hubsite.|SharePoint Online
+**[Grant&#8209;PnPHubSiteRights](../../sharepoint-ps/sharepoint-pnp/Grant-PnPHubSiteRights.md)** |Grant Permissions to associate sites to Hub Sites.|SharePoint Online
 **[Add&#8209;PnPOffice365GroupToSite](../../sharepoint-ps/sharepoint-pnp/Add-PnPOffice365GroupToSite.md)** |Groupifies a classic team site by creating an Office 365 group for it and connecting the site with the newly created group|SharePoint Online
 **[Disable&#8209;PnPPowerShellTelemetry](../../sharepoint-ps/sharepoint-pnp/Disable-PnPPowerShellTelemetry.md)** |Disables PnP PowerShell telemetry tracking|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Enable&#8209;PnPPowerShellTelemetry](../../sharepoint-ps/sharepoint-pnp/Enable-PnPPowerShellTelemetry.md)** |Enables PnP PowerShell telemetry tracking.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
