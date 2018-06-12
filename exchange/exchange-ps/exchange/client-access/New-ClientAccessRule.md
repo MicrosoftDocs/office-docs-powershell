@@ -172,6 +172,8 @@ Valid values for this parameter are:
 
 - REST
 
+- UniversalOutlook (Mail and Calendar app)
+
 You can enter multiple values separated by commas. Don't use quotation marks.
 
 ```yaml
@@ -334,6 +336,8 @@ Valid values for this parameter are:
 - RemotePowerShell
 
 - REST
+
+- UniversalOutlook (Mail and Calendar app)
 
 You can enter multiple values separated by commas. Don't use quotation marks.
 
