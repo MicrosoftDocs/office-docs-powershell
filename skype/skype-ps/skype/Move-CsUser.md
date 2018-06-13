@@ -252,7 +252,8 @@ Accept wildcard characters: False
 
 
 ### -Force
-If present, moves the user account without moving contacts or meetings. Contacts and meetings are deleted. If not present, both the account and the associated data are moved.
+If present, moves the user account without moving contacts or meetings. Contacts and meetings are not recoverable.
+If not present, both the account and the associated data are moved.
 
 ```yaml
 Type: SwitchParameter
