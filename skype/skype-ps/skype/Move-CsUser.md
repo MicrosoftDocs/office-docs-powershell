@@ -21,12 +21,12 @@ Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCrede
 
 ### Identity
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams]  [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Users
 ```
-Move-CsUser -UserList <String> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm][-Report <String>]  [-Force]  [-PassThru] 
+Move-CsUser -UserList <String> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-Force] [-PassThru] 
  [-WhatIf] [<CommonParameters>]
 ```
 
