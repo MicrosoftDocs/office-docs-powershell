@@ -16,17 +16,17 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 
 ###  (Default)
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>]  [-MoveConferenceData][-Force] [-PassThru] [-WhatIf] [-Confirm] [-IgnoreBackendStoreException][<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-Force] [-PassThru] [-WhatIf] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams] [-MoveConferenceData] [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [-IgnoreBackendStoreException][-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams]  [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Users
 ```
-Move-CsUser [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-MoveConferenceData] [-Confirm][-Report <String>]  [-Force]  [-PassThru]  [-IgnoreBackendStoreException] 
+Move-CsUser [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm][-Report <String>]  [-Force]  [-PassThru] 
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -233,24 +233,6 @@ Accept wildcard characters: False
 ```
 
 
-### -MoveConferenceData
-When present, moves meeting and conference data for users being transferred to a different Registrar pool.
-Note that you should not use the MoveConferenceData parameter if you are moving users as part of a disaster recovery procedure.
-Instead, you should rely on the backup service for moving conference data as part of a disaster recovery procedure.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserList
 PARAMVALUE: String
 
@@ -358,21 +340,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IgnoreBackendStoreException
-When present, instructs the computer to ignore any errors that might occur with the backend database and attempt to move the user despite those errors.
 
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
