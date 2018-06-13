@@ -10,7 +10,7 @@ schema: 2.0.0
 # Set-CsTeamsUpgradePolicy
 
 ## SYNOPSIS
-In on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables adminstrators to control whether user see a notification in their Skype for Business client of a pending upgrade to Teams. In addition, when this policy is assigned to a user, administrators can optionally have Win32 versions of Skype for Business clients silently download Teams based on the value of CsTeamsUpgradeConfiguration. 
+In on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables adminstrators to control whether users see a notification in their Skype for Business client of a pending upgrade to Teams. In addition, when this policy is assigned to a user, administrators can optionally have Win32 versions of Skype for Business clients silently download the Teams app based on the value of TeamsUpgradeConfiguration. 
 
 ## SYNTAX
 
@@ -27,13 +27,13 @@ Set-CsTeamsUpgradePolicy [-Tenant <Guid>] [-Description <String>] [-NotifySfbUse
 ```
 
 ## DESCRIPTION
-In on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables adminstrators to control whether users see a notification of a pending upgrade to Teams in their Skype for Business client. The Set-CsTeamsUpgradePolicy lets the adminstrator modify an existing instance of TeamsUpgradePolicy that can be assigned to users homed in Skype for Business on-premises. Notifications are enabled by the boolean parameter NotifySfBUsers. 
+In on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables adminstrators to control whether users see a notification of a pending upgrade to Teams in their Skype for Business client. The Set-CsTeamsUpgradePolicy lets the adminstrator modify an existing instance of TeamsUpgradePolicy for users homed in Skype for Business on-premises. Notifications are enabled by the boolean parameter NotifySfBUsers. 
  
-For users with Win32 versions of Skype for Business, if DownloadTeams=true in CsTeamsUpgradeConfiguration, users who are assigned an instance of TeamsUpgradePolicy with NotifySfBUsers=true will have Teams automatically downloaded in the background. 
+For users with Win32 versions of Skype for Business, if DownloadTeams=true in TeamsUpgradeConfiguration, users who are assigned an instance of TeamsUpgradePolicy with NotifySfBUsers=true will have Teams automatically downloaded in the background. 
 
 Notes:  
 * Instances of TeamsUpgradePolicy created in on-premises will not apply to any users that are already homed online.  
-* Skype for Business Online already provides built-in instances of TeamsUpgradePolicy, so there is no New-CsTeamsUpgradePolicy cmdlet for the online environment by design. 
+* Office 365 already provides built-in instances of TeamsUpgradePolicy, so there is no New-CsTeamsUpgradePolicy cmdlet for the online environment by design. 
 
 
 ## EXAMPLES

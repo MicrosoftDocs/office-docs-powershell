@@ -10,7 +10,7 @@ schema: 2.0.0
 # Remove-CsTeamsUpgradePolicy
 
 ## SYNOPSIS
-n on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables adminstrators to control whether user see a notification in their Skype for Business client of a pending upgrade to Teams. In addition, when this policy is assigned to a user, administrators can optionally have Win32 versions of Skype for Business clients silently download Teams based on the value of CsTeamsUpgradeConfiguration.
+In on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables adminstrators to control whether users see a notification in their Skype for Business client of a pending upgrade to Teams. In addition, when this policy is assigned to a user, administrators can optionally have Win32 versions of Skype for Business clients silently download the Teams app based on the value of TeamsUpgradeConfiguration.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Remove-CsTeamsUpgradePolicy  [-Identity] <XdsIdentity>
 ## DESCRIPTION
 In on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables adminstrators to control whether users see a notification of a pending upgrade to Teams in their Skype for Business client. The Remove-CsTeamsUpgradePolicy lets the adminstrator remove instances of TeamsUpgradePolicy that were previously created by the administrator.
 
-Instances of TeamsUpgradePolicy created  on-premises will not apply to any users that are already homed online. This cmdlet cannot be used to remove the built-in instances of TeamsUpgradePolicy provided in Skype for Business Online. There is no Remove-CsTeamsUpgradePolicy cmdlet for the online environment by design.
+Instances of TeamsUpgradePolicy created  on-premises will not apply to any users that are already homed online. This cmdlet cannot be used to remove the built-in instances of TeamsUpgradePolicy provided in Office 365. There is no Remove-CsTeamsUpgradePolicy cmdlet for the online environment by design.
 
 ## EXAMPLES
 

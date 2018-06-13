@@ -25,7 +25,7 @@ You must be a SharePoint Online global administrator and a site collection admin
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Add-PnPTenantCdnOrigin -Url /sites/site/subfolder -CdnType Public
+Add-PnPTenantCdnOrigin -OriginUrl /sites/site/subfolder -CdnType Public
 ```
 
 This example configures a public CDN on site level.

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsTeamsUpgradeConfiguration
 
 ## SYNOPSIS
-Returns information related to managing the upgrade to Teams from Skype for Business. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
+Returns information related to managing the upgrade to Teams from Skype for Business. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. For Office 365 users, it allows administrators to determine which application end users should use to join Skype for Business meetings.
 
 
 
@@ -31,11 +31,18 @@ Get-CsTeamsUpgradeConfiguration [[-Identity] <XdsIdentity>] [-Tenant <guid>] [<C
 ```
 
 ## DESCRIPTION
-TeamsUpgradeConfiguration is used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
+TeamsUpgradeConfiguration is used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download the Teams app. It also allows administrators to determine which application Office 365 users should use to join Skype for Business meetings.
 
-The DownloadTeams property allows admins to control whether the Skype for Business client should automatically download Teams in the background. This setting is only honored on Windows clients, and only for certain values of the user's TeamsUpgradePolicy. If NotifySfbUser=true or if Mode=TeamsOnly in TeamsUpgradePolicy, this setting is honored. Otherwise it is ignored. 
+Separate instances of TeamsUpgradeConfiguration exist in Office 365 and Skype for Business Server. 
+ - TeamsUpgradeConfiguration in Office 365 applies to any user who does not have an on-premises Skype for Business account.
+ - TeamsUpgradeConfiguration in Skype for Business Server can used to manage on-premises users in a hybrid environment. In on-premises, only the DownloadTeams property is available.
 
-The SfBMeetingJoinUx property allows admins to specify which app is used to join Skype for Business meetings, even after the user has been upgraded to Teams. Allowed values are: SkypeMeetingsApp and NativeLimitedClient.   "NativeLimitedClient"  means the existing Skype for Business rich client will be used, but since the user is upgraded, only meeting functionality is available. Calling and Messaging are done via Teams.  "SkypeMeetingsApp" means use the web-downloadable app. This setting can be useful for organizations that have upgraded to Teams and no longer want to install Skype for Business on their users' computers.
+The DownloadTeams property allows admins to control whether the Skype for Business client should automatically download the Teams app in the background. This setting is only honored for users on Windows clients, and only if TeamsUpgradePolicy for the user meets either of these conditions: 
+ - NotifySfbUser=true, or 
+ - Mode=TeamsOnly
+ Otherwise, this setting is ignored. 
+
+The SfBMeetingJoinUx property allows admins to specify which app is used to join Skype for Business meetings, even after the user has been upgraded to Teams. Allowed values are: SkypeMeetingsApp and NativeLimitedClient.   "NativeLimitedClient"  means the existing Skype for Business rich client will be used, but since the user is upgraded, only meeting functionality is available. Calling and Messaging are done via Teams.  "SkypeMeetingsApp" means use the web-downloadable app. This setting can be useful for organizations that have upgraded to Teams and no longer want to install Skype for Business on their users' computers. This property is only available when configuring TeamsUpgradeConfiguration in Office 365. It is not honored for users homed on-premises in Skype for Business Server.
 
 
 ## EXAMPLES
@@ -98,21 +105,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ## INPUTS
 
