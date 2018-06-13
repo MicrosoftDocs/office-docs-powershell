@@ -16,17 +16,17 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 
 ###  (Default)
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-Force] [-PassThru] [-WhatIf] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-Force] [-PassThru] [-WhatIf] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams]  [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Users
 ```
-Move-CsUser [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm][-Report <String>]  [-Force]  [-PassThru] 
+Move-CsUser -UserList <String> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-Force] [-PassThru] 
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -78,7 +78,7 @@ Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
 In Example 3, the Move-CsUser cmdlet is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
 
 
-### --------- EXAMPLE 4: Move multiple users: -------------------------- 
+### --------- EXAMPLE 4: Move multiple users --------------------------- 
 ```
 
 Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-001.litwareinc.com"
