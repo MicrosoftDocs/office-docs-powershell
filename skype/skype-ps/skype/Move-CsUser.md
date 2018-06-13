@@ -16,17 +16,17 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 
 ###  (Default)
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-ProxyPool <Fqdn>] [-MoveConferenceData][-Force] [-PassThru] [-WhatIf] [-Confirm]  [-DomainController <Fqdn>][-IgnoreBackendStoreException][<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>]  [-MoveConferenceData][-Force] [-PassThru] [-WhatIf] [-Confirm] [-IgnoreBackendStoreException][<CommonParameters>]
 ```
 
 ### Identity
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams] [-MoveConferenceData] [-PassThru] [-ProxyPool <Fqdn>] [-Force] [-HostedMigrationOverrideUrl <String>] [-IgnoreBackendStoreException][-Confirm] [-Report <String>] [-WhatIf] [-DomainController <Fqdn>][<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn>  [-Credential <PSCredential>] [MoveToTeams] [-MoveConferenceData] [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [-IgnoreBackendStoreException][-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Users
 ```
-Move-CsUser [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-MoveConferenceData][-ProxyPool <Fqdn>] [-Confirm][-Report <String>]  [-Force]  [-PassThru]  [-IgnoreBackendStoreException] [-DomainController <Fqdn>]
+Move-CsUser [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-MoveConferenceData] [-Confirm][-Report <String>]  [-Force]  [-PassThru]  [-IgnoreBackendStoreException] 
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -267,25 +267,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProxyPool
 
-This parameter is used only for Skype for Business Server.
-It should not be used with an on-premises implementation of Skype for Business Server.
-
-
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Force
 If present, moves the user account without moving contacts or meetings. Contacts and meetings are deleted. If not present, both the account and the associated data are moved.
@@ -303,21 +285,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConcurrentMovesPerFE
-PARAMVALUE: Int32
 
-```yaml
-Type: Int32
-Parameter Sets: Users
-Aliases: 
-Applicable: Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -Confirm
 Enables you to bypass the confirmation prompt that would otherwise appear when you attempt to move a user.
 To bypass the confirmation prompt, include the Confirm parameter using this syntax:
@@ -398,23 +366,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-Enables you to connect to the specified domain controller in order to retrieve contact information.
-To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-cs-001) or its FQDN (for example, atl-cs-001.litwareinc.com).
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
