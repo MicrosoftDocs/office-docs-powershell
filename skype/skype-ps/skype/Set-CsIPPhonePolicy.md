@@ -13,15 +13,9 @@ Use the Set-CsIPPhonePolicy cmdlet to modify the settings of the Skype for Busin
 ## SYNTAX
 
 ```
-Set-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-BetterTogetherOverEthernetPairingMode <String>]
- [-BypassDualWrite <Object>] [-Confirm] [-DateTimeFormat <Int>] [-EnableBetterTogetherOverEthernet <Boolean>]
- [-EnableDeviceUpdate <Boolean>] [-EnableExchangeCalendaring <Boolean>] [-EnableOneTouchVoicemail <Boolean>]
- [-EnablePowerSaveMode <Boolean>] [-Force] [-Instance <PSObject>] [-KeyboardLockMaxPinRetry <UInt64>]
- [-LocalProvisioningServerAddress <String>] [-LocalProvisioningServerPassword <String>]
- [-LocalProvisioningServerType <String>] [-LocalProvisioningServerUser <String>]
- [-PowerSaveDuringOfficeHoursTimeoutMS <UInt64>] [-PowerSavePostOfficeHoursTimeoutMS <UInt64>]
- [-PrioritizedCodecsList <String>] [-Tenant <Guid>] [-UserDialTimeoutMS <UInt64>] [-WhatIf] [-AsJob]
- [<CommonParameters>]
+Set-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-BetterTogetherOverEthernetPairingMode <String>] [-Confirm] [-DateTimeFormat <Int>] [-EnableBetterTogetherOverEthernet <Boolean>] [-EnableDeviceUpdate <Boolean>] [-EnableExchangeCalendaring <Boolean>] [-EnableOneTouchVoicemail <Boolean>] [-EnablePowerSaveMode <Boolean>] [-Force] [-Instance <PSObject>] [-KeyboardLockMaxPinRetry <UInt64>]
+ [-LocalProvisioningServerAddress <String>] [-LocalProvisioningServerPassword <String>] [-LocalProvisioningServerType <String>] [-LocalProvisioningServerUser <String>] [-PowerSaveDuringOfficeHoursTimeoutMS <UInt64>] [-PowerSavePostOfficeHoursTimeoutMS <UInt64>]
+ [-PrioritizedCodecsList <String>] [-Tenant <Guid>] [-UserDialTimeoutMS <UInt64>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,22 +45,6 @@ Auto – The phone will get paired with BTOE app Automatically and no need for t
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -447,7 +425,7 @@ Microsoft.Rtc.Management.ADConnect.Schema.ADUser
 ## OUTPUTS
 
 ### System.Object
-By default, the Grant-CsIPPhonePolicy cmdlet returns no objects or values. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
+By default, the Set-CsIPPhonePolicy cmdlet returns no objects or values. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
 
 ## NOTES
 
