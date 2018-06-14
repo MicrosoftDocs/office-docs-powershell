@@ -15,7 +15,7 @@ For example, you might enable the Better Together Over Ethernet feature for some
 ## SYNTAX
 
 ```
-Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <XdsIdentity>] [-Confirm] [-DomainController <Fqdn>]
+Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>]
  [-PassThru] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
@@ -55,7 +55,7 @@ If you set PolicyName to a null value, then the command will unassign any per-us
 For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
