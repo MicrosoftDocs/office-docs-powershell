@@ -15,8 +15,8 @@ For example, you might enable the Better Together Over Ethernet feature for some
 ## SYNTAX
 
 ```
-Grant-CsIPPhonePolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm] [-DomainController <Object>]
- [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <XdsIdentity>] [-Confirm] [-DomainController <Fqdn>]
+ [-PassThru] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +55,7 @@ If you set PolicyName to a null value, then the command will unassign any per-us
 For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -110,7 +110,7 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -140,10 +140,19 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-This parameter is reserved for internal Microsoft use.
+-Tenant
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
