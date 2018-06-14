@@ -13,7 +13,7 @@ Use the Get-CsIPPhonePolicy cmdlet to get all the settings of the Skype for Busi
 ## SYNTAX
 
 ```
-Get-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-BypassDualWrite <Object>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
+Get-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,22 +29,6 @@ PS C:\> Get-CsIPPhonePolicy
 This example returns the global IP phone policy along with all their settings.
 
 ## PARAMETERS
-
-### -BypassDualWrite
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Filter
 This parameter is reserved for internal Microsoft use.
