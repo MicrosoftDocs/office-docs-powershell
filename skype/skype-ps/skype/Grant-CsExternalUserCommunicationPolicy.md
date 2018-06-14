@@ -15,7 +15,7 @@ Assigns an external user communication policy to one or more users or groups.
 ## SYNTAX
 
 ```
-Grant-CsExternalUserCommunicationPolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>] [-PassThru] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsExternalUserCommunicationPolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>] [-PassThru] [-Global] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -177,6 +177,21 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
