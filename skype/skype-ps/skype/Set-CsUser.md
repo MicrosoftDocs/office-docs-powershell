@@ -40,10 +40,10 @@ You should not attempt to manually configure these attributes.
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsUser -Identity "Pilar Ackerman" -EnterpriseVoiceEnabled $True
+Set-CsUser -Identity PilarA@contoso.com -EnterpriseVoiceEnabled $True
 ```
 
-In Example 1, the `Set-CsUser` cmdlet is used to modify the user account with the Identity Pilar Ackerman.
+In Example 1, the `Set-CsUser` cmdlet is used to modify the user account PilarA@contoso.com.
 In this case, the account is modified to enable Enterprise Voice, the Microsoft implementation of VoIP.
 This task is carried out by adding the EnterpriseVoiceEnabled parameter, and then setting the parameter value to $True.
 
@@ -62,7 +62,11 @@ That information is then piped to the `Set-CsUser` cmdlet, which enables Enterpr
 
 ### -Identity
 Indicates the Identity of the user account to be modified.
-User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer).
+User Identities can be specified using one of four formats: 
+ - 1) the user's SIP address; 
+ - 2) the user's user principal name (UPN); 
+ - 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer)
+ - 4) the user's Active Directory display name (for example, Ken Myer), (only available if using the on-premises cmdlets)
 User Identities can also be referenced by using the user's Active Directory distinguished name.
 
 You can use the asterisk (*) wildcard character when using the display name as the user Identity.
