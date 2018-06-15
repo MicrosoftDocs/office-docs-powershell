@@ -32,7 +32,7 @@ When you contribute your work will go directly into the Microsoft Office product
    **IMPORTANT** The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
    Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
 
-6. Once you are satisified with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title title and other description informaton and then click **Propose file change**.
+6. Once you are satisfied with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title title and other description information and then click **Propose file change**.
 ![Image of Propose file change on Github](images/propose_file_change.png)
 
 7. On the next screen, click **Create pull request**.
