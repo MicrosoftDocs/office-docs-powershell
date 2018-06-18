@@ -8,7 +8,8 @@ schema: 2.0.0
 # Remove-CsImConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the Remove-CsImConfiguration cmdlet to remove an Instant Messaging (IM) configuration.
+
 
 ## SYNTAX
 
@@ -18,16 +19,22 @@ Remove-CsImConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-Tenant 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Remove-CsImConfiguration cmdlet to remove an Instant Messaging (IM) configuration.
+
+To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
+
+```
+Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}
+```
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-CsImConfiguration -Identity "service:Registrar Contoso.RegistrarPool.com"
 ```
 
-{{ Add example description here }}
+This example removes the IM configuration for the Registrar pool at "Contoso.RegistrarPool.com".
 
 ## PARAMETERS
 
