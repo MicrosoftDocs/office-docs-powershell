@@ -8,7 +8,8 @@ schema: 2.0.0
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Grant-CsOnlineVoicemailPolicy cmdlet to assign a voicemail policy to a user.
+
 
 ## SYNTAX
 
@@ -18,17 +19,24 @@ Grant-CsOnlineVoicemailPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+This cmdlet assigns an existing per-user voicemail policy to a user. Voicemail policies are used to manage Voicemail-related features such as transcription. 
+
+You can check whether a user has been granted a per-user voicemail policy by calling a command in this format: 
+
+```
+Get-CsOnlineUser "<user identity>" | Select-Object OnlineVoicemailPolicy
+```
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+For example:
 ```
 
-Insert example commands for example 1.
+Get-CsOnlineUser "Ken Myer" | Select-Object OnlineVoicemailPolicy
 ```
 
-Insert descriptive text for example 1.
+
 
 
 ## PARAMETERS
@@ -165,8 +173,10 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
+String. Accepts a pipelined string value representing the Identity of a user account to which the voice policy is being granted.
 
 ## OUTPUTS
+By default, the Grant-CsOnlineVoicemailPolicy cmdlet returns no objects or values. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
 
 ## NOTES
 
