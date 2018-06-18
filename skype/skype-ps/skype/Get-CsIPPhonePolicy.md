@@ -13,7 +13,7 @@ Use the Get-CsIPPhonePolicy cmdlet to get all the settings of the Skype for Busi
 ## SYNTAX
 
 ```
-Get-CsIPPhonePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,31 +26,15 @@ IP phone policies are applied each time a user accesses the system via an IP pho
 PS C:\> Get-CsIPPhonePolicy
 ```
 
-This example returns the global IP phone policy along with all their settings..
+This example returns the global IP phone policy along with all their settings.
 
 ## PARAMETERS
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
-{{Fill Filter Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -63,12 +47,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Microsoft.Rtc.Management.Xds.XdsIdentity
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -81,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -97,12 +79,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-System.Guid
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
