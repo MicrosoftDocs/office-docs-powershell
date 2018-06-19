@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsImConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the Set-CsImConfiguration cmdlet to modify an existing Instant Messaging (IM) configuration.
 
 ## SYNTAX
 
@@ -25,16 +25,23 @@ Set-CsImConfiguration [-Confirm] [-EnableOfflineIm <Boolean>] [-Force] [-Instanc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-CsImConfiguration cmdlet to modify an existing Instant Messaging (IM) configuration.
+
+To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
+
+```
+Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}
+```
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
+This example modifies the existing Redmond site IM configuration to disable the offline IM feature.
+
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsImConfiguration -Identity "site:Redmond" -EnableOfflineIm $false
 ```
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -55,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOfflineIm
-{{Fill EnableOfflineIm Description}}
+If set to $true, offline Instant Messaging is enabled. If $false, offline Instant Messaging is disabled
 
 ```yaml
 Type: Boolean
@@ -71,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Suppresses the display of any non-fatal error messages and completes the cmdlet operation. 
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the unique identity of the IM configuration to be modified.
+
+To modify the global IM configuration you can either omit Identity, or use the following syntax: -Identity Global
+
+To modify an IM configuration at the site scope, use the prefix "site:" followed by the site name. For example: -Identity "site:Redmond"
+
+To modify an IM configuration at the service scope, use the prefix "service:" followed by the service name. For example: -Identity "service:Registrar Contoso.RegistrarPool.com"
 
 ```yaml
 Type: XdsIdentity
@@ -103,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-{{Fill Instance Description}}
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values. 
 
 ```yaml
 Type: PSObject
@@ -119,7 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Specifies the globally unique identifier (GUID) of the Skype for Business Online tenant account on which the cmdlet will operate. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308". You can return the tenant ID for each of your Skype for Business Online tenants by running this command: Get-CsTenant | Select-Object DisplayName, TenantID.
+
 
 ```yaml
 Type: Guid
