@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-CsImConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the New-CsImConfiguration cmdlet to create a new Instant Messaging (IM) configuration.
+
 
 ## SYNTAX
 
@@ -18,16 +19,20 @@ New-CsImConfiguration [-Identity] <XdsIdentity> [-Confirm] [-EnableOfflineIm <Bo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the New-CsImConfiguration cmdlet to create a new Instant Messaging (IM) configuration.
+
+To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
+
+
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+New-CsImConfiguration -Identity "site:Redmond" -EnableOfflineIm $true
 ```
 
-{{ Add example description here }}
+This example creates a new IM configuration for the Redmond site and enables the offline IM feature in that new configuration.
 
 ## PARAMETERS
 
