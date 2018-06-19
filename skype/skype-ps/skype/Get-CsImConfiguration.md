@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsImConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations.
 
 ## SYNTAX
 
@@ -23,17 +23,20 @@ Get-CsImConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations.
+
+To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
+
+Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-CsImConfiguration
 ```
 
-{{ Add example description here }}
-
+This example returns information for the Global IM configuration.
 
 ## PARAMETERS
 
@@ -54,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Enables you to use wildcard characters in order to return a collection of items. For instance the following usage specifies all the site scoped IM configurations: -Filter "site:*" . Filter and and Filter and Identity are mutually exclusive.
+
 
 ```yaml
 Type: XdsIdentity
@@ -70,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+Presence of this switch causes the cmdlet to retrieve information from the local replica of the Central Management store, rather than from Central Management store itself. 
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Specifies the globally unique identifier (GUID) of the Skype for Business Online tenant account on which the cmdlet will operate. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308". You can return the tenant ID for each of your Skype for Business Online tenants by running this command: Get-CsTenant | Select-Object DisplayName, TenantID.
 
 ```yaml
 Type: Guid
