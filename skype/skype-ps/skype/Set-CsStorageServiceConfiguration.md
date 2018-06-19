@@ -43,12 +43,8 @@ Skype for Business Server Control Panel: The functions carried out by the `Set-C
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------
-```
-PS C:\> {{ Add example code here }}
-```
+At this point in time there are no property values that can be modified by using the Set-CsStorageServiceConfiguration cmdlet.
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
