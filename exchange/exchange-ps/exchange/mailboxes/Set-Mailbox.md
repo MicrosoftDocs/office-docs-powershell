@@ -985,7 +985,9 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - UpdateCalendarDelegation (cloud-based service only)
 
-By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, and UpdateCalendarDelegation actions performed by administrators are logged.
+- UpdateInboxRules (cloud-based service only)
+
+By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by administrators are logged.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1030,7 +1032,9 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 
 - UpdateFolderPermissions (cloud-based service only)
 
-By default, the Update, SoftDelete, HardDelete, SendAs, Create, and UpdateFolderPermissions actions performed by delegates are logged.
+- UpdateInboxRules (cloud-based service only)
+
+By default, the Update, SoftDelete, HardDelete, SendAs, Create, UpdateFolderPermissions, and UpdateInboxRules actions performed by delegates are logged.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1111,7 +1115,9 @@ The AuditOwner parameter specifies the mailbox operations to log for mailbox own
 
 - UpdateCalendarDelegation (cloud-based service only)
 
-In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions and UpdateCalendarDelegation action performed by the owner is logged by default.
+- UpdateInboxRules (cloud-based service only)
+
+In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by the owner are logged by default.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
