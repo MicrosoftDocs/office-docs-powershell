@@ -333,3 +333,6 @@ The Export-CsArchivingData cmdlet returns Archiving database records in EML form
 
 [Get-CsArchivingConfiguration](Get-CsArchivingConfiguration.md)
 
+[Export archived data in Skype for Business Server](https://docs.microsoft.com/en-us/skypeforbusiness/manage/archiving/export-archived-data)
+
+
