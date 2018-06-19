@@ -22,17 +22,19 @@ This cmdlet assigns an existing per-user voicemail policy to a user. Voicemail p
 
 You can check whether a user has been granted a per-user voicemail policy by calling a command in this format: 
 
+```
 Get-CsOnlineUser "<user identity>" | Select-Object OnlineVoicemailPolicy
+```
 
 For example: 
-
+```
 Get-CsOnlineUser "Ken Myer" | Select-Object OnlineVoicemailPolicy
+```
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
-
 Grant-CsOnlineVoicemailPolicy -Identity "Ken Myer" -PolicyName "TranscriptionDisabled" 
 ```
 
@@ -41,7 +43,6 @@ This example assigns the voicemail policy with the Identity TranscriptionDisable
 
 ### -------------------------- Example 2 -------------------------- (Skype for Business Online)
 ```
-
 Grant-CsOnlineVoicemailPolicy -Identity "sip:ken@contoso.com" -PolicyName "TranscriptionDisabled" 
 ```
 
