@@ -8,7 +8,8 @@ schema: 2.0.0
 # Set-CsImConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the Set-CsImConfiguration cmdlet to modify an existing Instant Messaging (IM) configuration.
+
 
 ## SYNTAX
 
@@ -25,16 +26,22 @@ Set-CsImConfiguration [-Confirm] [-EnableOfflineIm <Boolean>] [-Force] [-Instanc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-CsImConfiguration cmdlet to modify an existing Instant Messaging (IM) configuration.
+
+To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
+
+```
+Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}
+```
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-CsImConfiguration -Identity "site:Redmond" -EnableOfflineIm $false
 ```
 
-{{ Add example description here }}
+This example modifies the existing Redmond site IM configuration to disable the offline IM feature.
 
 ## PARAMETERS
 
