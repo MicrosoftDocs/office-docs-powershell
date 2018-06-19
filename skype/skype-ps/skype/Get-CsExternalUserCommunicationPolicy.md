@@ -14,7 +14,7 @@ Returns information about one or more external user communication policies confi
 ## SYNTAX
 
 ```
-Get-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsExternalUserCommunicationPolicy [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,27 +52,11 @@ This example uses the Filter parameter to retrieve all the external user communi
 
 ## PARAMETERS
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 This parameter accepts a wildcard string and returns all external user communication policies with identities matching that string. For example, a Filter value of tag:* will return all external user communication policies excluding Global policy.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -88,7 +72,7 @@ Accept wildcard characters: False
 Unique identifier for the external user communication policy to be created.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -100,7 +84,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -LocalStore
-{{Fill LocalStore Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -127,7 +111,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
