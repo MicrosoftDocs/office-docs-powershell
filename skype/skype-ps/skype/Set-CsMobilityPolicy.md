@@ -358,7 +358,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: 
 
 Required: False
 Position: Named
