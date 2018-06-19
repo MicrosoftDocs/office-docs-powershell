@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Grant-CsOnlineVoicemailPolicy cmdlet to assign a voicemail policy to a user.
 
 ## SYNTAX
 
@@ -18,17 +18,28 @@ Grant-CsOnlineVoicemailPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+This cmdlet assigns an existing per-user voicemail policy to a user. Voicemail policies are used to manage Voicemail-related features such as transcription. 
+
+You can check whether a user has been granted a per-user voicemail policy by calling a command in this format: 
+
+Get-CsOnlineUser "<user identity>" | Select-Object OnlineVoicemailPolicy
+ 
+
+For example: 
+
+Get-CsOnlineUser "Ken Myer" | Select-Object OnlineVoicemailPolicy
+ 
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
 
-Insert example commands for example 1.
+Grant-CsOnlineVoicemailPolicy -Identity "Ken Myer" -PolicyName "TranscriptionDisabled" 
 ```
+This example assigns the voicemail policy with the Identity TranscriptionDisabled to the user with the display name Ken Myer.
 
-Insert descriptive text for example 1.
 
 
 ## PARAMETERS
