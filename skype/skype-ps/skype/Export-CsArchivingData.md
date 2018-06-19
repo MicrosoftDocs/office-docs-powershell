@@ -91,7 +91,7 @@ With a start date of June 1, 2018 and an end date of June 30, 2018, exporting is
 ## PARAMETERS
 
 ### -DBInstance
-This parameter is intended for use only with Microsoft Lync Server 2010.If you are using the Export-CsArchivingData cmdlet on Skype for Business Server you should use the Identity parameter instead.
+This parameter is intended for use only with Microsoft Lync Server 2010. If you are using the Export-CsArchivingData cmdlet on Skype for Business Server you should use the Identity parameter instead.
 
 Path to the SQL Server database instance where archiving data is recorded.
 For example: 
