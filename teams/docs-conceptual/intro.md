@@ -10,4 +10,4 @@ Here you will find all of the Microsoft Teams PowerShell help topics. These topi
 
 The repo is located here: https://github.com/microsoftdocs/office-docs-powershell and you can find the README displayed at the bottom of the page.
 
-To find other modules you can use the PowerShell Module Browser located at: https://docs.microsoft.com/en-us/powershell. For example, to see the SharePoint modules you could use this query: https://docs.microsoft.com/en-us/powershell/module/?term=sharepoint.
+To find other modules you can use the PowerShell Module Browser located at: https://docs.microsoft.com/en-us/powershell/module. For example, to see the SharePoint modules you could use this query: https://docs.microsoft.com/en-us/powershell/module/?term=sharepoint.
