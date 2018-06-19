@@ -632,6 +632,8 @@ VGA has a resolution of 640 pixels by 480 pixels.
 
 The default value is VGA.
 
+Note: The Skype for Business client and Skype for Business 2015 AVMCU will offer H.264
+
 ```yaml
 Type: MaxVideoConferenceResolution
 Parameter Sets: (All)
