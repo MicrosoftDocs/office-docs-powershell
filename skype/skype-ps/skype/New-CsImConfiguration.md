@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsImConfiguration
 
 ## SYNOPSIS
-Use the New-CsImConfiguration cmdlet to create a new Instant Messaging (IM) configuration.
+Use the New-CsImConfiguration cmdlet to create a new Instant Messaging (IM) configuration. This cmdlet was introduced in Skype for Business June 2016 Cumulative Update.
 
 
 ## SYNTAX
@@ -21,18 +21,14 @@ New-CsImConfiguration [-Identity] <XdsIdentity> [-Confirm] [-EnableOfflineIm <Bo
 ## DESCRIPTION
 Use the New-CsImConfiguration cmdlet to create a new Instant Messaging (IM) configuration.
 
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
-
-
-
 ## EXAMPLES
 
-### Example 1 
+### -------------------------- Example 1 --------------------------
 ```
-New-CsImConfiguration -Identity "site:Redmond" -EnableOfflineIm $true
+New-CsImConfiguration -Identity "Site:Redmond" -EnableOfflineIm $true
 ```
 
-This example creates a new IM configuration for the Redmond site and enables the offline IM feature in that new configuration.
+This example creates a new Instant Messaging (IM) configuration for the Redmond site and enables the offline IM feature in that new configuration.
 
 ## PARAMETERS
 
@@ -53,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOfflineIm
-{{Fill EnableOfflineIm Description}}
+Enables or disable Offline Instant Messaging.
 
 ```yaml
 Type: Boolean
@@ -69,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+A unique identifier specifying the scope and, in some cases the name, of the IM configuration.
 
 ```yaml
 Type: XdsIdentity
@@ -101,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-{{Fill InMemory Description}}
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-<cmdlet>.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -133,8 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -163,4 +158,8 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-csimconfiguration?view=skype-ps)
 
+[Set-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-csimconfiguration?view=skype-ps)
+
+[Remove-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csimconfiguration?view=skype-ps)
