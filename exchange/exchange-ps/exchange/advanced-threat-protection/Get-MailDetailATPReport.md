@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailDetailATPReport cmdlet to list details about Advanced Threat protection actions in your cloud-based organization.
+Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Advanced Threat protection detections in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -109,13 +109,31 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
+Note: Advanced Phish Filter, Anti-spoof: external domain, ATP safe attachments, ATP safe links, Domain imeprsonation, and User impersonation protection are Office 365 Advanced Threat Protection (ATP) features and require a standalone Office 365 ATP or E5 subscription.
+
+- Advanced phish filter
+
 - Anti-malware engine
 
 - ATP safe attachments
 
 - ATP safe links
 
+- Anti-spoof: Intra-org
+
+- Anti-spoof: external domain
+
+- Domain impersonation
+
+- General phish filter
+
+- Malicious URL reputation
+
 - Message passed
+
+- URL ZAP
+
+- User impersonation
 
 - ZAP
 
