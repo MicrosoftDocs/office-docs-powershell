@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsImConfiguration
 
 ## SYNOPSIS
-Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations.
+Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations. This cmdlet was introduced in Skype for Business June 2016 Cumulative Update.
 
 ## SYNTAX
 
