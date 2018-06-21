@@ -117,4 +117,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[New-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-csimconfiguration?view=skype-ps)
 
+[Set-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-csimconfiguration?view=skype-ps)
+
+[Remove-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csimconfiguration?view=skype-ps)
