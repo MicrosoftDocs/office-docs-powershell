@@ -25,10 +25,6 @@ Get-CsImConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>]
 ## DESCRIPTION
 Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations.
 
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -36,12 +32,12 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}
 Get-CsImConfiguration
 ```
 
-This example returns information for the Global IM configuration.
+This example returns information for all Instant Messaging (IM) configurations in your organization.
 
 ## PARAMETERS
 
 ### -Filter
-{{Fill Filter Description}}
+Enables you to use wildcard characters in order to return a collection of items. For instance the following usage specifies all the site scoped IM configurations: -Filter "site:*" . Filter and Identity are mutually exclusive.
 
 ```yaml
 Type: String
@@ -57,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Enables you to use wildcard characters in order to return a collection of items. For instance the following usage specifies all the site scoped IM configurations: -Filter "site:*" . Filter and and Filter and Identity are mutually exclusive.
+A unique identifier specifying the scope and, in some cases the name, of the IM configuration. If this parameter is omitted, all IM configurations for the organization are returned.
 
 
 ```yaml
@@ -90,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Specifies the globally unique identifier (GUID) of the Skype for Business Online tenant account on which the cmdlet will operate. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308". You can return the tenant ID for each of your Skype for Business Online tenants by running this command: Get-CsTenant | Select-Object DisplayName, TenantID.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
