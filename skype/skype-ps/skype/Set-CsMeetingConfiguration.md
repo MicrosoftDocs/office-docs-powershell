@@ -187,6 +187,7 @@ Accept wildcard characters: False
 Indicates which users (besides the meeting organizer) are automatically designated as presenters when they join a meeting.
 Valid choices are: None; Company and Everyone.
 By default, DesignateAsPresenter is set to Company, meaning everyone in your organization will have presenter rights the moment they join a meeting.
+Note: When DesignateAsPresenter is set to Everyone, only dynamic meetings will comply with this setting. Static meetings do not allow Everyone to join as a Presenter. 
 
 ```yaml
 Type: DesignateAsPresenter
