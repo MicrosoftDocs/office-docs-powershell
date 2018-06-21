@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsImConfiguration
 
 ## SYNOPSIS
-Use the Set-CsImConfiguration cmdlet to modify an existing Instant Messaging (IM) configuration.
+Use the Set-CsImConfiguration cmdlet to modify an existing Instant Messaging (IM) configuration. This cmdlet was introduced in Skype for Business June 2016 Cumulative Update.
 
 ## SYNTAX
 
@@ -27,15 +27,11 @@ Set-CsImConfiguration [-Confirm] [-EnableOfflineIm <Boolean>] [-Force] [-Instanc
 ## DESCRIPTION
 Use the Set-CsImConfiguration cmdlet to modify an existing Instant Messaging (IM) configuration.
 
-To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "<DesiredCmdletName>"}
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsImConfiguration -Identity "site:Redmond" -EnableOfflineIm $false
+Set-CsImConfiguration -Identity "Site:Redmond" -EnableOfflineIm $false
 ```
 
 This example modifies the existing Redmond site IM configuration to disable the offline IM feature.
@@ -59,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOfflineIm
+Enables or disable Offline Instant Messaging.
 
 ```yaml
 Type: Boolean
@@ -74,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
 Type: SwitchParameter
@@ -89,6 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+A unique identifier specifying the scope and, in some cases the name, of the IM configuration.
 
 ```yaml
 Type: XdsIdentity
@@ -104,6 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values. This object must be of type IMConfiguration and can be retrieved by calling the Get-CsImConfiguration cmdlet.
 
 ```yaml
 Type: PSObject
@@ -119,6 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -134,8 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -164,4 +164,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-csimconfiguration?view=skype-ps)
 
+[New-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-csimconfiguration?view=skype-ps)
+
+[Remove-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csimconfiguration?view=skype-ps)
