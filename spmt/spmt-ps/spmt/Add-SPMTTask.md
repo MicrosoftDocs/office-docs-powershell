@@ -1,6 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
+applicable: SharePoint Migration Tool
+title: Add-SPMTTask
 online version: 
 schema: 2.0.0
 ---
@@ -57,7 +59,7 @@ PS C:\> {{ Add example code here }}
 Type: String
 Parameter Sets: FileShare
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Json
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -87,7 +89,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SharePointMigrateAll
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +104,7 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: SharePointMigrateAll, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +116,7 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: Json
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SharePointMigrateAll, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -144,7 +146,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -159,7 +161,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -174,7 +176,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: FileShare, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -189,7 +191,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: FileShare, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -204,7 +206,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: FileShare, SharePointMigrateAll, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
