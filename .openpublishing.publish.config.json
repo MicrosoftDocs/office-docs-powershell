@@ -117,6 +117,22 @@
       ]
     },
     {
+      "docset_name": "spmt-ps",
+      "build_source_folder": "spmt",
+      "build_output_subfolder": "spmt-ps",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "staffhub-ps",
       "build_source_folder": "staffhub",
       "build_output_subfolder": "staffhub-ps",
