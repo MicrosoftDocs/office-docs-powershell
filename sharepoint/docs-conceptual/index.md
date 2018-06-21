@@ -25,7 +25,7 @@ Find out how to manage SharePoint Server and SharePoint Online using PowerShell 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_overview.svg" alt="" />
+                            <img src="https://docs.microsoft.com/media/icons/walkthrough-map-blue.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -43,7 +43,7 @@ Find out how to manage SharePoint Server and SharePoint Online using PowerShell 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/logos/logo_sharepoint.svg" alt="" />
+                            <img src="https://docs.microsoft.com/media/icons/walkthrough-map-blue.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
