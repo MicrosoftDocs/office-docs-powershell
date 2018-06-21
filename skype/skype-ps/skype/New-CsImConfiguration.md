@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsImConfiguration
 
 ## SYNOPSIS
-Use the New-CsImConfiguration cmdlet to create a new Instant Messaging (IM) configuration.
+Use the New-CsImConfiguration cmdlet to create a new Instant Messaging (IM) configuration. This cmdlet was introduced in Skype for Business June 2016 Cumulative Update.
 
 
 ## SYNTAX
