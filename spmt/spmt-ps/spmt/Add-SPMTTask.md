@@ -10,36 +10,33 @@ schema: 2.0.0
 # Add-SPMTTask
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+Add a new migration task to the registered migration session. Currently there are three different types of tasks allowed: File share task, SharePoint task and a JSON defined task.  
 ## SYNTAX
 
-### FileShare (Default)
+### FileShare
 ```
 Add-SPMTTask -FileShareSource <String> -TargetSiteUrl <String> -TargetList <String>
  [-TargetListRelativePath <String>]
 ```
-
 ### SharePointMigrateAll
-```
-Add-SPMTTask [-MigrateAll] -SharePointSourceSiteUrl <String> -SharePointSourceCredential <PSCredential>
- -TargetSiteUrl <String>
+``` 
+Add-SPMTTask -SharePointSourceCredential <PSCredential> -SharePointSourceSiteUrl <string> -TargetSiteUrl <string> -MigrateAll 
 ```
 
 ### SharePointMigrateSelected
 ```
-Add-SPMTTask -SharePointSourceSiteUrl <String> -SharePointSourceCredential <PSCredential>
- [-SourceListRelativePath <String>] -SourceList <String> -TargetSiteUrl <String> -TargetList <String>
- [-TargetListRelativePath <String>]
+ Add-SPMTTask -SharePointSourceSiteUrl <string> -SharePointSourceCredential <pscredential> -SourceList <string> [-SourceListRelativePath <string>] -TargetSiteUrl <string> -TargetList <string> [-TargetListRelativePath <string>]
 ```
 
 ### Json
 ```
-Add-SPMTTask [-SharePointSourceCredential <PSCredential>] -JsonDefinition <String>
+Add-SPMTTask [-JsonDefinition <string>] 
+Add-SPMTTask -SharePointSourceCredential <PSCredential> [-JsonDefinition <string>]   
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Add a new migration task to the registered migration session. 
+Currently there are three different types of tasks allowed: File share task, SharePoint task and a JSON defined task. 
 
 ## EXAMPLES
 
@@ -53,7 +50,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -FileShareSource
-{{Fill FileShareSource Description}}
+This parameter is mandatory for file share migration. Please specify the source folder path. For example: C:\SourceFiles.
 
 ```yaml
 Type: String
@@ -68,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -JsonDefinition
-{{Fill JsonDefinition Description}}
+Define one File share task or SharePoint task in JSON format.
 
 ```yaml
 Type: String
@@ -83,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateAll
-{{Fill MigrateAll Description}}
+This is a switch parameter. If set to True, all lists will be migrated. If set to False, the customer will migrate selected lists. 
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointSourceCredential
-{{Fill SharePointSourceCredential Description}}
+This is a switch parameter. If set to True, all lists will be migrated. If set to False, the customer will migrate selected lists. 
 
 ```yaml
 Type: PSCredential
@@ -125,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointSourceSiteUrl
-{{Fill SharePointSourceSiteUrl Description}}
+Use this parameter to define SharePoint data source site URL.
 
 ```yaml
 Type: String
@@ -140,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceList
-{{Fill SourceList Description}}
+This parameter is mandatory and defines source document library name or list name.
 
 ```yaml
 Type: String
@@ -155,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceListRelativePath
-{{Fill SourceListRelativePath Description}}
+This parameter is optional and is to define one or more migration data source relative paths. 
 
 ```yaml
 Type: String
@@ -170,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetList
-{{Fill TargetList Description}}
+This parameter is mandatory and defines target library name or list name.
 
 ```yaml
 Type: String
@@ -185,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetListRelativePath
-{{Fill TargetListRelativePath Description}}
+This parameter is optional. You can define one or more target relative paths in a list and make the value to this parameter. 
 
 ```yaml
 Type: String
@@ -200,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetSiteUrl
-{{Fill TargetSiteUrl Description}}
+This parameter is mandatory for both file share and on-prem migration and defines the target site URL.
 
 ```yaml
 Type: String
