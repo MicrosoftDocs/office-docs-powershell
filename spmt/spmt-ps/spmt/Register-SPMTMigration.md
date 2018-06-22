@@ -1,6 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
+applicable: SharePoint Migration Tool
+title: Register-SPMTMigration
 online version: 
 schema: 2.0.0
 ---
@@ -47,7 +49,7 @@ PS C:\> {{ Add example code here }}
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -62,7 +64,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +79,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -92,7 +94,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +109,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +124,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -137,7 +139,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +154,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +169,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +184,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +199,7 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -212,7 +214,7 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -227,7 +229,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +244,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -257,7 +259,7 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -272,7 +274,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +289,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -302,7 +304,7 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -317,7 +319,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -332,7 +334,7 @@ Accept wildcard characters: False
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -347,7 +349,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -362,7 +364,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -377,7 +379,7 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -392,7 +394,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -407,7 +409,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
