@@ -10,7 +10,7 @@ schema: 2.0.0
 # Stop-SPMTMigration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cancel the current migration session. 
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Stop-SPMTMigration
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Cancel the current migration session. 
 
 ## EXAMPLES
 
