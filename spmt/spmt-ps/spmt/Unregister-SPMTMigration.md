@@ -10,7 +10,7 @@ schema: 2.0.0
 # Unregister-SPMTMigration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Remove the SPMT migration session created. 
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Unregister-SPMTMigration
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Remove the SPMT migration session created. 
 
 ## EXAMPLES
 
