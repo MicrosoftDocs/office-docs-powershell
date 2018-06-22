@@ -39,7 +39,7 @@ Set-RemoteMailbox [-Identity] <RemoteMailboxIdParameter> [-AcceptMessagesOnlyFro
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>] [-RemoteRoutingAddress <ProxyAddress>]
  [-RemovePicture] [-RemoveSpokenName] [-RequireSenderAuthenticationEnabled <$true | $false>]
  [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-Type <Regular | Room | Equipment>]
+ [-SendModerationNotifications <Never | Internal | Always>] [-Type <Regular | Room | Equipment | Shared>]
  [-UserPrincipalName <String>] [-WhatIf] [-WindowsEmailAddress <SmtpAddress>] [-ACLableSyncedObjectEnabled]
  [-MailTip <String>] [-RecoverableItemsQuota <Unlimited>] [-RecoverableItemsWarningQuota <Unlimited>]
  [<CommonParameters>]
@@ -1203,6 +1203,8 @@ The Type parameter specifies the type for the mailbox in the service. Valid valu
 - Room
 
 - Equipment
+
+- Shared (This value is available only in Exchange 2013 CU21 or later and Exchange 2016 CU10 or later. To use this value, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605/cmdlets-to-create-modify-remote-shared-mailbox-in-on-premises-exchange).)
 
 ```yaml
 Type: Regular | Room | Equipment
