@@ -10,26 +10,17 @@ schema: 2.0.0
 # Register-SPMTMigration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+This cmdlet will create a SPMT migration session and initialization. The initialization includes configuring migration settings at session level and connecting to SPO. If no specific setting parameters are defined, default settings will be used. 
+After a session is registered, the Administrator can add a migration task to the SPMT session and start migration.
 ## SYNTAX
 
 ```
-Register-SPMTMigration [-Force] [-SPOCredential <PSCredential>] [-ScanOnly <Boolean>]
- [-StartMigrationAutomaticallyWhenNoScanIssue <Boolean>] [-Incremental <Boolean>]
- [-MigrateFileVersionHistory <Boolean>] [-KeepAllVersions <Boolean>] [-NumberOfVersionToMigrate <Int32>]
- [-MigrateHiddenFiles <Boolean>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>]
- [-SkipFilesWithExtension <System.Collections.Generic.List`1[System.String]>]
- [-MigrateFilesAndFoldersWithInvalidChars <Boolean>] [-MigrateOneNoteFolderAsOneNoteNoteBook <Boolean>]
- [-AzureActiveDirectoryLookup <Boolean>] [-PreserveUserPermissionsForSharePointSource <Boolean>]
- [-PreserveUserPermissionsForFileShare <Boolean>] [-SkipListWithAudienceTargetingEnabled <Boolean>]
- [-UserMappingFile <String>] [-WorkingFolder <String>] [-UseCustomAzureStorage <Boolean>]
- [-EnableEncryption <Boolean>] [-DeleteTempFilesWhenMigrationDone <Boolean>]
- [-CustomAzureStorageAccount <String>] [-CustomAzureAccessKey <String>]
+Register-SPMTMigration [-Credentials <PSCredential>][-Incremental <bool>]  [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToKeep <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-WorkingFolder <string>] -Force
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet will create a SPMT migration session and initialization. The initialization includes configuring migration settings at session level and connecting to SPO. If no specific setting parameters are defined, default settings will be used. 
+After a session is registered, the Administrator can add a migration task to the SPMT session and start migration.
 
 ## EXAMPLES
 
@@ -43,11 +34,10 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AzureActiveDirectoryLookup
-{{Fill AzureActiveDirectoryLookup Description}}
-
+By default, this is set to On. If no user mapping file is provided by the user, then Azure Active Directory is used as the default for user mapping. 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: 
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -58,11 +48,10 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAzureAccessKey
-{{Fill CustomAzureAccessKey Description}}
-
+If you use your own Azure storage, you need to set Azure storage account to On, enter your account and key. You also need to select if you want to enable or disable encryption, and whether temporary files are deleted when migration is completed.
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: 
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -73,11 +62,12 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAzureStorageAccount
-{{Fill CustomAzureStorageAccount Description}}
-
+The default is Off.  If you wish to use your own Azure storage, set this value to On. 
+If you choose to turn it On, additional fields will appear for you to enter your account and key, and settings to select if you want to enable or disable encryption. You also need to decide whether temporary files are deleted when migration is completed. 
+Note: This feature is supported only for General Purpose storage accounts as General-Purpose accounts support Azure blobs and queues. This feature is not available for blob storage accounts.
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: 
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -88,11 +78,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteTempFilesWhenMigrationDone
-{{Fill DeleteTempFilesWhenMigrationDone Description}}
+The default is set to On.  The temp files in working folder %appdata% will be deleted when migration is completed.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: 
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -103,11 +93,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryption
-{{Fill EnableEncryption Description}}
-
+The default is set to On. If you use your own Azure storage, you will set and define your account and key, and decide and configure enable or disable encryption in settings, and whether temporary files are deleted when migration is completed.
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -118,11 +107,14 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
-
+Forcibly stop and unregister existing migration. 
+If you have never run “Register-SPMTMigration”, with or without the Force parameter, a new session will be created. 
+If you have a registered SPMT migration session already, the Force parameter will register a new session anyway.   
+The force parameter performs the function of Stop-SMPTMigration and Unregister-SPMTMigration together.
+If you have an active migration and didn’t use the Force parameter, you need to run Stop-SPMTMigration, and then run Unregister-SPMTMigration to unregister the exiting migration session first.  
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -133,11 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -Incremental
-{{Fill Incremental Description}}
-
+The default setting is On. This lets you rerun the migration with same source and target at a later date, migrating only the changes or additions since the previous run. 
+Important: If you wish to be able to submit the same job again for incremental migration, this setting must be set to On * before* the initial migration job is submitted.
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -148,11 +140,10 @@ Accept wildcard characters: False
 ```
 
 ### -KeepAllVersions
-{{Fill KeepAllVersions Description}}
-
+The default is set to On.  If set to On, all version numbers of the file will be migrated.
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: 
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -163,11 +154,11 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateFileVersionHistory
-{{Fill MigrateFileVersionHistory Description}}
+If set to No, only the most recent versions of the file will be migrated. If set to Yes, you can choose whether to keep all versions, or limit it to a specific number. By default, it is set to On. 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -178,11 +169,10 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateFilesAndFoldersWithInvalidChars
-{{Fill MigrateFilesAndFoldersWithInvalidChars Description}}
-
+The default is On. Files and folders with invalid characters (for example:<, >, :, ", |, ?, *, /, \,\u007f) in the names will be migrated by default. If set to Off, files and folders with invalid characters in names will not be migrated.
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -193,11 +183,10 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateFilesCreatedAfter
-{{Fill MigrateFilesCreatedAfter Description}}
-
+If you choose to limit which files are to be migrated based on creation dates, set your values in this section. This may be to limit the number of files migrated or to adhere to overall company governance policy regarding to file retention. The default value is null.
 ```yaml
 Type: DateTime
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -208,11 +197,10 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateFilesModifiedAfter
-{{Fill MigrateFilesModifiedAfter Description}}
-
+If you choose to limit what files are to be migrated   based on modified dates, set your values in this section. This may be to limit the number of files migrated or to adhere to overall company governance policy regarding to file retention. The default value is null.
 ```yaml
 Type: DateTime
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -223,11 +211,10 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateHiddenFiles
-{{Fill MigrateHiddenFiles Description}}
-
+If set to On, hidden system files will be migrated. By default, it is set to On.
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -238,11 +225,11 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateOneNoteFolderAsOneNoteNoteBook
-{{Fill MigrateOneNoteFolderAsOneNoteNoteBook Description}}
-
+By default, MigrateOneNoteFolderAsOneNoteNoteBook is set to Off. OneNote notebooks comprise of folders containing OneNote files and potentially nested subfolders with these files. The root folder of such a hierarchy is a OneNote notebook and it must contain a .onetoc2 file. 
+The current implementation is to mark the folders as notebooks at the end of the migration. If a folder contains any non-OneNote files, it won’t be marked as a notebook.
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -253,11 +240,10 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfVersionToMigrate
-{{Fill NumberOfVersionToMigrate Description}}
-
+You can choose a specific version number for the files to be migrated. By default, the number of versions kept is 10.
 ```yaml
 Type: Int32
-Parameter Sets: (All)
+Parameter Sets: 
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -268,11 +254,10 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveUserPermissionsForFileShare
-{{Fill PreserveUserPermissionsForFileShare Description}}
-
+By default, this is set to Off. If set to On, permissions will be preserved.
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: 
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -283,11 +268,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveUserPermissionsForSharePointSource
-{{Fill PreserveUserPermissionsForSharePointSource Description}}
+By default, this is set to On. If set to Off, no permissions will be preserved.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -298,11 +283,11 @@ Accept wildcard characters: False
 ```
 
 ### -SPOCredential
-{{Fill SPOCredential Description}}
+The credentials are used to connect the SharePoint Online tenant. If no credentials are passed in, use ADAL OAuth2.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -313,11 +298,11 @@ Accept wildcard characters: False
 ```
 
 ### -ScanOnly
-{{Fill ScanOnly Description}}
+The default is Off. When ScanOnly is On, only a scan will be performed. If you wish to scan migrated items as a pre-assessment to migration, turn it On. 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -328,11 +313,10 @@ Accept wildcard characters: False
 ```
 
 ### -SkipFilesWithExtension
-{{Fill SkipFilesWithExtension Description}}
-
+To prevent certain file types from migrating, list each extension, separate them with colons. The default value is null.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -343,11 +327,11 @@ Accept wildcard characters: False
 ```
 
 ### -SkipListWithAudienceTargetingEnabled
-{{Fill SkipListWithAudienceTargetingEnabled Description}}
+By default, this is set to On. Lists with an audience field migration will fail with the warning “Does not support list with audience settings” unless customer enables the “Ignore audience” setting. 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -358,11 +342,11 @@ Accept wildcard characters: False
 ```
 
 ### -StartMigrationAutomaticallyWhenNoScanIssue
-{{Fill StartMigrationAutomaticallyWhenNoScanIssue Description}}
+By default, this is set to On.  When StartMigrationAutomaticallyWhenNoScanIssue is turned on, migration starts automatically if no scan issue is found. 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -373,11 +357,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseCustomAzureStorage
-{{Fill UseCustomAzureStorage Description}}
+If you use your own Azure storage, you enter Azure account and Azure key, and select if you want to enable or disable encryption, and whether temporary files are deleted when migration is completed. 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -388,11 +372,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserMappingFile
-{{Fill UserMappingFile Description}}
+By default, Azure AD lookup is used to map users when submitting migration jobs. If you choose to use a custom user mapping file and you want to preserve user permissions, turn off Azure Active Directory lookup. By doing so, if a user isn't found in the mapping file, the tool won't look it up in AAD.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
@@ -403,11 +387,11 @@ Accept wildcard characters: False
 ```
 
 ### -WorkingFolder
-{{Fill WorkingFolder Description}}
-
+By default, a temp folder will be created as a working folder. If you wish to specify your own specific working folder, enter the name here. 
+Note: By default, the working folder is %appdata%\Microsoft\MigrationToolStorage. Make sure that your working folder has a minimum of 150 GB of free space. It may need more depending on the size of the data you plan to migrate.
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets:  
 Aliases: 
 applicable: SharePoint Migration Tool
 Required: False
