@@ -10,7 +10,7 @@ schema: 2.0.0
 # Remove-SPMTTask
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Remove an existing migration task from the registered migration.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Remove-SPMTTask -TaskId <Guid> [-Force]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Remove an existing migration task from the registered migration.
 
 ## EXAMPLES
 
@@ -33,7 +33,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -Force
-{{Fill Force Description}}
+This parameter is optional. To remove a task already started, the Force parameter is required. 
 
 ```yaml
 Type: SwitchParameter
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskId
-{{Fill TaskId Description}}
+This parameter is mandatory and defines the ID of task to be removed.
 
 ```yaml
 Type: Guid
