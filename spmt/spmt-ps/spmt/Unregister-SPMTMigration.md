@@ -1,6 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
+applicable: SharePoint Migration Tool
+title: Unregister-SPMTMigration
 online version: 
 schema: 2.0.0
 ---
