@@ -17,39 +17,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set4
+### Default
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment] [-Alias <String>] [-Confirm]
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-RemoteRoutingAddress <ProxyAddress>] [-ACLableSyncedObjectEnabled]
+ [-Alias <String>] [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Room
+```
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room] [-ACLableSyncedObjectEnabled] [-Alias <String>]
  [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RemoteRoutingAddress <ProxyAddress>] [-WhatIf] [-ACLableSyncedObjectEnabled] [<CommonParameters>]
+ [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ 
 ```
 
-### Set2
+### Equipment
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Room] [-Alias <String>] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf] [-ACLableSyncedObjectEnabled] [<CommonParameters>]
-```
-
-### Set5
-```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Alias <String>] [-Archive]
- [-ArchiveName <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-PrimarySmtpAddress <SmtpAddress>] [-WhatIf] [-ACLableSyncedObjectEnabled] [<CommonParameters>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Equipment] [-ACLableSyncedObjectEnabled] [-Alias <String>]
+ [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Archive
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Alias <String>] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf] [-ACLableSyncedObjectEnabled] [<CommonParameters>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Archive] [-ArchiveName <MultiValuedProperty>]
+ [-ACLableSyncedObjectEnabled] [-Alias <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Shared
 ```
-Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Alias <String>] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-RemoteRoutingAddress <ProxyAddress>]
- [-WhatIf] [-Equipment] [-ACLableSyncedObjectEnabled] [<CommonParameters>]
+Enable-RemoteMailbox [-Identity] <UserIdParameter> [-Shared] [-ACLableSyncedObjectEnabled [-Alias <String>]
+ [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemoteRoutingAddress <ProxyAddress>] [-Confirm] [-WhatIf]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -123,11 +124,11 @@ Accept wildcard characters: False
 ### -Equipment
 The Equipment switch specifies that the mailbox in the service should be created as an equipment resource mailbox.
 
-You can't use the Equipment switch if you specified the Room switch.
+You can't use this switch with the Room or Shared switches.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set3
+Parameter Sets: Equipment, Shared
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
@@ -138,15 +139,48 @@ Accept wildcard characters: False
 ```
 
 ### -Room
-The Room switch specifies that the mailbox in the service should be created as a room resource mailbox. You don't need to specify a value with this switch
+The Room switch specifies that the mailbox in the service should be created as a room resource mailbox. You don't need to specify a value with this switch.
 
-You can't use this switch with the Equipment switch.
+You can't use this switch with the Equipment or Shared switches.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Room
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Shared
+**Note**: This switch is available only in Exchange 2013 CU21 or later and Exchange 2016 CU10 or later. To use this switch, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605/cmdlets-to-create-modify-remote-shared-mailbox-in-on-premises-exchange).
+
+The Shared switch specifies that the mailbox in the service should be created as a shared mailbox. You don't need to specify a value with this switch.
+
+You can't use this switch with the Room or Equipment switches.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Shared
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
+### -ACLableSyncedObjectEnabled
+The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -190,7 +224,7 @@ You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5
+Parameter Sets: Archive
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
@@ -205,27 +239,8 @@ The ArchiveName parameter specifies the name of the archive mailbox. Use this pa
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set5
+Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
@@ -284,8 +299,27 @@ The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in 
 
 ```yaml
 Type: ProxyAddress
-Parameter Sets: Set4, Set2, Set1, Set3
+Parameter Sets: Default, Room, Equipment, Shared
 Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
@@ -302,21 +336,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ACLableSyncedObjectEnabled
-The ACLableSyncedObjectEnabled switch specfies whether the remote mailbox is an ACLableSyncedMailboxUser. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
