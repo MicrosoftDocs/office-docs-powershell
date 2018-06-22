@@ -10,8 +10,7 @@ schema: 2.0.0
 # Start-SPMTMigration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+This cmdlet will start the registered SPMT migration.
 ## SYNTAX
 
 ```
@@ -19,7 +18,7 @@ Start-SPMTMigration [-NoShow] [-ParametersValidationOnly]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet will start the registered SPMT migration.
 
 ## EXAMPLES
 
@@ -33,7 +32,9 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -NoShow
-{{Fill NoShow Description}}
+In "-NoShow" mode, a message will be displayed to indicate that the migration is running in the background.
+Note: Use the 'Show-SPMTMigration' to bring the migration from background to foreground. The task ID, data source location, target location and migration status will be displayed.
+
 
 ```yaml
 Type: SwitchParameter
@@ -48,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParametersValidationOnly
-{{Fill ParametersValidationOnly Description}}
+Validate the parameters: check source access permissions, source existence and if TargetUrl is valid.
 
 ```yaml
 Type: SwitchParameter
