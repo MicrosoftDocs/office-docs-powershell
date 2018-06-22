@@ -191,6 +191,35 @@
       ]
     },
     {
+      "docset_name": "spmt-ps",
+      "build_source_folder": "spmt",
+      "build_output_subfolder": "spmt-ps",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content",
+        "AzurePsModulePage": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0,
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
+      },
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
+    },
+    {
       "docset_name": "whiteboard-ps",
       "build_source_folder": "whiteboard",
       "build_output_subfolder": "whiteboard-ps",

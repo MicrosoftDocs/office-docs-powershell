@@ -1,6 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
+applicable: SharePoint Migration Tool
+title: Start-SPMTMigration
 online version: 
 schema: 2.0.0
 ---
@@ -37,7 +39,7 @@ PS C:\> {{ Add example code here }}
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -52,7 +54,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
