@@ -223,7 +223,7 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _PopEnabled_ <br/> |n/a  <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _PostalCode_ <br/> | _postalCode_ <br/> |String (wildcards accepted).  <br/> ||
 | _PostOfficeBox_ <br/> | _postOfficeBox_ <br/> |String (wildcards accepted).  <br/> ||
-| _PreviousRecipientTypeDetails_ <br/> | _msExchPreviousRecipientTypeDetails_ <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
+| _PreviousRecipientTypeDetails_ <br/> | _msExchPreviousRecipientTypeDetails_ <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
 | _PrimaryGroupId_ <br/> | _primaryGroupId_ <br/> |Integer  <br/> |For domain users, the value of this property is typically 513, which corresponds to the Domain Users group.  <br/> |
 | _PrimarySmtpAddress_ <br/> |n/a  <br/> |String (wildcards accepted).  <br/> ||
 | _ProhibitSendQuota_ <br/> | _mDBOverQuotaLimit_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
@@ -239,8 +239,8 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _RecipientDisplayType_ <br/> | _msExchRecipientDisplayType_ <br/> | `MailboxUser` (0), `DistributionGroup` (1), `PublicFolder` (2), `DynamicDistributionGroup` (3), `Organization` (4), `PrivateDistributionList` (5), `RemoteMailUser` (6). `ConferenceRoomMailbox` (7), or `EquipmentMailbox` (8). <br/> ||
 | _RecipientFilter_ <br/> | _msExchQueryFilter_ <br/> |String (wildcards accepted).  <br/> ||
 | _RecipientLimits_ <br/> | _msExchRecipLimit_ <br/> | `Unlimited` or an integer. <br/> |This property specifies the maximum number of recipients that are allowed in messages sent by the mailbox.  <br/> |
-| _RecipientType_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientType_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
-| _RecipientTypeDetails_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
+| _RecipientType_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientType_ parameter in [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
+| _RecipientTypeDetails_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
 | _RecoverableItemsQuota_ <br/> | _msExchDumpsterQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _RecoverableItemsWarningQuota_ <br/> | _msExchDumpsterWarningQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _RejectMessagesFrom_ <br/> | _unauthOrig_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Blank or non-blank.  <br/> ||
