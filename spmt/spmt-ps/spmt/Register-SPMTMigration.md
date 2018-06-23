@@ -24,9 +24,17 @@ After a session is registered, the Administrator can add a migration task to the
 
 ## EXAMPLES
 
-### Example 1
+### Create a SPMT migration session and connecting to SPO. 
 ```
-PS C:\> {{ Add example code here }}
+#Define SPO target#
+$Global:SPOUrl = “https://contoso.sharepoint.com”
+$Global:UserName = “admin@contoso.onmicrosoft.com”
+$Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
+$Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
+
+Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
+#Register the SPMT session with SPO credentials#
+Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 ```
 
 {{ Add example description here }}
