@@ -32,6 +32,64 @@ Add-SPMTTask -SharePointSourceCredential <PSCredential> -SharePointSourceSiteUrl
 ```
 Add-SPMTTask [-JsonDefinition <string>] 
 Add-SPMTTask -SharePointSourceCredential <PSCredential> [-JsonDefinition <string>]   
+Json defined migration task sample 1:
+Customer scenario:migrate data from File Share or local disk to SPO. 
+{
+"SourcePath":"\\LocalOrFileShareDataSource",
+         "TargetPath":"https://YourTargetSite",
+         "TargetList":"Documents",
+         "TargetListRelativePath":"subfolder"
+      }
+Json defined migration task sample 2:
+Customer scenario:migrate on-prem site to SPO site.  
+{  
+   "SourcePath":"http://YourOnPremSite",
+   "TargetPath":"https://YourTargetSite",
+   "Items":{  
+      "Lists":[  
+         {  
+            "SourceList":"sourceListName",
+            "TargetList":"targetListName"
+         }
+      ]
+   }
+}
+Json defined migration task sample 3:
+Customer scenario:migrate on-prem sites with subsites to SPO. 
+{  
+   "SourcePath":"http://YourOnPremSite",
+   "TargetPath":"https://YourTargetSite",
+   "Items":{  
+      "Lists":[  
+         {  
+            "SourceList":"listVersion2",
+            "TargetList":"ListVersion2"
+         },
+         {  
+            "SourceList":"listVersion3",
+            "TargetList":"ListVersion3"
+         }
+      ],
+      "SubSites":[  
+         {  
+            "SourceSubSitePath":"subSite",
+            "TargetSubSitePath":"targetSubSite",
+            "Lists":[  
+               {  
+                  "SourceList":"testSubListB",
+                  "TargetList":"targetSubList"
+               }
+            ]
+         }
+      ]
+   }
+}
+Json defined migration task sample 4:
+Customer scenario:migrate on-prem subsite to SPO subsite. 
+{  
+         "SourcePath":"http://YourOnPremSite/subsite2",
+         "TargetPath":"https://YourTargetSite/targetSubSite2"
+      }
 ```
 
 ## DESCRIPTION
