@@ -37,7 +37,7 @@ Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
 Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 ```
 
-{{ Add example description here }}
+Create a SPMT migration session and connecting to SPO
 
 ## PARAMETERS
 
