@@ -10,7 +10,7 @@ For a list of SharePoint Server on-premises cmdlets, see [SharePoint Server cmdl
 
 For a list of SharePoint Online cmdlets, see [SharePoint Online cmdlets](sharepoint-online\sharepoint-online-cmdlets.md)
 
-For a list of the SharePoint PnP cmdlets, see [SharePoint PnP cmdlets] (sharepoint-pnp\sharepoint-pnp-cmdlets.md)
+For a list of the SharePoint PnP cmdlets, see [SharePoint PnP cmdlets](sharepoint-pnp\sharepoint-pnp-cmdlets.md)
 
 #### SharePoint Online ####
 
