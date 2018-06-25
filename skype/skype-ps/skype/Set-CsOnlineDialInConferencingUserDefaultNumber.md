@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -RescheduleMeetings
-This parameter instructs the cmdlet to trigger the meeting migration service for all users that will have their default numbers modified by the cmdlet. Please take into consideration the potential side effects of triggering the meeting migration service for users in your organization. For additional details see, Setting up the Meeting Migration Service (MMS)  (https://docs.microsoft.com/en-us/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms?redirectSourcePath=%252fen-us%252farticle%252fSetting-up-the-Meeting-Migration-Service-MMS-031f09c0-9d2a-487a-b6db-b5d4bed6d16a).
+This parameter instructs the cmdlet to trigger the meeting migration service for all users that will have their default numbers modified by the cmdlet. Please take into consideration the potential side effects of triggering the meeting migration service for users in your organization. For additional details see, [Setting up the Meeting Migration Service (MMS)](https://docs.microsoft.com/en-us/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms?redirectSourcePath=%252fen-us%252farticle%252fSetting-up-the-Meeting-Migration-Service-MMS-031f09c0-9d2a-487a-b6db-b5d4bed6d16a).
 
 PARAMVALUE: SwitchParameter
 
