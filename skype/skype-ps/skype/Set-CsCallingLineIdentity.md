@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsCallingLineIdentity
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Set-CsCallingLineIdentity cmdlet to modify a Caller ID policy in your organization.
 
 ## SYNTAX
 
@@ -20,16 +20,22 @@ Set-CsCallingLineIdentity [[-Identity] <Object>] [-BlockIncomingPstnCallerID <Ob
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can modify a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed. 
 
+Note:  
+Identity must be unique.
+
+ServiceNumber must be a valid Service Number in the Skype for Business Online Telephone Number Inventory.
+
+If CallerIdSubstitute is given as “Service”, then ServiceNumber cannot be empty.
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-Insert example commands for example 1.
-```
+The following example blocks the incoming caller ID. The user can override this setting.
 
-Insert descriptive text for example 1.
+```
+Set-CsCallingLineIdentity -Identity "MyBlockingPolicy" -BlockIncomingPstnCallerID $true 
+```
 
 
 ## PARAMETERS

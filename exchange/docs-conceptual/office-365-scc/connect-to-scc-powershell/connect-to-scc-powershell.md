@@ -70,7 +70,10 @@ For more information about the Security &amp; Compliance Center, see [Office 365
     $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
-    **Note**: For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`
+    **Notes**:
+    - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`
+    
+    - If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add `-Prefix "CC"` to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
     
 3. Run the following command:
     

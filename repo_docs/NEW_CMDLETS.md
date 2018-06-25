@@ -7,9 +7,9 @@
     
     **HINT:** Use `Upgrade-Module` and also `Uninstall-Module` depending on the module version you have installed.
 1. Use PlatyPS to generate Markdown.
-    - Skype for Business Online: `New-MarkdownHelp -module tmp_byivwzpq.e1k -OutputFolder .\docs`. 
+    - Skype for Business Online: `New-MarkdownHelp -Module tmp_byivwzpq.e1k -OutputFolder .\docs`. 
     
-    **TIP:** You can see available modules with the command `Get-Module --listavailable`.
+    **TIP:** You can see available modules with the command `Get-Module -ListAvailable`.
 1. Find the new cmdlet and you will see the stubbed markdown.
 1. Add the correct Applicable tags to the top metadata and also the parameters for the cmdlet. 
     See others for details. 
