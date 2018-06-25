@@ -7,7 +7,7 @@ Locale: en-US
 
 # Microsoft SharePoint Migration Tool
 ## Description
-The following cmdlet references are for Microsoft SharePoint Migration tool.
+The following migration cmdlets are based on the SharePoint Migration Tool (SPMT) migration engine. It will move files from file shares, SharePoint on-prem 2013 document libraries, or list items from SharePoint on-prem 2013 to Office 365.
 
 ## Microsoft Teams Cmdlets
 
