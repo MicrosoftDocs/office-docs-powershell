@@ -96,7 +96,7 @@ You can only use the LinkedDomainController parameter with a linked role group.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -117,7 +117,7 @@ If you use the LinkedForeignGroup parameter, you must specify a domain controlle
 Type: UniversalSecurityGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -219,8 +219,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Position: Named
 Default value: None
 Accept pipeline input: False

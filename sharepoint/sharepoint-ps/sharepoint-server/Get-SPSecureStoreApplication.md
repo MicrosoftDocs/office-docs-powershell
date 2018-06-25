@@ -37,17 +37,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-C:\PS>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
+PS C:\>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
 ```
 
 This example gets the Secure Store application for the target application with the name ContosoTargetApplication.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>Get-SPSecureStoreApplication -ServiceContext http://contoso -All
+PS C:\>Get-SPSecureStoreApplication -ServiceContext http://contoso -All
 ```
 
-This example returns all of the Secure Store applicationshttp://contoso.
+This example returns all of the Secure Store applications http://contoso.
 
 ## PARAMETERS
 
@@ -84,13 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -106,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -All
-{{Fill All Description}}
+Returns all secure store applications for the given Service Context.
 
 ```yaml
 Type: SwitchParameter

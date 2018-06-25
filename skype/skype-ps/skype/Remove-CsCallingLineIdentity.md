@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsCallingLineIdentity
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Remove-CsCallingLineIdentity cmdlet to remove a Caller ID policy.
 
 ## SYNTAX
 
@@ -18,17 +18,19 @@ Remove-CsCallingLineIdentity [[-Identity] <Object>] [-BypassDualWrite <Object>] 
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. Caller ID policies can provide an alternate displayed number or block a number from being displayed. 
+
+You can remove an existing Caller ID policy from your organization by using the Remove-CsCallingLineIdentity cmdlet. When a Caller ID policy is removed, it is also removed from any user accounts to which it was granted.
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Remove-CsCallingLineIdentity -Identity Anonymous
 ```
 
-Insert descriptive text for example 1.
-
+The following example removes the Caller ID policy "Anonymous".
 
 ## PARAMETERS
 
@@ -129,7 +131,6 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -154,3 +155,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsRgsAgentGroup
 schema: 2.0.0
 ---
@@ -91,7 +91,7 @@ If called without any parameters, Get-CsRgsAgentGroup returns a collection of al
 Type: RgsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -107,7 +107,7 @@ Unique name given to the agent group at the time the group was created.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ However, the Owner ID will continue to point to the original pool.
 Type: RgsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ By default, Get-CsRgsAgentGroup only returns information about agent groups wher
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -176,3 +176,4 @@ A string value representing the Identity of the Response Group agent group.
 [Remove-CsRgsAgentGroup](Remove-CsRgsAgentGroup.md)
 
 [Set-CsRgsAgentGroup](Set-CsRgsAgentGroup.md)
+

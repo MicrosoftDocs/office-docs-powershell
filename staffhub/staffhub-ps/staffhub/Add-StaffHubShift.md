@@ -43,8 +43,8 @@ End time of the shift.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: True
 Position: 5
 Default value: None
@@ -58,8 +58,8 @@ Member to which the shift is to be added.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: True
 Position: 1
 Default value: None
@@ -73,8 +73,8 @@ Additional notes for the shift.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: False
 Position: 3
 Default value: None
@@ -88,9 +88,9 @@ ShiftType - Working/Absence.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Microsoft StaffHub
 Accepted values: Working, Absence
-
 Required: True
 Position: 6
 Default value: None
@@ -104,8 +104,8 @@ Start time of the shift.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: True
 Position: 4
 Default value: None
@@ -119,8 +119,8 @@ ID of the team to which the shift is to be added.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: True
 Position: 0
 Default value: None
@@ -134,8 +134,8 @@ Title of the shift.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: False
 Position: 2
 Default value: None

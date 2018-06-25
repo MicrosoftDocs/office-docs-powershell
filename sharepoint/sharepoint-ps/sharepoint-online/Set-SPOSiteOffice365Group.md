@@ -30,7 +30,7 @@ Connects a top-level SPO site collection to a new Office 365 Group.  You must be
 > [!IMPORTANT]
 > This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
+If the site doesn’t exist, this cmdlet returns a “File not found” error.
 
 ## EXAMPLES
 
@@ -44,6 +44,18 @@ Set-SPOSiteOffice365Group `
   -DisplayName "site1group" ` 
   -Alias "site1group" ` 
   -Classification "Highly Confidential" ` 
+```
+
+### Example 2
+
+This example creates a new Office 365 Group named "classicsite" and connects site collection https://contoso.sharepoint.com/sites/classicsite to it. It will keep the old home page from the classic site.
+
+```
+Set-SPOSiteOffice365Group ` 
+  -Site https://contoso.sharepoint.com/sites/classicsite ` 
+  -DisplayName "Classic Site" ` 
+  -Alias "classicsite" ` 
+  -KeepOldHomepage ` 
 ```
 
 

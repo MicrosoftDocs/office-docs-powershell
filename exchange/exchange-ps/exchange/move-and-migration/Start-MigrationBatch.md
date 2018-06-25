@@ -25,6 +25,10 @@ Start-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-Doma
 ## DESCRIPTION
 The Start-MigrationBatch cmdlet starts a pending migration batch that was created, but not started, with the New-MigrationBatch cmdlet.
 
+The Start-MigrationBatch cmdlet also will resume a Stopped migration batch or retry failures within a Failed or Synced with Errors migration batch. In the cloud-based service, the Start-MigrationBatch cmdlet can also retry failures within a Completed with Errors migration batch.
+
+In the cloud-based service, the Start-MigrationBatch cmdlet can be run at any time to retry failed users within the batch.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES

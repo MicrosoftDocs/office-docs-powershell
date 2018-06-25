@@ -98,13 +98,13 @@ Accept wildcard characters: False
 ### -Identity
 This cmdlet is available only in on-premises Exchange, and is only functional in Exchange Server 2010.
 
-The Identity parameter specifies the transport rule to be imported. Enter either the GUID or the name of the rule. You can omit the parameter label.
+The Identity parameter specifies the transport rule to be imported. Use either the GUID or the name of the rule. You can omit the parameter label.
 
 ```yaml
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: 1
 Default value: None

@@ -88,7 +88,7 @@ The RehomeRequest parameter specifies to the Microsoft Exchange Mailbox Replicat
 Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -107,7 +107,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 Type: PSCredential
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -329,7 +329,7 @@ The Priority parameter specifies the order in which the request should be proces
 Type: Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -363,7 +363,7 @@ The RemoteMailboxServerLegacyDN parameter specifies the server legacy DN of the 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable:  Exchange Online
 Required: False
 Position: Named
 Default value: None

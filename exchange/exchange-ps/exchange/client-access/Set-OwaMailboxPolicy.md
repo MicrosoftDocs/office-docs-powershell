@@ -270,7 +270,7 @@ The ChangePasswordEnabled parameter specifies whether users can change their pas
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -582,7 +582,7 @@ The JunkEmailEnabled parameter specifies whether the Junk Email management tools
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1167,7 +1167,7 @@ The DisableFacebook switch disables Facebook integration with Outlook on the web
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1282,7 +1282,7 @@ The LinkedInEnabled parameter specifies whether users can synchronize their Link
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1303,7 +1303,7 @@ The PlacesEnabled parameter specifies whether to enable or disable Places in Out
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1468,7 +1468,7 @@ The WeatherEnabled parameter specifies whether to enable or disable weather info
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1512,7 +1512,7 @@ To enable or disable Box attachments in Outlook on the web, use the ThirdPartyAt
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1550,7 +1550,7 @@ To enable or disable Dropbox attachments in Outlook on the web, use the ThirdPar
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1588,7 +1588,7 @@ The FreCardsEnabled parameter specifies whether to enable or disable the theme, 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1607,7 +1607,7 @@ To enable or disable Google Drive attachments in Outlook on the web, use the Thi
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1628,7 +1628,7 @@ The InterestingCalendarsEnabled parameter specifies whether to enable interestin
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1666,7 +1666,7 @@ The LocalEventsEnabled parameter specifies whether to enable local events calend
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1706,7 +1706,7 @@ The OnSendAddinsEnabled parameter specifies whether to enable or disable on send
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1776,18 +1776,18 @@ This parameter is available only in the cloud-based service.
 
 The ThirdPartyAttachmentsEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Google Drive) attachments in Outlook on the web. Valid values are:
 
-- $true: Third-party attachments are enabled. Users can connect their third-party file sharing accounts and share files over email. This is the default value.
+- $true: Third-party attachments are enabled. Users can connect their third-party file sharing accounts and share files over email.
 
-- $false: Third-party attachments are disabled. Users can't connect their third-party file sharing accounts or share files over email.
+- $false: Third-party attachments are disabled. Users can't connect their third-party file sharing accounts or share files over email. This is the default value.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1805,7 +1805,7 @@ The UserVoiceEnabled parameter specifies whether to enable or disable Outlook Us
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

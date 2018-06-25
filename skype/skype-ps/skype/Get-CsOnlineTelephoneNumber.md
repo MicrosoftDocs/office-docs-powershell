@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOnlineTelephoneNumber
 
 ## SYNOPSIS
-Use the Get-CsOnlineTelephoneNumber to retrieve telephone numbers from the Business Voice Directory.
+Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-CsOnlineTelephoneNumber [-ActivationState <Object>] [-Assigned <Object>] [-B
 ```
 
 ## DESCRIPTION
-Here is an example of the output of the Get-CsOnlineTelephoneNumber cmdlet.
+Here is an example of the output of the `Get-CsOnlineTelephoneNumber` cmdlet.
 
 RunspaceId : f90303a9-c6a8-483c-b3b3-a5b8cdbab19c
 
@@ -122,7 +122,6 @@ Accept wildcard characters: False
 ### -CapitalOrMajorCity
 Specifies the city by a concatenated string in the form: region-country-area-city.
 For example, "NOAM-US-OR-PO" would specify Portland, Oregon.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 The values for the CapitalOrMajorCity parameter are case-sensitive.
 
@@ -353,11 +352,9 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
@@ -366,5 +363,5 @@ An instance or array of the objects.
 
 ## NOTES
 
-
 ## RELATED LINKS
+

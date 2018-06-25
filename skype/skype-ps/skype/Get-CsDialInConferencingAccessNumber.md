@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsDialInConferencingAccessNumber
 schema: 2.0.0
 ---
@@ -145,7 +145,7 @@ If this parameter is not specified, then the Get-CsDialInConferencingAccessNumbe
 Type: UserIdParameter
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -164,7 +164,7 @@ For details, see the Get-Credential cmdlet help topic.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ To connect to a particular domain controller, include the DomainController param
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ This parameter cannot be used in conjunction with any other parameter.
 Type: SwitchParameter
 Parameter Sets: EmptyRegion
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -221,7 +221,7 @@ For example, a filter that returns only access numbers that have the 1-800 prefi
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ When specifying an OU, use the distinguished name of that container; for example
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -269,7 +269,7 @@ For details, see the Set-CsDialInConferencingAccessNumber cmdlet help topic.
 Type: String
 Parameter Sets: Region
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ If set to 0 the command will run, but no data will be returned.
 Type: Microsoft.Rtc.Management.ADConnect.Core.Unlimited`1[System.UInt32]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -324,3 +324,4 @@ The Get-CsDialInConferencingAccessNumber cmdlet accepts a string value represent
 [Remove-CsDialInConferencingAccessNumber](Remove-CsDialInConferencingAccessNumber.md)
 
 [Set-CsDialInConferencingAccessNumber](Set-CsDialInConferencingAccessNumber.md)
+

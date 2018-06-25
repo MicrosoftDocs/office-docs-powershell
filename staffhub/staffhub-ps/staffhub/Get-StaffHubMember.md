@@ -48,7 +48,7 @@ MemberId for the specified member in the team.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 1
 Default value: None
@@ -63,7 +63,7 @@ TeamId for which all the members are to be fetched.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: True
 Position: 0
 Default value: None

@@ -109,7 +109,7 @@ The TrustedPublishingDomain parameter specifies the trusted publishing domain yo
 Type: RmsTrustedPublishingDomainIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +132,7 @@ The Type parameter specifies the type of RMS template. Use one of the following 
 Type: Archived | Distributed | All
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

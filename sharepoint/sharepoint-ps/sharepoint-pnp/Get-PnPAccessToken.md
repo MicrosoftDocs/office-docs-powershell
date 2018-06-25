@@ -31,8 +31,6 @@ Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API
 ### -Decoded
 Returns the access token in a decoded manner
 
-Only applicable to: SharePoint Online, SharePoint Server 2013
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

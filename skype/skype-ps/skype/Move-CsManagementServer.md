@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsManagementServer
 schema: 2.0.0
 ---
@@ -33,32 +33,24 @@ Move-CsManagementServer [-ConfigurationFileName <String>] [-Confirm] [-Force]
 The Move-CsManagementServer cmdlet enables administrators to move the Central Management Server (and the accompanying Central Management store) from one pool to another.
 Because there is always the potential for data loss, not to mention service interruption, any time you move the Central Management Server, it is recommended that you do not make such a transfer unless:
 
-1.
-You need to decommission the existing management pool, and must transfer the Central Management Server before doing so.
+1. You need to decommission the existing management pool, and must transfer the Central Management Server before doing so.
 
-2.
-You've encountered a disaster recovery scenario in which the existing Central Management Server is no longer accessible.
+1. You've encountered a disaster recovery scenario in which the existing Central Management Server is no longer accessible.
+  Before you move the Central Management Server, you must do the following:
 
-Before you move the Central Management Server, you must do the following:
+1. Verify that you have created the new Central Management store.
+  This is done by running the Install-CsDatabase cmdlet and using the CentralManagementDatabase parameter.
 
-1.
-Verify that you have created the new Central Management store.
-This is done by running the Install-CsDatabase cmdlet and using the CentralManagementDatabase parameter.
+1. If you are moving the Central Management Server to a Standard Edition server, verify that you have used local setup to run the Prepare Standard Edition server option.
+ This advance preparation is required to add firewall rules that will allow Windows PowerShell to remotely access the new Central Management store.
 
-2.
-If you are moving the Central Management Server to a Standard Edition server, verify that you have used local setup to run the Prepare Standard Edition server option.
-This advance preparation is required to add firewall rules that will allow Windows PowerShell to remotely access the new Central Management store.
+1. Verify that there is enough free disk space on the computer where the Move-CsManagementServer cmdlet is being run to accommodate the Central Management Server.
 
-3.
-Verify that there is enough free disk space on the computer where the Move-CsManagementServer cmdlet is being run to accommodate the Central Management Server.
+1. Verify that the Front End Server service has been installed on the computer where the Move-CsManagementServer cmdlet is being run.
+  If this service is not installed, and running, then the move will fail.
 
-4.
-Verify that the Front End Server service has been installed on the computer where the Move-CsManagementServer cmdlet is being run.
-If this service is not installed, and running, then the move will fail.
-
-5.
-Verify that you can successfully run the Enable-CsTopology cmdlet on the computer where the Move-CsManagementServer cmdlet is going to be run.
-If the Enable-CsTopology cmdlet cannot be run on that computer then the move will fail and you will no longer have a functioning Central Management store.
+1. Verify that you can successfully run the Enable-CsTopology cmdlet on the computer where the Move-CsManagementServer cmdlet is going to be run.
+  If the Enable-CsTopology cmdlet cannot be run on that computer then the move will fail and you will no longer have a functioning Central Management store.
 
 After you have completed these steps, all you need to do to move the Central Management Server from Pool A to Pool B is log on to a computer in Pool B and then call the Move-CsManagementServer cmdlet without any additional parameters:
 
@@ -124,7 +116,7 @@ This parameter should only be used in a disaster recovery scenario.
 Type: String
 Parameter Sets: (All)
 Aliases: CsConfiguration
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -141,7 +133,7 @@ This parameter should only be used in a disaster recovery scenario.
 Type: String
 Parameter Sets: (All)
 Aliases: CsLisConfiguration
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -163,7 +155,7 @@ The Force parameter can also be used if your previous attempts at calling the Mo
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -180,7 +172,7 @@ For example: `-Report "C:\Logs\MoveManagementServer.html"`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -196,7 +188,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -212,7 +204,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -228,7 +220,7 @@ Fully qualified domain name of the pool where the Management Server should be mo
 Type: Fqdn
 Parameter Sets: FromBackup
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -257,4 +249,5 @@ The Move-CsManagementServer cmdlet does not return any objects.
 ## RELATED LINKS
 
 [Set-CsManagementServer](Set-CsManagementServer.md)
+
 

@@ -31,7 +31,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] [<CommonParameters>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
+ [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -665,6 +666,57 @@ Resets the OneDrive for Business storage quota to the tenant’s new default sto
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+
+### -DefaultSharingLinkType 
+
+The default link type for the site collection
+
+PARAMVALUE: None | AnonymousAccess | Internal | Direct
+
+None - Respect the organization default sharing link type
+AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
+Internal - Sets the default sharing link for this site to the “organization” link or company shareable link
+Direct - Sets the default sharing link for this site to the “Specific people” link
+
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -DefaultLinkPermission
+
+The default link permission for the site collection
+
+PARAMVALUE: None | View | Edit
+
+None - Respect the organization default link permission
+View - Sets the default link permission for the site to “view” permissions
+Edit - Sets the default link permission for the site to “edit” permissions
+
+```yaml
+Type: SharingPermissionType
 Parameter Sets: ParamSet1
 Aliases: 
 Applicable: SharePoint Online

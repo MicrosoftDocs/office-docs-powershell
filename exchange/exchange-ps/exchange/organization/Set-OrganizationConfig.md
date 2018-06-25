@@ -375,7 +375,7 @@ The CustomerFeedbackEnabled parameter specifies whether the Exchange server is e
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -490,7 +490,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -634,7 +634,7 @@ The ExchangeNotificationEnabled parameter enables or disables Exchange notificat
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -651,7 +651,7 @@ The ExchangeNotificationRecipients parameter specifies the recipients for Exchan
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -714,7 +714,7 @@ The Industry parameter specifies the industry that best represents your organiza
 Type: NotSpecified | Agriculture | Finance | BusinessServicesConsulting | Communications | ComputerRelatedProductsServices | Construction | Education | EngineeringArchitecture | Government | Healthcare | Hospitality | Legal | Manufacturing | MediaMarketingAdvertising | Mining | NonProfit | PersonalServices | PrintingPublishing | RealEstate | Retail | Transportation | Utilities | Wholesale | Other
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -731,7 +731,7 @@ The MailTipsAllTipsEnabled parameter specifies whether MailTips are enabled. The
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -763,7 +763,7 @@ The MailTipsGroupMetricsEnabled parameter specifies whether MailTips that rely o
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -795,7 +795,7 @@ The MailTipsMailboxSourcedTipsEnabled parameter specifies whether MailTips that 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -812,7 +812,7 @@ The ManagedFolderHomepage parameter specifies the URL of the web page that's dis
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -831,7 +831,7 @@ Email addresses that you specify by using the MicrosoftExchangeRecipientEmailAdd
 Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -850,7 +850,7 @@ If you change the value of the MicrosoftExchangeRecipientEmailAddressPolicyEnabl
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -871,7 +871,7 @@ The MicrosoftExchangeRecipientPrimarySmtpAddress parameter is meaningful only if
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -904,7 +904,7 @@ For example:
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -921,7 +921,7 @@ The OrganizationSummary parameter specifies a summarized description that best r
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -977,7 +977,7 @@ The PublicFolderMigrationComplete parameter is used during public folder migrati
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -994,7 +994,7 @@ The PublicFoldersLockedForMigration parameter specifies whether users are locked
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1041,7 +1041,7 @@ The SCLJunkThreshold parameter specifies the spam confidence level (SCL) thresho
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1096,7 +1096,7 @@ For more information about configuring AD FS claims based authentication in Exch
 Type: MultiValuedProperty
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1145,7 +1145,7 @@ To get this value, open Windows PowerShell on the AD FS server and run the comma
 Type: Uri
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1168,7 +1168,7 @@ To add or remove one or more values without affecting any existing entries, use 
 Type: MultiValuedProperty
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1355,7 +1355,7 @@ The IsExcludedFromOffboardMigration parameter specifies that no new moves from t
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1372,7 +1372,7 @@ The IsExcludedFromOnboardMigration parameter specifies that no new moves from yo
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1410,7 +1410,7 @@ You can use the MapiHttpEnabled parameter on the Set-CASMailbox cmdlet to overri
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1427,7 +1427,7 @@ The MaxConcurrentMigrations parameter specifies the maximum number of concurrent
 Type: Unlimited
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1440,7 +1440,7 @@ The OAuth2ClientProfileEnabled parameter enables or disables modern authenticati
 
 - $true: Modern authentication is enabled.
 
-- $false: Modern authentication is disabled. This is the default value.
+- $false: Modern authentication is disabled. 
 
 Modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
 
@@ -1453,7 +1453,7 @@ Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1486,7 +1486,7 @@ The PublicFolderMailboxesLockedForNewConnections parameter specifies whether use
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1507,7 +1507,7 @@ The PublicFolderMailboxesMigrationComplete parameter is used during public folde
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1575,7 +1575,7 @@ The UMAvailableLanguages parameter will be removed in future versions of the pro
 Type: MultiValuedProperty
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -1626,7 +1626,7 @@ The AsyncSendEnabled parameter specifies whether to enable or disable async send
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1645,7 +1645,7 @@ After you enable auto-expanding archiving, additional storage space is automatic
 Type: SwitchParameter
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1668,7 +1668,7 @@ Microsoft Bookings is an online and mobile app for small businesses who provide 
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1735,7 +1735,7 @@ Customer Lockbox is included in the Office 365 E5 plan. For more information abo
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1801,7 +1801,7 @@ The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable 
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1822,7 +1822,7 @@ The ElcProcessingDisabled parameter specifies whether to enable or disable the p
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1843,7 +1843,7 @@ The EndUserDLUpgradeFlowsDisabled parameter specifies whether to prevent users f
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1868,7 +1868,7 @@ Focused Inbox is a replacement for Clutter that separates the Inbox into the Foc
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1879,7 +1879,7 @@ Accept wildcard characters: False
 ### -IPListBlocked
 This parameter is available only in the cloud-based service.
 
-The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory.
+The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory. Note that the new settings might take up to 4 hours to fully propagate across the service.
 
 This parameter accepts IPv4 or IPv6 addresses in the following formats:
 
@@ -1899,7 +1899,7 @@ To add or remove one or more values without affecting any existing entries, use 
 Type: MultiValuedProperty
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1945,7 +1945,7 @@ Notes:
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1975,17 +1975,13 @@ Accept wildcard characters: False
 ### -PerTenantSwitchToESTSEnabled
 This parameter is available only in the cloud-based service.
 
-The PerTenantSwitchToESTSEnabled parameter specifies whether basic authentication requests use the Evolved Security Token Service (ESTS) in an Exchange Online organization. Valid values are:
-
-- $true: Basic authentication requests use ESTS.
-
-- $false: Basic authentication requests don't use ESTS. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2021,7 +2017,7 @@ The RefreshSessionEnabled parameter specifies whether to enable or disable the u
 Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOnlineTelephoneNumberInventoryCountries
 
 ## SYNOPSIS
-Use the Get-CsOnlineTelephoneNumberInventoryCountries cmdlet to retrieve a list of countries with telephone number inventories by specified region and telephone number inventory types.
+Use the `Get-CsOnlineTelephoneNumberInventoryCountries` cmdlet to retrieve a list of countries with telephone number inventories by specified region and telephone number inventory types.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-CsOnlineTelephoneNumberInventoryCountries [-InventoryType <Object>] [-Region
 ```
 
 ## DESCRIPTION
-Following is an example of the Get-CsOnlineTelephoneNumberInventoryCountries cmdlet's console output.
+Following is an example of the `Get-CsOnlineTelephoneNumberInventoryCountries` cmdlet's console output.
 
 RunspaceId : af39ca40-06a7-473b-8963-668865d15e87
 
@@ -37,7 +37,6 @@ Get-CsOnlineTelephoneNumberInventoryCountries -InventoryType Service -RegionalGr
 ```
 
 This example returns the countries in the north American region that contain service type telephone numbers.
-
 
 ## PARAMETERS
 
@@ -64,7 +63,6 @@ Accept wildcard characters: False
 
 ### -RegionalGroup
 Specifies the target geographical region for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -97,7 +95,6 @@ Accept wildcard characters: False
 
 ### -CountryOrRegion
 Specifies the target country for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -193,3 +190,4 @@ Instance or array of the object.
 ## NOTES
 
 ## RELATED LINKS
+

@@ -14,10 +14,10 @@ Sets the hub site information such as name, logo, and description.
 
 ```
 Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
-[-Title <string>]
-[-LogoUrl <string>]
-[-Description <string>]
-[<CommonParameters>]
+  [-Title <string>]
+  [-LogoUrl <string>]
+  [-Description <string>]
+  [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsHoliday
 schema: 2.0.0
 ---
@@ -83,7 +83,7 @@ Unique name used to differentiate the holiday from other holidays.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ on July 5, 2013.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -129,7 +129,7 @@ on July 4, 2013.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -159,3 +159,4 @@ New-CsRgsHoliday creates new instances of the Microsoft.Rtc.Rgs.Management.Writa
 [New-CsRgsHolidaySet](New-CsRgsHolidaySet.md)
 
 [Set-CsRgsHolidaySet](Set-CsRgsHolidaySet.md)
+

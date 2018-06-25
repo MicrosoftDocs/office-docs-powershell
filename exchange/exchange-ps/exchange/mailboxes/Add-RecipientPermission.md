@@ -19,11 +19,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Add-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty>
- -Trustee <SecurityPrincipalIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+ -Trustee <SecurityPrincipalIdParameter> [-SkipDomainValidationForMailContact] [-SkipDomainValidationForMailUser] [-SkipDomainValidationForSharedMailbox] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-When a user is assigned SendAs permission to a user or group, the user can send messages that appear to come from the other user or group.
+SendAs permission allows a user or group members to send messages that apear to come from the specified mailbox, mail contact, mail user, or group.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -39,9 +39,7 @@ This example gives the user Ayla Kol SendAs permission for the mailbox Help Desk
 ## PARAMETERS
 
 ### -AccessRights
-The AccessRights parameter specifies the permission.
-
-Valid input for this parameter is SendAs.
+The AccessRights parameter specifies the permission. The only value for this parameter is SendAs.
 
 ```yaml
 Type: MultiValuedProperty
@@ -56,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the target recipient. The user or group specified by the Trustee parameter can operate on this recipient.
+The Identity parameter specifies the target recipient. The user or group specified by the Trustee parameter receives SendAs permission on this recipient.
 
 You can specify any type of recipient, for example:
 
@@ -101,9 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter specifies the user or group to whom you're granting the permission. This allows the user or group to operate on the recipient specified by the Identity parameter.
+The Trustee parameter specifies the user or group that receives SendAs perimission on the recipient specified by the Identity parameter.
 
-You can specify the following types of users or groups:
+You can specify the following types of users or groups (security principals) for this parameter:
 
 - Mailbox users
 
@@ -146,6 +144,51 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -SkipDomainValidationForMailContact
+The SkipDomainValidationForMailContact switch skips the check that confirms the proxy addresses of the external contact specified by the Identity parameter are in the accepted domains of the organization. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipDomainValidationForMailUser
+The SkipDomainValidationForMailUser switch skips the check that confirms the proxy addresses of the mail user specified by the Identity parameter are in the accepted domains of the organization. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipDomainValidationForSharedMailbox
+The SkipDomainValidationForSharedMailbox switch skips the check that confirms the proxy addresses of the shared mailbox specified by the Identity parameter are in the accepted domains of the organization. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

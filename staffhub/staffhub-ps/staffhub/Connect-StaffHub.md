@@ -52,7 +52,7 @@ $mycreds = New-Object System.Management.Automation.PSCredential ("username", $se
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 0
 Default value: None
@@ -67,7 +67,7 @@ CultureInfo in which the message is to be displayed.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 3
 Default value: en-US
@@ -83,7 +83,7 @@ Default value is 10 days.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 2
 Default value: 10
@@ -98,7 +98,7 @@ Location where the logs are to be persisted in user's box.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 1
 Default value: None

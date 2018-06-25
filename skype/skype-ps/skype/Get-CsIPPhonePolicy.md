@@ -8,50 +8,33 @@ schema: 2.0.0
 # Get-CsIPPhonePolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the Get-CsIPPhonePolicy cmdlet to get all the settings of the Skype for Business Online global IP phone policy. IP phone policies define the Skype for Business Online features that are available to users.
 
 ## SYNTAX
 
 ```
-Get-CsIPPhonePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+IP phone policies are applied each time a user accesses the system via an IP phone device. The Get-CsIPPhonePolicy cmdlet retrieves the global IP phone policy that has been configured in your organization along with all their settings.
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 ------------------------
 ```
-{{ Add example code here }}
+PS C:\> Get-CsIPPhonePolicy
 ```
 
-{{ Add example description here }}
+This example returns the global IP phone policy along with all their settings.
 
 ## PARAMETERS
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
-{{Fill Filter Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -64,10 +47,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -80,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -96,10 +79,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -112,7 +95,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -144,3 +131,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
+[Grant-CsIPPhonePolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csipphonepolicy?view=skype-ps)
+
+[Set-CsIPPhonePolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csipphonepolicy?view=skype-ps)
