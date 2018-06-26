@@ -32,7 +32,9 @@ $Global:UserName = “admin@contoso.onmicrosoft.com”
 $Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
 $Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
 
+#Import SPMT Migration Module#
 Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
+
 #Register the SPMT session with SPO credentials#
 Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 ```
