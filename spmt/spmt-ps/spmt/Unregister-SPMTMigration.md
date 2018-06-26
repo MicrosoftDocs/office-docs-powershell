@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-applicable: SharePoint Migration Tool
-title: Unregister-SPMTMigration
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Unregister-SPMTMigration
+Online version: 
+Schema: 2.0.0
 ---
 
 # Unregister-SPMTMigration
@@ -50,13 +50,13 @@ Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 #Add two tasks into the session. One on-prem and one file share task.#
 Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll 
 Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList "Documents"
-#Start Migration#
-Start-SPMTMigration
+#Start Migration in the background#
+Start-SPMTMigration -NoShow
 
-PS C:\Users\YourUserName> Stop-SPMTMigration 
-PS C:\Users\YourUserName> Unregister-SPMTMigration 
+Stop-SPMTMigration 
+Unregister-SPMTMigration 
 ```
-Cancel the started migration and unregister the migration session from the commandline. 
+Cancel the started migration and unregister the migration session. 
 
 ## PARAMETERS
 
