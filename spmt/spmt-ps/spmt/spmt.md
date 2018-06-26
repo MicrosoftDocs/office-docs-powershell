@@ -1,7 +1,7 @@
 ---
 Module Name: SharePoint Migration Tool
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-title: SharePoint Migration Tool
+Title: SharePoint Migration Tool
 Locale: en-US
 ---
 
