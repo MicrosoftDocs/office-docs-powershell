@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-applicable: SharePoint Migration Tool
-title: Stop-SPMTMigration
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Stop-SPMTMigration
+Online version: 
+Schema: 2.0.0
 ---
 
 # Stop-SPMTMigration
@@ -51,10 +51,10 @@ Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll 
 Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList "Documents"
 #Start Migration in the background#
-Start-SPMTMigration 
-PS C:\Users\YourUserName> Stop-SPMTMigration 
+Start-SPMTMigration -NoShow
+Stop-SPMTMigration 
 ```
-Start a migration first, then run "Stop-SPMTMigration" in the commandline to cancel the migration. 
+Start a migration first, then run "Stop-SPMTMigration" to cancel the migration. 
 
 ## PARAMETERS
 
