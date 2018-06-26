@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-applicable: SharePoint Migration Tool
-title: Start-SPMTMigration
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Start-SPMTMigration
+Online version: 
+Schema: 2.0.0
 ---
 
 # Start-SPMTMigration
@@ -24,7 +24,7 @@ This cmdlet will start the registered SPMT migration.
 
 ### Example 1
 ```
-#Define On-prem SharePoint 2013 data source#
+#Define SharePoint 2013 data source#
 
 $Global:SourceSiteUrl = "http://YourOnPremSite/"
 $Global:OnPremUserName = "Yourcomputer\administrator"
@@ -40,26 +40,30 @@ $Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText
 $Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
 $Global:TargetListName = "TargetListName"
 
-#Define  Fileshare data source#
+#Define File Share data source#
 $Global:FileshareSource = "YourFileShareDataSource"
+
 #Import SPMT Migration Module#
 Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
+
 #Register the SPMT session with SPO credentials#
 Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force 
-#Add two tasks into the session. One on-prem and one file share task.#
+
+#Add two tasks into the session. One is SharePoint migration task, and another is File Share migration task.#
 Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll 
-Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList "Documents"
-#Start Migration#
+Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList $Global:TargetListName
+
+#Start Migration in the console.#
 Start-SPMTMigration
 ```
 
-Start a migration with one on-prem migration task and one file share migration task. 
+Start a migration with one SharePoint migration task and one File Share migration task.  
 
 ## PARAMETERS
 
 ### -NoShow
 In "-NoShow" mode, a message will be displayed to indicate that the migration is running in the background.
-Note: Use the 'Show-SPMTMigration' to bring the migration from background to foreground. The task ID, data source location, target location and migration status will be displayed.
+Note: Use the 'Show-SPMTMigration' to bring the migration from background to foreground. The task ID, data source location, target location and migration status will be displayed in the console. 
 
 
 ```yaml
@@ -75,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParametersValidationOnly
-Validate the parameters: check source access permissions, source existence and if TargetUrl is valid.
+Validate the parameters: check source access permissions, source existence and if the TargetUrl is valid.
 
 ```yaml
 Type: SwitchParameter
