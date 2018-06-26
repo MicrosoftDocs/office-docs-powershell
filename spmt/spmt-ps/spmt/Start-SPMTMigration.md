@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-applicable: SharePoint Migration Tool
-title: Start-SPMTMigration
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Start-SPMTMigration
+Online version: 
+Schema: 2.0.0
 ---
 
 # Start-SPMTMigration
@@ -53,13 +53,13 @@ Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPO
 Start-SPMTMigration
 ```
 
-Start a migration with one on-prem migration task and one file share migration task. 
+Start a migration with one SharePoint migration task and one File Share migration task. 
 
 ## PARAMETERS
 
 ### -NoShow
 In "-NoShow" mode, a message will be displayed to indicate that the migration is running in the background.
-Note: Use the 'Show-SPMTMigration' to bring the migration from background to foreground. The task ID, data source location, target location and migration status will be displayed.
+Note: Use the 'Show-SPMTMigration' to bring the migration from background to foreground. The task ID, data source location, target location and migration status will be displayed in the console. 
 
 
 ```yaml
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParametersValidationOnly
-Validate the parameters: check source access permissions, source existence and if TargetUrl is valid.
+Validate the parameters: check source access permissions, source existence and if the TargetUrl is valid.
 
 ```yaml
 Type: SwitchParameter
