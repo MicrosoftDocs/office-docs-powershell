@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-applicable: SharePoint Migration Tool
-title: Remove-SPMTTask
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Remove-SPMTTask
+Online version: 
+Schema: 2.0.0
 ---
 
 # Remove-SPMTTask
@@ -51,11 +51,11 @@ Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll 
 Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList "Documents"
 #Start Migration#
-Start-SPMTMigration
- PS C:\Users\YourUserName> Remove-SPMTTask -TaskID XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -Force
+Start-SPMTMigration -NoShow 
+Remove-SPMTTask -TaskID XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -Force
 ```
 
-Remove an existing migration task from the migration. Remember to replace the "XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" with your actual TaskID. You can get the Task ID in the console if the migration is running in the foregrund. If the migration is running in the background with -NoShow parameter, then find TaskID after running "Get-SPMTMigration" first. 
+Remove an existing migration task from the migration. Remember to replace the "XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" with your actual TaskID. You can get the TaskID in the console if the migration is running without -NoShow parameter. If the migration is running with -NoShow parameter, then find the TaskID after running "Get-SPMTMigration" first. 
 ## PARAMETERS
 
 ### -Force
