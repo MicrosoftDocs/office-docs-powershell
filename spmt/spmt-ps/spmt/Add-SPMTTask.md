@@ -1,16 +1,16 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-applicable: SharePoint Migration Tool
-title: Add-SPMTTask
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Add-SPMTTask
+Online version: 
+Schema: 2.0.0
 ---
 
 # Add-SPMTTask
 
 ## SYNOPSIS
-Add a new migration task to the registered migration session. Currently there are three different types of tasks allowed: File share task, SharePoint task and JSON defined task.  
+Add a new migration task to the registered migration session. Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task.  
 ## SYNTAX
 
 ### FileShare
@@ -94,7 +94,7 @@ Json sample for SharePoint migration(whole site):
 
 ## DESCRIPTION
 Add a new migration task to the registered migration session. 
-Currently there are three different types of tasks allowed: File share task, SharePoint task and JSON defined task. 
+Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task. 
 
 ## EXAMPLES
 
@@ -116,18 +116,20 @@ $Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText
 $Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
 $Global:TargetListName = "TargetListName"
 
-#Define Fileshare data source#
+#Define File Share data source#
 $Global:FileshareSource = "YourFileShareDataSource"
+
 #Import SPMT Migration Module#
 Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
+
 #Register the SPMT session with SPO credentials#
 Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force 
+
 #Add two tasks into the session. One is SharePoint migration task, and another is File Share migration task.#
 Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll 
 Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList $Global:TargetListName
 ```
-
-Add one file share migration task and one on-prem 2013 migration task to registered migration session. 
+Add one File Share migration task and one SharePoint 2013 migration task to the registered migration session. 
 
 ## PARAMETERS
 
