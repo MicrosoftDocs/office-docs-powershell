@@ -94,7 +94,7 @@ Single line of text: -Values @{"Title" = "Title New"}
 
 Multiple lines of text: -Values @{"MultiText" = "New text\n\nMore text"}
 
-Rich text: -Values @{"MultiText" = "<strong>New</strong> text"}
+Rich text: -Values @{"MultiText" = "&lt;strong&gt;New&lt;/strong&gt; text"}
 
 Choice: -Values @{"Choice" = "Value 1"}
 
@@ -104,7 +104,7 @@ Currency: -Values @{"Number" = "10"}
 
 Currency: -Values @{"Currency" = "10"}
 
-Date and Time: -Values @{"DateAndTime" = "03/10/2015 14:16"}
+Date and Time: -Values @{"DateAndTime" = "03/13/2015 14:16"}
 
 Lookup (id of lookup value): -Values @{"Lookup" = "2"}
 

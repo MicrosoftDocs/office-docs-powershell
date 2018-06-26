@@ -55,13 +55,13 @@ Accept wildcard characters: False
 Enables you to return data by using Active Directory attributes and without having to specify the full Active Directory distinguished name.
 For example, to retrieve a tenant by using the tenant display name, use syntax similar to this:
 
-`Get-CsTenant -Filter {DisplayName -eq "FabrikamTenant"}`
+Get-CsTenant -Filter {DisplayName -eq "FabrikamTenant"}
 
 To return all tenants that use a Fabrikam domain use this syntax:
 
-`Get-CsTenant -Filter {Domains -like "*fabrikam*"}`
+Get-CsTenant -Filter {Domains -like "*fabrikam*"}
 
-The Filter parameter uses the same Windows PowerShell filtering syntax is used by the Where-Object cmdlet.
+The Filter parameter uses the same Windows PowerShell filtering syntax is used by the `Where-Object` cmdlet.
 
 You cannot use both the Identity parameter and the Filter parameter in the same command.
 
@@ -82,9 +82,9 @@ Accept wildcard characters: False
 Unique identifier for the tenant.
 For example:
 
-`-Identity "bf19b7db-6960-41e5-a139-2aa373474354"`
+-Identity "bf19b7db-6960-41e5-a139-2aa373474354"
 
-If you do not include either the Identity or the Filter parameter then the Get-CsTenant cmdlet will return information about all your tenants.
+If you do not include either the Identity or the Filter parameter then the `Get-CsTenant` cmdlet will return information about all your tenants.
 
 ```yaml
 Type: Object
@@ -144,14 +144,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Rtc.Management.ADConnect.Schema.TenantObject or String
-The Get-CsTenant cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.TenantObject object as well as string values representing the Identity of the tenant (for example "bf19b7db-6960-41e5-a139-2aa373474354").
-
+The `Get-CsTenant` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.TenantObject object as well as string values representing the Identity of the tenant (for example "bf19b7db-6960-41e5-a139-2aa373474354").
 
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.ADConnect.Schema.TenantObject
 
-
 ## NOTES
 
 ## RELATED LINKS
+

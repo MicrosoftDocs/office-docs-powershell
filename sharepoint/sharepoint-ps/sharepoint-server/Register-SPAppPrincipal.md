@@ -8,7 +8,7 @@ schema: 2.0.0
 # Register-SPAppPrincipal
 
 ## SYNOPSIS
-Lets an on-premise or SharePoint Online administrator register an app principal.
+Registers an app principal.
 
 
 ## SYNTAX
@@ -19,7 +19,7 @@ Register-SPAppPrincipal -DisplayName <String> -NameIdentifier <String> -Site <SP
 ```
 
 ## DESCRIPTION
-Use the `Register-SPAppPrincipal` cmdlet to let an on-premise farm or SharePoint Online administrator to register an app principal management service.
+Use the `Register-SPAppPrincipal` cmdlet to register an app principal management service.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
@@ -29,10 +29,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE-----------------------
 ```
 PS C:\>$site = Get-SPSite "https://<urlofsite>"
-PS C:\>Register-SPAppPrincipal -site $site.root -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd" -DisplayName "Contoso SharePoint Online"
+PS C:\>Register-SPAppPrincipal -site $site.root -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd" -DisplayName "Contoso"
 ```
 
-This example registers the app principal named Contoso SharePoint Online.
+This example registers the app principal named Contoso.
 
 
 ## PARAMETERS

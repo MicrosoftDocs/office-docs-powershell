@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUserServicesConfiguration
 schema: 2.0.0
 ---
@@ -110,7 +110,7 @@ If this parameter is omitted then the Get-CsUserServicesConfiguration cmdlet ret
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -136,7 +136,7 @@ To return all the settings configured at the service scope, use this syntax:
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ Retrieves the User Services configuration data from the local replica of the Cen
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -189,3 +189,4 @@ The Get-CsUserServicesConfiguration cmdlet returns instances of the Microsoft.Rt
 [Remove-CsUserServicesConfiguration](Remove-CsUserServicesConfiguration.md)
 
 [Set-CsUserServicesConfiguration](Set-CsUserServicesConfiguration.md)
+

@@ -334,7 +334,8 @@ Accept wildcard characters: False
 ### -ConnectionUseDisabledFilter
 Filters out disabled accounts.
 
->[!NOTE] This will only filter out accounts which are in a disabled state prior to being imported. It will not filter out accounts which have been disabled after importing.
+>[!NOTE] 
+This will only filter out accounts which are in a disabled state prior to being imported. It will not filter out accounts which have been disabled after importing.
 
 ```yaml
 Type: Boolean

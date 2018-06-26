@@ -31,7 +31,15 @@ If the site doesn’t exist, this cmdlet returns a “File not found” error.
 ### Example 1
 
 ```
-Unregister-SPOHubSite https://contoso.sharepoint.com/sites/Marketing
+Unregister-SPOHubSite -Identity <guid>
+```
+
+This example removes a site from the hub site list based on unique hub identifier (<guid>).
+
+### Example 2
+
+```
+Unregister-SPOHubSite -Identity https://contoso.sharepoint.com/sites/Marketing
 ```
 
 This example disables the hub feature on the marketing site.
@@ -40,7 +48,7 @@ This example disables the hub feature on the marketing site.
 
 ### -Identity
 
-URL of the site to disable the hub site feature.
+Guid based identifier or URL of the site to disable the hub site feature. If hub site has been already deleted, you will need to use a Guid based identifier to remove the site from the list of hub sites.
 
 ```yaml
 Type: SpoHubSitePipeBind

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOnlineTelephoneNumberInventoryRegions
 
 ## SYNOPSIS
-Use the Get-CsOnlineTelephoneNumberInventoryRegions cmdlet to retrieve the regions where specified inventory types are supported.
+Use the `Get-CsOnlineTelephoneNumberInventoryRegions` cmdlet to retrieve the regions where specified inventory types are supported.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-CsOnlineTelephoneNumberInventoryRegions [-InventoryType <Object>] [-BypassDu
 ```
 
 ## DESCRIPTION
-Following is an example of the Get-CsOnlineTelephoneNumberInventoryRegions cmdlet's console output.
+Following is an example of the `Get-CsOnlineTelephoneNumberInventoryRegions` cmdlet's console output.
 
 RunspaceId : f90303a9-c6a8-483c-b3b3-a5b8cdbab19c
 
@@ -44,7 +44,6 @@ Get-CsOnlineTelephoneNumberInventoryRegions -InventoryType Subscriber
 ```
 
 This example returns the region where the inventory type of "Subscriber" is supported.
-
 
 ## PARAMETERS
 
@@ -121,7 +120,6 @@ Accept wildcard characters: False
 
 ### -RegionalGroup
 Specifies the target geographical region for the cmdlet.
-For a list of geographical codes see Skype for Business geographical codes (http://go.microsoft.com/fwlink/?LinkId=615951).
 
 ```yaml
 Type: Object
@@ -175,7 +173,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
-
 ## OUTPUTS
 
 ### Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Region
@@ -184,3 +181,4 @@ Instance or array of the object.
 ## NOTES
 
 ## RELATED LINKS
+

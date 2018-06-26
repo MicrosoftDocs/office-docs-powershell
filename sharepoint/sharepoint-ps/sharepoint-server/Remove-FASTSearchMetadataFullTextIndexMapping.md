@@ -28,10 +28,10 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>$fulltextindex = Get-FASTSearchMetadataFullTextIndex -Name content
-$managedproperty = Get-FASTSearchMetadataManagedProperty -Name CreatedBy
-$fulltextindexmapping = Get-FASTSearchMetadataFullTextIndexMapping -ManagedProperty $managedproperty -FullTextIndex $fulltextindex
-Remove-FASTSearchMetadataFullTextIndexMapping -mapping $fulltextindexmapping
+PS C:\>$fulltextindex = Get-FASTSearchMetadataFullTextIndex -Name content
+PS C:\>$managedproperty = Get-FASTSearchMetadataManagedProperty -Name CreatedBy
+PS C:\>$fulltextindexmapping = Get-FASTSearchMetadataFullTextIndexMapping -ManagedProperty $managedproperty -FullTextIndex $fulltextindex
+PS C:\>Remove-FASTSearchMetadataFullTextIndexMapping -mapping $fulltextindexmapping
 ```
 
 This example removes the mapping of the managed property "CreatedBy" from the full text index "content".

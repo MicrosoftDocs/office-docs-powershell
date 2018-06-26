@@ -10,6 +10,7 @@ Set site information.
 
 ## SYNTAX 
 
+### Set Properties
 ```powershell
 Set-PnPTenantSite -Url <String>
                   [-Title <String>]
@@ -20,8 +21,15 @@ Set-PnPTenantSite -Url <String>
                   [-UserCodeWarningLevel <Double>]
                   [-AllowSelfServiceUpgrade [<SwitchParameter>]]
                   [-Owners <String>]
-                  [-LockState <SiteLockState>]
                   [-NoScriptSite [<SwitchParameter>]]
+                  [-Wait [<SwitchParameter>]]
+                  [-Connection <SPOnlineConnection>]
+```
+
+### Set Lock State
+```powershell
+Set-PnPTenantSite -Url <String>
+                  [-LockState <SiteLockState>]
                   [-Wait [<SwitchParameter>]]
                   [-Connection <SPOnlineConnection>]
 ```
@@ -73,7 +81,7 @@ Specifies if the site administrator can upgrade the site collection
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -85,7 +93,7 @@ Sets the lockstate of a site
 
 ```yaml
 Type: SiteLockState
-Parameter Sets: (All)
+Parameter Sets: Set Lock State
 
 Required: False
 Position: Named
@@ -97,7 +105,7 @@ Specifies if a site allows custom script or not. See https://support.office.com/
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -109,7 +117,7 @@ Specifies owner(s) to add as site collection adminstrators. They will be added a
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -121,7 +129,7 @@ Specifies what the sharing capablilites are for the site. Possible values: Disab
 
 ```yaml
 Type: SharingCapabilities
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -133,7 +141,7 @@ Specifies the storage quota for this site collection in megabytes. This value mu
 
 ```yaml
 Type: Int
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -145,7 +153,7 @@ Specifies the warning level for the storage quota in megabytes. This value must 
 
 ```yaml
 Type: Int
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -157,7 +165,7 @@ Specifies the title of the site
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -181,7 +189,7 @@ Specifies the quota for this site collection in Sandboxed Solutions units. This 
 
 ```yaml
 Type: Double
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -193,7 +201,7 @@ Specifies the warning level for the resource quota. This value must not exceed t
 
 ```yaml
 Type: Double
-Parameter Sets: (All)
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named

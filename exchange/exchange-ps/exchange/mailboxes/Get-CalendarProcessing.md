@@ -23,6 +23,8 @@ Get-CalendarProcessing [-Identity] <MailboxIdParameter> [-DomainController <Fqdn
 ```
 
 ## DESCRIPTION
+For details about the properties that are returned in the output of this cmdlet, see Set-CalendarProcessing (https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-calendarprocessing).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -103,7 +105,7 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None

@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsNetworkBWAlternatePath
 schema: 2.0.0
 ---
@@ -64,7 +64,7 @@ Set the parameter to True to allow calls made in the media of the modality speci
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ Full data type: Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfigur
 Type: BWPolicyModality
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -113,3 +113,4 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 [New-CsNetworkRegion](New-CsNetworkRegion.md)
 
 [Set-CsNetworkRegion](Set-CsNetworkRegion.md)
+

@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsServerPatchVersion
 schema: 2.0.0
 ---
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsServerPatchVersion
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns the Skype for Business Server Component Version. This cmdlet was introduced in Skype for Business Server 2015 November 2015 Cumulative Update.
 
 ## SYNTAX
 
@@ -17,28 +17,29 @@ Get-CsServerPatchVersion [-Report <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet returns the Skype for Business Server version for each component installed on the server. It replaces the previous methods (Windows Registry and WMI Classes). 
+You should have installed November 2015 Cumulative Update (6.0.9319.102) for Skype for Business Server 2015 or later.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-CsServerPatchVersion
 ```
 
-{{ Add example description here }}
+This example returns the version for each component installed on the Skype for Business Server.
 
 
 ## PARAMETERS
 
 ### -Report
-{{Fill Report Description}}
+Generates a log file with the result of the operation. You should specify the file name in html format.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -61,3 +62,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

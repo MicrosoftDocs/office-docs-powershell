@@ -49,6 +49,8 @@ For more information about the different move and migration scenarios, see:
 
 - Manage on-premises mailbox moves (https://technet.microsoft.com/library/jj150487.aspx)
 
+Changes made to an endpoint that affect the individual users within the batch are applied starting at the next time that the batch is processed. If you are running this cmdlet in the cloud-based service and wish to speed up the application of these settings, consider running the Set-MigrationBatch cmdlet with the -Update parameter.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -87,13 +89,13 @@ Accept wildcard characters: False
 ### -Authentication
 This parameter is available only in the cloud-based service.
 
-The Authentication parameter specifies the authentication method used by the on-premises mail server.
+The Authentication parameter specifies the authentication method used by the remote mail server.
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +165,7 @@ The ExchangeServer parameter specifies the on-premises source Exchange server fo
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +188,7 @@ The account specified must have the following permissions:
 Type: Admin | FullAccess
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +235,7 @@ The NspiServer parameter specifies the FQDN of the remote Name Service Provider 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +252,7 @@ For an IMAP migration, the Port parameter specifies the TCP port number used by 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -286,7 +288,7 @@ For a staged Exchange migration, the RpcProxyServer parameter specifies the FQDN
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +297,9 @@ Accept wildcard characters: False
 ```
 
 ### -Security
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in the cloud-based service.
+
+For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
 Type: None | Ssl | Tls
@@ -333,7 +337,7 @@ The SourceMailboxLegacyDN parameter specifies a mailbox on the target server. Us
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -350,7 +354,7 @@ The TestMailbox parameter specifies a mailbox on the target server. Use the prim
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -53,7 +53,7 @@ Continuation Token returned by the previous call.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 1
 Default value: None
@@ -68,7 +68,7 @@ Top 'n' items to be fetched sorted by ascending creation time order.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 0
 Default value: None

@@ -19,7 +19,7 @@ Add-PnPSiteCollectionAppCatalog -Site <SitePipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Add-PnPOffice365GroupToSite -Site "https://contoso.sharepoint.com/sites/FinanceTeamsite"
+Add-PnPSiteCollectionAppCatalog -Site "https://contoso.sharepoint.com/sites/FinanceTeamsite"
 ```
 
 This will add a SiteCollection app catalog to the specified site

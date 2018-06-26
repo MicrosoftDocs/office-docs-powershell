@@ -136,11 +136,13 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Office 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 When you create an Office 365 Group without using the EmailAddresses parameter, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create an Office 365 Group, the value of the DisplayName parameter is used. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
+
+The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Office 365 group ("Alias\_\<ExternalDirectoryObjectId\>"\).
 
 ```yaml
 Type: String
@@ -178,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSubscribeNewMembers
-The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Office 365 Groupto conversations and calendar events. You don't need to specify a value with this switch.
+The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Office 365 Group to conversations and calendar events. You don't need to specify a value with this switch.
 
 You need to use this switch with the SubscriptionEnabled switch.
 
@@ -452,9 +454,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the Office 365 Group. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter has been deprecated and is no longer used.
 
-The value that you use for this is parameter is appended with an underscore character (\_) and a short GUID value.
+Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Office 365 group \("Name\_\<RandomGUID\>"\). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value ("Alias\_\<ExternalDirectoryObjectId\>"\). 
 
 ```yaml
 Type: String

@@ -226,7 +226,7 @@ Accept pipeline input: False
 ```
 
 ### -Parameters
-Allows you to specify parameters that can be referred to in the template by means of the {parameter:<Key>} token. See examples on how to use this parameter.
+Allows you to specify parameters that can be referred to in the template by means of the {parameter:&lt;Key&gt;} token. See examples on how to use this parameter.
 
 ```yaml
 Type: Hashtable
@@ -263,8 +263,6 @@ Accept pipeline input: False
 
 ### -ProvisionFieldsToSubWebs
 If set fields will be provisioned if the target web is a subweb.
-
-Only applicable to: SharePoint Online, SharePoint Server 2013
 
 ```yaml
 Type: SwitchParameter

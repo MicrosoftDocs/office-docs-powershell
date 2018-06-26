@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalUrl
-The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
+The InternalURL parameter specifies the URL that's used to connect to the virtual directory from inside the firewall.
 
 This setting is also important when SSL is used. You need to set this parameter to allow the Autodiscover service to return the URL for the ECP virtual directory.
 

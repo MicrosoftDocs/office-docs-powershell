@@ -26,7 +26,7 @@ Add-AvailabilityAddressSpace -AccessMethod <PerUserFB | OrgWideFB | PublicFolder
 ```
 
 ## DESCRIPTION
-In Exchange Online, you need to run the Add-AvailabilityConfig cmdlet before you run the Add-AvailabilityAddressSpace cmdlet.
+In Exchange Online, you need to run the New-AvailabilityConfig cmdlet before you run the Add-AvailabilityAddressSpace cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -159,7 +159,7 @@ This parameter required that you created the proper trust relationships and shar
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +180,7 @@ The UseServiceAccount parameter specifies whether to use the local Availability 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None

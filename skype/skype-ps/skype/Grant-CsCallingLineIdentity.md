@@ -8,7 +8,8 @@ schema: 2.0.0
 # Grant-CsCallingLineIdentity
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Grant-CsCallingLineIdentity cmdlet to apply a Caller ID policy to a user account.
+
 
 ## SYNTAX
 
@@ -18,17 +19,18 @@ Grant-CsCallingLineIdentity [[-Identity] <Object>] [[-PolicyName] <Object>] [-Co
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed; you can then apply the Caller ID policy to a specific user.
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
 
-Insert example commands for example 1.
+Grant-CsCallingLineIdentity -PolicyName Anonymous -Identity "amos.marble@contoso.com"
 ```
 
-Insert descriptive text for example 1.
+The following example grants the Caller ID policy "Anonymous" to the user Amos Marble. 
 
 
 ## PARAMETERS
@@ -171,4 +173,5 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+
 

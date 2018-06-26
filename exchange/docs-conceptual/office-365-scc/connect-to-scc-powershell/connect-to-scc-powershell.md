@@ -3,7 +3,7 @@ title: "Connect to Office 365 Security &amp; Compliance Center PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: serdars
-ms.date: 12/13/2017
+ms.date: 5/9/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-security-and-compliance
@@ -70,9 +70,12 @@ For more information about the Security &amp; Compliance Center, see [Office 365
     $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
-    **Note**: For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`
+    **Notes**:
+    - For Office 365 Germany, use the _ConnectionUri_ value: `https://ps.compliance.protection.outlook.de/powershell-liveid/`
     
-3. Run the following command.
+    - If you want to connect to Security & Compliance Center PowerShell in the same window as an active Exchange Online PowerShell connection, you need to add `-Prefix "CC"` to the end of this command to prevent cmdlet name collisions (both environments share some cmdlets with the same names).
+    
+3. Run the following command:
     
     ```
     Import-PSSession $Session
@@ -98,7 +101,13 @@ If you receive errors, check the following requirements:
 - To help prevent denial-of-service (DoS) attacks, you're limited to three open remote PowerShell connections to the Security &amp; Compliance Center.
     
 - TCP port 80 traffic needs to be open between your local computer and Office 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
-    
+
+- The **New-PSSession** command (Step 2) might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
+
+   `The request for the Windows Remote Shell with ShellId <ID> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.`
+
+   To fix the issue, use an SNAT pool that contains a single IP address, or force the use of a specific IP address for connections to the Security & Compliance PowerShell endpoint.
+ 
 ## See also
 
 The cmdlets that you use in this topic are Windows PowerShell cmdlets. For more information about these cmdlets, see the following topics.

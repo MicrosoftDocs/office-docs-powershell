@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPGroup
 
 ## SYNOPSIS
-Returns a specific group or all groups.
+Returns a specific SharePoint group or all SharePoint groups in site.
 
 ## SYNTAX 
 
@@ -52,14 +52,14 @@ Get-PnPGroup [-Includes <String[]>]
 Get-PnPGroup
 ```
 
-Returns all groups
+Returns all SharePoint groups in a site
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Get-PnPGroup -Identity 'My Site Users'
 ```
 
-This will return the group called 'My Site Users' if available
+This will return the group called 'My Site Users' in if available in the current site
 
 ### ------------------EXAMPLE 3------------------
 ```powershell

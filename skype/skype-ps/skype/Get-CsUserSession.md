@@ -13,7 +13,7 @@ Use the Get-CsUserSession cmdlet to retrieve user session information within a s
 ## SYNTAX
 
 ```
-Get-CsUserSession [-StartTime <Object>] [-User <Object>] [-EndTime <Object>] [-AsJob] [<CommonParameters>]
+Get-CsUserSession -StartTime <DateTimeOffset> -User <String> [-EndTime <DateTimeOffset>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +27,7 @@ To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has 
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-Get-CsUserSession -User "Ken.Myer@Contoso.com" -StartDate "02/22/2016 07:30:15 PM"
+Get-CsUserSession -User "Ken.Myer@Contoso.com" -StartTime "02/22/2016 07:30:15 PM"
 ```
 
 This example returns user session information for Ken Myer from "02/22/2016 07:30:15 PM" to the current date.
@@ -43,7 +43,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ### -User
 Specifies the user whose session data will be retrieved.
 The input format is any form of user URI defined in Skype for Business Server 2015.
-For instance: -User "Ken.Myer@Contoso.com".
+For instance: `-User "Ken.Myer@Contoso.com"`.
 
 ```yaml
 Type: Object
@@ -61,7 +61,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -116,3 +116,4 @@ The Get-CsUserSession cmdlet returns an instance of the Microsoft.Rtc.Management
 ## NOTES
 
 ## RELATED LINKS
+

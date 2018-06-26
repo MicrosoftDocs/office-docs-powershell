@@ -35,10 +35,10 @@ Adds a navigation node to the quicklaunch. The navigation node will have the tit
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Add-PnPNavigationNode -Title "Contoso USA" -Url "http://contoso.sharepoint.com/sites/contoso/usa/" -Location "QuickLaunch" -Header "Contoso"
+Add-PnPNavigationNode -Title "Contoso USA" -Url "http://contoso.sharepoint.com/sites/contoso/usa/" -Location "QuickLaunch" -Parent 2012
 ```
 
-Adds a navigation node to the quicklaunch. The navigation node will have the title "Contoso USA", will link to the url "http://contoso.sharepoint.com/sites/contoso/usa/" and will have "Contoso" as a parent navigation node.
+Adds a navigation node to the quicklaunch. The navigation node will have the title "Contoso USA", will link to the url "http://contoso.sharepoint.com/sites/contoso/usa/" and will have the node with id 2012 as a parent navigation node.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
@@ -87,20 +87,6 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -Header
-Optionally value of a header entry to add the menu item to.
-
-Only applicable to: SharePoint Server 2016
-
-```yaml
-Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
 ### -Location
 The location of the node to add. Either TopNavigationBar, QuickLaunch, SearchNav
 
@@ -115,8 +101,6 @@ Accept pipeline input: False
 
 ### -Parent
 The key of the parent. Leave empty to add to the top level
-
-Only applicable to: SharePoint Online, SharePoint Server 2013
 
 ```yaml
 Type: Int

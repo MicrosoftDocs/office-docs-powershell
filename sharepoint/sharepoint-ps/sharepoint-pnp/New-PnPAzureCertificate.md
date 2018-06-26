@@ -27,25 +27,38 @@ New-PnPAzureCertificate [-CommonName <String>]
                         [-OrganizationUnit <String>]
                         [-Out <String>]
                         [-ValidYears <Int>]
+                        [-CertificatePassword <SecureString>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Generate-PnPAzureCertificate
+New-PnPAzureCertificate
 ```
 
 This will generate a default self-signed certificate named "pnp.contoso.com" valid for 10 years.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Generate-PnPAzureCertificate -CommonName "My Certificate" -ValidYears 30 
+New-PnPAzureCertificate -CommonName "My Certificate" -ValidYears 30 
 ```
 
 This will output a certificate named "My Certificate" which expires in 30 years from now.
 
 ## PARAMETERS
+
+### -CertificatePassword
+Optional certificate password
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+
+Required: False
+Position: 8
+Accept pipeline input: False
+```
 
 ### -CommonName
 Common Name (e.g. server FQDN or YOUR name) [pnp.contoso.com]
@@ -139,7 +152,7 @@ Type: Int
 Parameter Sets: (All)
 
 Required: False
-Position: 6
+Position: 7
 Accept pipeline input: False
 ```
 
