@@ -10,13 +10,12 @@ schema: 2.0.0
 # Add-SPMTTask
 
 ## SYNOPSIS
-Add a new migration task to the registered migration session. Currently there are three different types of tasks allowed: File share task, SharePoint task and a JSON defined task.  
+Add a new migration task to the registered migration session. Currently there are three different types of tasks allowed: File share task, SharePoint task and JSON defined task.  
 ## SYNTAX
 
 ### FileShare
 ```
-Add-SPMTTask -FileShareSource <String> -TargetSiteUrl <String> -TargetList <String>
- [-TargetListRelativePath <String>]
+Add-SPMTTask -FileShareSource <String> -TargetSiteUrl <String> -TargetList <String> [-TargetListRelativePath <String>]
 ```
 ### SharePointMigrateAll
 ``` 
@@ -25,37 +24,38 @@ Add-SPMTTask -SharePointSourceCredential <PSCredential> -SharePointSourceSiteUrl
 
 ### SharePointMigrateSelected
 ```
- Add-SPMTTask -SharePointSourceSiteUrl <string> -SharePointSourceCredential <pscredential> -SourceList <string> [-SourceListRelativePath <string>] -TargetSiteUrl <string> -TargetList <string> [-TargetListRelativePath <string>]
+ Add-SPMTTask -SharePointSourceSiteUrl <string> -SharePointSourceCredential <PSCredential> -SourceList <string> [-SourceListRelativePath <string>] -TargetSiteUrl <string> -TargetList <string> [-TargetListRelativePath <string>]
 ```
 
 ### Json
 ```
-Add-SPMTTask [-JsonDefinition <string>] 
-Add-SPMTTask -SharePointSourceCredential <PSCredential> [-JsonDefinition <string>]   
-Json defined migration task sample 1:
-Customer scenario:migrate data from File Share or local disk to SPO. 
+Add-SPMTTask [-JsonDefinition <string>] # This cmdlet is for File Share migration
+
+Add-SPMTTask -SharePointSourceCredential <PSCredential> [-JsonDefinition <string>] # This cmdlet is for SharePoint migration
+
+Json sample for File Share migration:
 {
-"SourcePath":"\\LocalOrFileShareDataSource",
-         "TargetPath":"https://YourTargetSite",
-         "TargetList":"Documents",
-         "TargetListRelativePath":"subfolder"
-      }
-Json defined migration task sample 2:
-Customer scenario:migrate on-prem site to SPO site.  
-{  
+   "SourcePath":"\\LocalOrFileShareDataSource",
+   "TargetPath":"https://YourTargetSite",
+   "TargetList":"Documents",
+   "TargetListRelativePath":"subfolder"
+}
+
+Json sample for SharePoint migration(lists only): 
+{
    "SourcePath":"http://YourOnPremSite",
    "TargetPath":"https://YourTargetSite",
-   "Items":{  
-      "Lists":[  
-         {  
+   "Items":{
+      "Lists":[
+         {
             "SourceList":"sourceListName",
             "TargetList":"targetListName"
-         }
+         } 
       ]
    }
 }
-Json defined migration task sample 3:
-Customer scenario:migrate on-prem sites with subsites to SPO. 
+
+Json sample for SharePoint migration(lists and subsites):
 {  
    "SourcePath":"http://YourOnPremSite",
    "TargetPath":"https://YourTargetSite",
@@ -84,12 +84,12 @@ Customer scenario:migrate on-prem sites with subsites to SPO.
       ]
    }
 }
-Json defined migration task sample 4:
-Customer scenario:migrate on-prem subsite to SPO subsite. 
-{  
-         "SourcePath":"http://YourOnPremSite/subsite2",
-         "TargetPath":"https://YourTargetSite/targetSubSite2"
-      }
+
+Json sample for SharePoint migration(whole site):
+{
+   "SourcePath":"http://YourOnPremSite/subsite2",
+   "TargetPath":"https://YourTargetSite/targetSubSite2"
+}
 ```
 
 ## DESCRIPTION
