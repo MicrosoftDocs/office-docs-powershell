@@ -23,7 +23,7 @@ You can use PowerShell to find the permissions required to run any Exchange or E
     
 - Basically, you need to be an administrator to complete this procedure. Specifically, you need access to the **Get-ManagementRole** and **Get-ManagementRoleAssignment** cmdlets. By default, access to these cmdlets is granted by the View-Only Configuration or Role Management roles, which are assigned to the View-Only Organization Management and Organization Management role groups.
     
-- The procedures in this topic don't work in the Office 365 Security &amp; Compliance Center. For more information about permissions in the Security &amp; Compliance Center, see [Permissions in Office 365 Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+- The procedures in this topic don't work in the Office 365 Security & Compliance Center. For more information about permissions in the Security & Compliance Center, see [Permissions in Office 365 Compliance Center](https://go.microsoft.com/fwlink/p/?LinkId=511920).
     
 - The procedures in this topic don't work in Exchange Online Protection (EOP). For more information about permissions in EOP, see [Feature Permissions in EOP](https://technet.microsoft.com/library/34674847-a6b7-4a7e-9eaa-b64f22bc150d.aspx).
     
