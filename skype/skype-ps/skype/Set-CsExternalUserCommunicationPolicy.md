@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsExternalUserCommunicationPolicy
 schema: 2.0.0
@@ -13,7 +13,7 @@ Modifies the property values of an existing external user communication policy.
 ## SYNTAX
 
 ```
-Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-AllowPresenceVisibility <Object>] [-AllowTitleVisibility <Object>] [-BypassDualWrite <Object>] [-Confirm] [-EnableFileTransfer <Object>] [-EnableP2PFileTransfer <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Set-CsExternalUserCommunicationPolicy [-EnableFileTransfer <Boolean>] [-AllowTitleVisibility <Boolean>]  [-Confirm] [-AllowPresenceVisibility <Boolean>] [-EnableP2PFileTransfer <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-WhatIf] [-Force] [-Instance <PSObject>] [-AsJob]
 ```
 
 ## DESCRIPTION
@@ -38,10 +38,10 @@ This example sets the EnableP2PFileTransfer property to False for the Global pol
 ## PARAMETERS
 
 ### -AllowPresenceVisibility
-{{Fill AllowPresenceVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -54,26 +54,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTitleVisibility
-{{Fill AllowTitleVisibility Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -102,10 +86,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileTransfer
-{{Fill EnableFileTransfer Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -121,10 +105,25 @@ Accept wildcard characters: False
 Indicates whether file transfers to Federated partners are allowed. The default value is True.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -137,13 +136,29 @@ Accept wildcard characters: False
 Unique identifier for the external user communication policy to be created.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+```yaml
+Type: PSObject
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -161,7 +176,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

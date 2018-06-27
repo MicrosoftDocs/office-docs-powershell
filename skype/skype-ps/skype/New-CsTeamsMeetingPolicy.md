@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -9,6 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
  The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
+ 
 ## SYNTAX
 
 ```
@@ -27,6 +28,9 @@ New-CsTeamsMeetingPolicy [-AppDesktopSharingMode <Object>] [-Description <Object
 The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 
 The New-CsTeamsMeetingPolicy cmdlet allows administrators to define new meeting policies that can be assigned to particular users to control Teams features related to meetings.
+
+NOTE: This feature is rolling out in waves so you may not see it until it is available to your instance.
+
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 

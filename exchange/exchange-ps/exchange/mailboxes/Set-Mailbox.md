@@ -985,7 +985,9 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - UpdateCalendarDelegation (cloud-based service only)
 
-By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, and UpdateCalendarDelegation actions performed by administrators are logged.
+- UpdateInboxRules (cloud-based service only)
+
+By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by administrators are logged.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1030,7 +1032,9 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 
 - UpdateFolderPermissions (cloud-based service only)
 
-By default, the Update, SoftDelete, HardDelete, SendAs, Create, and UpdateFolderPermissions actions performed by delegates are logged.
+- UpdateInboxRules (cloud-based service only)
+
+By default, the Update, SoftDelete, HardDelete, SendAs, Create, UpdateFolderPermissions, and UpdateInboxRules actions performed by delegates are logged.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1111,7 +1115,9 @@ The AuditOwner parameter specifies the mailbox operations to log for mailbox own
 
 - UpdateCalendarDelegation (cloud-based service only)
 
-In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions and UpdateCalendarDelegation action performed by the owner is logged by default.
+- UpdateInboxRules (cloud-based service only)
+
+In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by the owner are logged by default.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -4221,13 +4227,13 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSendOnBehalfEnabled
-**Note**: This parameter is available only for shared mailboxes.
+**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes.
 
-The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a shared mailbox by users that have the "send on behalf of" permission. Valid values are:
+The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send on behalf of" permission. Valid values are:
 
-- $true: When a user sends a message from the shared mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
+- $true: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
 
-- $false: When a user sends a message from the shared mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $false: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
 You give users permission to send on behalf of a mailbox by using the GrantSendOnBehalfTo parameter on the mailbox.
 
@@ -4244,13 +4250,13 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSentAsEnabled
-**Note**: This parameter is available only for shared mailboxes.
+**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes.
 
-The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a shared mailbox by users that have the "send as" permission. Valid values are:
+The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send as" permission. Valid values are:
 
-- $true: When a user sends a message from the shared mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
+- $true: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
 
-- $false: When a user sends a message from the shared mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $false: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
 In Exchange Online, you give a user permission to send as a mailbox by running this command: `Add-RecipientPermission <Mailbox> -AccessRights SendAs -Trustee <User>`.
 

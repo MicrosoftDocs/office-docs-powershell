@@ -1776,9 +1776,9 @@ This parameter is available only in the cloud-based service.
 
 The ThirdPartyAttachmentsEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Google Drive) attachments in Outlook on the web. Valid values are:
 
-- $true: Third-party attachments are enabled. Users can connect their third-party file sharing accounts and share files over email. This is the default value.
+- $true: Third-party attachments are enabled. Users can connect their third-party file sharing accounts and share files over email.
 
-- $false: Third-party attachments are disabled. Users can't connect their third-party file sharing accounts or share files over email.
+- $false: Third-party attachments are disabled. Users can't connect their third-party file sharing accounts or share files over email. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -1787,7 +1787,7 @@ Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsExternalUserCommunicationPolicy
 schema: 2.0.0
@@ -15,7 +15,7 @@ Assigns an external user communication policy to one or more users or groups.
 ## SYNTAX
 
 ```
-Grant-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm] [-DomainController <Object>] [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsExternalUserCommunicationPolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>] [-PassThru] [-Global] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +25,7 @@ You can check whether a user has been granted an external user communication pol
 
 ## EXAMPLES
 
-### Example 1 
+### -------------------------- Example 1 -------------------------- 
 
 ```
 PS C:\> Grant-CsExternalUserCommunicationPolicy -Identity "Ken Myer" -PolicyName BlockExternalP2PFileTransfer
@@ -40,16 +40,14 @@ PS C:\> Get-CsOnlineUser -Filter {City -eq "Redmond"} | Grant-CsExternalUserComm
 
 This example assigns the external user communication policy with the Identity BlockExternalP2PFileTransfer to all users in the city of Redmond. The first part of the command calls the Get-CsOnlineUser cmdlet to retrieve all users enabled for Skype for Business Online from the specified city. This collection of users is then piped to the Grant-CsExternalUserCommunicationPolicy cmdlet, which assigns the policy BlockExternalP2PFileTransfer to each of these users.
 
-
 ## PARAMETERS
 
 ### -PolicyName
 
 The name (Identity) of the external user communication policy to be assigned to the user. (Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName.)
 
-
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -78,10 +76,10 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -99,7 +97,7 @@ Indicates the Identity of the user account to be retrieved. User Identities can 
 You can use the asterisk (*) wildcard character when using the display name as the user Identity. For example, the Identity "*Smith" returns all the users who have a display name that ends with the string value "Smith".
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -139,7 +137,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -179,6 +177,21 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

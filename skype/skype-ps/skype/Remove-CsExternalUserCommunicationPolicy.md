@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Remove-CsExternalUserCommunicationPolicy
 schema: 2.0.0
@@ -13,7 +13,7 @@ Removes the specified external user communication policy.
 ## SYNTAX
 
 ```
-Remove-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Remove-CsExternalUserCommunicationPolicy [[-Identity] <XdsIdentity>] [-Confirm] [-Force] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 
 ```
 
@@ -37,22 +37,6 @@ PS C:\> Get-CsExternalUserCommunicationPolicy -Filter tag* | Remove-CsExternalUs
 This example removes all the external user communication policies that can be assigned to specific users. First the `Get-CsExternalUserCommunicationPolicy` cmdlet is called with a Filter of tag*, which retrieves all the per-user policies excluding Global policy. That collection of policies is then piped to the `Remove-CsExternalUserCommunicationPolicy` cmdlet to be removed.
 
 ## PARAMETERS
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
@@ -90,7 +74,7 @@ Accept wildcard characters: False
 Unique identifier for the external user communication policy to be created.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -114,7 +98,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

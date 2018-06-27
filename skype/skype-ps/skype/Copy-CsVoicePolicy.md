@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online
 title: Copy-CsVoicePolicy
 schema: 2.0.0
