@@ -9,9 +9,7 @@ monikerRange: "exchonline-ps || eop-ps"
 # Get-AdvancedThreatProtectionDocumentDetail
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
-
-Use the Get-AdvancedThreatProtectionDocumentDetail cmdlet to view .
+This cmdlet is available only in the cloud-based service. Use the Get-AdvancedThreatProtectionDocumentDetailReport cmdlet to view the results of Office 365 Advanced Threat Protection (ATP) actions for files in SharePoint Online, OneDrive for Business and Microsoft Teams in your cloud-based organization. For more information about this feature, see article at: https://go.microsoft.com/fwlink/?linkid=857638
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -54,21 +52,7 @@ The Action parameter filters the results by the action taken on the attachment o
 
 - Allow
 
-- AllowRedirect
-
 - BlockAccess
-
-- BlockRedirect
-
-- BypassMessage
-
-- BypassMessageSystem
-
-- ContentReplaced
-
-- InfectedAllowed
-
-- ReplaceRedirect
 
 ```yaml
 Type: MultiValuedProperty
@@ -115,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type. The event type you specify must correspond to the report. For example, you can only specify malware filter events for malware reports.
+The EventType parameter filters the report by the event type. The event type you specify must correspond to the report. For example, you can only specify "Anti-malware engine" or "Advanced Threat Protection" events for malware reports.
 
 You can specify multiple values separated by commas.
 
