@@ -172,7 +172,7 @@ The EventType parameter filters the report by the event type. Valid values are:
 
 - Message passed
 
-- URL ZAP
+- Phish ZAP
 
 - User impersonation\*
 
