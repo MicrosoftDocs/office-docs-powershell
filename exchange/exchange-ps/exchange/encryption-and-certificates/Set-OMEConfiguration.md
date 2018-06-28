@@ -19,8 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-ClientEncryptionEnabled <$true | $false>]
- [-DisclaimerText <String>] [-EmailText <String>] [-ExpirationOptionEnabled <$true | $false>] [-Image <Byte[]>]
- [-OTPEnabled <$true | $false>] [-PortalText <String>] [<CommonParameters>]
+ [-DisclaimerText <String>] [-EmailText <String>] [-ExpirationOptionEnabled <$true | $false>] [-Image <Byte[]>] [-IntroductionText <String>] [-OTPEnabled <$true | $false>] [-PortalText <String>] [-ReadButton <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -164,6 +163,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IntroductionText
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OTPEnabled
 The OTPEnabled parameter specifies whether to allow recipients to use a one-time passcode to view encrypted messages. Valid values are:
 
@@ -187,6 +200,20 @@ Accept wildcard characters: False
 The PortalText parameter specifies the text that appears at the top of the encrypted mail viewing portal. The maximum length is 128 characters.
 
 To remove existing text and use the default value, use the value $null for this parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadButton
 
 ```yaml
 Type: String
