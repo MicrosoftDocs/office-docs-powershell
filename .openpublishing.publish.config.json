@@ -28,8 +28,6 @@
       "monikerPath": [
         "mapping/monikerMapping.json"
       ]
-<<<<<<< HEAD
-=======
     },
     {
       "docset_name": "officewebapps-ps",
@@ -233,7 +231,6 @@
       "monikerPath": [
         "mapping/monikerMapping.json"
       ]
->>>>>>> master
     }
   ],
   "notification_subscribers": [],
