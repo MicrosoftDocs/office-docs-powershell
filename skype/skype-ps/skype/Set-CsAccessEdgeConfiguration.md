@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAccessEdgeConfiguration
 schema: 2.0.0
 ---
@@ -115,7 +115,7 @@ However, if you prefer, you can use the following syntax to modify the global se
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -131,7 +131,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ This property also determines whether internal users can communicate with users 
 Type: Boolean
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ Note that you must delete all your hosting providers and all your public provide
 Type: String
 Parameter Sets: DefaultRoute
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -223,7 +223,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -243,7 +243,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ Must be set to True if the default route requires a public instant messaging lic
 Type: Boolean
 Parameter Sets: DefaultRoute
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -276,7 +276,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -294,7 +294,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ This parameter should not be changed unless you are instructed to do so by Micro
 Type: UInt32
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -330,7 +330,7 @@ This is the default routing method.
 Type: SwitchParameter
 Parameter Sets: DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -355,7 +355,7 @@ If no verification header is present then the message will be marked as unverifi
 Type: VerificationLevelType
 Parameter Sets: DefaultRoute
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -371,7 +371,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -387,7 +387,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -403,7 +403,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -421,7 +421,7 @@ This parameter should not be changed unless you are instructed to do so by Micro
 Type: Boolean
 Parameter Sets: DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -439,7 +439,7 @@ If you include the UseDefaultRouting parameter then you must also include the De
 Type: SwitchParameter
 Parameter Sets: DefaultRoute
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -455,7 +455,7 @@ The default value is 20.
 Type: UInt32
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -471,7 +471,7 @@ The default value is 60.
 Type: UInt32
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -487,7 +487,7 @@ The default value is 20.
 Type: UInt32
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -508,7 +508,7 @@ Allowed values are:
 Type: VerificationLevelType
 Parameter Sets: DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -525,7 +525,7 @@ When set to True (the default value), enables user enumeration protection for Di
 Type: Boolean
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -541,7 +541,7 @@ The default value is False ($False).
 Type: Boolean
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -558,7 +558,7 @@ The default value is 1000.
 Type: UInt32
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -575,7 +575,7 @@ The default value is 1000.
 Type: UInt32
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -592,7 +592,7 @@ The default value is 500.
 Type: UInt32
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -609,7 +609,7 @@ SRV records are used to specify service locations and port numbers.
 Type: UInt32
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -626,7 +626,7 @@ This service enables Skype for Business to search for Skype contacts.
 Type: String
 Parameter Sets: Identity, DefaultRoute, DnsSrvRouting
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -654,3 +654,4 @@ The `Set-CsAccessEdgeConfiguration` cmdlet does not return any objects or values
 ## RELATED LINKS
 
 [Get-CsAccessEdgeConfiguration](Get-CsAccessEdgeConfiguration.md)
+

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsGraphPolicy
 schema: 2.0.0
@@ -193,4 +193,5 @@ The Grant-CsGraphPolicy cmdlet returns an object of type Microsoft.Rtc.Managemen
 ## NOTES
 
 ## RELATED LINKS
+
 

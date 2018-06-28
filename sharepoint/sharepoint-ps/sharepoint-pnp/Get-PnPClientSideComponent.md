@@ -28,7 +28,7 @@ Returns all controls defined on the given page.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPClientSideComponent -Page Home -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
+Get-PnPClientSideComponent -Page Home -InstanceId a2875399-d6ff-43a0-96da-be6ae5875f82
 ```
 
 Returns a specific control defined on the given page.

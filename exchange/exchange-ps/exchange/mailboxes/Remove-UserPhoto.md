@@ -174,7 +174,7 @@ Using this switch allows photo requests to search Active Directory for a photo. 
 Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None

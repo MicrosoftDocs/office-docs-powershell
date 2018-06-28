@@ -54,7 +54,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ### -----------------------EXAMPLE 1-----------------------------
 ```
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
-Set-SPOTenant -NoAcessRedirectUrl 'http://www.contoso.com'
+Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
 ```
 This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to http://www.contoso.com. 
 
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchResolveExactEmailOrUPN
-Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired.
+Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired. This also does not allow SharePoint users to search for security groups or SharePoint groups.
 
 SharePoint Administrators will still be able to use starts with or partial name matching when enabled.
 

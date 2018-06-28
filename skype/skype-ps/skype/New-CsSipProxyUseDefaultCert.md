@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSipProxyUseDefaultCert
 schema: 2.0.0
 ---
@@ -92,3 +92,4 @@ The `New-CsSipProxyUseDefaultCert` cmdlet creates new instances of the Microsoft
 ## RELATED LINKS
 
 [New-CsSipProxyTLS](New-CsSipProxyTLS.md)
+

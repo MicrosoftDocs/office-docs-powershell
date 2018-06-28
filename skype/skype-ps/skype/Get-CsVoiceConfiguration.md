@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVoiceConfiguration
 schema: 2.0.0
 ---
@@ -52,7 +52,7 @@ The only possible value is Global.
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -68,7 +68,7 @@ There can only be one instance of this object, so this parameter does nothing.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Retrieves the voice configuration from the local replica of the Central Manageme
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -115,3 +115,4 @@ This cmdlet returns an instance of the Microsoft.Rtc.Management.WritableConfig.P
 [Set-CsVoiceConfiguration](Set-CsVoiceConfiguration.md)
 
 [Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)
+

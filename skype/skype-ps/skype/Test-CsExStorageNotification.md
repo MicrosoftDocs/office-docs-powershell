@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsExStorageNotification
 schema: 2.0.0
 ---
@@ -47,7 +47,7 @@ SIP address of the Exchange Server mailbox where the test item should be created
 Type: String
 Parameter Sets: (All)
 Aliases: s
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -68,7 +68,7 @@ valid values are:
 Type: String
 Parameter Sets: (All)
 Aliases: b
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ When present, the test item will be deleted from the Exchange mailbox at the end
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Suppresses the display of any non-fatal error message that might arise when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ This parameter is required if the Binding is set to NetTCP.
 Type: String
 Parameter Sets: (All)
 Aliases: h
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -146,3 +146,4 @@ The `Test-CsExStorageNotification` cmdlet returns instances of the Microsoft.Rtc
 ## RELATED LINKS
 
 [Test-CsExStorageConnectivity](Test-CsExStorageConnectivity.md)
+

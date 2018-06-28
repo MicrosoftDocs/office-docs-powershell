@@ -34,7 +34,7 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
   
 - The list might include:
     
-  - Properties that are only used in one type of environment: Microsoft Office 365, on-premises Exchange, or hybrid. The property might exist on recipient objects in all environments, but the value is only meaningful (a value other than blank or  `None`) in one type of environment.
+  - Properties that are only used in one type of environment: Microsoft Office 365, on-premises Exchange, or hybrid. The property might exist on recipient objects in all environments, but the value is only meaningful (a value other than blank or `None`) in one type of environment.
     
   - Properties that are present, but correspond to features that are no longer used in Exchange 2016.
     
@@ -44,11 +44,11 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
     
 - You typically use the object's name for properties that require a valid object value (for example, a mailbox, a distribution group, or an email address policy, but the property might also accept the object's distinguished name (DN) or globally unique identifier (GUID). To find the object's DN or GUID, use the **Get-** cmdlet that corresponds to the object's type (for example, `Get-EmailAddressPolicy | Format-List Name,DistinguishedName,GUID`).
     
-- Text string properties that accept wildcard characters require the  `-like` operator (for example, `Property -like '*abc'`).
+- Text string properties that accept wildcard characters require the `-like` operator (for example, `Property -like '*abc'`).
     
 - The Value column in the table describes the acceptable values for the  *filter*  , not necessarily for the property itself. For example, a property might obviously contain a date or numeric value, but when you use that property in a filter, it might be treated like a text string (no value check, and wildcards are supported).
     
-- To look for blank or non-blank property values, use the value  `$null` (for example, `Property -eq $null` or `Property -ne $null`).
+- To look for blank or non-blank property values, use the value `$null` (for example, `Property -eq $null` or `Property -ne $null`).
     
 - For more information about creating filters in recipient commands, see [Additional OPATH syntax information](https://technet.microsoft.com/library/b22affa2-ef51-4e4e-b59c-a58620baf8aa.aspx#OPATH).
     
@@ -75,17 +75,17 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _ArchiveDomain_ <br/> | _msExchArchiveAddress_ <br/> |String (wildcards accepted).  <br/> ||
 | _ArchiveGuid_ <br/> | _msExchArchiveGUID_ <br/> |String (wildcards accepted).  <br/> ||
 | _ArchiveName_ <br/> | _msExchArchiveName_ <br/> |String (wildcards accepted).  <br/> ||
-| _ArchiveQuota_ <br/> | _msExchArchiveQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `300MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
-| _ArchiveWarningQuota_ <br/> | _msExchArchiveWarnQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `300MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _ArchiveQuota_ <br/> | _msExchArchiveQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `300MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _ArchiveWarningQuota_ <br/> | _msExchArchiveWarnQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `300MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _ArchiveRelease_ <br/> | _msExchArchiveRelease_ <br/> |String (wildcards accepted).  <br/> ||
 | _ArchiveState_ <br/> |n/a  <br/> | `None` (0), `Local` (1), `HostedProvisioned` (2), `HostedPending` (3), or `OnPremise` (4). <br/> ||
 | _ArchiveStatus_ <br/> | _msExchArchiveStatus_ <br/> | `None` (0) or `Active` (1). <br/> ||
 | _AssistantName_ <br/> | _msExchAssistantName_ <br/> |String (wildcards accepted).  <br/> |The name of the recipient's assistant.  <br/> |
 | _AuditEnabled_ <br/> | _msExchMailboxAuditEnable_ <br/> |Boolean ( `$true` or `$false`)  <br/> ||
-| _AuditLogAgeLimit_ <br/> | _msExchMailboxAuditLogAgeLimit_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Blank or non-blank.  <br/> |The value of this property is a time span:  `dd.hh:mm:ss` where `dd` = days, `hh` = hours, `mm` = minutes, and `ss` = seconds. <br/> |
+| _AuditLogAgeLimit_ <br/> | _msExchMailboxAuditLogAgeLimit_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Blank or non-blank.  <br/> |The value of this property is a time span: `dd.hh:mm:ss` where `dd` = days, `hh` = hours, `mm` = minutes, and `ss` = seconds. <br/> |
 | _AuthenticationPolicy_ <br/> | _msExchAuthPolicyLink_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> ||
 | _C_ <br/> | _C_ <br/> |String (wildcards accepted).  <br/> |This property contains the two-letter country/region designation from International Organization for Standardization (ISO) 3166. For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779).  <br/> |
-| _CalendarLoggingQuota_ <br/> | _msExchCalendarLoggingQuota_ <br/> |Dynamic distribution groups:  `Unlimited` or a byte quantified size value (for example, `300MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others:  `Unlimited`, or blank/non-blank.  <br/> ||
+| _CalendarLoggingQuota_ <br/> | _msExchCalendarLoggingQuota_ <br/> |Dynamic distribution groups: `Unlimited` or a byte quantified size value (for example, `300MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: `Unlimited`, or blank/non-blank.  <br/> ||
 | _CalendarRepairDisabled_ <br/> | _msExchCalendarRepairDisabled_ <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _Certificate_ <br/> | _userCertificate_ <br/> | `System.Byte[]` <br/> |This property contains the DER-encoded X509v3 certificates that are issued to the user.  <br/> |
 | _CertificateSubject_ <br/> | _n/a_ <br/> | `X509:<I>X500Issuer<S>X500Subject` (for example, `X509:<I>C=US,O=InternetCA,CN=APublicCertificateAuthority<S>C=US,O=Fabrikam,OU=Sales,CN=Jeff Smith`)  <br/> |The X509 certificate that's published for the user account (visible on the **Published Certificates** tab in Active Directory Users and Computers). <br/> |
@@ -112,15 +112,15 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _EcpEnabled_ <br/> |n/a  <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _ElcExpirationSuspensionEndDate_ <br/> | _msExchELCExpirySuspensionEnd_ <br/> |Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server.  <br/> Others: Blank or non-blank.  <br/> |This property contains a date-time value.  <br/> |
 | _ElcExpirationSuspensionStartDate_ <br/> | _msExchELCExpirySuspensionStart_ <br/> |Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server.  <br/> Others: Blank or non-blank.  <br/> |This property contains a date-time value.  <br/> |
-| _ElcMailboxFlags_ <br/> | _msExchELCMailboxFlags_ <br/> | `None` (0), `ExpirationSuspended` (1), `ElcV2` (2), `DisableCalendarLogging` (4), <br/>  `LitigationHold` (8), `SingleItemRecovery` (16), `ValidArchiveDatabase` (32), `ShouldUseDefaultRetentionPolicy` (128), `EnableSiteMailboxMessageDedup` (256), `ElcProcessingDisabled` (512), or `ComplianceTagHold` (1024). <br/> ||
+| _ElcMailboxFlags_ <br/> | _msExchELCMailboxFlags_ <br/> | `None` (0), `ExpirationSuspended` (1), `ElcV2` (2), `DisableCalendarLogging` (4), <br/> `LitigationHold` (8), `SingleItemRecovery` (16), `ValidArchiveDatabase` (32), `ShouldUseDefaultRetentionPolicy` (128), `EnableSiteMailboxMessageDedup` (256), `ElcProcessingDisabled` (512), or `ComplianceTagHold` (1024). <br/> ||
 | _EmailAddresses_ <br/> | _proxyAddresses_ <br/> |String (wildcards accepted).  <br/> |This property contains the recipient's email addresses (the primary email address and all proxy addresses).  <br/> |
 | _EmailAddressPolicyEnabled_ <br/> |n/a  <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _EntryId_ <br/> | _msExchPublicFolderEntryId_ <br/> |String (wildcards accepted).  <br/> ||
 | _EwsApplicationAccessPolicy_ <br/> | _msExchEwsApplicationAccessPolicy_ <br/> | `EnforceAllowList` or `EnforceBlockList`.  <br/> ||
 | _EwsEnabled_ <br/> | _msExchEwsEnabled_ <br/> |Integer  <br/> ||
 | _ExchangeGuid_ <br/> | _msExchMailboxGuid_ <br/> |String (wildcards accepted).  <br/> ||
-| _ExchangeUserAccountControl_ <br/> | _msExchUserAccountControl_ <br/> |For valid values, see [ADS_USER_FLAG_ENUM enumeration](https://go.microsoft.com/fwlink/p/?linkid=190424). The integer values will work as described. Most of the text values won't work as described (even if you remove  `ADS_UF` and all underscores). <br/> ||
-| _ExchangeVersion_ <br/> | _msExchVersion_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others:  `ExchangeObjectVersion` values. <br/> ||
+| _ExchangeUserAccountControl_ <br/> | _msExchUserAccountControl_ <br/> |For valid values, see [ADS_USER_FLAG_ENUM enumeration](https://go.microsoft.com/fwlink/p/?linkid=190424). The integer values will work as described. Most of the text values won't work as described (even if you remove `ADS_UF` and all underscores). <br/> ||
+| _ExchangeVersion_ <br/> | _msExchVersion_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: `ExchangeObjectVersion` values. <br/> ||
 | _ExpansionServer_ <br/> | _msExchExpansionServerName_ <br/> |String (wildcards accepted).  <br/> ||
 | _ExtensionCustomAttribute1_ to _ExtensionCustomAttribute5_ <br/> | _msExchExtensionCustomAttribute1_ to _msExchExtensionCustomAttribute5_ <br/> |String (wildcards accepted).  <br/> ||
 | _ExternalDirectoryObjectId_ <br/> | _msExchExternalDirectoryObjectId_ <br/> |String (wildcards accepted).  <br/> ||
@@ -157,9 +157,9 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _IsSecurityPrincipal_ <br/> |n/a  <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _IsSoftDeletedByDisable_ <br/> |n/a  <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _IsSoftDeletedByRemove_ <br/> |n/a  <br/> |Boolean ( `$true` or `$false`)  <br/> ||
-| _IssueWarningQuota_ <br/> | _mDBStorageQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `300MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
-| _JournalArchiveAddress_ <br/> |n/a  <br/> |An SMTP email address (for example,  `julia@contoso.com`).  <br/> ||
-| _LanguagesRaw_ <br/> | _msExchUserCulture_ <br/> |String (wildcards accepted).  <br/> |This property contains the language preference for this mailbox in the format  `<ISO 639 two-letter culture code>-<ISO 3166 two-letter subculture code>`. For example, United States English is  `en-US`. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?LinkID=255174).  <br/> |
+| _IssueWarningQuota_ <br/> | _mDBStorageQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `300MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _JournalArchiveAddress_ <br/> |n/a  <br/> |An SMTP email address (for example, `julia@contoso.com`).  <br/> ||
+| _LanguagesRaw_ <br/> | _msExchUserCulture_ <br/> |String (wildcards accepted).  <br/> |This property contains the language preference for this mailbox in the format `<ISO 639 two-letter culture code>-<ISO 3166 two-letter subculture code>`. For example, United States English is `en-US`. For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/p/?LinkID=255174).  <br/> |
 | _LastExchangeChangedTime_ <br/> | _msExchLastExchangeChangedTime_ <br/> |Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server.  <br/> Others: Blank or non-blank.  <br/> ||
 | _LastName_ <br/> | _sn_ <br/> |String (wildcards accepted).  <br/> ||
 | _LdapRecipientFilter_ <br/> | _msExchDynamicDLFilter_ <br/> |String (wildcards accepted).  <br/> ||
@@ -183,8 +183,8 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _MapiRecipient_ <br/> | _mAPIRecipient_ <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _MaxBlockedSenders_ <br/> | _msExchMaxBlockedSenders_ <br/> | `Unlimited` or an integer. <br/> ||
 | _MaxSafeSenders_ <br/> | _msExchMaxSafeSenders_ <br/> | `Unlimited` or an integer. <br/> ||
-| _MaxReceiveSize_ <br/> | _delivContLength_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
-| _MaxSendSize_ <br/> | _submissionContLength_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _MaxReceiveSize_ <br/> | _delivContLength_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `50MB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _MaxSendSize_ <br/> | _submissionContLength_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `50MB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _MemberDepartRestriction_ <br/> | _msExchGroupDepartRestriction_ <br/> | `Closed` (0), `Open` (1), or `ApprovalRequired` (2). <br/> ||
 | _MemberJoinRestriction_ <br/> | _msExchGroupDepartRestriction_ <br/> | `Closed` (0), `Open` (1), or `ApprovalRequired` (2). <br/> ||
 | _MemberOfGroup_ <br/> | _memberOf_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> ||
@@ -197,10 +197,10 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _ModeratedBy_ <br/> | _msExchModeratedByLink_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> ||
 | _ModerationEnabled_ <br/> | _msExchEnableModeration_ <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _Name_ <br/> | _name_ <br/> |String (wildcards accepted).  <br/> |The unique name value of the recipient.  <br/> |
-| _NetID_ <br/> |n/a  <br/> |A sample value is  `1003BFFD9A0CFA03`.  <br/> |This property is populated for Office 365 mailboxes in hybrid environments.  <br/> |
+| _NetID_ <br/> |n/a  <br/> |A sample value is `1003BFFD9A0CFA03`.  <br/> |This property is populated for Office 365 mailboxes in hybrid environments.  <br/> |
 | _Notes_ <br/> | _info_ <br/> |String (wildcards accepted).  <br/> ||
-| _ObjectCategory_ <br/> | _objectCategory_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Valid Active Directory  `ObjectCategory` values. <br/> |Valid values use the format  `CN=<Type>,CN=Schema,CN=Configuration,DC=<domain>`, where _\<Type\>_ is typically `Person` or `Group` for recipients. For example, `CN=Person,CN=Schema,CN=Configuration,DC=contoso,DC=com`.  <br/> |
-| _ObjectClass_ <br/> | _objectClass_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Valid Active Directory  `ObjectCategory` values. <br/> | Common values for recipients are: `contact`,  `organizationalPerson`,  `person`,  `top`,  `group`,  `msExchDynamicDistributionList`, and  `user`.  <br/> |
+| _ObjectCategory_ <br/> | _objectCategory_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Valid Active Directory `ObjectCategory` values. <br/> |Valid values use the format `CN=<Type>,CN=Schema,CN=Configuration,DC=<domain>`, where _\<Type\>_ is typically `Person` or `Group` for recipients. For example, `CN=Person,CN=Schema,CN=Configuration,DC=contoso,DC=com`.  <br/> |
+| _ObjectClass_ <br/> | _objectClass_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Valid Active Directory `ObjectCategory` values. <br/> | Common values for recipients are: `contact`, `organizationalPerson`, `person`, `top`, `group`, `msExchDynamicDistributionList`, and `user`.  <br/> |
 | _Office_ <br/> | _physicalDeliveryOfficeName_ <br/> |String (wildcards accepted).  <br/> ||
 | _OfflineAddressBook_ <br/> | _msExchUseOAB_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> |This property contains the offline address book (OAB) that's associated with this recipient.  <br/> |
 | _OperatorNumber_ <br/> | _msExchUMOperatorNumber_ <br/> |String (wildcards accepted).  <br/> ||
@@ -223,11 +223,11 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _PopEnabled_ <br/> |n/a  <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _PostalCode_ <br/> | _postalCode_ <br/> |String (wildcards accepted).  <br/> ||
 | _PostOfficeBox_ <br/> | _postOfficeBox_ <br/> |String (wildcards accepted).  <br/> ||
-| _PreviousRecipientTypeDetails_ <br/> | _msExchPreviousRecipientTypeDetails_ <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
+| _PreviousRecipientTypeDetails_ <br/> | _msExchPreviousRecipientTypeDetails_ <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
 | _PrimaryGroupId_ <br/> | _primaryGroupId_ <br/> |Integer  <br/> |For domain users, the value of this property is typically 513, which corresponds to the Domain Users group.  <br/> |
 | _PrimarySmtpAddress_ <br/> |n/a  <br/> |String (wildcards accepted).  <br/> ||
-| _ProhibitSendQuota_ <br/> | _mDBOverQuotaLimit_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
-| _ProhibitSendReceiveQuota_ <br/> | _mDBOverHardQuotaLimit_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _ProhibitSendQuota_ <br/> | _mDBOverQuotaLimit_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _ProhibitSendReceiveQuota_ <br/> | _mDBOverHardQuotaLimit_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _ProtocolSettings_ <br/> | _protocolSettings_ <br/> |String (wildcards accepted).  <br/> ||
 | _PublicFolderContacts_ <br/> | _pFContacts_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> ||
 | _PurportedSearchUI_ <br/> | _msExchPurportedSearchUI_ <br/> |String (wildcards accepted).  <br/> ||
@@ -239,10 +239,10 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _RecipientDisplayType_ <br/> | _msExchRecipientDisplayType_ <br/> | `MailboxUser` (0), `DistributionGroup` (1), `PublicFolder` (2), `DynamicDistributionGroup` (3), `Organization` (4), `PrivateDistributionList` (5), `RemoteMailUser` (6). `ConferenceRoomMailbox` (7), or `EquipmentMailbox` (8). <br/> ||
 | _RecipientFilter_ <br/> | _msExchQueryFilter_ <br/> |String (wildcards accepted).  <br/> ||
 | _RecipientLimits_ <br/> | _msExchRecipLimit_ <br/> | `Unlimited` or an integer. <br/> |This property specifies the maximum number of recipients that are allowed in messages sent by the mailbox.  <br/> |
-| _RecipientType_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientType_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
-| _RecipientTypeDetails_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in[Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
-| _RecoverableItemsQuota_ <br/> | _msExchDumpsterQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
-| _RecoverableItemsWarningQuota_ <br/> | _msExchDumpsterWarningQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _RecipientType_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientType_ parameter in [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
+| _RecipientTypeDetails_ <br/> |n/a  <br/> |For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](../../../exchange-ps/exchange/users-and-groups/get-recipient.md).  <br/> ||
+| _RecoverableItemsQuota_ <br/> | _msExchDumpsterQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _RecoverableItemsWarningQuota_ <br/> | _msExchDumpsterWarningQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _RejectMessagesFrom_ <br/> | _unauthOrig_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Blank or non-blank.  <br/> ||
 | _RejectMessagesFromDLMembers_ <br/> | _dLMemRejectPerms_ <br/> |Dynamic distribution groups: String (wildcards accepted).  <br/> Others: Blank or non-blank.  <br/> ||
 | _RemoteAccountPolicy_ <br/> | _msExchSyncAccountsPolicyDN_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> ||
@@ -257,12 +257,12 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _ResourcePropertiesDisplay_ <br/> | _msExchResourceDisplay_ <br/> |String (wildcards accepted).  <br/> ||
 | _ResourceSearchProperties_ <br/> | _msExchResourceSearchProperties_ <br/> |String (wildcards accepted).  <br/> ||
 | _ResourceType_ <br/> |n/a  <br/> | `Room` (0) or `Equipment` (1). <br/> ||
-| _RetainDeletedItemsFor_ <br/> | _garbageCollPeriod_ <br/> |Dynamic distribution groups: A time span:  `dd.hh:mm:ss` where `dd` = days, `hh` = hours, `mm` = minutes, and `ss` = seconds. <br/> Others: Blank or non-blank.  <br/> ||
+| _RetainDeletedItemsFor_ <br/> | _garbageCollPeriod_ <br/> |Dynamic distribution groups: A time span: `dd.hh:mm:ss` where `dd` = days, `hh` = hours, `mm` = minutes, and `ss` = seconds. <br/> Others: Blank or non-blank.  <br/> ||
 | _RetentionComment_ <br/> | _msExchRetentionComment_ <br/> |String (wildcards accepted).  <br/> ||
 | _RetentionPolicy_ <br/> |n/a  <br/> |String  <br/> ||
 | _RetentionUrl_ <br/> | _msExchRetentionURL_ <br/> |String (wildcards accepted).  <br/> ||
 | _RoleAssignmentPolicy_ <br/> | _msExchRBACPolicyLink_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> ||
-| _RulesQuota_ <br/> | _msExchMDBRulesQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example,  `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
+| _RulesQuota_ <br/> | _msExchMDBRulesQuota_ <br/> |Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes.  <br/> Others: Blank or non-blank.  <br/> ||
 | _SamAccountName_ <br/> | _SamAccountName_ <br/> |String (wildcards accepted in dynamic distribution groups).  <br/> |This property specifies an identifier that's compatible with older versions of Microsoft Windows client and server operating systems (also known as the pre-Windows 2000 user account or group name)  <br/> |
 | _SafeRecipientsHash_ <br/> | _msExchSafeRecipientsHash_ <br/> | `System.Byte[]` <br/> |A user's safe recipients list is hashed (SHA-256) one way before it's stored as a binary large object in Active Directory.  <br/> |
 | _SafeSendersHash_ <br/> | _msExchSafeSendersHash_ <br/> | `System.Byte[]` <br/> |A user's safe senders list is hashed (SHA-256) one way before it's stored as a binary large object in Active Directory.  <br/> |
@@ -298,11 +298,11 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _UMServerWritableFlags_ <br/> | _msExchUMServerWritableFlags_ <br/> | `None` (0), `MissedCallNotificationEnabled` (1), `SMSVoiceMailNotificationEnabled` (2), `SMSMissedCallNotificationEnabled` (4), or `PinlessAccessToVoiceMailEnabled` (8). <br/> ||
 | _UMSpokenName_ <br/> | _msExchUMSpokenName_ <br/> | `System.Byte[]` <br/> ||
 | _UnicodePassword_ <br/> | _unicodePwd_ <br/> | `System.Byte[]` <br/> ||
-| _UsageLocation_ <br/> | _msExchUsageLocation_ <br/> |A valid two-letter country/region ISO 3166 value, or the corresponding display name (for example,  `US` or `UnitedStates`). For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779).  <br/> ||
+| _UsageLocation_ <br/> | _msExchUsageLocation_ <br/> |A valid two-letter country/region ISO 3166 value, or the corresponding display name (for example, `US` or `UnitedStates`). For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779).  <br/> ||
 | _UseDatabaseQuotaDefaults_ <br/> | _mDBUseDefaults_ <br/> |Boolean ( `$true` or `$false`)  <br/> |If the value of this property is $true, the values of these properties are ignored for the mailbox: _IssueWarningQuota_, _ProhibitSendQuota_, _ProhibitSendReceiveQuota_, , _CalendarLoggingQuota_, _RecoverableItemsWarningQuota_, and _RecoverableItemsQuota_.  <br/> |
-| _UserAccountControl_ <br/> | _userAccountControl_ <br/> |For valid values, see the Remarks section in [User-Account-Control attribute](https://go.microsoft.com/fwlink/p/?linkid=183366). You need to convert the hexadecimal values to decimal. Most of the text values won't work as described (even if you remove  `ADS_UF` and all underscores). <br/> ||
-| _UserPrincipalName_ <br/> | _userPrincipalName_ <br/> |String (wildcards accepted).  <br/> |This property contains the user principal name (UPN) for this recipient (for example,  `kim@contoso.com`).  <br/> |
-| _VoiceMailSettings_ <br/> | _msExchUCVoiceMailSettings_ <br/> |String (wildcards accepted).  <br/> |Valid values for this property are:  `ExchangeHostedVoiceMail=0`,  `ExchangeHostedVoiceMail=1`,  `CsHostedVoiceMail=0`, or  `CsHostedVoiceMail=1`.  <br/> |
+| _UserAccountControl_ <br/> | _userAccountControl_ <br/> |For valid values, see the Remarks section in [User-Account-Control attribute](https://go.microsoft.com/fwlink/p/?linkid=183366). You need to convert the hexadecimal values to decimal. Most of the text values won't work as described (even if you remove `ADS_UF` and all underscores). <br/> ||
+| _UserPrincipalName_ <br/> | _userPrincipalName_ <br/> |String (wildcards accepted).  <br/> |This property contains the user principal name (UPN) for this recipient (for example, `kim@contoso.com`).  <br/> |
+| _VoiceMailSettings_ <br/> | _msExchUCVoiceMailSettings_ <br/> |String (wildcards accepted).  <br/> |Valid values for this property are: `ExchangeHostedVoiceMail=0`, `ExchangeHostedVoiceMail=1`, `CsHostedVoiceMail=0`, or `CsHostedVoiceMail=1`.  <br/> |
 | _WebPage_ <br/> | _wWWHomePage_ <br/> |String (wildcards accepted).  <br/> ||
 | _WhenChanged_ <br/> | _whenChanged_ <br/> |Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server.  <br/> Others: Blank or non-blank.  <br/> ||
 | _WhenChangedUTC_ <br/> |n/a  <br/> |Dynamic distribution groups: A date/time value in Coordinated Universal Time (UTC).  <br/> Others: Blank or non-blank.  <br/> ||

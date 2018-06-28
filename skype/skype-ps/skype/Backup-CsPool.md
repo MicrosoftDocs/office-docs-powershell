@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Backup-CsPool
 schema: 2.0.0
 ---
@@ -21,16 +21,15 @@ Backup-CsPool -PoolFqdn <Fqdn> [-Category <BackupCategory>] [-Confirm] [-FailedO
 ```
 
 ## DESCRIPTION
-The Backup-CsPool cmdlet enables administrators to copy user data and conference data for a Registrar pool to a specified backup pool.
+The `Backup-CsPool` cmdlet enables administrators to copy user data and conference data for a Registrar pool to a specified backup pool.
 If the primary pool should fail or otherwise become unavailable, users homed on that primary pool can then be "failed over" to the backup pool.
-Those users can then log on to Skype for Business Server via the backup pool, and continue to use that pool until their home pool has been restored.
+Those users can then log on to Skype for Business Server via the backup pool and continue to use that pool until their home pool has been restored.
 
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
 `Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Backup-CsPool"}`
 
 Skype for Business Server Control Panel: The functions carried out by the Backup-CsPool cmdlet are not available in the Skype for Business Server Control Panel.
-
 
 
 ## EXAMPLES
@@ -63,7 +62,7 @@ For example:
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -83,7 +82,7 @@ Allowed values are:
 Type: BackupCategory
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -99,7 +98,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -116,7 +115,7 @@ If you use this parameter then you must also use the FullBackup parameter.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -132,7 +131,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +148,7 @@ You cannot use both the FullBackup parameter and the SteadyState parameter in th
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -165,7 +164,7 @@ Retrieves the topology information from the local replica of the Central Managem
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -188,7 +187,7 @@ By default, reports are written to the AppData\Local\Temp folder in your user pr
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -204,7 +203,7 @@ Maximum number of times Backup-CsPool will try to call the backup service before
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -215,13 +214,13 @@ Accept wildcard characters: False
 
 ### -SteadyState
 When present, backup will not begin until the backup service has reached a steady state.
-A "steady state" occurs when the pool switches to read-only or failover/failback mode, and no longer produces any new data that needs to be backed up.
+A "steady state" occurs when the pool switches to read-only or failover/failback mode and no longer produces any new data that needs to be backed up.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -237,7 +236,7 @@ Amount of time (in seconds) that the cmdlet will wait before checking to see if 
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -253,7 +252,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -269,7 +268,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The Backup-CsPool cmdlet does not accept pipelined data.
+The `Backup-CsPool` cmdlet does not accept pipelined data.
 
 ## OUTPUTS
 
@@ -285,3 +284,4 @@ None.
 [Get-CsBackupServiceStatus](Get-CsBackupServiceStatus.md)
 
 [Get-CsPoolBackupRelationship](Get-CsPoolBackupRelationship.md)
+

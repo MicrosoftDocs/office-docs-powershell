@@ -133,7 +133,7 @@ The OrganizationDomain parameter specifies the domain name of the Office 365 org
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

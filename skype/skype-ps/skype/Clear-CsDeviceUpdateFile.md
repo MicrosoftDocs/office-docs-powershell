@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Clear-CsDeviceUpdateFile
 schema: 2.0.0
 ---
@@ -22,16 +22,16 @@ Clear-CsDeviceUpdateFile [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
 Each time new device updates are uploaded to the system, a corresponding device update rule is created.
 By default, these new device update rules are assigned to the Pending state; that means that the rules can be downloaded and installed on test devices, but not on production devices.
 In turn, this gives you an opportunity to test the updates before making them available to users.
-If testing is successful, you can then run the Approve-CsDeviceUpdateRule cmdlet to make these device updates available to users.
+If testing is successful, you can then run the `Approve-CsDeviceUpdateRule` cmdlet to make these device updates available to users.
 
-If testing is not successful then you can use the Reset-CsDeviceUpdateRule cmdlet or the Restore-CsDeviceUpdateRule cmdlet to reject an update.
+If testing is not successful then you can use the `Reset-CsDeviceUpdateRule` cmdlet or the `Restore-CsDeviceUpdateRule` cmdlet to reject an update.
 When these cmdlets are run, the device update is disassociated from its device update rule.
-At that point, administrators can then use the Clear-CsDeviceUpdateFile cmdlet to remove the disassociated updates from the server.
+At that point, administrators can then use the `Clear-CsDeviceUpdateFile` cmdlet to remove the disassociated updates from the server.
 
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Clear-CsDeviceUpdateFile cmdlet locally: RTCUniversalServerAdmins.
+Who can run this cmdlet: By default, members of the following groups are authorized to run the `Clear-CsDeviceUpdateFile` cmdlet locally: RTCUniversalServerAdmins.
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Clear-CsDeviceUpdateFile"}`
+Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Clear-CsDeviceUpdateFile"}
 
 
 ## EXAMPLES
@@ -44,7 +44,6 @@ Clear-CsDeviceUpdateFile -Identity "service:WebServer:atl-cs-001.litwareinc.com"
 The command shown in Example 1 deletes all the device update files from the service WebServer:atl-cs-001.litwareinc.com that are no longer associated with a device.
 
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -55,7 +54,7 @@ For example, this syntax clears device update files from the Web Services servic
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 2
@@ -71,7 +70,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -87,7 +86,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -103,7 +102,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -119,13 +118,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The Clear-CsDeviceUpdateFile cmdlet does not accept pipelined input.
+The `Clear-CsDeviceUpdateFile` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
 None.
-The Clear-CsDeviceUpdateFile cmdlet does not return any values.
+The `Clear-CsDeviceUpdateFile` cmdlet does not return any values.
 
 ## NOTES
 
@@ -133,3 +132,4 @@ The Clear-CsDeviceUpdateFile cmdlet does not return any values.
 [Clear-CsDeviceUpdateLog](Clear-CsDeviceUpdateLog.md)
 
 [Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)
+

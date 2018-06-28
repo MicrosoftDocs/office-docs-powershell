@@ -1,5 +1,5 @@
 ---
-external help file: Get-CsOrganizationalAutoAttendantStatus.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantStatus
 schema: 2.0.0
@@ -124,3 +124,4 @@ The Get-CsOrganizationalAutoAttendantStatus cmdlet accepts a string as the Prima
 ## RELATED LINKS
 
 [Get-CsOrganizationalAutoAttendant](Get-CsOrganizationalAutoAttendant.md)
+

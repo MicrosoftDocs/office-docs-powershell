@@ -1,5 +1,5 @@
 ---
-external help file: Update-CsOrganizationalAutoAttendant.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Update-CsOrganizationalAutoAttendant
 schema: 2.0.0
@@ -99,3 +99,4 @@ The Update-CsOrganizationalAutoAttendant cmdlet accepts a string as the PrimaryU
 ## RELATED LINKS
 
 [Get-CsOrganizationalAutoAttendantStatus](Get-CsOrganizationalAutoAttendantStatus.md)
+

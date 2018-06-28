@@ -143,7 +143,7 @@ To remove a scope, specify a value of $null.
 Type: ManagementScopeIdParameter
 Parameter Sets: Set1, Set2, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -215,7 +215,7 @@ To remove a scope, specify a value of $null.
 Type: ManagementScopeIdParameter
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -325,7 +325,7 @@ You can't use this parameter with any of the other scope parameters.
 Type: AdministrativeUnitIdParameter
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None

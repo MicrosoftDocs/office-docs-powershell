@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsCallingLineIdentity
 schema: 2.0.0
@@ -164,3 +164,4 @@ BlockIncomingPstnCallerID : False
 [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
 
 [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
+

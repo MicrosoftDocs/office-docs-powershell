@@ -15,6 +15,7 @@ Updates a previously uploaded site design.
 
 ```powershell
 Set-SPOSiteDesign
+  [-Identity <SPOSiteDesignPipeBind>]
   [-Title <string>]
   [-WebTemplate <string>]
   [-SiteScripts <SPOSiteScriptPipeBind[]>]
@@ -33,6 +34,7 @@ This example updates a previously created site design.
 
 ```powershell
 Set-SPOSiteDesign `
+  -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
   -Title "Contoso customer tracking - version 2" `
   -WebTemplate "68" `
   -Description "Updated site design for list schema that tracks key customer data in a list" `
@@ -45,6 +47,21 @@ Set-SPOSiteDesign `
 Updates a previously uploaded site design. 
 
 ## PARAMETERS
+
+### -Identity
+The site design Id.
+
+```yaml
+Type: SPOSiteDesignPipeBind
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False 
+```
 
 ### -Title
 The display name of the site design.

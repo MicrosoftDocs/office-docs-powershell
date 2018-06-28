@@ -42,6 +42,8 @@ The Set-MigrationBatch cmdlet configures your existing migration batches to migr
 
 - IMAP migration
 
+Some settings can be applied both to the batch as well as to individual users within the batch. It is important to note that when a setting is applied to a user it will override any corresponding setting on the batch.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -145,7 +147,19 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
-This parameter is reserved for internal Microsoft use.
+The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but won't complete until the date/time you specify with this parameter.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+
+In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
+
+This parameter should only be used in the cloud-based service.
 
 ```yaml
 Type: DateTime
@@ -255,7 +269,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportInterval
-This parameter is reserved for internal Microsoft use.
+The ReportInterval parameter specifies how frequently emailed reports should be sent to the email addresses listed within NotificationEmails.
+
+By default, emailed reports are sent every 24 hours for a batch. Setting this value to 0 indicates that reports should never be sent for this batch.
+
+This parameter should only be used in the cloud-based service.
 
 ```yaml
 Type: TimeSpan
@@ -278,7 +296,7 @@ The SourcePublicFolderDatabase parameter specifies the name of the source public
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +305,19 @@ Accept wildcard characters: False
 ```
 
 ### -StartAfter
-This parameter is reserved for internal Microsoft use.
+The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for users within the batch won't start until the date/time you specify with this parameter.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+
+In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
+
+This parameter should only be used in the cloud-based service.
 
 ```yaml
 Type: DateTime
@@ -414,6 +444,8 @@ Accept wildcard characters: False
 
 ### -Update
 The Update switch sets the Update flag on the migration batch. You don't need to specify a value with this switch.
+
+The Update flag triggers the Migration Service to reapply all of the settings from the endpoint, batch, and user to the migration process.
 
 ```yaml
 Type: SwitchParameter

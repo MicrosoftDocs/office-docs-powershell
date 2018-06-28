@@ -1,5 +1,5 @@
 ---
-external help file: New-CsOrganizationalAutoAttendantPrompt.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantPrompt
 schema: 2.0.0
@@ -155,3 +155,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## RELATED LINKS
 
 [New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
+

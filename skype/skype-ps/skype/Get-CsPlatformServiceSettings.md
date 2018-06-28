@@ -1,6 +1,6 @@
 ---
-external help file:
-applicable: Skype for Business Server 2015
+external help file:Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsPlatformServiceSettings
 schema: 2.0.0
 ---
@@ -43,7 +43,7 @@ PS C:\> {{ Add example code here }}
 Type: String
 Parameter Sets: Filter
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -100,3 +100,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+

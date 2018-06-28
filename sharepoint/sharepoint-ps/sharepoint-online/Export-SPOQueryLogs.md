@@ -22,6 +22,13 @@ Export-SPOQueryLogs [-StartTime <DateTime>] -LoginName <String> -OutputFolder <S
 ## DESCRIPTION
 Export the query logs for a user in an Office 365 tenant. The result of the export is stored in the current working folder or a specified folder, in the two files loginName_queries.csv and loginName_personalQueries.csv.
 
+The output of the queries.csv will be for example:
+
+| QueryTime  |  QueryText |
+| ------------- | ------------- |
+| 5/31/2018 09:16 | Querytext1  |
+| 5/31/2018 08:16  | Querytext2  |
+
 You have to be a tenant admin to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
@@ -109,6 +116,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Introduction to the SharePoint Online management shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Set up the SharePoint Online Management Shell Windows PowerShell environment](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+

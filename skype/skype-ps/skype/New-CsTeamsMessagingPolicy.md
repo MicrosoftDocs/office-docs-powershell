@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsTeamsMessagingPolicy
 schema: 2.0.0
@@ -8,9 +8,9 @@ schema: 2.0.0
 # New-CsTeamsMessagingPolicy
 
 ## SYNOPSIS
-Specifies a Teams messaging policy, which designates what features a user is allowed to use within the messaging space. 
+The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.
 
-New-CsTeamsMessagingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowOwnerDeleteMessage \<bool\>\] \[-AllowUserEditMessage \<bool\>\] \[-AllowUserDeleteMessage \<bool\>\] \[-AllowUserChat \<bool\>\] \[-AllowGiphy \<bool\>\] \[-GiphyRatingType \<string\>\] \[-AllowMemes \<bool\>\] \[-AllowStickers \<bool\>\] \[-InMemory\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+New-CsTeamsMessagingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowOwnerDeleteMessage \<bool\>\] \[-AllowUserEditMessage \<bool\>\] \[-AllowUserDeleteMessage \<bool\>\] \[-AllowUserChat \<bool\>\] \[-AllowUserTranslation \<bool\>\] \[-AllowGiphy \<bool\>\] \[-GiphyRatingType \<string\>\] \[-AllowMemes \<bool\>\] \[-AllowStickers \<bool\>\] \[-InMemory\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 ## SYNTAX
 
@@ -18,11 +18,11 @@ New-CsTeamsMessagingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[
 New-CsTeamsMessagingPolicy [-WhatIf] [-Description <Object>] [-AllowMemes <Object>] [-AllowGiphy <Object>]
  [-AllowStickers <Object>] [-AllowUserEditMessage <Object>] [-AllowOwnerDeleteMessage <Object>]
  [-AllowUserDeleteMessage <Object>] [[-Identity] <Object>] [-Tenant <Object>] [-InMemory]
- [-AllowUserChat <Object>] [-GiphyRatingType <Object>] [-Confirm] [-Force] [-AsJob]
+ [-AllowUserChat <Object>] [-AllowUserTranslation <Object>] [-GiphyRatingType <Object>] [-Confirm] [-Force] [-AsJob]
 ```
 
 ## DESCRIPTION
-Specifies a Teams messaging policy, which designates what features a user is allowed to use within the messaging space.  Once a messaging policy has been created, the policy can be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
+ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.  This cmdlet creates a new Teams messaging policy.  Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
 
 ## EXAMPLES
 
@@ -39,7 +39,7 @@ All other policy properties will use the default values.
 ## PARAMETERS
 
 ### -AllowGiphy
-Determines if Giphy images are available for use. 
+Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit
 
 ```yaml
 Type: Object
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMemes
-Determines if memes are available for use. 
+Determines whether a user is allowed to access and post memes. Set this to TRUE to allow. Set this FALSE to prohibit
 
 ```yaml
 Type: Object
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOwnerDeleteMessage
-Determines if a user is allowed to delete all messages in the context of teams that they own.
+Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Object
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowStickers
-Determines if stickers are available for use.
+Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit
 
 ```yaml
 Type: Object
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserChat
-Determines if a user is allowed to chat. 
+Determines whether a user is allowed to chat. Set this to TRUE to allow a user to chat across private chat, group chat and in meetings. Set this to FALSE to prohibit all chat
 
 ```yaml
 Type: Object
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserDeleteMessage
-Determines if a user is allowed to delete their own messages. 
+Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Object
@@ -129,7 +129,22 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserEditMessage
-Determines if a user is allowed to edit their own messages. 
+Determines whether a user is allowed to edit their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUserTranslation
+Determines whether a user is allowed to translate messages to their client languages. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
 Type: Object
@@ -188,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -GiphyRatingType
-Determines the Giphy content restrictions. Options are 'Moderate' or 'Strict'
+Determines the Giphy content restrictions applicable to a user. Set this to STRICT, MODERATE or NORESTRICTION
 
 ```yaml
 Type: Object
@@ -287,3 +302,4 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+

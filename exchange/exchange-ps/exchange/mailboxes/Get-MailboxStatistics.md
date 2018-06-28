@@ -141,7 +141,7 @@ This parameter accepts pipeline input from the Get-MailboxDatabase cmdlet.
 Type: DatabaseIdParameter
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -215,7 +215,7 @@ When you specify a value for the Server parameter, the command returns statistic
 Type: ServerIdParameter
 Parameter Sets: Set3, Set4
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -313,7 +313,7 @@ The CopyOnServer parameter is used to retrieve statistics from a specific databa
 Type: ServerIdParameter
 Parameter Sets: Set1, Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -330,7 +330,7 @@ The Filter parameter specifies a filter to filter the results of the Get-Mailbox
 Type: String
 Parameter Sets: Set3, Set4
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -347,7 +347,7 @@ Without the IncludePassive parameter, the cmdlet retrieves statistics from activ
 Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -366,7 +366,7 @@ Specifically, this switch returns the values of the QuarantineDescription, Quara
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -383,7 +383,7 @@ The NoADLookup switch specifies that information is retrieved from the mailbox d
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -406,7 +406,7 @@ Use this syntax to retrieve information about disconnected mailboxes, which don'
 Type: StoreMailboxIdParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: 1
 Default value: None

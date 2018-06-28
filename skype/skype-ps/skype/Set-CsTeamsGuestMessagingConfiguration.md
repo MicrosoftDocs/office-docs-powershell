@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsTeamsGuestMessagingConfiguration
 schema: 2.0.0
@@ -255,3 +255,4 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+
