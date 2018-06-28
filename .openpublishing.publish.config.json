@@ -1,285 +1,164 @@
+
 {
+
   "docsets_to_publish": [
+
     {
+
       "docset_name": "exchange-ps",
+
       "build_source_folder": "exchange",
+
       "build_output_subfolder": "exchange-ps",
+
       "locale": "en-us",
+
       "monikers": [],
+
       "moniker_ranges": [],
+
       "open_to_public_contributors": true,
+
       "type_mapping": {
+
         "Conceptual": "Content",
+
         "ManagedReference": "Content",
+
         "RestApi": "Content",
+
         "AzurePsModulePage": "Content"
+
       },
+
       "build_entry_point": "docs",
+
       "template_folder": "_themes",
+
       "version": 0,
+
       "customized_template_paths": [
+
         "_dependentPackages/azurecli.plugins/azurecli"
+
       ],
+
       "customized_tasks": {
+
         "docset_prebuild": [
+
           "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+
         ]
+
       },
+
       "monikerPath": [
+
         "mapping/monikerMapping.json"
+
       ]
-    },
-    {
-      "docset_name": "officewebapps-ps",
-      "build_source_folder": "officewebapps",
-      "build_output_subfolder": "officewebapps-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePsModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "sharepoint-ps",
-      "build_source_folder": "sharepoint",
-      "build_output_subfolder": "sharepoint-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePsModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "skype-ps",
-      "build_source_folder": "skype",
-      "build_output_subfolder": "skype-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePsModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "staffhub-ps",
-      "build_source_folder": "staffhub",
-      "build_output_subfolder": "staffhub-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePsModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "teams-ps",
-      "build_source_folder": "teams",
-      "build_output_subfolder": "teams-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePsModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "spmt-ps",
-      "build_source_folder": "spmt",
-      "build_output_subfolder": "spmt-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePsModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "whiteboard-ps",
-      "build_source_folder": "whiteboard",
-      "build_output_subfolder": "whiteboard-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePsModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
+
     }
+
   ],
+
   "notification_subscribers": [],
+
   "branches_to_filter": [],
+
   "git_repository_branch_open_to_public_contributors": "master",
+
   "skip_source_output_uploading": false,
+
   "need_preview_pull_request": true,
+
   "contribution_branch_mappings": {},
+
   "dependent_repositories": [
+
     {
+
       "path_to_root": "_themes",
+
       "url": "https://github.com/Microsoft/templates.docs.msft",
+
       "branch": "master",
+
       "branch_mapping": {}
+
     },
+
     {
+
       "path_to_root": "_themes.pdf",
+
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+
       "branch": "master",
+
       "branch_mapping": {}
+
     }
+
   ],
+
   "branch_target_mapping": {
+
     "live": [
+
       "Publish",
+
       "Pdf"
+
     ]
+
   },
+
   "need_generate_pdf_url_template": true,
+
   "targets": {
+
     "Pdf": {
+
       "template_folder": "_themes.pdf"
+
     }
+
   },
+
   "need_generate_pdf": false,
+
   "need_generate_intellisense": false,
+
   "dependent_packages": [
+
     {
+
       "path_to_root": "_dependentPackages/azurecli.plugins",
+
       "id": "opbuild.templates.azurecli",
+
       "version": "latest",
+
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
+
     },
+
     {
+
       "path_to_root": "_dependentPackages/CommonPlugins",
+
       "target_framework": "net45",
+
       "version": "latest-prerelease",
+
       "id": "Microsoft.OpenPublishing.CommonPlugins",
+
       "nuget_feed": "https://www.myget.org/F/op-dev/api/v2"
+
     }
+
   ]
+
 }
