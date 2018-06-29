@@ -11,10 +11,6 @@ schema: 2.0.0
  The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 
 
-Set-CsTeamsMeetingPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowChannelMeetingScheduling \<bool\>\] \[-AllowMeetNow \<bool\>\] \[-AllowIPVideo \<bool\>\] \[-AllowAnonymousUsersToDialOut \<bool\>\] \[-AllowAnonymousUsersToStartMeeting \<bool\>\] \[-AllowPrivateMeetingScheduling \<bool\>\] \[-AutoAdmittedUsers \<string\>\] \[-AllowCloudRecording \<bool\>\] \[-AllowOutlookAddIn \<bool\>\] \[-AllowPowerPointSharing \<bool\>\] \[-AllowParticipantGiveRequestControl \<bool\>\] \[-AllowExternalParticipantGiveRequestControl \<bool\>\] \[-AppDesktopSharingMode \<string\>\] \[-AllowSharedNotes \<bool\>\] \[-AllowWhiteboard \<bool\>\] \[-AllowTranscription \<bool\>\] \[-MediaBitRateKb \<uint32\>\] \[-ScreenSharingMode \<string\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsTeamsMeetingPolicy \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowChannelMeetingScheduling \<bool\>\] \[-AllowMeetNow \<bool\>\] \[-AllowIPVideo \<bool\>\] \[-AllowAnonymousUsersToDialOut \<bool\>\] \[-AllowAnonymousUsersToStartMeeting \<bool\>\] \[-AllowPrivateMeetingScheduling \<bool\>\] \[-AutoAdmittedUsers \<string\>\] \[-AllowCloudRecording \<bool\>\] \[-AllowOutlookAddIn \<bool\>\] \[-AllowPowerPointSharing \<bool\>\] \[-AllowParticipantGiveRequestControl \<bool\>\] \[-AllowExternalParticipantGiveRequestControl \<bool\>\] \[-AppDesktopSharingMode \<string\>\] \[-AllowSharedNotes \<bool\>\] \[-AllowWhiteboard \<bool\>\] \[-AllowTranscription \<bool\>\] \[-MediaBitRateKb \<uint32\>\] \[-ScreenSharingMode \<string\>\] \[-Instance \<psobject\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
 ```
@@ -29,6 +25,14 @@ Set-CsTeamsMeetingPolicy [-AppDesktopSharingMode <Object>] [-Description <Object
  [-AllowExternalParticipantGiveRequestControl <Object>] [-AsJob]
 ```
 
+```
+Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>] [-Tenant <guid>] [-Description <string>] [-AllowChannelMeetingScheduling <bool>] [-AllowMeetNow <bool>] [-AllowIPVideo <bool>] [-AllowAnonymousUsersToDialOut <bool>] [-AllowAnonymousUsersToStartMeeting <bool>] [-AllowPrivateMeetingScheduling <bool>] [-AutoAdmittedUsers <string>] [-AllowCloudRecording <bool>] [-AllowOutlookAddIn <bool>] [-AllowPowerPointSharing <bool>] [-AllowParticipantGiveRequestControl <bool>] [-AllowExternalParticipantGiveRequestControl <bool>] [-AppDesktopSharingMode <string>] [-AllowSharedNotes <bool>] [-AllowWhiteboard <bool>] [-AllowTranscription <bool>] [-MediaBitRateKb <uint32>] [-ScreenSharingMode <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+```
+Set-CsTeamsMeetingPolicy [-Tenant <guid>] [-Description <string>] [-AllowChannelMeetingScheduling <bool>] [-AllowMeetNow <bool>] [-AllowIPVideo <bool>] [-AllowAnonymousUsersToDialOut <bool>] [-AllowAnonymousUsersToStartMeeting <bool>] [-AllowPrivateMeetingScheduling <bool>] [-AutoAdmittedUsers <string>] [-AllowCloudRecording <bool>] [-AllowOutlookAddIn <bool>] [-AllowPowerPointSharing <bool>] [-AllowParticipantGiveRequestControl <bool>] [-AllowExternalParticipantGiveRequestControl <bool>] [-AppDesktopSharingMode <string>] [-AllowSharedNotes <bool>] [-AllowWhiteboard <bool>] [-AllowTranscription <bool>] [-MediaBitRateKb <uint32>] [-ScreenSharingMode <string>] [-Instance <psobject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+
+```
 ## DESCRIPTION
 The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 

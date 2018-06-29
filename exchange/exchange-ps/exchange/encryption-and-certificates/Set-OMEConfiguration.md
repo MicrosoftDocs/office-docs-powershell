@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-ClientEncryptionEnabled <$true | $false>]
- [-DisclaimerText <String>] [-EmailText <String>] [-ExpirationOptionEnabled <$true | $false>] [-Image <Byte[]>] [-IntroductionText <String>] [-OTPEnabled <$true | $false>] [-PortalText <String>] [-ReadButton <String>] [<CommonParameters>]
+ [-DisclaimerText <String>] [-EmailText <String>] [-ExpirationOptionEnabled <$true | $false>] [-Image <Byte[]>] [-IntroductionText <String>] [-OTPEnabled <$true | $false>] [-PortalText <String>] [-ReadButtonText <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -213,7 +213,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReadButton
+### -ReadButtonText
 
 ```yaml
 Type: String

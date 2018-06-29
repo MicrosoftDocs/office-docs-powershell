@@ -10,14 +10,17 @@ schema: 2.0.0
 ## SYNOPSIS
 Assigns a teams meeting policy at the per-user scope. The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 
-Grant-CsTeamsMeetingPolicy \[-Identity\] \<UserIdParameter\> \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
 ```
 Grant-CsTeamsMeetingPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm]
  [-DomainController <Object>] [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
+
+```
+Grant-CsTeamsMeetingPolicy [-Identity] <UserIdParameter> [-PolicyName] <string> [-Tenant <guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 
 ## DESCRIPTION
 Assigns a teams meeting policy at the per-user scope. The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
