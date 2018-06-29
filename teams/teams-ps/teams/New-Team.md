@@ -18,7 +18,7 @@ Note: This cmdlet is currently in Beta and functionality may change.
 
 ```
 New-Team [-Group <String>] [-DisplayName <String>] [-Description <String>] [-Alias <String>]
- [-Classification <String>] [-AccessType <String>] [-AddCreatorAsMember <Boolean>] [<CommonParameters>]
+ [-Classification <String>] [-Visibility <String>] [-AddCreatorAsMember <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,13 +33,13 @@ New-Team -DisplayName "Tech Reads"
 
 ### Example 2
 ```
-New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -AccessType Public
+New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -Visibility Public
 ```
 
 ### Example 3
 ```
 Connect-MicrosoftTeams -AccountId myaccount@example.com
-$group = New-Team -alias "TestTeam" -displayname "Test Teams" -AccessType "private"
+$group = New-Team -alias "TestTeam" -displayname "Test Teams" -Visibility "private"
 Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "wilma@example.com"
@@ -51,7 +51,7 @@ Set-TeamFunSettings -GroupId $group.GroupId -AllowCustomMemes true
 
 ## PARAMETERS
 
-### -AccessType
+### -Visibility
 Team access type.
 Valid values are "Private" and "Public".
 Default is "Private".
