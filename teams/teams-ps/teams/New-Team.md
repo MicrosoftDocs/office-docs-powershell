@@ -52,7 +52,7 @@ Set-TeamFunSettings -GroupId $group.GroupId -AllowCustomMemes true
 ## PARAMETERS
 
 ### -Visibility
-Team access type.
+Team visibility.
 Valid values are "Private" and "Public".
 Default is "Private".
 (This parameter has the same meaning as -AccessType in New-UnifiedGroup.)

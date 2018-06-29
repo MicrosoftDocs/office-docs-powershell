@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Visibility
-Team access type.
+Team visibility.
 Valid values are "Private" and "Public"
 
 ```yaml
