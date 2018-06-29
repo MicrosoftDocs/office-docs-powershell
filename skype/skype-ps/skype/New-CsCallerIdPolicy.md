@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsCallerIdPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+This cmdlet has been deprecated please use New-CsCallingLineIdentity to create new caller id policy.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-CsCallerIdPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Caller
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+This cmdlet has been deprecated please use New-CsCallingLineIdentity to create new caller id policy.
 
 ## EXAMPLES
 
