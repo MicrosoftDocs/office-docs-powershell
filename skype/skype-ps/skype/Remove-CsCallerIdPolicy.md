@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsCallerIdPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+This cmdlet has been deprecated please use Remove-CsCallingLineIdentity to create new caller id policy.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-CsCallerIdPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Con
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+This cmdlet has been deprecated please use Remove-CsCallingLineIdentity to create new caller id policy.
 
 ## EXAMPLES
 
