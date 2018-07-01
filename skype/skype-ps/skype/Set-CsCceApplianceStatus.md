@@ -13,9 +13,7 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Set-CsCceApplianceStatus [[-Identity] <Object>] [-Status <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-Error <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [-Version <Object>]
- [<CommonParameters>]
+Set-CsCceApplianceStatus [[-Identity] <Object>] [-Status <Object>] [-Confirm] [-Error <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [-Version <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,22 +49,6 @@ Accept wildcard characters: False
 
 ### -Status
 PARAMVALUE: None | Running | Maintenance | Error
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
 
 ```yaml
 Type: Object
