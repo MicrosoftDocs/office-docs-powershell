@@ -71,13 +71,7 @@
       },
       {
         "files": [
-          "**/Add-ADPermission.md",
-          "**/Get-ADPermission.md",
-          "**/Get-AddressList.md",
-          "**/Move-AddressList.md",
-          "**/Get-Mailbox.md",
-          "**/Enable-Mailbox.md",
-          "**/Get-MxRecordReport.md"          
+          "**/*.md"         
         ],
         "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2016",
@@ -93,13 +87,7 @@
       },
       {
         "files": [
-          "**/Add-ADPermission.md",
-          "**/Get-ADPermission.md",
-          "**/Get-AddressList.md",
-          "**/Move-AddressList.md",
-          "**/Get-Mailbox.md",
-          "**/Enable-Mailbox.md",
-          "**/active-directory.md"
+          "**/*.md"
         ],
         "src": "exchange-ps/exchange",
         "version": "exchserver-ps-2013",
@@ -115,10 +103,7 @@
       },
       {
         "files": [
-          "**/Disable-AntiPhishRule.md",
-          "**/Enable-AntiPhishRule.md",
-          "**/Get-Mailbox.md",
-          "**/Enable-Mailbox.md"
+          "**/*.md"
         ],
         "src": "exchange-ps/exchange",
         "version": "eop-ps",
@@ -134,10 +119,7 @@
       },
       {
         "files": [
-          "**/Get-AddressList.md",
-          "**/Move-AddressList.md",
-          "**/Get-Mailbox.md",
-          "**/Enable-Mailbox.md"
+          "**/*.md"
         ],
         "src": "exchange-ps/exchange",
         "version": "exchonline-ps",
