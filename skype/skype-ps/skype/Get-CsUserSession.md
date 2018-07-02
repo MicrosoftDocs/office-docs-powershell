@@ -36,6 +36,7 @@ This example returns user session information for Ken Myer from "02/22/2016 07:3
 
 ### -StartTime
 PARAMVALUE: DateTimeOffset
+StartTime should be last 30 days.
 
 ```yaml
 Type: Object
