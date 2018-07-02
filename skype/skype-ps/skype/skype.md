@@ -10,6 +10,18 @@ Locale: en-US
 The following cmdlet references are for Skype for Business.
 
 ## Skype for Business Cmdlets
+### [New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
+{{Manually Enter New-CSOnlinePSTNGateway Description Here}}
+
+### [Set-CSOnlinePSTNGateway](Set-CSOnlinePSTNGateway.md)
+{{Manually Enter Set-CSOnlinePSTNGateway Description Here}}
+
+### [Get-CSOnlinePSTNGateway](Get-CSOnlinePSTNGateway.md)
+{{Manually Enter Get-CSOnlinePSTNGateway Description Here}}
+
+### [Remove-CSOnlinePSTNGateway](Remove-CSOnlinePSTNGateway.md)
+{{Manually Enter Remove-CSOnlinePSTNGateway Description Here}}
+
 ### [Add-CsSlaDelegates](Add-CsSlaDelegates.md)
 {{Manually Enter Add-CsSlaDelegates Description Here}}
 
