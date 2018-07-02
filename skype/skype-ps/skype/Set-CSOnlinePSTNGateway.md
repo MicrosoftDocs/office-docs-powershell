@@ -141,5 +141,7 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
+
 [Get-CSOnlinePSTNGateway](Get-CSOnlinePSTNGateway.md)
+
 [Remove-CSOnlinePSTNGateway](Remove-CSOnlinePSTNGateway.md)

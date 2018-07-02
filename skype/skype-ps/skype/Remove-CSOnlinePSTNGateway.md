@@ -51,5 +51,7 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Set-CSOnlinePSTNGateway](Set-CSOnlinePSTNGateway.md)
+
 [New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
+
 [Get-CSOnlinePSTNGateway](Get-CSOnlinePSTNGateway.md)
