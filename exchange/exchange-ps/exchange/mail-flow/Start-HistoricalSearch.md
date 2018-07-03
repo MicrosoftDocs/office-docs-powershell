@@ -85,20 +85,33 @@ Accept wildcard characters: False
 ### -ReportType
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
-- DLP
+- ATPReport: Advanced Threat Protection File Types Report and Advanced Threat Protection Message Disposition Report
 
-- Malware
+- ATPV2: Exchange Online Protection and Advanced Threat Protection E-mail Malware Report.
 
-- MessageTrace
+- ATPDocument: Advanced Threat Protection Content Malware Report.
 
-- MessageTraceDetail
+- DLP: Data Loss Prevention Report.
 
-- SPAM
+- Malware: Malware Detections Report.
 
-- TransportRule
+- MessageTrace: Message Trace Report.
+
+- MessageTraceDetail: Message Trace Details Report.
+
+- Phish: Exchange Online Protetion and Advacned Threat Protection E-mail Phish Report.
+
+- SPAM: SPAM Detections Report.
+
+- Spoof: Spood Mail Report.
+
+- TransportRule: Transport or Mail FLow Rules Report.
+
+- UnifiedDLP: Unified Data Loss Prevention Report
+
 
 ```yaml
-Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2
+Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2 | Phish | ATPDocument
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
