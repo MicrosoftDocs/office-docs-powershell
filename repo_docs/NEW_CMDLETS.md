@@ -26,7 +26,7 @@ Install-Module -Name platyPS -Scope CurrentUser
 
   - Windows 7
 
-  If you need to install platyPS on an older version of Windows (for example, a server running a product that lacks support for WMF 5.x or its requirements), see the Install platyPS on older versions of Windows section at the end of this topic.
+  If you need to install platyPS on an older version of Windows (for example, a server running a product that lacks support for WMF 5.x or its requirements), see the [Install platyPS on older versions of Windows](#install-platyps-on-older-versions-of-windows) section at the end of this topic.
 
 ## Step 2: Connect to the PowerShell environment that has the cmdlet
 You probably know how to do this already, but the available workloads and connection methods are:
@@ -43,7 +43,7 @@ You probably know how to do this already, but the available workloads and connec
 
   - Exchange Online: [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)
 
-  - Office 365 Security & Compliance Center Power: [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell)
+  - Office 365 Security & Compliance Center: [Connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell)
 
   - Exchange Online Protection: [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-eop/connect-to-exchange-online-protection-powershell)
 
@@ -53,10 +53,10 @@ You probably know how to do this already, but the available workloads and connec
 
 - You might need to connect to the service in an elevated Windows PowerShell prompt (required for Skype for Business Online and Teams, but not Exchange). The connection instructions topic should contain this and other connection requirements.
 
-- In Exchange environments, the cmdlets available to you are controlled by role-based access control (RBAC). Most cmdlets and parameters are avaialble to administrators by default, but some aren't (for example, the Mailbox Search and Mailbox Import Export roles).
+- In Exchange environments, the cmdlets available to you are controlled by role-based access control (RBAC). Most cmdlets and parameters are avaialble to administrators by default, but some aren't (for example, the "Mailbox Search" and "Mailbox Import Export" roles).
 
 ## Step 3: Load platyPS in the PowerShell environment
-After you've connected in PowerShell to the server or service \(either in a regular Windows PowerShell window or from a specific PowerShell console shortcut\), run the following command to make the platyPS cmdlets available in your session:
+After you've connected in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), run the following command to make the platyPS cmdlets available in your session:
 
 ```
 Import-Module platyPS
@@ -107,7 +107,7 @@ Either way, take note of your module name. You'll need it in the next steps.
 
 Check the details of your connection instructions, but your session information is stored in a variable. For example, in the Exchange connection instructions, the variable is `$Session`. You'll use this variable name in later steps.
 
-If you connected via a custom script or your remote PowerShell session variable isn't apparent, do the following steps:
+**If you connected via a custom script or your remote PowerShell session variable isn't apparent, do the following steps**:
 
 1. Run the following command to find your session:
  
@@ -142,7 +142,7 @@ If you connected via a custom script or your remote PowerShell session variable 
     For example, using the sample output in the previous step:
 
     ```
-    $x = Get-PSSession 1
+    $Session = Get-PSSession 1
     ```
 
     The variable name you choose doesn't matter, but you'll use it in later steps.
@@ -155,7 +155,7 @@ You have two choices:
   New-MarkdownHelp -Module <ModuleName> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
   ``` 
 
-- **Dump specific cmdlets to files**: This is a bit harder to setup, but the output is much quicker, and there are no extra topic files created. The basic syntax is:
+- **Dump specific cmdlets to files**: This is a bit harder to set up, but the output is much quicker, and there are no extra topic files created. The basic syntax is:
   
   ```
   New-MarkdownHelp -Command <Cmdlet> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
@@ -172,11 +172,11 @@ You have two choices:
 
 - \<ModuleName\> is the value you found in [Step 4](#step-4-find-your-module-name) (for example, `tmp_byivwzpq.e1k` or `Microsoft.Online.SharePoint.PowerShell`).
 
-- \<PSSessionVariableName\> is the remote PowerShell session variable from [Step 5](#step-5-verify-your-your-pssession-variable-name) (for example, `$Session`) *and is required only if the connection instructions used remote PowerShell (one or more **xxx-xxxSession** commands)*.
+- \<PSSessionVariableName\> is the remote PowerShell session variable from [Step 5](#step-5-verify-your-your-pssession-variable-name) (for example, `$Session`) _and is required only if the connection instructions used remote PowerShell (one or more **xxx-xxxSession** commands)_.
 
-   Failure to use the _Session_ parameter and value in remote PowerShell environments leads to weird results: multiple syntax blocks/parameter sets aren't recogonized and are collapsed into one big block, the Type value is Object for all parameters, the Required value is False for all parameters, etc.
+   Failure to use the _Session_ parameter in remote PowerShell environments leads to weird results: multiple syntax blocks/parameter sets aren't recogonized and are collapsed into one big block, the Type value is Object for all parameters, the Required value is False for all parameters, etc.
 
-- If the <Path> location doesn't exist, it's created for you.
+- If the \<Path\> location doesn't exist, it's created for you.
 
 #### Dump all cmdlets in the module/snap-in to files
 This example creates topic files for all available cmdlets in the Skype for Business Online PowerShell session where the module is `tmp_byivwzpq.e1k` and the session variable is `$Session` in the folder C:\My Docs\SfBO.
@@ -192,7 +192,7 @@ This example create a topic file for the cmdlet named Get-CoolFeature in the Exc
 New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO" -Session $Session
 ```
 
-This example creates topic files for the cmdlets Get-CoolFeature, New-CoolFeature, Remove-CoolFeature, and Set-CoolFeature from the Exchange Online session where the session variable is `$Session` in the folder C:\My Docs\ExO. 
+This example creates topic files for the Get-CoolFeature, New-CoolFeature, Remove-CoolFeature, and Set-CoolFeature cmdlets from the Exchange Online session where the session variable is `$Session` in the folder C:\My Docs\ExO. 
 
 The first command stores the cmdlet names in a variable. The second command uses that variable to identify the cmdlets and write the output files.
 
@@ -234,7 +234,7 @@ Here's an example of the cmdlet metadata that's required at the top of every top
     schema: 2.0.0
     ```
 
-- **external help file**: Defines which MAML/XML file the cmdlet help topic goes in for `Get-Help` at the command line. This value very product-specific. Some products (Skype) use only one XML file that's well-known and the same for all cmdlets; others (Exchange, SharePoint) use multiple XML files. See other topics for available values.
+- **external help file**: Defines which MAML/XML file the cmdlet help topic goes in for `Get-Help` at the command line. This value very product-specific, and the location is specified somewhere in product code. Some products (Skype) use only one XML file that's well-known and the same for all cmdlets; others (Exchange, SharePoint) use multiple XML files. See other topics for available values. Don't guess; a wrong value here will affect the avaialbility of the help topic at the command line.
 
 - **Module Name**: Not used in Exchange topics (remove it). For other products, this is the module name of the product.
 
@@ -249,7 +249,7 @@ Here's an example of the cmdlet metadata that's required at the top of every top
 ##### Parameter metadata
 Here's an example of the parameter metadata that's present in every parameter section:
 
-    ```
+    ```yaml
     Type: String
     Parameter Sets: (All)
     Aliases:
@@ -319,7 +319,7 @@ Add the cmdlet to Table of Contents (TOC) file in the GitHub repo. TOC file is t
 
 - Whiteboard: [https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/whiteboard/whiteboard-ps/whiteboard/whiteboard.md](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/whiteboard/whiteboard-ps/whiteboard/whiteboard.md)
 
-In the TOC file, you can fill in a description or remove the template text line. However, if you leave the template text line make sure it is exactly in the right format so it won't render as a template text.
+In the TOC file, you can fill in a description or remove the template text line. However, if you leave the template text line make sure it's in _exactly_ the right format so it won't render as a template text.
 
 After you're done editing the TOC file:
 
@@ -329,7 +329,7 @@ After you're done editing the TOC file:
 
 ## Appendix
 
-### References
+### Reference
 * https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
 * https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
 * https://github.com/PowerShell/platyPS
@@ -359,13 +359,13 @@ After you're done editing the TOC file:
 
       - PowerShellGet
 
-3. Delete the following folders from your computer (or move them to a remote location for safekeeping):
+3. Delete the following folders from your computer or move them to a remote location for safekeeping:
 
     - C:\Program Files\WindowsPowerShell\Modules\PackageManagement
 
     - C:\Program Files\WindowsPowerShell\Modules\PowerShellGet
 
-4. In Windows Explorer, copy the PackageManagement and PowerShellGet folders FROM \<TargetPath\> TO C:\Program Files\WindowsPowerShell\Modules\ (effectively replacing the folders you deleted in the previous step).
+4. In Windows Explorer, copy the PackageManagement and PowerShellGet folders FROM \<TargetPath\> TO C:\Program Files\WindowsPowerShell\Modules\ (replacing the folders you deleted in Step 3 with the new ones you downloaded in Step 2).
 
     You should now have the following folders again:
 

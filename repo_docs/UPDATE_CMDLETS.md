@@ -1,20 +1,23 @@
 ﻿#Update existing cmdlet topics
-Manuallt adding new parameters to a cmdlet reference topic is doable, but there are several obstacles to overcome:
+Manually adding new parameters to a cmdlet reference topic is doable, but there are several obstacles to overcome:
 
 - **Add the paramter and Type value to the SYNTAX block(s)**: Easy to do if there's only one, but what if there are multiple SYNTAX blocks (also known as parameter sets)? Does the new parameter go in one, some, or all of them? And what about the parameter Type value (String? `$true | $ false`? A finite list of values?)
 
 - **Create a new section for each parameter**: It's easy to create the section and write the descrition, but again, what about the parameter Type value? And which parameter sets does it belong to?
 
-The reality is: you almost always need the open-source [platyPS](https://github.com/PowerShell/platyPS) tool to automatically answer the unknowns about new parameters. To use platyPS, you have two choices:
+The reality is: you almost always need the open-source [platyPS](https://github.com/PowerShell/platyPS) tool to automatically answer the unknowns about new parameters.
 
-  - **Use New-MarkdownHelp to dump the latest verion of the cmdlet to a file**: After you create a new local copy of the cmdlet topics that contains the new parameters, you copy the relevant information from your local copy to the topic on GitHub. ***Currently, this is the best and least confusing method***. 
+Currently, the best method with platyPS is to simply create a new version of the topic using the **New-MarkdownHelp** cmdlet, and copy whatever you need out of it. Theoretically, platyPS has an **Update-MarkdownHelp** cmdlet that automatically updates an existing local copy of the topic for you, which you can then upload in its entirety to the GitHub website to replace the exisitng topic. This approach currently has some issues in our enviornment:
 
-  - **Use Update-MarkdownHelp to update an existing copy of the topic**: Currently this method doesn't work. Without a lot of boring technical details, this method currently requires too much copying of *unrelated* content *from the original version of the topic* back into the updated version of the topic. ***Eventually, this will be the preferred method, but for now, don't bother***.
+- It's difficult to get a local copy of an existing cmdlet topic from the GitHub website (unless you're interested in forking the repo and having a local cloned copy on your computer). You have to copy/paste everything from the Raw view of the topic on the web site, and the local copy text file you manually create needs to be UTF-8 formatted (instead of the Notepad default of ANSI).
+
+- The updated topic will have missing or incorrect _unrelated_ parameter and other topic metadata information that you'll need to change by copy/pasting those values _back from_ the existing topic on GitHub into your local topic before you can even think about uploading the updated topic to GitHub (more than double the work required).
+
+In short, it's simply easier and faster to generate a new local copy of the cmdlet topic, and copy/paste only what you need into the existing topic on GitHub.
 
 Removing parameters from topics is a manual excercise, but we'll explain the process fully.
 
 ## Use platyPS to add new cmdlets to existing topics
-Regardless of whether you use `New-MarkdownHelp` or `Update-MarkdownHelp`, the first several steps of the process are identical.
 
 ### Step 1: Install platyPS
 The steps are the same as [Create new cmdlet topics](NEW_CMDLETS.md#step-1-install-platyps).
@@ -23,7 +26,7 @@ The steps are the same as [Create new cmdlet topics](NEW_CMDLETS.md#step-1-insta
 You probably know how to do this already, but the available workloads and connection methods are also described in [Create new cmdlet topics](NEW_CMDLETS.md#step-2-connect-to-the-powershell-environment-that-has-the-cmdlet).
 
 ### Step 3: Load platyPS in the PowerShell environment
-After you've connected in PowerShell to the server or service \(either in a regular Windows PowerShell window or from a specific PowerShell console shortcut\), run the following command to make the platyPS cmdlets available in your session:
+After you've connected in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), run the following command to make the platyPS cmdlets available in your session:
 
 ```
 Import-Module platyPS
@@ -34,102 +37,46 @@ This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-ver
 
 To recap: this step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present), and the value is most likely `$Session`.
 
-If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell, you can skip this step.
+If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell to connect, you can skip this step.
 
-**At this point, the instructions diverge based on whether you're using New-MarkdownHelp or Update-MarkdownHelp. As described earlier, the only viable method is Step 5a; don't use Step 5b**
+### Step 5: Use New-MarkdownHelp to dump the latest verion of the cmdlet to a file
+These instructions are the same (up to a point) as in [Create new cmdlet topics](NEW_CMDLETS.md):
 
-### Step 5a: Use New-MarkdownHelp to dump the latest verion of the cmdlet to a file
-These instructions are the same \(up to a point\) as in [Create new cmdlet topics](NEW_CMDLETS.md):
+The basic syntax is:
 
-1. The basic syntax is:
+ ```
+ New-MarkdownHelp -Command <Cmdlet> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
+ ``` 
 
-    ```
-    New-MarkdownHelp -Command <Cmdlet> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
-    ``` 
-
-    or 
+ or 
     
-    ```
-    $x = "<Cmdlet1>","<Cmdlet2>",..."<CmdletN>"
-    New-MarkdownHelp -Command $x -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
-    ``` 
+ ```
+ $x = "<Cmdlet1>","<Cmdlet2>",..."<CmdletN>"
+ New-MarkdownHelp -Command $x -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
+ ``` 
 
-    This example create a topic file for the updated cmdlet named Get-CoolFeature in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
+ This example create a topic file for the updated cmdlet named Get-CoolFeature in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
 
-    ```
-    New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO" -Session $Session
-    ```
+```
+New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO" -Session $Session
+```
 
-    This example creates topic files for the updated cmdlets Get-CoolFeature, New-CoolFeature, Remove-CoolFeature, and Set-CoolFeature from the Exchange Online session where the session variable is `$Session` in the folder C:\My Docs\ExO. 
+This example creates topic files for the updated cmdlets Get-CoolFeature, New-CoolFeature, Remove-CoolFeature, and Set-CoolFeature from the Exchange Online session where the session variable is `$Session` in the folder C:\My Docs\ExO. 
 
-    The first command stores the cmdlet names in a variable. The second command uses that variable to identify the cmdlets and write the output files.
+The first command stores the cmdlet names in a variable. The second command uses that variable to identify the cmdlets and write the output files.
 
-    ```
-    $NewCmdlets = "Get-CoolFeature","New-CoolFeature","Remove-CoolFeature","Set-CoolFeature"
-    ```
+```
+$Delta = "Get-CoolFeature","New-CoolFeature","Remove-CoolFeature","Set-CoolFeature"
+```
 
-    ```
-    New-MarkdownHelp -Command $NewCmdlets -OutputFolder "C:\My Docs\ExO" -Session $Session
-    ```
-
-    The resulting topics are plain text UTF-8 files that are formatted using [markdown](https://guides.github.com/features/mastering-markdown/). Office writers use [Visual Studio Code](https://code.visualstudio.com/) to edit topic files, but you can use Notepad or your favorite text editor.
-
-### Step 5b: Use Update-MarkdownHelp to create a new local copy of the topic
-> [!Important]
-> As described earlier, this method doesn't work yet. Don't use this method.
-
-Without making a fork and a local clone of the [https://aka.ms/office-powershell](https://aka.ms/office-powershell) repo, it's a bit of a pain to get a local copy of the existing cmdlet topics that you want to update, but it can be done:
-
-1. Go to the cmdlet topics location in the appropriate GiHub repository:
-
-    - Exchange: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange)
-
-       For Exchage, you also need to go one level deepter into an appropriate subfolder.
-
-    - Office Web Apps: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps)
-
-    - SharePoint Online: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-online](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-online)
-
-    - SharePoint PNP: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-pnp](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-pnp)
-
-    - SharePoint Server: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-server](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-server)
-
-    - Skype: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/skype/skype-ps/skype](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/skype/skype-ps/skype)
-
-    - StaffHub: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/staffhub/staffhub-ps/staffhub](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/staffhub/staffhub-ps/staffhub)
-
-    - Teams: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams)
-
-    - Whiteboard: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard)
-
-2. Click on the cmdlet topic so the contents are visible on the page.
-
-3. Click the **Raw** button.
-
-4. Click anywhere on the page and press CTRL + A to select all content on the page, and CTRL + C copy all content.
-
-5. Open Notepad or your favorite text editor and paste the content into a new, blank file.
-
-6. Use **Save as** to save the file:
- 
-    - With **UTF-8** encoding (the default is likely ANSI)
-
-    - With the same cmdlet name as the file on GitHub (including the .md extension).
-
-    - In a location that's easy for you to find.
-
-7. Repeat the previous steps for as many cmdlets as you need.
-
-8. Run the `Update-MarkdownHelp` platyPS cmdlet. The basic syntax is:
-
-   ```
-   Update-MarkdownHelp -Path <PathToDownloadedTopicFiles> -LogPath <PathToLogInformation> [-Session <PSSessionVariableName>]
-   ```
+```
+New-MarkdownHelp -Command $Delta -OutputFolder "C:\My Docs\ExO" -Session $Session
+```
 
 ### Step 6: Document the new parameters
-**At this point, the instructions converge, regardless of the Step 5 method**
+The resulting topics are plain text UTF-8 files that are formatted using [markdown](https://guides.github.com/features/mastering-markdown/). Office writers use [Visual Studio Code](https://code.visualstudio.com/) to edit topic files, but you can use Notepad or your favorite text editor.
 
-1. Find the new parameter(s) in the SYNTAX block and the parameter sections later in the topic.
+1. Find the new parameter(s) in the SYNTAX block and the parameter sections.
 
 2. Add a parameter description. We highly enourage you to plagerize existing content and formatting from other cmdlet topics. Many parameters are common across a wide variety of cmdlets. 
  
@@ -154,8 +101,6 @@ Without making a fork and a local clone of the [https://aka.ms/office-powershell
     - **Applicable**: You need to add this attribute and value yourself. Notice the capital 'A'. See other topics for available values (same available values as the **applicable** attribute at the top of the topic). Don't invent new values here. The value **must** come from the list of predefined values.
 
     - **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
-
-
 
 ### Step 7: Copy your changes into the existing topic on GitHub
 At this point, the steps are basically identical to [Short URL: aka.ms/office-powershell](../README.md):
@@ -182,9 +127,9 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
 
     - Whiteboard: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard)
 
-2. Click **Edit**
+2. Find the topic and click **Edit**
 
-3. Copy/paste your updates into the existing topic (click the **Preview** tab to see what they'll look like).
+3. Copy/paste your updates (and only your updates) from your new, local copy of the topic into the existing topic (click the **Preview** tab to see what they'll look like).
 
     **IMPORTANT**: The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
     Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
@@ -193,3 +138,22 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
 ![Image of Propose file change on Github](images/propose_file_change.png)
 
 7. On the next screen, click **Create pull request**.
+
+## Remove existing parameters from existing topics
+Removing parameters is a search and destroy mission in the existing topics on GitHub, using the basic [Editing Instrucstions](../README.md).
+
+The most important thing to remember: a parameter isn't gone until it's truly not available to customers. If a parameter is still available, but it's going away "in the future", it doesn't work correctly anymore, or isn't supposed to be available, it needs to remain in the topic until the product code is actually changed to remove the parameter. Until then, you can use this type of languague for the parameter description:
+
+- This parameter is reserved for internal Microsoft use.
+
+- This parameter has been deprecated and is no longer used.
+
+Hear me now, believe me later: Removing available parameters from a cmdlet reference topic can create as many issues as thir removal was supposed to solve.
+
+After you've confirmed that the parameter in question is really gone, find and remove all references to the parameter in the topic:
+
+- The SYNTAX block(s)
+
+- Examples
+
+- The individual parameter sections where each parameter is described. Be sure to delete the whole section including the \`\`\`yaml part at the end (don't leave trailing \`\`\`, which is easy to do).
