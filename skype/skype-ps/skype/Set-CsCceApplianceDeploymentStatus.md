@@ -26,7 +26,7 @@ Modifies the status for a Cloud Connector Edition deployment.
 PS C:\> Set-CsCceApplianceDeploymentStatus -Identity c4e3cb24-9ee4-41c8-8720-ecd342ba6a7d -Action Deploy -Status Finished
 ```
 
-This example marks the appliance with id c4e3cb24-9ee4-41c8-8720-ecd342ba6a7d as successfully deployed.
+This example marks the Cloud Connector Edition appliance with id c4e3cb24-9ee4-41c8-8720-ecd342ba6a7d as successfully deployed.
 
 ## PARAMETERS
 
