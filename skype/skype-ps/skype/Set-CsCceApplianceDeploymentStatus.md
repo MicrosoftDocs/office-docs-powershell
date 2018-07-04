@@ -8,34 +8,39 @@ schema: 2.0.0
 # Set-CsCceApplianceDeploymentStatus
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Modifies the status for a Cloud Connector Edition deployment.
 
 ## SYNTAX
 
 ```
-Set-CsCceApplianceDeploymentStatus [[-Identity] <Object>] [-Action <Object>] [-Status <Object>] [-Confirm] [-Error <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-Version <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsCceApplianceDeploymentStatus [[-Identity] <Object>] [-Action <Action>] [-Status <Object>] [-Confirm] [-Error <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-Version <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Modifies the status for a Cloud Connector Edition deployment.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+PS C:\> Set-CsCceApplianceDeploymentStatus -Identity <Appliance Identity GUID> -Action Deploy -Status Finished
 ```
 
-Insert descriptive text for example 1.
-
+This example marks the appliance with id c4e3cb24-9ee4-41c8-8720-ecd342ba6a7d as successfully deployed.
 
 ## PARAMETERS
 
 ### -Action
+Allowed values are:
+
+* Deploy
+* BitsUpdate
+* OsUpdate
+* Remove
 PARAMVALUE: Deploy | BitsUpdate | OsUpdate | Remove
 
 ```yaml
-Type: Object
+Type: Action
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
