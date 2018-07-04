@@ -241,6 +241,12 @@ The Operations parameter filters the search results by the operations that are l
 
 - Update
 
+- UpdateCalendarDelegation (cloud-based service only)
+
+- UpdateFolderPermissions (cloud-based service only)
+
+- UpdateInboxRules (cloud-based service only)
+
 You can enter multiple values separated by commas.
 
 ```yaml
