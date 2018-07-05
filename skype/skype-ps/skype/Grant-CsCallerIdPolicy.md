@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsCallerIdPolicy
 
 ## SYNOPSIS
-This cmdlet has been deprecated please use Grant-CsCallingLineIdentity to create new caller id policy.
+The CsCallerIdPolicy cmdlets have been deprecated. Please use the CsCallingLineIdentity cmdlets to manage caller ID policies for your organization.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Grant-CsCallerIdPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm
 ```
 
 ## DESCRIPTION
-This cmdlet has been deprecated please use Grant-CsCallingLineIdentity to create new caller id policy.
+The CsCallerIdPolicy cmdlets have been deprecated. Please use the CsCallingLineIdentity cmdlets to manage caller ID policies for your organization.
 
 ## EXAMPLES
 
