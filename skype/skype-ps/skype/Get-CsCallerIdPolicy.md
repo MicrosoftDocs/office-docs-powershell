@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsCallerIdPolicy
 
 ## SYNOPSIS
-This cmdlet has been deprecated please use Get-CsCallingLineIdentity to create new caller id policy.
+This cmdlet has been deprecated please use Get-CsCallingLineIdentity to get caller id policies.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-CsCallerIdPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter
 ```
 
 ## DESCRIPTION
-This cmdlet has been deprecated please use Get-CsCallingLineIdentity to create new caller id policy.
+This cmdlet has been deprecated please use Get-CsCallingLineIdentity to get caller id policies.
 
 ## EXAMPLES
 
