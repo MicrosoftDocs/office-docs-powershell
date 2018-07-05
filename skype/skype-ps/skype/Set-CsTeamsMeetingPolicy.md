@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 
 ### -AutoAdmittedUsers
-Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to None to send all users to the Lobby and have an attendee allow them to join a meeting
+Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to None to send all users to the Lobby and have an attendee allow them to join a meeting. This setting also applies to participants joining via a PSTN device (i.e. a traditional phone)
 
 ```yaml
 Type: Object
