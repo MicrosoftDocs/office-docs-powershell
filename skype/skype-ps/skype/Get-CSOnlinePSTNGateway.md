@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version:
 applicable: Skype for Business Online
 title: Get-CSOnlinePSTNGateway
 schema: 2.0.0
@@ -12,8 +13,15 @@ Shows the configuration of the previously defined Session Border Controller(s) (
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CSOnlinePSTNGateway -Identity <SBCFQDN>
+Get-CSOnlinePSTNGateway [-Tenant <System.Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CSOnlinePSTNGateway [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -21,32 +29,93 @@ Use this cmdlet to show the configuration of the previously created Session Bord
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Get-CSOnlinePSTNGateway
+### Example 1
+```powershell
+PS C:\> Get-CSOnlinePSTNGateway
 ```
 
 This example shows all SBCs paired with the tenant
 
-### -------------------------- Example 2 --------------------------
-```
-Get-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
+### Example 2
+```powershell
+PS C:\> Get-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
 ```
 
 This example selects all SBC with names matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc
 
-
 ## PARAMETERS
+
+### -Filter
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 The parameter is optional for the cmdlet. If not set all SBC paired to the tenant are listed.
 
 ```yaml
+Type: XdsGlobalRelativeIdentity
+Parameter Sets: Identity
+Aliases:
+Applicable: Skype for Business Online
 Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -LocalStore
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tenant
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 
