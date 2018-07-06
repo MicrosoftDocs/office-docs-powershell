@@ -48,7 +48,7 @@
         "packageRoot": "exchange-ps/exchange",
         "conceptualToc":"docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/exchange/toc.json",
-        "referenceToc": "exchange-ps/exchange/exchonline-ps/toc.yml",
+        "referenceToc": "exchange-ps/exchange/o365scc-ps/toc.yml",
         "referenceTocUrl": "/powershell/module/exchange-ps/toc.json"
     }
 }
