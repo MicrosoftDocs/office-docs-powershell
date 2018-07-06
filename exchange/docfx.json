@@ -197,7 +197,7 @@
         ],
         "src": "exchange-ps/exchange/o365scc-ps",
         "version": "o365scc-ps",
-        "dest": "module/o365scc-ps"
+        "dest": "module/exchange-ps"
       }
     ],
     "resource": [
