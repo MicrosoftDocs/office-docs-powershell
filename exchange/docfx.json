@@ -7,6 +7,23 @@
           "toc.yml"
         ],
         "src": "docs-conceptual",
+        "version":"exchserver-ps-2010",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
         "version":"exchserver-ps-2016",
         "dest": "exchange",
         "exclude": [
@@ -42,6 +59,23 @@
         ],
         "src": "docs-conceptual",
         "version":"exchonline-ps",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"o365scc-ps",
         "dest": "exchange",
         "exclude": [
           "**/obj/**",
@@ -132,9 +166,63 @@
         "src": "exchange-ps/exchange/exchonline-ps",
         "version": "exchonline-ps",
         "dest": "module/exchange-ps"
+      }, 
+      {
+        "files": [
+          "**/*.md"         
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "exchserver-ps-2010",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/exchserver-ps-2010",
+        "version": "exchserver-ps-2010",
+        "dest": "module/exchange-ps"
+      },
+      {
+        "files": [
+          "**/*.md"         
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "o365scc-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/o365scc-ps",
+        "version": "o365scc-ps",
+        "dest": "module/exchange-ps"
       }
     ],
     "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "exchserver-ps-2010",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "o365scc-ps",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
       {
         "files": [
           "**/*.png",
@@ -192,6 +280,12 @@
       },
       "exchonline-ps": {
         "dest": "exchonline-ps"
+      },
+      "exchserver-ps-2010": {
+        "dest": "exchserver-ps-2010"
+      },
+      "o365scc-ps": {
+        "dest": "o365scc-ps"
       }
     },
     "overwrite": [],
