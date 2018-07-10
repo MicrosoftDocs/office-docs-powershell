@@ -71,6 +71,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
  [-LinkPreviewEnabled <$true | $false>] [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-RealTimeLogServiceEnabled <$true | $false>] [-RefreshSessionEnabled <$true | $false>]
  [-SmtpActionableMessagesEnabled <$true | $false>] [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -130,6 +131,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
  [-LinkPreviewEnabled <$true | $false>] [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-RealTimeLogServiceEnabled <$true | $false>] [-RefreshSessionEnabled <$true | $false>]
  [-SmtpActionableMessagesEnabled <$true | $false>] [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -2050,6 +2052,26 @@ The UnblockUnsafeSenderPromptEnabled parameter specifies whether to enable or di
 - $true: The prompt to unblock unsafe senders is enabled. This is the default value.
 
 - $false: The prompt to unblock unsafe senders is disabled.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Set2, Set3
+Aliases:
+Applicable: Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditDisabled
+This parameter is only available in the online cloud-based service. 
+The AuditDisabled parameter specifies whether to disable or enable mailbox audits across the organization. Valid values are:
+
+- $true: Mailbox audits are disabled for this organization. 
+
+- $false: Allow mailbox audits in this organization. This is the default value.
 
 ```yaml
 Type: $true | $false
