@@ -38,6 +38,16 @@ Get-OfficeWebAppsHost
 
 This example returns the host domains that are on the Allow List.
 
+### ------------------EXAMPLE 2---------------------
+If there are multiple domains in the Allow List, please run the following:
+
+```
+FormatEnumerationLimit=-1
+Get-OfficeWebAppsHost
+```
+
+This example returns the host domains that are on the Allow List without ellipsis truncation in the case of multiple domains.
+
 ## PARAMETERS
 
 ## INPUTS
