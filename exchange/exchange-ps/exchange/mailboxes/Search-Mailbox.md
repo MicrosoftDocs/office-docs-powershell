@@ -368,6 +368,8 @@ The SearchQuery parameter specifies a search string or a query formatted using K
 
 If this parameter is empty, all messages are returned.
 
+**Note**: The Search-Mailbox cmdlet returns up to 10000 results per mailbox if a search query is specified.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
