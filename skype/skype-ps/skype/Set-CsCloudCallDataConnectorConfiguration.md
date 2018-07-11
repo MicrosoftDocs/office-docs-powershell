@@ -25,7 +25,7 @@ Set-CsCloudCallDataConnectorConfiguration [-EnableCallDataConnector <Boolean>] [
 ```
 
 ## DESCRIPTION
-Call Data Connector greatly simplifies call monitoring in a hybrid environment because you no longer need to use different sets of on-premises and online tools to monitor all of your users call quality. Whether your users are homed on premises or online, you can choose to view call quality for your entire organization online.
+Call Data Connector greatly simplifies call monitoring in a hybrid environment because you no longer need to use different sets of on-premises and online tools to monitor all of your users' call quality. Whether your users are homed on premises or online, you can choose to view call quality for your entire organization online.
 
 With Call Data Connector, the Skype for Business Server pushes call data to the cloud service so that you can leverage the Skype for Business Online Call Analytics (CA) and Call Quality Dashboard (CQD) tools.
 
@@ -44,7 +44,7 @@ Get-CsCloudCallDataConnectorConfiguration | Set-CsCloudCallDataConnectorConfigur
 ```
 
 Example 2 is a variation of the command shown in Example 1.
-In this case, the EnableCallDataConnector property is modified for each collection of Cloud Call Data Connector Cloud Call Data Connector configuration settings currently in use in the organization.
+In this case, the EnableCallDataConnector property is modified for each collection of Cloud Call Data Connector configuration settings currently in use in the organization.
 To do this, the command first calls the \`Get-CsCloudCallDataConnectorConfiguration\` cmdlet without any parameters in order to return a collection of all the Cloud Call Data Connector settings currently in use.
 This collection is then piped to the \`Set-CsCloudCallDataConnectorConfiguration\` cmdlet, which takes each item in the collection and changes the value of the EnableCallDataConnector property to $True.
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Represents the unique identifier to be assigned to the new collection of CloudCallDataConnector configuration settings. Because you can only create new collections at the site scope, the Identity will always be the prefix "site:" followed by the site name; for example "site:Redmond".
+Represents the unique identifier to be assigned to the new collection of CloudCallDataConnector configuration settings. Because you can only create new collections at the site scope, the Identity will always be the prefix "site:" followed by the site name; for example, "site:Redmond".
 
 ```yaml
 Type: XdsIdentity
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+Allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
 
 ```yaml
 Type: PSObject
