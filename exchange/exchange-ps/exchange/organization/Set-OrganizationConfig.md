@@ -2077,7 +2077,7 @@ The AuditDisabled parameter specifies whether to disable or enable mailbox audit
 
 ```yaml
 Type: $true | $false
-Parameter (All)
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False
