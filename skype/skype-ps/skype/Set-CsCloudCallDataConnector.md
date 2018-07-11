@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-Module Name: SkypeForBusiness
+applicable: Skype for Business Server 2019
+title: Set-CsCloudCallDataConnector
 online version:
 schema: 2.0.0
 ---
@@ -44,7 +45,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -59,7 +60,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -74,7 +75,7 @@ Allows you to pass a reference to an object to the cmdlet, rather than set indiv
 Type: PSObject
 Parameter Sets: Instance
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +90,7 @@ Office 365 TenantID of your tenant.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +105,7 @@ Data ingestion token for CloudCallDataConnector telemetry endpoint.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +121,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +141,7 @@ Microsoft.Rtc.Management.WritableConfig.Settings.CloudCallDataConnection. The \`
 
 ## OUTPUTS
 
-### The \`Set-CsCloudCallDataConnector\` cmdlet does not return a value or object. Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CloudCallDataConnection object.
+### The `Set-CsCloudCallDataConnector` cmdlet does not return a value or object. Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CloudCallDataConnection object.
 
 ## NOTES
 

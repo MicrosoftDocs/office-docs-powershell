@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-Module Name: SkypeForBusiness
+applicable: Skype for Business Server 2019
+title: Set-CsCloudCallDataConnectorConfiguration
 online version:
 schema: 2.0.0
 ---
@@ -67,7 +68,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -82,7 +83,7 @@ Enables upload of call data.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +98,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +113,7 @@ Represents the unique identifier to be assigned to the new collection of CloudCa
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -127,7 +128,7 @@ Allows you to pass a reference to an object to the cmdlet, rather than set indiv
 Type: PSObject
 Parameter Sets: Instance
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +144,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +163,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### The \`Set-CsCloudCallDataConnectorConfiguration\` cmdlet does not return a value or object. Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CloudCallDataConnection object.
+### The `Set-CsCloudCallDataConnectorConfiguration` cmdlet does not return a value or object. Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CloudCallDataConnection object.
 
 ## NOTES
 

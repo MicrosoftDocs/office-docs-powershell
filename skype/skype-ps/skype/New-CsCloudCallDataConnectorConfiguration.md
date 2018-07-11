@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-Module Name: SkypeForBusiness
+applicable: Skype for Business Server 2019
+title: New-CsCloudCallDataConnectorConfiguration
 online version:
 schema: 2.0.0
 ---
@@ -57,7 +58,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -72,7 +73,7 @@ Enables upload of call data (CDR and QoE).
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -87,7 +88,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +103,7 @@ Represents the unique identifier to be assigned to the new collection of CloudCa
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -117,7 +118,7 @@ Creates an object reference without actually committing the object as a permanen
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -133,7 +134,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
