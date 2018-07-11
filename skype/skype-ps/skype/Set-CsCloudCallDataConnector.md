@@ -19,7 +19,7 @@ Set-CsCloudCallDataConnector [-Token <String>] [-TenantId <String>] [-Instance <
 ```
 
 ## DESCRIPTION
-Call Data Connector provides a single view in a hybrid environment where you can view the on-premises and online call quality data at one place.
+Call Data Connector provides a single view in a hybrid environment where you can view the on-premises and online call quality data in one place.
 
 The Set-CsCloudCallDataConnector cmdlet provides a way for you to store an on-premise copy of the cloud connection information created by the New-CsCloudCallDataConnection cmdlet.
 
@@ -30,10 +30,10 @@ The Set-CsCloudCallDataConnector cmdlet provides a way for you to store an on-pr
 PS C:\> New-CsCloudCallDataConnection | Set-CsCloudCallDataConnector -TenantId &lt;tenant_id&gt;
 ```
 
-If you're logged in to Skype for Business Online Powershell within the Skype for Business Server Management Shell 2019, this command in example 1 takes the output of the New-CsCloudCallDataConnection online cmdlet and passes it to the Set-CsCloudCallDataConnector cmdlet via pipeline so that the Token can be stored on-premises. Along with the Token, the TenantId of your O365 tenant will get stored on-premises as well.
+If you're logged in to Skype for Business Online Powershell within the Skype for Business Server Management Shell 2019, this command in example 1 takes the output of the New-CsCloudCallDataConnection online cmdlet and passes it to the Set-CsCloudCallDataConnector cmdlet via pipeline so that the Token can be stored on premises. Along with the Token, the TenantId of your O365 tenant will get stored on premises as well.
 
 ### Example 2
-Example showing the scenario when we aren't piping the output from online cmdlet
+Example showing the scenario when we aren't piping the output from online cmdlet.
 
 ## PARAMETERS
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+Allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
 
 ```yaml
 Type: PSObject
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
-O365 TenantID of your tenant.
+Office 365 TenantID of your tenant.
 
 ```yaml
 Type: String
