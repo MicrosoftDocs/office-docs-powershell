@@ -3071,3 +3071,13 @@ The following cmdlet references are for Skype for Business.
 ### [Remove-CsTeamsUpgradePolicy](Remove-CsTeamsUpgradePolicy.md)
 
 ### [Set-CsTeamsUpgradePolicy](Set-CsTeamsUpgradePolicy.md)
+
+### [Get-CsCloudCallDataConnector](Get-CsCloudCallDataConnector.md)
+
+### [Get-CsCloudCallDataConnectorConfiguration](Get-CsCloudCallDataConnectorConfiguration.md)
+
+### [New-CsCloudCallDataConnectorConfiguration](New-CsCloudCallDataConnectorConfiguration.md)
+
+### [Set-CsCloudCallDataConnector](Set-CsCloudCallDataConnector.md)
+
+### [Set-CsCloudCallDataConnectorConfiguration](Set-CsCloudCallDataConnectorConfiguration.md)
