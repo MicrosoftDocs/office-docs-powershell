@@ -17,9 +17,9 @@ Get-CsCloudCallDataConnector [[-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Call Data Connector provides a single view in a hybrid environment where you can view the on-premises and online call quality data at one place.
+Call Data Connector provides a single view in a hybrid environment where you can view the on-premises and online call quality data in one place.
 
-The Get-CsCloudCallDataConnector cmdlet provides a way for you to view the on-premises copy of the cloud connection information created by the New-CsCloudCallDataConnection cmdlet. This outputs the O365 TenantID and the data ingestion token for Call Data Connector telemetry endpoint.
+The Get-CsCloudCallDataConnector cmdlet provides a way for you to view the on-premises copy of the cloud connection information created by the New-CsCloudCallDataConnection cmdlet. This outputs the Office 365 TenantID and the data ingestion token for Call Data Connector telemetry endpoint.
 
 ## EXAMPLES
 
@@ -28,12 +28,12 @@ The Get-CsCloudCallDataConnector cmdlet provides a way for you to view the on-pr
 PS C:\> Get-CsCloudCallDataConnector
 ```
 
-This example returns the ClouldCallDataConnector settings stored on-premises. Note that there is only a single, global instance of ClouCallDataConnector settings.
+This example returns the CloudCallDataConnector settings stored on-premises. Note that there is only a single, global instance of CloudCallDataConnector settings.
 
 ## PARAMETERS
 
 ### -LocalStore
-Retrieves the Call Data Connector data from the local replica of the Central Management store rather than from the Central Management store itself.
+Retrieves the Call Data Connector data from the local replica of the Central Management store, rather than from the Central Management store itself.
 
 ```yaml
 Type: SwitchParameter
