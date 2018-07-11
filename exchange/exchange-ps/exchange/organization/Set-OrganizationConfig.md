@@ -20,9 +20,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
-  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
+ [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -71,7 +72,6 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
  [-LinkPreviewEnabled <$true | $false>] [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-RealTimeLogServiceEnabled <$true | $false>] [-RefreshSessionEnabled <$true | $false>]
  [-SmtpActionableMessagesEnabled <$true | $false>] [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
- [-AuditDisabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -82,6 +82,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -131,7 +132,6 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
  [-LinkPreviewEnabled <$true | $false>] [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-RealTimeLogServiceEnabled <$true | $false>] [-RefreshSessionEnabled <$true | $false>]
  [-SmtpActionableMessagesEnabled <$true | $false>] [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
- [-AuditDisabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -142,6 +142,7 @@ Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -2066,18 +2067,19 @@ Accept wildcard characters: False
 ```
 
 ### -AuditDisabled
-This parameter is only available in the online cloud-based service. 
-The AuditDisabled parameter specifies whether to disable or enable mailbox audits across the organization. Valid values are:
+This parameter is available only in the online cloud-based service.
 
-- $true: Mailbox audits are disabled for this organization. 
+The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
 
-- $false: Allow mailbox audits in this organization. This is the default value.
+- $true: Mailbox auditing is disabled for the organization. 
+
+- $false: Allow mailbox auditing in the organization. This is the default value.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2, Set3
+Parameter (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
