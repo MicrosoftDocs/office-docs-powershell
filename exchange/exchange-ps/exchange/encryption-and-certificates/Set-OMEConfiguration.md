@@ -18,9 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-ClientEncryptionEnabled <$true | $false>]
- [-DisclaimerText <String>] [-EmailText <String>] [-ExpirationOptionEnabled <$true | $false>] [-Image <Byte[]>]
- [-OTPEnabled <$true | $false>] [-PortalText <String>] [<CommonParameters>]
+Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-DisclaimerText <String>]
+ [-EmailText <String>] [-Image <Byte[]>] [-IntroductionText <String>] [-OTPEnabled <$true | $false>]
+ [-PortalText <String>] [-ReadButtonText <String>] [-SocialIdSignIn <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,21 +75,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClientEncryptionEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisclaimerText
 The DisclaimerText parameter specifies the disclaimer text in the email that contains the encrypted message. The maximum length is 1024 characters.
 
@@ -124,21 +109,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExpirationOptionEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Image
 The Image parameter identifies and uploads an image that will be displayed in the email message and in the Office 365 portal.
 
@@ -154,6 +124,20 @@ To remove an existing image and use the default image, use the value $null for t
 
 ```yaml
 Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntroductionText
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -190,6 +174,34 @@ To remove existing text and use the default value, use the value $null for this 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadButtonText
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SocialIdSignIn 
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

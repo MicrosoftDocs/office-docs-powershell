@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingPolicy
 schema: 2.0.0
@@ -631,6 +631,8 @@ VGA.
 VGA has a resolution of 640 pixels by 480 pixels.
 
 The default value is VGA.
+
+Note: The Skype for Business client and Skype for Business 2015 AVMCU will offer H.264
 
 ```yaml
 Type: MaxVideoConferenceResolution

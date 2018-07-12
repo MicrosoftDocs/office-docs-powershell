@@ -1,17 +1,17 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-applicable: SharePoint Migration Tool
-title: Register-SPMTMigration
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Register-SPMTMigration
+Online version: 
+Schema: 2.0.0
 ---
 
 # Register-SPMTMigration
 
 ## SYNOPSIS
-This cmdlet will create a SPMT migration session and initialization. The initialization includes configuring migration settings at session level and connecting to SPO. If no specific setting parameters are defined, default settings will be used. 
-After a session is registered, the Administrator can add a migration task to the SPMT session and start migration.
+This cmdlet will create a migration session and initialize it. The initialization will configure migration settings at session level. If no specific setting parameters are defined, default settings will be used. 
+After a session is registered, the user can add a migration task to the migration session and start migration.
 ## SYNTAX
 
 ```
@@ -19,12 +19,12 @@ Register-SPMTMigration [-Credentials <PSCredential>][-Incremental <bool>]  [-Sca
 ```
 
 ## DESCRIPTION
-This cmdlet will create a SPMT migration session and initialization. The initialization includes configuring migration settings at session level and connecting to SPO. If no specific setting parameters are defined, default settings will be used. 
-After a session is registered, the Administrator can add a migration task to the SPMT session and start migration.
+This cmdlet will create a migration session and initialize it. The initialization will configure migration settings at session level. If no specific setting parameters are defined, default settings will be used. 
+After a session is registered, the user can add a migration task to the migration session and start migration.
 
 ## EXAMPLES
 
-### Create a SPMT migration session and connecting to SPO. 
+### Create a migration session and connecting to SPO. 
 ```
 #Define SPO target#
 $Global:SPOUrl = “https://contoso.sharepoint.com”
@@ -32,12 +32,14 @@ $Global:UserName = “admin@contoso.onmicrosoft.com”
 $Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
 $Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
 
+#Import SPMT Migration Module#
 Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
+
 #Register the SPMT session with SPO credentials#
 Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
 ```
 
-Create a SPMT migration session and connecting to SPO
+Create a migration session.
 
 ## PARAMETERS
 
@@ -162,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateFileVersionHistory
-If set to No, only the most recent versions of the file will be migrated. If set to Yes, you can choose whether to keep all versions, or limit it to a specific number. By default, it is set to On. 
+If set to Off, only the most recent versions of the file will be migrated. If set to On, you can choose whether to keep all versions, or limit it to a specific number. By default, it is set to On. 
 
 ```yaml
 Type: Boolean
@@ -205,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateFilesModifiedAfter
-If you choose to limit what files are to be migrated   based on modified dates, set your values in this section. This may be to limit the number of files migrated or to adhere to overall company governance policy regarding to file retention. The default value is null.
+If you choose to limit what files are to be migrated based on modified dates, set your values in this section. This may be to limit the number of files migrated or to adhere to overall company governance policy regarding to file retention. The default value is null.
 ```yaml
 Type: DateTime
 Parameter Sets:  
@@ -421,4 +423,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
