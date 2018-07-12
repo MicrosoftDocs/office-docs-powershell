@@ -20,9 +20,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
-  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
+ [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -81,6 +82,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -140,6 +142,7 @@ Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -2056,6 +2059,27 @@ Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditDisabled
+This parameter is available only in the online cloud-based service.
+
+The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
+
+- $true: Mailbox auditing is disabled for the organization. 
+
+- $false: Allow mailbox auditing in the organization. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
