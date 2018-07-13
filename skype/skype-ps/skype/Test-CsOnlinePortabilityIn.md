@@ -24,10 +24,17 @@ Tests the ability to use ported phone numbers from your current service provider
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> 
+PS C:\> Test-CsOnlinePortabilityIn -TelephoneNumberRanges 2522444440,2522444449
 ```
 
-Insert descriptive text for example 1.
+This example tests the phone numbers range from 2522444440 to 2522444449.
+
+### -------------------------- Example 2 --------------------------
+```
+PS C:\> Test-CsOnlinePortabilityIn -TelephoneNumbers 2522444441,2522444445,2522444447
+```
+
+This example tests the phone numbers 2522444441,2522444445 and 2522444447.
 
 
 ## PARAMETERS
@@ -81,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberRanges
-Defines a telephone number range to test. For example, let's say you want to test all of your 25 phone numbers (+1 425-555-1235 through 1259). You should enter: "+14255551234-+14255551259".
+Defines a telephone number range to test.
 
 ```yaml
 Type: String
@@ -97,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumbers
-Defines a list of telephone numbers to test. For example, let's say you want to test +1 425-555-1235, +1 425-555-1245 and +1 425-555-1259. You should enter: "+14255551235,+14255551245,+14255551259".
+Defines a list of telephone numbers to test.
 
 ```yaml
 Type: String
@@ -129,7 +136,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
