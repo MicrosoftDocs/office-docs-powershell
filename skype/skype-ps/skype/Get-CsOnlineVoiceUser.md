@@ -342,4 +342,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 [Set-CsOnlineVoiceUser](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceuser?view=skype-ps)
+
 [Set-CsOnlineVoiceUserBulk](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceuserbulk?view=skype-ps)
