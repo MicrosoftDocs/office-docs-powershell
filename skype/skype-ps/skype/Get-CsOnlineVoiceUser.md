@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetFromAAD
-PARAMVALUE: SwitchParameter
+Use this switch to get the users from Azure Active Directory.
 
 ```yaml
 Type: SwitchParameter
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetPendingUsers
-PARAMVALUE: SwitchParameter
+Use this switch to get only the users in pending state.
 
 ```yaml
 Type: SwitchParameter
@@ -238,7 +238,10 @@ Accept wildcard characters: False
 ```
 
 ### -PSTNConnectivity
-PARAMVALUE: All | Online | OnPremises
+Possible values are:
+* All
+* Online
+* OnPremises
 
 ```yaml
 Type: Object
@@ -254,7 +257,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-PARAMVALUE: String
+The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more details about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
+
+If this parameter is empty, all users are returned.
 
 ```yaml
 Type: Object
