@@ -8,15 +8,16 @@ schema: 2.0.0
 # Set-CsOnlineVoiceUser
 
 ## SYNOPSIS
-Use the `Set-CsOnlineVoiceUser` to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
+Use the `Set-CsOnlineVoiceUser` to set the PSTN specific parameters (like telephone numbers and emergency response locations).
 
 ## SYNTAX
 
 ```
-Set-CsOnlineVoiceUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]  [-DomainController <Object>] [-Force] [-LocationID <Object>] [-TelephoneNumber <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineVoiceUser [[-Identity] <Object>] [-Confirm] [-DomainController <Object>] [-Force] [-LocationID <Object>] [-TelephoneNumber <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+Use the `Set-CsOnlineVoiceUser` to set the PSTN specific parameters (like telephone numbers and emergency response locations).
 
 ## EXAMPLES
 
