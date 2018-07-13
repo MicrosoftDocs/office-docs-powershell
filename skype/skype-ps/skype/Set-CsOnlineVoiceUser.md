@@ -13,9 +13,7 @@ Use the `Set-CsOnlineVoiceUser` to set the PSTN specific parameters (like teleph
 ## SYNTAX
 
 ```
-Set-CsOnlineVoiceUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-LocationID <Object>] [-TelephoneNumber <Object>] [-Tenant <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineVoiceUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]  [-DomainController <Object>] [-Force] [-LocationID <Object>] [-TelephoneNumber <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,11 +22,10 @@ Set-CsOnlineVoiceUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneNumber +4255037311 -LocationID c7c5a17f-00d7-47c0-9ddb-3383229d606b
+PS C:\> Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneNumber +4255037311 -LocationID c7c5a17f-00d7-47c0-9ddb-3383229d606b
 ```
 
 This example sets the telephone number and location for a user identified by the user ObjectID.
-
 
 ## PARAMETERS
 
@@ -52,22 +49,6 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
