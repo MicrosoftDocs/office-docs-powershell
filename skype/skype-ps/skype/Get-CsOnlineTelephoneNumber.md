@@ -71,7 +71,6 @@ PS C:\> Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
 
 This example gets the phone numbers with the city code designating New York, New York.
 
-
 ## PARAMETERS
 
 ### -ActivationState
