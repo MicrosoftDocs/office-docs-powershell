@@ -34,7 +34,7 @@ This example tests the phone numbers range from 2522444440 to 2522444449.
 PS C:\> Test-CsOnlinePortabilityIn -TelephoneNumbers 2522444441,2522444445,2522444447
 ```
 
-This example tests the phone numbers 2522444441,2522444445 and 2522444447.
+This example tests the phone numbers 2522444441, 2522444445 and 2522444447.
 
 
 ## PARAMETERS
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-This parameter is reserved for Microsoft internal use only.
+Suppresses any confirmation prompts that would otherwise be displayed before testing.
 
 ```yaml
 Type: SwitchParameter
