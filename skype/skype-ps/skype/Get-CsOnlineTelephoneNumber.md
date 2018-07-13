@@ -35,15 +35,25 @@ CityCode : NOAM-US-NY-NY
 Id : 19294450177
 
 InventoryType : Service
+
 Location :
+
 O365Region : NOAM
+
 SourceType : Tnm
+
 TargetType : caa
+
 Tenant :
+
 TenantId :
+
 UserId :
+
 IsManagedByServiceDesk : True
+
 PortInOrderStatus :
+
 
 ## EXAMPLES
 
