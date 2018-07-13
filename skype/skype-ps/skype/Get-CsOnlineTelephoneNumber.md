@@ -21,12 +21,19 @@ Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <Object>] [-C
 Here is an example of the output of the `Get-CsOnlineTelephoneNumber` cmdlet.
 
 RunspaceId : f90303a9-c6a8-483c-b3b3-a5b8cdbab19c
+
 ActivationState : Activated
+
 BridgeNumber :
+
 CallingProfile : BandwidthUS
+
 InventoryType : Service
+
 CityCode : NOAM-US-NY-NY
+
 Id : 19294450177
+
 InventoryType : Service
 Location :
 O365Region : NOAM
