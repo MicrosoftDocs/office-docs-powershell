@@ -13,10 +13,7 @@ Use the Get-CsOnlineVoiceUser cmdlet to retrieve a voice user's telephone number
 ## SYNTAX
 
 ```
-Get-CsOnlineVoiceUser [-BypassDualWrite <Object>] [-CivicAddressId <Object>] [-DomainController <Object>]
- [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Object>] [-Force] [-GetFromAAD]
- [-GetPendingUsers] [-Identity <Object>] [-LocationId <Object>] [-NumberAssigned] [-NumberNotAssigned]
- [-PSTNConnectivity <Object>] [-SearchQuery <Object>] [-Skip <Object>] [-Tenant <Object>] [-AsJob]
+Get-CsOnlineVoiceUser [-BypassDualWrite <Object>] [-CivicAddressId <Object>] [-DomainController <Object>] [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Object>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <Object>] [-LocationId <Object>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <Object>] [-SearchQuery <Object>] [-Skip <Object>] [-Tenant <Object>] [-AsJob]
  [<CommonParameters>]
 ```
 
@@ -26,29 +23,13 @@ Get-CsOnlineVoiceUser [-BypassDualWrite <Object>] [-CivicAddressId <Object>] [-D
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
+PS C:\> Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
 ```
 
 This example uses the User Principal Name (UPN) to retrieve the location and phone number information.
 
 
 ## PARAMETERS
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CivicAddressId
 Specifies the identity of the civic address that is assigned to the target users.
@@ -83,7 +64,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnterpriseVoiceStatus
-PARAMVALUE: All | Enabled | Disabled
+Possible values are:
+* All
+* Enabled
+* Disabled
 
 ```yaml
 Type: Object
@@ -99,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandLocation
-PARAMVALUE: SwitchParameter
+Displays the location parameter with its value.
 
 ```yaml
 Type: SwitchParameter
@@ -353,4 +337,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-
+[Set-CsOnlineVoiceUser](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceuser?view=skype-ps)
+[Set-CsOnlineVoiceUserBulk](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceuserbulk?view=skype-ps)
