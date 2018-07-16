@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCORS
-{{Fill EnableCORS Description}}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Boolean
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUcwaScopeCheck
-{{Fill EnableUcwaScopeCheck Description}}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Boolean
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxRegistrationsPerPublicApplication
-{{Fill MaxRegistrationsPerPublicApplication Description}}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Int32
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseLegacyPushNotifications
-{{Fill UseLegacyPushNotifications Description}}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Boolean
