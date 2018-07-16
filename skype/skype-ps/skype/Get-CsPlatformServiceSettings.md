@@ -39,7 +39,10 @@ This example shows you which of the Skype for Business on Mac features are enabl
 ## PARAMETERS
 
 ### -Filter
-{{Fill Filter Description}}
+Enables you to use wildcard characters in order to return one or more Platform Service Settings configurations.
+For example, to return all of the Platform Service Settings configurations with the word Test in their names use this syntax:
+
+-Filter "*Test*"
 
 ```yaml
 Type: String
@@ -55,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the Platform Service Settings to be modified.
 
 ```yaml
 Type: XdsIdentity
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+Retrieves the Platform Service Settings configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 ```yaml
 Type: SwitchParameter
