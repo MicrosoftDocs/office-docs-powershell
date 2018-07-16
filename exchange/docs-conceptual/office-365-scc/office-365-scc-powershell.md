@@ -9,6 +9,7 @@ ms.topic: article
 ms.service: o365-security-and-compliance
 localization_priority: Normal
 ms.assetid: 2f33bb84-cede-46f6-9d39-d246e8ce3543
+monikerRange: "o365scc-ps"
 description: "Learn about using PowerShell in the Office 365 Security & Compliance Center."
 ---
 

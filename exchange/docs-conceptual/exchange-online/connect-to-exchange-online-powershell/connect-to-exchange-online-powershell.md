@@ -11,6 +11,7 @@ localization_priority: Priority
 ms.collection: Strat_EX_Admin
 ms.custom: 
 ms.assetid: c8bea338-6c1a-4bdf-8de0-7895d427ee5b
+monikerRange: "exchonline-ps"
 description: "Learn how to use remote PowerShell to connect to Exchange Online."
 ---
 

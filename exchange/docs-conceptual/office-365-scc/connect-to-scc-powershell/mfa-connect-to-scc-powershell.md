@@ -8,6 +8,7 @@ ms.topic: article
 ms.service: o365-security-and-compliance
 localization_priority: Normal
 ms.assetid: 8e11c808-e734-4874-ac94-e5251ea85c19
+monikerRange: "o365scc-ps"
 description: "Learn how to connect to Security & Compliance Center PowerShell by using multi-factor authentication (MFA) or federated authentication."
 ---
 
