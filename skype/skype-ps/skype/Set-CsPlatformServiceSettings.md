@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the Platform Service Settings to be modified.
 
 ```yaml
 Type: XdsIdentity
