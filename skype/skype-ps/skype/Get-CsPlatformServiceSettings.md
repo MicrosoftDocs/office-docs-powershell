@@ -25,7 +25,7 @@ Get-CsPlatformServiceSettings [-Filter <String>] [-LocalStore] [<CommonParameter
 ## DESCRIPTION
 Skype for Business Server 2015 Cumulative Update 6 introduces new features for Skype for Business on Mac users like support for E-911 calls, send files in peer-to-peer chats, block external access by policy and more.
 
-The 'Get-CsPlatformServiceSettings' cmdlet shows you which of these features are enabled.
+The `Get-CsPlatformServiceSettings` cmdlet shows you which of these features are enabled.
 
 ## EXAMPLES
 
