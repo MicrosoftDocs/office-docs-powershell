@@ -13,7 +13,7 @@ Use the Get-CsOnlineVoiceUser cmdlet to retrieve a voice user's telephone number
 ## SYNTAX
 
 ```
-Get-CsOnlineVoiceUser [-BypassDualWrite <Object>] [-CivicAddressId <Object>] [-DomainController <Object>] [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Object>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <Object>] [-LocationId <Object>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <Object>] [-SearchQuery <Object>] [-Skip <Object>] [-Tenant <Object>] [-AsJob]
+Get-CsOnlineVoiceUser [-CivicAddressId <Object>] [-DomainController <Object>] [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Object>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <Object>] [-LocationId <Object>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <Object>] [-SearchQuery <Object>] [-Skip <Object>] [-Tenant <Object>] [-AsJob]
  [<CommonParameters>]
 ```
 
