@@ -3,53 +3,38 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version:
 applicable: Skype for Business Online
-title: Set-CsTeamsCallingPolicy
+title: Set-CsTeamsGuestCallingConfiguration
 schema: 2.0.0
 ---
-
-# Set-CsTeamsCallingPolicy
+# Set-CsTeamsGuestCallingConfiguration
 
 ## SYNOPSIS
+Allows admins to set values in the GuestCallingConfiguration, which specifies what options guest users have for calling within Teams.
 
-Use this cmdlet to update values in existing Teams Calling Policies.
 
 ## SYNTAX
 
 ```
-Set-CsTeamsCallingPolicy [-WhatIf] [-AllowCalling <Boolean>] [-Confirm] [[-Identity] <Object>]
- [-Tenant <Object>] [-AllowPrivateCalling <Boolean>] [-Force] [-Instance <Object>] [-AsJob]
+Set-CsTeamsGuestCallingConfiguration [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
+ [-AllowPrivateCalling <Boolean>] [-Force] [-Instance <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interopability state with Skype for Business.  This cmdlet allows admins to set values in a given calling policy
+Allows admins to set values in the GuestCallingConfiguration, which specifies what options guest users have for calling within Teams.  This policy primarily allows admins to disable calling for guest users within Teams.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsTeamsCallingPolicy -Identity Global -AllowPrivateCalling $true
+PS C:\> Set-CsTeamsGuestCallingConfiguration -Identity Global -AllowPrivateCalling $false
 ```
 
-Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the global (default) tenant CallingPolicy 
+In this example, the admin has disabled private calling for guests in his organization.
+
 ## PARAMETERS
 
-### -AllowCalling
-Controls interop calling capabilities. Turning this on will allow Skype for Business users to have one-on-one calls with Teams users and vice-versa. 
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowPrivateCalling
-controls all calling capabilities in Teams. Turning this off will turn off all calling functionality in Teams. If you use Skype for Business for calling, this policy will not affect calling functionality in Skype for Business.
+Designates whether guests who have been enabled for Teams can use calling functionality.  If $false, guests cannot call.
 
 ```yaml
 Type: Boolean
@@ -79,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Suppresses all non-fatal errors
+Bypass confirmation
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Name of the policy being modified.
+The only option is Global
 
 ```yaml
 Type: Object
@@ -109,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Internal Microsoft use
+Internal Microsoft use 
 
 ```yaml
 Type: Object

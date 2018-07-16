@@ -3,38 +3,41 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version:
 applicable: Skype for Business Online
-title: Set-CsTeamsCallingPolicy
+title: Set-CsTeamsGuestMeetingConfiguration
 schema: 2.0.0
 ---
 
-# Set-CsTeamsCallingPolicy
+# Set-CsTeamsGuestMeetingConfiguration
 
 ## SYNOPSIS
 
-Use this cmdlet to update values in existing Teams Calling Policies.
+Designates what meeting features guests using Microsoft Teams will have available. Use this cmdlet to set the configuration.
 
 ## SYNTAX
 
 ```
-Set-CsTeamsCallingPolicy [-WhatIf] [-AllowCalling <Boolean>] [-Confirm] [[-Identity] <Object>]
- [-Tenant <Object>] [-AllowPrivateCalling <Boolean>] [-Force] [-Instance <Object>] [-AsJob]
+Set-CsTeamsGuestMeetingConfiguration [-WhatIf] [-ScreenSharingMode <Object>] [-AllowMeetNow <bool>]
+ [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-AllowIPVideo <bool>] [-Force] [-Instance <Object>]
+ [-AsJob]
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interopability state with Skype for Business.  This cmdlet allows admins to set values in a given calling policy
+
+The TeamsGuestMeetingConfiguration designates which meeting features guests leveraging Microsoft Teams will have available.  This configuration will apply to all guests utilizing Microsoft Teams.  Use the Set-CsTeamsGuestMeetingConfiguration cmdlet to designate what values are set for your organization.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsTeamsCallingPolicy -Identity Global -AllowPrivateCalling $true
+PS C:\> Set-CsTeamsGuestMeetingConfiguration -Identity Global -AllowMeetNow $false -AllowIPVideo $false
 ```
 
-Sets the value of the parameter AllowPrivateCalling, which controls whether or not users can leverage calling functionality in Microsoft Teams, in the global (default) tenant CallingPolicy 
+Disables Guests' usage of MeetNow and Video calling in the organization; all other values of the configuration are left as is.
+
 ## PARAMETERS
 
-### -AllowCalling
-Controls interop calling capabilities. Turning this on will allow Skype for Business users to have one-on-one calls with Teams users and vice-versa. 
+### -AllowIPVideo
+Determines whether video is enabled in  a user's meetings or calls. Set this to TRUE to allow guests to share their video. Set this to FALSE to prohibit guests from sharing their video
 
 ```yaml
 Type: Boolean
@@ -48,11 +51,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowPrivateCalling
-controls all calling capabilities in Teams. Turning this off will turn off all calling functionality in Teams. If you use Skype for Business for calling, this policy will not affect calling functionality in Skype for Business.
+### -AllowMeetNow
+Determines whether guests can start ad-hoc meetings. Set this to TRUE to allow guests to start ad-hoc meetings. Set this to FALSE to prohibit guests from starting ad-hoc meetings. 
+
 
 ```yaml
-Type: Boolean
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
@@ -79,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Suppresses all non-fatal errors
+Suppresses all non fatal errors.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Name of the policy being modified.
+The only input allowed is "Global"
 
 ```yaml
 Type: Object
@@ -109,7 +113,22 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Internal Microsoft use
+Pipe the existing configuration from a Get- call.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScreenSharingMode
+Determines the mode in which guests can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens
 
 ```yaml
 Type: Object

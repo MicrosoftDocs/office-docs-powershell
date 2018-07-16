@@ -26,8 +26,12 @@ User-level policy for tenant admin to configure meeting broadcast behavior for t
 
 
 ## EXAMPLES
+### Example 1
+```powershell
+PS C:\> Set-CsTeamsMeetingBroadcastPolicy -Identity Global -AllowBroadcastScheduling $false 
+```
 
-
+Sets the value of the Default (Global) Broadcast Policy in the organization to disable broadcast scheduling, and leaves all other parameters the same.
 
 ## PARAMETERS
 

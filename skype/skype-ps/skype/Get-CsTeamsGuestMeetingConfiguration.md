@@ -3,42 +3,40 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version:
 applicable: Skype for Business Online
-title: Get-CsTeamsCallingPolicy
+title: Get-CsTeamsGuestCallingConfiguration
 schema: 2.0.0
 ---
 
-# Get-CsTeamsCallingPolicy
+# Get-CsTeamsGuestMeetingConfiguration
 
 ## SYNOPSIS
 
-Returns information about the teams calling policies configured for use in your organization.
-Teams calling policies help determine which users are able to use calling functionality within Microsoft Teams.
+Designates what meeting features guests using Microsoft Teams will have available.
 
 ## SYNTAX
 
 ```
-Get-CsTeamsCallingPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsGuestMeetingConfiguration [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
+ [-AsJob]
 ```
 
 ## DESCRIPTION
 
-Returns information about the teams calling policies configured for use in your organization.
-Teams calling policies help determine which users are able to use calling functionality within Microsoft Teams and interoperability with Skype for Business.
+The TeamsGuestMeetingConfiguration designates which meeting features guests leveraging Microsoft Teams will have available.  This configuration will apply to all guests utilizing Microsoft Teams.  Use the Get-CsTeamsGuestMeetingConfiguration cmdlet to return what values are set for your organization.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
+PS C:\> Get-CsTeamsGuestMeetingConfiguration
 ```
 
-Retrieves the calling policy with name "SalesCallingPolicy"
+Returns the TeamsGuestMeetingConfiguration set in your organization.
 
 ## PARAMETERS
 
 ### -Filter
-Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
+Internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -53,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specify the TeamsCallingPolicy that you would like to retrieve.
+The only value accepted is Global
 
 ```yaml
 Type: Object
@@ -68,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Microsoft internal use.
+Internal Microsoft use
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Microsoft internal use.
+Internal Microsoft use
 
 ```yaml
 Type: Object
@@ -98,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Not applicable to online service.
+Internal Microsoft use
 
 ```yaml
 Type: SwitchParameter
