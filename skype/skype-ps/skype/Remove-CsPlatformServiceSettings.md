@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Indicates the Identity of the Platform Service Settings to be modified.
+Indicates the Identity of the Platform Service Settings to be removed.
 
 ```yaml
 Type: XdsIdentity
