@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsPlatformServiceSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns information about Skype for Business on Mac capabilites which have been enabled in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
 
 ## SYNTAX
 
@@ -23,16 +23,18 @@ Get-CsPlatformServiceSettings [-Filter <String>] [-LocalStore] [<CommonParameter
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Skype for Business Server 2015 Cumulative Update 6 introduce new features for Skype for Business on Mac users like support for E-911 calls, send files in peer-to-peer chats, block external access by policy and more.
+
+The 'Get-CsPlatformServiceSettings' cmdlet shows you which of these features are enabled.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### -------------------------- EXAMPLE 1 --------------------------
+```
+PS C:\> Get-CsPlatformServiceSettings
 ```
 
-{{ Add example description here }}
+This example shows you which of the Skype for Business on Mac features are enabled in your organization.
 
 ## PARAMETERS
 
@@ -100,4 +102,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[New-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/new-csplatformservicesettings?view=skype-ps)
 
+[Set-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
+
+[Remove-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps)
