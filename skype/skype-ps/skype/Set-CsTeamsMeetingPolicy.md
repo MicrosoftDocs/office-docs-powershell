@@ -11,10 +11,6 @@ schema: 2.0.0
  The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 
 
-Set-CsTeamsMeetingPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowChannelMeetingScheduling \<bool\>\] \[-AllowMeetNow \<bool\>\] \[-AllowIPVideo \<bool\>\] \[-AllowAnonymousUsersToDialOut \<bool\>\] \[-AllowAnonymousUsersToStartMeeting \<bool\>\] \[-AllowPrivateMeetingScheduling \<bool\>\] \[-AutoAdmittedUsers \<string\>\] \[-AllowCloudRecording \<bool\>\] \[-AllowOutlookAddIn \<bool\>\] \[-AllowPowerPointSharing \<bool\>\] \[-AllowParticipantGiveRequestControl \<bool\>\] \[-AllowExternalParticipantGiveRequestControl \<bool\>\] \[-AppDesktopSharingMode \<string\>\] \[-AllowSharedNotes \<bool\>\] \[-AllowWhiteboard \<bool\>\] \[-AllowTranscription \<bool\>\] \[-MediaBitRateKb \<uint32\>\] \[-ScreenSharingMode \<string\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsTeamsMeetingPolicy \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowChannelMeetingScheduling \<bool\>\] \[-AllowMeetNow \<bool\>\] \[-AllowIPVideo \<bool\>\] \[-AllowAnonymousUsersToDialOut \<bool\>\] \[-AllowAnonymousUsersToStartMeeting \<bool\>\] \[-AllowPrivateMeetingScheduling \<bool\>\] \[-AutoAdmittedUsers \<string\>\] \[-AllowCloudRecording \<bool\>\] \[-AllowOutlookAddIn \<bool\>\] \[-AllowPowerPointSharing \<bool\>\] \[-AllowParticipantGiveRequestControl \<bool\>\] \[-AllowExternalParticipantGiveRequestControl \<bool\>\] \[-AppDesktopSharingMode \<string\>\] \[-AllowSharedNotes \<bool\>\] \[-AllowWhiteboard \<bool\>\] \[-AllowTranscription \<bool\>\] \[-MediaBitRateKb \<uint32\>\] \[-ScreenSharingMode \<string\>\] \[-Instance \<psobject\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
 ```
@@ -29,6 +25,14 @@ Set-CsTeamsMeetingPolicy [-AppDesktopSharingMode <Object>] [-Description <Object
  [-AllowExternalParticipantGiveRequestControl <Object>] [-AsJob]
 ```
 
+```
+Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>] [-Tenant <guid>] [-Description <string>] [-AllowChannelMeetingScheduling <bool>] [-AllowMeetNow <bool>] [-AllowIPVideo <bool>] [-AllowAnonymousUsersToDialOut <bool>] [-AllowAnonymousUsersToStartMeeting <bool>] [-AllowPrivateMeetingScheduling <bool>] [-AutoAdmittedUsers <string>] [-AllowCloudRecording <bool>] [-AllowOutlookAddIn <bool>] [-AllowPowerPointSharing <bool>] [-AllowParticipantGiveRequestControl <bool>] [-AllowExternalParticipantGiveRequestControl <bool>] [-AppDesktopSharingMode <string>] [-AllowSharedNotes <bool>] [-AllowWhiteboard <bool>] [-AllowTranscription <bool>] [-MediaBitRateKb <uint32>] [-ScreenSharingMode <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+```
+Set-CsTeamsMeetingPolicy [-Tenant <guid>] [-Description <string>] [-AllowChannelMeetingScheduling <bool>] [-AllowMeetNow <bool>] [-AllowIPVideo <bool>] [-AllowAnonymousUsersToDialOut <bool>] [-AllowAnonymousUsersToStartMeeting <bool>] [-AllowPrivateMeetingScheduling <bool>] [-AutoAdmittedUsers <string>] [-AllowCloudRecording <bool>] [-AllowOutlookAddIn <bool>] [-AllowPowerPointSharing <bool>] [-AllowParticipantGiveRequestControl <bool>] [-AllowExternalParticipantGiveRequestControl <bool>] [-AppDesktopSharingMode <string>] [-AllowSharedNotes <bool>] [-AllowWhiteboard <bool>] [-AllowTranscription <bool>] [-MediaBitRateKb <uint32>] [-ScreenSharingMode <string>] [-Instance <psobject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+
+```
 ## DESCRIPTION
 The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 
@@ -270,7 +274,7 @@ Accept wildcard characters: False
 
 
 ### -AutoAdmittedUsers
-Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to None to send all users to the Lobby and have an attendee allow them to join a meeting
+Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to None to send all users to the Lobby and have an attendee allow them to join a meeting. This setting also applies to participants joining via a PSTN device (i.e. a traditional phone)
 
 ```yaml
 Type: Object

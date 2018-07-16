@@ -57,11 +57,11 @@ This example also imports the Edge Subscription file generated in Example 1 to t
 ## PARAMETERS
 
 ### -AccountExpiryDuration
-The AccountExpiryDuration parameter specifies how soon the bootstrap account created by this command will expire.
+The AccountExpiryDuration parameter specifies how soon the EdgeSync bootstrap replication account (ESBRA) created by this command will expire.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
-The value for this parameter must be a minimum of 00:02:00 or 2 minutes.
+The value for this parameter must be a minimum of 00:02:00 or 2 minutes. The default value is 24:00:00 or 24 hours.
 
 ```yaml
 Type: TimeSpan
