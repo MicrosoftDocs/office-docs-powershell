@@ -3,48 +3,42 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version:
 applicable: Skype for Business Online
-title: Get-CsTeamsMeetingBroadcastConfiguration
+title: Get-CsTeamsCallingPolicy
 schema: 2.0.0
 ---
 
-# Get-CsTeamsMeetingBroadcastConfiguration
+# Get-CsTeamsCallingPolicy
 
 ## SYNOPSIS
-Get-CsTeamsMeetingBroadcastConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-ExposeSDNConfigurationJsonBlob \<bool\>\] \[-LocalStore\] \[\<CommonParameters\>\]
 
-Get-CsTeamsMeetingBroadcastConfiguration \[-Tenant \<guid\>\] \[-ExposeSDNConfigurationJsonBlob \<bool\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+Returns information about the teams calling policies configured for use in your organization.
+Teams calling policies help determine which users are able to use calling functionality within Microsoft Teams.
 
 ## SYNTAX
 
 ```
-Get-CsTeamsMeetingBroadcastConfiguration [-ExposeSDNConfigurationJsonBlob <Object>] [-LocalStore]
- [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsCallingPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
-Tenant level configuration for broadcast events in Teams
+
+Returns information about the teams calling policies configured for use in your organization.
+Teams calling policies help determine which users are able to use calling functionality within Microsoft Teams and interoperability with Skype for Business.
 
 ## EXAMPLES
 
-## PARAMETERS
-
-### -ExposeSDNConfigurationJsonBlob
-Extract SDN properties as a Json Blob in get.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+### Example 1
+```powershell
+PS C:\> Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
 ```
 
+Retrieves the calling policy with name "SalesCallingPolicy"
+
+## PARAMETERS
+
 ### -Filter
-Not applicable to online service - you can only have one configuration.
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
 
 ```yaml
 Type: Object
@@ -59,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-You can only have one configuration - "Global"
+Specify the TeamsCallingPolicy that you would like to retrieve.
 
 ```yaml
 Type: Object
@@ -74,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Not applicable to online service.
+Microsoft internal use.
 
 ```yaml
 Type: SwitchParameter
@@ -89,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Not applicable to online service
+Microsoft internal use.
 
 ```yaml
 Type: Object

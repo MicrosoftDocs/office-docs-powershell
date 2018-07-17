@@ -3,48 +3,40 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
 online version:
 applicable: Skype for Business Online
-title: Get-CsTeamsMeetingBroadcastConfiguration
+title: Get-CsTeamsGuestCallingConfiguration
 schema: 2.0.0
 ---
 
-# Get-CsTeamsMeetingBroadcastConfiguration
+# Get-CsTeamsGuestMeetingConfiguration
 
 ## SYNOPSIS
-Get-CsTeamsMeetingBroadcastConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-ExposeSDNConfigurationJsonBlob \<bool\>\] \[-LocalStore\] \[\<CommonParameters\>\]
 
-Get-CsTeamsMeetingBroadcastConfiguration \[-Tenant \<guid\>\] \[-ExposeSDNConfigurationJsonBlob \<bool\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+Designates what meeting features guests using Microsoft Teams will have available.
 
 ## SYNTAX
 
 ```
-Get-CsTeamsMeetingBroadcastConfiguration [-ExposeSDNConfigurationJsonBlob <Object>] [-LocalStore]
- [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsGuestMeetingConfiguration [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
+ [-AsJob]
 ```
 
 ## DESCRIPTION
-Tenant level configuration for broadcast events in Teams
+
+The TeamsGuestMeetingConfiguration designates which meeting features guests leveraging Microsoft Teams will have available.  This configuration will apply to all guests utilizing Microsoft Teams.  Use the Get-CsTeamsGuestMeetingConfiguration cmdlet to return what values are set for your organization.
 
 ## EXAMPLES
 
-## PARAMETERS
-
-### -ExposeSDNConfigurationJsonBlob
-Extract SDN properties as a Json Blob in get.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+### Example 1
+```powershell
+PS C:\> Get-CsTeamsGuestMeetingConfiguration
 ```
 
+Returns the TeamsGuestMeetingConfiguration set in your organization.
+
+## PARAMETERS
+
 ### -Filter
-Not applicable to online service - you can only have one configuration.
+Internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -59,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-You can only have one configuration - "Global"
+The only value accepted is Global
 
 ```yaml
 Type: Object
@@ -74,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Not applicable to online service.
+Internal Microsoft use
 
 ```yaml
 Type: SwitchParameter
@@ -89,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Not applicable to online service
+Internal Microsoft use
 
 ```yaml
 Type: Object
@@ -104,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Not applicable to online service.
+Internal Microsoft use
 
 ```yaml
 Type: SwitchParameter
