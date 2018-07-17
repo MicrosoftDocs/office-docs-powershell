@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsPushNotificationConfiguration
 schema: 2.0.0
@@ -43,30 +43,14 @@ For example, users can receive notice for events such as these:
 Without the push notification service users would receive these notices only when Skype for Business was in the foreground and serving as the active application.
 
 Administrators have the ability to enable or disable push notifications for iPhone users and/or Windows Phone users.
-(By default, push notifications are disabled for both iPhone users and Windows Phone users.) Administrators can enable or disable push notifications at the global scope by using the Set-CsPushNotificationConfiguration cmdlet.
-They can also create custom push notification settings at the site scope by using the New-CsPushNotificationConfiguration cmdlet.
+(By default, push notifications are disabled for both iPhone users and Windows Phone users.) Administrators can enable or disable push notifications at the global scope by using the `Set-CsPushNotificationConfiguration` cmdlet.
+They can also create custom push notification settings at the site scope by using the `New-CsPushNotificationConfiguration` cmdlet.
 
-The Get-CsPushNotificationConfiguration cmdlet provides a way for you to return information about the push notification configuration settings currently in use in your organization.
+The `Get-CsPushNotificationConfiguration` cmdlet provides a way for you to return information about the push notification configuration settings currently in use in your organization.
 
 
 
 ## EXAMPLES
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 1 returns information about all the push notification settings configured for use in your organization.
-
-Get-CsPushNotificationConfiguration
-
-### Example 1 (Skype for Business Online)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ### -------------------------- Example 1 --------------------------
 ```
@@ -273,4 +257,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
+[Set-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-cspushnotificationconfiguration?view=skype-ps)
 
+[New-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-cspushnotificationconfiguration?view=skype-ps)
+
+[Remove-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-cspushnotificationconfiguration?view=skype-ps)

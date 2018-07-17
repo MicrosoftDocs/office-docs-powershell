@@ -12,7 +12,6 @@ Exports user data in a format that can be imported into Skype for Business Serve
 The data will be exported as a .ZIP file containing a pair of XML documents.
 This cmdlet was introduced in Lync Server 2013.
 
-
 ## SYNTAX
 
 ### Identity
@@ -37,17 +36,16 @@ Export-CsUserData -FileName <String> -SqlInstanceName <String> [-ConfDirectoryFi
 ```
 
 ## DESCRIPTION
-The Export-CsUserData cmdlet provides a way for administrators to export user data and/or conference directory for a Skype for Business Server pool.
-That data, which can be saved in the user data format used by Skype for Business Server can then be imported by using the Import-CsUserData cmdlet.
+The `Export-CsUserData` cmdlet provides a way for administrators to export user data and/or conference directory for a Skype for Business Server pool.
+That data, which can be saved in the user data format used by Skype for Business Server can then be imported by using the `Import-CsUserData` cmdlet.
 
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsUserData"}`
+Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsUserData"}
 
-The functions carried out by the Export-CsUserData cmdlet are not available in the Skype for Business Server Control Panel.
+The functions carried out by the `Export-CsUserData` cmdlet are not available in the Skype for Business Server Control Panel.
 
 NOTE: URNs that have the following characters back slash (\\) and forward slash (/) will cause the powershell command to fail and stop the export of the user data until that point.The following error is reported: Export-CsUserData : "urn:hcd:User1/test@domain.com" is not a valid uniform resource name (At line:1 char:1+ Export-CsUserData -PoolFqdn pool01.domain.com -FileName c:\temp\UserDataExport.zip+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : NotSpecified: (:) [Export-CsUserData], UriFormatException    + FullyQualifiedErrorId : System.UriFormatException,Microsoft.Rtc.Management.BlobStor
-
 
 ## EXAMPLES
 
@@ -58,14 +56,13 @@ Export-CsUserData -PoolFqdn "atl-cs-001.litwareinc.com" -FileName "C:\Logs\Expor
 
 The command shown in Example 1 exports user data from the pool atl-cs-001.litwareinc.com to a file named C:\Logs\ExportedUserData.zip.
 
-
 ## PARAMETERS
 
 ### -FileName
-Full path to the .ZIP file that the Export-CsUserData cmdlet will create; this file will contain the exported user data.
+Full path to the .ZIP file that the `Export-CsUserData` cmdlet will create; this file will contain the exported user data.
 For example:
 
-`-FileName "C:\Logs\ExportedData.zip"`
+-FileName "C:\Logs\ExportedData.zip"
 
 ```yaml
 Type: String
@@ -84,11 +81,11 @@ Accept wildcard characters: False
 Fully qualified domain name of the pool where the User database containing the user data to be exported is installed.
 For example:
 
-`-Identity "atl-sql-001.litwareinc.com"`
+-Identity "atl-sql-001.litwareinc.com"
 
 Note that you can retrieve fully qualified domain names for your User database pools by running this command:
 
-`Get-CsService -UserDatabase`
+Get-CsService -UserDatabase
 
 ```yaml
 Type: String
@@ -107,7 +104,7 @@ Accept wildcard characters: False
 Fully qualified domain name of the Registrar pool containing the user data to be exported.
 For example:
 
-`-PoolFqdn "atl-cs-001.litwareinc.com"`
+-PoolFqdn "atl-cs-001.litwareinc.com"
 
 ```yaml
 Type: Fqdn
@@ -126,7 +123,7 @@ Accept wildcard characters: False
 When specified, allows you to export conference directory information for the specified conference directory.
 For example, to export data from the conference directory with the ID 13 use this syntax:
 
-`-ConfDirectoryFilter 13`
+-ConfDirectoryFilter 13
 
 You can return conference directory IDs by using this command:
 
@@ -146,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Enables administrators to specify the FQDN of the domain controller to be used when running the Export-CsUserData cmdlet.
+Enables administrators to specify the FQDN of the domain controller to be used when running the `Export-CsUserData` cmdlet.
 If not specified, the cmdlet will use the first available domain controller.
 
 ```yaml
@@ -199,7 +196,7 @@ Enables you to export data for a single user.
 That user is in dictated by specifying his or her SIP address, minus the sip: prefix.
 For example:
 
-`-UserFilter "kenmyer@litwareinc.com"`
+-UserFilter "kenmyer@litwareinc.com"
 
 ```yaml
 Type: String
@@ -218,7 +215,7 @@ Accept wildcard characters: False
 Name of the SQL Server instance containing the user data to be exported.
 For example:
 
-`-SqlInstanceName "rtc"`
+-SqlInstanceName "rtc"
 
 ```yaml
 Type: String
@@ -277,8 +274,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ###  
-The Export-CsUserData cmdlet creates new .ZIP files.
-
+The `Export-CsUserData` cmdlet creates new .ZIP files.
 
 ## NOTES
 
@@ -291,4 +287,3 @@ The Export-CsUserData cmdlet creates new .ZIP files.
 [Sync-CsUserData](Sync-CsUserData.md)
 
 [Update-CsUserData](Update-CsUserData.md)
-

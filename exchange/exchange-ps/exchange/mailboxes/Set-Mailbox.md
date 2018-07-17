@@ -686,7 +686,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
@@ -983,7 +983,11 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - UpdateFolderPermissions (cloud-based service only)
 
-By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, and UpdateFolderPermissions actions performed by administrators are logged.
+- UpdateCalendarDelegation (cloud-based service only)
+
+- UpdateInboxRules (cloud-based service only)
+
+By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by administrators are logged.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1028,7 +1032,9 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 
 - UpdateFolderPermissions (cloud-based service only)
 
-By default, the Update, SoftDelete, HardDelete, SendAs, Create, and UpdateFolderPermissions actions performed by delegates are logged.
+- UpdateInboxRules (cloud-based service only)
+
+By default, the Update, SoftDelete, HardDelete, SendAs, Create, UpdateFolderPermissions, and UpdateInboxRules actions performed by delegates are logged.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1107,7 +1113,11 @@ The AuditOwner parameter specifies the mailbox operations to log for mailbox own
 
 - UpdateFolderPermissions (cloud-based service only)
 
-In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions action performed by the owner is logged by default.
+- UpdateCalendarDelegation (cloud-based service only)
+
+- UpdateInboxRules (cloud-based service only)
+
+In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by the owner are logged by default.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -4217,6 +4227,8 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSendOnBehalfEnabled
+**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes.
+
 The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send on behalf of" permission. Valid values are:
 
 - $true: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
@@ -4238,15 +4250,17 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSentAsEnabled
+**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes.
+
 The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send as" permission. Valid values are:
 
 - $true: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
 
 - $false: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
-In Exchange Online, you give a user permission to send as a mailbox by running this command: Add-RecipientPermission \<Mailbox\> -AccessRights SendAs -Trustee \<User\>.
+In Exchange Online, you give a user permission to send as a mailbox by running this command: `Add-RecipientPermission <Mailbox> -AccessRights SendAs -Trustee <User>`.
 
-In on-premises Exchange, you give a user permission to send as a mailbox by running this command: Add-ADPermission \<Mailbox\> -ExtendedRights "Send As" -User \<User\>.
+In on-premises Exchange, you give a user permission to send as a mailbox by running this command: `Add-ADPermission <Mailbox> -ExtendedRights "Send As" -User <User>`.
 
 ```yaml
 Type: $true | $false

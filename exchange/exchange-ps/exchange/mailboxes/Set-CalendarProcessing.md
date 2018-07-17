@@ -23,7 +23,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter> [-AddAdditionalResponse 
  [-AddOrganizerToSubject <$true | $false>] [-AllBookInPolicy <$true | $false>]
  [-AllowConflicts <$true | $false>] [-AllowRecurringMeetings <$true | $false>]
  [-AllRequestInPolicy <$true | $false>] [-AllRequestOutOfPolicy <$true | $false>]
- [-AutomateProcessing <None | AutoUpdate | AutoAccept>] [-BookingWindowInDays <Int32>]
+ [-AutomateProcessing <None | AutoUpdate | AutoAccept>] [-BookingType <Standard | Reserved>] [-BookingWindowInDays <Int32>]
  [-BookInPolicy <RecipientIdParameter[]>] [-Confirm] [-ConflictPercentageAllowed <Int32>]
  [-DeleteAttachments <$true | $false>] [-DeleteComments <$true | $false>]
  [-DeleteNonCalendarItems <$true | $false>] [-DeleteSubject <$true | $false>] [-DomainController <Fqdn>]
@@ -300,6 +300,21 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -BookingType
+Description of this parameter
+
+```yaml
+Type: 
+Parameter Sets: ()
+Aliases:
+Applicable: 
+Required: 
+Position: 
+Default value: 
+Accept pipeline input:
+Accept wildcard characters: 
 ```
 
 ### -BookingWindowInDays

@@ -73,7 +73,7 @@ The following individual permissions are available:
 
 - FolderContact: The user is the contact for the specified public folder.
 
-- FolderOwner: The user is the owner of the specified folder. The user can view the folder, move the move the folder and create subfolders. The user can't read items, edit items, delete items or create items.
+- FolderOwner: The user is the owner of the specified folder. The user can view the folder, move the folder and create subfolders. The user can't read items, edit items, delete items or create items.
 
 - FolderVisible: The user can view the specified folder, but can't read or edit items within the specified public folder.
 

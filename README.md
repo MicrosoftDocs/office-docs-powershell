@@ -5,7 +5,7 @@ A repository to hold the help reference content for Office PowerShell cmdlets. T
 ![Contribution and Consumption model for Office PowerShell reference content](images/contrib-consumption-model.png)
 
 # Learn How To Contribute
-Anyone who is interested can contribute to the Microsoft Office PowerShell reference topics. 
+Anyone who is interested can contribute to the Microsoft Office PowerShell reference topics.
 When you contribute your work will go directly into the Microsoft Office products and show up in Get-Help for the given Office cmdlet.
 
 > Notice that if you are looking into contributing for the **PnP PowerShell cmdlets**, their documentation is automatically generated from the code and you should be submitting your change towards the original code at https://github.com/SharePoint/PnP-powershell. See for example how the attributes are used in the code for the [Get-PnPList](https://github.com/SharePoint/PnP-PowerShell/blob/master/Commands/Lists/GetList.cs) cmdlet.
@@ -32,7 +32,7 @@ When you contribute your work will go directly into the Microsoft Office product
    **IMPORTANT** The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
    Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
 
-6. Once you are satisified with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title title and other description informaton and then click **Propose file change**.
+6. Once you are satisfied with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title title and other description information and then click **Propose file change**.
 ![Image of Propose file change on Github](images/propose_file_change.png)
 
 7. On the next screen, click **Create pull request**.

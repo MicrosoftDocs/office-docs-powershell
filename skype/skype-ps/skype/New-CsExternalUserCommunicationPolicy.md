@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsExternalUserCommunicationPolicy
 schema: 2.0.0
@@ -22,7 +22,7 @@ This cmdlet allows you to block P2P file transfer with Federated partners only.
 
 ## EXAMPLES
 
-### Example 1 
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> New-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
 ```
@@ -31,12 +31,91 @@ This example creates a new policy to block external file transfer. Then you can 
 
 ## PARAMETERS
 
-### -EnableP2PFileTransfer
-Indicates whether file transfers to Federated partners are allowed. 
-The default value is True.
+### -AllowPresenceVisibility
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTitleVisibility
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableP2PFileTransfer
+Indicates whether file transfers to Federated partners are allowed. The default value is True.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFileTransfer
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -52,7 +131,7 @@ Accept wildcard characters: False
 Unique identifier for the external user communication policy to be created.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -67,6 +146,16 @@ Accept wildcard characters: False
 ### -Tenant
 Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
 
+### -InMemory
+This parameter is reserved for internal Microsoft use.
+
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+You can return your tenant ID by running this command:
+
+### -Tenant
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
 `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return your tenant ID by running this command:
@@ -76,7 +165,7 @@ You can return your tenant ID by running this command:
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

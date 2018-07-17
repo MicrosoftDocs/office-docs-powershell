@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Uninstall-SPUserSolution -Identity contoso_solution.wsp
+PS C:\>Uninstall-SPSolution -Identity contoso_solution.wsp
 ```
 
 This example retracts the deployed SharePoint solution contoso_solution.wsp.

@@ -10,8 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Modifies Skype for Business Server properties for an existing hybrid application endpoint.
 
-## SYNTAX
+This cmdlet was introduced in the July 2017 cumulative update for the Lync Server 2013 and May 2017 cumulative update for Skype Business Server 2015.
 
+## SYNTAX
 ```
 Set-CsHybridApplicationEndpoint [-Identity] <HybridApplicationEndpointIdParameter> [-DisplayName <String>] [-LineUri <String>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -31,7 +32,7 @@ This example modify the DisplayName and LineURI attributes for the specified hyb
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -47,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Friendly name for the application endpoint is being modified.
+Friendly name for the application endpoint that is being modified.
 
 ```yaml
 Type: String
@@ -79,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The ApplicationId or Client Id for which the endpoint is being modified.
+The ApplicationId or Client Id for which the endpoint that is being modified.
 
 ```yaml
 Type: UserIdParameter
@@ -95,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineUri
-Valid phone number for the application endpoint is being modified. (Not currently supported through BOT framework)
+Valid phone number for the application endpoint that is being modified. (Not currently supported through BOT framework)
 
 ```yaml
 Type: String

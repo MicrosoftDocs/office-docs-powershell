@@ -1,5 +1,5 @@
 ---
-external help file: Remove-CsOrganizationalAutoAttendant.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Remove-CsOrganizationalAutoAttendant
 schema: 2.0.0

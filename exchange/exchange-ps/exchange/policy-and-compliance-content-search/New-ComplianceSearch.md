@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-ComplianceSearch [-Name] <String> [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
  [-Case <String>] [-Confirm] [-ContentMatchQuery <String>] [-Description <String>]
- [-ExchangeLocation <String[]>] [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>]
+ [-ExchangeLocation <String[]>] [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>] [-IncludeUserAppContent <$true | $false>]
  [-Language <CultureInfo>] [-LogLevel <Suppressed | Basic | Full>] [-OneDriveLocation <String[]>]
  [-OneDriveLocationExclusion <String[]>] [-PublicFolderLocation <String[]>]
  [-PublicFolderLocationExclusion <String[]>] [-RefinerNames <String[]>] [-SearchNames <String[]>]
@@ -80,11 +80,21 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNotFoundExchangeLocationsEnabled
-The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to allow inactive mailboxes in the compliance search. An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. Valid values are:
+The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to include mailboxes other than regular user mailboxes in the compliance search. Valid values are:
 
-- $true: The search doesn't try to validate the existence of the mailbox before proceeding. This value is required if you want to include inactive mailboxes in the search, because inactive mailboxes don't resolve as regular mailboxes.
+- $true: The search doesn't try to validate the existence of the mailbox before proceeding. This value is required if you want to search mailboxes that don't resolve as regular mailboxes.
 
-- $false: The search tries to validate the existence of the mailbox before proceeding. If you specify an inactive mailbox or a mailbox that otherwise can't be found, the search will fail. This is the default value.
+- $false: The search tries to validate the existence of the mailbox before proceeding. If you specify a mailbox that isn't a regular user mailbox, the search will fail. This is the default value.
+
+The mailbox types that are affected by the value of this parameter include:
+
+- Inactive mailboxes
+
+- Users without an Exchange Online license who use Office applications
+
+- Office 365 guest users
+
+- On-premises users whose identity is synchronized with your Office 365 organization
 
 ```yaml
 Type: $true | $false
@@ -167,7 +177,7 @@ Accept wildcard characters: False
 ### -ExchangeLocation
 The ExchangeLocation parameter specifies the mailboxes to include. Valid values are:
 
-- A mailbox
+- A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Office 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
 
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
@@ -253,6 +263,27 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeUserAppContent
+This parameter is available only in the cloud-based service.
+
+The IncludeUserAppContent parameter specifies that you want to search the cloud-based storage location for users who don't have a regular Office 365 user account in your organization. These types of users include users without an Exchange Online license who use Office applications, Office 365 guest users, and on-premises users whose identity is synchronized with your Office 365 organization. Valid values are:
+
+- $true: The cloud-based storage location for the users specified in the ExchangeLocation parameter will be included in the search. If you use the value All for the ExchangeLocation parameter, the cloud-based storage location for any guest or on-premises user will be included in the search.
+
+- $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None

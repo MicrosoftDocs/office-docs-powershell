@@ -34,6 +34,7 @@ This example updates a previously created site design.
 
 ```powershell
 Set-SPOSiteDesign `
+  -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
   -Title "Contoso customer tracking - version 2" `
   -WebTemplate "68" `
   -Description "Updated site design for list schema that tracks key customer data in a list" `
