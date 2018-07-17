@@ -140,6 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+This parameter is available or functional only in Exchange Server 2010.
+
 The Server parameterspecifies the server on which to create the public folder.
 
 If a server isn't specified, the command checks whether the local server is running Microsoft Exchange Server 2010 or Exchange Server 2007 with the Mailbox server role installed and with a public folder database. If it is, the public folder is created locally. If it isn't, Exchange finds the closest (by site cost) Exchange 2010 or Exchange 2007 Mailbox server with a public folder database on which to create the public folder.

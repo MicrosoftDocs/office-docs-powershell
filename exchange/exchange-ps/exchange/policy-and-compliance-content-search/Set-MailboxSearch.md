@@ -115,6 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotIncludeArchive
+This parameter is available or functional only in Exchange Server 2010.
+
 The DoNotIncludeArchive parameter specifies whether items in the user's Archive mailbox are included in mailbox searches. By default, items in the user's Archive mailbox are included in mailbox searches. If set to $true, the DoNotIncludeArchive parameter instructs Multi-Mailbox Search to exclude archive mailboxes from the search.
 
 ```yaml
@@ -334,6 +336,8 @@ Accept wildcard characters: False
 ```
 
 ### -SearchDumpster
+This parameter is available or functional only in Exchange Server 2010.
+
 The SearchDumpster parameter specifies whether the dumpster is searched. The dumpster is a storage area in the mailbox where deleted items are temporarily stored after being deleted or removed from the Deleted Items folder, or after being hard-deleted and before being purged from the mailbox based on Deleted Item Retention settings.
 
 By default, items in the dumpster aren't searched. Set the value to $true to enable searching the dumpster.

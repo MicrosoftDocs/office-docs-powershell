@@ -4791,6 +4791,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncidentReportOriginalMail
+This parameter is available or functional only in Exchange Server 2013.
+
 The IncidentReportOriginalMail parameter specifies whether to include the original message with the incident report. This parameter is used together with the GenerateIncidentReport parameter. Valid values are:
 
 - IncludeOriginalMail

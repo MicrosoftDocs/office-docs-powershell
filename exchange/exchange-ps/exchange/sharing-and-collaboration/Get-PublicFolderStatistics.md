@@ -87,6 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+This parameter is available or functional only in Exchange Server 2010.
+
 The Server parameter specifies which server to check. If a server isn't specified, the command uses the local server.
 
 ```yaml
