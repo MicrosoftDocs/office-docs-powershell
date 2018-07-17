@@ -89,7 +89,7 @@ The ReportType parameter specifies the type of historical search that you want t
 
 - ATPV2: Exchange Online Protection and Advanced Threat Protection E-mail Malware Report.
 
-- ATPDocument: Advanced Threat Protection Content Malware Report.
+- ATPDocument: Advanced Threat Protection Content Malware Report for files in SharePoint, OneDrive and Microsoft Teams.
 
 - DLP: Data Loss Prevention Report.
 
@@ -99,7 +99,7 @@ The ReportType parameter specifies the type of historical search that you want t
 
 - MessageTraceDetail: Message Trace Details Report.
 
-- Phish: Exchange Online Protetion and Advacned Threat Protection E-mail Phish Report.
+- Phish: Exchange Online Protetion and Advanced Threat Protection E-mail Phish Report.
 
 - SPAM: SPAM Detections Report.
 
@@ -107,7 +107,7 @@ The ReportType parameter specifies the type of historical search that you want t
 
 - TransportRule: Transport or Mail FLow Rules Report.
 
-- UnifiedDLP: Unified Data Loss Prevention Report
+- UnifiedDLP: Unified Data Loss Prevention Report.
 
 
 ```yaml

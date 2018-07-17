@@ -50,7 +50,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf cf
-Applicable: Exchange Server 2010
+
 Required: False
 Position: Named
 Default value: None

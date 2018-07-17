@@ -2243,6 +2243,8 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicy
+This parameter is available or functional only in Exchange Server 2010.
+
 The ManagedFolderMailboxPolicy parameter specifies a managed folder mailbox policy that controls MRM for the mailbox. If the parameter is set to $null, Exchange removes the managed folder mailbox policy from the mailbox but any managed folders in the mailbox remain.
 
 ```yaml
@@ -2258,6 +2260,8 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicyAllowed
+This parameter is available or functional only in Exchange Server 2010.
+
 The ManagedFolderMailboxPolicyAllowed parameter bypasses the warning that MRM features aren't supported for e-mail clients running versions of Outlook earlier than Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox by using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
 
 Although Outlook 2003 Service Pack 3 clients are supported, they have limited MRM functionality.

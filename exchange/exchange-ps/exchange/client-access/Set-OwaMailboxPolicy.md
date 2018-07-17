@@ -315,6 +315,8 @@ Accept wildcard characters: False
 ### -DefaultClientLanguage
 This parameter is available or functional only in Exchange Server 2010.
 
+This parameter is available or functional only in Exchange Server 2010.
+
 The DefaultClientLanguage parameter isn't available in this release.
 
 ```yaml
@@ -687,6 +689,8 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 This parameter controls whether the mini version of Outlook Web App is enabled.
 
 ```yaml

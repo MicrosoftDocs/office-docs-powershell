@@ -121,6 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCallRoutingScheme
+This parameter is available or functional only in Exchange Server 2010.
+
 The GlobalCallRoutingScheme parameter specifies whether the IP gateway can accept calls for UM-enabled users and auto attendant numbers included in the global routing database. If the setting is E.164, the IP gateway accepts the call.
 
 ```yaml

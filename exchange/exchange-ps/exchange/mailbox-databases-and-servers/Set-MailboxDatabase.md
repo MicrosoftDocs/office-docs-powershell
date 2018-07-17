@@ -727,6 +727,8 @@ Accept wildcard characters: False
 ```
 
 ### -RpcClientAccessServer
+This parameter is available or functional only in Exchange Server 2010.
+
 The RpcClientAccessServer parameter specifies the Client Access server or Client Access server array through which RPC clients (for example, Microsoft Office Outlook 2007 clients) access their mailboxes. This feature is supported for all versions of Outlook.
 
 When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see Understanding RPC Client Access.
