@@ -1351,6 +1351,8 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxProcessorWorkCycle
+This parameter is available or functional only in Exchange Server 2013.
+
 The MailboxProcessorWorkCycle parameter specifies how often to scan for locked mailboxes on the Mailbox server. The default value is 1 day.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -1460,6 +1462,8 @@ Accept wildcard characters: False
 ```
 
 ### -OABGeneratorWorkCycle
+This parameter is available or functional only in Exchange Server 2013.
+
 The OABGeneratorWorkCycle parameter specifies the time span in which the OAB generation on the Mailbox server will be processed. The default value is 8 hours.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -1479,6 +1483,8 @@ Accept wildcard characters: False
 ```
 
 ### -OABGeneratorWorkCycleCheckpoint
+This parameter is available or functional only in Exchange Server 2013.
+
 The OABGeneratorWorkCycleCheckpoint parameter specifies the time span at which to run OAB generation on the Mailbox server. The default value is 1 hour.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -1498,6 +1504,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderWorkCycle
+This parameter is available or functional only in Exchange Server 2013.
+
 The PublicFolderWorkCycle parameter is used by the public folder assistant to determine how often the mailboxes in a database are processed by the assistant on the Mailbox server. The default value is 1 day.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -1515,6 +1523,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderWorkCycleCheckpoint
+This parameter is available or functional only in Exchange Server 2013.
+
 The PublicFolderWorkCycleCheckpoint determines how often the mailbox list for a database is evaluated on the Mailbox server. The processing speed is also calculated. The default value is 1 day.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -1532,6 +1542,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteMailboxWorkCycle
+This parameter is available or functional only in Exchange Server 2013.
+
 The SiteMailboxWorkCycle parameter specifies the time span in which the site mailbox information on the Mailbox server will be processed. The default value is 6 hours.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -1551,6 +1563,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteMailboxWorkCycleCheckpoint
+This parameter is available or functional only in Exchange Server 2013.
+
 The SiteMailboxWorkCycleCheckpoint parameter specifies the time span at which to refresh the site mailbox workcycle on the Mailbox server. The default value is 6 hours.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
