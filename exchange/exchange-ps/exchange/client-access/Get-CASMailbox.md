@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetImapProtocolLog
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The GetImapProtocolLog parameter specifies whether to retrieve the IMAP protocol log.
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetPopProtocolLog
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The GetPopProtocolLog parameter specifies whether to retrieve the POP protocol log.
 
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendLogsTo
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The SendLogsTo parameter specifies an address to receive the log files.
 

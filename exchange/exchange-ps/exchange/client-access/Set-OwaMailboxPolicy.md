@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultClientLanguage
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is available or functional only in Exchange Server 2010.
 
@@ -347,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateAccessEnabled
-This parameter is available only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders they have delegate access to through this virtual directory.
 
@@ -689,7 +689,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter controls whether the mini version of Outlook Web App is enabled.
 

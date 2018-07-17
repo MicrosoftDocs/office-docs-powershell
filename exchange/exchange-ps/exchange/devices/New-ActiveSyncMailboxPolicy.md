@@ -766,7 +766,7 @@ Accept wildcard characters: False
 ```
 
 ### -MobileOTAUpdateMode
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The MobileOTAUpdateMode parameter specifies which updates can be seen by the devices that implemented support for this restricting functionality. It must be used in conjunction with the AllowMobileOTAUpdate parameter to function properly.
 

@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSProxyMaxConnections
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see Understanding Move Requests.
 

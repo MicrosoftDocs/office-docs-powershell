@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressDnsWarning
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The SuppressDNSWarning parameter specifies whether to display the DNS warning message for creating TXT records in your public DNS when running the New-FederationTrust cmdlet. Valid values are $true or $false. The default value is $false. However, this parameter is automatically set to $true when used by the Hybrid Configuration wizard. It's not recommended that you use this parameter when using the New-FederationTrust cmdlet.
 

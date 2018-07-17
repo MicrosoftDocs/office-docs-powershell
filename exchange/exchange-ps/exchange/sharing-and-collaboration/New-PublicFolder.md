@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The Server parameterspecifies the server on which to create the public folder.
 

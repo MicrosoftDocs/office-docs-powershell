@@ -321,7 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmwsEnabled
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EmwsEnabled parameter specifies whether the Exchange Management Web Service is enabled on this Client Access server.
 
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 ```
 
 ### -HasActiveSyncDevicePartnership
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The HasActiveSyncDevicePartnership parameter specifies whether the mailbox has an ActiveSync device partnership established.
 

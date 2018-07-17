@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCoexistenceDomain
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The IsCoexistenceDomain parameter specifies whether this remote domain is used to represent your Microsoft Office 365 organization. The default value is $false.
 

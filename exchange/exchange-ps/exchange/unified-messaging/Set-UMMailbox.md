@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -AirSyncNumbers
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The AirSyncNumbers parameter specifies whether to register a mobile phone number with a hosted voice mail service. Each UM mailbox can have up to three numbers defined and numbers must be in E.164 format.
 

@@ -306,7 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -LiveIdAuthentication
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The LiveIdAuthentication parameter specifies whether Windows Live ID authentication is enabled for the Exchange Control Panel virtual directory.
 

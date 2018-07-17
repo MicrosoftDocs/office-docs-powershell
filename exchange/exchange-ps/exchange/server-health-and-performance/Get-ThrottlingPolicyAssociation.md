@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The Credential parameter specifies the user name and password to use to access Active Directory.
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The Filter parameter indicates the OPath filter used to filter recipients.
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
 
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The Organization parameter specifies the organization that the object specified by the Identity parameter is in.
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationalUnit
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The OrganizationalUnit parameter specifies an organizational unit (OU) and is used to limit the results. If you use this parameter, you only get mailboxes in the container that you specify. You can use either the OU or the domain name. If you use the OU, you must specify the canonical name of the OU.
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromDomainController
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain. If you set the recipient scope to include all recipients in the forest and don't use this parameter, it's possible that the user information is read from a global catalog with outdated information. If you use this parameter, multiple reads might be necessary to get the information.
 

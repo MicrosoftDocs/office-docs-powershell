@@ -521,7 +521,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyJournalingMigrationEnabled
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The LegacyJournalingMigrationEnabled parameter specifies whether journal messages generated in Microsoft Exchange Server 2003 will be reformatted by Exchange 2010.
 
@@ -687,7 +687,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationFederatedMailbox
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The OrganizationFederatedMailbox parameter specifies the SMTP address of the federated mailbox used for federated delivery with other organizations.
 

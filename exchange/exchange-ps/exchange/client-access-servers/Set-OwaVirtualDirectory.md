@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarPublishingEnabled
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The CalendarPublishingEnabled parameter specifies whether users can publish their calendar from Outlook Web App.
 
@@ -411,7 +411,7 @@ Accept wildcard characters: False
 ```
 
 ### -CrossSiteRedirectType
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The CrossSiteRedirectType parameter controls the method by which a Client Access server redirects a user's Web browser to Client Access server infrastructure in another Active Directory site.
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultClientLanguage
-This parameter is available only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The DefaultClientLanguage parameter, if set to a value other than 0, specifies the language used by Outlook Web App when a user who has not selected a specific language on the Options page signs in to Outlook Web App.
 
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateAccessEnabled
-This parameter is available only in Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders, which they have delegate access to, through this virtual directory.
 
@@ -1066,7 +1066,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyRedirectType
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The LegacyRedirectType parameter specifies the type of redirect that Outlook Web App uses to a legacy Client Access server or Front End server when forms-based authentication isn't used on the Exchange 2010 Outlook Web App virtual directory.
 
@@ -1091,7 +1091,7 @@ Accept wildcard characters: False
 ```
 
 ### -LiveIdAuthentication
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The LiveIdAuthentication parameter specifies whether to configure Outlook Web App to use logon via Windows Live ID. Set this parameter to $true to configure Outlook Web App to use logon via Windows Live ID.
 
@@ -1233,7 +1233,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter controls whether the mini version of Outlook Web App is enabled.
 

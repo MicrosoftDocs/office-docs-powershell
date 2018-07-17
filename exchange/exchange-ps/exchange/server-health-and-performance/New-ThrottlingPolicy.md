@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousPercentTimeInAD
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The AnonymousPercentTimeInAD parameter specifies the percentage of a minute that anonymous users can spend executing LDAP requests (PercentTimeInAD) to a user's calendar data. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousPercentTimeInCAS
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The AnonymousPercentTimeInCAS parameter specifies the percentage of a minute that anonymous users can spend executing CAS code (PercentTimeInCAS) to a user's calendar data. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousPercentTimeInMailboxRPC
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The AnonymousPercentTimeInMailboxRPC parameter specifies the percentage of a minute that anonymous users can spend executing mailbox RPC requests (PercentTimeInMailboxRPC) to a user's calendar data. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -CPAPercentTimeInMailboxRPC
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The CPAPercentTimeInMailboxRPC parameter specifies the percentage of a minute that a cross-premises user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -288,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -CPUStartPercent
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The CPUStartPercent parameter specifies the per-process CPU percentage at which users governed by this policy begin to be backed off. Valid values are from 0 through 100. Use $null to turn off CPU percentage-based throttling for this policy.
 
@@ -367,7 +367,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASPercentTimeInAD
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EASPercentTimeInAD parameter specifies the percentage of a minute that an Exchange ActiveSync user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASPercentTimeInCAS
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EASPercentTimeInCAS parameter specifies the percentage of a minute that an Exchange ActiveSync user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -401,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASPercentTimeInMailboxRPC
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EASPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an Exchange ActiveSync user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSFastSearchTimeoutInSeconds
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EWSFastSearchTimeoutInSeconds parameter specifies the amount of time that searches made using Exchange Web Services continue before they time out. If the search takes more than the time indicated by the policy value, the search stops and an error is returned. The default value of this setting is 60 seconds.
 
@@ -435,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSFindCountLimit
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EWSFindCountLimit parameter specifies the maximum result size of FindItem or FindFolder calls that can exist in memory on the Client Access server at the same time for this user in this current process. If an attempt is made to find more items or folders than your policy limit allows, an error is returned. However, the limit isn't strictly enforced if the call is made within the context of an indexed page view. Specifically, in this scenario, the search results are truncated to include the number of items and folders that fit within the policy limit. You can then continue paging into your results set via further FindItem or FindFolder calls.
 
@@ -482,7 +482,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSPercentTimeInAD
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EWSPercentTimeInAD parameter specifies the percentage of a minute that an Exchange Web Services user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -499,7 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSPercentTimeInCAS
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EWSPercentTimeInCAS parameter specifies the percentage of a minute that an Exchange Web Services user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -516,7 +516,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSPercentTimeInMailboxRPC
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The EWSPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an Exchange Web Services user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -580,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMAPPercentTimeInAD
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The IMAPPercentTimeInAD parameter specifies the percentage of a minute that an IMAP user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -597,7 +597,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMAPPercentTimeInCAS
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The IMAPPercentTimeInCAS parameter specifies the percentage of a minute that an IMAP user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -614,7 +614,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMAPPercentTimeInMailboxRPC
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The IMAPPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an IMAP user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -646,7 +646,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
 
@@ -680,7 +680,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAPercentTimeInAD
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The OWAPercentTimeInAD parameter specifies the percentage of a minute that an Outlook Web App user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -697,7 +697,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAPercentTimeInCAS
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The OWAPercentTimeInCAS parameter specifies the percentage of a minute that an Outlook Web App user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -714,7 +714,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAPercentTimeInMailboxRPC
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The OWAPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an Outlook Web App user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -746,7 +746,7 @@ Accept wildcard characters: False
 ```
 
 ### -POPPercentTimeInAD
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The POPPercentTimeInAD parameter specifies the percentage of a minute a POP user can spend executing LDAP requests (PercentTimeInAD). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -763,7 +763,7 @@ Accept wildcard characters: False
 ```
 
 ### -POPPercentTimeInCAS
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The POPPercentTimeInCAS parameter specifies the percentage of a minute a POP user can spend executing CAS code (PercentTimeInCAS). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -780,7 +780,7 @@ Accept wildcard characters: False
 ```
 
 ### -POPPercentTimeInMailboxRPC
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The POPPercentTimeInMailboxRPC parameter specifies the percentage of a minute a POP user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -932,7 +932,7 @@ Accept wildcard characters: False
 ```
 
 ### -RCAPercentTimeInAD
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The RCAPercentTimeInAD parameter specifies the percentage of a minute that an Outlook user can spend executing directory requests. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -949,7 +949,7 @@ Accept wildcard characters: False
 ```
 
 ### -RCAPercentTimeInCAS
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The RCAPercentTimeInCAS parameter specifies the percentage of a minute that an Outlook user can spend executing CAS mailbox requests. A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 
@@ -966,7 +966,7 @@ Accept wildcard characters: False
 ```
 
 ### -RCAPercentTimeInMailboxRPC
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The RCAPercentTimeInMailboxRPC parameter specifies the percentage of a minute that an RPC Client Access user can spend executing mailbox RPC requests (PercentTimeInMailboxRPC). A value of 100 indicates that for every one-minute window, the user can spend 60 seconds of that time consuming the resource in question.
 

@@ -353,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCoexistenceConnector
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The IsCoexistenceConnector parameter specifies whether this Send connector is used for secure mail flow between your on-premises deployment and your Microsoft Office 365 organization. The default value is $false.
 
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedReceiveConnector
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The LinkedReceiveConnector parameter forces all messages received by the specified Receive connector out through this Send connector. The value of the LinkedReceiveConnector parameter can use any of the following identifiers to specify the Receive connector:
 

@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludePreExchange2010
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The IncludePreExchange2010 parameter specifies whether to return information about the mailbox databases that reside on computers running Microsoft Exchange Server 2010 and earlier versions of Exchange.
 

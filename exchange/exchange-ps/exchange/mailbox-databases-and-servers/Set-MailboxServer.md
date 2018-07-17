@@ -308,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairSchedule
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The CalendarRepairSchedule parameter specifies the intervals each week during which the Calendar Repair Assistant applies checks for calendar failures. The format is StartDay.Time-EndDay.Time. You can use the following values for the start and end days:
 
@@ -492,7 +492,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMetricsGenerationTime
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The GroupMetricsGenerationTime parameter specifies the time of day when group metrics data is generated on a Mailbox server. You must use the 24-hour clock notation (HH:MM) when specifying the generation time.
 

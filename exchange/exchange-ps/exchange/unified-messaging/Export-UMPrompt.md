@@ -273,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### -TestBusinessName
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The TestBusinessName parameter specifies whether the business name configured on a UM auto attendant or the business name specified by this parameter is used to generate the welcome greeting prompt.
 
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -TestMenuKeyMapping
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The TestMenuKeyMapping parameter specifies whether the existing key mappings configured on a UM auto attendant or the key mapping menu specified by this parameter is used to generate the welcome greeting and menu.
 

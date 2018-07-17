@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludePreExchange2010
-This parameter is available only in Exchange 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The IncludePreExchange2010 parameter specifies whether information about all the public folder databases in the organization is returned, including versions of Microsoft Exchange prior to Exchange Server 2010. If the IncludePreExchange2010 parameter is included in the command, information about all of the public folder databases in the organization is returned. This parameter isn't necessary when the Server or Identity parameter is included in the command.
 
