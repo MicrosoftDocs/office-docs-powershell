@@ -118,6 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -Database
+This parameter is available only in Exchange 2010.
+
 The Database parameter specifies the database in which the user's mailbox or archive resides. You can use the following values:
 
 - GUID of the database

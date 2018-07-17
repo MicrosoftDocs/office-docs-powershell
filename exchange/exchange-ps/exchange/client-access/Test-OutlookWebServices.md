@@ -50,6 +50,8 @@ The example tests for a connection to each service. The example also submits a r
 ## PARAMETERS
 
 ### -ClientAccessServer
+This parameter is available only in Exchange 2010.
+
 The ClientAccessServer parameter specifies the Client Access server that the client accesses.
 
 ```yaml

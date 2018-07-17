@@ -80,6 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExportLegacyRules
+This parameter is available only in Exchange 2010.
+
 The ExportLegacyRules switch specifies whether to export Exchange 2007 journal rules.
 
 ```yaml

@@ -208,6 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabase
+This parameter is available only in Exchange 2010.
+
 The PublicFolderDatabase parameter specifies the identity of the public folder database being used to distribute the OAB. To use this parameter, the PublicFolderDistributionEnabled parameter must be set to $true.
 
 ```yaml
@@ -223,6 +225,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDistributionEnabled
+This parameter is available only in Exchange 2010.
+
 The PublicFolderDistributionEnabled parameter specifies whether the OAB is distributed via public folders. If the value of the PublicFolderDistributionEnabled parameter is $true, the OAB is distributed via public folders.
 
 ```yaml
@@ -238,6 +242,8 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
+This parameter is available only in Exchange 2010.
+
 The Schedule parameter specifies the interval scheduled for generating the new OAB.
 
 The Schedule parameter takes the following format and must include a range: Weekday.Hour:Minute[AM/PM]-Weekday.Hour:Minute[AM/PM].
@@ -255,6 +261,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+This parameter is available only in Exchange 2010.
+
 The Server parameter specifies which server the new OAB is created on.
 
 ```yaml
@@ -270,6 +278,8 @@ Accept wildcard characters: False
 ```
 
 ### -SkipPublicFolderInitialization
+This parameter is available only in Exchange 2010.
+
 The SkipPublicFolderInitialization parameter specifies whether to skip the immediate creation of the OAB public folders if you're creating an OAB that uses public folder distribution. The OAB isn't available for download until the next site folder maintenance cycle has completed. You don't have to specify a value with the SkipPublicFolderInitialization parameter. Omitting this parameter may cause the task to pause while it contacts the responsible public folder server to create the necessary public folders. If the server is presently unreachable, or is otherwise costly to contact, the pause could be significant.
 
 ```yaml
@@ -285,6 +295,8 @@ Accept wildcard characters: False
 ```
 
 ### -Versions
+This parameter is available only in Exchange 2010.
+
 The Versions parameter specifies what version of OAB to generate. The allowed values are:
 
 - Version1

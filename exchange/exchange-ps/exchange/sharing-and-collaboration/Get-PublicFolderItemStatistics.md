@@ -93,6 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+This parameter is available only in Exchange 2010.
+
 The Server parameter specifies the server on which to perform the selected operations.
 
 ```yaml

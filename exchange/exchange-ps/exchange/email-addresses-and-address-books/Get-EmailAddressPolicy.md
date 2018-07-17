@@ -82,6 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeMailboxSettingOnlyPolicy
+This parameter is available only in Exchange 2010.
+
 The IncludeMailboxSettingOnlyPolicy parameter retrieves Microsoft Exchange Server 2003 e-mail address policies that contain only mailbox management configuration. Microsoft Exchange Server 2010 supports both policies that contain only e-mail address policy settings and policies that contain e-mail address policy settings and mailbox management configuration. Exchange 2010 doesn't support policies that contain only mailbox management configuration, but Exchange 2003 policies that contain only mailbox management configuration are, by default, preserved and not upgraded. The IncludeMailboxSettingOnlyPolicy parameter is required to retrieve these policies.
 
 The attributes of e-mail address policies that contain only mailbox management configuration can't be modified in Exchange 2010. These policies can only be removed.

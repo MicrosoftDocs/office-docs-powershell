@@ -217,6 +217,8 @@ This example allows only the client applications specified by the EwsAllowList p
 ## PARAMETERS
 
 ### -Identity
+This parameter is available only in Exchange 2010.
+
 The Identity parameter specifies the Exchange organization that you want to modify. You can use any value that identifies the organization. For example:
 
 - Name
@@ -250,6 +252,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharedConfiguration
+This parameter is available only in Exchange 2010.
+
 The SharedConfiguration parameter is used to link one organization to another organization that holds shared configuration for the first organization. This parameter accepts the following values:
 
 - Name

@@ -315,6 +315,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDistributionEnabled
+This parameter is available only in Exchange 2010.
+
 The PublicFolderDistributionEnabled parameter specifies whether the OAB is to be distributed via public folders. Setting the PublicFolderDistributionEnabled parameter to a value of $true sets the OAB to be distributed via public folders. The default value is $true.
 
 ```yaml

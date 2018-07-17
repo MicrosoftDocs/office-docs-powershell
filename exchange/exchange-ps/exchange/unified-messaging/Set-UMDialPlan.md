@@ -385,6 +385,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOutboundCallingLineId
+This parameter is available only in Exchange 2010.
+
 The DefaultOutboundCallingLineId parameter specifies the phone number that a Unified Messaging server would use as the calling line ID when placing an outbound call. By default, this is set to $null and only the extension number of the UM-enabled user that places the outbound call is used.
 
 ```yaml

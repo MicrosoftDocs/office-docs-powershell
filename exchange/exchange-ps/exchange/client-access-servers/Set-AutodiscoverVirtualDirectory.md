@@ -221,6 +221,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalUrl
+This parameter is available only in Exchange 2010.
+
 The ExternalUrl parameter specifies the URL used to connect to the virtual directory from outside the network firewall.
 
 ```yaml
@@ -236,6 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -InternalUrl
+This parameter is available only in Exchange 2010.
+
 The InternalUrl parameter specifies the URL used to connect to the virtual directory from inside the network firewall.
 
 ```yaml

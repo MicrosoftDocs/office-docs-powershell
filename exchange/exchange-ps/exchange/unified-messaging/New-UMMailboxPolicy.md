@@ -107,6 +107,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharedUMDialPlan
+This parameter is available only in Exchange 2010.
+
 The SharedUMDialPlan parameter specifies whether the new UM mailbox policy being created is linked or associated with a dial plan outside the scope of the organization. If you specify this parameter, the UM mailbox policy can be linked with another tenant's dial plan. This parameter is used during tenant provisioning and is only used in a data center.
 
 ```yaml

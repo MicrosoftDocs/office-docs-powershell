@@ -86,6 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExportLegacyRules
+This parameter is available only in Exchange 2010.
+
 The ExportLegacyRules switch is used to export legacy transport rules.
 
 ```yaml

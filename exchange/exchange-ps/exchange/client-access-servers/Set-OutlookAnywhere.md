@@ -99,6 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAuthenticationMethod
+This parameter is available only in Exchange 2010.
+
 The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. This parameter accepts the following values:
 
 - Basic

@@ -290,6 +290,8 @@ Accept wildcard characters: False
 ```
 
 ### -ArbitrationMailbox
+This parameter is available only in Exchange 2010.
+
 The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process.
 
 ```yaml
