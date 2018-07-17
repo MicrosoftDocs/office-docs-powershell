@@ -5,7 +5,7 @@ A repository to hold the help reference content for Office PowerShell cmdlets. T
 ![Contribution and Consumption model for Office PowerShell reference content](images/contrib-consumption-model.png)
 
 # Learn How To Contribute
-Anyone who is interested can contribute to the Microsoft Office PowerShell reference topics. 
+Anyone who is interested can contribute to the Microsoft Office PowerShell reference topics.
 When you contribute your work will go directly into the Microsoft Office products and show up in Get-Help for the given Office cmdlet.
 
 > Notice that if you are looking into contributing for the **PnP PowerShell cmdlets**, their documentation is automatically generated from the code and you should be submitting your change towards the original code at https://github.com/SharePoint/PnP-powershell. See for example how the attributes are used in the code for the [Get-PnPList](https://github.com/SharePoint/PnP-PowerShell/blob/master/Commands/Lists/GetList.cs) cmdlet.

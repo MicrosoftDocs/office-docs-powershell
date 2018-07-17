@@ -63,7 +63,7 @@ Add-SPOTheme -Name "Custom Cyan" -Palette $themepalette -IsInverted $false
 If you want to update an existing theme (to modify some of its color settings, for example), use the same syntax as shown previously, but add the `-Overwrite` flag to the **Add-SPOTheme** cmdlet.
 
 ```powershell
-Add-SPOTheme -Name "Custom Cyan" -Palette $themepallette -IsInverted $false -Overwrite
+Add-SPOTheme -Name "Custom Cyan" -Palette $themepalette -IsInverted $false -Overwrite
 ```
 
 ## INPUTS

@@ -123,7 +123,7 @@ The MoveRequestQueue parameter specifies the mailbox database on which the move 
 
 - Database name
 
-You can't use this parameter can't be used with the Identity or MRSInstance parameters.
+You can't use this parameter with the Identity or MRSInstance parameters.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -138,9 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -MRSInstance
+This parameter is available only in on-premises Exchange 2010.
+
 The MRSInstance parameter specifies the fully qualified domain name (FQDN) of the Client Access server on which the Microsoft Exchange Mailbox Replication service (MRS) resides. When using this parameter, all records are returned for this instance of MRS.
 
-This parameter can't be used in conjunction with the Identity or MoveRequestQueue parameters.
+You can use this parameter with the Identity or MoveRequestQueue parameters.
 
 ```yaml
 Type: Fqdn
@@ -172,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeReport
-The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting.
+The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -191,7 +193,7 @@ This parameter is available only in on-premises Exchange.
 
 The MailboxGuid parameter specifies the GUID of a mailbox for which you want to view the move request statistics.
 
-This parameter can't be used with the Identity parameter.
+You can use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
@@ -206,13 +208,17 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
-The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+This parameter is available only in on-premises Exchange.
+
+The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
+
+Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set1, Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -221,13 +227,17 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticArgument
-The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+This parameter is available only in on-premises Exchange.
+
+The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. You don't need to specify a value with this switch.
+
+Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: String
 Parameter Sets: Set1, Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None

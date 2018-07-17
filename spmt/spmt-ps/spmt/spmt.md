@@ -1,13 +1,16 @@
 ---
 Module Name: SharePoint Migration Tool
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-title: SharePoint Migration Tool
+Title: SharePoint Migration Tool
 Locale: en-US
 ---
 
 # Microsoft SharePoint Migration Tool
 ## Description
-The following cmdlet references are for Microsoft SharePoint Migration tool.
+The following migration cmdlets are based on the SharePoint Migration Tool (SPMT) migration engine. It will move files from File Share, SharePoint 2013 document libraries, or items of SharePoint 2013 lists to Office 365.
+
+Notes:
+In order to support migration of file path up to 400 characters, PowerShell 5.0 and .NET 4.6.2 are required. 
 
 ## Microsoft Teams Cmdlets
 

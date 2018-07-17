@@ -1,15 +1,16 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Start-SPMTMigration
+Online version: 
+Schema: 2.0.0
 ---
 
 # Start-SPMTMigration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+This cmdlet will start the registered SPMT migration.
 ## SYNTAX
 
 ```
@@ -17,27 +18,59 @@ Start-SPMTMigration [-NoShow] [-ParametersValidationOnly]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet will start the registered SPMT migration.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+#Define SharePoint 2013 data source#
+
+$Global:SourceSiteUrl = "http://YourOnPremSite/"
+$Global:OnPremUserName = "Yourcomputer\administrator"
+$Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force 
+$Global:SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:OnPremUserName, $Global:OnPremPassword
+$Global:SourceListName = "SourceListName"
+
+
+#Define SPO target#
+$Global:SPOUrl = “https://contoso.sharepoint.com”
+$Global:UserName = “admin@contoso.onmicrosoft.com”
+$Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
+$Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
+$Global:TargetListName = "TargetListName"
+
+#Define File Share data source#
+$Global:FileshareSource = "YourFileShareDataSource"
+
+#Import SPMT Migration Module#
+Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
+
+#Register the SPMT session with SPO credentials#
+Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force 
+
+#Add two tasks into the session. One is SharePoint migration task, and another is File Share migration task.#
+Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll 
+Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList $Global:TargetListName
+
+#Start Migration in the console.#
+Start-SPMTMigration
 ```
 
-{{ Add example description here }}
+Start a migration with one SharePoint migration task and one File Share migration task.  
 
 ## PARAMETERS
 
 ### -NoShow
-{{Fill NoShow Description}}
+In "-NoShow" mode, a message will be displayed to indicate that the migration is running in the background.
+Note: Use the 'Show-SPMTMigration' to bring the migration from background to foreground. The task ID, data source location, target location and migration status will be displayed in the console. 
+
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -46,13 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -ParametersValidationOnly
-{{Fill ParametersValidationOnly Description}}
+Validate the parameters: check source access permissions, source existence and if the TargetUrl is valid.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None

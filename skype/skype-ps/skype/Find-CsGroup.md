@@ -1,5 +1,5 @@
 ---
-external help file: Find-CsGroup.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Find-CsGroup
 schema: 2.0.0

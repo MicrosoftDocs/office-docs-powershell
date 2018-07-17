@@ -1,63 +1,146 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+External help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-online version: 
-schema: 2.0.0
+Applicable: SharePoint Migration Tool
+Title: Add-SPMTTask
+Online version: 
+Schema: 2.0.0
 ---
 
 # Add-SPMTTask
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+Add a new migration task to the registered migration session. Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task.  
 ## SYNTAX
 
-### FileShare (Default)
+### FileShare
 ```
-Add-SPMTTask -FileShareSource <String> -TargetSiteUrl <String> -TargetList <String>
- [-TargetListRelativePath <String>]
+Add-SPMTTask -FileShareSource <String> -TargetSiteUrl <String> -TargetList <String> [-TargetListRelativePath <String>]
 ```
-
 ### SharePointMigrateAll
-```
-Add-SPMTTask [-MigrateAll] -SharePointSourceSiteUrl <String> -SharePointSourceCredential <PSCredential>
- -TargetSiteUrl <String>
+``` 
+Add-SPMTTask -SharePointSourceCredential <PSCredential> -SharePointSourceSiteUrl <string> -TargetSiteUrl <string> -MigrateAll 
 ```
 
 ### SharePointMigrateSelected
 ```
-Add-SPMTTask -SharePointSourceSiteUrl <String> -SharePointSourceCredential <PSCredential>
- [-SourceListRelativePath <String>] -SourceList <String> -TargetSiteUrl <String> -TargetList <String>
- [-TargetListRelativePath <String>]
+ Add-SPMTTask -SharePointSourceSiteUrl <string> -SharePointSourceCredential <PSCredential> -SourceList <string> [-SourceListRelativePath <string>] -TargetSiteUrl <string> -TargetList <string> [-TargetListRelativePath <string>]
 ```
 
 ### Json
 ```
-Add-SPMTTask [-SharePointSourceCredential <PSCredential>] -JsonDefinition <String>
+Add-SPMTTask [-JsonDefinition <string>] # This cmdlet is for File Share migration
+
+Add-SPMTTask -SharePointSourceCredential <PSCredential> [-JsonDefinition <string>] # This cmdlet is for SharePoint migration
+
+Json sample for File Share migration:
+{
+   "SourcePath":"\\LocalOrFileShareDataSource",
+   "TargetPath":"https://YourTargetSite",
+   "TargetList":"Documents",
+   "TargetListRelativePath":"subfolder"
+}
+
+Json sample for SharePoint migration(lists only): 
+{
+   "SourcePath":"http://YourOnPremSite",
+   "TargetPath":"https://YourTargetSite",
+   "Items":{
+      "Lists":[
+         {
+            "SourceList":"sourceListName",
+            "TargetList":"targetListName"
+         } 
+      ]
+   }
+}
+
+Json sample for SharePoint migration(lists and subsites):
+{  
+   "SourcePath":"http://YourOnPremSite",
+   "TargetPath":"https://YourTargetSite",
+   "Items":{  
+      "Lists":[  
+         {  
+            "SourceList":"listVersion2",
+            "TargetList":"ListVersion2"
+         },
+         {  
+            "SourceList":"listVersion3",
+            "TargetList":"ListVersion3"
+         }
+      ],
+      "SubSites":[  
+         {  
+            "SourceSubSitePath":"subSite",
+            "TargetSubSitePath":"targetSubSite",
+            "Lists":[  
+               {  
+                  "SourceList":"testSubListB",
+                  "TargetList":"targetSubList"
+               }
+            ]
+         }
+      ]
+   }
+}
+
+Json sample for SharePoint migration(whole site):
+{
+   "SourcePath":"http://YourOnPremSite/subsite2",
+   "TargetPath":"https://YourTargetSite/targetSubSite2"
+}
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Add a new migration task to the registered migration session. 
+Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task. 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
-```
+#Define SharePoint 2013 data source#
 
-{{ Add example description here }}
+$Global:SourceSiteUrl = "http://YourOnPremSite/"
+$Global:OnPremUserName = "Yourcomputer\administrator"
+$Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force 
+$Global:SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:OnPremUserName, $Global:OnPremPassword
+$Global:SourceListName = "SourceListName"
+
+
+#Define SPO target#
+$Global:SPOUrl = “https://contoso.sharepoint.com”
+$Global:UserName = “admin@contoso.onmicrosoft.com”
+$Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
+$Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
+$Global:TargetListName = "TargetListName"
+
+#Define File Share data source#
+$Global:FileshareSource = "YourFileShareDataSource"
+
+#Import SPMT Migration Module#
+Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
+
+#Register the SPMT session with SPO credentials#
+Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force 
+
+#Add two tasks into the session. One is SharePoint migration task, and another is File Share migration task.#
+Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll 
+Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList $Global:TargetListName
+```
+Add one File Share migration task and one SharePoint 2013 migration task to the registered migration session. 
 
 ## PARAMETERS
 
 ### -FileShareSource
-{{Fill FileShareSource Description}}
+This parameter is mandatory for File Share migration. Please specify the source folder path. For example: C:\SourceFiles.
 
 ```yaml
 Type: String
 Parameter Sets: FileShare
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -66,13 +149,13 @@ Accept wildcard characters: False
 ```
 
 ### -JsonDefinition
-{{Fill JsonDefinition Description}}
+Define one File share task or SharePoint task in JSON format.
 
 ```yaml
 Type: String
 Parameter Sets: Json
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -81,13 +164,13 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateAll
-{{Fill MigrateAll Description}}
+This is a switch parameter. If set to True, all lists will be migrated. If set to False, the customer will migrate selected lists. 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SharePointMigrateAll
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -95,14 +178,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SharePointSourceCredential
-{{Fill SharePointSourceCredential Description}}
+### -SharePointSourceCredential 
+Use this parameter to define SharePoint 2013 sign-in credentials.     
 
 ```yaml
 Type: PSCredential
 Parameter Sets: SharePointMigrateAll, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +197,7 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: Json
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -123,13 +206,13 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointSourceSiteUrl
-{{Fill SharePointSourceSiteUrl Description}}
+Use this parameter to define SharePoint data source site URL.
 
 ```yaml
 Type: String
 Parameter Sets: SharePointMigrateAll, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -138,13 +221,13 @@ Accept wildcard characters: False
 ```
 
 ### -SourceList
-{{Fill SourceList Description}}
+This parameter is mandatory and is to define source document library name or list name.
 
 ```yaml
 Type: String
 Parameter Sets: SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -153,13 +236,13 @@ Accept wildcard characters: False
 ```
 
 ### -SourceListRelativePath
-{{Fill SourceListRelativePath Description}}
+This parameter is optional and is to define data source relative path. 
 
 ```yaml
 Type: String
 Parameter Sets: SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -168,13 +251,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetList
-{{Fill TargetList Description}}
+This parameter is mandatory and is to define target library name or list name.
 
 ```yaml
 Type: String
 Parameter Sets: FileShare, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -183,13 +266,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetListRelativePath
-{{Fill TargetListRelativePath Description}}
-
+This parameter is optional and is to define target relative path. 
 ```yaml
 Type: String
 Parameter Sets: FileShare, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: False
 Position: Named
 Default value: None
@@ -198,13 +280,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetSiteUrl
-{{Fill TargetSiteUrl Description}}
+This parameter is mandatory for both File Share and SharePoint migration and is to define the target site URL.
 
 ```yaml
 Type: String
 Parameter Sets: FileShare, SharePointMigrateAll, SharePointMigrateSelected
 Aliases: 
-
+applicable: SharePoint Migration Tool
 Required: True
 Position: Named
 Default value: None
@@ -224,4 +306,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

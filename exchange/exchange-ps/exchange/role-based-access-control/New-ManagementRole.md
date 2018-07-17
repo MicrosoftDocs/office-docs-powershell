@@ -67,7 +67,7 @@ For more information about pipelining and the Where cmdlet, see the following to
 New-ManagementRole -Name "In-house scripts" -UnScopedTopLevel
 ```
 
-This example creates the unscoped management role In-house scripts. The user running the command, or the role group the user is a member of, is assigned the Unscoped Role Management management role. This assignment is required to use the UnScopedTopLevel switch.
+In on-premises Exchange, this example creates the unscoped management role In-house scripts. Note that the UnScopedTopLevel switch requires the Unscoped Role Management role, which isn't assigned to any role group by default.
 
 ## PARAMETERS
 
@@ -102,13 +102,19 @@ Accept wildcard characters: False
 ```
 
 ### -UnScopedTopLevel
-The UnScopedTopLevel switch specifies that the role should be a custom, empty role. If you specify the UnScopedTopLevel switch, you can't use the Parent parameter.
+This parameter is available on in on-premises Exchange.
+
+By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+
+The UnScopedTopLevel switch specifies that the role should be a custom, empty role. You don't need to specify a value with this switch.
+
+If you use this switch, you can't use the Parent parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -168,13 +174,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+This parameter is available only in the cloud-based service.
+
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

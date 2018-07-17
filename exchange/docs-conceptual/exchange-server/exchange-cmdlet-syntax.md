@@ -9,7 +9,7 @@ ms.topic: article
 ms.service: exchange-online
 localization_priority: Normal
 ms.assetid: 85ffe9c8-7f03-4877-8e55-3cbd40228d84
-description: "Learn about the structure and syntax of cmdlets in Exchange, Exchange Online, Exchange Online Protection, and the Office 365 Security &amp; Compliance Center."
+description: "Learn about the structure and syntax of cmdlets in Exchange, Exchange Online, Exchange Online Protection, and the Office 365 Security & Compliance Center."
 ---
 
 # Exchange cmdlet syntax
@@ -87,15 +87,15 @@ The `<COMMON PARAMETERS>` entry indicates the cmdlet supports the basic Windows 
 ## Quotation marks in Exchange PowerShell
 In Exchange PowerShell, you use single quotation marks ( ' ) or double quotation marks ( " ) to enclose parameter values that contain spaces. For example, the following commands behave the same:
   
--  `Get-ReceiveConnector -Identity "Contoso Receive Connector"`
+- `Get-ReceiveConnector -Identity "Contoso Receive Connector"`
     
--  `Get-ReceiveConnector -Identity 'Contoso Receive Connector'`
+- `Get-ReceiveConnector -Identity 'Contoso Receive Connector'`
     
 If you don't enclose the value `Contoso Receive Connector` in quotes, Exchange PowerShell tries to treat each word as a new argument, and the command will fail. In this example, you'll receive an error that looks like this:
   
  `A positional parameter cannot be found that accepts argument 'Receive'`
   
-If the value contains variables, you need choose carefully between single quotes and double quotes. For example, suppose you have a variable named  `$Server` that has the value `Mailbox01`.
+If the value contains variables, you need choose carefully between single quotes and double quotes. For example, suppose you have a variable named `$Server` that has the value `Mailbox01`.
   
 - **Double quotation marks**: Variables are substituted with their values. The input **"$Server Example"** results in the output `Mailbox01 Example`.
     
@@ -106,7 +106,7 @@ For more information about variables, see [User-Defined Variables](https://techn
 ## Escape characters in Exchange PowerShell
 In any programming language, an escape character is used to identify special characters literally, and not by their normal function in that language. In Exchange PowerShell, when you enclose a text string in double quotation marks, the escape character is the back quotation mark escape character ( \` ).
   
-For example, if you want the output  `The price is $23`, enter the value  **"The price is \`$23"**. The escape character is required because the dollar sign character ( $ ) defines variables in Exchange PowerShell.
+For example, if you want the output `The price is $23`, enter the value  **"The price is \`$23"**. The escape character is required because the dollar sign character ( $ ) defines variables in Exchange PowerShell.
   
 If you enclose the string in single quotation marks, the only special character you need to worry about is the single quotation mark character itself, which requires two single quotation marks (  '' ).
   
@@ -118,18 +118,18 @@ The following table shows the valid operators that you can use in an Exchange co
 |**Operator**|**Description**|
 |:-----|:-----|
 |**=** | The equal sign is used as an assignment character. The value on the right side of the equal sign is assigned to the variable on the left side of the equal sign. The following characters are also assignment characters: <br/> **+=** Add the value on the right side of the equal sign to the current value that's contained in the variable on the left side of the equal sign. <br/> **-=** Subtract the value on the right side of the equal sign from the current value that's contained in the variable on the left side of the equal sign. <br/> **\*=** Multiply the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign. <br/> **/=** Divide the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign. <br/> **%=** Modify the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign. <br/> |
-|**:** | A colon can be used to separate a parameter's name from the parameter's value. For example,  `-Enabled:$True`. Using a colon is optional with all parameter types except switch parameters. For more information about switch parameters, see [Parameters](https://technet.microsoft.com/library/bc81f639-c822-4b2b-a692-694c43f5f57e.aspx). |
+|**:** | A colon can be used to separate a parameter's name from the parameter's value. For example, `-Enabled:$True`. Using a colon is optional with all parameter types except switch parameters. For more information about switch parameters, see [Parameters](https://technet.microsoft.com/library/bc81f639-c822-4b2b-a692-694c43f5f57e.aspx). |
 |**!**  | The exclamation point is a logical **NOT** operator. When it is used with the equal ( **=** ) sign, the combined pair means "not equal to." |
-|**[ ]** | Brackets are used to specify the index value of an array position. Index values are offsets that start at zero. For example, `$Red[9]` refers to the tenth index position in the array, `$Red`. <br/> Brackets can also be used to assign a type to a variable (for example,  `$A=[XML] "<Test><A>value</A></Test>"`). The following variable types are available:  `Array`,  `Bool`,  `Byte`,  `Char`,  `Char[]`,  `Decimal`,  `Double`,  `Float`,  `Int`,  `Int[]`,  `Long`,  `Long[]`,  `RegEx`,  `Single`,  `ScriptBlock`,  `String`,  `Type`, and  `XML.` |
-|**{ }** |Braces are used to include an expression in a command. For example,  `Get-Process | Where {$_.HandleCount -gt 400}` |
-|**\|** |The pipe symbol is used when one cmdlet pipes a result to another cmdlet. For example,  `Get-Mailbox -Server SRV1 | Set-Mailbox -ProhibitSendQuota 2GB`. |
+|**[ ]** | Brackets are used to specify the index value of an array position. Index values are offsets that start at zero. For example, `$Red[9]` refers to the tenth index position in the array, `$Red`. <br/> Brackets can also be used to assign a type to a variable (for example, `$A=[XML] "<Test><A>value</A></Test>"`). The following variable types are available: `Array`, `Bool`, `Byte`, `Char`, `Char[]`, `Decimal`, `Double`, `Float`, `Int`, `Int[]`, `Long`, `Long[]`, `RegEx`, `Single`, `ScriptBlock`, `String`, `Type`, and `XML.` |
+|**{ }** |Braces are used to include an expression in a command. For example, `Get-Process | Where {$_.HandleCount -gt 400}` |
+|**\|** |The pipe symbol is used when one cmdlet pipes a result to another cmdlet. For example, `Get-Mailbox -Server SRV1 | Set-Mailbox -ProhibitSendQuota 2GB`. |
 |**\>**  |The right-angle bracket is used to send the output of a command to a file, and the contents of the file are overwritten. For example, `Get-TransportRulePredicate > "C:\My Documents\Output.txt"`. |
 |**\>\>** |Double right-angle brackets are used to append the output of a command to an existing file. If the file doesn't exist, a new file is created. For example, `Get-TransportRulePredicate >> "C:\My Documents\Output.txt"`. |
 |**"** |Double quotation marks are used to enclose text strings that contains spaces. |
-|**$** |A dollar sign indicates a variable. For example,  `$Blue = 10` assigns the value `10` to the variable `$Blue`. |
+|**$** |A dollar sign indicates a variable. For example, `$Blue = 10` assigns the value `10` to the variable `$Blue`. |
 |**@** |The @ symbol references an associative array. For more information, see [Arrays](https://technet.microsoft.com/library/599ed6d7-553a-41be-b4a3-aa75ab9dbb5d.aspx). |
 |**$( )** |A dollar sign ( `$` ) with parentheses indicates command substitution. You can use command substitution when you want to use the output of one command as an argument in another command. For example, `Get-ChildItem $(Read-Host -Prompt "Enter FileName: ")`. |
-|**..** |Double-periods indicate a value range. For example, if an array contains several indexes, you can return the values of all indexes between the second and fifth indexes by running the command:  `$Blue[2..5]`. |
+|**..** |Double-periods indicate a value range. For example, if an array contains several indexes, you can return the values of all indexes between the second and fifth indexes by running the command: `$Blue[2..5]`. |
 |**+** |The **+** operator adds two values together. For example, `6 + 6` equals `12`. |
 |**-** |The **-** operator subtracts one value from another value (for example, `12 - 6` equals `6`) or indicates a negative number (for example, `-6 * 6` equals `-36`). |
 |**\*** |You can use the wildcard character to match strings (for example `Get-User | Where-Object {$_.Department -like 'Sales*'}`), multiply numeric values (for example, `6 * 6` equals `36`), or repeat the string value the specified number of times (for example, `"Test" * 3` equals `TestTestTest`).|
