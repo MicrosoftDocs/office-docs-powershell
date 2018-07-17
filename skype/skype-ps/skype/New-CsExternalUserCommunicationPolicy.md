@@ -11,10 +11,8 @@ schema: 2.0.0
 Creates a new external user communication policy for use in your organization to block P2P file transfer with Federated partners only.
 
 ## SYNTAX
-
 ```
-New-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Tenant <Object>] [-AsJob] [-WhatIf]
- [<CommonParameters>]
+New-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Tenant <Object>] [-AsJob] [-WhatIf][<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +32,8 @@ This example creates a new policy to block external file transfer. Then you can 
 ## PARAMETERS
 
 ### -EnableP2PFileTransfer
-Indicates whether file transfers to Federated partners are allowed. The default value is True.
+Indicates whether file transfers to Federated partners are allowed. 
+The default value is True.
 
 ```yaml
 Type: Object
