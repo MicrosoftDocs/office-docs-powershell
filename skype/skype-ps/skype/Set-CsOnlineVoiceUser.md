@@ -13,7 +13,7 @@ Use the `Set-CsOnlineVoiceUser` to set the PSTN specific parameters (like teleph
 ## SYNTAX
 
 ```
-Set-CsOnlineVoiceUser [[-Identity] <Object>] [-Confirm] [-DomainController <Object>] [-Force] [-LocationID <Object>] [-TelephoneNumber <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineVoiceUser [[-Identity] <UserIdParameter>] [-Confirm] [-DomainController <Fqdn>] [-Force] [-LocationID <LocationID>] [-TelephoneNumber <String>] [-Tenant <TenantID>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +43,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 You can use the `Get-CsOnlineUser` cmdlet to identify the users you want to modify.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -112,7 +112,7 @@ Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmd
 This parameter is required for users based in the US.
 
 ```yaml
-Type: Object
+Type: LocationID
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -130,7 +130,7 @@ The value must be in E.164 format: +14255043920.
 Setting the value to $Null clears the user's telephone number.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: TenantID
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
