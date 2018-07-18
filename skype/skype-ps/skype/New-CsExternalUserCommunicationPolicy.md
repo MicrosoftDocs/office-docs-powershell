@@ -12,7 +12,7 @@ Creates a new external user communication policy for use in your organization to
 
 ## SYNTAX
 ```
-New-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Tenant <Object>] [-AsJob] [-WhatIf][<CommonParameters>]
+New-CsExternalUserCommunicationPolicy [[-Identity] <XdsIdentity>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>] [-Confirm] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>] [-Force] [-InMemory] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
