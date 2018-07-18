@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsUserSession
 
 ## SYNOPSIS
-Use the Get-CsUserSession cmdlet to retrieve user session information within a specified date range.
+Use the Get-CsUserSession cmdlet to retrieve user session information within a specified date range within the past 30 days.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-CsUserSession -StartTime <DateTimeOffset> -User <String> [-EndTime <DateTime
 ```
 
 ## DESCRIPTION
-Use the Get-CsUserSession cmdlet to retrieve session information for users within a specified date range.
+Use the Get-CsUserSession cmdlet to retrieve session information for users within a specified date range within the past 30 days.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
