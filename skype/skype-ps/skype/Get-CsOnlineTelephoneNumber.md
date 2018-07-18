@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandLocation
-This parameter is reserved for internal Microsoft use.
+Displays the location parameter with its value.
 
 ```yaml
 Type: SwitchParameter
