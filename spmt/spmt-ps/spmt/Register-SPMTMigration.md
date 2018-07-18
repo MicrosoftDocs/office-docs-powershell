@@ -397,8 +397,11 @@ Accept wildcard characters: False
 ```
 
 ### -WorkingFolder
-By default, a temp folder will be created as a working folder. If you wish to specify your own specific working folder, enter the name here. 
-Note: By default, the working folder is %appdata%\Microsoft\MigrationToolStorage. Make sure that your working folder has a minimum of 150 GB of free space. It may need more depending on the size of the data you plan to migrate.
+By default, the working folder is %appdata%\Microsoft\MigrationToolStorage. If you wish to specify your own specific working folder, create it first, then use it as -WorkingFolder parameter. The changed working folder will take effect till you close the PowerShell window. 
+
+Notes:
+Make sure that your working folder has a minimum of 150 GB of free space. It may need more depending on the size of the data you plan to migrate.
+
 ```yaml
 Type: String
 Parameter Sets:  

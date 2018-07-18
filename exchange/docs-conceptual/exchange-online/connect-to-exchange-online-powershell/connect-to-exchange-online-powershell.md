@@ -75,11 +75,17 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
     - For Office 365 operated by 21Vianet, use the _ConnectionUri_ value: `https://partner.outlook.cn/PowerShell`
 
     - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
+    
+    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
+      
+      Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
+      
+      For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
 3. Run the following command.
 
     ```
-    Import-PSSession $Session
+    Import-PSSession $Session -DisableNameChecking
     ```
 
 > [!NOTE]
