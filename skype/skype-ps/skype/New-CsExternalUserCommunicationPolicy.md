@@ -143,15 +143,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
 ### -InMemory
 This parameter is reserved for internal Microsoft use.
 
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-You can return your tenant ID by running this command:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Tenant
 Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
