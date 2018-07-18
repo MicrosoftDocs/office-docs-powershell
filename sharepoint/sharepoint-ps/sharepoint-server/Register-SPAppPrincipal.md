@@ -10,7 +10,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Lets an on-premises administrator register an app principal.
 
-
 ## SYNTAX
 
 ```
@@ -21,7 +20,7 @@ Register-SPAppPrincipal -DisplayName <String> -NameIdentifier <String> -Site <SP
 ## DESCRIPTION
 Use the `Register-SPAppPrincipal` cmdlet to let an on-premises farm administrator to register an app principal management service.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831(http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
@@ -70,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{ Fill Site Description}}
+{{Fill Site Description}}
 
 ```yaml
 Type: SPWebPipeBind
