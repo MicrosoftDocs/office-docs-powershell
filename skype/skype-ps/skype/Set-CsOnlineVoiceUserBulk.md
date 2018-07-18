@@ -13,7 +13,7 @@ Use the 'Set-CsOnlineVoiceUserBulk' to assign available phone numbers to users w
 ## SYNTAX
 
 ```
-Set-CsOnlineVoiceUserBulk [-Confirm] [-DomainController <Object>] [-Force] [-NumberAssignmentDetails <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineVoiceUserBulk [-Confirm] [-DomainController <Fqdn>] [-Force] [-NumberAssignmentDetails <List>] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 PARAMVALUE: List
 
 ```yaml
-Type: Object
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
