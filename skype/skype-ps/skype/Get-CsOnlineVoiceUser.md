@@ -13,7 +13,7 @@ Use the Get-CsOnlineVoiceUser cmdlet to retrieve a voice user's telephone number
 ## SYNTAX
 
 ```
-Get-CsOnlineVoiceUser [-CivicAddressId <Object>] [-DomainController <Object>] [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Object>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <Object>] [-LocationId <Object>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <Object>] [-SearchQuery <Object>] [-Skip <Object>] [-Tenant <Object>] [-AsJob]
+Get-CsOnlineVoiceUser [-CivicAddressId <Object>] [-DomainController <Fqdn>] [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Unlimited>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <UserIdParameter>] [-LocationId <LocationID>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <Object>] [-SearchQuery <String>] [-Skip <Unlimited>] [-Tenant <Guid>] [-AsJob]
  [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -103,7 +103,7 @@ Specifies the number of users to return.
 The default is 100.
 
 ```yaml
-Type: Object
+Type: Unlimited
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -176,7 +176,7 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -193,7 +193,7 @@ Specifies the location identity of the location whose users will be returned.
 You can find location identifiers by using the Get-CsOnlineLisLocation cmdlet.
 
 ```yaml
-Type: Object
+Type: LocationID
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -262,7 +262,7 @@ The SearchQuery parameter specifies a search string or a query formatted using K
 If this parameter is empty, all users are returned.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -280,7 +280,7 @@ If you used the First parameter to return the first 50 users and wanted to get a
 The default is 0.
 
 ```yaml
-Type: Object
+Type: Unlimited
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
