@@ -13,7 +13,7 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Set-CsCceApplianceStatus [[-Identity] <Object>] [-Status <Object>] [-Confirm] [-Error <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [-Version <Object>] [<CommonParameters>]
+Set-CsCceApplianceStatus [[-Identity] <UserIdParameter>] [-Status <Object>] [-Confirm] [-Error <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [-Version <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
