@@ -13,8 +13,8 @@ Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Bus
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <Object>] [-CapitalOrMajorCity <Object>] [-DomainController <Object>] [-ExpandLocation] [-Force] [-InventoryType <Object>] [-IsNotAssigned] [-ResultSize <Object>] [-TelephoneNumber <Object>]
- [-TelephoneNumberGreaterThan <Object>] [-TelephoneNumberLessThan <Object>] [-TelephoneNumberStartsWith <Object>] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <Object>] [-CapitalOrMajorCity <Object>] [-DomainController <Fqdn>] [-ExpandLocation] [-Force] [-InventoryType <Object>] [-IsNotAssigned] [-ResultSize <Unlimited>] [-TelephoneNumber <String>]
+ [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>] [-TelephoneNumberStartsWith <String>] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -224,7 +224,7 @@ The result size can be set to any whole number between 0 and 2147483647, inclusi
 If set to 0, the command will run, but no data will be returned.
 
 ```yaml
-Type: Object
+Type: Unlimited
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -243,7 +243,7 @@ For example:
 `-TelephoneNumber tel:+18005551234, or -TelephoneNumber +14251234567`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -261,7 +261,7 @@ The telephone numbers returned will all be greater than the number provided.
 The telephone number should be in E.164 format.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -279,7 +279,7 @@ The telephone numbers returned will all be less than the number provided.
 The telephone number should be in E.164 format.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -298,7 +298,7 @@ To return numbers that are in the 206 area code and that begin with 88, use this
 You can use up to nine digits.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
