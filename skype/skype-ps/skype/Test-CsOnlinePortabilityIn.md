@@ -13,7 +13,7 @@ Tests the ability to use ported phone numbers from your current service provider
 ## SYNTAX
 
 ```
-Test-CsOnlinePortabilityIn [-Confirm] [-DomainController <Object>] [-Force] [-TelephoneNumberRanges <String>] [-TelephoneNumbers <String>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Test-CsOnlinePortabilityIn [-Confirm] [-DomainController <Fqdn>] [-Force] [-TelephoneNumberRanges <String>] [-TelephoneNumbers <String>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
