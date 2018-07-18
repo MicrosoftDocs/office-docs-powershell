@@ -68,7 +68,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OnSendAddinsEnabled <$true | $false>] [-ReferenceAttachmentsEnabled <$true | $false>]
  [-SatisfactionEnabled <$true | $false>] [-SaveAttachmentsToCloudEnabled <$true | $false>]
  [-ThirdPartyAttachmentsEnabled <$true | $false>] [-UserVoiceEnabled <$true | $false>]
- [-WacEditingEnabled <$true | $false>] [-OutlookBetaToggleEnabled <$true | $false>][<CommonParameters>]
+ [-WacEditingEnabled <$true | $false>] [-OutlookBetaToggleEnabled <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -1838,11 +1838,11 @@ Accept wildcard characters: False
 ### -OutlookBetaToggleEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookBetaToggleEnabled parameter specifies whether to enable or disable the Outlook on the Web preview toggle. The preview toggle is allows your users a chance to trial the new Outlook on the Web experience.  They are able to easily toggle between both experiences.  Valid values are:
+The OutlookBetaToggleEnabled parameter specifies whether to enable or disable the Outlook on the web Preview toggle. The Preview toggle allows users to try the new Outlook on the Web experience. Valid values are:
 
-- $true: Outlook Preview Toggle is enabled. This is the default value.
+- $true: The Outlook on the web Preview toggle is enabled. Users can easily switch back and forth between both experiences. This is the default value.
 
-- $false: Outlook Preview is disabled.
+- $false: Outlook on the web Preview is disabled.
 
 ```yaml
 Type: $true | $false
