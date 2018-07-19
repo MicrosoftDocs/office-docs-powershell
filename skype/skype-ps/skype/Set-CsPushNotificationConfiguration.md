@@ -304,4 +304,8 @@ Instead, the `Set-CsPushNotificationConfiguration` cmdlet modifies existing inst
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cspushnotificationconfiguration?view=skype-ps)
 
+[New-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-cspushnotificationconfiguration?view=skype-ps)
+
+[Remove-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-cspushnotificationconfiguration?view=skype-ps)
