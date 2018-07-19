@@ -212,19 +212,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: PSObject
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -Tenant
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the push notification settings being modified.
 For example:
