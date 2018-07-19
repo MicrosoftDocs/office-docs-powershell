@@ -13,7 +13,7 @@ Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Bus
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <MultiValuedProperty>] [-CapitalOrMajorCity <String>] [-DomainController <Fqdn>] [-ExpandLocation] [-Force] [-InventoryType <MultiValuedProperty>] [-IsNotAssigned] [-ResultSize <Unlimited>] [-TelephoneNumber <String>] [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>] [-TelephoneNumberStartsWith <String>] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <MultiValuedProperty>] [-CapitalOrMajorCity <String>] [-DomainController <Fqdn>] [-ExpandLocation] [-Force] [-InventoryType <MultiValuedProperty>] [-IsNotAssigned] [-ResultSize <UInt32>] [-TelephoneNumber <String>] [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>] [-TelephoneNumberStartsWith <String>] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -223,7 +223,7 @@ The result size can be set to any whole number between 0 and 2147483647, inclusi
 If set to 0, the command will run, but no data will be returned.
 
 ```yaml
-Type: Unlimited
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
