@@ -15,20 +15,15 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 
 ## SYNTAX
 
-### Filter
+### Identity (Default)
 ```
-Get-CsPushNotificationConfiguration [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-### Identity
-```
-Get-CsPushNotificationConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>]
+Get-CsPushNotificationConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
  [<CommonParameters>]
 ```
 
-###  (Default)
+### Filter
 ```
-Get-CsPushNotificationConfiguration [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsPushNotificationConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
