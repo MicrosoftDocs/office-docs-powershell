@@ -13,7 +13,7 @@ Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Bus
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <Object>] [-CapitalOrMajorCity <Object>] [-DomainController <Fqdn>] [-ExpandLocation] [-Force] [-InventoryType <Object>] [-IsNotAssigned] [-ResultSize <Unlimited>] [-TelephoneNumber <String>]
+Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <Object>] [-CapitalOrMajorCity <String>] [-DomainController <Fqdn>] [-ExpandLocation] [-Force] [-InventoryType <Object>] [-IsNotAssigned] [-ResultSize <Unlimited>] [-TelephoneNumber <String>]
  [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>] [-TelephoneNumberStartsWith <String>] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -93,9 +93,9 @@ Accept wildcard characters: False
 Specifies the function of the telephone number.
 The acceptable values are:
 
-"caa" for numbers assigned to conferencing functions.
+* "caa" for numbers assigned to conferencing functions.
 
-"user" for numbers assigned to public switched telephone network (PSTN) functions.
+* "user" for numbers assigned to public switched telephone network (PSTN) functions.
 
 The values for the Assigned parameter are case-sensitive.
 
@@ -119,7 +119,7 @@ For example, "NOAM-US-OR-PO" would specify Portland, Oregon.
 The values for the CapitalOrMajorCity parameter are case-sensitive.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: CityCode
 Applicable: Skype for Business Online
@@ -185,9 +185,9 @@ Accept wildcard characters: False
 Specifies the target telephone number type for the cmdlet.
 Acceptable values are:
 
-"Service" for numbers assigned to conferencing support.
+* "Service" for numbers assigned to conferencing support.
 
-"Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
+* "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
 Type: Object
