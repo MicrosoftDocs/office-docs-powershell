@@ -13,8 +13,7 @@ Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Bus
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <Object>] [-CapitalOrMajorCity <String>] [-DomainController <Fqdn>] [-ExpandLocation] [-Force] [-InventoryType <Object>] [-IsNotAssigned] [-ResultSize <Unlimited>] [-TelephoneNumber <String>]
- [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>] [-TelephoneNumberStartsWith <String>] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <MultiValuedProperty>] [-CapitalOrMajorCity <String>] [-DomainController <Fqdn>] [-ExpandLocation] [-Force] [-InventoryType <MultiValuedProperty>] [-IsNotAssigned] [-ResultSize <Unlimited>] [-TelephoneNumber <String>] [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>] [-TelephoneNumberStartsWith <String>] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +99,7 @@ The acceptable values are:
 The values for the Assigned parameter are case-sensitive.
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -190,7 +189,7 @@ Acceptable values are:
 * "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
