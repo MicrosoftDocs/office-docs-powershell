@@ -221,7 +221,6 @@ Cmdlet|Description|Platform
 **[Set&#8209;PnPField](../../sharepoint-ps/sharepoint-pnp/Set-PnPField.md)** |Changes one or more properties of a field in a specific list or for the whole web|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Add&#8209;PnPFieldFromXml](../../sharepoint-ps/sharepoint-pnp/Add-PnPFieldFromXml.md)** |Adds a field to a list or as a site column based upon a CAML/XML field definition|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Add&#8209;PnPTaxonomyField](../../sharepoint-ps/sharepoint-pnp/Add-PnPTaxonomyField.md)** |Add a taxonomy field|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Set&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Set-PnPView.md)** |Change view properties|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 
 
 ## Files and Folders 
@@ -279,6 +278,7 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Add-PnPView.md)** |Adds a view to a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Get-PnPView.md)** |Returns one or all views from a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Remove&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Remove-PnPView.md)** |Deletes a view from a list|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Set&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Set-PnPView.md)** |Change view properties|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 
 
 ## Microsoft Graph 
