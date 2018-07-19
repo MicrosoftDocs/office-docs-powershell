@@ -13,7 +13,7 @@ Use the Get-CsOnlineVoiceUser cmdlet to retrieve a voice user's telephone number
 ## SYNTAX
 
 ```
-Get-CsOnlineVoiceUser [-CivicAddressId <Object>] [-DomainController <Fqdn>] [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Unlimited>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <UserIdParameter>] [-LocationId <LocationID>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <Object>] [-SearchQuery <String>] [-Skip <Unlimited>] [-Tenant <Guid>] [-AsJob]
+Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <Fqdn>] [-EnterpriseVoiceStatus <MultiValuedProperty>] [-ExpandLocation] [-First <Unlimited>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <UserIdParameter>] [-LocationId <LocationID>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <MultiValuedProperty>] [-SearchQuery <String>] [-Skip <Unlimited>] [-Tenant <Guid>] [-AsJob]
  [<CommonParameters>]
 ```
 
@@ -35,7 +35,7 @@ This example uses the User Principal Name (UPN) to retrieve the location and pho
 Specifies the identity of the civic address that is assigned to the target users.
 
 ```yaml
-Type: Object
+Type: XdsCivicAddressId
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -70,7 +70,7 @@ Possible values are:
 * Disabled
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -244,7 +244,7 @@ Possible values are:
 * OnPremises
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
