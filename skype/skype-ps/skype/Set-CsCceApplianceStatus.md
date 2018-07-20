@@ -13,7 +13,7 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Set-CsCceApplianceStatus [[-Identity] <UserIdParameter>] [-Status <Object>] [-Confirm] [-Error <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [-Version <Object>] [<CommonParameters>]
+Set-CsCceApplianceStatus [-WhatIf] [-Version <String>] [-ConfigurationSnapshot <Object>] [-Confirm] [[-Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [-Error <String>] [-Status <MultiValuedProperty>] [-Force] [-Instance <PSObject>] [-AsJob]
 ```
 
 ## DESCRIPTION
@@ -35,7 +35,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: XdsGlobalRelativeIdentity
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -48,10 +48,14 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-PARAMVALUE: None | Running | Maintenance | Error
+Possible values are:
+* None
+* Running
+* Maintenance
+* Error
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -83,7 +87,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -115,7 +119,7 @@ Accept wildcard characters: False
 PARAMVALUE: PSObject
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -131,7 +135,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -179,7 +183,7 @@ Accept wildcard characters: False
 {{Fill Version Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
