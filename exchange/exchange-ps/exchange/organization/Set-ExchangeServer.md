@@ -24,6 +24,7 @@ Set-ExchangeServer [-Identity] <ServerIdParameter> [-Confirm] [-CustomerFeedback
  [-StaticDomainControllers <MultiValuedProperty>] [-StaticExcludedDomainControllers <MultiValuedProperty>]
  [-StaticGlobalCatalogs <MultiValuedProperty>] [-WhatIf]
  [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>] [-MonitoringGroup <String>]
+ [-InternetWebProxyBypassList <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -271,6 +272,21 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -InternetWebProxyBypassList
+The InternetWebProxyBypassList parameter specifies the list of servers, for which Exchange should bypass the configured InternetWebProxy. Each entry should be FQDN. Currently there is a limit of 100 elements in this list.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
