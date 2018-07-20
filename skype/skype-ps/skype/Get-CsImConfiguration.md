@@ -12,14 +12,14 @@ Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messa
 
 ## SYNTAX
 
-### Filter
+### Identity (Default)
 ```
-Get-CsImConfiguration [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsImConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
-### Identity
+### Filter
 ```
-Get-CsImConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsImConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
