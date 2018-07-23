@@ -140,7 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -InternetWebProxy
-The InternetWebProxy parameter specifies which web proxy servers, such as computers running Forefront Threat Management Gateway, Exchange should use to reach the Internet.
+The InternetWebProxy parameter specifies the web proxy server that the Exchange server uses to reach the internet. A valid value for this parameter is the URL of the web proxy server.
+
+In Exchange 2016 or later, to configure a list of servers that bypass the web proxy server and connect to the internet directly, use the InternetWebProxyBypassList parameter.
 
 ```yaml
 Type: Uri
@@ -275,7 +277,13 @@ Accept wildcard characters: False
 ```
 
 ### -InternetWebProxyBypassList
-The InternetWebProxyBypassList parameter specifies the list of servers, for which Exchange should bypass the configured InternetWebProxy. Each entry should be FQDN. Currently there is a limit of 100 elements in this list.
+The InternetWebProxyBypassList parameter specifies a list of servers that bypass the web proxy server specified by the InternetWebProxy parameter. You identify the servers by their FQDN (for example, server01.contoso.com).
+
+To enter multiple values and overwrite any existing FQDN entries, use the following syntax: \<FQDN1\>,\<FQDN2\>,...\<FQDNX\>.
+
+To add or remove one or more values without affecting any existing FQDN entries, use the following syntax: @{Add="\<FQDN1\>","\<FQDN2\>"...; Remove="\<FQDN1\>","\<FQDN\>"...}.
+
+The maximum number of servers you can enter with this parameter is 100.
 
 ```yaml
 Type: MultiValuedProperty
