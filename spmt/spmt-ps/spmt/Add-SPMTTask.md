@@ -91,11 +91,6 @@ Json sample for SharePoint migration(whole site):
    "TargetPath":"https://YourTargetSite/targetSubSite2"
 }
 ```
-
-## DESCRIPTION
-Add a new migration task to the registered migration session. 
-Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task. 
-
 ## EXAMPLES
 
 ### Example 1
@@ -130,6 +125,91 @@ Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceS
 Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList $Global:TargetListName
 ```
 Add one File Share migration task and one SharePoint 2013 migration task to the registered migration session. 
+
+### DESCRIPTION
+Add a new migration task to the registered migration session. 
+Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task. 
+
+### Example 2
+Code snippets for bulk migration by loading the sample CSV with the name of spmt.csv:
+
+### Load CSV
+    $csvItems = import-csv "C:\spmt.csv" -Header c1,c2,c3,c4,c5,c6
+    ForEach ($item in $csvItems)
+    {
+        Write-Host $item.c1
+        Add-SPMTTask -FileShareSource $item.c1 -TargetSiteUrl $item.c4 -TargetList $item.c5 -TargetListRelativePath $item.c6
+    } 
+
+Two migration tasks are defined in the file of spmt.csv. 
+
+D:\MigrationTest\Files\Average_1M\c,,,https://SPOSite.sharepoint.com,Documents,Test
+C:\work\Powershell\negative,,,https://SPOSite.sharepoint.com/,Documents,DocLibrary_SubfolderName
+
+Code snippets for bulk migration by loading one JSON file: 
+ 
+### Load JSON
+    $jsonItems = Get-Content -Raw -Path  "C:\spmt.json" | ConvertFrom-Json        
+    ForEach ($taskItem in $jsonItems.Tasks)
+    {
+        $jsonString = ConvertTo-Json $taskItem -Depth 100
+        Add-SPMTTask -JsonDefinition $jsonString -SharePointSourceCredential $onpremCredential            
+    } 
+ 
+Three migration tasks are defined in the file of spmt.json. 
+
+```
+{
+   "Tasks":[
+      {
+         "SourcePath":"http://On-prem/sites/test",
+         "TargetPath":"https://YourSPO.sharepoint.com",
+         "Items":{
+            "Lists":[
+               {
+                  "SourceList":"list-01",
+                  "TargetList":"list-01"
+               }
+            ],
+            "SubSites":[
+
+            ]
+         }
+      },
+      {
+         "SourcePath":"http://On-prem/sites/test",
+         "TargetPath":"https://YourSPO.sharepoint.com",
+         "Items":{
+            "Lists":[
+               {
+                  "SourceList":"list-02",
+                  "TargetList":"list-02"
+               }
+            ],
+            "SubSites":[
+
+            ]
+         }
+      },
+      {
+         "SourcePath":"http://On-prem/sites/test",
+         "TargetPath":"https://YourSPO.sharepoint.com",
+         "Items":{
+            "Lists":[
+               {
+                  "SourceList":"doclib-01",
+                  "TargetList":"doclib-01"
+               }
+            ],
+            "SubSites":[
+
+            ]
+         }
+      }
+   ]
+}
+
+```
 
 ## PARAMETERS
 
