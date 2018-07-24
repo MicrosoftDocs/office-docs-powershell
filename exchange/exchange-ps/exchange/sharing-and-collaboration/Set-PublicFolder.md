@@ -69,7 +69,7 @@ In Exchange 2010, this example sets the folder to replicate only on weekends.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
+The Identity parameter specifies the name and path of the public folder you want to modify. A valid value uses the format: \\\<Level1\>\\\<Level2\>\\...\\\<LevelN\>\\\<PublicFolder\>. For example, "\\Customer Discussion" or "\\Engineering\\Customer Discussion".
 
 ```yaml
 Type: PublicFolderIdParameter

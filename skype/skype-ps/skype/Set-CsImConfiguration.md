@@ -12,7 +12,7 @@ Use the Set-CsImConfiguration cmdlet to modify an existing Instant Messaging (IM
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
 Set-CsImConfiguration [[-Identity] <XdsIdentity>] [-Confirm] [-EnableOfflineIm <Boolean>] [-Force]
  [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
