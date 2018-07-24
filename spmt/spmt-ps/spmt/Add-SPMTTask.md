@@ -126,7 +126,7 @@ Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPO
 ```
 Add one File Share migration task and one SharePoint 2013 migration task to the registered migration session. 
 
-## DESCRIPTION
+### DESCRIPTION
 Add a new migration task to the registered migration session. 
 Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task. 
 
@@ -210,7 +210,6 @@ Three migration tasks are defined in the file of spmt.json.
 }
 
 ```
-Add one File Share migration task and one SharePoint 2013 migration task to the registered migration session. 
 
 ## PARAMETERS
 
