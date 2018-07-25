@@ -40,7 +40,7 @@ This example removes the Shared Line Appearance configuration named "SLAGroup1".
 ### -Identity
 Indicates the Identity of the SLA group to be removed. User Identities can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). You can also reference a user account by using the Active Directory distinguished name.
 
-You can use the asterisk (\*) wildcard character when using the Display Name as the user Identity. For example, the Identity " Smith" returns all the users who have a display name that ends with the string value "\*Smith".
+You can use the asterisk (\*) wildcard character when using the Display Name as the user Identity. For example, the Identity "Smith" returns all the users who have a display name that ends with the string value "\*Smith".
 
 ```yaml
 Type: UserIdParameter
