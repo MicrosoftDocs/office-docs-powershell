@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsSlaDelegates
 
 ## SYNOPSIS
-Use the 'Remove-CsSlaDelegates' cmdlet to remove a delegate to a shared number in Shared Line Appearance (SLA). A shared number in SLA is an Enterprise Voice user that is capable of receiving multiple calls at a time and forwarding them to its delegates, who answer the call. This cmdlet was introduced in Skype for Business Server 2015, November 2015 Cumulative Update.
+Use the 'Remove-CsSlaDelegates' cmdlet to remove a delegate from a shared number in Shared Line Appearance (SLA). A shared number in SLA is an Enterprise Voice user that is capable of receiving multiple calls at a time and forwarding them to its delegates, who answer the call. This cmdlet was introduced in Skype for Business Server 2015, November 2015 Cumulative Update.
 
 ## SYNTAX
 
