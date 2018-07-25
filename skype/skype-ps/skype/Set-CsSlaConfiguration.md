@@ -36,6 +36,20 @@ PS C:\> Set-CsSlaConfiguration -Identity SLAGroup1 -MaxNumberOfCalls 3 -BusyOpti
 
 This example creates an SLA group for an existing Enterprise Voice user, SLAGroup1, and uses the number assigned for SLAGroup1 as the SLA mainline number. Also It sets the maximum number of concurrent calls for the new SLA group to 3, and for calls in excess of that to hear a busy signal.
 
+### -------------------------- Example 2 --------------------------
+```
+PS C:\> Set-CsSlaConfiguration -Identity SLAGroup1 -BusyOption Forward -Target tel:+2025551234
+```
+
+This example sets calls that exceed the maximum number of concurrent calls to be forwarded to the telephone number 202-555-1234.
+
+### -------------------------- Example 3 --------------------------
+```
+PS C:\> Set-CsSlaConfiguration -Identity SLAGroup1 -MissedCallOption Forward -MissedCallForwardTarget sip:sla_forward_number@contoso.com -BusyOption Forward -MaxNumberOfCalls 2 -Target sip:sla_forward_number@contoso.com
+```
+
+This example specifies that missed calls to be forwarded to the user named sla_forward_number and calls that exceed the maximum number of concurrent calls to be forwarded to the same user.
+
 ## PARAMETERS
 
 ### -Identity
@@ -108,7 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -MissedCallForwardTarget
-PARAMVALUE: Uri
+Specifies the sip address of a user account or a telephone number to forward the call when you select 'Forward' in the 'MissedCallOption' parameter. The target could be a user in your organization or a phone number following next sintax:
+* tel:<PhoneNumber>
+* sip:<NameofDelegate@domain>
 
 ```yaml
 Type: Uri
@@ -124,7 +140,11 @@ Accept wildcard characters: False
 ```
 
 ### -MissedCallOption
-PARAMVALUE: Disconnect | Forward | BusySignal | Voicemail
+Specifies the action to take when the SLA group delegates do not answer a call. Possible values are:
+* Disconnect
+* Forward
+* BusySignal
+* Voicemail
 
 ```yaml
 Type: SlaUserMissedCallOption
@@ -140,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-PARAMVALUE: SwitchParameter
+Enables you to pass a user object through the pipeline that represents the SLA group being created or modified. By default, the Set-CsSlaConfiguration cmdlet does not pass objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter
@@ -156,7 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-PARAMVALUE: Uri
+Specifies the sip address of a user account or a telephone number to forward the call when you select 'Forward' in the 'BusyOption' parameter. The target could be a user in your organization or a phone number following next sintax:
+* tel:<PhoneNumber>
+* sip:<NameofDelegate@domain>
 
 ```yaml
 Type: Uri
@@ -172,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -197,4 +219,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsSlaConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-csslaconfiguration?view=skype-ps)
+
+[Remove-CsSlaConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csslaconfiguration?view=skype-ps)
 
