@@ -31,7 +31,7 @@ Exchange PowerShell help follows conventions that indicate what's required or op
 |-|A hyphen indicates a parameter. For example, `-Identity`.|
 |\< \>|Angle brackets indicate the possible values for a parameter. For example, `-Location <ServerName>` or `-Enabled <$true | $false>`.|
 |[ ]|Square brackets indicate optional parameters and their values. For example, `[-WhatIf <SwitchParameter>]`. Parameter-value pairs that aren't enclosed in square brackets are required.|
-|\| |Pipe symbols in parameter values indicate a choice between values. For example, `-Enabled <$true | $false>` indicates the _Enabled_ parameter can have the value `$true` or `$false`.|
+|\| |Pipe symbols in parameter values indicate a choice between values. For example, -Enabled \<$true \| $false\> indicates the _Enabled_ parameter can have the value `$true` or `$false`.|
    
 These command conventions help you understand how a command is constructed. With the exception of the hyphen that indicates a parameter, you don't use these symbols as they're described in the table when you run cmdlets in Exchange PowerShell. 
   
