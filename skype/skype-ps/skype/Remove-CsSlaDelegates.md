@@ -58,26 +58,16 @@ Accept wildcard characters: False
 
 ### -Identity
 Indicates the identity of the shared number to which the delegate will be removed. User identities can be specified using one of five formats:
-
-SIP address
-
-Example: sip:kenmyer@litwareinc.com
-
-User principal name (UPN)
-
-Example: kenmyer@litwareinc.com
-
-Domain name and logon name in the form domain\logon
-
-Example: litwareinc\kenmyer
-
-Active Directory display name (this form typically requires quotes)
-
-Example: "Ken Myer"
-
-Active Directory distinguished name
-
-Example: CN=KenMyer,CN=Users,DC=Atlanta,DC=Corp,DC=litware,DC=com
+- SIP address
+  - Example: sip:kenmyer@litwareinc.com
+- User principal name (UPN)
+  - Example: kenmyer@litwareinc.com
+- Domain name and logon name in the form domain\logon
+  - Example: litwareinc\kenmyer
+- Active Directory display name (this form typically requires quotes)
+  - Example: "Ken Myer"
+- Active Directory distinguished name
+  - Example: CN=KenMyer,CN=Users,DC=Atlanta,DC=Corp,DC=litware,DC=com
 
 ```yaml
 Type: UserIdParameter
