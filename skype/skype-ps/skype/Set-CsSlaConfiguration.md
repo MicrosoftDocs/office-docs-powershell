@@ -23,9 +23,9 @@ Shared Line Appearance (SLA) is a feature in Skype for Business (SfB) for handli
 
 The Set-CsSlaConfiguration cmdlet modifies the properties of an SLA configuration.
 
-Note: Logging in with the account created for the SLA number is not supported. Using the SLA number account with any device or Desktop Client can result in unpredictable behavior. It is not necessary to use that account for the Shared Line Appearance feature to function. By default, members of the RTCUniversalServerAdmins group are authorized to run the Remove-CsSlaConfiguration cmdlet. To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
+Note: Logging in with the account created for the SLA number is not supported. Using the SLA number account with any device or Desktop Client can result in unpredictable behavior. It is not necessary to use that account for the Shared Line Appearance feature to function. By default, members of the RTCUniversalServerAdmins group are authorized to run the Set-CsSlaConfiguration cmdlet. To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsSlaConfiguration"}
+Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsSlaConfiguration"}
 
 ## EXAMPLES
 
