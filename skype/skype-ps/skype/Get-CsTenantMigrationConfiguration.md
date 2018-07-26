@@ -13,7 +13,7 @@ Use the Get-CsTenantMigrationConfiguration cmdlet to check if Meeting Migration 
 ## SYNTAX
 
 ```
-Get-CsTenantMigrationConfiguration [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Object>] [-Filter <String>]
+Get-CsTenantMigrationConfiguration [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Filter <String>]
  [-AsJob]
 ```
 
@@ -34,7 +34,7 @@ This example shows the MMS configuration in your organization.
 ## PARAMETERS
 
 ### -Filter
-Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-PARAMVALUE: XdsIdentity
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: XdsIdentity
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-PARAMVALUE: SwitchParameter
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -82,10 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -98,7 +98,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -123,4 +127,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
+[Set-CsTenantMigrationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-cstenantmigrationconfiguration?view=skype-ps)
