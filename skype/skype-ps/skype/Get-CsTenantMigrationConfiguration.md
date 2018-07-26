@@ -14,7 +14,7 @@ Use the Get-CsTenantMigrationConfiguration cmdlet to check if Meeting Migration 
 
 ```
 Get-CsTenantMigrationConfiguration [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Filter <String>]
- [-AsJob]
+ [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
