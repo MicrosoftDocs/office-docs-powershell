@@ -56,7 +56,7 @@ Indicates the Identity of the user account to be verified. User Identities can b
 2) the user's user principal name (UPN);
 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer)
 4) the user's Active Directory display name (for example, Ken Myer), (only available if using the on-premises cmdlets) User Identities can also be referenced by using the user's Active Directory distinguished name.
-You can use the asterisk (\*) wildcard character when using the display name as the user Identity. For example, the Identity "*\Smith" returns all the users who have a display name that ends with the string value "Smith".
+You can use the asterisk (\*) wildcard character when using the display name as the user Identity. For example, the Identity "\*Smith" returns all the users who have a display name that ends with the string value "Smith".
 
 ```yaml
 Type: UserIdParameter
