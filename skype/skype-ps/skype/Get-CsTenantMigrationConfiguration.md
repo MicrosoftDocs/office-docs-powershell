@@ -8,51 +8,36 @@ schema: 2.0.0
 # Get-CsTenantMigrationConfiguration
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Get-CsTenantMigrationConfiguration cmdlet to check if Meeting Migration Service (MMS) is enabled in your organization.
 
 ## SYNTAX
 
 ```
-Get-CsTenantMigrationConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>]
- [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsTenantMigrationConfiguration [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Object>] [-Filter <String>]
+ [-AsJob]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Meeting Migration Service (MMS) is a Skype for Business service that runs in the background and automatically updates Skype for Business and Microsoft Teams meetings for users. MMS is designed to eliminate the need for users to run the Meeting Migration Tool to update their Skype for Business and Microsoft Teams meetings. This tool does not migrate Skype for Business meetings into Microsoft Teams meetings.
+
+The Get-CsTenantMigrationConfiguration cmdlet retrieves the Meeting Migration Service configuration in your organization.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+PS C:\> Get-CsTenantMigrationConfiguration
 ```
 
-Insert descriptive text for example 1.
-
+This example shows the MMS configuration in your organization.
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
-PARAMVALUE: String
+Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -68,7 +53,7 @@ Accept wildcard characters: False
 PARAMVALUE: XdsIdentity
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
