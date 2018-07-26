@@ -10,8 +10,6 @@ schema: 2.0.0
 ## SYNOPSIS
 With `Get-CsUserLocationStatus` you can track the progress of the regionally hosted meetings cross region move and determine when it has completed.
 
-Get-CsUserLocationStatus \[\[-Tenant\] \<guid\>\] \[\[-Identity\] \<UserIdParameter\>\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
 ```
@@ -74,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -107,7 +105,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
