@@ -16,7 +16,7 @@ Use the Set-CsTenantMigrationConfiguration cmdlet to enable or disable Meeting M
 Set-CsTenantMigrationConfiguration [-MeetingMigrationSourceMeetingTypes <Object>]
  [-ACPMeetingMigrationTriggerEnabled <Boolean>] [-Confirm] [-MeetingMigrationTargetMeetingTypes <Object>]
  [-MeetingMigrationEnabled <Boolean>] [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-WhatIf] [-Force]
- [-Instance <PSObject>] [-AsJob]
+ [-Instance <PSObject>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
