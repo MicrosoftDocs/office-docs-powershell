@@ -75,7 +75,7 @@ Accept pipeline input: False
 ```
 
 ### -PromoteAs
-Allows to promote the page for a specific purpose (HomePage | NewsPage)
+Allows to promote the page for a specific purpose (HomePage | NewsArticle)
 
 ```yaml
 Type: ClientSidePagePromoteType
