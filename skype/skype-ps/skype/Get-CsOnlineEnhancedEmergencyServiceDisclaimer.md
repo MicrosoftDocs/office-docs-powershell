@@ -17,7 +17,7 @@ Get-CsOnlineEnhancedEmergencyServiceDisclaimer [-CountryOrRegion <CountryInfo>] 
 ```
 
 ## DESCRIPTION
-You must run this cmdlet prior to assigning phone numbers and locations to voice enabled users in the United States.
+You can use this cmdlet to determine whether your organization has accepted the terms and conditions of enhanced emergency service. The United States is currently the only country supported.
 
 ## EXAMPLES
 
