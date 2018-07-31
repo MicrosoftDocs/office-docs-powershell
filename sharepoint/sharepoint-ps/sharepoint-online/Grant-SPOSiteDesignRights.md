@@ -29,14 +29,24 @@ Used to apply permissions to a set of users or a security group, effectively sco
 
 ### Example 1
 
-This example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
+This example shows how to grant view rights on a site design to Nestor (a security group at the fictional Contoso site).
 
 ```powershell
 Grant-SPOSiteDesignRights `
          -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
-         -Principals "nestorw@contoso.onmicrosoft.com" `
+         -Principals "SiteCreators@contoso.onmicrosoft.com" `
          -Rights View
 ```
+
+or, if adding a specific user (a user at the fictional Contoso site).
+
+```powershell
+Grant-SPOSiteDesignRights `
+         -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
+         -Principals "chris.forbes@contoso.onmicrosoft.com" `
+         -Rights View
+```
+
 
 ## PARAMETERS
 
