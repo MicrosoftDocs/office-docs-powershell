@@ -37,7 +37,8 @@ Grant-SPOSiteDesignRights `
          -Principals "SiteCreators@contoso.onmicrosoft.com" `
          -Rights View
 ```
-or if adding a specific user (a user at the fictional Contoso site).
+
+or, if adding a specific user (a user at the fictional Contoso site).
 
 ```powershell
 Grant-SPOSiteDesignRights `
