@@ -94,7 +94,7 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 | _CommonName_ <br/> | _cn_ <br/> |String (wildcards accepted).  <br/> ||
 | _ComplianceTagHoldApplied_ <br/> | _n/a_ <br/> |Boolean ( `$true` or `$false`)  <br/> ||
 | _Company_ <br/> | _company_ <br/> |String (wildcards accepted).  <br/> |The recipient's company name.  <br/> |
-| _CountryCode_ <br/> | _CountryCode_ <br/> |Integers  <br/> |This property contains the numeric country/region designation from ISO 3166. For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779).  <br/> |
+
 | _CountryOrRegion_ <br/> |c  <br/> |String (wildcards accepted).  <br/> |This property contains the two-letter country/region designation from ISO 3166. For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779).  <br/> |
 | _CustomAttribute1_ to _CustomAttribute15_ <br/> | _extensionAttribute1_ to _extensionAttribute15_ <br/> |String (wildcards accepted).  <br/> |These properties contain custom attributes that you can add to a recipient.  <br/> |
 | _Database_ <br/> | _homeMDB_ <br/> |String (wildcards accepted).  <br/> |The identity of the user's mailbox database.  <br/> |
