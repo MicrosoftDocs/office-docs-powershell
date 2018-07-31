@@ -92,9 +92,8 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 |_City_|_l_|String (wildcards accepted).|The recipient's city.|
 |_Co_|_Co_|String (wildcards accepted).|The name of the recipient's country or region. You can locate valid _Co_ values on the **Address** tab in the recipient's properties in Active Directory Users and Computers.|
 |_CommonName_|_cn_|String (wildcards accepted).||
-|_ComplianceTagHoldApplied_|_n/a_|Boolean ( `$true` or `$false`)||
+|_ComplianceTagHoldApplied_|n/a|Boolean ( `$true` or `$false`)||
 |_Company_|_company_|String (wildcards accepted).|The recipient's company name.|
-|_CountryCode_|_CountryCode_|Integers|This property contains the numeric country/region designation from ISO 3166. For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779).|
 |_CountryOrRegion_|c|String (wildcards accepted).|This property contains the two-letter country/region designation from ISO 3166. For more information, see [Country Codes - ISO 3166](https://go.microsoft.com/fwlink/p/?linkid=213779).|
 |_CustomAttribute1_ to _CustomAttribute15_|_extensionAttribute1_ to _extensionAttribute15_|String (wildcards accepted).|These properties contain custom attributes that you can add to a recipient.|
 |_Database_|_homeMDB_|String (wildcards accepted).|The identity of the user's mailbox database.|
@@ -165,7 +164,7 @@ The recipient properties that have been  *confirmed*  to work with the _Recipien
 |_LdapRecipientFilter_|_msExchDynamicDLFilter_|String (wildcards accepted).||
 |_LegacyExchangeDN_|_legacyExchangeDN_|String (wildcards accepted).||
 |_LitigationHoldDate_|_msExchLitigationHoldDate_|Dynamic distribution groups: A date/time value using the time zone and regional settings of the Exchange server. <br/> Others: Blank or non-blank.||
-|_LitigationHoldEnabled_|_n/a_|Boolean ( `$true` or `$false`)||
+|_LitigationHoldEnabled_|n/a|Boolean ( `$true` or `$false`)||
 |_LitigationHoldOwner_|_msExchLitigationHoldOwner_|String (wildcards accepted).||
 |_LocaleID_|_localeID_|Integer|For valid values, [Microsoft Locale ID Values](https://go.microsoft.com/fwlink/p/?linkid=229656).|
 |_MailboxMoveBatchName_|_msExchMailboxMoveBatchName_|String (wildcards accepted).||
