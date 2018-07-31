@@ -15,25 +15,18 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsPushNotificationConfiguration [[-Identity] <XdsIdentity>] [-Confirm]
- [-EnableApplePushNotificationService <Boolean>] [-EnableMicrosoftPushNotificationService <Boolean>] [-Force]
- [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+Set-CsPushNotificationConfiguration [-Tenant <Guid>] [-EnableApplePushNotificationService <Boolean>]
+ [-EnableMicrosoftPushNotificationService <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsPushNotificationConfiguration [-Confirm] [-EnableApplePushNotificationService <Boolean>]
- [-EnableMicrosoftPushNotificationService <Boolean>] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-WhatIf]
+Set-CsPushNotificationConfiguration [-Tenant <Guid>] [-EnableApplePushNotificationService <Boolean>]
+ [-EnableMicrosoftPushNotificationService <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsPushNotificationConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-EnableApplePushNotificationService <Object>] [-EnableMicrosoftPushNotificationService <Object>] [-Force]
- [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -178,19 +171,6 @@ Note that you cannot use wildcards when specifying an Identity.
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -209,19 +189,6 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -277,24 +244,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -327,4 +282,8 @@ Instead, the `Set-CsPushNotificationConfiguration` cmdlet modifies existing inst
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cspushnotificationconfiguration?view=skype-ps)
 
+[New-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-cspushnotificationconfiguration?view=skype-ps)
+
+[Remove-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-cspushnotificationconfiguration?view=skype-ps)

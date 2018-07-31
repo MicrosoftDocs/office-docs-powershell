@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsAdditionalInternalDomain
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new additional internal domain for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 – December 2017.
 
 ## SYNTAX
 
@@ -24,16 +24,20 @@ New-CsAdditionalInternalDomain -Domain <String> [-InMemory] [-Force] [-WhatIf] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet creates a new additional internal domain for use in your organization.
+
+Additional internal domains are not used locally by internal user or services URIs but must be treated
+as internal by hybrid (split-domain) traffic analysis to support purely hosted and cloud appliance
+domains.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### -------------------------- Example 1 ------------------------
+```
+PS C:\> New-CsAdditionalInternalDomain -Identity fabrikam.com
 ```
 
-{{ Add example description here }}
+The cmdlet shown in Example 1 creates a new additional internal domain, one that has the Identity fabrikam.com.
 
 ## PARAMETERS
 
@@ -54,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-{{Fill Domain Description}}
+Fully qualified domain name (FQDN) for the new additional internal domain.
 
 ```yaml
 Type: String
@@ -70,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Fully qualified domain name (FQDN) for the new additional internal domain.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -102,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-{{Fill InMemory Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -118,8 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -150,4 +153,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[Remove-CsAdditionalInternalDomain](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csadditionalinternaldomain?view=skype-ps)
+
+[Get-CsAdditionalInternalDomain](https://docs.microsoft.com/en-us/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)
 

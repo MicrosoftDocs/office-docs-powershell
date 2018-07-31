@@ -52,7 +52,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -66,7 +66,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: Empty
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -82,14 +82,13 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: Empty
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -DeleteTempFilesWhenMigrationDone
-The default is set to On.  The temp files in working folder %appdata% will be deleted when migration is completed.
-
+By default, this is set to Off. If you set this value to On, those temporary files in Custom Azure storage generated during migration will be deleted when the migration is completed. Otherwise, those temporary files will not be deleted. 
 ```yaml
 Type: Boolean
 Parameter Sets: 
@@ -97,7 +96,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -111,7 +110,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -129,7 +128,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -144,7 +143,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -158,7 +157,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -173,7 +172,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -187,7 +186,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -201,7 +200,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -215,7 +214,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -229,7 +228,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -244,7 +243,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value:False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -258,7 +257,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: 10
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -272,7 +271,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -287,7 +286,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -317,7 +316,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -331,7 +330,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -346,7 +345,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -361,7 +360,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -376,7 +375,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -391,14 +390,17 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: Empty
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WorkingFolder
-By default, a temp folder will be created as a working folder. If you wish to specify your own specific working folder, enter the name here. 
-Note: By default, the working folder is %appdata%\Microsoft\MigrationToolStorage. Make sure that your working folder has a minimum of 150 GB of free space. It may need more depending on the size of the data you plan to migrate.
+By default, the working folder is %appdata%\Microsoft\MigrationToolStorage. If you wish to specify your own specific working folder, create it first, then use it as -WorkingFolder parameter. The changed working folder will take effect till you close the PowerShell window. 
+
+Notes:
+Make sure that your working folder has a minimum of 150 GB of free space. It may need more depending on the size of the data you plan to migrate.
+
 ```yaml
 Type: String
 Parameter Sets:  
@@ -406,7 +408,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: %appdata%\Microsoft\MigrationToolStorage
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
