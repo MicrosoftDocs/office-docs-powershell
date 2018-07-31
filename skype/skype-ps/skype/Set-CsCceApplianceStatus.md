@@ -13,7 +13,7 @@ Modifies the status for a Cloud Connector Edition appliance.
 ## SYNTAX
 
 ```
-Set-CsCceApplianceStatus [[-Identity] <XdsGlobalRelativeIdentity>] [-Status <Status>] [-Confirm] [-Error <String>] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-WhatIf] [-AsJob] [-Version <String>] [<CommonParameters>]
+Set-CsCceApplianceStatus [-WhatIf] [-Version <String>] [-ConfigurationSnapshot <Object>] [-Confirm] [[-Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [-Error <String>] [-Status <MultiValuedProperty>] [-Force] [-Instance <PSObject>] [-AsJob]
 ```
 
 ## DESCRIPTION
@@ -47,15 +47,14 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Allowed values are:
-
+Possible values are:
 * None
 * Running
 * Maintenance
 * Error
 
 ```yaml
-Type: Status
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
