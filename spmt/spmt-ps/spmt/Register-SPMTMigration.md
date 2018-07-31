@@ -88,8 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteTempFilesWhenMigrationDone
-The default is set to Off.  The temp files in working folder %appdata% will be deleted when migration is completed.
-
+By default, this is set to Off. If you set this value to On, those temporary files in Custom Azure storage generated during migration will be deleted when the migration is completed. Otherwise, those temporary files will not be deleted. 
 ```yaml
 Type: Boolean
 Parameter Sets: 
