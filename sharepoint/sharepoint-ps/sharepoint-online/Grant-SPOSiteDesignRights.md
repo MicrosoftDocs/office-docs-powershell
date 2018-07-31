@@ -34,7 +34,7 @@ This example shows how to grant view rights on a site design to Nestor (a user a
 ```powershell
 Grant-SPOSiteDesignRights `
          -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
-         -Principals "nestorw@contoso.onmicrosoft.com" `
+         -Principals "nestorw" `
          -Rights View
 ```
 
