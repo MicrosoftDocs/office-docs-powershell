@@ -52,7 +52,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -66,7 +66,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: Empty
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -82,13 +82,13 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: Empty
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -DeleteTempFilesWhenMigrationDone
-The default is set to On.  The temp files in working folder %appdata% will be deleted when migration is completed.
+The default is set to Off.  The temp files in working folder %appdata% will be deleted when migration is completed.
 
 ```yaml
 Type: Boolean
@@ -97,7 +97,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -111,7 +111,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -129,7 +129,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -144,7 +144,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -158,7 +158,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -173,7 +173,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -187,7 +187,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -201,7 +201,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -215,7 +215,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -229,7 +229,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -244,7 +244,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value:False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -258,7 +258,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: 10
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -272,7 +272,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -287,7 +287,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -317,7 +317,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -331,7 +331,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: null
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -346,7 +346,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -361,7 +361,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -376,7 +376,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -391,7 +391,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: Empty
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -409,7 +409,7 @@ Aliases:
 applicable: SharePoint Migration Tool
 Required: False
 Position: Named
-Default value: None
+Default value: %appdata%\Microsoft\MigrationToolStorage
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
