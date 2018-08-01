@@ -13,17 +13,17 @@ Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Bus
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumber [-ActivationState <Object>] [-Assigned <Object>] [-BypassDualWrite <Object>]
- [-CapitalOrMajorCity <Object>] [-DomainController <Object>] [-ExpandLocation] [-Force]
- [-InventoryType <Object>] [-IsNotAssigned] [-ResultSize <Object>] [-TelephoneNumber <Object>]
- [-TelephoneNumberGreaterThan <Object>] [-TelephoneNumberLessThan <Object>]
- [-TelephoneNumberStartsWith <Object>] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <MultiValuedProperty>] [-CapitalOrMajorCity <String>] [-DomainController <Fqdn>] [-ExpandLocation] [-Force] [-InventoryType <MultiValuedProperty>] [-IsNotAssigned] [-ResultSize <UInt32>] [-TelephoneNumber <String>] [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>] [-TelephoneNumberStartsWith <String>] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Here is an example of the output of the `Get-CsOnlineTelephoneNumber` cmdlet.
 
 RunspaceId : f90303a9-c6a8-483c-b3b3-a5b8cdbab19c
+
+ActivationState : Activated
+
+BridgeNumber :
 
 CallingProfile : BandwidthUS
 
@@ -33,42 +33,50 @@ CityCode : NOAM-US-NY-NY
 
 Id : 19294450177
 
+InventoryType : Service
+
+Location :
+
 O365Region : NOAM
 
 SourceType : Tnm
 
 TargetType : caa
 
-TargetMeta : ;BridgeId=5bc815ae-d9e9-4fb6-af74-cf4fa73ceaa6
+Tenant :
 
-User :
+TenantId :
 
-BridgeNumber :
+UserId :
+
+IsManagedByServiceDesk : True
+
+PortInOrderStatus :
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsOnlineTelephoneNumber -TelephoneNumber 19294450177
+PS C:\> Get-CsOnlineTelephoneNumber -TelephoneNumber 19294450177
 ```
 
 This example gets the attributes of a specific phone number.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
+PS C:\> Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
 ```
 
 This example gets the phone numbers with the city code designating New York, New York.
 
-
 ## PARAMETERS
 
 ### -ActivationState
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -84,30 +92,14 @@ Accept wildcard characters: False
 Specifies the function of the telephone number.
 The acceptable values are:
 
-"caa" for numbers assigned to conferencing functions.
+* "caa" for numbers assigned to conferencing functions.
 
-"user" for numbers assigned to public switched telephone network (PSTN) functions.
+* "user" for numbers assigned to public switched telephone network (PSTN) functions.
 
 The values for the Assigned parameter are case-sensitive.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -126,7 +118,7 @@ For example, "NOAM-US-OR-PO" would specify Portland, Oregon.
 The values for the CapitalOrMajorCity parameter are case-sensitive.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: CityCode
 Applicable: Skype for Business Online
@@ -142,7 +134,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -155,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandLocation
-PARAMVALUE: SwitchParameter
+Displays the location parameter with its value.
 
 ```yaml
 Type: SwitchParameter
@@ -192,12 +184,12 @@ Accept wildcard characters: False
 Specifies the target telephone number type for the cmdlet.
 Acceptable values are:
 
-"Service" for numbers assigned to conferencing support.
+* "Service" for numbers assigned to conferencing support.
 
-"Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
+* "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -231,7 +223,7 @@ The result size can be set to any whole number between 0 and 2147483647, inclusi
 If set to 0, the command will run, but no data will be returned.
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -250,7 +242,7 @@ For example:
 `-TelephoneNumber tel:+18005551234, or -TelephoneNumber +14251234567`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -268,7 +260,7 @@ The telephone numbers returned will all be greater than the number provided.
 The telephone number should be in E.164 format.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -286,7 +278,7 @@ The telephone numbers returned will all be less than the number provided.
 The telephone number should be in E.164 format.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -305,7 +297,7 @@ To return numbers that are in the 206 area code and that begin with 88, use this
 You can use up to nine digits.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -321,7 +313,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -334,7 +326,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -364,4 +360,4 @@ An instance or array of the objects.
 ## NOTES
 
 ## RELATED LINKS
-
+[Remove-CsOnlineTelephoneNumber](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csonlinetelephonenumber?view=skype-ps)
