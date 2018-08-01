@@ -1,47 +1,45 @@
 ---
-external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
-title: Remove-DataClassification
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+applicable: Office 365 Security & Compliance Center
+title: Remove-DlpSensitiveInformationType
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "o365scc-ps"
 ---
 
-# Remove-DataClassification
+# Remove-DlpSensitiveInformationType
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-In Exchange Online, this cmdlet has been replaced by the [Remove-DlpSensitiveInformationType](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/remove-dlpsensitiveinformationtype) cmdlet in Office 365 Security & Compliance Center PowerShell.
-
-Use the Remove-DataClassification cmdlet to remove data classification rules that use document fingerprints. You can't use this cmdlet to remove built-in data classification rules.
+Use the Remove-DlpSensitiveInformationType cmdlet to remove sensitive information type rules that use document fingerprints. You can't use this cmdlet to remove built-in sensitive information type rules.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Remove-DataClassification [-Identity] <DataClassificationIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Remove-DlpSensitiveInformationType [-Identity] <DataClassificationIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
+Sensitive information type rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-DataClassification "Contoso Confidential"
+Remove-DlpSensitiveInformationType "Contoso Confidential"
 ```
 
-This example removes the data classification rule named "Contoso Confidential".
+This example removes the sensitive information type rule named "Contoso Confidential".
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the data classification rule that you want to remove. You can use any value that uniquely identifies the data classification rule. For example:
+The Identity parameter specifies the sensitive information type rule that you want to remove. You can use any value that uniquely identifies the sensitive information type rule. For example:
 
 - Name
 
@@ -53,7 +51,7 @@ The Identity parameter specifies the data classification rule that you want to r
 Type: DataClassificationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 1
 Default value: None
@@ -72,22 +70,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -96,13 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
