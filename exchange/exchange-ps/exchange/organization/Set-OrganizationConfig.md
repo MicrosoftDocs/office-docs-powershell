@@ -1214,7 +1214,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultPublicFolderAgeLimit
-The DefaultPublicFolderAgeLimit parameter specifies the default age limit for public folders across the entire organization. A public folder is automatically deleted when this age limit is exceeded. This attribute applies to all public folders in the organization that don't have their own AgeLimit setting.
+The DefaultPublicFolderAgeLimit parameter specifies the default age limit for the contents of public folders across the entire organization. Content in a public folder is automatically deleted when this age limit is exceeded. This attribute applies to all public folders in the organization that don't have their own AgeLimit setting.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds. Or, enter the value $null. The default value is blank ($null).
 
 ```yaml
 Type: EnhancedTimeSpan
