@@ -1,41 +1,39 @@
 ---
-external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
-title: New-Fingerprint
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+applicable: Office 365 Security & Compliance Center
+title: New-DlpFingerprint
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "o365scc-ps"
 ---
 
-# New-Fingerprint
+# New-DlpFingerprint
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-**Note**: In Exchange Online, this cmdlet has been replaced by the [New-DlpFingerPrint](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpfingerprint) cmdlet in Office 365 Security & Compliance Center PowerShell.
-
-Use the New-Fingerprint cmdlet to create document fingerprints that are used with data classification rules. Because the results of New-Fingerprint are not stored outside of the data classification rule, you always run New-Fingerprint and New-DataClassification or Set-Dataclassification in the same PowerShell session.
+Use the New-DlpFingerprint cmdlet to create document fingerprints that are used with data loss prevention (DLP) sensitive information types in the Security & Compliance Center. Because the results of New-DlpFingerprint aren't stored outside of the sensitive information type, you always run New-DlpFingerprint and New-DlpSensitiveInformationType or Set-DlpSensitiveInformationType in the same PowerShell session.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-Fingerprint [[-FileData] <Byte[]>] -Description <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-DlpFingerprint [[-FileData] <Byte[]>] -Description <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
+Sensitive information type rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-$Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte; $Patent_Fingerprint = New-Fingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
+$Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte; $Patent_Fingerprint = New-DlpFingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
 ```
 
-This example creates a new document fingerprint based on the file C:\\My Documents\\Contoso Patent Template.docx. You store the new fingerprint as a variable so you can use it with the New-DataClassification cmdlet in the same PowerShell session.
+This example creates a new document fingerprint based on the file C:\\My Documents\\Contoso Patent Template.docx. You store the new fingerprint as a variable so you can use it with the New-DlpSensitiveInformationType cmdlet in the same PowerShell session.
 
 ## PARAMETERS
 
@@ -46,7 +44,7 @@ The Description parameter specifies a description for the document fingerprint.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: Named
 Default value: None
@@ -65,7 +63,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -76,13 +74,13 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the file to use as a document fingerprint.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For details, see the section.
+You need to read the file to a byte-encoded object using the Get-Content cmdlet. For details, see the Examples section in this topic.
 
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: 1
 Default value: None
@@ -91,13 +89,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
