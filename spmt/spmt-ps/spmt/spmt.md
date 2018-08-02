@@ -15,7 +15,7 @@ Notes:
 
 PowerShell 5.0 and .NET Framework 4.6.2 or higher are required to support the migration of file paths of up to 400 characters.
 
-After install SPMT, the PowerShell dlls are copied to %userprofile%\Documents\WindowsPowerShell\Modules. 
+After installing SPMT, the PowerShell dlls are copied to %userprofile%\Documents\WindowsPowerShell\Modules. 
 
 ## Microsoft Teams Cmdlets
 
