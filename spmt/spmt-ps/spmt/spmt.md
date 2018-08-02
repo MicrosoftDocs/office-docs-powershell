@@ -12,7 +12,10 @@ The following migration cmdlets are based on the SharePoint Migration Tool (SPMT
 [Install SPMT and Get PowerShell module](http://spmtreleasescus.blob.core.windows.net/install/default.htm "Install SPMT and Get PowerShell module")
 
 Notes:
-In order to support migration of file path up to 400 characters, the minimum PowerShell version is 5.0 and the minimum .NET version is 4.6.2. 
+
+PowerShell 5.0 and .NET Framework 4.6.2 or higher are required to support the migration of file paths of up to 400 characters.
+
+After install SPMT, the PowerShell dlls are copied to %userprofile%\Documents\WindowsPowerShell\Modules. 
 
 ## Microsoft Teams Cmdlets
 
