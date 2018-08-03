@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsCallingLineIdentity
 
 ## SYNOPSIS
-The Remove-CsCallingLineIdentity cmdlet removes a Caller ID policy.
+The `Remove-CsCallingLineIdentity` cmdlet removes a Caller ID policy.
 
 ## SYNTAX
 ```
