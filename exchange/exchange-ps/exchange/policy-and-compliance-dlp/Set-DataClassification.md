@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fingerprints
-The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the data classification rule. For instructions on how to import documents to use as templates for fingerprints, see New-Fingerprint or the section. For instructions on how to add and remove document fingerprints from an existing data classification rule, see the section.
+The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the data classification rule. For instructions on how to import documents to use as templates for fingerprints, see New-Fingerprint or the Examples section. For instructions on how to add and remove document fingerprints from an existing data classification rule, see the Examples section.
 
 ```yaml
 Type: MultiValuedProperty
