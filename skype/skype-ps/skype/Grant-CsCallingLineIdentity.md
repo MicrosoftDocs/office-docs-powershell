@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name (Identity) of the Caller ID policy to be assigned to the user.
+The name (Identity) of the Caller ID policy to be assigned to the user. (Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName).
 
 ```yaml
 Type: String
