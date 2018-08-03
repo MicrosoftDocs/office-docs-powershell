@@ -46,6 +46,8 @@ This example creates the hybrid configuration Hybrid Configuration with the defa
 ## PARAMETERS
 
 ### -ClientAccessServers
+This parameter is available or functional only in Exchange Server 2010.
+
 The ClientAccessServers parameter specifies the Exchange Server 2010 SP2 servers with the Client Access server role installed that will be configured to support the hybrid deployment features. At least one Client Access server must be defined and be externally accessible from the Internet on ports 80 and 443. The servers will be configured to enable the following:
 
 - Mailbox Replication Service (MRS) Proxy The MRS Proxy service configuration on the Client Access servers will be enabled.
@@ -177,6 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecureMailCertificateThumbprint
+This parameter is available or functional only in Exchange Server 2010.
+
 The SecureMailCertificateThumbprint parameter specifies the thumbprint of the X.509 certificate to be used as the certificate for hybrid deployment secure message transport. This certificate cannot be self-signed, must be obtained from a trusted certificate authority (CA) and must be installed on all Hub Transport servers defined in the TransportServers parameter.
 
 ```yaml
@@ -192,6 +196,8 @@ Accept wildcard characters: False
 ```
 
 ### -TransportServers
+This parameter is available or functional only in Exchange Server 2010.
+
 The TransportServers parameter specifies the Exchange Server 2010 SP2 servers with the Hub Transport server role installed that are configured to support the hybrid deployment features. At least one Hub Transport server must be defined and be externally accessible from the Internet for secure mail to be enabled between the on-premises and cloud-based organizations.
 
 ```yaml

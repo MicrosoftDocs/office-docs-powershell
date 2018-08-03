@@ -46,9 +46,7 @@ This example deletes the public folder Directory Folder and all its child public
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
-
-You can omit the parameter label so that only the public folder name or GUID is supplied.
+The Identity parameter specifies the name and path of the public folder you want to remove. A valid value uses the syntax: \\\<Level1\>\\\<Level2\>\\...\\\<LevelN\>\\\<PublicFolder\>. For example, "\\Customer Discussion" or "\\Engineering\\Customer Discussion".
 
 ```yaml
 Type: PublicFolderIdParameter
@@ -114,6 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+This parameter is available or functional only in Exchange Server 2010.
+
 The Server parameter specifies the identity of the server from which to remove the public folder.
 
 ```yaml
