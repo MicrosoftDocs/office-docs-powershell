@@ -8,19 +8,16 @@ schema: 2.0.0
 # Set-CsCallingLineIdentity
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy for your organization.
 
 ## SYNTAX
 
 ```
-Set-CsCallingLineIdentity [[-Identity] <Object>] [-BlockIncomingPstnCallerID <Object>]
- [-BypassDualWrite <Object>] [-CallingIDSubstitute <Object>] [-Confirm] [-Description <Object>]
- [-EnableUserOverride <Object>] [-Force] [-Instance <Object>] [-ServiceNumber <Object>] [-Tenant <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsCallingLineIdentity [-Description <Object>] [-ServiceNumber <Object>] [-Confirm] [-CallingIDSubstitute <Object>] [[-Identity] <Object>] [-EnableUserOverride <Object>] [-Tenant <Object>] [-BlockIncomingPstnCallerID <Object>] [-WhatIf] [-Force] [-Instance <Object>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create Caller ID policies to change this behavior, and you can use the Set-CsCallingLineIdentity cmdlet to modify the existing Caller ID policies for your organization.
 
 ## EXAMPLES
 
