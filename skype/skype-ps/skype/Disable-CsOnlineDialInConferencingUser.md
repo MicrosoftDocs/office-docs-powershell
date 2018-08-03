@@ -8,19 +8,18 @@ schema: 2.0.0
 # Disable-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
-Use the Disable-CsOnlineDialInConferencingUser cmdlet to prevent a Skype for Business Online user from using dial-in or audio conferencing through Skype for Business Online.
+Use the `Disable-CsOnlineDialInConferencingUse`r cmdlet to prevent a Skype for Business Online user from using dial-in or audio conferencing through Skype for Business Online.
 
 ## SYNTAX
 
 ```
-Disable-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-SendEmail] [-SendEmailFromAddress <Object>]
- [-SendEmailFromDisplayName <Object>] [-SendEmailToAddress <Object>] [-Tenant <Object>]
- [-TenantDomain <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Disable-CsOnlineDialInConferencingUser [-WhatIf] [-SendEmailFromDisplayName <String>] [-TenantDomain <String>]
+ [-SendEmailToAddress <String>] [-SendEmailFromAddress <String>] [-Confirm] [-SendEmail] [[-Identity] <UserIdParameter>]
+ [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Disable-CsOnlineDialInConferencingUser cmdlet validates that the user is provisioned for audio conferencing using Microsoft as the audio conferencing provider and then disables audio conferencing which prevents the user from setting up audio conferences or meetings.
+The `Disable-CsOnlineDialInConferencingUser` cmdlet validates that the user is provisioned for audio conferencing using Microsoft as the audio conferencing provider and then disables audio conferencing which prevents the user from setting up audio conferences or meetings.
 To disable the user, you must specify the TenantDomain or Tenant parameter.
 
 When a user is disabled, the conference ID or passcode that was assigned to the user is released so it can be used by another user that is enabled for dial-in or audio conferencing even if they have a license assigned to them.
@@ -33,11 +32,10 @@ If the user is enabled for a third-party audio conferencing provider (ACP) and t
 
 ### -------------------------- Example 1 --------------------------
 ```
-Disable-CsOnlineDialInConferencingUser -Identity "Pilar Ackerman" -Confirm
+PS C:> Disable-CsOnlineDialInConferencingUser -Identity "Pilar Ackerman" -Confirm
 ```
 
 This example disables user "Pilar Ackerman" from using audio conferencing and will prompt you to confirm the operation.
-
 
 
 ## PARAMETERS
@@ -48,29 +46,13 @@ A user identity can be specified by using one of four formats: 1) the user's SIP
 You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -93,10 +75,10 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -146,7 +128,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -162,7 +144,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -178,7 +160,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -200,7 +182,7 @@ You can find your tenant ID by running this command:
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -218,7 +200,7 @@ NOTE: This parameter is reserved for internal Microsoft use.
 Specifies the domain name for the tenant or organization.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -248,7 +230,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -273,4 +259,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Enable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
 
+[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
+
+[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
