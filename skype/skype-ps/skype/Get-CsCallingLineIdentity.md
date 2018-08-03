@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsCallingLineIdentity
 
 ## SYNOPSIS
-Use the Get-CsCallingLineIdentity cmdlet to display the Caller ID policies for your organization.
+Use the `Get-CsCallingLineIdentity` cmdlet to display the Caller ID policies for your organization.
 
 ## SYNTAX
 
