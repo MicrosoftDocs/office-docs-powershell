@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsCallingLineIdentity
 
 ## SYNOPSIS
-The Grant-CsCallingLineIdentity cmdlet assigns a Caller ID policy to one or more users.
+The `Grant-CsCallingLineIdentity` cmdlet assigns a Caller ID policy to one or more users.
 
 ## SYNTAX
 
