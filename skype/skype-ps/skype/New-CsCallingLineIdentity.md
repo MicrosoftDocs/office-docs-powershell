@@ -35,7 +35,7 @@ This example creates a new Caller ID policy that sets the Caller ID to Anonymous
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:\> New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose 
+PS C:\> New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose
 ```
 
 This example creates a new Caller ID policy that sets the Caller ID to a specified service number.
