@@ -8,7 +8,7 @@ schema: 2.0.0
 # Disable-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
-Use the `Disable-CsOnlineDialInConferencingUse`r cmdlet to prevent a Skype for Business Online user from using dial-in or audio conferencing through Skype for Business Online.
+Use the `Disable-CsOnlineDialInConferencingUser` cmdlet to prevent a Skype for Business Online user from using dial-in or audio conferencing through Skype for Business Online.
 
 ## SYNTAX
 
