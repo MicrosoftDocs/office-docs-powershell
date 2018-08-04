@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmail
-PARAMVALUE: SwitchParameter
+Send an email to the user that contains his Audio Conference information.
 
 ```yaml
 Type: SwitchParameter
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromAddress
-PARAMVALUE: String
+You can specify the From Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromDisplayName and -SendEmail.
 
 ```yaml
 Type: String
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromDisplayName
-PARAMVALUE: String
+You can specify the Display Name to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromAddress and -SendEmail.
 
 ```yaml
 Type: String
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailToAddress
-PARAMVALUE: String
+You can specify the To Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmail.
 
 ```yaml
 Type: String
