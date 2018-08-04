@@ -28,7 +28,7 @@ Grant-CsOnlineVoicemailPolicy -PolicyName TranscriptionDisabled -Identity sip:am
 
 This example disables transcription for a single user.
 
-### -------------------------- Example 1 --------------------------
+### -------------------------- Example 2 --------------------------
 ```
 Grant-CsOnlineVoicemailPolicy -PolicyName TranscriptionProfanityMaskingEnabled -Identity sip:amosmar@contoso.com
 ```
