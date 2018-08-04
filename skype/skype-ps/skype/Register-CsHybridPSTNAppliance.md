@@ -35,7 +35,7 @@ To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has 
 Register-CsHybridPSTNAppliance -Identity 1e298a7b-9a71-4579-9e82-c2988ceb2bf3
 ```
 
-This example registers the specified hybrid PSTN appliance.
+This example creates the specified hybrid PSTN appliance.
 
 
 ## PARAMETERS
