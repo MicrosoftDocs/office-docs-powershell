@@ -41,7 +41,7 @@ In Example 2, the Get-CsOnlineVoicemailPolicy cmdlet is used to return the per-u
 Get-CsOnlineVoicemailPolicy -Filter "tag:*"
 ```
 
-Example 3 uses the Filter parameter to return all the voicemail policies that have been configured at the per-user scope. The filter value "tag:*" tells the Get-CsOnlineVoicemailPolicy cmdlet to return only those policies that have an Identity that begins with the string value "tag:"..
+Example 3 uses the Filter parameter to return all the voicemail policies that have been configured at the per-user scope. The filter value "tag:*" tells the Get-CsOnlineVoicemailPolicy cmdlet to return only those policies that have an Identity that begins with the string value "tag:".
 
 
 ## PARAMETERS
