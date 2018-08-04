@@ -27,10 +27,17 @@ By default, users enabled for Phone System will be enabled for Online Voicemail,
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-CsOnlineVoicemailPolicy -EnableTranscription $false
 ```
 
-Insert descriptive text for example 1.
+This example disables transcription for your organization.
+
+### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineVoicemailPolicy -EnableTranscriptionProfanityMasking $true
+```
+
+This example enables transcription profanity masking for your organization.
 
 
 ## PARAMETERS
@@ -131,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-PARAMVALUE: PSObject
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
 Type: PSObject
