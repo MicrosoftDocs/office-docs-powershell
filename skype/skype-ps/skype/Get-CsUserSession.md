@@ -13,7 +13,7 @@ Use the Get-CsUserSession cmdlet to retrieve user session information within a s
 ## SYNTAX
 
 ```
-Get-CsUserSession [-StartTime <Object>] [-User <Object>] [-EndTime <Object>] [-AsJob] [<CommonParameters>]
+Get-CsUserSession [-StartTime <DateTimeOffset>] [-User <UserUri>] [-EndTime <DateTimeOffset>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,10 +35,10 @@ This example returns user session information for Ken Myer from "02/22/2016 07:3
 ## PARAMETERS
 
 ### -StartTime
-PARAMVALUE: DateTimeOffset
+Specifies the start date, time and offset of the date range.
 
 ```yaml
-Type: Object
+Type: DateTimeOffset
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -52,11 +52,11 @@ Accept wildcard characters: False
 
 ### -User
 Specifies the user whose session data will be retrieved.
-The input format is any form of user URI defined in Skype for Business Server 2015.
+The input format is any form of user URI defined in Skype for Business Online.
 For instance: -User "Ken.Myer@Contoso.com".
 
 ```yaml
-Type: Object
+Type: UserUri
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -69,10 +69,10 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-PARAMVALUE: DateTimeOffset
+Specifies the end date, time and offset of the date range.
 
 ```yaml
-Type: Object
+Type: DateTimeOffset
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -85,7 +85,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
