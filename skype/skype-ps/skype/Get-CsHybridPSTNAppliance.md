@@ -13,7 +13,8 @@ Use the `Get-CsHybridPSTNAppliance` cmdlet to retrieve information about your Sk
 ## SYNTAX
 
 ```
-Get-CsHybridPSTNAppliance [-Name <String>] [-LocalStore] [[-Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [-Filter <String>] [-SiteName <String>] [-AsJob] [<CommonParameters>]
+Get-CsHybridPSTNAppliance [-Name <String>] [-LocalStore] [[-Identity] <XdsGlobalRelativeIdentity>] 
+[-Tenant <Guid>] [-Filter <String>] [-SiteName <String>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
