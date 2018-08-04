@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
 applicable: Exchange Online
 title: Set-ApplicationAccessPolicy
 schema: 2.0.0
