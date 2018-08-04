@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Assigns a voicemail policy to one or more users.
+Assigns a pre-configured policy instance for Voicemail service to one or more users.
 
 ## SYNTAX
 ```
@@ -17,7 +17,7 @@ Grant-CsOnlineVoicemailPolicy [-PassThru] [-Confirm] [[-PolicyName] <String>] [[
 ```
 
 ## DESCRIPTION
-This cmdlet assigns an existing voicemail policy to a user. Voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
+This cmdlet assigns an pre-configured voicemail policy to a user. Voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
 
 ## EXAMPLES
 
