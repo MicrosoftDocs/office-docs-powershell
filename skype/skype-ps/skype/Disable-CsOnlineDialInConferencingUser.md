@@ -20,7 +20,6 @@ Disable-CsOnlineDialInConferencingUser [-WhatIf] [-SendEmailFromDisplayName <Str
 
 ## DESCRIPTION
 The `Disable-CsOnlineDialInConferencingUser` cmdlet validates that the user is provisioned for audio conferencing using Microsoft as the audio conferencing provider and then disables audio conferencing which prevents the user from setting up audio conferences or meetings.
-To disable the user, you must specify the TenantDomain or Tenant parameter.
 
 When a user is disabled, the conference ID or passcode that was assigned to the user is released so it can be used by another user that is enabled for dial-in or audio conferencing even if they have a license assigned to them.
 
