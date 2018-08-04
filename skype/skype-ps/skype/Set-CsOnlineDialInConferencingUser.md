@@ -13,8 +13,12 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 ## SYNTAX
 
 ```
-Set-CsOnlineDialInConferencingUser [-TollFreeServiceNumber <String>] [[-Identity] <UserIdParameter>] [-BridgeName <String>] [-SendEmail] [-Confirm] [-ServiceNumber <String>] [-ResetConferenceId] [-Force] [-Tenant <Guid>] [-SendEmailFromAddress <String>] [-ResetLeaderPin] [-ConferenceId <Int32>] [-DomainController <Fqdn>] [-SendEmailToAddress <String>] [-BridgeId <Guid>] [-TenantDomain <String>]
- [-AllowTollFreeDialIn <Boolean>] [-WhatIf] [-SendEmailFromDisplayName <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-AsJob] [<CommonParameters>]
+Set-CsOnlineDialInConferencingUser [-TollFreeServiceNumber <Object>] [[-Identity] <Object>]
+ [-BridgeName <Object>] [-SendEmail] [-Confirm] [-ServiceNumber <Object>] [-ResetConferenceId] [-Force]
+ [-Tenant <Object>] [-SendEmailFromAddress <Object>] [-ResetLeaderPin] [-ConferenceId <Object>]
+ [-DomainController <Object>] [-SendEmailToAddress <Object>] [-BridgeId <Object>] [-TenantDomain <Object>]
+ [-AllowTollFreeDialIn <Object>] [-WhatIf] [-SendEmailFromDisplayName <Object>]
+ [-AllowPSTNOnlyMeetings <Object>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
