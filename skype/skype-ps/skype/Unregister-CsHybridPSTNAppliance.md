@@ -13,8 +13,8 @@ Use the `Unregister-CsHybridPSTNAppliance` cmdlet to unregister a previously spe
 ## SYNTAX
 
 ```
-Unregister-CsHybridPSTNAppliance [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force]
- [-Instance <Object>] [-AsJob] [<CommonParameters>]
+Unregister-CsHybridPSTNAppliance [-WhatIf] [-Confirm] [[-Identity] <XdsGlobalRelativeIdentity>] [-Tenant <Guid>] [-Force]
+ [-Instance <PSObject>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
