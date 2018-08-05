@@ -15,7 +15,7 @@ Use the `Get-CsOnlineDialInConferencingUser` cmdlet to view the properties and s
 ```
 Get-CsOnlineDialInConferencingUser [-BridgeName <String>] [-ServiceNumber <String>] [-TenantDomain <String>]
  [-LdapFilter <String>] [[-Identity] <UserIdParameter>] [-Tenant <Guid>] [-BridgeId <Guid>] [-ResultSize <Int32>]
- [-DomainController <Object>] [-Force] [-AsJob] [<CommonParameters>]
+ [-DomainController <Fqdn>] [-Force] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
