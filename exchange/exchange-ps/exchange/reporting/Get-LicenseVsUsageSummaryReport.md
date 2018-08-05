@@ -21,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
+Get-LicenseVsUsageSummaryReport [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,6 +51,9 @@ Get-LicenseVsUsageSummaryReport
 This example gets a report of the active workload users.
 
 ## PARAMETERS
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

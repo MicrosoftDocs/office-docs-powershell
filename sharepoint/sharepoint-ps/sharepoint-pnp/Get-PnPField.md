@@ -16,6 +16,7 @@ Get-PnPField [-Includes <String[]>]
              [-List <ListPipeBind>]
              [-Identity <FieldPipeBind>]
              [-Group <String>]
+             [-InSiteHierarchy [<SwitchParameter>]]
              [-Web <WebPipeBind>]
              [-Connection <SPOnlineConnection>]
 ```
@@ -71,6 +72,20 @@ Parameter Sets: (All)
 
 Required: False
 Position: 0
+Accept pipeline input: False
+```
+
+### -InSiteHierarchy
+Search site hierarchy for fields
+
+Only applicable to: SharePoint Online
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
 Accept pipeline input: False
 ```
 

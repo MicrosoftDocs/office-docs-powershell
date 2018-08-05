@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsCallingLineIdentity
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsCallingLineIdentity
 
 ## SYNOPSIS
-The `Grant-CsCallingLineIdentity` cmdlet assigns a Caller ID policy to one or more users.
+Use the `Grant-CsCallingLineIdentity` cmdlet to apply a Caller ID policy to a user account.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Grant-CsCallingLineIdentity [[-Identity] <UserIdParameter>] [[-PolicyName] <Stri
 ```
 
 ## DESCRIPTION
-By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create Caller ID policies to change this behavior, and you can use the Grant-CsCallingLineIdentity cmdlet to assign a Caller ID policy to one or more users in your organization.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed; you can then apply the Caller ID policy to a specific user.
 
 ## EXAMPLES
 
@@ -30,10 +30,11 @@ This example assigns the Caller ID policy with the Identity CallerIDRedmond to t
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:\> Get-CsUser -OU "ou=Finance,ou=North America,dc=litwareinc,dc=com" | Grant-CsCallingLineIdentity -PolicyName CallerIDRedmond
+Grant-CsCallingLineIdentity -PolicyName Anonymous -Identity "amos.marble@contoso.com"
 ```
 
-This example assigns the Caller ID policy with the Identity CallerIDRedmond to all users in the Finance OU: OU=Finance,OU=NorthAmerica,DC=litwareinc,DC=com. The first part of the command calls the Get-CsUser cmdlet to retrieve all users enabled for Skype for Business Server from the specified OU. This collection of users is then piped to the Grant-CsCallingLineIdentity cmdlet, which assigns the policy CallerIDRedmond to each of these users.
+This example grants the Caller ID policy "Anonymous" to the user Amos Marble. 
+
 
 ## PARAMETERS
 

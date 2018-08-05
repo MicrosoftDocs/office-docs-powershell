@@ -45,7 +45,7 @@ This example removes permission for the user Chris to the public folder My Publi
 ## PARAMETERS
 
 ### -AccessRights
-This parameter is available only in on-premises Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The AccessRights parameter specifies the rights being removed. This parameter accepts the following values:
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available only in on-premises Exchange Server 2010.
+This parameter is available or functional only in Exchange Server 2010.
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifes the server. For example:
 

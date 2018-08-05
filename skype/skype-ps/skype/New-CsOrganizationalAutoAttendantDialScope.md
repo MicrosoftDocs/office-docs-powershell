@@ -1,5 +1,5 @@
 ---
-external help file: New-CsOrganizationalAutoAttendantDialScope.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantDialScope
 schema: 2.0.0

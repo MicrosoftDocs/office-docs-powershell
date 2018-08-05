@@ -27,7 +27,9 @@ Test-CalendarConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Confirm]
 ## DESCRIPTION
 The Test-CalendarConnectivity cmdlet tests anonymous calendar sharing by connecting to a specified Outlook on the web virtual directory, to any Outlook on the web virtual directories on a specified Exchange server, or to any Outlook on the web virtual directories that are available in the local Active Directory site.
 
-The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command.
+The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command:
+
+& $env:ExchangeInstallPath\Scripts\New-TestCasConnectivityUser.ps1
 
 If the server hosting the test mailbox isn't available, the command returns an error that might not clearly identify the problem. To avoid this, use the Test-MapiConnectivity cmdlet to verify that the server that hosts the test mailbox is running and that the mailbox is available before you run this command.
 

@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-Target folder where teh CSV file is generated.
+Target folder where the CSV file is generated.
 
 ```yaml
 Type: String

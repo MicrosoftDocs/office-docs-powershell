@@ -41,7 +41,7 @@ This example converts a web application specified by the Identity parameter to u
 
 ### ------------EXAMPLE 2-------
 ```
-C:\PS>Convert-SPWebApplication -Identity "https://<webappurl> -From Legacy -To Claims -RetainPermissions
+C:\PS>Convert-SPWebApplication -Identity "https://<webappurl>" -From Legacy -To Claims -RetainPermissions
 ```
 
 This example converts a web application specified by the Identity parameter from Classic Windows authentication to Claims authentication mode while retaining permissions. The -From parameter is required after security update MS04-022 or the April 2014 Cumulative Update for SharePoint Server 2013 is applied. This is required for all versions of SharePoint Server 2016.

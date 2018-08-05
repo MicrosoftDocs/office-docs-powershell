@@ -20,9 +20,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
-  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
+ [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -81,6 +82,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -140,6 +142,7 @@ Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>] [-Confirm] [-CustomerFeedbackEnabled <$true | $false>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
@@ -214,6 +217,8 @@ This example allows only the client applications specified by the EwsAllowList p
 ## PARAMETERS
 
 ### -Identity
+This parameter is available or functional only in Exchange Server 2010.
+
 The Identity parameter specifies the Exchange organization that you want to modify. You can use any value that identifies the organization. For example:
 
 - Name
@@ -247,6 +252,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharedConfiguration
+This parameter is available or functional only in Exchange Server 2010.
+
 The SharedConfiguration parameter is used to link one organization to another organization that holds shared configuration for the first organization. This parameter accepts the following values:
 
 - Name
@@ -1207,7 +1214,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultPublicFolderAgeLimit
-The DefaultPublicFolderAgeLimit parameter specifies the default age limit for public folders across the entire organization. A public folder is automatically deleted when this age limit is exceeded. This attribute applies to all public folders in the organization that don't have their own AgeLimit setting.
+The DefaultPublicFolderAgeLimit parameter specifies the default age limit for the contents of public folders across the entire organization. Content in a public folder is automatically deleted when this age limit is exceeded. This attribute applies to all public folders in the organization that don't have their own AgeLimit setting.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds. Or, enter the value $null. The default value is blank ($null).
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1975,11 +1984,7 @@ Accept wildcard characters: False
 ### -PerTenantSwitchToESTSEnabled
 This parameter is available only in the cloud-based service.
 
-The PerTenantSwitchToESTSEnabled parameter specifies whether basic authentication requests use the Evolved Security Token Service (ESTS) in an Exchange Online organization. Valid values are:
-
-- $true: Basic authentication requests use ESTS.
-
-- $false: Basic authentication requests don't use ESTS. This is the default value.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: $true | $false
@@ -2060,6 +2065,27 @@ Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditDisabled
+This parameter is available only in the online cloud-based service.
+
+The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
+
+- $true: Mailbox auditing is disabled for the organization. 
+
+- $false: Allow mailbox auditing in the organization. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

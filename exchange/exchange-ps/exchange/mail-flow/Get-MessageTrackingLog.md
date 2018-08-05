@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-The EventId parameter filters the message tracking log entries by the value of the EventId field. The EventId value classifies classify each message event. Example values include DSN, Defer, Deliver, Send, or Receive.
+The EventId parameter filters the message tracking log entries by the value of the EventId field. The EventId value classifies each message event. Example values include DSN, Defer, Deliver, Send, or Receive.
 
 ```yaml
 Type: String

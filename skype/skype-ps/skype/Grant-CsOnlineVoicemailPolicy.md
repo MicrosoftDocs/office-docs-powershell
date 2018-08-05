@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsOnlineVoicemailPolicy
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Assigns a pre-configured policy instance for Voicemail service to one or more users.
+Use the `Grant-CsOnlineVoicemailPolicy cmdlet to assign a voicemail policy to a user.
 
 ## SYNTAX
 ```
@@ -17,23 +17,31 @@ Grant-CsOnlineVoicemailPolicy [-PassThru] [-Confirm] [[-PolicyName] <String>] [[
 ```
 
 ## DESCRIPTION
-This cmdlet assigns an pre-configured voicemail policy to a user. Voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
+This cmdlet assigns an existing per-user voicemail policy to a user. Voicemail policies are used to manage Voicemail-related features such as transcription. 
+
+You can check whether a user has been granted a per-user voicemail policy by calling a command in this format: 
+
+Get-CsOnlineUser "<user identity>" | Select-Object OnlineVoicemailPolicy
+
+For example: 
+
+Get-CsOnlineUser "Ken Myer" | Select-Object OnlineVoicemailPolicy
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Grant-CsOnlineVoicemailPolicy -PolicyName TranscriptionDisabled -Identity sip:amosmar@contoso.com
+Grant-CsOnlineVoicemailPolicy -Identity "Ken Myer" -PolicyName "TranscriptionDisabled"
 ```
 
-This example disables transcription for a single user.
+This example assigns the voicemail policy with the Identity TranscriptionDisabled to the user with the display name Ken Myer.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Grant-CsOnlineVoicemailPolicy -PolicyName TranscriptionProfanityMaskingEnabled -Identity sip:amosmar@contoso.com
+Grant-CsOnlineVoicemailPolicy -PolicyName TranscriptionProfanityMaskingEnabled -Identity "Ken Myer"
 ```
 
-This example enables transcription profanity masking for a single user.
+This example assigns the voicemail policy with the Identity TranscriptionProfanityMaskingEnabled to the user with the display name Ken Myer.
 
 
 ## PARAMETERS

@@ -86,6 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExportLegacyRules
+This parameter is available or functional only in Exchange Server 2010.
+
 The ExportLegacyRules switch is used to export legacy transport rules.
 
 ```yaml
@@ -101,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-This parameter is functional or available only on Exchange Server 2010.
+This cmdlet is available only in on-premises Exchange, and is functional only in Exchange Server 2010.
 
 The Identity parameter specifies the name or GUID of a transport rule to be exported.
 
@@ -109,7 +111,7 @@ The Identity parameter specifies the name or GUID of a transport rule to be expo
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: 1
 Default value: None

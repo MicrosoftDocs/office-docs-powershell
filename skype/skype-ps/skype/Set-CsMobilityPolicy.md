@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMobilityPolicy
 schema: 2.0.0
@@ -44,7 +44,7 @@ Set-CsMobilityPolicy [[-Identity] <Object>] [-AllowAutomaticPstnFallback <Object
  [-AllowExchangeConnectivity <Object>] [-AllowSaveCallLogs <Object>] [-AllowSaveCredentials <Object>]
  [-AllowSaveIMHistory <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Description <Object>]
  [-EnableIPAudioVideo <Object>] [-EnableMobility <Object>] [-EnableOutsideVoice <Object>]
- [-EnablePushNotifications <Object>] [-EncryptAppData <Object>] [-Force] [-Instance <Object>]
+ [-EnablePushNotifications <Object>] [-Force] [-Instance <Object>]
  [-RequireIntune <Object>] [-RequireWIFIForIPVideo <Object>] [-RequireWiFiForSharing <Object>]
  [-Tenant <Object>] [-VoiceSettings <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
@@ -73,7 +73,7 @@ In turn, that means that the user will not be able to use Call via Work, regardl
 
 To use Call via Work, users must be managed by a voice policy that allows simultaneous ringing.
 
-The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, EncryptAppData, Force, Identity, Instance, PipelineVariable, RequireIntune, Tenant, VoiceSettings
+The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, Force, Identity, Instance, PipelineVariable, RequireIntune, Tenant, VoiceSettings
 
 ## EXAMPLES
 
@@ -489,22 +489,6 @@ Accept wildcard characters: False
 
 ### -EnablePushNotifications
 {{Fill EnablePushNotifications Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EncryptAppData
-{{Fill EncryptAppData Description}}
 
 ```yaml
 Type: Object

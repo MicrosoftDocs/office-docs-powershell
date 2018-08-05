@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Remove-CsCallingLineIdentity
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsCallingLineIdentity
 
 ## SYNOPSIS
-The `Remove-CsCallingLineIdentity` cmdlet removes a Caller ID policy.
+Use the `Remove-CsCallingLineIdentity` cmdlet to remove a Caller ID policy.
 
 ## SYNTAX
 ```
@@ -16,17 +16,18 @@ Remove-CsCallingLineIdentity [[-Identity] <XdsIdentity>] [-Confirm] [-Force] [-T
 ```
 
 ## DESCRIPTION
-By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create Caller ID policies to change this behavior, and you can use the Remove-CsCallingLineIdentity cmdlet to remove a Caller ID policy.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. Caller ID policies can provide an alternate displayed number or block a number from being displayed. 
+
+You can remove an existing Caller ID policy from your organization by using the Remove-CsCallingLineIdentity cmdlet. When a Caller ID policy is removed, it is also removed from any user accounts to which it was granted.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> Remove-CsCallingLineIdentity -Identity CallerIDRedmond
+Remove-CsCallingLineIdentity -Identity Anonymous
 ```
 
-This example removes the Caller ID policy with the Identity CallerIDRedmond.
-
+The following example removes the Caller ID policy "Anonymous".
 
 ## PARAMETERS
 

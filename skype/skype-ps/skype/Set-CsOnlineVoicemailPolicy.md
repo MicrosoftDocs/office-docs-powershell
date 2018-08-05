@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsOnlineVoicemailPolicy
 schema: 2.0.0
@@ -27,12 +27,19 @@ By default, users enabled for Phone System will be enabled for Online Voicemail,
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsOnlineVoicemailPolicy -EnableTranscription $false
+Set-CsOnlineVoicemailPolicy -EnableTranscription $False
 ```
 
-This example disables transcription for your organization.
+This example modifies the global online voicemail policy to disable transcription. This means that all the users in the organization that have not been assigned a per-user voicemail policy will not receive transcription as part of their subsequent voicemail emails.
 
 ### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineVoicemailPolicy -EnableTranscription $True
+```
+
+This example modifies the global online voicemail policy to enable transcription. This means that all the users in the organization that have not been assigned a per-user voicemail policy will receive transcription as part of their subsequent voicemail emails.
+
+### -------------------------- Example 3 --------------------------
 ```
 Set-CsOnlineVoicemailPolicy -EnableTranscriptionProfanityMasking $true
 ```

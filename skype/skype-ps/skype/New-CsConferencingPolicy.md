@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 schema: 2.0.0
 ---
@@ -59,7 +59,7 @@ The New-CsConferencingPolicy cmdlet enables you to create new conferencing polic
 You cannot create a new global policy because the global policy already exists.
 However, you can modify the property values of the global policy by using the Set-CsConferencingPolicy cmdlet.
 
-The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AsJob, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, InMemory, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb.
+The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AsJob, AudioBitRateKb, Description, EnableDialinConferencing, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, InMemory, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb.
 
 
 

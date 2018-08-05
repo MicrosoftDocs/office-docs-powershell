@@ -871,7 +871,7 @@ Accept pipeline input: False
 ```
 
 ### -TenantAdminUrl
-The url to the Tenant Admin site. If not specified, the cmdlets will assume to connect automatically to https://<tenantname>-admin.sharepoint.com where appropriate.
+The url to the Tenant Admin site. If not specified, the cmdlets will assume to connect automatically to https://&lt;tenantname&gt;-admin.sharepoint.com where appropriate.
 
 ```yaml
 Type: String
@@ -907,7 +907,7 @@ Accept pipeline input: False
 ```
 
 ### -UseWebLogin
-If you want to connect to SharePoint with browser based login
+If you want to connect to SharePoint with browser based login. This is required when you have multi-factor authentication (MFA) enabled.
 
 ```yaml
 Type: SwitchParameter

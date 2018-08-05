@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-SafeAttachmentRule -Name "Research Department URL Rule" -SafeAttachmentPolicy "Research Block URL" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
+New-SafeLinksRule -Name "Research Department URL Rule" -SafeAttachmentPolicy "Research Block URL" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
 ```
 
 This example creates a new Safe Links rule named Research Department URL Rule with the following conditions:

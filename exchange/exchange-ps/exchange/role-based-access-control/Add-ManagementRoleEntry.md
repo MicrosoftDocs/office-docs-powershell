@@ -50,7 +50,7 @@ This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient A
 
 ### -------------------------- Example 2 --------------------------
 ```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters Identity, Anr, Server, Filter
+Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters "Identity","Anr","Server","Filter"
 ```
 
 This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server and Filter parameters are added to the new role entry.
@@ -64,10 +64,10 @@ This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all t
 
 ### -------------------------- Example 4 --------------------------
 ```
-Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Department, Location -UnScopedTopLevel
+Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters "Department","Location" -UnScopedTopLevel
 ```
 
-This example adds the MailboxAudit script with the Department and Location parameters to the IT Scripts unscoped top-level role.
+In on-premises Exchange, this example adds the MailboxAudit script with the Department and Location parameters to the IT Scripts unscoped top-level role. Note that the UnScopedTopLevel switch requires the UnScoped Role Management role, which isn't assigned to any role groups by default.
 
 ## PARAMETERS
 
@@ -219,13 +219,19 @@ Accept wildcard characters: False
 ```
 
 ### -UnScopedTopLevel
-The UnScopedTopLevel switch specifies that you're adding a custom script or non-Exchange cmdlet to an unscoped top-level management role. You can only use the UnScopedTopLevel switch when you add a role entry to an unscoped top-level role. If you use the UnScopedTopLevel switch, you can't use the ParentRoleEntry parameter.
+This parameter is available on in on-premises Exchange.
+
+By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+
+The UnScopedTopLevel switch specifies that you're adding a custom script or non-Exchange cmdlet to an unscoped top-level management role. You don't need to specify a value with this switch.
+
+You can only use this switch when you add a role entry to an unscoped top-level role. When you use this switch, you can't use the ParentRoleEntry parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -249,13 +255,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in the cloud-based service.
+
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

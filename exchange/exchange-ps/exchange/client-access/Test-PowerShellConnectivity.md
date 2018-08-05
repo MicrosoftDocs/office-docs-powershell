@@ -37,7 +37,9 @@ Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>]
 ## DESCRIPTION
 The Test-PowerShellConnectivity cmdlet tests Exchange remote PowerShell connectivity by connecting to a specified remote PowerShell virtual directory, to any remote PowerShell virtual directories on a specified Exchange server, or to any remote PowerShell virtual directories that are available in the local Active Directory site.
 
-The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command.
+The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command:
+
+& $env:ExchangeInstallPath\Scripts\New-TestCasConnectivityUser.ps1
 
 The test results are displayed on-screen. The cmdlet returns the following information.
 

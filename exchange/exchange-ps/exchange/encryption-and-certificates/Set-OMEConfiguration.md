@@ -18,9 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-ClientEncryptionEnabled <$true | $false>]
- [-DisclaimerText <String>] [-EmailText <String>] [-ExpirationOptionEnabled <$true | $false>] [-Image <Byte[]>]
- [-OTPEnabled <$true | $false>] [-PortalText <String>] [<CommonParameters>]
+Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-DisclaimerText <String>]
+ [-EmailText <String>] [-Image <Byte[]>] [-IntroductionText <String>] [-OTPEnabled <$true | $false>]
+ [-PortalText <String>] [-ReadButtonText <String>] [-SocialIdSignIn <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,27 +55,16 @@ Accept wildcard characters: False
 ### -BackgroundColor
 The BackgroundColor parameter specifies the background color. Valid values are:
 
-- An HTML hexadecimal \(hex triplet\) color code value (for example, #FFFFFF is white).
+- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0x000000 is white\).
+
+- An available text value \(for example, yellow is 0x00FFFF00\).
 
 - $null \(blank\). This is the default value.
 
+For the list of available hex and text values, see Background colors for Office 365 Message Encryption (https://support.office.com/article/1508cb35-c5ff-4523-b579-947b21d5515f). 
+
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClientEncryptionEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -120,21 +109,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExpirationOptionEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Image
 The Image parameter identifies and uploads an image that will be displayed in the email message and in the Office 365 portal.
 
@@ -150,6 +124,20 @@ To remove an existing image and use the default image, use the value $null for t
 
 ```yaml
 Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntroductionText
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -186,6 +174,34 @@ To remove existing text and use the default value, use the value $null for this 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadButtonText
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SocialIdSignIn 
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

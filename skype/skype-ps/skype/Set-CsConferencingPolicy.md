@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingPolicy
 schema: 2.0.0
@@ -554,11 +554,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PRecording
-If True, users will be able to record peer-to-peer communication sessions.
+If True, users will be able to record peer-to-peer audio communication sessions.
 The default value is False.
 
 This setting is enforced at the per-user level.
-That means that one user in a peer-to-peer communication session might be allowed to record the session while the other user is not.
+That means that one user in a peer-to-peer audio communication session might be allowed to record the session while the other user is not. Recording is not available in peer-to-peer communication sessions with video or screen sharing.
 
 
 ```yaml
@@ -631,6 +631,8 @@ VGA.
 VGA has a resolution of 640 pixels by 480 pixels.
 
 The default value is VGA.
+
+Note: The Skype for Business client and Skype for Business 2015 AVMCU will offer H.264
 
 ```yaml
 Type: MaxVideoConferenceResolution

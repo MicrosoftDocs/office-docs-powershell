@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsCallingLineIdentity
 schema: 2.0.0
@@ -8,25 +8,31 @@ schema: 2.0.0
 # Set-CsCallingLineIdentity
 
 ## SYNOPSIS
-Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy for your organization.
+Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your organization.
 
 ## SYNTAX
-
 ```
 Set-CsCallingLineIdentity [-Description <String>] [-ServiceNumber <String>] [-Confirm] [-CallingIDSubstitute <CallingIDSubstituteType>] [[-Identity] <XdsIdentity>] [-EnableUserOverride <Boolean>] [-Tenant <Guid>] [-BlockIncomingPstnCallerID <Boolean>] [-WhatIf] [-Force] [-Instance <PSObject>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create Caller ID policies to change this behavior, and you can use the Set-CsCallingLineIdentity cmdlet to modify the existing Caller ID policies for your organization.
+You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can modify a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
+
+Note:  
+Identity must be unique.
+
+ServiceNumber must be a valid Service Number in the Skype for Business Online Telephone Number Inventory.
+
+If CallerIdSubstitute is given as “Service”, then ServiceNumber cannot be empty.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> Set-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous
+PS C:\> Set-CsCallingLineIdentity -Identity "MyBlockingPolicy" -BlockIncomingPstnCallerID $true
 ```
 
-This example modifies the Anonymous Caller ID policy that sets the Caller ID to Anonymous.
+This example blocks the incoming caller ID. The user can override this setting.
 
 ### -------------------------- Example 2 --------------------------
 ```

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsUserSession
 schema: 2.0.0
@@ -8,16 +8,16 @@ schema: 2.0.0
 # Get-CsUserSession
 
 ## SYNOPSIS
-Use the Get-CsUserSession cmdlet to retrieve user session information within a specified date range.
+Use the Get-CsUserSession cmdlet to retrieve user session information within a specified date range within the past 30 days.
 
 ## SYNTAX
 
 ```
-Get-CsUserSession [-StartTime <DateTimeOffset>] [-User <UserUri>] [-EndTime <DateTimeOffset>] [-AsJob] [<CommonParameters>]
+Get-CsUserSession -StartTime <DateTimeOffset> -User <String> [-EndTime <DateTimeOffset>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Get-CsUserSession cmdlet to retrieve session information for users within a specified date range.
+Use the Get-CsUserSession cmdlet to retrieve session information for users within a specified date range within the past 30 days.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
@@ -27,7 +27,7 @@ To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has 
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-Get-CsUserSession -User "Ken.Myer@Contoso.com" -StartDate "02/22/2016 07:30:15 PM"
+Get-CsUserSession -User "Ken.Myer@Contoso.com" -StartTime "02/22/2016 07:30:15 PM"
 ```
 
 This example returns user session information for Ken Myer from "02/22/2016 07:30:15 PM" to the current date.
@@ -43,7 +43,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ### -User
 Specifies the user whose session data will be retrieved.
 The input format is any form of user URI defined in Skype for Business Online.
-For instance: -User "Ken.Myer@Contoso.com".
+For instance: `-User "Ken.Myer@Contoso.com"`.
 
 ```yaml
 Type: UserUri
@@ -61,7 +61,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

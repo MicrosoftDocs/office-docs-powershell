@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-Get-O365ClientOSReport [-EndDate <DateTime>] [-OS <String>] [-ResultSize <Unlimited>] [-StartDate <DateTime>]
+Get-O365ClientOSReport [-EndDate <DateTime>] [-OS <String>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -130,6 +130,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

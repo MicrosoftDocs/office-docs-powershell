@@ -178,6 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogEnabled parameter specifies whether logging is enabled for Information Rights Management (IRM).
 
 ```yaml
@@ -193,6 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxAge
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogMaxAge parameter specifies the max age for IRM logs. Logs older than the specified value are deleted.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
@@ -212,6 +216,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxDirectorySize
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogMaxDirectorySize parameter specifies the maximum directory size for IRM logs. When the maximum directory size is reached, the server deletes the old log files first.
 
 A value of unlimited means no limit for the maximum directory size for the IRM logs.
@@ -229,6 +235,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxFileSize
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogMaxFileSize parameter specifies the maximum size of the IRM log. This value can't be larger than the IrmLogMaxDirectorySize parameter.
 
 ```yaml
@@ -244,6 +252,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogPath
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogPath parameter specifies the path to the log file.
 
 ```yaml
