@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Retrieves the voicemail policy from the local replica of the Central Management store, rather than the Central Management store itself.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
