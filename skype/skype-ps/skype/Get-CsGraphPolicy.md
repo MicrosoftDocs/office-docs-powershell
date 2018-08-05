@@ -17,7 +17,7 @@ Get-CsGraphPolicy [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [
 ```
 
 ## DESCRIPTION
-Skype for Business Online supports a Global CsGraphPolicy that is set by default to enable Outlook content pre-load in Skype for Business Online meetings. The Global policy can't be changed by you. Use the `Get-CsGraphPolicy` cmdlet to get a predefined graph policy in your organization.
+Skype for Business Online supports a Global CsGraphPolicy that is set by default to enable Outlook content pre-load in Skype for Business Online meetings. The Global policy can't be changed by you. Use the `Get-CsGraphPolicy` cmdlet to get predefined graph policies in your organization.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
