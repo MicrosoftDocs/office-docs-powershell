@@ -44,10 +44,10 @@ Specifies the name of the graph policy to grant to the tenant or user.
 The two options are:
 
 Graph Enabled: Granting this policy will enable the pre-loading content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, `Grant-CsGraphPolicy -PolicyName "Graph Enabled".`
+For example, `Grant-CsGraphPolicy -PolicyName "GraphEnabled".`
 
 Graph Disabled: Granting this policy will disable the pre-loading of content, files or attachments attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled".`
+For example, `Grant-CsGraphPolicy -PolicyName "GraphDisabled".`
 
 ```yaml
 Type: String
