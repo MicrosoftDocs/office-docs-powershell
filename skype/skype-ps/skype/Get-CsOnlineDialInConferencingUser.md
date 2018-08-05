@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
-Specifies the name of the audio conferencing bridge.
+Specifies the name for the audio conferencing bridge.
 
 ```yaml
 Type: String
