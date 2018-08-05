@@ -36,7 +36,7 @@ This example returns all predefined graph policies in your organization.
 ## PARAMETERS
 
 ### -Filter
-This parameter accepts a wildcard string and returns all graph policies with identities matching that string. For example, a Filter value of "*Enabled*" will return all policies which contain the string "Enabled".
+This parameter accepts a wildcard string and returns all graph policies with identities matching that string. For example, a Filter value of "\*Enabled\*" will return all policies which contain the string "Enabled".
 
 ```yaml
 Type: String
