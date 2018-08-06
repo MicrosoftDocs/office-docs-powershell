@@ -13,7 +13,8 @@ Use the `Get-CsCallingLineIdentity` cmdlet to display the Caller ID policies for
 ## SYNTAX
 
 ```
-Get-CsCallingLineIdentity [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] [<CommonParameters>]
+Get-CsCallingLineIdentity [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [-AsJob] 
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
