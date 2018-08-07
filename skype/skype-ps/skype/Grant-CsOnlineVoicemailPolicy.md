@@ -8,13 +8,12 @@ schema: 2.0.0
 # Grant-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Use the Grant-CsOnlineVoicemailPolicy cmdlet to assign a voicemail policy to a user.
+Use the `Grant-CsOnlineVoicemailPolicy cmdlet to assign a voicemail policy to a user.
 
 ## SYNTAX
-
 ```
-Grant-CsOnlineVoicemailPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm]
- [-DomainController <Object>] [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsOnlineVoicemailPolicy [-PassThru] [-Confirm] [[-PolicyName] <String>] [[-Identity] <UserIdParameter>]
+ [-Tenant <Guid>] [-DomainController <Fqdn>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,32 +22,35 @@ This cmdlet assigns an existing per-user voicemail policy to a user. Voicemail p
 You can check whether a user has been granted a per-user voicemail policy by calling a command in this format: 
 
 Get-CsOnlineUser "<user identity>" | Select-Object OnlineVoicemailPolicy
- 
 
 For example: 
 
 Get-CsOnlineUser "Ken Myer" | Select-Object OnlineVoicemailPolicy
- 
-
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Grant-CsOnlineVoicemailPolicy -Identity "Ken Myer" -PolicyName "TranscriptionDisabled"
 ```
 
-Grant-CsOnlineVoicemailPolicy -Identity "Ken Myer" -PolicyName "TranscriptionDisabled" 
-```
 This example assigns the voicemail policy with the Identity TranscriptionDisabled to the user with the display name Ken Myer.
 
+### -------------------------- Example 2 --------------------------
+```
+Grant-CsOnlineVoicemailPolicy -PolicyName TranscriptionProfanityMaskingEnabled -Identity "Ken Myer"
+```
+
+This example assigns the voicemail policy with the Identity TranscriptionProfanityMaskingEnabled to the user with the display name Ken Myer.
 
 
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: UserIdParameter
+A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, Global policy is modified.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -61,10 +63,10 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-PARAMVALUE: String
+The name (Identity) of the voicemail policy to be assigned to the user. (Note that this includes only the name portion of the Identity. Per-user policy identities include a prefix of tag: that should not be included with the PolicyName)
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -77,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-PARAMVALUE: SwitchParameter
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -93,10 +95,10 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -109,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-PARAMVALUE: SwitchParameter
+Returns the results of the command. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -125,10 +127,18 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -141,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -157,7 +167,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -182,5 +196,7 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+[Set-CsOnlineVoicemailPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
 
+[Get-CsOnlineVoicemailPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps)
 
