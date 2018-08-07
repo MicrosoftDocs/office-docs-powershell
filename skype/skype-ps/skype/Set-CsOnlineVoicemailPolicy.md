@@ -13,7 +13,7 @@ Modifies an existing Online Voicemail policy. Online Voicemail policies determin
 ## SYNTAX
 
 ```
-Set-CsOnlineVoicemailPolicy [-WhatIf] [-ShareData <Object>] [-EnableTranscription <Boolean>] [-Confirm]
+Set-CsOnlineVoicemailPolicy [-WhatIf] [-ShareData <ShareDataType>] [-EnableTranscription <Boolean>] [-Confirm]
  [-EnableTranscriptionProfanityMasking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Force]
  [-Instance <PSObject>] [-AsJob] [<CommonParameters>]
 ```
@@ -98,10 +98,10 @@ Accept wildcard characters: False
 ```
 
 ### -ShareData
-This parameter is reserved for internal Microsoft use.
+Specifies whether (voicemail and transcription) data is shared with the service for training and improving accuracy. By default, it is "Defer" which means that it is upto the user to decide whether they want to share their voicemail data with the service team (configurable through User Settings Portal). Other possible value is "Deny" which means that the voicemail data for any user in the tenant will not be shared with the service regardless of the users own choice.
 
 ```yaml
-Type: Object
+Type: ShareDataType
 Parameter Sets: (All)
 Aliases:
 
