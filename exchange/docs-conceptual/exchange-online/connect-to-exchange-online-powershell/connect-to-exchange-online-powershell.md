@@ -44,11 +44,11 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
   `Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.`
 
-  To enable Windows PowerShell to run signed scripts, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
+  To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-  ```
-  Set-ExecutionPolicy RemoteSigned
-  ```
+    ```
+    Set-ExecutionPolicy RemoteSigned
+    ```
 
   You need to configure this setting only once on your computer, not every time you connect.
 

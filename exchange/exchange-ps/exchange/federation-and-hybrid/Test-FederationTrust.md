@@ -23,7 +23,9 @@ Test-FederationTrust [-Confirm] [-DomainController <Fqdn>] [-MonitoringContext <
 ```
 
 ## DESCRIPTION
-The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command.
+The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command:
+
+& $env:ExchangeInstallPath\Scripts\New-TestCasConnectivityUser.ps1
 
 You can run the Test-FederationTrust cmdlet from the Exchange Management Shell, or a monitoring system can run the test periodically.
 
