@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: 63976059-25f8-4b4f-b597-633e78b803c0
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 description: "Find and open the shortcut for Exchange PowerShell (also known as the Exchange Management Shell) on Exchange 2016 servers or computers that have the Exchange management tools installed."
 ---
 
