@@ -34,7 +34,7 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
   
 ## Use the Exchange Management Shell to enable or disable remote PowerShell access for a user
 
-This example disable remote PowerShell access for the user named Therese Lindqvist.
+This example disables remote PowerShell access for the user named Therese Lindqvist.
   
 ```
 Set-User "Therese Lindqvist" -RemotePowerShellEnabled $false
@@ -43,7 +43,7 @@ Set-User "Therese Lindqvist" -RemotePowerShellEnabled $false
 This example enables remote PowerShell access for the user named Sirirat Kitjakarn.
   
 ```
-Set-User "Sirirat Kitjakarn" -RemotePowerShellEnabled $false
+Set-User "Sirirat Kitjakarn" -RemotePowerShellEnabled $true
 ```
 
 ## Use the Exchange Management Shell to disable remote PowerShell access for many users

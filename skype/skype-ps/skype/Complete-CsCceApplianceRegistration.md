@@ -13,8 +13,7 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Complete-CsCceApplianceRegistration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
- [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Complete-CsCceApplianceRegistration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

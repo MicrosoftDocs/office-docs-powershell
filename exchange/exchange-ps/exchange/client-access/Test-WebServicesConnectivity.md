@@ -48,7 +48,9 @@ Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>]
 ## DESCRIPTION
 The Test-WebServicesConnectivity cmdlet tests Exchange Web Services connectivity by connecting to a specified Exchange Web Services virtual directory, to any Exchange Web Services virtual directories on a specified Exchange server, or to any Exchange Web Services virtual directories that are available in the local Active Directory site.
 
-The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command.
+The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command:
+
+& $env:ExchangeInstallPath\Scripts\New-TestCasConnectivityUser.ps1
 
 The test results are displayed on-screen. The cmdlet returns the following information.
 
@@ -84,6 +86,8 @@ This example tests the client connection to Exchange Web Services on the server 
 ## PARAMETERS
 
 ### -AllowUnsecureAccess
+This parameter is available or functional only in Exchange Server 2010.
+
 The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Secure Sockets Layer (SSL).
 
 ```yaml
@@ -157,6 +161,8 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+This parameter is available or functional only in Exchange Server 2010.
+
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml

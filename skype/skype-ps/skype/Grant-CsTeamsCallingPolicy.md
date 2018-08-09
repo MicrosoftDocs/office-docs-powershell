@@ -1,7 +1,9 @@
 ---
-external help file: tmp_hj4xd5au.st3-help.xml
-Module Name: tmp_hj4xd5au.st3
-online version: http://technet.microsoft.com/EN-US/library/089fd324-a267-4e53-ad32-924875d15ef9(OCS.15).aspx
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+Module Name: Skype for Business Online
+online version:
+applicable: Skype for Business Online
+title: Grant-CsTeamsCallingPolicy
 schema: 2.0.0
 ---
 

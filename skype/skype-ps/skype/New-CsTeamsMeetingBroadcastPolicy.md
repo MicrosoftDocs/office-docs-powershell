@@ -24,6 +24,14 @@ User-level policy for tenant admin to configure meeting broadcast behavior for t
 
 ## EXAMPLES
 
+### Example 1
+```powershell
+PS C:\> New-CsTeamsMeetingBroadcastPolicy -Identity Students -AllowBroadcastScheduling $false 
+```
+
+Creates a new MeetingBroadcastPolicy with broadcast scheduling disabled, which can then be assigned to individual users using the corresponding grant- command.
+
+
 ## PARAMETERS
 
 ### -AllowBroadcastScheduling
