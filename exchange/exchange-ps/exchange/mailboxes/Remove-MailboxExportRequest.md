@@ -13,7 +13,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-MailboxExportRequest cmdlet to remove fully or partially completed export requests. You can create multiple export requests for a specified mailbox provided that you specify a distinct name. Completed export requests aren't cleared automatically; they need to be removed by using this cmdlet.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
 When a partially completed export request is removed, content already exported isn't removed from the PST file. If you want to start a new export request to the same file name and start with an empty PST file, you need to rename or delete the previous PST file.
 

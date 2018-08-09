@@ -47,7 +47,7 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
     
     `Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.`
     
-    To enable Windows PowerShell to run signed scripts, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
+    To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
     
     ```
     Set-ExecutionPolicy RemoteSigned
@@ -79,7 +79,7 @@ For more information about the Security & Compliance Center, see [Office 365 Sec
 3. Run the following command:
     
     ```
-    Import-PSSession $Session
+    Import-PSSession $Session -DisableNameChecking
     ```
 
 > [!NOTE]

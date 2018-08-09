@@ -497,6 +497,8 @@ Accept wildcard characters: False
 ```
 
 ### -MRSServer
+This parameter is available or functional only in Exchange Server 2010.
+
 The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
 
 ```yaml
