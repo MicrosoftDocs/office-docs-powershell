@@ -56,7 +56,7 @@ The input format is any form of user URI defined in Skype for Business Online.
 For instance: `-User "Ken.Myer@Contoso.com"`.
 
 ```yaml
-Type: UserUri
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
