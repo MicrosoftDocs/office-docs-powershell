@@ -8,13 +8,12 @@ schema: 2.0.0
 # Grant-CsDialoutPolicy
 
 ## SYNOPSIS
-Grant-CsDialoutPolicy \[-Identity\] \<UserIdParameter\> \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+
 
 ## SYNTAX
-
 ```
-Grant-CsDialoutPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm] [-DomainController <Object>]
- [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsDialoutPolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <string>] [-Confirm] [-DomainController <Fqdn>]
+ [-PassThru] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
