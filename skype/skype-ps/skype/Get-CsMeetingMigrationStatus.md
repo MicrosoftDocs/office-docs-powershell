@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsMeetingMigrationStatus
 
 ## SYNOPSIS
-You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations. 
+You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
 ## SYNTAX
 ```
@@ -17,7 +17,9 @@ Get-CsMeetingMigrationStatus [[-Identity] <UserIdParameter>] [-Confirm] [-EndTim
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Meeting Migration Service (MMS) is a Skype for Business service that runs in the background and automatically updates Skype for Business and Microsoft Teams meetings for users. MMS is designed to eliminate the need for users to run the Meeting Migration Tool to update their Skype for Business and Microsoft Teams meetings.
+
+You can use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
 ## EXAMPLES
 
@@ -211,3 +213,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cstenantmigrationconfiguration?view=skype-ps)
 
 [Get-CsOnlineDialInConferencingTenantSettings](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencingtenantsettings?view=skype-ps)
+
+[Start-CsExMeetingMigration](https://docs.microsoft.com/en-us/powershell/module/skype/start-csexmeetingmigration?view=skype-ps)
