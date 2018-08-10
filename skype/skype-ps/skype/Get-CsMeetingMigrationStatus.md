@@ -13,7 +13,7 @@ You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting
 ## SYNTAX
 ```
 Get-CsMeetingMigrationStatus [[-Identity] <UserIdParameter>] [-Confirm] [-EndTime <DateTime>] [-StartTime <DateTime>]
- [-SummaryOnly] [-Tenant <Guid>] [-WhatIf] [-AsJob] [-State <Object>] [<CommonParameters>]
+ [-SummaryOnly] [-Tenant <Guid>] [-WhatIf] [-AsJob] [-State <StateType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -186,7 +186,7 @@ With this parameter you can filter by migration state. Possible values are:
 * Succeeded
 
 ```yaml
-Type: Object
+Type: StateType
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
