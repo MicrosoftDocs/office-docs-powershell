@@ -8,10 +8,9 @@ schema: 2.0.0
 # Get-CsMeetingMigrationStatus
 
 ## SYNOPSIS
-Provide the topic introduction here.
+You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations. 
 
 ## SYNTAX
-
 ```
 Get-CsMeetingMigrationStatus [[-Identity] <Object>] [-Confirm] [-EndTime <Object>] [-StartTime <Object>]
  [-SummaryOnly] [-Tenant <Object>] [-WhatIf] [-AsJob] [-State <Object>] [<CommonParameters>]
