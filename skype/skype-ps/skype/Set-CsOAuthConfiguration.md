@@ -17,8 +17,10 @@ This cmdlet was introduced in Lync Server 2013.
 
 ### Identity (Default)
 ```
-Set-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-AdditionalAudienceUrls <String>]  [-AlternateAudienceUrl <String>] [-ClientAdalAuthOverride <Object>] [-ClientAuthorizationOAuthServerIdentity <String>] [-Confirm] [-ExchangeAutodiscoverAllowedDomains <String>] [-ExchangeAutodiscoverUrl <String>] [-Force] [-Instance <PSObject>] [-Realm <String>] [-ServiceName <String>]
- [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-AdditionalAudienceUrls <String>] [-AlternateAudienceUrl <String>] 
+[-ClientAdalAuthOverride <Object>] [-ClientAuthorizationOAuthServerIdentity <String>] [-Confirm] 
+[-ExchangeAutodiscoverAllowedDomains <String>] [-ExchangeAutodiscoverUrl <String>] [-Force] [-Instance <PSObject>] 
+[-Realm <String>] [-ServiceName <String>] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ### Instance
