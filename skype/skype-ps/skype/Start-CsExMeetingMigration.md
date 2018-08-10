@@ -13,7 +13,7 @@ The `Start-CsExMeetingMigration` cmdlet starts a meeting migration manually.
 ## SYNTAX
 
 ```
-Start-CsExMeetingMigration [[-Identity] <Object>] [-Confirm] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Start-CsExMeetingMigration [[-Identity] <UserIdParameter>] [-Confirm] [-Tenant <Guid>] [-WhatIf] [-AsJob]
  [<CommonParameters>]
 ```
 
