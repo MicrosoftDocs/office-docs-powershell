@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-Module Name: SkypeForBusiness
-online version:
+applicable: Skype for Business Server 2019
+title: Get-CsAuthConfig
 schema: 2.0.0
 ---
 
@@ -37,7 +37,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: 0
 Default value: None
@@ -68,7 +68,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
+applicable: Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
