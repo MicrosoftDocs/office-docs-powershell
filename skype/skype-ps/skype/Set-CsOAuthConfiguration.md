@@ -231,7 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalAudienceUrls
-{{Fill AdditionalAudienceUrls Description}}
+An OAuth token includes an audience ("aud") claim that identifies the intended recipient of the token, in this case your Skype for Business Server. The audience is typically expressed as a URL, such as https://skypeforbusiness.contoso.com, and is validated by the Skype for Business authentication module. In some cases, depending on your authentication providers and/or other applications used in your organization, it may be necessary to allow multiple audience values to be used and recognized as valid by your Skype for Business server.
+
+The AlternateAudienceUrl and AdditionalAudienceUrls parameters allow you to specify one or more additional audience values that will be recognized as valid by your Skype for Business server.
 
 ```yaml
 Type: String
@@ -247,7 +249,9 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateAudienceUrl
-{{Fill AlternateAudienceUrl Description}}
+An OAuth token includes an audience ("aud") claim that identifies the intended recipient of the token, in this case your Skype for Business Server. The audience is typically expressed as a URL, such as https://skypeforbusiness.contoso.com, and is validated by the Skype for Business authentication module. In some cases, depending on your authentication providers and/or other applications used in your organization, it may be necessary to allow multiple audience values to be used and recognized as valid by your Skype for Business server.
+
+The AlternateAudienceUrl and AdditionalAudienceUrls parameters allow you to specify one or more additional audience values that will be recognized as valid by your Skype for Business server.
 
 ```yaml
 Type: String
