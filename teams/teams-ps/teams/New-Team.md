@@ -19,7 +19,7 @@ Note: This cmdlet is currently in Beta and functionality may change.
 
 ```
 New-Team [-Group <String>] [-DisplayName <String>] [-Description <String>] [-Alias <String>]
- [-Classification <String>] [-Visibility <String>] [-AddCreatorAsMember <Boolean>] [<CommonParameters>]
+ [-Classification <String>] [-AccessType <String>] [-AddCreatorAsMember <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +40,7 @@ New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles
 ### Example 3
 ```
 Connect-MicrosoftTeams -AccountId myaccount@example.com
-$group = New-Team -alias "TestTeam" -displayname "Test Teams" -Visibility "private"
+$group = New-Team -alias "TestTeam" -displayname "Test Teams" -AccessType "private"
 Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "wilma@example.com"
@@ -52,11 +52,11 @@ Set-TeamFunSettings -GroupId $group.GroupId -AllowCustomMemes true
 
 ## PARAMETERS
 
-### -Visibility
+### -AccessType
 Team visibility.
 Valid values are "Private" and "Public".
 Default is "Private".
-(This parameter has the same meaning as -AccessType in New-UnifiedGroup.)
+(In Set-Team this parameter is called Visibility.)
 
 ```yaml
 Type: String
