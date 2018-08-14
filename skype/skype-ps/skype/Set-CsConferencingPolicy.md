@@ -68,7 +68,7 @@ Set-CsConferencingPolicy [[-Identity] <Object>] [-AllowAnnotations <Object>]
  [-AllowOfficeContent <Object>] [-AllowParticipantControl <Object>] [-AllowPolls <Object>]
  [-AllowQandA <Object>] [-AllowSharedNotes <Object>] [-AllowUserToScheduleMeetingsWithAppSharing <Object>]
  [-ApplicationSharingMode <Object>] [-AppSharingBitRateKb <Object>] [-AudioBitRateKb <Object>]
- [-BypassDualWrite <Object>] [-CloudRecordingServiceSupport <Object>] [-Confirm] [-Description <Object>]
+ [-BypassDualWrite <Object>] [-Confirm] [-Description <Object>]
  [-DisablePowerPointAnnotations <Object>] [-EnableAppDesktopSharing <Object>]
  [-EnableDataCollaboration <Object>] [-EnableDialInConferencing <Object>] [-EnableFileTransfer <Object>]
  [-EnableMultiViewJoin <Object>] [-EnableOnlineMeetingPromptForLyncResources <Object>]
@@ -1014,21 +1014,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CloudRecordingServiceSupport
-PARAMVALUE: NotSupported | Supported | Required
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -EnableOnlineMeetingPromptForLyncResources
 When set to True, users will be prompted any time they schedule a meeting in Outlook that includes invitees (such as a meeting room) that would benefit from having the meeting held online.
