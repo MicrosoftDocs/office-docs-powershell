@@ -267,10 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-Specifies if modern authentication is allowed or not. Possible values are:
-* NoOverride
-* Allowed
-* Disallowed
+Modern authentication using Azure ADAL (Active Directory Authentication Library) is enabled by default for Skype for Business Online. For authentication based on ADFS/MEX (metadata exchange), ADAL can be disabled by setting ClientAdalAuthOverride to Disallowed.
 
 ```yaml
 Type: Object
