@@ -3101,3 +3101,7 @@ The following cmdlet references are for Skype for Business.
 ### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
 
 ### [Remove-CsTeamsMeetingPolicy](Remove-CsTeamsMeetingPolicy.md)
+
+### [Set-CsAuthConfig](Set-CsAuthConfig.md)
+
+### [Get-CsAuthConfig](Get-CsAuthConfig.md)

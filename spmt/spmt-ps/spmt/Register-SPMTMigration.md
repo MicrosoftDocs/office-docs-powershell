@@ -15,7 +15,7 @@ After a session is registered, the user can add a migration task to the migratio
 ## SYNTAX
 
 ```
-Register-SPMTMigration [-Credentials <PSCredential>][-Incremental <bool>]  [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-WorkingFolder <string>] -Force
+Register-SPMTMigration [-Credentials <PSCredential>][-Incremental <bool>]  [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToKeep <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>][-MigrateAllSiteFieldsAndContentTypes<bool>][-WorkingFolder <string>]-Force
 ```
 
 ## DESCRIPTION
@@ -394,7 +394,19 @@ Default value: Empty
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
+### -MigrateAllSiteFieldsAndContentTypes
+By default, MigrateAllSiteFieldsAndContentTypes is Off. If it is set to On, all the site fields and content types will be migrated. Otherwise, only those fields and content types used by lists to be migrated will be migrated. 
+```yaml
+Type: Boolean
+Parameter Sets:  
+Aliases: 
+applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -WorkingFolder
 By default, the working folder is %appdata%\Microsoft\MigrationToolStorage. If you wish to specify your own specific working folder, create it first, then use it as -WorkingFolder parameter. The changed working folder will take effect till you close the PowerShell window. 
 
