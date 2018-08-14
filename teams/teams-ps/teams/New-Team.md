@@ -34,7 +34,7 @@ New-Team -DisplayName "Tech Reads"
 
 ### Example 2
 ```
-New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -Visibility Public
+New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -AccessType Public
 ```
 
 ### Example 3
