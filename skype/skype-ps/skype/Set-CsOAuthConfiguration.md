@@ -18,7 +18,7 @@ This cmdlet was introduced in Lync Server 2013.
 ### Identity (Default)
 ```
 Set-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-AdditionalAudienceUrls <String>] [-AlternateAudienceUrl <String>] 
-[-ClientAdalAuthOverride <Object>] [-ClientAuthorizationOAuthServerIdentity <String>] [-Confirm] 
+[-ClientAdalAuthOverride <ClientAdalAuthOverride>] [-ClientAuthorizationOAuthServerIdentity <String>] [-Confirm] 
 [-ExchangeAutodiscoverAllowedDomains <String>] [-ExchangeAutodiscoverUrl <String>] [-Force] [-Instance <PSObject>] 
 [-Realm <String>] [-ServiceName <String>] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 Modern authentication using Azure ADAL (Active Directory Authentication Library) is enabled by default for Skype for Business Online. For authentication based on ADFS/MEX (metadata exchange), ADAL can be disabled by setting ClientAdalAuthOverride to Disallowed.
 
 ```yaml
-Type: Object
+Type: ClientAdalAuthOverride
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NoOverride, Allowed, Disallowed
