@@ -27,7 +27,7 @@ Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String>
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and ninety days old. There are limits to the number of historical searches you can perform in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and ninety days old. There is a limit of 250 historical searches that can be submitted in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -85,20 +85,33 @@ Accept wildcard characters: False
 ### -ReportType
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
-- DLP
+- ATPReport: Advanced Threat Protection File Types Report and Advanced Threat Protection Message Disposition Report
 
-- Malware
+- ATPV2: Exchange Online Protection and Advanced Threat Protection E-mail Malware Report.
 
-- MessageTrace
+- ATPDocument: Advanced Threat Protection Content Malware Report for files in SharePoint, OneDrive and Microsoft Teams.
 
-- MessageTraceDetail
+- DLP: Data Loss Prevention Report.
 
-- SPAM
+- Malware: Malware Detections Report.
 
-- TransportRule
+- MessageTrace: Message Trace Report.
+
+- MessageTraceDetail: Message Trace Details Report.
+
+- Phish: Exchange Online Protetion and Advanced Threat Protection E-mail Phish Report.
+
+- SPAM: SPAM Detections Report.
+
+- Spoof: Spood Mail Report.
+
+- TransportRule: Transport or Mail FLow Rules Report.
+
+- UnifiedDLP: Unified Data Loss Prevention Report.
+
 
 ```yaml
-Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2
+Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2 | Phish | ATPDocument
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

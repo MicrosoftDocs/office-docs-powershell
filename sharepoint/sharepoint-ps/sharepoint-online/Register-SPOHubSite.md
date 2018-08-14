@@ -34,10 +34,10 @@ Use this cmdlet to register an existing site collection as a hub site.
 ### Example 1
 
 ```
-Register-SPOHubSite https://contoso.sharepoint.com/sites/Marketing
+Register-SPOHubSite https://contoso.sharepoint.com/sites/Marketing  -Principals $null
 ```
 
-This example registers the marketing site on Contoso as hub site.
+This example registers the marketing site on Contoso as hub site without setting any principals for it.
 
 ## PARAMETERS
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Principals
-Specifies One or more principles to be granted rights to the specified HubSite.
+Specifies One or more principles (user or group) to be granted rights to the specified HubSite. Can be used to filter who can associate sites to this hub site.
 
 ```yaml
 Type: string[]

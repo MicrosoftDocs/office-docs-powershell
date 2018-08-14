@@ -68,7 +68,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OnSendAddinsEnabled <$true | $false>] [-ReferenceAttachmentsEnabled <$true | $false>]
  [-SatisfactionEnabled <$true | $false>] [-SaveAttachmentsToCloudEnabled <$true | $false>]
  [-ThirdPartyAttachmentsEnabled <$true | $false>] [-UserVoiceEnabled <$true | $false>]
- [-WacEditingEnabled <$true | $false>] [<CommonParameters>]
+ [-WacEditingEnabled <$true | $false>] [-OutlookBetaToggleEnabled <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -313,6 +313,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultClientLanguage
+This parameter is available or functional only in Exchange Server 2010.
+
 This parameter is available or functional only in Exchange Server 2010.
 
 The DefaultClientLanguage parameter isn't available in this release.
@@ -687,6 +689,8 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 This parameter controls whether the mini version of Outlook Web App is enabled.
 
 ```yaml
@@ -1825,6 +1829,26 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -OutlookBetaToggleEnabled
+This parameter is available only in the cloud-based service.
+
+The OutlookBetaToggleEnabled parameter specifies whether to enable or disable the Outlook on the web Preview toggle. The Preview toggle allows users to try the new Outlook on the Web experience. Valid values are:
+
+- $true: The Outlook on the web Preview toggle is enabled. Users can easily switch back and forth between both experiences. This is the default value.
+
+- $false: Outlook on the web Preview is disabled.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

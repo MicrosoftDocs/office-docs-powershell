@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsHostedVoicemailPolicy
 schema: 2.0.0

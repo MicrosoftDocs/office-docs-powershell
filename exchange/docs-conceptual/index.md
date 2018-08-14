@@ -61,7 +61,7 @@ Exchange PowerShell enables you to manage your Exchange Server and Office 365 or
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_threat-protection.svg" alt="" />
+                            <img src="https://docs.microsoft.com/office/media/icons/security.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -79,7 +79,7 @@ Exchange PowerShell enables you to manage your Exchange Server and Office 365 or
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_information-protection.svg" alt="" />
+                            <img src="https://docs.microsoft.com/office/media/icons/security-blue.svg" alt="" />
                         </div>
                     </div>
                     <div class="cardText">

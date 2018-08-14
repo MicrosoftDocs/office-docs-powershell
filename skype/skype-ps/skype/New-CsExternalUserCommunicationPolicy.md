@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsExternalUserCommunicationPolicy
 schema: 2.0.0
@@ -11,7 +11,6 @@ schema: 2.0.0
 Creates a new external user communication policy for use in your organization to block P2P file transfer with Federated partners only.
 
 ## SYNTAX
-
 ```
 New-CsExternalUserCommunicationPolicy [[-Identity] <XdsIdentity>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>] [-Confirm] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>] [-Force] [-InMemory] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
@@ -150,8 +149,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named

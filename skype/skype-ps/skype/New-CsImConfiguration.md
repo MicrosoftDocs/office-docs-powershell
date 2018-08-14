@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOfflineIm
-Enables or disable Offline Instant Messaging.
+Enables or disables Offline Instant Messaging.
 
 ```yaml
 Type: Boolean

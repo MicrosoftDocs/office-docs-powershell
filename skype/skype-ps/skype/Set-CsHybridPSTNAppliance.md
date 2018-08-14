@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsHybridPSTNAppliance
 schema: 2.0.0
@@ -13,9 +13,8 @@ Use the `Set-CsHybridPSTNAppliance` cmdlet to modify an existing Skype for Busin
 ## SYNTAX
 
 ```
-Set-CsHybridPSTNAppliance [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
- [-Instance <Object>] [-MaintenanceMode <Object>] [-MediationServerGruu <Object>] [-Tenant <Object>] [-WhatIf]
- [-AsJob] [<CommonParameters>]
+Set-CsHybridPSTNAppliance [-WhatIf] [-MaintenanceMode <Boolean>] [-Confirm] [[-Identity] <XdsGlobalRelativeIdentity>]
+ [-Tenant <Guid>] [-MediationServerGruu <String>] [-Force] [-Instance <PSObject>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,19 +31,19 @@ To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has 
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-CsHybridPSTNAppliance -Identity 7af7dc1c-1065-4f1b-ab17-db724d3ba2e5 -MaintenanceMode $true
 ```
 
-Insert descriptive text for example 1.
+This example puts the specified hybrid PSTN appliance in maintenance mode.
 
 
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: XdsGlobalRelativeIdentity
+Specifies the identity of the Skype for Business Cloud Connector Edition appliance.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -56,24 +55,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
-PARAMVALUE: SwitchParameter
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -89,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -105,10 +88,10 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-PARAMVALUE: PSObject
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -127,7 +110,7 @@ This allows administrators to make manual maintenance changes on the host machin
 If set to $False, service resilience detection will be on and checks for Bits and OS updates will run if Auto Update is also set to $True.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -140,10 +123,10 @@ Accept wildcard characters: False
 ```
 
 ### -MediationServerGruu
-PARAMVALUE: String
+Specifies the Mediation Server Globally Routable User-Agent URI.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -156,10 +139,18 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -172,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -188,7 +179,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -213,4 +208,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsHybridPSTNAppliance](https://docs.microsoft.com/en-us/powershell/module/skype/get-cshybridpstnappliance?view=skype-ps)
 
+[Register-CsHybridPSTNAppliance](https://docs.microsoft.com/en-us/powershell/module/skype/register-cshybridpstnappliance?view=skype-ps)
+
+[Unregister-CsHybridPSTNAppliance](https://docs.microsoft.com/en-us/powershell/module/skype/unregister-cshybridpstnappliance?view=skype-ps)

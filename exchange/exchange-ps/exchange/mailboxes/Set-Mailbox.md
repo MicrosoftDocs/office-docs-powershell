@@ -2243,6 +2243,8 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicy
+This parameter is available or functional only in Exchange Server 2010.
+
 The ManagedFolderMailboxPolicy parameter specifies a managed folder mailbox policy that controls MRM for the mailbox. If the parameter is set to $null, Exchange removes the managed folder mailbox policy from the mailbox but any managed folders in the mailbox remain.
 
 ```yaml
@@ -2258,6 +2260,8 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderMailboxPolicyAllowed
+This parameter is available or functional only in Exchange Server 2010.
+
 The ManagedFolderMailboxPolicyAllowed parameter bypasses the warning that MRM features aren't supported for e-mail clients running versions of Outlook earlier than Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox by using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
 
 Although Outlook 2003 Service Pack 3 clients are supported, they have limited MRM functionality.
@@ -4227,13 +4231,13 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSendOnBehalfEnabled
-**Note**: This parameter is available only for shared mailboxes.
+**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes.
 
-The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a shared mailbox by users that have the "send on behalf of" permission. Valid values are:
+The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send on behalf of" permission. Valid values are:
 
-- $true: When a user sends a message from the shared mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
+- $true: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
 
-- $false: When a user sends a message from the shared mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $false: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
 You give users permission to send on behalf of a mailbox by using the GrantSendOnBehalfTo parameter on the mailbox.
 
@@ -4250,13 +4254,13 @@ Accept wildcard characters: False
 ```
 
 ### -MessageCopyForSentAsEnabled
-**Note**: This parameter is available only for shared mailboxes.
+**Note**: Previously, this parameter was available only for shared mailboxes. In Exchange Online or Exchange 2016 CU6 or later, this parameter is also available for user mailboxes.
 
-The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a shared mailbox by users that have the "send as" permission. Valid values are:
+The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send as" permission. Valid values are:
 
-- $true: When a user sends a message from the shared mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
+- $true: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
 
-- $false: When a user sends a message from the shared mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $false: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
 
 In Exchange Online, you give a user permission to send as a mailbox by running this command: `Add-RecipientPermission <Mailbox> -AccessRights SendAs -Trustee <User>`.
 

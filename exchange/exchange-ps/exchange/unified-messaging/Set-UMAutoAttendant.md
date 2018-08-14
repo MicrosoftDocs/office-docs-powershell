@@ -503,6 +503,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultMailbox
+This parameter is available or functional only in Exchange Server 2010.
+
 The DefaultMailbox parameter specifies the mailbox to be used with the ForwardCallsToDefaultMailbox parameter. The mailbox that's specified must be UM-enabled and associated with the same UM dial plan as the UM auto attendant.
 
 ```yaml
@@ -565,6 +567,8 @@ Accept wildcard characters: False
 ```
 
 ### -ForwardCallsToDefaultMailbox
+This parameter is available or functional only in Exchange Server 2010.
+
 The ForwardCallsToDefaultMailbox parameter specifies whether incoming calls received by the UM auto attendant are forwarded. The default is $false. When this is set to $true, all incoming calls to the UM auto attendant are transferred to the UM-enabled mailbox set by the DefaultMailbox parameter.
 
 ```yaml
@@ -767,6 +771,8 @@ Accept wildcard characters: False
 ```
 
 ### -StarOutToDialPlanEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 The StarOutToDialPlanEnabled parameter specifies whether a caller can press the \* button on a telephone keypad to get to the Outlook Voice Access welcome greeting when a UM auto attendant menu is played. The default setting is $false.
 
 ```yaml

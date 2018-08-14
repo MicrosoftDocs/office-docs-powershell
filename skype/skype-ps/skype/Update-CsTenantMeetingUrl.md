@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Update-CsTenantMeetingUrl
 schema: 2.0.0
@@ -74,7 +74,6 @@ The command shown in Example 1 updates the meeting URL for the tenant with the t
 (Note that you must supply the tenant ID in order for this command to complete.) After pressing ENTER to run the command, you will be asked if you are sure you want to update the meeting URL.
 You must answer yes to this prompt before `Update-CsTenantMeetingUrl` will actually make any changes to your Skype for Business Online configuration settings.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 Update-CsTenantMeetingUrl -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" -Force
@@ -83,7 +82,6 @@ Update-CsTenantMeetingUrl -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" -Force
 Example 2 also updates the meeting URL for the tenant with the tenant ID 38aad667-af54-4397-aaa7-e94c79ec2308.
 In this case, however, the Force parameter is included; this bypasses the confirmation prompt that typically appears when you run `Update-CsTenantMeetingUrl`.
 In this case, as soon as you press ENTER the command will run and your Skype for Business Online configuration settings will be modified.
-
 
 ## PARAMETERS
 
@@ -142,11 +140,11 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the tenant account whose federation settings are being returned.
 For example:
 
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 
 You can return your tenant ID by running this command:
 
-`Get-CsTenant | Select-Object DisplayName, TenantID`
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 If you do not include the Tenant parameter then `Update-CsMeetingUrl` will prompt you to enter that parameter before you can continue.
 
@@ -202,7 +200,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Update-CsMeetingUrl does not accept pipelined input.
+`Update-CsMeetingUrl` does not accept pipelined input.
 
 ## OUTPUTS
 
@@ -214,4 +212,3 @@ None.
 ## RELATED LINKS
 
 [Get-CSSimpleUrlConfiguration](Get-CSSimpleUrlConfiguration.md)
-

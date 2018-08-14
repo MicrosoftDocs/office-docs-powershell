@@ -326,6 +326,8 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarPublishingEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 The CalendarPublishingEnabled parameter specifies whether users can publish their calendar from Outlook Web App.
 
 ```yaml
@@ -409,6 +411,8 @@ Accept wildcard characters: False
 ```
 
 ### -CrossSiteRedirectType
+This parameter is available or functional only in Exchange Server 2010.
+
 The CrossSiteRedirectType parameter controls the method by which a Client Access server redirects a user's Web browser to Client Access server infrastructure in another Active Directory site.
 
 You can use one of the following values:
@@ -1062,6 +1066,8 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyRedirectType
+This parameter is available or functional only in Exchange Server 2010.
+
 The LegacyRedirectType parameter specifies the type of redirect that Outlook Web App uses to a legacy Client Access server or Front End server when forms-based authentication isn't used on the Exchange 2010 Outlook Web App virtual directory.
 
 The following values are valid for this parameter:
@@ -1085,6 +1091,8 @@ Accept wildcard characters: False
 ```
 
 ### -LiveIdAuthentication
+This parameter is available or functional only in Exchange Server 2010.
+
 The LiveIdAuthentication parameter specifies whether to configure Outlook Web App to use logon via Windows Live ID. Set this parameter to $true to configure Outlook Web App to use logon via Windows Live ID.
 
 ```yaml
@@ -1225,6 +1233,8 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 This parameter controls whether the mini version of Outlook Web App is enabled.
 
 ```yaml

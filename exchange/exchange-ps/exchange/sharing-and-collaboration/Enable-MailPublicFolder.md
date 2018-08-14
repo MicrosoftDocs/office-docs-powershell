@@ -113,6 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+This parameter is available or functional only in Exchange Server 2010.
+
 The Server parameter specifies the identity of the server to perform the operation from. If a server isn't specified, the command checks whether the local server is a Mailbox server running with a public folder store. If it is, the folder is created locally. If it isn't, the command finds the closest (by site cost) Mailbox server that has a mounted public folder store.
 
 ```yaml
