@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsAuthConfig
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the Set-CsAuthConfig cmdlet to modify the authentication configuration for your organization.
 
 ## SYNTAX
 
@@ -17,7 +17,19 @@ Set-CsAuthConfig [-Scenario] <AuthConfigScenario> [[-Pool] <String>] [-WhatIf] [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-CsAuthConfig cmdlet to modify the authentication configuration for your organization. 
+There are 5 different configurations that are supported as you can see in the parameters section. 
+
+
+This cmdlet sets configuration on both the Registrar and the Web Services roles.  
+It is only meant to be run at the global level (and not at the pool level), and we highly recommend that you only use it in this manner.
+However, technically it can be run at a pool level.
+But realize that if the pool only has one of the roles needed (say, Registrar and not Web Services), then only the settings for Registrar will be set and the Web Services settings will come from the global setting.
+No special warning will be given because some settings were not set.
+If a client uses the Registrar settings from one pool and the Web Services settings from another pool and the authentication settings are in an inconsistent state, the client may be unable to log on.
+If neither role is present for a pool, both Get will return an error message.
+If both roles are present for a pool but policies aren't defined at the pool level, Get will return an error message.
+
 
 ## EXAMPLES
 
