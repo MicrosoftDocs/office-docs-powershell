@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-Defines the source of the app.
+Defines the source of the app. The source indicates where the app package originates from, for example, if the app was built by a developer but did not reside on the SharePoint Marketplace, you might use the CorporateCatalog source.
 
 The following are valid values:
 
@@ -59,12 +59,11 @@ InvalidSource, Marketplace, CorporateCatalog, DeveloperSite, ObjectModel, Remote
 
 The following are valid sources (not parameters of -Source) of the app:
 
---SharePoint Store
+--SharePoint Store (Marketplace)
 
---App catalog
+--App catalog (CorporateCatalog)
 
---SharePointService- Indicates apps that were built in place with SharePoint features, for example Access
-        Services.
+--SharePointService - Indicates apps that were built in place with SharePoint features, for example Access Services (ObjectModel)
         
 
 ```yaml
