@@ -8,4 +8,8 @@ original_content_git_url: https://github.com/MicrosoftDocs/office-docs-powershel
 
 # Mailbox database and Mailbox server cmdlets for Exchange Server PowerShell
 
+## Description
+
 Welcome to the home of mailbox database and Mailbox server cmdlets for Exchange PowerShell.
+
+## Placeholder

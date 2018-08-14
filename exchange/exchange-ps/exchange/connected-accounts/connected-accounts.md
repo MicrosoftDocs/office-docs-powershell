@@ -8,4 +8,8 @@ original_content_git_url: https://github.com/MicrosoftDocs/office-docs-powershel
 
 # Connected account cmdlets for Exchange Online PowerShell
 
-Welcome to the home of connected account cmdlets for Exchange Online PowerShell.
+## Description
+
+Welcome to the home of connected account cmdlets for Exchange Online PowerShell.## Placeholder
+
+## Placeholder

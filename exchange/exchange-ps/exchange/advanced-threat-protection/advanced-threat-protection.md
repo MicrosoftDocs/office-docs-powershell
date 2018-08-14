@@ -8,4 +8,8 @@ original_content_git_url: https://github.com/MicrosoftDocs/office-docs-powershel
 
 # Advanced Threat Protection cmdlets for Exchange Online PowerShell
 
+## Description
+
 Welcome to the home of Advanced Threat Protection (ATP) cmdlets for Exchange Online PowerShell.
+
+## Placeholder

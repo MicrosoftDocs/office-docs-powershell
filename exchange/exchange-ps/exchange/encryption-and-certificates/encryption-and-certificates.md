@@ -8,4 +8,8 @@ original_content_git_url: https://github.com/MicrosoftDocs/office-docs-powershel
 
 # Encryption and certificate cmdlets for Exchange PowerShell
 
+## Description
+
 Welcome to the home of encryption and certificate cmdlets for Exchange PowerShell.
+
+## Placeholder

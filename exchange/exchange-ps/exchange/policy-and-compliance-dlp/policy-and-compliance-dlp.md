@@ -8,4 +8,8 @@ original_content_git_url: https://github.com/MicrosoftDocs/office-docs-powershel
 
 # Data loss prevention cmdlets for Exchange PowerShell
 
+## Description
+
 Welcome to the home of data loss prevention (DLP) cmdlets for Exchange PowerShell.
+
+## Placeholder

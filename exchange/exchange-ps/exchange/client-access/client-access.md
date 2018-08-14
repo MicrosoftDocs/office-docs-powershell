@@ -8,4 +8,8 @@ original_content_git_url: https://github.com/MicrosoftDocs/office-docs-powershel
 
 # Client Access cmdlets for Exchange PowerShell
 
+## Description
+
 Welcome to the home of Client Access cmdlets for Exchange PowerShell.
+
+## Placeholder
