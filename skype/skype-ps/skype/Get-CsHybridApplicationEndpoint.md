@@ -1,5 +1,5 @@
 ---
-external help file:Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsHybridApplicationEndpoint
 schema: 2.0.0
@@ -14,7 +14,7 @@ This cmdlet was introduced in the July 2017 cumulative update for the Lync Serve
 
 ## SYNTAX
 ```
-Get-CsHybridApplicationEndpoint [-Filter <String>] [-LdapFilter <String>] [-OU <OUIdParameter>] [-DomainController <Fqdn>] [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <Microsoft.Rtc.Management.ADConnect.Core.Unlimited`1[System.UInt32]>] [<CommonParameters>]
+Get-CsHybridApplicationEndpoint [-Filter <String>] [-LdapFilter <String>] [-OU <OUIdParameter>] [-DomainController <Fqdn>] [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <UInt32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -161,7 +161,7 @@ Enables you to limit the number of records returned by the cmdlet. For example, 
 The result size can be set to any whole number between 0 and 2147483647, inclusive. If set to 0 the command will run, but no data will be returned. If you set the ResultSize to 7 but you have only three endpoints in your forest, the command will return those three endpoints, and then complete without error.
 
 ```yaml
-Type: Microsoft.Rtc.Management.ADConnect.Core.Unlimited`1[System.UInt32]
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019

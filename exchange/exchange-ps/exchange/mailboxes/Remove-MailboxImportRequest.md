@@ -13,7 +13,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-MailboxImportRequest cmdlet to remove fully or partially completed import requests. Completed import requests aren't automatically cleared. Requests need to be removed by using the Remove-MailboxImportRequest cmdlet. Multiple import requests can exist against the same mailbox if you provide a distinct import request name.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
 Removing a partially completed import request removes the request from the Microsoft Exchange Mailbox Replication service (MRS) job queue. Any import progress that was made until the removal won't be reverted.
 

@@ -74,6 +74,8 @@ This example creates an email message in the Drafts folder with the subject and 
 ## PARAMETERS
 
 ### -Mailbox
+This parameter is available or functional only in Exchange Server 2010.
+
 The Mailbox parameter specifies a unique identifier for the destination mailbox where the e-mail message is being created. You can use any of the following values for this parameter:
 
 - Alias

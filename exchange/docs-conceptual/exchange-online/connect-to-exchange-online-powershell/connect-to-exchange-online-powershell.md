@@ -44,11 +44,11 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
 
   `Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.`
 
-  To enable Windows PowerShell to run signed scripts, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
+  To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
-  ```
-  Set-ExecutionPolicy RemoteSigned
-  ```
+    ```
+    Set-ExecutionPolicy RemoteSigned
+    ```
 
   You need to configure this setting only once on your computer, not every time you connect.
 
@@ -75,11 +75,17 @@ Exchange Online PowerShell allows you to manage your Exchange Online settings fr
     - For Office 365 operated by 21Vianet, use the _ConnectionUri_ value: `https://partner.outlook.cn/PowerShell`
 
     - For Office 365 Germany, use the _ConnectionUri_ value: `https://outlook.office.de/powershell-liveid/`
+    
+    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where the _ProxyAccessType_ value is `IEConfig`, `WinHttpConfig`, or `AutoDetect`.
+      
+      Then, add the following parameter and value to the end of the $Session = ... command: `-SessionOption $ProxyOptions`.
+      
+      For more information, see [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
 3. Run the following command.
 
     ```
-    Import-PSSession $Session
+    Import-PSSession $Session -DisableNameChecking
     ```
 
 > [!NOTE]

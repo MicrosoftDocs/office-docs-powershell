@@ -1,5 +1,5 @@
 ---
-external help file:Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsHybridApplicationEndpoint
 schema: 2.0.0
@@ -13,7 +13,6 @@ Modifies Skype for Business Server properties for an existing hybrid application
 This cmdlet was introduced in the July 2017 cumulative update for the Lync Server 2013 and May 2017 cumulative update for Skype Business Server 2015.
 
 ## SYNTAX
-
 ```
 Set-CsHybridApplicationEndpoint [-Identity] <HybridApplicationEndpointIdParameter> [-DisplayName <String>] [-LineUri <String>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -81,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The ApplicationId for the application endpoint that is being modified.
+The ApplicationId or Client Id for which the endpoint that is being modified.
 
 ```yaml
 Type: UserIdParameter

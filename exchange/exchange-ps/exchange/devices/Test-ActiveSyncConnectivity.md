@@ -30,7 +30,9 @@ Test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>] [[-URL] 
 ## DESCRIPTION
 The Test-ActiveSyncConnectivity cmdlet tests Exchange ActiveSync connectivity by connecting to a specified Exchange ActiveSync virtual directory, to any Exchange ActiveSync virtual directories on a specified Exchange server, or to any Exchange ActiveSync virtual directories that are available in the local Active Directory site.
 
-The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command.
+The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command:
+
+& $env:ExchangeInstallPath\Scripts\New-TestCasConnectivityUser.ps1
 
 The test results are displayed on-screen. The cmdlet returns the following information.
 

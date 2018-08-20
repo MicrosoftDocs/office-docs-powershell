@@ -3081,3 +3081,27 @@ The following cmdlet references are for Skype for Business.
 ### [Set-CsCloudCallDataConnector](Set-CsCloudCallDataConnector.md)
 
 ### [Set-CsCloudCallDataConnectorConfiguration](Set-CsCloudCallDataConnectorConfiguration.md)
+
+### [Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+
+### [Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+
+### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+
+### [Set-CsTeamsMeetingBroadcastConfiguration](Set-CsTeamsMeetingBroadcastConfiguration.md)
+
+### [Get-CsTeamsMeetingBroadcastConfiguration](Get-CsTeamsMeetingBroadcastConfiguration.md)
+
+### [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md)
+
+### [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
+
+### [New-CsTeamsMeetingPolicy](New-CsTeamsMeetingPolicy.md)
+
+### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
+
+### [Remove-CsTeamsMeetingPolicy](Remove-CsTeamsMeetingPolicy.md)
+
+### [Set-CsAuthConfig](Set-CsAuthConfig.md)
+
+### [Get-CsAuthConfig](Get-CsAuthConfig.md)
