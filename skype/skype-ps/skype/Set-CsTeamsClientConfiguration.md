@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowShareFile
-{{Fill AllowShareFile Description}}
+Designates whether users are able to leverage ShareFile as a third party storage solution in Microsoft Teams.  If $true, users will be able to add ShareFile in the client and interact with the files stored there.
 
 ```yaml
 Type: Boolean
