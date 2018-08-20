@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies a published site design to a specified site collection target. This allows a site design to be applied to an existing site collection.
+Applies a published site design to a specified site collection target. This allows a site design to be applied to an existing site collection. The supported site templates you can apply a site design to include: “modern” team site (with O365 group), “modern” team site (without an O365 group); communication site; classic team site; and classic publishing site.
 
 ## SYNTAX
 
