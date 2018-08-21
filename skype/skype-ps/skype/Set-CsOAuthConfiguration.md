@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Collection of domains that autodiscover requests can be redirected to.
 For example:
 
-`-ExchangeAutodiscoverAllowedDomains "*.contoso.com","*.fabrikam.com"`
+`-ExchangeAutodiscoverAllowedDomains "*.contoso.com;*.fabrikam.com"`
 
 ```yaml
 Type: String
