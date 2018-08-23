@@ -9,6 +9,7 @@ ms.topic: reference
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: fb4b1396-9aae-4037-be1a-b09e336b890e
+monikerRange: exchserver-ps-2016"
 description: "Learn about creating different kinds of recipient filters in the Exchange Management Shell."
 ---
 

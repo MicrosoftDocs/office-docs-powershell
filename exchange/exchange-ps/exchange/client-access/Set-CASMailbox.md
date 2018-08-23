@@ -22,7 +22,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter> [-ActiveSyncAllowedDeviceIDs <Mu
  [-ActiveSyncBlockedDeviceIDs <MultiValuedProperty>] [-ActiveSyncDebugLogging <$true | $false>]
  [-ActiveSyncEnabled <$true | $false>] [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Confirm]
  [-DisplayName <String>] [-DomainController <Fqdn>] [-ECPEnabled <$true | $false>]
- [-EmailAddresses <ProxyAddressCollection>] [-EmwsEnabled <$true | $false>]
+ [-EmailAddresses <ProxyAddressCollection>]
  [-EwsAllowEntourage <$true | $false>] [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <$true | $false>] [-EwsAllowOutlook <$true | $false>]
  [-EwsApplicationAccessPolicy <EnforceAllowList | EnforceBlockList>] [-EwsBlockList <MultiValuedProperty>]
@@ -320,27 +320,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EmwsEnabled
-This parameter is available or functional only in Exchange Server 2010.
-
-The EmwsEnabled parameter specifies whether the Exchange Management Web Service is enabled on this Client Access server.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EwsAllowEntourage
-The EwsAllowEntourage parameter enables or disables access to the mailbox by Microsoft Entourage clients that use Exchange Web Services (for example, Entourage 2008 for Mac, Web Services Edition).
+The EwsAllowEntourage parameter enables or disables Exchange Web Services (EWS) access to the mailbox by Microsoft Entourage clients (for example, Entourage 2008 for Mac, Web Services Edition). Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: EWS access to the mailbox by Entourage clients is enabled.
+
+- $false: EWS access to the mailbox by Entourage clients is disabled.
+
+- $null (blank): The setting isn't configured. This is the default value. EWS access to the mailbox by Entourage clients is controlled by the EwsAllowEntourage parameter on the Set-OrganizationConfig cmdlet (blank or $true for the organization equals enabled for the mailbox; $false for the organization equals disabled for the mailbox).
 
 ```yaml
 Type: $true | $false
@@ -355,13 +342,13 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowList
-The EwsAllowList parameter specifies the Exchange Web Services applications (user agent strings) that are allowed to access the mailbox.
+The EwsAllowList parameter specifies the applications that are allowed to access the mailbox by using EWS or REST when the EwsApplicationAccessPolicy parameter is set to EwsAllowList. Other applications that aren't specified by this parameter aren't allowed to access the mailbox by using EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
+
+The default value is $null (blank), which means no EWS or REST applications are specified.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-This parameter is meaningful only when the EwsEnabled parameter is set to $true, and the EwsApplicationAccessPolicy parameter is set to EnforceAllowList.
 
 ```yaml
 Type: MultiValuedProperty
@@ -376,9 +363,13 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowMacOutlook
-The EwsAllowMacOutlook parameter enables or disables access to the mailbox by Outlook for Mac clients that use Exchange Web Services (for example, Outlook for Mac 2011 or later).
+The EwsAllowMacOutlook parameter enables or disables EWS access to the mailbox by Microsoft Outlook for Mac clients (for example, Outlook for Mac 2011 or later). Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true.
+- $true: EWS access to the mailbox by Outlook for Mac clients is enabled.
+
+- $false: EWS access to the mailbox by Outlook for Mac clients is disabled.
+
+- $null (blank): The setting isn't configured. This is the default value. EWS access to the mailbox by Outlook for Mac is controlled by the EwsAllowMacOutlook parameter on the Set-OrganizationConfig cmdlet (blank or $true on the organization equals enabled for the mailbox; $false on the organization equals disabled for the mailbox).
 
 ```yaml
 Type: $true | $false
@@ -393,7 +384,13 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowOutlook
-The EwsAllowOutlook parameter enables or disables access to the mailbox by Outlook clients that use Exchange Web Services. Outlook uses Exchange Web Services for free/busy, out-of-office settings, and calendar sharing.
+The EwsAllowOutlook parameter enables or disables EWS access to the mailbox by Microsoft Outlook clients (for example, Outlook 2007 or later for free/busy, out-of-office settings, and calendar sharing). Valid values are:
+
+- $true: EWS access to the mailbox by Outlook clients is enabled.
+
+- $false: EWS access to the mailbox by Outlook clients is disabled.
+
+- $null (blank): The setting isn't configured. This is the default value. EWS access to the mailbox by Outlook clients is controlled by the EwsAllowOutlook parameter on the Set-OrganizationConfig cmdlet (blank or $true for the organization equals enabled for the mailbox; $false for the organization equals disabled for the mailbox).
 
 ```yaml
 Type: $true | $false
@@ -408,15 +405,15 @@ Accept wildcard characters: False
 ```
 
 ### -EwsApplicationAccessPolicy
-The EwsApplicationAccessPolicy parameter controls access to the mailbox by using Exchange Web Services applications.
+The EwsApplicationAccessPolicy parameter specifies the access control method for client applications that access the mailbox by using EWS and REST. Valid values are:
 
-Valid values for this parameter are:
+- EnforceAllowList: Specify the EWS and REST applications to allow by using the EwsAllowList parameter. EWS and REST access to the mailbox by all other applications is blocked.
 
-- EnforceAllowList: Only applications specified in the EwsAllowList parameter are allowed to access the mailbox.
+- EnforceBlockList: Specify the EWS and REST application to block by using the EwsBlockList parameter. EWS and REST access to the mailbox by all other applications is allowed.
 
-- EnforceBlockList: Applications specified in the EwsBlockList parameter aren't allowed to access the mailbox, but any other applications can access the mailbox.
+- $null (blank): The setting isn't configured. This is the default value. The access control method for the mailbox is defined by the EwsApplicationAccessPolicy parameter on the Set-OrganizationConfig cmdlet (blank for the organization means no EWS or REST applications are blocked from accessing the mailbox; EnforceAllowList for the organization means the EwsAllowList parameter on the organization specifies the applications that are allowed to access the mailbox; EnforceBlockList for the organization means the EwsBlockList parameter on the organization specifies the applications that are blocked from accessing the mailbox).
 
-This parameter doesn't affect access to the mailbox by using Entourage, Outlook for Mac, and Outlook. Access to the mailbox by using these clients is controlled by the EwsAllowEntourage, EwsAllowMacOutlook and EwsAllowOutlook parameters.
+This parameter doesn't affect EWS access to the mailbox by Entourage, Outlook for Mac, and Outlook clients (access by these applications is controlled by the EwsAllowEntourage, EwsAllowMacOutlook and EwsAllowOutlook parameters).
 
 ```yaml
 Type: EnforceAllowList | EnforceBlockList
@@ -431,13 +428,13 @@ Accept wildcard characters: False
 ```
 
 ### -EwsBlockList
-The EwsBlockList parameter specifies the Exchange Web Services applications (user agent strings) that aren't allowed to access the mailbox by using Exchange Web Services.
+The EwsBlockList parameter specifies the applications that aren't allowed to access the mailbox by using EWS or REST when the EwsApplicationAccessPolicy parameter is set to EnforceBlockList. All other applications that aren't specified by this parameter are allowed to access the mailbox by using EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
+
+The default value is $null (blank), which means no EWS or REST applications are specified.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-This parameter is meaningful only when the EwsEnabled parameter is set to $true, and the EwsApplicationAccessPolicy parameter is set to EnforceBlockList.
 
 ```yaml
 Type: MultiValuedProperty
@@ -452,9 +449,15 @@ Accept wildcard characters: False
 ```
 
 ### -EwsEnabled
-The EwsEnabled parameter enables or disables access to the mailbox by using Exchange Web Services clients.
+The EwsEnabled parameter specifies whether to globally enable or disable EWS access to the mailbox, regardless of the application that's making the request. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true. Note that when you set this parameter to $false, the other Exchange Web Services settings in this cmdlet are ignored.
+- $true: All EWS to the mailbox is enabled.
+
+- $false: All EWS access to the mailbox is disabled. The other EWS settings in this cmdlet are ignored.
+
+- $null (blank): The setting isn't configured. This is the default value. EWS access to the mailbox is controlled by the other EWS parameters (for example EwsAllowEntourage).
+
+This parameter has no affect on access to the mailbox by using REST.
 
 ```yaml
 Type: $true | $false

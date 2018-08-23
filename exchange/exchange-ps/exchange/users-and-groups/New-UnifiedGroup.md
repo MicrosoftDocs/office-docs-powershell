@@ -514,7 +514,9 @@ For example:
 
 - User ID or user principal name (UPN)
 
-You can specify multiple owners separated by commas
+The Name value of the owner you specify is stored in the ManagedBy property that's returned by the Get-UnifiedGroup cmdlet.
+
+Although you can specify only one owner with this parameter, you can use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets to specify multiple owners on existing Office 365 groups.
 
 ```yaml
 Type: RecipientIdParameter
