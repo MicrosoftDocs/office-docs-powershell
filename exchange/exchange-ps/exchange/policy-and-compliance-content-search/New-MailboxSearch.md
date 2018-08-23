@@ -598,7 +598,7 @@ The AllSourceMailboxes parameter specifies whether to include all mailboxes in t
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2016
 Required: False
 Position: Named
 Default value: None

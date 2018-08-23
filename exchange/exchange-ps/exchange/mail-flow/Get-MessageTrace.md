@@ -167,8 +167,6 @@ Accept wildcard characters: False
 ### -RecipientAddress
 The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
 
-You can use wildcards in the format \*@contoso.com, user@\* or \*@\*. However, if you use a value that contains wildcards, you can't specify any other values.
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -183,8 +181,6 @@ Accept wildcard characters: False
 
 ### -SenderAddress
 The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas.
-
-You can use wildcards in the format \*@contoso.com, user@\* or \*@\*. However, if you use a value that contains wildcards, you can't specify any other values.
 
 ```yaml
 Type: MultiValuedProperty

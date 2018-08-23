@@ -47,10 +47,18 @@ This example returns all the Exchange ActiveSync mobile devices that Tony Smith 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MobileDevice -Mailbox "Redmond\TonySmith"
+Get-MobileDevice -ResultSize -unlimited | Format-Table -Auto DeviceModel,Identity
 ```
 
-This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
+This example returns a summary list of all mobile devices in the organization.
+
+
+### -------------------------- Example 3 --------------------------
+```
+Get-MobileDevice -Identity lila\ExchangeActiveSyncDevices\Android§android94732903 | Format-List
+```
+
+This example returns detailed information about the specified device on Lila's mailbox.
 
 ## PARAMETERS
 
