@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: b02b0005-2fb6-4bc2-8815-305259fa5432
-monikerRange: "exchserver-ps-2016"
 description: "Learn about the filterable properties for the Filter parameter in on-premises Exchange."
 ---
 

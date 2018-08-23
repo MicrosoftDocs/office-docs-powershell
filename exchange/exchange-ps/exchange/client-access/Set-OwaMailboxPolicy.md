@@ -60,14 +60,14 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-WacExternalServicesEnabled <$true | $false>] [-WacOMEXEnabled <$true | $false>]
  [-WacViewingOnPrivateComputersEnabled <$true | $false>] [-WacViewingOnPublicComputersEnabled <$true | $false>]
  [-WeatherEnabled <$true | $false>] [-WebPartsFrameOptionsType <Deny | AllowFrom | None | SameOrigin>]
- [-ClassicAttachmentsEnabled <$true | $false>]
- [-ExternalSPMySiteHostURL <String>]
- [-FreCardsEnabled <$true | $false>]
+ [-BoxAttachmentsEnabled <$true | $false>] [-ClassicAttachmentsEnabled <$true | $false>]
+ [-DropboxAttachmentsEnabled <$true | $false>] [-ExternalSPMySiteHostURL <String>]
+ [-FreCardsEnabled <$true | $false>] [-GoogleDriveAttachmentsEnabled <$true | $false>]
  [-InterestingCalendarsEnabled <$true | $false>] [-InternalSPMySiteHostURL <String>]
  [-LocalEventsEnabled <$true | $false>] [-OneDriveAttachmentsEnabled <$true | $false>]
  [-OnSendAddinsEnabled <$true | $false>] [-ReferenceAttachmentsEnabled <$true | $false>]
  [-SatisfactionEnabled <$true | $false>] [-SaveAttachmentsToCloudEnabled <$true | $false>]
- [-ThirdPartyFileProvidersEnabled <$true | $false>] [-UserVoiceEnabled <$true | $false>]
+ [-ThirdPartyAttachmentsEnabled <$true | $false>] [-UserVoiceEnabled <$true | $false>]
  [-WacEditingEnabled <$true | $false>] [-OutlookBetaToggleEnabled <$true | $false>] [<CommonParameters>]
 ```
 
@@ -1505,6 +1505,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BoxAttachmentsEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter has been deprecated and is no longer used.
+
+To enable or disable Box attachments in Outlook on the web, use the ThirdPartyAttachmentsEnabled parameter.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClassicAttachmentsEnabled
 The ClassicAttachmentsEnabled parameter specifies whether users can attach local files as regular email attachments. Valid values are:
 
@@ -1517,6 +1536,25 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DropboxAttachmentsEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter has been deprecated and is no longer used.
+
+To enable or disable Dropbox attachments in Outlook on the web, use the ThirdPartyAttachmentsEnabled parameter.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1549,6 +1587,25 @@ The FreCardsEnabled parameter specifies whether to enable or disable the theme, 
 - $true: The theme, signature, and phone cards are visible in Outlook on the web. This is the default value.
 
 - $false: The theme, signature, and phone cards aren't visible in Outlook on the web. Only the introduction, time zone, and final cards are visible.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GoogleDriveAttachmentsEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter has been deprecated and is no longer used.
+
+To enable or disable Google Drive attachments in Outlook on the web, use the ThirdPartyAttachmentsEnabled parameter.
 
 ```yaml
 Type: $true | $false
@@ -1721,26 +1778,7 @@ Accept wildcard characters: False
 ### -ThirdPartyAttachmentsEnabled
 This parameter is available only in the cloud-based service.
 
-This parameter has been deprecated and is no longer used.
-
-To enable or disable third party attachments in Outlook on the web, use the ThirdPartyFileProvidersEnabled parameter.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyAttachmentsEnabled
-This parameter is available only in the cloud-based service.
-
-The ThirdPartyFileProvidersEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Egnyte) attachments in Outlook on the web. Valid values are:
+The ThirdPartyAttachmentsEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Google Drive) attachments in Outlook on the web. Valid values are:
 
 - $true: Third-party attachments are enabled. Users can connect their third-party file sharing accounts and share files over email.
 

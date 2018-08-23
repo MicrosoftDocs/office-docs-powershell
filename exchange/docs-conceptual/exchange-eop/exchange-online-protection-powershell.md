@@ -9,7 +9,6 @@ ms.topic: article
 ms.service: eop
 localization_priority: Normal
 ms.assetid: f7918a88-774a-405e-945b-bc2f5ee9f748
-monikerRange: "eop-ps"
 description: "Learn about using PowerShell in Exchange Online Protection"
 ---
 
