@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: cf78aca5-6699-485c-9b15-e0adba252176
+monikerRange: "exchserver-ps-2016"
 description: "Learn about the recipient properties that you can use with the RecipientFilter parameter in Exchange 2016 cmdlets."
 ---
 

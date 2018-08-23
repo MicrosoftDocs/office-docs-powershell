@@ -506,7 +506,13 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowEntourage
-The EwsAllowEntourage parameter specifies whether to enable or disable Entourage 2008 to access Exchange Web Services (EWS) for the entire organization. The default value is $true.
+The EwsAllowEntourage parameter enables or disables Exchange Web Services (EWS) access to the organization by Microsoft Entourage clients (for example, Entourage 2008 for Mac, Web Services Edition). Valid values are:
+
+- $true: EWS access to the organization by Entourage clients is enabled.
+
+- $false: EWS access to the organization by Entourage clients is disabled.
+
+- $null (blank): The setting isn't configured. This is the default value. EWS access to individual mailboxes by Entourage clients is controlled by the EwsAllowEntourage parameter on the Set-CASMailbox cmdlet (blank or $true on the mailbox equals enabled for the mailbox; $false on the mailbox equals disabled for the mailbox).
 
 ```yaml
 Type: $true | $false
@@ -521,7 +527,9 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowList
-The EwsAllowList parameter specifies the applications that are allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EwsAllowList. Other applications that aren't specified by this parameter aren't allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
+The EwsAllowList parameter specifies the applications that are allowed to access the organization by using EWS or REST when the EwsApplicationAccessPolicy parameter is set to EwsAllowList. Other applications that aren't specified by this parameter aren't allowed to access the organization by using EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
+
+The default value is $null (blank), which means no EWS or REST applications are specified.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -540,7 +548,13 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowMacOutlook
-The EwsAllowMacOutlook parameter specifies whether to enable or disable Microsoft Outlook for Mac 2011 to access EWS for the entire organization.
+The EwsAllowMacOutlook parameter enables or disables EWS access to the organization by Microsoft Outlook for Mac clients (for example, Outlook for Mac 2011 or later). Valid values are:
+
+- $true: EWS access to the organization by Outlook for Mac clients is enabled.
+
+- $false: EWS access to the organization by Outlook for Mac clients is disabled.
+
+- $null (blank): The setting isn't configured. This is the default value. EWS access to individual mailboxes by Outlook for Mac is controlled by the EwsAllowMacOutlook parameter on the Set-CASMailbox cmdlet (blank or $true on the mailbox equals enabled for the mailbox; $false on the mailbox equals disabled for the mailbox).
 
 ```yaml
 Type: $true | $false
@@ -555,7 +569,13 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowOutlook
-The EwsAllowOutlook parameter enables or disables Microsoft Office Outlook 2007 to access EWS for the entire organization. Outlook 2007 uses EWS for free and busy information, out-of-office settings, and calendar sharing.
+The EwsAllowOutlook parameter enables or disables EWS access to organization by Microsoft Outlook clients (for example, Outlook 2007 or later for free/busy, out-of-office settings, and calendar sharing). Valid values are:
+
+- $true: EWS access to the organization by Outlook clients is enabled.
+
+- $false: EWS access to the organization by Outlook clients is disabled.
+
+- $null (blank): The setting isn't configured. This is the default value. EWS access to individual mailboxes by Outlook clients is controlled by the EwsAllowOutlook parameter on the Set-CASMailbox cmdlet (blank or $true on the mailbox equals enabled for the mailbox; $false on the mailbox equals disabled for the mailbox).
 
 ```yaml
 Type: $true | $false
@@ -570,13 +590,15 @@ Accept wildcard characters: False
 ```
 
 ### -EwsApplicationAccessPolicy
-The EwsApplicationAccessPolicy parameter specifies the client applications that have access to EWS and REST. Valid values are:
+The EwsApplicationAccessPolicy parameter specifies the access control method for client applications that access the organziation by using EWS and REST. Valid values are:
 
-- EnforceAllowList: Only applications specified by the EwsAllowList parameter are allowed to access EWS and REST. Access by other applications is blocked.
+- EnforceAllowList: Specify the EWS and REST applications to allow by using the EwsAllowList parameter. EWS and REST access to the organization by all other applications is blocked.
 
-- EnforceBlockList: All applications are allowed to access EWS and REST, except for the applications specified by the EwsBlockList parameter.
+- EnforceBlockList: Specify the EWS and REST application to block by using the EwsBlockList parameter. EWS and REST access to the organization by all other applications is allowed.
 
-Note that this parameter doesn't affect access to EWS by Entourage, Mac Outlook, and Outlook. Access to EWS by these applications is controlled by the EwsAllowEntourage, EwsAllowMacOutlook and EwsAllowOutlook parameters.
+- $null (blank): The setting isn't configured. This is the default value. The access control method for individual mailboxes is defined by the EwsApplicationAccessPolicy parameter on the Set-CASMailbox cmdlet (blank for the mailbox means no EWS or REST applications are blocked from accessing the mailbox; EnforceAllowList for the mailbox means the EwsAllowList parameter on the mailbox specifies the applications that are allowed to access the mailbox; EnforceBlockList for the mailbox means the EwsBlockList parameter on the mailbox specifies the applications that are blocked from accessing the mailbox).
+
+This parameter doesn't affect EWS access to the organization by Entourage, Outlook for Mac, and Outlook clients (access by these applications is controlled by the EwsAllowEntourage, EwsAllowMacOutlook and EwsAllowOutlook parameters).
 
 ```yaml
 Type: EnforceAllowList | EnforceBlockList
@@ -591,7 +613,9 @@ Accept wildcard characters: False
 ```
 
 ### -EwsBlockList
-The EwsBlockList parameter specifies the applications that aren't allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EnforceBlockList. All other applications that aren't specified by this parameter are allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
+The EwsBlockList parameter specifies the applications that aren't allowed to access the organization by using EWS or REST when the EwsApplicationAccessPolicy parameter is set to EnforceBlockList. All other applications that aren't specified by this parameter are allowed to access the organization by using EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
+
+The default value is $null (blank), which means no EWS or REST applications are specified.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -610,15 +634,15 @@ Accept wildcard characters: False
 ```
 
 ### -EwsEnabled
-The EwsEnabled parameter specifies whether to globally enable or disable EWS access for the entire organization, regardless of what application is making the request. Valid values are:
+The EwsEnabled parameter specifies whether to globally enable or disable EWS access for the entire organization, regardless of the application that's making the request. Valid values are:
 
-- $true: All EWS access is enabled.
+- $true: All EWS access for the organization is enabled.
 
-- $false: All EWS access is disabled.
+- $false: All EWS access for the organization is disabled.
 
-- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the releated EWS parameters (for example EwsAllowEntourage). This is the default value.
+- $null (blank): The setting isn't configured. This is the default value. EWS access to the organization is controlled individually by the other EWS parameters (for example EwsAllowEntourage).
 
-This parameter has no affect on access to REST.
+This parameter has no affect on access to the organization by using REST.
 
 ```yaml
 Type: $true | $false
