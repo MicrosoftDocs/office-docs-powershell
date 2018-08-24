@@ -8,7 +8,7 @@ schema: 2.0.0
 # ConvertTo-SPOMigrationEncryptedPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+{{Fill in the Synopsis0}}
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters <EncryptionParamete
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+{{Fill in the Description0}}
 
 ## EXAMPLES
 
