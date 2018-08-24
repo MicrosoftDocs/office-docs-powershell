@@ -17,27 +17,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Identity
 ```
-Get-MailboxFolderStatistics [-Identity] <MailboxOrMailUserIdParameter> [-Archive] [-DomainController <Fqdn>]
- [-FolderScope <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
- [-IncludeAnalysis] [-IncludeOldestAndNewestItems] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-MailboxFolderStatistics [-Identity] <MailboxOrMailUserIdParameter> [-Archive] [-DomainController <Fqdn>]
- [-FolderScope <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems | NonIpmRoot | LegacyArchiveJournals>]
- [-IncludeAnalysis] [-IncludeOldestAndNewestItems] [-IncludeInternalAccessFolders] [-IncludeRecoverableItems]
- [<CommonParameters>]
+Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive] [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>] [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [-IncludeAnalysis] [-IncludeOldestAndNewestItems] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
 ```
 
-### Set2
+### AuditLog
 ```
-Get-MailboxFolderStatistics [[-Identity] <MailboxOrMailUserIdParameter>] [-AuditLog] [-DomainController <Fqdn>]
- [-FolderScope <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems | NonIpmRoot | LegacyArchiveJournals>]
- [-IncludeAnalysis] [-IncludeOldestAndNewestItems] [-IncludeInternalAccessFolders] [-IncludeRecoverableItems]
- [<CommonParameters>]
+Get-MailboxFolderStatistics [-AuditLog] [-DomainController <Fqdn>]
+ [-FolderScope <Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType>]
+ [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-IncludeAnalysis]
+ [-IncludeOldestAndNewestItems] [-DiagnosticInfo <String>] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,27 +98,28 @@ For example:
 
 - User ID or user principal name (UPN)
 
+
 ```yaml
-Type: MailboxOrMailUserIdParameter
-Parameter Sets: (All), Set1
+Type: GeneralMailboxOrMailUserIdParameter
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ```yaml
-Type: MailboxOrMailUserIdParameter
-Parameter Sets: Set2
+Type: GeneralMailboxOrMailUserIdParameter
+Parameter Sets: AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016
 Required: False
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -135,9 +128,43 @@ The Archiveswitch specifies whether to return the usage statistics of the archiv
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditLog
+This parameter is available only in on-premises Exchange.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AuditLog
+Aliases:
+Applicable: Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticInfo
+This parameter is available only in the cloud-based service.
+
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +237,7 @@ The FolderScope parameter specifies the scope of the search by folder type. Vali
 The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 
 ```yaml
-Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems
+Type: Microsoft.Exchange.Data.Directory.SystemConfiguration.ElcFolderType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
@@ -253,44 +280,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuditLog
-This parameter is reserved for internal Microsoft use.
+### -IncludeSoftDeletedRecipients
+This parameter is available only in the cloud-based service.
+
+{{Fill IncludeSoftDeletedRecipients Description}}
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeInternalAccessFolders
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeRecoverableItems
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
