@@ -234,7 +234,7 @@ Position:	Named
 Default value:	None
 Accept pipeline input:	False
 Accept wildcard characters:	False
-Applicable:	Exchange Online
+Applicable:	Exchange Online 
 ```
 
 ### -ReportOnly
