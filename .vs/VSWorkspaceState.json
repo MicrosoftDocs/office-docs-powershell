@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
-    "",
     "\\sharepoint",
     "\\sharepoint\\sharepoint-ps",
     "\\sharepoint\\sharepoint-ps\\sharepoint-online"
   ],
-  "SelectedNode": "\\sharepoint\\sharepoint-ps\\sharepoint-online\\Add-SPOSiteDesign.md",
   "PreviewInSolutionExplorer": false
 }
