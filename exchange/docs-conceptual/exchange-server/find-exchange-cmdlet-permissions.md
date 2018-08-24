@@ -9,7 +9,6 @@ ms.topic: article
 ms.service: exchange-online
 localization_priority: Normal
 ms.assetid: 5bcc46d3-8a07-4e9f-b1b0-e4cb0b0afc12
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
 description: "Admins can learn how to use PowerShell to find the permissions required to run any Exchange or Exchange Online cmdlet."
 ---
 
