@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: 219f78a3-f0e5-4dc6-9787-9a0b9756ee09
-monikerRange: "exchserver-ps-2016"
 description: "Administrators can learn how to use Update-ExchangeHelp to update Exchange cmdlet reference topics that are available in Exchange Management Shell in Exchange 2016"
 ---
 

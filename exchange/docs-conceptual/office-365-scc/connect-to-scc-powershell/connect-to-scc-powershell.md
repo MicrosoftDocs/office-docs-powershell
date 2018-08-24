@@ -9,7 +9,6 @@ ms.topic: article
 ms.service: o365-security-and-compliance
 localization_priority: Normal
 ms.assetid: 45a5242d-95b7-4a6a-9794-095bb6d8d9d0
-monikerRange: "o365scc-ps"
 description: "Learn how to connect to Security & Compliance Center PowerShell."
 ---
 

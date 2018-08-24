@@ -9,7 +9,6 @@ ms.topic: article
 ms.service: exchange-online
 localization_priority: Normal
 ms.assetid: 85ffe9c8-7f03-4877-8e55-3cbd40228d84
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
 description: "Learn about the structure and syntax of cmdlets in Exchange, Exchange Online, Exchange Online Protection, and the Office 365 Security & Compliance Center."
 ---
 
