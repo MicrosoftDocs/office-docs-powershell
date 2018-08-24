@@ -34,29 +34,6 @@ New-UnifiedGroup [-AccessType <Public | Private>] [-Alias <String>] [-AlwaysSubs
  [-Owner <RecipientIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
  [-RequireSenderAuthenticationEnabled <$true | $false>] [-SuppressWarmupMessage] [-WhatIf] [<CommonParameters>]
 ```
-
-### Set2
-```
-New-UnifiedGroup [-AccessType <Public | Private>] [-Alias <String>] [-AlwaysSubscribeMembersToCalendarEvents]
- [-AutoSubscribeNewMembers] [-Classification <String>] [-Confirm] [-DisplayName <String>]
- [-EmailAddresses <ProxyAddressCollection>] [-ExecutingUser <RecipientIdParameter>] [-ExoErrorAsWarning]
- [-HiddenGroupMembershipEnabled] [-Language <CultureInfo>] [-ManagedBy <RecipientIdParameter[]>]
- [-Members <RecipientIdParameter[]>] [-Name <String>] [-Notes <String>] [-Owner <RecipientIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-SuppressWarmupMessage] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-New-UnifiedGroup [-AccessType <Public | Private>] [-Alias <String>] [-AlwaysSubscribeMembersToCalendarEvents]
- [-AutoSubscribeNewMembers] [-Classification <String>] [-Confirm] [-DisplayName <String>]
- [-EmailAddresses <ProxyAddressCollection>] [-ExecutingUser <RecipientIdParameter>] [-ExoErrorAsWarning]
- [-HiddenGroupMembershipEnabled] [-Language <CultureInfo>] [-ManagedBy <RecipientIdParameter[]>]
- [-Members <RecipientIdParameter[]>] [-Name <String>] [-Notes <String>] [-Owner <RecipientIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-SubscriptionEnabled] [-SuppressWarmupMessage] [-WhatIf] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 Office 365 groups are group objects that are available across Office 365 services.
 
