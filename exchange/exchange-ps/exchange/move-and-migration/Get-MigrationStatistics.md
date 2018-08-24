@@ -81,7 +81,7 @@ Accept pipeline input:	False
 Accept wildcard characters:	False
 Applicable:	Exchange Online
 ```
-
+ 
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
