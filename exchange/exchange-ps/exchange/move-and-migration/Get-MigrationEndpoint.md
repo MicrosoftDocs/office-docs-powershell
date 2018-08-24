@@ -17,25 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### ConnectionSettingsFilter
 ```
 Get-MigrationEndpoint -ConnectionSettings <ExchangeConnectionSettings> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>]
- [<CommonParameters>]
+ [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set2
+### TypeFilter
 ```
-Get-MigrationEndpoint
- -Type <None | IMAP | XO1 | ExchangeOutlookAnywhere | BulkProvisioning | ExchangeRemoteMove | ExchangeLocalMove | PSTImport | PublicFolder>
- [-Diagnostic] [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>]
- [<CommonParameters>]
+Get-MigrationEndpoint -Type <MigrationType> [-Diagnostic] [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>] [-DiagnosticInfo <String>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-MigrationEndpoint [[-Identity] <MigrationEndpointIdParameter>] [-Diagnostic] [-DiagnosticArgument <String>]
- [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+ [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>] [-DiagnosticInfo <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,36 +70,15 @@ This example retrieves the settings for the migration endpoint, OnboardingME01.
 ## PARAMETERS
 
 ### -ConnectionSettings
+This parameter is available only in on-premises Exchange.
+
 The ConnectionSettings parameter specifies the configuration settings of source or target servers for which you want to find a matching endpoint.
 
 ```yaml
 Type: ExchangeConnectionSettings
-Parameter Sets: Set3
+Parameter Sets: ConnectionSettingsFilter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Type
-The Type parameter filters the results by the type of migration. Valid values for this parameter are:
-
-- ExchangeOutlookAnywhere: Cutover or staged Exchange migrations
-
-- ExchangeRemoteMove: Remote moves and migrations
-
-- IMAP: IMAP migrations
-
-- PublicFolder: Public folder migrations
-
-```yaml
-Type: None | IMAP | XO1 | ExchangeOutlookAnywhere | BulkProvisioning | ExchangeRemoteMove | ExchangeLocalMove | PSTImport | PublicFolder
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: True
 Position: Named
 Default value: None
@@ -111,13 +87,15 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
+This parameter is available only in on-premises Exchange.
+
 The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -126,13 +104,32 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticArgument
+This parameter is available only in on-premises Exchange.
+
 The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticInfo
+This parameter is available only in the cloud-based service.
+
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +159,7 @@ The Identity parameter specifies the name of the migration endpoint you want to 
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
@@ -173,14 +170,39 @@ Accept wildcard characters: False
 ```
 
 ### -Partition
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+The Type parameter filters the results by the type of migration. Valid values for this parameter are:
+
+- ExchangeOutlookAnywhere: Cutover or staged Exchange migrations
+
+- ExchangeRemoteMove: Remote moves and migrations
+
+- IMAP: IMAP migrations
+
+- PublicFolder: Public folder migrations
+
+```yaml
+Type: MigrationType
+Parameter Sets: TypeFilter
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
