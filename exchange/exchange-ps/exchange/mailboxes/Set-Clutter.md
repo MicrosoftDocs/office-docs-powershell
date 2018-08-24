@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-Clutter -Identity <MailboxIdParameter> [-Enable <$true | $false>] [<CommonParameters>]
+Set-Clutter -Identity <MailboxIdParameter> [-CleanUpClutter] [-Enable <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +56,21 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CleanUpClutter
+{{Fill CleanUpClutter Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

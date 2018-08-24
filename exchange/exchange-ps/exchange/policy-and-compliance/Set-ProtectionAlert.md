@@ -13,8 +13,6 @@ This cmdlet is available only in the Office 365 Security & Compliance Center. Fo
 
 Use the Set-ProtectionAlert cmdlet to modify alert policies in the Security & Compliance Center.
 
-**Note**: You can't modify the default alert policies using this cmdlet; you can only modify the default alert policies in the Office 365 Security & Compliance Center.
-
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX

@@ -9,7 +9,6 @@ ms.topic: article
 ms.service: eop
 localization_priority: Normal
 ms.assetid: 054e0fd7-d465-4572-93f8-a00a9136e4d1
-monikerRange: "eop-ps"
 description: "Use remote PowerShell to connect to an Exchange Online Protection organization"
 ---
 
