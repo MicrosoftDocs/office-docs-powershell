@@ -221,6 +221,21 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -DiagnosticInfo
+This parameter is available only in Exchange Online.
+
+The DiagnosticInfo parameter modifies the results that are returned by using the Diagnostic switch. You don't need to specify a value with this switch.
+
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type:	String
+Position:	Named
+Default value:	None
+Accept pipeline input:	False
+Accept wildcard characters:	False
+Applies to:	Exchange Online
+```
 
 ### -ReportOnly
 The ReportOnly switch returns the results as an array of report entries. You don't need to specify a value with this switch.
