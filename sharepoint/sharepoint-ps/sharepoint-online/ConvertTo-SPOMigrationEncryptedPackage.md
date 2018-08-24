@@ -27,7 +27,7 @@ ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters <EncryptionParamete
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+{{Fill in the Description0}}
 
 ## EXAMPLES
 
