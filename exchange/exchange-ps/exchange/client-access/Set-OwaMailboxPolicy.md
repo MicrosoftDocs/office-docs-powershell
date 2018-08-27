@@ -60,9 +60,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-WacExternalServicesEnabled <$true | $false>] [-WacOMEXEnabled <$true | $false>]
  [-WacViewingOnPrivateComputersEnabled <$true | $false>] [-WacViewingOnPublicComputersEnabled <$true | $false>]
  [-WeatherEnabled <$true | $false>] [-WebPartsFrameOptionsType <Deny | AllowFrom | None | SameOrigin>]
- [-ClassicAttachmentsEnabled <$true | $false>]
- [-ExternalSPMySiteHostURL <String>]
- [-FreCardsEnabled <$true | $false>]
+ [-ClassicAttachmentsEnabled <$true | $false>] [-ExternalSPMySiteHostURL <String>] [-FreCardsEnabled <$true | $false>]
  [-InterestingCalendarsEnabled <$true | $false>] [-InternalSPMySiteHostURL <String>]
  [-LocalEventsEnabled <$true | $false>] [-OneDriveAttachmentsEnabled <$true | $false>]
  [-OnSendAddinsEnabled <$true | $false>] [-ReferenceAttachmentsEnabled <$true | $false>]
@@ -364,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectFileAccessOnPrivateComputersEnabled
-The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options on attachments when the user has chosen to log on using the Private option. If this parameter is set to $true, Open is an available option. If it's set to $false, the Open option is disabled.
+The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options on attachments when the user has chosen to log on using the Private option. If this parameter is set to $true, Open is an available option. If it's set to $false, the Open option is disabled. Note: Office and .pdf documents can be previewed in Outlook on the web even if DirectFileAccessOnPrivateComputersEnabled is set to false.
 
 ```yaml
 Type: $true | $false
@@ -379,7 +377,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectFileAccessOnPublicComputersEnabled
-The DirectFileAccessOnPublicComputersEnabled parameter specifies the left-click options on attachments when the user has chosen to log on using the Public option. If this parameter is set to $true, Open is an available option. If it's set to $false, the Open option is disabled.
+The DirectFileAccessOnPublicComputersEnabled parameter specifies the left-click options on attachments when the user has chosen to log on using the Public option. If this parameter is set to $true, Open is an available option. If it's set to $false, the Open option is disabled. Note: Office and .pdf documents can be previewed in Outlook on the web even if DirectFileAccessOnPublicComputersEnabled is set to false.
 
 ```yaml
 Type: $true | $false
