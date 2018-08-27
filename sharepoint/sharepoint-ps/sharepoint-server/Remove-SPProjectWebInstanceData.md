@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2016
 title: Remove-SPProjectWebInstanceData
 schema: 2.0.0
 ---
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SPProjectWebInstanceData
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disassociates a Site Collection with the Project Server instance.
 
 
 ## SYNTAX
@@ -19,29 +19,30 @@ Remove-SPProjectWebInstanceData [-AssignmentCollection <SPAssignmentCollection>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
-
+This cmdlet disassociates the Project Server instance from the specified Site Collection, disabling the PWA Feature and removing Project content.
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Remove-SPProjectWebInstanceData -SiteCollection http://contoso/sites/pwa
 ```
 
-{{ Add example description here }}
+This example disassociates http://contoso/sites/pwa from the Project Server instance.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2016
 
 Required: False
 Position: Named
@@ -57,7 +58,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2016
 
 Required: False
 Position: Named
@@ -67,13 +68,13 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCollection
-{{Fill SiteCollection Description}}
+The site collection to disassociate from the Project Server instance.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2016
 
 Required: True
 Position: Named
@@ -90,7 +91,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2016
 
 Required: False
 Position: Named

@@ -19,30 +19,41 @@ Unregister-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 ```
 
 ## DESCRIPTION
-Disables the hub site feature on a site so that it is no longer a hub. 
+Disables the hub site feature on a site so that it is no longer a hub site. Associated sites may still appear associated for up to an hour. If you want to speed up the process, use the Remove-SPOHubSiteAssociation cmdlet to remove the associates sites first.
 
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
+> [!IMPORTANT]
+> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
+
+If the site doesn’t exist, this cmdlet returns a “File not found” error.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```
-Unregister-SPOHubSite https://contoso.sharepoint.com/sites/Marketing
+Unregister-SPOHubSite -Identity <guid>
+```
+
+This example removes a site from the hub site list based on unique hub identifier (<guid>).
+
+### Example 2
+
+```
+Unregister-SPOHubSite -Identity https://contoso.sharepoint.com/sites/Marketing
 ```
 
 This example disables the hub feature on the marketing site.
 
 ## PARAMETERS
 
-### -Site
+### -Identity
 
-URL of the site to disable the hub site feature.
+Guid based identifier or URL of the site to disable the hub site feature. If hub site has been already deleted, you will need to use a Guid based identifier to remove the site from the list of hub sites.
 
 ```yaml
-Type: SpoSitePipeBind
+Type: SpoHubSitePipeBind
 Parameter Sets: (All)
-Aliases: 
+Aliases: HubSite
 Applicable: SharePoint Online
 
 Required: True
@@ -52,13 +63,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+### -WhatIf
 
-## INPUTS
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
-## OUTPUTS
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: SharePoint Online
 
-## NOTES
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-## RELATED LINKS
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```

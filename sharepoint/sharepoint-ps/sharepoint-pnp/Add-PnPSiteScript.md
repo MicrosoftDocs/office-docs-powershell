@@ -21,7 +21,7 @@ Add-PnPSiteScript -Title <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPSiteScript -Title "My Site Script" -Description "A more detailed description" -Content $script
+Add-PnPSiteScript -Title "My Site Script" -Description "A more detailed description" -Content $script
 ```
 
 Adds a new Site Script, where $script variable contains the script.
@@ -65,7 +65,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

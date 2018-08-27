@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUCPhoneConfiguration
 schema: 2.0.0
 ---
@@ -134,7 +134,7 @@ If this parameter is not specified then the Get-CsUCPhoneConfiguration cmdlet re
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -170,7 +170,7 @@ To return a collection of all the settings that have the string value "EMEA" som
 Type: String
 Parameter Sets: Filter, (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ Retrieves the UC phone configuration data from the local replica of the Central 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -268,3 +268,4 @@ The Get-CsUCPhoneConfiguration cmdlet returns instances of the Microsoft.Rtc.Man
 [Remove-CsUCPhoneConfiguration](Remove-CsUCPhoneConfiguration.md)
 
 [Set-CsUCPhoneConfiguration](Set-CsUCPhoneConfiguration.md)
+

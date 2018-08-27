@@ -57,10 +57,19 @@ Add-PnPCustomAction -Name 'GetItemsCount' -Title 'Invoke GetItemsCount Action' -
 
 Adds a new custom action to the custom list template, and sets the Title, Name and other fields with the specified values. On click it shows the number of items in that list. Notice: escape quotes in CommandUIExtension.
 
+### ------------------EXAMPLE 2------------------
+```powershell
+Add-PnPCustomAction -Title "CollabFooter" -Name "CollabFooter" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId c0ab3b94-8609-40cf-861e-2a1759170b43 -ClientSideComponentProperties "{`"sourceTermSet`":`"PnP-CollabFooter-SharedLinks`",`"personalItemsStorageProperty`":`"PnP-CollabFooter-MyLinks`"}
+```
+
+Adds a new application customizer to the site. This requires that an SPFX solution has been deployed containing the application customizer specified.
+
 ## PARAMETERS
 
 ### -ClientSideComponentId
 The Client Side Component Id of the custom action
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: GuidPipeBind
@@ -73,6 +82,8 @@ Accept pipeline input: False
 
 ### -ClientSideComponentProperties
 The Client Side Component Properties of the custom action. Specify values as a json string : "{Property1 : 'Value1', Property2: 'Value2'}"
+
+Only applicable to: SharePoint Online
 
 ```yaml
 Type: String
@@ -136,7 +147,7 @@ The actual location where this custom action need to be added like 'CommandUI.Ri
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: True
 Position: Named
@@ -148,7 +159,7 @@ The name of the custom action
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: True
 Position: Named
@@ -160,7 +171,7 @@ The identifier of the object associated with the custom action.
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: False
 Position: Named
@@ -172,7 +183,7 @@ Specifies the type of object associated with the custom action
 
 ```yaml
 Type: UserCustomActionRegistrationType
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: False
 Position: Named
@@ -196,7 +207,7 @@ The scope of the CustomAction to add to. Either Web or Site; defaults to Web. 'A
 
 ```yaml
 Type: CustomActionScope
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: False
 Position: Named
@@ -220,7 +231,7 @@ The title of the custom action
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Default, Client Side Component Id
 
 Required: True
 Position: Named
@@ -240,7 +251,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

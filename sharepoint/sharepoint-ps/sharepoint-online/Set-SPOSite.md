@@ -26,11 +26,13 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
  [-Title <String>] [-WhatIf] [-AllowLimitedAccess <Boolean>] [-BlockDownloadOfNonViewableFiles <Boolean>]
- [-CommentsOnSitePagesDisabled <Boolean>] [-DisableAppViews <AppViewsPolicy>]
+ [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] [<CommonParameters>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
+ [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -50,7 +52,7 @@ For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates 
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
 
 
 ## EXAMPLES
@@ -94,8 +96,8 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuo
 
 This example sets the quota for the site.
 
-Note:  
-If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
+> [!NOTE] 
+> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
 
 ## PARAMETERS
@@ -208,7 +210,7 @@ Accept wildcard characters: False
 
 ### -LocaleId
 Specifies the language of this site collection.
-For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911) (http://go.microsoft.com/fwlink/p/?LinkId=242911).
+For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911).
 
 
 ```yaml
@@ -282,7 +284,7 @@ Accept wildcard characters: False
 ### -ResourceQuota
 Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
-For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx) (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
+For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
 
 
 ```yaml
@@ -469,6 +471,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
+### -SocialBarOnSitePagesDisabled
+Disables or enables the Social Bar for Site Collection.
+
+The Social Bar will appear on all modern SharePoint pages with the exception of the home page of a site. It will give users the ability to like a page, see the number of views, likes, and comments on a page, and see the people who have liked a page.
+
+PARAMVALUE: $true | $false
+
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableAppViews
 PARAMVALUE: Unknown | Disabled | NotDisabled
 
@@ -642,6 +666,57 @@ Resets the OneDrive for Business storage quota to the tenant’s new default sto
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+
+### -DefaultSharingLinkType 
+
+The default link type for the site collection
+
+PARAMVALUE: None | AnonymousAccess | Internal | Direct
+
+None - Respect the organization default sharing link type
+AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
+Internal - Sets the default sharing link for this site to the “organization” link or company shareable link
+Direct - Sets the default sharing link for this site to the “Specific people” link
+
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -DefaultLinkPermission
+
+The default link permission for the site collection
+
+PARAMVALUE: None | View | Edit
+
+None - Respect the organization default link permission
+View - Sets the default link permission for the site to “view” permissions
+Edit - Sets the default link permission for the site to “edit” permissions
+
+```yaml
+Type: SharingPermissionType
 Parameter Sets: ParamSet1
 Aliases: 
 Applicable: SharePoint Online

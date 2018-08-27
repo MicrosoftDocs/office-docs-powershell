@@ -44,12 +44,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- 
+### --------------------EXAMPLE 1--------------------- 
 ```
-C:\PS>Get-SPDatabase -ServerInstance "ServerA\SharePoint"
+PS C:\>Get-SPDatabase | ?{$_.TypeName -eq 'Microsoft.Office.Server.Administration.ProfileDatabase'}
 ```
 
-This example gets all databases on a specific named SQL Server Express instance.
+This example gets the Profile database used by the User Profile Service Application.
+
+### --------------------EXAMPLE 2--------------------- 
+```
+PS C:\>Get-SPDatabase -Name 'Profile DB'
+```
+
+This example gets the Profile database by name. Applies to SharePoint Server 2016 only.
 
 ## PARAMETERS
 
@@ -88,13 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -110,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the database.
 
 ```yaml
 Type: String

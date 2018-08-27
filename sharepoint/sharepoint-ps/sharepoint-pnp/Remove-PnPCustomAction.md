@@ -11,9 +11,9 @@ Removes a custom action
 ## SYNTAX 
 
 ```powershell
-Remove-PnPCustomAction [-Scope <CustomActionScope>]
+Remove-PnPCustomAction [-Identity <UserCustomActionPipeBind>]
+                       [-Scope <CustomActionScope>]
                        [-Force [<SwitchParameter>]]
-                       [-Identity <UserCustomActionPipeBind>]
                        [-Web <WebPipeBind>]
                        [-Connection <SPOnlineConnection>]
 ```
@@ -22,28 +22,28 @@ Remove-PnPCustomAction [-Scope <CustomActionScope>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
+Remove-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
 ```
 
 Removes the custom action with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2'.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2 -Scope web
+Remove-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2 -Scope web
 ```
 
 Removes the custom action with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2' from the current web.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Remove-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2 -Force
+Remove-PnPCustomAction -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2 -Force
 ```
 
 Removes the custom action with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2' without asking for confirmation.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Get-PnPCustomAction -Scope All | ? Location -eq ScriptLink | Remove-PnPCustomAction
+Get-PnPCustomAction -Scope All | ? Location -eq ScriptLink | Remove-PnPCustomAction
 ```
 
 Removes all custom actions that are ScriptLinks
@@ -87,7 +87,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

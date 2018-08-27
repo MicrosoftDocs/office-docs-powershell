@@ -29,9 +29,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 4b32-4fe6-8f8d-065388df201e
-Remove-SPEnterpriseSearchTopology -Identity $topology
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 4b32-4fe6-8f8d-065388df201e
+PS C:\>Remove-SPEnterpriseSearchTopology -Identity $topology
 ```
 
 This example removes a search topology with the identity 4b32-4fe6-8f8d-065388df201e.
@@ -39,8 +39,8 @@ This example removes a search topology with the identity 4b32-4fe6-8f8d-065388df
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-Remove-SPEnterpriseSearchTopology -Identity $topo -SearchApplication $ssa
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Remove-SPEnterpriseSearchTopology -Identity $topo -SearchApplication $ssa
 ```
 
 This example removes the search topology referenced by $topo in the search service application referenced by $ssa.
@@ -65,13 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection

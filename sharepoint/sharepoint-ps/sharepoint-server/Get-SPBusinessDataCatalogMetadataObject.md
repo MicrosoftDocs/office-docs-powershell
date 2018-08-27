@@ -23,15 +23,16 @@ Get-SPBusinessDataCatalogMetadataObject -BdcObjectType <PSBdcObjectType>
 
 ## DESCRIPTION
 The Get-SPBusinessDataCatalogMetadataObject cmdlet reads a Business Data Connectivity Metadata Store metadata object from a Business Data Connectivity Service application.
+
 Output for this cmdlet can be a series of objects.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceConext http://contoso
+PS C:\>Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceConext http://contoso
 ```
 
 This example gets a metadata object of type Model with the name ContosoModel from the Business Data Connectivity Metadata Store on the given site.
@@ -73,13 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -127,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainingLobSystem
-{{Fill ContainingLobSystem Description}}
+Specifies the name of the LobSystem.
 
 ```yaml
 Type: String

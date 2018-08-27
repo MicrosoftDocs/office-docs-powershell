@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMobilityPolicy
 schema: 2.0.0
 ---
@@ -44,7 +44,7 @@ Set-CsMobilityPolicy [[-Identity] <Object>] [-AllowAutomaticPstnFallback <Object
  [-AllowExchangeConnectivity <Object>] [-AllowSaveCallLogs <Object>] [-AllowSaveCredentials <Object>]
  [-AllowSaveIMHistory <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Description <Object>]
  [-EnableIPAudioVideo <Object>] [-EnableMobility <Object>] [-EnableOutsideVoice <Object>]
- [-EnablePushNotifications <Object>] [-EncryptAppData <Object>] [-Force] [-Instance <Object>]
+ [-EnablePushNotifications <Object>] [-Force] [-Instance <Object>]
  [-RequireIntune <Object>] [-RequireWIFIForIPVideo <Object>] [-RequireWiFiForSharing <Object>]
  [-Tenant <Object>] [-VoiceSettings <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
@@ -73,7 +73,7 @@ In turn, that means that the user will not be able to use Call via Work, regardl
 
 To use Call via Work, users must be managed by a voice policy that allows simultaneous ringing.
 
-The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, EncryptAppData, Force, Identity, Instance, PipelineVariable, RequireIntune, Tenant, VoiceSettings
+The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, Force, Identity, Instance, PipelineVariable, RequireIntune, Tenant, VoiceSettings
 
 ## EXAMPLES
 
@@ -117,7 +117,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ For example, the Description might include information about the users the polic
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ This parameter was introduced in Lync Server 2013.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ When set to True, users are allowed to use Skype for Business Mobile.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ If you do not specify an Identity, then the `Set-CsMobilityPolicy` cmdlet will m
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -270,7 +270,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -283,7 +283,7 @@ Accept wildcard characters: False
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -304,7 +304,7 @@ This parameter was introduced in Lync Server 2013.
 Type: Boolean
 Parameter Sets: Identity, Instance
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -325,7 +325,7 @@ This parameter was introduced in Lync Server 2013.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -342,7 +342,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -375,7 +375,7 @@ When set to True (the default value) mobile users will be allowed to participate
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -408,7 +408,7 @@ When set to True (the default value) users will be allowed to connect to Exchang
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -427,7 +427,7 @@ Note that this setting does not apply to Android devices.
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -445,7 +445,7 @@ This information can then be applied to auto-logon scenarios.
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -462,7 +462,7 @@ When set to True (the default value) users will be allowed to save transcripts o
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -489,22 +489,6 @@ Accept wildcard characters: False
 
 ### -EnablePushNotifications
 {{Fill EnablePushNotifications Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EncryptAppData
-{{Fill EncryptAppData Description}}
 
 ```yaml
 Type: Object
@@ -547,7 +531,7 @@ If this value is set to False users can use the Options page to modify their sha
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -571,7 +555,7 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -636,3 +620,4 @@ Instead, the `Set-CsMobilityPolicy` cmdlet modifies existing instances of the Mi
 ## NOTES
 
 ## RELATED LINKS
+

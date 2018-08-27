@@ -97,8 +97,8 @@ Accept wildcard characters: False
 ### -PermissionLevelsToAdd
 Specifies the permission levels to grant to the group.
 
-Note:  
-Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
+> [!NOTE] 
+> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
 
 
 ```yaml
@@ -117,8 +117,8 @@ Accept wildcard characters: False
 ### -PermissionLevelsToRemove
 Specifies the permission levels to remove from the group.
 
-Note:  
-Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
+> [!NOTE] 
+> Permission levels are defined by SharePoint Online global administrators from SharePoint Online Administration Center.  
 
 
 ```yaml

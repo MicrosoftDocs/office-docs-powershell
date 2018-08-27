@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Enable-CsMeetingRoom
 schema: 2.0.0
 ---
@@ -13,6 +13,8 @@ A meeting room is a conferencing device designed to address video conferencing a
 To enable a meeting room you must first create an Active Directory user account that will represent that system.
 Note that, although meeting room objects are based on user accounts, these objects will not show up when you run the Get-CsUser cmdlet.
 This cmdlet was introduced in Lync Server 2013.
+
+The process for creating and updating meeting rooms differs depending on your deployment of Skype for Business Online and Skype for Business Server.  Make sure you are following the guidance here to set up your meeting rooms properly: https://docs.microsoft.com/en-us/skypeforbusiness/deploy/deploy-clients/with-office-365
 
 
 ## SYNTAX
@@ -37,6 +39,8 @@ In order to manage these new endpoint devices you must, among other things, crea
 Note that, for Skype for Business Server, there are no cmdlets for creating or removing meeting rooms.
 Instead, you use the Enable-CsMeetingRoom cmdlet to enable meeting rooms and the Disable-CsMeetingRoom cmdlet to disable meeting rooms.
 The resource account must already exist in order for you to enable the meeting room, and disabling a meeting room only removes that room from your collection of meeting rooms; it does not delete the resource mailbox account.
+
+The process for creating and updating meeting rooms differs depending on your deployment of Skype for Business Online and Skype for Business Server.  Make sure you are following the guidance here to set up your meeting rooms properly: https://docs.microsoft.com/en-us/skypeforbusiness/deploy/deploy-clients/with-office-365
 
 The functions carried out by the Enable-CsMeetingRoom cmdlet are not available in the Skype for Business Server Control Panel.
 
@@ -81,7 +85,7 @@ For example, the Identity "Smith" returns all the user who have a display name t
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -97,7 +101,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -114,7 +118,7 @@ To connect to a particular domain controller, include the DomainController param
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +135,7 @@ This parameter is used only with Skype for Business Online.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: HostingProvider
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +153,7 @@ This parameter is used only with Skype for Business Online.
 Type: SecurityIdentifier
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -166,7 +170,7 @@ By default, the Enable-CsMeetingRoom cmdlet does not pass objects through the pi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -183,7 +187,7 @@ This parameter is used only with Skype for Business Online.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -199,7 +203,7 @@ Indicates the Registrar pool where the meeting room's Skype for Business Server 
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -224,7 +228,7 @@ Instead, you must auto-generate SIP address for those rooms by using the SipAddr
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -254,7 +258,7 @@ The SipAddressType parameter is not required if you use the SIPAddress parameter
 Type: AddressType
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -272,7 +276,7 @@ This parameter is not required if you base SIP addresses on the user's email add
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -288,7 +292,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -340,3 +344,4 @@ The cmdlet also accepts pipelined instances of the Active Directory user object.
 [Move-CsMeetingRoom](Move-CsMeetingRoom.md)
 
 [Set-CsMeetingRoom](Set-CsMeetingRoom.md)
+

@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Installs the specified Web Part package to the specified location.
 
-
-
 ## SYNTAX
 
 ### UseFileName
@@ -51,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>Install-SPWebPartPack "MyCustomWebPartPack" -LiteralPath "c:/mywebpart.wpp" -GlobalInstall
+PS C:\>Install-SPWebPartPack "MyCustomWebPartPack" -LiteralPath "C:\mywebpart.wpp" -GlobalInstall
 ```
 
 This example installs the Web Part Package with the name MyCustomWebPartPack globally in the farm from the path c:/mywebpart.wpp.
@@ -213,13 +211,13 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
-{{Fill CompatibilityLevel Description}}
+Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection. When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the SiteCreationMode setting.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

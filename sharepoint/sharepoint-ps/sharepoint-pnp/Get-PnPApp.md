@@ -11,7 +11,8 @@ Returns the available apps from the app catalog
 ## SYNTAX 
 
 ```powershell
-Get-PnPApp [-Identity <GuidPipeBind>]
+Get-PnPApp [-Identity <AppMetadataPipeBind>]
+           [-Scope <AppCatalogScope>]
            [-Connection <SPOnlineConnection>]
 ```
 
@@ -19,17 +20,24 @@ Get-PnPApp [-Identity <GuidPipeBind>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPApp
+Get-PnPApp
 ```
 
-This will return all available app metadata from the tenant app catalog. It will list the installed version in the current site.
+This will return all available apps from the tenant app catalog. It will list the installed version in the current site.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPApp -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
+Get-PnPApp -Scope Site
 ```
 
-This will the specific app metadata from the app catalog.
+This will return all available apps from the site collection scoped app catalog. It will list the installed version in the current site.
+
+### ------------------EXAMPLE 3------------------
+```powershell
+Get-PnPApp -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
+```
+
+This willr retrieve the specific app from the app catalog.
 
 ## PARAMETERS
 
@@ -37,7 +45,7 @@ This will the specific app metadata from the app catalog.
 Specifies the Id of an app which is available in the app catalog
 
 ```yaml
-Type: GuidPipeBind
+Type: AppMetadataPipeBind
 Parameter Sets: (All)
 
 Required: False
@@ -45,8 +53,20 @@ Position: 0
 Accept pipeline input: True
 ```
 
+### -Scope
+Defines which app catalog to use. Defaults to Tenant
+
+```yaml
+Type: AppCatalogScope
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

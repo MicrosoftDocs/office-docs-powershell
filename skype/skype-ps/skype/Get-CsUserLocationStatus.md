@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsUserLocationStatus
 schema: 2.0.0
@@ -8,26 +8,28 @@ schema: 2.0.0
 # Get-CsUserLocationStatus
 
 ## SYNOPSIS
-Get-CsUserLocationStatus \[\[-Tenant\] \<guid\>\] \[\[-Identity\] \<UserIdParameter\>\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+With `Get-CsUserLocationStatus` you can track the progress of the regionally hosted meetings cross region move and determine when it has completed.
 
 ## SYNTAX
 
 ```
-Get-CsUserLocationStatus [[-Tenant] <Object>] [[-Identity] <Object>] [-Confirm] [-WhatIf] [-AsJob]
+Get-CsUserLocationStatus [[-Tenant] <Guid>] [[-Identity] <UserIdParameter>] [-Confirm] [-WhatIf] [-AsJob]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+With regionally hosted meetings, you can take advantage of Microsoft Office 365 data centers located all over the world, and you can choose where your users are located in the Microsoft cloud. Your users log in to local data centers and therefore benefit from regional performance for meetings within the cloud.
+
+The `Get-CsUserLocationStatus` tracks the progress of the cross region move and determine when it has completed.
 
 ## EXAMPLES
 
-### Example (Skype for Business Online)
+### -------------------------- EXAMPLE 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsUserLocationStatus -Identity PilarA@contoso.com
 ```
 
-{{ Add example description here }}
+This example tracks the progress of the cross region move for PilarA@contoso.com account.
 
 ## PARAMETERS
 
@@ -48,10 +50,16 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the user account to be verified. User Identities can be specified using one of four formats:
+
+1) the user's SIP address;
+2) the user's user principal name (UPN);
+3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer)
+4) the user's Active Directory display name (for example, Ken Myer), (only available if using the on-premises cmdlets) User Identities can also be referenced by using the user's Active Directory distinguished name.
+You can use the asterisk (\*) wildcard character when using the display name as the user Identity. For example, the Identity "\*Smith" returns all the users who have a display name that ends with the string value "Smith".
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -64,10 +72,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -97,7 +105,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -126,3 +138,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsUserPstnSettings
 schema: 2.0.0
@@ -148,4 +148,5 @@ The Get-CsUserPstnSettings cmdlet returns instances of the UserPstnSettings obje
 ## NOTES
 
 ## RELATED LINKS
+
 

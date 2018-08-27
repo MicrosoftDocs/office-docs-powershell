@@ -1,5 +1,5 @@
 ---
-external help file: Get-CsHuntGroup.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsHuntGroup
 schema: 2.0.0
@@ -153,3 +153,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
+

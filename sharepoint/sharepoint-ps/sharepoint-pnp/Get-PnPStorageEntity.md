@@ -6,12 +6,13 @@ schema: 2.0.0
 # Get-PnPStorageEntity
 
 ## SYNOPSIS
-Retrieve Storage Entities / Farm Properties.
+Retrieve Storage Entities / Farm Properties from either the Tenant App Catalog or from the current site if it has a site scope app catalog.
 
 ## SYNTAX 
 
 ```powershell
 Get-PnPStorageEntity [-Key <String>]
+                     [-Scope <StorageEntityScope>]
                      [-Connection <SPOnlineConnection>]
 ```
 
@@ -19,17 +20,31 @@ Get-PnPStorageEntity [-Key <String>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPStorageEntity
+Get-PnPStorageEntity
 ```
 
 Returns all site storage entities/farm properties
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPTenantSite -Key MyKey
+Get-PnPStorageEntity -Key MyKey
 ```
 
 Returns the storage entity/farm property with the given key.
+
+### ------------------EXAMPLE 3------------------
+```powershell
+Get-PnPStorageEntity -Scope Site
+```
+
+Returns all site collection scoped storage entities
+
+### ------------------EXAMPLE 4------------------
+```powershell
+Get-PnPStorageEntity -Key MyKey -Scope Site
+```
+
+Returns the storage entity from the site collection with the given key
 
 ## PARAMETERS
 
@@ -45,8 +60,20 @@ Position: Named
 Accept pipeline input: False
 ```
 
+### -Scope
+Defines the scope of the storage entity. Defaults to Tenant.
+
+```yaml
+Type: StorageEntityScope
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

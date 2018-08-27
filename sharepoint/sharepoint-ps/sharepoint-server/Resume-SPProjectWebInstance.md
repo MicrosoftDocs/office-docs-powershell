@@ -10,7 +10,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Switches the specified instance of Project Web App to read-write mode, allowing users to change data again.
 
-
 ## SYNTAX
 
 ```
@@ -30,11 +29,12 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+PS C:\>$instance = Get-SPProjectWebInstance -ServiceApplication $sa
+PS C:\>Resume-SPProjectWebInstance -Identity $instance
 ```
 
-{{ Add example description here }}
-
+Resumes the Project Web Server Instance in the Project Web Application Service Application.
 
 ## PARAMETERS
 

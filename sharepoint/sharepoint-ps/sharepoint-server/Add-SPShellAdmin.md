@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: Add-SPShellAdmin
 schema: 2.0.0
 ---
@@ -29,13 +29,16 @@ There is no need to use this cmdlet for databases that use SQL authentication; i
 Use the Add-SPShellAdmin cmdlet to add a user to the SharePoint_Shell_Access role as follows:
 
 --If you specify only the user, the user is added to the role for the farm configuration database.
+
 --If you use the database parameter, the user is added to the role on the farm configuration database, the Central Administration content database, and the specified database. Using the database parameter is the preferred method because most of the administrative operations require access to the Central Administration content database.
 
 The user is added to the WSS_Admin_WPG group on all Web servers when the user is added to the SharePoint_Shell_Access role.
 If the target database does not have a SharePoint_Shell_Access role, the role is automatically created.
 
 In order to use Windows PowerShell for SharePoint Products, a user must be a member of the SharePoint_Shell_Access role on the configuration database and a member of the WSS_ADMIN_WPG local group on the computer where SharePoint Products is installed.
-However, the result of running this cmdlet is that the user specified with the UserName parameter will have the dbo_owner role access on the affected databases as described above.
+
+However, the result of running this cmdlet is that the user specified with the UserName parameter will have the **SPDataAccess** role, if it exists, or db_owner role, if the SPDataAccess role does not exist, on the affected databases as described above. Therefore, you should carefully plan which users are given this access.
+
 Therefore, you should carefully plan which users are given this access.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
@@ -79,7 +82,7 @@ Specifies the name of the user to add to the SharePoint_Shell_Access role in the
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -101,7 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -118,7 +121,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -136,7 +139,7 @@ The farm configuration database is always included, even if you specify another 
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -153,7 +156,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

@@ -10,8 +10,9 @@ schema: 2.0.0
 # Import-StaffHubTeam
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 Imports a set of teams from a specified file
+
+Note: This cmdlet is currently in Beta.
 
 ## SYNTAX
 
@@ -20,19 +21,20 @@ Import-StaffHubTeam [-Path] <String> [[-Encoding] <String>]
 ```
 
 ## DESCRIPTION
-Imports a set of teams from a specified file
+
+Imports a set of teams from a specified file.
 Format of the File content - Name,TimeZone,ManagerEmail
 Eg: CmdletTestTeam,Asia/Calcutta,abc@contoso.com
 Failure in adding one team does not stop the other teams from getting added.
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Import-StaffHubTeam -Path "C:\team.txt"
 ```
 
-Imports a list of teams from the file in the specified path
+Imports a list of teams from the file in the specified path.
 
 ## PARAMETERS
 
@@ -44,7 +46,7 @@ https://msdn.microsoft.com/en-us/library/system.text.encoding(v=vs.110).aspx - E
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 1
 Default value: None
@@ -53,13 +55,13 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Location of the file
+Location of the file.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: True
 Position: 0
 Default value: None
@@ -71,12 +73,14 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
 
 ## NOTES
 
+This cmdlet is currently in Beta.
+
 ## RELATED LINKS
 
+[MicrosoftStaffHub Module in Gallery](https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha)

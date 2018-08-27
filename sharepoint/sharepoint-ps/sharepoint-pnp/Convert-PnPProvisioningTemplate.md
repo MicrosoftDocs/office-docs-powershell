@@ -22,21 +22,21 @@ Convert-PnPProvisioningTemplate -Path <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Convert-PnPProvisioningTemplate -Path template.xml
+Convert-PnPProvisioningTemplate -Path template.xml
 ```
 
 Converts a provisioning template to the latest schema and outputs the result to current console.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Convert-PnPProvisioningTemplate -Path template.xml -Out newtemplate.xml
+Convert-PnPProvisioningTemplate -Path template.xml -Out newtemplate.xml
 ```
 
 Converts a provisioning template to the latest schema and outputs the result the newtemplate.xml file.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Convert-PnPProvisioningTemplate -Path template.xml -Out newtemplate.xml -ToSchema V201512
+Convert-PnPProvisioningTemplate -Path template.xml -Out newtemplate.xml -ToSchema V201512
 ```
 
 Converts a provisioning template to the latest schema using the 201512 schema and outputs the result the newtemplate.xml file.

@@ -26,16 +26,16 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityAliaser
+PS C:\>Get-FASTSearchSecurityAliaser
 ```
 
 This example gets a list of all XML and regular expression principal aliasers.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-FASTSearchSecurityAliaser -Identity xmlalias4
+PS C:\>Get-FASTSearchSecurityAliaser -Identity xmlalias4
 ```
 
 This example gets the principal aliaser with the ID "xmlalias4".

@@ -36,9 +36,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-
-C:\PS>New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
+PS C:\>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
+PS C:\>New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
 ```
 
 This example creates a new trusted root authority, WFEFarm1.
@@ -121,13 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndPoint
-{{Fill MetadataEndPoint Description}}
+Specifies the Uri of the metadata endpoint.
 
 ```yaml
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named

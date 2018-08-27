@@ -11,8 +11,8 @@ Checks if a list item is a record
 ## SYNTAX 
 
 ```powershell
-Test-PnPListItemIsRecord -Identity <ListItemPipeBind>
-                         -List <ListPipeBind>
+Test-PnPListItemIsRecord -List <ListPipeBind>
+                         -Identity <ListItemPipeBind>
                          [-Web <WebPipeBind>]
                          [-Connection <SPOnlineConnection>]
 ```
@@ -21,7 +21,7 @@ Test-PnPListItemIsRecord -Identity <ListItemPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Test-PnPListItemAsRecord -List "Documents" -Identity 4
+Test-PnPListItemIsRecord -List "Documents" -Identity 4
 ```
 
 Returns true if the document in the documents library with id 4 is a record
@@ -53,7 +53,7 @@ Accept pipeline input: True
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

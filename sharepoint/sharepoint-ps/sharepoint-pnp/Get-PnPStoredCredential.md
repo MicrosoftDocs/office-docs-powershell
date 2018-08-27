@@ -22,14 +22,14 @@ Returns a stored credential from the Windows Credential Manager
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPStoredCredential -Name O365
+Get-PnPStoredCredential -Name O365
 ```
 
 Returns the credential associated with the specified identifier
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPStoredCredential -Name testEnvironment -Type OnPrem
+Get-PnPStoredCredential -Name testEnvironment -Type OnPrem
 ```
 
 Gets the credential associated with the specified identifier from the credential manager and then will return a credential that can be used for on-premises authentication

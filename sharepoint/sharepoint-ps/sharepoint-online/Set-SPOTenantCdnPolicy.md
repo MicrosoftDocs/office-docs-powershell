@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPOTenantCdnPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the content delivery network (CDN) policies from the tenant level.
 
 
 ## SYNTAX
@@ -24,13 +24,19 @@ Set-SPOTenantCdnPolicy -CdnType <SPOTenantCdnType> -PolicyType <SPOTenantCdnPoli
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### --------------------EXAMPLE 1---------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPOTenantCdnPolicy -CdnType Public -PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF,BMP"
 ```
 
-{{ Add example description here }}
+This example sets a CDN to a public type with a policy value of listed extensions.
 
+### --------------------EXAMPLE 2---------------------
+```
+Set-SPOTenantCdnPolicy -CdnType Public -PolicyType ExcludeRestrictedSiteClassifications -PolicyValue "Confidential,Restricted"
+```
+
+This example sets a CDN to a public type with a policy value of valid site classifications.
 
 ## PARAMETERS
 

@@ -27,8 +27,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
-Import-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename .\topology.xml
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
+PS C:\>Import-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename .\topology.xml
 ```
 
 This example imports a topology from a file named topology.xml to the default search service application.

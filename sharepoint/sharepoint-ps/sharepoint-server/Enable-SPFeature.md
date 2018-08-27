@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Enables an installed SharePoint Feature at the given scope.
 
-
-
 ## SYNTAX
 
 ### SiteFeature
@@ -52,7 +50,6 @@ This example enables the "MyCustom" site scoped SharePoint Feature at http://som
 ### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>$w = Get-SPWeb http://somesite/myweb | ForEach{ $_.URL }
-
 C:\PS>Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
 ```
 
@@ -120,6 +117,12 @@ Accept wildcard characters: False
 ### -Force
 Forces the activation of a Feature.
 This causes any custom code associated with the Feature to rerun.
+
+> [!NOTE]
+> Please be aware ```-Force``` will not work if you updated the feature with Update-SPSolution.
+> In this case you have to disable feature first with ```Disable-SPFeature``` and then enable it back with ```Enable-SPFeature```
+
+
 
 ```yaml
 Type: SwitchParameter

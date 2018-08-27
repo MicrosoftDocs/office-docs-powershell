@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Debug-CsIntraPoolReplication
 schema: 2.0.0
 ---
@@ -105,7 +105,7 @@ You cannot use the ConferenceDirectory parameter and the UserUri parameter in th
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: ConferenceDirectory
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -126,7 +126,7 @@ You cannot use the ConferenceDirectory parameter and the UserUri parameter in th
 Type: UserIdParameter
 Parameter Sets: User
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -142,7 +142,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ For example:
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: PoolFqdn
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -177,7 +177,7 @@ Enables you to specify a particular service to be verified.
 Type: String
 Parameter Sets: PoolFqdn
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ When included in the command, shows information about all the services involved 
 Type: SwitchParameter
 Parameter Sets: PoolFqdn
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ Allowed values are:
 Type: ServiceEnumerationType
 Parameter Sets: PoolFqdn
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -244,3 +244,4 @@ Debug-CsIntraPoolReplication returns instances of the Microsoft.Rtc.Management.U
 [Get-CsManagementStoreReplicationStatus](Get-CsManagementStoreReplicationStatus.md)
 
 [Test-CsReplica](Test-CsReplica.md)
+

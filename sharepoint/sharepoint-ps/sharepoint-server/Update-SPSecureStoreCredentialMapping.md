@@ -27,17 +27,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
-
-$firstCredential = ConvertTo-SecureString "LOBDATABASE\jdoe" -AsPlainText -Force
-
-$secondCredential = ConvertTo-SecureString "abcDEF123$%^" -AsPlainText -Force
-
-$credentialValues = $firstCredential,$secondCredential
-
-$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
-
-Update-SPSecureStoreCredentialMapping -Identity $ssApp -Values $credentialValues -Principal $userClaim
+PS C:\>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
+PS C:\>$firstCredential = ConvertTo-SecureString "LOBDATABASE\jdoe" -AsPlainText -Force
+PS C:\>$secondCredential = ConvertTo-SecureString "abcDEF123$%^" -AsPlainText -Force
+PS C:\>$credentialValues = $firstCredential,$secondCredential
+PS C:\>$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
+PS C:\>Update-SPSecureStoreCredentialMapping -Identity $ssApp -Values $credentialValues -Principal $userClaim
 ```
 
 This example updates a credential mapping for the given site and the target application ContosoTargetApplication, for the user with the identity janedoe on domain CONTOSO.

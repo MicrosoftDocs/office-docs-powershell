@@ -14,7 +14,8 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ```
-Set-SPOTenant [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
+Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] 
+ [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>] 
  [-DisplayStartASiteOption <Boolean>] [-ExternalServicesEnabled <Boolean>] [-MaxCompatibilityLevel <Int32>]
  [-MinCompatibilityLevel <Int32>] [-NoAccessRedirectUrl <String>] [-OfficeClientADALDisabled <Boolean>]
  [-ProvisionSharedWithEveryoneFolder <Boolean>] [-RequireAcceptingAccountMatchInvitedAccount <Boolean>]
@@ -22,7 +23,8 @@ Set-SPOTenant [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInv
  [-ShowAllUsersClaim <Boolean>] [-ShowEveryoneClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>] [-SignInAccelerationDomain <String>]
  [-StartASiteFormUrl <String>] [-UsePersistentCookiesForExplorerView <Boolean>]
- [-CommentsOnSitePagesDisabled <Boolean>] [-DefaultSharingLinkType <SharingLinkType>]
+ [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>]
  [-DisallowInfectedFileDownload <Boolean>] [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>] [-IPAddressEnforcement <Boolean>] [-IPAddressWACTokenLifetime <Int32>]
@@ -52,7 +54,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ### -----------------------EXAMPLE 1-----------------------------
 ```
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
-Set-SPOTenant -NoAcessRedirectUrl 'http://www.contoso.com'
+Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
 ```
 This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to http://www.contoso.com. 
 
@@ -79,6 +81,27 @@ This example enables the use of special persisted cookie for Open with Explorer.
 
 
 ## PARAMETERS
+
+### -ApplyAppEnforcedRestrictionsToAdHocRecipients
+When the feature is enabled, all guest users are subject to conditional access policy. By default guest users who are accessing SharePoint Online files with pass code are exempt from the conditional access policy.
+
+The valid values are:  
+False (default) - Guest access users are exempt from conditional access policy.  
+True - Conditional access policy is applieda also to guest users.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -BccExternalSharingInvitations
 When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList.
@@ -292,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchResolveExactEmailOrUPN
-Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired.
+Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired. This also does not allow SharePoint users to search for security groups or SharePoint groups.
 
 SharePoint Administrators will still be able to use starts with or partial name matching when enabled.
 
@@ -506,13 +529,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SocialBarOnSitePagesDisabled
+Disables or enables the Social Bar.
+
+The Social Bar will appear on all modern SharePoint pages with the exception of the home page of a site. It will give users the ability to like a page, see the number of views, likes, and comments on a page, and see the people who have liked a page.
+
+PARAMVALUE: $true | $false
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultSharingLinkType
 Lets administrators choose what type of link appears is selected in the “Get a link” sharing dialog box in OneDrive for Business and SharePoint Online.
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
 
-Note:  
-Setting this value to “none” will default “get a link” to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.  
+> [!NOTE] 
+> Setting this value to “none” will default “get a link” to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.  
 
 The values are: 
 None
@@ -556,8 +600,8 @@ Accept wildcard characters: False
 ### -EnableGuestSignInAcceleration
 Accelerates guest-enabled site collections as well as member-only site collections when the SignInAccelerationDomain parameter is set. 
 
-Note:  
-If enabled, your identity provider must be capable of authenticating guest users. If it is not, guest users will be unable to log in and access content that was shared with them.  
+> [!NOTE] 
+> If enabled, your identity provider must be capable of authenticating guest users. If it is not, guest users will be unable to log in and access content that was shared with them.  
 
 
 ```yaml
@@ -612,8 +656,8 @@ Configures multiple IP addresses or IP address ranges (IPv4 or IPv6).
 
 Use commas to separate multiple IP addresses or IP address ranges. Verify there are no overlapping IP addresses and ensure IP ranges use Classless Inter-Domain Routing (CIDR) notation. For example, 172.16.0.0, 192.168.1.0/27.
 
-Note:  
-The IPAddressAllowList parameter only lets administrators set IP addresses or ranges that are recognized as trusted. To only grant access from these IP addresses or ranges, set the IPAddressEnforcement parameter to $true.  
+> [!NOTE] 
+> The IPAddressAllowList parameter only lets administrators set IP addresses or ranges that are recognized as trusted. To only grant access from these IP addresses or ranges, set the IPAddressEnforcement parameter to $true.  
 
 
 ```yaml
@@ -676,8 +720,8 @@ A value of True- Enables Office clients using non-modern authentication protocol
 
 A value of False-Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
-Note:  
-This may also prevent third-party apps from accessing SharePoint Online resources.
+> [!NOTE] 
+> This may also prevent third-party apps from accessing SharePoint Online resources.
 Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class.  
 
 
@@ -1077,8 +1121,8 @@ Accept wildcard characters: False
 ### -SpecialCharactersStateInFileFolderNames
 Permits the use of special characters in file and folder names in SharePoint Online and OneDrive for Business document libraries. 
 
-Note:  
-The only two characters that can be managed at this time are the # and % characters.  
+> [!NOTE] 
+> The only two characters that can be managed at this time are the # and % characters.  
 
 The following are the valid values: 
 
@@ -1103,8 +1147,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseFindPeopleInPeoplePicker
-Note:  
-When set to $true, users aren't able to share with security groups or SharePoint groups.  
+
+> [!NOTE] 
+> When set to $true, users aren't able to share with security groups or SharePoint groups.  
 
 
 ```yaml

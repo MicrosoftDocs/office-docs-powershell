@@ -23,12 +23,12 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### ---------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-FASTSearchSecurityCCTKServer
+PS C:\>Get-FASTSearchSecurityCCTKServer
 ```
 
-This example retrieves the                                                 configuration setting for the server that handles CCTK requests.
+This example retrieves the configuration setting for the server that handles CCTK requests.
 
 ## PARAMETERS
 

@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------------
 ```
-C:\PS>New-SPServiceApplicationPool -Name TestServiceWebApplicationPool -Account testdomain\testuser1
+C:\PS>New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account (Get-SPManagedAccount 'contoso\serviceAccount')
 ```
 
 This example creates a new Web service application pool.

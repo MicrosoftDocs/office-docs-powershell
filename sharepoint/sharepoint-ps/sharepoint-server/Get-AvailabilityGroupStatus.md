@@ -18,13 +18,13 @@ Get-AvailabilityGroupStatus [-AssignmentCollection <SPAssignmentCollection>] [-I
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns one or more objects representing the availability groups known to the SharePoint farm.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-Get-AvailabilityGroupStatus -Identity MyAvailabilityGroup 
+PS C:\>Get-AvailabilityGroupStatus -Identity MyAvailabilityGroup 
 
 ```
 

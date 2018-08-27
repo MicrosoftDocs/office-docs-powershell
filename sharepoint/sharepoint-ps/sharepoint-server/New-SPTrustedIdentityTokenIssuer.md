@@ -52,9 +52,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------- EXAMPLE---------------------------
 ```
-C:\PS>New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl http://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
-
-C:\PS>Set -SPWebApplication http://contoso.com -IdentityProvider (Get-SPTrustedIdentityTokenIssuer "LiveIDSTS")
+PS C:\>New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl http://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
 ```
 
 This example creates a new identity provider in the farm named LiveIDSTS.
@@ -229,13 +227,13 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndPoint
-{{ Fill MetadataEndPoint Description}}
+Specifies the URI for the metadata endpoint of the trusted provider.
 
 ```yaml
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -246,6 +244,7 @@ Accept wildcard characters: False
 
 ### -UseWReply
 Includes a WReply with the token request.
+
 WReply is a URL at the relying party to which the requestor is redirected once sign-out processing is complete.
 
 ```yaml
@@ -278,7 +277,9 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierClaimIs
-{{Fill IdentifierClaimIs Description}}
+Specifies which of the default mapped claims should be used as the identifier claim.
+
+Only used if the UseDefaultConfiguration parameter is set to true, otherwise use the IdentifierClaim parameter.
 
 ```yaml
 Type: String
@@ -294,13 +295,13 @@ Accept wildcard characters: False
 ```
 
 ### -RegisteredIssuerName
-{{Fill RegisteredIssuerName Description}}
+Specifies the Registered Issuer Name instead of not using the metadata endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: BasicParameterSet, ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -310,13 +311,13 @@ Accept wildcard characters: False
 ```
 
 ### -SignOutUrl
-{{Fill SignOutUrl Description}}
+Specifies the sign out URI for the trusted provider. This lets SharePoint to sign the user out from the trusted provider when they sign out from SharePoint.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SSharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -326,13 +327,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultConfiguration
-{{Fill UseDefaultConfiguration Description}}
+Specifies if the default set of claim mappings should be used.
+
+If UseDefaultConfiguration parameter is used, then the IdentifierClaimIs parameter must be used.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named

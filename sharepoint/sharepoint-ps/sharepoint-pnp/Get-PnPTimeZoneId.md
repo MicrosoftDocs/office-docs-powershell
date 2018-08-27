@@ -21,14 +21,14 @@ In order to create a new classic site you need to specify the timezone this site
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPTimeZoneId
+Get-PnPTimeZoneId
 ```
 
 This will return all time zone IDs in use by Office 365.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Get-PnPTimeZoneId -Match Stockholm
+Get-PnPTimeZoneId -Match Stockholm
 ```
 
 This will return the time zone IDs for Stockholm

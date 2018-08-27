@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE-------- 
 ```
-C:\PS>Get-SPAppPrincipal -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd"
+PS C:\>Get-SPAppPrincipal -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd"
 ```
 
 This example returns the app principal for a specified ID.

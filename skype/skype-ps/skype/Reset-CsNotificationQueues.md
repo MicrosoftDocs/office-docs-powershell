@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Reset-CsNotificationQueues
 schema: 2.0.0
 ---
@@ -8,25 +8,24 @@ schema: 2.0.0
 # Reset-CsNotificationQueues
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+The `Reset-CsNotificationQueues` cmdlet resets all presence notification queues. This cmdlet was introduced in Skype for Business Server 2015 November 2015 Cumulative Update.
 
 ## SYNTAX
-
 ```
 Reset-CsNotificationQueues [[-Fqdn] <Fqdn>] [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Reset-CsNotificationQueues` cmdlet resets all presence notification queues. Pending notifications will not be sent.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Reset-CsNotificationQueues -Fqdn FE01.contoso.com
 ```
 
-{{ Add example description here }}
+This example resets the notification queues on server FE01.contoso.com.
 
 ## PARAMETERS
 
@@ -37,7 +36,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -47,13 +46,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -63,13 +62,13 @@ Accept wildcard characters: False
 ```
 
 ### -Fqdn
-{{Fill Fqdn Description}}
+Specifies the fqdn of the server which you want to reset notification queues.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -86,7 +85,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -109,3 +108,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

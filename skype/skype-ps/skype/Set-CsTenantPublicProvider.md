@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsTenantPublicProvider
 schema: 2.0.0
@@ -210,3 +210,4 @@ Instead, the `Set-CsTenantPublicProvider` cmdlet modifies existing instances of 
 [Get-CsTenantFederationConfiguration](Get-CsTenantFederationConfiguration.md)
 
 [Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)
+

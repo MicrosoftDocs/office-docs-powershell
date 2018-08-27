@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPAccessServicesDatabaseServerGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns a database server group.
 
 ## SYNTAX
 
@@ -19,21 +19,22 @@ Get-SPAccessServicesDatabaseServerGroup [-ServiceContext] <SPServiceContextPipeB
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns a database server group associated with the given service context.
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Get-SPAccessServicesDatabaseServerGroup -ServiceContext http://siteUrl
 ```
-
-{{ Add example description here }}
+Returns the database server group associated with the site, http://siteUrl.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -49,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerGroup
-{{Fill DatabaseServerGroup Description}}
+The name of the database server group.
 
 ```yaml
 Type: AccessServicesDatabaseServerGroupPipeBind
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
-{{Fill ServiceContext Description}}
+Specifies the service context to retrieve Access Services database server information from.
 
 ```yaml
 Type: SPServiceContextPipeBind

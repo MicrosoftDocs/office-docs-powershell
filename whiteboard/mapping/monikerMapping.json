@@ -1,0 +1,11 @@
+{
+    "whiteboard-ps": {
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/whiteboard/whiteboard-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/whiteboard-ps/toc.json",
+        "packageRoot": "whiteboard-ps",
+        "modules": {
+            "whiteboard": {}     
+        }
+    }
+}

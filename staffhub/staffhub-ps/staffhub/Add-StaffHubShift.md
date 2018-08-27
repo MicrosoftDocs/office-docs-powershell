@@ -10,8 +10,9 @@ schema: 2.0.0
 # Add-StaffHubShift
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 Adds a shift to the specified member in a team.
+
+Note: This cmdlet is currently in Beta.
 
 ## SYNTAX
 
@@ -21,29 +22,29 @@ Add-StaffHubShift [-Title] <String> [[-Notes] <String>] [-StartDateTime] <DateTi
 ```
 
 ## DESCRIPTION
-Adds a shift to the specified member in a team
+Adds a shift to the specified member in a team.
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 $startTime = Get-Date -Date "2018-01-01T00:10:00"
 $endTime = Get-Date -Date "2018-01-01T04:10:00"
 Add-StaffHubShift -Title "Title" -StartDateTime $startTime -EndDateTime $endTime -ShiftType Working -MemberId "MBER_1234" -TeamId "TEAM_1234"
 ```
 
-Creates a shift for member MBER_1234 under the team TEAM_1234
+Creates a shift for member MBER_1234 under the team TEAM_1234.
 
 ## PARAMETERS
 
 ### -EndDateTime
-End time of the shift
+End time of the shift.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: True
 Position: 5
 Default value: None
@@ -52,13 +53,13 @@ Accept wildcard characters: False
 ```
 
 ### -MemberId
-Member to which the shift is to be added
+Member to which the shift is to be added.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: True
 Position: 1
 Default value: None
@@ -67,13 +68,13 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
-Additional notes for the shift
+Additional notes for the shift.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: False
 Position: 3
 Default value: None
@@ -82,14 +83,14 @@ Accept wildcard characters: False
 ```
 
 ### -ShiftType
-ShiftType - Working/Absence
+ShiftType - Working/Absence.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Microsoft StaffHub
 Accepted values: Working, Absence
-
 Required: True
 Position: 6
 Default value: None
@@ -98,13 +99,13 @@ Accept wildcard characters: False
 ```
 
 ### -StartDateTime
-Start time of the shift
+Start time of the shift.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: True
 Position: 4
 Default value: None
@@ -113,13 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -TeamId
-ID of the team to which the shift is to be added
+ID of the team to which the shift is to be added.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: True
 Position: 0
 Default value: None
@@ -128,13 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-Title of the shift
+Title of the shift.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-
+Aliases:
+Applicable: Microsoft StaffHub
 Required: False
 Position: 2
 Default value: None
@@ -146,12 +147,14 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
 
 ## NOTES
 
+This cmdlet is currently in Beta.
+
 ## RELATED LINKS
 
+[MicrosoftStaffHub Module in Gallery](https://www.powershellgallery.com/packages/MicrosoftStaffHub/1.0.0-alpha)

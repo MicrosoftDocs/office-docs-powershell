@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Returns the metadata for an instance of an app.
 
-
-
 ## SYNTAX
 
 ### IdentityParameterSet
@@ -46,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE 1----------- 
 ```
-C:\PS>$instances = Get-SPAppInstance -Web http://localhost
+PS C:\>Get-SPAppInstance -Web http://localhost
 ```
 
 This example returns a collection if more than one app is installed on http://localhost.
@@ -54,7 +52,7 @@ If only one app is installed, a single object is returned.
 
 ### -----------EXAMPLE 2----------- 
 ```
-C:\PS>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
+PS C:\>Get-SPAppInstance -AppInstanceId $instance.Id
 ```
 
 This example returns the ID of an instance of an app.
@@ -97,6 +95,7 @@ Accept wildcard characters: False
 
 ### -App
 Specifies the App.
+
 This parameter returns metadata for all instances of an app.
 
 ```yaml
@@ -135,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppInstanceId
-{{Fill AppInstanceId Description}}
+Specifies the App Instance ID to display.
 
 ```yaml
 Type: Guid
@@ -151,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Web
-{{Fill Web Description}}
+Specifies the SPWeb object.
 
 ```yaml
 Type: SPWebPipeBind

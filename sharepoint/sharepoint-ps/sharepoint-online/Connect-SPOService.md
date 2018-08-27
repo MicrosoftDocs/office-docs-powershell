@@ -8,6 +8,7 @@ schema: 2.0.0
 # Connect-SPOService
 
 ## SYNOPSIS
+
 Connects a SharePoint Online global administrator to a SharePoint Online connection (the SharePoint Online Administration Center).
 This cmdlet must be run before any other SharePoint Online cmdlets can run.
 
@@ -15,18 +16,21 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 ## SYNTAX
 
 ### AuthenticationUrl
+
 ```
 Connect-SPOService -AuthenticationUrl <String> [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
  -Url <UrlCmdletPipeBind> [<CommonParameters>]
 ```
 
 ### AuthenticationLocation
+
 ```
 Connect-SPOService [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
  [-Region <AADCrossTenantAuthenticationLocation>] -Url <UrlCmdletPipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Connect-SPOService` cmdlet connects a SharePoint Online global administrator to the SharePoint Online Administration Center.
 
 Only a single SharePoint Online service connection is maintained from any single Windows PowerShell session.
@@ -44,26 +48,31 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
+
 ```
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -credential admin@contoso.com
 ```
+
 Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com/.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
+
 ```
 $username = "admin@contoso.sharepoint.com"
 $password = "password"
 $cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(convertto-securestring $Password -asplaintext -force)
-Connect-SPOService -Url http://contoso-admin.sharepoint.com/ -Credential $cred
+Connect-SPOService -Url https://contoso-admin.sharepoint.com/ -Credential $cred
 ```
+
 Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com/.
 
 
 ## PARAMETERS
 
 ### -AuthenticationUrl
-{{Fill AuthenticationUrl Description}}
+
+Location for AAD Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
 
 ```yaml
 Type: String
@@ -79,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientTag
-{{Fill ClientTag Description}}
+
+Permits appending a client tag to existing client tag. Used optionally in the CSOM http traffic to identify used script or solution.
 
 ```yaml
 Type: String
@@ -95,6 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the credentials to use to connect. If no credentials are presented, a dialog will prompt for the credentials. The credentials must be those of a SharePoint Online global administrator who can access the SharePoint Online Administration Center site.
 
 
@@ -112,12 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -Region
+
 The valid values are: Default | ITAR | Germany | China
 
 The default value is "default".
 
-Note:  
-The ITAR value is for United States Government cloud tenancies only.  
+> [!NOTE] 
+> The ITAR value is for United States Government cloud tenancies only.  
 
 
 ```yaml
@@ -151,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -161,8 +174,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Disconnect-SPOService](Disconnect-SPOService.md)

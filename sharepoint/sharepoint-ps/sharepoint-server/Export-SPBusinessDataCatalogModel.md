@@ -33,8 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceConext http://contoso
-
+C:\PS>$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceContext http://contoso
 C:\PS>Export-SPBusinessDataCatalogModel -Identity $Model -Path "C:\folder\model.bdcm"
 ```
 

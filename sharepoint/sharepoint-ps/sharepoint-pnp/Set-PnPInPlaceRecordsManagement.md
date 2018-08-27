@@ -10,16 +10,9 @@ Activates or deactivates in the place records management feature.
 
 ## SYNTAX 
 
-### On
+### Enable or Disable
 ```powershell
-Set-PnPInPlaceRecordsManagement -On [<SwitchParameter>]
-                                [-Web <WebPipeBind>]
-                                [-Connection <SPOnlineConnection>]
-```
-
-### Off
-```powershell
-Set-PnPInPlaceRecordsManagement -Off [<SwitchParameter>]
+Set-PnPInPlaceRecordsManagement -Enabled <Boolean>
                                 [-Web <WebPipeBind>]
                                 [-Connection <SPOnlineConnection>]
 ```
@@ -28,46 +21,34 @@ Set-PnPInPlaceRecordsManagement -Off [<SwitchParameter>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPInPlaceRecordsManagement -On
+Set-PnPInPlaceRecordsManagement -Enabled $true
 ```
 
 Activates In Place Records Management
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Set-PnPInPlaceRecordsManagement -Off
+Set-PnPInPlaceRecordsManagement -Enabled $false
 ```
 
 Deactivates In Place Records Management
 
 ## PARAMETERS
 
-### -Off
-Turn records management off
+### -Enabled
+
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Off
+Type: Boolean
+Parameter Sets: Enable or Disable
 
 Required: True
-Position: 0
-Accept pipeline input: False
-```
-
-### -On
-Turn records management on
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: On
-
-Required: True
-Position: 0
+Position: Named
 Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

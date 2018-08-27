@@ -94,7 +94,7 @@ Single line of text: -Values @{"Title" = "Title New"}
 
 Multiple lines of text: -Values @{"MultiText" = "New text\n\nMore text"}
 
-Rich text: -Values @{"MultiText" = "<strong>New</strong> text"}
+Rich text: -Values @{"MultiText" = "&lt;strong&gt;New&lt;/strong&gt; text"}
 
 Choice: -Values @{"Choice" = "Value 1"}
 
@@ -104,7 +104,7 @@ Currency: -Values @{"Number" = "10"}
 
 Currency: -Values @{"Currency" = "10"}
 
-Date and Time: -Values @{"DateAndTime" = "03/10/2015 14:16"}
+Date and Time: -Values @{"DateAndTime" = "03/13/2015 14:16"}
 
 Lookup (id of lookup value): -Values @{"Lookup" = "2"}
 
@@ -138,7 +138,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -163,7 +163,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.ListItem](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.listitem.aspx)
+### Microsoft.SharePoint.Client.ListItem
 
 ## RELATED LINKS
 

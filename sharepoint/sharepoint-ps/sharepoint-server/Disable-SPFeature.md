@@ -39,7 +39,6 @@ This example disables the "MyCustom" Web site scoped feature at   http://somesit
 ### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>$w = Get-SPWeb http://somesite/myweb | ForEach{ $_.URL }
-
 C:\PS>Get-SPFeature -Web $w |%{ Disable-SPFeature -Identity $_ -URL $w}
 ```
 

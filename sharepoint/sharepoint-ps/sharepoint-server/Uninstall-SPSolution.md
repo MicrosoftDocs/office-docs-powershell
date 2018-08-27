@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>Uninstall-SPUserSolution -Identity contoso_solution.wsp
+PS C:\>Uninstall-SPSolution -Identity contoso_solution.wsp
 ```
 
 This example retracts the deployed SharePoint solution contoso_solution.wsp.
@@ -142,14 +142,13 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
-{{Fill CompatibilityLevel Description}}
-
+Specifies whether to uninstall the solution, from a specific version directory based on CompatibilityLevel. The default behavior if this parameter is not specified is to uninstall the solution only from the version directory based on the version tracked in the manifest of the solution's cab file.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

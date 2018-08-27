@@ -29,21 +29,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>Get-SPRoutingRule -RequestManagementSettings $rm
-
-C:\PS>$machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
-
-C:\PS>$pool=Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
-
-C:\PS>$criteria=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
-
-C:\PS>$rule=Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
-
-C:\PS>$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
-
-C:\PS>Set-SPRoutingRule -Identity $rule -Criteria $criteriaNew
+PS C:\>$wa = Get-SPWebApplication http://webAppUrl
+PS C:\>$rm = Get-SPRequestManagementSettings -Identity $wa
+PS C:\>Get-SPRoutingRule -RequestManagementSettings $rm
+PS C:\>$machines = Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+PS C:\>$pool = Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
+PS C:\>$criteria = New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+PS C:\>$rule = Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
+PS C:\>$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
+PS C:\>Set-SPRoutingRule -Identity $rule -Criteria $criteriaNew
 ```
 
 This example sets a routing rule for the specified identity by using the $rule variable.
@@ -68,13 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection

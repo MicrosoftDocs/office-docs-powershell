@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsOnlineVoicemailPolicy
 schema: 2.0.0
@@ -13,9 +13,9 @@ Modifies an existing Online Voicemail policy. Online Voicemail policies determin
 ## SYNTAX
 
 ```
-Set-CsOnlineVoicemailPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-EnableTranscription <Object>] [-EnableTranscriptionProfanityMasking <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
- [<CommonParameters>]
+Set-CsOnlineVoicemailPolicy [-WhatIf] [-ShareData <ShareDataType>] [-EnableTranscription <Boolean>] [-Confirm]
+ [-EnableTranscriptionProfanityMasking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Force]
+ [-Instance <PSObject>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,32 +27,30 @@ By default, users enabled for Phone System will be enabled for Online Voicemail,
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Set-CsOnlineVoicemailPolicy -EnableTranscription $False
 ```
 
-Insert descriptive text for example 1.
+This example modifies the global online voicemail policy to disable transcription. This means that all the users in the organization that have not been assigned a per-user voicemail policy will not receive transcription as part of their subsequent voicemail emails.
+
+### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineVoicemailPolicy -EnableTranscription $True
+```
+
+This example modifies the global online voicemail policy to enable transcription. This means that all the users in the organization that have not been assigned a per-user voicemail policy will receive transcription as part of their subsequent voicemail emails.
+
+### -------------------------- Example 3 --------------------------
+```
+Set-CsOnlineVoicemailPolicy -EnableTranscriptionProfanityMasking $true
+```
+
+This example enables transcription profanity masking for your organization.
 
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
-PARAMVALUE: SwitchParameter
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -68,10 +66,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
-PARAMVALUE: $true | $false
+Enables or disables automatically transcription of all incoming voicemails and delivery of the text version together with the audio file to the inbox for your organization.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -84,10 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscriptionProfanityMasking
-PARAMVALUE: $true | $false
+Enables or disables transcription profanity masking for your organization.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -99,8 +97,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShareData
+Specifies whether (voicemail and transcription) data is shared with the service for training and improving accuracy. By default, it is "Defer" which means that it is upto the user to decide whether they want to share their voicemail data with the service team (configurable through User Settings Portal). Other possible value is "Deny" which means that the voicemail data for any user in the tenant will not be shared with the service regardless of the users own choice.
+
+```yaml
+Type: ShareDataType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
-PARAMVALUE: SwitchParameter
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -116,10 +129,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-PARAMVALUE: XdsIdentity
+A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, Global policy is modified.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -132,10 +145,10 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-PARAMVALUE: PSObject
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -148,10 +161,18 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -164,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-PARAMVALUE: SwitchParameter
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -180,7 +201,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -205,3 +230,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsOnlineVoicemailPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps)
+
+[Grant-CsOnlineVoicemailPolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps)

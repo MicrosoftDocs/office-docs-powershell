@@ -22,21 +22,21 @@ Remove-PnPList -Identity <ListPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Remove-PnPList -Identity Announcements
+Remove-PnPList -Identity Announcements
 ```
 
 Removes the list named 'Announcements'. Asks for confirmation.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Remove-PnPList -Identity Announcements -Force
+Remove-PnPList -Identity Announcements -Force
 ```
 
 Removes the list named 'Announcements' without asking for confirmation.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Remove-PnPList -Title Announcements -Recycle
+Remove-PnPList -Title Announcements -Recycle
 ```
 
 Removes the list named 'Announcements' and saves to the Recycle Bin
@@ -68,7 +68,7 @@ Accept pipeline input: True
 ```
 
 ### -Recycle
-
+Defines if the list should be moved to recycle bin or directly deleted.
 
 ```yaml
 Type: SwitchParameter
@@ -80,7 +80,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

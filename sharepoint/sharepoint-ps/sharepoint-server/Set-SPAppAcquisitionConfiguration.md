@@ -8,8 +8,7 @@ schema: 2.0.0
 # Set-SPAppAcquisitionConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
-
+Sets app acquisition settings.
 
 ## SYNTAX
 
@@ -26,30 +25,34 @@ Set-SPAppAcquisitionConfiguration -Enable <Boolean> [-AssignmentCollection <SPAs
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+
+Use the Set-SPAppAcquisitionConfiguration cmdlet to set app acquisition settings from the SharePoint Store or App Catalog.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference (http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\>Set-SPAppAcquisitionConfiguration -WebApplication http://localhost -Enable:$false
 ```
 
-{{ Add example description here }}
+This example disabled app purchases for the specified Web Application.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>Set-SPAppAcquisitionConfiguration -SiteSubscription http://localhost/sites/SharePointOnlineAdmin1 -Enable:$false
+PS C:\>Set-SPAppAcquisitionConfiguration -SiteSubscription http://localhost/sites/SharePointOnlineAdmin1 -Enable:$false
 ```
 
-This example disables app purchase for the specified tenant.
+This example disables app purchases for the specified tenant.
 
 
 ## PARAMETERS
 
 ### -Enable
-{{Fill Enable Description}}
+Specifies whether acquisition is enabled or disabled.
 
 
 ```yaml
@@ -66,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
-{{Fill SiteSubscription Description}}
+Specifies the site collection for which to set app acquisition settings.
 
 
 ```yaml
@@ -83,7 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 ```yaml
@@ -117,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
-{{Fill WebApplication Description}}
+Specifies the web application for which acquisitions settings are to be set.
 
 
 ```yaml

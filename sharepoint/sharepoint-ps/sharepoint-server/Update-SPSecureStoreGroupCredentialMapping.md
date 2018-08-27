@@ -29,15 +29,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoGroupTargetApplication"
-
-$firstCredential = ConvertTo-SecureString "LOBDATABASE\fulltimeemployees" -AsPlainText -Force
-
-$secondCredential = ConvertTo-SecureString "abcDEF123$%^" -AsPlainText -Force
-
-$credentialValues = $firstCredential,$secondCredential
-
-Update-SPSecureStoreGroupCredentialMapping -Identity $ssApp -Values $credentialValues
+PS C:\>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoGroupTargetApplication"
+PS C:\>$firstCredential = ConvertTo-SecureString "LOBDATABASE\fulltimeemployees" -AsPlainText -Force
+PS C:\>$secondCredential = ConvertTo-SecureString "abcDEF123$%^" -AsPlainText -Force
+PS C:\>$credentialValues = $firstCredential,$secondCredential
+PS C:\>Update-SPSecureStoreGroupCredentialMapping -Identity $ssApp -Values $credentialValues
 ```
 
 This example adds a credential mapping for the target application ContosoGroupTargetApplication, for all users in this group target application.

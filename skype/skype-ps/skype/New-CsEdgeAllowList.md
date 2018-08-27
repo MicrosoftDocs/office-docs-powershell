@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsEdgeAllowList
 schema: 2.0.0
@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Enables administrators to specify the domains that their users will be allowed to communicate with.
-The New-CsEdgeAllowList cmdlet, which can be used only with Skype for Business Online, must be used in conjunction with the New-CsEdgeDomainPattern cmdlet and the Set-CsTenantFederationConfiguration cmdlet.
+The `New-CsEdgeAllowList` cmdlet, which can be used only with Skype for Business Online, must be used in conjunction with the `New-CsEdgeDomainPattern` cmdlet and the `Set-CsTenantFederationConfiguration` cmdlet.
 
 ## SYNTAX
 
@@ -32,20 +32,20 @@ However, administrators can modify this default setting and limit communication 
 
 Skype for Business Online does not allow you to directly modify the allowed list or the blocked list; for example, you cannot use a command similar to this one, which passes a string value representing a domain name to the allowed domains list:
 
-`Set-CsTenantFederationConfiguration -AllowedDomains "fabrikam.com"`
+Set-CsTenantFederationConfiguration -AllowedDomains "fabrikam.com"
 
-Instead, you must use either the New-CsEdgeAllowAllKnownDomains cmdlet or the New-CsEdgeAllowList cmdlet to create a domain object and then pass that domain object to the Set-CsTenantFederationConfiguration cmdlet.
-The New-CsEdgeAllowAllKnownDomains cmdlet is used if you want to allow users to communicate with all domains except for those expressly specified on the blocked domains list.
-The New-CsEdgeAllowList cmdlet is used if you want to limit user communication to a specified collection of domains.
+Instead, you must use either the `New-CsEdgeAllowAllKnownDomains` cmdlet or the `New-CsEdgeAllowList` cmdlet to create a domain object and then pass that domain object to the `Set-CsTenantFederationConfiguration` cmdlet.
+The `New-CsEdgeAllowAllKnownDomains` cmdlet is used if you want to allow users to communicate with all domains except for those expressly specified on the blocked domains list.
+The `New-CsEdgeAllowList` cmdlet is used if you want to limit user communication to a specified collection of domains.
 In that case, users will only be allowed to communicate with domains that appear on the allowed domains list.
 
 To add a single domain (fabrikam.com) to the allowed domain list, you need to use a set of command similar to these:
 
-`$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"`
+$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 
-`$newAllowList = New-CsEdgeAllowList -AllowedDomain $x`
+$newAllowList = New-CsEdgeAllowList -AllowedDomain $x
 
-`Set-CsTenantFederationConfiguration -AllowedDomains $newAllowList`
+Set-CsTenantFederationConfiguration -AllowedDomains $newAllowList
 
 When this command finishes executing, users will only be allowed to communicate with users from fabrikam.com domain.
 
@@ -62,10 +62,10 @@ Set-CsTenantFederationConfiguration -AllowedDomains $newAllowList
 ```
 
 The commands shown in Example 1 assign the domain fabrikam.com to the allowed domains list for the tenant with the TenantId "bf19b7db-6960-41e5-a139-2aa373474354".
-To do this, the first command in the example uses the New-CsEdgeDomainPattern cmdlet to create a domain object for fabrikam.com; this object is stored in a variable named $x.
-After the domain object has been created, the New-CsEdgeAllowList cmdlet is used to create a new allowed list containing only the domain fabrikam.com.
+To do this, the first command in the example uses the `New-CsEdgeDomainPattern` cmdlet to create a domain object for fabrikam.com; this object is stored in a variable named $x.
+After the domain object has been created, the `New-CsEdgeAllowList` cmdlet is used to create a new allowed list containing only the domain fabrikam.com.
 
-With the allowed domain list created, the final command in the example can then use the Set-CsTenantFederationConfiguration cmdlet to configure fabrikam.com as the only domain on the allowed domain list for the current tenant.
+With the allowed domain list created, the final command in the example can then use the `Set-CsTenantFederationConfiguration` cmdlet to configure fabrikam.com as the only domain on the allowed domain list for the current tenant.
 
 
 ### -------------------------- Example 2 -------------------------- 
@@ -82,10 +82,8 @@ Set-CsTenantFederationConfiguration -AllowedDomains $newAllowList
 ```
 
 Example 2 shows how you can add multiple domains to an allowed domains list.
-This is done by calling the New-CsEdgeDomainPattern cmdlet multiple times (one for each domain to be added to the list), and storing the resulting domain objects in separate variables.
-Each of those variables can then be added to the allow list created by the New-CsEdgeAllowList cmdlet simply by using the AllowedDomain parameter and separating the variables name by using commas:
-
-
+This is done by calling the `New-CsEdgeDomainPattern` cmdlet multiple times (one for each domain to be added to the list), and storing the resulting domain objects in separate variables.
+Each of those variables can then be added to the allow list created by the `New-CsEdgeAllowList` cmdlet simply by using the AllowedDomain parameter and separating the variables name by using commas.
 
 ### -------------------------- Example 3 -------------------------- 
 ```
@@ -95,20 +93,18 @@ Set-CsTenantFederationConfiguration -AllowedDomains $newAllowList
 ```
 
 In Example 3, all domains are removed from the allowed domains list.
-To do this, the first command in the example uses the New-CsEdgeAllowList cmdlet to create a blank list of allowed domains; this is accomplished by setting the AllowedDomain property to a null value ($Null).
-The resulting object reference ($newAllowList) is then used in conjunction with the Set-CsTenantFederationConfiguration cmdlet to remove all the domains from the allowed domain list
-
-
+To do this, the first command in the example uses the `New-CsEdgeAllowList` cmdlet to create a blank list of allowed domains; this is accomplished by setting the AllowedDomain property to a null value ($Null).
+The resulting object reference ($newAllowList) is then used in conjunction with the `Set-CsTenantFederationConfiguration` cmdlet to remove all the domains from the allowed domain list.
 
 ## PARAMETERS
 
 ### -AllowedDomain
 Object reference to the new domain (or set of domains) to be added to the allowed domain list.
-Domain object references must be created by using the New-CsEdgeDomainPattern cmdlet.
+Domain object references must be created by using the `New-CsEdgeDomainPattern` cmdlet.
 Multiple domain objects can be added by separating the object references using commas.
 For example:
 
-`-AllowedDomain $x,$y`
+-AllowedDomain $x,$y
 
 ```yaml
 Type: Object
@@ -146,12 +142,12 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ###  
 None.
-The New-CsEdgeAllowList cmdlet does not accept pipelined input.
+The `New-CsEdgeAllowList` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-The New-CsEdgeAllowList cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowList object.
+The `New-CsEdgeAllowList` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowList object.
 
 ## NOTES
 
@@ -160,4 +156,3 @@ The New-CsEdgeAllowList cmdlet creates new instances of the Microsoft.Rtc.Manage
 [New-CsEdgeDomainPattern](New-CsEdgeDomainPattern.md)
 
 [Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
-

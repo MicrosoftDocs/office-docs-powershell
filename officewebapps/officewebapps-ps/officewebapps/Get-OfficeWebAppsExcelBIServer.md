@@ -24,10 +24,10 @@ Returns the server ID of the instance of Analysis Services that has been configu
 
 ### Example 1
 ```
-{{ Add example code here }}
+Get-OfficeWebAppsExcelBIServer
 ```
 
-{{ Add example description here }}
+This example returns the server ID of the instance of Analysis Services.
 
 ## PARAMETERS
 

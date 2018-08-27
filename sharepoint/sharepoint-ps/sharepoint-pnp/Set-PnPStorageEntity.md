@@ -6,15 +6,16 @@ schema: 2.0.0
 # Set-PnPStorageEntity
 
 ## SYNOPSIS
-Set Storage Entities / Farm Properties.
+Set Storage Entities / Farm Properties in either the tenant scoped app catalog or the site collection app catalog.
 
 ## SYNTAX 
 
 ```powershell
 Set-PnPStorageEntity -Key <String>
                      -Value <String>
-                     -Comment <String>
-                     -Description <String>
+                     [-Comment <String>]
+                     [-Description <String>]
+                     [-Scope <StorageEntityScope>]
                      [-Connection <SPOnlineConnection>]
 ```
 
@@ -22,10 +23,17 @@ Set-PnPStorageEntity -Key <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Set-PnPStorageEntity -Key MyKey -Value "MyValue" -Comment "My Comment" -Description "My Description"
+Set-PnPStorageEntity -Key MyKey -Value "MyValue" -Comment "My Comment" -Description "My Description"
 ```
 
-Sets an existing or adds a new storage entity / farm property
+Sets an existing or adds a new storage entity / farm property at tenant level.
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Set-PnPStorageEntity -Scope Site -Key MyKey -Value "MyValue" -Comment "My Comment" -Description "My Description"
+```
+
+Sets an existing or adds a new storage entity site collection level.
 
 ## PARAMETERS
 
@@ -36,7 +44,7 @@ The comment to set.
 Type: String
 Parameter Sets: (All)
 
-Required: True
+Required: False
 Position: Named
 Accept pipeline input: False
 ```
@@ -48,7 +56,7 @@ The description to set.
 Type: String
 Parameter Sets: (All)
 
-Required: True
+Required: False
 Position: Named
 Accept pipeline input: False
 ```
@@ -61,6 +69,18 @@ Type: String
 Parameter Sets: (All)
 
 Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -Scope
+Defines the scope of the storage entity. Defaults to Tenant.
+
+```yaml
+Type: StorageEntityScope
+Parameter Sets: (All)
+
+Required: False
 Position: Named
 Accept pipeline input: False
 ```
@@ -78,7 +98,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

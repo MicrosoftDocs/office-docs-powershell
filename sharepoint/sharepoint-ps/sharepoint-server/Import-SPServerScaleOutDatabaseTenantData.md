@@ -11,9 +11,6 @@ schema: 2.0.0
 
 Imports data from the specified subscription id.
 
-
-
-
 ## SYNTAX
 
 ```
@@ -26,17 +23,14 @@ Import-SPServerScaleOutDatabaseTenantData -FilePath <String> -ServiceApplication
 
 Use the Import-SPServerPScaleOutDatabaseTenantData cmdlet to import data from the specified file for the specified subscription id to the specified service application.
 
-
-
-
 ## EXAMPLES
 
 ### -------------EXAMPLE---------- 
 ```
-C:\PS>Import-SPServerScaleOutDatabaseTenantData -FilePath "C:\ TenantData.dat" -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
+C:\PS>Import-SPServerScaleOutDatabaseTenantData -FilePath "C:\TenantData.dat" -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
 ```
 
-This example imports data from the file at C:\ TenantData.dat, to the specified service application and marks all the imported data with the site subscription id 5CAF2F99-A75F-4239-B9CD-7FE63D1CE904
+This example imports data from the file at C:\TenantData.dat, to the specified service application and marks all the imported data with the site subscription id 5CAF2F99-A75F-4239-B9CD-7FE63D1CE904.
 
 
 ## PARAMETERS
@@ -67,10 +61,6 @@ Accept wildcard characters: False
 
 Specifies the service application to import the data to.
 
-
-
-
-
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
@@ -88,10 +78,6 @@ Accept wildcard characters: False
 
 Specifies the site subscription id to import the data from.
 This value will replace the site subscription id value from the data file.
-
-
-
-
 
 ```yaml
 Type: Guid
@@ -116,9 +102,6 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
-
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
@@ -137,9 +120,6 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
-
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -157,8 +137,6 @@ Accept wildcard characters: False
 
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
-
 
 ```yaml
 Type: SwitchParameter

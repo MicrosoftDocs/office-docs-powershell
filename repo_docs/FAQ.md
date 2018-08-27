@@ -26,7 +26,12 @@ When a product team ships an update or new version they can use the PlatyPS tool
 
 The XML contains the latest version of the reference content on GitHub.
 Ideally the Online versions will always have the latest content from GitHub and the On Premises products will always have the latest help with Update-Help. 
-The work to make this happen is not yet done so the content is only refreshed on product team releases.
+The work to make this happen is not yet done so the content is only refreshed on product team releases. 
+
+NOTE: For now (3/1/2018) the XML is being placed in skype/update-help.
+This help is generated from the New-ExternalHelp command that is part of PlatyPS.
+The 2019 release is working towards pulling help from here with Update-Help.
+Stay tuned.
 
 ## What metadata do reference topics need to have?
 
@@ -109,3 +114,39 @@ If you are working with the command line using Git Bash, this will help:
 https://www.codeproject.com/Articles/457305/Basic-Git-Command-Line-Reference-for-Windows-Users
 
 Also check out Git Kraken https://www.gitkraken.com/ which has a great user interface and visualizations.
+
+## Why are all the cmdlets for a given product in a single folder in the repo? Wouldn't it be better to put them in buckets?
+GitHub is the single source of truth for Office PowerShell cmdlet reference. 
+There is a single reference article per cmdlet.
+There is a folder for each major product area in order to create a basic structure but this isn't require for the system to work.
+Each article is tagged with appropriate metadata for versioning.
+Keeping things as simple as possible has a number of benefits.
+For more about the design of the system, see the FAQ item *"Why is this open source project designed the way it is?"*.
+
+
+## Why is this open source project designed the way it is?
+The system was designed to be as simple as possible in order to achieve three primary objectives.
+
+1. Increase community engagement.
+
+    There are many open source projects and every one of them is striving for community involvement.
+    We designed the PowerShell reference project to be easily understood in order to increase community ownership and contributions.
+    If a person comes to a project and they cannot understand what they can do in 20-30 seconds then they are likely to bounce on to something else. 
+    The open source PowerShell reference project was designed to break down the barriers to understanding and so someone can ‘flow’ directly into contributions once they have discovered the project.
+    A vibrant and active community results in the best reference content that goes directly back into PowerShell Get-Help.
+    
+1. Central location for content that feeds multiple surfacing mechanisms.
+
+    The first two places the PowerShell reference content is surfaces is Get-Help in PowerShell itself and the docs.microsoft.com website.
+    In the future the content can also be surfaced in an iOS app, Android app, Windows Universal app, and other mechanisms. 
+    With a simple, centralized, system for the source of truth, in GitHub, it becomes much easier to surface content using multiple mechanisms since GitHub is not tailored for once specific location, such as Get-Help. 
+    If the GitHub repo focused on one specific site or mechanism then surfacing from other mechansisms could become too complex or could exponentially expound the effort required.
+
+1. Keep content fresh and up to date.
+
+    The system uses a single [PlatyPS](https://github.com/PowerShell/platyPS) command to generate the XML file that goes into the product so that Get-Help shows the current reference content.
+    The system was designed so that the process can be automated, perhaps with a GitHub webhook that triggers on any merge.
+    The idea is that in the past the Get-Help content was immediately outdated once a product shipped.
+    With the new system the content in Get-Help will always be up-to-date by running an Update-Help, or equivalent, command in PowerSHell.
+
+

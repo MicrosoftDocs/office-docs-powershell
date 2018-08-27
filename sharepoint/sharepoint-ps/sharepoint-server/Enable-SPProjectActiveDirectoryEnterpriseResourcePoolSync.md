@@ -44,8 +44,12 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ###   ------------ Example 1 --------------------
 ```
-C:\PS>
+C:\PS>$groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
+C:\PS>[Guid[]]$groupUids = $groupGuids[0].ObjectGuid,$groupGuids[1].ObjectGuid
+C:\PS>Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync -Url http://pwa_site -GroupUids $groupUids
 ```
+
+Retrieves the ObjectGuid values of the Domain Users and Domain Admins Active Directory groups and adds them to the Active Directory Enterprise Resource Pool Synchronization on the Project Web Apps site, http://pwa_site.
 
 ## PARAMETERS
 

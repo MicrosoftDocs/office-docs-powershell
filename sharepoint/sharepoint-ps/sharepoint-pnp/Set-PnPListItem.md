@@ -11,8 +11,8 @@ Updates a list item
 ## SYNTAX 
 
 ```powershell
-Set-PnPListItem -Identity <ListItemPipeBind>
-                -List <ListPipeBind>
+Set-PnPListItem -List <ListPipeBind>
+                -Identity <ListItemPipeBind>
                 [-ContentType <ContentTypePipeBind>]
                 [-Values <Hashtable>]
                 [-SystemUpdate [<SwitchParameter>]]
@@ -84,6 +84,8 @@ Accept pipeline input: True
 ### -SystemUpdate
 Update the item without creating a new version.
 
+Only applicable to: SharePoint Online
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -100,7 +102,7 @@ Single line of text: -Values @{"TextField" = "Title New"}
 
 Multiple lines of text: -Values @{"MultiTextField" = "New text\n\nMore text"}
 
-Rich text: -Values @{"MultiTextField" = "<strong>New</strong> text"}
+Rich text: -Values @{"MultiTextField" = "&lt;strong&gt;New&lt;/strong&gt; text"}
 
 Choice: -Values @{"ChoiceField" = "Value 1"}
 
@@ -110,7 +112,7 @@ Currency: -Values @{"NumberField" = "10"}
 
 Currency: -Values @{"CurrencyField" = "10"}
 
-Date and Time: -Values @{"DateAndTimeField" = "03/10/2015 14:16"}
+Date and Time: -Values @{"DateAndTimeField" = "03/13/2015 14:16"}
 
 Lookup (id of lookup value): -Values @{"LookupField" = "2"}
 
@@ -144,7 +146,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -169,7 +171,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.ListItem](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.listitem.aspx)
+### Microsoft.SharePoint.Client.ListItem
 
 ## RELATED LINKS
 

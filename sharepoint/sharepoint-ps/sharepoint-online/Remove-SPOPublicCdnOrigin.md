@@ -24,11 +24,16 @@ Remove-SPOPublicCdnOrigin [-Identity] <String> [-Confirm] [-WhatIf] [<CommonPara
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
-```
-PS C:\> {{ Add example code here }}
+```get
+Get-SPOPublicCdnOrigins
+Id                                                                       Url
+--                                                                       ---
+11270051ee79e73829f6e7a3ee5d900d49c4fc5901645c642b799ecb62787a5069ca80fb HTTPS://CONTOSO.SHAREPOINT.COM/SITES/CDN...
+Remove-SPOPublicCdnOrigin -Identity 11270051ee79e73829f6e7a3ee5d900d49c4fc5901645c642b799ecb6278
+7a5069ca80fb
 ```
 
-{{ Add example description here }}
+This example returns a list of CDN origins and then removes and origin based on the identity.
 
 
 ## PARAMETERS

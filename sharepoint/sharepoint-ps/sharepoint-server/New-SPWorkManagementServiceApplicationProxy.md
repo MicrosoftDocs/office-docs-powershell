@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013
 title: New-SPWorkManagementServiceApplicationProxy
 schema: 2.0.0
 ---
@@ -24,17 +24,17 @@ Use the `New-SPWorkManagementServiceApplicationProxy` cmdlet to create a new Wor
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+Note: This functionality has been removed from SharePoint Server 2016, but the cmdlet is still present in the product.
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-C:\PS>$serviceApp = Get-SPServiceApplication -name "Work Management Service Application"
-
-C:\PS>New-SPWorkManagementServiceApplicationProxy -name "WMServiceProxy" -ServiceApplication $serviceApp
+PS C:\>$sa = New-SPWorkManagementServiceApplication -Name 'Work Management Service Application' -ApplicationPool 'SharePoint Web Services Default'
+PS C:\>New-SPWorkManagementServiceApplicationProxy -name 'Work Management Service Application Proxy' -ServiceApplication $sa
 ```
 
-This example creates a new SPWorkManagementServiceApplicationProxy called "WMServiceProxy" mapped to the "Work Management Service Application" Service Application.
+This example creates a new SPWorkManagementServiceApplicationProxy called Work Management Service Application Proxy mapped to the "Work Management Service Application" Service Application.
 
 
 ## PARAMETERS
@@ -50,7 +50,7 @@ The value must be a name of a valid Work Management Service application proxy; f
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ Specifies that the Work Management Service application proxy be added to the def
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -120,14 +120,16 @@ Specifies the local Work Management Service application that is associated with 
 The value must be in one of the following forms:
 
 --A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
+
 --A valid name of a Work Management Service application (for example, WorkManServ1)
+
 --An instance of a valid SPServiceApplication object
 
 ```yaml
 Type: SPWorkManagementServiceCmdletPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -137,13 +139,16 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-{{ Fill Uri Description}}
+Specifies the URI of a remote Work Management service application to connect to.
+
+To specify the Work Management service application that this proxy is connecting to, you must set only the URI parameter or only the ServiceApplication parameter.
+
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -160,7 +165,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named

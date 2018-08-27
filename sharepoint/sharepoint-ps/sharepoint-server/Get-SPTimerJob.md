@@ -11,8 +11,6 @@ schema: 2.0.0
 
 Returns timer jobs.
 
-
-
 ## SYNTAX
 
 ```
@@ -22,18 +20,24 @@ Get-SPTimerJob [[-Identity] <SPTimerJobPipeBind>] [-AssignmentCollection <SPAssi
 
 ## DESCRIPTION
 The Get-SPTimerJob cmdlet reads a specified timer job, timer jobs of a specified type, or timer jobs defined for a specified scope.
+
 If no parameters are specified, this cmdlet returns all timer job definitions for the farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
-
-### ---------------------EXAMPLE--------------------- 
+### ---------------------EXAMPLE 01--------------------- 
 ```
-C:\PS>Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
+PS C:\>Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
 ```
 
 This example displays all timer jobs for a specified Web application.
+
+### ---------------------EXAMPLE 02---------------------
+```powershell
+PS C:\>Get-SPTimerJob | select -ExpandProperty HistoryEntries
+```
+The above example will show you timer job run history
 
 ## PARAMETERS
 

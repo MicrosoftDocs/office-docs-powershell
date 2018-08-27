@@ -13,6 +13,7 @@ Publishes/Deploys/Trusts an available app in the app catalog
 ```powershell
 Publish-PnPApp -Identity <AppMetadataPipeBind>
                [-SkipFeatureDeployment [<SwitchParameter>]]
+               [-Scope <AppCatalogScope>]
                [-Connection <SPOnlineConnection>]
 ```
 
@@ -20,10 +21,17 @@ Publish-PnPApp -Identity <AppMetadataPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Publish-PnPApp
+Publish-PnPApp -Identity -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
 ```
 
-This will deploy/trust an app into the app catalog. Notice that the app needs to be available in the app catalog
+This will deploy/trust an app into the app catalog. Notice that the app needs to be available in the tenant scoped app catalog
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Publish-PnPApp -Identity -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f -Scope Site
+```
+
+This will deploy/trust an app into the app catalog. Notice that the app needs to be available in the site collection scoped app catalog
 
 ## PARAMETERS
 
@@ -39,6 +47,18 @@ Position: 0
 Accept pipeline input: True
 ```
 
+### -Scope
+Defines which app catalog to use. Defaults to Tenant
+
+```yaml
+Type: AppCatalogScope
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
 ### -SkipFeatureDeployment
 
 
@@ -52,7 +72,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection

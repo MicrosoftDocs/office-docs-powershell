@@ -8,6 +8,12 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the current OAuth Access token
 
+## SYNTAX 
+
+```powershell
+Get-PnPAccessToken [-Decoded [<SwitchParameter>]]
+```
+
 ## DESCRIPTION
 Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API
 
@@ -15,10 +21,24 @@ Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Get-PnPAccessToken
+Get-PnPAccessToken
 ```
 
 Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API
+
+## PARAMETERS
+
+### -Decoded
+Returns the access token in a decoded manner
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
 
 ## RELATED LINKS
 

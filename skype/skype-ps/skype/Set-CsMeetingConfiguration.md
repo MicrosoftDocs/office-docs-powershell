@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMeetingConfiguration
 schema: 2.0.0
 ---
@@ -12,7 +12,6 @@ schema: 2.0.0
 Meeting configuration settings help dictate the type of meetings (also called conferences) that users can create, and also control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 Note that these settings only affect scheduled meetings; they do not affect ad-hoc meetings created by clicking the Meet Now option in Skype for Business.
 This cmdlet was introduced in Lync Server 2010.
-
 
 ## SYNTAX
 
@@ -58,7 +57,6 @@ This will occur regardless of how you have configured your meeting settings usin
 
 The `Set-CsMeetingConfiguration` cmdlet enables you to modify any of the meeting configuration settings currently in use in your organization.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 ------------------------
@@ -68,7 +66,6 @@ Set-CsMeetingConfiguration -Identity site:Redmond -DesignateAsPresenter Everyone
 
 The command shown in Example 1 modifies the meeting configuration settings assigned to the Redmond site (-Identity site:Redmond).
 In this case, the value of the DesignateAsPresenter property is set to Everyone.
-
 
 ### -------------------------- Example 2 ------------------------
 ```
@@ -80,7 +77,6 @@ In this case, however, the value of the DesignateAsPresenter property is modifie
 To do this, the `Get-CsMeetingConfiguration` cmdlet is called without any parameters in order to return a collection of all the meeting configuration settings currently in use.
 This collection is then piped to the `Set-CsMeetingConfiguration` cmdlet, which modifies the DesignateAsPresenter property for each item in the collection.
 
-
 ### -------------------------- Example 3 ------------------------
 ```
 Get-CsMeetingConfiguration | Where-Object {$_.AdmitAnonymousUsersByDefault -eq $False} | Set-CsMeetingConfiguration -PstnCallersBypassLobby $True
@@ -91,23 +87,21 @@ To perform this task, the command first calls the `Get-CsMeetingConfiguration` c
 This collection is then piped to the `Where-Object` cmdlet, which picks out only those settings where the AdmitAnonymousUsersByDefault property is equal to False.
 In turn, this filtered collection is piped to the `Set-CsMeetingConfiguration` cmdlet, which takes each item in the collection and sets the PstnCallersBypassLobby property to True.
 
-
 ## PARAMETERS
 
 ### -Identity
 Indicates the unique identifier for the collection of meeting configuration settings you want to modify.
-To refer to the global settings, use this syntax: `-Identity global`.
-To refer to a collection configured at the site scope, use syntax similar to this: `-Identity "site:Redmond"`.
-Settings configured at the service scope can be referenced using syntax like this: `-Identity "service:UserServer:atl-cs-001.litwareinc.com"`.
+To refer to the global settings, use this syntax: -Identity global.
+To refer to a collection configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
+Settings configured at the service scope can be referenced using syntax like this: -Identity "service:UserServer:atl-cs-001.litwareinc.com".
 
 If this parameter is not specified, then the `Set-CsMeetingConfiguration` cmdlet will modify the global settings.
-
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity, (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -119,12 +113,11 @@ Accept wildcard characters: False
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
-
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -137,7 +130,7 @@ Accept wildcard characters: False
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -156,7 +149,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -174,7 +167,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -187,12 +180,13 @@ Accept wildcard characters: False
 Indicates which users (besides the meeting organizer) are automatically designated as presenters when they join a meeting.
 Valid choices are: None; Company and Everyone.
 By default, DesignateAsPresenter is set to Company, meaning everyone in your organization will have presenter rights the moment they join a meeting.
+Note: When DesignateAsPresenter is set to Everyone, only dynamic meetings will comply with this setting. Static meetings do not allow Everyone to join as a Presenter. 
 
 ```yaml
 Type: DesignateAsPresenter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -211,7 +205,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -231,7 +225,7 @@ The default value is True.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -247,7 +241,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -261,22 +255,21 @@ Globally unique identifier (GUID) of the Office 365 tenant account whose meeting
 
 For example:
 
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 
 You can return the tenant ID for each of your tenants by running this command:
 
-`Get-CsTenant | Select-Object DisplayName, TenantID`
+Get-CsTenant | Select-Object DisplayName, TenantID
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
 Instead, the tenant ID will automatically be filled in for you based on your connection information.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -292,7 +285,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -308,7 +301,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -324,7 +317,7 @@ Text to be used on custom meeting invitations.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -340,7 +333,7 @@ URL to a website where users can obtain assistance on joining the meeting.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -356,7 +349,7 @@ URL to a website containing legal information and meeting disclaimers.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -372,7 +365,7 @@ URL for the image to be used on custom meeting invitations.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -385,12 +378,11 @@ Accept wildcard characters: False
 When set to True ($True) all users must be authenticated before they can join a meeting using the Skype for Business Room System.
 The default value is False ($False).
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

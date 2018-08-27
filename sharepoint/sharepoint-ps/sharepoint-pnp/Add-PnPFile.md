@@ -49,42 +49,42 @@ Add-PnPFile -FileName <String>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS:> Add-PnPFile -Path c:\temp\company.master -Folder "_catalogs/masterpage"
+Add-PnPFile -Path c:\temp\company.master -Folder "_catalogs/masterpage"
 ```
 
 This will upload the file company.master to the masterpage catalog
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS:> Add-PnPFile -Path .\displaytemplate.html -Folder "_catalogs/masterpage/display templates/test"
+Add-PnPFile -Path .\displaytemplate.html -Folder "_catalogs/masterpage/display templates/test"
 ```
 
 This will upload the file displaytemplate.html to the test folder in the display templates folder. If the test folder does not exist it will create it.
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS:> Add-PnPFile -Path .\sample.doc -Folder "Shared Documents" -Values @{Modified="1/1/2016"}
+Add-PnPFile -Path .\sample.doc -Folder "Shared Documents" -Values @{Modified="1/1/2016"}
 ```
 
 This will upload the file sample.doc to the Shared Documnets folder. After uploading it will set the Modified date to 1/1/2016.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS:> Add-PnPFile -FileName sample.doc -Folder "Shared Documents" -Stream $fileStream -Values @{Modified="1/1/2016"}
+Add-PnPFile -FileName sample.doc -Folder "Shared Documents" -Stream $fileStream -Values @{Modified="1/1/2016"}
 ```
 
 This will add a file sample.doc with the contents of the stream into the Shared Documents folder. After adding it will set the Modified date to 1/1/2016.
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-PS:> Add-PnPFile -FileName sample.doc -Folder "Shared Documents" -ContentType "Document" -Values @{Modified="1/1/2016"}
+Add-PnPFile -FileName sample.doc -Folder "Shared Documents" -ContentType "Document" -Values @{Modified="1/1/2016"}
 ```
 
 This will add a file sample.doc to the Shared Documents folder, with a ContentType of 'Documents'. After adding it will set the Modified date to 1/1/2016.
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-PS:> Add-PnPFile -FileName sample.docx -Folder "Documents" -Values @{Modified="1/1/2016"; Created="1/1/2017"; Editor=23}
+Add-PnPFile -FileName sample.docx -Folder "Documents" -Values @{Modified="1/1/2016"; Created="1/1/2017"; Editor=23}
 ```
 
 This will add a file sample.docx to the Documents folder and will set the Modified date to 1/1/2016, Created date to 1/1/2017 and the Modified By field to the user with ID 23. To find out about the proper user ID to relate to a specific user, use Get-PnPUser.
@@ -242,7 +242,7 @@ Single line of text: -Values @{"Title" = "Title New"}
 
 Multiple lines of text: -Values @{"MultiText" = "New text\n\nMore text"}
 
-Rich text: -Values @{"MultiText" = "<strong>New</strong> text"}
+Rich text: -Values @{"MultiText" = "&lt;strong&gt;New&lt;/strong&gt; text"}
 
 Choice: -Values @{"Choice" = "Value 1"}
 
@@ -286,7 +286,7 @@ Accept pipeline input: False
 ```
 
 ### -Connection
-Optional connection to be used by cmdlet. Retrieve the value for this parameter by eiter specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
 Type: SPOnlineConnection
@@ -311,7 +311,7 @@ Accept pipeline input: False
 
 ## OUTPUTS
 
-### [Microsoft.SharePoint.Client.File](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.file.aspx)
+### Microsoft.SharePoint.Client.File
 
 ## RELATED LINKS
 

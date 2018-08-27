@@ -1,5 +1,5 @@
 ---
-external help file: Set-CsOrganizationalAutoAttendant.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Set-CsOrganizationalAutoAttendant
 schema: 2.0.0
@@ -111,3 +111,4 @@ The Set-CsOrganizationalAutoAttendant cmdlet does not return any objects or valu
 [New-CsOrganizationalAutoAttendant](New-CsOrganizationalAutoAttendant.md)
 
 [Get-CsOrganizationalAutoAttendant](Get-CsOrganizationalAutoAttendant.md)
+
