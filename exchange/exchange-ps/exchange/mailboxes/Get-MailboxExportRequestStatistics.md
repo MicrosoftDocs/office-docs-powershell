@@ -19,19 +19,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
 Get-MailboxExportRequestStatistics [-Identity] <MailboxExportRequestIdParameter> [-DomainController <Fqdn>]
- [-IncludeReport] [-Diagnostic] [-DiagnosticArgument <String>] [-ReportOnly] [<CommonParameters>]
+ [-IncludeReport] [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-ReportOnly] [<CommonParameters>]
 ```
 
-### Set3
+### MRSInstance
 ```
 Get-MailboxExportRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
-### Set2
+### MigrationRequestQueue
 ```
 Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter> [-DomainController <Fqdn>]
  [-IncludeReport] [-RequestGuid <Guid>] [-Diagnostic] [-DiagnosticArgument <String>] [-ReportOnly]
@@ -98,7 +98,7 @@ This parameter can't be used with the RequestGuid or RequestQueue parameters.
 
 ```yaml
 Type: MailboxExportRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
@@ -117,7 +117,7 @@ This parameter can't be used in conjunction with the Identity or RequestQueue pa
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set3
+Parameter Sets: MRSInstance
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -138,10 +138,57 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Diagnostic
+The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, MigrationRequestQueue
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticArgument
+The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: Identity, MigrationRequestQueue
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticInfo
+This parameter is available only in the cloud-based service.
+
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -168,54 +215,9 @@ The IncludeReport switch specifies whether to return additional details, which c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestGuid
-The RequestGuid parameter specifies the unique identifier for the export request. To find the export request GUID, use the Get-MailboxExportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
-
-```yaml
-Type: Guid
-Parameter Sets: Set3, Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Diagnostic
-The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DiagnosticArgument
-The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
-
-```yaml
-Type: String
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -228,9 +230,24 @@ The ReportOnly switch returns the results as an array of report entries. You don
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestGuid
+The RequestGuid parameter specifies the unique identifier for the export request. To find the export request GUID, use the Get-MailboxExportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
+
+```yaml
+Type: Guid
+Parameter Sets: MRSInstance, MigrationRequestQueue
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None

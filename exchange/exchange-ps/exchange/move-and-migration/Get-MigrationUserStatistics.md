@@ -19,8 +19,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-MigrationUserStatistics [-Identity] <MigrationUserIdParameter> [-Diagnostic] [-DiagnosticArgument <String>]
- [-DomainController <Fqdn>] [-IncludeReport] [-LimitSkippedItemsTo <Int32>] [-IncludeSkippedItems]
- [-Partition <MailboxIdParameter>] [-SkipSubscription] [<CommonParameters>]
+ [-DiagnosticInfo <String>] [-DomainController <Fqdn>] [-IncludeReport] [-LimitSkippedItemsTo <Int32>]
+ [-IncludeSkippedItems] [-Partition <MailboxIdParameter>] [-SkipSubscription] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,21 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeReport | FL Status,Error,Report
+Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeReport | Format-List Status,Error,Report
 ```
 
 This example uses the IncludeReport parameter to display detailed information about the migration status for the user.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com | FL SkippedItemCount,SkippedItems
+Get-MigrationUserStatistics -Identity davidp@corp.contoso.com | Format-List SkippedItemCount,SkippedItems
 ```
 
 This example displays the number of mailbox items that failed to migrate, which are called skipped items, and information about each skipped item.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | FL SkippedItemCount,SkippedItems
+Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | Format-List SkippedItemCount,SkippedItems
 ```
 
 This example displays results information in the SkippedItems property for a maximum of 20 skipped items.
@@ -65,10 +65,10 @@ This example displays detailed information about users from all current migratio
 
 ### -------------------------- Example 6 --------------------------
 ```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -Diagnostic | FL Status,Error,DiagnosticInfo
+Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -Diagnostic | Format-List Status,Error,DiagnosticInfo
 ```
 
-This example uses the Diagnostic parameter to display detailed troubleshooting information about the migration for the user.
+In on-premises Exchange, this example uses the Diagnostic parameter to display detailed troubleshooting information about the migration for the user.
 
 ## PARAMETERS
 
@@ -88,13 +88,15 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
+This parameter is available only in on-premises Exchange.
+
 The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -103,13 +105,32 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticArgument
+This parameter is available only in on-premises Exchange.
+
 The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticInfo
+This parameter is available only in the cloud-based service.
+
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -149,21 +170,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LimitSkippedItemsTo
-The LimitSkippedItemsTo parameter specifies the maximum number of skipped items to display information about in the SkippedItems property in command output. For example, if this parameter is set to 5, the cmdlet returns information for up to five skipped items for the specified user, even if there are more than five skipped items.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -IncludeSkippedItems
 The IncludeSkippedItems switch specifies whether to include skipped items for the user. You don't need to specify a value with this switch.
 
@@ -179,7 +185,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LimitSkippedItemsTo
+The LimitSkippedItemsTo parameter specifies the maximum number of skipped items to display information about in the SkippedItems property in command output. For example, if this parameter is set to 5, the cmdlet returns information for up to five skipped items for the specified user, even if there are more than five skipped items.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Partition
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
