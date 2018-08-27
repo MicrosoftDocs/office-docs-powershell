@@ -1,23 +1,21 @@
 ---
-external help file: tmp_wpxjtq4g.b0k-help.xml
-Module Name: tmp_wpxjtq4g.b0k
-online version:
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
+title: Get-CsTeamsVideoInteropServicePolicy
 schema: 2.0.0
 ---
 
 # Get-CsTeamsVideoInteropServicePolicy
 
 ## SYNOPSIS
+{{Add a synopsis}}
 
 ## SYNTAX
-
-### Identity (Default)
 ```
 Get-CsTeamsVideoInteropServicePolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
  [<CommonParameters>]
 ```
 
-### Filter
 ```
 Get-CsTeamsVideoInteropServicePolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore]
  [<CommonParameters>]
@@ -30,15 +28,16 @@ Get-CsTeamsVideoInteropServicePolicy [-Tenant <System.Guid>] [-Filter <String>] 
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsTeamsVideoInteropServicePolicy _____________
 ```
 
-{{ Add example description here }}
+Retrieves the TeamsVideoInteropServicePolicy with name ______________
 
 ## PARAMETERS
 
 ### -Filter
-{{Fill Filter Description}}
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
 
 ```yaml
 Type: String
@@ -53,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specify the TeamsVideoInteropServicePolicy that you would like to retrieve.
 
 ```yaml
 Type: XdsIdentity
@@ -68,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+Microsoft internal use.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Microsoft internal use.
 
 ```yaml
 Type: System.Guid
