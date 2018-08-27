@@ -1,23 +1,22 @@
 ---
-external help file: tmp_wpxjtq4g.b0k-help.xml
-Module Name: tmp_wpxjtq4g.b0k
-online version: http://technet.microsoft.com/EN-US/library/089fd324-a267-4e53-ad32-924875d15ef9(OCS.15).aspx
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
+title: Grant-CsTeamsVideoInteropServicePolicy
 schema: 2.0.0
 ---
 
 # Grant-CsTeamsVideoInteropServicePolicy
 
 ## SYNOPSIS
+{{Fill in the synopsis}}
 
 ## SYNTAX
 
-### Identity (Default)
 ```
 Grant-CsTeamsVideoInteropServicePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String>
  [-Tenant <System.Guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### GrantToTenant
 ```
 Grant-CsTeamsVideoInteropServicePolicy [-PolicyName] <String> [-Tenant <System.Guid>]
  [-DomainController <Fqdn>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -30,10 +29,10 @@ Grant-CsTeamsVideoInteropServicePolicy [-PolicyName] <String> [-Tenant <System.G
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Grant-CsTeamsVideoInteropServicePolicy -identity "Ken Myer" -PolicyName ___________
 ```
 
-{{ Add example description here }}
+In this example, a user with identity "Ken Myer" is being assigned the _____________
 
 ## PARAMETERS
 
@@ -44,6 +43,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -53,12 +53,12 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{Fill DomainController Description}}
 
 ```yaml
-Type: Fqdn
+Type: Object
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -74,6 +74,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: GrantToTenant
 Aliases:
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -83,12 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the user account the policy should be assigned to. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: Identity
 Aliases:
+Applicable: Skype for Business Online
 
 Required: False
 Position: 0
@@ -98,12 +100,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -113,12 +115,13 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{Fill PolicyName Description}}
+The name of the custom policy that is being assigned to the user.  To remove a specific assignment and fall back to the default tenant policy, you can assign to $Null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Online
 
 Required: True
 Position: 1
@@ -128,12 +131,12 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -150,6 +153,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
