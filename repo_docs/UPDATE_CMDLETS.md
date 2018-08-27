@@ -1,5 +1,4 @@
-#Update existing cmdlet topics
- 
+# Update existing cmdlet topics
 Manually adding new parameters to a cmdlet reference topic is doable, but there are several obstacles to overcome:
 
 - **Add the paramter and Type value to the SYNTAX block(s)**: Easy to do if there's only one, but what if there are multiple SYNTAX blocks (also known as parameter sets)? Does the new parameter go in one, some, or all of them? And what about the parameter Type value (String? `$true | $ false`? A finite list of values?)
