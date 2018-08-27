@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseLegacyPushNotifications
-This parameter is reserved for Microsoft internal use only.
+When UseLegacyPushNotifications are used, Push Notifications are no longer sent to either Google Cloud Manger (GCM) or to Apple Push Notification Server (PNS). 
 
 ```yaml
 Type: Boolean
