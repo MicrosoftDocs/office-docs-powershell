@@ -96,11 +96,11 @@ The resulting topics are plain text UTF-8 files that are formatted using [markdo
         Accept wildcard characters: False
     ```
 
-    Most of the atrributes and values are generated automatically by platyPS. The ones that require manual intervention are:
+  Most of the atrributes and values are generated automatically by platyPS. The ones that require manual intervention are:
 
-    - **Applicable**: You need to add this attribute and value yourself. Notice the capital 'A'. See other topics for available values (same available values as the **applicable** attribute at the top of the topic). Don't invent new values here. The value **must** come from the list of predefined values.
+  - **Applicable**: You need to add this attribute and value yourself. Notice the capital 'A'. See other topics for available values (same available values as the **applicable** attribute at the top of the topic). Don't invent new values here. The value **must** come from the list of predefined values.
 
-    - **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
+  - **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
 
 ### Step 7: Copy your changes into the existing topic on GitHub
 At this point, the steps are basically identical to [Short URL: aka.ms/office-powershell](../README.md):
@@ -135,7 +135,8 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
     Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
  
 4. Once you're satisified with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title title and other description informaton and then click **Propose file change**.
-![Image of Propose file change on Github](images/propose_file_change.png)
+
+    ![Image of Propose file change on Github](../images/propose_file_change.png)
 
 7. On the next screen, click **Create pull request**.
 
@@ -148,7 +149,7 @@ The most important thing to remember: a parameter isn't gone until it's truly no
 
 - This parameter has been deprecated and is no longer used.
 
-Hear me now, believe me later: Removing available parameters from a cmdlet reference topic can create as many issues as thir removal was supposed to solve.
+Hear me now, believe me later: Removing available parameters from a cmdlet reference topic can create as many issues as their removal is supposed to solve.
 
 After you've confirmed that the parameter in question is really gone, find and remove all references to the parameter in the topic:
 
