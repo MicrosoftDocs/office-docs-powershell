@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: Get-ComplianceSearchAction
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016 || o365scc-ps"
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # Get-ComplianceSearchAction
