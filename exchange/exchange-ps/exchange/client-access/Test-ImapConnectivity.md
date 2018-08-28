@@ -52,9 +52,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 **Important Note**: When running this command on Exchange 2013 or newer against a particluar mailbox, you may see this following error message when running this command on an Exchange Server that doesn't host the active mailbox database copy of the mailbox that you are running the command against. 
 
-```
-Unable to create MailboxSession object to access the mailbox [user@consoto.com]. Detailed error information: [Microsoft.Exchange.Data.Storage.WrongServerException]: The user and the mailbox are in different Active Directory sites. Inner error [Microsoft.Mapi.MapiExceptionMailboxInTransit]: MapiExceptionMailboxInTransit: Detected site violation (hr=0x0, ec=1292)
-```
+`Unable to create MailboxSession object to access the mailbox [user@consoto.com]. Detailed error information: [Microsoft.Exchange.Data.Storage.WrongServerException]: The user and the mailbox are in different Active Directory sites. Inner error [Microsoft.Mapi.MapiExceptionMailboxInTransit]: MapiExceptionMailboxInTransit: Detected site violation (hr=0x0, ec=1292)`
 
 You should run the command again in an Exchange Management Shell on the server that hosts the active mailbox database copy to verify that IMAP works for this mailbox. 
 
