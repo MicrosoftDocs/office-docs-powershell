@@ -99,7 +99,7 @@ Before you run the Set-OwaVirtualDirectory cmdlet, consider the following items:
 
 - Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
 
-- Many of the Outlook on the web virtual directory settings require you to run the IISReset /noforce command before the change takes effect. For example, when you enable or disable forms-based authentication, or when you enable or disable the Private computer option on the sign-in page.
+- Many of the Outlook on the web virtual directory settings require you to restart IIS (Stop-Service WAS -Force and Start-Service W3SVC) before the change takes effect. For example, when you enable or disable forms-based authentication, or when you enable or disable the Private computer option on the sign-in page.
 
 - To switch from forms-based authentication to Basic authentication, you must first disable forms-based authentication, and then as a separate task, enable Basic authentication. You can't disable forms-based authentication and enable Basic authentication in a single task.
 
