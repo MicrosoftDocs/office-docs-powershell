@@ -96,11 +96,11 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-TasksEnabled <$true | $false>]
  [-TextMessagingEnabled <$true | $false>]
  [-ThemeSelectionEnabled <$true | $false>]
- [ThirdPartyFAttachmentsEnabled <$true | $false>]
+ [-ThirdPartyFAttachmentsEnabled <$true | $false>]
  [-ThirdPartyFileProvidersEnabled <$true | $false>]
  [-UMIntegrationEnabled <$true | $false>]
- [UNCAccessOnPrivateComputersEnabled <$true | $false>]
- [UNCAccessOnPublicComputersEnabled <$true | $false>]
+ [-UNCAccessOnPrivateComputersEnabled <$true | $false>]
+ [-UNCAccessOnPublicComputersEnabled <$true | $false>]
  [-UseGB18030 <$true | $false>]
  [-UseISO885915 <$true | $false>]
  [-UserVoiceEnabled <$true | $false>]
@@ -124,9 +124,9 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-In on-premises Exchange, theOutlook on the web mailbox policy is named Default. In Office 365, the default Outlook on the web mailbox policy is named OwaMailboxPolicy-Default.
+In on-premises Exchange, the Outlook on the web mailbox policy is named Default. In Office 365, the default Outlook on the web mailbox policy is named OwaMailboxPolicy-Default.
 
-Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by running the command IISRESET /noforce.
+Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (Stop-Service WAS -Force and Start-Service W3SVC).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -270,7 +270,11 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
- If the same extensions are in multiple settings lists, the most secure setting overrides the less secure settings. 
+If the same file types are specified in multiple lists:
+
+- The Allow list overrides the Block list and the Force Save list.
+
+- The Block list overrides the Force Save list. 
 
 ```yaml
 Type: MultiValuedProperty
@@ -299,7 +303,11 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-If the same extensions are in multiple settings lists, the most secure setting overrides the less secure settings.
+If the same MIME types are specified in multiple lists:
+
+- The Allow list overrides the Block list and the Force Save list.
+
+- The Block list overrides the Force Save list. 
 
 ```yaml
 Type: MultiValuedProperty
@@ -316,13 +324,13 @@ Accept wildcard characters: False
 ### -AllowOfflineOn
 The AllowOfflineOn parameter specifies which computers can use Outlook on the web in offline mode. Valid values are:
 
-- PrivateComputersOnly: Outlook on the web in offline mode is enabled, but only for Private computers. By default, all Outlook on the web sessions are considered to be on private computers.
+- PrivateComputersOnly: Outlook on the web in offline mode is available in private computer sessions for supported web browsers. By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers. In Exchange 2013 or later, the only way that users can specify public computer sessions is if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 - NoComputers: Outlook on the web in offline mode is disabled.
 
-- AllComputers: Outlook on the web in offline mode is enabled for Public and Private computers. This is the default value. By default, all Outlook on the web sessions are considered to be on private computers. In on-premises Exchange, the only way that users can specify public computer sessions is if you've enabled the selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
+- AllComputers: Outlook on the web in offline mode is enabled for public and private computer sessions for supported web browsers. This is the default value. 
 
-For the values PrivateComputersOnly or AllComputers, Outlook on the web in offline mode is available with a supported browser. Users can turn offline mode on or off individually in Outlook on the web. For more information, see Using Outlook Web App offline (https://go.microsoft.com/fwlink/p/?linkid=267644).
+When offline mode is available, uers can turn offline mode on or off themselves in Outlook on the web. For more information, see Using Outlook Web App offline (https://go.microsoft.com/fwlink/p/?linkid=267644).
 
 ```yaml
 Type: PrivateComputersOnly | NoComputers | AllComputers
@@ -344,6 +352,12 @@ The BlockedFileTypes parameter specifies a list of attachment file types (file e
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+If the same file types are specified in multiple lists:
+
+- The Allow list overrides the Block list and the Force Save list.
+
+- The Block list overrides the Force Save list. 
 
 ```yaml
 Type: MultiValuedProperty
@@ -379,6 +393,12 @@ The BlockedMimeTypes parameter specifies MIME extentions in attachments that pre
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+If the same MIME types are specified in multiple lists:
+
+- The Allow list overrides the Block list and the Force Save list.
+
+- The Block list overrides the Force Save list. 
 
 ```yaml
 Type: MultiValuedProperty
@@ -568,13 +588,13 @@ Accept wildcard characters: False
 ```
 
 ### -DirectFileAccessOnPrivateComputersEnabled
-The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for Private computers. Valid values are:
+The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for private computer sessions. Valid values are:
 
-- $true: Open is available in Outlook on the web for attachments on Private computers. This is the default value.
+- $true: Open is available for attachments in Outlook on the web for private computer sessions. This is the default value.
 
-- $false: Open isn't available in Outlook on the web for attachments on Private computers. Note that Office and .pdf documents can still be previewed in Outlook on the web.
+- $false: Open isn't available for attachments in Outlook on the web for private computer sessions. Note that Office and .pdf documents can still be previewed in Outlook on the web.
 
-By default, all Outlook on the web sessions are considered to be on private computers.
+By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
 Type: $true | $false
@@ -589,13 +609,13 @@ Accept wildcard characters: False
 ```
 
 ### -DirectFileAccessOnPublicComputersEnabled
-The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for Public computers. Valid values are:
+The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for public computer sessions. Valid values are:
 
-- $true: Open is available in Outlook on the web for attachments on Public computers. This is the default value.
+- $true: Open is available for attachments in Outlook on the web for public computer sessions. This is the default value.
 
-- $false: Open isn't available in Outlook on the web for attachments on Public computers. Note that Office and .pdf documents can still be previewed in Outlook on the web.
+- $false: Open isn't available for attachments in Outlook on the web for public computer sessions. Note that Office and .pdf documents can still be previewed in Outlook on the web.
 
-By default, this setting is meaningless, because all Outlook on the web sessions are considered to be on private computers. In on-premises Exchange, the only way that users can specify public computer sessions is if you've enabled the selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
+In Exchange 2013 or later, the only way that users can specify public computer sessions is if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
 Type: $true | $false
@@ -709,7 +729,7 @@ The ForceSaveAttachmentFilteringEnabled parameter specifies whether files are fi
 
 - $true: The attachments specified by the ForceSaveFileTypes parameter are filtered before they can be saved from Outlook on the web.
 
-- $false: The attachments aren't filtered. This is the default value.
+- $false: The attachments aren't filtered before they're saved. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -731,6 +751,12 @@ The ForceSaveFileTypes parameter specifies the attachment file types (file exten
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+If the same file types are specified in multiple lists:
+
+- The Allow list overrides the Block list and the Force Save list.
+
+- The Block list overrides the Force Save list. 
 
 ```yaml
 Type: MultiValuedProperty
@@ -761,6 +787,12 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
+If the same MIME types are specified in multiple lists:
+
+- The Allow list overrides the Block list and the Force Save list.
+
+- The Block list overrides the Force Save list. 
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -774,13 +806,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWacViewingFirstOnPrivateComputers
-The ForceWacViewingFirstOnPrivateComputers parameter specifies whether Private computers must first preview an Office file as a web page in Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) before opening the file from Outlook web app. Valid values are:
+The ForceWacViewingFirstOnPrivateComputers parameter specifies whether private computers must first preview an Office file as a web page in Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) before opening the file from Outlook web app. Valid values are:
 
 - $true: Private computers must first preview an Office file as a web page in Office Online Server before opening the file.
 
 - $false: Private computers aren't required to preview an Office file as a web page in Office Online Server before opening the file. This is the default value.
 
-By default, all Outlook on the web sessions are considered to be on private computers.
+By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
 Type: $true | $false
@@ -795,13 +827,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceWacViewingFirstOnPublicComputers
-The ForceWacViewingFirstOnPublicComputers parameter specifies whether Public computers must first preview an Office file as a web page in Office Online Server before opening the file from Outlook web app. Valid values are:
+The ForceWacViewingFirstOnPublicComputers parameter specifies whether public computers must first preview an Office file as a web page in Office Online Server before opening the file from Outlook web app. Valid values are:
 
 - $true: Public computers must first preview an Office file as a web page in Office Online Server before opening the file.
 
 - $false: Public computers aren't required to preview an Office file as a web page in Office Online Server before opening the file. This is the default value.
 
-By default, this setting is meaningless, because all Outlook on the web sessions are considered to be on private computers. In on-premises Exchange, the only way that users can specify public computer sessions is if you've enabled the selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
+In Exchange 2013 or later, the only way that users can specify public computer sessions is if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
 Type: $true | $false
@@ -818,13 +850,13 @@ Accept wildcard characters: False
 ### -ForceWebReadyDocumentViewingFirstOnPrivateComputers
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The ForceWebReadyDocumentViewingFirstOnPrivateComputers parameter specifies whether Private computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file from Outlook Web App. Valid values are:
+The ForceWebReadyDocumentViewingFirstOnPrivateComputers parameter specifies whether private computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file from Outlook Web App. Valid values are:
 
 - $true: Private computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file.
 
 - $false: Private computers aren't required to preview an Office file as a web page in WebReady Document Viewing before opening the file. This is the default value.
 
-By default, all Outlook on the web sessions are considered to be on private computers.
+By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
 Type: $true | $false
@@ -847,7 +879,7 @@ The ForceWebReadyDocumentViewingFirstOnPublicComputers parameter specifies wheth
 
 - $false: Public computers aren't required to preview an Office file as a web page in WebReady Document Viewing before opening the file. This is the default value.
 
-By default, this setting is meaningless, because all Outlook on the web sessions are considered to be on private computers. In on-premises Exchange, the only way that users can specify public computer sessions is if you've enabled the selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
+In Exchange 2013 or later, the only way that users can specify public computer sessions is if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
 Type: $true | $false
@@ -1119,7 +1151,7 @@ Accept wildcard characters: False
 ### -LogonAndErrorLanguage
 The LogonAndErrorLanguage parameter specifies which language Outlook on the web uses for forms-based authentication and for error messages that occur when a user's current language setting can't be read.
 
-A valid value is a supported Microsoft Windows Langague Code Identifier (LCID). For example, 1033 is US English.
+A valid value is a supported Microsoft Windows Language Code Identifier (LCID). For example, 1033 is US English.
 
 The default value is 0, which means the language selection is undefined.
 
@@ -1288,7 +1320,7 @@ Accept wildcard characters: False
 ### -OWAMiniEnabled
 This parameter is available or functional only in Exchange Server 2010.
 
-This parameter controls the availability of the mini version of Outlook Web App. Valid values are:
+The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
 
 - $true: The mini version of Outlook Web App is avaialble. This is the default value.
 
@@ -1366,7 +1398,7 @@ Accept wildcard characters: False
 ### -PrintWithoutDownloadEnabled
 This parameter is available only in the cloud-based service.
 
-The PrintWithoutDownloadEnabled specifies whether to allow printing supported files without downloading the attachment in Outlook on the web. Valid values are:
+The PrintWithoutDownloadEnabled specifies whether to allow printing of supported files without downloading the attachment in Outlook on the web. Valid values are:
 
 - $true: Supported files can be printed without being downloaded in Outlook web app. This is the default value.
 
@@ -1780,9 +1812,9 @@ This parameter is available only in the cloud-based service.
 
 The ThirdPartyFileProvidersEnabled parameter specifies whether to allow third-party (for example, Box, Dropbox, and Egnyte) attachments in Outlook on the web. Valid values are:
 
-- $true: Third-party attachments are enabled in Outlook web app. Users can connect their third-party file sharing accounts and share files over emailp.
+- $true: Third-party attachments are enabled in Outlook on the web. Users can connect their third-party file sharing accounts and share files over emailp.
 
-- $false: Third-party attachments are disabled in Outlook web app. Users can't connect their third-party file sharing accounts or share files over email. This is the default value.
+- $false: Third-party attachments are disabled in Outlook on the web. Users can't connect their third-party file sharing accounts or share files over email. This is the default value.
 
 ```yaml
 Type: $true | $false
@@ -1856,7 +1888,7 @@ Accept wildcard characters: False
 ### -UseGB18030
 The UseGB18030 parameter specifies whether to use the GB18030 character set instead of GB2312 in Outlook on the web. Valid values are:
 
-- $true: GB18030 is used wherever GB2312 is would have been used in Outlook on the web.
+- $true: GB18030 is used wherever GB2312 would have been used in Outlook on the web.
 
 - $false: GB2312 isn't replaced by GB18030 in Outlook on the web. This is the default value.
 
@@ -1974,7 +2006,9 @@ The WacViewingOnPrivateComputersEnabled parameter specifies whether to enable or
 
 - $true: In private computer sessions, users can view supported Office documents in the web browser. This is the default value.
 
-- $false: In private computer sessions, users can't view supported Office documents in the web browser. Users can still open the file in a supported application, or save the file locally.
+- $false: In private computer sessions, users can't view supported Office documents in the web browser. Users can still open the file in a supported application or save the file locally.
+
+By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
 Type: $true | $false
@@ -1993,9 +2027,9 @@ The WacViewingOnPublicComputersEnabled parameter specifies whether to enable or 
 
 - $true: In public computer sessions, users can view supported Office documents in the web browser. This is the default value.
 
-- $false: In public computer sessions, users can't view supported Office documents in the web browser. Users can still open the file in a supported application, or save the file locally.
+- $false: In public computer sessions, users can't view supported Office documents in the web browser. Users can still open the file in a supported application or save the file locally.
 
-By default, this setting is meaningless, because all Outlook on the web sessions are considered to be on private computers. In on-premises Exchange, the only way that users can specify public computer sessions is if you've enabled the selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
+In Exchange 2013 or later, the only way that users can specify public computer sessions is if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
 Type: $true | $false
@@ -2010,7 +2044,6 @@ Accept wildcard characters: False
 ```
 
 ### -WeatherEnabled
-
 This parameter is available only in the cloud-based service.
 
 The WeatherEnabled parameter specifies whether to enable or disable weather information in the calendar in Outlook on the web. Valid values are:
@@ -2054,11 +2087,11 @@ Accept wildcard characters: False
 ### -WebReadyDocumentViewingForAllSupportedTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyDocumentViewingForAllSupportedTypes parameter specifies whether to enable enables WebReady Document Viewing for all supported file and MIME types. Valid values are:
+The WebReadyDocumentViewingForAllSupportedTypes parameter specifies whether to enable WebReady Document Viewing for all supported file and MIME types. Valid values are:
 
 - $true: All supported attachment types are avaialble for WebReady Document Viewing. This is the default value.
 - 
-- $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are avaialble for WebReady Document Viewing.
+- $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are avaialble for WebReady Document Viewing (you can remove values from the lists).
 
 ```yaml
 Type: $true | $false
@@ -2075,7 +2108,13 @@ Accept wildcard characters: False
 ### -WebReadyDocumentViewingOnPrivateComputersEnabled
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyDocumentViewingOnPrivateComputersEnabled parameter specifies whether WebReady Document Viewing is enabled when the user selects the This is a private computer option on the Outlook Web App logon page.
+The WebReadyDocumentViewingOnPrivateComputersEnabled parameter specifies whether WebReady Document Viewing is available in private computer sessions. Valid values are:
+
+- $true: WebReady Document Viewing is availble in private computer sessions. This is the default value.
+
+- $false: WebReady Document Viewing isn't availble in private computer sessions.
+
+By default in Exchange 2013, all Outlook on the web sessions are considered to be on private computers.
 
 ```yaml
 Type: $true | $false
@@ -2092,7 +2131,13 @@ Accept wildcard characters: False
 ### -WebReadyDocumentViewingOnPublicComputersEnabled
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether WebReady Document Viewing is enabled when the user selects the This is a public or shared computer option on the Outlook Web App logon page.
+The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether WebReady Document Viewing is in public computer sessions. Valid values are:
+
+- $true: WebReady Document Viewing is availble for public computer sessions. This is the default value.
+
+- $false: WebReady Document Viewing isn't availble for public computer sessions.
+
+In Exchange 2013, the only way that users can specify public computer sessions is if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
 Type: $true | $false
@@ -2109,33 +2154,7 @@ Accept wildcard characters: False
 ### -WebReadyDocumentViewingSupportedFileTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyDocumentViewingSupportedFileTypes parameter specifies the attachment file types (file extensions) that are supported by the WebReady Document Viewing conversion engine. The default values are:
-
-- .doc
-
-- .docx
-
-- .dot
-
-- .pdf
-
-- .pps
-
-- .ppt
-
-- .pptx
-
-- .rtf
-
-- .xls
-
-- .xlsx
-
-You can only remove or add values from within this default list (you can't add additional values).
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+This is a read-only parameter that can't be modified; use the WebReadyMimeTypes parameter instead.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2152,31 +2171,7 @@ Accept wildcard characters: False
 ### -WebReadyDocumentViewingSupportedMimeTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyDocumentViewingSupportedMimeTypes parameter specifies the MIME extentions of attachments that are supported by the WebReady Document Viewing conversion engine. The default values are:
-
-- application/msword
-
-- application/pdf
-
-- application/vnd.ms-excel
-
-- application/vnd.ms-powerpoint
-
-- application/vnd.openxmlformats-officedocument.presentationml.presentation
-
-- application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-- application/vnd.openxmlformats-officedocument.wordprocessingml.document
-
-- application/x-msexcel
-
-- application/x-mspowerpoint
-
-You can only remove or add values from within this default list (you can't add additional values).
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+This is a read-only parameter that can't be modified; use the WebReadyFileTypes parameter instead.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2193,7 +2188,7 @@ Accept wildcard characters: False
 ### -WebReadyFileTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyFileTypes parameter specifies the attachment file types (file extensions) that can be viewed by WebReady Document Viewing in Outlook on the web. The default values are:
+The WebReadyFileTypes parameter specifies the attachment file types (file extensions) that can be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported file types:
 
 - .doc
 
@@ -2215,13 +2210,13 @@ The WebReadyFileTypes parameter specifies the attachment file types (file extens
 
 - .xlsx
 
-This parameter is meaningful only if the WebReadyDocumentViewingForAllSupportedTypes parameter is set to the value $false.
-
-You can only remove or add values from within this default list (you can't add additional values).
+You can only remove or add values from within the list of supported file types (you can't add additional values).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+This list is used only if the WebReadyDocumentViewingForAllSupportedTypes parameter is set to $false. Otherwise, all supported file types are avaialable in WebReady Document Viewing.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2238,7 +2233,7 @@ Accept wildcard characters: False
 ### -WebReadyMimeTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-The WebReadyMimeTypes parameter specifies the MIME extentions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default values are:
+The WebReadyMimeTypes parameter specifies the MIME extentions of attachments that allow the attachments to be viewed by WebReady Document Viewing in Outlook on the web. The default value is all supported MIME types:
 
 - application/msword
 
@@ -2258,13 +2253,14 @@ The WebReadyMimeTypes parameter specifies the MIME extentions of attachments tha
 
 - application/x-mspowerpoint
 
-This parameter is meaningful only if the WebReadyDocumentViewingForAllSupportedTypes parameter is set to the value $false.
-
-You can only remove or add values from within this default list (you can't add additional values).
+You can only remove or add values from within the list of supported file types (you can't add additional values).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+This list is used only if the WebReadyDocumentViewingForAllSupportedTypes parameter is set to $false. Otherwise, all supported MIME types are avaialable in WebReady Document Viewing.
+
 
 ```yaml
 Type: MultiValuedProperty
