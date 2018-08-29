@@ -120,7 +120,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-WebReadyMimeTypes <MultiValuedProperty>]
  [-WhatIf]
  [-WSSAccessOnPrivateComputersEnabled <$true | $false>]
- [-WSSAccessOnPublicComputersEnabled <$true | $false>]
+ [-WSSAccessOnPublicComputersEnabled <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -2010,6 +2010,7 @@ Accept wildcard characters: False
 ```
 
 ### -WeatherEnabled
+
 This parameter is available only in the cloud-based service.
 
 The WeatherEnabled parameter specifies whether to enable or disable weather information in the calendar in Outlook on the web. Valid values are:
