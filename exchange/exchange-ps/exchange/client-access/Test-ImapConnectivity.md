@@ -50,11 +50,11 @@ You can write the results to a file by piping the output to ConvertTo-Html or Co
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-**Important Note**: When running this command on Exchange 2013 or newer against a particluar mailbox, you may see this following error message when running this command on an Exchange Server that doesn't host the active mailbox database copy of the mailbox that you are running the command against. 
+**Important Note**: In Exchange 2013 or later, when you run this command to test a single mailbox on an Exchange server that isn't hosting the active maildbox database copy for the mailbox, you might see the following error message:
 
-`Unable to create MailboxSession object to access the mailbox [user@consoto.com]. Detailed error information: [Microsoft.Exchange.Data.Storage.WrongServerException]: The user and the mailbox are in different Active Directory sites. Inner error [Microsoft.Mapi.MapiExceptionMailboxInTransit]: MapiExceptionMailboxInTransit: Detected site violation (hr=0x0, ec=1292)`
+Unable to create MailboxSession object to access the mailbox \[user@consoto.com\]. Detailed error information: \[Microsoft.Exchange.Data.Storage.WrongServerException\]: The user and the mailbox are in different Active Directory sites. Inner error \[Microsoft.Mapi.MapiExceptionMailboxInTransit\]: MapiExceptionMailboxInTransit: Detected site violation \(hr=0x0, ec=1292\)
 
-You should run the command again in an Exchange Management Shell on the server that hosts the active mailbox database copy to verify that IMAP works for this mailbox. 
+When you receive this error, run the command again on the server that's hosting the active mailbox database copy to verify that IMAP works for the mailbox. 
 
 ## EXAMPLES
 
