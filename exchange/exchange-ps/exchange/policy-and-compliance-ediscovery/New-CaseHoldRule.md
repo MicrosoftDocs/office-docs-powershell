@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-The Policy parameter specifies the case holdpolicy that contains the rule. You can use any value that uniquely identifies the policy. For example:
+The Policy parameter specifies the case hold policy that contains the rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 

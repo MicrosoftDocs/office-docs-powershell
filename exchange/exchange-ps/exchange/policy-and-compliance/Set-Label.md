@@ -1,17 +1,17 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: New-ComplianceRetentionEvent
+title: Set-Label
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# New-ComplianceRetentionEvent
+# Set-Label
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-ComplianceRetentionEvent cmdlet to create compliance retention events in your organization.
+Use the Set-Label cmdlet to modify labels in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -19,11 +19,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-New-ComplianceRetentionEvent -Name <String> [-AssetId <String>] [-Comment <String>] [-Confirm] [-EventDateTime <DateTime>] [-EventTags <MultiValuedProperty>] [-EventType <ComplianceRuleIdParameter>] [-ExchangeAssetIdQuery <String>] [-SharePointAssetIdQuery <String>] [-WhatIf] [<CommonParameters>]
+Set-Label [-Identity] <ComplianceRuleIdParameter> [-Comment <String>] [-Conditions <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-LabelActions <MultiValuedProperty>] [-Order <Int32>] [-ParentId <ComplianceRuleIdParameter>] [-Settings <PswsHashtable>] [-WhatIf]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920)..
 
 ## EXAMPLES
 
@@ -34,32 +34,31 @@ Insert example commands for example 1.
 
 Insert descriptive text for example 1.
 
-### -------------------------- Example 2 --------------------------
-```
-Insert example commands for example 2.
-```
-
-Insert descriptive text for example 2.
-
 ## PARAMETERS
 
-### -Name
-The Name parameter specifies a unique name for the compliance retention event. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
+### -Identity
+The Identity parameter specifies the label that you want to modify. You can use any value that uniquely identifies the label. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
-Type: String
+Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -AssetId
-The AssetId parameter.
+### -Comment
+The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
 Type: String
@@ -73,11 +72,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Comment
-The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+### -Conditions
+PARAMVALUE: MultiValuedProperty
 
 ```yaml
-Type: String
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
@@ -107,13 +106,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EventDateTime
-The EventDateTime parameter specifies the date-time of the event.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+### -DisplayName
+The DisplayName parameter specifies the display name for the label. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate label before they send a message.
 
 ```yaml
-Type: DateTime
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
@@ -124,8 +121,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EventTags
-The EventTags parameter.
+### -LabelActions
+PARAMVALUE: MultiValuedProperty
 
 ```yaml
 Type: MultiValuedProperty
@@ -139,8 +136,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EventType
-The EventType parameter.
+### -Order
+The Order parameter specifies a priority value for the label that determines the order of label processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and labels can't have the same priority value.
+
+Valid values and the default value for this parameter depend on the number of existing labels. For example, if there are 8 existing labels:
+
+- Valid priority values for the existing 8 labels are from 0 through 7.
+
+- Valid priority values for a new label (the 9th label) are from 0 through 8.
+
+- The default value for a new label (the 9th label) is 8.
+
+If you modify the priority value of a label, the position of the label in the list changes to match the priority value you specify. In other words, if you set the priority value of a label to the same value as an existing label, the priority value of the existing label and all other lower priority labels after it is increased by 1.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentId
+The ParentId parameter specifies the policy that contains the label. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: ComplianceRuleIdParameter
@@ -154,26 +182,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExchangeAssetIdQuery
-The ExchangeAssetIdQuery parameter.
+### -Settings
+PARAMVALUE: PswsHashtable
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointAssetIdQuery
-The SharePointAssetIdQuery parameter.
-
-```yaml
-Type: String
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
@@ -199,21 +212,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
-
 ## INPUTS
 
-### 
+###  
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-### 
+###  
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/New-ComplianceRetentionEvent)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label)
