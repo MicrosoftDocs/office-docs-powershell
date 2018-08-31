@@ -1,14 +1,14 @@
 ---
-external help file: tmp_5cw4yxew.xls-help.xml
-Module Name: tmp_5cw4yxew.xls
-online version: http://technet.microsoft.com/EN-US/library/eecc8b8a-16c3-4334-91bf-3be5db4d14d5(OCS.15).aspx
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
+title: Get-CsOnlineUser
 schema: 2.0.0
 ---
 
 # Set-CsOnlinePstnUsage
 
 ## SYNOPSIS
-Creates or modifies a PSTN Usage to use in your organization.
+Modifies a set of strings that identify the allowed public switched telephone network (PSTN) usages. This cmdlet can be used to add usages to the list of PSTN usages or remove usages from the list.
 
 ## SYNTAX
 
@@ -25,18 +25,37 @@ Set-CsOnlinePstnUsage [-Tenant <Guid>] [-Usage <PSListModifier>] [-Instance <PSO
 ```
 
 ## DESCRIPTION
-A PSTN Usage is a container for Voice Routes; can be shared in different Voice Routing Policies.
-
-The `Set-CsOnlinePstnUsage` creates or modifies a PSTN Usage to use in your organization.
+PSTN usages are string values that are used for call authorization. A PSTN usage links a voice policy to a route. The `Set-CsOnlinePstnUsage` cmdlet is used to add or remove phone usages to or from the usage list. This list is global so it can be used by policies and routes throughout the tenant.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> Set-CsOnlinePstnUsage  -Identity Global -Usage @{Add="US and Canada"}
+PS C:\> Set-CsOnlinePstnUsage -Identity global -Usage @{add="International"}
 ```
 
-The command shown in Example 1 creates the PSTN Usage “US and Canada”.
+This command adds the string "International" to the current list of available PSTN usages.
+
+### -------------------------- Example 2 --------------------------
+```
+PS C:\> Set-CsOnlinePstnUsage -Identity global -Usage @{remove="Local"}
+```
+
+This command removes the string "Local" from the list of available PSTN usages.
+
+### -------------------------- Example 3 --------------------------
+```
+PS C:\> Set-CsOnlinePstnUsage -Usage @{remove="Local"}
+```
+
+The command in this example performs the exact same action as the command in Example 2: it removes the "Local" PSTN usage. This example shows the command without the Identity parameter specified. The only Identity available to the Set-CsPstnUsage cmdlet is the Global identity; omitting the Identity parameter defaults to Global.
+
+### -------------------------- Example 4 --------------------------
+```
+PS C:\> Set-CsOnlinePstnUsage -Usage @{replace="International","Restricted"}
+```
+
+This command replaces everything in the usage list with the values International and Restricted. All previously existing usages are removed.
 
 ## PARAMETERS
 
@@ -56,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
 Type: SwitchParameter
@@ -71,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+The scope at which these settings are applied. The Identity for this cmdlet is always Global.
 
 ```yaml
 Type: XdsIdentity
@@ -86,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-{{Fill Instance Description}}
+A reference to a PSTN usage object. This object must be of type PstnUsages and can be retrieved by calling the Get-CsOnlinePstnUsage cmdlet.
 
 ```yaml
 Type: PSObject
@@ -101,7 +120,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
 Type: System.Guid
@@ -116,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Usage
-{{Fill Usage Description}}
+Contains a list of allowable usage strings. These entries can be any string value.
 
 ```yaml
 Type: PSListModifier
@@ -162,3 +189,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsPstnUsage](https://docs.microsoft.com/en-us/powershell/module/skype/get-cspstnusage?view=skype-ps)
