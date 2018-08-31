@@ -16,19 +16,12 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 
 ###  (Default)
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-Force] [-PassThru] [-WhatIf] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
 ```
 
-### Identity
-```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
-```
 
-### Users
-```
-Move-CsUser -UserList <String> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-Force] [-PassThru] 
- [-WhatIf] [<CommonParameters>]
-```
+
+
 
 ## DESCRIPTION
 
@@ -231,24 +224,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
-### -UserList
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: Users
-Aliases: 
-Applicable: Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 
 ### -Force
