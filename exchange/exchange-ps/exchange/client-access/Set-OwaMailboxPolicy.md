@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActionForUnknownFileAndMIMETypes
-The ActionForUnknownFileAndMIMETypes parameter specifies how to handle file types that aren't specified in the Allow, Block, and Force Save lists. Valid values are:
+The ActionForUnknownFileAndMIMETypes parameter specifies how to handle file types that aren't specified in the Allow, Block, and Force Save lists for file types and MIME types. Valid values are:
 
 - Allow (This is the default value.)
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
 - $true: ActiveSync is available in Outlook on the web. This is the default value.
-- 
+
 - $false: ActiveSync isn't avaialble in Outlook on the web.
 
 ```yaml
@@ -533,15 +533,13 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultClientLanguage
-This parameter is available or functional only in Exchange Server 2010.
-
 This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -552,7 +550,7 @@ Accept wildcard characters: False
 ### -DefaultTheme
 The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are avaialble in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
 
-Note that this parameter is a text string, and the value you specify isn't validated against the list of available themes. 
+Note that this parameter is a text string, and the value you specify isn't validated against the list of available themes.
 
 ```yaml
 Type: String
@@ -1374,8 +1372,6 @@ Accept wildcard characters: False
 ```
 
 ### -PremiumClientEnabled
-This parameter is available or functional only in Exchange Server 2010.
-
 The PremiumClientEnabled parameter controls the availability of the full version of Outlook Web App. Valid values are:
 
 - $true: The full version of Outlook Web App is avaialble for supported browsers. This is the default value.
@@ -1386,7 +1382,7 @@ The PremiumClientEnabled parameter controls the availability of the full version
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1428,7 +1424,7 @@ The PublicFoldersEnabled parameter specifies whether a user can browse or read i
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1449,7 +1445,7 @@ The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outloo
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1477,7 +1473,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemindersAndNotificationsEnabled
-The RemindersAndNotificationsEnabled parameter specifies whether notifications and reminders are enabled in Outlook on the web. This parameter doesn't apply to the light version of Outlook on the web.
+The RemindersAndNotificationsEnabled parameter specifies whether notifications and reminders are enabled in Outlook on the web. Valid values are:
+
+- $true: Notifications and reminders are enabled in Outlook on the web. This is the default value.
+
+- $false: Notifications and reminders are disabled in Outlook on the web.
+
+This parameter doesn't apply to the light version of Outlook Web App.
 
 ```yaml
 Type: $true | $false
@@ -1648,7 +1650,7 @@ The SilverlightEnabled parameter specifies whether a user can use Microsoft Silv
 
 - $true: Silverlight features are available in Outlook Web App. This is the default value.
 
-- $false: Silverlight features aren't available in Outlook on the web.
+- $false: Silverlight features aren't available in Outlook Web App.
 
 ```yaml
 Type: $true | $false
@@ -2067,7 +2069,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebPartsFrameOptionsType
-The WebPartsFrameOptionsType parameter specifies what sources can access Outlook on the web web parts in IFRAME or FRAME elements. Valid values are:
+The WebPartsFrameOptionsType parameter specifies what sources can access web parts in IFRAME or FRAME elements in Outlook on the web. Valid values are:
 
 - None: Tthere are no restrictions on displaying Outlook on the web content in a frame.
 
@@ -2140,7 +2142,7 @@ The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether 
 
 - $false: WebReady Document Viewing isn't availble for public computer sessions.
 
-In Exchange 2013, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
+In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
 ```yaml
 Type: $true | $false
