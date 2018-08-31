@@ -8,32 +8,35 @@ schema: 2.0.0
 # Set-CsOnlinePstnUsage
 
 ## SYNOPSIS
+Creates or modifies a PSTN Usage to use in your organization.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Set-CsOnlinePstnUsage [-Tenant <System.Guid>] [-Usage <PSListModifier>] [[-Identity] <XdsIdentity>] [-Force]
+Set-CsOnlinePstnUsage [-Tenant <Guid>] [-Usage <PSListModifier>] [[-Identity] <XdsIdentity>] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsOnlinePstnUsage [-Tenant <System.Guid>] [-Usage <PSListModifier>] [-Instance <PSObject>] [-Force]
+Set-CsOnlinePstnUsage [-Tenant <Guid>] [-Usage <PSListModifier>] [-Instance <PSObject>] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+A PSTN Usage is a container for Voice Routes; can be shared in different Voice Routing Policies.
+
+The `Set-CsOnlinePstnUsage` creates or modifies a PSTN Usage to use in your organization.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### -------------------------- Example 1 --------------------------
+```
+PS C:\> Set-CsOnlinePstnUsage  -Identity Global -Usage @{Add="US and Canada"}
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 creates the PSTN Usage “US and Canada”.
 
 ## PARAMETERS
 
