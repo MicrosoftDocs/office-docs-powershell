@@ -1,14 +1,14 @@
 ---
-external help file: tmp_5cw4yxew.xls-help.xml
-Module Name: tmp_5cw4yxew.xls
-online version: http://technet.microsoft.com/EN-US/library/8d95ff3e-b6e2-4a33-b567-e77352e4d7ed(OCS.15).aspx
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
+title: Get-CsOnlineUser
 schema: 2.0.0
 ---
 
 # Get-CsOnlinePstnUsage
 
 ## SYNOPSIS
-Returns information about the PSTN Usages in your organization. 
+Returns information about public switched telephone network (PSTN) usage records used in your tenant.
 
 ## SYNTAX
 
@@ -23,9 +23,7 @@ Get-CsOnlinePstnUsage [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<Common
 ```
 
 ## DESCRIPTION
-A PSTN Usage is a container for Voice Routes; can be shared in different Voice Routing Policies.
-
-The `Get-CsOnlineUser` cmdlet returns information about the PSTN Usages in your organization.
+PSTN usages are string values that are used for call authorization. A PSTN usage links a voice policy to a route. The `Get-CsOnlinePstnUsage` cmdlet retrieves the list of all PSTN usages available within a tenant.
 
 ## EXAMPLES
 
@@ -34,12 +32,12 @@ The `Get-CsOnlineUser` cmdlet returns information about the PSTN Usages in your 
 PS C:\> Get-CSOnlinePSTNUsage
 ```
 
-The command shown in Example 1 returns information for all the PSTN Usages in your tenant.
+This command returns the list of global PSTN usages available within the tenant.
 
 ## PARAMETERS
 
 ### -Filter
-{{Fill Filter Description}}
+The Filter parameter allows you to retrieve only those PSTN usages with an Identity matching a particular wildcard string. However, the only Identity available to PSTN usages is Global, so this parameter is not useful for this cmdlet.
 
 ```yaml
 Type: String
@@ -54,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+The level at which these settings are applied. The only identity that can be applied to PSTN usages is Global.
 
 ```yaml
 Type: XdsIdentity
@@ -69,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +82,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
 Type: System.Guid
@@ -114,3 +120,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[Set-CsPstnUsage](https://docs.microsoft.com/en-us/powershell/module/skype/set-cspstnusage?view=skype-ps)
