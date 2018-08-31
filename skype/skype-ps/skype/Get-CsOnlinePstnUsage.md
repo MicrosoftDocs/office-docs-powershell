@@ -8,30 +8,33 @@ schema: 2.0.0
 # Get-CsOnlinePstnUsage
 
 ## SYNOPSIS
+Returns information about the PSTN Usages in your organization. 
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Get-CsOnlinePstnUsage [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlinePstnUsage [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsOnlinePstnUsage [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlinePstnUsage [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+A PSTN Usage is a container for Voice Routes; can be shared in different Voice Routing Policies.
+
+The `Get-CsOnlineUser` cmdlet returns information about the PSTN Usages in your organization.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### -------------------------- Example 1 --------------------------
+```
+PS C:\> Get-CSOnlinePSTNUsage
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 returns information for all the PSTN Usages in your tenant.
 
 ## PARAMETERS
 
