@@ -48,7 +48,7 @@ This command removes the string "Local" from the list of available PSTN usages.
 PS C:\> Set-CsOnlinePstnUsage -Usage @{remove="Local"}
 ```
 
-The command in this example performs the exact same action as the command in Example 2: it removes the "Local" PSTN usage. This example shows the command without the Identity parameter specified. The only Identity available to the Set-CsPstnUsage cmdlet is the Global identity; omitting the Identity parameter defaults to Global.
+The command in this example performs the exact same action as the command in Example 2: it removes the "Local" PSTN usage. This example shows the command without the Identity parameter specified. The only Identity available to the Set-CsOnlinePstnUsage cmdlet is the Global identity; omitting the Identity parameter defaults to Global.
 
 ### -------------------------- Example 4 --------------------------
 ```
