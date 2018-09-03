@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{Fill Description Description}}
+A description of what this online voice route is for.
 
 ```yaml
 Type: String
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+A name that uniquely identifies the online voice route. Voice routes can be defined only at the global scope, so the identity is simply the name you want to give the route. (You can have spaces in the route name, for instance Test Route, but you must enclose the full string in double quotes in the call to the New-CsOnlineVoiceRoute cmdlet.)
+
+If Identity is specified, the Name must be left blank. The value of the Identity will be assigned to the Name.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -119,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-{{Fill InMemory Description}}
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-<cmdlet>.
 
 ```yaml
 Type: SwitchParameter
@@ -134,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+The unique name of the voice route. If this parameter is set, the value will be automatically applied to the online voice route Identity. You cannot specify both an Identity and a Name.
 
 ```yaml
 Type: String
@@ -149,7 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -NumberPattern
-{{Fill NumberPattern Description}}
+A regular expression that specifies the phone numbers to which this route applies. Numbers matching this pattern will be routed according to the rest of the routing settings.
+
+Default: [0-9]{10}
 
 ```yaml
 Type: String
@@ -164,7 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -OnlinePstnGatewayList
-{{Fill OnlinePstnGatewayList Description}}
+This parameter contains a list of online gateways associated with this voice route. Each member of this list must be the service Identity of the online PSTN gateway. The service Identity is a string in the format OnlinePstnGateway:<FQDN>, where FQDN is the fully qualified domain name (FQDN) of the pool or the IP address of the server. For example, OnlinePstnGateway:redmondpool.litwareinc.com.
+
+By default this list is empty. However, if you leave this parameter blank when creating a new voice route, you'll receive a warning message.
 
 ```yaml
 Type: PSListModifier
@@ -179,7 +185,9 @@ Accept wildcard characters: False
 ```
 
 ### -OnlinePstnUsages
-{{Fill OnlinePstnUsages Description}}
+A list of online PSTN usages (such as Local, Long Distance, etc.) that can be applied to this online voice route. The PSTN usage must be an existing usage (PSTN usages can be retrieved by calling the Get-CsOnlinePstnUsage cmdlet).
+
+By default this list is empty. However, if you leave this parameter blank when creating a new online voice route, you'll receive a warning message.
 
 ```yaml
 Type: PSListModifier
@@ -194,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-{{Fill Priority Description}}
+A number could resolve to multiple online voice routes. The priority determines the order in which the routes will be applied if more than one route is possible.
 
 ```yaml
 Type: Int32
@@ -209,7 +217,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
 Type: System.Guid
@@ -255,3 +271,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
+
+[Set-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceroute?view=skype-ps)
+
+[Remove-CsOnlineVoiceRoute](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csonlinevoiceroute?view=skype-ps)
