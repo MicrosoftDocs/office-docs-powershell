@@ -1,7 +1,7 @@
 ---
-external help file: tmp_5cw4yxew.xls-help.xml
-Module Name: tmp_5cw4yxew.xls
-online version: http://technet.microsoft.com/EN-US/library/96a619a9-62fd-4d28-8ed0-968e2de35e1e(OCS.15).aspx
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
+title: Get-CsOnlineUser
 schema: 2.0.0
 ---
 
@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ### Identity (Default)
 ```
-Set-CsOnlineVoiceRoutingPolicy [-Tenant <System.Guid>] [-OnlinePstnUsages <PSListModifier>]
+Set-CsOnlineVoiceRoutingPolicy [-Tenant <Guid>] [-OnlinePstnUsages <PSListModifier>]
  [-Description <String>] [-RouteType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
