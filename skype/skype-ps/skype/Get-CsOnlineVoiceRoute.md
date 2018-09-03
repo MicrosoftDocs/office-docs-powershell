@@ -53,7 +53,7 @@ This command displays voice route settings where the Identity contains the strin
 
 ### -------------------------- Example 4 --------------------------
 ```
-PS C:\> Get-CsOnlineVoiceRoute | Where-Object {$_.PstnGatewayList.Count -eq 0}
+PS C:\> Get-CsOnlineVoiceRoute | Where-Object {$_.OnlinePstnGatewayList.Count -eq 0}
 ```
 
 This command retrieves all voice routes that have not had any PSTN gateways assigned. First all voice routes are retrieved using the Get-CsOnlineVoiceRoute cmdlet. These voice routes are then piped to the Where-Object cmdlet. The Where-Object cmdlet narrows down the results of the Get operation. In this case we look at each voice route (that's what the $_ represents) and check the Count property of the PstnGatewayList property. If the count of PSTN gateways is 0, the list is empty and no gateways have been defined for the route.
