@@ -189,4 +189,4 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsPstnUsage](https://docs.microsoft.com/en-us/powershell/module/skype/get-cspstnusage?view=skype-ps)
+[Get-CsOnlinePstnUsage](https://docs.microsoft.com/en-us/powershell/module/skype/get-csOnlinepstnusage?view=skype-ps)
