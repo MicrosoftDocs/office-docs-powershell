@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOnlineVoiceRoute
 
 ## SYNOPSIS
-Creates a new online voice route. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Microsoft Phone System Direct Routing users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+Creates a new online voice route. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
 ## SYNTAX
 
@@ -27,9 +27,11 @@ New-CsOnlineVoiceRoute [-Tenant <Guid>] -Name <String> [-Description <String>] [
 ```
 
 ## DESCRIPTION
-Use this cmdlet to create a new online voice route. All voice routes are created at the Global scope. However, multiple global voice routes can be defined. This is accomplished through the Identity parameter, which requires a unique route name.
+Use this cmdlet to create a new online voice route. All online voice routes are created at the Global scope. However, multiple global voice routes can be defined. This is accomplished through the Identity parameter, which requires a unique route name.
 
 Voice routes are associated with online voice policies through online PSTN usages. A voice route includes a regular expression that identifies which phone numbers will be routed through a given voice route: phone numbers matching the regular expression will be routed through this route.
+
+This cmdlet is used when configuring Microsoft Phone System Direct Routing.
 
 ## EXAMPLES
 
