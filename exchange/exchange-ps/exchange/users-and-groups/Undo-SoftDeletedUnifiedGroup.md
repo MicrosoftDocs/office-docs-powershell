@@ -27,6 +27,8 @@ Office 365 groups are group objects that are available across Office 365 service
 
 Soft-deleted Office 365 groups are groups that have been deleted, but can be restored within 30 days of being deleted. All of the group contents can be restored within this period. After 30 days, soft-deleted Office 365 groups are marked for permanent deletion and can't be restored.
 
+To display all soft-deleted Office 365 groups in your organization, use the Get-AzureADMSDeletedGroup cmdlet in Azure Active Directory PowerShell. To permanently remove (purge) a soft-deleted Office 365 group, use the Remove-AzureADMSDeletedDirectoryObject cmdlet in Azure Actived Directory PowerShell. For more information, see [Permanently delete an Office 365 group](https://support.office.com/article/b7c66b59-657a-4e1a-8aa0-8163b1f4eb54#bkmk_perm).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
