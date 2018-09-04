@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOnlineVoiceRoute
 
 ## SYNOPSIS
-Creates a new online voice route. Voice routes contain instructions that tell Skype for Business Online how to route calls from Phone System users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX). 
+Creates a new online voice route. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Microsoft Phone System Direct Routing users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
 ## SYNTAX
 
