@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsOnlineVoiceRoute
 
 ## SYNOPSIS
-Removes an online voice route. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Microsoft Phone System Direct Routing users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+Removes an online voice route. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
 ## SYNTAX
 ```
@@ -17,6 +17,8 @@ Remove-CsOnlineVoiceRoute [-Tenant <Guid>] [[-Identity] <XdsGlobalRelativeIdenti
 
 ## DESCRIPTION
 Use this cmdlet to remove an existing online voice route. Online voice routes are associated with online voice policies through online PSTN usages, so removing a online voice route does not change any values relating to an online voice policy, it simply changes the routing for the numbers that had matched the pattern for the deleted online voice route.
+
+This cmdlet is used when configuring Microsoft Phone System Direct Routing.
 
 ## EXAMPLES
 
