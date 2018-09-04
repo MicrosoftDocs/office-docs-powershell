@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOnlinePstnUsage
 
 ## SYNOPSIS
-Returns information about public switched telephone network (PSTN) usage records used in your tenant.
+Returns information about online public switched telephone network (PSTN) usage records used in your tenant.
 
 ## SYNTAX
 
