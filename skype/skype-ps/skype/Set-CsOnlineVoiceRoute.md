@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsOnlineVoiceRoute
 
 ## SYNOPSIS
-Modifies an online voice route. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Microsoft Phone System Direct Routing users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+Modifies an online voice route. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
 ## SYNTAX
 
@@ -27,7 +27,9 @@ Set-CsOnlineVoiceRoute [-Tenant <Guid>] [-Description <String>] [-NumberPattern 
 ```
 
 ## DESCRIPTION
-Use this cmdlet to modify an existing online voice route. Voice routes are associated with online voice policies through online public switched telephone network (PSTN) usages. A voice route includes a regular expression that identifies which phone numbers will be routed through a given voice route: phone numbers matching the regular expression will be routed through this route.
+Use this cmdlet to modify an existing online voice route. Online voice routes are associated with online voice policies through online public switched telephone network (PSTN) usages. A online voice route includes a regular expression that identifies which phone numbers will be routed through a given voice route: phone numbers matching the regular expression will be routed through this route.
+
+This cmdlet is used when configuring Microsoft Phone System Direct Routing.
 
 ## EXAMPLES
 
