@@ -44,7 +44,7 @@ In Example 2, all the online voice routing policies configured at the per-user s
 PS C:\> Get-CsOnlineVoiceRoutingPolicy | Where-Object {$_.OnlinePstnUsages -contains "Long Distance"} | Remove-CsOnlineVoiceRoutingPolicy
 ```
 
-In Example 3, all the online voice routing polices that include the online PSTN usage "Long Distance" are removed. To carry out this task, the `Get-CsOnlineVoiceRoutingPolicy` cmdlet is first called without any parameters in order to return a collection of all the available online voice routing policies. That collection is then piped to the Where-Object cmdlet, which picks out only those policies where the OnlinePstnUsages property includes (-contains) the usage "Long Distance". Policies that meet that criterion are then piped to the Remove-CsOnlineVoiceRoutingPolicy, which removes each online voice routing policy that includes the online PSTN usage "Long Distance".
+In Example 3, all the online voice routing polices that include the online PSTN usage "Long Distance" are removed. To carry out this task, the `Get-CsOnlineVoiceRoutingPolicy` cmdlet is first called without any parameters in order to return a collection of all the available online voice routing policies. That collection is then piped to the Where-Object cmdlet, which picks out only those policies where the OnlinePstnUsages property includes (-contains) the usage "Long Distance". Policies that meet that criterion are then piped to the `Remove-CsOnlineVoiceRoutingPolicy`, which removes each online voice routing policy that includes the online PSTN usage "Long Distance".
 
 ## PARAMETERS
 
