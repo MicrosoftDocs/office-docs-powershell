@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOnlineVoiceRoute
 
 ## SYNOPSIS
-Returns information about the voice routes configured for use in your tenant.
+Returns information about the online voice routes configured for use in your tenant. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Microsoft Phone System Direct Routing users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
 ## SYNTAX
 
