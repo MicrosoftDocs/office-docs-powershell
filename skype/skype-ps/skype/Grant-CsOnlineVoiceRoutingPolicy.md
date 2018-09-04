@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-When you use this cmdlet without specifying an user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
 
 ```yaml
 Type: SwitchParameter
