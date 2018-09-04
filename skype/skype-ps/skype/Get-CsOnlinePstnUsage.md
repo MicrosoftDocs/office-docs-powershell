@@ -23,7 +23,9 @@ Get-CsOnlinePstnUsage [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<Common
 ```
 
 ## DESCRIPTION
-PSTN usages are string values that are used for call authorization. A PSTN usage links a voice policy to a route. The `Get-CsOnlinePstnUsage` cmdlet retrieves the list of all PSTN usages available within a tenant.
+Online PSTN usages are string values that are used for call authorization. An online PSTN usage links an online voice policy to a route. The `Get-CsOnlinePstnUsage` cmdlet retrieves the list of all online PSTN usages available within a tenant.
+
+This cmdlet is used when configuring Microsoft Phone System Direct Routing.
 
 ## EXAMPLES
 
