@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteType
-{{Fill RouteType Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
