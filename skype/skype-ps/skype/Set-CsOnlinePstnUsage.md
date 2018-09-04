@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsOnlinePstnUsage
 
 ## SYNOPSIS
-Modifies a set of strings that identify the allowed public switched telephone network (PSTN) usages. This cmdlet can be used to add usages to the list of PSTN usages or remove usages from the list.
+Modifies a set of strings that identify the allowed online public switched telephone network (PSTN) usages. This cmdlet can be used to add usages to the list of online PSTN usages or remove usages from the list.
 
 ## SYNTAX
 
@@ -25,7 +25,9 @@ Set-CsOnlinePstnUsage [-Tenant <Guid>] [-Usage <PSListModifier>] [-Instance <PSO
 ```
 
 ## DESCRIPTION
-PSTN usages are string values that are used for call authorization. A PSTN usage links a voice policy to a route. The `Set-CsOnlinePstnUsage` cmdlet is used to add or remove phone usages to or from the usage list. This list is global so it can be used by policies and routes throughout the tenant.
+Online PSTN usages are string values that are used for call authorization. An online PSTN usage links an online voice policy to a route. The `Set-CsOnlinePstnUsage` cmdlet is used to add or remove phone usages to or from the usage list. This list is global so it can be used by policies and routes throughout the tenant.
+
+This cmdlet is used when configuring Microsoft Phone System Direct Routing.
 
 ## EXAMPLES
 
