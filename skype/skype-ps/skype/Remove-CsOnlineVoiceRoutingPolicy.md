@@ -79,15 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier assigned to the policy when it was created. Online voice routing policies can be assigned at the global scope or the per-user scope. To refer to the global instance, use this syntax:
-
--Identity global
-
-To refer to a per-user policy, use syntax similar to this:
-
--Identity "RedmondOnlineVoiceRoutingPolicy"
-
-If you do not specify an Identity, then the `Set-CsOnlineVoiceRoutingPolicy` cmdlet will modify the global policy.
+Unique identifier assigned to the policy when it was created.
 
 ```yaml
 Type: XdsIdentity
