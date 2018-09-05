@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-applicable: Exchange Server 2016, Exchange Online
+applicable: Exchange Online
 title: Get-OnlineMeetingConfiguration
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchonline-ps"
 ---
 
 # Get-OnlineMeetingConfiguration
@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-OnlineMeetingConfiguration [-Identity] <MailboxIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-OnlineMeetingConfiguration [-Identity] <MailboxIdParameter> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,26 +82,11 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
