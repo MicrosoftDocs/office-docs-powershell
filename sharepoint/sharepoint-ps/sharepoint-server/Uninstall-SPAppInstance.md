@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE--------------
 ```
-PS C:\>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
+PS C:\>$spapp = Get-SPAppInstance -AppInstanceId $instance.Id
 PS C:\>Uninstall-SPAppInstance -Identity $spapp
 ```
 
