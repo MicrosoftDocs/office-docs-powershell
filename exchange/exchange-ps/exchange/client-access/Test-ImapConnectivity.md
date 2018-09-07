@@ -50,6 +50,12 @@ You can write the results to a file by piping the output to ConvertTo-Html or Co
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
+**Important Note**: In Exchange 2013 or later, when you run this command to test a single mailbox on an Exchange server that isn't hosting the active maildbox database copy for the mailbox, you might see the following error message:
+
+Unable to create MailboxSession object to access the mailbox \[user@consoto.com\]. Detailed error information: \[Microsoft.Exchange.Data.Storage.WrongServerException\]: The user and the mailbox are in different Active Directory sites. Inner error \[Microsoft.Mapi.MapiExceptionMailboxInTransit\]: MapiExceptionMailboxInTransit: Detected site violation \(hr=0x0, ec=1292\)
+
+When you receive this error, run the command again on the server that's hosting the active mailbox database copy to verify that IMAP works for the mailbox. 
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
