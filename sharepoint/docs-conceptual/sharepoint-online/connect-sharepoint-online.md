@@ -14,7 +14,7 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 
 <br />
 
-> [!Video https://www.youtube.com/watch?v=TMzHAWEQjlk]
+> [!Video https://www.youtube.com/embed/TMzHAWEQjlk]
 
 ## To connect with a user name and password ##
 
