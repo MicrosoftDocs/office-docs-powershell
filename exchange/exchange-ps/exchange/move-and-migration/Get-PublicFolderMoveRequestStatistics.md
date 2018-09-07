@@ -42,19 +42,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-PublicFolderMoveRequestStatistics -Identity \PublicFolderMove
 ```
 
-This example returns the default statistics for the public folder move request \\PublicFolderMove.
+This example returns the default statistics for the public folder move request \PublicFolderMove.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-PublicFolderMoveRequestStatistics -Identity \PublicFolderMove | Format-List
 ```
 
-This example returns the detailed statistics for the move request \\PublicFolderMove by pipelining the results to the Format-List command.
+This example returns the detailed statistics for the move request \PublicFolderMove by pipelining the results to the Format-List command.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the public folder move request. The default public folder move request identity is \\PublicFolderMove.
+The Identity parameter specifies the identity of the public folder move request. The default public folder move request identity is \PublicFolderMove.
 
 This parameter can't be used with the RequestQueue parameter.
 

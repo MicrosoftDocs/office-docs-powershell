@@ -67,13 +67,13 @@ Import-RMSTrustedPublishingDomain -Name "Contoso TPD" -FileData $([byte[]](Get-C
 
 This example imports a TPD from an AD RMS server into a cloud-based organization. The TPD uses the following values:
 
-- Path to exported XML file: C:\\My Documents\\Contoso.xml
+- Path to exported XML file: C:\My Documents\Contoso.xml
 
 - Password of exported XML file: Pa$$word1
 
-- External licensing URL: https://rms.contoso.com/\_wmcs/licensing
+- External licensing URL: `https://rms.contoso.com/_wmcs/licensing`
 
-- Internal licensing URL: https://RMS01/\_wmcs/licensing
+- Internal licensing URL: `https://RMS01/_wmcs/licensing`
 
 - TPD name: Contoso TPD
 
@@ -82,7 +82,7 @@ This example imports a TPD from an AD RMS server into a cloud-based organization
 ### -ExtranetLicensingUrl
 The ExtranetLicensingUrl parameter specifies the external licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
 
-By default, the value of the ExtranetLicensingUrl parameter is https://\<FQDN\>/\_wmcs/licensing.
+By default, the value of the ExtranetLicensingUrl parameter is https://ServerFQDN_wmcs/licensing.
 
 ```yaml
 Type: Uri
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the XML file you want to import. The XML file contains the TPD you exported from the on-premises AD RMS server.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
 
 ```yaml
 Type: Byte[]
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ### -IntranetLicensingUrl
 The IntranetLicensingUrl parameter specifies the internal licensing URL of the on-premises AD RMS server that's stamped into the publishing license. The publishing license specifies the users that can open the rights-protected content, under which conditions the content may be opened by the user, and the rights that each user will have to the rights-protected content.
 
-By default, the value of the IntranetLicensingUrl parameter is https://\<server name\>/\_wmcs/licensing.
+By default, the value of the IntranetLicensingUrl parameter is https://ServerName/_wmcs/licensing.
 
 ```yaml
 Type: Uri
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password of the TPD that you want to import. The password value must match the password in the XML file when you exported the TPD from the on-premises AD RMS server.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, to be prompted to enter the password and store it as a variable, run the command `$password = Read-Host "Enter password" -AsSecureString`, and then use the value $password for this parameter.
 
 ```yaml
 Type: SecureString
@@ -212,9 +212,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ### -ExtranetCertificationUrl
 The ExtranetCertificationUrl parameter specifies the external certification URL of the on-premises AD RMS server that's stamped into the Rights Account Certificate (RAC). The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
-By default, the value of the ExtranetCertificationUrl parameter is https://\<FQDN\>/\_wmcs/certification/servercertification.asmx.
+By default, the value of the ExtranetCertificationUrl parameter is https://ServerFQDN>/_wmcs/certification/servercertification.asmx.
 
 ```yaml
 Type: Uri
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ### -IntranetCertificationUrl
 The IntranetCertificationUrl parameter specifies the internal certification URL of the on-premises AD RMS server that's stamped into the RAC. The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
-By default, the value of the IntranetCertificationUrl parameter is https://\<server name\>/\_wmcs/certification/servercertification.asmx.
+By default, the value of the IntranetCertificationUrl parameter is https://ServerFQDN>/_wmcs/certification/servercertification.asmx.
 
 ```yaml
 Type: Uri

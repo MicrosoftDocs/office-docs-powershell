@@ -47,7 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-MailboxImportRequest -Identity "Ayla\MailboxImport1"
 ```
 
-This example removes the second import request for Ayla's mailbox Ayla\\MailboxImport1.
+This example removes the second import request for Ayla's mailbox Ayla\MailboxImport1.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -66,7 +66,7 @@ This example removes all completed import requests.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you created the request using the Name parameter, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the import request. By default, import requests are named Alias\MailboxImportX (where X = 0-9). If you created the request using the Name parameter, use the following syntax: Alias\Name.
 
 You can't use this parameter with the RequestGuid parameter.
 
@@ -127,9 +127,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

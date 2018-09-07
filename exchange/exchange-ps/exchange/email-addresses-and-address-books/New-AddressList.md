@@ -77,12 +77,12 @@ This example creates the address list MyAddressList2 that includes mailboxes tha
 New-AddressList -Name "AL_AgencyB" -RecipientFilter {((RecipientType -eq 'MailboxUser') -and (CustomAttribute15 -like *AgencyB*))}
 ```
 
-This example creates the address list AL\_AgencyB that includes mailboxes that have the value of the CustomAttribute15 parameter contains AgencyB.
+This example creates the address list AL_AgencyB that includes mailboxes that have the value of the CustomAttribute15 parameter contains AgencyB.
 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the unique name for the new address list. The maximum length is 64 characters, and it can't include a carriage return or a backslash (\\). If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the unique name for the new address list. The maximum length is 64 characters, and it can't include a carriage return or a backslash (`\`). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -441,9 +441,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -458,7 +458,7 @@ Accept wildcard characters: False
 ```
 
 ### -Container
-The Container parameter specifies where to create the address list. Valid input for this parameter is under the root "\\" (also known as All Address Lists) or under an existing address list. You can use any value that uniquely identifies the address list. For example:
+The Container parameter specifies where to create the address list. Valid input for this parameter is under the root "`\`" (also known as All Address Lists) or under an existing address list. You can use any value that uniquely identifies the address list. For example:
 
 - Name
 
@@ -468,9 +468,9 @@ The Container parameter specifies where to create the address list. Valid input 
 
 - GUID
 
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `\<Name>` or `<Container>\<Name>`
 
-If you don't use this parameter,the address list is created under the root (\\).
+If you don't use this parameter,the address list is created under the root (`\`).
 
 ```yaml
 Type: AddressListIdParameter
@@ -583,7 +583,7 @@ The RecipientFilter parameter specifies an OPath filter that's based on the valu
 
 - Include a hyphen before all operators.
 
-- In cloud-based environments, you can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
+- In cloud-based environments, you can't use a wildcard as the first character. For example, `Sales*` is allowed, but `*Sales` isn't allowed.
 
 For more information, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
 

@@ -44,7 +44,7 @@ This example changes the current SMTP address of the Security Team EOP distribut
 ### -Alias
 The Alias parameter specifies the alias of the distribution group.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', *, +, -, /, =, ?, ^, _, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 ```yaml
 Type: String
@@ -134,7 +134,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

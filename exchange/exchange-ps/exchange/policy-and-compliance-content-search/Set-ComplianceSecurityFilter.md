@@ -87,9 +87,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -119,15 +119,15 @@ Accept wildcard characters: False
 ```
 
 ### -Filters
-The Filters parameter specifies the search criteria for the compliance security filter. You can create three different types of filters:
+The Filters parameter specifies the search criteria for the compliance security filter. The filters are applied to the users specified by the Users parameter. You can create three different types of filters:
 
-- Mailbox filter: Specifies the mailboxes that can be searched by the assigned users. Valid syntax is Mailbox\_\<MailboxPropertyName\>, where \<MailboxPropertyName\> is a mailbox property value. For example, "Mailbox\_CustomAttribute10 -eq 'OttawaUsers'" allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
+- Mailbox filter: Specifies mailboxes that can be searched by the assigned users. Valid syntax is `Mailbox_<MailboxPropertyName>`, where `<MailboxPropertyName>` is a mailbox property value. For example, "Mailbox_CustomAttribute10 -eq 'OttawaUsers'" allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
 
-- Mailbox content filter: Specifies the mailbox content the assigned users can search for. Valid syntax is MailboxContent\_\<SearchablePropertyName\>:\<value\>, where \<SearchablePropertyName\> specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, MailboxContent\_recipients:contoso.com allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see Keyword queries for Compliance Search (https://technet.microsoft.com/library/ms.o365.cc.searchquerylearnmore.aspx).
+- Mailbox content filter: Specifies mailbox content that the assigned users can search for. Valid syntax is `MailboxContent_<SearchablePropertyName>:<value>`, where `<SearchablePropertyName>` specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, `MailboxContent_recipients:contoso.com` allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable message properties, see Keyword queries for Compliance Search (https://technet.microsoft.com/library/ms.o365.cc.searchquerylearnmore.aspx).
 
-- Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create: Site\_\<SearchableSiteProperty\> (specifies site-related properties. For example,"Site\_Path -eq 'https://contoso.sharepoint.com/sites/doctors'" allows users to only search for content in the https://contoso.sharepoint.com/sites/doctors site collection) and SiteContent\_\<SearchableSiteProperty\> (specifies content-related properties. For example, "SiteContent\_FileExtension -eq 'docx'" allows users to only search for Word documents). For a list of searchable site properties, see Overview of crawled and managed properties in SharePoint (https://go.microsoft.com/fwlink/p/?LinkId=331599). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
+- Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create. `Site_<SearchableSiteProperty>` specifies site-related properties. For example,`Site_Path -eq 'https://contoso.sharepoint.com/sites/doctors'` allows users to only search for content in the https://contoso.sharepoint.com/sites/doctors site collection. `SiteContent_<SearchableSiteProperty>` specifies content-related properties. For example, `SiteContent_FileExtension -eq 'docx'` allows users to only search for Word documents. For a list of searchable site properties, see Overview of crawled and managed properties in SharePoint (https://go.microsoft.com/fwlink/p/?LinkId=331599). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
 
-You can specify multiple filters of the same type. For example, "Mailbox\_CustomAttribute10 -eq 'FTE' -and Mailbox\_MemberOfGroup -eq '$($DG.DistinguishedName)'".
+You can specify multiple filters of the same type. For example, `"Mailbox_CustomAttribute10 -eq 'FTE' -and Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'"`.
 
 ```yaml
 Type: MultiValuedProperty

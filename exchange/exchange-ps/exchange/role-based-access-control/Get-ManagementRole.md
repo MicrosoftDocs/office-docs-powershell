@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the role you want to view. If the role you want to view contains spaces, enclose the name in quotation marks ("). You can use the wildcard character (\*) and a partial role name to match multiple roles.
+The Identity parameter specifies the role you want to view. If the role you want to view contains spaces, enclose the name in quotation marks ("). You can use the wildcard character (*) and a partial role name to match multiple roles.
 
 ```yaml
 Type: RoleIdParameter

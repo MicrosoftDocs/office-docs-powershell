@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MailboxImportRequest -Identity "tony\Recovered"
 ```
 
-This example returns the default information regarding the status of the ongoing import request with the identity tony\\Recovered. The type of information returned by default includes name, mailbox, and status.
+This example returns the default information regarding the status of the ongoing import request with the identity tony\Recovered. The type of information returned by default includes name, mailbox, and status.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -71,7 +71,7 @@ This example returns all import requests that have the name Recovered where the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you specify a name for the import request, use the following syntax: \<alias\>\\\<name\>. Microsoft Exchange automatically precedes the request with the mailbox's alias.
+The Identity parameter specifies the identity of the import request. By default, import requests are named Alias\MailboxImportX (where X = 0-9). If you specify a name for the import request, use the following syntax: Alias\Name. Exchange automatically precedes the request with the mailbox's alias.
 
 You can't use this parameter with the following parameters:
 
@@ -186,7 +186,7 @@ The Mailbox parameter specifies the identity of the mailbox or mail user into wh
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

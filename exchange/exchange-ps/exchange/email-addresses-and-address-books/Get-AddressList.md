@@ -55,12 +55,12 @@ This example returns a summary list of all the address lists.
 Get-AddressList -Identity "All Users\Sales\building4" | Format-List
 ```
 
-This example returns detailed information for the address list named building4that's located under the All Users\\Sales\\ address list.
+This example returns detailed information for the address list named building4that's located under the All Users\Sales\ address list.
 
 ## PARAMETERS
 
 ### -Container
-The Container parameter filters the results based on the location of the address list. Only address lists under the specified path are returned. Valid input for this parameter is the root "\\" (also known as All Address Lists) or an existing address list. You can use any value that uniquely identifies the address list. For example:
+The Container parameter filters the results based on the location of the address list. Only address lists under the specified path are returned. Valid input for this parameter is the root "`\`" (also known as All Address Lists) or an existing address list. You can use any value that uniquely identifies the address list. For example:
 
 - Name
 
@@ -70,7 +70,7 @@ The Container parameter filters the results based on the location of the address
 
 - GUID
 
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `\<Name>` or `<Container>\<Name>`
 
 You can't use this parameter with the Identity or SearchText parameters.
 
@@ -114,7 +114,7 @@ The Identity parameter specifies the address list that you want to view. You can
 
 - GUID
 
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `\<Name>` or `<Container>\<Name>`
 
 You can't use this parameter with the Container or SearchText parameters.
 

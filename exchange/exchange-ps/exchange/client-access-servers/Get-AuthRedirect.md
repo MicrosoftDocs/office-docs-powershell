@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the existing OAuth redirection object that you want to view. The object name uses the syntax AuthRedirect-Bearer-\<GUID\>.
+The Identity parameter specifies the existing OAuth redirection object that you want to view. The object name uses the syntax `AuthRedirect-Bearer-<GUID>`.
 
 ```yaml
 Type: AuthRedirectIdParameter

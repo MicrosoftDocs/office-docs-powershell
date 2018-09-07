@@ -89,7 +89,7 @@ The Identity parameter specifies the identity of the mailbox or mail user. You c
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 
@@ -278,7 +278,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

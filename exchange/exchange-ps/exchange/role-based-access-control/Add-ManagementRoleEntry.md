@@ -72,7 +72,7 @@ In on-premises Exchange, this example adds the MailboxAudit script with the Depa
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the role entry to add. You must specify the value of the Identity parameter in the format: \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
+The Identity parameter specifies the role entry to add. A valid value for this parameter uses the syntax ManagementRole\RoleEntryName (for example, ExampleRole\Set-Mailbox).
 
 For more information about how management role entries work, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
@@ -123,9 +123,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

@@ -49,7 +49,7 @@ This example returns the status of in-progress migration requests.
 Get-PublicFolderMigrationRequest -Identity "PFMigrate10_11_12" | Format-List Suspended,AutoSuspended
 ```
 
-This example returns all migration requests that have the name PFMigrate10\_11\_12 and the request has been suspended.
+This example returns all migration requests that have the name `PFMigrate10_11_12` and the request has been suspended.
 
 ## PARAMETERS
 

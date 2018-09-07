@@ -50,7 +50,7 @@ This example changes the warning quota to 9.5 GB and the prohibit send and recei
 Set-SiteMailboxProvisioningPolicy -Identity SM_DefaultPolicy -AliasPrefix Project
 ```
 
-This example changes the default provisioning policy named SM\_DefaultPolicy and sets the AliasPrefix value to Project. When you create new site mailboxes, the prefix Project- is automatically added to the alias.
+This example changes the default provisioning policy named SM_DefaultPolicy and sets the AliasPrefix value to Project. When you create new site mailboxes, the prefix Project- is automatically added to the alias.
 
 ## PARAMETERS
 
@@ -97,9 +97,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ### -DefaultAliasPrefixEnabled
 The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes have the default prefix text added to the alias. Valid values are:
 
-- $true: Aliases get the default prefix text. This is the default value. In Office 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
+- $true: Aliases get the default prefix text. This is the default value. In Office 365, the default prefix text is SMO- (for example, the alias value `BugBash_2016` becomes `SMO-BugBash_2016`). In on-premises Exchange, the the default prefix text is SM- (for example, the alias value `BugBash_2016` becomes `SM-BugBash_2016`).
 
 - $false: Aliases don't get the default prefix text.
 

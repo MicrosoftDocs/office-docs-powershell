@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-PublicFolderItemStatistics -Identity "\Marketing\2013\Pamphlets"
 ```
 
-This example returns default statistics for all items in the Pamphlets public folder under the \\Marketing\\2013 path. Default information includes item identity, creation time and subject.
+This example returns default statistics for all items in the Pamphlets public folder under the \Marketing\2013 path. Default information includes item identity, creation time and subject.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -46,7 +46,7 @@ This example returns additional information about the items within the public fo
 Get-PublicFolderItemStatistics -Identity "\Marketing\Reports" | Select Subject,LastModificationTime,HasAttachments,ItemType,MessageSize | Export-CSV C:\PFItemStats.csv
 ```
 
-This example exports the output of the Get-PublicFolderItemStatistics command to the PFItemStats.csv file that includes the following information for all items within the public folder \\Marketing\\Reports:
+This example exports the output of the Get-PublicFolderItemStatistics command to the PFItemStats.csv file that includes the following information for all items within the public folder \Marketing\Reports:
 
 - Subject of the message (Subject)
 
@@ -61,7 +61,7 @@ This example exports the output of the Get-PublicFolderItemStatistics command to
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the following format: \\TopLevelPublicFolder\\PublicFolder
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the following format: \TopLevelPublicFolder\PublicFolder
 
 ```yaml
 Type: PublicFolderIdParameter

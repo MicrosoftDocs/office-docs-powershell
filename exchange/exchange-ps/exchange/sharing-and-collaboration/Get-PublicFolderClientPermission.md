@@ -33,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-PublicFolderClientPermission "\My Public Folder"
 ```
 
-This example retrieves the permissions for all users of \\My Public Folder.
+This example retrieves the permissions for all users of \My Public Folder.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -45,7 +45,7 @@ This example retrieves the permissions for the public folder My Public Folder, f
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \TopLevelPublicFolder\PublicFolder.
 
 You can omit the parameter label so that only the public folder name or GUID is supplied.
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of a specific user for whom you want to view the permissions on the public folder.
+The User parameter specifies the user principal name (UPN), domain\user, or alias of a specific user for whom you want to view the permissions on the public folder.
 
 ```yaml
 Type: PublicFolderUserIdParameter

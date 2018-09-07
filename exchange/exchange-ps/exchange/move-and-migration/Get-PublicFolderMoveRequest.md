@@ -43,7 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-PublicFolderMoveRequest -Identity \PublicFolderMove
 ```
 
-This example returns the status of an in-progress public folder move request with the identity \\PublicFolderMove, which is the default name assigned to public folder moves.
+This example returns the status of an in-progress public folder move request with the identity \PublicFolderMove, which is the default name assigned to public folder moves.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the identity of the public folder move request. The default identity assigned to public folder move requests is \\PublicFolderMove.
+The Identity parameter specifies the identity of the public folder move request. The default identity assigned to public folder move requests is \PublicFolderMove.
 
 This parameter can't be used in conjunction with the following parameters:
 

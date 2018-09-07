@@ -114,9 +114,9 @@ Name: Southeast Offices
 
 Precanned recipient filter: All users with mailboxes where the State or province value is GA, AL, or LA (Georgia, Alabama, or Louisiana).
 
-Primary SMTP email address:\<last name\>.\<first two letters of the first name\>@contoso.com
+Primary SMTP email address: `<last name>.<first two letters of the first name>@contoso.com`
 
-Additional proxy email addresses:\<last name\>.\<first two letters of the first name\>@contoso.net
+Additional proxy email addresses: `<last name>.<first two letters of the first name>@contoso.net`
 
 Priority:N+1, where N is the number of manually created email address policies that already exist (we didn't use the Priority parameter, and the default value is N+1).
 
@@ -131,7 +131,7 @@ Name: Northwest Executives
 
 Custom recipient filter: All users with mailboxes where the Title value contains Director or Manager, and the State or province value is WA, OR, or ID (Washington, Oregon, or Idaho).
 
-Primary SMTP email address:\<first two letters of the first name\>\<last name\>@contoso.com
+Primary SMTP email address: `<first two letters of the first name><last name>@contoso.com`
 
 Additional proxy email addresses: None
 
@@ -142,15 +142,15 @@ Priority: 2
 ### -EnabledEmailAddressTemplates
 The EnabledEmailAddressTemplates parameter specifies the rules in the email address policy that are used to generate email addresses for recipients.
 
-Valid syntax for this parameter is \<Type\>:\<AddressFormat\>:
+Valid syntax for this parameter is `<Type>:<AddressFormat>`:
 
-- \<Type\>: A valid email address type as described in "Address types" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example, SMTP for the primary email address, and smtp for proxy addresses.
+- `<Type>`: A valid email address type as described in "Address types" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example, SMTP for the primary email address, and smtp for proxy addresses.
 
-- \<AddressFormat\>: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
+- `<AddressFormat>`: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: `<alias>@contoso.com` requires the value `%m@contoso.com`, and `<firstname>.<lastname>@contoso.com` requires the value `%g.%s@contoso.com`.
 
-This parameter requires at least one template with the \<Type\> value SMTP (to define the primary SMTP email address). After that, if you don't include a \<Type\> prefix for a template, the value smtp (an SMTP proxy address) is assumed.
+This parameter requires at least one template with the`<Type>`value SMTP (to define the primary SMTP email address). After that, if you don't include a`<Type>`prefix for a template, the value smtp (an SMTP proxy address) is assumed.
 
-You can specify multiple email address templates separated by commas: "SMTP:\<PrimarySMTPEmailAddress\>","[\<Type1\>]:\<EmailAddress1\>","[\<Type2\>]:\<EmailAddress2\>",..."[\<TypeN\>]:\<EmailAddressN\>".
+You can specify multiple email address templates separated by commas: `"SMTP:<PrimarySMTPEmailAddress>","[<Type1>]:<EmailAddress1>","[<Type2>]:<EmailAddress2>",..."[<TypeN>]:<EmailAddressN>"`.
 
 You can't use this parameter with the EnabledPrimarySMTPAddressTemplate parameter.
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ### -EnabledPrimarySMTPAddressTemplate
 The EnabledPrimarySMTPAddressTemplate parameter specifies the specifies the rule in the email address policy that's used to generate the primary SMTP email addresses for recipients. You can use this parameter instead of the EnabledEmailAddressTemplates if the policy only applies the primary email address and no additional proxy addresses.
 
-Valid syntax for this parameter is a domain or subdomain that's configured as an authoritative accepted domain, and valid variables and ASCII text characters as described in the "Address format" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
+Valid syntax for this parameter is a domain or subdomain that's configured as an authoritative accepted domain, and valid variables and ASCII text characters as described in the "Address format" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: `<alias>@contoso.com` requires the value `%m@contoso.com`, and `<firstname>.<lastname>@contoso.com` requires the value `%g.%s@contoso.com`.
 
 You can't use this parameter with the EnabledEmailAddressTemplates parameter.
 
@@ -246,7 +246,7 @@ The RecipientFilter parameter specifies an OPath filter that's based on the valu
 
 - Include a hyphen before all operators.
 
-- In cloud-based environments, you can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
+- In cloud-based environments, you can't use a wildcard as the first character. For example, `Sales*` is allowed, but `*Sales` isn't allowed.
 
 For more information, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
 
@@ -645,9 +645,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -666,13 +666,13 @@ This parameter is available only in on-premises Exchange.
 
 The DisabledEmailAddressTemplates parameter specifies the proxy email addresses templates that are included in an email address policy, but aren't used to configure the email addresses of recipients.
 
-Valid syntax for this parameter is \<Type\>:\<AddressFormat\>:
+Valid syntax for this parameter is `<Type>:<AddressFormat>`:
 
-- \<Type\>: A valid email address type as described in the "Address types" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example, smtp or X400. Note that you can't use SMTP to specify a disabled primary SMTP email address.
+- `<Type>`: A valid email address type as described in the "Address types" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example, smtp or X400. Note that you can't use SMTP to specify a disabled primary SMTP email address.
 
-- \<AddressFormat\>: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: \<alias\>@contoso.com requires the value %m@contoso.com, and \<firstname\>.\<lastname\>@contoso.com requires the value %g.%s@contoso.com.
+- `<AddressFormat>`: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx). For example: `<alias>@contoso.com` requires the value `%m@contoso.com`, and `<firstname>.<lastname>@contoso.com` requires the value `%g.%s@contoso.com`.
 
-You can specify multiple disabled email address templates separated by commas: "[\<Type1\>]:\<EmailAddress1\>","[\<Type2\>]:\<EmailAddress2\>",..."[\<TypeN\>]:\<EmailAddressN\>".
+You can specify multiple disabled email address templates separated by commas: `"[<Type1>]:<EmailAddress1>","[<Type2>]:<EmailAddress2>",..."[<TypeN>]:<EmailAddressN>"`.
 
 ```yaml
 Type: ProxyAddressTemplateCollection
@@ -792,7 +792,7 @@ This parameter is an OPath filter that's based on the value of any available rec
 
 - Include a hyphen before all operators.
 
-- You can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
+- You can't use a wildcard as the first character. For example, `Sales*` is allowed, but `*Sales` isn't allowed.
 
 For more information, see Multi-domain support for Office 365 groups - Admin help (https://go.microsoft.com/fwlink/p/?linkid=838413).
 

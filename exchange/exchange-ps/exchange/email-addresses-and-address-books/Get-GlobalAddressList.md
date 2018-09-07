@@ -49,7 +49,7 @@ This example returns a summary list of all GALs.
 Get-GlobalAddressList -Identity GAL_AgencyB | Format-List
 ```
 
-This example returns detailed information about the GAL named GAL\_AgencyB.
+This example returns detailed information about the GAL named GAL_AgencyB.
 
 ## PARAMETERS
 

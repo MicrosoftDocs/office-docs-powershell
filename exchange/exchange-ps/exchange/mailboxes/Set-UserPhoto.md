@@ -112,7 +112,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ### -PictureData
 The PictureData parameter specifies the photo file that will be uploaded to the user's account.
 
-This parameter uses the syntax ([System.IO.File]::ReadAllBytes("\<file name and path\>")). The following is an example. ([System.IO.File]::ReadAllBytes("C:\\Documents\\Pictures\\MyPhoto.jpg")).
+This parameter uses the syntax `([System.IO.File]::ReadAllBytes("<file name and path>"))` (for example, `([System.IO.File]::ReadAllBytes("C:\Documents\Pictures\MyPhoto.jpg"))`).
 
 ```yaml
 Type: Byte[]
@@ -227,9 +227,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

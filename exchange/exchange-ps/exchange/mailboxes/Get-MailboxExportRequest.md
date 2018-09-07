@@ -46,7 +46,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MailboxExportRequest -Identity "tony\DB01toPST"
 ```
 
-This example returns the status of the ongoing export request with the identity tony\\DB01toPST.
+This example returns the status of the ongoing export request with the identity tony\DB01toPST.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -60,7 +60,7 @@ In Exchange Server 2010, this example returns the status of in progress export r
 Get-MailboxExportRequest -BatchName "Attachment_CompanyReport" -Status Completed
 ```
 
-This example returns the status of export requests in the Attachment\_CompanyReport batch that completed.
+This example returns the status of export requests in the Attachment_CompanyReport batch that completed.
 
 ### -------------------------- Example 4 --------------------------
 ```
@@ -72,7 +72,7 @@ This example returns all export requests that have the name DB01toPST where the 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specified a name for the export request when the request was created using the New-MailboxExportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>. Exchange automatically precedes the request with the mailbox's alias.
+The Identity parameter specifies the identity of the export request. By default, export requests are named Alias\MailboxExportX (where X = 0-9). If you specified a name for the export request when the request was created using the New-MailboxExportRequest cmdlet, use the following syntax: Alias\Name. Exchange automatically precedes the request with the mailbox's alias.
 
 This parameter can't be with the following parameters:
 
@@ -183,7 +183,7 @@ The Mailbox parameter specifies the identity of the mailbox or mail user from wh
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

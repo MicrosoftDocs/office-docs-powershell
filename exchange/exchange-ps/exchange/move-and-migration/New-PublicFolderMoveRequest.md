@@ -43,14 +43,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-PublicFolderMoveRequest -Folders \DeveloperReports\CustomerEngagements -TargetMailbox DeveloperReports01
 ```
 
-This example begins the move request for the public folder \\CustomerEngagements from public folder mailbox DeveloperReports to DeveloperReports01.
+This example begins the move request for the public folder \CustomerEngagements from public folder mailbox DeveloperReports to DeveloperReports01.
 
 ### -------------------------- Example 2 --------------------------
 ```
 New-PublicFolderMoveRequest -Folders \Dev\CustomerEngagements,\Dev\RequestsforChange,\Dev\Usability -TargetMailbox DeveloperReports01
 ```
 
-This example begins the move request for public folders under the \\Dev public folder branch to the target public folder mailbox DeveloperReports01.
+This example begins the move request for public folders under the \Dev public folder branch to the target public folder mailbox DeveloperReports01.
 
 You can also move a branch of public folders by using the Move-PublicFolderBranch.ps1 script.
 
@@ -64,7 +64,7 @@ This example moves all public folders from public folder mailbox Pub1 to public 
 ## PARAMETERS
 
 ### -Folders
-The Folders parameter specifies the public folders that you want to move. If the public folder has child public folders, child public folders won't be moved unless you explicitly state them in the command. You can move multiple public folders by separating them with a comma, for example, \\Dev\\CustomerEngagements,\\Dev\\RequestsforChange,\\Dev\\Usability.
+The Folders parameter specifies the public folders that you want to move. If the public folder has child public folders, child public folders won't be moved unless you explicitly state them in the command. You can move multiple public folders by separating them with a comma, for example, \Dev\CustomerEngagements,\Dev\RequestsforChange,\Dev\Usability.
 
 ```yaml
 Type: PublicFolderIdParameter[]
@@ -89,7 +89,7 @@ The TargetMailbox parameter specifies the target public folder mailbox that you 
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - GUID
 
@@ -178,9 +178,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -350,7 +350,7 @@ The RequestExpiryInterval parameter specifies an age limit for a completed or fa
 
 - The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
 
-- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
+- If the request fails, you need to manually remove it by using the corresponding `Remove-*`Request cmdlet.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 

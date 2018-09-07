@@ -46,16 +46,16 @@ This example displays summary information for all retention policies for Microso
 Get-TeamsRetentionCompliancePolicy -Identity "Teams - Regulation 123 Compliance" -DistributionDetail | Format-List
 ```
 
-This example displays detailed information for the policy named "Teams - Regulation 123 Compliance", including accurate values for the DistributionStatus and \*Location properties.
+This example displays detailed information for the policy named "Teams - Regulation 123 Compliance", including accurate values for the DistributionStatus and *Location properties.
 
 ## PARAMETERS
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
 
-If you don't use this switch, the values of the DistributionStatus and \*Location property values will be inaccurate.
+If you don't use this switch, the values of the DistributionStatus and *Location property values will be inaccurate.
 
 ```yaml
 Type: SwitchParameter

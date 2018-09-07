@@ -81,7 +81,7 @@ New-ThrottlingPolicy [-Name] <String> [-AnonymousMaxConcurrency <UInt32>] [-Anon
 ```
 
 ## DESCRIPTION
-By default, there is one default throttling policy named GlobalThrottlingPolicy\_\<GUID\> with a throttling scope of Global. Microsoft Exchange Setup creates a default client throttling policy as part of the Client Access server role. You should not replace, re-create, or remove the existing default throttling policy. However, you can create additional throttling policies with the scope of Organization or Regular to change your user throttling settings. You can also edit policies with the scope of Organization and Regular that you've created using the Set-ThrottlingPolicy cmdlet.
+By default, there is one default throttling policy named `GlobalThrottlingPolicy_<GUID>` with a throttling scope of Global. Microsoft Exchange Setup creates a default client throttling policy as part of the Client Access server role. You should not replace, re-create, or remove the existing default throttling policy. However, you can create additional throttling policies with the scope of Organization or Regular to change your user throttling settings. You can also edit policies with the scope of Organization and Regular that you've created using the Set-ThrottlingPolicy cmdlet.
 
 For more information about how to control how resources are consumed by individual users, see User workload management (https://technet.microsoft.com/library/jj150503.aspx).
 
@@ -101,7 +101,7 @@ In Exchange Server 2010, this example creates a non-default throttling policy. A
 New-ThrottlingPolicy -Name ITUserPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
 ```
 
-This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>. After you create this policy, you must associate it with specific users.
+This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy `GlobalThrottlingPolicy_<GUID>`. After you create this policy, you must associate it with specific users.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -115,7 +115,7 @@ In Exchange Server 2010, this example creates a policy for a tenant that sets th
 New-ThrottlingPolicy -Name AllUsersEWSPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
 ```
 
-This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>.
+This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy `GlobalThrottlingPolicy_<GUID>`.
 
 ### -------------------------- Example 5 --------------------------
 ```
@@ -224,9 +224,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

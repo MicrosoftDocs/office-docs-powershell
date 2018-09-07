@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Disable-JournalArchiving -Identity TimothyAmaral_Archive
 ```
 
-This example disables the journal archiving for the user named Timothy Amaral. Timothy's journal archive mailbox in Exchange Online is named TimothyAmaral\_Archive.
+This example disables the journal archiving for the user named Timothy Amaral. Timothy's journal archive mailbox in Exchange Online is named TimothyAmaral_Archive.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

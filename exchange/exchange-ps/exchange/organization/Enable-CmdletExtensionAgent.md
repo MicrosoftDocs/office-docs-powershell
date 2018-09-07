@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Enable-CmdletExtensionAgent "Scripting Agent"
 ```
 
-This example enables the cmdlet extension agent named Scripting Agent. Before you enable the Scripting Agent, you need to configure the %ExchangeInstallPath%Bin\\CmdletExtensionAgents\\ScriptingAgentConfig.xml.sample file and rename it to ScriptingAgentConfig.xml on all the Exchange servers in your organization. If you don't, all non-Get cmdlets will fail.
+This example enables the cmdlet extension agent named Scripting Agent. Before you enable the Scripting Agent, you need to configure the %ExchangeInstallPath%Bin\CmdletExtensionAgents\ScriptingAgentConfig.xml.sample file and rename it to ScriptingAgentConfig.xml on all the Exchange servers in your organization. If you don't, all non-Get cmdlets will fail.
 
 ## PARAMETERS
 
@@ -66,9 +66,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

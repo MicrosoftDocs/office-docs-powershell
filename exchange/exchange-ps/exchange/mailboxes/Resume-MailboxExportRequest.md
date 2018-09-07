@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Resume-MailboxExportRequest -Identity kweku\export
 ```
 
-This example resumes the export request kweku\\export.
+This example resumes the export request kweku\export.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -48,7 +48,7 @@ This example resumes any failed export move requests.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). Use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the export request. By default, export requests are named Alias\MailboxExportX (where X = 0-9). Use the following syntax: Alias\Name.
 
 ```yaml
 Type: MailboxExportRequestIdParameter
@@ -65,9 +65,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

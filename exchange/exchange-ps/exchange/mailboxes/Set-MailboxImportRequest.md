@@ -56,7 +56,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-MailboxImportRequest -Identity "Kweku\Import" -BadItemLimit 5
 ```
 
-This example changes the import request Kweku\\Import to accept up to five corrupted mailbox items.
+This example changes the import request Kweku\Import to accept up to five corrupted mailbox items.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -68,7 +68,7 @@ This example finds all import requests that have a status of Suspended, and then
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you specified a name for the import request with the New-MailboxImportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the import request. By default, import requests are named Alias\MailboxImportX (where X = 0-9). If you specified a name for the import request with the New-MailboxImportRequest cmdlet, use the following syntax: Alias\Name.
 
 ```yaml
 Type: MailboxImportRequestIdParameter
@@ -134,9 +134,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -360,7 +360,7 @@ The RequestExpiryInterval parameter specifies an age limit for a completed or fa
 
 - The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
 
-- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
+- If the request fails, you need to manually remove it by using the corresponding `Remove-*`Request cmdlet.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 

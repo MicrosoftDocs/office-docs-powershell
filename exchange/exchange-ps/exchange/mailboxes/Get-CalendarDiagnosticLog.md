@@ -81,7 +81,7 @@ This example exports all calendar items in the Calendar Diagnostic log for Jasen
 
 Notes:
 
-In this example, the message files are written to C:\\My Documents\\Calendar Diagnostic Export\\jkozma@contoso.com.
+In this example, the message files are written to C:\My Documents\Calendar Diagnostic Export\jkozma@contoso.com.
 
 In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
 
@@ -102,7 +102,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -211,13 +211,13 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
-The LogLocation parameter specifies the location to export the calendar items to .msg files. You can specify a local path, or a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
+The LogLocation parameter specifies the location to export the calendar items to .msg files. You can specify a local path, or a UNC path (`\\<Server>\<Share>`). If the value contains spaces, enclose the value in quotation marks (").
 
-In the location you specify, a subfolder is automatically created for the specified mailbox that holds the exported calendar items. For example, if you specify the value "C:\\My Documents\\Calendar Export" to export calendar items from the mailbox of Shannon Steele, the .msg files are actually stored in C:\\My Documents\\Calendar Export\\ssteele@contoso.com.
+In the location you specify, a subfolder is automatically created for the specified mailbox that holds the exported calendar items. For example, if you specify the value "C:\My Documents\Calendar Export" to export calendar items from the mailbox of Shannon Steele, the .msg files are actually stored in C:\My Documents\Calendar Export\ssteele@contoso.com.
 
 In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
 
-Note: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (\> "C:\\My Documents\\Calendar Export") or substitute the output to a PowerShell variable.
+Note: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (`> "C:\My Documents\Calendar Export"`) or substitute the output to a PowerShell variable.
 
 ```yaml
 Type: String

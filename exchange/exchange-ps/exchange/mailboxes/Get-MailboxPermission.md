@@ -45,13 +45,13 @@ The output of this cmdlet shows the following information:
 
 By default, the following permissions are assigned to user mailboxes:
 
-- FullAccess and ReadPermission are directly assigned to NT AUTHORITY\\SELF. This entry gives a user permission to their own mailbox.
+- FullAccess and ReadPermission are directly assigned to NT AUTHORITY\SELF. This entry gives a user permission to their own mailbox.
 
 - FullAccess is denied to Administrator, Domain Admins, Enterprise Admins and Organization Management. These inherited permissions prevent these users and group members from opening other users' mailboxes.
 
 - ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are allowed for Administrator, Domain Admins, Enterprise Admins and Organization Management. Note that these inherited permission entries also appear to allow FullAccess. However, these users and groups do not have FullAccess to the mailbox because the inherited Deny permission entries override the inherited Allow permission entries.
 
-- FullAccess is inherited by NT AUTHORITY\\SYSTEM and ReadPermission is inherited by NT AUTHORITY\\NETWORK.
+- FullAccess is inherited by NT AUTHORITY\SYSTEM and ReadPermission is inherited by NT AUTHORITY\NETWORK.
 
 - FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem and ReadPermission is inherited by Managed Availability Servers.
 
@@ -93,7 +93,7 @@ The Identity parameter identifies the mailbox. You can use one of the following 
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the UPN, domain\\user, or the alias of the user.
+The User parameter specifies the UPN, domain\user, or the alias of the user.
 
 This parameter can't be used with the Owner parameter.
 

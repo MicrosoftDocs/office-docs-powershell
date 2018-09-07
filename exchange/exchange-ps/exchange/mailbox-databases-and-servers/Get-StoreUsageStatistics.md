@@ -97,7 +97,7 @@ The Identity parameter specifies a mailbox. When you specify a value for the Ide
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

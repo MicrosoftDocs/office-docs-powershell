@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ### -FromMessageId
 The FromMessageId parameter specifies the message that's used to create the Inbox rule. The rule is based on the properties of the message. You identify the message by its Base64-encoded StoreObjectId property value. For example:
 
-- MailboxId\\StoreObjectId
+- MailboxId\StoreObjectId
 
 - StoreObjectId
 
@@ -195,9 +195,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopyToFolder
-The CopyToFolder parameter specifies an action for the Inbox rule that copies messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \\Inbox\\Personal).
+The CopyToFolder parameter specifies an action for the Inbox rule that copies messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \Inbox\Personal).
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -664,7 +664,7 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 The corresponding condition parameter to this exception is SentTo.
 
@@ -1097,7 +1097,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -1201,7 +1201,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToFolder
-The MoveToFolder parameter specifies an action for the Inbox rule that moves messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \\Inbox\\Personal).
+The MoveToFolder parameter specifies an action for the Inbox rule that moves messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \Inbox\Personal).
 
 ```yaml
 Type: MailboxFolderIdParameter

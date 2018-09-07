@@ -141,9 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter filters the results by using an OPath. This parameter searches the Description property, which includes the conditions, exceptions, actions and the associated values of a transport rule.
+The Filter parameter filters the results by using OPath filter syntax. This parameter searches the Description property, which includes the conditions, exceptions, actions and the associated values of a transport rule.
 
-This parameter uses the syntax -Filter "Description -like '\*\<text\>\*'". For example, -Filter "Description -like \*192.168.1.1\*'".
+This parameter uses the syntax, `-Filter {Description -like '*<text>*'}`. For example, `-Filter {Description -like *192.168.1.1*'}`.
 
 ```yaml
 Type: String

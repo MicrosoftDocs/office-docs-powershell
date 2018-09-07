@@ -67,7 +67,7 @@ The Identity parameter specifies the Foreign connector that you want to examine.
 
 - Connector name
 
-- ServerName\\ConnectorName
+- ServerName\ConnectorName
 
 ```yaml
 Type: ForeignConnectorIdParameter

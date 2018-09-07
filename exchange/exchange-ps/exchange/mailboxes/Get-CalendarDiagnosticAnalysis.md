@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
-The LogLocation parameter specifies the location of the exported calendar items that you want to analyze. You can specify a local path, or a UNC path (\\\\\<Server\>\\\<Share\>\\\<User\>). If the value contains spaces, enclose the value in quotation marks (").
+The LogLocation parameter specifies the location of the exported calendar items that you want to analyze. You can specify a local path, or a UNC path (`\\<Server>\<Share>\<User>`). If the value contains spaces, enclose the value in quotation marks (").
 
 You export the calender items to .msg files by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter. If the path contains multiple .msg files, all of those files are analyzed when you run Get-CalendarDiagnosticAnalysis.
 

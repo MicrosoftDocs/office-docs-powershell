@@ -80,9 +80,9 @@ The Identity parameter specifies the Inbox rule that you want to modify. You can
 
 - RuleIdentity property (for example, 16752869479666417665).
 
-- Exchange Online: \<mailbox alias\>\\\<RuleIdentity\> (for example, rzaher\\16752869479666417665.
+- Exchange Online: MailboxAlias\RuleIdentity (for example, rzaher\16752869479666417665).
 
-- On-premises Exchange: \<mailbox canonical name\>\\\<RuleIdentity\> (for example, contoso.com/Users/Rick Zaher\\16752869479666417665.
+- On-premises Exchange: MailboxCanonicalName\RuleIdentity (for example, contoso.com/Users/Rick Zaher\16752869479666417665).
 
 ```yaml
 Type: InboxRuleIdParameter
@@ -131,9 +131,9 @@ Accept wildcard characters: False
 ### -BodyContainsWords
 The BodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding exception parameter to this condition is ExceptIfBodyContainsWords.
 
@@ -152,9 +152,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -CopyToFolder
-The CopyToFolder parameter specifies an action for the Inbox rule that copies messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \\Inbox\\Personal).
+The CopyToFolder parameter specifies an action for the Inbox rule that copies messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \Inbox\Personal).
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -222,9 +222,9 @@ Accept wildcard characters: False
 ### -ExceptIfBodyContainsWords
 The ExceptIfBodyContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding condition parameter to this exception is BodyContainsWords.
 
@@ -317,9 +317,9 @@ Accept wildcard characters: False
 ### -ExceptIfFromAddressContainsWords
 The ExceptIfFromAddressContainsWords parameter specifies an exception for the Inbox rule that looks for messages where the specified words are in the sender's email address.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding condition parameter to this exception is FromAddressContainsWords.
 
@@ -395,9 +395,9 @@ Accept wildcard characters: False
 ### -ExceptIfHeaderContainsWords
 The HeaderContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the header fields of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding condition parameter to this exception is HeaderContainsWords.
 
@@ -577,9 +577,9 @@ Accept wildcard characters: False
 ### -ExceptIfRecipientAddressContainsWords
 The ExceptIfRecipientAddressContainsWords parameter specifies an exception for the Inbox rule that looks for messages where the specified words are in recipient email addresses.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding condition parameter to this exception is RecipientAddressContainsWords.
 
@@ -629,7 +629,7 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 The corresponding condition parameter to this exception is SentTo.
 
@@ -648,9 +648,9 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectContainsWords
 The ExceptIfSubjectContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the Subject field of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding condition parameter to this exception is SubjectContainsWords.
 
@@ -669,9 +669,9 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectOrBodyContainsWords
 The ExceptIfSubjectOrBodyContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the Subject field or body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding condition parameter to this exception is ExceptIfSubjectOrBodyContainsWords.
 
@@ -959,9 +959,9 @@ Accept wildcard characters: False
 ### -FromAddressContainsWords
 The FromAddressContainsWords parameter specifies a condition for the Inbox rule that looks for messages where the specified words are in the sender's email address.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding exception parameter to this condition is ExceptIfFromAddressContainsWords.
 
@@ -1037,9 +1037,9 @@ Accept wildcard characters: False
 ### -HeaderContainsWords
 The HeaderContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the header fields of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding exception parameter to this condition is ExceptIfHeaderContainsWords.
 
@@ -1070,7 +1070,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -1174,7 +1174,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveToFolder
-The MoveToFolder parameter specifies an action for the Inbox rule that moves messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \\Inbox\\Personal).
+The MoveToFolder parameter specifies an action for the Inbox rule that moves messages to the specified mailbox folder. You can specify the existing folder by name, or by the store object ID and a path string (for example, \Inbox\Personal).
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -1343,9 +1343,9 @@ Accept wildcard characters: False
 ### -RecipientAddressContainsWords
 The RecipientAddressContainsWords parameter specifies a condition for the Inbox rule that looks for messages where the specified words are in recipient email addresses.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding exception parameter to this condition is ExceptIfRecipientAddressContainsWords.
 
@@ -1393,9 +1393,9 @@ Accept wildcard characters: False
 ### -SendTextMessageNotificationTo
 The SendTextMessageNotificationTo parameter specifies an action for the Inbox rule that send a text message notification to the specified telephone number.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1483,9 +1483,9 @@ Accept wildcard characters: False
 ### -SubjectContainsWords
 The SubjectContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the Subject field of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding exception parameter to this condition is ExceptIfSubjectContainsWords.
 
@@ -1504,9 +1504,9 @@ Accept wildcard characters: False
 ### -SubjectOrBodyContainsWords
 The SubjectOrBodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the Subject field or body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The corresponding exception parameter to this condition is ExceptIfSubjectOrBodyContainsWords.
 
@@ -1702,9 +1702,9 @@ The ApplySystemCategory parameter specifies an action for the Inbox rule that ap
 
 - Video
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 ```yaml
 Type: MultiValuedProperty

@@ -44,7 +44,7 @@ This example returns the permissions for the same folder in John's mailbox, but 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox.
+The Identity parameter specifies the mailbox folder that you want to view. This parameter uses the syntax: Mailbox\Folder. For the value of Mailbox, you can use any value that uniquely identifies the mailbox.
 
 For example:
 
@@ -58,7 +58,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -70,7 +70,7 @@ For example:
 
 - User ID or user principal name (UPN)
 
-Example values for this parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
+Example values for this parameter are john@contoso.com:\Calendar or John:\Marketing\Reports.
 
 ```yaml
 Type: MailboxFolderIdParameter

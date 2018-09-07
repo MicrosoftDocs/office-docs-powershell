@@ -47,7 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MailboxRestoreRequestStatistics -Identity "Tony\MailboxRestore1"
 ```
 
-This example returns the default statistics for the restore request with the identity Tony\\MailboxRestore1. The type of information returned by default includes name, mailbox, status and percent complete.
+This example returns the default statistics for the restore request with the identity Tony\MailboxRestore1. The type of information returned by default includes name, mailbox, status and percent complete.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -75,12 +75,12 @@ In Exchange Server 2010 and 2013, this example returns default statistics for a 
 Get-MailboxRestoreRequest -Status Failed | Get-MailboxRestoreRequestStatistics -IncludeReport | Format-List > C:\Reports\AllRestoreReports.txt
 ```
 
-This example returns additional information for all the restore requests that have a status of Failed by using the IncludeReport parameter and then saves the information to the text file C:\\Reports\\AllRestoreReports.txt.
+This example returns additional information for all the restore requests that have a status of Failed by using the IncludeReport parameter and then saves the information to the text file C:\Reports\AllRestoreReports.txt.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: Alias\Name.
 
 If you didn't specify a name for the restore request when it was created, Exchange automatically generated the default name MailboxRestore. Exchange generates up to 10 names, starting with MailboxRestore and then MailboxRestoreX (where X = 1-9).
 

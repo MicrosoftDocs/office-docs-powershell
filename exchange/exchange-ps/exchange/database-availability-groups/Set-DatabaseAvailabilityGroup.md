@@ -68,14 +68,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessDirectory C:\DAG1DIR
 ```
 
-This example sets the witness directory to C:\\DAG1DIR for the DAG DAG1.
+This example sets the witness directory to C:\DAG1DIR for the DAG DAG1.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -AlternateWitnessDirectory C:\DAGFileShareWitnesses\DAG1.contoso.com -AlternateWitnessServer CAS3
 ```
 
-This example preconfigures an alternate witness server of CAS3 and an alternate witness directory of C:\\DAGFileShareWitnesses\\DAG1.contoso.com for the DAG DAG1.
+This example preconfigures an alternate witness server of CAS3 and an alternate witness directory of C:\DAGFileShareWitnesses\DAG1.contoso.com for the DAG DAG1.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -186,9 +186,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -450,7 +450,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDagDatabasesRootFolderPath
-The AutoDagDatabasesRootFolderPath parameter specifies the directory containing the database mount points when using AutoReseed. This parameter is required when using AutoReseed. AutoReseed uses a default path of C:\\ExchangeDatabases.
+The AutoDagDatabasesRootFolderPath parameter specifies the directory containing the database mount points when using AutoReseed. This parameter is required when using AutoReseed. AutoReseed uses a default path of C:\ExchangeDatabases.
 
 ```yaml
 Type: NonRootLocalLongFullPath
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDagVolumesRootFolderPath
-The AutoDagVolumesRootFolderPath parameter specifies the volume containing the mount points for all disks, including spare disks, when using the AutoReseed feature of the DAG. This parameter is required when using AutoReseed. AutoReseed uses a default path of C:\\ExchangeVolumes.
+The AutoDagVolumesRootFolderPath parameter specifies the volume containing the mount points for all disks, including spare disks, when using the AutoReseed feature of the DAG. This parameter is required when using AutoReseed. AutoReseed uses a default path of C:\ExchangeVolumes.
 
 ```yaml
 Type: NonRootLocalLongFullPath

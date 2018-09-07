@@ -303,7 +303,7 @@ Valid values are::
 
 - 6610: AES256 (This is the default value)
 
-If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the 3DES algorithm, use the value 6603,\<CustomOID\>.
+If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the 3DES algorithm, use the value `6603,<CustomOID>`.
 
 This parameter uses the sytax <AlgorithmID> or RC2:<KeyLength> or <AlgorithmID>,<CustomOID>. You can specify multiple values separated by semicolons (;). For example, to set the encryption algorithms to 3DES, RC2-128, RC2-64, DES, and RC2-56, use the following value: 6603;6602:128;6602:64;6601;6602:56.
 
@@ -476,21 +476,21 @@ The OWASigningAlgorithms parameter specifies the list of symmetric encryption si
 
 Valid values are:
 
-- 8003: CALG\_MD5 or 128-bit MD5
+- 8003: `CALG_MD5` or 128-bit MD5
 
-- 800E: CALG\_SHA\_512 or 512-bit Secure Hash Algorithm (SHA)
+- 800E: `CALG_SHA_512` or 512-bit Secure Hash Algorithm (SHA)
 
-- 800D: CALG\_SHA\_384 or 384-bit SHA
+- 800D: `CALG_SHA_384` or 384-bit SHA
 
-- 800C: CALG\_SHA\_256 or 256-bit SHA
+- 800C: `CALG_SHA_256` or 256-bit SHA
 
-- 8004: SHA1 or 160-bit SHA-1 (This is the default value)
+- 8004: `SHA1` or 160-bit SHA-1 (This is the default value)
  
-If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value 8804,\<CustomOID\>.
+If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value `8804,<CustomOID>`.
 
-This parameter uses the sytax <AlgorithmID> or <AlgorithmID>:<KeyLength> or <AlgorithmID>,<CustomOID>. You can specify multiple values separated by semicolons (;).
+This parameter uses the sytax `<AlgorithmID>` or `<AlgorithmID>:<KeyLength>` or `<AlgorithmID>,<CustomOID>`. You can specify multiple values separated by semicolons (;).
 
-For example, to set the signing algorithms to CALG\_SHA\_512, SHA1, and CALG\_MD5, use the value 800E;8004;8003.
+For example, to set the signing algorithms to `CALG_SHA_512`, `SHA1`, and `CALG_MD5`, use the value 800E;8004;8003.
 
 If this parameter is not specified or is not formatted correctly, Outlook on the web defaults to 8004 (SHA1).
 
@@ -568,7 +568,7 @@ Accept wildcard characters: False
 ### -SMIMECertificateIssuingCA
 The SMIMECertificateIssuingCA parameter specifies the serialized certificate store (SST) that contains the Certificate Authority (CA) signing and intermediate certificate information.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For example: -SMIMECertificateIssuingCA $\(\[byte\[\]\]\(Get-Content -Encoding byte -Path "C:\\Temp\\CACertificateSerializedStore.sst" -ReadCount 0\)
+You need to read the file to a byte-encoded object using the Get-Content cmdlet. For example: `-SMIMECertificateIssuingCA $([byte[]](Get-Content -Encoding byte -Path "C:\Temp\CACertificateSerializedStore.sst" -ReadCount 0)`.
 
 Each certificate is checked, and if any certificates are expired, the operation will fail.
 

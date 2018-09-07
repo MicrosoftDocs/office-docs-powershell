@@ -32,19 +32,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Update-PublicFolder "\Legal\Cases\My Public Folder" -Server "My Server"
 ```
 
-This example starts content replication of the public folder My Public Folder in the \\Legal\\Cases path from the server My Server to all of the servers on the replication list for My Public Folder.
+This example starts content replication of the public folder My Public Folder in the \Legal\Cases path from the server My Server to all of the servers on the replication list for My Public Folder.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-PublicFolder "\Legal\Cases\My Public Folder" | Update-PublicFolder -Server "My Server"
 ```
 
-This example also starts content replication of the public folder My Public Folder in the \\Legal\\Cases path from the server My Server to all of the servers on the replication list for My Public Folder, but uses the Get-PublicFolder cmdlet to pipeline the desired folder.
+This example also starts content replication of the public folder My Public Folder in the \Legal\Cases path from the server My Server to all of the servers on the replication list for My Public Folder, but uses the Get-PublicFolder cmdlet to pipeline the desired folder.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path by using the format TopLevelPublicFolder\\PublicFolder.
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path by using the format TopLevelPublicFolder\PublicFolder.
 
 You can omit the parameter label so that only the public folder name or GUID is supplied.
 
@@ -78,9 +78,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

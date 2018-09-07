@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-SiteMailboxProvisioningPolicy -Name SM_ProvisioningPolicy -IsDefault -IssueWarningQuota 9GB -ProhibitSendReceiveQuota 10GB -MaxReceiveSize 50MB
 ```
 
-This example creates the default provisioning policy named SM\_ProvisioningPolicy that has the following settings:
+This example creates the default provisioning policy named SM_ProvisioningPolicy that has the following settings:
 
 - The warning quota for the site mailboxes is 9 GB.
 
@@ -49,14 +49,14 @@ This example creates the default provisioning policy named SM\_ProvisioningPolic
 New-SiteMailboxProvisioningPolicy -Name SM_DefaultPolicy -IsDefault
 ```
 
-This example creates the default provisioning policy named SM\_DefaultPolicy that uses the defaults for send and receive quotas.
+This example creates the default provisioning policy named SM_DefaultPolicy that uses the defaults for send and receive quotas.
 
 ### -------------------------- Example 3 --------------------------
 ```
 New-SiteMailboxProvisioningPolicy -Name SM_DefaultPolicy -IsDefault -AliasPrefix Project
 ```
 
-This example creates the default provisioning policy named SM\_DefaultPolicy and sets the AliasPrefixvalue to Project. When you create new site mailboxes, the prefix Project- is automatically added to the alias.
+This example creates the default provisioning policy named SM_DefaultPolicy and sets the AliasPrefixvalue to Project. When you create new site mailboxes, the prefix Project- is automatically added to the alias.
 
 ## PARAMETERS
 
@@ -101,9 +101,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +122,7 @@ This parameter is available only in on-premises Exchange.
 
 The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes have the default prefix text added to the alias. Valid values are:
 
-- $true: Aliases get the default prefix text. This is the default value. In Office 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
+- $true: Aliases get the default prefix text. This is the default value. In Office 365, the default prefix text is SMO- (for example, the alias value `BugBash_2016` becomes `SMO-BugBash_2016`). In on-premises Exchange, the the default prefix text is SM- (for example, the alias value `BugBash_2016` becomes `SM-BugBash_2016`).
 
 - $false: Aliases don't get the default prefix text.
 

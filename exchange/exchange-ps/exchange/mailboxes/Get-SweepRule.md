@@ -87,9 +87,9 @@ The Identity parameter specifies the Sweep rule that you want to view. You can u
 
 - RuleId property (for example, x2hlsdpGmUifjFgxxGIOJw==).
 
-- Exchange Online: \<mailbox alias\>\\\<RuleId\> (for example, rzaher\\x2hlsdpGmUifjFgxxGIOJw==.
+- Exchange Online: MailboxAlias\RuleID (for example, rzaher\x2hlsdpGmUifjFgxxGIOJw==).
 
-- On-premises Exchange: \<mailbox canonical name\>\\\<RuleId\> (for example, contoso.com/Users/Rick Zaher\\x2hlsdpGmUifjFgxxGIOJw==.
+- On-premises Exchange: MailboxCanonicalName\RuleID (for example, contoso.com/Users/Rick Zaher\x2hlsdpGmUifjFgxxGIOJw==).
 
 ```yaml
 Type: SweepRuleIdParameter
@@ -118,7 +118,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

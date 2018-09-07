@@ -67,7 +67,7 @@ This example retrieves the calendar diagnostic logs for Pedro Pizarro's mailbox 
 Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Lunch" -StartDate 7/1/2017 -EndDate 7/31/2017 | Export-Csv "C:\My Documents\Team Lunch Meeting.csv" -NoTypeInformation
 ```
 
-This example returns diagnostic information for meetings with the subject Team Lunch in Pedro Pizarro's mailbox in the month of July, 2017, and exports the results to the file C:\\My Documents\\Team Lunch Meeting.csv.
+This example returns diagnostic information for meetings with the subject Team Lunch in Pedro Pizarro's mailbox in the month of July, 2017, and exports the results to the file C:\My Documents\Team Lunch Meeting.csv.
 
 ## PARAMETERS
 
@@ -86,7 +86,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -EntryId
-The EntryID parameter filters the results by the specified EntryID property value, which corresponds to the MAPI property PR\_ENTRYID.
+The EntryID parameter filters the results by the specified EntryID property value, which corresponds to the MAPI property PR_ENTRYID.
 
 ```yaml
 Type: String

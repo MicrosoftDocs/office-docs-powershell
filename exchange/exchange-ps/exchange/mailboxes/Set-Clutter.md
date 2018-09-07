@@ -43,7 +43,7 @@ For example:
 - Alias
 - Distinguished name (DN)
 - Canonical DN
-- \<domain name>\\\<account name>
+- Domain\Account
 - Email address
 - GUID
 - LegacyExchangeDN 

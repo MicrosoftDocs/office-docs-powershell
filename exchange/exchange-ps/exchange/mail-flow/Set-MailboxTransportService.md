@@ -55,7 +55,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-MailboxTransportService Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
 
-This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs\\Receive.log for the Mailbox Transport service on server Mailbox01.
+This example sets the ReceiveProtocolLogPath parameter to C:\SMTP Protocol Logs\Receive.log for the Mailbox Transport service on server Mailbox01.
 
 ## PARAMETERS
 
@@ -77,9 +77,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogPath
-The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
+The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\Logs\Mailbox\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryAgentLogPath
-The MailboxDeliveryAgentLogPath parameter specifies the default agent log directory location for the Mailbox Transport Delivery service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\AgentLog\\Delivery. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the MailboxDeliveryAgentLogEnabled attribute is $true generates event log errors.
+The MailboxDeliveryAgentLogPath parameter specifies the default agent log directory location for the Mailbox Transport Delivery service. The default location is %ExchangeInstallPath%TransportRoles\Logs\Mailbox\AgentLog\Delivery. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the MailboxDeliveryAgentLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -467,7 +467,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryThrottlingLogPath
-The MailboxDeliveryThrottlingLogPath parameter specifies the default mailbox delivery throttling log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Throttling\\Delivery. Setting the value of this parameter to $null disables mailbox delivery throttling logging. However, setting this parameter to $null when the value of the MailboxDeliveryThrottlingLogEnabled attribute is $true generates event log errors.
+The MailboxDeliveryThrottlingLogPath parameter specifies the default mailbox delivery throttling log directory location. The default location is %ExchangeInstallPath%TransportRoles\Logs\Throttling\Delivery. Setting the value of this parameter to $null disables mailbox delivery throttling logging. However, setting this parameter to $null when the value of the MailboxDeliveryThrottlingLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -578,7 +578,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxSubmissionAgentLogPath
-The MailboxSubmissionAgentLogPath parameter specifies the default agent log directory location for the Mailbox Transport Submission service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\AgentLog\\Submission. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the MailboxSubmissionAgentLogEnabled attribute is $true generates event log errors.
+The MailboxSubmissionAgentLogPath parameter specifies the default agent log directory location for the Mailbox Transport Submission service. The default location is %ExchangeInstallPath%TransportRoles\Logs\Mailbox\AgentLog\Submission. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the MailboxSubmissionAgentLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -638,7 +638,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineTracingPath
-The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\\Mailbox\\Hub\\PipelineTracing. The path must be local to the Exchange computer. Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter. Pipeline tracing captures the complete contents of email messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
+The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\Mailbox\Hub\PipelineTracing. The path must be local to the Exchange computer. Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter. Pipeline tracing captures the complete contents of email messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
 - Administrators: Full Control
 
@@ -767,7 +767,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogPath
-The ReceiveProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpReceive. The log files are automatically stored in the Delivery subdirectory.
+The ReceiveProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default location is %ExchangeInstallPath%TransportRoles\Logs\Mailbox\ProtocolLog\SmtpReceive. The log files are automatically stored in the Delivery subdirectory.
 
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for the mailbox delivery Receive connector. To disable protocol logging for this connector, use the value None for the MailboxDeliveryConnectorProtocolLoggingLevel parameter.
 
@@ -875,7 +875,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogPath
-The SendProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpSend. Log files are automatically stored in the following subdirectories:
+The SendProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. The default location is %ExchangeInstallPath%TransportRoles\Logs\Mailbox\ProtocolLog\SmtpSend. Log files are automatically stored in the following subdirectories:
 
 - Submission: Protocol log files for the intra-organization Send connector in the Mailbox Transport Submission service.
 
@@ -976,7 +976,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\Routing. Setting this parameter to $null disables routing table logging.
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\Logs\Mailbox\Routing. Setting this parameter to $null disables routing table logging.
 
 ```yaml
 Type: LocalLongFullPath

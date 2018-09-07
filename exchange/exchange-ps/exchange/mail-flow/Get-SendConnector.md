@@ -36,7 +36,7 @@ This example displays detailed information about the Send connector named Contos
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name, or GUID of the Send connector. If the Identity name contains spaces, enclose the name in quotation marks ("). You can omit the Identity parameter label. You can also include the server name by using the format ServerName\\ConnectorName.
+The Identity parameter specifies the name, or GUID of the Send connector. If the Identity name contains spaces, enclose the name in quotation marks ("). You can omit the Identity parameter label. You can also include the server name by using the format ServerName\ConnectorName.
 
 ```yaml
 Type: SendConnectorIdParameter

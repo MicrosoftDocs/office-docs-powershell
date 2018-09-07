@@ -41,7 +41,7 @@ This example returns a summary list of all site mailbox provisioning policies in
 Get-SiteMailboxProvisioningPolicy -Identity SM_NewPolicy | Format-List
 ```
 
-This example returns detailed information about the site mailbox provisioning policy named SM\_NewPolicy
+This example returns detailed information about the site mailbox provisioning policy named SM_NewPolicy
 
 ## PARAMETERS
 

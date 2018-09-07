@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ### -IncludeAlternateServiceAccountCredentialPassword
 The IncludeAlternateServiceAccountCredentialPassword switch specifies whether to include the password of the alternate service account in the results. You don't need to specify a value with this switch.
 
-The password is visible in the AlternateServiceAccountConfiguration property. To see this property, use the Format-List cmdlet. For example, Get-ClientAccessService \<ServerIdentity\> | Format-List AlternateServiceAccountConfiguration.
+The password is visible in the AlternateServiceAccountConfiguration property. To see this property, use the Format-List cmdlet. For example, `Get-ClientAccessService <ServerIdentity> | Format-List AlternateServiceAccountConfiguration`.
 
 ```yaml
 Type: SwitchParameter
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ### -IncludeAlternateServiceAccountCredentialStatus
 The IncludeAlternateServiceAccountCredentialStatus parameter specifies whether to include the status of the alternate service account in the results. You don't need to specify a value with this switch.
 
-The status is visible in the AlternateServiceAccountConfiguration property. To see this property, use the Format-List cmdlet. For example, Get-ClientAccessService \<ServerIdentity\> | Format-List AlternateServiceAccountConfiguration.
+The status is visible in the AlternateServiceAccountConfiguration property. To see this property, use the Format-List cmdlet. For example, `Get-ClientAccessService <ServerIdentity> | Format-List AlternateServiceAccountConfiguration`.
 
 ```yaml
 Type: SwitchParameter

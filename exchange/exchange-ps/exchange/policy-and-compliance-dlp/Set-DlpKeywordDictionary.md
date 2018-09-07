@@ -53,7 +53,7 @@ This example removes the specified terms from the DLP keyword dictionary named D
 $Dictionary = Get-DlpKeywordDictionary -Name "Inappropriate Language"; $Terms = $Dictionary.KeywordDictionary.split(',').trim(); Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"; $UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"; $Keywords = $UpdatedTerms -Join ", "; $EncodedKeywords = [system.Text.Encoding]::UTF8.GetBytes($Keywords); Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
 ```
 
-The first three commands export the terms from the existing keyword dictionary named Inappropriate Language to the file C:\\My Documents\\InappropriateTerms.txt, where each term is on a separate line.
+The first three commands export the terms from the existing keyword dictionary named Inappropriate Language to the file C:\My Documents\InappropriateTerms.txt, where each term is on a separate line.
 
 After you use Notepad to modify the terms and save the file, the last four commands use the file to replace the terms in the keyword dictionary.
 
@@ -77,9 +77,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

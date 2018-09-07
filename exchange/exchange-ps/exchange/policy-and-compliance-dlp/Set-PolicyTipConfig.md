@@ -46,7 +46,7 @@ This example replaces the text of all custom Spanish Policy Tips with the value,
 ### -Identity
 The Identity parameter specifies the custom Policy Tip you want to modify. You can use any value that uniquely identifies the custom Policy Tip. For example:
 
-- \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
+- Locale\Action: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
 
 - The value Url
 
@@ -69,9 +69,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

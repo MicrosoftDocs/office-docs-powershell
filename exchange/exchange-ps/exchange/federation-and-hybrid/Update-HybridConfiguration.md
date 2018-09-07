@@ -34,7 +34,7 @@ $OnPremisesCreds = Get-Credential; $TenantCreds = Get-Credential; Update-HybridC
 
 This example defines the credentials that are used to update the hybrid configuration object and connect to the Microsoft Office 365 for enterprises organization.
 
-Use the first command to specify your on-premises organization credentials. For example, run this command and enter \<domain\>\\admin@contoso.com and the associated password in the resulting Windows PowerShell Credential Request dialog box.
+Use the first command to specify your on-premises organization credentials. For example, run this command and enter `<domain>\admin@contoso.com` and the associated password in the resulting Windows PowerShell Credential Request dialog box.
 
 Use the second command to specify your Office 365 for enterprises organization credentials. For example, run this command and then enter admin@contoso.onmicrosoft.com and the associated account password in the resulting Windows PowerShell Credential Request dialog box.
 
@@ -79,9 +79,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

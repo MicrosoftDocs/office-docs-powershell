@@ -48,7 +48,7 @@ This example returns all provided publishing information for the specified calen
 Get-MailboxCalendarFolder -Identity contoso\kai:\Calendar
 ```
 
-This example returns all provided publishing information for the specified calendar folder in Kai's mailbox. In this example, the Identity parameter specifies the mailbox with the domain\\account format.
+This example returns all provided publishing information for the specified calendar folder in Kai's mailbox. In this example, the Identity parameter specifies the mailbox with the domain\account format.
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ The Identity parameter specifies the mailbox and folder path or folder name to t
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

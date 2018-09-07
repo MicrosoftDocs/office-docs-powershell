@@ -71,7 +71,7 @@ The Identity parameter specifies a unique identifier associated with a mailbox. 
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

@@ -74,9 +74,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -183,13 +183,13 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredClientVersions
-The RequiredClientVersions parameter specifies the minimum version of Microsoft Outlook that's allowed to connect to the Exchange server. This information is in the Autodiscover response to the client connection request. Valid input for this parameter is "\<MinimumVersion\>, \<ExpirationDate\>".
+The RequiredClientVersions parameter specifies the minimum version of Microsoft Outlook that's allowed to connect to the Exchange server. This information is in the Autodiscover response to the client connection request. Valid input for this parameter is `"<MinimumVersion>,<ExpirationDate>"`.
 
-\<MinimumVersion\> is the version of Outlook in the format xx.x.xxxx.xxxx. For example, to specify Outlook 2010 Service Pack 2 (SP2), use the value 14.0.7012.1000.
+`<MinimumVersion>` is the version of Outlook in the format xx.x.xxxx.xxxx. For example, to specify Outlook 2010 Service Pack 2 (SP2), use the value 14.0.7012.1000.
 
-\<ExpirationDate\> is the UTC date-time when connections by older versions of Outlook will be blocked. The UTC date-time is represented in the ISO 8601 date-time format: yyyy-mm-ddThh:mm:ss.fffZ, where yyyy = year, mm = month, dd = day, T indicates the beginning of the time component, hh = hour, mm = minute, ss = second, fff = fractions of a second and Z signifies Zulu, which is another way to denote UTC.
+`<ExpirationDate>` is the UTC date-time when connections by older versions of Outlook will be blocked. The UTC date-time is represented in the ISO 8601 date-time format: yyyy-mm-ddThh:mm:ss.fffZ, where yyyy = year, mm = month, dd = day, T indicates the beginning of the time component, hh = hour, mm = minute, ss = second, fff = fractions of a second and Z signifies Zulu, which is another way to denote UTC.
 
-An example of a valid value for this parameter is "14.0.7012.1000, 2014-01-01T12:00:00Z".
+An example of a valid value for this parameter is `"14.0.7012.1000, 2014-01-01T12:00:00Z"`.
 
 ```yaml
 Type: String[]

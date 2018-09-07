@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MailboxRestoreRequest -Identity "ayla\MailboxRestore"
 ```
 
-This example returns the status of the in-progress and queued restore request with the identity ayla\\MailboxRestore.
+This example returns the status of the in-progress and queued restore request with the identity ayla\MailboxRestore.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -71,7 +71,7 @@ This example returns all restore requests that have the name RestoreToMBD01 wher
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: Alias\Name.
 
 If you didn't specify a name for the restore request when it was created, Exchange automatically generated the default name MailboxRestore. Exchange generates up to 10 names, starting with MailboxRestore and then MailboxRestoreX (where X = 1-9).
 
@@ -287,7 +287,7 @@ The TargetMailbox parameter specifies the identity of the target mailbox. You ca
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

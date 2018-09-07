@@ -57,7 +57,7 @@ Export-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e 
 
 This example exports a certificate from the local Exchange server to a file with the following settings:
 
-The certificate that has the thumbprint value 5113ae0233a72fccb75b1d0198628675333d010e is exported to the file C:\\Data\\HT cert.pfx.
+The certificate that has the thumbprint value 5113ae0233a72fccb75b1d0198628675333d010e is exported to the file C:\Data\HT cert.pfx.
 
 The exported certificate file is encoded by DER (not Base64).
 
@@ -70,7 +70,7 @@ Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 
 
 This example exports a pending certificate request to a file with the following settings:
 
-The pending certificate request that has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 on the Exchange server named Mailbox01 is exported to the file \\\\FileServer01\\Data\\Fabrikam.req.
+The pending certificate request that has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 on the Exchange server named Mailbox01 is exported to the file \\FileServer01\Data\Fabrikam.req.
 
 The exported certificate request file is Base64 encoded, so the information that's written to the file is also displayed onscreen.
 
@@ -113,9 +113,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ### -Password
 The Password parameter specifies the password for the private key or chain of trust in the exported certificate file. To import the exported certificate file on another server, you need to know the password.
 
-This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, to be prompted to enter the password and store it as a variable, run the command `$password = Read-Host "Enter password" -AsSecureString`, and then use the value $password for this parameter.
 
 ```yaml
 Type: SecureString
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-The FileName parameter specifies the name and path of the exported certificate or certificate request file. You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
+The FileName parameter specifies the name and path of the exported certificate or certificate request file. You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\<Server>\<Share>`). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -223,9 +223,9 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate or certificate request that you want to export. Valid values are:
 
-- \<ServerNameorFQDN\>\\\<Thumbprint\>
+- ServerNameorFQDN\Thumbprint
 
-- \<Thumbprint\>
+- Thumbprint
 
 You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
 

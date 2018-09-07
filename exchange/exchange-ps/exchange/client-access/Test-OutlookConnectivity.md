@@ -141,7 +141,7 @@ This example runs a logon test from the client access services on a Mailbox serv
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies a target user mailbox. This value can be the mailbox GUID or can be the domain name\\user, for example, contoso.com\\erin. If the parameter isn't specified, the command looks for a test user in Active Directory. You need to create the test user with the New-TestCasConnectivityUser.ps1 script.
+The Identity parameter specifies a target user mailbox. This value can be the mailbox GUID or can be the domain name\user, for example, contoso.com\erin. If the parameter isn't specified, the command looks for a test user in Active Directory. You need to create the test user with the New-TestCasConnectivityUser.ps1 script.
 
 ```yaml
 Type: MailboxIdParameter
@@ -241,9 +241,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -356,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -RpcProxyTestType
-The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. The value can be Internal or External. The Internal value refers to the local computer name (http://\<localcomputername\>, for example, http://CAS01). The External value refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, http://mail.contoso.com).
+The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. The value can be Internal or External. The Internal value refers to the local computer name (http://LocalComputerName, for example, http://CAS01). The External value refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, http://mail.contoso.com).
 
 ```yaml
 Type: External | Internal

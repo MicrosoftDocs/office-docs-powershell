@@ -47,35 +47,35 @@ Spam detections
 
 Spam analysis - content-filtered spam
 
-- Spam\_AdditionalSpamFiltered: Messages filtered based on advanced spam filters that have been enabled. For details about the advanced spam filter, see Advanced spam filtering \(ASF\) options (https://technet.microsoft.com/library/jj200750.aspx) Options.
+- Spam_AdditionalSpamFiltered: Messages filtered based on advanced spam filters that have been enabled. For details about the advanced spam filter, see Advanced spam filtering ASF options (https://technet.microsoft.com/library/jj200750.aspx) Options.
 
-- Spam\_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see Configure your spam filter policies (https://technet.microsoft.com/library/jj200684.aspx).
+- Spam_BlockList: Messages that were filtered because the sender was on a spam filter block list. For more details on how to configure these lists, see Configure your spam filter policies (https://technet.microsoft.com/library/jj200684.aspx).
 
-- Spam\_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see What's the difference between junk email and bulk email? (https://technet.microsoft.com/library/dn720441.aspx)
+- Spam_BulkFiltered: Messages that were filtered as bulk mail. See message volume breakdown by Bulk Complaint Level (BCL) for further analysis of bulk mail. For more information about bulk mail processing, see What's the difference between junk email and bulk email? (https://technet.microsoft.com/library/dn720441.aspx)
 
-- Spam\_ContentScanFiltered: Messages that were filtered based on the message content.
+- Spam_ContentScanFiltered: Messages that were filtered based on the message content.
 
-- Spam\_ETRFiltered: Messages that were filtered due to a transport rule.
+- Spam_ETRFiltered: Messages that were filtered due to a transport rule.
 
-- Spam\_SenderBlocked: Messages that were filtered because the sender was on a block list.
+- Spam_SenderBlocked: Messages that were filtered because the sender was on a block list.
 
 Spam analysis - non-spam messages
 
-- NonSpam\_AdditionalSpamFilterPassed: Messages that were passed based on advanced spam filters that have been enabled. For details about the advanced spam filters, see Advanced spam filtering \(ASF\) options (https://technet.microsoft.com/library/jj200750.aspx) Options.
+- NonSpam_AdditionalSpamFilterPassed: Messages that were passed based on advanced spam filters that have been enabled. For details about the advanced spam filters, see Advanced spam filtering ASF options (https://technet.microsoft.com/library/jj200750.aspx) Options.
 
-- NonSpam\_AllowList: Messages that were passed because the sender was on a spam filter allow list. For more details on how to configure these lists, see Configure your spam filter policies (https://technet.microsoft.com/library/jj200684.aspx).
+- NonSpam_AllowList: Messages that were passed because the sender was on a spam filter allow list. For more details on how to configure these lists, see Configure your spam filter policies (https://technet.microsoft.com/library/jj200684.aspx).
 
-- NonSpam\_BulkPassed: Messages that were determined not to be bulk mail.
+- NonSpam_BulkPassed: Messages that were determined not to be bulk mail.
 
-- NonSpam\_ContentScanPassed: Messages that were passed by the content scan.
+- NonSpam_ContentScanPassed: Messages that were passed by the content scan.
 
-- NonSpam\_ETRPassed: Messages that passed based on a transport rule.
+- NonSpam_ETRPassed: Messages that passed based on a transport rule.
 
-- NonSpam\_IntraOrg: Messages that were deemed as low risk of spam based on factors such as intra-organizational mail.
+- NonSpam_IntraOrg: Messages that were deemed as low risk of spam based on factors such as intra-organizational mail.
 
-- NonSpam\_IPAllowed: Messages that were passed because the sending IP was on the IP allow list.
+- NonSpam_IPAllowed: Messages that were passed because the sending IP was on the IP allow list.
 
-- NonSpam\_SafeSender: Messages that were passed because the sender was marked as safe.
+- NonSpam_SafeSender: Messages that were passed because the sender was marked as safe.
 
 Bulk mail
 

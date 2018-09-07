@@ -92,7 +92,7 @@ This example returns additional information for all the export requests that hav
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>.
+The Identity parameter specifies the identity of the export request. By default, export requests are named Alias\MailboxExportX (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: Alias\Name.
 
 This parameter can't be used with the RequestGuid or RequestQueue parameters.
 

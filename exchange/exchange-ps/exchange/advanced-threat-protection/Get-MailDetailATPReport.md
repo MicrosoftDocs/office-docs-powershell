@@ -109,19 +109,9 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- Advanced phish filter\*
-
 - Anti-malware engine
 
-- ATP safe attachments\*
-
-- ATP safe links\*
-
 - Anti-spoof: Intra-org
-
-- Anti-spoof: external domain\*
-
-- Domain impersonation\*
 
 - General phish filter
 
@@ -131,13 +121,23 @@ The EventType parameter filters the report by the event type. Valid values are:
 
 - Phish ZAP
 
-- User impersonation\*
-
 - ZAP
 
-\* These features require a standalone Office 365 ATP or E5 subscription.
+These additional values require a standalone Office 365 ATP or E5 subscription:
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+- Advanced phish filter
+
+- ATP safe attachments
+
+- ATP safe links
+
+- Anti-spoof: external domain
+
+- Domain impersonation
+
+- User impersonation
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty

@@ -71,28 +71,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-ManagementRoleAssignment "Mail Recipients_Denver Help Desk" -Enabled $false
 ```
 
-This example disables the Mail Recipients\_Denver Help Desk role assignment. When a role assignment is disabled, the users assigned the role can no longer run cmdlets granted by the role.
+This example disables the Mail Recipients_Denver Help Desk role assignment. When a role assignment is disabled, the users assigned the role can no longer run cmdlets granted by the role.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Set-ManagementRoleAssignment "MyGAL_KimA" -RecipientRelativeWriteScope MyGAL
 ```
 
-This example changes the recipient scope for the MyGAL\_KimA role assignment to MyGAL. When the recipient scope is changed to a predefined value, any previously defined OUs or custom scopes are overwritten.
+This example changes the recipient scope for the MyGAL_KimA role assignment to MyGAL. When the recipient scope is changed to a predefined value, any previously defined OUs or custom scopes are overwritten.
 
 ### -------------------------- Example 3 --------------------------
 ```
 Set-ManagementRoleAssignment "Mail Recipients_Marketing Admins" -RecipientOrganizationalUnitScope "contoso.com/North America/Marketing/Users"
 ```
 
-This example restricts the Mail Recipients\_Marketing Admins role assignment to the contoso.com/North America/Marketing/Users OU. Users who are members of the Marketing Admins role group assigned the role assignment can create, modify, and remove objects only in the specified OU. When the RecipientOrganizationalUnitScope parameter is used, any predefined or custom scopes on the role assignment are overwritten.
+This example restricts the Mail Recipients_Marketing Admins role assignment to the contoso.com/North America/Marketing/Users OU. Users who are members of the Marketing Admins role group assigned the role assignment can create, modify, and remove objects only in the specified OU. When the RecipientOrganizationalUnitScope parameter is used, any predefined or custom scopes on the role assignment are overwritten.
 
 ### -------------------------- Example 4 --------------------------
 ```
 Set-ManagementRoleAssignment "Distribution Groups_Cairns Admins" -CustomRecipientWriteScope "Cairns Recipients"
 ```
 
-This example restricts the Distribution Groups\_Cairns Admins role assignment using the Cairns Recipients custom recipient management scope. Users that are members of the Cairns Admins role group assigned the role assignment can create, modify, and remove only the distribution group objects that match the Cairns Recipients custom recipient management scope.
+This example restricts the Distribution Groups_Cairns Admins role assignment using the Cairns Recipients custom recipient management scope. Users that are members of the Cairns Admins role group assigned the role assignment can create, modify, and remove only the distribution group objects that match the Cairns Recipients custom recipient management scope.
 
 ## PARAMETERS
 
@@ -114,9 +114,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

@@ -72,7 +72,7 @@ This example displays all messages queued on the server named Server01. The resu
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see the "Message identity" section in Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
+The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\Queue\MessageInteger or Queue\MessageInteger or MessageInteger (for example, Mailbox01\contoso.com\5 or 10). For details about message identity, see the "Message identity" section in Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
 
 ```yaml
 Type: MessageIdentity
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value, for example, {FromAddress -like "\*@contoso.com"}. For details about filterable message properties and comparison operators, see Properties of messages in queues (https://technet.microsoft.com/library/bb123714.aspx) and https://technet.microsoft.com/library/aa998047.aspx (Find queues and messages in queues in the Exchange Management Shell).
+The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value (for example, `{FromAddress -like "*@contoso.com"}`). For details about filterable message properties and comparison operators, see Properties of messages in queues (https://technet.microsoft.com/library/bb123714.aspx) and https://technet.microsoft.com/library/aa998047.aspx (Find queues and messages in queues in the Exchange Management Shell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
@@ -178,7 +178,7 @@ Storing the results of a Get-Message -IncludeRecipientInfo command in a variable
 
 - LastError: The SMTP response after the last delivery attempt or a localized error message if the message is placed in the unreachable queue.
 
-For example, to store the recipient information of a message in the contoso.com remote delivery queue that has the MessageIdentity value of 1234 to a variable named $x, use the following command: $x=Get-Message -Identity "contoso.com\\1234" -IncludeRecipientInfo.
+For example, to store the recipient information of a message in the contoso.com remote delivery queue that has the MessageIdentity value of 1234 to a variable named $x, use the following command: `$x = Get-Message -Identity "contoso.com\1234" -IncludeRecipientInfo`.
 
 To display the extended recipient properties that are now stored in the $x variable, use the following command : $x.Recipients.
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Queue
-The Queue parameter specifies the identity of the queue that contains the messages that you want to display. Valid input for this parameter uses the syntax \<Server\>\\\<Queue\> or \<Queue\>, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see the "Queue identity" section in Find queues and messages in queues in the Exchange Management Shell.
+The Queue parameter specifies the identity of the queue that contains the messages that you want to display. Valid input for this parameter uses the syntax Server\Queue or Queue (for example, Mailbox01\contoso.com or Unreachable). For details about queue identity, see the "Queue identity" section in Find queues and messages in queues in the Exchange Management Shell.
 
 If you use the Queue parameter, you can't use the Identity, Filter or Server parameters.
 

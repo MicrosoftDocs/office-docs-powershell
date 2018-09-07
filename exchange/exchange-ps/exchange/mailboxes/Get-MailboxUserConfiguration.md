@@ -44,11 +44,11 @@ This example returns detailed information for the specified user configuration i
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user configuration item that you want to view. This parameter uses the syntax \<MailboxFolder\>\\\<ItemName\>:
+The Identity parameter specifies the user configuration item that you want to view. This parameter uses the syntax MailboxFolder\ItemNme:
 
-- Valid values for \<MailboxFolder\> are folder names (for example, Inbox or Calendar), the value Configuration, or the value Root. Wildcards (\*) aren't supported.
+- Valid values for MailboxFolder are folder names (for example, Inbox or Calendar), the value Configuration, or the value Root. Wildcards (*) aren't supported.
 
-- Valid values for \<ItemName\> start with IPM.Configuration (for example, IPM.Configuration.Aggregated.OwaUserConfiguration. Wildcards (\*) are supported.
+- Valid values for ItemName start with IPM.Configuration (for example, IPM.Configuration.Aggregated.OwaUserConfiguration. Wildcards (*) are supported.
 
 ```yaml
 Type: MailboxUserConfigurationIdParameter
@@ -77,7 +77,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

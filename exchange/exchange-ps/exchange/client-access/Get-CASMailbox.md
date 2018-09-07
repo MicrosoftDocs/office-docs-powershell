@@ -154,15 +154,15 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax {\<Property\> -\<Comparison operator\> '\<Value\>'}.
+The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax `{<Property> -<Comparison operator> '<Value>'}`.
 
-- \<Property\> is a filterable property.
+- `<Property>` is a filterable property.
 
-- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see about\_Comparison\_Operators (https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- `-<Comparison Operator>` is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see About Comparison Operators (https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-- \<Value\> is the property value. Text values with or without spaces need to be enclosed in quotation marks ('\<Value\>'). Don't use quotation marks with integers or the system values $true, $false, or $null.
+- `<Value>` is the property value. Text values with or without spaces need to be enclosed in quotation marks ('`<Value>`'). Don't use quotation marks with integers or the system values $true, $false, or $null.
 
-You can chain multiple search criteria together using the logical operators -and and -or. For example, {\<Criteria1\>) -and \<Criteria2\>} or {(\<Criteria1\> -and \<Criteria2\>) -or \<Criteria3\>}.
+You can chain multiple search criteria together using the logical operators -and and -or. For example, `{<Criteria1>) -and <Criteria2>}` or `{(<Criteria1> -and <Criteria2>) -or <Criteria3>}`.
 
 You can filter by the following properties:
 
@@ -297,7 +297,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with `| Format-Table -Auto <Property1>,<Property2>...` to create a new view that contains all of the properties that you want to see. Wildcards (*) in the property names are supported.
 
 You can sort by the following properties:
 

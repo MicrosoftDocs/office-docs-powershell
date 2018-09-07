@@ -49,14 +49,14 @@ This example displays summary information for all retention policies in your org
 Get-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -DistributionDetail | Format-List
 ```
 
-This example displays detailed information for the policy named "Regulation 123 Compliance", including accurate values for the DistributionStatus and \*Location properties.
+This example displays detailed information for the policy named "Regulation 123 Compliance", including accurate values for the DistributionStatus and *Location properties.
 
 ## PARAMETERS
 
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
 
-If you don't use this switch, the values of the DistributionStatus and \*Location property values will be inaccurate.
+If you don't use this switch, the values of the DistributionStatus and *Location property values will be inaccurate.
 
 ```yaml
 Type: SwitchParameter

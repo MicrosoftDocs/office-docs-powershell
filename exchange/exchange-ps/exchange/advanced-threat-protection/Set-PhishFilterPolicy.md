@@ -78,13 +78,13 @@ Accept wildcard characters: False
 ### -SpoofAllowBlockList
 The SpoofAllowBlockList parameter specifies the CSV file that you want to use to configure the phish filter policy.
 
-A valid value for this parameter reads the CSV file and stores it as a variable. For example, run the command $SpoofedUsers = Get-Content -Raw \<PathAndFileName\>.csv, and then use the value $SpoofedUsers for this parameter.
+A valid value for this parameter reads the CSV file and stores it as a variable. For example, run the command `$SpoofedUsers = Get-Content -Raw <PathAndFileName>.csv`, and then use the value $SpoofedUsers for this parameter.
 
 There are two basic options for the CSV file:
 
-- Block or allow all spoofed mail from the source: You want to block or allow any and all spoofed messages from the specified message source, regardless of the spoofed email address. You can get the CSV file by running the command Get-PhishFilterPolicy -SpoofAllowBlockList | Export-CSV "\<PathAndFileName\>.csv". The important header fields (column headers) are Sender (the domain of the source messaging server from DNS records, or the IP address if there aren't any DNS records) and AllowedToSpoof (indicates whether the message source is allowed to send spoofed messages. Valid values are Yes or No).
+- Block or allow all spoofed mail from the source: You want to block or allow any and all spoofed messages from the specified message source, regardless of the spoofed email address. You can get the CSV file by running the command `Get-PhishFilterPolicy -SpoofAllowBlockList | Export-CSV "<PathAndFileName>.csv"`. The important header fields (column headers) are Sender (the domain of the source messaging server from DNS records, or the IP address if there aren't any DNS records) and AllowedToSpoof (indicates whether the message source is allowed to send spoofed messages. Valid values are Yes or No).
 
-- Block or allow some spoofed mail from the source: You want to block or allow some spoofed messages from the specified message source, but not others. You can get the CSV file by running the command Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "\<PathAndFileName\>.csv". The important header fields (column headers) are:
+- Block or allow some spoofed mail from the source: You want to block or allow some spoofed messages from the specified message source, but not others. You can get the CSV file by running the command `Get-PhishFilterPolicy -Detailed -SpoofAllowBlockList | Export-CSV "<PathAndFileName>.csv"`. The important header fields (column headers) are:
 
 - Sender: The domain of the source messaging server from DNS records, or the IP address if there aren't any DNS records.
 
@@ -107,9 +107,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

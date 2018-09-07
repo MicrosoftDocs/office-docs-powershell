@@ -43,7 +43,7 @@ The following combinations of options and behaviors are available:
 
 - You can specify a name for the DAG and the witness server that you want to use. In this scenario, the task creates the default directory on the specified witness server.
 
-If the witness server that you specify isn't an Exchange server, you need to add the Exchange Trusted Subsystem universal security group (USG) to the local Administrators group on the witness server. If the witness server is a directory server, you need to add the Exchange Trusted Subsystem USG to the Builtin\\Administrators group. These security permissions are necessary to ensure that Exchange can create a directory and share on the witness server as needed.
+If the witness server that you specify isn't an Exchange server, you need to add the Exchange Trusted Subsystem universal security group (USG) to the local Administrators group on the witness server. If the witness server is a directory server, you need to add the Exchange Trusted Subsystem USG to the Builtin\Administrators group. These security permissions are necessary to ensure that Exchange can create a directory and share on the witness server as needed.
 
 In Windows Server 2012 R2 or later, a DAG is created without a cluster administrative access point by default. In this scenario, you don't need to provide any IP addresses to the DAG. However, in all supported versions of Windows, you have the option of assigning static IP addresses to the DAG by using the DatabaseAvailabilityGroupIpAddresses parameter. If you specify Any or 0.0.0.0, the task attempts to use Dynamic Host Configuration Protocol (DHCP) to obtain IP addresses. If you omit this parameter or configure the parameter with a value of None or 255.255.255.255, the DAG will not have a cluster administrative access point.
 
@@ -56,7 +56,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-DatabaseAvailabilityGroup -Name DAG1 -WitnessServer SERVER1 -WitnessDirectory C:\DAG1
 ```
 
-This example creates a DAG named DAG1 that's configured to use a witness server of SERVER1, and a local directory of C:\\DAG1. This example requires Windows Server 2012 R2 or later.
+This example creates a DAG named DAG1 that's configured to use a witness server of SERVER1, and a local directory of C:\DAG1. This example requires Windows Server 2012 R2 or later.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -70,7 +70,7 @@ This example creates the DAG named DAG2 with a witness server named SERVER2. The
 New-DatabaseAvailabilityGroup -Name DAG3 -WitnessServer SERVER1 -WitnessDirectory C:\DAG3 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8,192.168.0.8
 ```
 
-This example creates a DAG named DAG3. DAG3 is configured to use SERVER1 for the witness server, and a witness directory on SERVER1 of C:\\DAG3. DAG3 is assigned multiple static IP addresses because the MAPI network for the DAG contains or will contain multiple subnets (10.0.0.x and 192.168.0.x).
+This example creates a DAG named DAG3. DAG3 is configured to use SERVER1 for the witness server, and a witness directory on SERVER1 of C:\DAG3. DAG3 is assigned multiple static IP addresses because the MAPI network for the DAG contains or will contain multiple subnets (10.0.0.x and 192.168.0.x).
 
 ## PARAMETERS
 
@@ -92,9 +92,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

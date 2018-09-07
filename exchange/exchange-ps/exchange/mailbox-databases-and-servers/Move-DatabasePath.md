@@ -80,9 +80,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -EDBFilePath
-The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is \<ExchangeInstallDirectory\>\\Mailbox\\LocalCopies\\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
+The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is %ExchangeInstllPath%Mailbox\LocalCopies\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
 
 ```yaml
 Type: EdbFilePath
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -EDBFilePath
-The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is \<ExchangeInstallDirectory\>\\Mailbox\\LocalCopies\\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
+The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is %ExchangeInstllPath%Mailbox\LocalCopies\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
 
 ```yaml
 Type: EdbFilePath

@@ -58,7 +58,7 @@ The DsnCode parameter specifies the enhanced status code for the custom system m
 
 Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. You can specify a default code that's included with Exchange, or you can specify a custom code.
 
-To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html \> "C:\\My Documents\\Default DSNs.html".
+To generate a list of default enhanced status codes that are used by Exchange, run this command: `Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html > "C:\My Documents\Default DSNs.html"`.
 
 You need to use this parameter with the Language and Internal parameters.
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-The Language parameter specifies the language of the message \(for example, en for English or ja for Japanese). For the list of supported language codes, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages).
+The Language parameter specifies the language of the message for example, en for English or ja for Japanese). For the list of supported language codes, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages).
 
 You need to use this parameter with the DsnCode or QuotaMessageType parameters.
 
@@ -231,9 +231,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

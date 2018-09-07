@@ -23,7 +23,7 @@ Get-UMHuntGroup [[-Identity] <UMHuntGroupIdParameter>] [-DomainController <Fqdn>
 ```
 
 ## DESCRIPTION
-The Get-UMHuntGroup cmdlet retrieves the properties for a single UM hunt group or a list of UM hunt groups. When you're using the Get-UMHuntGroup cmdlet, you can't only enter the name of the UM hunt group. You must also include the name of the UM IP gateway associated with the UM hunt group, for example, Get-UMHuntGroup -Identity MyUMIPGateway\\MyUMHuntGroup1.
+The Get-UMHuntGroup cmdlet retrieves the properties for a single UM hunt group or a list of UM hunt groups. When you're using the Get-UMHuntGroup cmdlet, you can't only enter the name of the UM hunt group. You must also include the name of the UM IP gateway associated with the UM hunt group, for example, Get-UMHuntGroup -Identity MyUMIPGateway\MyUMHuntGroup1.
 
 After this task is completed, if the Identity parameter is specified, the properties for the UM hunt group are returned. If neither the Identity nor the UMDialPlan parameter is specified, all UM hunt groups in the Active Directory forest are returned.
 

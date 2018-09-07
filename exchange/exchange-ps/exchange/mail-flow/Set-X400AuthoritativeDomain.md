@@ -107,9 +107,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -X400ExternalRelay
-The X400ExternalRelay parameter specifies whether this authoritative domain is an external relay domain. If you set the X400ExternalRelay parameter to $true, Exchange routes e-mail to the external address and doesn't treat resolution failures to this subdomain as errors.
+The X400ExternalRelay parameter specifies whether this authoritative domain is an external relay domain. If you set the X400ExternalRelay parameter to $true, Exchange routes email to the external address and doesn't treat resolution failures to this subdomain as errors.
 
 ```yaml
 Type: $true | $false

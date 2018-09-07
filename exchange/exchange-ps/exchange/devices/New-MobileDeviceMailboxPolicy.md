@@ -529,9 +529,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -635,7 +635,7 @@ The MaxAttachmentSize parameter specifies the maximum size of attachments that c
 
 Unqualified values are treated as bytes. You can qualify the value with KB (kilobytes), MB (megabytes) or GB (gigabytes). For example, to set the limit to 4 kilobytes, enter the value 4096 or 4KB.
 
-The maximum value is 1024 bytes (one kilobyte) less than two gigabytes (2\*1024^3), so these are the maximum qualified values you can use with this parameter.
+The maximum value is 1024 bytes (one kilobyte) less than two gigabytes (2*1024^3), so these are the maximum qualified values you can use with this parameter.
 
 - 2097151KB
 

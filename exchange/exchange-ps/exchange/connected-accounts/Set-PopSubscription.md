@@ -61,7 +61,7 @@ The Identity parameter specifies the POP subscription. You can identify the subs
 
 - Use the Mailbox parameter to specify the mailbox that contains the subscription, and then specify the name of the subscription.
 
-You can find the identifying values for a POP subscription, such as Identity and Name, by running this command: Get-PopSubscription -Mailbox \<mailbox\>.
+You can find the identifying values for a POP subscription, such as Identity and Name, by running this command: `Get-PopSubscription -Mailbox <mailbox>`.
 
 ```yaml
 Type: AggregationSubscriptionIdParameter
@@ -78,9 +78,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingPassword
-The IncomingPassword parameter specifies the password used to sign in to the POP mailbox. You must specify the value for this parameter in a secure format, for example, (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force).
+The IncomingPassword parameter specifies the password used to sign in to the POP mailbox.
+
+This parameter uses the syntax `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`. Or, to be prompted to enter the password and store it as a variable, run the command `$password = Read-Host "Enter password" -AsSecureString`, and then use the value $password for this parameter.
 
 ```yaml
 Type: SecureString
@@ -274,7 +276,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

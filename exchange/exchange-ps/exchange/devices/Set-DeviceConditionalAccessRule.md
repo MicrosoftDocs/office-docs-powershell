@@ -70,7 +70,7 @@ This example modifies the specified mobile device conditional access rule to blo
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device conditional access rule that you want to modify. The name of the rule uses the syntax \<Mobile device conditional access policy name\>{\<GUID value\>}. For example, Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}. You can find the name value by running the command: Get-DeviceConfigurationRule | Format-List Name.
+The Identity parameter specifies the mobile device conditional access rule that you want to modify. The name of the rule uses the syntax `<Mobile device conditional access policy name>{<GUID value>}`. For example, `Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}`. You can find the name value by running the command: `Get-DeviceConfigurationRule | Format-List Name`.
 
 ```yaml
 Type: ComplianceRuleIdParameter
@@ -652,9 +652,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

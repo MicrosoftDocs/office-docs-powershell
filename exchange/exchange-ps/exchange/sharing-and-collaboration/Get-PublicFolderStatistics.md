@@ -33,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-PublicFolderStatistics -Identity "\Marketing\2013\Pamphlets" | Format-List
 ```
 
-This example retrieves statistics about the public folder Marketing\\2013\\Pamphlets. The output of the Get-PublicFolderStatistics command is piped to the Format-List command so that all the available information is displayed in the result.
+This example retrieves statistics about the public folder Marketing\2013\Pamphlets. The output of the Get-PublicFolderStatistics command is piped to the Format-List command so that all the available information is displayed in the result.
 
 ## PARAMETERS
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \TopLevelPublicFolder\PublicFolder.
 
 You can omit the parameter label so that only the public folder name or GUID is supplied.
 

@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 $file = Export-TransportRuleCollection; Set-Content -Path "C:\MyDocs\Rules.xml" -Value $file.FileData -Encoding Byte
 ```
 
-This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\MyDocs folder.
+This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\MyDocs folder.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -50,9 +50,9 @@ In Exchange Server 2010, this example exports legacy transport rules created in 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

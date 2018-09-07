@@ -46,7 +46,7 @@ Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 15.0.0-15.4737.999
 
 This example prevents Outlook Anywhere connections by Outlook 2013 clients that don't have KB3054940 installed (version 15.0.4737.1000) on the server named MBX01.
 
-Note: You can determine specific client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\\RPC Client Access.
+Note: You can determine specific client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\RPC Client Access.
 
 ## PARAMETERS
 
@@ -107,9 +107,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

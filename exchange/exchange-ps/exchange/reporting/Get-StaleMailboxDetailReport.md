@@ -60,9 +60,9 @@ The ResultSize parameter specifies the maximum number of results to return. The 
 
 This cmdlet returns a maximum of 50000 results, even when you use the value unlimited. If your organization has more than 50000 mailboxes, you can use the Select-Object and Sort-Object cmdlets in multiple commands to return all of the results. For example, if your organization has 90000 mailboxes, run the following commands:
 
-Get-StaleMailboxDetailReport -ResultSize unlimited | Sort-Object UserName -Unique | Select-Object TenantName,UserName,WindowsLiveID,LastLogin,DaysInactive -First 45000 | Export-Csv "C:\\Data\\First45k Stale.csv"
+Get-StaleMailboxDetailReport -ResultSize unlimited | Sort-Object UserName -Unique | Select-Object TenantName,UserName,WindowsLiveID,LastLogin,DaysInactive -First 45000 | Export-Csv "C:\Data\First45k Stale.csv"
 
-Get-StaleMailboxDetailReport -ResultSize unlimited | Sort-Object UserName -Unique | Select-Object TenantName,UserName,WindowsLiveID,LastLogin,DaysInactive -Last 45000 | Export-Csv "C:\\Data\\Last45k Stale.csv"
+Get-StaleMailboxDetailReport -ResultSize unlimited | Sort-Object UserName -Unique | Select-Object TenantName,UserName,WindowsLiveID,LastLogin,DaysInactive -Last 45000 | Export-Csv "C:\Data\Last45k Stale.csv"
 
 ```yaml
 Type: Unlimited

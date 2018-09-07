@@ -112,9 +112,9 @@ Valid values for this parameter are individual senders in your organization (mai
 
 - GUID
 
-You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: `<sender1>,<sender2>,...<senderN>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<sender1>","<sender2>",..."<senderN>"`.
 
-To add or remove senders without affecting other existing entries, use the following syntax: @{Add="\<sender1\>","\<sender2\>"...; Remove="\<sender1\>","\<sender2\>"...}.
+To add or remove senders without affecting other existing entries, use the following syntax: `@{Add="<sender1>","<sender2>"...; Remove="<sender1>","<sender2>"...}`.
 
 The senders you specify for this parameter are automatically copied to the AcceptMessagesOnlyFromSendersOrMembers property. Therefore, you can't use the AcceptMessagesOnlyFrom and AcceptMessagesOnlyFromSendersOrMembers parameters in the same command.
 
@@ -151,9 +151,9 @@ Valid values for this parameter are groups in your organization (distribution gr
 
 - GUID
 
-You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: \<group1\>,\<group2\>,...\<groupN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<group1\>","\<group2\>",..."\<groupN\>".
+You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: `<group1>,<group2>,...<groupN>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<group1>","<group2>",..."<groupN>"`.
 
-To add or remove groups without affecting other existing entries, use the following syntax: @{Add="\<group1\>","\<group2\>"...; Remove="\<group1\>","\<group2\>"...}.
+To add or remove groups without affecting other existing entries, use the following syntax: `@{Add="<group1>","<group2>"...; Remove="<group1>","<group2>"...}`.
 
 The groups you specify for this parameter are automatically copied to the AcceptMessagesOnlyFromSendersOrMembers property. Therefore, you can't use the AcceptMessagesOnlyFromDLMembers and AcceptMessagesOnlyFromSendersOrMembers parameters in the same command.
 
@@ -192,7 +192,7 @@ To specify senders for this parameter, you can use any value that uniquely ident
 
 - GUID
 
-You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: `<sender1>,<sender2>,...<senderN>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<sender1>","<sender2>",..."<senderN>"`.
 
 To add or remove individual senders or groups without affecting other existing entries, use the AcceptMessagesOnlyFrom and AcceptMessageOnlyFromDLMembers parameters.
 
@@ -215,9 +215,9 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', *, +, -, /, =, ?, ^, _, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
-When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
+When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (`<alias>@<domain>`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create a recipient, the value of a different required parameter is used for the Alias property value:
 
@@ -277,9 +277,9 @@ To specify senders for this parameter, you can use any value that uniquely ident
 
 - GUID
 
-To enter multiple senders and overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+To enter multiple senders and overwrite any existing entries, use the following syntax: `<sender1>,<sender2>,...<senderN>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<sender1>","<sender2>",..."<senderN>"`.
 
-To add or remove one or more senders without affecting any existing entries, use the following syntax: @{Add="\<sender1\>","\<sender2\>"...; Remove="\<sender3\>","\<sender4\>"...}.
+To add or remove one or more senders without affecting any existing entries, use the following syntax: `@{Add="<sender1>","<sender2>"...; Remove="<sender3>","<sender4>"...}`.
 
 This parameter is meaningful only when moderation is enabled for the recipient. By default, this parameter is blank ($null), which means messages from all senders other than the designated moderators are moderated. When a moderator sends a message to this recipient, the message is isn't moderated. In other words, you don't need to use this parameter to include the moderators.
 
@@ -298,9 +298,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -593,7 +593,7 @@ Accept wildcard characters: False
 ### -EmailAddresses
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx).
 
-Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
+Valid syntax for this parameter is `<Type>:<emailaddress1>,<Type>:<emailaddress2\,...<Type>:<emailaddressN>`. The optional `<Type>` value specifies the type of email address. Some examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 
@@ -603,19 +603,19 @@ Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailad
 
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a`<Type>`value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
-- Use the \<Type\> value SMTP on the address.
+- Use the`<Type>`value SMTP on the address.
 
-- The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
+- The first email address when you don't use any`<Type>`values, or when you use multiple`<Type>`values of smtp.
 
 - If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
-To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
+To replace all existing proxy email addresses with the values you specify, use the following syntax: `"<Type>:<emailaddress1>","<Type>:<emailaddress2>",..."<Type>:<emailaddressN>"`.
 
-To add or remove specify proxy addresses without affecting other existing values, use the following syntax: @{Add="\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",...; Remove="\<Type\>:\<emailaddress2\>","\<Type\>:\<emailaddress2\>",...}.
+To add or remove specify proxy addresses without affecting other existing values, use the following syntax: `@{Add="<Type>:<emailaddress1>","<Type>:<emailaddress2>",...; Remove="<Type>:<emailaddress2>","<Type>:<emailaddress2>",...}`.
 
 ```yaml
 Type: ProxyAddressCollection
@@ -796,7 +796,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -808,9 +808,9 @@ For example:
 
 - User ID or user principal name (UPN)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 By default, this parameter is blank, which means no one else has permission to send on behalf of this mail contact.
 
@@ -1109,9 +1109,9 @@ For example:
 
 - GUID
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
@@ -1203,9 +1203,9 @@ Valid values for this parameter are individual senders in your organization (mai
 
 - GUID
 
-You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: `<sender1>,<sender2>,...<senderN>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<sender1>","<sender2>",..."<senderN>"`.
 
-To add or remove senders without affecting other existing entries, use the following syntax: @{Add="\<sender1\>","\<sender2\>"...; Remove="\<sender1\>","\<sender2\>"...}.
+To add or remove senders without affecting other existing entries, use the following syntax: `@{Add="<sender1>","<sender2>"...; Remove="<sender1>","<sender2>"...}`.
 
 The senders you specify for this parameter are automatically copied to the RejectMessagesFromSendersOrMembers property. Therefore, you can't use the RejectMessagesFrom and RejectMessagesFromSendersOrMembers parameters in the same command.
 
@@ -1242,9 +1242,9 @@ Valid values for this parameter are groups in your organization (distribution gr
 
 - GUID
 
-You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: \<group1\>,\<group2\>,...\<groupN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<group1\>","\<group2\>",..."\<groupN\>".
+You can enter multiple groups separated by commas. To overwrite any existing entries, use the following syntax: `<group1>,<group2>,...<groupN>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<group1>","<group2>",..."<groupN>"`.
 
-To add or remove groups without affecting other existing entries, use the following syntax: @{Add="\<group1\>","\<group2\>"...; Remove="\<group1\>","\<group2\>"...}.
+To add or remove groups without affecting other existing entries, use the following syntax: `@{Add="<group1>","<group2>"...; Remove="<group1>","<group2>"...}`.
 
 The groups you specify for this parameter are automatically copied to the RejectMessagesFromSendersOrMembers property. Therefore, you can't use the RejectMessagesFromDLMembers and RejectMessagesFromSendersOrMembers parameters in the same command.
 
@@ -1283,7 +1283,7 @@ To specify senders for this parameter, you can use any value that uniquely ident
 
 - GUID
 
-You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: \<sender1\>,\<sender2\>,...\<senderN\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<sender1\>","\<sender2\>",..."\<senderN\>".
+You can enter multiple senders separated by commas. To overwrite any existing entries, use the following syntax: `<sender1>,<sender2>,...<senderN>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<sender1>","<sender2>",..."<senderN>"`.
 
 To add or remove individual senders or groups without affecting other existing entries, use the RejectMessagesFrom and RejectMessagesFromDLMembers parameters.
 

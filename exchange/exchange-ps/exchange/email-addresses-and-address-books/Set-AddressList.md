@@ -80,7 +80,7 @@ The Identity parameter specifies the address list that you want to modify. You c
 
 - GUID
 
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `\<Name>` or `<Container>\<Name>`
 
 ```yaml
 Type: AddressListIdParameter
@@ -439,9 +439,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -536,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the address list. The maximum length is 64 characters, and it can't include a carriage return or a backslash (\\). If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a unique name for the address list. The maximum length is 64 characters, and it can't include a carriage return or a backslash (`\`). If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -584,7 +584,7 @@ The RecipientFilter parameter specifies an OPath filter that's based on the valu
 
 - Include a hyphen before all operators.
 
-- In cloud-based environments, you can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
+- In cloud-based environments, you can't use a wildcard as the first character. For example, `Sales*` is allowed, but `*Sales` isn't allowed.
 
 For more information, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
 

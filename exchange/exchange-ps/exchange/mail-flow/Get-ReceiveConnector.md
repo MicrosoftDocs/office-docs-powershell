@@ -77,7 +77,7 @@ The Identity parameter specifies the Receive connector that you want to view. Yo
 
 - GUID
 
-- \<ServerName\>\\\<Name\>
+- ServerName\Name
 
 You can't use this parameter with the Server parameter.
 

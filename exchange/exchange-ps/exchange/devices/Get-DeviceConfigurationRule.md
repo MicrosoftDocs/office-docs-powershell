@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mobile device configuration rule that you want to view. The name of the rule uses the syntax \<Mobile device configuration policy name\>{\<GUID value\>}. For example, Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}.
+The Identity parameter specifies the mobile device configuration rule that you want to view. The name of the rule uses the syntax `<Mobile device configuration policy name>{<GUID value>}`. For example, `Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}`.
 
 ```yaml
 Type: ComplianceRuleIdParameter

@@ -127,7 +127,7 @@ The AddressSpaces parameter specifies the domain names to which the Send connect
 
 - AddressSpaceType: On an Edge server, the address space type must be SMTP. In the Transport service on a Mailbox server, the address space type may be SMTP, X400, or any other text string. If you omit the address space type, SMTP is assumed.
 
-- AddressSpace: For SMTP address space types, the address space that you enter must be RFC 1035-compliant. For example, \*, \*.com, and \*.contoso.com are permitted, but \*contoso.com is not. For X.400 address space types, the address space that you enter must be RFC 1685-compliant, such as o=MySite;p=MyOrg;a=adatum;c=us. For all other values of address space type, you can enter any text for the address space.
+- AddressSpace: For SMTP address space types, the address space that you enter must be RFC 1035-compliant. For example, `*`, `*.com`, and `*.contoso.com` are valid, but `*contoso.com` isn't valid. For X.400 address space types, the address space that you enter must be RFC 1685-compliant, such as o=MySite;p=MyOrg;a=adatum;c=us. For all other values of address space type, you can enter any text for the address space.
 
 - AddressSpaceCost: The valid input range for the cost is from 1 through 100. A lower cost indicates a better route. This parameter is optional. If you omit the address space cost, a cost of 1 is assumed. If you enter a non-SMTP address space that contains the semicolon character (;), you must specify the address space cost.
 
@@ -198,9 +198,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -299,7 +299,7 @@ The DomainSecureEnabled parameter enables mutual Transport Layer Security (TLS) 
 
 - IgnoreSTARTTLS is set to $false.
 
-The wildcard character (\*) isn't supported in domains configured for mutual TLS authentication. The same domain must also be defined on the corresponding Receive connector, and in the value of the TLSReceiveDomainSecureList attribute of the transport configuration.
+The wildcard character (*) isn't supported in domains configured for mutual TLS authentication. The same domain must also be defined on the corresponding Receive connector, and in the value of the TLSReceiveDomainSecureList attribute of the transport configuration.
 
 The default value for the DomainSecureEnabled parameter is $false for the following types of Send connectors:
 
@@ -522,17 +522,17 @@ The LinkedReceiveConnector parameter specifies whether to force all messages rec
 
 - Distinguished name (DN)
 
-- Servername\\ConnectorName
+- Servername\ConnectorName
 
 When you use the LinkReceiveConnector parameter with this command, you must also use the following parameters with the specified values:
 
-- DNSRoutingEnabled$false
+- DNSRoutingEnabled:$false
 
 - MaxMessageSizeunlimited
 
-- Smarthosts \<SmarthostID\>
+- Smarthosts `<SmarthostID>`
 
-- SmarthostAuthMechanism \<AuthMechanism\>
+- SmarthostAuthMechanism `<AuthMechanism>`
 
 When you use the LinkedReceiveConnector parameter, you can't use the AddressSpaces parameter.
 
@@ -682,7 +682,7 @@ Accept wildcard characters: False
 ### -SmartHosts
 The SmartHosts parameter specifies the smart hosts the Send connector uses to route mail. This parameteris required if you set the DNSRoutingEnabled parameter to $false and it must be specified on the same command line. The SmartHosts parameter takes one or more FQDNs, such as server.contoso.com, or one or more IP addresses, or a combination of both FQDNs and IP addresses. If you enter an IP address, you must enter the IP address as a literal. For example, 10.10.1.1. The smart host identity can be the FQDN of a smart-host server, a mail exchanger (MX) record, or an address (A) record. If you configure an FQDN as the smart host identity, the source server for the Send connector must be able to use DNS name resolution to locate the smart-host server.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -729,7 +729,7 @@ Accept wildcard characters: False
 ### -SourceTransportServers
 The SourceTransportServers parameter specifies the names of the Mailbox servers that can use this Send connector. This parameter isn't valid for Send connectors configured on an Edge server.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 ```yaml
 Type: MultiValuedProperty
@@ -849,11 +849,11 @@ Accept wildcard characters: False
 ### -CloudServicesMailEnabled
 Note: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see Hybrid Configuration wizard (https://technet.microsoft.com/library/hh529921.aspx).
 
-The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft Office 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
+The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft Office 365. Specifically, this parameter controls how certain internal `X-MS-Exchange-Organization-*` message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
 
 Valid values are:
 
-- $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This is the default value for connectors that are created by the Hybrid Configuration wizard. Certain X-MS-Exchange-Organization-\* headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to X-MS-Exchange-CrossPremises-\* headers and are thereby preserved in messages. X-MS-Exchange-CrossPremises-\* headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to X-MS-Exchange-Organization-\* headers. These promoted headers replace any instances of the same X-MS-Exchange-Organization-\* headers that already exist in messages.
+- $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This is the default value for connectors that are created by the Hybrid Configuration wizard. Certain `X-MS-Exchange-Organization-*` headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to `X-MS-Exchange-CrossPremises-*` headers and are thereby preserved in messages. `X-MS-Exchange-CrossPremises-*` headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to `X-MS-Exchange-Organization-*` headers. These promoted headers replace any instances of the same `X-MS-Exchange-Organization-*` headers that already exist in messages.
 
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
@@ -885,7 +885,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsCertificateName
-The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)", and then use the value $TLSCertName for this parameter.
+The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "`<I>X.500Issuer<S>X.500Subject`". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command `$TLSCert = Get-ExchangeCertificate -Thumbprint <Thumbprint>`, run the command `$TLSCertName = "<I>$($TLSCert.Issuer)<S>$($TLSCert.Subject)"`, and then use the value $TLSCertName for this parameter.
 
 ```yaml
 Type: SmtpX509Identifier

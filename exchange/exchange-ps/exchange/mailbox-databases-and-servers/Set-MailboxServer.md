@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairLogPath
-The CalendarRepairLogPath parameter specifies the location of the calendar repair log files on the Mailbox server. The default value is %ExchangeInstallPath%Logging\\Calendar Repair Assistant.
+The CalendarRepairLogPath parameter specifies the location of the calendar repair log files on the Mailbox server. The default value is %ExchangeInstallPath%Logging\Calendar Repair Assistant.
 
 ```yaml
 Type: LocalLongFullPath
@@ -387,9 +387,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -603,7 +603,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogPath
-The IrmLogPath parameter specifies the default IRM log directory location. The default value is C:\\Program Files\\Microsoft\\Exchange Server\\ v14\\Logging\\IRMLogs.
+The IrmLogPath parameter specifies the default IRM log directory location. The default location is %ExchangeInstallPath%Logging\IRMLogs.
 
 If you set the value of the IrmLogPath parameter to $null, you effectively disable IRM logging. However, if you set the value of the IrmLogPath parameter to $null when the value of the IrmLogEnabled parameter is $true, Exchange will log errors in the Application event log. The preferred way for disabling IRM logging is to set the IrmLogEnabled parameter to $false.
 
@@ -664,9 +664,9 @@ The Locale parameter specifies the locale of the Mailbox server. A locale is a c
 
 For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=68806).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -685,7 +685,7 @@ This parameter is used for coexistence with Exchange 2010. Specifically, this pa
 
 The LogDirectorySizeLimitForManagedFolders parameter specifies the maximum size of all managed folder logs from a single mailbox database in the managed folder log directory on the Mailbox server. When a set of log files reaches its maximum size, the server deletes the oldest log files first.
 
-Every mailbox database on the server uses a different log file name prefix (for example, Managed\_Folder\_Assistant[Mailbox database name]). Therefore, the maximum size of the managed folder log directory is the number of mailbox databases multiplied by the value of the LogDirectorySizeLimitForManagedFolders parameter. Other files aren't counted in the total size calculation. Renaming old log files or copying other files into the managed folder log directory could cause the directory to exceed its specified maximum size.
+Every mailbox database on the server uses a different log file name prefix (for example, Managed_Folder_Assistant[Mailbox database name]). Therefore, the maximum size of the managed folder log directory is the number of mailbox databases multiplied by the value of the LogDirectorySizeLimitForManagedFolders parameter. Other files aren't counted in the total size calculation. Renaming old log files or copying other files into the managed folder log directory could cause the directory to exceed its specified maximum size.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -772,7 +772,7 @@ Accept wildcard characters: False
 ### -LogPathForManagedFolders
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
-The LogPathForManagedFolders parameter specifies the location of the managed folder log files on the Mailbox server. The default value is %ExchangeInstallPath%Logging\\ Managed Folder Assistant.
+The LogPathForManagedFolders parameter specifies the location of the managed folder log files on the Mailbox server. The default value is %ExchangeInstallPath%Logging\ Managed Folder Assistant.
 
 ```yaml
 Type: LocalLongFullPath
@@ -992,7 +992,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogPath
-The MessageTrackingLogPath parameter specifies the location of the message tracking logs. The default location is C:\\Program Files\\Microsoft\\Exchange Server TransportRoles\\Logs\\MessageTracking. If you set the value of the MessageTrackingLogPath parameter to $null, you effectively disable message tracking. However, if you set the value of the MessageTrackingLogPath parameter to $null when the value of the MessageTrackingLogEnabled attribute is $true, event log errors occur. The preferred method to disable message tracking is to use the MessageTrackingLogEnabled parameter.
+The MessageTrackingLogPath parameter specifies the location of the message tracking logs. The default location is %ExchangeInstallPath%TransportRoles\Logs\MessageTracking. If you set the value of the MessageTrackingLogPath parameter to $null, you effectively disable message tracking. However, if you set the value of the MessageTrackingLogPath parameter to $null when the value of the MessageTrackingLogEnabled attribute is $true, event log errors occur. The preferred method to disable message tracking is to use the MessageTrackingLogEnabled parameter.
 
 ```yaml
 Type: LocalLongFullPath

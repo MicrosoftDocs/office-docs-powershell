@@ -53,7 +53,7 @@ This example configures the unencrypted or STARTTLS encrypted POP3 connection to
 Set-PopSettings -ProtocolLogEnabled $true -LogFileLocation "C:\Pop3Logging"
 ```
 
-This example turns on POP3 protocol logging. It also changes the POP3 protocol logging directory to C:\\Pop3Logging.
+This example turns on POP3 protocol logging. It also changes the POP3 protocol logging directory to C:\Pop3Logging.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -142,9 +142,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -256,13 +256,13 @@ Accept wildcard characters: False
 ### -ExternalConnectionSettings
 The ExternalConnectionSettings parameter specifies the host name, port, and encryption method that's used by external POP3 clients (POP3 connections from outside your corporate network).
 
-This parameter uses the syntax \<HostName\>:\<Port\>:[\<TLS | SSL\>]. The encryption method value is optional (blank indicates unencrypted connections).
+This parameter uses the syntax `<HostName>:<Port>:[<TLS | SSL>]`. The encryption method value is optional (blank indicates unencrypted connections).
 
 The default value is blank ($null), which means no external POP3 connection settings are configured.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The combination of encryption methods and ports that are specified for this parameter need to match the corresponding encryption methods and ports that are specified by the SSLBindings and UnencryptedOrTLSBindings parameters.
 
@@ -281,13 +281,13 @@ Accept wildcard characters: False
 ### -InternalConnectionSettings
 The InternalConnectionSettings parameter specifies the host name, port, and encryption method that's used by internal POP3 clients (POP3 connections from inside your corporate network). This setting is also used when a POP3 connection is forwarded to another Exchange server that's running the Microsoft Exchange POP3 service.
 
-This parameter uses the syntax \<HostName\>:\<Port\>:[\<TLS | SSL\>]. The encryption method value is optional (blank indicates unencrypted connections).
+This parameter uses the syntax `<HostName>:<Port>:[<TLS | SSL>]`. The encryption method value is optional (blank indicates unencrypted connections).
 
-The default value is \<ServerFQDN\>:995:SSL,\<ServerFQDN\>:110:TLS.
+The default value is `<ServerFQDN>:995:SSL,<ServerFQDN>:110:TLS`.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 The combination of encryption methods and ports that are specified for this parameter need to match the corresponding encryption methods and ports that are specified by the SSLBindings and UnencryptedOrTLSBindings parameters.
 
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogFileLocation
-The LogFileLocation parameter specifies the location for the POP3 protocol log files. The default location is%ExchangeInstallPath%Logging\\Pop3.
+The LogFileLocation parameter specifies the location for the POP3 protocol log files. The default location is%ExchangeInstallPath%LoggingPop3.
 
 This parameter is only meaningful when the ProtocolLogEnabled parameter value is $true.
 
@@ -601,13 +601,13 @@ Accept wildcard characters: False
 ```
 
 ### -SSLBindings
-The SSLBindings parameter specifies the IP address and TCP port that's used for an POP3 connection that's always encrypted by SSL/TLS. This parameter uses the syntax \<IPv4OrIPv6Address\>:\<Port\>.
+The SSLBindings parameter specifies the IP address and TCP port that's used for an POP3 connection that's always encrypted by SSL/TLS. This parameter uses the syntax `<IPv4OrIPv6Address>:<Port>`.
 
 The default value is [::]:995,0.0.0.0:995.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -641,13 +641,13 @@ Accept wildcard characters: False
 ```
 
 ### -UnencryptedOrTLSBindings
-The UnencryptedOrTLSBindings parameter specifies the IP address and TCP port that's used for unencrypted POP3 connections, or POP3 connections that are encrypted by using opportunistic TLS (STARTTLS) after the initial unencrypted protocol handshake. This parameter uses the syntax \<IPv4OrIPv6Address\>:\<Port\>.
+The UnencryptedOrTLSBindings parameter specifies the IP address and TCP port that's used for unencrypted POP3 connections, or POP3 connections that are encrypted by using opportunistic TLS (STARTTLS) after the initial unencrypted protocol handshake. This parameter uses the syntax `<IPv4OrIPv6Address>:<Port>`.
 
 The default value is [::]:110, 0.0.0.0:110.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 ```yaml
 Type: MultiValuedProperty

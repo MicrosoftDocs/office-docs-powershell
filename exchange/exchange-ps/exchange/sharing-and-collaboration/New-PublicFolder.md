@@ -40,21 +40,21 @@ This example creates the public folder Marketing in the root of the public folde
 New-PublicFolder -Name FY2010 -Path \Legal\Cases -Server MBXSVR01
 ```
 
-In Exchange Server 2010, this example creates the public folder FY2010 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2010 on the server MBXSVR01.
+In Exchange Server 2010, this example creates the public folder FY2010 under the existing folders \Legal\Cases. The path to the new folder is \Legal\Cases\FY2010 on the server MBXSVR01.
 
 ### -------------------------- Example 3 --------------------------
 ```
 New-PublicFolder -Name FY2013 -Path \Legal\Cases
 ```
 
-This example creates the public folder FY2013 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2013.
+This example creates the public folder FY2013 under the existing folders \Legal\Cases. The path to the new folder is \Legal\Cases\FY2013.
 
 ### -------------------------- Example 4 --------------------------
 ```
 New-PublicFolder -Name Support -Mailbox North_America
 ```
 
-This example creates the public folder Support in the North\_America hierarchy public folder mailbox.
+This example creates the public folder Support in the North_America hierarchy public folder mailbox.
 
 ## PARAMETERS
 
@@ -76,9 +76,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The Path parameter specifies the location of the folder in the folder hierarchy, for example, \\Legal\\Cases.
+The Path parameter specifies the location of the folder in the folder hierarchy, for example, \Legal\Cases.
 
 ```yaml
 Type: PublicFolderIdParameter
@@ -180,7 +180,7 @@ The Mailbox parameter specifies the identity of the hierarchy public folder mail
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

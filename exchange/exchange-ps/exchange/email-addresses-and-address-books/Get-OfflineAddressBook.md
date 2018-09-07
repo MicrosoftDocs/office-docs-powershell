@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the OAB that you want to view. You can use any value that uniquely identifies the OAB. For example:
 
-- Name or \\Name
+- Name or \Name
 
 - Distinguished name (DN)
 

@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter filters the results by the compliance search action. You can use any value that uniquely identifies the compliance search action. For example:
 
-- Name: The compliance search action name uses the syntax \<Compliance Search Name\>\_\<Action\>. For example, Case 1234\_Preview.
+- Name: The compliance search action name uses the syntax `<Compliance Search Name>_<Action>`. For example, Case 1234_Preview.
 
 - JobRunId (GUID)
 

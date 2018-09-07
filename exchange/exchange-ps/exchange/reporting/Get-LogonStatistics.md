@@ -85,7 +85,7 @@ The Identity parameter specifies a mailbox for which you want to obtain logon st
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

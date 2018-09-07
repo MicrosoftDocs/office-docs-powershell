@@ -24,7 +24,7 @@ Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
 ```
 
 ## DESCRIPTION
-The Test-OutlookWebServices cmdlet uses a specified e-mail address to verify that the Outlook provider is configured correctly.
+The Test-OutlookWebServices cmdlet uses a specified email address to verify that the Outlook provider is configured correctly.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -69,9 +69,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies any valid e-mail address in the forest. If you specify this parameter, incorrectly formed e-mail addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and user name in the domain\\user name format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
+The Identity parameter specifies any valid email address in the forest. If you specify this parameter, incorrectly formed email addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and user name in the domain\username format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
 
 ```yaml
 Type: RecipientIdParameter

@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the name of the database copy for which the command should gather information. The Identity parameter can be specified in the form of \<database\>\\\<server\>. Specifying just \<database\> returns information for all copies of the database. This parameter can't be combined with the Server parameter.
+The Identity parameter specifies the name of the database copy for which the command should gather information. The Identity parameter can be specified in the form of `<database>\<server>`. Specifying just `<database>` returns information for all copies of the database. This parameter can't be combined with the Server parameter.
 
 ```yaml
 Type: DatabaseCopyIdParameter

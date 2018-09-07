@@ -58,7 +58,7 @@ This example retrieves the owner of the public folder My Public Folder.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format TopLevelPublicFolder\\PublicFolder.
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format TopLevelPublicFolder\PublicFolder.
 
 You can omit the parameter label so that only the public folder name or GUID is supplied.
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of the user for whom administrative permissions are sought.
+The User parameter specifies the user principal name (UPN), domain\user, or alias of the user for whom administrative permissions are sought.
 
 ```yaml
 Type: SecurityPrincipalIdParameter

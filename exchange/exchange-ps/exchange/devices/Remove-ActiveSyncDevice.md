@@ -36,21 +36,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-ActiveSyncDevice -Identity WM_JeffHay
 ```
 
-This example removes the mobile device partnership for the device named WM\_JeffHay.
+This example removes the mobile device partnership for the device named WM_JeffHay.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Remove-ActiveSyncDevice -Identity iPhone_TonySmith -Confirm $true
 ```
 
-This example removes the mobile device partnership for the device named iPhone\_TonySmith after displaying the confirm prompt.
+This example removes the mobile device partnership for the device named iPhone_TonySmith after displaying the confirm prompt.
 
 ### -------------------------- Example 3 --------------------------
 ```
 Remove-ActiveSyncDevice -Identity Tablet_JeffHay -Confirm $true
 ```
 
-This example removes the mobile device partnership for the device named Tablet\_JeffHay after displaying the confirm prompt.
+This example removes the mobile device partnership for the device named Tablet_JeffHay after displaying the confirm prompt.
 
 ## PARAMETERS
 
@@ -72,9 +72,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

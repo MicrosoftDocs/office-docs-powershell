@@ -66,7 +66,7 @@ The AddressId parameter specifies the email address. The value of AddressId is i
 
 - No default From address is set. This is represented by the value $null.
 
-You can find the values of the AddressId parameter on a user's mailbox by running the command Get-SendAddress -Mailbox \<mailbox\>.
+You can find the values of the AddressId parameter on a user's mailbox by running the command `Get-SendAddress -Mailbox <mailbox>`.
 
 If you use the AddressId parameter, you must also use the Mailbox parameter. If you use the AddressId parameter, you can't use the Identity parameter.
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox and the email address. The value of the Identity parameter is in the format \<mailbox\>\\\<address\>. The \<mailbox\> part is any value that uniquely identifies the mailbox. The \<address\> part is in one following formats:
+The Identity parameter specifies the mailbox and the email address. The value of the Identity parameter is in the format `<mailbox>\<address>`. The `<mailbox>` part is any value that uniquely identifies the mailbox. The `<address>` part is in one following formats:
 
 - The user's primary email address is displayed as an email address, for example, bob@contoso.com.
 
@@ -91,7 +91,7 @@ The Identity parameter specifies the mailbox and the email address. The value of
 
 - No default From address is set. This is represented by a blank value.
 
-You can find the values of the Identity parameter on a user's mailbox by running the command Get-SendAddress -Mailbox \<mailbox\>.
+You can find the values of the Identity parameter on a user's mailbox by running the command `Get-SendAddress -Mailbox <mailbox>`.
 
 If you use the Identity parameter, you can't use the AddressId parameter.
 
@@ -122,7 +122,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

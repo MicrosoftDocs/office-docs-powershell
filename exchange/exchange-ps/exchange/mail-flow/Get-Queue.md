@@ -69,7 +69,7 @@ This example lists only the external queues.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the queue. Valid input for this parameter uses the syntax Server\\Queue or Queue, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see the "Queue identity" section in Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
+The Identity parameter specifies the queue. Valid input for this parameter uses the syntax Server\Queue or Queue (for example, Mailbox01\contoso.com or Unreachable). For details about queue identity, see the "Queue identity" section in Find queues and messages in queues in the Exchange Management Shell (https://technet.microsoft.com/library/aa998047.aspx).
 
 ```yaml
 Type: QueueIdentity

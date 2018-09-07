@@ -54,15 +54,15 @@ The Identity parameter specifies the custom system message that you want to modi
 
 The identity value of a system message uses one of these formats:
 
-- System messages for enhanced status codes:\<Language\>\\\<Internal | External\>\\\<DSNcode\>. For example, En\\Internal\\5.1.2 or Ja\\External\\5.1.2.
+- System messages for enhanced status codes: `<Language>\<Internal | External>\<DSNcode>`. For example, `En\Internal\5.1.2` or `Ja\External\5.1.2`.
 
-- System messages for quotas:\<Language\>\\\<QuotaMessageType\>. For example, En\\ProhibitSendReceiveMailBox.
+- System messages for quotas: `<Language>\<QuotaMessageType>`. For example, `En\ProhibitSendReceiveMailBox`.
 
-\<Language\>: For the list of supported language codes, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages).
+`<Language>`: For the list of supported language codes, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages).
 
-\<DSNcode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command Get-SystemMessage. To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html \> "C:\\My Documents\\Default DSNs.html".
+`<DSNCode>`: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command Get-SystemMessage. To generate a list of default enhanced status codes that are used by Exchange, run this command: Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html \> "C:\My Documents\Default DSNs.html".
 
-\<QuotaMessageType\>: Valid value are:
+`<QuotaMessageType>`: Valid value are:
 
 Mailbox size quotas:
 
@@ -127,9 +127,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

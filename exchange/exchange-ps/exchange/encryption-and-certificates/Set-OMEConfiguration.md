@@ -55,11 +55,11 @@ Accept wildcard characters: False
 ### -BackgroundColor
 The BackgroundColor parameter specifies the background color. Valid values are:
 
-- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0x000000 is white\).
+- An available HTML hexadecimal hex triplet color code value for example, 0x000000 is white.
 
-- An available text value \(for example, yellow is 0x00FFFF00\).
+- An available text value for example, yellow is 0x00FFFF00.
 
-- $null \(blank\). This is the default value.
+- $null blank. This is the default value.
 
 For the list of available hex and text values, see Background colors for Office 365 Message Encryption (https://support.office.com/article/1508cb35-c5ff-4523-b579-947b21d5515f). 
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ### -Image
 The Image parameter identifies and uploads an image that will be displayed in the email message and in the Office 365 portal.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\\Temp\\OME Logo.gif" -Encoding byte)
+You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\Temp\OME Logo.gif" -Encoding byte)
 
 - Supported file formats: .png, .jpg, .bmp, or .tiff
 

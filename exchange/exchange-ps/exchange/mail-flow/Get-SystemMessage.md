@@ -60,7 +60,7 @@ This example displays detailed information for the specified custom quota messag
 Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html > "C:\My Documents\Default System Messages.html"
 ```
 
-This example outputs the list of all default system messages in all languages to an HTML file named C:\\My Documents\\Default System Messages.html.
+This example outputs the list of all default system messages in all languages to an HTML file named C:\My Documents\Default System Messages.html.
 
 You should output the list to a file, because the list is very long, and you'll receive errors if you don't have the required language packs installed.
 
@@ -96,15 +96,15 @@ You can't use this parameter with the Original switch.
 
 The identity value of a system message uses one of these formats:
 
-- System messages for enhanced status codes:\<Language\>\\\<Internal | External\>\\\<DSNcode\>. For example, En\\Internal\\5.1.2 or Ja\\External\\5.1.2.
+- System messages for enhanced status codes: `<Language>\<Internal | External>\<DSNcode>`. For example, `En\Internal\5.1.2` or `Ja\External\5.1.2`.
 
-- System messages for quotas:\<Language\>\\\<QuotaMessageType\>. For example, En\\ProhibitSendReceiveMailBox.
+- System messages for quotas: `<Language>\<QuotaMessageType>`. For example, `En\ProhibitSendReceiveMailBox`.
 
-\<Language\>: For the list of supported language codes, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages).
+`<Language>`: For the list of supported language codes, see Supported languages for NDRs (https://technet.microsoft.com/library/aa996803.aspx#NDRLanguages).
 
-\<DSNcode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers.
+`<DSNCode>`: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers.
 
-\<QuotaMessageType\>: Valid value are:
+`<QuotaMessageType>`: Valid value are:
 
 Mailbox size quotas:
 

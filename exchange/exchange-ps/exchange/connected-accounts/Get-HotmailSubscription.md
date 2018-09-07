@@ -74,9 +74,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -97,7 +97,7 @@ The Identity parameter specifies the Hotmail subscription. You can identify the 
 
 - Use the Mailbox parameter to specify the mailbox that contains the subscription, and then specify the name of the subscription.
 
-You can find the identifying values for a Hotmail subscription, such as Identity and Name, by running this command: Get-HotmailSubscription -Mailbox \<mailbox\>.
+You can find the identifying values for a Hotmail subscription, such as Identity and Name, by running this command: `Get-HotmailSubscription -Mailbox <mailbox>`.
 
 ```yaml
 Type: AggregationSubscriptionIdParameter
@@ -141,7 +141,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

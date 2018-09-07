@@ -56,7 +56,7 @@ This example returns the Outlook on the web spelling checker options for Tony's 
 Get-MailboxSpellingConfiguration -Identity contoso\tony
 ```
 
-This example returns the Outlook on the web spelling checker options for Tony's mailbox by specifying the identity of the mailbox in the format domain\\account.
+This example returns the Outlook on the web spelling checker options for Tony's mailbox by specifying the identity of the mailbox in the format domain\account.
 
 ## PARAMETERS
 
@@ -75,7 +75,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

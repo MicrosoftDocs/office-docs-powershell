@@ -41,14 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-MailboxFolder -Identity Tony:\Inbox
 ```
 
-This example retrieves the Inbox folder in Tony's mailbox. The Identity parameter is supplied in the format of \<Mailbox Identity\>:\<Folder\>.
+This example retrieves the Inbox folder in Tony's mailbox. The Identity parameter is supplied in the format of MailboxIdentity\Folder.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-MailboxFolder -Identity Tony
 ```
 
-This example returns the root folders in Tony's mailbox. The Identity parameter is supplied in the format of \<Mailbox Identity\>.
+This example returns the root folders in Tony's mailbox. The Identity parameter is supplied in the format of MailboxIdentity.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -125,9 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox and the folder that you want to view. If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox. You specify values for this parameter by using the syntax: \<Mailbox Identity\>:\<Parent\>.
+The Identity parameter specifies the mailbox and the folder that you want to view. If you don't specify the folder, the command returns information about folders in the root hierarchy of the specified mailbox. You specify values for this parameter by using the syntax: MailboxIdentity\Parent.
 
-Valid values for \<Mailbox Identity\> are unique identifiers for the mailbox.
+Valid values for MailboxIdentity are unique identifiers for the mailbox.
 
 For example:
 
@@ -141,7 +141,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -153,7 +153,7 @@ For example:
 
 - User ID or user principal name (UPN)
 
-Values for \<Parent\> can be both the store object ID and a path string such as \\Inbox\\Personal.
+Values for Parent can be both the store object ID and a path string such as \Inbox\Personal.
 
 ```yaml
 Type: MailboxFolderIdParameter

@@ -50,16 +50,16 @@ This example retrieves a list of all the role entries that contain the Get-Recip
 Get-ManagementRoleEntry "Tier 2 Help Desk\Set-Mailbox" | Format-List Name, Parameters, Role, Type
 ```
 
-This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes the output of the Get-ManagementRoleEntry cmdlet to the Format-List cmdlet. The Format-List cmdlet then outputs only the Name, Parameters, Role and Type properties from the role entry.
+This example retrieves the Tier 2 Help Desk\Set-Mailbox role entry and pipes the output of the Get-ManagementRoleEntry cmdlet to the Format-List cmdlet. The Format-List cmdlet then outputs only the Name, Parameters, Role and Type properties from the role entry.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the role entry to retrieve. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
+The Identity parameter specifies the role entry to retrieve. A valid value for this parameter uses the syntax ManagementRole\RoleEntryName (for example, ExampleRole\Set-Mailbox).
 
 For more information about how management role entries work, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
-You can use the wildcard character (\*) instead of the role, cmdlet name or both.
+You can use the wildcard character (*) instead of the role, cmdlet name or both.
 
 If the role entry name contains spaces, enclose the name in quotation marks (").
 
@@ -93,9 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Parameters parameter includes only the role entries that contain the parameters specified. You can specify multiple parameters, separated by commas. You can use the wildcard character (\*) with partial parameter names to retrieve all parameters that match the value you specify.
+The Parameters parameter includes only the role entries that contain the parameters specified. You can specify multiple parameters, separated by commas. You can use the wildcard character (*) with partial parameter names to retrieve all parameters that match the value you specify.
 
-This parameter is useful when you use the wildcard character (\*) with the value you specify in the Identity parameter.
+This parameter is useful when you use the wildcard character (*) with the value you specify in the Identity parameter.
 
 ```yaml
 Type: String[]

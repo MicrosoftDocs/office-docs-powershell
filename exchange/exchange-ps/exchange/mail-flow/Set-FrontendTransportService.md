@@ -62,7 +62,7 @@ This example sets the TransientFailureRetryCount parameter to 3 and sets the Tra
 Set-FrontEndTransportService MBX01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
 
-This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs\\Receive.log for the Front End Transport service on the Mailbox server named MBX01.
+This example sets the ReceiveProtocolLogPath parameter to C:\SMTP Protocol Logs\Receive.log for the Front End Transport service on the Mailbox server named MBX01.
 
 ## PARAMETERS
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgentLogPath
-The AgentLogPath parameter specifies the default agent log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\AgentLog. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the AgentLogEnabled attribute is $true generates event log errors.
+The AgentLogPath parameter specifies the default agent log directory location. The default location is %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\AgentLog. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the AgentLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -212,9 +212,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogPath
-The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
+The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -736,7 +736,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogPath
-The ReceiveProtocolLogPath parameter specifies the location of the protocol log directory for all Receive connectors in the Front End Transport service on the server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\ProtocolLog\\SmtpReceive.
+The ReceiveProtocolLogPath parameter specifies the location of the protocol log directory for all Receive connectors in the Front End Transport service on the server. The default location is %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpReceive.
 
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for any Receive connector in the Front End Transport service. To disable protocol logging for Receive connectors, use the value None for the ProtocolLoggingLevel parameter on the Set-ReceiveConnector cmdlet for each Receive connector in the Front End Transport service.
 
@@ -919,7 +919,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogPath
-The SendProtocolLogPath parameter specifies the location of the protocol log directory for all Send connectors in the Front End Transport service that have this server configured as a source server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\ProtocolLog\\SmtpSend.
+The SendProtocolLogPath parameter specifies the location of the protocol log directory for all Send connectors in the Front End Transport service that have this server configured as a source server. The default location is %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
 
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for any Send connector in the Front End Transport service that has this server configured as a source server. To disable protocol logging for these Send connectors, use the value None for the following parameters:
 
@@ -1039,7 +1039,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\FrontEnd\\Routing. Setting this parameter to $null disables routing table logging.
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\Routing. Setting this parameter to $null disables routing table logging.
 
 ```yaml
 Type: LocalLongFullPath

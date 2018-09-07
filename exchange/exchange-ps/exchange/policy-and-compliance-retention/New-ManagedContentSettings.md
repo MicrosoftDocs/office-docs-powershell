@@ -77,41 +77,41 @@ The MessageClass parameter specifies the message type to which any expiration an
 
 The parameter value can be a well-known message type such as Calendar items, a specific message class such as IPM.NOTE.SMIME, or a custom message class. The following well-known message types can be used:
 
-- For All mailbox content, use the value \*.
+- For All mailbox content, use the value `*`.
 
-- For the Calendar items message type, use the value IPM.Appointment\*.
+- For the Calendar items message type, use the value `IPM.Appointment*`.
 
-- For the Contacts message type, use the value IPM.Contact\*.
+- For the Contacts message type, use the value `IPM.Contact*`.
 
-- For the Documents message type, use the value IPM.Document\*.
+- For the Documents message type, use the value `IPM.Document*`.
 
-- For the Faxes message type, use the value IPM.Note.Microsoft.Fax.
+- For the Faxes message type, use the value `IPM.Note.Microsoft.Fax`.
 
 - For the Journalitems message type, use the value IPM.Activity.
 
-- For the Meeting requests, responses, and cancellations message type, use the value IPM.Schedule\*.
+- For the Meeting requests, responses, and cancellations message type, use the value `IPM.Schedule*`.
 
-- For the Notes message type, use the value IPM.StickyNote.
+- For the Notes message type, use the value `IPM.StickyNote`.
 
-- For the Posts message type, use the value IPM.Post.
+- For the Posts message type, use the value `IPM.Post`.
 
-- For the RSS items message type, use the value IPM.Post.RSS.
+- For the RSS items message type, use the value `IPM.Post.RSS`.
 
-- For the Tasks message type, use the value IPM.Task\*.
+- For the Tasks message type, use the value `IPM.Task*`.
 
-- For the Voice mail message type, use the value IPM.Note.Microsoft.Voicemail\*.
+- For the Voice mail message type, use the value `IPM.Note.Microsoft.Voicemail*`.
 
 Valid parameter values for custom message classes include:
 
-- A specific message class (for example, IPM.NOTE).
+- A specific message class (for example, `IPM.NOTE`).
 
-- The asterisk (\*) wildcard character, which indicates that the content settings apply to all message classes.
+- The asterisk (`*`) wildcard character, which indicates that the content settings apply to all message classes.
 
-- A specific message class that has the asterisk wildcard character. The asterisk wildcard character must appear as the last character in the message class. For example, IPM.NOTE\* (includes IPM.NOTE and all subclasses) or IPM.NOTE.\* (includes the subclasses for IPM.NOTE but not IPM.NOTE itself). \*.NOTE and IPM.\*.NOTE aren't valid values.
+- A specific message class that has the asterisk wildcard character. The asterisk wildcard character must appear as the last character in the message class. For example, `IPM.NOTE*` (includes `IPM.NOTE` and all subclasses) or `IPM.NOTE.*` (includes the subclasses for `IPM.NOTE` but not `IPM.NOTE` itself). `*.NOTE` and `IPM.*`.NOTE aren't valid values.
 
 Notes:
 
-- When wildcard characters are used, these policies apply only to message classes that don't have a specific content setting. Therefore, IPM.NOTE.SMIME overrides IPM.NOTE.\*.
+- When wildcard characters are used, these policies apply only to message classes that don't have a specific content setting. Therefore, `IPM.NOTE.SMIME` overrides `IPM.NOTE.*`.
 
 - Specific settings supersede general settings, for example, Voicemail supersedes AllMailboxContent.
 
@@ -177,9 +177,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

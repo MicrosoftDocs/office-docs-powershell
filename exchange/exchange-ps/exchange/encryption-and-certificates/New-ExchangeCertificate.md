@@ -55,9 +55,9 @@ New-ExchangeCertificate
 
 This example creates a self-signed certificate with the following settings:
 
-The Subject value is CN=\<ServerName\> (for example, CN=Mailbox01).
+The Subject value is CN=ServerName (for example, CN=Mailbox01).
 
-The Domains (subject alternative names) value is \<ServerName\>, \<ServerFQDN\> (for example, Mailbox01,Mailbox01.contoso.com).
+The Domains (subject alternative names) value is ServerName,ServerFQDN (for example, Mailbox01,Mailbox01.contoso.com).
 
 The Services value is IMAP,POP,SMTP
 
@@ -76,7 +76,7 @@ This example creates a new certificate request for a certification authority tha
 
 The request is Base64 encoded.
 
-The output is displayed onscreen and is also written to the text file C:\\Cert Requests\\woodgrovebank.req.
+The output is displayed onscreen and is also written to the text file C:\Cert Requests\woodgrovebank.req.
 
 The Subject value is c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com
 
@@ -104,7 +104,7 @@ The thumbprint value of the existing certificate is 8A141F7F2BBA8041973399723BD2
 
 The request is Base64 encoded.
 
-The output is displayed onscreen and is also written to the text file C:\\Cert Requests\\fabrikam\_renewal.req.
+The output is displayed onscreen and is also written to the text file C:\Cert Requests\fabrikam_renewal.req.
 
 After you create the certificate renewal request, you send the output to the CA. After you receive the renewed certificate from the CA, you install the certificate by using the Import-ExchangeCertificate cmdlet.
 
@@ -145,9 +145,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -290,7 +290,7 @@ For example, if the organization has the accepted domains woodgrovebank.com and 
 
 When you use this switch:
 
-- If you've already included the value autodiscover.\<AcceptedDomain\> in the DomainName parameter, the value isn't duplicated in the Subject Alternative Name field.
+- If you've already included the value `autodiscover.<AcceptedDomain>` in the DomainName parameter, the value isn't duplicated in the Subject Alternative Name field.
 
 - For new self-signed certificates, if you don't use the Services parameter, the certificate is only assigned to SMTP.
 
@@ -479,7 +479,7 @@ The SubjectName parameter specifies the Subject field of the certificate request
 
 Every certificate requires a value for the Subject field, and only one value is allowed. The requestor attempts to match the destination server name or FQDN with the common name (CN) value of subject.
 
-This parameter uses the syntax: [C=\<CountryOrRegion\>,S=\<StateOrProvince\>,L=LocalityOrCity,O=\<Organization\>,OU=\<Department\>],CN=\<HostNameOrFQDN\>. Although the only required value is CN=\<HostNameOrFQDN\>, you should always include C=\<CountryOrRegion\> for certificate requests, but other values might also be required by the certification authority.
+This parameter uses the syntax: `[C=<CountryOrRegion>,S=<StateOrProvince>,L=LocalityOrCity,O=<Organization>,OU=<Department>],CN=<HostNameOrFQDN>`. Although the only required value is `CN=<HostNameOrFQDN>`, you should always include `C=<CountryOrRegion>` for certificate requests, but other values might also be required by the certification authority.
 
 For example, if you want the certificate's subject to be mail.contoso.com in the United States, you can use any of the following values:
 
@@ -493,7 +493,7 @@ If you don't use this parameter, the default value is the name of the Exchange s
 
 For a subject alternative name (SAN) certificate, you should choose one of the values from the DomainName parameter to use in the SubjectName value. In fact, the CN value that you specify for SubjectName is automatically included in the DomainName values.
 
-For a wildcard certificate, use a SubjectName value that contains the wildcard character (\*). For example, C=US,CN=\*.contoso.com.
+For a wildcard certificate, use a SubjectName value that contains the wildcard character (*). For example, `C=US,CN=*.contoso.com`.
 
 ```yaml
 Type: X500DistinguishedName
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 ### -RequestFile
 The RequestFile parameter specifies the name and path of the certificate request file. The file contains the same information that's displayed on-screen when you generate a Base64 encoded certificate request (you don't use the BinaryEncoded switch).
 
-You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
+You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (`\\<Server>\<Share>`). If the value contains spaces, enclose the value in quotation marks (").
 
 You can use this parameter only when you use the GenerateRequest switch.
 

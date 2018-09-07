@@ -67,49 +67,31 @@ This example bulk restores all the mailboxes in the MyDatabase mailbox database 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the identity of the mailbox.
+The Identity parameter specifies the the mailbox that you want to restore. You can use any value that uniquely identifies the mailbox.
 
-This parameter accepts the following values:
+For example:
+
+- Name
+
+- Display name
 
 - Alias
 
-  Example: JPhillips
+- Distinguished name (DN)
 
 - Canonical DN
 
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
+- Domain\Account
 
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
+- Email address
 
 - GUID
 
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
+- LegacyExchangeDN
 
-- Immutable ID
+- SamAccountName
 
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -211,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -AttachmentFilenames
-The AttachmentFilenames parameter specifies the filter for the attachment file name. You can use wildcard characters in the string. For example, you can use \*.txt to export items that have a .txt extension.
+The AttachmentFilenames parameter specifies the filter for the attachment file name. You can use wildcard characters in the string. For example, you can use *.txt to export items that have a .txt extension.
 
 ```yaml
 Type: String[]
@@ -243,9 +225,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

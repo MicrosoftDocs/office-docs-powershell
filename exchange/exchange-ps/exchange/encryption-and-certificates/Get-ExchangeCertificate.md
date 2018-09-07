@@ -41,7 +41,7 @@ By default, this cmdlet returns the following certificate properties in the summ
 
 - Thumbprint: The unique digest of the certificate data. An example thumbprint value is 78E1BE82F683EE6D8CB9B9266FC1185AE0890C41.
 
-- Services: The Exchange services that the certificate is assigned to by using the Enable-ExchangeCertificate cmdlet. Values are None, Federation, IIS, IMAP, POP, SMTP, UM, and UMCallRouter. You'll see the value None in certificates that aren't used with Exchange (for example, the WMSvc-\<ServerName\> certificate that's used for the IIS Web Management Service).
+- Services: The Exchange services that the certificate is assigned to by using the Enable-ExchangeCertificate cmdlet. Values are None, Federation, IIS, IMAP, POP, SMTP, UM, and UMCallRouter. You'll see the value None in certificates that aren't used with Exchange (for example, `the WMSvc-<ServerName>` certificate that's used for the IIS Web Management Service).
 
 - Subject: Contains the X.500 value in the certificate's Subject Name field. The important part is the CN= value.
 
@@ -69,7 +69,7 @@ If you append | Format-List to the command, the cmdlet returns these additional 
 
 - Status: The status of the certificate. Values are DateInvalid, Invalid, PendingRequest, RevocationCheckFailure, Revoked, Unknown, Untrusted or Valid
 
-If you append | Format-List \* to the command, the cmdlet returns these additional certificate properties:
+If you append `| Format-List *` to the command, the cmdlet returns these additional certificate properties:
 
 - Archived
 
@@ -85,7 +85,7 @@ If you append | Format-List \* to the command, the cmdlet returns these addition
 
 - Handle
 
-- Identity: This value is \<ServerFQDN\>\\\<Thumbprint\>
+- Identity: This value is `<ServerFQDN>\<Thumbprint>`
 
 - IISServices
 
@@ -241,9 +241,9 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate that you want to view. Valid values are:
 
-- \<ServerNameorFQDN\>\\\<Thumbprint\>
+- ServerNameorFQDN\Thumbprint
 
-- \<Thumbprint\>
+- Thumbprint
 
 You can't use this parameter with the Server parameter.
 

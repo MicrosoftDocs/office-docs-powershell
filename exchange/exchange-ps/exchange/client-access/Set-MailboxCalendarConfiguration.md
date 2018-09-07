@@ -86,7 +86,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 
@@ -113,9 +113,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -430,7 +430,7 @@ The WorkingHoursTimeZone parameter specifies the time zone that's used by the Wo
 
 A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
 
-To see the available values, run the following command: $TimeZone = Get-ChildItem "HKLM:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display
+To see the available values, run the following command: `$TimeZone = Get-ChildItem "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Time zones" | foreach {Get-ItemProperty $_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display`.
 
 If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
 
@@ -474,13 +474,13 @@ This parameter is available only in the cloud-based service.
 
 The WeatherLocations parameter specifies one or more locations to display the weather for in the calendar in Outlook on the web.
 
-This parameter uses the syntax: LocationId:\<LocationID\>;Name:\<Name\>;Latitude:\<Latitude\>;Longitude:\<Longitude\>. For example, LocationId:105808079;Name:Redmond, WA;Latitude:47.679;Longitude:-122.132.
+This parameter uses the syntax: `LocationId:<LocationID>;Name:<Name>;Latitude:<Latitude>;Longitude:<Longitude>`. For example, `LocationId:105808079;Name:Redmond, WA;Latitude:47.679;Longitude:-122.132`.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
-For this parameter, "\<value1\>" is "LocationId:\<LocationID1\>;Name:\<Name1\>;Latitude:\<Latitude1\>;Longitude:\<Longitude1\>", and "\<value2\>" is "LocationId:\<LocationID2\>;Name:\<Name2\>;Latitude:\<Latitude2\>;Longitude:\<Longitude2\>"
+For this parameter, `"<value1>"` is `"LocationId:<LocationID1>;Name:\Name1>;Latitude:\Latitude1>;Longitude:<Longitude1>"`, and `"<value2>"` is `"LocationId:<LocationID2>;Name:<Name2>;Latitude:<Latitude2>;Longitude:<Longitude2>"`.
 
 You can configure a maximum of 5 weather locations.
 

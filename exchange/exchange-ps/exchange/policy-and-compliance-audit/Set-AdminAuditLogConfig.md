@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ### -AdminAuditLogCmdlets
 This parameter is available only in on-premises Exchange.
 
-The AdminAuditLogCmdlets parameter specifies which cmdlets should be audited. You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (\*) to match multiple cmdlets in one or more of the entries in the cmdlet list. To audit all cmdlets, specify only the wildcard character (\*).
+The AdminAuditLogCmdlets parameter specifies which cmdlets should be audited. You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (*) to match multiple cmdlets in one or more of the entries in the cmdlet list. To audit all cmdlets, specify only the wildcard character (*).
 
 ```yaml
 Type: MultiValuedProperty
@@ -128,7 +128,7 @@ This parameter is available only in on-premises Exchange.
 
 The AdminAuditLogExcludedCmdlets parameter specifies which cmdlets should be excluded from auditing. Use this parameter if you want to exclude specific cmdlets you don't want to audit even if they match a wildcard string specified in the AdminAuditLogCmdlets parameter.
 
-You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (\*) to match multiple cmdlets in one or more of the entries in the cmdlet list. You can't specify only the wildcard character (\*).
+You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (*) to match multiple cmdlets in one or more of the entries in the cmdlet list. You can't specify only the wildcard character (*).
 
 If you want to clear the list, specify a value of $null.
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ### -AdminAuditLogParameters
 This parameter is available only in on-premises Exchange.
 
-The AdminAuditLogParameters parameter specifies which parameters should be audited on the cmdlets you specified using the AdminAuditLogCmdlets parameter. You can specify one or more parameters, separated by commas. You can also use the wildcard character (\*) to match multiple parameters in one or more of the entries in the parameters list. To audit all parameters, specify only the wildcard character (\*).
+The AdminAuditLogParameters parameter specifies which parameters should be audited on the cmdlets you specified using the AdminAuditLogCmdlets parameter. You can specify one or more parameters, separated by commas. You can also use the wildcard character (*) to match multiple parameters in one or more of the entries in the parameters list. To audit all parameters, specify only the wildcard character (*).
 
 ```yaml
 Type: MultiValuedProperty
@@ -164,9 +164,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

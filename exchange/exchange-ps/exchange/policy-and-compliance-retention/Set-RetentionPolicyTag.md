@@ -128,9 +128,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -222,13 +222,13 @@ Accept wildcard characters: False
 ```
 
 ### -MessageClass
-The MessageClass parameter specifies the message type to which the tag applies. If not specified, the default value is set to \*.
+The MessageClass parameter specifies the message type to which the tag applies. If not specified, the default value is set to *.
 
-With the exception of a default policy tag (DPT) for voicemail, Exchange doesn't support retention tags for different message types. Only tags with a MessageClass of \* are supported and they apply to all message types.
+With the exception of a default policy tag (DPT) for voicemail, Exchange doesn't support retention tags for different message types. Only tags with a MessageClass of * are supported and they apply to all message types.
 
 To create a DPT for voice mail messages, set the MessageClass parameter to voicemail and the Type parameter to All.
 
-A DPT for voice mail messages applies only to Microsoft Exchange Unified Messaging voice mail messages (identified by the PR\_MESSAGE\_CLASS MAPI property value IPM.Note.Microsoft.Voicemail\*).
+A DPT for voice mail messages applies only to Microsoft Exchange Unified Messaging voice mail messages (identified by the PR_MESSAGE_CLASS MAPI property value IPM.Note.Microsoft.Voicemail*).
 
 ```yaml
 Type: String
@@ -319,7 +319,7 @@ The RetentionEnabled parameter specifies whether the tag is enabled. When set to
 
 Messages with a disabled tag are still considered tagged, so any default policy tags in the user's retention policy aren't applied to such messages.
 
-When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items that they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as DISABLED\_\<Original Name\>.
+When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items that they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as `DISABLED_<Original Name>`.
 
 ```yaml
 Type: $true | $false

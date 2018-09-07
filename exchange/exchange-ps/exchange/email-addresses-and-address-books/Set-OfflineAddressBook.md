@@ -57,7 +57,7 @@ This example changes the organization mailbox that's responsible for generating 
 ### -Identity
 The Identity parameter specifies the OAB that you want to modify. You can use any value that uniquely identifies the OAB. For example:
 
-- Name or \\Name
+- Name or \Name
 
 - Distinguished name (DN)
 
@@ -84,7 +84,7 @@ The AddressLists parameter specifies the address lists or global address lists t
 
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>".
 
 You can find the identify values of address lists and global address lists by using the Get-AddressList and Get-GlobalAddressList cmdlets.
 
@@ -118,11 +118,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConfiguredAttributes
-The ConfiguredAttributes parameter specifies the recipient MAPI propertiesthat are available in the OAB. This parameter uses the syntax: "\<Name1\>,\<Type1\>","\<Name2\>,\<Type2\>"... where \<Name\> is the name of the MAPI property (for example, MobileTelephoneNumber), and \<Type\> is the value ANR (ambiguous name resolution), Value, or Indicator.
+The ConfiguredAttributes parameter specifies the recipient MAPI propertiesthat are available in the OAB. This parameter uses the syntax: `"<Name1>,<Type1>","<Name2>,<Type2>"...` where `<Name>` is the name of the MAPI property (for example, MobileTelephoneNumber), and `<Type>` is the value ANR (ambiguous name resolution), Value, or Indicator.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 To reset this parameter back to the default values, use the UseDefaultAttributes switch.
 
@@ -141,9 +141,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -411,15 +411,15 @@ The VirtualDirectories parameter specifies the OAB virtual directories that acce
 
 You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
+- Name or `<Server>\Name`
 
 - Distinguished name (DN)
 
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `<VirtualDirectoryName> (<WebsiteName>)` from the properties of the virtual directory. You can specify the wildcard character (*) instead of the default website by using the syntax `<VirtualDirectoryName>*`.
 
-The default value of this parameter is the Client Access services (frontend) and backend OAB virtual directories on the Mailbox server that holds the OAB generation mailbox (the GeneratingMailbox parameter or SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}) when you created the OAB (for example, Mailbox01\\OAB (Default Web Site),Mailbox01\\OAB (Exchange Back End).
+The default value of this parameter is the Client Access services (frontend) and backend OAB virtual directories on the Mailbox server that holds the OAB generation mailbox (the GeneratingMailbox parameter or SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}) when you created the OAB (for example, Mailbox01\OAB (Default Web Site),Mailbox01\OAB (Exchange Back End).
 
 To use this parameter, the value of the GlobalWebDistributionEnabled parameter must be $false.
 
@@ -469,7 +469,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

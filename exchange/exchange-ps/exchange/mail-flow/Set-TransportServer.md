@@ -99,7 +99,7 @@ This example sets the TransientFailureRetryCount parameter to 3 and sets the Tra
 Set-TransportServer Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
 
-This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs\\Receive.log on server Mailbox01.
+This example sets the ReceiveProtocolLogPath parameter to C:\SMTP Protocol Logs\Receive.log on server Mailbox01.
 
 ## PARAMETERS
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveUserStatisticsLogPath
-The ActiveUserStatisticsLogPath parameter specifies the location of per user activity statistics log storage. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ActiveUsersStats. Setting the value of this parameter to $null disables server statistics logging.
+The ActiveUserStatisticsLogPath parameter specifies the location of per user activity statistics log storage. The default location is %ExchangeInstallPath%TransportRoles\Logs\Hub\ActiveUsersStats. Setting the value of this parameter to $null disables server statistics logging.
 
 ```yaml
 Type: LocalLongFullPath
@@ -234,9 +234,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -347,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogPath
-The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
+The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\Logs\Hub\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentConversionTracingEnabled
-The ContentConversionTracingEnabled parameter specifies whether content conversion tracing is enabled. Content conversion tracing captures content conversion failures that occur in the Transport service on a Mailbox server or on the Edge server. The default value is $false. Content conversion tracing captures a maximum of 128 MB of content conversion failures. When the 128 MB limit is reached, no more content conversion failures are captured. Content conversion tracing captures the complete contents of e-mail messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
+The ContentConversionTracingEnabled parameter specifies whether content conversion tracing is enabled. Content conversion tracing captures content conversion failures that occur in the Transport service on a Mailbox server or on the Edge server. The default value is $false. Content conversion tracing captures a maximum of 128 MB of content conversion failures. When the 128 MB limit is reached, no more content conversion failures are captured. Content conversion tracing captures the complete contents of email messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
 - Administrators: Full Control
 
@@ -468,9 +468,9 @@ Accept wildcard characters: False
 ### -ExternalDNSServers
 The ExternalDNSServers parameter specifies the list of external DNS servers that the server queries when resolving a remote domain. DNS servers are specified by IP address. The default value is an empty list ({}).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 If the value of the ExternalDNSAdapterEnabled parameter is set to $true, the ExternalDNSServers parameter and its list of DNS servers isn't used.
 
@@ -553,9 +553,9 @@ Accept wildcard characters: False
 ### -InternalDNSServers
 The InternalDNSServers parameter specifies the list of DNS servers that should be used when resolving a domain name. DNS servers are specified by IP address. The default value is any empty list ({}).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
 If the InternalDNSAdapterGuid parameter is set, and the value of the InternalDNSAdapterEnabled parameter is set to $true, the InternalDNSServers parameter and its list of DNS servers isn't used.
 
@@ -704,7 +704,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogPath
-The IrmLogPath parameter specifies the default IRM log directory location. The default location is %ExchangeInstallPath%Logging\\IRMLogs. If you set the value of the IrmLogPath parameter to $null, you effectively disable IRM logging. However, if you set the value of the IrmLogPath parameter to $null when the value of the IrmLogEnabled attribute is $true, Exchange will log errors in the Application event log. The preferred way for disabling IRM logging is to set the IrmLogEnabled to $false.
+The IrmLogPath parameter specifies the default IRM log directory location. The default location is %ExchangeInstallPath%Logging\IRMLogs. If you set the value of the IrmLogPath parameter to $null, you effectively disable IRM logging. However, if you set the value of the IrmLogPath parameter to $null when the value of the IrmLogEnabled attribute is $true, Exchange will log errors in the Application event log. The preferred way for disabling IRM logging is to set the IrmLogEnabled to $false.
 
 ```yaml
 Type: LocalLongFullPath
@@ -934,7 +934,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogPath
-The MessageTrackingLogPath parameter specifies the location of the message tracking logs. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\MessageTracking. Setting the value of this parameter to $null disables message tracking. However, setting this parameter to $null when the value of the MessageTrackingLogEnabled attribute is $true generates event log errors. The preferred method to disable message tracking is to use the MessageTrackingLogEnabled parameter.
+The MessageTrackingLogPath parameter specifies the location of the message tracking logs. The default location is %ExchangeInstallPath%TransportRoles\Logs\MessageTracking. Setting the value of this parameter to $null disables message tracking. However, setting this parameter to $null when the value of the MessageTrackingLogEnabled attribute is $true generates event log errors. The preferred method to disable message tracking is to use the MessageTrackingLogEnabled parameter.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1029,7 +1029,7 @@ Accept wildcard characters: False
 ```
 
 ### -PickupDirectoryMaxRecipientsPerMessage
-The PickupDirectoryMaxRecipientsPerMessage parameter specifies the maximum number of recipients that can be included on an e-mail message. The default value is 100. The valid input range for this parameter is from 1 through 10000.
+The PickupDirectoryMaxRecipientsPerMessage parameter specifies the maximum number of recipients that can be included on an email message. The default value is 100. The valid input range for this parameter is from 1 through 10000.
 
 ```yaml
 Type: Int32
@@ -1044,7 +1044,7 @@ Accept wildcard characters: False
 ```
 
 ### -PickupDirectoryPath
-The PickupDirectoryPath parameter specifies the location of the Pickup directory. The Pickup directory is used by administrators and third-party applications to create and submit messages. The default location is %ExchangeInstallPath%TransportRoles\\Pickup. If the value of the PickupDirectoryPath parameter is set to $null, the Pickup directory is disabled.
+The PickupDirectoryPath parameter specifies the location of the Pickup directory. The Pickup directory is used by administrators and third-party applications to create and submit messages. The default location is %ExchangeInstallPath%TransportRoles\Pickup. If the value of the PickupDirectoryPath parameter is set to $null, the Pickup directory is disabled.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1074,7 +1074,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineTracingPath
-The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\PipelineTracing. The path must be local to the Exchange computer. Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter. Pipeline tracing captures the complete contents of e-mail messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
+The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\Logs\Hub\PipelineTracing. The path must be local to the Exchange computer. Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter. Pipeline tracing captures the complete contents of email messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
 - Administrators: Full Control
 
@@ -1095,7 +1095,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineTracingSenderAddress
-The PipelineTracingSenderAddress parameter specifies the sender e-mail address that invokes pipeline tracing. Only messages from this address generate pipeline tracing output. The address can be either inside or outside the Exchange organization. Depending on your requirements, you may have to set this parameter to different sender addresses and send new messages to start the transport agents or routes that you want to test. The default value of this parameter is $null.
+The PipelineTracingSenderAddress parameter specifies the sender email address that invokes pipeline tracing. Only messages from this address generate pipeline tracing output. The address can be either inside or outside the Exchange organization. Depending on your requirements, you may have to set this parameter to different sender addresses and send new messages to start the transport agents or routes that you want to test. The default value of this parameter is $null.
 
 ```yaml
 Type: SmtpAddress
@@ -1240,7 +1240,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogPath
-The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpReceive. Setting the value of this parameter to $null disables protocol logging for all Receive connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel attribute for any Receive connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-ReceiveConnector cmdlet to set the ProtocolLoggingLevel to None on each Receive connector.
+The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location is %ExchangeInstallPath%TransportRoles\Logs\Hub\ProtocolLog\SmtpReceive. Setting the value of this parameter to $null disables protocol logging for all Receive connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel attribute for any Receive connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-ReceiveConnector cmdlet to set the ProtocolLoggingLevel to None on each Receive connector.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1270,7 +1270,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplayDirectoryPath
-The ReplayDirectoryPath parameter specifies the path of the Replay directory. The Replay directory is used to resubmit exported messages and to receive messages from foreign gateway servers. The default location is %ExchangeInstallPath%TransportRoles\\Replay. If the value of the ReplayDirectoryPath parameter is set to $null, the Replay directory is disabled.
+The ReplayDirectoryPath parameter specifies the path of the Replay directory. The Replay directory is used to resubmit exported messages and to receive messages from foreign gateway servers. The default location is %ExchangeInstallPath%TransportRoles\Replay. If the value of the ReplayDirectoryPath parameter is set to $null, the Replay directory is disabled.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1350,7 +1350,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Routing. Setting the value of the RoutingTableLogPath parameter to $null disables routing table logging.
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\Logs\Routing. Setting the value of the RoutingTableLogPath parameter to $null disables routing table logging.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1446,7 +1446,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogPath
-The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpSend. Setting the value of this parameter to $null disables protocol logging for all Send connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel or IntraOrgConnectorProtocolLoggingLevel attribute for any Send connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-SendConnector cmdlet to set the ProtocolLoggingLevel parameter to None on each Send connector and to set the IntraOrgConnectorProtocolLoggingLevel parameter to None.
+The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location is %ExchangeInstallPath%TransportRoles\Logs\Hub\ProtocolLog\SmtpSend. Setting the value of this parameter to $null disables protocol logging for all Send connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel or IntraOrgConnectorProtocolLoggingLevel attribute for any Send connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-SendConnector cmdlet to set the ProtocolLoggingLevel parameter to None on each Send connector and to set the IntraOrgConnectorProtocolLoggingLevel parameter to None.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1691,7 +1691,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgentLogPath
-The AgentLogPath parameter specifies the default agent log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\AgentLog. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the AgentLogEnabled attribute is $true generates event log errors.
+The AgentLogPath parameter specifies the default agent log directory location. The default location is %ExchangeInstallPath%TransportRoles\Logs\Hub\AgentLog. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the AgentLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1898,7 +1898,7 @@ Accept wildcard characters: False
 ```
 
 ### -QueueLogPath
-The QueueLogPath parameter specifies the path of the queue log directory. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\QueueViewer. Setting the value of this parameter to $null disables queue logging.
+The QueueLogPath parameter specifies the path of the queue log directory. The default location is %ExchangeInstallPath%TransportRoles\Logs\Hub\QueueViewer. Setting the value of this parameter to $null disables queue logging.
 
 ```yaml
 Type: LocalLongFullPath

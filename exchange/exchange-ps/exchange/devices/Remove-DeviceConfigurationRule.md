@@ -46,7 +46,7 @@ This example removes the mobile device configuration rule named Legal Team{58b50
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device configuration rule that you want to view. The name of the rule uses the syntax \<Mobile device configuration policy name\>{\<GUID value\>}. For example, Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}. You can find the name values by running the command: Get-DeviceConfigurationRule | Format-List Name.
+The Identity parameter specifies the mobile device configuration rule that you want to view. The name of the rule uses the syntax `<Mobile device configuration policy name>{<GUID value>}`. For example, `Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}`. You can find the name values by running the command: Get-DeviceConfigurationRule | Format-List Name.
 
 ```yaml
 Type: PolicyIdParameter
@@ -63,9 +63,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

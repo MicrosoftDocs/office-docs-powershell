@@ -63,7 +63,7 @@ This example retrieves all the calendar settings for Kai's mailbox where the Ide
 Get-MailboxCalendarConfiguration -Identity contoso\tony
 ```
 
-This example uses the Identity parameter specified in the domain\\account format and returns the calendar settings for Tony's mailbox.
+This example uses the Identity parameter specified in the domain\account format and returns the calendar settings for Tony's mailbox.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -89,7 +89,7 @@ For example:
 
 - Canonical DN
 
-- \<domain name\>\\\<account name\>
+- Domain\Account
 
 - Email address
 

@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Move-AddressList -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -Target "\All Users\Sales\building4"
 ```
 
-This example moves the address list with GUID c3fffd8e-026b-41b9-88c4-8c21697ac8ac to a new location under the parent address list \\All Users\\Sales\\building4.
+This example moves the address list with GUID c3fffd8e-026b-41b9-88c4-8c21697ac8ac to a new location under the parent address list \All Users\Sales\building4.
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ The Identity parameter specifies the address list that you want to move. You can
 
 - GUID
 
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `\<Name>` or `<Container>\<Name>`
 
 ```yaml
 Type: AddressListIdParameter
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-The Container parameter specifies where to move the address list. Valid input for this parameter is under the root "\\" (also known as All Address Lists) or under an existing address list. You can use any value that uniquely identifies the address list. For example:
+The Container parameter specifies where to move the address list. Valid input for this parameter is under the root "`\`" (also known as All Address Lists) or under an existing address list. You can use any value that uniquely identifies the address list. For example:
 
 - Name
 
@@ -72,7 +72,7 @@ The Container parameter specifies where to move the address list. Valid input fo
 
 - GUID
 
-- Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
+- Path: `\<Name>` or `<Container>\<Name>`
 
 ```yaml
 Type: AddressListIdParameter
@@ -89,9 +89,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

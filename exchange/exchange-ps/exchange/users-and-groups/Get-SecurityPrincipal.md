@@ -79,15 +79,15 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax {\<Property\> -\<Comparison operator\> '\<Value\>'}.
+The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax `{<Property> -<Comparison operator> '<Value>'}`.
 
-- \<Property\> is a filterable property.
+- `<Property>` is a filterable property.
 
-- -\<Comparison Operator\> is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see about\_Comparison\_Operators (https://go.microsoft.com/fwlink/p/?LinkId=620712).
+- `-<Comparison Operator>` is an OPATH comparison operator. For example -eq for equals and -like for string comparison. For more information about comparison operators, see About Comparison Operators (https://go.microsoft.com/fwlink/p/?LinkId=620712).
 
-- \<Value\> is the property value. Text values with or without spaces need to be enclosed in quotation marks ('\<Value\>'). Don't use quotation marks with integers or the system values $true, $false, or $null.
+- `<Value>` is the property value. Text values with or without spaces need to be enclosed in quotation marks ('`<Value>`'). Don't use quotation marks with integers or the system values $true, $false, or $null.
 
-You can chain multiple search criteria together using the logical operators -and and -or. For example, {\<Criteria1\>) -and \<Criteria2\>} or {(\<Criteria1\> -and \<Criteria2\>) -or \<Criteria3\>}.
+You can chain multiple search criteria together using the logical operators -and and -or. For example, `{<Criteria1>) -and <Criteria2>}` or `{(<Criteria1> -and <Criteria2>) -or <Criteria3>}`.
 
 You can filter by the following properties:
 

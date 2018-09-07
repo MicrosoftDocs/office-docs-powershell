@@ -139,7 +139,7 @@ The Identity parameter specifies the identity of the site mailbox. You can use o
 
 - Display name
 
-- Domain\\Account
+- Domain\Account
 
 - User principal name (UPN)
 

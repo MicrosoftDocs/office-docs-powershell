@@ -183,9 +183,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDeliveryDomain
-The TargetDeliveryDomain parameter specifies the e-mail domain that's used when generating target addresses for new mail users in a cross-premises deployment scenario. When you have a cross-premises deployment, the user mailboxes on the remote location are represented as mail user objects. For example, all mailboxes hosted on Exchange Online are represented as mail users in your on-premises organization. The value of this parameter is used to determine what domain should be used for the target e-mail address for these mail users.
+The TargetDeliveryDomain parameter specifies the email domain that's used when generating target addresses for new mail users in a cross-premises deployment scenario. When you have a cross-premises deployment, the user mailboxes on the remote location are represented as mail user objects. For example, all mailboxes hosted on Exchange Online are represented as mail users in your on-premises organization. The value of this parameter is used to determine what domain should be used for the target email address for these mail users.
 
 ```yaml
 Type: $true | $false
@@ -492,7 +492,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedMailInboundEnabled
-The TrustedMailInboundEnabled parameter specifies whether Exchange will treat e-mail received from this remote domain as trusted messages. If you set this parameter to $true, all incoming messages from this remote domain are considered safe and they will bypass content and recipient filtering.
+The TrustedMailInboundEnabled parameter specifies whether Exchange will treat email received from this remote domain as trusted messages. If you set this parameter to $true, all incoming messages from this remote domain are considered safe and they will bypass content and recipient filtering.
 
 We recommend that you set this parameter to $true for cross-premises deployment scenarios.
 

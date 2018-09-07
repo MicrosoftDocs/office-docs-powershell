@@ -56,7 +56,7 @@ This example uses the Identity parameter to return information about the specifi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the public folder mailbox migration request. The default identity value is \\PublicFolderMailboxMigration\<UniqueIdentifier\> (for example, \\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
+The Identity parameter specifies the public folder mailbox migration request. The default identity value is \PublicFolderMailboxMigrationGUID (for example, \PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
 
 You can't use this parameter with the RequestQueue and RequestGuid parameters.
 
