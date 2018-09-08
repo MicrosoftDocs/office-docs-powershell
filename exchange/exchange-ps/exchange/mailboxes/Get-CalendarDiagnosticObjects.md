@@ -31,7 +31,7 @@ Some of the more interesting properties that are returned in the results are:
 
 - CalendarLogTriggerAction: The action that's taken on the item (for example, Create or Update).
 
-- ClientInfoString: The entity that made the change (for example, Client=OWA;\<AdditionalDetails\>, Client=WebServices;\<AdditionalDetails\>;, or Client=TBA;Service=MSExchangeMailboxAssistants;Action=ELCAssistant;).
+- ClientInfoString: The entity that made the change (for example, `Client=OWA;<AdditionalDetails>`, `Client=WebServices;<AdditionalDetails>;`, or `Client=TBA;Service=MSExchangeMailboxAssistants;Action=ELCAssistant;`).
 
 - OriginalLastModifiedTime: Used as the primary sort field to order the events.
 

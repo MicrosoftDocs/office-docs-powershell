@@ -49,7 +49,7 @@ This example makes the following configuration changes to the routing group conn
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name or GUID of the routing group connector that you want to modify. A valid name value uses the syntax AdministrativeGroupName\RoutingGroupName\RoutingGroupConnectorName, where AdministrativeGroupName\ and RoutingGroupName\ are optional. You can use the wildcard character (*) as part of the administrative group name or routing group name.
+The Identity parameter specifies the name or GUID of the routing group connector that you want to modify. A valid name value uses the syntax AdministrativeGroupName\RoutingGroupName\RoutingGroupConnectorName, where AdministrativeGroupName\ and RoutingGroupName\ are optional. You can use the wildcard character (`*`) as part of the administrative group name or routing group name.
 
 ```yaml
 Type: RoutingGroupConnectorIdParameter
@@ -66,9 +66,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New and Set cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

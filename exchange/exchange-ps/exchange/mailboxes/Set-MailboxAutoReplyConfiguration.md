@@ -120,9 +120,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New and Set cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ### -ExternalMessage
 The ExternalMessage parameter specifies the Automatic Replies message that's sent to external senders or senders outside the organization. If the value contains spaces, enclose the value in quotation marks (").
 
-HTML tags are automatically added to the text. For example, if you enter the text, "I'm on vacation", the value automatically becomes: \<html\>\<body\>I'm on vacation\</body\>\</html\>. Additional HTML tags are supported if you enclose the value in quotation marks. For example, "\<html\>\<body\>I'm on vacation.\<br\>I'll respond when I return.\</body\>\</html\>".
+HTML tags are automatically added to the text. For example, if you enter the text, "I'm on vacation", the value automatically becomes: `<html><body>I'm on vacation</body></html>`. Additional HTML tags are supported if you enclose the value in quotation marks. For example, `"<html><body>I'm on vacation.<br>I'll respond when I return.</body></html>"`.
 
 The value of this parameter is meaningful only when both of the following conditions are true:
 
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ### -InternalMessage
 The InternalMessage parameter specifies the Automatic Replies message that's sent to internal senders or senders within the organization. If the value contains spaces, enclose the value in quotation marks (").
 
-HTML tags are automatically added to the text. For example, if you enter the text: "I'm on vacation", the value automatically becomes: \<html\>\<body\>I'm on vacation\</body\>\</html\>. Additional HTML tags are supported if you enclose the value in quotation marks. For example, "\<html\>\<body\>I'm on vacation.\<br\>Please contact my manager.\</body\>\</html\>".
+HTML tags are automatically added to the text. For example, if you enter the text, "I'm on vacation", the value automatically becomes: `<html><body>I'm on vacation</body></html>`. Additional HTML tags are supported if you enclose the value in quotation marks. For example, `"<html><body>I'm on vacation.<br>I'll respond when I return.</body></html>"`.
 
 The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
 
@@ -393,7 +393,7 @@ The DeclineMeetingMessage parameter specifies the text in the message when meeti
 
 - The DeclineEventsForScheduledOOF parameter is set to $true, and the DeclineAllEventsForScheduledOOF parameter is set to $true, or individual events are specified by using the EventsToDeleteIDs parameter.
 
-If the value contains spaces, enclose the value in quotation marks ("). HTML tags aren't automatically added to the text, but you can use values that contain HTML tags. For example, "\<html\>\<body\>I'm on vacation.\<br\>I can't attend the meeting.\</body\>\</html\>".
+If the value contains spaces, enclose the value in quotation marks ("). HTML tags aren't automatically added to the text, but you can use values that contain HTML tags. For example, `"<html><body>I'm on vacation.<br>I can't attend the meeting.</body></html>"`.
 
 To clear the value of this parameter, use the value $null.
 

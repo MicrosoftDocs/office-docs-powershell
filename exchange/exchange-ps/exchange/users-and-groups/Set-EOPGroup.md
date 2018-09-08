@@ -105,7 +105,7 @@ For example:
 
 - GUID
 
-You can specify multiple owners by using the following syntax: @("\<user1\>","\<user2\>"...). The values that you specify will overwrite the current list of owners.
+You can specify multiple owners by using the following syntax: `@("<user1>","<user2>"...)`. The values that you specify will overwrite the current list of owners.
 
 The users you specify with this parameter aren't automatically added to the group. To add members to the group, use the Update-EOPDistributionGroupMember cmdlet.
 

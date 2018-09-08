@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Component
-The Component parameter specifies the component or endpoint for which you want to retrieve the state. To see the available values, run the following command: Get-ServerComponentState \<ServerName\>.
+The Component parameter specifies the component or endpoint for which you want to retrieve the state. To see the available values, run the following command: `Get-ServerComponentState <ServerName>`.
 
 ```yaml
 Type: String

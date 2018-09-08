@@ -110,9 +110,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New and Set cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalPostmasterAddress
-The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is $null. In the Transport service on a Mailbox server, the value of the external postmaster email address is postmaster@\<defaultaccepteddomain\>. If an Edge Transport server hasn't yet been through the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster email address on the Edge Transport server is postmaster@\<edgetransportserverfqdn\>. If an Edge Transport server has completed the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster email address on the Edge Transport server is postmaster@\<defaultaccepteddomain\>. To override the default behavior, you can specify an email address for the ExternalPostMasterAddress parameter.
+The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is $null. In the Transport service on a Mailbox server, the value of the external postmaster email address is `postmaster@<defaultaccepteddomain>`. If an Edge Transport server hasn't yet been through the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster email address on the Edge Transport server is `postmaster@<edgetransportserverfqdn>`. If an Edge Transport server has completed the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster email address on the Edge Transport server is `postmaster@<defaultaccepteddomain>`. To override the default behavior, you can specify an email address for the ExternalPostMasterAddress parameter.
 
 ```yaml
 Type: SmtpAddress
@@ -341,7 +341,7 @@ To add or remove one or more values without affecting any existing entries, use 
 
 Although these DSN codes are monitored by default, the associated NDRs aren't copied to the Exchange recipient or to the external postmaster address if no mailbox is assigned to the Exchange recipient or to the external postmaster address. By default, no mailbox is assigned to the Exchange recipient or to the external postmaster address.
 
-To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of postmaster@\<Authoritative domain\> to the mailbox.
+To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of `postmaster@<Authoritative domain>` to the mailbox.
 
 ```yaml
 Type: MultiValuedProperty
@@ -836,7 +836,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
-The wildcard character (*) isn't supported in the domains listed in the TLSReceiveDomainSecureList parameter or in the TLSSendDomainSecureList parameter. The default value for both parameters is an empty list ({}).
+The wildcard character (`*`) isn't supported in the domains listed in the TLSReceiveDomainSecureList parameter or in the TLSSendDomainSecureList parameter. The default value for both parameters is an empty list ({}).
 
 ```yaml
 Type: MultiValuedProperty
@@ -865,7 +865,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="<value1>","<value2>"...; Remove="<value1>","<value2>"...}`.
 
-Multiple domains may be separated by commas. The wildcard character (*) isn't supported in the domains listed in the TLSSendDomainSecureList parameter or in the TLSReceiveSecureList parameter. The default values for both parameters are an empty list ({}).
+Multiple domains may be separated by commas. The wildcard character (`*`) isn't supported in the domains listed in the TLSSendDomainSecureList parameter or in the TLSReceiveSecureList parameter. The default values for both parameters are an empty list ({}).
 
 ```yaml
 Type: MultiValuedProperty

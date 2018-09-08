@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox and the email address. The value of the Identity parameter is in the format `<mailbox>\<address>`. The `<mailbox>` part is any value that uniquely identifies the mailbox. The `<address>` part is in one following formats:
+The Identity parameter specifies the mailbox and the email address. The value of the Identity parameter is in the format Mailbox\EmailAddress. The Mailbox part is any value that uniquely identifies the mailbox. The EmailAddress part is in one following formats:
 
 - The user's primary email address is displayed as an email address, for example, bob@contoso.com.
 

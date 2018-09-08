@@ -357,9 +357,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New and Set cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -444,9 +444,9 @@ Accept wildcard characters: False
 ### -DistributionGroupNamingPolicy
 The DistributionGroupNamingPolicy parameter specifies the template applied to the name of distribution groups that are created in the organization. You can enforce that a prefix or suffix be applied to all distribution groups. Prefixes and suffixes can be either a string or an attribute, and you can combine strings and attributes. When creating a naming policy, use the following syntax:
 
-"prefix\<GroupName\>suffix"
+`"prefix<GroupName>suffix"`
 
-Don't set the \<GroupName\>. Users create the name when they create the distribution group. You can have multiple prefixes and suffixes.
+Don't set the `<GroupName>`. Users create the name when they create the distribution group. You can have multiple prefixes and suffixes.
 
 You can use the following attributes that will be gathered from the user who's creating the distribution group mailbox settings:
 
@@ -466,13 +466,13 @@ You can use the following attributes that will be gathered from the user who's c
 
 - CustomAttribute1 to CustomAttribute15
 
-To create a naming policy using an attribute, use the following syntax: "\<PrefixAttribute\>\<GroupName\>\<SuffixAttribute\>".
+To create a naming policy using an attribute, use the following syntax: `"<PrefixAttribute><GroupName><SuffixAttribute>"`.
 
 For example, to create a naming policy using the Department as a prefix and CustomAttribute1 as the suffix:
 
-"\<Department\>\<GroupName\>\<CustomAttribute1\>".
+`"<Department><GroupName><CustomAttribute1>"`.
 
-To create a naming policy using strings, use the following syntax "string\<GroupName\>string". For example to create a naming policy using the string `DL_` as the prefix use the following syntax: `"DL_<GroupName>"`.
+To create a naming policy using strings, use the following syntax `"string<GroupName>string"`. For example to create a naming policy using the string `DL_` as the prefix use the following syntax: `"DL_<GroupName>"`.
 
 ```yaml
 Type: DistributionGroupNamingPolicy
@@ -521,7 +521,7 @@ Accept wildcard characters: False
 ```
 
 ### -EwsAllowList
-The EwsAllowList parameter specifies the applications that are allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EwsAllowList. Other applications that aren't specified by this parameter aren't allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (*) are supported.
+The EwsAllowList parameter specifies the applications that are allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EwsAllowList. Other applications that aren't specified by this parameter aren't allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (`*`) are supported.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
@@ -591,7 +591,7 @@ Accept wildcard characters: False
 ```
 
 ### -EwsBlockList
-The EwsBlockList parameter specifies the applications that aren't allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EnforceBlockList. All other applications that aren't specified by this parameter are allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (*) are supported.
+The EwsBlockList parameter specifies the applications that aren't allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EnforceBlockList. All other applications that aren't specified by this parameter are allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (`*`) are supported.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `<value1>,<value2>,...<valueN>`. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: `"<value1>","<value2>",..."<valueN">`.
 
@@ -851,7 +851,7 @@ This parameter is available only in on-premises Exchange.
 
 The MicrosoftExchangeRecipientEmailAddressPolicyEnabled parameter specifies whether the default email address policy is automatically applied to the Exchange recipient. The default value is $true. If this parameter is set to $true, Exchange automatically adds new email addresses to the Exchange recipient when email address policies are added or modified in the Exchange organization. If this parameter is set to $false, you must manually add new email addresses to the Exchange recipient when email address policies are added or modified.
 
-If you change the value of the MicrosoftExchangeRecipientEmailAddressPolicyEnabled parameter from $false to $true, any email addresses that you defined by using the MicrosoftExchangeRecipientEmailAddresses parameter are preserved. However, the value of the MicrosoftExchangeRecipientPrimarySmtpAddress parameter reverts to MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@\<Accepted Domain in Highest Priority Email Address Policy\>.
+If you change the value of the MicrosoftExchangeRecipientEmailAddressPolicyEnabled parameter from $false to $true, any email addresses that you defined by using the MicrosoftExchangeRecipientEmailAddresses parameter are preserved. However, the value of the MicrosoftExchangeRecipientPrimarySmtpAddress parameter reverts to `MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@<Accepted Domain in Highest Priority Email Address Policy>`.
 
 ```yaml
 Type: $true | $false

@@ -192,29 +192,29 @@ This parameter can contain text and HTML tags. The maximum length is 512 charact
 
 The following HTML tags are available:
 
-- \<B\> and \</B\> (bold)
+- `<B>` and `</B>` (bold)
 
-- \<EM\> and \</EM\> (italic)
+- `<EM>` and `</EM>` (italic)
 
-- \<BR\> (line break)
+- `<BR>` (line break)
 
-- \<P\> and \</P\> (paragraph)
+- `<P>` and `</P>` (paragraph)
 
-- \<A HREF="url"\> and \</A\> (hyperlink). Note: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
+- `<A HREF="url">` and `</A>` (hyperlink). Note: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
 
 Use the following escape codes for these special characters:
 
-- &lt; for \<.
+- &lt; for `<`
 
-- &gt; for \>.
+- &gt; for `>`
 
-- &quot; for ".
+- &quot; for "
 
-- &amp; for &.
+- &amp; for &
 
 Here's an example value for this parameter that uses HTML tags and special characters:
 
-'You tried to send a message to a \<B\>disabled\</B\> mailbox. Please visit \<A HREF="https://it.contoso.com"\>Internal Support\</A\> or contact &quot;InfoSec&quot; for more information.'
+`'You tried to send a message to a <B>disabled</B> mailbox. Please visit <A HREF="https://it.contoso.com">Internal Support</A> or contact &quot;InfoSec&quot; for more information.'`
 
 ```yaml
 Type: String
@@ -231,9 +231,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New and Set cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

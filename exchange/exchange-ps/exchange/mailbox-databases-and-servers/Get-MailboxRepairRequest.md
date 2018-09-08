@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is `<DatabaseGuid>\<RequestGuid>\<JobGuid>`.
+The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is DatabaseGuid\RequestGuid\JobGuid`.
 
 ```yaml
 Type: StoreIntegrityCheckJobIdParameter

@@ -485,7 +485,7 @@ You can use any value that uniquely identifies the server. For example:
 
 You can't use this parameter with the Anr, Database, or Identity parameters.
 
-The ServerName and ServerLegacyDN properties for a mailbox may not be updated immediately after a mailbox move within a database availability group (DAG). To get the most up-to-date values for these mailbox properties, run the command Get-Mailbox \<Identity\> | Get-MailboxStatistics | Format-List Name,ServerName,ServerLegacyDN.
+The ServerName and ServerLegacyDN properties for a mailbox may not be updated immediately after a mailbox move within a database availability group (DAG). To get the most up-to-date values for these mailbox properties, run the command `Get-Mailbox <Identity> | Get-MailboxStatistics | Format-List Name,ServerName,ServerLegacyDN`.
 
 ```yaml
 Type: ServerIdParameter
@@ -502,7 +502,7 @@ Accept wildcard characters: False
 ### -SortBy
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
-If the default view doesn't include the property you're sorting by, you can append the command with `| Format-Table -Auto <Property1>,<Property2>...` to create a new view that contains all of the properties that you want to see. Wildcards (*) in the property names are supported.
+If the default view doesn't include the property you're sorting by, you can append the command with `| Format-Table -Auto <Property1>,<Property2>...` to create a new view that contains all of the properties that you want to see. Wildcards (`*`) in the property names are supported.
 
 You can sort by the following properties:
 

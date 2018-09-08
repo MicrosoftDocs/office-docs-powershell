@@ -85,7 +85,7 @@ If you append `| Format-List *` to the command, the cmdlet returns these additio
 
 - Handle
 
-- Identity: This value is `<ServerFQDN>\<Thumbprint>`
+- Identity: This value is ServerFQDN\Thumbprint
 
 - IISServices
 

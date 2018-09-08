@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies the primary email address and other proxy addresses for the mail user. This parameter uses the syntax SMTP:\<PrimaryEmailAddress\>,\<ProxyAddress\>.
+The EmailAddresses parameter specifies the primary email address and other proxy addresses for the mail user. This parameter uses the syntax `SMTP:<PrimaryEmailAddress>,<ProxyAddress>`.
 
 The values that you specify for this parameter overwrite any existing values.
 

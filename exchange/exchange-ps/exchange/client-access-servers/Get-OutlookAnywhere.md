@@ -112,7 +112,7 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 
 - GUID
 
-The Name value uses the syntax `<VirtualDirectoryName> (<WebsiteName>)` from the properties of the virtual directory. You can specify the wildcard character (*) instead of the default website by using the syntax `<VirtualDirectoryName>*`.
+The Name value uses the syntax `<VirtualDirectoryName> (<WebsiteName>)` from the properties of the virtual directory. You can specify the wildcard character (`*`) instead of the default website by using the syntax `<VirtualDirectoryName>*`.
 
 ```yaml
 Type: VirtualDirectoryIdParameter

@@ -48,7 +48,7 @@ The Argument parameter specifies a valid argument to use with the specified Comp
 
 Common Argument values that you can use with virtually Component value are Help and Verbose.
 
-To see the Argument values that are available for a given Component value, run the command Get-ExchangeDiagnosticInfo -Process \<ProcessName\> -Component \<ComponentName\> -Argument Help
+To see the Argument values that are available for a given Component value, run the command `Get-ExchangeDiagnosticInfo -Process <ProcessName> -Component <ComponentName> -Argument Help`.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ### -Component
 The Component parameter returns detailed information for the specified Component of the given Process value.
 
-To see the Component values that are available for a given Process value, run the command Get-ExchangeDiagnosticInfo -Process \<ProcessName\> -Argument Help.
+To see the Component values that are available for a given Process value, run the command `Get-ExchangeDiagnosticInfo -Process <ProcessName> -Argument Help`.
 
 ```yaml
 Type: String

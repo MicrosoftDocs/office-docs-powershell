@@ -33,13 +33,13 @@ Install-UnifiedCompliancePrerequisite [-LoadOnly] [<CommonParameters>]
 ## DESCRIPTION
 This cmdlet returns the following information about the Compliance Policy Center:
 
-- SharepointRootSiteUrl: This value is typically https://\<domain\>.onmicrosoft.com/.
+- SharepointRootSiteUrl: This value is typically `https://<domain>.onmicrosoft.com/`.
 
-- SharepointTenantAdminUrl: This value uses the format https://\<domain\>-admin.onmicrosoft.com/.
+- SharepointTenantAdminUrl: This value uses the format `https://<domain>-admin.onmicrosoft.com/`.
 
 - SharepointSuccessInitializedUtc: The time that the Compliance Policy Center was last initialized in coordinated universal time (UTC).
 
-- SharepointPolicyCenterSiteUrl: This value is typically https://\<domain\>.onmicrosoft.com/sites/compliancepolicycenter.
+- SharepointPolicyCenterSiteUrl: This value is typically `https://<domain>.onmicrosoft.com/sites/compliancepolicycenter`.
 
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 

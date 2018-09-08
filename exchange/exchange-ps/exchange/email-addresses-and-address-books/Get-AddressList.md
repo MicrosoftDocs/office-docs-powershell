@@ -70,7 +70,7 @@ The Container parameter filters the results based on the location of the address
 
 - GUID
 
-- Path: `\<Name>` or `<Container>\<Name>`
+- Path: Name or Container\Name
 
 You can't use this parameter with the Identity or SearchText parameters.
 
@@ -114,7 +114,7 @@ The Identity parameter specifies the address list that you want to view. You can
 
 - GUID
 
-- Path: `\<Name>` or `<Container>\<Name>`
+- Path: Name or Container\Name
 
 You can't use this parameter with the Container or SearchText parameters.
 

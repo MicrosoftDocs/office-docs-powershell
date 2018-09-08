@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -GenericScopes
-The GenericScopes parameter filters the results by the scope. The available values are determined by the schema of the Exchange setting object. This parameter uses the syntax "\<key1\>=\<value1\>","\<key2\>=\<value2\>"...
+The GenericScopes parameter filters the results by the scope. The available values are determined by the schema of the Exchange setting object. This parameter uses the syntax `"<key1>=<value1>","<key2>=<value2>"..."<keyN>=<valueN>"`.
 
 ```yaml
 Type: String[]
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter filters the results by user. You identify the user by their GUID value (for example, 87246450-1b19-4c81-93dc-1a4200eff66c). To find the GUID for a user, run the following command: Get-User \<UserIdentity\> | Format-List Name,GUID.
+The User parameter filters the results by user. You identify the user by their GUID value (for example, 87246450-1b19-4c81-93dc-1a4200eff66c). To find the GUID for a user, run the following command: `Get-User <UserIdentity> | Format-List Name,GUID`.
 
 ```yaml
 Type: Guid

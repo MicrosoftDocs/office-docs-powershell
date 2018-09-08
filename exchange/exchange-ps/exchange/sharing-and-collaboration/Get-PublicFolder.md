@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: `\<Level1>\<Level2>\...\<LevelN>\<PublicFolder>`. For example, "\Customer Discussion" or "\Engineering\Customer Discussion".
+The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: "\Level1\Level2\...\LevelN\PublicFolder". For example, "\Customer Discussion" or "\Engineering\Customer Discussion".
 
 ```yaml
 Type: PublicFolderIdParameter

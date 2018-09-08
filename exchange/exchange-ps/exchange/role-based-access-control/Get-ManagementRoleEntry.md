@@ -59,7 +59,7 @@ The Identity parameter specifies the role entry to retrieve. A valid value for t
 
 For more information about how management role entries work, see Understanding management roles (https://technet.microsoft.com/library/dd298116.aspx).
 
-You can use the wildcard character (*) instead of the role, cmdlet name or both.
+You can use the wildcard character (`*`) instead of the role, cmdlet name or both.
 
 If the role entry name contains spaces, enclose the name in quotation marks (").
 
@@ -93,9 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-The Parameters parameter includes only the role entries that contain the parameters specified. You can specify multiple parameters, separated by commas. You can use the wildcard character (*) with partial parameter names to retrieve all parameters that match the value you specify.
+The Parameters parameter includes only the role entries that contain the parameters specified. You can specify multiple parameters, separated by commas. You can use the wildcard character (`*`) with partial parameter names to retrieve all parameters that match the value you specify.
 
-This parameter is useful when you use the wildcard character (*) with the value you specify in the Identity parameter.
+This parameter is useful when you use the wildcard character (`*`) with the value you specify in the Identity parameter.
 
 ```yaml
 Type: String[]

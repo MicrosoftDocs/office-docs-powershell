@@ -124,7 +124,7 @@ For example:
 
 - GUID
 
-You can specify multiple owners by using the following syntax: @("\<user1\>","\<user2\>"...).
+You can specify multiple owners by using the following syntax: `@("<user1>","<user2>"...)`.
 
 The users you specify with this parameter aren't automatically added to the group. To add members to the group, use the Update-EOPDistributionGroupMember cmdlet.
 
@@ -167,7 +167,7 @@ For example:
 
 - GUID
 
-You can specify multiple recipients by using the following syntax: @("\<recipient1\>","\<recipient2\>"...).
+You can specify multiple recipients by using the following syntax: `@("<recipient1>","<recipient2>"...)`.
 
 ```yaml
 Type: String[]

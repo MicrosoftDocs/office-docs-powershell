@@ -146,7 +146,7 @@ For example:
 
 - User ID or user principal name (UPN)
 
-You can specify multiple owners by using the following syntax: @("\<user1\>","\<user2\>"...). The values that you specify will overwrite the current list of owners.
+You can specify multiple owners by using the following syntax: `@("<user1>","\user2>"...)`. The values that you specify will overwrite the current list of owners.
 
 The users specified with the ManagedBy parameter aren't automatically members of the distribution group. If you want any of the owners to be added as members of the distribution group, you need to add them by using the Update-EOPDistributionGroupMember cmdlet.
 

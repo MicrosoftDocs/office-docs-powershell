@@ -120,7 +120,7 @@ For example:
 
 - GUID
 
-To replace the current members of the group with the recipients that you specify, use the syntax @("\<recipient1\>","\<recipient2\>"...). To add new group members without affecting the existing members, see Example 2 in the Examples section.
+To replace the current members of the group with the recipients that you specify, use the syntax `@("<recipient1>","<recipient2>"...)`. To add new group members without affecting the existing members, see Example 2 in the Examples section.
 
 ```yaml
 Type: String[]

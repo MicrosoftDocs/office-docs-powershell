@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the name or GUID of the routing group connector that you want to view. A valid name value uses the syntax AdministrativeGroupName\RoutingGroupName\RoutingGroupConnectorName, where AdministrativeGroupName\ and RoutingGroupName\ are optional. You can use the wildcard character (*) as part of the administrative group name or routing group name.
+The Identity parameter specifies the name or GUID of the routing group connector that you want to view. A valid name value uses the syntax AdministrativeGroupName\RoutingGroupName\RoutingGroupConnectorName, where AdministrativeGroupName\ and RoutingGroupName\ are optional. You can use the wildcard character (`*`) as part of the administrative group name or routing group name.
 
 ```yaml
 Type: RoutingGroupConnectorIdParameter

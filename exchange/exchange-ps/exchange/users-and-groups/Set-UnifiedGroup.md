@@ -226,7 +226,7 @@ The CalendarMemberReadOnly switch specifies whether to set read-only Calendar pe
 
 - To remove read-only Calendar permissions, use this exact syntax: -CalendarMemberReadOnly:$false.
 
-To view the current value of the CalendarMemberReadOnly property on an Office 365 Group, replace \<EmailAddress\> with the email address of the group, and run this command: `Get-UnifiedGroup -Identity <EmailAddress> -IncludeAllProperties | Format-List *Calendar*`.
+To view the current value of the CalendarMemberReadOnly property on an Office 365 Group, replace `<EmailAddress>` with the email address of the group, and run this command: `Get-UnifiedGroup -Identity <EmailAddress> -IncludeAllProperties | Format-List *Calendar*`.
 
 ```yaml
 Type: SwitchParameter
@@ -258,9 +258,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New and Set cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -687,7 +687,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this Office 365 Group. Although messages that are sent on behalf of the group clearly show the sender in the From field (\<Sender\> on behalf of \<Office365Group\>), replies to these messages are delivered to the group, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this Office 365 Group. Although messages that are sent on behalf of the group clearly show the sender in the From field (`<Sender> on behalf of <Mailbox>`), replies to these messages are delivered to the group, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender.
 
@@ -808,9 +808,9 @@ The MailTip parameter specifies the custom MailTip text for this recipient. The 
 
 When you add a MailTip to a recipient, two things happen:
 
-- HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: \<html\>\<body\>This mailbox is not monitored\</body\>\</html\>. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
+- HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: `<html><body>This mailbox is not monitored</body></html>`. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
 
-- The text is automatically added to the MailTipTranslations property of the recipient as the default value: default:\<MailTip text\>. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
+- The text is automatically added to the MailTipTranslations property of the recipient as the default value: `default:<MailTip text>`. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
 
 ```yaml
 Type: String
@@ -829,9 +829,9 @@ The MailTipTranslations parameter specifies additional languages for the custom 
 
 To add or remove MailTip translations without affecting the default MailTip or other MailTip translations, use the following syntax:
 
-@{Add="\<culture 1\>:\<localized text 1\>","\<culture 2\>:\<localized text 2\>"...; Remove="\<culture 3\>:\<localized text 3\>","\<culture 4\>:\<localized text 4\>"...}
+`@{Add="<culture 1>:<localized text 1>","<culture 2>:<localized text 2>"...; Remove="<culture 3>:<localized text 3>","<culture 4>:<localized text 4>"...}`
 
-\<culture\> is a valid ISO 639 two-letter culture code that's associated with the language.
+`<culture>` is a valid ISO 639 two-letter culture code that's associated with the language.
 
 For example, suppose this recipient currently has the MailTip text: "This mailbox is not monitored." To add the Spanish translation, use the following value for this parameter: @{Add="ES:Esta caja no se supervisa."}.
 

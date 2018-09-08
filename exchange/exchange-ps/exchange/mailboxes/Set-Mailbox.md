@@ -859,7 +859,7 @@ Accept wildcard characters: False
 ### -ArchiveName
 The ArchiveName parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App.
 
-If you don't use this parameter, the default value is In-Place Archive - \<Mailbox User's Display Name\>.
+If you don't use this parameter, the default value is `In-Place Archive - <Mailbox User's Display Name>`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1215,9 +1215,9 @@ Accept wildcard characters: False
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, `Remove-*` cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+- Destructive cmdlets (for example, Remove cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
-- Most other cmdlets (for example, `New-*` and `Set-*` cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New and Set cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -1577,7 +1577,7 @@ Accept wildcard characters: False
 ### -EmailAddresses
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx).
 
-Valid syntax for this parameter is `<Type>:<emailaddress1>,<Type>:<emailaddress2\,...<Type>:<emailaddressN>`. The optional `<Type>` value specifies the type of email address. Some examples of valid values include:
+Valid syntax for this parameter is `<Type>:<emailaddress1>,<Type>:<emailaddress2>,...<Type>:<emailaddressN>`. The optional `<Type>` value specifies the type of email address. Some examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 
@@ -1902,7 +1902,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mailbox. Although messages send on behalf of the mailbox clearly show the sender in the From field (\<Sender\> on behalf of \<Mailbox\>), replies to these messages are delivered to the mailbox, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mailbox. Although messages send on behalf of the mailbox clearly show the sender in the From field (`<Sender> on behalf of <Mailbox>`), replies to these messages are delivered to the mailbox, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender.
 
@@ -2203,9 +2203,9 @@ The MailTip parameter specifies the custom MailTip text for this recipient. The 
 
 When you add a MailTip to a recipient, two things happen:
 
-- HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: \<html\>\<body\>This mailbox is not monitored\</body\>\</html\>. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
+- HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: `<html><body>This mailbox is not monitored</body></html>`. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
 
-- The text is automatically added to the MailTipTranslations property of the recipient as the default value: default:\<MailTip text\>. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
+- The text is automatically added to the MailTipTranslations property of the recipient as the default value: `default:<MailTip text>`. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
 
 ```yaml
 Type: String
@@ -2224,9 +2224,9 @@ The MailTipTranslations parameter specifies additional languages for the custom 
 
 To add or remove MailTip translations without affecting the default MailTip or other MailTip translations, use the following syntax:
 
-@{Add="\<culture 1\>:\<localized text 1\>","\<culture 2\>:\<localized text 2\>"...; Remove="\<culture 3\>:\<localized text 3\>","\<culture 4\>:\<localized text 4\>"...}
+`@{Add="<culture 1>:<localized text 1>","<culture 2>:<localized text 2>"...; Remove="<culture 3>:<localized text 3>","<culture 4>:<localized text 4>"...}`
 
-\<culture\> is a valid ISO 639 two-letter culture code that's associated with the language.
+`<culture>` is a valid ISO 639 two-letter culture code that's associated with the language.
 
 For example, suppose this recipient currently has the MailTip text: "This mailbox is not monitored." To add the Spanish translation, use the following value for this parameter: @{Add="ES:Esta caja no se supervisa."}.
 
@@ -3462,7 +3462,7 @@ The SimpleDisplayName parameter is used to display an alternative description of
 
 - 0 - 9
 
-- "\<space\>", """, "'", "(", ")", "+", ",", "-", ".", "/", ":", and "?".
+- "`<space>`", """, "'", "(", ")", "+", ",", "-", ".", "/", ":", and "?".
 
 ```yaml
 Type: String
@@ -3565,19 +3565,19 @@ Accept wildcard characters: False
 ### -UMDtmfMap
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
-- emailAddress:\<integers\>
+- `emailAddress:<integers>`
 
-- lastNameFirstName:\<integers\>
+- `lastNameFirstName:<integers>`
 
-- firstNameLastName:\<integers\>
+- `firstNameLastName:<integers>`
 
-To enter values that overwrite all existing entries, use the following syntax: emailAddress:\<integers\>,lastNameFirstName:\<integers\>,firstNameLastName:\<integers\>.
+To enter values that overwrite all existing entries, use the following syntax: `emailAddress:<integers>,lastNameFirstName:<integers>,firstNameLastName:<integers>`.
 
-If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only emailAddress:\<integers\>, all existing lastNameFirstName and firstNameLastName values are removed.
+If you use this syntax and you omit any of the DTMF map values, those values are removed from the recipient. For example, if you specify only `emailAddress:<integers>`, all existing lastNameFirstName and firstNameLastName values are removed.
 
-To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
+To add or remove values without affecting other existing entries, use the following syntax: `@{Add="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"; Remove="emailAddress:<integers>","lastNameFirstName:<integers>","firstNameLastName:<integers>"}`.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<intgers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use `@{Add="emailAddress:<integers1>","emailAddress:<intgers2>}` to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
@@ -3846,7 +3846,7 @@ Accept wildcard characters: False
 ### -DumpsterMessagesPerFolderCountReceiveQuota
 The DumpsterMessagesPerFolderCountReceiveQuota parameter specifies the maximum number of messages that can be contained in each folder in the Recoverable Items folder (called the dumpster in previous versions of Exchange). When a folder exceeds this limit, it can't store new messages. For example, if the Deletions folder in the Recoverable Items folder has exceeded the message count limit and the mailbox owner attempts to permanently delete items from their mailbox, the deletion will fail.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List DumpsterMessagesPerFolderCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List DumpsterMessagesPerFolderCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -3863,7 +3863,7 @@ Accept wildcard characters: False
 ### -DumpsterMessagesPerFolderCountWarningQuota
 The DumpsterMessagesPerFolderCountWarningQuota parameters specifies the number of messages that each folder in the Recoverable Items folder (called the dumpster in previous versions of Exchange) can hold before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List DumpsterMessagesPerFolderCountWarningQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List DumpsterMessagesPerFolderCountWarningQuota`.
 
 ```yaml
 Type: Int32
@@ -3926,7 +3926,7 @@ This parameter is available only in on-premises Exchange.
 
 The FolderHierarchyChildrenCountReceiveQuota parameter specifies the maximum number of subfolders that can be created in a mailbox folder. The mailbox owner won't be able to create a new subfolder when this limit is reached.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FolderHierarchyChildrenCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyChildrenCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -3945,7 +3945,7 @@ This parameter is available only in on-premises Exchange.
 
 The FolderHierarchyChildrenCountWarningQuota parameter specifies the number of subfolders that can be created in a mailbox folder before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FolderHierarchyChildrenCountWarningQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyChildrenCountWarningQuota`.
 
 ```yaml
 Type: Int32
@@ -3964,7 +3964,7 @@ This parameter is available only in on-premises Exchange.
 
 The FolderHierarchyDepthReceiveQuota parameter specifies the maximum number of levels in the folder hierarchy of a mailbox folder. The mailbox owner won't be able to create another level in the folder hierarchy of the mailbox folder when this limit is reached.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FolderHierarchyDepthReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyDepthReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -3983,7 +3983,7 @@ This parameter is available only in on-premises Exchange.
 
 The FolderHierarchyDepthWarningQuota parameter specifies the number of levels in the folder hierarchy of a mailbox folder that can be created before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FolderHierarchyDepthWarningQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyDepthWarningQuota`.
 
 ```yaml
 Type: Int32
@@ -4002,7 +4002,7 @@ This parameter is available only in on-premises Exchange.
 
 The FoldersCountReceiveQuota parameter is used to specify a maximum number of folders within a mailbox, typically a public folder mailbox. If this value is configured and the limit is reached, no new folders will be able to be created.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FoldersCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FoldersCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -4021,7 +4021,7 @@ This parameter is available only in on-premises Exchange.
 
 The FoldersCountWarningQuota parameter is used to display a warning message that the folder hierarchy is full when the value specified for this parameter is reached. This parameter is typically used for public folder mailboxes.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List FoldersCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FoldersCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -4148,7 +4148,7 @@ The MailboxMessagesPerFolderCountReceiveQuota parameter specifies the maximum nu
 
 The MailboxMessagesPerFolderCountReceiveQuota value must be greater than or equal to the MailboxMessagesPerFolderCountWarningQuota value.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List MailboxMessagesPerFolderCountReceiveQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List MailboxMessagesPerFolderCountReceiveQuota`.
 
 ```yaml
 Type: Int32
@@ -4167,7 +4167,7 @@ The MailboxMessagesPerFolderCountWarningQuota parameter specifies the number of 
 
 The MailboxMessagesPerFolderCountReceiveQuota value must be greater than or equal to the MailboxMessagesPerFolderCountWarningQuota value.
 
-To see the current value of this property, run the command Get-MailboxStatistics \<MailboxIdentity\> | Format-List MailboxMessagesPerFolderCountWarningQuota
+To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List MailboxMessagesPerFolderCountWarningQuota`.
 
 ```yaml
 Type: Int32
@@ -4542,7 +4542,7 @@ This parameter is available only in the cloud-based service.
 
 The RemoveDelayHoldApplied switch specifies whether to remove delay holds from the mailbox. You don't need to specify a value with this switch.
 
-The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace \<MailboxIdentity\> with the name, email address, or alias of the mailbox, and run this command: Export-MailboxDiagnosticLogs -Identity \<MailboxIdentity\> -ComponentName HoldTracking.
+The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace `<MailboxIdentity>` with the name, email address, or alias of the mailbox, and run this command: `Export-MailboxDiagnosticLogs -Identity <MailboxIdentity> -ComponentName HoldTracking`.
 
 ```yaml
 Type: SwitchParameter
