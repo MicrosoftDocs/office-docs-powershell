@@ -1,32 +1,45 @@
 ---
-external help file: tmp_e0jy4uh4.ab3-help.xml
-Module Name: tmp_e0jy4uh4.ab3
-online version:
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
+Module Name: Skype for Business Online
+title: Grant-CsPolicy
 schema: 2.0.0
 ---
 
 # Grant-CsPolicy
 
 ## SYNOPSIS
+The Grant-CsPolicy cmdlet allows you to assign a policy to multiple users.
 
 ## SYNTAX
 
 ```
-Grant-CsPolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-Identity] <Object>] [-Tenant <Object>]
- [-DomainController <Object>] [[-PolicyType] <Object>] [-WhatIf] [-AsJob]
+Grant-CsPolicy [[-PolicyType] <String>] [[-PolicyName] <String>] [[-Identity] <List>] [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-Confirm] [-AsJob] [-PassThru] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Grant-CsPolicy cmdlet allows you to assign a policy to multiple users.  A policy type and policy name are passed together with a list of users to which the policy will be assigned.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $users = ("Ken Meyer", "Seema Kulkarni")
+PS C:\> Grant-CsPolicy -PolicyType "TeamsUpgradePolicy" -PolicyName "SfBWithTeamsCollab" -Identity $users
 ```
 
-{{ Add example description here }}
+This command will assign the Teams upgrade policy SfBWithTeamsCollab to two users.
+
+### Example 2
+```powershell
+PS C:\> $users = Import-CSV "users.csv"
+PS C:\> Grant-CsPolicy -PolicyType "TeamsUpgradePolicy" -PolicyName "SfBWithTeamsCollab" -Identity $users
+```
+
+This command will assign the Teams upgrade policy SfBWithTeamsCollab to all the users listed in the file users.csv.
+
+
 
 ## PARAMETERS
 
