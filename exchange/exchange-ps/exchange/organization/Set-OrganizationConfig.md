@@ -712,6 +712,8 @@ The ConnectorsEnabled parameter specifies whether to enable or disable connected
 
 - $false: Connectors are disabled.
 
+The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Yammer.
+
 To enable and disable the ability to use connectors on specific Office 365 groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
 
 For more information about connectors for Outlook on the web, see Connect apps to your inbox in Outlook on the web (https://go.microsoft.com/fwlink/p/?LinkId=845310).
