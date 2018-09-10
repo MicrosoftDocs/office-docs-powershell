@@ -58,8 +58,8 @@ Get-CsVoiceRoute -Filter *test*
 ```
 
 This command displays voice route settings where the Identity contains the string "test" anywhere within the value.
-To find the string test only at the end of the Identity, use the value *test.
-Similarly, to find the string test only if it occurs at the beginning of the Identity, specify the value test*.
+To find the string test only at the end of the Identity, use the value \*test.
+Similarly, to find the string test only if it occurs at the beginning of the Identity, specify the value test\*.
 
 ### -------------------------- Example 4 --------------------------
 ```
