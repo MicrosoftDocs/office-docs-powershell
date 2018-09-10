@@ -17,20 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### BatchesFromEndpoint
 ```
-Get-MigrationBatch [-Diagnostic] [-DiagnosticArgument <String>] [-DomainController <Fqdn>]
- [-Endpoint <MigrationEndpointIdParameter>] [-IncludeReport]
- [-Status <Created | Syncing | Stopping | Stopped | Completed | Failed | Removing | Synced | IncrementalSyncing | Completing | CompletedWithErrors | SyncedWithErrors | Corrupted | Waiting | Starting>]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Get-MigrationBatch [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>] [-Endpoint <MigrationEndpointIdParameter>] [-IncludeReport]
+ [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>] [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Diagnostic] [-DiagnosticArgument <String>]
- [-DomainController <Fqdn>] [-IncludeReport]
- [-Status <Created | Syncing | Stopping | Stopped | Completed | Failed | Removing | Synced | IncrementalSyncing | Completing | CompletedWithErrors | SyncedWithErrors | Corrupted | Waiting | Starting>]
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+ [-DiagnosticInfo <String>] [-DomainController <Fqdn>] [-IncludeReport]
+ [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>] [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,13 +67,15 @@ This example displays information about all migration batches associated with th
 ## PARAMETERS
 
 ### -Diagnostic
+This parameter is available only in on-premises Exchange.
+
 The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -82,13 +84,15 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticArgument
+This parameter is available only in on-premises Exchange.
+
 The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -113,6 +117,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DiagnosticInfo
+This parameter is available only in the cloud-based service.
+
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Endpoint
 The Endpoint parameter returns a list of migration batches associated with the specified migration endpoint.
 
@@ -120,7 +141,7 @@ If you use this parameter, you can't include the Identity parameter.
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: Set2
+Parameter Sets: BatchesFromEndpoint
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
@@ -137,7 +158,7 @@ If you use this parameter, you can't include the Endpoint parameter.
 
 ```yaml
 Type: MigrationBatchIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
@@ -148,13 +169,32 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeReport
-The IncludeReport parameter returns additional information about the specified migration batch. This information is displayed in the Report field.
+The IncludeReport switch returns additional information about the specified migration batch. You don't need to specify a value with this switch.
+
+This information is displayed in the Report field.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -196,25 +236,10 @@ The Status parameter returns a list of migration batches that have the specified
 - Waiting
 
 ```yaml
-Type: Created | Syncing | Stopping | Stopped | Completed | Failed | Removing | Synced | IncrementalSyncing | Completing | CompletedWithErrors | SyncedWithErrors | Corrupted | Waiting | Starting
+Type: Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None

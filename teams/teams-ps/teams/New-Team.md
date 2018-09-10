@@ -12,13 +12,14 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team.  Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default.  If you want these groups to appear in Outlook clients, you can use the Set-UnifiedGroup (https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps) cmdlet in the Exchange Powershell Module to set the parameter HiddenFromExchangeClients to $false. 
 
+Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected. 
 Note: This cmdlet is currently in Beta and functionality may change.
 
 ## SYNTAX
 
 ```
 New-Team [-Group <String>] [-DisplayName <String>] [-Description <String>] [-Alias <String>]
- [-Classification <String>] [-Visibility <String>] [-AddCreatorAsMember <Boolean>] [<CommonParameters>]
+ [-Classification <String>] [-AccessType <String>] [-AddCreatorAsMember <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,13 +34,13 @@ New-Team -DisplayName "Tech Reads"
 
 ### Example 2
 ```
-New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -Visibility Public
+New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -AccessType Public
 ```
 
 ### Example 3
 ```
 Connect-MicrosoftTeams -AccountId myaccount@example.com
-$group = New-Team -alias "TestTeam" -displayname "Test Teams" -Visibility "private"
+$group = New-Team -alias "TestTeam" -displayname "Test Teams" -AccessType "private"
 Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "wilma@example.com"
@@ -51,11 +52,11 @@ Set-TeamFunSettings -GroupId $group.GroupId -AllowCustomMemes true
 
 ## PARAMETERS
 
-### -Visibility
+### -AccessType
 Team visibility.
 Valid values are "Private" and "Public".
 Default is "Private".
-(This parameter has the same meaning as -AccessType in New-UnifiedGroup.)
+(In Set-Team this parameter is called Visibility.)
 
 ```yaml
 Type: String

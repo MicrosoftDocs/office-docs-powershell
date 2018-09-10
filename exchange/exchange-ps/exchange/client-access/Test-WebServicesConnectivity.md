@@ -48,7 +48,9 @@ Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>]
 ## DESCRIPTION
 The Test-WebServicesConnectivity cmdlet tests Exchange Web Services connectivity by connecting to a specified Exchange Web Services virtual directory, to any Exchange Web Services virtual directories on a specified Exchange server, or to any Exchange Web Services virtual directories that are available in the local Active Directory site.
 
-The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command.
+The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command:
+
+& $env:ExchangeInstallPath\Scripts\New-TestCasConnectivityUser.ps1
 
 The test results are displayed on-screen. The cmdlet returns the following information.
 

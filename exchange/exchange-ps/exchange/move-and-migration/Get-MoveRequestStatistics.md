@@ -19,21 +19,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter> [-DomainController <Fqdn>] [-IncludeReport]
- [-Diagnostic] [-DiagnosticArgument <String>] [-ProxyToMailbox <MailboxIdParameter>] [-ReportOnly]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter> [-DomainController <Fqdn>] [-IncludeReport]
- [-MailboxGuid <Guid>] [-Diagnostic] [-DiagnosticArgument <String>] [-ProxyToMailbox <MailboxIdParameter>]
+Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter> [-Diagnostic] [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>] [-DomainController <Fqdn>] [-IncludeReport] [-ProxyToMailbox <MailboxIdParameter>]
  [-ReportOnly] [<CommonParameters>]
 ```
 
-### Set3
+### MigrationMoveRequestQueue
+```
+Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter> [-Diagnostic] [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>] [-IncludeReport] [-MailboxGuid <Guid>] [-ReportOnly] [<CommonParameters>]
+```
+
+### MRSInstance
 ```
 Get-MoveRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-MailboxGuid <Guid>]
  [<CommonParameters>]
@@ -104,7 +103,7 @@ You can use this parameter with the MoveRequestQueue or MailboxGuid parameters.
 
 ```yaml
 Type: MoveRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: True
@@ -127,7 +126,7 @@ You can't use this parameter with the Identity or MRSInstance parameters.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
@@ -146,10 +145,65 @@ You can use this parameter with the Identity or MoveRequestQueue parameters.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set3
+Parameter Sets: MRSInstance
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Diagnostic
+This parameter is available only in on-premises Exchange.
+
+The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
+
+Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, MigrationMoveRequestQueue
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticArgument
+This parameter is available only in on-premises Exchange.
+
+The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. You don't need to specify a value with this switch.
+
+Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: Identity, MigrationMoveRequestQueue
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticInfo
+This parameter is available only in the cloud-based service.
+
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -178,7 +232,7 @@ The IncludeReport switch specifies whether to return additional details, which c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
@@ -193,51 +247,13 @@ This parameter is available only in on-premises Exchange.
 
 The MailboxGuid parameter specifies the GUID of a mailbox for which you want to view the move request statistics.
 
-You can use this parameter with the Identity parameter.
+You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
-Parameter Sets: Set2, Set3
+Parameter Sets: MigrationMoveRequestQueue, MRSInstance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Diagnostic
-This parameter is available only in on-premises Exchange.
-
-The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
-
-Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DiagnosticArgument
-This parameter is available only in on-premises Exchange.
-
-The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. You don't need to specify a value with this switch.
-
-Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
-
-```yaml
-Type: String
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -276,7 +292,7 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -291,7 +307,7 @@ The ReportOnly switch returns the results as an array of report entries. You don
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
 Required: False
