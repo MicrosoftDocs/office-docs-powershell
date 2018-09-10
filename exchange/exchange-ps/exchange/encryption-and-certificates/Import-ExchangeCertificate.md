@@ -57,10 +57,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Import-ExchangeCertificate -Server Mailbox01 -FileName" \\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
+Import-ExchangeCertificate -Server Mailbox01 -FileName "\\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
 
-This example imports the certificate from the PKCS #12 file from \\FileServer01\Data\Exported Fabrikam Cert.pfx to the Exchange server named Mailbox01. This file requires the password P@ssw0rd1. This certificate could have been exported from another server, or issued by a certification authority.
+This example imports the certificate from the PKCS #12 file from `\\FileServer01\Data\Exported Fabrikam Cert.pfx` to the Exchange server named Mailbox01. This file requires the password P@ssw0rd1. This certificate could have been exported from another server, or issued by a certification authority.
 
 ### -------------------------- Example 2 --------------------------
 ```

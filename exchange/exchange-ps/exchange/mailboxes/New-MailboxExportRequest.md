@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\SERVER01\PST Files\exported.pst.
+The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, `\\SERVER01\PST Files\exported.pst`.
 
 You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
 

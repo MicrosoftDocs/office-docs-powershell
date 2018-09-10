@@ -70,7 +70,7 @@ Export-ExchangeCertificate -Thumbprint 72570529B260E556349F3403F5CF5819D19B3B58 
 
 This example exports a pending certificate request to a file with the following settings:
 
-The pending certificate request that has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 on the Exchange server named Mailbox01 is exported to the file \\FileServer01\Data\Fabrikam.req.
+The pending certificate request that has the thumbprint value 72570529B260E556349F3403F5CF5819D19B3B58 on the Exchange server named Mailbox01 is exported to the file `\\FileServer01\Data\Fabrikam.req`.
 
 The exported certificate request file is Base64 encoded, so the information that's written to the file is also displayed onscreen.
 
