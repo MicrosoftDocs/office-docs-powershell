@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
 title: Set-ActiveSyncDeviceAutoblockThreshold
 schema: 2.0.0

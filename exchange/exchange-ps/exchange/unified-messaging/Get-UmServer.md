@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010
 title: Get-UmServer
 schema: 2.0.0
