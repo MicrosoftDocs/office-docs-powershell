@@ -187,7 +187,7 @@ The EnableMailboxIntelligence parameter specifies whether to enable or disable m
 - $true: Use mailbox intelligence in domain and user impersonation protection.
 
 - $false: Don't use mailbox intelligence in domain and user impersonation protection. This is the default value.
-- 
+
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
