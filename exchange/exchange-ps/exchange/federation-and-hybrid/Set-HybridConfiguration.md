@@ -176,7 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter isn't used and will be deprecated from the Set-HybridConfiguration cmdlet in a future release. There can be only one HybridConfiguration object in an Exchange organization.
+This parameter has been deprecated and is no longer used.
+
+There can be only one HybridConfiguration object in an Exchange organization.
 
 ```yaml
 Type: String

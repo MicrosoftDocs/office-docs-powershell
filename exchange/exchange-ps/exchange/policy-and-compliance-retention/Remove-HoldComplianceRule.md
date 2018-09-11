@@ -13,7 +13,7 @@ This cmdlet is available only in the Office 365 Security & Compliance Center. Fo
 
 Use the Remove-HoldComplianceRule cmdlet to remove preservation rules from the Security & Compliance Center.
 
-The Remove-HoldComplianceRule cmdlet has been replaced by the Remove-RetentionComplianceRule cmdlet. If you have any scripts that use the Remove-HoldComplianceRule cmdlet, update them to use the Remove-RetentionComplianceRule cmdlet.
+Note: The Remove-HoldComplianceRule cmdlet has been replaced by the Remove-RetentionComplianceRule cmdlet. If you have scripts that use Remove-HoldComplianceRule, update them to use Remove-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
