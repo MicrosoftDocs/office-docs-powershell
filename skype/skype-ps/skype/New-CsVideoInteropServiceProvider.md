@@ -32,7 +32,7 @@ Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join T
 
 Use the New-CsVideoInteropServiceProvider to specify information about a supported CVI partner your organization would like to use.
 
-Important note: New CsVideoInteropServiceProvider does not do a check on the -Name to be one of the Identity (without tag:) from the Get-CsTeamsVideoInteropServicePolicy, however if this is not set to match, the scheduling service will not add the VTC Coordinates.  Make sure that your "Name" matches a valid policy.
+Important note: New-CsVideoInteropServiceProvider does not do a check on the -Name to be one of the Identity (without tag:) from the Get-CsTeamsVideoInteropServicePolicy, however if this is not set to match, the VTC coordinates will not added to the meetings correctly.  Make sure that your "Name" matches a valid policy.  Make sure that your "Name" matches a valid policy.
 
 ## EXAMPLES
 
