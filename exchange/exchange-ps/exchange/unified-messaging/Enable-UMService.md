@@ -11,9 +11,9 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Enable-UMService cmdlet to set the status of an Exchange Server 2010 Unified Messaging server to enabled. This setting enables the Unified Messaging server to process UM calls.
+Use the Enable-UMService cmdlet to set the status of an Exchange Server 2010 Unified Messaging (UM) server to enabled. This setting enables the Unified Messaging server to process UM calls.
 
-You can run this cmdlet on an Exchange Server 2016 Mailbox server, but the target server must be an Exchange 2010 UM server. You can't use this cmdlet to enable the UM service on an Exchange 2016 Mailbox server.
+You can run this cmdlet in Exchange 2013 or later, but the target server must be an Exchange 2010 UM server. You can't use this cmdlet to enable the UM service on Exchange 2013 or Exchange 2016 Mailbox servers.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

@@ -154,7 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-The Members parameter specifies the members of the site mailbox. You can add or remove members using this parameter. This is a multivalued parameter and multiple recipients should be separated by a comma. This parameter is intended for use only by the user interface. We recommend that you don't use this parameter in the Shell.
+This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
+
+The Members parameter specifies the members of the site mailbox. You can add or remove members using this parameter. This is a multivalued parameter and multiple recipients should be separated by a comma.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -169,7 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -Owners
-The Owners parameter specifies the site mailbox's owners. This is a multivalued field and multiple recipients should be separated by commas. This parameter is intended for use only by the user interface. We recommend that you don't use this parameter in the Shell.
+This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
+
+The Owners parameter specifies the site mailbox's owners. This is a multivalued field and multiple recipients should be separated by commas.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -214,7 +218,9 @@ Accept wildcard characters: False
 ```
 
 ### -ShowInMyClient
-The ShowInMyClient parameter specifies that the site mailbox folder will show in your email client. This parameter is intended for use only by the user interface. We recommend that you don't use this parameter in the Shell.
+This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
+
+The ShowInMyClient parameter specifies that the site mailbox folder will show in your email client.
 
 ```yaml
 Type: $true | $false

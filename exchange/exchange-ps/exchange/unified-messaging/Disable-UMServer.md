@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the Disable-UMServer cmdlet to set the status of a Unified Messaging (UM) server to disabled. This prevents the Unified Messaging server from processing UM calls.
+Use the Disable-UMServer cmdlet to set the status of an Exchange Server 2010 Unified Messaging (UM) server to disabled. This prevents the Unified Messaging server from processing UM calls.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
