@@ -36,7 +36,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-AcceptMessagesOnlyFrom <MultiValu
  [-CustomAttribute3 <String>] [-CustomAttribute4 <String>] [-CustomAttribute5 <String>]
  [-CustomAttribute6 <String>] [-CustomAttribute7 <String>] [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>] [-Database <DatabaseIdParameter>] [-DeliverToMailboxAndForward <$true | $false>]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-DowngradeHighPriorityMessagesEnabled <$true | $false>]
+ [-DisableThrottling <$true | $false>] [-DisplayName <String>] 
+ [-DomainController <Fqdn>] [-DowngradeHighPriorityMessagesEnabled <$true | $false>]
  [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
  [-EndDateForRetentionHold <DateTime>] [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>] [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -123,7 +124,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
  [-CustomAttribute5 <String>] [-CustomAttribute6 <String>] [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-Database <DatabaseIdParameter>]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>] [-DefaultPublicFolderMailbox <RecipientIdParameter>]
- [-DeliverToMailboxAndForward <$true | $false>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-DeliverToMailboxAndForward <$true | $false>] [-DisableThrottling <$true | $false>]
+ [-DisplayName <String>] [-DomainController <Fqdn>]
  [-DowngradeHighPriorityMessagesEnabled <$true | $false>] [-DumpsterMessagesPerFolderCountReceiveQuota <Int32>]
  [-DumpsterMessagesPerFolderCountWarningQuota <Int32>] [-ElcProcessingDisabled <$true | $false>]
  [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
@@ -211,7 +213,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveDelayHoldApplied]
  [-CustomAttribute5 <String>] [-CustomAttribute6 <String>] [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-Database <DatabaseIdParameter>]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>] [-DefaultPublicFolderMailbox <RecipientIdParameter>]
- [-DeliverToMailboxAndForward <$true | $false>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-DeliverToMailboxAndForward <$true | $false>] [-DisableThrottling <$true | $false>]
+ [-DisplayName <String>] [-DomainController <Fqdn>]
  [-DowngradeHighPriorityMessagesEnabled <$true | $false>] [-DumpsterMessagesPerFolderCountReceiveQuota <Int32>]
  [-DumpsterMessagesPerFolderCountWarningQuota <Int32>] [-ElcProcessingDisabled <$true | $false>]
  [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
@@ -299,7 +302,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
  [-CustomAttribute5 <String>] [-CustomAttribute6 <String>] [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-Database <DatabaseIdParameter>]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>] [-DefaultPublicFolderMailbox <RecipientIdParameter>]
- [-DeliverToMailboxAndForward <$true | $false>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-DeliverToMailboxAndForward <$true | $false>] [-DisableThrottling <$true | $false>]
+ [-DisplayName <String>] [-DomainController <Fqdn>]
  [-DowngradeHighPriorityMessagesEnabled <$true | $false>] [-DumpsterMessagesPerFolderCountReceiveQuota <Int32>]
  [-DumpsterMessagesPerFolderCountWarningQuota <Int32>] [-ElcProcessingDisabled <$true | $false>]
  [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
@@ -387,7 +391,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
  [-CustomAttribute5 <String>] [-CustomAttribute6 <String>] [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-Database <DatabaseIdParameter>]
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>] [-DefaultPublicFolderMailbox <RecipientIdParameter>]
- [-DeliverToMailboxAndForward <$true | $false>] [-DisplayName <String>] [-DomainController <Fqdn>]
+ [-DeliverToMailboxAndForward <$true | $false>] [-DisableThrottling <$true | $false>]
+ [-DisplayName <String>] [-DomainController <Fqdn>]
  [-DowngradeHighPriorityMessagesEnabled <$true | $false>] [-DumpsterMessagesPerFolderCountReceiveQuota <Int32>]
  [-DumpsterMessagesPerFolderCountWarningQuota <Int32>] [-ElcProcessingDisabled <$true | $false>]
  [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
@@ -1517,6 +1522,27 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableThrottling
+The DeliverToMailboxAndForward parameter acts as a switch for whether sender rate throttling is enabled or disabled for a particular mailbox.Valid values are:
+
+- $true: Messages sent by this mailbox will not be throttled by Sender Rate Control.
+
+- $false: Messages will be throttled after the threshold is exceeded. This is the default value.
+
+Enabling of this switch is only recommended for moderation mailboxes.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
