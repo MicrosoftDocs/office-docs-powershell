@@ -1527,13 +1527,11 @@ Accept wildcard characters: False
 ```
 
 ### -DisableThrottling
-The DeliverToMailboxAndForward parameter acts as a switch for whether sender rate throttling is enabled or disabled for a particular mailbox.Valid values are:
+The DisableThrottling parameter enables or disables sender rate throttling for the mailbox. Valid values are:
 
-- $true: Messages sent by this mailbox will not be throttled by Sender Rate Control.
+- $true: Messages sent by this mailbox will not be throttled by Sender Rate Control. We only recommend this value for moderation mailboxes.
 
 - $false: Messages will be throttled after the threshold is exceeded. This is the default value.
-
-Enabling of this switch is only recommended for moderation mailboxes.
 
 ```yaml
 Type: $true | $false
