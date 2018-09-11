@@ -89,9 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClassificationRuleCollectionIdentity
-The ClassificationRuleCollectionIdentity parameter is reserved for future use.
-
-New data classification rules that you create are automatically added to the classification rule collection named Fingerprint Classification Collection.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ClassificationRuleCollectionIdParameter

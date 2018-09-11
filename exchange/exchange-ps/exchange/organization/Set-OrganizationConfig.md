@@ -555,7 +555,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuditDisabled
-This parameter is available only in the online cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
 

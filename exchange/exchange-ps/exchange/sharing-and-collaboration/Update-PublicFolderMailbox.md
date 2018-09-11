@@ -187,7 +187,9 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressStatus
-The SuppressStatus switch specifies that the output of this cmdlet is suppressed and that the command will run asynchronously in the background from the Exchange Management Shell. If you don't use this switch in the command, the output will display status messages every 3 seconds for up to one minute. Until the minute passes, you can't use that instance of the Shell.
+The SuppressStatus switch specifies that the output of this cmdlet is suppressed and that the command will run asynchronously in the background from the Exchange Management Shell. You don't need to specify a value with this switch.
+
+If you don't use this switch, the output will display status messages every 3 seconds for up to one minute. Until the minute passes, you can't use that instance of the Exchange Management Shell.
 
 ```yaml
 Type: SwitchParameter

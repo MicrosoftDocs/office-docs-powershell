@@ -99,7 +99,7 @@ The Site parameter filters the results by Active Directory site. You can use any
 - Distinguished name (DN)
 
 - GUID
-- 
+
 - To see a list of available sites, use the Get-ADSite cmdlet.
 
 ```yaml

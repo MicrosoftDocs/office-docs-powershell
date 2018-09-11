@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ### -ConvertClosedDlToPrivateGroup
 The ConvertClosedDlToPrivateGroup switch specifies whether to migrate the closed distribution group to a private Office 365 Group. You don't need to specify a value with this switch.
 
-By default, this switch is always applied when migrating closed distribution groups, and will eventually be deprecated.
+By default, this switch is always applied when migrating closed distribution groups, and is no longer required.
 
 If the distribution group has the value Closed for the MemberDepartRestriction or MemberJoinRestriction parameters, the distribution group will always be migrated to a private Office 365 Group. For open distribution groups, the migrated Office 365 Group is always public, not private.
 

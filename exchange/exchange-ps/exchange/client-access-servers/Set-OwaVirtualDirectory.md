@@ -2494,7 +2494,7 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 The WebReadyDocumentViewingForAllSupportedTypes parameter specifies whether to enable WebReady Document Viewing for all supported file and MIME types. Valid values are:
 
 - $true: All supported attachment types are avaialble for WebReady Document Viewing. This is the default value.
-- 
+
 - $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are avaialble for WebReady Document Viewing (you can remove values from the lists).
 
 ```yaml

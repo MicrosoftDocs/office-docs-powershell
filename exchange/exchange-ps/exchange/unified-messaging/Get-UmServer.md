@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the Get-UMServer cmdlet to display the properties for a single Unified Messaging (UM) server or to display a list of servers enabled for Unified Messaging.
+Use the Get-UMServer cmdlet to view settings that are associated with the Unified Messaging (UM) server role.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

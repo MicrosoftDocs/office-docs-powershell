@@ -13,7 +13,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ActiveSyncMailboxPolicy cmdlet to create a Microsoft Mobile Device mailbox policy object.
 
-The New-ActiveSyncMailboxPolicy cmdlet will be removed in a future version of Microsoft Exchange. Use the New-MobileMailboxPolicy cmdlet instead. If you have any scripts that use the New-ActiveSyncMailboxPolicy cmdlet, update them to use the New-MobileMailboxPolicy cmdlet.
+Note: In Exchange 2013 or later, use the New-MobileMailboxPolicy cmdlet instead. If you have scripts that use New-ActiveSyncMailboxPolicy, update them to use New-MobileMailboxPolicy.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

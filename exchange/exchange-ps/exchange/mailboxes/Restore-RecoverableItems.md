@@ -50,7 +50,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 $mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"; $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
 ```
 
-This example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\My Documents\RestoreMessage.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
+This example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\\My Documents\\RestoreMessage.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
 
 SMTPAddress
 

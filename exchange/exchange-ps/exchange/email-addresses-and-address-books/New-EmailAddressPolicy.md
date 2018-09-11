@@ -110,15 +110,15 @@ New-EmailAddressPolicy -Name "Southeast Offices" -IncludedRecipients MailboxUser
 
 This example creates an email address policy in an on-premises Exchange organization that uses a precanned recipient filter:
 
-Name: Southeast Offices
+- Name: Southeast Offices
 
-Precanned recipient filter: All users with mailboxes where the State or province value is GA, AL, or LA (Georgia, Alabama, or Louisiana).
+- Precanned recipient filter: All users with mailboxes where the State or province value is GA, AL, or LA (Georgia, Alabama, or Louisiana).
 
-Primary SMTP email address:\<last name\>.\<first two letters of the first name\>@contoso.com
+- Primary SMTP email address: \<last name\>.\<first two letters of the first name\>@contoso.com
 
-Additional proxy email addresses:\<last name\>.\<first two letters of the first name\>@contoso.net
+- Additional proxy email addresses: \<last name\>.\<first two letters of the first name\>@contoso.net
 
-Priority:N+1, where N is the number of manually created email address policies that already exist (we didn't use the Priority parameter, and the default value is N+1).
+- Priority:N+1, where N is the number of manually created email address policies that already exist (we didn't use the Priority parameter, and the default value is N+1).
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -127,15 +127,15 @@ New-EmailAddressPolicy -Name "Northwest Executives" -RecipientFilter {(Recipient
 
 This example creates an email address policy in an on-premises Exchange organization that uses a custom recipient filter:
 
-Name: Northwest Executives
+- Name: Northwest Executives
 
-Custom recipient filter: All users with mailboxes where the Title value contains Director or Manager, and the State or province value is WA, OR, or ID (Washington, Oregon, or Idaho).
+- Custom recipient filter: All users with mailboxes where the Title value contains Director or Manager, and the State or province value is WA, OR, or ID (Washington, Oregon, or Idaho).
 
-Primary SMTP email address:\<first two letters of the first name\>\<last name\>@contoso.com
+- Primary SMTP email address: \<first two letters of the first name\>\<last name\>@contoso.com
 
-Additional proxy email addresses: None
+- Additional proxy email addresses: None
 
-Priority: 2
+- Priority: 2
 
 ## PARAMETERS
 

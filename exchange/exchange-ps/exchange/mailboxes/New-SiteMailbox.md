@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-SiteMailbox
 ```
 
-You can't run this cmdlet from the Shell. Use SharePoint to create a site mailbox.
+You can't run this cmdlet from the Exchange Management Shell. Use SharePoint to create a site mailbox.
 
 ## PARAMETERS
 

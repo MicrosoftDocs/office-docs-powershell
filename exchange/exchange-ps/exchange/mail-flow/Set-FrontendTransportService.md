@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-FrontEndTransportService cmdlet to set the transport configuration options for the Front End Transport service on Mailbox servers.
+Use the Get-FrontEndTransportService cmdlet to modify the configuration of the Front End Transport service on Exchange 2013 or later servers that have the Client Access server role installed.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

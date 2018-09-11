@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCallsAllowed
-The MaxCallsAllowed parameter will be removed in future versions of the product.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: Int32

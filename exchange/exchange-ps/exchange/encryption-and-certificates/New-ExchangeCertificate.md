@@ -341,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-The Instance parameter is no longer used and will be deprecated.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: X509Certificate2

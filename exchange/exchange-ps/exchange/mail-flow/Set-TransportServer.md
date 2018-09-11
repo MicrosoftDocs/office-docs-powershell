@@ -11,7 +11,9 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-TransportServer cmdlet to set the transport configuration options for the Transport service on Mailbox servers or for Edge Transport servers.
+Use the Set-TransportServer cmdlet to modify settings that are associated with the Hub Transport server role or the Edge Transport server role.
+
+Note: In Exchange 2013 or later, use the Set-TransportService cmdlet instead. If you have scripts that use Set-TransportServer, update them to use Set-TransportService.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -74,8 +76,6 @@ Set-TransportServer [-Identity] <ServerIdParameter> [-ActiveUserStatisticsLogMax
 ```
 
 ## DESCRIPTION
-The Set-TransportServer cmdlet will be removed in a future version of Exchange. You should use the Set-TransportService cmdlet instead.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES

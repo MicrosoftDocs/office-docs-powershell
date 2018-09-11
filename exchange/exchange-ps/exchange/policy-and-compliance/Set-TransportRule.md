@@ -4793,17 +4793,17 @@ Accept wildcard characters: False
 ### -IncidentReportOriginalMail
 This parameter is available or functional only in Exchange Server 2013.
 
+This parameter has been deprecated and is no longer used. Use the IncidentReportContent parameter instead. The value AttachOriginalMail on the IncidentReportContent parameter is equivalent to setting this parameter to the value IncludeOriginalMail.
+
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is only available on Mailbox servers.
+
 The IncidentReportOriginalMail parameter specifies whether to include the original message with the incident report. This parameter is used together with the GenerateIncidentReport parameter. Valid values are:
 
 - IncludeOriginalMail
 
-- DoNotIncludeOriginalMail
-
-The default value is DoNotIncludeOriginalMail.
-
-This parameter is used to define a rule action.
-
-The functionality of this parameter is now managed by the IncidentReportContent parameter and this parameter will be deprecated in the future. Adding the value AttachOriginalMail to the IncidentReportContent parameter is equivalent to setting this parameter to IncludeOriginalMail value. Even though this parameter is still functional, we recommend you use the IncidentReportContent parameter instead.
+- DoNotIncludeOriginalMail (this is the default value)
 
 ```yaml
 Type: IncludeOriginalMail | DoNotIncludeOriginalMail

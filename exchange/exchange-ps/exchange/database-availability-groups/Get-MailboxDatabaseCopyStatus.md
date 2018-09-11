@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStatus
-The ConnectionStatus switch is obsolete and in the process of being deprecated. Use of this switch will be ignored by the task. The information previously provided by this switch is now provided through an internal caching mechanism and, as such, the switch is no longer needed.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter

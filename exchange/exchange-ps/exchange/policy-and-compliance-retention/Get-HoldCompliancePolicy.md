@@ -13,7 +13,7 @@ This cmdlet is available only in the Office 365 Security & Compliance Center. Fo
 
 Use the Get-HoldCompliancePolicy to view existing preservation policies in the Security & Compliance Center.
 
-The Get-HoldCompliancePolicy cmdlet has been replaced by the Get-RetentionCompliancePolicy cmdlet. If you have any scripts that use the Get-HoldCompliancePolicy cmdlet, update them to use the Get-RetentionCompliancePolicy cmdlet.
+Note: The Get-HoldCompliancePolicy cmdlet has been replaced by the Get-RetentionCompliancePolicy cmdlet. If you have scripts that use Get-HoldCompliancePolicy, update them to use Get-RetentionCompliancePolicy.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

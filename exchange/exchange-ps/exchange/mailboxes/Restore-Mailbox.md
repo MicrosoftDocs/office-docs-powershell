@@ -13,7 +13,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Restore-Mailbox cmdlet to extract mailbox content from a restored database.
 
-If you are running Exchange Server Service Pack 1 (SP1) or a later version, use the New-MailboxRestoreRequest cmdlet instead of the Restore-Mailbox cmdlet to extract mailbox content from a restored database. For more information, see New Mailbox and Recipient Functionality in Exchange 2010 SP1 and New-MailboxRestoreRequest.
+Note: In Exchange Server 2010 Service Pack 1 (SP1) or later, use the New-MailboxRestoreRequest cmdlet instead of the Restore-Mailbox cmdlet to extract mailbox content from a restored database.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
