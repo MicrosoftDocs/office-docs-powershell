@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010
 title: Set-UmServer
 schema: 2.0.0
@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the Set-UMServer cmdlet to set the properties on a Unified Messaging (UM) server.
+Use the Set-UMServer cmdlet to modify settings that are associated with the Unified Messaging (UM) server role.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

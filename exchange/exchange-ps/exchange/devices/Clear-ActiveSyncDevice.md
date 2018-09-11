@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 title: Clear-ActiveSyncDevice
 schema: 2.0.0
@@ -13,7 +13,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Clear-ActiveSyncDevice cmdlet to delete all data from a mobile device.
 
-The Clear-ActiveSyncDevice cmdlet will be removed in a future version of Exchange. Use the Clear-MobileDevice cmdlet instead. If you have any scripts that use the Clear-ActiveSyncDevice cmdlet, update them to use the Clear-MobileDevice cmdlet.
+Note: In Exchange 2013 or later, use the Clear-MobileDevice cmdlet instead. If you have scripts that use Clear-ActiveSyncDevice, update them to use Clear-MobileDevice.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

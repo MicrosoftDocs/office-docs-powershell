@@ -37,17 +37,29 @@ This example disables Clutter for the user Alexander Martinez.
 
 ### -Identity
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
+
 For example:
+
 - Name
+
 - Display name
+
 - Alias
+
 - Distinguished name (DN)
+
 - Canonical DN
+
 - \<domain name>\\\<account name>
+
 - Email address
+
 - GUID
+
 - LegacyExchangeDN 
+
 - SamAccountName 
+
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -66,7 +78,7 @@ Accept wildcard characters: False
 The Enable parameter specifies whether to enable or disable Clutter for the mailbox. Valid values are:
 
 - $true: Clutter is enabled for the mailbox. This is the default value.
-- 
+
 - $false: Clutter is disabled for the mailbox.
 
 ```yaml

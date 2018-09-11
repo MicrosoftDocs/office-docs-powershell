@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 applicable: Exchange Server 2013, Exchange Server 2016
 title: Get-UMService
 schema: 2.0.0
@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-UMService cmdlet to view the properties of the Microsoft Exchange Unified Messaging service on Exchange servers in your organization. This service exists on Exchange Server 2016 and Exchange Server 2013 Mailbox servers and on Exchange Server 2010 Unified Messaging servers.
+Use the Get-UMService cmdlet to view the settings of the Microsoft Exchange Unified Messaging service on Exchange 2013 or Exchange 2016 Mailbox servers.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

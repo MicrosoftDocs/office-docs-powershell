@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-TransportService cmdlet to view the transport configuration information for the Transport service on Mailbox servers or for Edge Transport servers.
+Use the Get-TransportService cmdlet to view the settings of the Transport service on Exchange 2013 or later Mailbox servers or Edge Transport servers.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

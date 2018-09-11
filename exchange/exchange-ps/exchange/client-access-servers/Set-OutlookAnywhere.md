@@ -101,15 +101,13 @@ Accept wildcard characters: False
 ### -ClientAuthenticationMethod
 This parameter is available or functional only in Exchange Server 2010.
 
-The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. This parameter accepts the following values:
+The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. Valid values are:
 
 - Basic
 
 - Ntlm
 
-- MaxValidValue Also known as Negotiate Ex authentication (NegoEx). This authentication type is reserved for future Microsoft use and shouldn't be used. Use of this setting will cause authentication to fail.
-
-Although you can use this parameter to set only one authentication method, the Shell doesn't return an error if you include multiple values.
+Although you can use this parameter to set only one authentication method, the command won't return an error if you include multiple values.
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
