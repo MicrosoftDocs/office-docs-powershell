@@ -83,19 +83,19 @@ Accept wildcard characters: False
 ### -Condition
 The Condition parameter specifies the conditions and exceptions for the rule. This parameter uses the following syntax:
 
-- User or group communications to supervise:((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...). Exceptions use the syntax (NOT((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...)).
+- User or group communications to supervise: ((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...). Exceptions use the syntax (NOT((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...)).
 
-- Direction:((Direction:Inbound) -OR (Direction:Outbound) -OR (Direction:Internal)).
+- Direction: ((Direction:Inbound) -OR (Direction:Outbound) -OR (Direction:Internal)).
 
-- Message contains words:((\<Word1orPhrase1\>)-OR (\<Word2orPhrase2\>)...). Exceptions use the syntax (NOT((\<Word1orPhrase1\>)-OR (\<Word2orPhrase2\>)...)).
+- Message contains words: ((\<Word1orPhrase1\>)-OR (\<Word2orPhrase2\>)...). Exceptions use the syntax (NOT((\<Word1orPhrase1\>)-OR (\<Word2orPhrase2\>)...)).
 
-- Any attachment contains words:((Attachment:\<word1\>)-OR (Attachment:\<word2\>)...). Exceptions use the syntax (NOT((Attachment:\<word1\>)-OR (Attachment:\<word2\>)...)).
+- Any attachment contains words: ((Attachment:\<word1\>)-OR (Attachment:\<word2\>)...). Exceptions use the syntax (NOT((Attachment:\<word1\>)-OR (Attachment:\<word2\>)...)).
 
-- Any attachment has the extension:((AttachmentName:.\<extension1\>)-OR (AttachmentName:.\<extension2\>)...). Exceptions use the syntax (NOT((AttachmentName:.\<extension1\>)-OR (AttachmentName:.\<extension2\>)...)).
+- Any attachment has the extension: ((AttachmentName:.\<extension1\>)-OR (AttachmentName:.\<extension2\>)...). Exceptions use the syntax (NOT((AttachmentName:.\<extension1\>)-OR (AttachmentName:.\<extension2\>)...)).
 
-- Message size is larger than:(MessageSize:\<size in B, KB, MB or GB\>). For example (MessageSize:300KB). Exceptions use the syntax (NOT(MessageSize:\<size in B, KB, MB or GB\>))
+- Message size is larger than: (MessageSize:\<size in B, KB, MB or GB\>). For example (MessageSize:300KB). Exceptions use the syntax (NOT(MessageSize:\<size in B, KB, MB or GB\>))
 
-- Any attachment is larger than:(AttachmentSize:\<size in B, KB, MB or GB\>). For example (AttachmentSize:3MB). Exceptions use the syntax (NOT(AttachmentSize:\<size in B, KB, MB or GB\>))
+- Any attachment is larger than: (AttachmentSize:\<size in B, KB, MB or GB\>). For example (AttachmentSize:3MB). Exceptions use the syntax (NOT(AttachmentSize:\<size in B, KB, MB or GB\>))
 
 - Braces { } are required around the whole filter.
 
