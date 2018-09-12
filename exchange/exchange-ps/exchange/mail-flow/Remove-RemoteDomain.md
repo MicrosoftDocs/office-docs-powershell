@@ -37,7 +37,13 @@ This example removes the remote domain object named Contoso.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the remote domain you want to remove. Enter either the GUID or name of the remote domain.
+The Identity parameter specifies the remote domain that you want to remove. You can use any value that uniquely identifies the remote domain. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: RemoteDomainIdParameter
