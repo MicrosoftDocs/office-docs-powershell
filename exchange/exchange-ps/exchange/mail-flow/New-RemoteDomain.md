@@ -18,7 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-RemoteDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains> [-Confirm] [-DomainController <Fqdn>]
+New-RemoteDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains>
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -37,7 +39,9 @@ This example creates the remote domain Contoso.
 ## PARAMETERS
 
 ### -DomainName
-The DomainName parameter specifies the SMTP domain that you want to establish as a remote domain. Valid input for the DomainName parameter is an SMTP domain. You can use a wildcard character to specify all subdomains of a specified domain, as shown in the following example: \*.contoso.com. However, you can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com. The domain name string may contain a maximum of 256 characters.
+The DomainName parameter specifies the SMTP domain that you want to establish as a remote domain. A valid value is an SMTP domain (for example, contoso.com). The maximum length is 256 characters.
+
+You can use the wildcard character (\*) to specify a domain and all subdomains (for example: \*.contoso.com), but you can't embed the wildcard character (for example, domain.\*.contoso.com).
 
 ```yaml
 Type: SmtpDomainWithSubdomains
@@ -52,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the remote domain object.
+The Name parameter specifies a unique name for the remote domain object. The maximum length is 64 characters. If the value contains spaces, enclose the value in quoatation marks (").
 
 ```yaml
 Type: String
