@@ -31,10 +31,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-RemoteDomain -DomainName Contoso.com -Name Contoso
+New-RemoteDomain -DomainName *.contoso.com -Name Contoso
 ```
 
-This example creates the remote domain Contoso.
+This example creates the remote domain named Contoso for the domain contoso.com and all subdomains.
 
 ## PARAMETERS
 
