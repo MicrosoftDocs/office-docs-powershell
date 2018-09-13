@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActionName
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The ActionName parameter specifies a name for the compliance search action. You use this parameter only when you specify multiple compliance searches in the SearchName parameter.
 
@@ -154,23 +154,19 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveFormat
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
-The ArchiveFormat parameter specifies how to export Exchange search results. Valid values are:
+The ArchiveFormat parameter specifies how to export SharePoint or OneDrive search results. Valid values are:
 
-- PerUserPst: One PST file for each mailbox. This is the default value.
+- IndividualMessage: Export files without compression. This is the default value.
 
-- SinglePst: One PST file that contains all exported messages.
+- SingleZip: 
 
-- SingleFolderPst: One PST file with a single root folder for the entire export.
+- PerUserZip: Export files in a compressed ZIP file.
 
-- IndividualMessage: Export each message as a file, using the .msg format.
-
-- SingleZip: One ZIP file that contains all exported messages.
-
-- PerUserZip: One ZIP file for each mailbox.
+To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter.
 
 ```yaml
 Type: ComplianceExportArchiveFormat
@@ -204,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDedupe
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The EnableDedupe parameter eliminates duplication of messages when you export compliance search results. Valid values are:
 
@@ -225,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchiveFormat
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
@@ -237,11 +233,13 @@ The ExchangeArchiveFormat parameter specifies how to export Exchange search resu
 
 - SingleFolderPst: One PST file with a single root folder for the entire export.
 
-- IndividualMessage: Export each message as a file, using the .msg format.
+- IndividualMessage: Export each message as an .msg message file.
 
-- SingleZip: One ZIP file that contains all exported messages, using the .msg format.
+- SingleZip: One ZIP file for all mailboxes. The ZIP file contains all exported .msg message files from all mailboxes.
 
-- PerUserZip: One ZIP file for each mailbox.
+- PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox.
+
+To specify the format for SharePoint and OneDrive search results, use the ArchiveFormat parameter.
 
 ```yaml
 Type: ComplianceExportArchiveFormat
@@ -256,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -Export
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
@@ -347,7 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSharePointDocumentVersions
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The IncludeSharePointDocumentVersions parameter specifies whether to export previous versions of the document when you use the Export switch. Valid values are:
 
@@ -474,7 +472,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReferenceActionName
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -491,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -Region
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -508,7 +506,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The Report switch specifies the action for the compliance search is to export a report about the results (information about each item instead of the full set of results) that match the search criteria. You don't need to specify a value with this switch.
 
@@ -607,7 +605,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeDetails
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter requires the Export or Compliance Search roles in the Security & Compliance Center. By default, these roles are assigned only to the eDiscovery Manager role group.
 
@@ -626,7 +624,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchNames
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The SearchNames parameter specifies the names of the existing compliance searches to associate with the compliance search action. You separate the compliance searche names by commas.
 
@@ -645,7 +643,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointArchiveFormat
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter requires the Export role in the Office 365 Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
