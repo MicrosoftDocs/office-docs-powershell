@@ -23,6 +23,7 @@ Set-MailboxTransportService [-Identity] <MailboxTransportServerIdParameter> [-Co
  [-ConnectivityLogMaxDirectorySize <Unlimited>] [-ConnectivityLogMaxFileSize <Unlimited>]
  [-ConnectivityLogPath <LocalLongFullPath>] [-ContentConversionTracingEnabled <$true | $false>]
  [-DomainController <Fqdn>] [-MailboxDeliveryAgentLogEnabled <$true | $false>]
+ [-MailboxDeliveryConnectorSMTPUtf8Enabled <$true | $false>] 
  [-MailboxDeliveryAgentLogMaxAge <EnhancedTimeSpan>] [-MailboxDeliveryAgentLogMaxDirectorySize <Unlimited>]
  [-MailboxDeliveryAgentLogMaxFileSize <Unlimited>] [-MailboxDeliveryAgentLogPath <LocalLongFullPath>]
  [-MailboxDeliveryConnectorProtocolLoggingLevel <None | Verbose>]
