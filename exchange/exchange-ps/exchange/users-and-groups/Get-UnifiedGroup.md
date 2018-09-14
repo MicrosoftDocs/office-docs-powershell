@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set2
 ```
-Get-UnifiedGroup [-Anr <String>] [-Filter <String>] [-IncludeSoftDeletedGroups] [-ResultSize <Unlimited>]
+Get-UnifiedGroup [-Anr <String>] [-Filter <String>] [-IncludeAllProperties] [-IncludeSoftDeletedGroups] [-ResultSize <Unlimited>]
  [-SortBy <String>] [<CommonParameters>]
 ```
 
@@ -142,6 +142,18 @@ Accept wildcard characters: False
 The IncludeAllProperties switch specifies whether to include the values of all properties in the results. You don't need to specify a value with this switch.
 
 If you don't use this switch, the values of some properties (for example, CalendarMemeberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -IncludeSoftDeletedGroups
 The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 groups in the results. You don't need to specify a value with this switch.

@@ -158,15 +158,9 @@ This parameter is available only in the cloud-based service.
 
 This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
-The ArchiveFormat parameter specifies how to export SharePoint or OneDrive search results. Valid values are:
+This parameter has been deprecated and is no longer used.
 
-- IndividualMessage: Export files without compression. This is the default value.
-
-- SingleZip: 
-
-- PerUserZip: Export files in a compressed ZIP file.
-
-To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter.
+To specify the format for Exchange search results, use the SharePointArchiveFormat parameter.
 
 ```yaml
 Type: ComplianceExportArchiveFormat
@@ -647,19 +641,15 @@ This parameter is available only in the cloud-based service.
 
 This parameter requires the Export role in the Office 365 Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
-The SharePointArchiveFormat parameter specifies how to export SharePoint search results. Valid values are:
+The SharePointArchiveFormat parameter specifies how to export SharePoint and OneDrive search results. Valid values are:
 
-- PerUserPst: One PST file for each user. This is the default value.
+- IndividualMessage: Export the files uncompressed.
 
-- SinglePst: One PST file that contains all exported files.
+- SingleZip: Export the search restuls to a ZIP file.
 
-- SingleFolderPst: One PST file with a single root folder for the entire export.
+- PerUserZip: Export the search restuls to a ZIP file.
 
-- IndividualMessage: Export each file to a message using the .msg format.
-
-- SingleZip: One ZIP file that contains all exported files.
-
-- PerUserZip: One ZIP file for each user.
+To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter.
 
 ```yaml
 Type: ComplianceExportArchiveFormat
