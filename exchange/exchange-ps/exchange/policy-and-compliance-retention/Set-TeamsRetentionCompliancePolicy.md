@@ -115,6 +115,18 @@ You can use any value that uniquely identifies the mailbox. For example:
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Set1
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AddTeamsChannelLocationException
 The AddTeamsChannelLocationException parameter specifies the teams (group mailboxes) to add to the list of excluded teams whose channel messages are targeted by this policy, when you aren't using the value All for the TeamsChannelLocation parameter.
 
@@ -131,10 +143,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -158,10 +170,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -185,10 +197,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -277,11 +289,13 @@ You can use any value that uniquely identifies the mailbox. For example:
 
 - GUID
 
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -305,10 +319,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -329,11 +343,13 @@ You can use any value that uniquely identifies the mailbox. For example:
 
 - GUID
 
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -357,10 +373,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
