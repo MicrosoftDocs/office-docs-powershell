@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2016 || o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-ComplianceSearchAction cmdlet to create actions for compliance searches in Exchange Server 2016 and in the Office 365 Security & Compliance Center.
+Use the New-ComplianceSearchAction cmdlet to create actions for content searches in Exchange Server and in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -19,14 +19,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Export
 ```
-New-ComplianceSearchAction [[-SearchName] <String[]>]
+New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
  [-ActionName <String>]
  [-ArchiveFormat <ComplianceExportArchiveFormat>]
  [-Confirm]
  [-FileTypeExclusionsForUnindexedItems <String[]>]
  [-EnableDedupe <Boolean>]
  [-ExchangeArchiveFormat <ComplianceExportArchiveFormat>]
- [-Export]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
  [-IncludeCredential]
@@ -49,13 +48,12 @@ New-ComplianceSearchAction [[-SearchName] <String[]>]
 
 ### Preview
 ```
-New-ComplianceSearchAction [[-SearchName] <String[]>]
+New-ComplianceSearchAction [-SearchName] <String[]> [-Preview]
  [-ActionName <String>]
  [-Confirm]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
  [-IncludeCredential] [-JobOptions <Int32>]
- [-Preview]
  [-ReferenceActionName <String>]
  [-Region <String>]
  [-RetryOnError]
@@ -67,14 +65,13 @@ New-ComplianceSearchAction [[-SearchName] <String[]>]
 
 ### Purge
 ```
-New-ComplianceSearchAction [[-SearchName] <String[]>]
- [-ActionName <String>
+New-ComplianceSearchAction [-SearchName] <String[]> [-Purge]
+ [-ActionName <String>]
  [-Confirm]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
  [-IncludeCredential]
  [-JobOptions <Int32>]
- [-Purge]
  [-PurgeType <ComplianceDestroyType>]
  [-Region <String>]
  [-ReferenceActionName <String>]
@@ -86,7 +83,7 @@ New-ComplianceSearchAction [[-SearchName] <String[]>]
 ```
 
 ## DESCRIPTION
-After you create a compliance search using the New-ComplianceSearch cmdlet and run it using the Start-ComplianceSearch cmdlet, you assign a search action to the search using the New-ComplianceSearchAction cmdlet.
+After you create a content search using the New-ComplianceSearch cmdlet and run it using the Start-ComplianceSearch cmdlet, you assign a search action to the search using the New-ComplianceSearchAction cmdlet.
 
 In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group, and not to the Organization Management role group.
 
@@ -101,35 +98,43 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 New-ComplianceSearchAction -SearchName "Project X" -Preview
 ```
 
-This example creates a preview search action for the compliance search named Project X.
+This example creates a preview search action for the content search named Project X.
 
 ### -------------------------- Example 2 --------------------------
 ```
 New-ComplianceSearchAction -SearchName "Project X" -Export
 ```
 
-This example creates an export search action for the compliance search named Project X.
+This example creates an export search action for the content search named Project X.
 
 ### -------------------------- Example 3 --------------------------
 ```
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
 ```
 
-This example deletes the search results returned by a compliance search named Remove Phishing Message. Note that unindexed items aren't deleted when you use the Purge parameter.
+This example deletes the search results returned by a content search named Remove Phishing Message. Note that unindexed items aren't deleted when you use the Purge parameter.
+
+### -------------------------- Example 4 --------------------------
+
+```
+New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip
+```
+
+This example exports the results returned by the content search named "Case 321 All Sites". The search results are compressed and exported to a single ZIP file. If the search included any Exchange locations, the search results are exported as one PST file per mailbox (the default value of the ExchangeArchiveFormat parameter).
 
 ## PARAMETERS
 
 ### -SearchName
-The SearchName parameter specifies the name of the existing compliance search to associate with the compliance search action. You can specify multiple compliance searches separated by commas.
+The SearchName parameter specifies the name of the existing content search to associate with the content search action. You can specify multiple content searches separated by commas.
 
-You can find the compliance search by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
+You can find the content search by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -139,7 +144,7 @@ Accept wildcard characters: False
 ### -ActionName
 This parameter is available only in the cloud-based service.
 
-The ActionName parameter specifies a name for the compliance search action. You use this parameter only when you specify multiple compliance searches in the SearchName parameter.
+The ActionName parameter specifies a name for the content search action. You use this parameter only when you specify multiple content searches in the SearchName parameter.
 
 ```yaml
 Type: String
@@ -160,7 +165,7 @@ This parameter requires the Export role in the Security & Compliance Center. By 
 
 This parameter has been deprecated and is no longer used.
 
-To specify the format for Exchange search results, use the SharePointArchiveFormat parameter.
+To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter. To specify the format for SharePoint and OneDrive search results, use the SharePointArchiveFormat parameter.
 
 ```yaml
 Type: ComplianceExportArchiveFormat
@@ -196,7 +201,7 @@ Accept wildcard characters: False
 ### -EnableDedupe
 This parameter is available only in the cloud-based service.
 
-The EnableDedupe parameter eliminates duplication of messages when you export compliance search results. Valid values are:
+The EnableDedupe parameter eliminates duplication of messages when you export content search results. Valid values are:
 
 - $true: Export a single copy of a message if the same message exists in multiple folders or mailboxes.
 
@@ -229,11 +234,11 @@ The ExchangeArchiveFormat parameter specifies how to export Exchange search resu
 
 - IndividualMessage: Export each message as an .msg message file.
 
-- SingleZip: One ZIP file for all mailboxes. The ZIP file contains all exported .msg message files from all mailboxes.
+- PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
 
-- PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox.
+- SingleZip: One ZIP file for all mailboxes. The ZIP file contains all exported .msg message files from all mailboxes. This output setting is only available in PowerShell.
 
-To specify the format for SharePoint and OneDrive search results, use the ArchiveFormat parameter.
+To specify the format for SharePoint and OneDrive search results, use the SharePointArchiveFormat parameter.
 
 ```yaml
 Type: ComplianceExportArchiveFormat
@@ -252,7 +257,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
-The Export switch specifies the action for the compliance search is to export the full set of results that match the search criteria. You don't need to specify a value with this switch.
+The Export switch specifies the action for the content search is to export the full set of results that match the search criteria. You don't need to specify a value with this switch.
 
 To only return the information about each detected item in a report, use the Report switch.
 
@@ -413,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -Preview
-The Preview switch specifies the action for the compliance search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
+The Preview switch specifies the action for the content search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
 
 In the Security & Compliance Center, this parameter requires the Preivew role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
 
@@ -430,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### -Purge
-The Purge switch specifies the action for the compliance search is to remove items that match the search criteria. You don't need to specify a value with this switch.
+The Purge switch specifies the action for the content search is to remove items that match the search criteria. You don't need to specify a value with this switch.
 
 Note that a maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
 
@@ -502,7 +507,7 @@ Accept wildcard characters: False
 ### -Report
 This parameter is available only in the cloud-based service.
 
-The Report switch specifies the action for the compliance search is to export a report about the results (information about each item instead of the full set of results) that match the search criteria. You don't need to specify a value with this switch.
+The Report switch specifies the action for the content search is to export a report about the results (information about each item instead of the full set of results) that match the search criteria. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -517,7 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionReport
-The RetentionReport switch specifies the action for the compliance search is to export a retention report. You don't need to specify a value with this switch.
+The RetentionReport switch specifies the action for the content search is to export a retention report. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -584,7 +589,7 @@ The Scope parameter specifies the items to include when the action is Export. Va
 
 - BothIndexedAndUnindexedItems
 
-This parameter is only meaningful for compliance searches where the IncludeUnindexedItemsEnabled parameter is set to $true.
+This parameter is only meaningful for content searches where the IncludeUnindexedItemsEnabled parameter is set to $true.
 
 ```yaml
 Type: ComplianceExportScope
@@ -620,9 +625,9 @@ Accept wildcard characters: False
 ### -SearchNames
 This parameter is available only in the cloud-based service.
 
-The SearchNames parameter specifies the names of the existing compliance searches to associate with the compliance search action. You separate the compliance searche names by commas.
+The SearchNames parameter specifies the names of the existing content searches to associate with the content search action. You separate the content searche names by commas.
 
-You can find compliance search names by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
+You can find content search names by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
 
 ```yaml
 Type: String[]
@@ -643,11 +648,11 @@ This parameter requires the Export role in the Office 365 Security & Compliance 
 
 The SharePointArchiveFormat parameter specifies how to export SharePoint and OneDrive search results. Valid values are:
 
-- IndividualMessage: Export the files uncompressed.
+- IndividualMessage: Export the files uncompressed. This is the default value.
 
-- SingleZip: Export the search restuls to a ZIP file.
+- PerUserZip: One ZIP file for each user. Each ZIP file contains the exported files for the user. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
 
-- PerUserZip: Export the search restuls to a ZIP file.
+- SingleZip: One ZIP file for all users. The ZIP file contains all exported files from all users. This output setting is only available in PowerShell.
 
 To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter.
 
