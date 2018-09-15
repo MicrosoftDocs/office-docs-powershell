@@ -345,7 +345,7 @@ The MRSProxyMaxConnections parameter specifies the maximum number of simultaneou
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None

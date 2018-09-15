@@ -209,7 +209,7 @@ The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disabl
 
 - $true: ActiveSync is available in Outlook on the web. This is the default value.
 
-- $false: ActiveSync isn't avaialble in Outlook on the web.
+- $false: ActiveSync isn't available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfflineOn
-The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is avaialble for supported web browsers. Valid values are:
+The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is available for supported web browsers. Valid values are:
 
 - PrivateComputersOnly: Offline mode is available in private computer sessions. By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers. In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
@@ -548,7 +548,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultTheme
-The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are avaialble in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
+The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are available in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
 
 Note that this parameter is a text string, and the value you specify isn't validated against the list of available themes.
 
@@ -992,7 +992,7 @@ Accept wildcard characters: False
 ### -InterestingCalendarsEnabled
 This parameter is available only in the cloud-based service.
 
-The InterestingCalendarsEnabled parameter specifies whether interesting calendars are avaialble in Outlook on the web. Valid values are:
+The InterestingCalendarsEnabled parameter specifies whether interesting calendars are available in Outlook on the web. Valid values are:
 
 - $true: Interesting calendars are available in Outlook on thew web. This is the default value.
 
@@ -1087,7 +1087,7 @@ This parameter is available only in on-premises Exchange.
 
 The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
 
-- $true: The Junk Email folder and junk email management are avaialble in Outlook on the web. This is the default value.
+- $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
 
 - $false: The Junk Email folder and junk email management aren't available in Outlook on the web.
 
@@ -1298,9 +1298,9 @@ Accept wildcard characters: False
 ### -OWALightEnabled
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
-- $true: The light version of Outlook on the web is avaialble. This is the default value.
+- $true: The light version of Outlook on the web is available. This is the default value.
 
-- $false: The light version of Outlook on the web is isn't avaialble. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
+- $false: The light version of Outlook on the web is isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -1319,9 +1319,9 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
 
-- $true: The mini version of Outlook Web App is avaialble. This is the default value.
+- $true: The mini version of Outlook Web App is available. This is the default value.
 
-- $false: The mini version of Outlook Web App isn't avaialble.
+- $false: The mini version of Outlook Web App isn't available.
 
 ```yaml
 Type: $true | $false
@@ -1374,9 +1374,9 @@ Accept wildcard characters: False
 ### -PremiumClientEnabled
 The PremiumClientEnabled parameter controls the availability of the full version of Outlook Web App. Valid values are:
 
-- $true: The full version of Outlook Web App is avaialble for supported browsers. This is the default value.
+- $true: The full version of Outlook Web App is available for supported browsers. This is the default value.
 
-- $false: The full version of Outlook Web App isn't avaialble.
+- $false: The full version of Outlook Web App isn't available.
 
 ```yaml
 Type: $true | $false
@@ -2094,9 +2094,9 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingForAllSupportedTypes parameter specifies whether to enable WebReady Document Viewing for all supported file and MIME types. Valid values are:
 
-- $true: All supported attachment types are avaialble for WebReady Document Viewing. This is the default value.
+- $true: All supported attachment types are available for WebReady Document Viewing. This is the default value.
 
-- $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are avaialble for WebReady Document Viewing (you can remove values from the lists).
+- $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are available for WebReady Document Viewing (you can remove values from the lists).
 
 ```yaml
 Type: $true | $false
