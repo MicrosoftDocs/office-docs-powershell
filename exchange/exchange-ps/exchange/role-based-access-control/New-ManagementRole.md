@@ -106,9 +106,11 @@ This parameter is available on in on-premises Exchange.
 
 By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
-The UnScopedTopLevel switch specifies that the role should be a custom, empty role. You don't need to specify a value with this switch.
+The UnScopedTopLevel switch specifies that the role new role is an unscoped top-level management role (a custom, empty role). You don't need to specify a value with this switch.
 
-If you use this switch, you can't use the Parent parameter.
+You can only add custom scripts or non-Exchange cmdlets to an unscoped top-level management role. For more information, see Create an unscoped role(https://technet.microsoft.com/library/dd876886.aspx).
+
+You can't use this switch with the Parent parameter.
 
 ```yaml
 Type: SwitchParameter
