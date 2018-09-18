@@ -304,6 +304,8 @@ Accept wildcard characters: False
 ```
 
 ### -Format
+In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+
 The Format parameter specifies the format of the search results when you use the Export switch. Valid values are:
 
 - FxStream: Export to PST files. This is the only option that's available when you export search results from the Security & Compliance Center.
@@ -313,8 +315,6 @@ The Format parameter specifies the format of the search results when you use the
 - Message: Export to .msg messsage files.
 
 - BodyText: Export to .txt files.
-
-This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
 ```yaml
 Type: ComplianceDataTransferFormat
@@ -380,11 +380,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmail
+In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+
 The NotifyEmail parameter specifies the email address target for the search results when you use the Export switch.
 
 The recipient you specify is in the To: field of the message.
-
-In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
 ```yaml
 Type: String
@@ -399,11 +399,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmailCC
+In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+
 The NotifyEmailCC parameter specifies the email address target for the search results when you use the Export switch.
 
 The recipient you specify is in the Cc: field of the message.
-
-In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
 ```yaml
 Type: String
@@ -552,6 +552,8 @@ Accept wildcard characters: False
 ```
 
 ### -Scenario
+In the Security & Compliance Center, this parameter requires the Preivew role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
+
 The Scenario parameter specifies the scenario type when you use the Export switch. Valid values are:
 
 - AnalyzeWithZoom: Prepare the search results for processing in Office 365 Advanced eDiscovery.
@@ -565,8 +567,6 @@ The Scenario parameter specifies the scenario type when you use the Export switc
 - RetentionReports:
 
 - TriagePreview:
-
-In the Security & Compliance Center, this parameter requires the Preivew role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
 
 ```yaml
 Type: ComplianceSearchActionScenario
