@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-MailDetailATPReport [-Action <MultiValuedProperty>] [-Direction <MultiValuedProperty>]
+Get-MailDetailATPReport [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-EventType <MultiValuedProperty>]
  [-Expression <Expression>] [-MalwareName <MultiValuedProperty>] [-MessageId <MultiValuedProperty>]
  [-MessageTraceId <MultiValuedProperty>] [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>]
@@ -43,21 +43,6 @@ Get-MailDetailATPReport -StartDate 7/1/2017 -EndDate 7/31/2017
 This example returns the Advanced Threat Protection actions for July, 2017.
 
 ## PARAMETERS
-
-### -Action
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Direction
 The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
