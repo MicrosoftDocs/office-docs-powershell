@@ -1,4 +1,4 @@
----
+: ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 applicable: Skype for Business Server 2019
 title: Set-CsAuthConfig
@@ -17,27 +17,18 @@ Set-CsAuthConfig [-Scenario] <AuthConfigScenario> [[-Pool] <String>] [-WhatIf] [
 ```
 
 ## DESCRIPTION
-Use the Set-CsAuthConfig cmdlet to modify the authentication configuration for your organization. There are 5 different scenarios that are supported as follows. Scenario is a required parameter. All other parameters are optional.
+Use the Set-CsAuthConfig cmdlet to modify the authentication configuration for your organization. The 5 supported scenarios are described in the following list. Scenario is a required parameter. All other parameters are optional. MA is Modern Authentication and Win is Windows Integrated Authentication in the following list.
 
-[!IMPORTANT] MA represents Modern Authentication and Win is Windows Integrated Authentication in the table and descriptions below.
+- **Scenario 1**: External: MA + Win; Internal: MA + Win; Parameter: AllowAllExternallyAndInternally. This is the default scenario when MA is turned on for Skype for Business Server. In other words, this is the starting point when MA is configured. 
 
-|  |Externally  |Internally  |Parameter  |
-|---------|---------|---------|---------|
-|Scenario 1     |    MA + Win     |    MA + Win     |    AllowAllExternallyAndInternally     |
-|Scenario 2     |    MA     | MA + Win         |     BlockWindowsAuthExternally    |
-|Scenario 3     |    MA   |    MA     | BlockWindowsAuthExternallyAndInternally        |
-|Scenario 4     |    MA     |    Win     |    BlockWindowsAuthExternallyAndModernAuthInternally     |
-|Scenario 5     |    MA + Win     |  Win       |   BlockModernAuthInternally      |
+- **Scenario 2**: External: MA; Internal: MA + Win; Parameter: BlockWindowsAuthExternally. This topology blocks NTLM externally, but allows NTLM or Kerberos (for clients that don't support ADAL) to work internally. If your clients do support ADAL they will use MA internally.
 
-**Scenario 1 Description**: This is the default scenario when MA is turned on for Skype for Business Server. In other words, this is the starting point when MA is configured. 
+- **Scenario 3**: External: MA; Internal: MA; Parameter: BlockWindowsAuthExternallyAndInternally. This topology requires MA for all users. All your ADAL-capable clients will work in this topology, and passwords will not be leveraged if, for example, you turn off the use of passwords with Certificate-based Auth. 
 
-**Scenario 2 Description**: This topology blocks NTLM externally, but allows NTLM or Kerberos (for clients that don't support ADAL) to work internally. If your clients do support ADAL they will use MA internally.
+- **Scenario 4**: External: MA; Internal: Win; Parameter: BlockWindowsAuthExternallyAndModernAuthInternally. This topology blocks NTLM externally and MA internally. It allows all clients to use legacy authentication methods internally (even ADAL-capable clients).
 
-**Scenario 3 Description**: This topology requires MA for all users. All your ADAL-capable clients will work in this topology, and passwords will not be leveraged if, for example, you turn off the use of passwords with Certificate-based Auth.
+- **Scenario 5**: External: MA + Win; Internal: Win; Parameter: BlockModernAuthInternally. Externally, your modern ADAL clients will use MA and any clients that don't support ADAL will use legacy authentication methods. But, internally all clients will use legacy authentication (including all ADAL-capable clients).
 
-**Scenario 4 Description**: This topology blocks NTLM externally and MA internally. It allows all clients to use legacy authentication methods internally (even ADAL-capable clients). 
-
-**Scenario 5 Description**: Externally, your modern ADAL clients will use MA and any clients that don't support ADAL will use legacy authentication methods. But, internally all clients will use legacy authentication (including all ADAL-capable clients).
 This cmdlet sets configuration on both the Registrar and the Web Services roles.
 
 It is only meant to be run at the global level (and not at the pool level), and we highly recommend that you only use it in this manner. However, technically it can be run at a pool level. But realize that if the pool only has one of the roles needed (say, Registrar and not Web Services), then only the settings for Registrar will be set and the Web Services settings will come from the global setting. No special warning will be given because some settings were not set. If a client uses the Registrar settings from one pool and the Web Services settings from another pool and the authentication settings are in an inconsistent state, the client may be unable to log on. If neither role is present for a pool, both Get will return an error message. If both roles are present for a pool but policies aren't defined at the pool level, Get will return an error message.
