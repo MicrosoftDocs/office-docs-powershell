@@ -25,7 +25,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteC
  [-DomainController <Fqdn>] [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly]
  [-Priority <Normal | High>] [-Protect] [-RemoteArchiveTargetDatabase <String>]
  [-RemoteOrganizationName <String>] [-RemoteTargetDatabase <String>] [-Suspend] [-SuspendComment <String>]
- [-SuspendWhenReadyToComplete] [-TargetDeliveryDomain <Fqdn>] [-WhatIf] [-CheckInitialProvisioningSetting]
+ [-SuspendWhenReadyToComplete] [-TargetDeliveryDomain <Fqdn>] [-WhatIf]
  [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>] [-ForceOffline]
  [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
  [-PreventCompletion] [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
@@ -44,7 +44,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCre
  [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly] [-Priority <Normal | High>] [-Protect]
  [-RemoteOrganizationName <String>] [-Suspend] [-SuspendComment <String>] [-SuspendWhenReadyToComplete]
  [-TargetDatabase <DatabaseIdParameter>] [-TargetDeliveryDomain <Fqdn>] [-WhatIf] [-RemoteLegacy]
- [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
+ [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
  [-ForceOffline] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>] [-PreventCompletion] [-RemoteTargetDatabase <String>]
  [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
@@ -63,7 +63,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PS
  [-RemoteTargetDatabase <String>] [-Suspend] [-SuspendComment <String>] [-SuspendWhenReadyToComplete]
  [-TargetDatabase <DatabaseIdParameter>] [-TargetDeliveryDomain <Fqdn>] [-WhatIf] [-Remote]
  -RemoteHostName <Fqdn> [-ArchiveDomain <String>] [-ArchiveOnly] [-ArchiveTargetDatabase <DatabaseIdParameter>]
- [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
+ [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
  [-ForceOffline] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>] [-PreventCompletion] [-PrimaryOnly] [-RemoteOrganizationName <String>]
  [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
@@ -80,7 +80,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-AcceptLargeDataLoss
  [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>] [-DoNotPreserveMailboxSignature]
  [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly] [-Priority <Normal | High>] [-Protect] [-Suspend]
  [-SuspendComment <String>] [-SuspendWhenReadyToComplete] [-TargetDatabase <DatabaseIdParameter>] [-WhatIf]
- [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
+ [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
  [-ForceOffline] [-ForcePull] [-ForcePush] [-IncrementalSyncInterval <TimeSpan>]
  [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>] [-PreventCompletion]
  [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
@@ -95,7 +95,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-AcceptLargeDataLoss
 New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteCredential <PSCredential>]
  [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn> [-TargetDeliveryDomain <Fqdn>] [-AcceptLargeDataLoss]
  [-AllowLargeItems] [-ArchiveDomain <String>] [-ArchiveOnly] [-BadItemLimit <Unlimited>] [-BatchName <String>]
- [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
+ [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm] [-DomainController <Fqdn>] [-ForceOffline] [-IgnoreTenantMigrationPolicies]
  [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
  [-MigrationMailbox <MailboxIdParameter>] [-MoveOptions <MultiValuedProperty>] [-PreventCompletion]
@@ -112,7 +112,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteC
 ```
 New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTenant <SmtpDomain>
  -TargetDeliveryDomain <Fqdn> [-AcceptLargeDataLoss] [-AllowLargeItems] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>]
+ [-BatchName <String>] [-CompleteAfter <DateTime>]
  [-CompletedRequestAgeLimit <Unlimited>] [-Confirm] [-DomainController <Fqdn>] [-ForceOffline]
  [-IgnoreTenantMigrationPolicies] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>] [-MoveOptions <MultiValuedProperty>] [-PreventCompletion]
@@ -734,23 +734,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CheckInitialProvisioningSetting
-The CheckInitialProvisioningSetting switch specifies that the move request checks the IsExcludedFromProvisioning setting on the target database when you don't specify a target database for the move. You don't need to specify a value with this switch.  Note - This switch is not available in on premises Exchange or Exchange Online.  It is only available to internal Microsoft datacenter operations staff.
-
-The IsExcludedFromProvisioning setting allows the database to be excluded from provisioning new mailboxes.  
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
