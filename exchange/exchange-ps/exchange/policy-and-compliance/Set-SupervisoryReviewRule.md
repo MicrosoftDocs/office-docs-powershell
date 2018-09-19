@@ -74,9 +74,9 @@ The Condition parameter specifies the conditions and exceptions for the rule. Th
 
 - Any attachment is larger than: (AttachmentSize:\<size in B, KB, MB or GB\>). For example (AttachmentSize:3MB). Exceptions use the syntax (NOT(AttachmentSize:\<size in B, KB, MB or GB\>))
 
-- Braces { } are required around the whole filter.
+- Parentheses ( ) are required around the whole filter.
 
-- Separate multiple conditions or exception types with the -AND operator. For example, {(Reviewee:chris@contoso.com) -AND (AttachmentSize:3MB)}.
+- Separate multiple conditions or exception types with the -AND operator. For example, ((Reviewee:chris@contoso.com) -AND (AttachmentSize:3MB)).
 
 ```yaml
 Type: String

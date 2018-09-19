@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-MailboxPlan [[-Identity] <MailboxPlanIdParameter>] [-AllMailboxPlanReleases] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
+ [-Filter <String>] [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ResultSize <Unlimited>] [-SortBy <String>]
  [<CommonParameters>]
 ```
@@ -71,21 +71,6 @@ This parameter requires the creation and passing of a credential object. This cr
 
 ```yaml
 Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
