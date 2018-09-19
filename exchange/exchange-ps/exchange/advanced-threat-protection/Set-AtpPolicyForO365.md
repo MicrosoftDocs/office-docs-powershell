@@ -23,9 +23,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>] [-AllowClickThrough <$true | $false>]
- [-BlockUrls <MultiValuedProperty>] [-Confirm] [-EnableSafeLinksForClients <$true | $false>]
- [-EnableSafeLinksForWebAccessCompanion <$true | $false>] [-TrackClicks <$true | $false>] [-WhatIf]
- [<CommonParameters>]
+ [-BlockUrls <MultiValuedProperty>] [-Confirm] [-EnableATPForSPOTeamsODB <$true | $false>]
+ [-EnableSafeLinksForClients <$true | $false>] [-EnableSafeLinksForWebAccessCompanion <$true | $false>]
+ [-TrackClicks <$true | $false>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,6 +105,18 @@ The EnableATPForSPOTeamsODB parameter specifies whether ATP is enabled for Share
 - $true: ATP is enabled for SharePoint Online, OneDrive for Business and Microsoft Teams.
 
 - $false: ATP is disabled for SharePoint Online, OneDrive for Business and Microsoft Teams. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -EnableSafeLinksForClients
 

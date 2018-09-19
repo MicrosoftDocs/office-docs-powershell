@@ -49,8 +49,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf cf
-
+Aliases: cf
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None

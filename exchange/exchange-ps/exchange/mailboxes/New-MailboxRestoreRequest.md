@@ -141,15 +141,9 @@ Accept wildcard characters: False
 ### -SourceStoreMailbox
 This parameter is available only in on-premises Exchange.
 
-The SourceStoreMailbox parameter specifies the identity of the mailbox from which you want to restore content. This parameter accepts the following values:
+The SourceStoreMailbox parameter specifies the MailboxGUID of the source mailbox that you want to restore content from.
 
-- MailboxGUID
-
-- LegacyExchangeDN
-
-- DisplayName
-
-You can find this information by running the Get-MailboxStatistics cmdlet.
+You can find the MailboxGUID by running the Get-MailboxStatistics cmdlet.
 
 ```yaml
 Type: StoreMailboxIdParameter
@@ -164,17 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailbox
-The TargetMailbox parameter specifies the identity of the mailbox or mail user to which you want to restore content. The target mailbox or mail user needs to exist before you can run this command successfully. This parameter accepts the following values:
+The TargetMailbox parameter specifies the GUID of the target mailbox or mail user where you want to restore content to. The target mailbox or mail user needs to exist before you can run this command successfully.
 
-- GUID
-
-- Alias
-
-- LegacyExchangeDN
-
-- Domain\\Account Name
-
-- SMTP address
+You can find the GUID value for the mailbox or mail user by running the Get-Mailbox or Get-MailUser cmdlets.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter

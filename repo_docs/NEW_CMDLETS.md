@@ -12,7 +12,7 @@ Install-Module -Name platyPS -Scope CurrentUser
 
 **Notes**:
 
-- You need platyPS v0.10.2 or later, which was released on or about June 18, 2018. If you have an earlier version of platyPS installed, run the command `Uninstall-Module platyPS` from an elevated Windows PowerShell window, and then reinstall platyPS.
+- You need platyPS v0.11.1 or later, released on or about September 13, 2018. If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded (or run the command `Remove-Module platyPS`) and then run `Update-Module platyPS` from an elevated Windows PowerShell window.
 
 - Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](http://aka.ms/wmf5download) and installed on these versions of Windows:
   
@@ -63,6 +63,8 @@ Import-Module platyPS
 ```
 
 ### Step 4: Find your module name
+**Note**: This step is required only if you're interested in creaing cmdlet reference topics for **all** available cmdlets in your product (the _Module_ parameter in `New-MarkdownHelp`). If you're going to manually specify the cmdlet names (the _Command_ parameter in `New-MarkdownHelp`), you can skip this step.
+
 platyPS needs the name of the loaded PowerShell module or snap-in that contains the cmdlets you want to update. To find the name, run the following command:
 
 ```
@@ -96,7 +98,7 @@ Manifest   3.1.0.0     Microsoft.PowerShell.Utility           {Add-Member, Add-T
 Script     1.2         PSReadline                             {Get-PSReadlineKeyHandler, Get-PSReadlineOption, Remov...
 ```
 
-For services that use remote PowerShell (Skype for Business Online, Teams, Exchange Online, Security & Compliance Center, and Exchange Online Protection), the module name is a temporary value that changes every time you connect. In this output, the module name is `tmp_byivwzpq.e1k`.
+For services that use remote PowerShell (Skype for Business Online, Teams, Exchange Online, Security & Compliance Center, and Exchange Online Protection), the module name is a temporary value that changes every time you connect. In this output, the module name is `tmp_byivwzpq.e1k`, but yours will be different.
 
 For SharePoint Online in the SharePoint Online Management Shell, the module name is always `Microsoft.Online.SharePoint.PowerShell`.
 
@@ -186,7 +188,7 @@ New-MarkdownHelp -Module tmp_byivwzpq.e1k -OutputFolder "C:\My Docs\SfBO" -Sessi
 ```
 
 #### Dump specific cmdlets to files
-This example create a topic file for the cmdlet named Get-CoolFeature in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
+This example creates a topic file for the cmdlet named Get-CoolFeature in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
 
 ```
 New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO" -Session $Session
@@ -330,10 +332,15 @@ After you're done editing the TOC file:
 ## Appendix
 
 ### Reference
-* https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
-* https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
-* https://github.com/PowerShell/platyPS
-* https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
+
+- https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
+
+- https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
+
+- https://github.com/PowerShell/platyPS
+
+- https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
+
 
 ### Install platyPS on older versions of Windows
 
