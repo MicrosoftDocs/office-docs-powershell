@@ -18,7 +18,7 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force]
+ [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -27,7 +27,7 @@ New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-Cod
 New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -Fqdn <String> -SipSignallingPort <Int32>
  [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
- [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-InMemory] [-Force]
+ [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-InMemory] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -256,6 +256,21 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewaySiteLbrEnabled
+Defines if the PSTN Gateway Site is LBR enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: $false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
