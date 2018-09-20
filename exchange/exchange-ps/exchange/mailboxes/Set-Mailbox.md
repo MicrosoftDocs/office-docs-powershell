@@ -3465,7 +3465,7 @@ Accept wildcard characters: False
 ### -ManagedFolderMailboxPolicyAllowed
 This parameter is available or functional only in Exchange Server 2010.
 
-The ManagedFolderMailboxPolicyAllowed parameter bypasses the warning that MRM features aren't supported for e-mail clients running versions of Outlook earlier than Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox by using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
+The ManagedFolderMailboxPolicyAllowed parameter bypasses the warning that MRM features aren't supported for  clients running versions of Outlook earlier than Outlook 2007. When a managed folder mailbox policy is assigned to a mailbox by using the ManagedFolderMailboxPolicy parameter, the warning appears by default unless the ManagedFolderMailboxPolicyAllowed parameter is used.
 
 Although Outlook 2003 Service Pack 3 clients are supported, they have limited MRM functionality.
 

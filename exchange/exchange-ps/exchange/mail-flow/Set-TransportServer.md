@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentConversionTracingEnabled
-The ContentConversionTracingEnabled parameter specifies whether content conversion tracing is enabled. Content conversion tracing captures content conversion failures that occur in the Transport service on a Mailbox server or on the Edge server. The default value is $false. Content conversion tracing captures a maximum of 128 MB of content conversion failures. When the 128 MB limit is reached, no more content conversion failures are captured. Content conversion tracing captures the complete contents of e-mail messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
+The ContentConversionTracingEnabled parameter specifies whether content conversion tracing is enabled. Content conversion tracing captures content conversion failures that occur in the Transport service on a Mailbox server or on the Edge server. The default value is $false. Content conversion tracing captures a maximum of 128 MB of content conversion failures. When the 128 MB limit is reached, no more content conversion failures are captured. Content conversion tracing captures the complete contents of  messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
 - Administrators: Full Control
 
@@ -1029,7 +1029,7 @@ Accept wildcard characters: False
 ```
 
 ### -PickupDirectoryMaxRecipientsPerMessage
-The PickupDirectoryMaxRecipientsPerMessage parameter specifies the maximum number of recipients that can be included on an e-mail message. The default value is 100. The valid input range for this parameter is from 1 through 10000.
+The PickupDirectoryMaxRecipientsPerMessage parameter specifies the maximum number of recipients that can be included on an  message. The default value is 100. The valid input range for this parameter is from 1 through 10000.
 
 ```yaml
 Type: Int32
@@ -1074,7 +1074,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineTracingPath
-The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\PipelineTracing. The path must be local to the Exchange computer. Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter. Pipeline tracing captures the complete contents of e-mail messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
+The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\PipelineTracing. The path must be local to the Exchange computer. Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter. Pipeline tracing captures the complete contents of  messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
 - Administrators: Full Control
 
@@ -1095,7 +1095,7 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineTracingSenderAddress
-The PipelineTracingSenderAddress parameter specifies the sender e-mail address that invokes pipeline tracing. Only messages from this address generate pipeline tracing output. The address can be either inside or outside the Exchange organization. Depending on your requirements, you may have to set this parameter to different sender addresses and send new messages to start the transport agents or routes that you want to test. The default value of this parameter is $null.
+The PipelineTracingSenderAddress parameter specifies the sender  address that invokes pipeline tracing. Only messages from this address generate pipeline tracing output. The address can be either inside or outside the Exchange organization. Depending on your requirements, you may have to set this parameter to different sender addresses and send new messages to start the transport agents or routes that you want to test. The default value of this parameter is $null.
 
 ```yaml
 Type: SmtpAddress

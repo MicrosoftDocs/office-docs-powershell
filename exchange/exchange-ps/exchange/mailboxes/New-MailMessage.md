@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report" -Mailbox tony
 ```
 
-In Exchange Server 2010, this example creates an e-mail message in the Drafts folder of Tony's mailbox, with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
+In Exchange Server 2010, this example creates an  message in the Drafts folder of Tony's mailbox, with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -48,7 +48,7 @@ This example creates an email message in the Drafts folder with the subject and 
 New-MailMessage -Mailbox tony@contoso.com
 ```
 
-In Exchange Server 2010, this example creates an empty e-mail message in the Drafts folder of Tony's mailbox because no subject or message body is specified.
+In Exchange Server 2010, this example creates an empty  message in the Drafts folder of Tony's mailbox because no subject or message body is specified.
 
 ### -------------------------- Example 4 --------------------------
 ```
@@ -62,7 +62,7 @@ This example creates an empty email message in the Drafts folder because no subj
 New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -Mailbox tony -BodyFormat Html
 ```
 
-In Exchange Server 2010, this example creates an e-mail message in the Drafts folder of Tony's mailbox with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
+In Exchange Server 2010, this example creates an  message in the Drafts folder of Tony's mailbox with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
 
 ### -------------------------- Example 6 --------------------------
 ```
@@ -76,7 +76,7 @@ This example creates an email message in the Drafts folder with the subject and 
 ### -Mailbox
 This parameter is available or functional only in Exchange Server 2010.
 
-The Mailbox parameter specifies a unique identifier for the destination mailbox where the e-mail message is being created. You can use any of the following values for this parameter:
+The Mailbox parameter specifies a unique identifier for the destination mailbox where the  message is being created. You can use any of the following values for this parameter:
 
 - Alias
 
