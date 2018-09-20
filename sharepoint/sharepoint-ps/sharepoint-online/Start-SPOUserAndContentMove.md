@@ -8,7 +8,7 @@ schema: 2.0.0
 # Start-SPOUserAndContentMove
 
 ## SYNOPSIS
-In a multi-get company, starts the ability to move a user closer to their sites.
+In a multi-geo company, starts the ability to move a user closer to their sites.
 
 ## SYNTAX
 
