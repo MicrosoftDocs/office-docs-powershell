@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPOSdnProvider
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Add a New SDN Provider
 
 
 ## SYNTAX
@@ -19,7 +19,7 @@ New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf]
 
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This command receives two parameters, the Identity (ID) of the Hive and the License key of the Hive.
 
 
 ## EXAMPLES
@@ -105,14 +105,13 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### System.String
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Introduction to the SharePoint Online management shell]()
+
+[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Remove-SPOSdnProvider](Remove-SPOSdnProvider.md)
