@@ -8,7 +8,7 @@ schema: 2.0.0
 # Start-SPOUserAndContentMove
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+In a multi-get company, starts the ability to move a user closer to their sites.
 
 ## SYNTAX
 
@@ -23,18 +23,34 @@ Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocat
 
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
-```
-{{ Add example code here }}
+### ---------------EXAMPLE 1 --------------
+```yaml
+Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
 ```
 
-{{ Add example description here }}
+This will move the user username@contoso.com from the current location, example NA to the European Site (EUR)
+
+### ---------------EXAMPLE 2--------------
+```yaml
+Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
+```
+
+This will move the user username@contoso.com from the current location, example NA to the European Site (EUR)
+
+
+### ---------------EXAMPLE 3--------------
+```yaml
+Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
+```
+
+This will move the user username@contoso.com from the current location, example NA to the European Site (EUR)
+
 
 
 ## PARAMETERS
 
 ### -DestinationDataLocation
-{{Fill DestinationDataLocation Description}}
+Defines the new destination of the user that you want to move.
 
 ```yaml
 Type: String
@@ -50,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notify
-{{Fill Notify Description}}
+Makes a SPO notification that the user is being move
 
 ```yaml
 Type: String
@@ -66,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverwriteOdb
-{{Fill OverwriteOdb Description}}
+Switch parameter to Overwrite the information into the DB 
 
 ```yaml
 Type: SwitchParameter
@@ -82,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveBeginDate
-{{Fill PreferredMoveBeginDate Description}}
+Specifies what is the preferred Date and time to start the job
 
 ```yaml
 Type: DateTime
@@ -98,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveEndDate
-{{Fill PreferredMoveEndDate Description}}
+Specifies what is the preferred Date and time to stop the job
 
 ```yaml
 Type: DateTime
@@ -130,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{Fill UserPrincipalName Description}}
+UserPrincipalName or UPN defined for the specific user on the SPO tenant
 
 ```yaml
 Type: String
@@ -164,14 +180,14 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Introduction to the SharePoint Online management shell]()
+
+[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
