@@ -79,7 +79,7 @@ The Identity parameter specifies the user that you want to retrieve migration in
 Type: MigrationUserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -96,7 +96,7 @@ The Diagnostic switch specifies whether to return extremely detailed information
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +113,7 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +147,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +162,7 @@ The IncludeReport switch specifies whether to return additional details, which c
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +177,7 @@ The IncludeSkippedItems switch specifies whether to include skipped items for th
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +192,7 @@ The LimitSkippedItemsTo parameter specifies the maximum number of skipped items 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -209,7 +209,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -224,7 +224,7 @@ The SkipSubscription switch specifies whether to skip loading the subscription f
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -127,7 +127,7 @@ The Identity parameter specifies the server that you want to modify.
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -146,7 +146,7 @@ For example, to specify 10 days for this parameter, use 10.00:00:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +177,7 @@ The value of the ActiveUserStatisticsLogMaxFileSize parameter must be less than 
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +208,7 @@ The value of the ActiveUserStatisticsLogMaxFileSize parameter must be less than 
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +223,7 @@ The ActiveUserStatisticsLogPath parameter specifies the location of per user act
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -238,7 +238,7 @@ The AgentLogEnabled parameter specifies whether the agent log is enabled. The de
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -257,7 +257,7 @@ Setting the value of the AgentLogMaxAge parameter to 00:00:00 prevents the autom
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -288,7 +288,7 @@ The value of the AgentLogMaxFileSize parameter must be less than or equal to the
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -319,7 +319,7 @@ The value of the AgentLogMaxFileSize parameter must be less than or equal to the
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -334,7 +334,7 @@ The AgentLogPath parameter specifies the default agent log directory location. T
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -351,7 +351,7 @@ You set this parameter by using a script. You shouldn't modify this parameter ma
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -370,7 +370,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -385,7 +385,7 @@ The ConnectivityLogEnabled parameter specifies whether the connectivity log is e
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -404,7 +404,7 @@ For example, to specify 25 days for this parameter, use 25.00:00:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -435,7 +435,7 @@ The value of the ConnectivityLogMaxFileSize parameter must be less than or equal
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -466,7 +466,7 @@ The value of the ConnectivityLogMaxFileSize parameter must be less than or equal
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -481,7 +481,7 @@ The ConnectivityLogPath parameter specifies the default connectivity log directo
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -502,7 +502,7 @@ The ContentConversionTracingEnabled parameter specifies whether content conversi
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -521,7 +521,7 @@ For example, to specify 3.5 hours for this parameter, use 03:30:00. The valid in
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -536,7 +536,7 @@ The DnsLogEnabled parameter specifies whether the DNS log is enabled. The defaul
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -555,7 +555,7 @@ Setting the value of the DnsLogMaxAge parameter to 00:00:00 prevents the automat
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -586,7 +586,7 @@ The value of the DnsLogMaxFileSize parameter must be less than or equal to the v
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -617,7 +617,7 @@ The value of the DnsLogMaxFileSize parameter must be less than or equal to the v
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -632,7 +632,7 @@ The DnsLogPath parameter specifies the DNS log directory location. The default v
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -649,7 +649,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -664,7 +664,7 @@ The ExternalDNSAdapterEnabled parameter specifies one or more Domain Name System
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -681,7 +681,7 @@ If the value of the ExternalDNSAdapterEnabled parameter is set to $false, the va
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -696,7 +696,7 @@ The ExternalDNSProtocolOption parameter specifies which protocol to use when que
 Type: Any | UseUdpOnly | UseTcpOnly
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -717,7 +717,7 @@ If the value of the ExternalDNSAdapterEnabled parameter is set to $true, the Ext
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -732,7 +732,7 @@ The ExternalIPAddress parameter specifies the IP address used in the Received me
 Type: IPAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -747,7 +747,7 @@ The InternalDNSAdapterEnabled parameter specifies one or more DNS servers that E
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -764,7 +764,7 @@ If the value of the InternalDNSAdapterEnabled parameter is set to $false, the va
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -779,7 +779,7 @@ The InternalDNSProtocolOption parameter specifies which protocol to use when you
 Type: Any | UseUdpOnly | UseTcpOnly
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -800,7 +800,7 @@ If the InternalDNSAdapterGuid parameter is set, and the value of the InternalDNS
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -825,7 +825,7 @@ Valid values are:
 Type: None | Verbose
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -842,7 +842,7 @@ A valid value is an integer from 0 to 2147483647. The default value is 20.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -861,7 +861,7 @@ The IrmLogEnabled parameter enables logging of Information Rights Management (IR
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -880,7 +880,7 @@ The valid input range for this parameter is 00:00:00 to 24855.03:14:07. Setting 
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -911,7 +911,7 @@ The value of the IrmLogMaxFileSize parameter must be less than or equal to the v
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -942,7 +942,7 @@ The value of the IrmLogMaxFileSize parameter must be less than or equal to the v
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -957,7 +957,7 @@ The IrmLogPath parameter specifies the default IRM log directory location. The d
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -972,7 +972,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -987,7 +987,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1002,7 +1002,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1017,7 +1017,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1032,7 +1032,7 @@ This parameter is reserved for internal Microsoft use.
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1047,7 +1047,7 @@ The MaxConcurrentMailboxDeliveries parameter specifies the maximum number of del
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1062,7 +1062,7 @@ The MaxConcurrentMailboxSubmissions parameter specifies the maximum number of su
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1077,7 +1077,7 @@ The MaxConnectionRatePerMinute parameter specifies the maximum rate that connect
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1092,7 +1092,7 @@ The MaxOutboundConnections parameter specifies the maximum number of outbound co
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1107,7 +1107,7 @@ The MaxPerDomainOutboundConnections parameter specifies the maximum number of co
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1126,7 +1126,7 @@ For example, to specify 3 days for this parameter, use 3.00:00:00. The valid inp
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1145,7 +1145,7 @@ For example, to specify 20 minutes for this parameter, use 00:20:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1160,7 +1160,7 @@ The MessageTrackingLogEnabled parameter specifies whether message tracking is en
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1179,7 +1179,7 @@ For example, to specify 20 days for this parameter, use 20.00:00:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1216,7 +1216,7 @@ The value of the MessageTrackingLogMaxFileSize parameter must be less than or eq
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1247,7 +1247,7 @@ The value of the MessageTrackingLogMaxFileSize parameter must be less than or eq
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1262,7 +1262,7 @@ The MessageTrackingLogPath parameter specifies the location of the message track
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1277,7 +1277,7 @@ The MessageTrackingLogSubjectLoggingEnabled parameter specifies whether the mess
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1296,7 +1296,7 @@ For example, to specify 15 minutes for this parameter, use 00:15:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1327,7 +1327,7 @@ The valid input range for this parameter is from 32768 through 2147483647 bytes.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1342,7 +1342,7 @@ The PickupDirectoryMaxMessagesPerMinute parameter specifies the maximum number o
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1357,7 +1357,7 @@ The PickupDirectoryMaxRecipientsPerMessage parameter specifies the maximum numbe
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1372,7 +1372,7 @@ The PickupDirectoryPath parameter specifies the location of the Pickup directory
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1387,7 +1387,7 @@ The PipelineTracingEnabled parameter specifies whether to enable pipeline tracin
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1408,7 +1408,7 @@ The PipelineTracingPath parameter specifies the location of the pipeline tracing
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1423,7 +1423,7 @@ The PipelineTracingSenderAddress parameter specifies the sender email address th
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1438,7 +1438,7 @@ The PoisonMessageDetectionEnabled parameter specifies whether poison messages sh
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1453,7 +1453,7 @@ The PoisonThreshold parameter specifies the number of times a message can be rej
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1472,7 +1472,7 @@ For example, to specify 10 days for this parameter, use 10.00:00:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1503,7 +1503,7 @@ The value of the QueueLogMaxFileSize parameter must be less than or equal to the
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1534,7 +1534,7 @@ The value of the QueueLogMaxFileSize parameter must be less than or equal to the
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1549,7 +1549,7 @@ The QueueLogPath parameter specifies the path of the queue log directory. The de
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1568,7 +1568,7 @@ For example, to specify 5 minutes for this parameter, use 00:05:00. The valid in
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1589,7 +1589,7 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1624,7 +1624,7 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1659,7 +1659,7 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1676,7 +1676,7 @@ Don't use the value $null for this parameter, because event log errors are gener
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1691,7 +1691,7 @@ The RecipientValidationCacheEnabled parameter specifies whether the recipient ad
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1706,7 +1706,7 @@ The ReplayDirectoryPath parameter specifies the path of the Replay directory. Th
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1721,7 +1721,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1736,7 +1736,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1751,7 +1751,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1766,7 +1766,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1781,7 +1781,7 @@ This parameter is reserved for internal Microsoft use.
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1796,7 +1796,7 @@ The RootDropDirectoryPath parameter specifies the top-level location of the Drop
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1815,7 +1815,7 @@ For example, to specify 5 days for this parameter, use 5.00:00:00. The valid inp
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1846,7 +1846,7 @@ The valid input range for this parameter is from 1 through 9223372036854775807 b
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1861,7 +1861,7 @@ The RoutingTableLogPath parameter specifies the directory location where routing
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1882,7 +1882,7 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1917,7 +1917,7 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1952,7 +1952,7 @@ This parameter is only meaningful when protocol logging is enabled for at least 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1973,7 +1973,7 @@ Don't use the value $null for this parameter, because event log errors are gener
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2100,7 +2100,7 @@ The TransientFailureRetryCount parameter specifies the maximum number of immedia
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2119,7 +2119,7 @@ For example, to specify 8 minutes for this parameter, use 00:08:00. The valid in
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2134,7 +2134,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2149,7 +2149,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2164,7 +2164,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2179,7 +2179,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2194,7 +2194,7 @@ This parameter is reserved for internal Microsoft use.
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2209,7 +2209,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2224,7 +2224,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2239,7 +2239,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2254,7 +2254,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2269,7 +2269,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2284,7 +2284,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2299,7 +2299,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2314,7 +2314,7 @@ This parameter is reserved for internal Microsoft use.
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2329,7 +2329,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2344,7 +2344,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2359,7 +2359,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2374,7 +2374,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2389,7 +2389,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2404,7 +2404,7 @@ This parameter is reserved for internal Microsoft use.
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2419,7 +2419,7 @@ This parameter is reserved for internal Microsoft use.
 Type: None | Error | Information | Verbose | RawData | Debugging
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2434,7 +2434,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2449,7 +2449,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2464,7 +2464,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2479,7 +2479,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2494,7 +2494,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2509,7 +2509,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2524,7 +2524,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2539,7 +2539,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2558,7 +2558,7 @@ If you set this parameter to $true, you also need to create a specific Receive c
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2573,7 +2573,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2588,7 +2588,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2603,7 +2603,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2618,7 +2618,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2633,7 +2633,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2648,7 +2648,7 @@ This parameter is reserved for internal Microsoft use.
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2663,7 +2663,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2678,7 +2678,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2693,7 +2693,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2708,7 +2708,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2723,7 +2723,7 @@ This parameter is reserved for internal Microsoft use.
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2738,7 +2738,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2753,7 +2753,7 @@ This parameter is reserved for internal Microsoft use.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2768,7 +2768,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2783,7 +2783,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -2798,7 +2798,7 @@ This parameter is reserved for internal Microsoft use.
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

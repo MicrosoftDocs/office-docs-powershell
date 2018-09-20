@@ -85,7 +85,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -100,7 +100,7 @@ The Identity parameter specifies the name of a DAG or a DAG network.
 Type: DatabaseAvailabilityGroupNetworkIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -115,7 +115,7 @@ The Server parameter specifies health information for the DAG network from a spe
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

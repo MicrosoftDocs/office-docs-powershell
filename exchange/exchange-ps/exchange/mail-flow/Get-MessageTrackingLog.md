@@ -64,7 +64,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -81,7 +81,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -96,7 +96,7 @@ The EventId parameter filters the message tracking log entries by the value of t
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +113,7 @@ The value of the internal-message-id for a specific message is different in the 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +128,7 @@ The MessageId parameter filters the message tracking log entries by the value of
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +143,7 @@ The MessageSubject parameter filters the message tracking log entries by the val
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +158,7 @@ The Recipients parameter filters the message tracking log entries by the SMTP em
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +173,7 @@ The Reference parameter filters the message tracking log entries by the value of
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +188,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +203,7 @@ The Sender parameter filters the message tracking log entries by the sender's SM
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -228,7 +228,7 @@ If you don't use this parameter, the command is run on the local server.
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +245,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -260,7 +260,7 @@ The NetworkMessageId parameter filters the message tracking log entries by the v
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -275,7 +275,7 @@ The Source parameter filters the message tracking log entries by the value of th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -290,7 +290,7 @@ The TransportTrafficType parameter filters the message tracking log entries by t
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

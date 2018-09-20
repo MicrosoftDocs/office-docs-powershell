@@ -100,7 +100,7 @@ This parameter can't be used with the RequestGuid or RequestQueue parameters.
 Type: MailboxExportRequestIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -140,7 +140,7 @@ You can't use this parameter with the Identity parameter.
 Type: DatabaseIdParameter
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -155,7 +155,7 @@ The Diagnostic switch specifies whether to return extremely detailed information
 Type: SwitchParameter
 Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -170,7 +170,7 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 Type: String
 Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +202,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +217,7 @@ The IncludeReport switch specifies whether to return additional details, which c
 Type: SwitchParameter
 Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -232,7 +232,7 @@ The ReportOnly switch returns the results as an array of report entries. You don
 Type: SwitchParameter
 Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -247,7 +247,7 @@ The RequestGuid parameter specifies the unique identifier for the export request
 Type: Guid
 Parameter Sets: MRSInstance, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

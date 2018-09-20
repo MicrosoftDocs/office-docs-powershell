@@ -54,7 +54,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -69,7 +69,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +94,7 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +113,7 @@ The ExtendedProtectionSPNList parameter specifies a list of valid Service Princi
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -138,7 +138,7 @@ If you use the value Allow or Require, and you have a proxy server between the c
 Type: None | Allow | Require
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +153,7 @@ The ExternalURL parameter specifies the URL that's used to connect to the virtua
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +168,7 @@ The InternalURL parameter specifies the URL that's used to connect to the virtua
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +183,7 @@ The Path parameter specifies the file system path of the virtual directory. We r
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -198,7 +198,7 @@ The PollInterval parameter specifies the time interval in minutes that the distr
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +213,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -232,7 +232,7 @@ The RequireSSL parameter specifies whether the client connection to the virtual 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -255,7 +255,7 @@ The Server parameter specifies the Exchange server that hosts the virtual direct
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -270,7 +270,7 @@ The WebSiteName parameter specifies the name of the IIS website under which the 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -285,7 +285,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -306,7 +306,7 @@ Client connections are proxied from the Client Access services to the backend se
 Type: ClientAccess | Mailbox
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

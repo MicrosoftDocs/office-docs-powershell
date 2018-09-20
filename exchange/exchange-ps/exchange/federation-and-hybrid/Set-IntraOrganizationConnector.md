@@ -52,7 +52,7 @@ The Identity parameter specifies the Intra-Organization connector that you want 
 Type: IntraOrganizationConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -71,7 +71,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +86,7 @@ The DiscoveryEndpoint parameter specifies the externally accessible URL used for
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +103,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -120,7 +120,7 @@ When you set the value to $false, you completely stop connectivity for the speci
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +135,7 @@ The TargetAddressDomains parameter specifies the domain namespaces that will be 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +150,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

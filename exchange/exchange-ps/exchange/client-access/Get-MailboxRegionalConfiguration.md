@@ -81,7 +81,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -98,7 +98,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -123,7 +123,7 @@ If you view the DefaultFolderNameMatchingUserLanguage property without using the
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -85,7 +85,7 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 Type: String
 Parameter Sets: (All), Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -102,7 +102,7 @@ Typically, you use this switch when you export a certificate, because you can st
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +121,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -138,7 +138,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -155,7 +155,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +182,7 @@ You can't use this parameter with the Identity parameter, but you can use it wit
 Type: ServerIdParameter
 Parameter Sets: (All), Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +197,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -212,7 +212,7 @@ The FileName parameter specifies the name and path of the exported certificate o
 Type: String
 Parameter Sets: Set1, Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -237,7 +237,7 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 Type: ExchangeCertificateIdParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None

@@ -84,7 +84,7 @@ If the value contains spaces, enclose the value in quotation marks (").
 Type: Byte[]
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -99,7 +99,7 @@ This parameter has been deprecated and is no longer used.
 Type: String[]
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -118,7 +118,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -135,7 +135,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -152,7 +152,7 @@ The friendly name value is descriptive text and doesn't affect the functionality
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +169,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +188,7 @@ The PrivateKeyExportable parameter specifies whether the certificate has an expo
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +213,7 @@ If you don't use this parameter, the command is run on the local server.
 Type: ServerIdParameter
 Parameter Sets: Set1, Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 Type: ServerIdParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +240,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -259,7 +259,7 @@ If the value contains spaces, enclose the value in quotation marks (").
 Type: String
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None

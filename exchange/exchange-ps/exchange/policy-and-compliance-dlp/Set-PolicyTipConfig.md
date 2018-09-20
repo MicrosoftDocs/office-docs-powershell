@@ -58,7 +58,7 @@ The Identity parameter specifies the custom Policy Tip you want to modify. You c
 Type: PolicyTipConfigIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -77,7 +77,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +94,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +109,7 @@ The Value parameter specifies the text that's displayed by the Policy Tip. If th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +124,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

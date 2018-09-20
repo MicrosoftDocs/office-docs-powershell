@@ -147,7 +147,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 Type: String
 Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +183,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -198,7 +198,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +217,7 @@ This parameter requires the creation and passing of a credential object. This cr
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +234,7 @@ The Database parameter specifies a mailbox database. Use this parameter to retur
 Type: DatabaseIdParameter
 Parameter Sets: DatabaseSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -251,7 +251,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -268,7 +268,7 @@ For more information about the filterable properties, see Filterable properties 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -299,7 +299,7 @@ For example:
 Type: RecipientIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: 1
 Default value: None
@@ -322,7 +322,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -337,7 +337,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -356,7 +356,7 @@ Soft-deleted recipients are deleted recipients that are still recoverable.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -379,7 +379,7 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -394,7 +394,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -409,7 +409,7 @@ This parameter is reserved for internal Microsoft use.
 Type: All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -428,7 +428,7 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +443,7 @@ The RecipientPreviewFilter parameter specifies a recipient filter that would def
 Type: String
 Parameter Sets: RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -476,7 +476,7 @@ You can specify multiple values separated by commas.
 Type: RecipientType[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -549,7 +549,7 @@ The value of the RecipientType parameter affects the values that you can use for
 Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -564,7 +564,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -599,7 +599,7 @@ You can sort by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

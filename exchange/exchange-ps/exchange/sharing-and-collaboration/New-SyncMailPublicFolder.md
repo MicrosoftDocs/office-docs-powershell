@@ -71,7 +71,7 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -86,7 +86,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -103,7 +103,7 @@ This value is also used for the DisplayName property if you don't use the Displa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -122,7 +122,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -139,7 +139,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +176,7 @@ To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<e
 Type: ProxyAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +191,7 @@ The ExternalEmailAddress parameter specifies an email address outside the organi
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +210,7 @@ The HiddenFromAddressListsEnabled parameter specifies whether this recipient is 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +225,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +240,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -261,7 +261,7 @@ The WindowsEmailAddress property is visible for the recipient in Active Director
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -298,7 +298,7 @@ By default, this parameter is blank ($null), which allows this recipient to acce
 Type: DeliveryRecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -333,7 +333,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -348,7 +348,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -363,7 +363,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -378,7 +378,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -393,7 +393,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -408,7 +408,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -423,7 +423,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -438,7 +438,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -453,7 +453,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -468,7 +468,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -483,7 +483,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -498,7 +498,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -513,7 +513,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -528,7 +528,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -543,7 +543,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -558,7 +558,7 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -579,7 +579,7 @@ The default value is $false. This parameter is meaningful only if you configure 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -596,7 +596,7 @@ If you don't use the DisplayName parameter, the value of the Name parameter is u
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -635,7 +635,7 @@ The default value is blank ($null), which means no forwarding recipient is confi
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -680,7 +680,7 @@ By default, this parameter is blank, which means no one else has permission to s
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -713,7 +713,7 @@ For any message size limit, you need to set a value that's larger than the actua
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -746,7 +746,7 @@ For any message size limit, you need to set a value that's larger than the actua
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -761,7 +761,7 @@ The OnPremisesObjectId parameter specifies the GUID of the on-premises mail-enab
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -798,7 +798,7 @@ By default, this parameter is blank ($null), which allows this recipient to acce
 Type: DeliveryRecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -817,7 +817,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

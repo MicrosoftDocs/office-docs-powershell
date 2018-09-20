@@ -95,7 +95,7 @@ The name of the built-in mobile device mailbox policy is Default.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -127,7 +127,7 @@ The AllowBluetooth parameter specifies whether the Bluetooth capabilities of the
 Type: Disable | HandsfreeOnly | Allow
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +142,7 @@ The AllowBrowser parameter specifies whether Microsoft Pocket Internet Explorer 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -157,7 +157,7 @@ The AllowCamera parameter specifies whether the mobile device's camera is allowe
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +172,7 @@ The AllowConsumerEmail parameter specifies whether the user can configure a pers
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -187,7 +187,7 @@ The AllowDesktopSync parameter specifies whether the mobile device can synchroni
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +202,7 @@ The AllowExternalDeviceManagement parameter specifies whether an external device
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +234,7 @@ The AllowHTMLEmail parameter specifies whether HTML-formatted email is enabled o
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -249,7 +249,7 @@ The AllowInternetSharing parameter specifies whether the mobile device can be us
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +264,7 @@ The AllowIrDA parameter specifies whether infrared connections are allowed to th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -296,7 +296,7 @@ The AllowMobileOTAUpdate parameter specifies whether the policy can be sent to t
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -313,7 +313,7 @@ When set to $true, this parameter enables all mobile devices to synchronize with
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -328,7 +328,7 @@ The AllowPOPIMAPEmail parameter specifies whether the user can configure a POP3 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -343,7 +343,7 @@ The AllowRemoteDesktop parameter specifies whether the mobile device can initiat
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -358,7 +358,7 @@ The AllowSimplePassword parameter specifies whether a simple password is allowed
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -381,7 +381,7 @@ The default value is AllowAnyAlgorithmNegotiation.
 Type: BlockNegotiation | OnlyStrongAlgorithmNegotiation | AllowAnyAlgorithmNegotiation
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -396,7 +396,7 @@ The AllowSMIMESoftCerts parameter specifies whether S/MIME software certificates
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -411,7 +411,7 @@ The AllowStorageCard parameter specifies whether the mobile device can access in
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -426,7 +426,7 @@ The AllowTextMessaging parameter specifies whether text messaging is allowed fro
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -441,7 +441,7 @@ The AllowUnsignedApplications parameter specifies whether unsigned applications 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -456,7 +456,7 @@ The AllowUnsignedInstallationPackages parameter specifies whether unsigned insta
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -471,7 +471,7 @@ The AllowWiFi parameter specifies whether wireless Internet access is allowed on
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -486,7 +486,7 @@ The AlphanumericPasswordRequired parameter specifies whether the password for th
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -501,7 +501,7 @@ The ApprovedApplicationList parameter specifies a configured list of approved ap
 Type: ApprovedApplicationCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -518,7 +518,7 @@ When set to $false, this parameter blocks the user from downloading attachments 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -537,7 +537,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -554,7 +554,7 @@ When this parameter is set to $true, device encryption is enabled on the mobile 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -573,7 +573,7 @@ The default value is Unlimited.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -590,7 +590,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -605,7 +605,7 @@ The IrmEnabled parameter specifies whether Information Rights Management (IRM) i
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -622,7 +622,7 @@ There can be only one default policy. If another policy is currently set as the 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -647,7 +647,7 @@ The maximum value is 1024 bytes (one kilobyte) less than two gigabytes (2\*1024^
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -674,7 +674,7 @@ The default value is All.
 Type: All | TwoWeeks | OneMonth | ThreeMonths | SixMonths
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -703,7 +703,7 @@ The default value is All.
 Type: All | OneDay | ThreeDays | OneWeek | TwoWeeks | OneMonth
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -720,7 +720,7 @@ Unqualified values are treated as bytes. You can qualify the value with KB (kilo
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -737,7 +737,7 @@ Unqualified values are treated as bytes. You can qualify the value with KB (kilo
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -756,7 +756,7 @@ The MaxInactivityTimeLock parameter specifies the length of time that the mobile
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -773,7 +773,7 @@ You can enter any number from 4 through 16 or the value Unlimited. The default v
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -810,7 +810,7 @@ For Windows Phone 10 devices, the value specifies the following password complex
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -827,7 +827,7 @@ You can enter any number from 1 through 16 or the value $null. The default value
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -844,7 +844,7 @@ When set to $true, this parameter requires the user to set a password on the mob
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -863,7 +863,7 @@ The PasswordExpiration parameter specifies how long a password can be used on a 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -880,7 +880,7 @@ You can enter any number from 0 through 50. The default value is 0.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -897,7 +897,7 @@ When set to $true, this parameter enables you to store the recovery password for
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -912,7 +912,7 @@ The RequireDeviceEncryption parameter specifies whether encryption is required o
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -927,7 +927,7 @@ The RequireEncryptedSMIMEMessages parameter specifies whether the mobile device 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -954,7 +954,7 @@ The default value is TripleDES.
 Type: TripleDES | DES | RC2128bit | RC264bit | RC240bit
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -969,7 +969,7 @@ The RequireManualSyncWhenRoaming parameter specifies whether the mobile device m
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -986,7 +986,7 @@ Valid values for this parameter are SHA1 or MD5. The default value is SHA1.
 Type: SHA1 | MD5
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1001,7 +1001,7 @@ The RequireSignedSMIMEMessages parameter specifies whether the mobile device mus
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1018,7 +1018,7 @@ Setting this parameter to $true also sets the DeviceEncryptionEnabled parameter 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1033,7 +1033,7 @@ The UnapprovedInROMApplicationList parameter specifies a list of applications th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1048,7 +1048,7 @@ The UNCAccessEnabled parameter specifies whether access to Microsoft Windows fil
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1063,7 +1063,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1078,7 +1078,7 @@ The WSSAccessEnabled parameter specifies whether access to Microsoft Windows Sha
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

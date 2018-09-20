@@ -76,7 +76,7 @@ The Identity parameter specifies the identity of the object that's getting permi
 Type: ADRawEntryIdParameter
 Parameter Sets: Set1, Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Type: ADRawEntryIdParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -103,7 +103,7 @@ The Instance parameter enables you to pass an entire object to the command to be
 Type: ADAcePresentationObject
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -120,7 +120,7 @@ The Owner parameter can only be used with the Identity parameter and no other pa
 Type: SecurityPrincipalIdParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -135,7 +135,7 @@ The User parameter specifies the user that the permissions are being granted to 
 Type: SecurityPrincipalIdParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Type: SecurityPrincipalIdParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +200,7 @@ The AccessRights parameter specifies the rights needed to perform the operation.
 Type: ActiveDirectoryRights[]
 Parameter Sets: Set1, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +217,7 @@ The ChildObjectTypes parameter can only be used if the AccessRights parameter is
 Type: ADSchemaObjectIdParameter[]
 Parameter Sets: Set1, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +236,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -251,7 +251,7 @@ The Deny switch specifies whether to deny permissions to the user on the Active 
 Type: SwitchParameter
 Parameter Sets: Set1, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -268,7 +268,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -283,7 +283,7 @@ The ExtendedRights parameter specifies the extended rights needed to perform the
 Type: ExtendedRightIdParameter[]
 Parameter Sets: Set1, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -298,7 +298,7 @@ The InheritanceType parameter specifies whether permissions are inherited.
 Type: None | All | Descendents | SelfAndChildren | Children
 Parameter Sets: Set1, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -313,7 +313,7 @@ The InheritedObjectType parameter specifies what kind of object inherits this ac
 Type: ADSchemaObjectIdParameter
 Parameter Sets: Set1, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -330,7 +330,7 @@ The Properties parameter can only be used if the AccessRights parameter is set t
 Type: ADSchemaObjectIdParameter[]
 Parameter Sets: Set1, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -345,7 +345,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

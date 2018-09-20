@@ -76,7 +76,7 @@ The Server parameter specifies the name of the server from which to retrieve mai
 Type: ServerIdParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -91,7 +91,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +106,7 @@ The DumpsterStatistics switch specifies that transport dumpster statistics be re
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +129,7 @@ If you have multiple databases with the same name, the command retrieves all dat
 Type: DatabaseIdParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -171,7 +171,7 @@ If you specify this switch, you should format the output in such a way that you 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +186,7 @@ The IncludePreExchange2013 switch parameter specifies whether to return informat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +201,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

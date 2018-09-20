@@ -675,7 +675,7 @@ The Name parameter specifies the unique name of the mailbox. The maximum length 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -694,7 +694,7 @@ The mailbox is created, and the associated account is created, but the account i
 Type: SwitchParameter
 Parameter Sets: Set5, Set12, Set7
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -715,7 +715,7 @@ Note: To create an arbitration mailbox that's used to store audit log settings o
 Type: SwitchParameter
 Parameter Sets: Set15, Set16, Set22
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -727,7 +727,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: Set23
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -746,7 +746,7 @@ Only use this parameter if the archive is hosted in the cloud-based service.
 Type: SmtpDomain
 Parameter Sets: Set9, Set13
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -765,7 +765,7 @@ Discovery mailboxes are created as target mailboxes for Discovery searches. Afte
 Type: SwitchParameter
 Parameter Sets: Set16, Set14, Set24
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -782,7 +782,7 @@ This switch is required only if you're creating an equipment mailbox.
 Type: SwitchParameter
 Parameter Sets: Set13, Set17
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -837,7 +837,7 @@ This parameter is required only if you're creating a linked mailbox.
 Type: String
 Parameter Sets: Set15, Set11, Set3, Set20
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -864,7 +864,7 @@ For example:
 Type: UserIdParameter
 Parameter Sets: Set15, Set11, Set3, Set20
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -881,7 +881,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 Type: SecureString
 Parameter Sets: Set5, Set15, Set16, Set13, Set6, Set11, Set2, Set3, Set12, Set14, Set7, Set23, Set17, Set20, Set18, Set19, Set21, Set22, Set24
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -893,7 +893,7 @@ Accept wildcard characters: False
 Type: SecureString
 Parameter Sets: Set9, Set1, Set10, Set4
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -912,7 +912,7 @@ When you use this switch, a logon-disabled account is created with the room mail
 Type: SwitchParameter
 Parameter Sets: Set2, Set23, Set25
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -931,7 +931,7 @@ A shared mailbox is a mailbox where multiple users can log on to access the mail
 Type: SwitchParameter
 Parameter Sets: Set14, Set19, Set21
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -967,7 +967,7 @@ The UserPrincipalName parameter specifies the logon name for the user account. T
 Type: String
 Parameter Sets: Set5, Set16, Set13, Set11, Set2, Set3, Set12, Set14, Set23, Set17, Set20, Set18, Set19, Set21, Set22, Set25, Set27, Set28
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -979,7 +979,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Set15, Set9, Set6, Set1, Set7, Set26, Set24
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -1019,7 +1019,7 @@ If you don't use this parameter, the default mobile device mailbox policy is use
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1044,7 +1044,7 @@ For more information about address book policies, see Address book policies (htt
 Type: AddressBookMailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1073,7 +1073,7 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1114,7 +1114,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1129,7 +1129,7 @@ The Archiveswitch specifies that an archive mailbox is created for this mailbox.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1152,7 +1152,7 @@ The ArchiveDatabase parameter specifies the Exchange database that contains the 
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1171,7 +1171,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1196,7 +1196,7 @@ Use the Get-MailboxDatabase cmdlet to see the available mailbox databases.
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1213,7 +1213,7 @@ If you don't use the DisplayName parameter, the value of the Name parameter is u
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1230,7 +1230,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1264,7 +1264,7 @@ The FirstName parameter specifies the user's first name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1279,7 +1279,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1296,7 +1296,7 @@ You need to set the ImmutableId parameter if Active Directory Federation Service
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1311,7 +1311,7 @@ The Initials parameter specifies the user's middle initials.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1326,7 +1326,7 @@ The LastName parameter specifies the user's last name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1345,7 +1345,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 Type: PSCredential
 Parameter Sets: Set15, Set11, Set3, Set20
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1447,7 +1447,7 @@ You need to use this parameter to specify at least one moderator when you set th
 Type: MultiValuedProperty
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1468,7 +1468,7 @@ You use the ModeratedBy parameter to specify the moderators.
 Type: $true | $false
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1483,7 +1483,7 @@ The Office parameter specifies the user's physical office name or number.
 Type: String
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1508,7 +1508,7 @@ Valid input for this parameter is an organizational unit (OU) or domain that's v
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1523,7 +1523,7 @@ The Phone parameter specifies the user's telephone number.
 Type: String
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1540,7 +1540,7 @@ If you use the PrimarySmtpAddress parameter to specify the primary email address
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1557,7 +1557,7 @@ The RemoteArchive switch specifies that a remote archive mailbox is created for 
 Type: SwitchParameter
 Parameter Sets: Set9, Set13
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1580,7 +1580,7 @@ A user's experience in any of these management interfaces is still controlled by
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1599,7 +1599,7 @@ The ResetPasswordOnNextLogon parameter specifies whether the user is required to
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1614,7 +1614,7 @@ The ResourceCapacity parameter specifies the capacity of the resource mailbox. F
 Type: Int32
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1643,7 +1643,7 @@ If you don't use this parameter, the retention policy named Default MRM Policy i
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1668,7 +1668,7 @@ Use the Get-RoleAssignmentPolicy cmdlet to see the available role assignment pol
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1685,7 +1685,7 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1708,7 +1708,7 @@ This parameter is only meaningful when moderation is enabled (the ModerationEnab
 Type: Never | Internal | Always
 Parameter Sets: Set5, Set15, Set9, Set16, Set13, Set8, Set6, Set11, Set1, Set10, Set2, Set3, Set12, Set14, Set4, Set7, Set17, Set20, Set19, Set21, Set22, Set25, Set29
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1735,7 +1735,7 @@ If you don't use this parameter, the sharing policy named Default Sharing Policy
 Type: SharingPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1762,7 +1762,7 @@ By default, no throttling policy is applied to the mailbox.
 Type: ThrottlingPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1777,7 +1777,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1802,7 +1802,7 @@ In Exchange Online, a room mailbox with an associated enabled account doesn't re
 Type: $true | $false
 Parameter Sets: Set23, Set25
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -1821,7 +1821,7 @@ A linked resource mailbox is useful in a scenario where you have an account in a
 Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -1869,7 +1869,7 @@ Public folder mailboxes are specially designed mailboxes that store the hierarch
 Type: SwitchParameter
 Parameter Sets: Set26, Set30
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -1888,7 +1888,7 @@ Use this parameter only if you plan to migrate legacy Exchange 2010 public folde
 Type: SwitchParameter
 Parameter Sets: Set26, Set30
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1903,7 +1903,7 @@ The IsExcludedFromServingHierarchy parameter prevents users from accessing the p
 Type: $true | $false
 Parameter Sets: Set26, Set30
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1918,7 +1918,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MailboxProvisioningConstraint
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1933,7 +1933,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1948,7 +1948,7 @@ This parameter is reserved for internal Microsoft use.
 Type: RemovedMailboxIdParameter
 Parameter Sets: Set5, Set9, Set13, Set8, Set11, Set1, Set10, Set12, Set14, Set4, Set7
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1960,7 +1960,7 @@ Accept wildcard characters: False
 Type: RemovedMailboxIdParameter
 Parameter Sets: Set6
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -1983,7 +1983,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 Type: SecureString
 Parameter Sets: Set23, Set25
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1998,7 +1998,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2019,7 +2019,7 @@ Notes:
 Type: SwitchParameter
 Parameter Sets: Set26
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -2040,7 +2040,7 @@ Notes:
 Type: SwitchParameter
 Parameter Sets: Set27
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -2057,7 +2057,7 @@ This switch is required only if you're creating a migration mailbox.
 Type: SwitchParameter
 Parameter Sets: Set23
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -2072,7 +2072,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Set18
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -2087,7 +2087,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: Set28
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -2116,7 +2116,7 @@ Accept wildcard characters: False
 Type: MailboxIdParameter
 Parameter Sets: Set10
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -2131,7 +2131,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2146,7 +2146,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Set22
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2161,7 +2161,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Set22
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2176,7 +2176,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

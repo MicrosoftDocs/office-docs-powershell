@@ -73,7 +73,7 @@ You can't use the Action parameter with the Identity parameter.
 Type: NotifyOnly | RejectOverride | Reject | Url
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +90,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +115,7 @@ You can't use the Identity parameter with the Action, Locale or Original paramet
 Type: PolicyTipConfigIdParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -134,7 +134,7 @@ You can't use the Locale parameter with the Identity parameter.
 Type: CultureInfo
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +149,7 @@ The Original switch includes built-in Policy Tips in the results. You don't spec
 Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

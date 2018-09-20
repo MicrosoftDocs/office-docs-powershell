@@ -56,7 +56,7 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: ExtendedOrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

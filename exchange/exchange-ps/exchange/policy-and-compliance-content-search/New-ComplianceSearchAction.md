@@ -133,7 +133,7 @@ You can find the content search by running the command Get-ComplianceSearch | Fo
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: True
 Position: 1
 Default value: None
@@ -190,7 +190,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -280,7 +280,7 @@ The FileTypeExclusionsForUnindexedItems specifies the file types to exclude beca
 Type: String[]
 Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +295,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -320,7 +320,7 @@ The Format parameter specifies the format of the search results when you use the
 Type: ComplianceDataTransferFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -335,7 +335,7 @@ The IncludeCredential switch specifies whether to include the credential in the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +371,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -390,7 +390,7 @@ The recipient you specify is in the To: field of the message.
 Type: String
 Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -409,7 +409,7 @@ The recipient you specify is in the Cc: field of the message.
 Type: String
 Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -426,7 +426,7 @@ In the Security & Compliance Center, this parameter requires the Preivew role. B
 Type: SwitchParameter
 Parameter Sets: Preview
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -445,7 +445,7 @@ Additionally, unindexed items aren't removed from mailboxes when you use this sw
 Type: SwitchParameter
 Parameter Sets: Purge
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -462,7 +462,7 @@ The valid value for this parameter is SoftDelete, which means the purged items a
 Type: ComplianceDestroyType
 Parameter Sets: Purge
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -528,7 +528,7 @@ The RetentionReport switch specifies the action for the content search is to exp
 Type: SwitchParameter
 Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -543,7 +543,7 @@ The RetryOnError switch specifies whether to retry the action on any items that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -572,7 +572,7 @@ The Scenario parameter specifies the scenario type when you use the Export switc
 Type: ComplianceSearchActionScenario
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -595,7 +595,7 @@ This parameter is only meaningful for content searches where the IncludeUnindexe
 Type: ComplianceExportScope
 Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -675,7 +675,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -692,7 +692,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None

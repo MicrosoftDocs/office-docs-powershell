@@ -77,7 +77,7 @@ You can't use the Dag parameter with the Server, Site or Forest parameters.
 Type: MultiValuedProperty
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -94,7 +94,7 @@ You can't use the Forest switch with the Server, Site or Dag parameters.
 Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -111,7 +111,7 @@ You can't use the Server parameter with the Dag, Site or Forest parameters.
 Type: MultiValuedProperty
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -128,7 +128,7 @@ You can't use the Site parameter with the Server, Dag or Forest parameters.
 Type: MultiValuedProperty
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +143,7 @@ The DetailsLevel parameter specifies the level of detail to display in the resul
 Type: None | Normal | Verbose
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +160,7 @@ You can specify multiple criteria by using the and comparison operator. Property
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -195,7 +195,7 @@ The default value is NextHopDomain.
 Type: NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +210,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +225,7 @@ The ResultSize parameter filters the delivery queue results by the number of mes
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +242,7 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

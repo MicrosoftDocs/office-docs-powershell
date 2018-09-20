@@ -77,7 +77,7 @@ You can't use this switch with the Summary switch.
 Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -94,7 +94,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +109,7 @@ The Identity parameter specifies the notification event that you want to view. Y
 Type: EwsStoreObjectIdParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -134,7 +134,7 @@ The ProcessType parameter filters the results by the type of notification event.
 Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +161,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -178,7 +178,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: ExDateTime
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -195,7 +195,7 @@ You can't use this switch with the Settings switch.
 Type: SwitchParameter
 Parameter Sets: Set2, Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

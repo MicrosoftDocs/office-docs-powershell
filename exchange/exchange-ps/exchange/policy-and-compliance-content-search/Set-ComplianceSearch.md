@@ -84,7 +84,7 @@ You can find these values by running the command Get-ComplianceSearch | Format-T
 Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: True
 Position: 1
 Default value: None
@@ -115,7 +115,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +146,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +161,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +176,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +191,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -206,7 +206,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +223,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +240,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -269,7 +269,7 @@ The mailbox types that are affected by the value of this parameter include:
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -288,7 +288,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -305,7 +305,7 @@ This parameter uses a text search string or a query that's formatted by using th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -320,7 +320,7 @@ The Description parameter specifies a description for the compliance search. If 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -353,7 +353,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -384,7 +384,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -399,7 +399,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -418,7 +418,7 @@ Also, if a content location was placed on a query-based case hold, only items th
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -456,7 +456,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -471,7 +471,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -486,7 +486,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -501,7 +501,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -516,7 +516,7 @@ The PublicFolderLocation parameter specifies that you want to include all public
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -531,7 +531,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -546,7 +546,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -577,7 +577,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -608,7 +608,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -623,7 +623,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -638,7 +638,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -653,7 +653,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -668,7 +668,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -685,7 +685,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -702,7 +702,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -717,7 +717,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -734,7 +734,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -751,7 +751,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -768,7 +768,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None

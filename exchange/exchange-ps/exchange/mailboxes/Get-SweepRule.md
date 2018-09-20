@@ -57,7 +57,7 @@ The BypassScopeCheck switch specifies whether to bypass the scope check for the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -74,7 +74,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -95,7 +95,7 @@ The Identity parameter specifies the Sweep rule that you want to view. You can u
 Type: SweepRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: 1
 Default value: None
@@ -134,7 +134,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +149,7 @@ The Provider parameter filters the results by the specified provider.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

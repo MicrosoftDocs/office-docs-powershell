@@ -48,7 +48,7 @@ By default, the Update-ExchangeHelp cmdlet has a throttling period of 24 hours. 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

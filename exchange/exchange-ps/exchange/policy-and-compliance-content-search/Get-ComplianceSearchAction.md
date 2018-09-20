@@ -75,7 +75,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +90,7 @@ The Details switch specifies whether to include detailed information in the resu
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +107,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -122,7 +122,7 @@ The Export switch filters the results by Export compliance search actions. You d
 Type: SwitchParameter
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +141,7 @@ The Identity parameter specifies the compliance search action that you want to v
 Type: ComplianceSearchActionIdParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: 1
 Default value: None
@@ -156,7 +156,7 @@ The IncludeCredential switch specifies whether to include the credential in the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +171,7 @@ The Preview switch filters the results by Preview compliance search actions.
 Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +186,7 @@ The Purge switch filters the results by Purge compliance search actions.
 Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +201,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
