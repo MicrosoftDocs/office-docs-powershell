@@ -19,7 +19,7 @@ Get-SPOMigrationJobStatus -Credentials <CredentialCmdletPipeBind> [-JobId <Guid>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet will check the status of a migration job,
 
 
 ## EXAMPLES
@@ -31,12 +31,13 @@ $credentials = Get-Credential
 Get-SPOMigrationJobStatus -TargetWebUrl $targetWebUrl -Credentials $credentials -JobId "779c4b3b-ec24-4705-bb58-c38f4329418c"
 ```
 
-Get the status of your SPO Migration Job. You can obtain the Job id when submit package data to create new SPO migration job via the Invoke-SPOMigrationEncryptUploadSubmit cmdlet
+Get the status of your SPO Migration Job. 
+You can obtain the Job id when submit package data to create new SPO migration job via the Invoke-SPOMigrationEncryptUploadSubmit cmdlet
 
 ## PARAMETERS
 
 ### -Credentials
-(Optional) The credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection.
+The credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection.
 
 
 ```yaml
@@ -106,14 +107,12 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Introduction to the SharePoint Online management shell]()
+
+[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
