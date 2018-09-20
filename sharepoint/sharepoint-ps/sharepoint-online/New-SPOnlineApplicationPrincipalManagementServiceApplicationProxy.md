@@ -8,7 +8,8 @@ schema: 2.0.0
 # New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create a new SharePoint Online management Application Proxy Name
+
 
 
 ## SYNTAX
@@ -20,23 +21,26 @@ New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This Cmdlet is used to creates a new Application Proxy name, for example 
+usually when you run [this script](https://www.microsoft.com/en-us/download/confirmation.aspx?id=51490) you onboard your SharePoint Online (SPO) tenant and your SharePoint server cloud SSA to cloud hybrid search.
+
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
-{{ Add example code here }}
+```Powershell
+New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy -Name $SPO_MANAGEMENT_APPPROXY_NAME -OnlineTenantUri $PortalUrl -DefaultProxyGroup
 ```
 
-{{ Add example description here }}
+Found the proxies for the tenant on the variable $PortalUrl on the Default Proxy Group.
+
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+After the creation of the new Principal Management Service Application proxy assign it to the collection.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -68,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProxyGroup
-{{Fill DefaultProxyGroup Description}}
+Search Proxies on the default Proxy Group
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+SPO Management AppProxy Name.
 
 ```yaml
 Type: String
@@ -100,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnlineTenantUri
-{{Fill OnlineTenantUri Description}}
+Define the online Tenant URI.
 
 ```yaml
 Type: String
@@ -146,3 +150,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
+
+[SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
+
+[Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
+
+[Full Download to Hybrid Scripts](https://www.microsoft.com/en-us/download/confirmation.aspx?id=51490)
