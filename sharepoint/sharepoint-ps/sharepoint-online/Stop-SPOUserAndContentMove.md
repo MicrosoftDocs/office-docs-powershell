@@ -60,9 +60,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
