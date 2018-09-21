@@ -38,10 +38,16 @@ It is only meant to be run at the global level (and not at the pool level), and 
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsAuthConfig -BlockWindowsAuthExternally
 ```
 
-{{ Add example description here }}
+This example forces all external clients to use MA but allows NTLM or Kerberos (for clients that don't support ADAL) to work internally. If your clients do support ADAL they will use MA internally.
+
+### Example 2
+PS C:\> Set-CsAuthConfig -BlockWindowsAuthExternallyAndModernAuthInternally
+
+This example blocks NTLM externally and MA internally. It forces all external clients to use MA, but allows all clients to use legacy authentication methods internally (even ADAL-capable clients).
+
 
 ## PARAMETERS
 
