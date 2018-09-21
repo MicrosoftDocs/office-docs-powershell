@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version:
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CSOnlinePSTNGateway
 schema: 2.0.0
 ---
@@ -44,7 +44,7 @@ The parameter is mandatory for the cmdlet. The Identity is the same as the SBC F
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: True
 Position: 1
 Default value: None
