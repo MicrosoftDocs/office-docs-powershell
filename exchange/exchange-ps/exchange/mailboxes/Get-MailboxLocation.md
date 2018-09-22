@@ -17,28 +17,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### DatabaseSet
 ```
 Get-MailboxLocation -Database <DatabaseIdParameter> [-Confirm]
  [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
  [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-MailboxLocation -Identity <MailboxLocationIdParameter> [-Confirm]
  [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
  [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
-```
-Get-MailboxLocation -Organization <OrganizationIdParameter> [-Confirm]
- [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
+### User
 ```
 Get-MailboxLocation -User <UserIdParameter> [-Confirm]
  [-MailboxLocationType <Primary | MainArchive | AuxArchive | Aggregated | AuxPrimary | ComponentShared>]
@@ -64,7 +57,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set3
+Parameter Sets: DatabaseSet
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -81,22 +74,7 @@ You can't use this parameter with the User parameter.
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: Set4
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -125,7 +103,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set2
+Parameter Sets: User
 Aliases:
 Applicable: Exchange Online
 Required: True

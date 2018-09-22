@@ -223,7 +223,7 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -278,17 +278,17 @@ Accept wildcard characters: False
 ```
 
 ### -AutomateProcessing
-The AutomateProcessing parameter enables or disables calendar processing on the mailbox.
+The AutomateProcessing parameter enables or disables calendar processing on the mailbox. Valid values are:
 
-This parameter takes the following values:
+- None: Calendar processing is disabled on the mailbox. Both the resource booking attendant and the Calendar Attendant are disabled on the mailbox.
 
-- None: Both the resource booking attendant and the Calendar Attendant are disabled on the mailbox.
+- AutoUpdate: Only the Calendar Attendant processes meeting requests and responses. Meeting requests are tentative in the calendar until they're approved by a delegate. Meeting organizers receive only decisions from delegates.
 
-- AutoUpdate: Only the Calendar Attendant processes meeting requests and responses.
+- AutoAccept: Both the Calendar Attendant and resource booking attendant are enabled on the mailbox. This means that the Calendar Attendant updates the calendar, and then the resource booking assistant accepts the meeting based upon the policies. Eligible meeting organizers receive the decision directly without human intervention (free = accept; busy = decline).
 
-- AutoAccept: Both the Calendar Attendant and resource booking attendant are enabled on the mailbox. This means that the Calendar Attendant updates the calendar, and then the resource booking assistant accepts the meeting based upon the policies.
+The default value for resource mailboxes created in the Exchange admin center (EAC) is AutoAccept. The default value for resource mailboxes created in PowerShell is AutoUpdate.
 
-The default value on a resource mailbox is AutoAccept. The default value on a user mailbox is AutoUpdate, but you can't change the value on a user mailbox.
+The default value for user mailboxes is AutoUpdate, but you can't change the value on a user mailbox.
 
 ```yaml
 Type: None | AutoUpdate | AutoAccept

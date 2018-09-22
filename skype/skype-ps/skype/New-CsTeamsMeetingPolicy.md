@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CsTeamsMeetingPolicy [-AppDesktopSharingMode <Object>] [-Description <Object>] [[-Identity] <Object>]
+New-CsTeamsMeetingPolicy [-Description <Object>] [[-Identity] <Object>]
  [-InMemory] [-Confirm] [-AllowSharedNotes <Object>] [-AutoAdmittedUsers <Object>]
  [-AllowOutlookAddIn <Object>] [-Force] [-AllowTranscription <Object>]
  [-AllowPrivateMeetingScheduling <Object>] [-Tenant <Object>] [-MediaBitRateKb <Object>]
