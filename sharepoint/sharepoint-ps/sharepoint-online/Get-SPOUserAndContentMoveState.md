@@ -8,11 +8,10 @@ schema: 2.0.0
 # Get-SPOUserAndContentMoveState
 
 ## SYNOPSIS
-The Get-SPOUserAndContentMoveState cmdlet is part of the OneDrive and SharePoint Multi-Geo cmdlets, and allows a SharePoint administrators to check the status of a user or site’s move across geo locations.
-
+The Get-SPOUserAndContentMoveState cmdlet is part of the OneDrive and SharePoint Multi-Geo cmdlets, and allows a SharePoint administrators to check the status of a user or site move across geo locations.
 
 ## SYNTAX
-To obtain the status of a particular user’s move, you may use the following cmdlet
+To obtain the status of a particular user move, you may use the following cmdlet
 ```Powershell
 Get-SPOUserAndContentMoveState -UserPrincipalName <String> [<CommonParameters>]
 ```
