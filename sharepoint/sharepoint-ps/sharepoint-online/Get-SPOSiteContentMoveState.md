@@ -91,4 +91,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
-[Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
