@@ -8,27 +8,27 @@ schema: 2.0.0
 # Set-SPOGeoStorageQuota
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This Cmdlet sets the Storage quota on a multi-geo tenant
 
 
 ## SYNTAX
 
-```
+```Powershell
 Set-SPOGeoStorageQuota -GeoLocation <String> -StorageQuotaMB <Int64> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This Cmdlet sets the storage on a particular geolocation, with a specific number of MBs
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
-{{ Add example code here }}
+```Powershell
+Set-SPOGeoStorageQuota -GeoLocation EASTUS -StorageQuotaMB 512 
 ```
 
-{{ Add example description here }}
+Sets the SharePoint Online Storage Quota on the EAST US location to 512 MB.
 
 
 ## PARAMETERS
@@ -70,14 +70,10 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Get-SPOGeoStorageQuota](Get-SPOGeoStorageQuota.md)
