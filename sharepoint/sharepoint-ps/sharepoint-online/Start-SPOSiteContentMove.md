@@ -8,7 +8,7 @@ schema: 2.0.0
 # Start-SPOSiteContentMove
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Start a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command
 
 
 ## SYNTAX
@@ -34,17 +34,28 @@ Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-Preferred
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This command starts the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
 
 
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
+### ---------------EXAMPLE 1--------------
+```yaml
+Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHour(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
 ```
-{{ Add example code here }}
-```
+Starts the movement of the content on $url to the destination defined on $DestLocation variable prefered to start 1 hour ahead from now, until 12 hours to that relative time.
 
-{{ Add example description here }}
+### ---------------EXAMPLE 2--------------
+```
+Start-SPOSiteContentMove -GroupName  group@contoso.com -DestinationDataLocation  $destlocation
+```
+Starts the movement of a group of users called group@contoso.com to the destination location called $destlocation
+
+### ---------------EXAMPLE 3--------------
+```
+Start-SPOSiteContentMove -Url $url -DestinationUrl $destlocation
+```
+Starts the movement from a $url and set it to the location defined on $destlocation
 
 
 ## PARAMETERS
@@ -152,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-{{Fill Url Description}}
+Destination URL where the move will take place
 
 
 ```yaml
@@ -188,14 +199,12 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Get-SPOUserAndContentMoveState](Get-SPOUserAndContentMoveState.md)
