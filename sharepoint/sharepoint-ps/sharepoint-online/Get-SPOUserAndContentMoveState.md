@@ -29,7 +29,16 @@ Get-SPOUserAndContentMoveState -UserPrincipalName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This command gets the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
+
+The following are the available move states:
+
+|Status	|Description|
+| --- | --- |
+|NotStarted|	The move has not started. |
+|InProgress| 	The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
+|Success|	The move has completed successfully.|
+|Failed	|The move failed.|
 
 ## EXAMPLES
 ### Example 1 
