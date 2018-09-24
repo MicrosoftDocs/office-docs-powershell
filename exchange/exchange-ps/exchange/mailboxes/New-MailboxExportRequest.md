@@ -19,48 +19,96 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+###  Set1 (Default)
 ```
-New-MailboxExportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath> [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-Confirm] [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
- [-ContentFilter <String>] [-ContentFilterLanguage <CultureInfo>] [-DomainController <Fqdn>] [-ExcludeDumpster]
- [-ExcludeFolders <String[]>] [-IncludeFolders <String[]>] [-IsArchive] [-MRSServer <Fqdn>] [-Name <String>]
- [-Priority <Normal | High>] [-SourceRootFolder <String>] [-Suspend] [-SuspendComment <String>]
- [-TargetRootFolder <String>] [-WhatIf] [-CompletedRequestAgeLimit <Unlimited>]
- [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>] [-RemoteCredential <PSCredential>]
- [-RemoteHostName <Fqdn>] [-SkipMerging <SkippableMergeComponent[]>]
+New-MailboxExportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath>
+ [-AcceptLargeDataLoss]
+ [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-IsArchive]
+ [-LargeItemLimit <Unlimited>]
+ [-MRSServer <Fqdn>]
+ [-Name <String>]
+ [-Priority <Normal | High>]
+ [-RemoteCredential <PSCredential>]
+ [-RemoteHostName <Fqdn>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
  [<CommonParameters>]
 ```
 
-### Set2
+### MailboxExportRequest
 ```
-New-MailboxExportRequest [-Mailbox] <MailboxLocationIdParameter> -ComplianceStorePath <String>
- [-AcceptLargeDataLoss] [-BadItemLimit <Unlimited>] [-BatchName <String>]
- [-CompletedRequestAgeLimit <Unlimited>] [-Confirm] [-ContentFilter <String>]
- [-ContentFilterLanguage <CultureInfo>] [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>]
- [-IsArchive] [-LargeItemLimit <Unlimited>] [-Name <String>] [-PreferredMessageFormat <Default | Mime>]
+New-MailboxExportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <LongPath>
+ [-AcceptLargeDataLoss]
+ [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-IsArchive]
+ [-LargeItemLimit <Unlimited>]
+ [-Name <String>]
  [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- -RemoteCredential <PSCredential> [-RequestExpiryInterval <Unlimited>]
- [-SkipMerging <SkippableMergeComponent[]>] [-Suspend] [-SuspendComment <String>] [-WhatIf]
+ [-RemoteCredential <PSCredential>]
+ [-RemoteHostName <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
  [<CommonParameters>]
 ```
 
-### Set1
+### MailboxComplianceExportRequest
 ```
-New-MailboxExportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <LongPath> [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
- [-ContentFilter <String>] [-ContentFilterLanguage <CultureInfo>] [-DomainController <Fqdn>] [-ExcludeDumpster]
- [-ExcludeFolders <String[]>] [-IncludeFolders <String[]>] [-InternalFlags <InternalMrsFlag[]>] [-IsArchive]
- [-LargeItemLimit <Unlimited>] [-Name <String>]
+New-MailboxExportRequest [-Mailbox] <MailboxLocationIdParameter> -ComplianceStorePath <String> -RemoteCredential <PSCredential>
+ [-AcceptLargeDataLoss]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-IsArchive]
+ [-LargeItemLimit <Unlimited>]
+ [-Name <String>]
+ [-PreferredMessageFormat <Default | Mime>]
  [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RemoteCredential <PSCredential>] [-RemoteHostName <Fqdn>] [-RequestExpiryInterval <Unlimited>]
- [-SkipMerging <SkippableMergeComponent[]>] [-SourceRootFolder <String>] [-Suspend] [-SuspendComment <String>]
- [-TargetRootFolder <String>] [-WhatIf]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
  [<CommonParameters>]
 ```
@@ -110,6 +158,44 @@ This example exports all messages from Kweku's Inbox to the .pst file InPlaceHol
 
 ## PARAMETERS
 
+### -ComplianceStorePath
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: MailboxComplianceExportRequest
+Aliases:
+Applicable: Exchange Server 2016
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePath
+The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
+
+You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
+
+- To import PST files from the share: Read permission
+
+- To save exported PST files to the share: Read/Write permission.
+
+If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+
+```yaml
+Type: LongPath
+Parameter Sets: Set1, MailboxExportRequest
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Mailbox
 The Mailbox parameter specifies the mailbox that you want to export from. You can use any value that uniquely identifies the mailbox.
 
@@ -149,22 +235,26 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -FilePath
-The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
-
-You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
-
-- To import PST files from the share: Read permission
-
-- To save exported PST files to the share: Read/Write permission.
-
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+### -RemoteCredential
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: LongPath
-Parameter Sets: (All), Set1
+Type: PSCredential
+Parameter Sets: Set1, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: PSCredential
+Parameter Sets: MailboxComplianceExportRequest
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -200,7 +290,7 @@ Content filtering doesn't apply to associated messages.
 
 ```yaml
 Type: DoNotCopy | MapByMessageClass | Copy
-Parameter Sets: (All), Set1
+Parameter Sets: Set1, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -244,6 +334,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CompletedRequestAgeLimit
+The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit is 30 days.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -280,7 +385,7 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 
 ```yaml
 Type: KeepSourceItem | KeepLatestItem | KeepAll
-Parameter Sets: (All), Set1
+Parameter Sets: Set1, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -348,7 +453,7 @@ The ExcludeDumpster parameter specifies whether to exclude the Recoverable Items
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Set1, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -387,7 +492,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 - JunkEmail
 
-- CommunicationHistory
+- CommunicatorHistory
 
 - Voicemail
 
@@ -407,7 +512,7 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All), Set1
+Parameter Sets: Set1, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -466,9 +571,24 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All), Set1
+Parameter Sets: Set1, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InternalFlags
+The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
+
+```yaml
+Type: InternalMrsFlag[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
 Position: Named
 Default value: None
@@ -481,6 +601,31 @@ The IsArchive switch specifies that you're exporting from the user's archive. Yo
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LargeItemLimit
+The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
+
+For more information about maximum message size values, see the following topics:
+
+- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
+
+- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
+
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
+
+If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+```yaml
+Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -525,10 +670,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreferredMessageFormat
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Default | Mime
+Parameter Sets: MailboxComplianceExportRequest
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Priority
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
-
-- Lowest
 
 - Lower
 
@@ -548,165 +706,8 @@ The Priority parameter specifies the order in which the request should be proces
 Type: Normal | High
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceRootFolder
-The SourceRootFolder parameter specifies the root folder of the mailbox from which data is exported. If this parameter isn't specified, the command exports all folders.
-
-```yaml
-Type: String
-Parameter Sets: (All), Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SuspendComment
-The SuspendComment parameter specifies a description about why the request was suspended. You can only use this parameter if you specify the Suspend parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetRootFolder
-The TargetRootFolder parameter specifies the top-level folder in which to export data. If you don't specify this parameter, the command exports folders to the top of the folder structure in the target .pst file. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
-
-```yaml
-Type: String
-Parameter Sets: (All), Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit is 30 days.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InternalFlags
-The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
-
-```yaml
-Type: InternalMrsFlag[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LargeItemLimit
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
-
-- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
-
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteCredential
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All), Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSCredential
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -718,9 +719,32 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All), Set1
+Parameter Sets: Set1, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestExpiryInterval
+The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
+
+- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
+
+- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+When you use the value Unlimited, the completed request isn't automatically removed.
+
+```yaml
+Type: Unlimited
+Parameter Sets: MailboxComplianceExportRequest, MailboxExportRequest
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -743,11 +767,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkloadType
-The WorkloadType parameter is reserved for internal Microsoft use.
+### -SourceRootFolder
+The SourceRootFolder parameter specifies the root folder of the mailbox from which data is exported. If this parameter isn't specified, the command exports all folders.
 
 ```yaml
-Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
+Type: String
+Parameter Sets: Set1, MailboxExportRequest
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Suspend
+The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -758,12 +797,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ComplianceStorePath
-This parameter is reserved for internal Microsoft use.
+### -SuspendComment
+The SuspendComment parameter specifies a description about why the request was suspended. You can only use this parameter if you specify the Suspend parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetRootFolder
+The TargetRootFolder parameter specifies the top-level folder in which to export data. If you don't specify this parameter, the command exports folders to the top of the folder structure in the target .pst file. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
+
+```yaml
+Type: String
+Parameter Sets: Set1, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -773,14 +827,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PreferredMessageFormat
-This parameter is reserved for internal Microsoft use.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
-Type: Default | Mime
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -788,20 +842,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RequestExpiryInterval
-The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
-
-- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
-
-- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-When you use the value Unlimited, the completed request isn't automatically removed.
+### -WorkloadType
+The WorkloadType parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Unlimited
-Parameter Sets: Set2, Set1
+Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False

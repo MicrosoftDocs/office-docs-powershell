@@ -357,7 +357,7 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 
 - JunkEmail
 
-- CommunicationHistory
+- CommunicatorHistory
 
 - Voicemail
 
