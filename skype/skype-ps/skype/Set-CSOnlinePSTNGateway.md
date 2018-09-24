@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version:
-applicable: Microsoft Teams
+applicable: Skype for Business Online
 title: Set-CSOnlinePSTNGateway
 schema: 2.0.0
 ---
@@ -59,7 +59,7 @@ Allows choosing codec priority when media is negotiated between Media Proxy and 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: ("SILKWB,SILKNB,PCMU,PCMA")
@@ -74,7 +74,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -89,7 +89,7 @@ Used to enable this SBC for outbound calls. Can be used to temporarily remove th
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: $false
@@ -104,7 +104,7 @@ Allows exclude some codecs during the process of media negotiation between Media
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -119,7 +119,7 @@ When set to 10 (default value), outbound calls that are not answered by the gate
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: 10
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +148,7 @@ Indicates whether call history information will be forwarded through the trunk. 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: $false
@@ -163,7 +163,7 @@ Indicates whether the P-Asserted-Identity (PAI) header will be forwarded along w
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: $false
@@ -178,7 +178,7 @@ The parameter is mandatory when modifying an existing SBC.
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: 1
 Default value: None
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 Type: PSObject
 Parameter Sets: Instance
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +207,7 @@ Used by alerting system. When any value is set, the alerting system will generat
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -222,7 +222,7 @@ Parameter indicated of the SBC supports Media Bypass and the administrator wants
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: $false
@@ -237,7 +237,7 @@ PSTN Gateway Site Id.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -252,7 +252,7 @@ Used to enable this SBC to report assigned site location. Site location is used 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: $false
@@ -267,7 +267,7 @@ Defines if an SBC will or will not send the SIP options. If disabled, the SBC wi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: $true
@@ -282,7 +282,7 @@ Listening port used for communicating with Direct Routing services by using the 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -312,7 +312,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None

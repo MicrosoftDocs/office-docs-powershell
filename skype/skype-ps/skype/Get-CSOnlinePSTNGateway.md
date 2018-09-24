@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version:
-applicable: Microsoft Teams
+applicable: Skype for Business Online
 title: Get-CSOnlinePSTNGateway
 schema: 2.0.0
 ---
@@ -51,7 +51,7 @@ This example selects all SBC with names matching the pattern *.contoso.com. For 
 Type: String
 Parameter Sets: Filter
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
@@ -66,7 +66,7 @@ The parameter is optional for the cmdlet. If not set all SBC paired to the tenan
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases:
-Applicable: Microsoft Teams
+Applicable: Skype for Business Online
 Required: False
 Position: 1
 Default value: None
