@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2016
+applicable: Exchange Server 2016, Exchange Server 2019
 title: Get-ClientAccessService
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016"
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ClientAccessService
@@ -51,7 +51,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +76,7 @@ You can use any value that uniquely identifies the server. For example:
 Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -93,7 +93,7 @@ The password is visible in the AlternateServiceAccountConfiguration property. To
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +110,7 @@ The status is visible in the AlternateServiceAccountConfiguration property. To s
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

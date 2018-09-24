@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: Get-TeamsRetentionComplianceRule
+title: Set-TeamsRetentionComplianceRule
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
