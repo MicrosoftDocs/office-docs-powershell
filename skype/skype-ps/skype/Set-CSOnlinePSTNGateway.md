@@ -18,7 +18,7 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 Set-CSOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf]
+ [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -27,7 +27,7 @@ Set-CSOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-C
 Set-CSOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -241,6 +241,21 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewaySiteLbrEnabled
+Used to enable this SBC to report assigned site location. Site location is used for Location Based Routing. When this parameter is turned on, the SBC will report the site name as defined by tenant administrator. On incoming call to a Teams user the value of the site assigned to the SBC is compared with the value of the site assigned to the user to make a routing decision. The parameter is mandatory for enabling Location Based Routing feature. The default value is False ($False).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: $false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
