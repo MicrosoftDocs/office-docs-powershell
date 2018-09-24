@@ -13,6 +13,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-PowerShellConnectivity cmdlet to test client connectivity to Exchange remote PowerShell virtual directories.
 
+**Note**: This cmdlet works best in Exchange 2010. In Exchange 2013 or later, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX

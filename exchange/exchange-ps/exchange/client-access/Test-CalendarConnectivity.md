@@ -13,6 +13,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-CalendarConnectivity cmdlet to verify that anonymous calendar sharing is enabled and working properly. The Calendar virtual directory is a subdirectory of the Microsoft Outlook on the web virtual directories. When you run this command without any parameters, the command tests calendar connectivity against all Outlook on the web virtual directories.
 
+**Note**: This cmdlet works best in Exchange 2010. In Exchange 2013 or later, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
