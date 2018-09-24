@@ -8,47 +8,30 @@ schema: 2.0.0
 # Get-SPOUserAndContentMoveState
 
 ## SYNOPSIS
-The Get-SPOUserAndContentMoveState cmdlet is part of the OneDrive and SharePoint Multi-Geo cmdlets, and allows a SharePoint administrators to check the status of a user or site move across geo locations.
+This cmdlet is part of the OneDrive and SharePoint MultiGeo cmdlets, and allows a SharePoint administrators to check the status of a user or site move across geo locations.
 
 ## SYNTAX
-The objective of the cmdlet is to obtain the status of a particular use while the move job is active.
-
 
 ### MoveReport
 ```
 Get-SPOUserAndContentMoveState [-Limit <UInt32>] [-MoveDirection <Direction>] [-MoveEndTime <DateTime>]
  [-MoveStartTime <DateTime>] [-MoveState <State>] [<CommonParameters>]
 ```
-Allows you to define the direction of the user move in relation to your current SharePoint location. The sintax is as follows:
-
 
 ### OdbMoveId
 ```
 Get-SPOUserAndContentMoveState -OdbMoveId <Guid> [<CommonParameters>]
 ```
-To obtain the move state by OneDrive Move Job ID
 
 ### UserPrincipalName
 ```
 Get-SPOUserAndContentMoveState -UserPrincipalName <String> [<CommonParameters>]
 ```
-Get the status of the move of a user by UPN
 
 ## DESCRIPTION
-This command gets the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
-
-The following are the available move states:
-
-|Status	|Description|
-| --- | --- |
-|NotStarted|	The move has not started. |
-|InProgress| 	The move is in progress in one of the following states: Validation (1/4), Backup (2/4), Restore (3/4), Cleanup (4/4).|
-|Success|	The move has completed successfully.|
-|Failed	|The move failed.|
-
+{{Fill in the Description}}
 
 ## EXAMPLES
-
 ### Example 1 
 
 ```Powershell
