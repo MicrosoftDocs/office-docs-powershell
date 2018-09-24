@@ -152,7 +152,7 @@ FileDownloadOnly
 Type: AddressBookAvailability
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ When set to False, transferred calls that fail to reach the intended recipient w
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ For example, to set the interval to 25 minutes use this syntax: `- AutoDiscovery
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ When set to False, outside contacts are allowed to send unsolicited instant mess
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ For example, to set the CalendarStatePublicationInterval to 10 minutes (600 seco
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -266,7 +266,7 @@ For example, this syntax sets the timeout value to 45 minutes:
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -290,7 +290,7 @@ This parameter has been deprecated for use with Skype for Business Server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -311,7 +311,7 @@ Users can then click that link and be taken to a custom website that contains ad
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -331,7 +331,7 @@ Specifies the location of the XML file used to add custom presence states to Sky
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -352,7 +352,7 @@ For example, the Description might indicate which users the policy should be ass
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -373,7 +373,7 @@ The default value is 28,800 seconds.
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -415,7 +415,7 @@ When set to False, the contact card Organization tab is available in Skype for B
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -482,7 +482,7 @@ When set to False, the notification dialog box will use the federated user's dis
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -502,7 +502,7 @@ When set to False, the feeds tab will be available within Skype for Business.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -676,7 +676,7 @@ For example, any time you are on the phone your status will automatically be set
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -696,7 +696,7 @@ When set to False, the notification dialog box will use the person's display nam
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -957,7 +957,7 @@ When set to False, only major events (such as the failure to connect to Skype fo
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -976,7 +976,7 @@ When set to True (the default value) Skype for Business creates a corresponding 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -996,7 +996,7 @@ When set to True, delegates that a user has configured in Microsoft Exchange wil
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1016,7 +1016,7 @@ When set to False, full-screen video is not available in Skype for Business, but
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -1108,7 +1108,7 @@ Tracing is mostly useful to developers and to application support personnel.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013,  Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
