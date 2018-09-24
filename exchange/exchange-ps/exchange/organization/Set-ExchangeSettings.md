@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2016
+applicable: Exchange Server 2016, Exchange Server 2019
 title: Set-ExchangeSettings
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016"
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ExchangeSettings
@@ -133,7 +133,7 @@ The ClearHistory switch specifies that you want to clear the entries in the modi
 Type: SwitchParameter
 Parameter Sets: Set12
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -150,7 +150,7 @@ For add and update operations, you also need to use the ConfigValue parameter to
 Type: String
 Parameter Sets: Set5, Set9
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -167,7 +167,7 @@ You can't use the ConfigValue parameter with the ConfigPairs parameter.
 Type: String
 Parameter Sets: Set5
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -184,7 +184,7 @@ Depending on how you want to configure the settings group, you use either the Gr
 Type: SwitchParameter
 Parameter Sets: Set1, Set2, Set3, Set4
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -203,7 +203,7 @@ You can only use the ExpirationDate parameter with the CreateSettingsGroup or Up
 Type: DateTime
 Parameter Sets: Set1, Set2, Set4
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 Type: DateTime
 Parameter Sets: Set7
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +234,7 @@ You can't use this parameter with the GenericScopeName, GenericScopeValue, MaxVe
 Type: Guid
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -251,7 +251,7 @@ The value of this parameter is the value of the Name parameter on the New-Exchan
 Type: ExchangeSettingsIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -266,7 +266,7 @@ The Reason parameter specifies a description for why the Exchange setting or set
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -283,7 +283,7 @@ You use the ConfigPairs parameter or the ConfigName parameter to specify the set
 Type: SwitchParameter
 Parameter Sets: Set9, Set10
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -300,7 +300,7 @@ You use the GroupName parameter to specify the Exchange settings group that you 
 Type: SwitchParameter
 Parameter Sets: Set11
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -317,7 +317,7 @@ You can't use the SettingsGroup parameter with the GroupName parameter.
 Type: String
 Parameter Sets: Set3, Set8
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -334,7 +334,7 @@ You use the ConfigPairs parameter or the ConfigName and ConfigValue parameters t
 Type: SwitchParameter
 Parameter Sets: Set5, Set6
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -351,7 +351,7 @@ Depending on how you want to configure the settings group, you use either the Gr
 Type: SwitchParameter
 Parameter Sets: Set7, Set8
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -368,7 +368,7 @@ You can't use the ConfigPairs parameter with the ConfigName or ConfigValue param
 Type: String[]
 Parameter Sets: Set1, Set2, Set4
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: Set10, Set6
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -399,7 +399,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -418,7 +418,7 @@ To use this switch to enable an Exchange settings group, use the syntax -Disable
 Type: SwitchParameter
 Parameter Sets: Set1, Set2, Set4
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -435,7 +435,7 @@ You can use the DisableGroup and EnableGroup parameters together in the same com
 Type: String
 Parameter Sets: Set13
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -450,7 +450,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -467,7 +467,7 @@ You can use the DisableGroup and EnableGroup parameters together in the same com
 Type: String
 Parameter Sets: Set13
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -482,7 +482,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -497,7 +497,7 @@ The GenericScopeName parameter specifies the name of the scope. The available va
 Type: String
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -512,7 +512,7 @@ The GenericScopeValue parameter specifies the value of the scope specified by th
 Type: String
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -537,7 +537,7 @@ If the value contains spaces, enclose the value in quotation marks (").
 Type: String
 Parameter Sets: Set5, Set9, Set1, Set2, Set4, Set7, Set10, Set11, Set6
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -556,7 +556,7 @@ You can't use this parameter with the GuidMatch, GenericScopeName, or GenericSco
 Type: String
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -575,7 +575,7 @@ You can't use this parameter with GuidMatch, GenericScopeName, or GenericScopeVa
 Type: String
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -594,7 +594,7 @@ You can't use this parameter with the GuidMatch, GenericScopeName, or GenericSco
 Type: String
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -609,7 +609,7 @@ The Priority parameter specifies the priority of an Exchange settings group. The
 Type: Int32
 Parameter Sets: Set1, Set2, Set4, Set7
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -640,7 +640,7 @@ The Scope parameter specifies the scope of the Exchange settings object. Valid v
 Type: Forest | Dag | Server | Process | Database | Organization | User | Generic
 Parameter Sets: Set1, Set2, Set4
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -659,7 +659,7 @@ You can't use this parameter with other scope-related parameters.
 Type: String
 Parameter Sets: Set1, Set7
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -674,7 +674,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
