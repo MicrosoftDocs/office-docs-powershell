@@ -13,13 +13,13 @@ Creates a new migration job in the target site collection
 ## SYNTAX
 
 ### ImplicitSourceParameterSet
-```Powershell
+```powershell
 Invoke-SPOMigrationEncryptUploadSubmit -Credentials <CredentialCmdletPipeBind>
  -MigrationSourceLocations <MigrationPackageLocation> [-NoLogFile] -TargetWebUrl <String> [<CommonParameters>]
 ```
 
 ### ExplicitSourceParameterSet
-```Powershell
+```powershell
 Invoke-SPOMigrationEncryptUploadSubmit -Credentials <CredentialCmdletPipeBind> [-NoLogFile]
  -SourceFilesPath <String> -SourcePackagePath <String> -TargetWebUrl <String> [<CommonParameters>]
 ```
@@ -32,7 +32,7 @@ Creates a new migration job in the target site collection, and then returns a GU
 ### Example 1 
 This example shows how to submit package data to create a new migration job
 
-```Powershell
+```powershell
 $job = Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $sourceFiles -SourcePackagePath $spoPackagePath -Credentials $cred -TargetWebUrl $targetWebUrl
 ```
 
@@ -161,6 +161,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 [Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
 [Upload on-premises content to SharePoint Online using PowerShell cmdlets](https://support.office.com/en-us/article/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets-555049c6-15ef-45a6-9a1f-a1ef673b867c)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)

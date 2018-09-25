@@ -8,7 +8,7 @@ schema: 2.0.0
 # ConvertTo-SPOMigrationTargetedPackage
 
 ## SYNOPSIS
-Use this command to convert the XML that is generated in your temporary folder. It saves a new set of targeted migration package metadata files to the target directory.
+Use this cmdlet to convert your XML files into a new migration package.
 
 ## SYNTAX
 
@@ -32,8 +32,7 @@ ConvertTo-SPOMigrationTargetedPackage [-SourceFilesPath] <String> [-SourcePackag
 ```
 
 ## DESCRIPTION
-Use this Cmdlet to create a migration package from one Library to Another Library in form of a package. In other words:
-convert the XML files and saves them as a new set of targeted migration package metadata files to the target directory.
+Use this Cmdlets to create a migration package from one Library to Another Library in form of a package. It converts the XML files and saves them as a new set of targeted migration package metadata files to the target directory.
 
 
 ## EXAMPLES

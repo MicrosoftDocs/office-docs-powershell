@@ -12,25 +12,25 @@ In a multi-geo company, starts the ability to move a user closer to their sites.
 
 ## SYNTAX
 
-```
+```powershell
 Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [-OverwriteOdb]
  [[-Notify] <String>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet requires a multi-geo tenant to work, and enables the ability to move a user closer to their sites.
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1 --------------
+### EXAMPLE 1
 ```yaml
 Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This will move the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
-### ---------------EXAMPLE 2--------------
+### EXAMPLE 2
 ```yaml
 Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
 ```
@@ -38,7 +38,7 @@ Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationD
 This will move the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 
-### ---------------EXAMPLE 3--------------
+### EXAMPLE 3
 ```yaml
 Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
 ```
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reserved
-{{Fill Reserved Description}}
+This parameter will only check for reserved users to be moved near to their sites
 
 ```yaml
 Type: String
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationOnly
-{{Fill ValidationOnly Description}}
+This parameter will force the cmdlet to execute only validation
 
 ```yaml
 Type: SwitchParameter
@@ -184,9 +184,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

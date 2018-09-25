@@ -8,11 +8,11 @@ schema: 2.0.0
 # Stop-SPOUserAndContentMove
 
 ## SYNOPSIS
-In a multi-get company, stops the ability to move a user closer to their sites.
+In a Multi-Geo company, stops the ability to move a user closer to their sites.
 
 ## SYNTAX
 
-```
+```powershell
 Stop-SPOUserAndContentMove [-UserPrincipalName] <String> [<CommonParameters>]
 ```
 
@@ -21,14 +21,14 @@ Stops the ability to move a user's content related objects in a Sharepoint Onlin
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1--------------
+### EXAMPLE 1
 ```yaml
 Stop-SPOUserAndContentMove -UserPrincipalName TesIser@contoso.com
 ```
 
 This will stop the ability to moves the movement of the objects for the "TesIser@contoso.com" in the current Tenant
 
-### ---------------EXAMPLE 2--------------
+### EXAMPLE 2
 ```yaml
 Stop-SPOUserAndContentMove TesIser@contoso.com
 ```

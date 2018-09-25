@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOCrossGeoUsers
 
 ## SYNOPSIS
-In a multi-geo tenant returns the SharePoint Online user (or users) that matches the cross Geographics criteria
+In a multi-geo tenant returns the SharePoint Online user (or users) that matches the criteria
 
 
 ## SYNTAX

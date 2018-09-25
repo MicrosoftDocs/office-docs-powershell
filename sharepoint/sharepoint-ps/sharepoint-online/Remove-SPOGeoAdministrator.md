@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SPOGeoAdministrator
 
 ## SYNOPSIS
-Remove a new SharePoint user or security Group as Get-Administrator of the current Multi-Geo Tenant.
+Remove a new SharePoint user or security Group in the current Multi-Geo Tenant.
 
 
 ## SYNTAX
@@ -74,9 +74,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

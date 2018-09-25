@@ -8,7 +8,7 @@ schema: 2.0.0
 # ConvertTo-SPOMigrationEncryptedPackage
 
 ## SYNOPSIS
-Use this command to convert the XML that is generated in your temporary folder. It saves a new set of targeted encrypted migration package metadata files to the target directory.
+Use this Cmdlet to convert your XML files into a new encryted migration package.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters <EncryptionParamete
 ```
 
 ## DESCRIPTION
-This command convert the XML file on your temprary folder XML file into a new set of targeted migration encrypted metadata.
+This command convert the XML file on your temprary XML folder files into a new set of targeted migration encrypted metadata files to the target directory.
 
 ## EXAMPLES
 

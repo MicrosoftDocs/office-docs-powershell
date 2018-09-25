@@ -13,7 +13,7 @@ This Cmdlet sets the Storage quota on a multi-geo tenant
 
 ## SYNTAX
 
-```Powershell
+```powershell
 Set-SPOGeoStorageQuota -GeoLocation <String> -StorageQuotaMB <Int64> [<CommonParameters>]
 ```
 
@@ -23,8 +23,8 @@ This Cmdlet sets the storage on a particular geolocation, with a specific number
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
-```Powershell
+### EXAMPLE 1
+```powershell
 Set-SPOGeoStorageQuota -GeoLocation EASTUS -StorageQuotaMB 512 
 ```
 

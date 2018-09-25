@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
 
 ## SYNOPSIS
-Create a new SharePoint Online management Application Proxy Name
+Creates a new SharePoint Online management Application Proxy Name
 
 
 
@@ -21,20 +21,16 @@ New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
 ```
 
 ## DESCRIPTION
-This Cmdlet is used to creates a new Application Proxy name, for example 
-usually when you run [this script](https://www.microsoft.com/en-us/download/confirmation.aspx?id=51490) you onboard your SharePoint Online (SPO) tenant and your SharePoint server cloud SSA to cloud hybrid search.
-
+This Cmdlet is used to create a new Application Proxy name, for example usually when you run [this script](https://www.microsoft.com/en-us/download/confirmation.aspx?id=51490) you onboard your SharePoint Online (SPO) tenant and your SharePoint server cloud SSA to cloud hybrid search.
 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
-```Powershell
+### EXAMPLE 1
+```powershell
 New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy -Name $SPO_MANAGEMENT_APPPROXY_NAME -OnlineTenantUri $PortalUrl -DefaultProxyGroup
 ```
-
 Found the proxies for the tenant on the variable $PortalUrl on the Default Proxy Group.
-
 
 
 ## PARAMETERS
@@ -139,20 +135,12 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### Microsoft.SharePoint.PowerShell.SPAssignmentCollection
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
-
 ## RELATED LINKS
 [Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
 [SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
 
 [Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
 

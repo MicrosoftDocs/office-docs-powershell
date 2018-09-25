@@ -17,19 +17,19 @@ Get-SPOTenantCdnPolicies -CdnType <SPOTenantCdnType> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet gets the public or private policies applied to a SharePoint Online organization tenant.
 
 ## EXAMPLES
 
 ### Example 1 
-```
+```powershell
 Get-SPOTenantCdnPolicies -CdnType Public
 ```
 
 This example returns public CDN policies of your tenant.
 
 ### Example 2 
-```
+```powershell
 Get-SPOTenantCdnPolicies -CdnType Private
 ```
 
@@ -61,9 +61,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

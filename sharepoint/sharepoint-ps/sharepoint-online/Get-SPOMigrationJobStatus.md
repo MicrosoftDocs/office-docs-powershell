@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOMigrationJobStatus
 
 ## SYNOPSIS
-Cmdlet to monitor the status of a submitted SharePoint Online Migration job.
+Use this cmdlet to monitor the status of a submitted SharePoint Online migration job.
 
 
 ## SYNTAX
@@ -25,7 +25,7 @@ This cmdlet will check the status of a migration job,
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 $targetWebUrl = "https://contoso.sharepoint.com/sites/migrationtest"
 $credentials = Get-Credential
 Get-SPOMigrationJobStatus -TargetWebUrl $targetWebUrl -Credentials $credentials -JobId "779c4b3b-ec24-4705-bb58-c38f4329418c"
@@ -110,9 +110,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

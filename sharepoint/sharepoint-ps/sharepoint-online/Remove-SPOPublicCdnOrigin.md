@@ -13,25 +13,25 @@ Removes a given public CDN origin based on its identity (id) in your Sharepoint 
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOPublicCdnOrigin [-Identity] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This command will remove a Public CDN Origin based on its identity.
+This cmdlet will remove a Public CDN Origin based on its identity.
 
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
-```Get
+### EXAMPLE 1
+```powershell
 #Get a list of CDN origins
 
 Get-SPOPublicCdnOrigins
 Id                                                                       Url
 --                                                                       ---
 11270051ee79e73829f6e7a3ee5d900d49c4fc5901645c642b799ecb62787a5069ca80fb HTTPS://CONTOSO.SHAREPOINT.COM/SITES/CDN...
-
+#then remove the CDN by Identity id GUID.
 Remove-SPOPublicCdnOrigin -Identity 11270051ee79e73829f6e7a3ee5d900d49c4fc5901645c642b799ecb62787a5069ca80fb
 ```
 
@@ -96,10 +96,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

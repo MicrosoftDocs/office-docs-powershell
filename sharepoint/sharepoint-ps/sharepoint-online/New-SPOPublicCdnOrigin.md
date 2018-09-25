@@ -13,7 +13,7 @@ Creates a new public CDN on a document library in your Sharepoint Online Tenant
 
 ## SYNTAX
 
-```
+```powershell
 New-SPOPublicCdnOrigin [-Url] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -24,8 +24,8 @@ This Cmdlet creates a new Public CDN Origin in your SPO Tenant
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
-```
+### EXAMPLE 1
+```powershell
 New-SPOPublicCdnOrigin –URL https://contoso.sharepoint.com/sites/CDN/CDNFilesLibrary/
 ```
 
@@ -93,9 +93,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

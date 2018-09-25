@@ -13,7 +13,7 @@ Removes SDN Support in your SharePoint Online tenant
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOSdnProvider [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -23,12 +23,12 @@ Removes SDN Support in your SharePoint Online tenant
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
 ```yaml
 Remove-SPOSdnProvider -Confirm:false
 ```
 
-This command removes the SDN support for your Online Tenant without Confirmation.
+This command removes the SDN support for your Online Tenant without confirmation.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```yaml
@@ -81,9 +81,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Introduction to the SharePoint Online management shell]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

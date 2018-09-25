@@ -14,21 +14,21 @@ Start a job to move a particular user or group of users to be moved across geo l
 ## SYNTAX
 
 ### UrlAndDestinationDataLocation
-```
+```powershell
 Start-SPOSiteContentMove [-Url] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
  [-ValidationOnly] [<CommonParameters>]
 ```
 
 ### GroupNameAndDestinationDataLocation
-```
+```powershell
 Start-SPOSiteContentMove [-GroupName] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
  [-ValidationOnly] [<CommonParameters>]
 ```
 
 ### UrlAndDestinationUrl
-```
+```powershell
 Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-PreferredMoveBeginDate] <DateTime>]
  [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
 ```
@@ -39,20 +39,20 @@ This command starts the information and the status of a move request of a user b
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1--------------
-```yaml
+### EXAMPLE 1
+```powershell
 Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHour(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
 ```
 Starts the movement of the content on $url to the destination defined on $DestLocation variable prefered to start 1 hour ahead from now, until 12 hours to that relative time.
 
-### ---------------EXAMPLE 2--------------
-```
+### EXAMPLE 2
+```powershell
 Start-SPOSiteContentMove -GroupName  group@contoso.com -DestinationDataLocation  $destlocation
 ```
 Starts the movement of a group of users called group@contoso.com to the destination location called $destlocation
 
-### ---------------EXAMPLE 3--------------
-```
+### EXAMPLE 3
+```powershell
 Start-SPOSiteContentMove -Url $url -DestinationUrl $destlocation
 ```
 Starts the movement from a $url and set it to the location defined on $destlocation

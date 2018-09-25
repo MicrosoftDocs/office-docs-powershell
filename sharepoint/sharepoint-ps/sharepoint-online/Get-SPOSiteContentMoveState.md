@@ -14,12 +14,12 @@ This Cmdlet allows a SharePoint administrators to check the status of a site or 
 ## SYNTAX
 
 ### GroupName
-```
+```powershell
 Get-SPOSiteContentMoveState [-GroupName] <String> [<CommonParameters>]
 ```
 
 ### SourceSiteUrl
-```
+```powershell
 Get-SPOSiteContentMoveState [-SourceSiteUrl] <String> [<CommonParameters>]
 ```
 

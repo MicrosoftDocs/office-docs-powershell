@@ -8,12 +8,12 @@ schema: 2.0.0
 # New-SPOSdnProvider
 
 ## SYNOPSIS
-Add a New SDN Provider
+Adds a new SDN provider
 
 
 ## SYNTAX
 
-```
+```powershell
 New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -24,9 +24,9 @@ This command receives two parameters, the Identity (ID) of the Hive and the Lice
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE 1
 
-```
+```powershell
 New-SPOSdnProvider -ID "Hive" -License "<Hive license key>"
 ```
 
@@ -108,10 +108,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
+[Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
+
 
 [Remove-SPOSdnProvider](Remove-SPOSdnProvider.md)
