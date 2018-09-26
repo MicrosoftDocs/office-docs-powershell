@@ -11,35 +11,42 @@ monikerRange: "exchserver-ps-2010"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-This cmdlet is available only in on-premises Exchange Server 2010.
-
 Use the Add-PublicFolderAdministrativePermission cmdlet to add administrative permissions to a public folder or a public folder hierarchy.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
- -AccessRights <MultiValuedProperty> -User <SecurityPrincipalIdParameter> [-Confirm] [-Deny]
- [-DomainController <Fqdn>] [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Add-PublicFolderAdministrativePermission [[-Identity] <PublicFolderIdParameter>]
- [-AccessRights <MultiValuedProperty>] -Instance <PublicFolderAdministrativeAceObject>
- [-User <SecurityPrincipalIdParameter>] [-Confirm] [-Deny] [-DomainController <Fqdn>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-Server <ServerIdParameter>]
+Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty> -User <SecurityPrincipalIdParameter>
+ [-Confirm] [-Deny]
+ [-DomainController <Fqdn>]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Instance
 ```
-Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
- -Owner <SecurityPrincipalIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Server <ServerIdParameter>]
+Add-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativeAceObject>
+ [-AccessRights <MultiValuedProperty>]
+ [-User <SecurityPrincipalIdParameter>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [[-Identity] <PublicFolderIdParameter>]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Owner
+```
+Add-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -Owner <SecurityPrincipalIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -89,7 +96,7 @@ The AccessRights parameter specifies the rights that are being added. Valid valu
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -101,7 +108,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -118,7 +125,7 @@ You can omit the parameter label so that only the public folder name or GUID is 
 
 ```yaml
 Type: PublicFolderIdParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, Owner
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -130,7 +137,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: PublicFolderIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -145,7 +152,7 @@ The Instance parameter specifies whether to pass an entire object to the command
 
 ```yaml
 Type: PublicFolderAdministrativeAceObject
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -160,7 +167,7 @@ The Owner parameter specifies the NT Owner access control list (ACL) on the obje
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set2
+Parameter Sets: Owner
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -175,7 +182,7 @@ The User parameter specifies the UPN, domain\\user, or alias of the user for who
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -187,7 +194,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -221,7 +228,7 @@ The Deny switch specifies whether to deny the permission specified. You don't ne
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set3
+Parameter Sets: Identity, Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -261,7 +268,7 @@ The InheritanceType parameter specifies the type of inheritance. Valid values ar
 
 ```yaml
 Type: None | All | Descendents | SelfAndChildren | Children
-Parameter Sets: Set1, Set3
+Parameter Sets: Identity, Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False

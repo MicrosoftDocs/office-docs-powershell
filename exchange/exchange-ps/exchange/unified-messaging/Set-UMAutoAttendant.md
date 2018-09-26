@@ -18,31 +18,51 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter> [-AfterHoursKeyMapping <MultiValuedProperty>]
- [-AfterHoursKeyMappingEnabled <$true | $false>] [-AfterHoursMainMenuCustomPromptEnabled <$true | $false>]
- [-AfterHoursMainMenuCustomPromptFilename <String>] [-AfterHoursTransferToOperatorEnabled <$true | $false>]
- [-AfterHoursWelcomeGreetingEnabled <$true | $false>] [-AfterHoursWelcomeGreetingFilename <String>]
- [-AllowDialPlanSubscribers <$true | $false>] [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
- [-AllowedInternationalGroups <MultiValuedProperty>] [-AllowExtensions <$true | $false>]
- [-BusinessHoursKeyMapping <MultiValuedProperty>] [-BusinessHoursKeyMappingEnabled <$true | $false>]
+Set-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter>
+ [-AfterHoursKeyMapping <MultiValuedProperty>]
+ [-AfterHoursKeyMappingEnabled <$true | $false>]
+ [-AfterHoursMainMenuCustomPromptEnabled <$true | $false>]
+ [-AfterHoursMainMenuCustomPromptFilename <String>]
+ [-AfterHoursTransferToOperatorEnabled <$true | $false>]
+ [-AfterHoursWelcomeGreetingEnabled <$true | $false>]
+ [-AfterHoursWelcomeGreetingFilename <String>]
+ [-AllowDialPlanSubscribers <$true | $false>]
+ [-AllowedInCountryOrRegionGroups <MultiValuedProperty>]
+ [-AllowedInternationalGroups <MultiValuedProperty>]
+ [-AllowExtensions <$true | $false>]
+ [-BusinessHoursKeyMapping <MultiValuedProperty>]
+ [-BusinessHoursKeyMappingEnabled <$true | $false>]
  [-BusinessHoursMainMenuCustomPromptEnabled <$true | $false>]
- [-BusinessHoursMainMenuCustomPromptFilename <String>] [-BusinessHoursSchedule <ScheduleInterval[]>]
+ [-BusinessHoursMainMenuCustomPromptFilename <String>]
+ [-BusinessHoursSchedule <ScheduleInterval[]>]
  [-BusinessHoursTransferToOperatorEnabled <$true | $false>]
- [-BusinessHoursWelcomeGreetingEnabled <$true | $false>] [-BusinessHoursWelcomeGreetingFilename <String>]
- [-BusinessLocation <String>] [-BusinessName <String>] [-CallSomeoneEnabled <$true | $false>] [-Confirm]
- [-ContactAddressList <AddressListIdParameter>] [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
- [-ContactScope <DialPlan | GlobalAddressList | AddressList>] [-DefaultMailbox <MailboxIdParameter>]
- [-DomainController <Fqdn>] [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>] [-ForceUpgrade]
- [-ForwardCallsToDefaultMailbox <$true | $false>] [-HolidaySchedule <MultiValuedProperty>]
- [-InfoAnnouncementEnabled <True | False | Uninterruptible>] [-InfoAnnouncementFilename <String>]
+ [-BusinessHoursWelcomeGreetingEnabled <$true | $false>]
+ [-BusinessHoursWelcomeGreetingFilename <String>]
+ [-BusinessLocation <String>]
+ [-BusinessName <String>]
+ [-CallSomeoneEnabled <$true | $false>]
+ [-Confirm]
+ [-ContactAddressList <AddressListIdParameter>]
+ [-ContactRecipientContainer <OrganizationalUnitIdParameter>]
+ [-ContactScope <DialPlan | GlobalAddressList | AddressList>]
+ [-DomainController <Fqdn>]
+ [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>]
+ [-ForceUpgrade]
+ [-HolidaySchedule <MultiValuedProperty>]
+ [-InfoAnnouncementEnabled <True | False | Uninterruptible>]
+ [-InfoAnnouncementFilename <String>]
  [-Language <UMLanguage>]
  [-MatchedNameSelectionMethod <Title | Department | Location | None | PromptForAlias | InheritFromDialPlan>]
- [-Name <String>] [-NameLookupEnabled <$true | $false>] [-OperatorExtension <String>]
- [-PilotIdentifierList <MultiValuedProperty>] [-SendVoiceMsgEnabled <$true | $false>]
- [-SpeechEnabled <$true | $false>] [-StarOutToDialPlanEnabled <$true | $false>] [-Timezone <String>]
+ [-Name <String>]
+ [-NameLookupEnabled <$true | $false>]
+ [-OperatorExtension <String>]
+ [-PilotIdentifierList <MultiValuedProperty>]
+ [-SendVoiceMsgEnabled <$true | $false>]
+ [-SpeechEnabled <$true | $false>]
+ [-Timezone <String>]
  [-TimeZoneName <UMTimeZone>]
- [-WeekStartDay <Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday>] [-WhatIf]
- [<CommonParameters>]
+ [-WeekStartDay <Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -502,23 +522,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultMailbox
-This parameter is available or functional only in Exchange Server 2010.
-
-The DefaultMailbox parameter specifies the mailbox to be used with the ForwardCallsToDefaultMailbox parameter. The mailbox that's specified must be UM-enabled and associated with the same UM dial plan as the UM auto attendant.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -559,23 +562,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForwardCallsToDefaultMailbox
-This parameter is available or functional only in Exchange Server 2010.
-
-The ForwardCallsToDefaultMailbox parameter specifies whether incoming calls received by the UM auto attendant are forwarded. The default is $false. When this is set to $true, all incoming calls to the UM auto attendant are transferred to the UM-enabled mailbox set by the DefaultMailbox parameter.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
@@ -770,16 +756,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StarOutToDialPlanEnabled
-This parameter is available or functional only in Exchange Server 2010.
-
-The StarOutToDialPlanEnabled parameter specifies whether a caller can press the \* button on a telephone keypad to get to the Outlook Voice Access welcome greeting when a UM auto attendant menu is played. The default setting is $false.
+### -Timezone
+The Timezone parameter specifies the time zone used with the auto attendant. The default time zone is the time zone setting on the server.
 
 ```yaml
-Type: $true | $false
+Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -839,21 +823,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Timezone
-The Timezone parameter specifies the time zone used with the auto attendant. The default time zone is the time zone setting on the server.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
