@@ -8,7 +8,7 @@ schema: 2.0.0
 # Start-SPOUserAndContentMove
 
 ## SYNOPSIS
-In a multi-geo company, starts the ability to move a user closer to their sites.
+Starts the ability to move a user closer to their sites.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocat
 ```
 
 ## DESCRIPTION
-This cmdlet requires a multi-geo tenant to work, and enables the ability to move a user closer to their sites.
+In a multi-geo company, this cmdlet requires a multi-geo tenant to work, and enables the ability to move a user closer to their sites
 
 ## EXAMPLES
 
@@ -28,14 +28,14 @@ This cmdlet requires a multi-geo tenant to work, and enables the ability to move
 Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
 ```
 
-This will move the user username@contoso.com from the current location, example NA to the European Site (EUR)
+This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 ### EXAMPLE 2
 ```yaml
 Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
 ```
 
-This will move the user username@contoso.com from the current location, example NA to the European Site (EUR)
+This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 
 ### EXAMPLE 3
@@ -43,7 +43,7 @@ This will move the user username@contoso.com from the current location, example 
 Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
 ```
 
-This will move the user username@contoso.com from the current location, example NA to the European Site (EUR)
+This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 
 

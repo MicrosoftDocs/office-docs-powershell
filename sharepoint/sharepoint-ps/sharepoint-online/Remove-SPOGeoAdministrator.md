@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SPOGeoAdministrator
 
 ## SYNOPSIS
-Remove a new SharePoint user or security Group in the current Multi-Geo Tenant.
+Removes a new SharePoint user or security Group in the current Multi-Geo Tenant.
 
 
 ## SYNTAX

@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPOSdnProvider
 
 ## SYNOPSIS
-Adds a new SDN provider
+Adds a new Software-Defined Networking (SDN) provider
 
 
 ## SYNTAX
@@ -19,8 +19,7 @@ New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf]
 
 
 ## DESCRIPTION
-This command receives two parameters, the Identity (ID) of the Hive and the License key of the Hive.
-
+This Cmdlet creates a new Software-Defined Networking, and it receives two parameters, the Identity (ID) of the Hive and the License key of the Hive.
 
 ## EXAMPLES
 
@@ -30,7 +29,7 @@ This command receives two parameters, the Identity (ID) of the Hive and the Lice
 New-SPOSdnProvider -ID "Hive" -License "<Hive license key>"
 ```
 
-This example activates the Hive SDN Provider.
+This example creates the Hive for a SDN Provider.
 
 
 ## PARAMETERS

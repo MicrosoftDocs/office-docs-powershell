@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SPOSdnProvider
 
 ## SYNOPSIS
-Removes SDN Support in your SharePoint Online tenant
+Removes Software-Defined Networking (SDN) Support in your SharePoint Online tenant
 
 
 ## SYNTAX
