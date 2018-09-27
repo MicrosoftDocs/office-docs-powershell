@@ -8,32 +8,35 @@ schema: 2.0.0
 # Remove-SPOPublicCdnOrigin
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a given public CDN origin based on its identity (id) in your Sharepoint Online Tenant
 
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOPublicCdnOrigin [-Identity] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet will remove a Public CDN Origin based on its identity.
 
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
-```get
+### EXAMPLE 1
+```powershell
+#Get a list of CDN origins
+
 Get-SPOPublicCdnOrigins
 Id                                                                       Url
 --                                                                       ---
 11270051ee79e73829f6e7a3ee5d900d49c4fc5901645c642b799ecb62787a5069ca80fb HTTPS://CONTOSO.SHAREPOINT.COM/SITES/CDN...
-Remove-SPOPublicCdnOrigin -Identity 11270051ee79e73829f6e7a3ee5d900d49c4fc5901645c642b799ecb6278
-7a5069ca80fb
+#then remove the CDN by Identity id GUID.
+Remove-SPOPublicCdnOrigin -Identity 11270051ee79e73829f6e7a3ee5d900d49c4fc5901645c642b799ecb62787a5069ca80fb
 ```
 
-This example returns a list of CDN origins and then removes and origin based on the identity.
+
+This example returns a list of CDN origins and then removes an origin based on the identity.
 
 
 ## PARAMETERS
@@ -55,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+It's the unique identificator of the Public CDN path, it can be queried using the Cmdlet Get-SpoPublicCdnOrigins
 
 ```yaml
 Type: String
@@ -90,14 +93,13 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### System.String
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
+
+[New-SPOPublicCdnOrigin](New-SPOPublicCdnOrigin.md)
