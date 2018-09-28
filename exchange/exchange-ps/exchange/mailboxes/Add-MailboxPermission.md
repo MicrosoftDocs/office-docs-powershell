@@ -17,38 +17,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### AccessRights
 ```
-Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]>
- -User <SecurityPrincipalIdParameter> [-AutoMapping <$true | $false>] [-Confirm] [-Deny]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipalIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Add-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
+ [-AutoMapping <$true | $false>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Owner
 ```
-Add-MailboxPermission [[-Identity] <MailboxIdParameter>] [-AccessRights <MailboxRights[]>]
- -Instance <MailboxAcePresentationObject> [-User <SecurityPrincipalIdParameter>]
- [-AutoMapping <$true | $false>] [-Confirm] [-Deny] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set4
-```
-Add-MailboxPermission [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Add-MailboxPermission [-Identity] <MailboxIdParameter> -Owner <SecurityPrincipalIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### Instance
 ```
-Add-MailboxPermission [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Add-MailboxPermission -Instance <MailboxAcePresentationObject>
+ [-AccessRights <MailboxRights[]>]
+ [-User <SecurityPrincipalIdParameter>]
+ [-AutoMapping <$true | $false>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [[-Identity] <MailboxIdParameter>]
+ [-IgnoreDefaultScope]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,7 +119,7 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1, Set2, Set4, Set5
+Parameter Sets: AccessRights, Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -158,7 +160,7 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MailboxRights[]
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -170,7 +172,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxRights[]
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -185,7 +187,7 @@ This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: MailboxAcePresentationObject
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -214,7 +216,7 @@ For example:
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set2
+Parameter Sets: Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -243,7 +245,7 @@ For example:
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -255,7 +257,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -276,7 +278,7 @@ If you've already assign the user Full Access to the mailbox, and you want to pr
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -310,7 +312,7 @@ The Deny switch specifies whether to deny the specified permissions to the user 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -371,7 +373,7 @@ The InheritanceType parameter specifies how permissions are inherited by folders
 
 ```yaml
 Type: None | All | Descendents | SelfAndChildren | Children
-Parameter Sets: Set1, Set3
+Parameter Sets: AccessRights, Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

@@ -19,13 +19,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-UMDialPlan [-Name] <String> -CountryOrRegionCode <String> -NumberOfDigitsInExtension <Int32>
- [-AccessTelephoneNumbers <MultiValuedProperty>] [-Confirm] [-DefaultLanguage <UMLanguage>]
- [-DefaultOutboundCallingLineId <String>] [-DomainController <Fqdn>] [-FaxEnabled <$true | $false>]
+ [-AccessTelephoneNumbers <MultiValuedProperty>]
+ [-Confirm]
+ [-DefaultLanguage <UMLanguage>]
+ [-DefaultOutboundCallingLineId <String>]
+ [-DomainController <Fqdn>]
+ [-FaxEnabled <$true | $false>]
  [-GenerateUMMailboxPolicy <$true | $false>]
- [-GlobalCallRoutingScheme <None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3>]
- [-SipResourceIdentifierRequired <$true | $false>]
- [-SubscriberType <Enterprise | Consumer>] [-URIType <TelExtn | E164 | SipName>]
- [-VoIPSecurity <SIPSecured | Unsecured | Secured>] [-WhatIf] [<CommonParameters>]
+ [-URIType <TelExtn | E164 | SipName>]
+ [-VoIPSecurity <SIPSecured | Unsecured | Secured>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -213,51 +216,6 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GlobalCallRoutingScheme
-The GlobalCallRoutingScheme parameter specifies whether UM-enabled users and auto attendant numbers should be included in the global routing database. If the setting is E.164, the numbers are provisioned in the global routing database.
-
-```yaml
-Type: None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SipResourceIdentifierRequired
-The SipResourceIdentifierRequired parameter specifies whether the SIP resource identifier is required to be specified when mailboxes are UM-enabled and associated with the dial plan. The default is $false but it can only be set to $true if the URI type of the dial plan is E.164.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SubscriberType
-The SubscriberType parameter specifies either Consumer or Enterprise as the type of dial plan. Enterprise dial plans are most likely to be used in a single organization. Consumer dial plans are used in hosted environments and can represent dial plans that may belong to different tenants.
-
-```yaml
-Type: Enterprise | Consumer
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
