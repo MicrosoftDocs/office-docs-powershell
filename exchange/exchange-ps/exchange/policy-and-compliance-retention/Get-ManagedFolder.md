@@ -83,7 +83,7 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-
+### -Mailbox
 The Mailbox parameter specifies the identity of the mailbox. Valid values include SMTP address, domain name, and alias. The command retrieves all the folders that apply to the specified user.
 
 ```yaml
