@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  Set1 (Default)
+###  Mailbox (Default)
 ```
 New-MailboxExportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath>
  [-AcceptLargeDataLoss]
@@ -186,7 +186,7 @@ If you don't grant this permission, you will receive an error message stating th
 
 ```yaml
 Type: LongPath
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 Required: True
@@ -197,9 +197,11 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox that you want to export from. You can use any value that uniquely identifies the mailbox.
+The Mailbox parameter specifies the source mailbox where the contents are being exported from.
 
-For example:
+In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
+
+In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 
@@ -225,9 +227,21 @@ For example:
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: (All)
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxExportRequest, MailboxComplianceExportRequest
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -240,7 +254,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
 Required: False
@@ -290,7 +304,7 @@ Content filtering doesn't apply to associated messages.
 
 ```yaml
 Type: DoNotCopy | MapByMessageClass | Copy
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -385,7 +399,7 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 
 ```yaml
 Type: KeepSourceItem | KeepLatestItem | KeepAll
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -453,7 +467,7 @@ The ExcludeDumpster parameter specifies whether to exclude the Recoverable Items
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -512,7 +526,7 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -571,7 +585,7 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -719,7 +733,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -772,7 +786,7 @@ The SourceRootFolder parameter specifies the root folder of the mailbox from whi
 
 ```yaml
 Type: String
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -817,7 +831,7 @@ The TargetRootFolder parameter specifies the top-level folder in which to export
 
 ```yaml
 Type: String
-Parameter Sets: Set1, MailboxExportRequest
+Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True

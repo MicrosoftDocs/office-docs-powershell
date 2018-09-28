@@ -109,7 +109,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Mailbox
+
 The Mailbox parameter specifies the mailbox for which you want to test OAuth connectivity to the specified partner application.
 
 ```yaml
