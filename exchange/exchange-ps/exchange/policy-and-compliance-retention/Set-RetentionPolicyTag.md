@@ -19,25 +19,46 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter>
- [-AgeLimitForRetention <EnhancedTimeSpan>] [-Comment <String>]
- [-Confirm] [-DomainController <Fqdn>] [-Force] [-LegacyManagedFolder <ELCFolderIdParameter>]
- [-LocalizedComment <MultiValuedProperty>] [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
- [-MessageClass <String>] [-MustDisplayCommentEnabled <$true | $false>] [-Name <String>]
+Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter> 
+ [-AddressForJournaling <RecipientIdParameter>]
+ [-AgeLimitForRetention <EnhancedTimeSpan>]
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-JournalingEnabled <Boolean>]
+ [-LabelForJournaling <String>] 
+ [-LegacyManagedFolder <ELCFolderIdParameter>]
+ [-LocalizedComment <MultiValuedProperty>]
+ [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
+ [-MessageClass <String>]
+ [-MessageFormatForJournaling <JournalingFormat>]
+ [-MustDisplayCommentEnabled <$true | $false>]
+ [-Name <String>]
  [-RetentionAction <MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive>]
- [-RetentionEnabled <$true | $false>] [-RetentionId <Guid>] [-SystemTag <$true | $false>] [-WhatIf]
- [<CommonParameters>]
+ [-RetentionEnabled <$true | $false>]
+ [-RetentionId <Guid>] [-SystemTag <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### MailboxTask
 ```
-Set-RetentionPolicyTag -Mailbox <MailboxIdParameter> [-Comment <String>] [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-LegacyManagedFolder <ELCFolderIdParameter>] [-LocalizedComment <MultiValuedProperty>]
- [-LocalizedRetentionPolicyTagName <MultiValuedProperty>] [-MustDisplayCommentEnabled <$true | $false>]
- [-Name <String>] [-OptionalInMailbox <RetentionPolicyTagIdParameter[]>] [-RetentionId <Guid>]
- [-SystemTag <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-RetentionPolicyTag -Mailbox <MailboxIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-LegacyManagedFolder <ELCFolderIdParameter>]
+ [-LocalizedComment <MultiValuedProperty>]
+ [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
+ [-MustDisplayCommentEnabled <$true | $false>]
+ [-Name <String>]
+ [-OptionalInMailbox <RetentionPolicyTagIdParameter[]>]
+ [-RetentionId <Guid>]
+ [-SystemTag <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,7 +89,7 @@ The Identity parameter specifies the name, distinguished name (DN), or GUID of t
 
 ```yaml
 Type: RetentionPolicyTagIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -85,10 +106,27 @@ You must use this parameter with the OptionalInMailbox parameter.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxTask
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddressForJournaling
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -100,7 +138,7 @@ The AgeLimitForRetention parameter specifies the age at which retention is enfor
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -176,6 +214,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JournalingEnabled
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelForJournaling
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LegacyManagedFolder
 The LegacyManagedFolder parameter specifies the name of a managed folder. The retention tag is created by using retention settings from the managed folder and its managed content settings. You can use this parameter to create retention tags based on existing managed folders to migrate users from managed folder mailbox policies to retention policies.
 
@@ -232,9 +304,26 @@ A DPT for voice mail messages applies only to Microsoft Exchange Unified Messagi
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageFormatForJournaling
+This parameter is available or functional only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: JournalingFormat
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +366,7 @@ The OptionalInMailbox parameter is used with the Mailbox parameter to specify op
 
 ```yaml
 Type: RetentionPolicyTagIdParameter[]
-Parameter Sets: Set2
+Parameter Sets: MailboxTask
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -304,7 +393,7 @@ If this parameter isn't present and the RetentionEnabled parameter is set to $tr
 
 ```yaml
 Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -323,7 +412,7 @@ When you set the RetentionEnabled parameter to $false, the retention period for 
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

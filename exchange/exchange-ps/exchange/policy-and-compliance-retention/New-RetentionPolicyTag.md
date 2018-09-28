@@ -19,26 +19,44 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### RetentionPolicy (Default)
 ```
-New-RetentionPolicyTag [-Name] <String> [-AgeLimitForRetention <EnhancedTimeSpan>] 
- [-Comment <String>] [-Confirm] [-DomainController <Fqdn>]
+New-RetentionPolicyTag [-Name] <String>
+ [-AddressForJournaling <RecipientIdParameter>]
+ [-AgeLimitForRetention <EnhancedTimeSpan>] 
+ [-Comment <String>]
+ [-Confirm] [-DomainController <Fqdn>]
+ [-IsDefaultAutoGroupPolicyTag]
+ [-IsDefaultModeratedRecipientsPolicyTag]
+ [-JournalingEnabled <Boolean>]
+ [-LabelForJournaling <String>] 
  [-LocalizedComment <MultiValuedProperty>]
- [-LocalizedRetentionPolicyTagName <MultiValuedProperty>] [-MessageClass <String>]
+ [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
+ [-MessageClass <String>]
+ [-MessageFormatForJournaling <JournalingFormat>]
  [-MustDisplayCommentEnabled <$true | $false>]
  [-RetentionAction <MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive>]
- [-RetentionEnabled <$true | $false>] [-RetentionId <Guid>] [-SystemTag <$true | $false>]
+ [-RetentionEnabled <$true | $false>]
+ [-RetentionId <Guid>]
+ [-SystemTag <$true | $false>]
  [-Type <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
- [-WhatIf] [-IsDefaultAutoGroupPolicyTag] [-IsDefaultModeratedRecipientsPolicyTag] [<CommonParameters>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### UpgradeManagedFolder
 ```
-New-RetentionPolicyTag [-Name] <String> [-Comment <String>] [-Confirm] [-DomainController <Fqdn>]
- [-LocalizedComment <MultiValuedProperty>] [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
- [-ManagedFolderToUpgrade <ELCFolderIdParameter>] [-MustDisplayCommentEnabled <$true | $false>]
- [-SystemTag <$true | $false>] [-Type <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
- [-WhatIf] [-IsDefaultAutoGroupPolicyTag] [-IsDefaultModeratedRecipientsPolicyTag] [<CommonParameters>]
+New-RetentionPolicyTag [-Name] <String> [-ManagedFolderToUpgrade <ELCFolderIdParameter>]
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IsDefaultAutoGroupPolicyTag]
+ [-IsDefaultModeratedRecipientsPolicyTag]
+ [-LocalizedComment <MultiValuedProperty>]
+ [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
+ [-MustDisplayCommentEnabled <$true | $false>]
+ [-SystemTag <$true | $false>]
+ [-Type <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,12 +106,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AddressForJournaling
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: RetentionPolicy
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AgeLimitForRetention
 The AgeLimitForRetention parameter specifies the age at which retention is enforced on an item. The age limit corresponds to the number of days from the date the item was delivered, or the date an item was created if it wasn't delivered. If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set1
+Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -154,6 +189,70 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsDefaultAutoGroupPolicyTag
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDefaultModeratedRecipientsPolicyTag
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JournalingEnabled
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: RetentionPolicy
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelForJournaling
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: RetentionPolicy
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LocalizedComment
 The LocalizedComment parameter specifies localized comments and their languages. When the user's language setting matches a language specified for this parameter, Microsoft Outlook and Outlook on the web display the corresponding localized comment. Comments are specified in the form of ISO Language Code:Comment, for example, LocalizedComment EN-US:"This is a localized comment in U.S. English".
 
@@ -191,7 +290,7 @@ The ManagedFolderToUpgrade parameter specifies the name of a managed folder to u
 
 ```yaml
 Type: ELCFolderIdParameter
-Parameter Sets: Set2
+Parameter Sets: UpgradeManagedFolder
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -212,9 +311,27 @@ A DPT for voice mail messages applies only to Microsoft Exchange Unified Messagi
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -MessageFormatForJournaling
+This parameter is available or functional only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: JournalingFormat
+Parameter Sets: RetentionPolicy
+Aliases:
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
@@ -254,7 +371,7 @@ If this parameter isn't present and the RetentionEnabled parameter is set to $tr
 
 ```yaml
 Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive
-Parameter Sets: Set1
+Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -273,7 +390,7 @@ When you set the RetentionEnabled parameter to $false, the retention period for 
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -288,7 +405,7 @@ The RetentionId parameter specifies an alternate tag ID to make sure the retenti
 
 ```yaml
 Type: Guid
-Parameter Sets: Set1
+Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -380,36 +497,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefaultAutoGroupPolicyTag
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IsDefaultModeratedRecipientsPolicyTag
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
