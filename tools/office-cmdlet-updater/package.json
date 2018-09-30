@@ -1,5 +1,5 @@
 {
-  "name": "microsoft-teams-generator-tool",
+  "name": "office-cmdlet-updater",
   "version": "1.0.0",
   "engines": {
     "node": ">=9.0.0"
