@@ -83,19 +83,11 @@ class MarkdownService {
 			return cb(err, null);
 		}
 
-		[, err] = await of(this.clearTempFolder());
-
-		if (err) {
-			return cb(err, null);
-		}
-
 		return cb(null, result);
 	}
 
 	async queueFailedHandler(err) {
-		const [, fsError] = await of(this.clearTempFolder());
-
-		throw new Error(fsError || err);
+		throw new Error(err);
 	}
 
 	queueFinishHandler(result) {
@@ -112,6 +104,14 @@ class MarkdownService {
 
 		if (err) {
 			throw new Error(err);
+		}
+
+		if (fs.pathExists(this.tempFolderPath)) {
+			const [, fsError] = await of(this.clearTempFolder());
+
+			if (fsError) {
+				throw new Error(fsError);
+			}
 		}
 
 		this.logParseService.parseAll();
@@ -150,8 +150,8 @@ class MarkdownService {
 		return (await fs.readFile(logFilePath)).toString();
 	}
 
-	async clearTempFolder() {
-		return await fs.remove(this.tempFolderPath);
+	clearTempFolder() {
+		return fs.remove(this.tempFolderPath);
 	}
 }
 
