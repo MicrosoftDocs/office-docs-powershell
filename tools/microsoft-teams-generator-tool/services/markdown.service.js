@@ -68,6 +68,8 @@ class MarkdownService {
 		if (err) {
 			console.error(err);
 
+			this.logStoreService.addError(err);
+
 			return cb(null, '');
 		}
 
@@ -100,11 +102,17 @@ class MarkdownService {
 		if (!result) {
 			return;
 		}
-		this.logStoreService.add(result);
+		this.logStoreService.addLog(result);
 	}
 
-	queueEmptyHandler() {
+	async queueEmptyHandler() {
 		this.powerShellService.dispose();
+
+		const [, err] = await of(this.logStoreService.saveInFs());
+
+		if (err) {
+			throw new Error(err);
+		}
 
 		this.logParseService.parseAll();
 	}
