@@ -1,5 +1,5 @@
 const awilix = require('awilix');
-const config = require('config');
+const config = require('../services/config.service')();
 const PowerShellService = require('../services/power.shell.service');
 const MarkdownService = require('../services/markdown.service');
 const LogStoreService = require('../services/log.store.service');
