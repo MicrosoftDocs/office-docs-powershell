@@ -5,7 +5,9 @@ const of = require('await-of').default;
 
 class MailNotificationService {
 	constructor(logStoreService, config) {
-		const apiKey = config.get('sendgrid.apiKey');
+		const { apiKey, sendMailNotification } = config.get('sendgrid');
+
+		this.sendMailNotification = sendMailNotification;
 
 		if (!apiKey) {
 			throw new Error(mailErrors.CANT_GET_SENDGRID_API_KEY);
@@ -35,6 +37,10 @@ class MailNotificationService {
 	}
 
 	addEmailToQueue(mail) {
+		if (!this.sendMailNotification) {
+			return;
+		}
+
 		this.queue.push(mail);
 	}
 
