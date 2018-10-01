@@ -129,7 +129,7 @@ You can't use this parameter in conjunction with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -152,7 +152,7 @@ You can't use this parameter in conjunction with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -192,7 +192,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -266,7 +266,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -320,7 +320,7 @@ CompletionInProgress and AutoSuspended don't apply to import requests and won't 
 
 ```yaml
 Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -337,7 +337,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -360,7 +360,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Identity
 ```
-Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
+Set-OrganizationConfig
  [-ACLableSyncedObjectEnabled <true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -42,6 +42,7 @@ Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
  [-EwsEnabled <$true | $false>]
  [-ExchangeNotificationEnabled <$true | $false>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
+ [Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <NotSpecified | Agriculture | Finance | BusinessServicesConsulting | Communications | ComputerRelatedProductsServices | Construction | Education | EngineeringArchitecture | Government | Healthcare | Hospitality | Legal | Manufacturing | MediaMarketingAdvertising | Mining | NonProfit | PersonalServices | PrintingPublishing | RealEstate | Retail | Transportation | Utilities | Wholesale | Other>]
  [-MailTipsAllTipsEnabled <$true | $false>]
@@ -68,7 +69,7 @@ Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
 
 ### AdfsAuthenticationRawConfiguration
 ```
-Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
+Set-OrganizationConfig
  [-ACLableSyncedObjectEnabled <$true | $false>]
  [-AdfsAuthenticationConfiguration <String>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
@@ -111,6 +112,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
  [-ExchangeNotificationEnabled <$true | $false>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
  [-FocusedInboxOn <$true | $false>]
+ [Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <NotSpecified | Agriculture | Finance | BusinessServicesConsulting | Communications | ComputerRelatedProductsServices | Construction | Education | EngineeringArchitecture | Government | Healthcare | Hospitality | Legal | Manufacturing | MediaMarketingAdvertising | Mining | NonProfit | PersonalServices | PrintingPublishing | RealEstate | Retail | Transportation | Utilities | Wholesale | Other>]
  [-IPListBlocked <MultiValuedProperty>]
@@ -158,7 +160,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguration <OrganizationIdParameter>
+Set-OrganizationConfig
  [-ACLableSyncedObjectEnabled <true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -204,6 +206,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
  [-ExchangeNotificationEnabled <$true | $false>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
  [-FocusedInboxOn <$true | $false>]
+ [Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <NotSpecified | Agriculture | Finance | BusinessServicesConsulting | Communications | ComputerRelatedProductsServices | Construction | Education | EngineeringArchitecture | Government | Healthcare | Hospitality | Legal | Manufacturing | MediaMarketingAdvertising | Mining | NonProfit | PersonalServices | PrintingPublishing | RealEstate | Retail | Transportation | Utilities | Wholesale | Other>]
  [-IPListBlocked <MultiValuedProperty>]
@@ -297,63 +300,6 @@ This example allows only the client applications specified by the EwsAllowList p
 
 ## PARAMETERS
 
-### -Identity
-This parameter is available or functional only in Exchange Server 2010.
-
-The Identity parameter specifies the Exchange organization that you want to modify. You can use any value that identifies the organization. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
-Aliases:
-Applicable: Exchange Server 2010
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: Identity (Default)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -SharedConfiguration
-This parameter is available or functional only in Exchange Server 2010.
-
-The SharedConfiguration parameter is used to link one organization to another organization that holds shared configuration for the first organization. This parameter accepts the following values:
-
-- Name
-
-- DN
-
-- GUID
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: AdfsAuthenticationParameter
-Aliases:
-Applicable: Exchange Server 2010
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ACLableSyncedObjectEnabled
 This parameter is available only in on-premises Exchange.
@@ -1286,6 +1232,23 @@ Type: $true | $false
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is avaialble or functional only in Exchange Server 2010.
+
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
