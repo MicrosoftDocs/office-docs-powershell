@@ -68,6 +68,8 @@ class MarkdownService {
 		if (err) {
 			console.error(err);
 
+			this.logStoreService.addError(err);
+
 			return cb(null, '');
 		}
 
@@ -81,30 +83,36 @@ class MarkdownService {
 			return cb(err, null);
 		}
 
-		[, err] = await of(this.clearTempFolder());
-
-		if (err) {
-			return cb(err, null);
-		}
-
 		return cb(null, result);
 	}
 
 	async queueFailedHandler(err) {
-		const [, fsError] = await of(this.clearTempFolder());
-
-		throw new Error(fsError || err);
+		throw new Error(err);
 	}
 
 	queueFinishHandler(result) {
 		if (!result) {
 			return;
 		}
-		this.logStoreService.add(result);
+		this.logStoreService.addLog(result);
 	}
 
-	queueEmptyHandler() {
+	async queueEmptyHandler() {
 		this.powerShellService.dispose();
+
+		const [, err] = await of(this.logStoreService.saveInFs());
+
+		if (err) {
+			throw new Error(err);
+		}
+
+		if (fs.pathExists(this.tempFolderPath)) {
+			const [, fsError] = await of(this.clearTempFolder());
+
+			if (fsError) {
+				throw new Error(fsError);
+			}
+		}
 
 		this.logParseService.parseAll();
 	}
@@ -142,8 +150,8 @@ class MarkdownService {
 		return (await fs.readFile(logFilePath)).toString();
 	}
 
-	async clearTempFolder() {
-		return await fs.remove(this.tempFolderPath);
+	clearTempFolder() {
+		return fs.remove(this.tempFolderPath);
 	}
 }
 

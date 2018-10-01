@@ -1,0 +1,14 @@
+{
+  "platyPS": {
+    "docPath": "..\\..\\teams\\teams-ps\\teams"
+  },
+  "sendgrid": {
+    "sendMailNotification": false,
+    "apiKey": "<API_KEY>",
+    "emailSettings": {
+      "from": "no-replay@outlook.com",
+      "to": "test@gmail.com",
+      "subject": "Test subject"
+  }
+}
+}
