@@ -4,5 +4,6 @@ _site/
 .optemp/
 _themes*/
 .vs/
+.local/
 
 .openpublishing.buildcore.ps1
