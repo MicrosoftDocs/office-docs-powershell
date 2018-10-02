@@ -338,7 +338,7 @@ Accept wildcard characters: False
 Determines what level of sharing is available for the site.
 The possible values are: Disabled - external user sharing (share by email) and guest link sharing are both disabled, ExternalUserSharingOnly - external user sharing (share by email) is enabled, but guest link sharing is disabled, or ExternalUserAndGuestSharing - external user sharing (share by email) and guest link sharing are both enabled.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Turn external sharing on or off for SharePoint Online (https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off).
 
 
 ```yaml
