@@ -11,11 +11,7 @@ class MarkdownController {
 
 	async updateMarkdown() {
 		let err;
-		const { docPath } = this.config.get('platyPS');
-
-		if (!await fs.pathExists(docPath)) {
-			throw new Error(powerShellErrors.DOC_PATH_DOESNT_EXIST);
-		}
+		const { docs } = this.config.get('platyPS');
 
 		[, err] = await of(this.powerShellService.preInstall());
 
@@ -23,12 +19,18 @@ class MarkdownController {
 			throw new Error(err);
 		}
 
-		[, err] = await of(this.markdownService.updateMd(docPath));
+		docs.forEach(async (doc) => {
+			if (!(await fs.pathExists(doc.path))) {
+				throw new Error(powerShellErrors.DOC_PATH_DOESNT_EXIST);
+			}
 
-		if (err) {
-			this.powerShellService.dispose();
-			throw new Error(err);
-		}
+			[, err] = await of(this.markdownService.updateMd(doc));
+
+			if (err) {
+				this.powerShellService.dispose();
+				throw new Error(err);
+			}
+		});
 	}
 }
 

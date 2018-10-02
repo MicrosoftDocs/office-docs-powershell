@@ -39,7 +39,7 @@ class LogParseService {
 	}
 
 	parseAll() {
-		const logs = this.logStoreService.getAll();
+		const logs = this.logStoreService.getAllLogs();
 		const logObjs = [];
 
 		logs.forEach((log) => {

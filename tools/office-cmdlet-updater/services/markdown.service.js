@@ -27,23 +27,32 @@ class MarkdownService {
 		this.tempFolderPath = null;
 	}
 
-	async updateMd(docPath) {
-		this.tempFolderPath = `${docPath}\\${shortId()}`;
+	async updateMd(doc) {
+		const { path } = doc;
 
-		await this.addMdFilesInQueue(docPath);
+		this.tempFolderPath = `${path}\\${shortId()}`;
+
+		await this.addMdFilesInQueue(path);
 	}
 
 	async addMdFilesInQueue(folderPath) {
 		const mdExt = '.md';
+		const { ignoreFiles } = this.config.get('platyPS');
+		const ignoreAbsolutePathsArr = ignoreFiles.map((f) => path.resolve(f));
 
-		const allFiles = await fs.readdir(folderPath);
-		const mdFiles = allFiles.filter((fileName) => fileName.endsWith(mdExt));
+		const isFileIgnore = (fileName) => {
+			const absoluteFilePath = path.resolve(fileName);
 
-		mdFiles.forEach((fileName) => {
-			const absolutePath = path.resolve(`${folderPath}\\${fileName}`);
+			return ignoreAbsolutePathsArr.includes(absoluteFilePath);
+		};
 
+		const mdFiles = (await fs.readdir(folderPath))
+			.map((f) => path.resolve(folderPath, f))
+			.filter((fn) => fn.endsWith(mdExt) && !isFileIgnore(fn));
+
+		mdFiles.forEach((file) => {
 			this.queue
-				.push(absolutePath)
+				.push(file)
 				.on('failed', this.queueFailedHandler)
 				.on('finish', this.queueFinishHandler);
 		});
@@ -68,6 +77,8 @@ class MarkdownService {
 		if (err) {
 			console.error(err);
 
+			this.logStoreService.addError(err);
+
 			return cb(null, '');
 		}
 
@@ -81,30 +92,36 @@ class MarkdownService {
 			return cb(err, null);
 		}
 
-		[, err] = await of(this.clearTempFolder());
-
-		if (err) {
-			return cb(err, null);
-		}
-
 		return cb(null, result);
 	}
 
 	async queueFailedHandler(err) {
-		const [, fsError] = await of(this.clearTempFolder());
-
-		throw new Error(fsError || err);
+		throw new Error(err);
 	}
 
 	queueFinishHandler(result) {
 		if (!result) {
 			return;
 		}
-		this.logStoreService.add(result);
+		this.logStoreService.addLog(result);
 	}
 
-	queueEmptyHandler() {
+	async queueEmptyHandler() {
 		this.powerShellService.dispose();
+
+		const [, err] = await of(this.logStoreService.saveInFs());
+
+		if (err) {
+			throw new Error(err);
+		}
+
+		if (fs.pathExists(this.tempFolderPath)) {
+			const [, fsError] = await of(this.clearTempFolder());
+
+			if (fsError) {
+				throw new Error(fsError);
+			}
+		}
 
 		this.logParseService.parseAll();
 	}
@@ -142,8 +159,8 @@ class MarkdownService {
 		return (await fs.readFile(logFilePath)).toString();
 	}
 
-	async clearTempFolder() {
-		return await fs.remove(this.tempFolderPath);
+	clearTempFolder() {
+		return fs.remove(this.tempFolderPath);
 	}
 }
 
