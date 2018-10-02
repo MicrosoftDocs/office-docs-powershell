@@ -36,10 +36,7 @@ This example returns the MyAnalytics privacy setting for the user named Kathleen
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user email address that you want to view.
-
-- Email address
-
+The Identity parameter specifies the email address of the user that you want to view.
 
 ```yaml
 Type: RecipientIdParameter
