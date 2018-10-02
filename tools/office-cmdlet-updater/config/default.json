@@ -1,6 +1,7 @@
 {
   "platyPS": {
-    "docPath": "..\\..\\teams\\teams-ps\\teams"
+    "docPath": "..\\..\\teams\\teams-ps\\teams",
+    "ignoreFiles": []
   },
   "sendgrid": {
     "sendMailNotification": false,
