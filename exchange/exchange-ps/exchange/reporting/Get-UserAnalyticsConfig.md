@@ -36,7 +36,7 @@ This example returns the MyAnalytics privacy setting for the user named Kathleen
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user email address that you want to view. You can use any value that uniquely identifies the user. For example:
+The Identity parameter specifies the user email address that you want to view.
 
 - Email address
 
