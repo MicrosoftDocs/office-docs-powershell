@@ -27,10 +27,12 @@ class MarkdownService {
 		this.tempFolderPath = null;
 	}
 
-	async updateMd(docPath) {
-		this.tempFolderPath = `${docPath}\\${shortId()}`;
+	async updateMd(doc) {
+		const { path } = doc;
 
-		await this.addMdFilesInQueue(docPath);
+		this.tempFolderPath = `${path}\\${shortId()}`;
+
+		await this.addMdFilesInQueue(path);
 	}
 
 	async addMdFilesInQueue(folderPath) {
