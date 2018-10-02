@@ -48,11 +48,9 @@ class MarkdownService {
 			.map((f) => path.resolve(folderPath, f))
 			.filter((fn) => fn.endsWith(mdExt) && !isFileIgnore(fn));
 
-		mdFiles.forEach((fileName) => {
-			const absolutePath = path.resolve(`${folderPath}\\${fileName}`);
-
+		mdFiles.forEach((file) => {
 			this.queue
-				.push(absolutePath)
+				.push(file)
 				.on('failed', this.queueFailedHandler)
 				.on('finish', this.queueFinishHandler);
 		});
