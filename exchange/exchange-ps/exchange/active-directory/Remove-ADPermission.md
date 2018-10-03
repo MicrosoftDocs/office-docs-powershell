@@ -17,36 +17,44 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### AccessRights
 ```
 Remove-ADPermission [-Identity] <ADRawEntryIdParameter> -User <SecurityPrincipalIdParameter>
- [-AccessRights <ActiveDirectoryRights[]>] [-ChildObjectTypes <ADSchemaObjectIdParameter[]>] [-Confirm] [-Deny]
- [-DomainController <Fqdn>] [-ExtendedRights <ExtendedRightIdParameter[]>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
- [-InheritedObjectType <ADSchemaObjectIdParameter>] [-Properties <ADSchemaObjectIdParameter[]>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Remove-ADPermission [-Identity] <ADRawEntryIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- -Instance <ADAcePresentationObject> [-User <SecurityPrincipalIdParameter>]
- [-AccessRights <ActiveDirectoryRights[]>] [-ChildObjectTypes <ADSchemaObjectIdParameter[]>] [-Deny]
+ [-AccessRights <ActiveDirectoryRights[]>]
+ [-ChildObjectTypes <ADSchemaObjectIdParameter[]>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
  [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
- [-InheritedObjectType <ADSchemaObjectIdParameter>] [-Properties <ADSchemaObjectIdParameter[]>]
- [<CommonParameters>]
+ [-InheritedObjectType <ADSchemaObjectIdParameter>]
+ [-Properties <ADSchemaObjectIdParameter[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Owner
 ```
-Remove-ADPermission [[-Identity] <ADRawEntryIdParameter>] -Instance <ADAcePresentationObject>
- [-User <SecurityPrincipalIdParameter>] [-AccessRights <ActiveDirectoryRights[]>]
- [-ChildObjectTypes <ADSchemaObjectIdParameter[]>] [-Confirm] [-Deny] [-DomainController <Fqdn>]
+Remove-ADPermission [-Identity] <ADRawEntryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Instance
+```
+Remove-ADPermission -Instance <ADAcePresentationObject>
+ [-AccessRights <ActiveDirectoryRights[]>]
+ [-ChildObjectTypes <ADSchemaObjectIdParameter[]>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
  [-ExtendedRights <ExtendedRightIdParameter[]>]
+ [[-Identity] <ADRawEntryIdParameter>]
  [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
- [-InheritedObjectType <ADSchemaObjectIdParameter>] [-Properties <ADSchemaObjectIdParameter[]>] [-WhatIf]
- [<CommonParameters>]
+ [-InheritedObjectType <ADSchemaObjectIdParameter>]
+ [-Properties <ADSchemaObjectIdParameter[]>]
+ [-User <SecurityPrincipalIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,7 +87,7 @@ You can specify either the distinguished name (DN) of the object or the object's
 
 ```yaml
 Type: ADRawEntryIdParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: AccessRights, Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -91,7 +99,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ADRawEntryIdParameter
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -106,7 +114,7 @@ The Instance parameter enables you to pass an entire object to the command to be
 
 ```yaml
 Type: ADAcePresentationObject
-Parameter Sets: Set2, Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -121,7 +129,7 @@ The User parameter specifies the user object that will have permissions removed.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -133,7 +141,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
