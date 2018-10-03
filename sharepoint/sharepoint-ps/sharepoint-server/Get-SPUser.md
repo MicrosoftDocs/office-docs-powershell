@@ -13,7 +13,7 @@ Returns the user account or accounts that match a given search criteria.
 
 
 
-## SYNTAX
+## SYNTAX 
 
 ```
 Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
