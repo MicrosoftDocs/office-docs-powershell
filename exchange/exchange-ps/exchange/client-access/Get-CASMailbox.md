@@ -17,24 +17,42 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AnrSet
 ```
-Get-CASMailbox [-ActiveSyncDebugLogging] [-Anr <String>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-GetImapProtocolLog] [-GetPopProtocolLog] [-IgnoreDefaultScope]
+Get-CASMailbox [-Anr <String>]
+ [-ActiveSyncDebugLogging]
+ [-ActiveSyncSuppressReadReceipt]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-Monitoring]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ProtocolSettings] [-ReadFromDomainController] [-ResultSize <Unlimited>] [-SendLogsTo <MultiValuedProperty>]
- [-SortBy <String>] [-Monitoring] [-RecalculateHasActiveSyncDevicePartnership] [-ActiveSyncSuppressReadReceipt]
- [-ReadIsOptimizedForAccessibility] [<CommonParameters>]
+ [-ProtocolSettings]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-ReadIsOptimizedForAccessibility]
+ [-RecalculateHasActiveSyncDevicePartnership] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-CASMailbox [[-Identity] <MailboxIdParameter>] [-ActiveSyncDebugLogging] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-GetImapProtocolLog] [-GetPopProtocolLog] [-IgnoreDefaultScope]
+Get-CASMailbox [[-Identity] <MailboxIdParameter>]
+ [-ActiveSyncDebugLogging]
+ [-ActiveSyncSuppressReadReceipt]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-Monitoring]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ProtocolSettings] [-ReadFromDomainController] [-ResultSize <Unlimited>] [-SendLogsTo <MultiValuedProperty>]
- [-SortBy <String>] [-Monitoring] [-RecalculateHasActiveSyncDevicePartnership] [-ActiveSyncSuppressReadReceipt]
- [-ReadIsOptimizedForAccessibility] [<CommonParameters>]
+ [-ProtocolSettings]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-ReadIsOptimizedForAccessibility]
+ [-RecalculateHasActiveSyncDevicePartnership] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,6 +112,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ActiveSyncSuppressReadReceipt
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Anr
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
@@ -109,7 +142,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -248,40 +281,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GetImapProtocolLog
-This parameter is available or functional only in Exchange Server 2010.
-
-The GetImapProtocolLog parameter specifies whether to retrieve the IMAP protocol log.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GetPopProtocolLog
-This parameter is available or functional only in Exchange Server 2010.
-
-The GetPopProtocolLog parameter specifies whether to retrieve the POP protocol log.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
 
@@ -311,7 +310,7 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -335,6 +334,23 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Monitoring
+This parameter is available only in on-premises Exchange.
+
+The Monitoring switch includes mailboxes that were created by monitoring accounts in the results. By default, these mailboxes aren't included in the results. You don't have to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -413,6 +429,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReadIsOptimizedForAccessibility
+The ReadIsOptimizedForAccessibility switch specifies whether to read the value of the IsOptimizedForAccessibility property on the mailbox (whether the mailbox is configured to use the light version of Outlook on the web). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecalculateHasActiveSyncDevicePartnership
+The RecalculateHasActiveSyncDevicePartnership switch recalculates the value of the HasActiveSyncDevicePartnership property on the mailbox. The value is automatically updated if it's found to be incorrect. You don't have to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -421,23 +467,6 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SendLogsTo
-This parameter is available or functional only in Exchange Server 2010.
-
-The SendLogsTo parameter specifies an address to receive the log files.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
@@ -463,68 +492,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Monitoring
-This parameter is available only in on-premises Exchange.
-
-The Monitoring switch includes mailboxes that were created by monitoring accounts in the results. By default, these mailboxes aren't included in the results. You don't have to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecalculateHasActiveSyncDevicePartnership
-The RecalculateHasActiveSyncDevicePartnership switch recalculates the value of the HasActiveSyncDevicePartnership property on the mailbox. The value is automatically updated if it's found to be incorrect. You don't have to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActiveSyncSuppressReadReceipt
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReadIsOptimizedForAccessibility
-The ReadIsOptimizedForAccessibility switch specifies whether to read the value of the IsOptimizedForAccessibility property on the mailbox (whether the mailbox is configured to use the light version of Outlook on the web). You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
