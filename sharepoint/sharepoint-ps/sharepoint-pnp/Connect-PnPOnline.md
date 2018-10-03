@@ -60,7 +60,7 @@ Connect-PnPOnline -Scopes <String[]>
                   [-NoTelemetry [<SwitchParameter>]]
 ```
 
-### WebLogin
+### WebLogin 
 ```powershell
 Connect-PnPOnline -Url <String>
                   -UseWebLogin [<SwitchParameter>]
