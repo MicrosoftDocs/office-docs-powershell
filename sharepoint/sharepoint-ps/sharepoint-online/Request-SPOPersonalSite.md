@@ -23,6 +23,12 @@ The `Request-SPOPersonalSite` cmdlet requests that the users specified be enqueu
 > [!NOTE] 
 > You must specify a string array of user logins that contains one or more valid user email (logins) and cannot contain any empty fields. The command will stop if it encounters any empty strings in the array. A maximum of 200 users can be specified.
 
+> [!NOTE] 
+> The actor executing this cmdlet must be at least assigned the SharePoint Online administrator role and have been assigned a SharePoint Online license to be able to provision the OneDrive for Business sites.
+
+> [!NOTE]
+> This commandlet is NOT OneDrive Multi-Geo aware. If you need to request Personal Sites for Multi-Geo enabled tenants, you must run this commandlet for users in the region their data is to be hosted in. To retrieve users with a specific PDL, use the following sample: 
+get-MSOLUser | Where {$_.PreferredDataLocation -eq "EUR"]
 
 ## EXAMPLES
 
@@ -88,6 +94,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-## NOTES
+## NOTES 
 
 ## RELATED LINKS

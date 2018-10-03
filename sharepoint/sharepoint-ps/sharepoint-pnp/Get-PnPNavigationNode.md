@@ -86,8 +86,6 @@ Accept pipeline input: False
 ### -Tree
 Show a tree view of all navigation nodes
 
-Only applicable to: SharePoint Online, SharePoint Server 2013
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-RemoteDomain
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-RemoteDomain
@@ -32,21 +32,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-RemoteDomain
 ```
 
-This example returns all remote domains configured in the Active Directory forest in which you run the command.
+This example returns a summary list of all remote domains in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-RemoteDomain Contoso
+Get-RemoteDomain -Identity Contoso | Format-List
 ```
 
-This example returns the configuration for the remote domain Contoso.
+This example returns detailed information for the remote domain named Contoso.
 
 ### -------------------------- Example 3 --------------------------
 ```
 Get-RemoteDomain | Where {$_.TNEFEnabled -eq $false}
 ```
 
-This example queries Active Directory for all remote domains and displays only those remote domains for which Transport Neutral Encapsulation Format (TNEF) encoding isn't used.
+This example returns all domains where Transport Neutral Encapsulation Format (TNEF) encoding isn't used.
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -70,13 +70,19 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the remote domain you want to view. Enter either the GUID or name of the remote domain.
+The Identity parameter specifies the remote domain that you want to view. You can use any value that uniquely identifies the remote domain. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
 
 ```yaml
 Type: RemoteDomainIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None

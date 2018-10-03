@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsTeamsMessagingPolicy
 schema: 2.0.0
@@ -19,7 +19,7 @@ Get-CsTeamsMessagingPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object
 ```
 
 ## DESCRIPTION
-Retrieves a Teams messaging policy.
+The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.  This cmdlet lets you retrieve messaging policies that are available for use within your organization.
 
 ## EXAMPLES
 
@@ -121,3 +121,4 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+

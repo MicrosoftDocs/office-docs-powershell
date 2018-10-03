@@ -8,42 +8,81 @@ schema: 2.0.0
 # Get-SPOUserAndContentMoveState
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This cmdlet allows a SharePoint administrators to check the status of a user or site move across geo locations.
 
 ## SYNTAX
 
 ### MoveReport
-```
+```powershell
 Get-SPOUserAndContentMoveState [-Limit <UInt32>] [-MoveDirection <Direction>] [-MoveEndTime <DateTime>]
  [-MoveStartTime <DateTime>] [-MoveState <State>] [<CommonParameters>]
 ```
 
 ### OdbMoveId
-```
+```powershell
 Get-SPOUserAndContentMoveState -OdbMoveId <Guid> [<CommonParameters>]
 ```
 
 ### UserPrincipalName
-```
+```powershell
 Get-SPOUserAndContentMoveState -UserPrincipalName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This command gets the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
+
+The following are the available move states:
+
+|Status	|Description|
+| --- | --- |
+|NotStarted|	The move has not started. |
+|InProgress| 	The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
+|Success|	The move has completed successfully.|
+|Failed	|The move failed.|
 
 ## EXAMPLES
-
 ### Example 1 
-```
-{{ Add example code here }}
-```
 
-{{ Add example description here }}
+```Powershell
+Get-SPOUserAndContentMoveState -OdbMoveId b298219e-3440-10b8-8931-46e805e2b85b
+```
+Obtain the move state by OneDrive Move Job ID
+   
+### Example 2
+
+```Powershell
+Get-SPOUserAndContentMoveState -movestate NotStarted
+```
+Getting which moves are being done in a particular state
+###Example 3
+
+```Powershell
+Get-SPOUserAndContentMoveState -MoveDirection All 
+```
+Gives you the output for users moving in and out from the geo location you are logged into
+
+###Example 4
+```Powershell
+Get-SPOUserAndContentMoveState -MoveDirection In 
+```
+Gives you the output for users moving into the geo location that you are logged into
+
+###Example 5
+```Powershell
+Get-SPOUserAndContentMoveState -MoveDirection Out 
+```
+Gives you the output for users moving out from the geo location that you are logged into
+
+###Example 6
+```Powershell
+Get-SPOUserAndContentMoveState -UserPrincipalName jezz@contoso.com
+```
+Obtains the status of the move for jezz@contoso.com
 
 ## PARAMETERS
 
 ### -Limit
-{{Fill Limit Description}}
+Get the limit of user on a single call of the parameter
 
 ```yaml
 Type: UInt32
@@ -59,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveDirection
-{{Fill MoveDirection Description}}
+Allows you to define the direction of the user move in relation to your current SharePoint location
 
 ```yaml
 Type: Direction
@@ -76,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveEndTime
-{{Fill MoveEndTime Description}}
+Allows you to obtain the moves that are scheduled to end by a particular time, as defined in UTC
 
 ```yaml
 Type: DateTime
@@ -92,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveStartTime
-{{Fill MoveStartTime Description}}
+Allows you to obtain the moves that are scheduled to begin at a particular time, as defined in UTC
 
 ```yaml
 Type: DateTime
@@ -108,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveState
-{{Fill MoveState Description}}
+Move State current status.
 
 ```yaml
 Type: State
@@ -125,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -OdbMoveId
-{{Fill OdbMoveId Description}}
+Onedrive GUID MoveID that you get when you start a job.
 
 ```yaml
 Type: Guid
@@ -141,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-{{Fill UserPrincipalName Description}}
+User Principal name is the unique property on Azure AD for each user.
 
 ```yaml
 Type: String
@@ -159,15 +198,12 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
 
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)

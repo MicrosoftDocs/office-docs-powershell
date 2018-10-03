@@ -1,8 +1,21 @@
 ---
-Module Name: Skype for Business PowerShell
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Module Name: SkypeForBusiness
+Module Guid: 01dfdcd9-c48d-46a9-b09a-587ca5c4829a
+Help Version:  17.0.15229.2100
+Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/skype/
 title: skype
 Locale: en-US
+Additional Locale: de-DE,es-ES,fr-FR,it-IT,ja-JP,ko-KR,pt-BR,ru-RU,zh-CN,zh-TW
+de-DE Version: 17.0.15229.2100
+es-ES Version: 17.0.15229.2100
+fr-FR Version: 17.0.15229.2100
+it-IT Version: 17.0.15229.2100
+ja-JP Version: 17.0.15229.2100
+ko-KR Version: 17.0.15229.2100
+pt-BR Version: 17.0.15229.2100
+ru-RU Version: 17.0.15229.2100
+zh-CN Version: 17.0.15229.2100
+zh-TW Version: 17.0.15229.2100
 ---
 
 # Skype for Business PowerShell
@@ -10,6 +23,18 @@ Locale: en-US
 The following cmdlet references are for Skype for Business.
 
 ## Skype for Business Cmdlets
+### [New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
+{{Manually Enter New-CSOnlinePSTNGateway Description Here}}
+
+### [Set-CSOnlinePSTNGateway](Set-CSOnlinePSTNGateway.md)
+{{Manually Enter Set-CSOnlinePSTNGateway Description Here}}
+
+### [Get-CSOnlinePSTNGateway](Get-CSOnlinePSTNGateway.md)
+{{Manually Enter Get-CSOnlinePSTNGateway Description Here}}
+
+### [Remove-CSOnlinePSTNGateway](Remove-CSOnlinePSTNGateway.md)
+{{Manually Enter Remove-CSOnlinePSTNGateway Description Here}}
+
 ### [Add-CsSlaDelegates](Add-CsSlaDelegates.md)
 {{Manually Enter Add-CsSlaDelegates Description Here}}
 
@@ -3053,3 +3078,43 @@ The following cmdlet references are for Skype for Business.
 ### [Get-CsTeamsUpgradePolicy](Get-CsTeamsUpgradePolicy.md)
 
 ### [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
+
+### [New-CsTeamsUpgradePolicy](New-CsTeamsUpgradePolicy.md)
+
+### [Remove-CsTeamsUpgradePolicy](Remove-CsTeamsUpgradePolicy.md)
+
+### [Set-CsTeamsUpgradePolicy](Set-CsTeamsUpgradePolicy.md)
+
+### [Get-CsCloudCallDataConnector](Get-CsCloudCallDataConnector.md)
+
+### [Get-CsCloudCallDataConnectorConfiguration](Get-CsCloudCallDataConnectorConfiguration.md)
+
+### [New-CsCloudCallDataConnectorConfiguration](New-CsCloudCallDataConnectorConfiguration.md)
+
+### [Set-CsCloudCallDataConnector](Set-CsCloudCallDataConnector.md)
+
+### [Set-CsCloudCallDataConnectorConfiguration](Set-CsCloudCallDataConnectorConfiguration.md)
+
+### [Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+
+### [Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+
+### [Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+
+### [Set-CsTeamsMeetingBroadcastConfiguration](Set-CsTeamsMeetingBroadcastConfiguration.md)
+
+### [Get-CsTeamsMeetingBroadcastConfiguration](Get-CsTeamsMeetingBroadcastConfiguration.md)
+
+### [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md)
+
+### [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
+
+### [New-CsTeamsMeetingPolicy](New-CsTeamsMeetingPolicy.md)
+
+### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
+
+### [Remove-CsTeamsMeetingPolicy](Remove-CsTeamsMeetingPolicy.md)
+
+### [Set-CsAuthConfig](Set-CsAuthConfig.md)
+
+### [Get-CsAuthConfig](Get-CsAuthConfig.md)

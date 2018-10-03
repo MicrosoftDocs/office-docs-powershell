@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ClientAccessServer
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ClientAccessServer
@@ -11,34 +11,49 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-ClientAccessServer cmdlet to modify the client access configuration settings on Mailbox servers.
+Use the Set-ClientAccessServer cmdlet to modify settings that are associated with the Client Access server role.
+
+Note: In Exchange 2013 or later, use the Set-ClientAccessService cmdlet instead. If you have scripts that use Set-ClientAccessServer, update them to use Set-ClientAccessService.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set2
+### AlternateServiceAccount
 ```
 Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
- [-AlternateServiceAccountCredential <PSCredential[]>] [-CleanUpInvalidAlternateServiceAccountCredentials]
- [-Confirm] [-DomainController <Fqdn>] [-IrmLogEnabled <$true | $false>] [-IrmLogMaxAge <EnhancedTimeSpan>]
- [-IrmLogMaxDirectorySize <Unlimited>] [-IrmLogMaxFileSize <ByteQuantifiedSize>]
- [-IrmLogPath <LocalLongFullPath>] [-RemoveAlternateServiceAccountCredentials] 
+ [-AlternateServiceAccountCredential <PSCredential[]>]
+ [-CleanUpInvalidAlternateServiceAccountCredentials]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IrmLogEnabled <$true | $false>]
+ [-IrmLogMaxAge <EnhancedTimeSpan>]
+ [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IrmLogMaxFileSize <ByteQuantifiedSize>]
+ [-IrmLogPath <LocalLongFullPath>]
+ [-IsOutOfService <$true | $false>]
+ [-RemoveAlternateServiceAccountCredentials] 
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter> [-AutoDiscoverServiceInternalUri <Uri>]
- [-AutoDiscoverSiteScope <MultiValuedProperty>] [-Confirm] [-DomainController <Fqdn>]
- [-IrmLogEnabled <$true | $false>] [-IrmLogMaxAge <EnhancedTimeSpan>] [-IrmLogMaxDirectorySize <Unlimited>]
- [-IrmLogMaxFileSize <ByteQuantifiedSize>] [-IrmLogPath <LocalLongFullPath>]
- [-WhatIf] [-Array <ClientAccessArrayIdParameter>] [<CommonParameters>]
+Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
+ [-Array <ClientAccessArrayIdParameter>]
+ [-AutoDiscoverServiceInternalUri <Uri>]
+ [-AutoDiscoverSiteScope <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IrmLogEnabled <$true | $false>]
+ [-IrmLogMaxAge <EnhancedTimeSpan>]
+ [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IrmLogMaxFileSize <ByteQuantifiedSize>]
+ [-IrmLogPath <LocalLongFullPath>]
+ [-IsOutOfService <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-ClientAccessServer cmdlet will be removed in a future version of Exchange. You should use the Set-ClientAccessService cmdlet instead.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -67,7 +82,7 @@ The Identity parameter specifies the server that you want to modify. You can use
 Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -82,9 +97,24 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential[]
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: ClientAccessArrayIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -97,9 +127,9 @@ The AutoDiscoverServiceInternalUri parameter specifies the internal URL of the A
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -118,9 +148,9 @@ To add or remove one or more values without affecting any existing entries, use 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -133,9 +163,9 @@ The CleanUpInvalidAlternateServiceAccountCredentialsswitch specifies whether to 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -154,7 +184,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +199,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -178,6 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogEnabled
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogEnabled parameter specifies whether logging is enabled for Information Rights Management (IRM).
 
 ```yaml
@@ -193,6 +225,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxAge
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogMaxAge parameter specifies the max age for IRM logs. Logs older than the specified value are deleted.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
@@ -212,6 +246,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxDirectorySize
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogMaxDirectorySize parameter specifies the maximum directory size for IRM logs. When the maximum directory size is reached, the server deletes the old log files first.
 
 A value of unlimited means no limit for the maximum directory size for the IRM logs.
@@ -229,6 +265,8 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxFileSize
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogMaxFileSize parameter specifies the maximum size of the IRM log. This value can't be larger than the IrmLogMaxDirectorySize parameter.
 
 ```yaml
@@ -244,10 +282,29 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogPath
+This parameter is available or functional only in Exchange Server 2010.
+
 The IrmLogPath parameter specifies the path to the log file.
 
 ```yaml
 Type: LocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsOutOfService
+This parameter is available or functional only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -263,9 +320,9 @@ The RemoveAlternateServiceAccountCredentialsswitch specifies whether to remove a
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -280,22 +337,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Array
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ClientAccessArrayIdParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

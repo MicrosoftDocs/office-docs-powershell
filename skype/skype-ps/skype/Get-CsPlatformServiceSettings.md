@@ -1,6 +1,6 @@
 ---
-external help file:
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsPlatformServiceSettings
 schema: 2.0.0
 ---
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsPlatformServiceSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns information about Skype for Business on Mac capabilites which have been enabled in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
 
 ## SYNTAX
 
@@ -23,27 +23,32 @@ Get-CsPlatformServiceSettings [-Filter <String>] [-LocalStore] [<CommonParameter
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Skype for Business Server 2015 Cumulative Update 6 introduces new features for Skype for Business on Mac users like support for E-911 calls, send files in peer-to-peer chats, block external access by policy and more.
+
+The `Get-CsPlatformServiceSettings` cmdlet shows you which of these features are enabled.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### -------------------------- EXAMPLE 1 --------------------------
+```
+PS C:\> Get-CsPlatformServiceSettings
 ```
 
-{{ Add example description here }}
+This example shows you which of the Skype for Business on Mac features are enabled in your organization.
 
 ## PARAMETERS
 
 ### -Filter
-{{Fill Filter Description}}
+Enables you to use wildcard characters in order to return one or more Platform Service Settings configurations.
+For example, to return all of the Platform Service Settings configurations with the word Test in their names use this syntax:
+
+-Filter "\*Test*"
 
 ```yaml
 Type: String
 Parameter Sets: Filter
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -53,13 +58,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the Platform Service Settings to be returned.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -69,13 +74,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+Retrieves the Platform Service Settings configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -100,3 +105,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[New-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/new-csplatformservicesettings?view=skype-ps)
+
+[Set-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
+
+[Remove-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps)

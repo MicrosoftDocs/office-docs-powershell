@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Lync Server 2013, Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsExtendedTest
 schema: 2.0.0
 ---
@@ -62,7 +62,7 @@ Friendly name to be given to the extended test.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ You can only specify a single TestType per extended test.
 Type: TestType
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ You must specify at least two test users when using the PSTN TestType.
 Type: PSListModifier
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -135,4 +135,5 @@ The New-CsExtendedTest cmdlet creates new instances of the Microsoft.Rtc.Managem
 [New-CsWatcherNodeConfiguration](New-CsWatcherNodeConfiguration.md)
 
 [Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)
+
 

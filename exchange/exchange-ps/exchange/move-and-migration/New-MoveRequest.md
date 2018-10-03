@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MoveRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MoveRequest
@@ -25,7 +25,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteC
  [-DomainController <Fqdn>] [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly]
  [-Priority <Normal | High>] [-Protect] [-RemoteArchiveTargetDatabase <String>]
  [-RemoteOrganizationName <String>] [-RemoteTargetDatabase <String>] [-Suspend] [-SuspendComment <String>]
- [-SuspendWhenReadyToComplete] [-TargetDeliveryDomain <Fqdn>] [-WhatIf] [-CheckInitialProvisioningSetting]
+ [-SuspendWhenReadyToComplete] [-TargetDeliveryDomain <Fqdn>] [-WhatIf]
  [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>] [-ForceOffline]
  [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
  [-PreventCompletion] [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
@@ -44,7 +44,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCre
  [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly] [-Priority <Normal | High>] [-Protect]
  [-RemoteOrganizationName <String>] [-Suspend] [-SuspendComment <String>] [-SuspendWhenReadyToComplete]
  [-TargetDatabase <DatabaseIdParameter>] [-TargetDeliveryDomain <Fqdn>] [-WhatIf] [-RemoteLegacy]
- [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
+ [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
  [-ForceOffline] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>] [-PreventCompletion] [-RemoteTargetDatabase <String>]
  [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
@@ -63,7 +63,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PS
  [-RemoteTargetDatabase <String>] [-Suspend] [-SuspendComment <String>] [-SuspendWhenReadyToComplete]
  [-TargetDatabase <DatabaseIdParameter>] [-TargetDeliveryDomain <Fqdn>] [-WhatIf] [-Remote]
  -RemoteHostName <Fqdn> [-ArchiveDomain <String>] [-ArchiveOnly] [-ArchiveTargetDatabase <DatabaseIdParameter>]
- [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
+ [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
  [-ForceOffline] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>] [-PreventCompletion] [-PrimaryOnly] [-RemoteOrganizationName <String>]
  [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
@@ -80,7 +80,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-AcceptLargeDataLoss
  [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>] [-DoNotPreserveMailboxSignature]
  [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly] [-Priority <Normal | High>] [-Protect] [-Suspend]
  [-SuspendComment <String>] [-SuspendWhenReadyToComplete] [-TargetDatabase <DatabaseIdParameter>] [-WhatIf]
- [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
+ [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
  [-ForceOffline] [-ForcePull] [-ForcePush] [-IncrementalSyncInterval <TimeSpan>]
  [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>] [-PreventCompletion]
  [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
@@ -95,7 +95,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-AcceptLargeDataLoss
 New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteCredential <PSCredential>]
  [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn> [-TargetDeliveryDomain <Fqdn>] [-AcceptLargeDataLoss]
  [-AllowLargeItems] [-ArchiveDomain <String>] [-ArchiveOnly] [-BadItemLimit <Unlimited>] [-BatchName <String>]
- [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
+ [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm] [-DomainController <Fqdn>] [-ForceOffline] [-IgnoreTenantMigrationPolicies]
  [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
  [-MigrationMailbox <MailboxIdParameter>] [-MoveOptions <MultiValuedProperty>] [-PreventCompletion]
@@ -112,7 +112,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteC
 ```
 New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTenant <SmtpDomain>
  -TargetDeliveryDomain <Fqdn> [-AcceptLargeDataLoss] [-AllowLargeItems] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CheckInitialProvisioningSetting] [-CompleteAfter <DateTime>]
+ [-BatchName <String>] [-CompleteAfter <DateTime>]
  [-CompletedRequestAgeLimit <Unlimited>] [-Confirm] [-DomainController <Fqdn>] [-ForceOffline]
  [-IgnoreTenantMigrationPolicies] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
  [-LargeItemLimit <Unlimited>] [-MoveOptions <MultiValuedProperty>] [-PreventCompletion]
@@ -173,7 +173,7 @@ The Identity parameter specifies the identity of the mailbox or mail user. You c
 Type: MailboxOrMailUserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -190,7 +190,7 @@ You can't use this switch with the Remote switch.
 Type: SwitchParameter
 Parameter Sets: Set4, Set5, Set6
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -207,7 +207,7 @@ You can't use this switch with the Outbound switch.
 Type: SwitchParameter
 Parameter Sets: Set4, Set3, Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -224,7 +224,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 Type: PSCredential
 Parameter Sets: Set4, Set3, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -251,7 +251,7 @@ The RemoteGlobalCatalog parameter specifies the fully qualified domain name (FQD
 Type: Fqdn
 Parameter Sets: Set4, Set3, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 Type: Fqdn
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -278,7 +278,7 @@ The RemoteHostName parameter specifies the FQDN of the cross-forest organization
 Type: Fqdn
 Parameter Sets: Set4, Set3, Set2, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -295,7 +295,7 @@ The RemoteLegacy switch specifies that this mailbox move is from a remote forest
 Type: SwitchParameter
 Parameter Sets: Set3, Set2
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -310,7 +310,7 @@ The AcceptLargeDataLoss switch specifies the request should continue even if a l
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -329,7 +329,7 @@ You can't use this switch with the LargeItemLimit parameter.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -344,7 +344,7 @@ The ArchiveDomain parameter specifies the FQDN of the external domain to which y
 Type: String
 Parameter Sets: Set4, Set3, Set2, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -361,7 +361,7 @@ You can't use this switch with the PrimaryOnlyswitch.
 Type: SwitchParameter
 Parameter Sets: Set4, Set3, Set2, Set1, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -384,7 +384,7 @@ You can use the following values for this parameter:
 Type: DatabaseIdParameter
 Parameter Sets: Set4, Set3, Set2, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -403,7 +403,7 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -418,7 +418,7 @@ The BatchName parameter specifies a descriptive name for moving a batch of mailb
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -437,7 +437,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -454,7 +454,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -473,7 +473,7 @@ We recommend that you use this switch only if the move request fails because the
 Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -497,6 +497,8 @@ Accept wildcard characters: False
 ```
 
 ### -MRSServer
+This parameter is available or functional only in Exchange Server 2010.
+
 The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
 
 ```yaml
@@ -522,7 +524,7 @@ You can't use this parameter with the ArchiveOnly parameter.
 Type: SwitchParameter
 Parameter Sets: Set4, Set3, Set2, Set1, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -555,7 +557,7 @@ The Priority parameter specifies the order in which the request should be proces
 Type: Normal | High
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -570,7 +572,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -587,7 +589,7 @@ If you use this parameter, you must specify the Remote or RemoteLegacy parameter
 Type: String
 Parameter Sets: Set4, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -619,7 +621,7 @@ If you use this parameter, you must specify the Remote or RemoteLegacy parameter
 Type: String
 Parameter Sets: Set4, Set3, Set2, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -634,7 +636,7 @@ The Suspend switch specifies whether to suspend the request. If you use this swi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -649,7 +651,7 @@ The SuspendComment parameter specifies a description about why the request was s
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -664,7 +666,7 @@ The SuspendWhenReadyToComplete switch specifies whether to suspend the move requ
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -687,7 +689,7 @@ You can use the following values:
 Type: DatabaseIdParameter
 Parameter Sets: Set4, Set3, Set2, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -702,7 +704,7 @@ The TargetDeliveryDomain parameter specifies the FQDN of the external email addr
 Type: Fqdn
 Parameter Sets: Set4, Set3, Set2, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -714,7 +716,7 @@ Accept wildcard characters: False
 Type: Fqdn
 Parameter Sets: Set6
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -731,24 +733,7 @@ You can use this switch to test a mailbox's readiness to be moved, and to view a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CheckInitialProvisioningSetting
-The CheckInitialProvisioningSetting switch specifies that the move request checks the IsExcludedFromProvisioning setting on the target database when you don't specify a target database for the move. You don't need to specify a value with this switch.
-
-The IsExcludedFromProvisioning setting allows the database to be excluded from provisioning new mailboxes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -773,7 +758,7 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -788,7 +773,7 @@ The CompletedRequestAgeLimit parameter specifies how long the request will be ke
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -805,7 +790,7 @@ Moving a mailbox in offline mode means the user will have no access to email dur
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -824,7 +809,7 @@ You use this parameter only for local moves.
 Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -843,7 +828,7 @@ You use this parameter only for local moves.
 Type: SwitchParameter
 Parameter Sets: Set1
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -862,7 +847,7 @@ Valid values are from 00:00:00 to 120.00:00:00 (120 days). The default value is 
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -879,7 +864,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -904,7 +889,7 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -919,7 +904,7 @@ The PreventCompletion switch specifies whether to run the move request, but not 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -936,7 +921,7 @@ The SkipMoving parameter specifies the stages of the move that you want to skip 
 Type: SkippableMoveComponent[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -961,7 +946,7 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -978,7 +963,7 @@ The WorkloadType parameter is reserved for internal Microsoft use.
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -993,7 +978,7 @@ PARAMVALUE: SmtpDomain
 Type: SmtpDomain
 Parameter Sets: Set4, Set6
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -1008,7 +993,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Set4, Set3, Set2, Set5, Set6
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1023,7 +1008,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MailboxIdParameter
 Parameter Sets: Set3, Set2, Set1, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1040,7 +1025,7 @@ Don't use this parameter with the SkipMoving parameter.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1081,7 +1066,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1104,7 +1089,7 @@ When you use the value Unlimited, the completed request isn't automatically remo
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1119,7 +1104,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MigrationEndpointIdParameter
 Parameter Sets: Set3, Set2, Set1, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

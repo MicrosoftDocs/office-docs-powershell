@@ -1,6 +1,6 @@
 ---
-external help file:
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsAdditionalInternalDomain
 schema: 2.0.0
 ---
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsAdditionalInternalDomain
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes an additional internal domain previously configured for use in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 – December 2017.
 
 ## SYNTAX
 
@@ -18,16 +18,20 @@ Remove-CsAdditionalInternalDomain [-Identity] <XdsGlobalRelativeIdentity> [-Forc
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet removes an additional internal domain previously configured for use in your organization.
+
+Additional internal domains are not used locally by internal user or services URIs but must be treated
+as internal by hybrid (split-domain) traffic analysis to support purely hosted and cloud appliance
+domains.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### -------------------------- Example 1 ------------------------
+```
+PS C:\> Remove-CsAdditionalInternalDomain -Identity fabrikam.com
 ```
 
-{{ Add example description here }}
+Example 1 removes the additional internal domain with the Identity fabrikam.com.
 
 ## PARAMETERS
 
@@ -38,7 +42,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -48,13 +52,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -64,13 +68,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Fully qualified domain name (FQDN) for the new additional internal domain.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -80,14 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -112,3 +115,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[New-CsAdditionalInternalDomain](https://docs.microsoft.com/en-us/powershell/module/skype/new-csadditionalinternaldomain?view=skype-ps)
+
+[Get-CsAdditionalInternalDomain](https://docs.microsoft.com/en-us/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)

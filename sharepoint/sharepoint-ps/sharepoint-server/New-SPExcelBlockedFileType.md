@@ -19,7 +19,7 @@ New-SPExcelBlockedFileType -ExcelServiceApplication <SPExcelServiceApplicationPi
 ```
 
 ## DESCRIPTION
-The `New-SPExcelBlockedExcelFileType` cmdlet adds an entry to the list of file types that Excel Services Application prevents from loading.
+The `New-SPExcelBlockedFileType` cmdlet adds an entry to the list of file types that Excel Services Application prevents from loading.
 Excel Services Application does not load any files that correspond to a file type that is on this list.
 The specified file type is prevented from loading by all instances of Excel Services Application for the specified Excel Services Application Web service application.
 
@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```
 C:\PS>$sa = Get-SPExcelServiceApplication 
-PS C:\>New-SPExcelBlockedExcelFileType -FileType XLSM -ExcelServiceApplication $sa
+PS C:\>New-SPExcelBlockedFileType -FileType XLSM -ExcelServiceApplication $sa
 ```
 
 This example adds an entry for XLSM to the list of file types that Excel Services Application currently prevents from loading.

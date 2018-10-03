@@ -22,9 +22,6 @@ Applies permissions to a set of users or mail-enabled security groups. Use this 
 
 To view which users or groups have permissions to a site, use the [Get-SPOHubSite](Get-SPOHubSite.md) cmdlet.
 
-> [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
-
 ## EXAMPLES
 
 ### Example 1
@@ -49,7 +46,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

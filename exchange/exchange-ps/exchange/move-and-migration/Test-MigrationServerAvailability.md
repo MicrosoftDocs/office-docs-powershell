@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Test-MigrationServerAvailability
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Test-MigrationServerAvailability
@@ -174,7 +174,7 @@ The Autodiscover parameter specifies that the cmdlet should use the Autodiscover
 Type: SwitchParameter
 Parameter Sets: Set7, Set8, Set11, Set12
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -191,7 +191,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 Type: PSCredential
 Parameter Sets: Set7, Set8, Set4, Set5, Set6, Set9, Set11, Set12, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: Set3
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +218,7 @@ The EmailAddress parameter specifies the email address of an administrator accou
 Type: SmtpAddress
 Parameter Sets: Set7, Set8, Set11, Set12
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 Type: SmtpAddress
 Parameter Sets: Set5
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +245,7 @@ The Endpoint parameter specifies the name of the migration endpoint to connect t
 Type: MigrationEndpointIdParameter
 Parameter Sets: Set9, Set13
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -262,7 +262,7 @@ The ExchangeOutlookAnywhere parameter specifies a migration type for migrating o
 Type: SwitchParameter
 Parameter Sets: Set8, Set5, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -277,7 +277,7 @@ The ExchangeRemoteMove parameter specifies a type of migration where mailboxes a
 Type: SwitchParameter
 Parameter Sets: Set7, Set3, Set12
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -294,7 +294,7 @@ The ExchangeServer parameter specifies the FQDN of the on-premises Exchange serv
 Type: String
 Parameter Sets: Set8, Set5
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -311,7 +311,7 @@ The Imap parameter specifies an IMAP migration as the migration type. This param
 Type: SwitchParameter
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -330,7 +330,7 @@ The standard is to use port 143 for unencrypted connections, port 143 for Transp
 Type: Int32
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -345,7 +345,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -366,7 +366,7 @@ The RemoteServer parameter specifies the FQDN of the on-premises mail server. Th
 Type: Fqdn
 Parameter Sets: Set7, Set4, Set6, Set3, Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -378,7 +378,7 @@ Accept wildcard characters: False
 Type: Fqdn
 Parameter Sets: Set5
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -395,7 +395,7 @@ The RPCProxyServer parameter specifies the FQDN of the RPC proxy server for the 
 Type: Fqdn
 Parameter Sets: Set8, Set5, Set6, Set9, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -412,7 +412,7 @@ The SourceMailboxLegacyDN parameter specifies a mailbox on the target server. Us
 Type: String
 Parameter Sets: Set8, Set5, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -424,7 +424,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Set6, Set9, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -443,7 +443,7 @@ The parameter is only used for cutover Exchange migrations and staged Exchange m
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
 Parameter Sets: Set8, Set5, Set6, Set9, Set2, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -462,7 +462,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -477,7 +477,7 @@ The FilePath parameter specifies the path containing the PST files when testing 
 Type: String
 Parameter Sets: Set4
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -502,7 +502,7 @@ This parameter isn't used for testing the connection to the remote server for a 
 Type: Admin | FullAccess
 Parameter Sets: Set8, Set5, Set11
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -513,13 +513,13 @@ Accept wildcard characters: False
 ### -Security
 This parameter is available only in the cloud-based service.
 
-The Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl. Use this parameter only when testing the connection to an IMAP server or in preparation for creating a migration endpoint for an IMAP migration.
+For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
 
 ```yaml
 Type: None | Ssl | Tls
 Parameter Sets: Set2
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -536,7 +536,7 @@ The TestMailbox parameter specifies a mailbox on the target server. Use the prim
 Type: MailboxIdParameter
 Parameter Sets: Set7, Set8, Set5, Set6, Set9, Set11, Set10
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -551,7 +551,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -566,7 +566,7 @@ The Compliance switch specifies that the endpoint type is compliance. You don't 
 Type: SwitchParameter
 Parameter Sets: Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -581,7 +581,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Set6, Set9
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -596,7 +596,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: Set9, Set10
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -611,7 +611,7 @@ The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public
 Type: SwitchParameter
 Parameter Sets: Set7, Set10
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -626,7 +626,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-EmailAddressPolicy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-EmailAddressPolicy
@@ -52,7 +52,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -73,7 +73,7 @@ The Identity parameter specifies the email address policy that you want to view.
 Type: EmailAddressPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -82,9 +82,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeMailboxSettingOnlyPolicy
-The IncludeMailboxSettingOnlyPolicy parameter retrieves Microsoft Exchange Server 2003 e-mail address policies that contain only mailbox management configuration. Microsoft Exchange Server 2010 supports both policies that contain only e-mail address policy settings and policies that contain e-mail address policy settings and mailbox management configuration. Exchange 2010 doesn't support policies that contain only mailbox management configuration, but Exchange 2003 policies that contain only mailbox management configuration are, by default, preserved and not upgraded. The IncludeMailboxSettingOnlyPolicy parameter is required to retrieve these policies.
+This parameter is available or functional only in Exchange Server 2010.
 
-The attributes of e-mail address policies that contain only mailbox management configuration can't be modified in Exchange 2010. These policies can only be removed.
+The IncludeMailboxSettingOnlyPolicy parameter retrieves Microsoft Exchange Server 2003  address policies that contain only mailbox management configuration. Microsoft Exchange Server 2010 supports both policies that contain only  address policy settings and policies that contain  address policy settings and mailbox management configuration. Exchange 2010 doesn't support policies that contain only mailbox management configuration, but Exchange 2003 policies that contain only mailbox management configuration are, by default, preserved and not upgraded. The IncludeMailboxSettingOnlyPolicy parameter is required to retrieve these policies.
+
+The attributes of  address policies that contain only mailbox management configuration can't be modified in Exchange 2010. These policies can only be removed.
 
 ```yaml
 Type: SwitchParameter

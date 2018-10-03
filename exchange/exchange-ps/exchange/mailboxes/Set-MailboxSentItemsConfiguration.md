@@ -49,7 +49,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf cf
+Aliases: cf
 Applicable: Exchange Server 2010
 Required: False
 Position: Named
@@ -114,7 +114,9 @@ Accept wildcard characters: False
 
 ### -SendAsItemsCopiedTo
 The SendAsItemsCopiedTo parameter specifies where messages that are sent from the mailbox using Send As permmission are are saved. Valid values are:
+
 - Sender: Messages sent from the mailbox are saved in the Sent Items folder of the user who sent the message. This is the default value.
+
 - SenderAndFrom: Messages sent from the mailbox are saved in the Sent Items folder of the user who sent the message, and in the Sent Items folder of the mailbox.
 
 ```yaml
@@ -131,7 +133,9 @@ Accept wildcard characters: False
 
 ### -SendOnBehalfOfItemsCopiedTo
 The SendOnBehalfOfItemsCopiedTo parameter specifies where messages that are sent from the mailbox using Send On Behalf Of permmission are are saved. Valid values are:
+
 - Sender: Messages sent from the mailbox are saved in the Sent Items folder of the user who sent the message. This is the default value.
+
 - SenderAndFrom: Messages sent from the mailbox are saved in the Sent Items folder of the user who sent the message, and in the Sent Items folder of the mailbox.
 
 ```yaml

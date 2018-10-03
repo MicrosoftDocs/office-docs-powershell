@@ -11,54 +11,103 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-UnifiedGroup cmdlet to create Office 365 groups in your cloud-based organization. To add members, owners, and subscribers to Office 365 groups, use the Add-UnifiedGroupLinks cmdlet.
+Use the New-UnifiedGroup cmdlet to create Office 365 Groups in your cloud-based organization. To add members, owners, and subscribers to Office 365 Groups, use the Add-UnifiedGroupLinks cmdlet.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set4
+### Identity (Default)
 ```
-New-UnifiedGroup -DlIdentity <DistributionGroupIdParameter> [-Confirm] [-ConvertClosedDlToPrivateGroup]
- [-DeleteDlAfterMigration] [-ExecutingUser <RecipientIdParameter>] [-ManagedBy <RecipientIdParameter[]>]
- [-Members <RecipientIdParameter[]>] [-Owner <RecipientIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-New-UnifiedGroup [-AccessType <Public | Private>] [-Alias <String>] [-AlwaysSubscribeMembersToCalendarEvents]
- [-AutoSubscribeNewMembers] [-Classification <String>] [-Confirm] [-DisplayName <String>]
- [-EmailAddresses <ProxyAddressCollection>] [-ExecutingUser <RecipientIdParameter>] [-ExoErrorAsWarning]
- [-HiddenGroupMembershipEnabled] [-Language <CultureInfo>] [-MailboxRegion <String>]
- [-ManagedBy <RecipientIdParameter[]>] [-Members <RecipientIdParameter[]>] [-Name <String>] [-Notes <String>]
- [-Owner <RecipientIdParameter>] [-PrimarySmtpAddress <SmtpAddress>]
- [-RequireSenderAuthenticationEnabled <$true | $false>] [-SuppressWarmupMessage] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-New-UnifiedGroup [-AccessType <Public | Private>] [-Alias <String>] [-AlwaysSubscribeMembersToCalendarEvents]
- [-AutoSubscribeNewMembers] [-Classification <String>] [-Confirm] [-DisplayName <String>]
- [-EmailAddresses <ProxyAddressCollection>] [-ExecutingUser <RecipientIdParameter>] [-ExoErrorAsWarning]
- [-HiddenGroupMembershipEnabled] [-Language <CultureInfo>] [-ManagedBy <RecipientIdParameter[]>]
- [-Members <RecipientIdParameter[]>] [-Name <String>] [-Notes <String>] [-Owner <RecipientIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-SuppressWarmupMessage] [-WhatIf] [<CommonParameters>]
+New-UnifiedGroup [-AccessType <Public | Private>] [-MailboxRegion <String>]
+ [-Alias <String>]
+ [-AlwaysSubscribeMembersToCalendarEvents]
+ [-AutoSubscribeNewMembers]
+ [-Classification <String>]
+ [-Confirm]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DisplayName <String>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExecutingUser <RecipientIdParameter>]
+ [-ExoErrorAsWarning]
+ [-HiddenGroupMembershipEnabled]
+ [-Language <CultureInfo>]
+ [-ManagedBy <RecipientIdParameter[]>]
+ [-Members <RecipientIdParameter[]>]
+ [-Name <String>]
+ [-Notes <String>]
+ [-Owner <RecipientIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-SuppressWarmupMessage]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### ProvisioningOptions
 ```
-New-UnifiedGroup [-AccessType <Public | Private>] [-Alias <String>] [-AlwaysSubscribeMembersToCalendarEvents]
- [-AutoSubscribeNewMembers] [-Classification <String>] [-Confirm] [-DisplayName <String>]
- [-EmailAddresses <ProxyAddressCollection>] [-ExecutingUser <RecipientIdParameter>] [-ExoErrorAsWarning]
- [-HiddenGroupMembershipEnabled] [-Language <CultureInfo>] [-ManagedBy <RecipientIdParameter[]>]
- [-Members <RecipientIdParameter[]>] [-Name <String>] [-Notes <String>] [-Owner <RecipientIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RequireSenderAuthenticationEnabled <$true | $false>]
- [-SubscriptionEnabled] [-SuppressWarmupMessage] [-WhatIf] [<CommonParameters>]
+New-UnifiedGroup [-AccessType <Public | Private>]
+ [-Alias <String>]
+ [-AlwaysSubscribeMembersToCalendarEvents]
+ [-AutoSubscribeNewMembers]
+ [-Classification <String>]
+ [-Confirm]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DisplayName <String>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExecutingUser <RecipientIdParameter>]
+ [-ExoErrorAsWarning]
+ [-HiddenGroupMembershipEnabled]
+ [-Language <CultureInfo>]
+ [-ManagedBy <RecipientIdParameter[]>]
+ [-Members <RecipientIdParameter[]>]
+ [-Name <String>]
+ [-Notes <String>]
+ [-Owner <RecipientIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-SuppressWarmupMessage]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### SegmentationOption
+```
+New-UnifiedGroup [-AccessType <Public | Private>] [-SubscriptionEnabled]
+ [-Alias <String>]
+ [-AlwaysSubscribeMembersToCalendarEvents]
+ [-AutoSubscribeNewMembers]
+ [-Classification <String>]
+ [-Confirm]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DisplayName <String>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExecutingUser <RecipientIdParameter>]
+ [-ExoErrorAsWarning]
+ [-HiddenGroupMembershipEnabled]
+ [-Language <CultureInfo>]
+ [-ManagedBy <RecipientIdParameter[]>]
+ [-Members <RecipientIdParameter[]>]
+ [-Name <String>]
+ [-Notes <String>]
+ [-Owner <RecipientIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-SuppressWarmupMessage]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### DlMigration
+```
+New-UnifiedGroup -DlIdentity <DistributionGroupIdParameter> [-ConvertClosedDlToPrivateGroup] [-DeleteDlAfterMigration]
+ [-Confirm]
+ [-ExecutingUser <RecipientIdParameter>]
+ [-ManagedBy <RecipientIdParameter[]>]
+ [-Members <RecipientIdParameter[]>]
+ [-Owner <RecipientIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Office 365 groups are group objects that are available across Office 365 services.
+Office 365 Groups are group objects that are available across Office 365 services.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -96,11 +145,11 @@ All the properties and membership of the distribution group are copied to the Of
 
 The alias and proxy addresses of the distribution group are moved to the Office 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 attribute of the distribution group.
 
-Office 365 groups don't have ReportToManager and ReportToOriginator parameters, so the values of these parameters aren't migrated from the distribution group to the Office 365 Group. The Office 365 Group behaves as if the default values of these parameters were set (ReportToManager is $false and ReportToOriginator is $true). In other words, delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the message sender and not to the owner of the Office 365 Group.
+Office 365 Groups don't have ReportToManager and ReportToOriginator parameters, so the values of these parameters aren't migrated from the distribution group to the Office 365 Group. The Office 365 Group behaves as if the default values of these parameters were set (ReportToManager is $false and ReportToOriginator is $true). In other words, delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the message sender and not to the owner of the Office 365 Group.
 
 ```yaml
 Type: DistributionGroupIdParameter
-Parameter Sets: Set4
+Parameter Sets: DlMigration
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -123,7 +172,7 @@ Note: Although a user needs to be a member to participate in a private group, an
 
 ```yaml
 Type: Public | Private
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -136,15 +185,17 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Office 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 When you create an Office 365 Group without using the EmailAddresses parameter, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
 If you don't use the Alias parameter when you create an Office 365 Group, the value of the DisplayName parameter is used. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
 
+The Alias value is appended with the ExternalDirectoryObjectId property value and used as the Name property value for the Office 365 Group ("Alias\_\<ExternalDirectoryObjectId\>"\).
+
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -167,7 +218,7 @@ The AutoSubscribeNewMembers switch overrides this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -178,13 +229,13 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSubscribeNewMembers
-The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Office 365 Groupto conversations and calendar events. You don't need to specify a value with this switch.
+The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Office 365 Group to conversations and calendar events. You don't need to specify a value with this switch.
 
 You need to use this switch with the SubscriptionEnabled switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -199,7 +250,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -231,7 +282,7 @@ Accept wildcard characters: False
 ### -ConvertClosedDlToPrivateGroup
 The ConvertClosedDlToPrivateGroup switch specifies whether to migrate the closed distribution group to a private Office 365 Group. You don't need to specify a value with this switch.
 
-By default, this switch is always applied when migrating closed distribution groups, and will eventually be deprecated.
+By default, this switch is always applied when migrating closed distribution groups, and is no longer required.
 
 If the distribution group has the value Closed for the MemberDepartRestriction or MemberJoinRestriction parameters, the distribution group will always be migrated to a private Office 365 Group. For open distribution groups, the migrated Office 365 Group is always public, not private.
 
@@ -239,7 +290,29 @@ You can only use this switch with the DlIdentity parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: DlMigration
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataEncryptionPolicy
+The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Office 365 Group. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+
+```yaml
+Type: DataEncryptionPolicyIdParameter
+Parameter Sets: Identity, SegmentationOption, ProvisioningOptions
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -256,7 +329,7 @@ You can only use this switch with the DlIdentity parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: DlMigration
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -269,11 +342,11 @@ Accept wildcard characters: False
 ### -DisplayName
 The DisplayName parameter specifies the name of the Office 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-For Office 365 groups, the DisplayName value is used in the unique Name property. However, because the DisplayName value doesn't need to be unique, the DisplayName value is appended with an underscore character (\_) and a short GUID value when it's used for the Name property.
+For Office 365 Groups, the DisplayName value is used in the unique Name property. However, because the DisplayName value doesn't need to be unique, the DisplayName value is appended with an underscore character (\_) and a short GUID value when it's used for the Name property.
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -310,7 +383,7 @@ To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<e
 
 ```yaml
 Type: ProxyAddressCollection
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -338,11 +411,11 @@ Accept wildcard characters: False
 ### -ExoErrorAsWarning
 The ExoErrorAsWarning switch specifies that Exchange Online errors that you encounter while creating the Office 365 Group are treated as warnings, not errors. You don't need to specify a value with this switch.
 
-Creating Office 365 groups involves background operations in Azure Active Directory and Exchange Online. Errors that you might encounter in Exchange Online don't prevent the creation of the group (and therefore aren't really errors), because the group object in Azure Active Directory is synchronized back to Exchange Online.
+Creating Office 365 Groups involves background operations in Azure Active Directory and Exchange Online. Errors that you might encounter in Exchange Online don't prevent the creation of the group (and therefore aren't really errors), because the group object in Azure Active Directory is synchronized back to Exchange Online.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -361,7 +434,7 @@ Note: You can't change this setting after you create the group. If you create th
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -378,7 +451,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 
 ```yaml
 Type: CultureInfo
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -393,7 +466,7 @@ PARAMVALUE: String
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -452,13 +525,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the Office 365 Group. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter has been deprecated and is no longer used.
 
-The value that you use for this is parameter is appended with an underscore character (\_) and a short GUID value.
+Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Office 365 Group \("Name\_\<RandomGUID\>"\). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value ("Alias\_\<ExternalDirectoryObjectId\>"\). 
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -473,7 +546,7 @@ The Notes parameter specifies the description of the Office 365 Group. If the va
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -531,7 +604,7 @@ The PrimarySmtpAddress parameter specifies the primary return email address that
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -550,7 +623,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -565,7 +638,7 @@ The SubscriptionEnabled switch specifies whether subscriptions to conversations 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -580,7 +653,7 @@ This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
 Applicable: Exchange Online
 Required: False

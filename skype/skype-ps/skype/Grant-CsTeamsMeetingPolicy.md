@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-CsTeamsMeetingPolicy
 
 ## SYNOPSIS
-Grant-CsTeamsMeetingPolicy \[-Identity\] \<UserIdParameter\> \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+Assigns a teams meeting policy at the per-user scope. The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 
 ## SYNTAX
 
@@ -17,17 +17,22 @@ Grant-CsTeamsMeetingPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Con
  [-DomainController <Object>] [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
+```
+Grant-CsTeamsMeetingPolicy [-Identity] <UserIdParameter> [-PolicyName] <string> [-Tenant <guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+
 ## DESCRIPTION
-{{Fill in the Description}}
+Assigns a teams meeting policy at the per-user scope. The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 
 ## EXAMPLES
 
-### Example 1 
-```
-PS C:\> {{ Add example code here }}
+### Example 1
+```powershell
+PS C:\> Grant-CsTeamsMeetingPolicy -identity "Ken Myer" -PolicyName StudentMeetingPolicy
 ```
 
-{{ Add example description here }}
+In this example, a user with identity "Ken Myer" is being assigned the StudentMeetingPolicy
 
 ## PARAMETERS
 
@@ -48,7 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{Fill DomainController Description}}
 
 ```yaml
 Type: Object
@@ -64,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the user account the policy should be assigned to. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: Object
@@ -80,7 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -96,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{Fill PolicyName Description}}
+The name of the custom policy that is being assigned to the user.  To remove a specific assignment and fall back to the default tenant policy, you can assign to $Null.
 
 ```yaml
 Type: Object
@@ -112,7 +115,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
 
 ```yaml
 Type: Object
@@ -174,3 +176,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+

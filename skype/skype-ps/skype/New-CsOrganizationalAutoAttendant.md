@@ -1,5 +1,5 @@
 ---
-external help file: New-CsOrganizationalAutoAttendant.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendant
 schema: 2.0.0
@@ -496,3 +496,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 [Get-CsOrganizationalAutoAttendantSupportedLanguage](Get-CsOrganizationalAutoAttendantSupportedLanguage.md)
 
 [Get-CsOrganizationalAutoAttendantSupportedTimeZone](Get-CsOrganizationalAutoAttendantSupportedTimeZone.md)
+

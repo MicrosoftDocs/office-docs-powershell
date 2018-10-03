@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-This cmdlet will be deprecated after January 29, 2018. For information about the available replacement Microsoft Graph reports in Office 365, see the subtopics of Working with Office 365 usage reports in Microsoft Graph (https://go.microsoft.com/fwlink/p/?LinkID=865135).
+This cmdlet was deprecated in January, 2018. For information about the available replacement Microsoft Graph reports in Office 365, see the subtopics of Working with Office 365 usage reports in Microsoft Graph (https://go.microsoft.com/fwlink/p/?LinkID=865135).
 
 Use the Get-LicenseVsUsageSummaryReport cmdlet to retrieve a report that identifies the number of active users for installed software licenses (workloads).
 
@@ -21,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
+Get-LicenseVsUsageSummaryReport [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,6 +51,9 @@ Get-LicenseVsUsageSummaryReport
 This example gets a report of the active workload users.
 
 ## PARAMETERS
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

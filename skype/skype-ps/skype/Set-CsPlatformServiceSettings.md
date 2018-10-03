@@ -1,6 +1,6 @@
 ---
-external help file:
-applicable: Skype for Business Server 2015
+external help file: Microsoft.Rtc.Management.dll-help.xml
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsPlatformServiceSettings
 schema: 2.0.0
 ---
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsPlatformServiceSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Modifies the Skype for Business on Mac capabilites in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
 
 ## SYNTAX
 
@@ -31,16 +31,19 @@ Set-CsPlatformServiceSettings [-EnableDelegateManagement <Boolean>] [-EnableExte
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Skype for Business Server 2015 Cumulative Update 6 introduces new features for Skype for Business on Mac users like support for E-911 calls, send files in peer-to-peer chats, block external access by policy and more.
+
+The `Set-CsPlatformServiceSettings` cmdlet gives you control to enable or disable these features.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### -------------------------- EXAMPLE 1 --------------------------
+```
+PS C:\> Set-CsPlatformServiceSettings -EnableDelegateManagement $False -EnableExternalAccessCheck $True -EnableE911 $False -EnableFil
+eTransfer $True
 ```
 
-{{ Add example description here }}
+This example modifies some parameters for global platform service settings.
 
 ## PARAMETERS
 
@@ -51,7 +54,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -61,13 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCORS
-{{Fill EnableCORS Description}}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -77,13 +80,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDelegateManagement
-{{Fill EnableDelegateManagement Description}}
+Enables the ability to manage delegates from the Skype for Business on Mac client.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -93,13 +96,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableE911
-{{Fill EnableE911 Description}}
+Allows Skype for Business on Mac users to call 911.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -109,13 +112,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExternalAccessCheck
-{{Fill EnableExternalAccessCheck Description}}
+Enables administrators to use external access policies to block external access to Skype for Business on Mac users. 
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -125,13 +128,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileTransfer
-{{Fill EnableFileTransfer Description}}
+Enables Skype for Business on Mac users send files in peer-to-peer chats.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -141,13 +144,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePushNotifications
-{{Fill EnablePushNotifications Description}}
+Enables Skype for Business on Mac clients to use push notifications.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -157,13 +160,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUcwaScopeCheck
-{{Fill EnableUcwaScopeCheck Description}}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -173,13 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Suppresses any confirmation prompts that would otherwise be displayed before testing.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -189,13 +192,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the Platform Service Settings to be modified.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -205,13 +208,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-{{Fill Instance Description}}
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values. You can retrieve this object reference by calling the Get-CsPlatformServiceSettings cmdlet.
 
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -221,13 +224,13 @@ Accept wildcard characters: False
 ```
 
 ### -MaxRegistrationsPerPublicApplication
-{{Fill MaxRegistrationsPerPublicApplication Description}}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -237,13 +240,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseLegacyPushNotifications
-{{Fill UseLegacyPushNotifications Description}}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -260,7 +263,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Server 2015
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -285,3 +288,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[New-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/new-csplatformservicesettings?view=skype-ps)
+
+[Get-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/get-csplatformservicesettings?view=skype-ps)
+
+[Remove-CsPlatformServiceSettings](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps)

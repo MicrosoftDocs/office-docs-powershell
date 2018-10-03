@@ -48,7 +48,7 @@ Organizational email of the member who should be the manager of the team. If not
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: False
 Position: 2
 Default value: None
@@ -63,7 +63,7 @@ Name of the team to be created.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: True
 Position: 0
 Default value: None
@@ -79,7 +79,7 @@ Reference: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
+Applicable: Microsoft StaffHub
 Required: True
 Position: 1
 Default value: None

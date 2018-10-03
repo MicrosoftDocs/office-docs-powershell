@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineTelephoneNumberInventoryCities
 schema: 2.0.0
@@ -233,3 +233,4 @@ Instance or array of the object.
 ## NOTES
 
 ## RELATED LINKS
+

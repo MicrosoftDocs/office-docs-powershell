@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineVoiceUser
 schema: 2.0.0
@@ -13,10 +13,7 @@ Use the Get-CsOnlineVoiceUser cmdlet to retrieve a voice user's telephone number
 ## SYNTAX
 
 ```
-Get-CsOnlineVoiceUser [-BypassDualWrite <Object>] [-CivicAddressId <Object>] [-DomainController <Object>]
- [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Object>] [-Force] [-GetFromAAD]
- [-GetPendingUsers] [-Identity <Object>] [-LocationId <Object>] [-NumberAssigned] [-NumberNotAssigned]
- [-PSTNConnectivity <Object>] [-SearchQuery <Object>] [-Skip <Object>] [-Tenant <Object>] [-AsJob]
+Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <Fqdn>] [-EnterpriseVoiceStatus <MultiValuedProperty>] [-ExpandLocation] [-First <Unlimited>] [-Force] [-GetFromAAD] [-GetPendingUsers] [-Identity <UserIdParameter>] [-LocationId <LocationID>] [-NumberAssigned] [-NumberNotAssigned] [-PSTNConnectivity <MultiValuedProperty>] [-SearchQuery <String>] [-Skip <Unlimited>] [-Tenant <Guid>] [-AsJob]
  [<CommonParameters>]
 ```
 
@@ -26,7 +23,7 @@ Get-CsOnlineVoiceUser [-BypassDualWrite <Object>] [-CivicAddressId <Object>] [-D
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
+PS C:\> Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
 ```
 
 This example uses the User Principal Name (UPN) to retrieve the location and phone number information.
@@ -34,27 +31,11 @@ This example uses the User Principal Name (UPN) to retrieve the location and pho
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CivicAddressId
 Specifies the identity of the civic address that is assigned to the target users.
 
 ```yaml
-Type: Object
+Type: XdsCivicAddressId
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -70,7 +51,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -83,10 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnterpriseVoiceStatus
-PARAMVALUE: All | Enabled | Disabled
+Possible values are:
+* All
+* Enabled
+* Disabled
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -99,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandLocation
-PARAMVALUE: SwitchParameter
+Displays the location parameter with its value.
 
 ```yaml
 Type: SwitchParameter
@@ -119,7 +103,7 @@ Specifies the number of users to return.
 The default is 100.
 
 ```yaml
-Type: Object
+Type: Unlimited
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -150,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetFromAAD
-PARAMVALUE: SwitchParameter
+Use this switch to get the users from Azure Active Directory.
 
 ```yaml
 Type: SwitchParameter
@@ -166,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -GetPendingUsers
-PARAMVALUE: SwitchParameter
+Use this switch to get only the users in pending state.
 
 ```yaml
 Type: SwitchParameter
@@ -192,7 +176,7 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -209,7 +193,7 @@ Specifies the location identity of the location whose users will be returned.
 You can find location identifiers by using the Get-CsOnlineLisLocation cmdlet.
 
 ```yaml
-Type: Object
+Type: LocationID
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -254,10 +238,13 @@ Accept wildcard characters: False
 ```
 
 ### -PSTNConnectivity
-PARAMVALUE: All | Online | OnPremises
+Possible values are:
+* All
+* Online
+* OnPremises
 
 ```yaml
-Type: Object
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -270,10 +257,12 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-PARAMVALUE: String
+The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more details about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
+
+If this parameter is empty, all users are returned.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -291,7 +280,7 @@ If you used the First parameter to return the first 50 users and wanted to get a
 The default is 0.
 
 ```yaml
-Type: Object
+Type: Unlimited
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -307,7 +296,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -320,7 +309,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
@@ -353,3 +346,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
+[Set-CsOnlineVoiceUser](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceuser?view=skype-ps)
+
+[Set-CsOnlineVoiceUserBulk](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinevoiceuserbulk?view=skype-ps)

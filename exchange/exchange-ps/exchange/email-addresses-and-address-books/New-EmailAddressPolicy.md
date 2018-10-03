@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-EmailAddressPolicy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-EmailAddressPolicy
@@ -110,15 +110,15 @@ New-EmailAddressPolicy -Name "Southeast Offices" -IncludedRecipients MailboxUser
 
 This example creates an email address policy in an on-premises Exchange organization that uses a precanned recipient filter:
 
-Name: Southeast Offices
+- Name: Southeast Offices
 
-Precanned recipient filter: All users with mailboxes where the State or province value is GA, AL, or LA (Georgia, Alabama, or Louisiana).
+- Precanned recipient filter: All users with mailboxes where the State or province value is GA, AL, or LA (Georgia, Alabama, or Louisiana).
 
-Primary SMTP email address:\<last name\>.\<first two letters of the first name\>@contoso.com
+- Primary SMTP email address: \<last name\>.\<first two letters of the first name\>@contoso.com
 
-Additional proxy email addresses:\<last name\>.\<first two letters of the first name\>@contoso.net
+- Additional proxy email addresses: \<last name\>.\<first two letters of the first name\>@contoso.net
 
-Priority:N+1, where N is the number of manually created email address policies that already exist (we didn't use the Priority parameter, and the default value is N+1).
+- Priority:N+1, where N is the number of manually created email address policies that already exist (we didn't use the Priority parameter, and the default value is N+1).
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -127,15 +127,15 @@ New-EmailAddressPolicy -Name "Northwest Executives" -RecipientFilter {(Recipient
 
 This example creates an email address policy in an on-premises Exchange organization that uses a custom recipient filter:
 
-Name: Northwest Executives
+- Name: Northwest Executives
 
-Custom recipient filter: All users with mailboxes where the Title value contains Director or Manager, and the State or province value is WA, OR, or ID (Washington, Oregon, or Idaho).
+- Custom recipient filter: All users with mailboxes where the Title value contains Director or Manager, and the State or province value is WA, OR, or ID (Washington, Oregon, or Idaho).
 
-Primary SMTP email address:\<first two letters of the first name\>\<last name\>@contoso.com
+- Primary SMTP email address: \<first two letters of the first name\>\<last name\>@contoso.com
 
-Additional proxy email addresses: None
+- Additional proxy email addresses: None
 
-Priority: 2
+- Priority: 2
 
 ## PARAMETERS
 
@@ -160,7 +160,7 @@ In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients,
 Type: ProxyAddressTemplateCollection
 Parameter Sets: Set2, Set4, Set3, Set6
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -181,7 +181,7 @@ In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients,
 Type: String
 Parameter Sets: Set2, Set1, Set3, Set5
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -214,7 +214,7 @@ You need to use this parameter when you use any of the Conditional parameters. Y
 Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -229,7 +229,7 @@ The Name parameter specifies the unique name of the email address policy. The ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -256,7 +256,7 @@ You can't use this parameter with the IncludedRecipients parameter or any of the
 Type: String
 Parameter Sets: Set2, Set3
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -277,7 +277,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -298,7 +298,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -319,7 +319,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -340,7 +340,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -361,7 +361,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -382,7 +382,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -403,7 +403,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -424,7 +424,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -445,7 +445,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -466,7 +466,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -487,7 +487,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -508,7 +508,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -529,7 +529,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -550,7 +550,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -571,7 +571,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -592,7 +592,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -613,7 +613,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -634,7 +634,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 Type: MultiValuedProperty
 Parameter Sets: Set4, Set1
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -653,7 +653,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -678,7 +678,7 @@ You can specify multiple disabled email address templates separated by commas: "
 Type: ProxyAddressTemplateCollection
 Parameter Sets: Set2, Set4, Set3, Set6
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -695,7 +695,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013
 Required: False
 Position: Named
 Default value: None
@@ -714,7 +714,7 @@ Note: The first email address policy that identifies a recipient configures the 
 Type: EmailAddressPolicyPriority
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -741,7 +741,7 @@ If you don't use this parameter, the default value is the OU where the object wa
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -756,7 +756,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -773,7 +773,7 @@ The IncludeUnifiedGroupRecipients switch specifies that the email address policy
 Type: SwitchParameter
 Parameter Sets: Set6, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -804,7 +804,7 @@ You need to use this parameter with the IncludeUnifiedGroupRecipients switch.
 Type: String
 Parameter Sets: Set6, Set5
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

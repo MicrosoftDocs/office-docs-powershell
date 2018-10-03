@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-IRMConfiguration
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-IRMConfiguration
@@ -20,14 +20,15 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-IRMConfiguration [[-ClientAccessServerEnabled <$true | $false>]
- [-Confirm] [-DomainController <Fqdn>] [-EDiscoverySuperUserEnabled <$true | $false>]
- [-ExternalLicensingEnabled <$true | $false>] [-Force] [-InternalLicensingEnabled <$true | $false>]
- [-JournalReportDecryptionEnabled <$true | $false>] [-LicensingLocation <MultiValuedProperty>]
- [-PublishingLocation <Uri>] [-RefreshServerCertificates] [-SearchEnabled <$true | $false>]
- [-ServiceLocation <Uri>] [-TransportDecryptionSetting <Disabled | Optional | Mandatory>] [-WhatIf]
- [-RMSOnlineKeySharingLocation <Uri>] [-AzureRMSLicensingEnabled <$true | $false>]
- [-SimplifiedClientAccessEnabled <$true | $false>] [<CommonParameters>]
+Set-IRMConfiguration [-AutomaticServiceUpdateEnabled <$true | $false>] [-AzureRMSLicensingEnabled <$true | $false>]
+ [-ClientAccessServerEnabled <$true | $false>] [-Confirm] [-DecryptAttachmentForEncryptOnly <$true | $false>]
+ [-DecryptAttachmentFromPortal <$true | $false>] [-DomainController <Fqdn>]
+ [-EDiscoverySuperUserEnabled <$true | $false>] [-ExternalLicensingEnabled <$true | $false>] [-Force]
+ [-InternalLicensingEnabled <$true | $false>] [-JournalReportDecryptionEnabled <$true | $false>]
+ [-LicensingLocation <MultiValuedProperty>] [-PublishingLocation <Uri>] [-RefreshServerCertificates]
+ [-RMSOnlineKeySharingLocation <Uri>] [-SearchEnabled <$true | $false>] [-ServiceLocation <Uri>]
+ [-SimplifiedClientAccessEnabled <$true | $false>]
+ [-TransportDecryptionSetting <Disabled | Optional | Mandatory>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,6 +61,48 @@ This example enables licensing for external messages.
 
 ## PARAMETERS
 
+### -AutomaticServiceUpdateEnabled
+This parameter is available only in the cloud-based service.
+
+The AutomaticServiceUpdateEnabled parameter specifies whether to automatically enable the protection features in Azure Information Protection for your cloud-based organization. Valid values are:
+
+- $true: Starting July 1, 2018, the protection features in Azure Information Protection will be automatically enabled in your cloud-based organization. This means you can can start using the new Office 365 Message Encryption capabilities without additional set up steps. This is the default value.
+
+- $false: If you're using Active Directory Rights Management Services (AD RMS) in your on-premises environment, you must use this value to prevent the automatic enabling of the protection features in Azure Information Protection for your cloud-based organization. 
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureRMSLicensingEnabled
+This parameter is available only in the cloud-based service.
+
+The AzureRMSLicensingEnabled parameter specifies whether the Exchange Online organization can to connect directly to Azure Rights Management. Valid values are:
+
+- $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables Office 365 Message Encryption.
+
+- $false: The Exchange Online organization can't connect directly to Azure Rights Management. Do not configure this value unless you're directed to do so by Microsoft Customer Service and Support.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClientAccessServerEnabled
 The ClientAccessServerEnabled parameter specifies whether to enable IRM for Outlook on the web (formerly known as Outlook Web App) and Exchange ActiveSync. Valid values are:
 
@@ -71,7 +114,7 @@ The ClientAccessServerEnabled parameter specifies whether to enable IRM for Outl
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +133,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -107,7 +150,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +171,49 @@ For more information about In-Place eDiscovery and IRM-protected messages, see I
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DecryptAttachmentForEncryptOnly
+This parameter is available only in the cloud-based service.
+
+The DecryptAttachmentForEncryptOnly parameter specifies whether mail recipients have unrestricted rights on the attachment or not for Encrypt-only mails sent using new Office 365 Message Encryption capabilities. Valid values are:
+
+- $true: The recipients will have unrestricted rights on attachments sent using Encrypt-Only policy.
+
+- $false: The recipients will not have unrestricted rights on attachments sent using Encrypt-Only policy.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DecryptAttachmentFromPortal
+This parameter is available only in the cloud-based service.
+
+The DecryptAttachmentFromPortal parameter specifies whether Office attachments are protected for recipients outside of Office 365 when Encrypt-only policy is used for sending mails using new Office 365 Message Encryption capabilities. Use this option when you don't need to retain the original protection for the attachment upon download. Valid values are:
+
+- $true: The recipients will have permissions to download Encrypt-only attachments without protection.
+
+- $false: The recipients will continue to have Encrypt-only attachments protected even after download.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +232,7 @@ The ExternalLicensingEnabled parameter specifies whether to enable IRM features 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +247,7 @@ The Force switch specifies whether to suppress the confirmation prompt that appe
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -181,7 +266,7 @@ The InternalLicensingEnabled parameter specifies whether to enable IRM features 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +285,7 @@ The JournalReportDecryptionEnabled parameter specifies whether to enable journal
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -217,7 +302,7 @@ Typically, in on-premises Exchange, you only need to use this parameter in cross
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -253,79 +338,7 @@ Clearing RACs, CLCs, and cached templates might be required during troubleshooti
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchEnabled
-The SearchEnabled parameter specifies whether to enable searching of IRM-encrypted messages in Outlook on the web. Valid values are:
-
-- $true: Searching IRM-encrypted messages in Outlook on the web is enabled. This is the default value.
-
-- $false: Searching IRM-encrypted messages in Outlook on the web is disabled.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceLocation
-This parameter is available only in the cloud-based service.
-
-The ServiceLocation parameter specifies the AD RMS service URL.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransportDecryptionSetting
-The TransportDecryptionSetting parameter specifies the transport decryption configuration. Valid values are:
-
-- Disabled: Transport decryption is disabled for internal and external messages.
-
-- Mandatory: Messages that can't be decrypted are rejected with a non-delivery report (also known as an NDR or bounce message).
-
-- Optional: Messages are decrypted if possible, but are delivered even if decryption fails. This is the default value.
-
-```yaml
-Type: Disabled | Optional | Mandatory
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -350,17 +363,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AzureRMSLicensingEnabled
-This parameter is available only in the cloud-based service.
+### -SearchEnabled
+The SearchEnabled parameter specifies whether to enable searching of IRM-encrypted messages in Outlook on the web. Valid values are:
 
-The AzureRMSLicensingEnabled parameter specifies whether the Exchange Online organization can to connect directly to Azure Rights Management. Valid values are:
+- $true: Searching IRM-encrypted messages in Outlook on the web is enabled. This is the default value.
 
-- $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables Office 365 Message Encryption.
-
-- $false: The Exchange Online organization can't connect directly to Azure Rights Management. Do not configure this value unless you're directed to do so by Microsoft Customer Service and Support.
+- $false: Searching IRM-encrypted messages in Outlook on the web is disabled.
 
 ```yaml
 Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceLocation
+This parameter is available only in the cloud-based service.
+
+The ServiceLocation parameter specifies the AD RMS service URL.
+
+```yaml
+Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -385,6 +413,42 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransportDecryptionSetting
+The TransportDecryptionSetting parameter specifies the transport decryption configuration. Valid values are:
+
+- Disabled: Transport decryption is disabled for internal and external messages.
+
+- Mandatory: Messages that can't be decrypted are rejected with a non-delivery report (also known as an NDR or bounce message).
+
+- Optional: Messages are decrypted if possible, but are delivered even if decryption fails. This is the default value.
+
+```yaml
+Type: Disabled | Optional | Mandatory
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

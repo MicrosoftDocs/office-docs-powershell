@@ -1,5 +1,5 @@
 ---
-external help file: New-CsHuntGroup.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsHuntGroup
 schema: 2.0.0
@@ -490,3 +490,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 [Create a Phone System Call Queue](https://support.office.com/en-us/article/Create-a-Phone-System-call-queue-67ccda94-1210-43fb-a25b-7b9785f8a061)
+

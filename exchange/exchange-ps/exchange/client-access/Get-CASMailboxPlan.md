@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-CASMailboxPlan [[-Identity] <MailboxPlanIdParameter>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-ReadFromDomainController]
+ [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
  [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
 ```
 
@@ -121,21 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReadFromDomainController
 This parameter is reserved for internal Microsoft use.
 
 ```yaml

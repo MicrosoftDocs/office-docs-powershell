@@ -14,27 +14,27 @@ Enables the hub site feature on a site to make it a hub site.
 ## SYNTAX
 
 ```
-Register-SPOHubSite [-Site] <SpoSitePipeBind>  [<CommonParameters>]
+Register-SPOHubSite 
+  -Site <SpoSitePipeBind>  
+  -Principals <string[]>
+  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Use this cmdlet to register an existing site collection as a hub site.
 
 > [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
-
-> [!IMPORTANT]
-> A maximum of 50 hub sites may be created per tenant.
+> A maximum of 100 hub sites may be created per tenant, with 'unlimited' number of site collections associated to a hub site.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```
-Register-SPOHubSite https://contoso.sharepoint.com/sites/Marketing
+Register-SPOHubSite https://contoso.sharepoint.com/sites/Marketing  -Principals $null
 ```
 
-This example registers the marketing site on Contoso as hub site.
+This example registers the marketing site on Contoso as hub site without setting any principals for it.
 
 ## PARAMETERS
 
@@ -47,7 +47,23 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 
-Required: False
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Principals
+Specifies One or more principles (user or group) to be granted rights to the specified HubSite. Can be used to filter who can associate sites to this hub site.
+
+```yaml
+Type: string[]
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

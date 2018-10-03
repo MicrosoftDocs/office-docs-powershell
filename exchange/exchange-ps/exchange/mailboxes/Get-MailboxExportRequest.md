@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxExportRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxExportRequest
@@ -13,25 +13,47 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-MailboxExportRequest cmdlet to view the detailed status of an ongoing export request that was initiated by using the New-MailboxExportRequest cmdlet.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-MailboxExportRequest [[-Identity] <MailboxExportRequestIdParameter>] [-DomainController <Fqdn>]
+Get-MailboxExportRequest [[-Identity] <MailboxExportRequestIdParameter>]
+ [-DomainController <Fqdn>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### MailboxFiltering
 ```
-Get-MailboxExportRequest [-BatchName <String>] [-Database <DatabaseIdParameter>] [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>] [-Mailbox <MailboxOrMailUserIdParameter>] [-Name <String>]
+Get-MailboxExportRequest
+ [-BatchName <String>]
+ [-Database <DatabaseIdParameter>]
+ [-DomainController <Fqdn>]
+ [-HighPriority <$true | $false>]
+ [-Mailbox <MailboxOrMailUserIdParameter>]
+ [-Name <String>]
  [-ResultSize <Unlimited>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>] [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+ [-Suspend <$true | $false>]
+ [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
+```
+
+### MailboxLocationFiltering
+```
+Get-MailboxExportRequest
+ [-BatchName <String>]
+ [-Database <DatabaseIdParameter>]
+ [-DomainController <Fqdn>]
+ [-HighPriority <$true | $false>]
+ [-Mailbox <MailboxLocationIdParameter>]
+ [-Name <String>]
+ [-ResultSize <Unlimited>]
+ [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
+ [-Suspend <$true | $false>]
+ [-RequestQueue <DatabaseIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,9 +112,9 @@ This parameter can't be with the following parameters:
 
 ```yaml
 Type: MailboxExportRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -107,9 +129,9 @@ You can't use this parameter in conjunction with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -Database
+This parameter is available or functional only in Exchange Server 2010.
+
 The Database parameter specifies the database in which the user's mailbox or archive resides. You can use the following values:
 
 - GUID of the database
@@ -128,7 +152,7 @@ You can't use this parameter in conjunction with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -145,7 +169,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -164,9 +188,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -175,29 +199,53 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the identity of the mailbox or mail user from which contents are being exported. You can use the following values:
+The Mailbox parameter filters the results by the source mailbox where the contents are being exported from.
 
-- GUID
+In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
+
+In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+
+- Display name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
 
-- Legacy Exchange DN
+- Email address
 
-- SMTP address
+- GUID
 
-- Alias
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
 
 You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -216,9 +264,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +281,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -270,9 +318,9 @@ CompletionInProgress and AutoSuspended don't apply to export requests and won't 
 
 ```yaml
 Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -287,9 +335,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -308,9 +356,9 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -LinkForModifiedConnector
-The LinkForModifiedConnector parameter specifies the GUID of the existing Send connector that's been modified to create this test connector.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid

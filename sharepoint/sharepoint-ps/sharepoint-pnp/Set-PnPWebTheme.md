@@ -31,7 +31,7 @@ Sets the theme named "MyTheme" to the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPTenantTheme -Name "MyTheme" | Set-PnPTheme
+Get-PnPTenantTheme -Name "MyTheme" | Set-PnPWebTheme
 ```
 
 Sets the theme named "MyTheme" to the current web

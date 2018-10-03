@@ -84,7 +84,7 @@ Each available update package is defined in a **\<HelpVersion\>** section, and e
     
 - **\<CulturesUpdated\>** This key identifies the language that the update package applies to. This key might specify only one language or multiple languages.
     
-- **\<Revision\>** This key identifies the order that the updated packages were released for the major version of Exchange. In other words, the first update package released for Exchange 2016 is `001`, the second is  `002`, etc. And, there's no relationship between the update packages and the order they were released in. For example,  `001` might be an English only update, `002` might be an update for all other supported languages, and `003` might be a German-only update.
+- **\<Revision\>** This key identifies the order that the updated packages were released for the major version of Exchange. In other words, the first update package released for Exchange 2016 is `001`, the second is `002`, etc. And, there's no relationship between the update packages and the order they were released in. For example, `001` might be an English only update, `002` might be an update for all other supported languages, and `003` might be a German-only update.
     
 - **\<CabinetUrl\>** This key identifies the name and location of the update package for the **\<HelpVersion\>** section.
     
@@ -92,7 +92,7 @@ The update package that's defined in a **\<HelpVersion\>** section applies to an
   
 You might find that multiple **\<HelpVersion\>** sections apply to your Exchange servers for a given version of Exchange. For example, there might be multiple updates for the same language, or separate updates for different languages that both apply to your Exchange servers because you have multiple languages installed. Either way, you need only the most recent update for your Exchange server version and language based on the **\<Revision\>** key.
   
-For example, suppose your Exchange servers are running Exchange 2016 version  `15.01.0225.040` with English and Spanish installed, and the ExchangeHelpInfo.xml manifest file looks like this:
+For example, suppose your Exchange servers are running Exchange 2016 version `15.01.0225.040` with English and Spanish installed, and the ExchangeHelpInfo.xml manifest file looks like this:
   
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -120,7 +120,7 @@ For example, suppose your Exchange servers are running Exchange 2016 version  `1
 </ExchangeHelpInfo>
 ```
 
-In this example, all the updates apply to you based on the version of Exchange. However, you need only revision  `003` for English, and revision `002` for Spanish. You don't need revision `001` for English because revision `003` is newer.
+In this example, all the updates apply to you based on the version of Exchange. However, you need only revision `003` for English, and revision `002` for Spanish. You don't need revision `001` for English because revision `003` is newer.
   
 [Return to top](use-update-exchangehelp.md#RTT)
   
@@ -136,11 +136,11 @@ To download all of the update packages, follow these steps.
   
 1. Download all of the .cab files that are defined in the ExchangeHelpInfo.xml manifest file by using the **\<CabinetUrl\>** values. Save the files in a location that's easy to remember.
     
-2. Publish the .cab files on an internal web server (for example  `http://intranet.contoso.com/downloads/exchange`).
+2. Publish the .cab files on an internal web server (for example `http://intranet.contoso.com/downloads/exchange`).
     
 3. Modify the URL values of the **\<CabinetUrl\>** keys to point to the internal web server where you published the .cab files.
     
-    For example, change the value  `http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
+    For example, change the value `http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
     
 4. Save the customized ExchangeHelpInfo.xml manifest file.
     
@@ -160,7 +160,7 @@ If you want to identify only the update packages that apply to you, follow these
     
     ```
     Get-ExchangeServer | Sort-Object Name | ForEach {Invoke-Command -ComputerName $_.Name -ScriptBlock {Get-Command ExSetup.exe | ForEach{$_.FileVersionInfo}}} | Format-Table -Auto
-    ```
+   ```
 
     The result for **ProductVersion** will be in the format `15.01.0225.xxx`.
     
@@ -170,11 +170,11 @@ After you identify the update packages that apply to you, follow these steps:
   
 1. Download the applicable .cab files by using the **\<CabinetUrl\>** values. Save the files in a location that's easy to remember.
     
-2. Publish the .cab files on an internal web server (for example  `http://intranet.contoso.com/downloads/exchange`).
+2. Publish the .cab files on an internal web server (for example `http://intranet.contoso.com/downloads/exchange`).
     
 3. Modify the URL values of the **\<CabinetUrl\>** keys to point to the internal web server where you published the .cab files.
     
-    For example, change the value  `http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
+    For example, change the value `http://download.microsoft.com/download/8/7/0/870FC9AB-6D22-4478-BFBF-66CE775BCD18/ExchangePS_Update_En.cab` to `http://intranet.contoso.com/downloads/exchange/ExchangePS_Update_En.cab`.
     
 4. Optionally, you can delete the **\<HelpInfo\>** sections that don't apply to you.
     
@@ -184,7 +184,7 @@ After you identify the update packages that apply to you, follow these steps:
   
 ### Step 3. Publish the customized ExchangeHelpInfo.xml manifest file on an internal web server
 
-Publish the customized ExchangeHelpInfo.xml manifest file from Step 2 on an internal web server that's accessible to your internal Exchange servers. For example,  `http://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml`. You'll use the URL value of this location in Step 4.
+Publish the customized ExchangeHelpInfo.xml manifest file from Step 2 on an internal web server that's accessible to your internal Exchange servers. For example, `http://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml`. You'll use the URL value of this location in Step 4.
   
 Note that there's no relationship between the ExchangeHelpInfo.xml manifest file and .cab file locations. You can have them available at the same URL or on different servers.
   
@@ -192,7 +192,7 @@ Note that there's no relationship between the ExchangeHelpInfo.xml manifest file
   
 ### Step 4. Modify the registry of your Exchange servers to point to the customized ExchangeHelpInfo.xml manifest file
 
-You need the download location of the customized ExchangeHelpInfo.xml manifest file that you configured in Step 3. This example uses the value  `http://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml`.
+You need the download location of the customized ExchangeHelpInfo.xml manifest file that you configured in Step 3. This example uses the value `http://intranet.contoso.com/downloads/exchange/ExchangeHelpInfo.xml`.
   
 1. Copy and paste the following text into Notepad, customize the URL for your environment, and save the file as UpdateExchangeHelp.reg in a location that's easy to remember.
     

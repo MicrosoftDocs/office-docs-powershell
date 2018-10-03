@@ -27,7 +27,7 @@ Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String>
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and ninety days old. There are limits to the number of historical searches you can perform in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and ninety days old. There is a limit of 250 historical searches that can be submitted in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -35,12 +35,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2016 -EndDate 1/7/2016 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
+Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2018 -EndDate 1/7/2018 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
 ```
 
 This example starts a new historical search named "Fabirkam Search" that has the following properties:
 
-- Date range: January 1, 2016 to January 7, 2016
+- Date range: January 1, 2018 to January 7, 2018
 
 - Report type: Message trace
 
@@ -53,7 +53,9 @@ This example starts a new historical search named "Fabirkam Search" that has the
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
 Type: DateTime
@@ -70,6 +72,8 @@ Accept wildcard characters: False
 ### -ReportTitle
 The ReportTitle parameter specifies a descriptive name for the historical search. If the value contains spaces, enclose the value in quotation marks (").
 
+You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -85,20 +89,34 @@ Accept wildcard characters: False
 ### -ReportType
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
-- DLP
+- ATPReport: Advanced Threat Protection File Types Report and Advanced Threat Protection Message Disposition Report
 
-- Malware
+- ATPV2: Exchange Online Protection and Advanced Threat Protection E-mail Malware Report.
 
-- MessageTrace
+- ATPDocument: Advanced Threat Protection Content Malware Report for files in SharePoint, OneDrive and Microsoft Teams.
 
-- MessageTraceDetail
+- DLP: Data Loss Prevention Report.
 
-- SPAM
+- Malware: Malware Detections Report.
 
-- TransportRule
+- MessageTrace: Message Trace Report.
+
+- MessageTraceDetail: Message Trace Details Report.
+
+- Phish: Exchange Online Protection and Advanced Threat Protection E-mail Phish Report.
+
+- SPAM: SPAM Detections Report.
+
+- Spoof: Spoof Mail Report.
+
+- TransportRule: Transport or Mail FLow Rules Report.
+
+- UnifiedDLP: Unified Data Loss Prevention Report.
+
+You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
-Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2
+Type: MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2 | Phish | ATPDocument
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -112,7 +130,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime

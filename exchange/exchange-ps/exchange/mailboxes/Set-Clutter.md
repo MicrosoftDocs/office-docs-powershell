@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-Clutter -Identity <MailboxIdParameter> [-CleanUpClutter] [-Enable <$true | $false>] [<CommonParameters>]
+Set-Clutter -Identity <MailboxIdParameter> [-Enable <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,17 +37,29 @@ This example disables Clutter for the user Alexander Martinez.
 
 ### -Identity
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
+
 For example:
+
 - Name
+
 - Display name
+
 - Alias
+
 - Distinguished name (DN)
+
 - Canonical DN
+
 - \<domain name>\\\<account name>
+
 - Email address
+
 - GUID
+
 - LegacyExchangeDN 
+
 - SamAccountName 
+
 - User ID or user principal name (UPN)
 
 ```yaml
@@ -62,26 +74,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CleanUpClutter
-{{Fill CleanUpClutter Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Enable
 The Enable parameter specifies whether to enable or disable Clutter for the mailbox. Valid values are:
 
 - $true: Clutter is enabled for the mailbox. This is the default value.
-- 
+
 - $false: Clutter is disabled for the mailbox.
 
 ```yaml
