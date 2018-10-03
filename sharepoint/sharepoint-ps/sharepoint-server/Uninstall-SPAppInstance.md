@@ -11,7 +11,7 @@ schema: 2.0.0
 Uninstalls an instance of an app.
 
 
-## SYNTAX
+## SYNTAX 
 
 ```
 Uninstall-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
