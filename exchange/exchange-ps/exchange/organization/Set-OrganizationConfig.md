@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Identity
 ```
-Set-OrganizationConfig
+Set-OrganizationConfig [[-Identity] <OrganizationIdParameter>]
  [-ACLableSyncedObjectEnabled <true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -42,7 +42,6 @@ Set-OrganizationConfig
  [-EwsEnabled <$true | $false>]
  [-ExchangeNotificationEnabled <$true | $false>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
- [Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <NotSpecified | Agriculture | Finance | BusinessServicesConsulting | Communications | ComputerRelatedProductsServices | Construction | Education | EngineeringArchitecture | Government | Healthcare | Hospitality | Legal | Manufacturing | MediaMarketingAdvertising | Mining | NonProfit | PersonalServices | PrintingPublishing | RealEstate | Retail | Transportation | Utilities | Wholesale | Other>]
  [-MailTipsAllTipsEnabled <$true | $false>]
@@ -64,12 +63,13 @@ Set-OrganizationConfig
  [-ReadTrackingEnabled <$true | $false>]
  [-RequiredCharsetCoverage <Int32>]
  [-SCLJunkThreshold <Int32>]
+ [-VisibleMeetingUpdateProperties <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### AdfsAuthenticationRawConfiguration
 ```
-Set-OrganizationConfig
+Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
  [-ACLableSyncedObjectEnabled <$true | $false>]
  [-AdfsAuthenticationConfiguration <String>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
@@ -112,7 +112,6 @@ Set-OrganizationConfig
  [-ExchangeNotificationEnabled <$true | $false>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
  [-FocusedInboxOn <$true | $false>]
- [Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <NotSpecified | Agriculture | Finance | BusinessServicesConsulting | Communications | ComputerRelatedProductsServices | Construction | Education | EngineeringArchitecture | Government | Healthcare | Hospitality | Legal | Manufacturing | MediaMarketingAdvertising | Mining | NonProfit | PersonalServices | PrintingPublishing | RealEstate | Retail | Transportation | Utilities | Wholesale | Other>]
  [-IPListBlocked <MultiValuedProperty>]
@@ -154,13 +153,14 @@ Set-OrganizationConfig
  [-SmtpActionableMessagesEnabled <$true | $false>]
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
+ [-VisibleMeetingUpdateProperties <MultiValuedProperty>]
  [-WACDiscoveryEndpoint <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig
+Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguration <OrganizationIdParameter>
  [-ACLableSyncedObjectEnabled <true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -206,7 +206,6 @@ Set-OrganizationConfig
  [-ExchangeNotificationEnabled <$true | $false>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
  [-FocusedInboxOn <$true | $false>]
- [Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <NotSpecified | Agriculture | Finance | BusinessServicesConsulting | Communications | ComputerRelatedProductsServices | Construction | Education | EngineeringArchitecture | Government | Healthcare | Hospitality | Legal | Manufacturing | MediaMarketingAdvertising | Mining | NonProfit | PersonalServices | PrintingPublishing | RealEstate | Retail | Transportation | Utilities | Wholesale | Other>]
  [-IPListBlocked <MultiValuedProperty>]
@@ -248,6 +247,7 @@ Set-OrganizationConfig
  [-SmtpActionableMessagesEnabled <$true | $false>]
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
+ [-VisibleMeetingUpdateProperties <MultiValuedProperty>]
  [-WACDiscoveryEndpoint <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -298,8 +298,74 @@ Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowLis
 
 This example allows only the client applications specified by the EwsAllowList parameter to use REST and EWS.
 
+
+### -------------------------- Example 6 --------------------------
+```
+Set-OrganizationConfig -VisibleMeetingUpdateProperties Location:15
+```
+
+This example results in meeting message updates being auto-processed on behalf of attendees except if the meeting location changed and the meeting start time is within 15 minutes.
+
+
 ## PARAMETERS
 
+### -Identity
+This parameter is available or functional only in Exchange Server 2010.
+
+The Identity parameter specifies the Exchange organization that you want to modify. You can use any value that identifies the organization. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
+Aliases:
+Applicable: Exchange Server 2010
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: Identity (Default)
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -SharedConfiguration
+This parameter is available or functional only in Exchange Server 2010.
+
+The SharedConfiguration parameter is used to link one organization to another organization that holds shared configuration for the first organization. This parameter accepts the following values:
+
+- Name
+
+- DN
+
+- GUID
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: AdfsAuthenticationParameter
+Aliases:
+Applicable: Exchange Server 2010
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ACLableSyncedObjectEnabled
 This parameter is available only in on-premises Exchange.
@@ -1239,23 +1305,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-This parameter is avaialble or functional only in Exchange Server 2010.
-
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -HierarchicalAddressBookRoot
 The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient.
 
@@ -2029,6 +2078,49 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -VisibleMeetingUpdateProperties
+The VisibleMeetingUpdateProperties determines whether meeting message updates will be auto-processed on behalf of attendees. Auto-processed updates are applied to the attendee's calendar item, and then the meeting message is moved to the deleted items. The attendee never sees the update in their inbox but their calendar is updated.
+
+There are three scenarios in which the message will always be visible to the attendee in their inbox:
+- If the update contains a change to date, time, or recurrence pattern. 
+- If the meeting message is received for a delegated shared calendar.
+- If the receiving attendee is @mention'ed in the meeting body.
+
+Other than those above cases, you can use the VisibleMeetingUpdateProperties to choose which meeting updates are visible. All other meeting updates will be auto-processed. The default settings are that messages will be visible for the above cases as well as if:
+- the location is changed
+- any property is changed within 15 minutes of the meeting start time
+
+For updates to recurring series, the meeting start time is the start time of the next occurrence in the series.
+
+The configurable meeting update properties are:
+- Location: the meeting location field
+- Subject: the meeting subject or title
+- Sensitivity: the sensitivity (privacy) of the event
+- Body: the meeting body
+- OnlineMeetingLinks: 
+- AllowForwarding: the option to allow or prevent forwarding of meetings
+- RequestResponses: the option on whether responses are requested
+- AllowNewTimeProposals: the option to allow or prevent new time proposals
+- ShowAs: the busy state of the meeting - Free, Tentative, Busy, Working elsewhere, Away/Out of office
+- Reminder: the reminder time
+- AllProperties: any meeting change
+
+For any of these settings, you can configure it to always be visible regardless of when the meeting start time is, or you can configure this property to result in a visible update if the meeting start time in within a certain number of minutes.
+
+Examples:
+- Location,AllProperties:15 -- This is the way that the deafult settings described above were configured.
+- Location:15,Body -- This would result in visible updates whenever the Location changes, or visible updates if the Body changed within 15 minutes of the meeting start time.
+- Location:240,AllProperties:15 -- This would result in visible updates whenever the Location changes within 4 hours of the meeting start time, or visible updates if anything is changed and the meeting starts within 15 minutes.
+
+```yaml
+Type: MultiValuedProperty
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Applies to: Exchange Online
 ```
 
 ### -WACDiscoveryEndpoint
