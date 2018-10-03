@@ -13,6 +13,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Enable-Mailbox cmdlet to create mailboxes for existing users who don't already have mailboxes. You can also use this cmdlet to create In-Place archives for existing mailboxes.
 
+Note: In Exchange Online, this cmdlet doesn't activate/enable a mailbox the same way it does in on-premises Exchange. To add a mailbox for an existing Azure AD account, you can simply add a license to the account by using the Set-MsolUserLicense cmdlet.
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
@@ -176,8 +178,6 @@ The Enable-Mailbox cmdlet mailbox-enables existing users, public folders, or Ine
 When mailbox-enabling an existing user, beware of non-supported characters in the user account or Name property. If you don't specify an Alias value when you mailbox-enable the user, Exchange converts all non-supported characters to question marks (?). To avoid question marks in the Alias, verify that the user account and Name properties have only supported ASCII or Unicode characters or specify an Alias value when you mailbox-enable the user.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
-
-Please note that for Exchange Online this cmdlet doesn't activate/enable mailbox the same way it does in Exchange On-Premises. If you want to add mailbox for existing Azure AD you can simply add a license to a user using `Set-MsolUserLicense` cmdlet.
 
 ## EXAMPLES
 
