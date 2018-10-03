@@ -19,23 +19,38 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AlternateServiceAccount
 ```
 Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
- [-AlternateServiceAccountCredential <PSCredential[]>] [-CleanUpInvalidAlternateServiceAccountCredentials]
- [-Confirm] [-DomainController <Fqdn>] [-IrmLogEnabled <$true | $false>] [-IrmLogMaxAge <EnhancedTimeSpan>]
- [-IrmLogMaxDirectorySize <Unlimited>] [-IrmLogMaxFileSize <ByteQuantifiedSize>]
- [-IrmLogPath <LocalLongFullPath>] [-RemoveAlternateServiceAccountCredentials] 
+ [-AlternateServiceAccountCredential <PSCredential[]>]
+ [-CleanUpInvalidAlternateServiceAccountCredentials]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IrmLogEnabled <$true | $false>]
+ [-IrmLogMaxAge <EnhancedTimeSpan>]
+ [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IrmLogMaxFileSize <ByteQuantifiedSize>]
+ [-IrmLogPath <LocalLongFullPath>]
+ [-IsOutOfService <$true | $false>]
+ [-RemoveAlternateServiceAccountCredentials] 
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter> [-AutoDiscoverServiceInternalUri <Uri>]
- [-AutoDiscoverSiteScope <MultiValuedProperty>] [-Confirm] [-DomainController <Fqdn>]
- [-IrmLogEnabled <$true | $false>] [-IrmLogMaxAge <EnhancedTimeSpan>] [-IrmLogMaxDirectorySize <Unlimited>]
- [-IrmLogMaxFileSize <ByteQuantifiedSize>] [-IrmLogPath <LocalLongFullPath>]
- [-WhatIf] [-Array <ClientAccessArrayIdParameter>] [<CommonParameters>]
+Set-ClientAccessServer [-Identity] <ClientAccessServerIdParameter>
+ [-Array <ClientAccessArrayIdParameter>]
+ [-AutoDiscoverServiceInternalUri <Uri>]
+ [-AutoDiscoverSiteScope <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IrmLogEnabled <$true | $false>]
+ [-IrmLogMaxAge <EnhancedTimeSpan>]
+ [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IrmLogMaxFileSize <ByteQuantifiedSize>]
+ [-IrmLogPath <LocalLongFullPath>]
+ [-IsOutOfService <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,9 +97,24 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential[]
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: ClientAccessArrayIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +127,7 @@ The AutoDiscoverServiceInternalUri parameter specifies the internal URL of the A
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -118,7 +148,7 @@ To add or remove one or more values without affecting any existing entries, use 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -133,7 +163,7 @@ The CleanUpInvalidAlternateServiceAccountCredentialsswitch specifies whether to 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -268,12 +298,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsOutOfService
+This parameter is available or functional only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveAlternateServiceAccountCredentials
 The RemoveAlternateServiceAccountCredentialsswitch specifies whether to remove a previously distributed alternate service account. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -291,21 +338,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Array
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ClientAccessArrayIdParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
