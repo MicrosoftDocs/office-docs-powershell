@@ -19,7 +19,7 @@ Get-PnPFolder -Url <String>
 ```
 
 ## DESCRIPTION
-Retrieves a folder if it exists. Use Ensure-PnPFolder to create the folder if it does not exist.
+Retrieves a folder if it exists. Use Resolve-PnPFolder to create the folder if it does not exist. (Note: The old Ensure-PnPFolder cmdlet has been deprecated)
 
 ## EXAMPLES
 
@@ -94,4 +94,4 @@ Accept pipeline input: False
 
 ## RELATED LINKS
 
-[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Ensure-PnPFolder](https://github.com/OfficeDev/PnP-PowerShell/blob/master/Documentation/EnsureSPOFolder.md)
+[SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)[Ensure-PnPFolder](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/resolve-pnpfolder)
