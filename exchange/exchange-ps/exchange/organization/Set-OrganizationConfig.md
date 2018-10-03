@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
 Set-OrganizationConfig
  [-ACLableSyncedObjectEnabled <true | $false>]
@@ -64,6 +64,7 @@ Set-OrganizationConfig
  [-ReadTrackingEnabled <$true | $false>]
  [-RequiredCharsetCoverage <Int32>]
  [-SCLJunkThreshold <Int32>]
+ [-VisibleMeetingUpdateProperties <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -297,6 +298,13 @@ Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowLis
 ```
 
 This example allows only the client applications specified by the EwsAllowList parameter to use REST and EWS.
+
+### -------------------------- Example 6 -------------------------- 
+``` 
+Set-OrganizationConfig -VisibleMeetingUpdateProperties Location:15 
+``` 
+
+In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
 
 ## PARAMETERS
 
@@ -2024,6 +2032,61 @@ Type: $true | $false
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VisibleMeetingUpdateProperties
+This parameter is available only in the cloud-based service.
+
+The VisibleMeetingUpdateProperties parameter specifies whether meeting message updates will be auto-processed on behalf of attendees. Auto-processed updates are applied to the attendee's calendar item, and then the meeting message is moved to the deleted items. The attendee never sees the update in their inbox, but their calendar is updated.
+
+This parameter uses the syntax: MeetingProperty1:MeetingStartTimeWithinXMinutes1,MeetingProperty2:MeetingStartTimeWithinXMinutes2,...MeetingPropertyN:MeetingStartTimeWithinXMinutesN.
+
+The valid meeting properties to monitor for updates are:
+
+- Location: The meeting Location field.
+
+- Subject: The meeting subject or title.
+
+- Sensitivity: The sensitivity (privacy) of the event.
+
+- Body: The meeting body.
+
+- OnlineMeetingLinks
+
+- AllowForwarding: The option to allow or prevent forwarding of meetings.
+
+- RequestResponses: The option on whether responses are requested.
+
+- AllowNewTimeProposals: The option to allow or prevent new time proposals.
+
+- ShowAs: The free/busy state of the meeting: Free, Tentative, Busy, Working elsewhere, or Away/Out of office.
+
+- Reminder: The reminder time.
+
+- AllProperties: Any meeting change.
+
+If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting property, any change to the meeting property will result in visible meeting update messages (regardless of how soon or how far away the meeting is). For updates to recurring meetings, the meeting start time is the start time of the next occurrence in the series.
+
+The default value is `Location,AllProperties:15`: changes to the meeting location at any time, or changes to other meeting properties within 15 minutes of the meeting start time results in visisble meeting update messages.
+
+There are three scenarios where this parameter auto-process meeting update messages (attendees will see meeting update messages in their Inbox):
+
+- The update contains a change to the meeting date, time, or recurrence pattern.
+
+- The meeting message is received for a delegated shared calendar.
+
+- The receiving attendee is @ mentioned in the meeting body.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
