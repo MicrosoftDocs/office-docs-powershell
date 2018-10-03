@@ -23,20 +23,17 @@ class MarkdownService {
 
 		this.queue = new Queue(this.processQueue);
 		this.queue.on('empty', this.queueEmptyHandler);
-
-		this.tempFolderPath = null;
 	}
 
 	async updateMd(doc) {
-		this.tempFolderPath = `${doc.path}\\${shortId()}`;
-
-		await this.addMdFilesInQueue(doc);
+		return this.addMdFilesInQueue(doc);
 	}
 
 	async addMdFilesInQueue(doc) {
 		const mdExt = '.md';
 		const { ignoreFiles } = this.config.get('platyPS');
 		const ignoreAbsolutePathsArr = ignoreFiles.map((f) => path.resolve(f));
+		const metaTagRegex = /(?<=applicable: ).+/gmu;
 
 		const isFileIgnore = (fileName) => {
 			const absoluteFilePath = path.resolve(fileName);
@@ -44,9 +41,35 @@ class MarkdownService {
 			return ignoreAbsolutePathsArr.includes(absoluteFilePath);
 		};
 
+		const isContainTag = (filePath) => {
+			if (!doc.metaTags.length) {
+				return true;
+			}
+			console.log(filePath);
+			const groups = fs
+				.readFileSync(filePath, 'utf8')
+				.toString()
+				.match(metaTagRegex);
+
+			if (!groups) {
+				return false;
+			}
+
+			for (const metaTag of doc.metaTags) {
+				if (groups[0].indexOf(metaTag) !== -1) {
+					return true;
+				}
+			}
+
+			return false;
+		};
+
 		const mdFiles = (await fs.readdir(doc.path))
 			.map((f) => path.resolve(doc.path, f))
-			.filter((fn) => fn.endsWith(mdExt) && !isFileIgnore(fn));
+			.filter(
+				(fn) =>
+					fn.endsWith(mdExt) && !isFileIgnore(fn) && isContainTag(fn)
+			);
 
 		mdFiles.forEach((file) => {
 			this.queue
@@ -58,10 +81,11 @@ class MarkdownService {
 
 	async processQueue({ file, doc }, cb) {
 		let result, err;
-		const logFilePath = `${this.tempFolderPath}\\${shortId()}.log`;
+		const tempFolderPath = `${doc.path}\\${shortId()}`;
+		const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
 
 		[result, err] = await of(
-			this.copyMdInTempFolder(file, this.tempFolderPath)
+			this.copyMdInTempFolder(file, tempFolderPath)
 		);
 
 		if (err) {
@@ -109,13 +133,14 @@ class MarkdownService {
 
 		this.logStoreService.saveInFs();
 
-		if (fs.pathExists(this.tempFolderPath)) {
-			const [, fsError] = await of(this.clearTempFolder());
-
-			if (fsError) {
-				throw new Error(fsError);
-			}
-		}
+		// TODO: store all temp folders in db and remove from it
+		// if (fs.pathExists(this.tempFolderPath)) {
+		// 	const [, fsError] = await of(this.clearTempFolder());
+		//
+		// 	if (fsError) {
+		// 		throw new Error(fsError);
+		// 	}
+		// }
 
 		this.logParseService.parseAll();
 	}
