@@ -8,11 +8,15 @@ class LogStoreService {
 	}
 
 	addLog(log, name) {
-		this._add('logs', log, name);
+		this._addMap('logs', log, name);
 	}
 
 	addError(err, name) {
-		this._add('errors', err, name);
+		this._addMap('errors', err, name);
+	}
+
+	addTempFolder(name, tempFolderName) {
+		this._addMap('tempFolders', name, tempFolderName);
 	}
 
 	getAllLogs() {
@@ -23,7 +27,11 @@ class LogStoreService {
 		return this._getAll('errors');
 	}
 
-	_add(collection, obj, name) {
+	getAllTempFolders() {
+		return this._getAll('tempFolders');
+	}
+
+	_addMap(collection, obj, name) {
 		const map = this.db.get(collection).value();
 
 		if (!map.has(name)) {
@@ -44,16 +52,19 @@ class LogStoreService {
 	saveInFs() {
 		const logs = this.getAllLogs();
 
-		for(const key of logs.keys()) {
-            const fileName = `${this._getLogName()}.log`;
-            const filePath = path.join('.local', 'logs', key, fileName);
+		for (const key of logs.keys()) {
+			const fileName = `${this._getLogName()}.log`;
+			const filePath = path.join('.local', 'logs', key, fileName);
 
-            fs.ensureFileSync(filePath);
+			fs.ensureFileSync(filePath);
 
-            const logs = this.getAllLogs().get(key).join('\n') || '';
-            const errors = this.getAllErrors().get(key).join('\n') || '';
+			const logs = this.getAllLogs().get(key);
+			const logsContent = logs ? logs.join('\n') : '';
 
-            fs.writeFile(filePath, logs + errors);
+			const errors = this.getAllErrors().get(key);
+			const errorContent = errors ? errors.join('\n') : '';
+
+			fs.writeFile(filePath, logsContent + errorContent);
 		}
 	}
 

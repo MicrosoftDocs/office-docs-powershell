@@ -45,7 +45,7 @@ class MarkdownService {
 			if (!doc.metaTags.length) {
 				return true;
 			}
-			console.log(filePath);
+
 			const groups = fs
 				.readFileSync(filePath, 'utf8')
 				.toString()
@@ -81,12 +81,25 @@ class MarkdownService {
 
 	async processQueue({ file, doc }, cb) {
 		let result, err;
-		const tempFolderPath = `${doc.path}\\${shortId()}`;
+
+		const getTempFolderName = () => {
+			let tempFolders = this.logStoreService.getAllTempFolders();
+
+			if (!tempFolders.has(doc.name)) {
+				const tempFolderPath = `${doc.path}\\${shortId()}`;
+
+				this.logStoreService.addTempFolder(tempFolderPath, doc.name);
+
+				tempFolders = this.logStoreService.getAllTempFolders();
+			}
+
+			return tempFolders.get(doc.name);
+		};
+
+		const [tempFolderPath] = getTempFolderName();
 		const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
 
-		[result, err] = await of(
-			this.copyMdInTempFolder(file, tempFolderPath)
-		);
+		[result, err] = await of(this.copyMdInTempFolder(file, tempFolderPath));
 
 		if (err) {
 			return cb(err, null);
@@ -133,14 +146,19 @@ class MarkdownService {
 
 		this.logStoreService.saveInFs();
 
-		// TODO: store all temp folders in db and remove from it
-		// if (fs.pathExists(this.tempFolderPath)) {
-		// 	const [, fsError] = await of(this.clearTempFolder());
-		//
-		// 	if (fsError) {
-		// 		throw new Error(fsError);
-		// 	}
-		// }
+		const tempFolders = [
+			...this.logStoreService.getAllTempFolders().values()
+		].map((path) => path[0]);
+
+		for (const path of tempFolders) {
+			if (fs.pathExists(path)) {
+				const [, fsError] = await of(fs.remove(path));
+
+				if (fsError) {
+					throw new Error(fsError);
+				}
+			}
+		}
 
 		this.logParseService.parseAll();
 	}
@@ -176,10 +194,6 @@ class MarkdownService {
 		}
 
 		return (await fs.readFile(logFilePath)).toString();
-	}
-
-	clearTempFolder() {
-		return fs.remove(this.tempFolderPath);
 	}
 }
 
