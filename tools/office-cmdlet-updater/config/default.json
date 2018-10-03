@@ -12,7 +12,9 @@
 				"metaTags": ["Skype for Business Online"]
 			}
 		],
-		"ignoreFiles": []
+		"ignoreFiles": [
+			"..\\..\\teams\\teams-ps\\teams\\teams.md"
+		]
 	},
 	"sendgrid": {
 		"sendMailNotification": false,
