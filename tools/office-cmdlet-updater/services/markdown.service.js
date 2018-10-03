@@ -28,14 +28,12 @@ class MarkdownService {
 	}
 
 	async updateMd(doc) {
-		const { path } = doc;
+		this.tempFolderPath = `${doc.path}\\${shortId()}`;
 
-		this.tempFolderPath = `${path}\\${shortId()}`;
-
-		await this.addMdFilesInQueue(path);
+		await this.addMdFilesInQueue(doc);
 	}
 
-	async addMdFilesInQueue(folderPath) {
+	async addMdFilesInQueue(doc) {
 		const mdExt = '.md';
 		const { ignoreFiles } = this.config.get('platyPS');
 		const ignoreAbsolutePathsArr = ignoreFiles.map((f) => path.resolve(f));
@@ -46,24 +44,24 @@ class MarkdownService {
 			return ignoreAbsolutePathsArr.includes(absoluteFilePath);
 		};
 
-		const mdFiles = (await fs.readdir(folderPath))
-			.map((f) => path.resolve(folderPath, f))
+		const mdFiles = (await fs.readdir(doc.path))
+			.map((f) => path.resolve(doc.path, f))
 			.filter((fn) => fn.endsWith(mdExt) && !isFileIgnore(fn));
 
 		mdFiles.forEach((file) => {
 			this.queue
-				.push(file)
+				.push({ file, doc })
 				.on('failed', this.queueFailedHandler)
 				.on('finish', this.queueFinishHandler);
 		});
 	}
 
-	async processQueue(input, cb) {
+	async processQueue({ file, doc }, cb) {
 		let result, err;
 		const logFilePath = `${this.tempFolderPath}\\${shortId()}.log`;
 
 		[result, err] = await of(
-			this.copyMdInTempFolder(input, this.tempFolderPath)
+			this.copyMdInTempFolder(file, this.tempFolderPath)
 		);
 
 		if (err) {
@@ -77,7 +75,7 @@ class MarkdownService {
 		if (err) {
 			console.error(err);
 
-			this.logStoreService.addError(err);
+			this.logStoreService.addError(err, doc.name);
 
 			return cb(null, '');
 		}
@@ -92,28 +90,24 @@ class MarkdownService {
 			return cb(err, null);
 		}
 
-		return cb(null, result);
+		return cb(null, { result, doc });
 	}
 
 	async queueFailedHandler(err) {
 		throw new Error(err);
 	}
 
-	queueFinishHandler(result) {
+	queueFinishHandler({ result, doc }) {
 		if (!result) {
 			return;
 		}
-		this.logStoreService.addLog(result);
+		this.logStoreService.addLog(result, doc.name);
 	}
 
 	async queueEmptyHandler() {
 		this.powerShellService.dispose();
 
-		const [, err] = await of(this.logStoreService.saveInFs());
-
-		if (err) {
-			throw new Error(err);
-		}
+		this.logStoreService.saveInFs();
 
 		if (fs.pathExists(this.tempFolderPath)) {
 			const [, fsError] = await of(this.clearTempFolder());

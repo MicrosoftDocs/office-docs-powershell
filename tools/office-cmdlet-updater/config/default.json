@@ -4,6 +4,10 @@
 			{
 				"name": "teams",
 				"path": "..\\..\\teams\\teams-ps\\teams"
+			},
+			{
+				"name": "skype",
+				"path": "..\\..\\teams\\teams-ps\\teams"
 			}
 		],
 		"ignoreFiles": []
