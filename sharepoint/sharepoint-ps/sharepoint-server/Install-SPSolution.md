@@ -162,7 +162,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -216,7 +216,7 @@ For additional information about bin assembly, see Assembly Element
 Type: SwitchParameter
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

@@ -40,8 +40,8 @@ class LogStoreService {
 
 		fs.ensureFileSync(filePath);
 
-		const logs = this.getAllLogs() || '';
-		const errors = this.getAllErrors() || '';
+		const logs = this.getAllLogs().join('\n') || '';
+		const errors = this.getAllErrors().join('\n') || '';
 
 		return fs.writeFile(filePath, logs + errors);
 	}

@@ -32,12 +32,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-PS> C:\>$ssa = Get-SPEnterpriseSearchServiceapplication
-PS> C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
-PS> C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
-PS> C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
-PS> C:\>$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
-PS> C:\>$ssa | Repartition-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
+PS C:\>$ssa = Get-SPEnterpriseSearchServiceapplication
+PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
+PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
+PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
+PS C:\>$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
+PS C:\>$ssa | Move-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
 ```
 
 This example adds 3 new links databases and uses Move-SPEnterpriseSearchLinksDatabases to move data from the current links databases into new databases.
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216 (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

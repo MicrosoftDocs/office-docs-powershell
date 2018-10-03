@@ -27,23 +27,32 @@ class MarkdownService {
 		this.tempFolderPath = null;
 	}
 
-	async updateMd(docPath) {
-		this.tempFolderPath = `${docPath}\\${shortId()}`;
+	async updateMd(doc) {
+		const { path } = doc;
 
-		await this.addMdFilesInQueue(docPath);
+		this.tempFolderPath = `${path}\\${shortId()}`;
+
+		await this.addMdFilesInQueue(path);
 	}
 
 	async addMdFilesInQueue(folderPath) {
 		const mdExt = '.md';
+		const { ignoreFiles } = this.config.get('platyPS');
+		const ignoreAbsolutePathsArr = ignoreFiles.map((f) => path.resolve(f));
 
-		const allFiles = await fs.readdir(folderPath);
-		const mdFiles = allFiles.filter((fileName) => fileName.endsWith(mdExt));
+		const isFileIgnore = (fileName) => {
+			const absoluteFilePath = path.resolve(fileName);
 
-		mdFiles.forEach((fileName) => {
-			const absolutePath = path.resolve(`${folderPath}\\${fileName}`);
+			return ignoreAbsolutePathsArr.includes(absoluteFilePath);
+		};
 
+		const mdFiles = (await fs.readdir(folderPath))
+			.map((f) => path.resolve(folderPath, f))
+			.filter((fn) => fn.endsWith(mdExt) && !isFileIgnore(fn));
+
+		mdFiles.forEach((file) => {
 			this.queue
-				.push(absolutePath)
+				.push(file)
 				.on('failed', this.queueFailedHandler)
 				.on('finish', this.queueFinishHandler);
 		});

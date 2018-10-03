@@ -4,2828 +4,1138 @@ Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-server
 Locale: en-US
 ---
-
 # SharePoint Server PowerShell
 ## Description
 The following cmdlet references are for SharePoint Server.
 
-## sharepoint-server Cmdlets
-### [Add-DatabaseToAvailabilityGroup](Add-DatabaseToAvailabilityGroup.md)
-{{Manually Enter Add-DatabaseToAvailabilityGroup Description Here}}
-
-### [Add-SPAppDeniedEndpoint](Add-SPAppDeniedEndpoint.md)
-{{Manually Enter Add-SPAppDeniedEndpoint Description Here}}
-
-### [Add-SPClaimTypeMapping](Add-SPClaimTypeMapping.md)
-{{Manually Enter Add-SPClaimTypeMapping Description Here}}
-
-### [Add-SPDiagnosticsPerformanceCounter](Add-SPDiagnosticsPerformanceCounter.md)
-{{Manually Enter Add-SPDiagnosticsPerformanceCounter Description Here}}
-
-### [Add-SPDistributedCacheServiceInstance](Add-SPDistributedCacheServiceInstance.md)
-{{Manually Enter Add-SPDistributedCacheServiceInstance Description Here}}
-
-### [Add-SPEduClassMember](Add-SPEduClassMember.md)
-{{Manually Enter Add-SPEduClassMember Description Here}}
-
-### [Add-SPEduUser](Add-SPEduUser.md)
-{{Manually Enter Add-SPEduUser Description Here}}
-
-### [Add-SPInfoPathUserAgent](Add-SPInfoPathUserAgent.md)
-{{Manually Enter Add-SPInfoPathUserAgent Description Here}}
-
-### [Add-SPPluggableSecurityTrimmer](Add-SPPluggableSecurityTrimmer.md)
-{{Manually Enter Add-SPPluggableSecurityTrimmer Description Here}}
-
-### [Add-SPProfileLeader](Add-SPProfileLeader.md)
-{{Manually Enter Add-SPProfileLeader Description Here}}
-
-### [Add-SPProfileSyncConnection](Add-SPProfileSyncConnection.md)
-{{Manually Enter Add-SPProfileSyncConnection Description Here}}
-
-### [Add-SPRoutingMachineInfo](Add-SPRoutingMachineInfo.md)
-{{Manually Enter Add-SPRoutingMachineInfo Description Here}}
-
-### [Add-SPRoutingMachinePool](Add-SPRoutingMachinePool.md)
-{{Manually Enter Add-SPRoutingMachinePool Description Here}}
-
-### [Add-SPRoutingRule](Add-SPRoutingRule.md)
-{{Manually Enter Add-SPRoutingRule Description Here}}
-
-### [Add-SPScaleOutDatabase](Add-SPScaleOutDatabase.md)
-{{Manually Enter Add-SPScaleOutDatabase Description Here}}
-
-### [Add-SPSecureStoreSystemAccount](Add-SPSecureStoreSystemAccount.md)
-{{Manually Enter Add-SPSecureStoreSystemAccount Description Here}}
-
-### [Add-SPServerScaleOutDatabase](Add-SPServerScaleOutDatabase.md)
-{{Manually Enter Add-SPServerScaleOutDatabase Description Here}}
-
-### [Add-SPServiceApplicationProxyGroupMember](Add-SPServiceApplicationProxyGroupMember.md)
-{{Manually Enter Add-SPServiceApplicationProxyGroupMember Description Here}}
-
-### [Add-SPShellAdmin](Add-SPShellAdmin.md)
-{{Manually Enter Add-SPShellAdmin Description Here}}
-
-### [Add-SPSiteSubscriptionFeaturePackMember](Add-SPSiteSubscriptionFeaturePackMember.md)
-{{Manually Enter Add-SPSiteSubscriptionFeaturePackMember Description Here}}
-
-### [Add-SPSiteSubscriptionProfileConfig](Add-SPSiteSubscriptionProfileConfig.md)
-{{Manually Enter Add-SPSiteSubscriptionProfileConfig Description Here}}
-
-### [Add-SPSolution](Add-SPSolution.md)
-{{Manually Enter Add-SPSolution Description Here}}
-
-### [Add-SPThrottlingRule](Add-SPThrottlingRule.md)
-{{Manually Enter Add-SPThrottlingRule Description Here}}
-
-### [Add-SPUserLicenseMapping](Add-SPUserLicenseMapping.md)
-{{Manually Enter Add-SPUserLicenseMapping Description Here}}
-
-### [Add-SPUserSolution](Add-SPUserSolution.md)
-{{Manually Enter Add-SPUserSolution Description Here}}
-
-### [Backup-SPConfigurationDatabase](Backup-SPConfigurationDatabase.md)
-{{Manually Enter Backup-SPConfigurationDatabase Description Here}}
-
-### [Backup-SPEnterpriseSearchServiceApplicationIndex](Backup-SPEnterpriseSearchServiceApplicationIndex.md)
-{{Manually Enter Backup-SPEnterpriseSearchServiceApplicationIndex Description Here}}
-
-### [Backup-SPFarm](Backup-SPFarm.md)
-{{Manually Enter Backup-SPFarm Description Here}}
-
-### [Backup-SPSite](Backup-SPSite.md)
-{{Manually Enter Backup-SPSite Description Here}}
-
-### [Clear-SPAppDeniedEndpointList](Clear-SPAppDeniedEndpointList.md)
-{{Manually Enter Clear-SPAppDeniedEndpointList Description Here}}
-
-### [Clear-SPBusinessDataCatalogEntityNotificationWeb](Clear-SPBusinessDataCatalogEntityNotificationWeb.md)
-{{Manually Enter Clear-SPBusinessDataCatalogEntityNotificationWeb Description Here}}
-
-### [Clear-SPDistributedCacheItem](Clear-SPDistributedCacheItem.md)
-{{Manually Enter Clear-SPDistributedCacheItem Description Here}}
-
-### [Clear-SPLogLevel](Clear-SPLogLevel.md)
-{{Manually Enter Clear-SPLogLevel Description Here}}
-
-### [Clear-SPMetadataWebServicePartitionData](Clear-SPMetadataWebServicePartitionData.md)
-{{Manually Enter Clear-SPMetadataWebServicePartitionData Description Here}}
-
-### [Clear-SPPerformancePointServiceApplicationTrustedLocation](Clear-SPPerformancePointServiceApplicationTrustedLocation.md)
-{{Manually Enter Clear-SPPerformancePointServiceApplicationTrustedLocation Description Here}}
-
-### [Clear-SPScaleOutDatabaseDeletedDataSubRange](Clear-SPScaleOutDatabaseDeletedDataSubRange.md)
-{{Manually Enter Clear-SPScaleOutDatabaseDeletedDataSubRange Description Here}}
-
-### [Clear-SPScaleOutDatabaseLog](Clear-SPScaleOutDatabaseLog.md)
-{{Manually Enter Clear-SPScaleOutDatabaseLog Description Here}}
-
-### [Clear-SPScaleOutDatabaseTenantData](Clear-SPScaleOutDatabaseTenantData.md)
-{{Manually Enter Clear-SPScaleOutDatabaseTenantData Description Here}}
-
-### [Clear-SPSecureStoreCredentialMapping](Clear-SPSecureStoreCredentialMapping.md)
-{{Manually Enter Clear-SPSecureStoreCredentialMapping Description Here}}
-
-### [Clear-SPSecureStoreDefaultProvider](Clear-SPSecureStoreDefaultProvider.md)
-{{Manually Enter Clear-SPSecureStoreDefaultProvider Description Here}}
-
-### [Clear-SPServerScaleOutDatabaseDeletedDataSubRange](Clear-SPServerScaleOutDatabaseDeletedDataSubRange.md)
-{{Manually Enter Clear-SPServerScaleOutDatabaseDeletedDataSubRange Description Here}}
-
-### [Clear-SPServerScaleOutDatabaseLog](Clear-SPServerScaleOutDatabaseLog.md)
-{{Manually Enter Clear-SPServerScaleOutDatabaseLog Description Here}}
-
-### [Clear-SPServerScaleOutDatabaseTenantData](Clear-SPServerScaleOutDatabaseTenantData.md)
-{{Manually Enter Clear-SPServerScaleOutDatabaseTenantData Description Here}}
-
-### [Clear-SPSiteSubscriptionBusinessDataCatalogConfig](Clear-SPSiteSubscriptionBusinessDataCatalogConfig.md)
-{{Manually Enter Clear-SPSiteSubscriptionBusinessDataCatalogConfig Description Here}}
-
-### [Connect-SPConfigurationDatabase](Connect-SPConfigurationDatabase.md)
-{{Manually Enter Connect-SPConfigurationDatabase Description Here}}
-
-### [Convert-SPWebApplication](Convert-SPWebApplication.md)
-{{Manually Enter Convert-SPWebApplication Description Here}}
-
-### [ConvertTo-SPOMigrationEncryptedPackage](ConvertTo-SPOMigrationEncryptedPackage.md)
-{{Manually Enter ConvertTo-SPOMigrationEncryptedPackage Description Here}}
-
-### [ConvertTo-SPOMigrationTargetedPackage](ConvertTo-SPOMigrationTargetedPackage.md)
-{{Manually Enter ConvertTo-SPOMigrationTargetedPackage Description Here}}
-
-### [Copy-SPAccessServicesDatabaseCredentials](Copy-SPAccessServicesDatabaseCredentials.md)
-{{Manually Enter Copy-SPAccessServicesDatabaseCredentials Description Here}}
-
-### [Copy-SPActivitiesToWorkflowService](Copy-SPActivitiesToWorkflowService.md)
-{{Manually Enter Copy-SPActivitiesToWorkflowService Description Here}}
-
-### [Copy-SPBusinessDataCatalogAclToChildren](Copy-SPBusinessDataCatalogAclToChildren.md)
-{{Manually Enter Copy-SPBusinessDataCatalogAclToChildren Description Here}}
-
-### [Copy-SPContentTypes](Copy-SPContentTypes.md)
-{{Manually Enter Copy-SPContentTypes Description Here}}
-
-### [Copy-SPSideBySideFiles](Copy-SPSideBySideFiles.md)
-{{Manually Enter Copy-SPSideBySideFiles Description Here}}
-
-### [Copy-SPSite](Copy-SPSite.md)
-{{Manually Enter Copy-SPSite Description Here}}
-
-### [Copy-SPTaxonomyGroups](Copy-SPTaxonomyGroups.md)
-{{Manually Enter Copy-SPTaxonomyGroups Description Here}}
-
-### [Disable-ProjectServerLicense](Disable-ProjectServerLicense.md)
-{{Manually Enter Disable-ProjectServerLicense Description Here}}
-
-### [Disable-SPAppAutoProvision](Disable-SPAppAutoProvision.md)
-{{Manually Enter Disable-SPAppAutoProvision Description Here}}
-
-### [Disable-SPBusinessDataCatalogEntity](Disable-SPBusinessDataCatalogEntity.md)
-{{Manually Enter Disable-SPBusinessDataCatalogEntity Description Here}}
-
-### [Disable-SPFeature](Disable-SPFeature.md)
-{{Manually Enter Disable-SPFeature Description Here}}
-
-### [Disable-SPHealthAnalysisRule](Disable-SPHealthAnalysisRule.md)
-{{Manually Enter Disable-SPHealthAnalysisRule Description Here}}
-
-### [Disable-SPInfoPathFormTemplate](Disable-SPInfoPathFormTemplate.md)
-{{Manually Enter Disable-SPInfoPathFormTemplate Description Here}}
-
-### [Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync](Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md)
-{{Manually Enter Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync Description Here}}
-
-### [Disable-SPProjectEmailNotification](Disable-SPProjectEmailNotification.md)
-{{Manually Enter Disable-SPProjectEmailNotification Description Here}}
-
-### [Disable-SPProjectEnterpriseProjectTaskSync](Disable-SPProjectEnterpriseProjectTaskSync.md)
-{{Manually Enter Disable-SPProjectEnterpriseProjectTaskSync Description Here}}
-
-### [Disable-SPProjectQueueStatsMonitoring](Disable-SPProjectQueueStatsMonitoring.md)
-{{Manually Enter Disable-SPProjectQueueStatsMonitoring Description Here}}
-
-### [Disable-SPSessionStateService](Disable-SPSessionStateService.md)
-{{Manually Enter Disable-SPSessionStateService Description Here}}
-
-### [Disable-SPSingleSignOn](Disable-SPSingleSignOn.md)
-{{Manually Enter Disable-SPSingleSignOn Description Here}}
-
-### [Disable-SPTimerJob](Disable-SPTimerJob.md)
-{{Manually Enter Disable-SPTimerJob Description Here}}
-
-### [Disable-SPUserLicensing](Disable-SPUserLicensing.md)
-{{Manually Enter Disable-SPUserLicensing Description Here}}
-
-### [Disable-SPUserSolutionAllowList](Disable-SPUserSolutionAllowList.md)
-{{Manually Enter Disable-SPUserSolutionAllowList Description Here}}
-
-### [Disable-SPWebApplicationHttpThrottling](Disable-SPWebApplicationHttpThrottling.md)
-{{Manually Enter Disable-SPWebApplicationHttpThrottling Description Here}}
-
-### [Disable-SPWebTemplateForSiteMaster](Disable-SPWebTemplateForSiteMaster.md)
-{{Manually Enter Disable-SPWebTemplateForSiteMaster Description Here}}
-
-### [Disconnect-SPConfigurationDatabase](Disconnect-SPConfigurationDatabase.md)
-{{Manually Enter Disconnect-SPConfigurationDatabase Description Here}}
-
-### [Dismount-SPContentDatabase](Dismount-SPContentDatabase.md)
-{{Manually Enter Dismount-SPContentDatabase Description Here}}
-
-### [Dismount-SPSiteMapDatabase](Dismount-SPSiteMapDatabase.md)
-{{Manually Enter Dismount-SPSiteMapDatabase Description Here}}
-
-### [Dismount-SPStateServiceDatabase](Dismount-SPStateServiceDatabase.md)
-{{Manually Enter Dismount-SPStateServiceDatabase Description Here}}
-
-### [Enable-ProjectServerLicense](Enable-ProjectServerLicense.md)
-{{Manually Enter Enable-ProjectServerLicense Description Here}}
-
-### [Enable-SPAppAutoProvision](Enable-SPAppAutoProvision.md)
-{{Manually Enter Enable-SPAppAutoProvision Description Here}}
-
-### [Enable-SPBusinessDataCatalogEntity](Enable-SPBusinessDataCatalogEntity.md)
-{{Manually Enter Enable-SPBusinessDataCatalogEntity Description Here}}
-
-### [Enable-SPFeature](Enable-SPFeature.md)
-{{Manually Enter Enable-SPFeature Description Here}}
-
-### [Enable-SPHealthAnalysisRule](Enable-SPHealthAnalysisRule.md)
-{{Manually Enter Enable-SPHealthAnalysisRule Description Here}}
-
-### [Enable-SPInfoPathFormTemplate](Enable-SPInfoPathFormTemplate.md)
-{{Manually Enter Enable-SPInfoPathFormTemplate Description Here}}
-
-### [Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync](Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md)
-{{Manually Enter Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync Description Here}}
-
-### [Enable-SPProjectEmailNotification](Enable-SPProjectEmailNotification.md)
-{{Manually Enter Enable-SPProjectEmailNotification Description Here}}
-
-### [Enable-SPProjectEnterpriseProjectTaskSync](Enable-SPProjectEnterpriseProjectTaskSync.md)
-{{Manually Enter Enable-SPProjectEnterpriseProjectTaskSync Description Here}}
-
-### [Enable-SPProjectQueueStatsMonitoring](Enable-SPProjectQueueStatsMonitoring.md)
-{{Manually Enter Enable-SPProjectQueueStatsMonitoring Description Here}}
-
-### [Enable-SPSessionStateService](Enable-SPSessionStateService.md)
-{{Manually Enter Enable-SPSessionStateService Description Here}}
-
-### [Enable-SPTimerJob](Enable-SPTimerJob.md)
-{{Manually Enter Enable-SPTimerJob Description Here}}
-
-### [Enable-SPUserLicensing](Enable-SPUserLicensing.md)
-{{Manually Enter Enable-SPUserLicensing Description Here}}
-
-### [Enable-SPUserSolutionAllowList](Enable-SPUserSolutionAllowList.md)
-{{Manually Enter Enable-SPUserSolutionAllowList Description Here}}
-
-### [Enable-SPWebApplicationHttpThrottling](Enable-SPWebApplicationHttpThrottling.md)
-{{Manually Enter Enable-SPWebApplicationHttpThrottling Description Here}}
-
-### [Enable-SPWebTemplateForSiteMaster](Enable-SPWebTemplateForSiteMaster.md)
-{{Manually Enter Enable-SPWebTemplateForSiteMaster Description Here}}
-
-### [Export-SPAccessServicesDatabase](Export-SPAccessServicesDatabase.md)
-{{Manually Enter Export-SPAccessServicesDatabase Description Here}}
-
-### [Export-SPAppPackage](Export-SPAppPackage.md)
-{{Manually Enter Export-SPAppPackage Description Here}}
-
-### [Export-SPBusinessDataCatalogModel](Export-SPBusinessDataCatalogModel.md)
-{{Manually Enter Export-SPBusinessDataCatalogModel Description Here}}
-
-### [Export-SPEnterpriseSearchTopology](Export-SPEnterpriseSearchTopology.md)
-{{Manually Enter Export-SPEnterpriseSearchTopology Description Here}}
-
-### [Export-SPInfoPathAdministrationFiles](Export-SPInfoPathAdministrationFiles.md)
-{{Manually Enter Export-SPInfoPathAdministrationFiles Description Here}}
-
-### [Export-SPMetadataWebServicePartitionData](Export-SPMetadataWebServicePartitionData.md)
-{{Manually Enter Export-SPMetadataWebServicePartitionData Description Here}}
-
-### [Export-SPPerformancePointContent](Export-SPPerformancePointContent.md)
-{{Manually Enter Export-SPPerformancePointContent Description Here}}
-
-### [Export-SPScaleOutDatabaseTenantData](Export-SPScaleOutDatabaseTenantData.md)
-{{Manually Enter Export-SPScaleOutDatabaseTenantData Description Here}}
-
-### [Export-SPServerScaleOutDatabaseTenantData](Export-SPServerScaleOutDatabaseTenantData.md)
-{{Manually Enter Export-SPServerScaleOutDatabaseTenantData Description Here}}
-
-### [Export-SPSiteSubscriptionBusinessDataCatalogConfig](Export-SPSiteSubscriptionBusinessDataCatalogConfig.md)
-{{Manually Enter Export-SPSiteSubscriptionBusinessDataCatalogConfig Description Here}}
-
-### [Export-SPSiteSubscriptionSettings](Export-SPSiteSubscriptionSettings.md)
-{{Manually Enter Export-SPSiteSubscriptionSettings Description Here}}
-
-### [Export-SPTagsAndNotesData](Export-SPTagsAndNotesData.md)
-{{Manually Enter Export-SPTagsAndNotesData Description Here}}
-
-### [Export-SPWeb](Export-SPWeb.md)
-{{Manually Enter Export-SPWeb Description Here}}
-
-### [Get-AvailabilityGroupStatus](Get-AvailabilityGroupStatus.md)
-{{Manually Enter Get-AvailabilityGroupStatus Description Here}}
-
-### [Get-ProjectServerLicense](Get-ProjectServerLicense.md)
-{{Manually Enter Get-ProjectServerLicense Description Here}}
-
-### [Get-SPAccessServiceApplication](Get-SPAccessServiceApplication.md)
-{{Manually Enter Get-SPAccessServiceApplication Description Here}}
-
-### [Get-SPAccessServicesApplication](Get-SPAccessServicesApplication.md)
-{{Manually Enter Get-SPAccessServicesApplication Description Here}}
-
-### [Get-SPAccessServicesDatabase](Get-SPAccessServicesDatabase.md)
-{{Manually Enter Get-SPAccessServicesDatabase Description Here}}
-
-### [Get-SPAccessServicesDatabaseServer](Get-SPAccessServicesDatabaseServer.md)
-{{Manually Enter Get-SPAccessServicesDatabaseServer Description Here}}
-
-### [Get-SPAccessServicesDatabaseServerGroup](Get-SPAccessServicesDatabaseServerGroup.md)
-{{Manually Enter Get-SPAccessServicesDatabaseServerGroup Description Here}}
-
-### [Get-SPAccessServicesDatabaseServerGroupMapping](Get-SPAccessServicesDatabaseServerGroupMapping.md)
-{{Manually Enter Get-SPAccessServicesDatabaseServerGroupMapping Description Here}}
-
-### [Get-SPAlternateURL](Get-SPAlternateURL.md)
-{{Manually Enter Get-SPAlternateURL Description Here}}
-
-### [Get-SPAppAcquisitionConfiguration](Get-SPAppAcquisitionConfiguration.md)
-{{Manually Enter Get-SPAppAcquisitionConfiguration Description Here}}
-
-### [Get-SPAppAutoProvisionConnection](Get-SPAppAutoProvisionConnection.md)
-{{Manually Enter Get-SPAppAutoProvisionConnection Description Here}}
-
-### [Get-SPAppDeniedEndpointList](Get-SPAppDeniedEndpointList.md)
-{{Manually Enter Get-SPAppDeniedEndpointList Description Here}}
-
-### [Get-SPAppDisablingConfiguration](Get-SPAppDisablingConfiguration.md)
-{{Manually Enter Get-SPAppDisablingConfiguration Description Here}}
-
-### [Get-SPAppDomain](Get-SPAppDomain.md)
-{{Manually Enter Get-SPAppDomain Description Here}}
-
-### [Get-SPAppHostingQuotaConfiguration](Get-SPAppHostingQuotaConfiguration.md)
-{{Manually Enter Get-SPAppHostingQuotaConfiguration Description Here}}
-
-### [Get-SPAppInstance](Get-SPAppInstance.md)
-{{Manually Enter Get-SPAppInstance Description Here}}
-
-### [Get-SPAppPrincipal](Get-SPAppPrincipal.md)
-{{Manually Enter Get-SPAppPrincipal Description Here}}
-
-### [Get-SPAppScaleProfile](Get-SPAppScaleProfile.md)
-{{Manually Enter Get-SPAppScaleProfile Description Here}}
-
-### [Get-SPAppSiteSubscriptionName](Get-SPAppSiteSubscriptionName.md)
-{{Manually Enter Get-SPAppSiteSubscriptionName Description Here}}
-
-### [Get-SPAppStateSyncLastRunTime](Get-SPAppStateSyncLastRunTime.md)
-{{Manually Enter Get-SPAppStateSyncLastRunTime Description Here}}
-
-### [Get-SPAppStateUpdateInterval](Get-SPAppStateUpdateInterval.md)
-{{Manually Enter Get-SPAppStateUpdateInterval Description Here}}
-
-### [Get-SPAppStoreConfiguration](Get-SPAppStoreConfiguration.md)
-{{Manually Enter Get-SPAppStoreConfiguration Description Here}}
-
-### [Get-SPAppStoreWebServiceConfiguration](Get-SPAppStoreWebServiceConfiguration.md)
-{{Manually Enter Get-SPAppStoreWebServiceConfiguration Description Here}}
-
-### [Get-SPAuthenticationProvider](Get-SPAuthenticationProvider.md)
-{{Manually Enter Get-SPAuthenticationProvider Description Here}}
-
-### [Get-SPAuthenticationRealm](Get-SPAuthenticationRealm.md)
-{{Manually Enter Get-SPAuthenticationRealm Description Here}}
-
-### [Get-SPBackupHistory](Get-SPBackupHistory.md)
-{{Manually Enter Get-SPBackupHistory Description Here}}
-
-### [Get-SPBingMapsBlock](Get-SPBingMapsBlock.md)
-{{Manually Enter Get-SPBingMapsBlock Description Here}}
-
-### [Get-SPBingMapsKey](Get-SPBingMapsKey.md)
-{{Manually Enter Get-SPBingMapsKey Description Here}}
-
-### [Get-SPBrowserCustomerExperienceImprovementProgram](Get-SPBrowserCustomerExperienceImprovementProgram.md)
-{{Manually Enter Get-SPBrowserCustomerExperienceImprovementProgram Description Here}}
-
-### [Get-SPBusinessDataCatalogEntityNotificationWeb](Get-SPBusinessDataCatalogEntityNotificationWeb.md)
-{{Manually Enter Get-SPBusinessDataCatalogEntityNotificationWeb Description Here}}
-
-### [Get-SPBusinessDataCatalogMetadataObject](Get-SPBusinessDataCatalogMetadataObject.md)
-{{Manually Enter Get-SPBusinessDataCatalogMetadataObject Description Here}}
-
-### [Get-SPBusinessDataCatalogThrottleConfig](Get-SPBusinessDataCatalogThrottleConfig.md)
-{{Manually Enter Get-SPBusinessDataCatalogThrottleConfig Description Here}}
-
-### [Get-SPCertificateAuthority](Get-SPCertificateAuthority.md)
-{{Manually Enter Get-SPCertificateAuthority Description Here}}
-
-### [Get-SPClaimProvider](Get-SPClaimProvider.md)
-{{Manually Enter Get-SPClaimProvider Description Here}}
-
-### [Get-SPClaimProviderManager](Get-SPClaimProviderManager.md)
-{{Manually Enter Get-SPClaimProviderManager Description Here}}
-
-### [Get-SPClaimTypeEncoding](Get-SPClaimTypeEncoding.md)
-{{Manually Enter Get-SPClaimTypeEncoding Description Here}}
-
-### [Get-SPConnectedServiceApplicationInformation](Get-SPConnectedServiceApplicationInformation.md)
-{{Manually Enter Get-SPConnectedServiceApplicationInformation Description Here}}
-
-### [Get-SPContentDatabase](Get-SPContentDatabase.md)
-{{Manually Enter Get-SPContentDatabase Description Here}}
-
-### [Get-SPContentDeploymentJob](Get-SPContentDeploymentJob.md)
-{{Manually Enter Get-SPContentDeploymentJob Description Here}}
-
-### [Get-SPContentDeploymentPath](Get-SPContentDeploymentPath.md)
-{{Manually Enter Get-SPContentDeploymentPath Description Here}}
-
-### [Get-SPCustomLayoutsPage](Get-SPCustomLayoutsPage.md)
-{{Manually Enter Get-SPCustomLayoutsPage Description Here}}
-
-### [Get-SPDatabase](Get-SPDatabase.md)
-{{Manually Enter Get-SPDatabase Description Here}}
-
-### [Get-SPDataConnectionFile](Get-SPDataConnectionFile.md)
-{{Manually Enter Get-SPDataConnectionFile Description Here}}
-
-### [Get-SPDataConnectionFileDependent](Get-SPDataConnectionFileDependent.md)
-{{Manually Enter Get-SPDataConnectionFileDependent Description Here}}
-
-### [Get-SPDeletedSite](Get-SPDeletedSite.md)
-{{Manually Enter Get-SPDeletedSite Description Here}}
-
-### [Get-SPDesignerSettings](Get-SPDesignerSettings.md)
-{{Manually Enter Get-SPDesignerSettings Description Here}}
-
-### [Get-SPDiagnosticConfig](Get-SPDiagnosticConfig.md)
-{{Manually Enter Get-SPDiagnosticConfig Description Here}}
-
-### [Get-SPDiagnosticsPerformanceCounter](Get-SPDiagnosticsPerformanceCounter.md)
-{{Manually Enter Get-SPDiagnosticsPerformanceCounter Description Here}}
-
-### [Get-SPDiagnosticsProvider](Get-SPDiagnosticsProvider.md)
-{{Manually Enter Get-SPDiagnosticsProvider Description Here}}
-
-### [Get-SPDistributedCacheClientSetting](Get-SPDistributedCacheClientSetting.md)
-{{Manually Enter Get-SPDistributedCacheClientSetting Description Here}}
-
-### [Get-SPEduServiceSetting](Get-SPEduServiceSetting.md)
-{{Manually Enter Get-SPEduServiceSetting Description Here}}
-
-### [Get-SPEnterpriseSearchAdministrationComponent](Get-SPEnterpriseSearchAdministrationComponent.md)
-{{Manually Enter Get-SPEnterpriseSearchAdministrationComponent Description Here}}
-
-### [Get-SPEnterpriseSearchComponent](Get-SPEnterpriseSearchComponent.md)
-{{Manually Enter Get-SPEnterpriseSearchComponent Description Here}}
-
-### [Get-SPEnterpriseSearchContentEnrichmentConfiguration](Get-SPEnterpriseSearchContentEnrichmentConfiguration.md)
-{{Manually Enter Get-SPEnterpriseSearchContentEnrichmentConfiguration Description Here}}
-
-### [Get-SPEnterpriseSearchCrawlContentSource](Get-SPEnterpriseSearchCrawlContentSource.md)
-{{Manually Enter Get-SPEnterpriseSearchCrawlContentSource Description Here}}
-
-### [Get-SPEnterpriseSearchCrawlCustomConnector](Get-SPEnterpriseSearchCrawlCustomConnector.md)
-{{Manually Enter Get-SPEnterpriseSearchCrawlCustomConnector Description Here}}
-
-### [Get-SPEnterpriseSearchCrawlDatabase](Get-SPEnterpriseSearchCrawlDatabase.md)
-{{Manually Enter Get-SPEnterpriseSearchCrawlDatabase Description Here}}
-
-### [Get-SPEnterpriseSearchCrawlExtension](Get-SPEnterpriseSearchCrawlExtension.md)
-{{Manually Enter Get-SPEnterpriseSearchCrawlExtension Description Here}}
-
-### [Get-SPEnterpriseSearchCrawlLogReadPermission](Get-SPEnterpriseSearchCrawlLogReadPermission.md)
-{{Manually Enter Get-SPEnterpriseSearchCrawlLogReadPermission Description Here}}
-
-### [Get-SPEnterpriseSearchCrawlMapping](Get-SPEnterpriseSearchCrawlMapping.md)
-{{Manually Enter Get-SPEnterpriseSearchCrawlMapping Description Here}}
-
-### [Get-SPEnterpriseSearchCrawlRule](Get-SPEnterpriseSearchCrawlRule.md)
-{{Manually Enter Get-SPEnterpriseSearchCrawlRule Description Here}}
-
-### [Get-SPEnterpriseSearchFileFormat](Get-SPEnterpriseSearchFileFormat.md)
-{{Manually Enter Get-SPEnterpriseSearchFileFormat Description Here}}
-
-### [Get-SPEnterpriseSearchHostController](Get-SPEnterpriseSearchHostController.md)
-{{Manually Enter Get-SPEnterpriseSearchHostController Description Here}}
-
-### [Get-SPEnterpriseSearchLanguageResourcePhrase](Get-SPEnterpriseSearchLanguageResourcePhrase.md)
-{{Manually Enter Get-SPEnterpriseSearchLanguageResourcePhrase Description Here}}
-
-### [Get-SPEnterpriseSearchLinguisticComponentsStatus](Get-SPEnterpriseSearchLinguisticComponentsStatus.md)
-{{Manually Enter Get-SPEnterpriseSearchLinguisticComponentsStatus Description Here}}
-
-### [Get-SPEnterpriseSearchLinksDatabase](Get-SPEnterpriseSearchLinksDatabase.md)
-{{Manually Enter Get-SPEnterpriseSearchLinksDatabase Description Here}}
-
-### [Get-SPEnterpriseSearchMetadataCategory](Get-SPEnterpriseSearchMetadataCategory.md)
-{{Manually Enter Get-SPEnterpriseSearchMetadataCategory Description Here}}
-
-### [Get-SPEnterpriseSearchMetadataCrawledProperty](Get-SPEnterpriseSearchMetadataCrawledProperty.md)
-{{Manually Enter Get-SPEnterpriseSearchMetadataCrawledProperty Description Here}}
-
-### [Get-SPEnterpriseSearchMetadataManagedProperty](Get-SPEnterpriseSearchMetadataManagedProperty.md)
-{{Manually Enter Get-SPEnterpriseSearchMetadataManagedProperty Description Here}}
-
-### [Get-SPEnterpriseSearchMetadataMapping](Get-SPEnterpriseSearchMetadataMapping.md)
-{{Manually Enter Get-SPEnterpriseSearchMetadataMapping Description Here}}
-
-### [Get-SPEnterpriseSearchOwner](Get-SPEnterpriseSearchOwner.md)
-{{Manually Enter Get-SPEnterpriseSearchOwner Description Here}}
-
-### [Get-SPEnterpriseSearchPropertyRule](Get-SPEnterpriseSearchPropertyRule.md)
-{{Manually Enter Get-SPEnterpriseSearchPropertyRule Description Here}}
-
-### [Get-SPEnterpriseSearchPropertyRuleCollection](Get-SPEnterpriseSearchPropertyRuleCollection.md)
-{{Manually Enter Get-SPEnterpriseSearchPropertyRuleCollection Description Here}}
-
-### [Get-SPEnterpriseSearchQueryAndSiteSettingsService](Get-SPEnterpriseSearchQueryAndSiteSettingsService.md)
-{{Manually Enter Get-SPEnterpriseSearchQueryAndSiteSettingsService Description Here}}
-
-### [Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance](Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance.md)
-{{Manually Enter Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance Description Here}}
-
-### [Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy](Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy.md)
-{{Manually Enter Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy Description Here}}
-
-### [Get-SPEnterpriseSearchQueryAuthority](Get-SPEnterpriseSearchQueryAuthority.md)
-{{Manually Enter Get-SPEnterpriseSearchQueryAuthority Description Here}}
-
-### [Get-SPEnterpriseSearchQueryDemoted](Get-SPEnterpriseSearchQueryDemoted.md)
-{{Manually Enter Get-SPEnterpriseSearchQueryDemoted Description Here}}
-
-### [Get-SPEnterpriseSearchQueryKeyword](Get-SPEnterpriseSearchQueryKeyword.md)
-{{Manually Enter Get-SPEnterpriseSearchQueryKeyword Description Here}}
-
-### [Get-SPEnterpriseSearchQueryScope](Get-SPEnterpriseSearchQueryScope.md)
-{{Manually Enter Get-SPEnterpriseSearchQueryScope Description Here}}
-
-### [Get-SPEnterpriseSearchQueryScopeRule](Get-SPEnterpriseSearchQueryScopeRule.md)
-{{Manually Enter Get-SPEnterpriseSearchQueryScopeRule Description Here}}
-
-### [Get-SPEnterpriseSearchQuerySpellingCorrection](Get-SPEnterpriseSearchQuerySpellingCorrection.md)
-{{Manually Enter Get-SPEnterpriseSearchQuerySpellingCorrection Description Here}}
-
-### [Get-SPEnterpriseSearchQuerySuggestionCandidates](Get-SPEnterpriseSearchQuerySuggestionCandidates.md)
-{{Manually Enter Get-SPEnterpriseSearchQuerySuggestionCandidates Description Here}}
-
-### [Get-SPEnterpriseSearchRankingModel](Get-SPEnterpriseSearchRankingModel.md)
-{{Manually Enter Get-SPEnterpriseSearchRankingModel Description Here}}
-
-### [Get-SPEnterpriseSearchResultItemType](Get-SPEnterpriseSearchResultItemType.md)
-{{Manually Enter Get-SPEnterpriseSearchResultItemType Description Here}}
-
-### [Get-SPEnterpriseSearchResultSource](Get-SPEnterpriseSearchResultSource.md)
-{{Manually Enter Get-SPEnterpriseSearchResultSource Description Here}}
-
-### [Get-SPEnterpriseSearchSecurityTrimmer](Get-SPEnterpriseSearchSecurityTrimmer.md)
-{{Manually Enter Get-SPEnterpriseSearchSecurityTrimmer Description Here}}
-
-### [Get-SPEnterpriseSearchService](Get-SPEnterpriseSearchService.md)
-{{Manually Enter Get-SPEnterpriseSearchService Description Here}}
-
-### [Get-SPEnterpriseSearchServiceApplication](Get-SPEnterpriseSearchServiceApplication.md)
-{{Manually Enter Get-SPEnterpriseSearchServiceApplication Description Here}}
-
-### [Get-SPEnterpriseSearchServiceApplicationBackupStore](Get-SPEnterpriseSearchServiceApplicationBackupStore.md)
-{{Manually Enter Get-SPEnterpriseSearchServiceApplicationBackupStore Description Here}}
-
-### [Get-SPEnterpriseSearchServiceApplicationProxy](Get-SPEnterpriseSearchServiceApplicationProxy.md)
-{{Manually Enter Get-SPEnterpriseSearchServiceApplicationProxy Description Here}}
-
-### [Get-SPEnterpriseSearchServiceInstance](Get-SPEnterpriseSearchServiceInstance.md)
-{{Manually Enter Get-SPEnterpriseSearchServiceInstance Description Here}}
-
-### [Get-SPEnterpriseSearchSiteHitRule](Get-SPEnterpriseSearchSiteHitRule.md)
-{{Manually Enter Get-SPEnterpriseSearchSiteHitRule Description Here}}
-
-### [Get-SPEnterpriseSearchStatus](Get-SPEnterpriseSearchStatus.md)
-{{Manually Enter Get-SPEnterpriseSearchStatus Description Here}}
-
-### [Get-SPEnterpriseSearchTopology](Get-SPEnterpriseSearchTopology.md)
-{{Manually Enter Get-SPEnterpriseSearchTopology Description Here}}
-
-### [Get-SPEnterpriseSearchVssDataPath](Get-SPEnterpriseSearchVssDataPath.md)
-{{Manually Enter Get-SPEnterpriseSearchVssDataPath Description Here}}
-
-### [Get-SPExcelBIServer](Get-SPExcelBIServer.md)
-{{Manually Enter Get-SPExcelBIServer Description Here}}
-
-### [Get-SPExcelBlockedFileType](Get-SPExcelBlockedFileType.md)
-{{Manually Enter Get-SPExcelBlockedFileType Description Here}}
-
-### [Get-SPExcelDataConnectionLibrary](Get-SPExcelDataConnectionLibrary.md)
-{{Manually Enter Get-SPExcelDataConnectionLibrary Description Here}}
-
-### [Get-SPExcelDataProvider](Get-SPExcelDataProvider.md)
-{{Manually Enter Get-SPExcelDataProvider Description Here}}
-
-### [Get-SPExcelFileLocation](Get-SPExcelFileLocation.md)
-{{Manually Enter Get-SPExcelFileLocation Description Here}}
-
-### [Get-SPExcelServiceApplication](Get-SPExcelServiceApplication.md)
-{{Manually Enter Get-SPExcelServiceApplication Description Here}}
-
-### [Get-SPExcelUserDefinedFunction](Get-SPExcelUserDefinedFunction.md)
-{{Manually Enter Get-SPExcelUserDefinedFunction Description Here}}
-
-### [Get-SPFarm](Get-SPFarm.md)
-{{Manually Enter Get-SPFarm Description Here}}
-
-### [Get-SPFarmConfig](Get-SPFarmConfig.md)
-{{Manually Enter Get-SPFarmConfig Description Here}}
-
-### [Get-SPFeature](Get-SPFeature.md)
-{{Manually Enter Get-SPFeature Description Here}}
-
-### [Get-SPHealthAnalysisRule](Get-SPHealthAnalysisRule.md)
-{{Manually Enter Get-SPHealthAnalysisRule Description Here}}
-
-### [Get-SPHelpCollection](Get-SPHelpCollection.md)
-{{Manually Enter Get-SPHelpCollection Description Here}}
-
-### [Get-SPInfoPathFormsService](Get-SPInfoPathFormsService.md)
-{{Manually Enter Get-SPInfoPathFormsService Description Here}}
-
-### [Get-SPInfoPathFormTemplate](Get-SPInfoPathFormTemplate.md)
-{{Manually Enter Get-SPInfoPathFormTemplate Description Here}}
-
-### [Get-SPInfoPathUserAgent](Get-SPInfoPathUserAgent.md)
-{{Manually Enter Get-SPInfoPathUserAgent Description Here}}
-
-### [Get-SPInfoPathWebServiceProxy](Get-SPInfoPathWebServiceProxy.md)
-{{Manually Enter Get-SPInfoPathWebServiceProxy Description Here}}
-
-### [Get-SPInsightsConfig](Get-SPInsightsConfig.md)
-{{Manually Enter Get-SPInsightsConfig Description Here}}
-
-### [Get-SPInternalAppStateSyncLastRunTime](Get-SPInternalAppStateSyncLastRunTime.md)
-{{Manually Enter Get-SPInternalAppStateSyncLastRunTime Description Here}}
-
-### [Get-SPInternalAppStateUpdateInterval](Get-SPInternalAppStateUpdateInterval.md)
-{{Manually Enter Get-SPInternalAppStateUpdateInterval Description Here}}
-
-### [Get-SPIRMSettings](Get-SPIRMSettings.md)
-{{Manually Enter Get-SPIRMSettings Description Here}}
-
-### [Get-SPLogEvent](Get-SPLogEvent.md)
-{{Manually Enter Get-SPLogEvent Description Here}}
-
-### [Get-SPLogLevel](Get-SPLogLevel.md)
-{{Manually Enter Get-SPLogLevel Description Here}}
-
-### [Get-SPManagedAccount](Get-SPManagedAccount.md)
-{{Manually Enter Get-SPManagedAccount Description Here}}
-
-### [Get-SPManagedPath](Get-SPManagedPath.md)
-{{Manually Enter Get-SPManagedPath Description Here}}
-
-### [Get-SPMetadataServiceApplication](Get-SPMetadataServiceApplication.md)
-{{Manually Enter Get-SPMetadataServiceApplication Description Here}}
-
-### [Get-SPMetadataServiceApplicationProxy](Get-SPMetadataServiceApplicationProxy.md)
-{{Manually Enter Get-SPMetadataServiceApplicationProxy Description Here}}
-
-### [Get-SPMicrofeedOptions](Get-SPMicrofeedOptions.md)
-{{Manually Enter Get-SPMicrofeedOptions Description Here}}
-
-### [Get-SPMobileMessagingAccount](Get-SPMobileMessagingAccount.md)
-{{Manually Enter Get-SPMobileMessagingAccount Description Here}}
-
-### [Get-SPPendingUpgradeActions](Get-SPPendingUpgradeActions.md)
-{{Manually Enter Get-SPPendingUpgradeActions Description Here}}
-
-### [Get-SPPerformancePointServiceApplication](Get-SPPerformancePointServiceApplication.md)
-{{Manually Enter Get-SPPerformancePointServiceApplication Description Here}}
-
-### [Get-SPPerformancePointServiceApplicationTrustedLocation](Get-SPPerformancePointServiceApplicationTrustedLocation.md)
-{{Manually Enter Get-SPPerformancePointServiceApplicationTrustedLocation Description Here}}
-
-### [Get-SPPluggableSecurityTrimmer](Get-SPPluggableSecurityTrimmer.md)
-{{Manually Enter Get-SPPluggableSecurityTrimmer Description Here}}
-
-### [Get-SPProcessAccount](Get-SPProcessAccount.md)
-{{Manually Enter Get-SPProcessAccount Description Here}}
-
-### [Get-SPProduct](Get-SPProduct.md)
-{{Manually Enter Get-SPProduct Description Here}}
-
-### [Get-SPProfileLeader](Get-SPProfileLeader.md)
-{{Manually Enter Get-SPProfileLeader Description Here}}
-
-### [Get-SPProfileServiceApplicationSecurity](Get-SPProfileServiceApplicationSecurity.md)
-{{Manually Enter Get-SPProfileServiceApplicationSecurity Description Here}}
-
-### [Get-SPProjectDatabaseQuota](Get-SPProjectDatabaseQuota.md)
-{{Manually Enter Get-SPProjectDatabaseQuota Description Here}}
-
-### [Get-SPProjectDatabaseUsage](Get-SPProjectDatabaseUsage.md)
-{{Manually Enter Get-SPProjectDatabaseUsage Description Here}}
-
-### [Get-SPProjectEnterpriseProjectTaskSync](Get-SPProjectEnterpriseProjectTaskSync.md)
-{{Manually Enter Get-SPProjectEnterpriseProjectTaskSync Description Here}}
-
-### [Get-SPProjectEventServiceSettings](Get-SPProjectEventServiceSettings.md)
-{{Manually Enter Get-SPProjectEventServiceSettings Description Here}}
-
-### [Get-SPProjectIsEmailNotificationEnabled](Get-SPProjectIsEmailNotificationEnabled.md)
-{{Manually Enter Get-SPProjectIsEmailNotificationEnabled Description Here}}
-
-### [Get-SPProjectOdataConfiguration](Get-SPProjectOdataConfiguration.md)
-{{Manually Enter Get-SPProjectOdataConfiguration Description Here}}
-
-### [Get-SPProjectPCSSettings](Get-SPProjectPCSSettings.md)
-{{Manually Enter Get-SPProjectPCSSettings Description Here}}
-
-### [Get-SPProjectPermissionMode](Get-SPProjectPermissionMode.md)
-{{Manually Enter Get-SPProjectPermissionMode Description Here}}
-
-### [Get-SPProjectQueueSettings](Get-SPProjectQueueSettings.md)
-{{Manually Enter Get-SPProjectQueueSettings Description Here}}
-
-### [Get-SPProjectWebInstance](Get-SPProjectWebInstance.md)
-{{Manually Enter Get-SPProjectWebInstance Description Here}}
-
-### [Get-SPRequestManagementSettings](Get-SPRequestManagementSettings.md)
-{{Manually Enter Get-SPRequestManagementSettings Description Here}}
-
-### [Get-SPRoutingMachineInfo](Get-SPRoutingMachineInfo.md)
-{{Manually Enter Get-SPRoutingMachineInfo Description Here}}
-
-### [Get-SPRoutingMachinePool](Get-SPRoutingMachinePool.md)
-{{Manually Enter Get-SPRoutingMachinePool Description Here}}
-
-### [Get-SPRoutingRule](Get-SPRoutingRule.md)
-{{Manually Enter Get-SPRoutingRule Description Here}}
-
-### [Get-SPScaleOutDatabase](Get-SPScaleOutDatabase.md)
-{{Manually Enter Get-SPScaleOutDatabase Description Here}}
-
-### [Get-SPScaleOutDatabaseDataState](Get-SPScaleOutDatabaseDataState.md)
-{{Manually Enter Get-SPScaleOutDatabaseDataState Description Here}}
-
-### [Get-SPScaleOutDatabaseInconsistency](Get-SPScaleOutDatabaseInconsistency.md)
-{{Manually Enter Get-SPScaleOutDatabaseInconsistency Description Here}}
-
-### [Get-SPScaleOutDatabaseLogEntry](Get-SPScaleOutDatabaseLogEntry.md)
-{{Manually Enter Get-SPScaleOutDatabaseLogEntry Description Here}}
-
-### [Get-SPSecureStoreApplication](Get-SPSecureStoreApplication.md)
-{{Manually Enter Get-SPSecureStoreApplication Description Here}}
-
-### [Get-SPSecureStoreSystemAccount](Get-SPSecureStoreSystemAccount.md)
-{{Manually Enter Get-SPSecureStoreSystemAccount Description Here}}
-
-### [Get-SPSecurityTokenServiceConfig](Get-SPSecurityTokenServiceConfig.md)
-{{Manually Enter Get-SPSecurityTokenServiceConfig Description Here}}
-
-### [Get-SPServer](Get-SPServer.md)
-{{Manually Enter Get-SPServer Description Here}}
-
-### [Get-SPServerScaleOutDatabase](Get-SPServerScaleOutDatabase.md)
-{{Manually Enter Get-SPServerScaleOutDatabase Description Here}}
-
-### [Get-SPServerScaleOutDatabaseDataState](Get-SPServerScaleOutDatabaseDataState.md)
-{{Manually Enter Get-SPServerScaleOutDatabaseDataState Description Here}}
-
-### [Get-SPServerScaleOutDatabaseInconsistency](Get-SPServerScaleOutDatabaseInconsistency.md)
-{{Manually Enter Get-SPServerScaleOutDatabaseInconsistency Description Here}}
-
-### [Get-SPServerScaleOutDatabaseLogEntry](Get-SPServerScaleOutDatabaseLogEntry.md)
-{{Manually Enter Get-SPServerScaleOutDatabaseLogEntry Description Here}}
-
-### [Get-SPService](Get-SPService.md)
-{{Manually Enter Get-SPService Description Here}}
-
-### [Get-SPServiceApplication](Get-SPServiceApplication.md)
-{{Manually Enter Get-SPServiceApplication Description Here}}
-
-### [Get-SPServiceApplicationEndpoint](Get-SPServiceApplicationEndpoint.md)
-{{Manually Enter Get-SPServiceApplicationEndpoint Description Here}}
-
-### [Get-SPServiceApplicationPool](Get-SPServiceApplicationPool.md)
-{{Manually Enter Get-SPServiceApplicationPool Description Here}}
-
-### [Get-SPServiceApplicationProxy](Get-SPServiceApplicationProxy.md)
-{{Manually Enter Get-SPServiceApplicationProxy Description Here}}
-
-### [Get-SPServiceApplicationProxyGroup](Get-SPServiceApplicationProxyGroup.md)
-{{Manually Enter Get-SPServiceApplicationProxyGroup Description Here}}
-
-### [Get-SPServiceApplicationSecurity](Get-SPServiceApplicationSecurity.md)
-{{Manually Enter Get-SPServiceApplicationSecurity Description Here}}
-
-### [Get-SPServiceContext](Get-SPServiceContext.md)
-{{Manually Enter Get-SPServiceContext Description Here}}
-
-### [Get-SPServiceHostConfig](Get-SPServiceHostConfig.md)
-{{Manually Enter Get-SPServiceHostConfig Description Here}}
-
-### [Get-SPServiceInstance](Get-SPServiceInstance.md)
-{{Manually Enter Get-SPServiceInstance Description Here}}
-
-### [Get-SPSessionStateService](Get-SPSessionStateService.md)
-{{Manually Enter Get-SPSessionStateService Description Here}}
-
-### [Get-SPShellAdmin](Get-SPShellAdmin.md)
-{{Manually Enter Get-SPShellAdmin Description Here}}
-
-### [Get-SPSite](Get-SPSite.md)
-{{Manually Enter Get-SPSite Description Here}}
-
-### [Get-SPSiteAdministration](Get-SPSiteAdministration.md)
-{{Manually Enter Get-SPSiteAdministration Description Here}}
-
-### [Get-SPSiteMapDatabase](Get-SPSiteMapDatabase.md)
-{{Manually Enter Get-SPSiteMapDatabase Description Here}}
-
-### [Get-SPSiteMaster](Get-SPSiteMaster.md)
-{{Manually Enter Get-SPSiteMaster Description Here}}
-
-### [Get-SPSiteSubscription](Get-SPSiteSubscription.md)
-{{Manually Enter Get-SPSiteSubscription Description Here}}
-
-### [Get-SPSiteSubscriptionConfig](Get-SPSiteSubscriptionConfig.md)
-{{Manually Enter Get-SPSiteSubscriptionConfig Description Here}}
-
-### [Get-SPSiteSubscriptionEdiscoveryHub](Get-SPSiteSubscriptionEdiscoveryHub.md)
-{{Manually Enter Get-SPSiteSubscriptionEdiscoveryHub Description Here}}
-
-### [Get-SPSiteSubscriptionEdiscoverySearchScope](Get-SPSiteSubscriptionEdiscoverySearchScope.md)
-{{Manually Enter Get-SPSiteSubscriptionEdiscoverySearchScope Description Here}}
-
-### [Get-SPSiteSubscriptionFeaturePack](Get-SPSiteSubscriptionFeaturePack.md)
-{{Manually Enter Get-SPSiteSubscriptionFeaturePack Description Here}}
-
-### [Get-SPSiteSubscriptionIRMConfig](Get-SPSiteSubscriptionIRMConfig.md)
-{{Manually Enter Get-SPSiteSubscriptionIRMConfig Description Here}}
-
-### [Get-SPSiteSubscriptionMetadataConfig](Get-SPSiteSubscriptionMetadataConfig.md)
-{{Manually Enter Get-SPSiteSubscriptionMetadataConfig Description Here}}
-
-### [Get-SPSiteUpgradeSessionInfo](Get-SPSiteUpgradeSessionInfo.md)
-{{Manually Enter Get-SPSiteUpgradeSessionInfo Description Here}}
-
-### [Get-SPSiteURL](Get-SPSiteURL.md)
-{{Manually Enter Get-SPSiteURL Description Here}}
-
-### [Get-SPSolution](Get-SPSolution.md)
-{{Manually Enter Get-SPSolution Description Here}}
-
-### [Get-SPStateServiceApplication](Get-SPStateServiceApplication.md)
-{{Manually Enter Get-SPStateServiceApplication Description Here}}
-
-### [Get-SPStateServiceApplicationProxy](Get-SPStateServiceApplicationProxy.md)
-{{Manually Enter Get-SPStateServiceApplicationProxy Description Here}}
-
-### [Get-SPStateServiceDatabase](Get-SPStateServiceDatabase.md)
-{{Manually Enter Get-SPStateServiceDatabase Description Here}}
-
-### [Get-SPTaxonomySession](Get-SPTaxonomySession.md)
-{{Manually Enter Get-SPTaxonomySession Description Here}}
-
-### [Get-SPThrottlingRule](Get-SPThrottlingRule.md)
-{{Manually Enter Get-SPThrottlingRule Description Here}}
-
-### [Get-SPTimerJob](Get-SPTimerJob.md)
-{{Manually Enter Get-SPTimerJob Description Here}}
-
-### [Get-SPTopologyServiceApplication](Get-SPTopologyServiceApplication.md)
-{{Manually Enter Get-SPTopologyServiceApplication Description Here}}
-
-### [Get-SPTopologyServiceApplicationProxy](Get-SPTopologyServiceApplicationProxy.md)
-{{Manually Enter Get-SPTopologyServiceApplicationProxy Description Here}}
-
-### [Get-SPTranslationThrottlingSetting](Get-SPTranslationThrottlingSetting.md)
-{{Manually Enter Get-SPTranslationThrottlingSetting Description Here}}
-
-### [Get-SPTrustedIdentityTokenIssuer](Get-SPTrustedIdentityTokenIssuer.md)
-{{Manually Enter Get-SPTrustedIdentityTokenIssuer Description Here}}
-
-### [Get-SPTrustedRootAuthority](Get-SPTrustedRootAuthority.md)
-{{Manually Enter Get-SPTrustedRootAuthority Description Here}}
-
-### [Get-SPTrustedSecurityTokenIssuer](Get-SPTrustedSecurityTokenIssuer.md)
-{{Manually Enter Get-SPTrustedSecurityTokenIssuer Description Here}}
-
-### [Get-SPTrustedServiceTokenIssuer](Get-SPTrustedServiceTokenIssuer.md)
-{{Manually Enter Get-SPTrustedServiceTokenIssuer Description Here}}
-
-### [Get-SPUpgradeActions](Get-SPUpgradeActions.md)
-{{Manually Enter Get-SPUpgradeActions Description Here}}
-
-### [Get-SPUsageApplication](Get-SPUsageApplication.md)
-{{Manually Enter Get-SPUsageApplication Description Here}}
-
-### [Get-SPUsageDefinition](Get-SPUsageDefinition.md)
-{{Manually Enter Get-SPUsageDefinition Description Here}}
-
-### [Get-SPUsageService](Get-SPUsageService.md)
-{{Manually Enter Get-SPUsageService Description Here}}
-
-### [Get-SPUser](Get-SPUser.md)
-{{Manually Enter Get-SPUser Description Here}}
-
-### [Get-SPUserLicense](Get-SPUserLicense.md)
-{{Manually Enter Get-SPUserLicense Description Here}}
-
-### [Get-SPUserLicenseMapping](Get-SPUserLicenseMapping.md)
-{{Manually Enter Get-SPUserLicenseMapping Description Here}}
-
-### [Get-SPUserLicensing](Get-SPUserLicensing.md)
-{{Manually Enter Get-SPUserLicensing Description Here}}
-
-### [Get-SPUserSettingsProvider](Get-SPUserSettingsProvider.md)
-{{Manually Enter Get-SPUserSettingsProvider Description Here}}
-
-### [Get-SPUserSettingsProviderManager](Get-SPUserSettingsProviderManager.md)
-{{Manually Enter Get-SPUserSettingsProviderManager Description Here}}
-
-### [Get-SPUserSolution](Get-SPUserSolution.md)
-{{Manually Enter Get-SPUserSolution Description Here}}
-
-### [Get-SPUserSolutionAllowList](Get-SPUserSolutionAllowList.md)
-{{Manually Enter Get-SPUserSolutionAllowList Description Here}}
-
-### [Get-SPVisioExternalData](Get-SPVisioExternalData.md)
-{{Manually Enter Get-SPVisioExternalData Description Here}}
-
-### [Get-SPVisioPerformance](Get-SPVisioPerformance.md)
-{{Manually Enter Get-SPVisioPerformance Description Here}}
-
-### [Get-SPVisioSafeDataProvider](Get-SPVisioSafeDataProvider.md)
-{{Manually Enter Get-SPVisioSafeDataProvider Description Here}}
-
-### [Get-SPVisioServiceApplication](Get-SPVisioServiceApplication.md)
-{{Manually Enter Get-SPVisioServiceApplication Description Here}}
-
-### [Get-SPVisioServiceApplicationProxy](Get-SPVisioServiceApplicationProxy.md)
-{{Manually Enter Get-SPVisioServiceApplicationProxy Description Here}}
-
-### [Get-SPWeb](Get-SPWeb.md)
-{{Manually Enter Get-SPWeb Description Here}}
-
-### [Get-SPWebApplication](Get-SPWebApplication.md)
-{{Manually Enter Get-SPWebApplication Description Here}}
-
-### [Get-SPWebApplicationAppDomain](Get-SPWebApplicationAppDomain.md)
-{{Manually Enter Get-SPWebApplicationAppDomain Description Here}}
-
-### [Get-SPWebApplicationHttpThrottlingMonitor](Get-SPWebApplicationHttpThrottlingMonitor.md)
-{{Manually Enter Get-SPWebApplicationHttpThrottlingMonitor Description Here}}
-
-### [Get-SPWebPartPack](Get-SPWebPartPack.md)
-{{Manually Enter Get-SPWebPartPack Description Here}}
-
-### [Get-SPWebTemplate](Get-SPWebTemplate.md)
-{{Manually Enter Get-SPWebTemplate Description Here}}
-
-### [Get-SPWebTemplatesEnabledForSiteMaster](Get-SPWebTemplatesEnabledForSiteMaster.md)
-{{Manually Enter Get-SPWebTemplatesEnabledForSiteMaster Description Here}}
-
-### [Get-SPWOPIBinding](Get-SPWOPIBinding.md)
-{{Manually Enter Get-SPWOPIBinding Description Here}}
-
-### [Get-SPWOPISuppressionSetting](Get-SPWOPISuppressionSetting.md)
-{{Manually Enter Get-SPWOPISuppressionSetting Description Here}}
-
-### [Get-SPWOPIZone](Get-SPWOPIZone.md)
-{{Manually Enter Get-SPWOPIZone Description Here}}
-
-### [Get-SPWorkflowConfig](Get-SPWorkflowConfig.md)
-{{Manually Enter Get-SPWorkflowConfig Description Here}}
-
-### [Get-SPWorkflowServiceApplicationProxy](Get-SPWorkflowServiceApplicationProxy.md)
-{{Manually Enter Get-SPWorkflowServiceApplicationProxy Description Here}}
-
-### [Grant-SPBusinessDataCatalogMetadataObject](Grant-SPBusinessDataCatalogMetadataObject.md)
-{{Manually Enter Grant-SPBusinessDataCatalogMetadataObject Description Here}}
-
-### [Grant-SPObjectSecurity](Grant-SPObjectSecurity.md)
-{{Manually Enter Grant-SPObjectSecurity Description Here}}
-
-### [Import-SPAccessServicesDatabase](Import-SPAccessServicesDatabase.md)
-{{Manually Enter Import-SPAccessServicesDatabase Description Here}}
-
-### [Import-SPAppPackage](Import-SPAppPackage.md)
-{{Manually Enter Import-SPAppPackage Description Here}}
-
-### [Import-SPBusinessDataCatalogDotNetAssembly](Import-SPBusinessDataCatalogDotNetAssembly.md)
-{{Manually Enter Import-SPBusinessDataCatalogDotNetAssembly Description Here}}
-
-### [Import-SPBusinessDataCatalogModel](Import-SPBusinessDataCatalogModel.md)
-{{Manually Enter Import-SPBusinessDataCatalogModel Description Here}}
-
-### [Import-SPEnterpriseSearchCustomExtractionDictionary](Import-SPEnterpriseSearchCustomExtractionDictionary.md)
-{{Manually Enter Import-SPEnterpriseSearchCustomExtractionDictionary Description Here}}
-
-### [Import-SPEnterpriseSearchPopularQueries](Import-SPEnterpriseSearchPopularQueries.md)
-{{Manually Enter Import-SPEnterpriseSearchPopularQueries Description Here}}
-
-### [Import-SPEnterpriseSearchThesaurus](Import-SPEnterpriseSearchThesaurus.md)
-{{Manually Enter Import-SPEnterpriseSearchThesaurus Description Here}}
-
-### [Import-SPEnterpriseSearchTopology](Import-SPEnterpriseSearchTopology.md)
-{{Manually Enter Import-SPEnterpriseSearchTopology Description Here}}
-
-### [Import-SPInfoPathAdministrationFiles](Import-SPInfoPathAdministrationFiles.md)
-{{Manually Enter Import-SPInfoPathAdministrationFiles Description Here}}
-
-### [Import-SPMetadataWebServicePartitionData](Import-SPMetadataWebServicePartitionData.md)
-{{Manually Enter Import-SPMetadataWebServicePartitionData Description Here}}
-
-### [Import-SPPerformancePointContent](Import-SPPerformancePointContent.md)
-{{Manually Enter Import-SPPerformancePointContent Description Here}}
-
-### [Import-SPScaleOutDatabaseTenantData](Import-SPScaleOutDatabaseTenantData.md)
-{{Manually Enter Import-SPScaleOutDatabaseTenantData Description Here}}
-
-### [Import-SPServerScaleOutDatabaseTenantData](Import-SPServerScaleOutDatabaseTenantData.md)
-{{Manually Enter Import-SPServerScaleOutDatabaseTenantData Description Here}}
-
-### [Import-SPSiteSubscriptionBusinessDataCatalogConfig](Import-SPSiteSubscriptionBusinessDataCatalogConfig.md)
-{{Manually Enter Import-SPSiteSubscriptionBusinessDataCatalogConfig Description Here}}
-
-### [Import-SPSiteSubscriptionSettings](Import-SPSiteSubscriptionSettings.md)
-{{Manually Enter Import-SPSiteSubscriptionSettings Description Here}}
-
-### [Import-SPWeb](Import-SPWeb.md)
-{{Manually Enter Import-SPWeb Description Here}}
-
-### [Initialize-SPResourceSecurity](Initialize-SPResourceSecurity.md)
-{{Manually Enter Initialize-SPResourceSecurity Description Here}}
-
-### [Initialize-SPStateServiceDatabase](Initialize-SPStateServiceDatabase.md)
-{{Manually Enter Initialize-SPStateServiceDatabase Description Here}}
-
-### [Install-SPApp](Install-SPApp.md)
-{{Manually Enter Install-SPApp Description Here}}
-
-### [Install-SPApplicationContent](Install-SPApplicationContent.md)
-{{Manually Enter Install-SPApplicationContent Description Here}}
-
-### [Install-SPDataConnectionFile](Install-SPDataConnectionFile.md)
-{{Manually Enter Install-SPDataConnectionFile Description Here}}
-
-### [Install-SPEduSites](Install-SPEduSites.md)
-{{Manually Enter Install-SPEduSites Description Here}}
-
-### [Install-SPFeature](Install-SPFeature.md)
-{{Manually Enter Install-SPFeature Description Here}}
-
-### [Install-SPHelpCollection](Install-SPHelpCollection.md)
-{{Manually Enter Install-SPHelpCollection Description Here}}
-
-### [Install-SPInfoPathFormTemplate](Install-SPInfoPathFormTemplate.md)
-{{Manually Enter Install-SPInfoPathFormTemplate Description Here}}
-
-### [Install-SPService](Install-SPService.md)
-{{Manually Enter Install-SPService Description Here}}
-
-### [Install-SPSolution](Install-SPSolution.md)
-{{Manually Enter Install-SPSolution Description Here}}
-
-### [Install-SPUserSolution](Install-SPUserSolution.md)
-{{Manually Enter Install-SPUserSolution Description Here}}
-
-### [Install-SPWebPartPack](Install-SPWebPartPack.md)
-{{Manually Enter Install-SPWebPartPack Description Here}}
-
-### [Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync](Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md)
-{{Manually Enter Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync Description Here}}
-
-### [Invoke-SPProjectActiveDirectoryGroupSync](Invoke-SPProjectActiveDirectoryGroupSync.md)
-{{Manually Enter Invoke-SPProjectActiveDirectoryGroupSync Description Here}}
-
-### [Merge-SPLogFile](Merge-SPLogFile.md)
-{{Manually Enter Merge-SPLogFile Description Here}}
-
-### [Merge-SPUsageLog](Merge-SPUsageLog.md)
-{{Manually Enter Merge-SPUsageLog Description Here}}
-
-### [Migrate-SPDatabase](Migrate-SPDatabase.md)
-{{Manually Enter Migrate-SPDatabase Description Here}}
-
-### [Migrate-SPProjectDatabase](Migrate-SPProjectDatabase.md)
-{{Manually Enter Migrate-SPProjectDatabase Description Here}}
-
-### [Migrate-SPProjectResourcePlans](Migrate-SPProjectResourcePlans.md)
-{{Manually Enter Migrate-SPProjectResourcePlans Description Here}}
-
-### [Mount-SPContentDatabase](Mount-SPContentDatabase.md)
-{{Manually Enter Mount-SPContentDatabase Description Here}}
-
-### [Mount-SPSiteMapDatabase](Mount-SPSiteMapDatabase.md)
-{{Manually Enter Mount-SPSiteMapDatabase Description Here}}
-
-### [Mount-SPStateServiceDatabase](Mount-SPStateServiceDatabase.md)
-{{Manually Enter Mount-SPStateServiceDatabase Description Here}}
-
-### [Move-SPAppManagementData](Move-SPAppManagementData.md)
-{{Manually Enter Move-SPAppManagementData Description Here}}
-
-### [Move-SPBlobStorageLocation](Move-SPBlobStorageLocation.md)
-{{Manually Enter Move-SPBlobStorageLocation Description Here}}
-
-### [Move-SPDeletedSite](Move-SPDeletedSite.md)
-{{Manually Enter Move-SPDeletedSite Description Here}}
-
-### [Move-SPEnterpriseSearchLinksDatabases](Move-SPEnterpriseSearchLinksDatabases.md)
-{{Manually Enter Move-SPEnterpriseSearchLinksDatabases Description Here}}
-
-### [Move-SPProfileManagedMetadataProperty](Move-SPProfileManagedMetadataProperty.md)
-{{Manually Enter Move-SPProfileManagedMetadataProperty Description Here}}
-
-### [Move-SPSite](Move-SPSite.md)
-{{Manually Enter Move-SPSite Description Here}}
-
-### [Move-SPSocialComment](Move-SPSocialComment.md)
-{{Manually Enter Move-SPSocialComment Description Here}}
-
-### [Move-SPUser](Move-SPUser.md)
-{{Manually Enter Move-SPUser Description Here}}
-
-### [New-SPAccessServiceApplication](New-SPAccessServiceApplication.md)
-{{Manually Enter New-SPAccessServiceApplication Description Here}}
-
-### [New-SPAccessServicesApplication](New-SPAccessServicesApplication.md)
-{{Manually Enter New-SPAccessServicesApplication Description Here}}
-
-### [New-SPAccessServicesApplicationProxy](New-SPAccessServicesApplicationProxy.md)
-{{Manually Enter New-SPAccessServicesApplicationProxy Description Here}}
-
-### [New-SPAccessServicesDatabaseServer](New-SPAccessServicesDatabaseServer.md)
-{{Manually Enter New-SPAccessServicesDatabaseServer Description Here}}
-
-### [New-SPAlternateURL](New-SPAlternateURL.md)
-{{Manually Enter New-SPAlternateURL Description Here}}
-
-### [New-SPAppManagementServiceApplication](New-SPAppManagementServiceApplication.md)
-{{Manually Enter New-SPAppManagementServiceApplication Description Here}}
-
-### [New-SPAppManagementServiceApplicationProxy](New-SPAppManagementServiceApplicationProxy.md)
-{{Manually Enter New-SPAppManagementServiceApplicationProxy Description Here}}
-
-### [New-SPAuthenticationProvider](New-SPAuthenticationProvider.md)
-{{Manually Enter New-SPAuthenticationProvider Description Here}}
-
-### [New-SPAzureAccessControlServiceApplicationProxy](New-SPAzureAccessControlServiceApplicationProxy.md)
-{{Manually Enter New-SPAzureAccessControlServiceApplicationProxy Description Here}}
-
-### [New-SPBECWebServiceApplicationProxy](New-SPBECWebServiceApplicationProxy.md)
-{{Manually Enter New-SPBECWebServiceApplicationProxy Description Here}}
-
-### [New-SPBusinessDataCatalogServiceApplication](New-SPBusinessDataCatalogServiceApplication.md)
-{{Manually Enter New-SPBusinessDataCatalogServiceApplication Description Here}}
-
-### [New-SPBusinessDataCatalogServiceApplicationProxy](New-SPBusinessDataCatalogServiceApplicationProxy.md)
-{{Manually Enter New-SPBusinessDataCatalogServiceApplicationProxy Description Here}}
-
-### [New-SPCentralAdministration](New-SPCentralAdministration.md)
-{{Manually Enter New-SPCentralAdministration Description Here}}
-
-### [New-SPClaimProvider](New-SPClaimProvider.md)
-{{Manually Enter New-SPClaimProvider Description Here}}
-
-### [New-SPClaimsPrincipal](New-SPClaimsPrincipal.md)
-{{Manually Enter New-SPClaimsPrincipal Description Here}}
-
-### [New-SPClaimTypeEncoding](New-SPClaimTypeEncoding.md)
-{{Manually Enter New-SPClaimTypeEncoding Description Here}}
-
-### [New-SPClaimTypeMapping](New-SPClaimTypeMapping.md)
-{{Manually Enter New-SPClaimTypeMapping Description Here}}
-
-### [New-SPConfigurationDatabase](New-SPConfigurationDatabase.md)
-{{Manually Enter New-SPConfigurationDatabase Description Here}}
-
-### [New-SPContentDatabase](New-SPContentDatabase.md)
-{{Manually Enter New-SPContentDatabase Description Here}}
-
-### [New-SPContentDeploymentJob](New-SPContentDeploymentJob.md)
-{{Manually Enter New-SPContentDeploymentJob Description Here}}
-
-### [New-SPContentDeploymentPath](New-SPContentDeploymentPath.md)
-{{Manually Enter New-SPContentDeploymentPath Description Here}}
-
-### [New-SPEduClass](New-SPEduClass.md)
-{{Manually Enter New-SPEduClass Description Here}}
-
-### [New-SPEnterpriseSearchAdminComponent](New-SPEnterpriseSearchAdminComponent.md)
-{{Manually Enter New-SPEnterpriseSearchAdminComponent Description Here}}
-
-### [New-SPEnterpriseSearchAnalyticsProcessingComponent](New-SPEnterpriseSearchAnalyticsProcessingComponent.md)
-{{Manually Enter New-SPEnterpriseSearchAnalyticsProcessingComponent Description Here}}
-
-### [New-SPEnterpriseSearchContentEnrichmentConfiguration](New-SPEnterpriseSearchContentEnrichmentConfiguration.md)
-{{Manually Enter New-SPEnterpriseSearchContentEnrichmentConfiguration Description Here}}
-
-### [New-SPEnterpriseSearchContentProcessingComponent](New-SPEnterpriseSearchContentProcessingComponent.md)
-{{Manually Enter New-SPEnterpriseSearchContentProcessingComponent Description Here}}
-
-### [New-SPEnterpriseSearchCrawlComponent](New-SPEnterpriseSearchCrawlComponent.md)
-{{Manually Enter New-SPEnterpriseSearchCrawlComponent Description Here}}
-
-### [New-SPEnterpriseSearchCrawlContentSource](New-SPEnterpriseSearchCrawlContentSource.md)
-{{Manually Enter New-SPEnterpriseSearchCrawlContentSource Description Here}}
-
-### [New-SPEnterpriseSearchCrawlCustomConnector](New-SPEnterpriseSearchCrawlCustomConnector.md)
-{{Manually Enter New-SPEnterpriseSearchCrawlCustomConnector Description Here}}
-
-### [New-SPEnterpriseSearchCrawlDatabase](New-SPEnterpriseSearchCrawlDatabase.md)
-{{Manually Enter New-SPEnterpriseSearchCrawlDatabase Description Here}}
-
-### [New-SPEnterpriseSearchCrawlExtension](New-SPEnterpriseSearchCrawlExtension.md)
-{{Manually Enter New-SPEnterpriseSearchCrawlExtension Description Here}}
-
-### [New-SPEnterpriseSearchCrawlMapping](New-SPEnterpriseSearchCrawlMapping.md)
-{{Manually Enter New-SPEnterpriseSearchCrawlMapping Description Here}}
-
-### [New-SPEnterpriseSearchCrawlRule](New-SPEnterpriseSearchCrawlRule.md)
-{{Manually Enter New-SPEnterpriseSearchCrawlRule Description Here}}
-
-### [New-SPEnterpriseSearchFileFormat](New-SPEnterpriseSearchFileFormat.md)
-{{Manually Enter New-SPEnterpriseSearchFileFormat Description Here}}
-
-### [New-SPEnterpriseSearchIndexComponent](New-SPEnterpriseSearchIndexComponent.md)
-{{Manually Enter New-SPEnterpriseSearchIndexComponent Description Here}}
-
-### [New-SPEnterpriseSearchLanguageResourcePhrase](New-SPEnterpriseSearchLanguageResourcePhrase.md)
-{{Manually Enter New-SPEnterpriseSearchLanguageResourcePhrase Description Here}}
-
-### [New-SPEnterpriseSearchLinksDatabase](New-SPEnterpriseSearchLinksDatabase.md)
-{{Manually Enter New-SPEnterpriseSearchLinksDatabase Description Here}}
-
-### [New-SPEnterpriseSearchMetadataCategory](New-SPEnterpriseSearchMetadataCategory.md)
-{{Manually Enter New-SPEnterpriseSearchMetadataCategory Description Here}}
-
-### [New-SPEnterpriseSearchMetadataCrawledProperty](New-SPEnterpriseSearchMetadataCrawledProperty.md)
-{{Manually Enter New-SPEnterpriseSearchMetadataCrawledProperty Description Here}}
-
-### [New-SPEnterpriseSearchMetadataManagedProperty](New-SPEnterpriseSearchMetadataManagedProperty.md)
-{{Manually Enter New-SPEnterpriseSearchMetadataManagedProperty Description Here}}
-
-### [New-SPEnterpriseSearchMetadataMapping](New-SPEnterpriseSearchMetadataMapping.md)
-{{Manually Enter New-SPEnterpriseSearchMetadataMapping Description Here}}
-
-### [New-SPEnterpriseSearchQueryAuthority](New-SPEnterpriseSearchQueryAuthority.md)
-{{Manually Enter New-SPEnterpriseSearchQueryAuthority Description Here}}
-
-### [New-SPEnterpriseSearchQueryDemoted](New-SPEnterpriseSearchQueryDemoted.md)
-{{Manually Enter New-SPEnterpriseSearchQueryDemoted Description Here}}
-
-### [New-SPEnterpriseSearchQueryKeyword](New-SPEnterpriseSearchQueryKeyword.md)
-{{Manually Enter New-SPEnterpriseSearchQueryKeyword Description Here}}
-
-### [New-SPEnterpriseSearchQueryProcessingComponent](New-SPEnterpriseSearchQueryProcessingComponent.md)
-{{Manually Enter New-SPEnterpriseSearchQueryProcessingComponent Description Here}}
-
-### [New-SPEnterpriseSearchQueryScope](New-SPEnterpriseSearchQueryScope.md)
-{{Manually Enter New-SPEnterpriseSearchQueryScope Description Here}}
-
-### [New-SPEnterpriseSearchQueryScopeRule](New-SPEnterpriseSearchQueryScopeRule.md)
-{{Manually Enter New-SPEnterpriseSearchQueryScopeRule Description Here}}
-
-### [New-SPEnterpriseSearchRankingModel](New-SPEnterpriseSearchRankingModel.md)
-{{Manually Enter New-SPEnterpriseSearchRankingModel Description Here}}
-
-### [New-SPEnterpriseSearchResultItemType](New-SPEnterpriseSearchResultItemType.md)
-{{Manually Enter New-SPEnterpriseSearchResultItemType Description Here}}
-
-### [New-SPEnterpriseSearchResultSource](New-SPEnterpriseSearchResultSource.md)
-{{Manually Enter New-SPEnterpriseSearchResultSource Description Here}}
-
-### [New-SPEnterpriseSearchSecurityTrimmer](New-SPEnterpriseSearchSecurityTrimmer.md)
-{{Manually Enter New-SPEnterpriseSearchSecurityTrimmer Description Here}}
-
-### [New-SPEnterpriseSearchServiceApplication](New-SPEnterpriseSearchServiceApplication.md)
-{{Manually Enter New-SPEnterpriseSearchServiceApplication Description Here}}
-
-### [New-SPEnterpriseSearchServiceApplicationProxy](New-SPEnterpriseSearchServiceApplicationProxy.md)
-{{Manually Enter New-SPEnterpriseSearchServiceApplicationProxy Description Here}}
-
-### [New-SPEnterpriseSearchSiteHitRule](New-SPEnterpriseSearchSiteHitRule.md)
-{{Manually Enter New-SPEnterpriseSearchSiteHitRule Description Here}}
-
-### [New-SPEnterpriseSearchTopology](New-SPEnterpriseSearchTopology.md)
-{{Manually Enter New-SPEnterpriseSearchTopology Description Here}}
-
-### [New-SPExcelBIServer](New-SPExcelBIServer.md)
-{{Manually Enter New-SPExcelBIServer Description Here}}
-
-### [New-SPExcelBlockedFileType](New-SPExcelBlockedFileType.md)
-{{Manually Enter New-SPExcelBlockedFileType Description Here}}
-
-### [New-SPExcelDataConnectionLibrary](New-SPExcelDataConnectionLibrary.md)
-{{Manually Enter New-SPExcelDataConnectionLibrary Description Here}}
-
-### [New-SPExcelDataProvider](New-SPExcelDataProvider.md)
-{{Manually Enter New-SPExcelDataProvider Description Here}}
-
-### [New-SPExcelFileLocation](New-SPExcelFileLocation.md)
-{{Manually Enter New-SPExcelFileLocation Description Here}}
-
-### [New-SPExcelServiceApplication](New-SPExcelServiceApplication.md)
-{{Manually Enter New-SPExcelServiceApplication Description Here}}
-
-### [New-SPExcelUserDefinedFunction](New-SPExcelUserDefinedFunction.md)
-{{Manually Enter New-SPExcelUserDefinedFunction Description Here}}
-
-### [New-SPLogFile](New-SPLogFile.md)
-{{Manually Enter New-SPLogFile Description Here}}
-
-### [New-SPManagedAccount](New-SPManagedAccount.md)
-{{Manually Enter New-SPManagedAccount Description Here}}
-
-### [New-SPManagedPath](New-SPManagedPath.md)
-{{Manually Enter New-SPManagedPath Description Here}}
-
-### [New-SPMarketplaceWebServiceApplicationProxy](New-SPMarketplaceWebServiceApplicationProxy.md)
-{{Manually Enter New-SPMarketplaceWebServiceApplicationProxy Description Here}}
-
-### [New-SPMetadataServiceApplication](New-SPMetadataServiceApplication.md)
-{{Manually Enter New-SPMetadataServiceApplication Description Here}}
-
-### [New-SPMetadataServiceApplicationProxy](New-SPMetadataServiceApplicationProxy.md)
-{{Manually Enter New-SPMetadataServiceApplicationProxy Description Here}}
-
-### [New-SPPerformancePointServiceApplication](New-SPPerformancePointServiceApplication.md)
-{{Manually Enter New-SPPerformancePointServiceApplication Description Here}}
-
-### [New-SPPerformancePointServiceApplicationProxy](New-SPPerformancePointServiceApplicationProxy.md)
-{{Manually Enter New-SPPerformancePointServiceApplicationProxy Description Here}}
-
-### [New-SPPerformancePointServiceApplicationTrustedLocation](New-SPPerformancePointServiceApplicationTrustedLocation.md)
-{{Manually Enter New-SPPerformancePointServiceApplicationTrustedLocation Description Here}}
-
-### [New-SPPowerPointConversionServiceApplication](New-SPPowerPointConversionServiceApplication.md)
-{{Manually Enter New-SPPowerPointConversionServiceApplication Description Here}}
-
-### [New-SPPowerPointConversionServiceApplicationProxy](New-SPPowerPointConversionServiceApplicationProxy.md)
-{{Manually Enter New-SPPowerPointConversionServiceApplicationProxy Description Here}}
-
-### [New-SPProfileServiceApplication](New-SPProfileServiceApplication.md)
-{{Manually Enter New-SPProfileServiceApplication Description Here}}
-
-### [New-SPProfileServiceApplicationProxy](New-SPProfileServiceApplicationProxy.md)
-{{Manually Enter New-SPProfileServiceApplicationProxy Description Here}}
-
-### [New-SPProjectServiceApplication](New-SPProjectServiceApplication.md)
-{{Manually Enter New-SPProjectServiceApplication Description Here}}
-
-### [New-SPProjectServiceApplicationProxy](New-SPProjectServiceApplicationProxy.md)
-{{Manually Enter New-SPProjectServiceApplicationProxy Description Here}}
-
-### [New-SPRequestManagementRuleCriteria](New-SPRequestManagementRuleCriteria.md)
-{{Manually Enter New-SPRequestManagementRuleCriteria Description Here}}
-
-### [New-SPSecureStoreApplication](New-SPSecureStoreApplication.md)
-{{Manually Enter New-SPSecureStoreApplication Description Here}}
-
-### [New-SPSecureStoreApplicationField](New-SPSecureStoreApplicationField.md)
-{{Manually Enter New-SPSecureStoreApplicationField Description Here}}
-
-### [New-SPSecureStoreServiceApplication](New-SPSecureStoreServiceApplication.md)
-{{Manually Enter New-SPSecureStoreServiceApplication Description Here}}
-
-### [New-SPSecureStoreServiceApplicationProxy](New-SPSecureStoreServiceApplicationProxy.md)
-{{Manually Enter New-SPSecureStoreServiceApplicationProxy Description Here}}
-
-### [New-SPSecureStoreTargetApplication](New-SPSecureStoreTargetApplication.md)
-{{Manually Enter New-SPSecureStoreTargetApplication Description Here}}
-
-### [New-SPServiceApplicationPool](New-SPServiceApplicationPool.md)
-{{Manually Enter New-SPServiceApplicationPool Description Here}}
-
-### [New-SPServiceApplicationProxyGroup](New-SPServiceApplicationProxyGroup.md)
-{{Manually Enter New-SPServiceApplicationProxyGroup Description Here}}
-
-### [New-SPSite](New-SPSite.md)
-{{Manually Enter New-SPSite Description Here}}
-
-### [New-SPSiteMaster](New-SPSiteMaster.md)
-{{Manually Enter New-SPSiteMaster Description Here}}
-
-### [New-SPSiteSubscription](New-SPSiteSubscription.md)
-{{Manually Enter New-SPSiteSubscription Description Here}}
-
-### [New-SPSiteSubscriptionFeaturePack](New-SPSiteSubscriptionFeaturePack.md)
-{{Manually Enter New-SPSiteSubscriptionFeaturePack Description Here}}
-
-### [New-SPStateServiceApplication](New-SPStateServiceApplication.md)
-{{Manually Enter New-SPStateServiceApplication Description Here}}
-
-### [New-SPStateServiceApplicationProxy](New-SPStateServiceApplicationProxy.md)
-{{Manually Enter New-SPStateServiceApplicationProxy Description Here}}
-
-### [New-SPStateServiceDatabase](New-SPStateServiceDatabase.md)
-{{Manually Enter New-SPStateServiceDatabase Description Here}}
-
-### [New-SPSubscriptionSettingsServiceApplication](New-SPSubscriptionSettingsServiceApplication.md)
-{{Manually Enter New-SPSubscriptionSettingsServiceApplication Description Here}}
-
-### [New-SPSubscriptionSettingsServiceApplicationProxy](New-SPSubscriptionSettingsServiceApplicationProxy.md)
-{{Manually Enter New-SPSubscriptionSettingsServiceApplicationProxy Description Here}}
-
-### [New-SPTranslationServiceApplication](New-SPTranslationServiceApplication.md)
-{{Manually Enter New-SPTranslationServiceApplication Description Here}}
-
-### [New-SPTranslationServiceApplicationProxy](New-SPTranslationServiceApplicationProxy.md)
-{{Manually Enter New-SPTranslationServiceApplicationProxy Description Here}}
-
-### [New-SPTrustedIdentityTokenIssuer](New-SPTrustedIdentityTokenIssuer.md)
-{{Manually Enter New-SPTrustedIdentityTokenIssuer Description Here}}
-
-### [New-SPTrustedRootAuthority](New-SPTrustedRootAuthority.md)
-{{Manually Enter New-SPTrustedRootAuthority Description Here}}
-
-### [New-SPTrustedSecurityTokenIssuer](New-SPTrustedSecurityTokenIssuer.md)
-{{Manually Enter New-SPTrustedSecurityTokenIssuer Description Here}}
-
-### [New-SPTrustedServiceTokenIssuer](New-SPTrustedServiceTokenIssuer.md)
-{{Manually Enter New-SPTrustedServiceTokenIssuer Description Here}}
-
-### [New-SPUsageApplication](New-SPUsageApplication.md)
-{{Manually Enter New-SPUsageApplication Description Here}}
-
-### [New-SPUsageLogFile](New-SPUsageLogFile.md)
-{{Manually Enter New-SPUsageLogFile Description Here}}
-
-### [New-SPUser](New-SPUser.md)
-{{Manually Enter New-SPUser Description Here}}
-
-### [New-SPUserLicenseMapping](New-SPUserLicenseMapping.md)
-{{Manually Enter New-SPUserLicenseMapping Description Here}}
-
-### [New-SPUserSettingsProvider](New-SPUserSettingsProvider.md)
-{{Manually Enter New-SPUserSettingsProvider Description Here}}
-
-### [New-SPUserSolutionAllowList](New-SPUserSolutionAllowList.md)
-{{Manually Enter New-SPUserSolutionAllowList Description Here}}
-
-### [New-SPVisioSafeDataProvider](New-SPVisioSafeDataProvider.md)
-{{Manually Enter New-SPVisioSafeDataProvider Description Here}}
-
-### [New-SPVisioServiceApplication](New-SPVisioServiceApplication.md)
-{{Manually Enter New-SPVisioServiceApplication Description Here}}
-
-### [New-SPVisioServiceApplicationProxy](New-SPVisioServiceApplicationProxy.md)
-{{Manually Enter New-SPVisioServiceApplicationProxy Description Here}}
-
-### [New-SPWeb](New-SPWeb.md)
-{{Manually Enter New-SPWeb Description Here}}
-
-### [New-SPWebApplication](New-SPWebApplication.md)
-{{Manually Enter New-SPWebApplication Description Here}}
-
-### [New-SPWebApplicationAppDomain](New-SPWebApplicationAppDomain.md)
-{{Manually Enter New-SPWebApplicationAppDomain Description Here}}
-
-### [New-SPWebApplicationExtension](New-SPWebApplicationExtension.md)
-{{Manually Enter New-SPWebApplicationExtension Description Here}}
-
-### [New-SPWOPIBinding](New-SPWOPIBinding.md)
-{{Manually Enter New-SPWOPIBinding Description Here}}
-
-### [New-SPWOPISuppressionSetting](New-SPWOPISuppressionSetting.md)
-{{Manually Enter New-SPWOPISuppressionSetting Description Here}}
-
-### [New-SPWordConversionServiceApplication](New-SPWordConversionServiceApplication.md)
-{{Manually Enter New-SPWordConversionServiceApplication Description Here}}
-
-### [New-SPWorkflowServiceApplicationProxy](New-SPWorkflowServiceApplicationProxy.md)
-{{Manually Enter New-SPWorkflowServiceApplicationProxy Description Here}}
-
-### [New-SPWorkManagementServiceApplication](New-SPWorkManagementServiceApplication.md)
-{{Manually Enter New-SPWorkManagementServiceApplication Description Here}}
-
-### [New-SPWorkManagementServiceApplicationProxy](New-SPWorkManagementServiceApplicationProxy.md)
-{{Manually Enter New-SPWorkManagementServiceApplicationProxy Description Here}}
-
-### [Pause-SPProjectWebInstance](Pause-SPProjectWebInstance.md)
-{{Manually Enter Pause-SPProjectWebInstance Description Here}}
-
-### [Publish-SPServiceApplication](Publish-SPServiceApplication.md)
-{{Manually Enter Publish-SPServiceApplication Description Here}}
-
-### [Receive-SPServiceApplicationConnectionInfo](Receive-SPServiceApplicationConnectionInfo.md)
-{{Manually Enter Receive-SPServiceApplicationConnectionInfo Description Here}}
-
-### [Register-SPAppPrincipal](Register-SPAppPrincipal.md)
-{{Manually Enter Register-SPAppPrincipal Description Here}}
-
-### [Register-SPWorkflowService](Register-SPWorkflowService.md)
-{{Manually Enter Register-SPWorkflowService Description Here}}
-
-### [Remove-DatabaseFromAvailabilityGroup](Remove-DatabaseFromAvailabilityGroup.md)
-{{Manually Enter Remove-DatabaseFromAvailabilityGroup Description Here}}
-
-### [Remove-SPAccessServicesDatabaseServer](Remove-SPAccessServicesDatabaseServer.md)
-{{Manually Enter Remove-SPAccessServicesDatabaseServer Description Here}}
-
-### [Remove-SPActivityFeedItems](Remove-SPActivityFeedItems.md)
-{{Manually Enter Remove-SPActivityFeedItems Description Here}}
-
-### [Remove-SPAlternateURL](Remove-SPAlternateURL.md)
-{{Manually Enter Remove-SPAlternateURL Description Here}}
-
-### [Remove-SPAppDeniedEndpoint](Remove-SPAppDeniedEndpoint.md)
-{{Manually Enter Remove-SPAppDeniedEndpoint Description Here}}
-
-### [Remove-SPAppPrincipalPermission](Remove-SPAppPrincipalPermission.md)
-{{Manually Enter Remove-SPAppPrincipalPermission Description Here}}
-
-### [Remove-SPBusinessDataCatalogModel](Remove-SPBusinessDataCatalogModel.md)
-{{Manually Enter Remove-SPBusinessDataCatalogModel Description Here}}
-
-### [Remove-SPCentralAdministration](Remove-SPCentralAdministration.md)
-{{Manually Enter Remove-SPCentralAdministration Description Here}}
-
-### [Remove-SPClaimProvider](Remove-SPClaimProvider.md)
-{{Manually Enter Remove-SPClaimProvider Description Here}}
-
-### [Remove-SPClaimTypeMapping](Remove-SPClaimTypeMapping.md)
-{{Manually Enter Remove-SPClaimTypeMapping Description Here}}
-
-### [Remove-SPConfigurationDatabase](Remove-SPConfigurationDatabase.md)
-{{Manually Enter Remove-SPConfigurationDatabase Description Here}}
-
-### [Remove-SPContentDatabase](Remove-SPContentDatabase.md)
-{{Manually Enter Remove-SPContentDatabase Description Here}}
-
-### [Remove-SPContentDeploymentJob](Remove-SPContentDeploymentJob.md)
-{{Manually Enter Remove-SPContentDeploymentJob Description Here}}
-
-### [Remove-SPContentDeploymentPath](Remove-SPContentDeploymentPath.md)
-{{Manually Enter Remove-SPContentDeploymentPath Description Here}}
-
-### [Remove-SPDeletedSite](Remove-SPDeletedSite.md)
-{{Manually Enter Remove-SPDeletedSite Description Here}}
-
-### [Remove-SPDiagnosticsPerformanceCounter](Remove-SPDiagnosticsPerformanceCounter.md)
-{{Manually Enter Remove-SPDiagnosticsPerformanceCounter Description Here}}
-
-### [Remove-SPDistributedCacheServiceInstance](Remove-SPDistributedCacheServiceInstance.md)
-{{Manually Enter Remove-SPDistributedCacheServiceInstance Description Here}}
-
-### [Remove-SPEduClassMember](Remove-SPEduClassMember.md)
-{{Manually Enter Remove-SPEduClassMember Description Here}}
-
-### [Remove-SPEnterpriseSearchComponent](Remove-SPEnterpriseSearchComponent.md)
-{{Manually Enter Remove-SPEnterpriseSearchComponent Description Here}}
-
-### [Remove-SPEnterpriseSearchContentEnrichmentConfiguration](Remove-SPEnterpriseSearchContentEnrichmentConfiguration.md)
-{{Manually Enter Remove-SPEnterpriseSearchContentEnrichmentConfiguration Description Here}}
-
-### [Remove-SPEnterpriseSearchCrawlContentSource](Remove-SPEnterpriseSearchCrawlContentSource.md)
-{{Manually Enter Remove-SPEnterpriseSearchCrawlContentSource Description Here}}
-
-### [Remove-SPEnterpriseSearchCrawlCustomConnector](Remove-SPEnterpriseSearchCrawlCustomConnector.md)
-{{Manually Enter Remove-SPEnterpriseSearchCrawlCustomConnector Description Here}}
-
-### [Remove-SPEnterpriseSearchCrawlDatabase](Remove-SPEnterpriseSearchCrawlDatabase.md)
-{{Manually Enter Remove-SPEnterpriseSearchCrawlDatabase Description Here}}
-
-### [Remove-SPEnterpriseSearchCrawlExtension](Remove-SPEnterpriseSearchCrawlExtension.md)
-{{Manually Enter Remove-SPEnterpriseSearchCrawlExtension Description Here}}
-
-### [Remove-SPEnterpriseSearchCrawlLogReadPermission](Remove-SPEnterpriseSearchCrawlLogReadPermission.md)
-{{Manually Enter Remove-SPEnterpriseSearchCrawlLogReadPermission Description Here}}
-
-### [Remove-SPEnterpriseSearchCrawlMapping](Remove-SPEnterpriseSearchCrawlMapping.md)
-{{Manually Enter Remove-SPEnterpriseSearchCrawlMapping Description Here}}
-
-### [Remove-SPEnterpriseSearchCrawlRule](Remove-SPEnterpriseSearchCrawlRule.md)
-{{Manually Enter Remove-SPEnterpriseSearchCrawlRule Description Here}}
-
-### [Remove-SPEnterpriseSearchFileFormat](Remove-SPEnterpriseSearchFileFormat.md)
-{{Manually Enter Remove-SPEnterpriseSearchFileFormat Description Here}}
-
-### [Remove-SPEnterpriseSearchLanguageResourcePhrase](Remove-SPEnterpriseSearchLanguageResourcePhrase.md)
-{{Manually Enter Remove-SPEnterpriseSearchLanguageResourcePhrase Description Here}}
-
-### [Remove-SPEnterpriseSearchLinksDatabase](Remove-SPEnterpriseSearchLinksDatabase.md)
-{{Manually Enter Remove-SPEnterpriseSearchLinksDatabase Description Here}}
-
-### [Remove-SPEnterpriseSearchMetadataCategory](Remove-SPEnterpriseSearchMetadataCategory.md)
-{{Manually Enter Remove-SPEnterpriseSearchMetadataCategory Description Here}}
-
-### [Remove-SPEnterpriseSearchMetadataManagedProperty](Remove-SPEnterpriseSearchMetadataManagedProperty.md)
-{{Manually Enter Remove-SPEnterpriseSearchMetadataManagedProperty Description Here}}
-
-### [Remove-SPEnterpriseSearchMetadataMapping](Remove-SPEnterpriseSearchMetadataMapping.md)
-{{Manually Enter Remove-SPEnterpriseSearchMetadataMapping Description Here}}
-
-### [Remove-SPEnterpriseSearchQueryAuthority](Remove-SPEnterpriseSearchQueryAuthority.md)
-{{Manually Enter Remove-SPEnterpriseSearchQueryAuthority Description Here}}
-
-### [Remove-SPEnterpriseSearchQueryDemoted](Remove-SPEnterpriseSearchQueryDemoted.md)
-{{Manually Enter Remove-SPEnterpriseSearchQueryDemoted Description Here}}
-
-### [Remove-SPEnterpriseSearchQueryKeyword](Remove-SPEnterpriseSearchQueryKeyword.md)
-{{Manually Enter Remove-SPEnterpriseSearchQueryKeyword Description Here}}
-
-### [Remove-SPEnterpriseSearchQueryScope](Remove-SPEnterpriseSearchQueryScope.md)
-{{Manually Enter Remove-SPEnterpriseSearchQueryScope Description Here}}
-
-### [Remove-SPEnterpriseSearchQueryScopeRule](Remove-SPEnterpriseSearchQueryScopeRule.md)
-{{Manually Enter Remove-SPEnterpriseSearchQueryScopeRule Description Here}}
-
-### [Remove-SPEnterpriseSearchRankingModel](Remove-SPEnterpriseSearchRankingModel.md)
-{{Manually Enter Remove-SPEnterpriseSearchRankingModel Description Here}}
-
-### [Remove-SPEnterpriseSearchResultItemType](Remove-SPEnterpriseSearchResultItemType.md)
-{{Manually Enter Remove-SPEnterpriseSearchResultItemType Description Here}}
-
-### [Remove-SPEnterpriseSearchResultSource](Remove-SPEnterpriseSearchResultSource.md)
-{{Manually Enter Remove-SPEnterpriseSearchResultSource Description Here}}
-
-### [Remove-SPEnterpriseSearchSecurityTrimmer](Remove-SPEnterpriseSearchSecurityTrimmer.md)
-{{Manually Enter Remove-SPEnterpriseSearchSecurityTrimmer Description Here}}
-
-### [Remove-SPEnterpriseSearchServiceApplication](Remove-SPEnterpriseSearchServiceApplication.md)
-{{Manually Enter Remove-SPEnterpriseSearchServiceApplication Description Here}}
-
-### [Remove-SPEnterpriseSearchServiceApplicationProxy](Remove-SPEnterpriseSearchServiceApplicationProxy.md)
-{{Manually Enter Remove-SPEnterpriseSearchServiceApplicationProxy Description Here}}
-
-### [Remove-SPEnterpriseSearchServiceApplicationSiteSettings](Remove-SPEnterpriseSearchServiceApplicationSiteSettings.md)
-{{Manually Enter Remove-SPEnterpriseSearchServiceApplicationSiteSettings Description Here}}
-
-### [Remove-SPEnterpriseSearchSiteHitRule](Remove-SPEnterpriseSearchSiteHitRule.md)
-{{Manually Enter Remove-SPEnterpriseSearchSiteHitRule Description Here}}
-
-### [Remove-SPEnterpriseSearchTenantConfiguration](Remove-SPEnterpriseSearchTenantConfiguration.md)
-{{Manually Enter Remove-SPEnterpriseSearchTenantConfiguration Description Here}}
-
-### [Remove-SPEnterpriseSearchTenantSchema](Remove-SPEnterpriseSearchTenantSchema.md)
-{{Manually Enter Remove-SPEnterpriseSearchTenantSchema Description Here}}
-
-### [Remove-SPEnterpriseSearchTopology](Remove-SPEnterpriseSearchTopology.md)
-{{Manually Enter Remove-SPEnterpriseSearchTopology Description Here}}
-
-### [Remove-SPExcelBIServer](Remove-SPExcelBIServer.md)
-{{Manually Enter Remove-SPExcelBIServer Description Here}}
-
-### [Remove-SPExcelBlockedFileType](Remove-SPExcelBlockedFileType.md)
-{{Manually Enter Remove-SPExcelBlockedFileType Description Here}}
-
-### [Remove-SPExcelDataConnectionLibrary](Remove-SPExcelDataConnectionLibrary.md)
-{{Manually Enter Remove-SPExcelDataConnectionLibrary Description Here}}
-
-### [Remove-SPExcelDataProvider](Remove-SPExcelDataProvider.md)
-{{Manually Enter Remove-SPExcelDataProvider Description Here}}
-
-### [Remove-SPExcelFileLocation](Remove-SPExcelFileLocation.md)
-{{Manually Enter Remove-SPExcelFileLocation Description Here}}
-
-### [Remove-SPExcelUserDefinedFunction](Remove-SPExcelUserDefinedFunction.md)
-{{Manually Enter Remove-SPExcelUserDefinedFunction Description Here}}
-
-### [Remove-SPInfoPathUserAgent](Remove-SPInfoPathUserAgent.md)
-{{Manually Enter Remove-SPInfoPathUserAgent Description Here}}
-
-### [Remove-SPManagedAccount](Remove-SPManagedAccount.md)
-{{Manually Enter Remove-SPManagedAccount Description Here}}
-
-### [Remove-SPManagedPath](Remove-SPManagedPath.md)
-{{Manually Enter Remove-SPManagedPath Description Here}}
-
-### [Remove-SPPerformancePointServiceApplication](Remove-SPPerformancePointServiceApplication.md)
-{{Manually Enter Remove-SPPerformancePointServiceApplication Description Here}}
-
-### [Remove-SPPerformancePointServiceApplicationProxy](Remove-SPPerformancePointServiceApplicationProxy.md)
-{{Manually Enter Remove-SPPerformancePointServiceApplicationProxy Description Here}}
-
-### [Remove-SPPerformancePointServiceApplicationTrustedLocation](Remove-SPPerformancePointServiceApplicationTrustedLocation.md)
-{{Manually Enter Remove-SPPerformancePointServiceApplicationTrustedLocation Description Here}}
-
-### [Remove-SPPluggableSecurityTrimmer](Remove-SPPluggableSecurityTrimmer.md)
-{{Manually Enter Remove-SPPluggableSecurityTrimmer Description Here}}
-
-### [Remove-SPProfileLeader](Remove-SPProfileLeader.md)
-{{Manually Enter Remove-SPProfileLeader Description Here}}
-
-### [Remove-SPProfileSyncConnection](Remove-SPProfileSyncConnection.md)
-{{Manually Enter Remove-SPProfileSyncConnection Description Here}}
-
-### [Remove-SPProjectWebInstanceData](Remove-SPProjectWebInstanceData.md)
-{{Manually Enter Remove-SPProjectWebInstanceData Description Here}}
-
-### [Remove-SPRoutingMachineInfo](Remove-SPRoutingMachineInfo.md)
-{{Manually Enter Remove-SPRoutingMachineInfo Description Here}}
-
-### [Remove-SPRoutingMachinePool](Remove-SPRoutingMachinePool.md)
-{{Manually Enter Remove-SPRoutingMachinePool Description Here}}
-
-### [Remove-SPRoutingRule](Remove-SPRoutingRule.md)
-{{Manually Enter Remove-SPRoutingRule Description Here}}
-
-### [Remove-SPScaleOutDatabase](Remove-SPScaleOutDatabase.md)
-{{Manually Enter Remove-SPScaleOutDatabase Description Here}}
-
-### [Remove-SPSecureStoreApplication](Remove-SPSecureStoreApplication.md)
-{{Manually Enter Remove-SPSecureStoreApplication Description Here}}
-
-### [Remove-SPSecureStoreSystemAccount](Remove-SPSecureStoreSystemAccount.md)
-{{Manually Enter Remove-SPSecureStoreSystemAccount Description Here}}
-
-### [Remove-SPServerScaleOutDatabase](Remove-SPServerScaleOutDatabase.md)
-{{Manually Enter Remove-SPServerScaleOutDatabase Description Here}}
-
-### [Remove-SPServiceApplication](Remove-SPServiceApplication.md)
-{{Manually Enter Remove-SPServiceApplication Description Here}}
-
-### [Remove-SPServiceApplicationPool](Remove-SPServiceApplicationPool.md)
-{{Manually Enter Remove-SPServiceApplicationPool Description Here}}
-
-### [Remove-SPServiceApplicationProxy](Remove-SPServiceApplicationProxy.md)
-{{Manually Enter Remove-SPServiceApplicationProxy Description Here}}
-
-### [Remove-SPServiceApplicationProxyGroup](Remove-SPServiceApplicationProxyGroup.md)
-{{Manually Enter Remove-SPServiceApplicationProxyGroup Description Here}}
-
-### [Remove-SPServiceApplicationProxyGroupMember](Remove-SPServiceApplicationProxyGroupMember.md)
-{{Manually Enter Remove-SPServiceApplicationProxyGroupMember Description Here}}
-
-### [Remove-SPShellAdmin](Remove-SPShellAdmin.md)
-{{Manually Enter Remove-SPShellAdmin Description Here}}
-
-### [Remove-SPSite](Remove-SPSite.md)
-{{Manually Enter Remove-SPSite Description Here}}
-
-### [Remove-SPSiteMaster](Remove-SPSiteMaster.md)
-{{Manually Enter Remove-SPSiteMaster Description Here}}
-
-### [Remove-SPSiteSubscription](Remove-SPSiteSubscription.md)
-{{Manually Enter Remove-SPSiteSubscription Description Here}}
-
-### [Remove-SPSiteSubscriptionBusinessDataCatalogConfig](Remove-SPSiteSubscriptionBusinessDataCatalogConfig.md)
-{{Manually Enter Remove-SPSiteSubscriptionBusinessDataCatalogConfig Description Here}}
-
-### [Remove-SPSiteSubscriptionFeaturePack](Remove-SPSiteSubscriptionFeaturePack.md)
-{{Manually Enter Remove-SPSiteSubscriptionFeaturePack Description Here}}
-
-### [Remove-SPSiteSubscriptionFeaturePackMember](Remove-SPSiteSubscriptionFeaturePackMember.md)
-{{Manually Enter Remove-SPSiteSubscriptionFeaturePackMember Description Here}}
-
-### [Remove-SPSiteSubscriptionMetadataConfig](Remove-SPSiteSubscriptionMetadataConfig.md)
-{{Manually Enter Remove-SPSiteSubscriptionMetadataConfig Description Here}}
-
-### [Remove-SPSiteSubscriptionProfileConfig](Remove-SPSiteSubscriptionProfileConfig.md)
-{{Manually Enter Remove-SPSiteSubscriptionProfileConfig Description Here}}
-
-### [Remove-SPSiteSubscriptionSettings](Remove-SPSiteSubscriptionSettings.md)
-{{Manually Enter Remove-SPSiteSubscriptionSettings Description Here}}
-
-### [Remove-SPSiteUpgradeSessionInfo](Remove-SPSiteUpgradeSessionInfo.md)
-{{Manually Enter Remove-SPSiteUpgradeSessionInfo Description Here}}
-
-### [Remove-SPSiteURL](Remove-SPSiteURL.md)
-{{Manually Enter Remove-SPSiteURL Description Here}}
-
-### [Remove-SPSocialItemByDate](Remove-SPSocialItemByDate.md)
-{{Manually Enter Remove-SPSocialItemByDate Description Here}}
-
-### [Remove-SPSolution](Remove-SPSolution.md)
-{{Manually Enter Remove-SPSolution Description Here}}
-
-### [Remove-SPSolutionDeploymentLock](Remove-SPSolutionDeploymentLock.md)
-{{Manually Enter Remove-SPSolutionDeploymentLock Description Here}}
-
-### [Remove-SPStateServiceDatabase](Remove-SPStateServiceDatabase.md)
-{{Manually Enter Remove-SPStateServiceDatabase Description Here}}
-
-### [Remove-SPThrottlingRule](Remove-SPThrottlingRule.md)
-{{Manually Enter Remove-SPThrottlingRule Description Here}}
-
-### [Remove-SPTranslationServiceJobHistory](Remove-SPTranslationServiceJobHistory.md)
-{{Manually Enter Remove-SPTranslationServiceJobHistory Description Here}}
-
-### [Remove-SPTrustedIdentityTokenIssuer](Remove-SPTrustedIdentityTokenIssuer.md)
-{{Manually Enter Remove-SPTrustedIdentityTokenIssuer Description Here}}
-
-### [Remove-SPTrustedRootAuthority](Remove-SPTrustedRootAuthority.md)
-{{Manually Enter Remove-SPTrustedRootAuthority Description Here}}
-
-### [Remove-SPTrustedSecurityTokenIssuer](Remove-SPTrustedSecurityTokenIssuer.md)
-{{Manually Enter Remove-SPTrustedSecurityTokenIssuer Description Here}}
-
-### [Remove-SPTrustedServiceTokenIssuer](Remove-SPTrustedServiceTokenIssuer.md)
-{{Manually Enter Remove-SPTrustedServiceTokenIssuer Description Here}}
-
-### [Remove-SPUsageApplication](Remove-SPUsageApplication.md)
-{{Manually Enter Remove-SPUsageApplication Description Here}}
-
-### [Remove-SPUser](Remove-SPUser.md)
-{{Manually Enter Remove-SPUser Description Here}}
-
-### [Remove-SPUserLicenseMapping](Remove-SPUserLicenseMapping.md)
-{{Manually Enter Remove-SPUserLicenseMapping Description Here}}
-
-### [Remove-SPUserSettingsProvider](Remove-SPUserSettingsProvider.md)
-{{Manually Enter Remove-SPUserSettingsProvider Description Here}}
-
-### [Remove-SPUserSolution](Remove-SPUserSolution.md)
-{{Manually Enter Remove-SPUserSolution Description Here}}
-
-### [Remove-SPVisioSafeDataProvider](Remove-SPVisioSafeDataProvider.md)
-{{Manually Enter Remove-SPVisioSafeDataProvider Description Here}}
-
-### [Remove-SPWeb](Remove-SPWeb.md)
-{{Manually Enter Remove-SPWeb Description Here}}
-
-### [Remove-SPWebApplication](Remove-SPWebApplication.md)
-{{Manually Enter Remove-SPWebApplication Description Here}}
-
-### [Remove-SPWebApplicationAppDomain](Remove-SPWebApplicationAppDomain.md)
-{{Manually Enter Remove-SPWebApplicationAppDomain Description Here}}
-
-### [Remove-SPWOPIBinding](Remove-SPWOPIBinding.md)
-{{Manually Enter Remove-SPWOPIBinding Description Here}}
-
-### [Remove-SPWOPISuppressionSetting](Remove-SPWOPISuppressionSetting.md)
-{{Manually Enter Remove-SPWOPISuppressionSetting Description Here}}
-
-### [Remove-SPWordConversionServiceJobHistory](Remove-SPWordConversionServiceJobHistory.md)
-{{Manually Enter Remove-SPWordConversionServiceJobHistory Description Here}}
-
-### [Rename-SPServer](Rename-SPServer.md)
-{{Manually Enter Rename-SPServer Description Here}}
-
-### [Repair-SPManagedAccountDeployment](Repair-SPManagedAccountDeployment.md)
-{{Manually Enter Repair-SPManagedAccountDeployment Description Here}}
-
-### [Repair-SPProjectWebInstance](Repair-SPProjectWebInstance.md)
-{{Manually Enter Repair-SPProjectWebInstance Description Here}}
-
-### [Repair-SPSite](Repair-SPSite.md)
-{{Manually Enter Repair-SPSite Description Here}}
-
-### [Request-SPUpgradeEvaluationSite](Request-SPUpgradeEvaluationSite.md)
-{{Manually Enter Request-SPUpgradeEvaluationSite Description Here}}
-
-### [Reset-SPAccessServicesDatabasePassword](Reset-SPAccessServicesDatabasePassword.md)
-{{Manually Enter Reset-SPAccessServicesDatabasePassword Description Here}}
-
-### [Reset-SPProjectEventServiceSettings](Reset-SPProjectEventServiceSettings.md)
-{{Manually Enter Reset-SPProjectEventServiceSettings Description Here}}
-
-### [Reset-SPProjectPCSSettings](Reset-SPProjectPCSSettings.md)
-{{Manually Enter Reset-SPProjectPCSSettings Description Here}}
-
-### [Reset-SPProjectQueueSettings](Reset-SPProjectQueueSettings.md)
-{{Manually Enter Reset-SPProjectQueueSettings Description Here}}
-
-### [Reset-SPSites](Reset-SPSites.md)
-{{Manually Enter Reset-SPSites Description Here}}
-
-### [Restart-SPAppInstanceJob](Restart-SPAppInstanceJob.md)
-{{Manually Enter Restart-SPAppInstanceJob Description Here}}
-
-### [Restore-SPDeletedSite](Restore-SPDeletedSite.md)
-{{Manually Enter Restore-SPDeletedSite Description Here}}
-
-### [Restore-SPEnterpriseSearchServiceApplication](Restore-SPEnterpriseSearchServiceApplication.md)
-{{Manually Enter Restore-SPEnterpriseSearchServiceApplication Description Here}}
-
-### [Restore-SPEnterpriseSearchServiceApplicationIndex](Restore-SPEnterpriseSearchServiceApplicationIndex.md)
-{{Manually Enter Restore-SPEnterpriseSearchServiceApplicationIndex Description Here}}
-
-### [Restore-SPFarm](Restore-SPFarm.md)
-{{Manually Enter Restore-SPFarm Description Here}}
-
-### [Restore-SPSite](Restore-SPSite.md)
-{{Manually Enter Restore-SPSite Description Here}}
-
-### [Resume-SPEnterpriseSearchServiceApplication](Resume-SPEnterpriseSearchServiceApplication.md)
-{{Manually Enter Resume-SPEnterpriseSearchServiceApplication Description Here}}
-
-### [Resume-SPProjectWebInstance](Resume-SPProjectWebInstance.md)
-{{Manually Enter Resume-SPProjectWebInstance Description Here}}
-
-### [Resume-SPStateServiceDatabase](Resume-SPStateServiceDatabase.md)
-{{Manually Enter Resume-SPStateServiceDatabase Description Here}}
-
-### [Revoke-SPBusinessDataCatalogMetadataObject](Revoke-SPBusinessDataCatalogMetadataObject.md)
-{{Manually Enter Revoke-SPBusinessDataCatalogMetadataObject Description Here}}
-
-### [Set-SPAccessServiceApplication](Set-SPAccessServiceApplication.md)
-{{Manually Enter Set-SPAccessServiceApplication Description Here}}
-
-### [Set-SPAccessServicesApplication](Set-SPAccessServicesApplication.md)
-{{Manually Enter Set-SPAccessServicesApplication Description Here}}
-
-### [Set-SPAccessServicesDatabaseServer](Set-SPAccessServicesDatabaseServer.md)
-{{Manually Enter Set-SPAccessServicesDatabaseServer Description Here}}
-
-### [Set-SPAccessServicesDatabaseServerGroupMapping](Set-SPAccessServicesDatabaseServerGroupMapping.md)
-{{Manually Enter Set-SPAccessServicesDatabaseServerGroupMapping Description Here}}
-
-### [Set-SPAlternateURL](Set-SPAlternateURL.md)
-{{Manually Enter Set-SPAlternateURL Description Here}}
-
-### [Set-SPAppAcquisitionConfiguration](Set-SPAppAcquisitionConfiguration.md)
-{{Manually Enter Set-SPAppAcquisitionConfiguration Description Here}}
-
-### [Set-SPAppAutoProvisionConnection](Set-SPAppAutoProvisionConnection.md)
-{{Manually Enter Set-SPAppAutoProvisionConnection Description Here}}
-
-### [Set-SPAppDisablingConfiguration](Set-SPAppDisablingConfiguration.md)
-{{Manually Enter Set-SPAppDisablingConfiguration Description Here}}
-
-### [Set-SPAppDomain](Set-SPAppDomain.md)
-{{Manually Enter Set-SPAppDomain Description Here}}
-
-### [Set-SPAppHostingQuotaConfiguration](Set-SPAppHostingQuotaConfiguration.md)
-{{Manually Enter Set-SPAppHostingQuotaConfiguration Description Here}}
-
-### [Set-SPAppManagementDeploymentId](Set-SPAppManagementDeploymentId.md)
-{{Manually Enter Set-SPAppManagementDeploymentId Description Here}}
-
-### [Set-SPAppPrincipalPermission](Set-SPAppPrincipalPermission.md)
-{{Manually Enter Set-SPAppPrincipalPermission Description Here}}
-
-### [Set-SPAppScaleProfile](Set-SPAppScaleProfile.md)
-{{Manually Enter Set-SPAppScaleProfile Description Here}}
-
-### [Set-SPAppSiteDomain](Set-SPAppSiteDomain.md)
-{{Manually Enter Set-SPAppSiteDomain Description Here}}
-
-### [Set-SPAppSiteSubscriptionName](Set-SPAppSiteSubscriptionName.md)
-{{Manually Enter Set-SPAppSiteSubscriptionName Description Here}}
-
-### [Set-SPAppStateUpdateInterval](Set-SPAppStateUpdateInterval.md)
-{{Manually Enter Set-SPAppStateUpdateInterval Description Here}}
-
-### [Set-SPAppStoreConfiguration](Set-SPAppStoreConfiguration.md)
-{{Manually Enter Set-SPAppStoreConfiguration Description Here}}
-
-### [Set-SPAppStoreWebServiceConfiguration](Set-SPAppStoreWebServiceConfiguration.md)
-{{Manually Enter Set-SPAppStoreWebServiceConfiguration Description Here}}
-
-### [Set-SPAuthenticationRealm](Set-SPAuthenticationRealm.md)
-{{Manually Enter Set-SPAuthenticationRealm Description Here}}
-
-### [Set-SPBingMapsBlock](Set-SPBingMapsBlock.md)
-{{Manually Enter Set-SPBingMapsBlock Description Here}}
-
-### [Set-SPBingMapsKey](Set-SPBingMapsKey.md)
-{{Manually Enter Set-SPBingMapsKey Description Here}}
-
-### [Set-SPBrowserCustomerExperienceImprovementProgram](Set-SPBrowserCustomerExperienceImprovementProgram.md)
-{{Manually Enter Set-SPBrowserCustomerExperienceImprovementProgram Description Here}}
-
-### [Set-SPBusinessDataCatalogEntityNotificationWeb](Set-SPBusinessDataCatalogEntityNotificationWeb.md)
-{{Manually Enter Set-SPBusinessDataCatalogEntityNotificationWeb Description Here}}
-
-### [Set-SPBusinessDataCatalogMetadataObject](Set-SPBusinessDataCatalogMetadataObject.md)
-{{Manually Enter Set-SPBusinessDataCatalogMetadataObject Description Here}}
-
-### [Set-SPBusinessDataCatalogServiceApplication](Set-SPBusinessDataCatalogServiceApplication.md)
-{{Manually Enter Set-SPBusinessDataCatalogServiceApplication Description Here}}
-
-### [Set-SPBusinessDataCatalogThrottleConfig](Set-SPBusinessDataCatalogThrottleConfig.md)
-{{Manually Enter Set-SPBusinessDataCatalogThrottleConfig Description Here}}
-
-### [Set-SPCentralAdministration](Set-SPCentralAdministration.md)
-{{Manually Enter Set-SPCentralAdministration Description Here}}
-
-### [Set-SPClaimProvider](Set-SPClaimProvider.md)
-{{Manually Enter Set-SPClaimProvider Description Here}}
-
-### [Set-SPContentDatabase](Set-SPContentDatabase.md)
-{{Manually Enter Set-SPContentDatabase Description Here}}
-
-### [Set-SPContentDeploymentJob](Set-SPContentDeploymentJob.md)
-{{Manually Enter Set-SPContentDeploymentJob Description Here}}
-
-### [Set-SPContentDeploymentPath](Set-SPContentDeploymentPath.md)
-{{Manually Enter Set-SPContentDeploymentPath Description Here}}
-
-### [Set-SPCustomLayoutsPage](Set-SPCustomLayoutsPage.md)
-{{Manually Enter Set-SPCustomLayoutsPage Description Here}}
-
-### [Set-SPDataConnectionFile](Set-SPDataConnectionFile.md)
-{{Manually Enter Set-SPDataConnectionFile Description Here}}
-
-### [Set-SPDefaultProfileConfig](Set-SPDefaultProfileConfig.md)
-{{Manually Enter Set-SPDefaultProfileConfig Description Here}}
-
-### [Set-SPDesignerSettings](Set-SPDesignerSettings.md)
-{{Manually Enter Set-SPDesignerSettings Description Here}}
-
-### [Set-SPDiagnosticConfig](Set-SPDiagnosticConfig.md)
-{{Manually Enter Set-SPDiagnosticConfig Description Here}}
-
-### [Set-SPDiagnosticsProvider](Set-SPDiagnosticsProvider.md)
-{{Manually Enter Set-SPDiagnosticsProvider Description Here}}
-
-### [Set-SPDistributedCacheClientSetting](Set-SPDistributedCacheClientSetting.md)
-{{Manually Enter Set-SPDistributedCacheClientSetting Description Here}}
-
-### [Set-SPEduServiceSetting](Set-SPEduServiceSetting.md)
-{{Manually Enter Set-SPEduServiceSetting Description Here}}
-
-### [Set-SPEnterpriseSearchAdministrationComponent](Set-SPEnterpriseSearchAdministrationComponent.md)
-{{Manually Enter Set-SPEnterpriseSearchAdministrationComponent Description Here}}
-
-### [Set-SPEnterpriseSearchContentEnrichmentConfiguration](Set-SPEnterpriseSearchContentEnrichmentConfiguration.md)
-{{Manually Enter Set-SPEnterpriseSearchContentEnrichmentConfiguration Description Here}}
-
-### [Set-SPEnterpriseSearchCrawlContentSource](Set-SPEnterpriseSearchCrawlContentSource.md)
-{{Manually Enter Set-SPEnterpriseSearchCrawlContentSource Description Here}}
-
-### [Set-SPEnterpriseSearchCrawlDatabase](Set-SPEnterpriseSearchCrawlDatabase.md)
-{{Manually Enter Set-SPEnterpriseSearchCrawlDatabase Description Here}}
-
-### [Set-SPEnterpriseSearchCrawlLogReadPermission](Set-SPEnterpriseSearchCrawlLogReadPermission.md)
-{{Manually Enter Set-SPEnterpriseSearchCrawlLogReadPermission Description Here}}
-
-### [Set-SPEnterpriseSearchCrawlRule](Set-SPEnterpriseSearchCrawlRule.md)
-{{Manually Enter Set-SPEnterpriseSearchCrawlRule Description Here}}
-
-### [Set-SPEnterpriseSearchFileFormatState](Set-SPEnterpriseSearchFileFormatState.md)
-{{Manually Enter Set-SPEnterpriseSearchFileFormatState Description Here}}
-
-### [Set-SPEnterpriseSearchLinguisticComponentsStatus](Set-SPEnterpriseSearchLinguisticComponentsStatus.md)
-{{Manually Enter Set-SPEnterpriseSearchLinguisticComponentsStatus Description Here}}
-
-### [Set-SPEnterpriseSearchLinksDatabase](Set-SPEnterpriseSearchLinksDatabase.md)
-{{Manually Enter Set-SPEnterpriseSearchLinksDatabase Description Here}}
-
-### [Set-SPEnterpriseSearchMetadataCategory](Set-SPEnterpriseSearchMetadataCategory.md)
-{{Manually Enter Set-SPEnterpriseSearchMetadataCategory Description Here}}
-
-### [Set-SPEnterpriseSearchMetadataCrawledProperty](Set-SPEnterpriseSearchMetadataCrawledProperty.md)
-{{Manually Enter Set-SPEnterpriseSearchMetadataCrawledProperty Description Here}}
-
-### [Set-SPEnterpriseSearchMetadataManagedProperty](Set-SPEnterpriseSearchMetadataManagedProperty.md)
-{{Manually Enter Set-SPEnterpriseSearchMetadataManagedProperty Description Here}}
-
-### [Set-SPEnterpriseSearchMetadataMapping](Set-SPEnterpriseSearchMetadataMapping.md)
-{{Manually Enter Set-SPEnterpriseSearchMetadataMapping Description Here}}
-
-### [Set-SPEnterpriseSearchPrimaryHostController](Set-SPEnterpriseSearchPrimaryHostController.md)
-{{Manually Enter Set-SPEnterpriseSearchPrimaryHostController Description Here}}
-
-### [Set-SPEnterpriseSearchQueryAuthority](Set-SPEnterpriseSearchQueryAuthority.md)
-{{Manually Enter Set-SPEnterpriseSearchQueryAuthority Description Here}}
-
-### [Set-SPEnterpriseSearchQueryKeyword](Set-SPEnterpriseSearchQueryKeyword.md)
-{{Manually Enter Set-SPEnterpriseSearchQueryKeyword Description Here}}
-
-### [Set-SPEnterpriseSearchQueryScope](Set-SPEnterpriseSearchQueryScope.md)
-{{Manually Enter Set-SPEnterpriseSearchQueryScope Description Here}}
-
-### [Set-SPEnterpriseSearchQueryScopeRule](Set-SPEnterpriseSearchQueryScopeRule.md)
-{{Manually Enter Set-SPEnterpriseSearchQueryScopeRule Description Here}}
-
-### [Set-SPEnterpriseSearchQuerySpellingCorrection](Set-SPEnterpriseSearchQuerySpellingCorrection.md)
-{{Manually Enter Set-SPEnterpriseSearchQuerySpellingCorrection Description Here}}
-
-### [Set-SPEnterpriseSearchRankingModel](Set-SPEnterpriseSearchRankingModel.md)
-{{Manually Enter Set-SPEnterpriseSearchRankingModel Description Here}}
-
-### [Set-SPEnterpriseSearchResultItemType](Set-SPEnterpriseSearchResultItemType.md)
-{{Manually Enter Set-SPEnterpriseSearchResultItemType Description Here}}
-
-### [Set-SPEnterpriseSearchResultSource](Set-SPEnterpriseSearchResultSource.md)
-{{Manually Enter Set-SPEnterpriseSearchResultSource Description Here}}
-
-### [Set-SPEnterpriseSearchService](Set-SPEnterpriseSearchService.md)
-{{Manually Enter Set-SPEnterpriseSearchService Description Here}}
-
-### [Set-SPEnterpriseSearchServiceApplication](Set-SPEnterpriseSearchServiceApplication.md)
-{{Manually Enter Set-SPEnterpriseSearchServiceApplication Description Here}}
-
-### [Set-SPEnterpriseSearchServiceApplicationProxy](Set-SPEnterpriseSearchServiceApplicationProxy.md)
-{{Manually Enter Set-SPEnterpriseSearchServiceApplicationProxy Description Here}}
-
-### [Set-SPEnterpriseSearchServiceInstance](Set-SPEnterpriseSearchServiceInstance.md)
-{{Manually Enter Set-SPEnterpriseSearchServiceInstance Description Here}}
-
-### [Set-SPEnterpriseSearchTopology](Set-SPEnterpriseSearchTopology.md)
-{{Manually Enter Set-SPEnterpriseSearchTopology Description Here}}
-
-### [Set-SPExcelBIServer](Set-SPExcelBIServer.md)
-{{Manually Enter Set-SPExcelBIServer Description Here}}
-
-### [Set-SPExcelDataConnectionLibrary](Set-SPExcelDataConnectionLibrary.md)
-{{Manually Enter Set-SPExcelDataConnectionLibrary Description Here}}
-
-### [Set-SPExcelDataProvider](Set-SPExcelDataProvider.md)
-{{Manually Enter Set-SPExcelDataProvider Description Here}}
-
-### [Set-SPExcelFileLocation](Set-SPExcelFileLocation.md)
-{{Manually Enter Set-SPExcelFileLocation Description Here}}
-
-### [Set-SPExcelServiceApplication](Set-SPExcelServiceApplication.md)
-{{Manually Enter Set-SPExcelServiceApplication Description Here}}
-
-### [Set-SPExcelUserDefinedFunction](Set-SPExcelUserDefinedFunction.md)
-{{Manually Enter Set-SPExcelUserDefinedFunction Description Here}}
-
-### [Set-SPFarmConfig](Set-SPFarmConfig.md)
-{{Manually Enter Set-SPFarmConfig Description Here}}
-
-### [Set-SPInfoPathFormsService](Set-SPInfoPathFormsService.md)
-{{Manually Enter Set-SPInfoPathFormsService Description Here}}
-
-### [Set-SPInfoPathFormTemplate](Set-SPInfoPathFormTemplate.md)
-{{Manually Enter Set-SPInfoPathFormTemplate Description Here}}
-
-### [Set-SPInfoPathWebServiceProxy](Set-SPInfoPathWebServiceProxy.md)
-{{Manually Enter Set-SPInfoPathWebServiceProxy Description Here}}
-
-### [Set-SPInternalAppStateUpdateInterval](Set-SPInternalAppStateUpdateInterval.md)
-{{Manually Enter Set-SPInternalAppStateUpdateInterval Description Here}}
-
-### [Set-SPIRMSettings](Set-SPIRMSettings.md)
-{{Manually Enter Set-SPIRMSettings Description Here}}
-
-### [Set-SPLogLevel](Set-SPLogLevel.md)
-{{Manually Enter Set-SPLogLevel Description Here}}
-
-### [Set-SPManagedAccount](Set-SPManagedAccount.md)
-{{Manually Enter Set-SPManagedAccount Description Here}}
-
-### [Set-SPMetadataServiceApplication](Set-SPMetadataServiceApplication.md)
-{{Manually Enter Set-SPMetadataServiceApplication Description Here}}
-
-### [Set-SPMetadataServiceApplicationProxy](Set-SPMetadataServiceApplicationProxy.md)
-{{Manually Enter Set-SPMetadataServiceApplicationProxy Description Here}}
-
-### [Set-SPMicrofeedOptions](Set-SPMicrofeedOptions.md)
-{{Manually Enter Set-SPMicrofeedOptions Description Here}}
-
-### [Set-SPMobileMessagingAccount](Set-SPMobileMessagingAccount.md)
-{{Manually Enter Set-SPMobileMessagingAccount Description Here}}
-
-### [Set-SPPassPhrase](Set-SPPassPhrase.md)
-{{Manually Enter Set-SPPassPhrase Description Here}}
-
-### [Set-SPPerformancePointSecureDataValues](Set-SPPerformancePointSecureDataValues.md)
-{{Manually Enter Set-SPPerformancePointSecureDataValues Description Here}}
-
-### [Set-SPPerformancePointServiceApplication](Set-SPPerformancePointServiceApplication.md)
-{{Manually Enter Set-SPPerformancePointServiceApplication Description Here}}
-
-### [Set-SPPowerPointConversionServiceApplication](Set-SPPowerPointConversionServiceApplication.md)
-{{Manually Enter Set-SPPowerPointConversionServiceApplication Description Here}}
-
-### [Set-SPProfileServiceApplication](Set-SPProfileServiceApplication.md)
-{{Manually Enter Set-SPProfileServiceApplication Description Here}}
-
-### [Set-SPProfileServiceApplicationProxy](Set-SPProfileServiceApplicationProxy.md)
-{{Manually Enter Set-SPProfileServiceApplicationProxy Description Here}}
-
-### [Set-SPProfileServiceApplicationSecurity](Set-SPProfileServiceApplicationSecurity.md)
-{{Manually Enter Set-SPProfileServiceApplicationSecurity Description Here}}
-
-### [Set-SPProjectDatabaseQuota](Set-SPProjectDatabaseQuota.md)
-{{Manually Enter Set-SPProjectDatabaseQuota Description Here}}
-
-### [Set-SPProjectEventServiceSettings](Set-SPProjectEventServiceSettings.md)
-{{Manually Enter Set-SPProjectEventServiceSettings Description Here}}
-
-### [Set-SPProjectOdataConfiguration](Set-SPProjectOdataConfiguration.md)
-{{Manually Enter Set-SPProjectOdataConfiguration Description Here}}
-
-### [Set-SPProjectPCSSettings](Set-SPProjectPCSSettings.md)
-{{Manually Enter Set-SPProjectPCSSettings Description Here}}
-
-### [Set-SPProjectPermissionMode](Set-SPProjectPermissionMode.md)
-{{Manually Enter Set-SPProjectPermissionMode Description Here}}
-
-### [Set-SPProjectQueueSettings](Set-SPProjectQueueSettings.md)
-{{Manually Enter Set-SPProjectQueueSettings Description Here}}
-
-### [Set-SPProjectServiceApplication](Set-SPProjectServiceApplication.md)
-{{Manually Enter Set-SPProjectServiceApplication Description Here}}
-
-### [Set-SPProjectUserSync](Set-SPProjectUserSync.md)
-{{Manually Enter Set-SPProjectUserSync Description Here}}
-
-### [Set-SPProjectUserSyncDisabledSyncThreshold](Set-SPProjectUserSyncDisabledSyncThreshold.md)
-{{Manually Enter Set-SPProjectUserSyncDisabledSyncThreshold Description Here}}
-
-### [Set-SPProjectUserSyncFullSyncThreshold](Set-SPProjectUserSyncFullSyncThreshold.md)
-{{Manually Enter Set-SPProjectUserSyncFullSyncThreshold Description Here}}
-
-### [Set-SPProjectUserSyncOffPeakSyncThreshold](Set-SPProjectUserSyncOffPeakSyncThreshold.md)
-{{Manually Enter Set-SPProjectUserSyncOffPeakSyncThreshold Description Here}}
-
-### [Set-SPRequestManagementSettings](Set-SPRequestManagementSettings.md)
-{{Manually Enter Set-SPRequestManagementSettings Description Here}}
-
-### [Set-SPRoutingMachineInfo](Set-SPRoutingMachineInfo.md)
-{{Manually Enter Set-SPRoutingMachineInfo Description Here}}
-
-### [Set-SPRoutingMachinePool](Set-SPRoutingMachinePool.md)
-{{Manually Enter Set-SPRoutingMachinePool Description Here}}
-
-### [Set-SPRoutingRule](Set-SPRoutingRule.md)
-{{Manually Enter Set-SPRoutingRule Description Here}}
-
-### [Set-SPScaleOutDatabaseDataRange](Set-SPScaleOutDatabaseDataRange.md)
-{{Manually Enter Set-SPScaleOutDatabaseDataRange Description Here}}
-
-### [Set-SPScaleOutDatabaseDataSubRange](Set-SPScaleOutDatabaseDataSubRange.md)
-{{Manually Enter Set-SPScaleOutDatabaseDataSubRange Description Here}}
-
-### [Set-SPSecureStoreApplication](Set-SPSecureStoreApplication.md)
-{{Manually Enter Set-SPSecureStoreApplication Description Here}}
-
-### [Set-SPSecureStoreDefaultProvider](Set-SPSecureStoreDefaultProvider.md)
-{{Manually Enter Set-SPSecureStoreDefaultProvider Description Here}}
-
-### [Set-SPSecureStoreServiceApplication](Set-SPSecureStoreServiceApplication.md)
-{{Manually Enter Set-SPSecureStoreServiceApplication Description Here}}
-
-### [Set-SPSecurityTokenServiceConfig](Set-SPSecurityTokenServiceConfig.md)
-{{Manually Enter Set-SPSecurityTokenServiceConfig Description Here}}
-
-### [Set-SPServer](Set-SPServer.md)
-{{Manually Enter Set-SPServer Description Here}}
-
-### [Set-SPServerScaleOutDatabaseDataRange](Set-SPServerScaleOutDatabaseDataRange.md)
-{{Manually Enter Set-SPServerScaleOutDatabaseDataRange Description Here}}
-
-### [Set-SPServerScaleOutDatabaseDataSubRange](Set-SPServerScaleOutDatabaseDataSubRange.md)
-{{Manually Enter Set-SPServerScaleOutDatabaseDataSubRange Description Here}}
-
-### [Set-SPServiceApplication](Set-SPServiceApplication.md)
-{{Manually Enter Set-SPServiceApplication Description Here}}
-
-### [Set-SPServiceApplicationEndpoint](Set-SPServiceApplicationEndpoint.md)
-{{Manually Enter Set-SPServiceApplicationEndpoint Description Here}}
-
-### [Set-SPServiceApplicationPool](Set-SPServiceApplicationPool.md)
-{{Manually Enter Set-SPServiceApplicationPool Description Here}}
-
-### [Set-SPServiceApplicationSecurity](Set-SPServiceApplicationSecurity.md)
-{{Manually Enter Set-SPServiceApplicationSecurity Description Here}}
-
-### [Set-SPServiceHostConfig](Set-SPServiceHostConfig.md)
-{{Manually Enter Set-SPServiceHostConfig Description Here}}
-
-### [Set-SPSessionStateService](Set-SPSessionStateService.md)
-{{Manually Enter Set-SPSessionStateService Description Here}}
-
-### [Set-SPSite](Set-SPSite.md)
-{{Manually Enter Set-SPSite Description Here}}
-
-### [Set-SPSiteAdministration](Set-SPSiteAdministration.md)
-{{Manually Enter Set-SPSiteAdministration Description Here}}
-
-### [Set-SPSiteSubscriptionConfig](Set-SPSiteSubscriptionConfig.md)
-{{Manually Enter Set-SPSiteSubscriptionConfig Description Here}}
-
-### [Set-SPSiteSubscriptionEdiscoveryHub](Set-SPSiteSubscriptionEdiscoveryHub.md)
-{{Manually Enter Set-SPSiteSubscriptionEdiscoveryHub Description Here}}
-
-### [Set-SPSiteSubscriptionIRMConfig](Set-SPSiteSubscriptionIRMConfig.md)
-{{Manually Enter Set-SPSiteSubscriptionIRMConfig Description Here}}
-
-### [Set-SPSiteSubscriptionMetadataConfig](Set-SPSiteSubscriptionMetadataConfig.md)
-{{Manually Enter Set-SPSiteSubscriptionMetadataConfig Description Here}}
-
-### [Set-SPSiteSubscriptionProfileConfig](Set-SPSiteSubscriptionProfileConfig.md)
-{{Manually Enter Set-SPSiteSubscriptionProfileConfig Description Here}}
-
-### [Set-SPSiteURL](Set-SPSiteURL.md)
-{{Manually Enter Set-SPSiteURL Description Here}}
-
-### [Set-SPStateServiceApplication](Set-SPStateServiceApplication.md)
-{{Manually Enter Set-SPStateServiceApplication Description Here}}
-
-### [Set-SPStateServiceApplicationProxy](Set-SPStateServiceApplicationProxy.md)
-{{Manually Enter Set-SPStateServiceApplicationProxy Description Here}}
-
-### [Set-SPStateServiceDatabase](Set-SPStateServiceDatabase.md)
-{{Manually Enter Set-SPStateServiceDatabase Description Here}}
-
-### [Set-SPSubscriptionSettingsServiceApplication](Set-SPSubscriptionSettingsServiceApplication.md)
-{{Manually Enter Set-SPSubscriptionSettingsServiceApplication Description Here}}
-
-### [Set-SPThrottlingRule](Set-SPThrottlingRule.md)
-{{Manually Enter Set-SPThrottlingRule Description Here}}
-
-### [Set-SPTimerJob](Set-SPTimerJob.md)
-{{Manually Enter Set-SPTimerJob Description Here}}
-
-### [Set-SPTopologyServiceApplication](Set-SPTopologyServiceApplication.md)
-{{Manually Enter Set-SPTopologyServiceApplication Description Here}}
-
-### [Set-SPTopologyServiceApplicationProxy](Set-SPTopologyServiceApplicationProxy.md)
-{{Manually Enter Set-SPTopologyServiceApplicationProxy Description Here}}
-
-### [Set-SPTranslationServiceApplication](Set-SPTranslationServiceApplication.md)
-{{Manually Enter Set-SPTranslationServiceApplication Description Here}}
-
-### [Set-SPTranslationServiceApplicationProxy](Set-SPTranslationServiceApplicationProxy.md)
-{{Manually Enter Set-SPTranslationServiceApplicationProxy Description Here}}
-
-### [Set-SPTranslationThrottlingSetting](Set-SPTranslationThrottlingSetting.md)
-{{Manually Enter Set-SPTranslationThrottlingSetting Description Here}}
-
-### [Set-SPTrustedIdentityTokenIssuer](Set-SPTrustedIdentityTokenIssuer.md)
-{{Manually Enter Set-SPTrustedIdentityTokenIssuer Description Here}}
-
-### [Set-SPTrustedRootAuthority](Set-SPTrustedRootAuthority.md)
-{{Manually Enter Set-SPTrustedRootAuthority Description Here}}
-
-### [Set-SPTrustedSecurityTokenIssuer](Set-SPTrustedSecurityTokenIssuer.md)
-{{Manually Enter Set-SPTrustedSecurityTokenIssuer Description Here}}
-
-### [Set-SPTrustedServiceTokenIssuer](Set-SPTrustedServiceTokenIssuer.md)
-{{Manually Enter Set-SPTrustedServiceTokenIssuer Description Here}}
-
-### [Set-SPUsageApplication](Set-SPUsageApplication.md)
-{{Manually Enter Set-SPUsageApplication Description Here}}
-
-### [Set-SPUsageDefinition](Set-SPUsageDefinition.md)
-{{Manually Enter Set-SPUsageDefinition Description Here}}
-
-### [Set-SPUsageService](Set-SPUsageService.md)
-{{Manually Enter Set-SPUsageService Description Here}}
-
-### [Set-SPUser](Set-SPUser.md)
-{{Manually Enter Set-SPUser Description Here}}
-
-### [Set-SPVisioExternalData](Set-SPVisioExternalData.md)
-{{Manually Enter Set-SPVisioExternalData Description Here}}
-
-### [Set-SPVisioPerformance](Set-SPVisioPerformance.md)
-{{Manually Enter Set-SPVisioPerformance Description Here}}
-
-### [Set-SPVisioSafeDataProvider](Set-SPVisioSafeDataProvider.md)
-{{Manually Enter Set-SPVisioSafeDataProvider Description Here}}
-
-### [Set-SPVisioServiceApplication](Set-SPVisioServiceApplication.md)
-{{Manually Enter Set-SPVisioServiceApplication Description Here}}
-
-### [Set-SPWeb](Set-SPWeb.md)
-{{Manually Enter Set-SPWeb Description Here}}
-
-### [Set-SPWebApplication](Set-SPWebApplication.md)
-{{Manually Enter Set-SPWebApplication Description Here}}
-
-### [Set-SPWebApplicationHttpThrottlingMonitor](Set-SPWebApplicationHttpThrottlingMonitor.md)
-{{Manually Enter Set-SPWebApplicationHttpThrottlingMonitor Description Here}}
-
-### [Set-SPWOPIBinding](Set-SPWOPIBinding.md)
-{{Manually Enter Set-SPWOPIBinding Description Here}}
-
-### [Set-SPWOPIZone](Set-SPWOPIZone.md)
-{{Manually Enter Set-SPWOPIZone Description Here}}
-
-### [Set-SPWordConversionServiceApplication](Set-SPWordConversionServiceApplication.md)
-{{Manually Enter Set-SPWordConversionServiceApplication Description Here}}
-
-### [Set-SPWorkflowConfig](Set-SPWorkflowConfig.md)
-{{Manually Enter Set-SPWorkflowConfig Description Here}}
-
-### [Set-SPWorkManagementServiceApplication](Set-SPWorkManagementServiceApplication.md)
-{{Manually Enter Set-SPWorkManagementServiceApplication Description Here}}
-
-### [Set-SPWorkManagementServiceApplicationProxy](Set-SPWorkManagementServiceApplicationProxy.md)
-{{Manually Enter Set-SPWorkManagementServiceApplicationProxy Description Here}}
-
-### [Split-SPScaleOutDatabase](Split-SPScaleOutDatabase.md)
-{{Manually Enter Split-SPScaleOutDatabase Description Here}}
-
-### [Split-SPServerScaleOutDatabase](Split-SPServerScaleOutDatabase.md)
-{{Manually Enter Split-SPServerScaleOutDatabase Description Here}}
-
-### [Start-SPAdminJob](Start-SPAdminJob.md)
-{{Manually Enter Start-SPAdminJob Description Here}}
-
-### [Start-SPAssignment](Start-SPAssignment.md)
-{{Manually Enter Start-SPAssignment Description Here}}
-
-### [Start-SPContentDeploymentJob](Start-SPContentDeploymentJob.md)
-{{Manually Enter Start-SPContentDeploymentJob Description Here}}
-
-### [Start-SPDiagnosticsSession](Start-SPDiagnosticsSession.md)
-{{Manually Enter Start-SPDiagnosticsSession Description Here}}
-
-### [Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance](Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance.md)
-{{Manually Enter Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance Description Here}}
-
-### [Start-SPEnterpriseSearchServiceInstance](Start-SPEnterpriseSearchServiceInstance.md)
-{{Manually Enter Start-SPEnterpriseSearchServiceInstance Description Here}}
-
-### [Start-SPInfoPathFormTemplate](Start-SPInfoPathFormTemplate.md)
-{{Manually Enter Start-SPInfoPathFormTemplate Description Here}}
-
-### [Start-SPProjectGenerateWsdl](Start-SPProjectGenerateWsdl.md)
-{{Manually Enter Start-SPProjectGenerateWsdl Description Here}}
-
-### [Start-SPService](Start-SPService.md)
-{{Manually Enter Start-SPService Description Here}}
-
-### [Start-SPServiceInstance](Start-SPServiceInstance.md)
-{{Manually Enter Start-SPServiceInstance Description Here}}
-
-### [Start-SPTimerJob](Start-SPTimerJob.md)
-{{Manually Enter Start-SPTimerJob Description Here}}
-
-### [Stop-SPAssignment](Stop-SPAssignment.md)
-{{Manually Enter Stop-SPAssignment Description Here}}
-
-### [Stop-SPContentTypeReplication](Stop-SPContentTypeReplication.md)
-{{Manually Enter Stop-SPContentTypeReplication Description Here}}
-
-### [Stop-SPDiagnosticsSession](Stop-SPDiagnosticsSession.md)
-{{Manually Enter Stop-SPDiagnosticsSession Description Here}}
-
-### [Stop-SPDistributedCacheServiceInstance](Stop-SPDistributedCacheServiceInstance.md)
-{{Manually Enter Stop-SPDistributedCacheServiceInstance Description Here}}
-
-### [Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance](Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance.md)
-{{Manually Enter Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance Description Here}}
-
-### [Stop-SPEnterpriseSearchServiceInstance](Stop-SPEnterpriseSearchServiceInstance.md)
-{{Manually Enter Stop-SPEnterpriseSearchServiceInstance Description Here}}
-
-### [Stop-SPInfoPathFormTemplate](Stop-SPInfoPathFormTemplate.md)
-{{Manually Enter Stop-SPInfoPathFormTemplate Description Here}}
-
-### [Stop-SPService](Stop-SPService.md)
-{{Manually Enter Stop-SPService Description Here}}
-
-### [Stop-SPServiceInstance](Stop-SPServiceInstance.md)
-{{Manually Enter Stop-SPServiceInstance Description Here}}
-
-### [Stop-SPTaxonomyReplication](Stop-SPTaxonomyReplication.md)
-{{Manually Enter Stop-SPTaxonomyReplication Description Here}}
-
-### [Suspend-SPEnterpriseSearchServiceApplication](Suspend-SPEnterpriseSearchServiceApplication.md)
-{{Manually Enter Suspend-SPEnterpriseSearchServiceApplication Description Here}}
-
-### [Suspend-SPStateServiceDatabase](Suspend-SPStateServiceDatabase.md)
-{{Manually Enter Suspend-SPStateServiceDatabase Description Here}}
-
-### [Sync-SPProjectPermissions](Sync-SPProjectPermissions.md)
-{{Manually Enter Sync-SPProjectPermissions Description Here}}
-
-### [Test-SPContentDatabase](Test-SPContentDatabase.md)
-{{Manually Enter Test-SPContentDatabase Description Here}}
-
-### [Test-SPInfoPathFormTemplate](Test-SPInfoPathFormTemplate.md)
-{{Manually Enter Test-SPInfoPathFormTemplate Description Here}}
-
-### [Test-SPProjectServiceApplication](Test-SPProjectServiceApplication.md)
-{{Manually Enter Test-SPProjectServiceApplication Description Here}}
-
-### [Test-SPProjectWebInstance](Test-SPProjectWebInstance.md)
-{{Manually Enter Test-SPProjectWebInstance Description Here}}
-
-### [Test-SPSite](Test-SPSite.md)
-{{Manually Enter Test-SPSite Description Here}}
-
-### [Uninstall-SPAppInstance](Uninstall-SPAppInstance.md)
-{{Manually Enter Uninstall-SPAppInstance Description Here}}
-
-### [Uninstall-SPDataConnectionFile](Uninstall-SPDataConnectionFile.md)
-{{Manually Enter Uninstall-SPDataConnectionFile Description Here}}
-
-### [Uninstall-SPFeature](Uninstall-SPFeature.md)
-{{Manually Enter Uninstall-SPFeature Description Here}}
-
-### [Uninstall-SPHelpCollection](Uninstall-SPHelpCollection.md)
-{{Manually Enter Uninstall-SPHelpCollection Description Here}}
-
-### [Uninstall-SPInfoPathFormTemplate](Uninstall-SPInfoPathFormTemplate.md)
-{{Manually Enter Uninstall-SPInfoPathFormTemplate Description Here}}
-
-### [Uninstall-SPSolution](Uninstall-SPSolution.md)
-{{Manually Enter Uninstall-SPSolution Description Here}}
-
-### [Uninstall-SPUserSolution](Uninstall-SPUserSolution.md)
-{{Manually Enter Uninstall-SPUserSolution Description Here}}
-
-### [Uninstall-SPWebPartPack](Uninstall-SPWebPartPack.md)
-{{Manually Enter Uninstall-SPWebPartPack Description Here}}
-
-### [Unpublish-SPServiceApplication](Unpublish-SPServiceApplication.md)
-{{Manually Enter Unpublish-SPServiceApplication Description Here}}
-
-### [Update-SPAppCatalogConfiguration](Update-SPAppCatalogConfiguration.md)
-{{Manually Enter Update-SPAppCatalogConfiguration Description Here}}
-
-### [Update-SPAppInstance](Update-SPAppInstance.md)
-{{Manually Enter Update-SPAppInstance Description Here}}
-
-### [Update-SPDistributedCacheSize](Update-SPDistributedCacheSize.md)
-{{Manually Enter Update-SPDistributedCacheSize Description Here}}
-
-### [Update-SPFarmEncryptionKey](Update-SPFarmEncryptionKey.md)
-{{Manually Enter Update-SPFarmEncryptionKey Description Here}}
-
-### [Update-SPHelp](Update-SPHelp.md)
-{{Manually Enter Update-SPHelp Description Here}}
-
-### [Update-SPInfoPathAdminFileUrl](Update-SPInfoPathAdminFileUrl.md)
-{{Manually Enter Update-SPInfoPathAdminFileUrl Description Here}}
-
-### [Update-SPInfoPathFormTemplate](Update-SPInfoPathFormTemplate.md)
-{{Manually Enter Update-SPInfoPathFormTemplate Description Here}}
-
-### [Update-SPInfoPathUserFileUrl](Update-SPInfoPathUserFileUrl.md)
-{{Manually Enter Update-SPInfoPathUserFileUrl Description Here}}
-
-### [Update-SPProfilePhotoStore](Update-SPProfilePhotoStore.md)
-{{Manually Enter Update-SPProfilePhotoStore Description Here}}
-
-### [Update-SPRepopulateMicroblogFeedCache](Update-SPRepopulateMicroblogFeedCache.md)
-{{Manually Enter Update-SPRepopulateMicroblogFeedCache Description Here}}
-
-### [Update-SPRepopulateMicroblogLMTCache](Update-SPRepopulateMicroblogLMTCache.md)
-{{Manually Enter Update-SPRepopulateMicroblogLMTCache Description Here}}
-
-### [Update-SPSecureStoreApplicationServerKey](Update-SPSecureStoreApplicationServerKey.md)
-{{Manually Enter Update-SPSecureStoreApplicationServerKey Description Here}}
-
-### [Update-SPSecureStoreCredentialMapping](Update-SPSecureStoreCredentialMapping.md)
-{{Manually Enter Update-SPSecureStoreCredentialMapping Description Here}}
-
-### [Update-SPSecureStoreGroupCredentialMapping](Update-SPSecureStoreGroupCredentialMapping.md)
-{{Manually Enter Update-SPSecureStoreGroupCredentialMapping Description Here}}
-
-### [Update-SPSecureStoreMasterKey](Update-SPSecureStoreMasterKey.md)
-{{Manually Enter Update-SPSecureStoreMasterKey Description Here}}
-
-### [Update-SPSolution](Update-SPSolution.md)
-{{Manually Enter Update-SPSolution Description Here}}
-
-### [Update-SPUserSolution](Update-SPUserSolution.md)
-{{Manually Enter Update-SPUserSolution Description Here}}
-
-### [Update-SPWOPIProofKey](Update-SPWOPIProofKey.md)
-{{Manually Enter Update-SPWOPIProofKey Description Here}}
-
-### [Upgrade-SPAppManagementServiceApplication](Upgrade-SPAppManagementServiceApplication.md)
-{{Manually Enter Upgrade-SPAppManagementServiceApplication Description Here}}
-
-### [Upgrade-SPContentDatabase](Upgrade-SPContentDatabase.md)
-{{Manually Enter Upgrade-SPContentDatabase Description Here}}
-
-### [Upgrade-SPEnterpriseSearchServiceApplication](Upgrade-SPEnterpriseSearchServiceApplication.md)
-{{Manually Enter Upgrade-SPEnterpriseSearchServiceApplication Description Here}}
-
-### [Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings](Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings.md)
-{{Manually Enter Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings Description Here}}
-
-### [Upgrade-SPFarm](Upgrade-SPFarm.md)
-{{Manually Enter Upgrade-SPFarm Description Here}}
-
-### [Upgrade-SPProfileServiceApplication](Upgrade-SPProfileServiceApplication.md)
-{{Manually Enter Upgrade-SPProfileServiceApplication Description Here}}
-
-### [Upgrade-SPSingleSignOnDatabase](Upgrade-SPSingleSignOnDatabase.md)
-{{Manually Enter Upgrade-SPSingleSignOnDatabase Description Here}}
-
-### [Upgrade-SPSite](Upgrade-SPSite.md)
-{{Manually Enter Upgrade-SPSite Description Here}}
-
-### [Upgrade-SPSiteMapDatabase](Upgrade-SPSiteMapDatabase.md)
-{{Manually Enter Upgrade-SPSiteMapDatabase Description Here}}
-
-### [Add-FASTSearchResource](Add-FASTSearchResource.md)
-{{Manually Enter Add-FASTSearchResource Description Here}}
-
-### [Add-FASTSearchSpelltuning](Add-FASTSearchSpelltuning.md)
-{{Manually Enter Add-FASTSearchSpelltuning Description Here}}
-
-### [Clear-FASTSearchContentCollection](Clear-FASTSearchContentCollection.md)
-{{Manually Enter Clear-FASTSearchContentCollection Description Here}}
-
-### [Get-FASTSearchContentCollection](Get-FASTSearchContentCollection.md)
-{{Manually Enter Get-FASTSearchContentCollection Description Here}}
-
-### [Get-FASTSearchDocumentProcessingPipeline](Get-FASTSearchDocumentProcessingPipeline.md)
-{{Manually Enter Get-FASTSearchDocumentProcessingPipeline Description Here}}
-
-### [Get-FASTSearchMetadataCategory](Get-FASTSearchMetadataCategory.md)
-{{Manually Enter Get-FASTSearchMetadataCategory Description Here}}
-
-### [Get-FASTSearchMetadataCrawledProperty](Get-FASTSearchMetadataCrawledProperty.md)
-{{Manually Enter Get-FASTSearchMetadataCrawledProperty Description Here}}
-
-### [Get-FASTSearchMetadataCrawledPropertyMapping](Get-FASTSearchMetadataCrawledPropertyMapping.md)
-{{Manually Enter Get-FASTSearchMetadataCrawledPropertyMapping Description Here}}
-
-### [Get-FASTSearchMetadataFullTextIndex](Get-FASTSearchMetadataFullTextIndex.md)
-{{Manually Enter Get-FASTSearchMetadataFullTextIndex Description Here}}
-
-### [Get-FASTSearchMetadataFullTextIndexMapping](Get-FASTSearchMetadataFullTextIndexMapping.md)
-{{Manually Enter Get-FASTSearchMetadataFullTextIndexMapping Description Here}}
-
-### [Get-FASTSearchMetadataManagedProperty](Get-FASTSearchMetadataManagedProperty.md)
-{{Manually Enter Get-FASTSearchMetadataManagedProperty Description Here}}
-
-### [Get-FASTSearchMetadataRankProfile](Get-FASTSearchMetadataRankProfile.md)
-{{Manually Enter Get-FASTSearchMetadataRankProfile Description Here}}
-
-### [Get-FASTSearchResource](Get-FASTSearchResource.md)
-{{Manually Enter Get-FASTSearchResource Description Here}}
-
-### [Get-FASTSearchSearchSettingGroup](Get-FASTSearchSearchSettingGroup.md)
-{{Manually Enter Get-FASTSearchSearchSettingGroup Description Here}}
-
-### [Get-FASTSearchSecurityAliaser](Get-FASTSearchSecurityAliaser.md)
-{{Manually Enter Get-FASTSearchSecurityAliaser Description Here}}
-
-### [Get-FASTSearchSecurityCCTKServer](Get-FASTSearchSecurityCCTKServer.md)
-{{Manually Enter Get-FASTSearchSecurityCCTKServer Description Here}}
-
-### [Get-FASTSearchSecurityClaimsUserStore](Get-FASTSearchSecurityClaimsUserStore.md)
-{{Manually Enter Get-FASTSearchSecurityClaimsUserStore Description Here}}
-
-### [Get-FASTSearchSecurityCompleteGroupExpansion](Get-FASTSearchSecurityCompleteGroupExpansion.md)
-{{Manually Enter Get-FASTSearchSecurityCompleteGroupExpansion Description Here}}
-
-### [Get-FASTSearchSecurityDecodedSid](Get-FASTSearchSecurityDecodedSid.md)
-{{Manually Enter Get-FASTSearchSecurityDecodedSid Description Here}}
-
-### [Get-FASTSearchSecurityDefaultUserStore](Get-FASTSearchSecurityDefaultUserStore.md)
-{{Manually Enter Get-FASTSearchSecurityDefaultUserStore Description Here}}
-
-### [Get-FASTSearchSecurityEncodedSid](Get-FASTSearchSecurityEncodedSid.md)
-{{Manually Enter Get-FASTSearchSecurityEncodedSid Description Here}}
-
-### [Get-FASTSearchSecurityGeneralSettings](Get-FASTSearchSecurityGeneralSettings.md)
-{{Manually Enter Get-FASTSearchSecurityGeneralSettings Description Here}}
-
-### [Get-FASTSearchSecurityLogLevel](Get-FASTSearchSecurityLogLevel.md)
-{{Manually Enter Get-FASTSearchSecurityLogLevel Description Here}}
-
-### [Get-FASTSearchSecurityLotusNotesUserStore](Get-FASTSearchSecurityLotusNotesUserStore.md)
-{{Manually Enter Get-FASTSearchSecurityLotusNotesUserStore Description Here}}
-
-### [Get-FASTSearchSecurityPublicFilter](Get-FASTSearchSecurityPublicFilter.md)
-{{Manually Enter Get-FASTSearchSecurityPublicFilter Description Here}}
-
-### [Get-FASTSearchSecurityRegexAliaser](Get-FASTSearchSecurityRegexAliaser.md)
-{{Manually Enter Get-FASTSearchSecurityRegexAliaser Description Here}}
-
-### [Get-FASTSearchSecurityUserFilter](Get-FASTSearchSecurityUserFilter.md)
-{{Manually Enter Get-FASTSearchSecurityUserFilter Description Here}}
-
-### [Get-FASTSearchSecurityUserStore](Get-FASTSearchSecurityUserStore.md)
-{{Manually Enter Get-FASTSearchSecurityUserStore Description Here}}
-
-### [Get-FASTSearchSecurityUserStoreGroupExpansion](Get-FASTSearchSecurityUserStoreGroupExpansion.md)
-{{Manually Enter Get-FASTSearchSecurityUserStoreGroupExpansion Description Here}}
-
-### [Get-FASTSearchSecurityWorkerNode](Get-FASTSearchSecurityWorkerNode.md)
-{{Manually Enter Get-FASTSearchSecurityWorkerNode Description Here}}
-
-### [Get-FASTSearchSecurityXMLAliaser](Get-FASTSearchSecurityXMLAliaser.md)
-{{Manually Enter Get-FASTSearchSecurityXMLAliaser Description Here}}
-
-### [Get-FASTSearchSpelltuningStatus](Get-FASTSearchSpelltuningStatus.md)
-{{Manually Enter Get-FASTSearchSpelltuningStatus Description Here}}
-
-### [Install-FASTSearchAdminDatabase](Install-FASTSearchAdminDatabase.md)
-{{Manually Enter Install-FASTSearchAdminDatabase Description Here}}
-
-### [New-FASTSearchContentCollection](New-FASTSearchContentCollection.md)
-{{Manually Enter New-FASTSearchContentCollection Description Here}}
-
-### [New-FASTSearchMetadataCategory](New-FASTSearchMetadataCategory.md)
-{{Manually Enter New-FASTSearchMetadataCategory Description Here}}
-
-### [New-FASTSearchMetadataCrawledProperty](New-FASTSearchMetadataCrawledProperty.md)
-{{Manually Enter New-FASTSearchMetadataCrawledProperty Description Here}}
-
-### [New-FASTSearchMetadataCrawledPropertyMapping](New-FASTSearchMetadataCrawledPropertyMapping.md)
-{{Manually Enter New-FASTSearchMetadataCrawledPropertyMapping Description Here}}
-
-### [New-FASTSearchMetadataFullTextIndex](New-FASTSearchMetadataFullTextIndex.md)
-{{Manually Enter New-FASTSearchMetadataFullTextIndex Description Here}}
-
-### [New-FASTSearchMetadataFullTextIndexMapping](New-FASTSearchMetadataFullTextIndexMapping.md)
-{{Manually Enter New-FASTSearchMetadataFullTextIndexMapping Description Here}}
-
-### [New-FASTSearchMetadataManagedProperty](New-FASTSearchMetadataManagedProperty.md)
-{{Manually Enter New-FASTSearchMetadataManagedProperty Description Here}}
-
-### [New-FASTSearchMetadataRankProfile](New-FASTSearchMetadataRankProfile.md)
-{{Manually Enter New-FASTSearchMetadataRankProfile Description Here}}
-
-### [New-FASTSearchSearchSettingGroup](New-FASTSearchSearchSettingGroup.md)
-{{Manually Enter New-FASTSearchSearchSettingGroup Description Here}}
-
-### [New-FASTSearchSecurityClaimsUserStore](New-FASTSearchSecurityClaimsUserStore.md)
-{{Manually Enter New-FASTSearchSecurityClaimsUserStore Description Here}}
-
-### [New-FASTSearchSecurityLotusNotesUserStore](New-FASTSearchSecurityLotusNotesUserStore.md)
-{{Manually Enter New-FASTSearchSecurityLotusNotesUserStore Description Here}}
-
-### [New-FASTSearchSecurityRegexAliaser](New-FASTSearchSecurityRegexAliaser.md)
-{{Manually Enter New-FASTSearchSecurityRegexAliaser Description Here}}
-
-### [New-FASTSearchSecurityRegexAliaserPattern](New-FASTSearchSecurityRegexAliaserPattern.md)
-{{Manually Enter New-FASTSearchSecurityRegexAliaserPattern Description Here}}
-
-### [New-FASTSearchSecurityXMLAliaser](New-FASTSearchSecurityXMLAliaser.md)
-{{Manually Enter New-FASTSearchSecurityXMLAliaser Description Here}}
-
-### [Remove-FASTSearchContentCollection](Remove-FASTSearchContentCollection.md)
-{{Manually Enter Remove-FASTSearchContentCollection Description Here}}
-
-### [Remove-FASTSearchMetadataCategory](Remove-FASTSearchMetadataCategory.md)
-{{Manually Enter Remove-FASTSearchMetadataCategory Description Here}}
-
-### [Remove-FASTSearchMetadataCrawledPropertyMapping](Remove-FASTSearchMetadataCrawledPropertyMapping.md)
-{{Manually Enter Remove-FASTSearchMetadataCrawledPropertyMapping Description Here}}
-
-### [Remove-FASTSearchMetadataFullTextIndex](Remove-FASTSearchMetadataFullTextIndex.md)
-{{Manually Enter Remove-FASTSearchMetadataFullTextIndex Description Here}}
-
-### [Remove-FASTSearchMetadataFullTextIndexMapping](Remove-FASTSearchMetadataFullTextIndexMapping.md)
-{{Manually Enter Remove-FASTSearchMetadataFullTextIndexMapping Description Here}}
-
-### [Remove-FASTSearchMetadataManagedProperty](Remove-FASTSearchMetadataManagedProperty.md)
-{{Manually Enter Remove-FASTSearchMetadataManagedProperty Description Here}}
-
-### [Remove-FASTSearchMetadataRankProfile](Remove-FASTSearchMetadataRankProfile.md)
-{{Manually Enter Remove-FASTSearchMetadataRankProfile Description Here}}
-
-### [Remove-FASTSearchResource](Remove-FASTSearchResource.md)
-{{Manually Enter Remove-FASTSearchResource Description Here}}
-
-### [Remove-FASTSearchSearchSettingGroup](Remove-FASTSearchSearchSettingGroup.md)
-{{Manually Enter Remove-FASTSearchSearchSettingGroup Description Here}}
-
-### [Remove-FASTSearchSecurityAliaser](Remove-FASTSearchSecurityAliaser.md)
-{{Manually Enter Remove-FASTSearchSecurityAliaser Description Here}}
-
-### [Remove-FASTSearchSecurityUserStore](Remove-FASTSearchSecurityUserStore.md)
-{{Manually Enter Remove-FASTSearchSecurityUserStore Description Here}}
-
-### [Remove-FASTSearchSpelltuning](Remove-FASTSearchSpelltuning.md)
-{{Manually Enter Remove-FASTSearchSpelltuning Description Here}}
-
-### [Set-FASTSearchConfiguration](Set-FASTSearchConfiguration.md)
-{{Manually Enter Set-FASTSearchConfiguration Description Here}}
-
-### [Set-FASTSearchIPSec](Set-FASTSearchIPSec.md)
-{{Manually Enter Set-FASTSearchIPSec Description Here}}
-
-### [Set-FASTSearchMetadataCategory](Set-FASTSearchMetadataCategory.md)
-{{Manually Enter Set-FASTSearchMetadataCategory Description Here}}
-
-### [Set-FASTSearchMetadataCrawledProperty](Set-FASTSearchMetadataCrawledProperty.md)
-{{Manually Enter Set-FASTSearchMetadataCrawledProperty Description Here}}
-
-### [Set-FASTSearchMetadataCrawledPropertyMapping](Set-FASTSearchMetadataCrawledPropertyMapping.md)
-{{Manually Enter Set-FASTSearchMetadataCrawledPropertyMapping Description Here}}
-
-### [Set-FASTSearchMetadataFullTextIndex](Set-FASTSearchMetadataFullTextIndex.md)
-{{Manually Enter Set-FASTSearchMetadataFullTextIndex Description Here}}
-
-### [Set-FASTSearchMetadataFullTextIndexMapping](Set-FASTSearchMetadataFullTextIndexMapping.md)
-{{Manually Enter Set-FASTSearchMetadataFullTextIndexMapping Description Here}}
-
-### [Set-FASTSearchMetadataManagedProperty](Set-FASTSearchMetadataManagedProperty.md)
-{{Manually Enter Set-FASTSearchMetadataManagedProperty Description Here}}
-
-### [Set-FASTSearchMetadataRankProfile](Set-FASTSearchMetadataRankProfile.md)
-{{Manually Enter Set-FASTSearchMetadataRankProfile Description Here}}
-
-### [Set-FASTSearchSecurityCCTKServer](Set-FASTSearchSecurityCCTKServer.md)
-{{Manually Enter Set-FASTSearchSecurityCCTKServer Description Here}}
-
-### [Set-FASTSearchSecurityClaimsUserStore](Set-FASTSearchSecurityClaimsUserStore.md)
-{{Manually Enter Set-FASTSearchSecurityClaimsUserStore Description Here}}
-
-### [Set-FASTSearchSecurityDefaultUserStore](Set-FASTSearchSecurityDefaultUserStore.md)
-{{Manually Enter Set-FASTSearchSecurityDefaultUserStore Description Here}}
-
-### [Set-FASTSearchSecurityLogLevel](Set-FASTSearchSecurityLogLevel.md)
-{{Manually Enter Set-FASTSearchSecurityLogLevel Description Here}}
-
-### [Set-FASTSearchSecurityLotusNotesUserStore](Set-FASTSearchSecurityLotusNotesUserStore.md)
-{{Manually Enter Set-FASTSearchSecurityLotusNotesUserStore Description Here}}
-
-### [Set-FASTSearchSecurityPublicFilter](Set-FASTSearchSecurityPublicFilter.md)
-{{Manually Enter Set-FASTSearchSecurityPublicFilter Description Here}}
-
-### [Set-FASTSearchSecurityRegexAliaser](Set-FASTSearchSecurityRegexAliaser.md)
-{{Manually Enter Set-FASTSearchSecurityRegexAliaser Description Here}}
-
-### [Set-FASTSearchSecurityXMLAliaser](Set-FASTSearchSecurityXMLAliaser.md)
-{{Manually Enter Set-FASTSearchSecurityXMLAliaser Description Here}}
-
-### [Uninstall-FASTSearchAdminDatabase](Uninstall-FASTSearchAdminDatabase.md)
-{{Manually Enter Uninstall-FASTSearchAdminDatabase Description Here}}
+## Access Service (2010)
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get-SPAccessServiceApplication](Get-SPAccessServiceApplication.md)** |Returns an Access Services application or a collection of Access Services applications. |SharePoint 2010, SharePoint 2013, SharePoint 2016
+**[New-SPAccessServiceApplication](New-SPAccessServiceApplication.md)** |Creates a new instance of an Access Services application in SharePoint Server. |SharePoint 2010, SharePoint 2013, SharePoint 2016
+**[Set-SPAccessServiceApplication](Set-SPAccessServiceApplication.md)** |Sets global properties of an existing Access Services application in SharePoint Server. |SharePoint 2010, SharePoint 2013, SharePoint 2016
+
+## Access Services (2013)
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Copy-SPAccessServicesDatabaseCredentials](Copy-SPAccessServicesDatabaseCredentials.md)** |{{Manually Enter Copy-SPAccessServicesDatabaseCredentials Description Here}} |SharePoint 2013, SharePoint 2016  
+**[Export-SPAccessServicesDatabase](Export-SPAccessServicesDatabase.md)** |Exports an Access Services Database to a DACPAC via the Data-Tier Framework. |SharePoint 2016
+**[Get-SPAccessServicesApplication](Get-SPAccessServicesApplication.md)** |Gets an Access Services Service Application. |SharePoint 2013, SharePoint 2016
+**[Get-SPAccessServicesDatabase](Get-SPAccessServicesDatabase.md)** |Returns an Access Services database. |SharePoint 2013, SharePoint 2016
+**[Get-SPAccessServicesDatabaseServer](Get-SPAccessServicesDatabaseServer.md)** |Returns SQL Server instances associated with Access Services. |SharePoint 2013, SharePoint 2016
+**[Get-SPAccessServicesDatabaseServerGroup](Get-SPAccessServicesDatabaseServerGroup.md) |Returns a database server group. |SharePoint 2013, SharePoint 2016
+**[Get-SPAccessServicesDatabaseServerGroupMapping](Get-SPAccessServicesDatabaseServerGroupMapping.md)** |Returns the mapping of the database server group. |SharePoint 2013, SharePoint 2016
+**[Import-SPAccessServicesDatabase](Import-SPAccessServicesDatabase.md)** |Imports an Access Services Database to a DACPAC via the Data-Tier Framework. |SharePoint 2016
+**[New-SPAccessServicesApplication](New-SPAccessServicesApplication.md)** |Creates an Access Services Service Application. |SharePoint 2013, SharePoint 2016
+**[New-SPAccessServicesApplicationProxy](New-SPAccessServicesApplicationProxy.md)** |Creates a Proxy for an Access Services Service Application. |SharePoint 2013, SharePoint 2016
+**[New-SPAccessServicesDatabaseServer](New-SPAccessServicesDatabaseServer.md)** |Adds a server to host Access Services databases. |SharePoint 2013, SharePoint 2016
+**[Remove-SPAccessServicesDatabaseServer](Remove-SPAccessServicesDatabaseServer.md)** |Removes a database server for hosting Access Services databases. |SharePoint 2013, SharePoint 2016
+**[Reset-SPAccessServicesDatabasePassword](Reset-SPAccessServicesDatabasePassword.md)** |Resets the specified Access Services Database password with a randomly generated password. |SharePoint 2013, SharePoint 2016
+**[Set-SPAccessServicesApplication](Set-SPAccessServicesApplication.md)** |Sets properties of an Access Services Service Application. |SharePoint 2013, SharePoint 2016
+**[Set-SPAccessServicesDatabaseServer](Set-SPAccessServicesDatabaseServer.md)** |{{Manually Enter Set-SPAccessServicesDatabaseServer Description Here}} |SharePoint 2013, SharePoint 2016
+**[Set-SPAccessServicesDatabaseServerGroupMapping](Set-SPAccessServicesDatabaseServerGroupMapping.md)** |{{Manually Enter Set-SPAccessServicesDatabaseServerGroupMapping Description Here}} |SharePoint 2013, SharePoint 2016
+
+## SharePoint Addins
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPAppDeniedEndpoint](Add-SPAppDeniedEndpoint.md)** |
+**[Clear-SPAppDeniedEndpointList](Clear-SPAppDeniedEndpointList.md)** |
+**[Disable-SPAppAutoProvision](Disable-SPAppAutoProvision.md)** |
+**[Enable-SPAppAutoProvision](Enable-SPAppAutoProvision.md)** |
+**[Export-SPAppPackage](Export-SPAppPackage.md)** |
+**[Get-SPAppAcquisitionConfiguration](Get-SPAppAcquisitionConfiguration.md)** |
+**[Get-SPAppAutoProvisionConnection](Get-SPAppAutoProvisionConnection.md)** |
+**[Get-SPAppDeniedEndpointList](Get-SPAppDeniedEndpointList.md)** |
+**[Get-SPAppDisablingConfiguration](Get-SPAppDisablingConfiguration.md)** |
+**[Get-SPAppDomain](Get-SPAppDomain.md)** |
+**[Get-SPAppHostingQuotaConfiguration](Get-SPAppHostingQuotaConfiguration.md)** |
+**[Get-SPAppInstance](Get-SPAppInstance.md)** |
+**[Get-SPAppPrincipal](Get-SPAppPrincipal.md)** |
+**[Get-SPAppScaleProfile](Get-SPAppScaleProfile.md)** |
+**[Get-SPAppSiteSubscriptionName](Get-SPAppSiteSubscriptionName.md)** |
+**[Get-SPAppStateSyncLastRunTime](Get-SPAppStateSyncLastRunTime.md)** |
+**[Get-SPAppStateUpdateInterval](Get-SPAppStateUpdateInterval.md)** |
+**[Get-SPAppStoreConfiguration](Get-SPAppStoreConfiguration.md)** |
+**[Get-SPAppStoreWebServiceConfiguration](Get-SPAppStoreWebServiceConfiguration.md)** |
+**[Get-SPInternalAppStateSyncLastRunTime](Get-SPInternalAppStateSyncLastRunTime.md)** |
+**[Get-SPInternalAppStateUpdateInterval](Get-SPInternalAppStateUpdateInterval.md)** |
+**[Import-SPAppPackage](Import-SPAppPackage.md)** |
+**[Install-SPApp](Install-SPApp.md)** |
+**[Move-SPAppManagementData](Move-SPAppManagementData.md)** |
+**[New-SPMarketplaceWebServiceApplicationProxy](New-SPMarketplaceWebServiceApplicationProxy.md)** |
+**[Register-SPAppPrincipal](Register-SPAppPrincipal.md)** |
+**[Remove-SPAppDeniedEndpoint](Remove-SPAppDeniedEndpoint.md)** |
+**[Remove-SPAppPrincipalPermission](Remove-SPAppPrincipalPermission.md)** |
+**[Restart-SPAppInstanceJob](Restart-SPAppInstanceJob.md)** |
+**[Set-SPAppAcquisitionConfiguration](Set-SPAppAcquisitionConfiguration.md)** |
+**[Set-SPAppAutoProvisionConnection](Set-SPAppAutoProvisionConnection.md)** |
+**[Set-SPAppDisablingConfiguration](Set-SPAppDisablingConfiguration.md)** |
+**[Set-SPAppDomain](Set-SPAppDomain.md)** |
+**[Set-SPAppHostingQuotaConfiguration](Set-SPAppHostingQuotaConfiguration.md)** |
+**[Set-SPAppManagementDeploymentId](Set-SPAppManagementDeploymentId.md)** |
+**[Set-SPAppPrincipalPermission](Set-SPAppPrincipalPermission.md)** |
+**[Set-SPAppScaleProfile](Set-SPAppScaleProfile.md)** |
+**[Set-SPAppSiteDomain](Set-SPAppSiteDomain.md)** |
+**[Set-SPAppSiteSubscriptionName](Set-SPAppSiteSubscriptionName.md)** |
+**[Set-SPAppStateUpdateInterval](Set-SPAppStateUpdateInterval.md)** |
+**[Set-SPAppStoreConfiguration](Set-SPAppStoreConfiguration.md)** |
+**[Set-SPAppStoreWebServiceConfiguration](Set-SPAppStoreWebServiceConfiguration.md)** |
+**[Set-SPInternalAppStateUpdateInterval](Set-SPInternalAppStateUpdateInterval.md)** |
+**[Update-SPAppCatalogConfiguration](Update-SPAppCatalogConfiguration.md)** |
+**[Update-SPAppInstance](Update-SPAppInstance.md)** |
+**[Uninstall-SPAppInstance](Uninstall-SPAppInstance.md)** |
+
+## App Management Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[New-SPAppManagementServiceApplication](New-SPAppManagementServiceApplication.md)** |
+**[New-SPAppManagementServiceApplicationProxy](New-SPAppManagementServiceApplicationProxy.md)** |
+
+## Backup and Restore Operations
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Backup-SPConfigurationDatabase](Backup-SPConfigurationDatabase.md)** |
+**[Backup-SPFarm](Backup-SPFarm.md)** |
+**[Backup-SPSite](Backup-SPSite.md)** |
+**[Export-SPWeb](Export-SPWeb.md)** |
+**[Get-SPBackupHistory](Get-SPBackupHistory.md)** |
+**[Restore-SPDeletedSite](Restore-SPDeletedSite.md)** |
+**[Restore-SPFarm](Restore-SPFarm.md)** |
+**[Restore-SPSite](Restore-SPSite.md)** |
+
+## Bing Maps
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get-SPBingMapsBlock](Get-SPBingMapsBlock.md)** |
+**[Get-SPBingMapsKey](Get-SPBingMapsKey.md)** |
+**[Set-SPBingMapsBlock](Set-SPBingMapsBlock.md)** |
+**[Set-SPBingMapsKey](Set-SPBingMapsKey.md)** |
+
+## Business Data Connectivity Services
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Clear-SPBusinessDataCatalogEntityNotificationWeb](Clear-SPBusinessDataCatalogEntityNotificationWeb.md)** |
+**[Copy-SPBusinessDataCatalogAclToChildren](Copy-SPBusinessDataCatalogAclToChildren.md)** |
+**[Disable-SPBusinessDataCatalogEntity](Disable-SPBusinessDataCatalogEntity.md)** |
+**[Enable-SPBusinessDataCatalogEntity](Enable-SPBusinessDataCatalogEntity.md)** |
+**[Export-SPBusinessDataCatalogModel](Export-SPBusinessDataCatalogModel.md)** |
+**[Get-SPBusinessDataCatalogEntityNotificationWeb](Get-SPBusinessDataCatalogEntityNotificationWeb.md)** |
+**[Get-SPBusinessDataCatalogMetadataObject](Get-SPBusinessDataCatalogMetadataObject.md)** |
+**[Get-SPBusinessDataCatalogThrottleConfig](Get-SPBusinessDataCatalogThrottleConfig.md)** |
+**[Grant-SPBusinessDataCatalogMetadataObject](Grant-SPBusinessDataCatalogMetadataObject.md)** |
+**[Import-SPBusinessDataCatalogDotNetAssembly](Import-SPBusinessDataCatalogDotNetAssembly.md)** |
+**[Import-SPBusinessDataCatalogModel](Import-SPBusinessDataCatalogModel.md)** |
+**[New-SPBECWebServiceApplicationProxy](New-SPBECWebServiceApplicationProxy.md)** |
+**[New-SPBusinessDataCatalogServiceApplication](New-SPBusinessDataCatalogServiceApplication.md)** |
+**[New-SPBusinessDataCatalogServiceApplicationProxy](New-SPBusinessDataCatalogServiceApplicationProxy.md)** |
+**[Remove-SPBusinessDataCatalogModel](Remove-SPBusinessDataCatalogModel.md)** |
+**[Revoke-SPBusinessDataCatalogMetadataObject](Revoke-SPBusinessDataCatalogMetadataObject.md)** |
+**[Set-SPBusinessDataCatalogEntityNotificationWeb](Set-SPBusinessDataCatalogEntityNotificationWeb.md)** |
+**[Set-SPBusinessDataCatalogMetadataObject](Set-SPBusinessDataCatalogMetadataObject.md)** |
+**[Set-SPBusinessDataCatalogServiceApplication](Set-SPBusinessDataCatalogServiceApplication.md)** |
+**[Set-SPBusinessDataCatalogThrottleConfig](Set-SPBusinessDataCatalogThrottleConfig.md)** |
+
+## Database Operations
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-DatabaseToAvailabilityGroup](Add-DatabaseToAvailabilityGroup.md)** |
+**[Add-SPScaleOutDatabase](Add-SPScaleOutDatabase.md)** |
+**[Add-SPServerScaleOutDatabase](Add-SPServerScaleOutDatabase.md)** |
+**[Clear-SPScaleOutDatabaseDeletedDataSubRange](Clear-SPScaleOutDatabaseDeletedDataSubRange.md)** |
+**[Clear-SPScaleOutDatabaseLog](Clear-SPScaleOutDatabaseLog.md)** |
+**[Clear-SPScaleOutDatabaseTenantData](Clear-SPScaleOutDatabaseTenantData.md)** |
+**[Clear-SPServerScaleOutDatabaseDeletedDataSubRange](Clear-SPServerScaleOutDatabaseDeletedDataSubRange.md)** |
+**[Clear-SPServerScaleOutDatabaseLog](Clear-SPServerScaleOutDatabaseLog.md)** |
+**[Clear-SPServerScaleOutDatabaseTenantData](Clear-SPServerScaleOutDatabaseTenantData.md)** |
+**[Dismount-SPContentDatabase](Dismount-SPContentDatabase.md)** |
+**[Export-SPScaleOutDatabaseTenantData](Export-SPScaleOutDatabaseTenantData.md)** |
+**[Export-SPServerScaleOutDatabaseTenantData](Export-SPServerScaleOutDatabaseTenantData.md)** |
+**[Get-AvailabilityGroupStatus](Get-AvailabilityGroupStatus.md)** |
+**[Get-SPContentDatabase](Get-SPContentDatabase.md)** |
+**[Get-SPDatabase](Get-SPDatabase.md)** |
+**[Get-SPScaleOutDatabase](Get-SPScaleOutDatabase.md)** |
+**[Get-SPScaleOutDatabaseDataState](Get-SPScaleOutDatabaseDataState.md)** |
+**[Get-SPScaleOutDatabaseInconsistency](Get-SPScaleOutDatabaseInconsistency.md)** |
+**[Get-SPScaleOutDatabaseLogEntry](Get-SPScaleOutDatabaseLogEntry.md)** |
+**[Get-SPServerScaleOutDatabase](Get-SPServerScaleOutDatabase.md)** |
+**[Get-SPServerScaleOutDatabaseDataState](Get-SPServerScaleOutDatabaseDataState.md)** |
+**[Get-SPServerScaleOutDatabaseInconsistency](Get-SPServerScaleOutDatabaseInconsistency.md)** |
+**[Get-SPServerScaleOutDatabaseLogEntry](Get-SPServerScaleOutDatabaseLogEntry.md)** |
+**[Import-SPScaleOutDatabaseTenantData](Import-SPScaleOutDatabaseTenantData.md)** |
+**[Import-SPServerScaleOutDatabaseTenantData](Import-SPServerScaleOutDatabaseTenantData.md)** |
+**[Migrate-SPDatabase](Migrate-SPDatabase.md)** |
+**[Move-SPBlobStorageLocation](Move-SPBlobStorageLocation.md)** |
+**[Mount-SPContentDatabase](Mount-SPContentDatabase.md)** |
+**[New-SPContentDatabase](New-SPContentDatabase.md)** |
+**[Remove-DatabaseFromAvailabilityGroup](Remove-DatabaseFromAvailabilityGroup.md)** |
+**[Remove-SPContentDatabase](Remove-SPContentDatabase.md)** |
+**[Remove-SPScaleOutDatabase](Remove-SPScaleOutDatabase.md)** |
+**[Remove-SPServerScaleOutDatabase](Remove-SPServerScaleOutDatabase.md)** |
+**[Set-SPContentDatabase](Set-SPContentDatabase.md)** |
+**[Set-SPScaleOutDatabaseDataRange](Set-SPScaleOutDatabaseDataRange.md)** |
+**[Set-SPScaleOutDatabaseDataSubRange](Set-SPScaleOutDatabaseDataSubRange.md)** |
+**[Split-SPScaleOutDatabase](Split-SPScaleOutDatabase.md)** |
+**[Split-SPServerScaleOutDatabase](Split-SPServerScaleOutDatabase.md)** |
+**[Set-SPServerScaleOutDatabaseDataRange](Set-SPServerScaleOutDatabaseDataRange.md)** |
+**[Set-SPServerScaleOutDatabaseDataSubRange](Set-SPServerScaleOutDatabaseDataSubRange.md)** |
+**[Test-SPContentDatabase](Test-SPContentDatabase.md)** |
+**[Upgrade-SPContentDatabase](Upgrade-SPContentDatabase.md)** |
+
+## Diagnostics (ULS)
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Clear-SPLogLevel](Clear-SPLogLevel.md)** |
+**[Get-SPLogEvent](Get-SPLogEvent.md)** |
+**[Get-SPLogLevel](Get-SPLogLevel.md)** |
+**[Merge-SPLogFile](Merge-SPLogFile.md)** |
+**[New-SPLogFile](New-SPLogFile.md)** |
+**[Set-SPLogLevel](Set-SPLogLevel.md)** |
+
+## Distributed Cache
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPDistributedCacheServiceInstance](Add-SPDistributedCacheServiceInstance.md)** |
+**[Clear-SPDistributedCacheItem](Clear-SPDistributedCacheItem.md)** |
+**[Get-SPDistributedCacheClientSetting](Get-SPDistributedCacheClientSetting.md)** |
+**[Remove-SPDistributedCacheServiceInstance](Remove-SPDistributedCacheServiceInstance.md)** |
+**[Set-SPDistributedCacheClientSetting](Set-SPDistributedCacheClientSetting.md)** |
+**[Stop-SPDistributedCacheServiceInstance](Stop-SPDistributedCacheServiceInstance.md)** |
+**[Update-SPDistributedCacheSize](Update-SPDistributedCacheSize.md)** |
+
+## Excel Calculation Services
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get-SPExcelBIServer](Get-SPExcelBIServer.md)** |
+**[Get-SPExcelBlockedFileType](Get-SPExcelBlockedFileType.md)** |
+**[Get-SPExcelDataConnectionLibrary](Get-SPExcelDataConnectionLibrary.md)** |
+**[Get-SPExcelDataProvider](Get-SPExcelDataProvider.md)** |
+**[Get-SPExcelFileLocation](Get-SPExcelFileLocation.md)** |
+**[Get-SPExcelServiceApplication](Get-SPExcelServiceApplication.md)** |
+**[Get-SPExcelUserDefinedFunction](Get-SPExcelUserDefinedFunction.md)** |
+**[New-SPExcelBIServer](New-SPExcelBIServer.md)** |
+**[New-SPExcelBlockedFileType](New-SPExcelBlockedFileType.md)** |
+**[New-SPExcelDataConnectionLibrary](New-SPExcelDataConnectionLibrary.md)** |
+**[New-SPExcelDataProvider](New-SPExcelDataProvider.md)** |
+**[New-SPExcelFileLocation](New-SPExcelFileLocation.md)** |
+**[New-SPExcelServiceApplication](New-SPExcelServiceApplication.md)** |
+**[New-SPExcelUserDefinedFunction](New-SPExcelUserDefinedFunction.md)** |
+**[Remove-SPExcelBIServer](Remove-SPExcelBIServer.md)** |
+**[Remove-SPExcelBlockedFileType](Remove-SPExcelBlockedFileType.md)** |
+**[Remove-SPExcelDataConnectionLibrary](Remove-SPExcelDataConnectionLibrary.md)** |
+**[Remove-SPExcelDataProvider](Remove-SPExcelDataProvider.md)** |
+**[Remove-SPExcelFileLocation](Remove-SPExcelFileLocation.md)** |
+**[Remove-SPExcelUserDefinedFunction](Remove-SPExcelUserDefinedFunction.md)** |
+**[Set-SPExcelBIServer](Set-SPExcelBIServer.md)** |
+**[Set-SPExcelDataConnectionLibrary](Set-SPExcelDataConnectionLibrary.md)** |
+**[Set-SPExcelDataProvider](Set-SPExcelDataProvider.md)** |
+**[Set-SPExcelFileLocation](Set-SPExcelFileLocation.md)** |
+**[Set-SPExcelServiceApplication](Set-SPExcelServiceApplication.md)** |
+**[Set-SPExcelUserDefinedFunction](Set-SPExcelUserDefinedFunction.md)** |
+
+## Farm
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Disable-SPTimerJob](Disable-SPTimerJob.md)** |
+**[Enable-SPTimerJob](Enable-SPTimerJob.md)** |
+**[Get-SPBrowserCustomerExperienceImprovementProgram](Get-SPBrowserCustomerExperienceImprovementProgram.md)** |
+**[Get-SPFarm](Get-SPFarm.md)** |
+**[Get-SPFarmConfig](Get-SPFarmConfig.md)** |
+**[Get-SPMobileMessagingAccount](Get-SPMobileMessagingAccount.md)** |
+**[Get-SPProduct](Get-SPProduct.md)** |
+**[Get-SPProcessAccount](Get-SPProcessAccount.md)** |
+**[Get-SPServer](Get-SPServer.md)** |
+**[Get-SPService](Get-SPService.md)** |
+**[Get-SPServiceHostConfig](Get-SPServiceHostConfig.md)** |
+**[Get-SPServiceInstance](Get-SPServiceInstance.md)** |
+**[Get-SPTimerJob](Get-SPTimerJob.md)** |
+**[Get-SPWebPartPack](Get-SPWebPartPack.md)** |
+**[Get-SPUserSettingsProvider](Get-SPUserSettingsProvider.md)** |
+**[Get-SPUserSettingsProviderManager](Get-SPUserSettingsProviderManager.md)** |
+**[Install-SPWebPartPack](Install-SPWebPartPack.md)** |
+**[New-SPUserSettingsProvider](New-SPUserSettingsProvider.md)** |
+**[Remove-SPUserSettingsProvider](Remove-SPUserSettingsProvider.md)** |
+**[Rename-SPServer](Rename-SPServer.md)** |
+**[Set-SPBrowserCustomerExperienceImprovementProgram](Set-SPBrowserCustomerExperienceImprovementProgram.md)** |
+**[Set-SPCustomLayoutsPage](Set-SPCustomLayoutsPage.md)** |
+**[Set-SPFarmConfig](Set-SPFarmConfig.md)** |
+**[Set-SPMobileMessagingAccount](Set-SPMobileMessagingAccount.md)** |
+**[Set-SPIRMSettings](Set-SPIRMSettings.md)** |
+**[Set-SPServiceHostConfig](Set-SPServiceHostConfig.md)** |
+**[Set-SPTimerJob](Set-SPTimerJob.md)** |
+**[Start-SPAdminJob](Start-SPAdminJob.md)** |
+**[Start-SPService](Start-SPService.md)** |
+**[Start-SPServiceInstance](Start-SPServiceInstance.md)** |
+**[Start-SPTimerJob](Start-SPTimerJob.md)** |
+**[Stop-SPService](Stop-SPService.md)** |
+**[Stop-SPServiceInstance](Stop-SPServiceInstance.md)** |
+**[Uninstall-SPWebPartPack](Uninstall-SPWebPartPack.md)** |
+**[Unpublish-SPServiceApplication](Unpublish-SPServiceApplication.md)** |
+
+## Farm and Sandbox Solutions
+Cmdlet|Description|Platform
+:-----|:----------|:------- 
+**[Add-SPSolution](Add-SPSolution.md)** |
+**[Add-SPUserSolution](Add-SPUserSolution.md)** |
+**[Disable-SPUserSolutionAllowList](Disable-SPUserSolutionAllowList.md)** |
+**[Enable-SPUserSolutionAllowList](Enable-SPUserSolutionAllowList.md)** |
+**[Get-SPSolution](Get-SPSolution.md)** |
+**[Get-SPUserSolution](Get-SPUserSolution.md)** |
+**[Get-SPUserSolutionAllowList](Get-SPUserSolutionAllowList.md)** |
+**[Install-SPSolution](Install-SPSolution.md)** |
+**[Install-SPUserSolution](Install-SPUserSolution.md)** |
+**[New-SPUserSolutionAllowList](New-SPUserSolutionAllowList.md)** |
+**[Remove-SPSolution](Remove-SPSolution.md)** |
+**[Remove-SPSolutionDeploymentLock](Remove-SPSolutionDeploymentLock.md)** |
+**[Remove-SPUserSolution](Remove-SPUserSolution.md)** |
+**[Uninstall-SPSolution](Uninstall-SPSolution.md)** |
+**[Uninstall-SPUserSolution](Uninstall-SPUserSolution.md)** |
+**[Update-SPSolution](Update-SPSolution.md)** |
+**[Update-SPUserSolution](Update-SPUserSolution.md)** |
+
+## FAST Search Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-FASTSearchResource](Add-FASTSearchResource.md)** |
+**[Add-FASTSearchSpelltuning](Add-FASTSearchSpelltuning.md)** |
+**[Clear-FASTSearchContentCollection](Clear-FASTSearchContentCollection.md)** |
+**[Get-FASTSearchContentCollection](Get-FASTSearchContentCollection.md)** |
+**[Get-FASTSearchDocumentProcessingPipeline](Get-FASTSearchDocumentProcessingPipeline.md)** |
+**[Get-FASTSearchMetadataCategory](Get-FASTSearchMetadataCategory.md)** |
+**[Get-FASTSearchMetadataCrawledProperty](Get-FASTSearchMetadataCrawledProperty.md)** |
+**[Get-FASTSearchMetadataCrawledPropertyMapping](Get-FASTSearchMetadataCrawledPropertyMapping.md)** |
+**[Get-FASTSearchMetadataFullTextIndex](Get-FASTSearchMetadataFullTextIndex.md)** |
+**[Get-FASTSearchMetadataFullTextIndexMapping](Get-FASTSearchMetadataFullTextIndexMapping.md)** |
+**[Get-FASTSearchMetadataManagedProperty](Get-FASTSearchMetadataManagedProperty.md)** |
+**[Get-FASTSearchMetadataRankProfile](Get-FASTSearchMetadataRankProfile.md)** |
+**[Get-FASTSearchResource](Get-FASTSearchResource.md)** |
+**[Get-FASTSearchSearchSettingGroup](Get-FASTSearchSearchSettingGroup.md)** |
+**[Get-FASTSearchSecurityAliaser](Get-FASTSearchSecurityAliaser.md)** |
+**[Get-FASTSearchSecurityCCTKServer](Get-FASTSearchSecurityCCTKServer.md)** |
+**[Get-FASTSearchSecurityClaimsUserStore](Get-FASTSearchSecurityClaimsUserStore.md)** |
+**[Get-FASTSearchSecurityCompleteGroupExpansion](Get-FASTSearchSecurityCompleteGroupExpansion.md)** |
+**[Get-FASTSearchSecurityDecodedSid](Get-FASTSearchSecurityDecodedSid.md)** |
+**[Get-FASTSearchSecurityDefaultUserStore](Get-FASTSearchSecurityDefaultUserStore.md)** |
+**[Get-FASTSearchSecurityEncodedSid](Get-FASTSearchSecurityEncodedSid.md)** |
+**[Get-FASTSearchSecurityGeneralSettings](Get-FASTSearchSecurityGeneralSettings.md)** |
+**[Get-FASTSearchSecurityLogLevel](Get-FASTSearchSecurityLogLevel.md)** |
+**[Get-FASTSearchSecurityLotusNotesUserStore](Get-FASTSearchSecurityLotusNotesUserStore.md)** |
+**[Get-FASTSearchSecurityPublicFilter](Get-FASTSearchSecurityPublicFilter.md)** |
+**[Get-FASTSearchSecurityRegexAliaser](Get-FASTSearchSecurityRegexAliaser.md)** |
+**[Get-FASTSearchSecurityUserFilter](Get-FASTSearchSecurityUserFilter.md)** |
+**[Get-FASTSearchSecurityUserStore](Get-FASTSearchSecurityUserStore.md)** |
+**[Get-FASTSearchSecurityUserStoreGroupExpansion](Get-FASTSearchSecurityUserStoreGroupExpansion.md)** |
+**[Get-FASTSearchSecurityWorkerNode](Get-FASTSearchSecurityWorkerNode.md)** |
+**[Get-FASTSearchSecurityXMLAliaser](Get-FASTSearchSecurityXMLAliaser.md)** |
+**[Get-FASTSearchSpelltuningStatus](Get-FASTSearchSpelltuningStatus.md)** |
+**[Install-FASTSearchAdminDatabase](Install-FASTSearchAdminDatabase.md)** |
+**[New-FASTSearchContentCollection](New-FASTSearchContentCollection.md)** |
+**[New-FASTSearchMetadataCategory](New-FASTSearchMetadataCategory.md)** |
+**[New-FASTSearchMetadataCrawledProperty](New-FASTSearchMetadataCrawledProperty.md)** |
+**[New-FASTSearchMetadataCrawledPropertyMapping](New-FASTSearchMetadataCrawledPropertyMapping.md)** |
+**[New-FASTSearchMetadataFullTextIndex](New-FASTSearchMetadataFullTextIndex.md)** |
+**[New-FASTSearchMetadataFullTextIndexMapping](New-FASTSearchMetadataFullTextIndexMapping.md)** |
+**[New-FASTSearchMetadataManagedProperty](New-FASTSearchMetadataManagedProperty.md)** |
+**[New-FASTSearchMetadataRankProfile](New-FASTSearchMetadataRankProfile.md)** |
+**[New-FASTSearchSearchSettingGroup](New-FASTSearchSearchSettingGroup.md)** |
+**[New-FASTSearchSecurityClaimsUserStore](New-FASTSearchSecurityClaimsUserStore.md)** |
+**[New-FASTSearchSecurityLotusNotesUserStore](New-FASTSearchSecurityLotusNotesUserStore.md)** |
+**[New-FASTSearchSecurityRegexAliaser](New-FASTSearchSecurityRegexAliaser.md)** |
+**[New-FASTSearchSecurityRegexAliaserPattern](New-FASTSearchSecurityRegexAliaserPattern.md)** |
+**[New-FASTSearchSecurityXMLAliaser](New-FASTSearchSecurityXMLAliaser.md)** |
+**[Remove-FASTSearchContentCollection](Remove-FASTSearchContentCollection.md)** |
+**[Remove-FASTSearchMetadataCategory](Remove-FASTSearchMetadataCategory.md)** |
+**[Remove-FASTSearchMetadataCrawledPropertyMapping](Remove-FASTSearchMetadataCrawledPropertyMapping.md)** |
+**[Remove-FASTSearchMetadataFullTextIndex](Remove-FASTSearchMetadataFullTextIndex.md)** |
+**[Remove-FASTSearchMetadataFullTextIndexMapping](Remove-FASTSearchMetadataFullTextIndexMapping.md)** |
+**[Remove-FASTSearchMetadataManagedProperty](Remove-FASTSearchMetadataManagedProperty.md)** |
+**[Remove-FASTSearchMetadataRankProfile](Remove-FASTSearchMetadataRankProfile.md)** |
+**[Remove-FASTSearchResource](Remove-FASTSearchResource.md)** |
+**[Remove-FASTSearchSearchSettingGroup](Remove-FASTSearchSearchSettingGroup.md)** |
+**[Remove-FASTSearchSecurityAliaser](Remove-FASTSearchSecurityAliaser.md)** |
+**[Remove-FASTSearchSecurityUserStore](Remove-FASTSearchSecurityUserStore.md)** |
+**[Remove-FASTSearchSpelltuning](Remove-FASTSearchSpelltuning.md)** |
+**[Set-FASTSearchConfiguration](Set-FASTSearchConfiguration.md)** |
+**[Set-FASTSearchIPSec](Set-FASTSearchIPSec.md)** |
+**[Set-FASTSearchMetadataCategory](Set-FASTSearchMetadataCategory.md)** |
+**[Set-FASTSearchMetadataCrawledProperty](Set-FASTSearchMetadataCrawledProperty.md)** |
+**[Set-FASTSearchMetadataCrawledPropertyMapping](Set-FASTSearchMetadataCrawledPropertyMapping.md)** |
+**[Set-FASTSearchMetadataFullTextIndex](Set-FASTSearchMetadataFullTextIndex.md)** |
+**[Set-FASTSearchMetadataFullTextIndexMapping](Set-FASTSearchMetadataFullTextIndexMapping.md)** |
+**[Set-FASTSearchMetadataManagedProperty](Set-FASTSearchMetadataManagedProperty.md)** |
+**[Set-FASTSearchMetadataRankProfile](Set-FASTSearchMetadataRankProfile.md)** |
+**[Set-FASTSearchSecurityCCTKServer](Set-FASTSearchSecurityCCTKServer.md)** |
+**[Set-FASTSearchSecurityClaimsUserStore](Set-FASTSearchSecurityClaimsUserStore.md)** |
+**[Set-FASTSearchSecurityDefaultUserStore](Set-FASTSearchSecurityDefaultUserStore.md)** |
+**[Set-FASTSearchSecurityLogLevel](Set-FASTSearchSecurityLogLevel.md)** |
+**[Set-FASTSearchSecurityLotusNotesUserStore](Set-FASTSearchSecurityLotusNotesUserStore.md)** |
+**[Set-FASTSearchSecurityPublicFilter](Set-FASTSearchSecurityPublicFilter.md)** |
+**[Set-FASTSearchSecurityRegexAliaser](Set-FASTSearchSecurityRegexAliaser.md)** |
+**[Set-FASTSearchSecurityXMLAliaser](Set-FASTSearchSecurityXMLAliaser.md)** |
+**[Uninstall-FASTSearchAdminDatabase](Uninstall-FASTSearchAdminDatabase.md)** |
+
+## Feature
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Disable-SPFeature](Disable-SPFeature.md)** |
+**[Enable-SPFeature](Enable-SPFeature.md)** |
+**[Get-SPFeature](Get-SPFeature.md)** |
+**[Install-SPFeature](Install-SPFeature.md)** |
+**[Uninstall-SPFeature](Uninstall-SPFeature.md)** |
+
+## Hybrid and Migration
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[ConvertTo-SPOMigrationEncryptedPackage](ConvertTo-SPOMigrationEncryptedPackage.md)** |
+**[ConvertTo-SPOMigrationTargetedPackage](ConvertTo-SPOMigrationTargetedPackage.md)** |
+**[Copy-SPContentTypes](Copy-SPContentTypes.md)** |
+**[Get-SPInsightsConfig](Get-SPInsightsConfig.md)** |
+**[New-SPAzureAccessControlServiceApplicationProxy](New-SPAzureAccessControlServiceApplicationProxy.md)** |
+**[Stop-SPContentTypeReplication](Stop-SPContentTypeReplication.md)** |
+
+## Identity (General)
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPClaimTypeMapping](Add-SPClaimTypeMapping.md)** |
+**[Get-SPClaimProvider](Get-SPClaimProvider.md)** |
+**[Get-SPClaimProviderManager](Get-SPClaimProviderManager.md)** |
+**[Get-SPClaimTypeEncoding](Get-SPClaimTypeEncoding.md)** |
+**[Get-SPUser](Get-SPUser.md)** |
+**[Move-SPUser](Move-SPUser.md)** |
+**[New-SPClaimProvider](New-SPClaimProvider.md)** |
+**[New-SPClaimsPrincipal](New-SPClaimsPrincipal.md)** |
+**[New-SPClaimTypeEncoding](New-SPClaimTypeEncoding.md)** |
+**[New-SPClaimTypeMapping](New-SPClaimTypeMapping.md)** |
+**[New-SPManagedAccount](New-SPManagedAccount.md)** |
+**[New-SPUser](New-SPUser.md)** |
+**[Remove-SPClaimProvider](Remove-SPClaimProvider.md)** |
+**[Remove-SPClaimTypeMapping](Remove-SPClaimTypeMapping.md)** |
+**[Remove-SPManagedAccount](Remove-SPManagedAccount.md)** |
+**[Remove-SPUser](Remove-SPUser.md)** |
+**[Set-SPClaimProvider](Set-SPClaimProvider.md)** |
+**[Set-SPUser](Set-SPUser.md)** |
+
+## InfoPath Forms Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPInfoPathUserAgent](Add-SPInfoPathUserAgent.md)** |
+**[Disable-SPInfoPathFormTemplate](Disable-SPInfoPathFormTemplate.md)** |
+**[Enable-SPInfoPathFormTemplate](Enable-SPInfoPathFormTemplate.md)** |
+**[Export-SPInfoPathAdministrationFiles](Export-SPInfoPathAdministrationFiles.md)** |
+**[Get-SPDataConnectionFile](Get-SPDataConnectionFile.md)** |
+**[Get-SPDataConnectionFileDependent](Get-SPDataConnectionFileDependent.md)** |
+**[Get-SPInfoPathFormsService](Get-SPInfoPathFormsService.md)** |
+**[Get-SPInfoPathFormTemplate](Get-SPInfoPathFormTemplate.md)** |
+**[Get-SPInfoPathUserAgent](Get-SPInfoPathUserAgent.md)** |
+**[Get-SPInfoPathWebServiceProxy](Get-SPInfoPathWebServiceProxy.md)** |
+**[Import-SPInfoPathAdministrationFiles](Import-SPInfoPathAdministrationFiles.md)** |
+**[Install-SPDataConnectionFile](Install-SPDataConnectionFile.md)** |
+**[Install-SPInfoPathFormTemplate](Install-SPInfoPathFormTemplate.md)** |
+**[Remove-SPInfoPathUserAgent](Remove-SPInfoPathUserAgent.md)** |
+**[Set-SPDataConnectionFile](Set-SPDataConnectionFile.md)** |
+**[Set-SPInfoPathFormsService](Set-SPInfoPathFormsService.md)** |
+**[Set-SPInfoPathFormTemplate](Set-SPInfoPathFormTemplate.md)** |
+**[Set-SPInfoPathWebServiceProxy](Set-SPInfoPathWebServiceProxy.md)** |
+**[Start-SPInfoPathFormTemplate](Start-SPInfoPathFormTemplate.md)** |
+**[Stop-SPInfoPathFormTemplate](Stop-SPInfoPathFormTemplate.md)** |
+**[Test-SPInfoPathFormTemplate](Test-SPInfoPathFormTemplate.md)** |
+**[Uninstall-SPDataConnectionFile](Uninstall-SPDataConnectionFile.md)** |
+**[Uninstall-SPInfoPathFormTemplate](Uninstall-SPInfoPathFormTemplate.md)** |
+**[Update-SPInfoPathAdminFileUrl](Update-SPInfoPathAdminFileUrl.md)** |
+**[Update-SPInfoPathFormTemplate](Update-SPInfoPathFormTemplate.md)** |
+**[Update-SPInfoPathUserFileUrl](Update-SPInfoPathUserFileUrl.md)** |
+
+## Installation and Upgrade
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Connect-SPConfigurationDatabase](Connect-SPConfigurationDatabase.md)** |
+**[Copy-SPSideBySideFiles](Copy-SPSideBySideFiles.md)** |
+**[Disconnect-SPConfigurationDatabase](Disconnect-SPConfigurationDatabase.md)** |
+**[Get-SPPendingUpgradeActions](Get-SPPendingUpgradeActions.md)** |
+**[Get-SPUpgradeActions](Get-SPUpgradeActions.md)** |
+**[Initialize-SPResourceSecurity](Initialize-SPResourceSecurity.md)** |
+**[Install-SPApplicationContent](Install-SPApplicationContent.md)** |
+**[Install-SPHelpCollection](Install-SPHelpCollection.md)** |
+**[Install-SPService](Install-SPService.md)** |
+**[New-SPCentralAdministration](New-SPCentralAdministration.md)** |
+**[New-SPConfigurationDatabase](New-SPConfigurationDatabase.md)** |
+**[Remove-SPCentralAdministration](Remove-SPCentralAdministration.md)** |
+**[Remove-SPConfigurationDatabase](Remove-SPConfigurationDatabase.md)** |
+**[Set-SPCentralAdministration](Set-SPCentralAdministration.md)** |
+**[Set-SPServer](Set-SPServer.md)** |
+**[Set-SPPassPhrase](Set-SPPassPhrase.md)** |
+**[Uninstall-SPHelpCollection](Uninstall-SPHelpCollection.md)** |
+**[Upgrade-SPFarm](Upgrade-SPFarm.md)** |
+**[Update-SPFarmEncryptionKey](Update-SPFarmEncryptionKey.md)** |
+
+## Machine Translation Services
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get-SPTranslationThrottlingSetting](Get-SPTranslationThrottlingSetting.md)** |
+**[New-SPTranslationServiceApplication](New-SPTranslationServiceApplication.md)** |
+**[New-SPTranslationServiceApplicationProxy](New-SPTranslationServiceApplicationProxy.md)** |
+**[Remove-SPTranslationServiceJobHistory](Remove-SPTranslationServiceJobHistory.md)** |
+**[Set-SPTranslationServiceApplication](Set-SPTranslationServiceApplication.md)** |
+**[Set-SPTranslationServiceApplicationProxy](Set-SPTranslationServiceApplicationProxy.md)** |
+**[Set-SPTranslationThrottlingSetting](Set-SPTranslationThrottlingSetting.md)** |
+
+## Managed Account
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get-SPManagedAccount](Get-SPManagedAccount.md)** |
+**[Set-SPManagedAccount](Set-SPManagedAccount.md)** |
+**[Repair-SPManagedAccountDeployment](Repair-SPManagedAccountDeployment.md)** |
+
+## Managed Metadata Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Export-SPMetadataWebServicePartitionData](Export-SPMetadataWebServicePartitionData.md)** |
+**[Copy-SPTaxonomyGroups](Copy-SPTaxonomyGroups.md)** |
+**[Get-SPMetadataServiceApplication](Get-SPMetadataServiceApplication.md)** |
+**[Get-SPMetadataServiceApplicationProxy](Get-SPMetadataServiceApplicationProxy.md)** |
+**[Get-SPTaxonomySession](Get-SPTaxonomySession.md)** |
+**[Import-SPMetadataWebServicePartitionData](Import-SPMetadataWebServicePartitionData.md)** |
+**[Move-SPProfileManagedMetadataProperty](Move-SPProfileManagedMetadataProperty.md)** |
+**[New-SPMetadataServiceApplication](New-SPMetadataServiceApplication.md)** |
+**[New-SPMetadataServiceApplicationProxy](New-SPMetadataServiceApplicationProxy.md)** |
+**[Set-SPMetadataServiceApplication](Set-SPMetadataServiceApplication.md)** |
+**[Set-SPMetadataServiceApplicationProxy](Set-SPMetadataServiceApplicationProxy.md)** |
+**[Stop-SPTaxonomyReplication](Stop-SPTaxonomyReplication.md)** |
+
+## Office Web Apps/Office Online Server
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get-SPWOPIBinding](Get-SPWOPIBinding.md)** |
+**[Get-SPWOPISuppressionSetting](Get-SPWOPISuppressionSetting.md)** |
+**[Get-SPWOPIZone](Get-SPWOPIZone.md)** |
+**[New-SPWOPIBinding](New-SPWOPIBinding.md)** |
+**[New-SPWOPISuppressionSetting](New-SPWOPISuppressionSetting.md)** |
+**[Remove-SPWOPIBinding](Remove-SPWOPIBinding.md)** |
+**[Remove-SPWOPISuppressionSetting](Remove-SPWOPISuppressionSetting.md)** |
+**[Set-SPWOPIBinding](Set-SPWOPIBinding.md)** |
+**[Set-SPWOPIZone](Set-SPWOPIZone.md)** |
+**[Update-SPWOPIProofKey](Update-SPWOPIProofKey.md)** |
+
+## PerformancePoint Services
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Clear-SPPerformancePointServiceApplicationTrustedLocation](Clear-SPPerformancePointServiceApplicationTrustedLocation.md)** |
+**[Export-SPPerformancePointContent](Export-SPPerformancePointContent.md)** |
+**[Get-SPPerformancePointServiceApplication](Get-SPPerformancePointServiceApplication.md)** |
+**[Get-SPPerformancePointServiceApplicationTrustedLocation](Get-SPPerformancePointServiceApplicationTrustedLocation.md)** |
+**[Import-SPPerformancePointContent](Import-SPPerformancePointContent.md)** |
+**[New-SPPerformancePointServiceApplication](New-SPPerformancePointServiceApplication.md)** |
+**[New-SPPerformancePointServiceApplicationProxy](New-SPPerformancePointServiceApplicationProxy.md)** |
+**[New-SPPerformancePointServiceApplicationTrustedLocation](New-SPPerformancePointServiceApplicationTrustedLocation.md)** |
+**[Remove-SPPerformancePointServiceApplication](Remove-SPPerformancePointServiceApplication.md)** |
+**[Remove-SPPerformancePointServiceApplicationProxy](Remove-SPPerformancePointServiceApplicationProxy.md)** |
+**[Remove-SPPerformancePointServiceApplicationTrustedLocation](Remove-SPPerformancePointServiceApplicationTrustedLocation.md)** |
+**[Set-SPPerformancePointSecureDataValues](Set-SPPerformancePointSecureDataValues.md)** |
+**[Set-SPPerformancePointServiceApplication](Set-SPPerformancePointServiceApplication.md)** |
+
+## PowerPoint Conversion Services
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[New-SPPowerPointConversionServiceApplication](New-SPPowerPointConversionServiceApplication.md)** |
+**[New-SPPowerPointConversionServiceApplicationProxy](New-SPPowerPointConversionServiceApplicationProxy.md)** |
+**[Set-SPPowerPointConversionServiceApplication](Set-SPPowerPointConversionServiceApplication.md)** |
+
+## PowerShell (General)
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Start-SPAssignment](Start-SPAssignment.md)** |
+**[Stop-SPAssignment](Stop-SPAssignment.md)** |
+**[Update-SPHelp](Update-SPHelp.md)** |
+
+## Project Server
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync](Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md)** |
+**[Disable-SPProjectEmailNotification](Disable-SPProjectEmailNotification.md)** |
+**[Disable-SPProjectEnterpriseProjectTaskSync](Disable-SPProjectEnterpriseProjectTaskSync.md)** |
+**[Disable-SPProjectQueueStatsMonitoring](Disable-SPProjectQueueStatsMonitoring.md)** |
+**[Disable-ProjectServerLicense](Disable-ProjectServerLicense.md)** |
+**[Enable-ProjectServerLicense](Enable-ProjectServerLicense.md)** |
+**[Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync](Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md)** |
+**[Enable-SPProjectEmailNotification](Enable-SPProjectEmailNotification.md)** |
+**[Enable-SPProjectEnterpriseProjectTaskSync](Enable-SPProjectEnterpriseProjectTaskSync.md)** |
+**[Enable-SPProjectQueueStatsMonitoring](Enable-SPProjectQueueStatsMonitoring.md)** |
+**[Get-ProjectServerLicense](Get-ProjectServerLicense.md)** |
+**[Get-SPProjectDatabaseQuota](Get-SPProjectDatabaseQuota.md)** |
+**[Get-SPProjectDatabaseUsage](Get-SPProjectDatabaseUsage.md)** |
+**[Get-SPProjectEnterpriseProjectTaskSync](Get-SPProjectEnterpriseProjectTaskSync.md)** |
+**[Get-SPProjectEventServiceSettings](Get-SPProjectEventServiceSettings.md)** |
+**[Get-SPProjectIsEmailNotificationEnabled](Get-SPProjectIsEmailNotificationEnabled.md)** |
+**[Get-SPProjectOdataConfiguration](Get-SPProjectOdataConfiguration.md)** |
+**[Get-SPProjectPCSSettings](Get-SPProjectPCSSettings.md)** |
+**[Get-SPProjectPermissionMode](Get-SPProjectPermissionMode.md)** |
+**[Get-SPProjectQueueSettings](Get-SPProjectQueueSettings.md)** |
+**[Get-SPProjectWebInstance](Get-SPProjectWebInstance.md)** |
+**[Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync](Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md)** |
+**[Invoke-SPProjectActiveDirectoryGroupSync](Invoke-SPProjectActiveDirectoryGroupSync.md)** |
+**[Migrate-SPProjectDatabase](Migrate-SPProjectDatabase.md)** |
+**[Migrate-SPProjectResourcePlans](Migrate-SPProjectResourcePlans.md)** |
+**[New-SPProjectServiceApplication](New-SPProjectServiceApplication.md)** |
+**[New-SPProjectServiceApplicationProxy](New-SPProjectServiceApplicationProxy.md)** |
+**[Pause-SPProjectWebInstance](Pause-SPProjectWebInstance.md)** |
+**[Remove-SPProjectWebInstanceData](Remove-SPProjectWebInstanceData.md)** |
+**[Repair-SPProjectWebInstance](Repair-SPProjectWebInstance.md)** |
+**[Reset-SPProjectEventServiceSettings](Reset-SPProjectEventServiceSettings.md)** |
+**[Reset-SPProjectPCSSettings](Reset-SPProjectPCSSettings.md)** |
+**[Reset-SPProjectQueueSettings](Reset-SPProjectQueueSettings.md)** |
+**[Resume-SPProjectWebInstance](Resume-SPProjectWebInstance.md)** |
+**[Set-SPProjectDatabaseQuota](Set-SPProjectDatabaseQuota.md)** |
+**[Set-SPProjectEventServiceSettings](Set-SPProjectEventServiceSettings.md)** |
+**[Set-SPProjectOdataConfiguration](Set-SPProjectOdataConfiguration.md)** |
+**[Set-SPProjectPCSSettings](Set-SPProjectPCSSettings.md)** |
+**[Set-SPProjectPermissionMode](Set-SPProjectPermissionMode.md)** |
+**[Set-SPProjectQueueSettings](Set-SPProjectQueueSettings.md)** |
+**[Set-SPProjectServiceApplication](Set-SPProjectServiceApplication.md)** |
+**[Set-SPProjectUserSync](Set-SPProjectUserSync.md)** |
+**[Set-SPProjectUserSyncDisabledSyncThreshold](Set-SPProjectUserSyncDisabledSyncThreshold.md)** |
+**[Set-SPProjectUserSyncFullSyncThreshold](Set-SPProjectUserSyncFullSyncThreshold.md)** |
+**[Set-SPProjectUserSyncOffPeakSyncThreshold](Set-SPProjectUserSyncOffPeakSyncThreshold.md)** |
+**[Start-SPProjectGenerateWsdl](Start-SPProjectGenerateWsdl.md)** |
+**[Sync-SPProjectPermissions](Sync-SPProjectPermissions.md)** |
+**[Test-SPProjectServiceApplication](Test-SPProjectServiceApplication.md)** |
+**[Test-SPProjectWebInstance](Test-SPProjectWebInstance.md)** |
+
+## Request Management
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPThrottlingRule](Add-SPThrottlingRule.md)** |
+**[Get-SPRequestManagementSettings](Get-SPRequestManagementSettings.md)** |
+**[Add-SPRoutingMachineInfo](Add-SPRoutingMachineInfo.md)** |
+**[Add-SPRoutingMachinePool](Add-SPRoutingMachinePool.md)** |
+**[Add-SPRoutingRule](Add-SPRoutingRule.md)** |
+**[Get-SPRoutingMachineInfo](Get-SPRoutingMachineInfo.md)** |
+**[Get-SPRoutingMachinePool](Get-SPRoutingMachinePool.md)** |
+**[Get-SPRoutingRule](Get-SPRoutingRule.md)** |
+**[Get-SPThrottlingRule](Get-SPThrottlingRule.md)** |
+**[New-SPRequestManagementRuleCriteria](New-SPRequestManagementRuleCriteria.md)** |
+**[Remove-SPRoutingMachineInfo](Remove-SPRoutingMachineInfo.md)** |
+**[Remove-SPRoutingMachinePool](Remove-SPRoutingMachinePool.md)** |
+**[Remove-SPRoutingRule](Remove-SPRoutingRule.md)** |
+**[Remove-SPThrottlingRule](Remove-SPThrottlingRule.md)** |
+**[Set-SPRequestManagementSettings](Set-SPRequestManagementSettings.md)** |
+**[Set-SPRoutingMachineInfo](Set-SPRoutingMachineInfo.md)** |
+**[Set-SPRoutingMachinePool](Set-SPRoutingMachinePool.md)** |
+**[Set-SPRoutingRule](Set-SPRoutingRule.md)** |
+**[Set-SPThrottlingRule](Set-SPThrottlingRule.md)** |
+
+## Search Service Application
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Backup-SPEnterpriseSearchServiceApplicationIndex](Backup-SPEnterpriseSearchServiceApplicationIndex.md)** |
+**[Export-SPEnterpriseSearchTopology](Export-SPEnterpriseSearchTopology.md)** |
+**[Get-SPEnterpriseSearchAdministrationComponent](Get-SPEnterpriseSearchAdministrationComponent.md)** |
+**[Get-SPEnterpriseSearchComponent](Get-SPEnterpriseSearchComponent.md)** |
+**[Get-SPEnterpriseSearchContentEnrichmentConfiguration](Get-SPEnterpriseSearchContentEnrichmentConfiguration.md)** |
+**[Get-SPEnterpriseSearchCrawlContentSource](Get-SPEnterpriseSearchCrawlContentSource.md)** |
+**[Get-SPEnterpriseSearchCrawlCustomConnector](Get-SPEnterpriseSearchCrawlCustomConnector.md)** |
+**[Get-SPEnterpriseSearchCrawlDatabase](Get-SPEnterpriseSearchCrawlDatabase.md)** |
+**[Get-SPEnterpriseSearchCrawlExtension](Get-SPEnterpriseSearchCrawlExtension.md)** |
+**[Get-SPEnterpriseSearchCrawlLogReadPermission](Get-SPEnterpriseSearchCrawlLogReadPermission.md)** |
+**[Get-SPEnterpriseSearchCrawlMapping](Get-SPEnterpriseSearchCrawlMapping.md)** |
+**[Get-SPEnterpriseSearchCrawlRule](Get-SPEnterpriseSearchCrawlRule.md)** |
+**[Get-SPEnterpriseSearchFileFormat](Get-SPEnterpriseSearchFileFormat.md)** |
+**[Get-SPEnterpriseSearchHostController](Get-SPEnterpriseSearchHostController.md)** |
+**[Get-SPEnterpriseSearchLanguageResourcePhrase](Get-SPEnterpriseSearchLanguageResourcePhrase.md)** |
+**[Get-SPEnterpriseSearchLinguisticComponentsStatus](Get-SPEnterpriseSearchLinguisticComponentsStatus.md)** |
+**[Get-SPEnterpriseSearchLinksDatabase](Get-SPEnterpriseSearchLinksDatabase.md)** |
+**[Get-SPEnterpriseSearchMetadataCategory](Get-SPEnterpriseSearchMetadataCategory.md)** |
+**[Get-SPEnterpriseSearchMetadataCrawledProperty](Get-SPEnterpriseSearchMetadataCrawledProperty.md)** |
+**[Get-SPEnterpriseSearchMetadataManagedProperty](Get-SPEnterpriseSearchMetadataManagedProperty.md)** |
+**[Get-SPEnterpriseSearchMetadataMapping](Get-SPEnterpriseSearchMetadataMapping.md)** |
+**[Get-SPEnterpriseSearchOwner](Get-SPEnterpriseSearchOwner.md)** |
+**[Get-SPEnterpriseSearchPropertyRule](Get-SPEnterpriseSearchPropertyRule.md)** |
+**[Get-SPEnterpriseSearchPropertyRuleCollection](Get-SPEnterpriseSearchPropertyRuleCollection.md)** |
+**[Get-SPEnterpriseSearchQueryAndSiteSettingsService](Get-SPEnterpriseSearchQueryAndSiteSettingsService.md)** |
+**[Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance](Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance.md)** |
+**[Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy](Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy.md)** |
+**[Get-SPEnterpriseSearchQueryAuthority](Get-SPEnterpriseSearchQueryAuthority.md)** |
+**[Get-SPEnterpriseSearchQueryDemoted](Get-SPEnterpriseSearchQueryDemoted.md)** |
+**[Get-SPEnterpriseSearchQueryKeyword](Get-SPEnterpriseSearchQueryKeyword.md)** |
+**[Get-SPEnterpriseSearchQueryScope](Get-SPEnterpriseSearchQueryScope.md)** |
+**[Get-SPEnterpriseSearchQueryScopeRule](Get-SPEnterpriseSearchQueryScopeRule.md)** |
+**[Get-SPEnterpriseSearchQuerySpellingCorrection](Get-SPEnterpriseSearchQuerySpellingCorrection.md)** |
+**[Get-SPEnterpriseSearchQuerySuggestionCandidates](Get-SPEnterpriseSearchQuerySuggestionCandidates.md)** |
+**[Get-SPEnterpriseSearchRankingModel](Get-SPEnterpriseSearchRankingModel.md)** |
+**[Get-SPEnterpriseSearchResultItemType](Get-SPEnterpriseSearchResultItemType.md)** |
+**[Get-SPEnterpriseSearchResultSource](Get-SPEnterpriseSearchResultSource.md)** |
+**[Get-SPEnterpriseSearchSecurityTrimmer](Get-SPEnterpriseSearchSecurityTrimmer.md)** |
+**[Get-SPEnterpriseSearchService](Get-SPEnterpriseSearchService.md)** |
+**[Get-SPEnterpriseSearchServiceApplication](Get-SPEnterpriseSearchServiceApplication.md)** |
+**[Get-SPEnterpriseSearchServiceApplicationBackupStore](Get-SPEnterpriseSearchServiceApplicationBackupStore.md)** |
+**[Get-SPEnterpriseSearchServiceApplicationProxy](Get-SPEnterpriseSearchServiceApplicationProxy.md)** |
+**[Get-SPEnterpriseSearchServiceInstance](Get-SPEnterpriseSearchServiceInstance.md)** |
+**[Get-SPEnterpriseSearchSiteHitRule](Get-SPEnterpriseSearchSiteHitRule.md)** |
+**[Get-SPEnterpriseSearchStatus](Get-SPEnterpriseSearchStatus.md)** |
+**[Get-SPEnterpriseSearchTopology](Get-SPEnterpriseSearchTopology.md)** |
+**[Get-SPEnterpriseSearchVssDataPath](Get-SPEnterpriseSearchVssDataPath.md)** |
+**[Import-SPEnterpriseSearchCustomExtractionDictionary](Import-SPEnterpriseSearchCustomExtractionDictionary.md)** |
+**[Import-SPEnterpriseSearchPopularQueries](Import-SPEnterpriseSearchPopularQueries.md)** |
+**[Import-SPEnterpriseSearchThesaurus](Import-SPEnterpriseSearchThesaurus.md)** |
+**[Import-SPEnterpriseSearchTopology](Import-SPEnterpriseSearchTopology.md)** |
+**[Move-SPEnterpriseSearchLinksDatabases](Move-SPEnterpriseSearchLinksDatabases.md)** |
+**[New-SPEnterpriseSearchAdminComponent](New-SPEnterpriseSearchAdminComponent.md)** |
+**[New-SPEnterpriseSearchAnalyticsProcessingComponent](New-SPEnterpriseSearchAnalyticsProcessingComponent.md)** |
+**[New-SPEnterpriseSearchContentEnrichmentConfiguration](New-SPEnterpriseSearchContentEnrichmentConfiguration.md)** |
+**[New-SPEnterpriseSearchContentProcessingComponent](New-SPEnterpriseSearchContentProcessingComponent.md)** |
+**[New-SPEnterpriseSearchCrawlComponent](New-SPEnterpriseSearchCrawlComponent.md)** |
+**[New-SPEnterpriseSearchCrawlContentSource](New-SPEnterpriseSearchCrawlContentSource.md)** |
+**[New-SPEnterpriseSearchCrawlCustomConnector](New-SPEnterpriseSearchCrawlCustomConnector.md)** |
+**[New-SPEnterpriseSearchCrawlDatabase](New-SPEnterpriseSearchCrawlDatabase.md)** |
+**[New-SPEnterpriseSearchCrawlExtension](New-SPEnterpriseSearchCrawlExtension.md)** |
+**[New-SPEnterpriseSearchCrawlMapping](New-SPEnterpriseSearchCrawlMapping.md)** |
+**[New-SPEnterpriseSearchCrawlRule](New-SPEnterpriseSearchCrawlRule.md)** |
+**[New-SPEnterpriseSearchFileFormat](New-SPEnterpriseSearchFileFormat.md)** |
+**[New-SPEnterpriseSearchIndexComponent](New-SPEnterpriseSearchIndexComponent.md)** |
+**[New-SPEnterpriseSearchLanguageResourcePhrase](New-SPEnterpriseSearchLanguageResourcePhrase.md)** |
+**[New-SPEnterpriseSearchLinksDatabase](New-SPEnterpriseSearchLinksDatabase.md)** |
+**[New-SPEnterpriseSearchMetadataCategory](New-SPEnterpriseSearchMetadataCategory.md)** |
+**[New-SPEnterpriseSearchMetadataCrawledProperty](New-SPEnterpriseSearchMetadataCrawledProperty.md)** |
+**[New-SPEnterpriseSearchMetadataManagedProperty](New-SPEnterpriseSearchMetadataManagedProperty.md)** |
+**[New-SPEnterpriseSearchMetadataMapping](New-SPEnterpriseSearchMetadataMapping.md)** |
+**[New-SPEnterpriseSearchQueryAuthority](New-SPEnterpriseSearchQueryAuthority.md)** |
+**[New-SPEnterpriseSearchQueryDemoted](New-SPEnterpriseSearchQueryDemoted.md)** |
+**[New-SPEnterpriseSearchQueryKeyword](New-SPEnterpriseSearchQueryKeyword.md)** |
+**[New-SPEnterpriseSearchQueryProcessingComponent](New-SPEnterpriseSearchQueryProcessingComponent.md)** |
+**[New-SPEnterpriseSearchQueryScope](New-SPEnterpriseSearchQueryScope.md)** |
+**[New-SPEnterpriseSearchQueryScopeRule](New-SPEnterpriseSearchQueryScopeRule.md)** |
+**[New-SPEnterpriseSearchRankingModel](New-SPEnterpriseSearchRankingModel.md)** |
+**[New-SPEnterpriseSearchResultItemType](New-SPEnterpriseSearchResultItemType.md)** |
+**[New-SPEnterpriseSearchResultSource](New-SPEnterpriseSearchResultSource.md)** |
+**[New-SPEnterpriseSearchSecurityTrimmer](New-SPEnterpriseSearchSecurityTrimmer.md)** |
+**[New-SPEnterpriseSearchServiceApplication](New-SPEnterpriseSearchServiceApplication.md)** |
+**[New-SPEnterpriseSearchServiceApplicationProxy](New-SPEnterpriseSearchServiceApplicationProxy.md)** |
+**[New-SPEnterpriseSearchSiteHitRule](New-SPEnterpriseSearchSiteHitRule.md)** |
+**[New-SPEnterpriseSearchTopology](New-SPEnterpriseSearchTopology.md)** |
+**[Remove-SPEnterpriseSearchComponent](Remove-SPEnterpriseSearchComponent.md)** |
+**[Remove-SPEnterpriseSearchContentEnrichmentConfiguration](Remove-SPEnterpriseSearchContentEnrichmentConfiguration.md)** |
+**[Remove-SPEnterpriseSearchCrawlContentSource](Remove-SPEnterpriseSearchCrawlContentSource.md)** |
+**[Remove-SPEnterpriseSearchCrawlCustomConnector](Remove-SPEnterpriseSearchCrawlCustomConnector.md)** |
+**[Remove-SPEnterpriseSearchCrawlDatabase](Remove-SPEnterpriseSearchCrawlDatabase.md)** |
+**[Remove-SPEnterpriseSearchCrawlExtension](Remove-SPEnterpriseSearchCrawlExtension.md)** |
+**[Remove-SPEnterpriseSearchCrawlLogReadPermission](Remove-SPEnterpriseSearchCrawlLogReadPermission.md)** |
+**[Remove-SPEnterpriseSearchCrawlMapping](Remove-SPEnterpriseSearchCrawlMapping.md)** |
+**[Remove-SPEnterpriseSearchCrawlRule](Remove-SPEnterpriseSearchCrawlRule.md)** |
+**[Remove-SPEnterpriseSearchFileFormat](Remove-SPEnterpriseSearchFileFormat.md)** |
+**[Remove-SPEnterpriseSearchLanguageResourcePhrase](Remove-SPEnterpriseSearchLanguageResourcePhrase.md)** |
+**[Remove-SPEnterpriseSearchLinksDatabase](Remove-SPEnterpriseSearchLinksDatabase.md)** |
+**[Remove-SPEnterpriseSearchMetadataCategory](Remove-SPEnterpriseSearchMetadataCategory.md)** |
+**[Remove-SPEnterpriseSearchMetadataManagedProperty](Remove-SPEnterpriseSearchMetadataManagedProperty.md)** |
+**[Remove-SPEnterpriseSearchMetadataMapping](Remove-SPEnterpriseSearchMetadataMapping.md)** |
+**[Remove-SPEnterpriseSearchQueryAuthority](Remove-SPEnterpriseSearchQueryAuthority.md)** |
+**[Remove-SPEnterpriseSearchQueryDemoted](Remove-SPEnterpriseSearchQueryDemoted.md)** |
+**[Remove-SPEnterpriseSearchQueryKeyword](Remove-SPEnterpriseSearchQueryKeyword.md)** |
+**[Remove-SPEnterpriseSearchQueryScope](Remove-SPEnterpriseSearchQueryScope.md)** |
+**[Remove-SPEnterpriseSearchQueryScopeRule](Remove-SPEnterpriseSearchQueryScopeRule.md)** |
+**[Remove-SPEnterpriseSearchRankingModel](Remove-SPEnterpriseSearchRankingModel.md)** |
+**[Remove-SPEnterpriseSearchResultItemType](Remove-SPEnterpriseSearchResultItemType.md)** |
+**[Remove-SPEnterpriseSearchResultSource](Remove-SPEnterpriseSearchResultSource.md)** |
+**[Remove-SPEnterpriseSearchSecurityTrimmer](Remove-SPEnterpriseSearchSecurityTrimmer.md)** |
+**[Remove-SPEnterpriseSearchServiceApplication](Remove-SPEnterpriseSearchServiceApplication.md)** |
+**[Remove-SPEnterpriseSearchServiceApplicationProxy](Remove-SPEnterpriseSearchServiceApplicationProxy.md)** |
+**[Remove-SPEnterpriseSearchServiceApplicationSiteSettings](Remove-SPEnterpriseSearchServiceApplicationSiteSettings.md)** |
+**[Remove-SPEnterpriseSearchSiteHitRule](Remove-SPEnterpriseSearchSiteHitRule.md)** |
+**[Remove-SPEnterpriseSearchTenantConfiguration](Remove-SPEnterpriseSearchTenantConfiguration.md)** |
+**[Remove-SPEnterpriseSearchTenantSchema](Remove-SPEnterpriseSearchTenantSchema.md)** |
+**[Remove-SPEnterpriseSearchTopology](Remove-SPEnterpriseSearchTopology.md)** |
+**[Restore-SPEnterpriseSearchServiceApplication](Restore-SPEnterpriseSearchServiceApplication.md)** |
+**[Restore-SPEnterpriseSearchServiceApplicationIndex](Restore-SPEnterpriseSearchServiceApplicationIndex.md)** |
+**[Resume-SPEnterpriseSearchServiceApplication](Resume-SPEnterpriseSearchServiceApplication.md)** |
+**[Set-SPEnterpriseSearchAdministrationComponent](Set-SPEnterpriseSearchAdministrationComponent.md)** |
+**[Set-SPEnterpriseSearchContentEnrichmentConfiguration](Set-SPEnterpriseSearchContentEnrichmentConfiguration.md)** |
+**[Set-SPEnterpriseSearchCrawlContentSource](Set-SPEnterpriseSearchCrawlContentSource.md)** |
+**[Set-SPEnterpriseSearchCrawlDatabase](Set-SPEnterpriseSearchCrawlDatabase.md)** |
+**[Set-SPEnterpriseSearchCrawlLogReadPermission](Set-SPEnterpriseSearchCrawlLogReadPermission.md)** |
+**[Set-SPEnterpriseSearchCrawlRule](Set-SPEnterpriseSearchCrawlRule.md)** |
+**[Set-SPEnterpriseSearchFileFormatState](Set-SPEnterpriseSearchFileFormatState.md)** |
+**[Set-SPEnterpriseSearchLinguisticComponentsStatus](Set-SPEnterpriseSearchLinguisticComponentsStatus.md)** |
+**[Set-SPEnterpriseSearchLinksDatabase](Set-SPEnterpriseSearchLinksDatabase.md)** |
+**[Set-SPEnterpriseSearchMetadataCategory](Set-SPEnterpriseSearchMetadataCategory.md)** |
+**[Set-SPEnterpriseSearchMetadataCrawledProperty](Set-SPEnterpriseSearchMetadataCrawledProperty.md)** |
+**[Set-SPEnterpriseSearchMetadataManagedProperty](Set-SPEnterpriseSearchMetadataManagedProperty.md)** |
+**[Set-SPEnterpriseSearchMetadataMapping](Set-SPEnterpriseSearchMetadataMapping.md)** |
+**[Set-SPEnterpriseSearchPrimaryHostController](Set-SPEnterpriseSearchPrimaryHostController.md)** |
+**[Set-SPEnterpriseSearchQueryAuthority](Set-SPEnterpriseSearchQueryAuthority.md)** |
+**[Set-SPEnterpriseSearchQueryKeyword](Set-SPEnterpriseSearchQueryKeyword.md)** |
+**[Set-SPEnterpriseSearchQueryScope](Set-SPEnterpriseSearchQueryScope.md)** |
+**[Set-SPEnterpriseSearchQueryScopeRule](Set-SPEnterpriseSearchQueryScopeRule.md)** |
+**[Set-SPEnterpriseSearchQuerySpellingCorrection](Set-SPEnterpriseSearchQuerySpellingCorrection.md)** |
+**[Set-SPEnterpriseSearchRankingModel](Set-SPEnterpriseSearchRankingModel.md)** |
+**[Set-SPEnterpriseSearchResultItemType](Set-SPEnterpriseSearchResultItemType.md)** |
+**[Set-SPEnterpriseSearchResultSource](Set-SPEnterpriseSearchResultSource.md)** |
+**[Set-SPEnterpriseSearchService](Set-SPEnterpriseSearchService.md)** |
+**[Set-SPEnterpriseSearchServiceApplication](Set-SPEnterpriseSearchServiceApplication.md)** |
+**[Set-SPEnterpriseSearchServiceApplicationProxy](Set-SPEnterpriseSearchServiceApplicationProxy.md)** |
+**[Set-SPEnterpriseSearchServiceInstance](Set-SPEnterpriseSearchServiceInstance.md)** |
+**[Set-SPEnterpriseSearchTopology](Set-SPEnterpriseSearchTopology.md)** |
+**[Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance](Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance.md)** |
+**[Start-SPEnterpriseSearchServiceInstance](Start-SPEnterpriseSearchServiceInstance.md)** |
+**[Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance](Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance.md)** |
+**[Stop-SPEnterpriseSearchServiceInstance](Stop-SPEnterpriseSearchServiceInstance.md)** |
+**[Suspend-SPEnterpriseSearchServiceApplication](Suspend-SPEnterpriseSearchServiceApplication.md)** |
+**[Upgrade-SPEnterpriseSearchServiceApplication](Upgrade-SPEnterpriseSearchServiceApplication.md)** |
+**[Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings](Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings.md)** |
+
+## Secure Store Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPSecureStoreSystemAccount](Add-SPSecureStoreSystemAccount.md)** |
+**[Clear-SPSecureStoreCredentialMapping](Clear-SPSecureStoreCredentialMapping.md)** |
+**[Clear-SPSecureStoreDefaultProvider](Clear-SPSecureStoreDefaultProvider.md)** |
+**[Disable-SPSingleSignOn](Disable-SPSingleSignOn.md)** |
+**[Get-SPSecureStoreApplication](Get-SPSecureStoreApplication.md)** |
+**[Get-SPSecureStoreSystemAccount](Get-SPSecureStoreSystemAccount.md)** |
+**[New-SPSecureStoreApplication](New-SPSecureStoreApplication.md)** |
+**[New-SPSecureStoreApplicationField](New-SPSecureStoreApplicationField.md)** |
+**[New-SPSecureStoreServiceApplication](New-SPSecureStoreServiceApplication.md)** |
+**[New-SPSecureStoreServiceApplicationProxy](New-SPSecureStoreServiceApplicationProxy.md)** |
+**[New-SPSecureStoreTargetApplication](New-SPSecureStoreTargetApplication.md)** |
+**[Remove-SPSecureStoreApplication](Remove-SPSecureStoreApplication.md)** |
+**[Remove-SPSecureStoreSystemAccount](Remove-SPSecureStoreSystemAccount.md)** |
+**[Set-SPSecureStoreApplication](Set-SPSecureStoreApplication.md)** |
+**[Set-SPSecureStoreDefaultProvider](Set-SPSecureStoreDefaultProvider.md)** |
+**[Set-SPSecureStoreServiceApplication](Set-SPSecureStoreServiceApplication.md)** |
+**[Update-SPSecureStoreApplicationServerKey](Update-SPSecureStoreApplicationServerKey.md)** |
+**[Update-SPSecureStoreCredentialMapping](Update-SPSecureStoreCredentialMapping.md)** |
+**[Update-SPSecureStoreGroupCredentialMapping](Update-SPSecureStoreGroupCredentialMapping.md)** |
+**[Update-SPSecureStoreMasterKey](Update-SPSecureStoreMasterKey.md)** |
+**[Upgrade-SPSingleSignOnDatabase](Upgrade-SPSingleSignOnDatabase.md)** |
+
+## Security (General)
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPShellAdmin](Add-SPShellAdmin.md)** |
+**[Get-SPAuthenticationProvider](Get-SPAuthenticationProvider.md)** |
+**[Get-SPAuthenticationRealm](Get-SPAuthenticationRealm.md)** |
+**[Get-SPCertificateAuthority](Get-SPCertificateAuthority.md)** |
+**[Get-SPIRMSettings](Get-SPIRMSettings.md)** |
+**[Get-SPSecurityTokenServiceConfig](Get-SPSecurityTokenServiceConfig.md)** |
+**[Get-SPShellAdmin](Get-SPShellAdmin.md)** |
+**[Get-SPTrustedIdentityTokenIssuer](Get-SPTrustedIdentityTokenIssuer.md)** |
+**[Get-SPTrustedRootAuthority](Get-SPTrustedRootAuthority.md)** |
+**[Get-SPTrustedSecurityTokenIssuer](Get-SPTrustedSecurityTokenIssuer.md)** |
+**[Get-SPTrustedServiceTokenIssuer](Get-SPTrustedServiceTokenIssuer.md)** |
+**[Grant-SPObjectSecurity](Grant-SPObjectSecurity.md)** |
+**[New-SPAuthenticationProvider](New-SPAuthenticationProvider.md)** |
+**[New-SPTrustedIdentityTokenIssuer](New-SPTrustedIdentityTokenIssuer.md)** |
+**[New-SPTrustedRootAuthority](New-SPTrustedRootAuthority.md)** |
+**[New-SPTrustedSecurityTokenIssuer](New-SPTrustedSecurityTokenIssuer.md)** |
+**[New-SPTrustedServiceTokenIssuer](New-SPTrustedServiceTokenIssuer.md)** |
+**[Set-SPSecurityTokenServiceConfig](Set-SPSecurityTokenServiceConfig.md)** |
+**[Set-SPTrustedIdentityTokenIssuer](Set-SPTrustedIdentityTokenIssuer.md)** |
+**[Set-SPTrustedRootAuthority](Set-SPTrustedRootAuthority.md)** |
+**[Set-SPTrustedSecurityTokenIssuer](Set-SPTrustedSecurityTokenIssuer.md)** |
+**[Set-SPTrustedServiceTokenIssuer](Set-SPTrustedServiceTokenIssuer.md)** |
+**[Remove-SPShellAdmin](Remove-SPShellAdmin.md)** |
+**[Remove-SPTrustedIdentityTokenIssuer](Remove-SPTrustedIdentityTokenIssuer.md)** |
+**[Remove-SPTrustedRootAuthority](Remove-SPTrustedRootAuthority.md)** |
+**[Remove-SPTrustedSecurityTokenIssuer](Remove-SPTrustedSecurityTokenIssuer.md)** |
+**[Remove-SPTrustedServiceTokenIssuer](Remove-SPTrustedServiceTokenIssuer.md)** |
+**[Set-SPAuthenticationRealm](Set-SPAuthenticationRealm.md)** |
+
+## Service Application
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPServiceApplicationProxyGroupMember](Add-SPServiceApplicationProxyGroupMember.md)** |
+**[Get-SPConnectedServiceApplicationInformation](Get-SPConnectedServiceApplicationInformation.md)** |
+**[Get-SPServiceApplication](Get-SPServiceApplication.md)** |
+**[Get-SPServiceApplicationEndpoint](Get-SPServiceApplicationEndpoint.md)** |
+**[Get-SPServiceApplicationPool](Get-SPServiceApplicationPool.md)** |
+**[Get-SPServiceApplicationProxy](Get-SPServiceApplicationProxy.md)** |
+**[Get-SPServiceApplicationProxyGroup](Get-SPServiceApplicationProxyGroup.md)** |
+**[Get-SPServiceApplicationSecurity](Get-SPServiceApplicationSecurity.md)** |
+**[Publish-SPServiceApplication](Publish-SPServiceApplication.md)** |
+**[New-SPServiceApplicationPool](New-SPServiceApplicationPool.md)** |
+**[New-SPServiceApplicationProxyGroup](New-SPServiceApplicationProxyGroup.md)** |
+**[Receive-SPServiceApplicationConnectionInfo](Receive-SPServiceApplicationConnectionInfo.md)** |
+**[Remove-SPServiceApplication](Remove-SPServiceApplication.md)** |
+**[Remove-SPServiceApplicationPool](Remove-SPServiceApplicationPool.md)** |
+**[Remove-SPServiceApplicationProxy](Remove-SPServiceApplicationProxy.md)** |
+**[Remove-SPServiceApplicationProxyGroup](Remove-SPServiceApplicationProxyGroup.md)** |
+**[Remove-SPServiceApplicationProxyGroupMember](Remove-SPServiceApplicationProxyGroupMember.md)** |
+**[Set-SPServiceApplication](Set-SPServiceApplication.md)** |
+**[Set-SPServiceApplicationEndpoint](Set-SPServiceApplicationEndpoint.md)** |
+**[Set-SPServiceApplicationPool](Set-SPServiceApplicationPool.md)** |
+**[Set-SPServiceApplicationSecurity](Set-SPServiceApplicationSecurity.md)** |
+
+## Session State Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Disable-SPSessionStateService](Disable-SPSessionStateService.md)** |
+**[Enable-SPSessionStateService](Enable-SPSessionStateService.md)** |
+**[Get-SPSessionStateService](Get-SPSessionStateService.md)** |
+**[Set-SPSessionStateService](Set-SPSessionStateService.md)** |
+
+## Site
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Copy-SPSite](Copy-SPSite.md)** |
+**[Get-SPDeletedSite](Get-SPDeletedSite.md)** |
+**[Get-SPServiceContext](Get-SPServiceContext.md)** |
+**[Get-SPSite](Get-SPSite.md)** |
+**[Get-SPSiteAdministration](Get-SPSiteAdministration.md)** |
+**[Get-SPSiteMaster](Get-SPSiteMaster.md)** |
+**[Get-SPSiteUpgradeSessionInfo](Get-SPSiteUpgradeSessionInfo.md)** |
+**[Get-SPSiteURL](Get-SPSiteURL.md)** |
+**[Move-SPDeletedSite](Move-SPDeletedSite.md)** |
+**[Move-SPSite](Move-SPSite.md)** |
+**[New-SPSite](New-SPSite.md)** |
+**[New-SPSiteMaster](New-SPSiteMaster.md)** |
+**[Remove-SPDeletedSite](Remove-SPDeletedSite.md)** |
+**[Remove-SPSite](Remove-SPSite.md)** |
+**[Remove-SPSiteMaster](Remove-SPSiteMaster.md)** |
+**[Remove-SPSiteUpgradeSessionInfo](Remove-SPSiteUpgradeSessionInfo.md)** |
+**[Remove-SPSiteURL](Remove-SPSiteURL.md)** |
+**[Repair-SPSite](Repair-SPSite.md)** |
+**[Request-SPUpgradeEvaluationSite](Request-SPUpgradeEvaluationSite.md)** |
+**[Reset-SPSites](Reset-SPSites.md)** |
+**[Set-SPSite](Set-SPSite.md)** |
+**[Set-SPSiteAdministration](Set-SPSiteAdministration.md)** |
+**[Set-SPSiteURL](Set-SPSiteURL.md)** |
+**[Test-SPSite](Test-SPSite.md)** |
+**[Upgrade-SPSite](Upgrade-SPSite.md)** |
+
+## Site Subscriptions
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPSiteSubscriptionFeaturePackMember](Add-SPSiteSubscriptionFeaturePackMember.md)** |
+**[Add-SPSiteSubscriptionProfileConfig](Add-SPSiteSubscriptionProfileConfig.md)** |
+**[Clear-SPMetadataWebServicePartitionData](Clear-SPMetadataWebServicePartitionData.md)** |
+**[Clear-SPSiteSubscriptionBusinessDataCatalogConfig](Clear-SPSiteSubscriptionBusinessDataCatalogConfig.md)** |
+**[Export-SPSiteSubscriptionBusinessDataCatalogConfig](Export-SPSiteSubscriptionBusinessDataCatalogConfig.md)** |
+**[Export-SPSiteSubscriptionSettings](Export-SPSiteSubscriptionSettings.md)** |
+**[Get-SPSiteSubscription](Get-SPSiteSubscription.md)** |
+**[Get-SPSiteSubscriptionConfig](Get-SPSiteSubscriptionConfig.md)** |
+**[Get-SPSiteSubscriptionEdiscoveryHub](Get-SPSiteSubscriptionEdiscoveryHub.md)** |
+**[Get-SPSiteSubscriptionEdiscoverySearchScope](Get-SPSiteSubscriptionEdiscoverySearchScope.md)** |
+**[Get-SPSiteSubscriptionFeaturePack](Get-SPSiteSubscriptionFeaturePack.md)** |
+**[Get-SPSiteSubscriptionIRMConfig](Get-SPSiteSubscriptionIRMConfig.md)** |
+**[Get-SPSiteSubscriptionMetadataConfig](Get-SPSiteSubscriptionMetadataConfig.md)** |
+**[Import-SPSiteSubscriptionBusinessDataCatalogConfig](Import-SPSiteSubscriptionBusinessDataCatalogConfig.md)** |
+**[Import-SPSiteSubscriptionSettings](Import-SPSiteSubscriptionSettings.md)** |
+**[New-SPSiteSubscription](New-SPSiteSubscription.md)** |
+**[New-SPSiteSubscriptionFeaturePack](New-SPSiteSubscriptionFeaturePack.md)** |
+**[Remove-SPSiteSubscription](Remove-SPSiteSubscription.md)** |
+**[Remove-SPSiteSubscriptionBusinessDataCatalogConfig](Remove-SPSiteSubscriptionBusinessDataCatalogConfig.md)** |
+**[Remove-SPSiteSubscriptionFeaturePack](Remove-SPSiteSubscriptionFeaturePack.md)** |
+**[Remove-SPSiteSubscriptionFeaturePackMember](Remove-SPSiteSubscriptionFeaturePackMember.md)** |
+**[Remove-SPSiteSubscriptionMetadataConfig](Remove-SPSiteSubscriptionMetadataConfig.md)** |
+**[Remove-SPSiteSubscriptionProfileConfig](Remove-SPSiteSubscriptionProfileConfig.md)** |
+**[Remove-SPSiteSubscriptionSettings](Remove-SPSiteSubscriptionSettings.md)** |
+**[Set-SPSiteSubscriptionConfig](Set-SPSiteSubscriptionConfig.md)** |
+**[Set-SPSiteSubscriptionEdiscoveryHub](Set-SPSiteSubscriptionEdiscoveryHub.md)** |
+**[Set-SPSiteSubscriptionIRMConfig](Set-SPSiteSubscriptionIRMConfig.md)** |
+**[Set-SPSiteSubscriptionMetadataConfig](Set-SPSiteSubscriptionMetadataConfig.md)** |
+**[Set-SPSiteSubscriptionProfileConfig](Set-SPSiteSubscriptionProfileConfig.md)** |
+
+## State Service
+Cmdlet|Description|Platform
+:-----|:----------|:------- 
+**[Dismount-SPStateServiceDatabase](Dismount-SPStateServiceDatabase.md)** |
+**[Get-SPStateServiceApplication](Get-SPStateServiceApplication.md)** |
+**[Get-SPStateServiceApplicationProxy](Get-SPStateServiceApplicationProxy.md)** |
+**[Get-SPStateServiceDatabase](Get-SPStateServiceDatabase.md)** |
+**[Initialize-SPStateServiceDatabase](Initialize-SPStateServiceDatabase.md)** |
+**[Mount-SPStateServiceDatabase](Mount-SPStateServiceDatabase.md)** |
+**[New-SPStateServiceApplication](New-SPStateServiceApplication.md)** |
+**[New-SPStateServiceApplicationProxy](New-SPStateServiceApplicationProxy.md)** |
+**[New-SPStateServiceDatabase](New-SPStateServiceDatabase.md)** |
+**[Remove-SPStateServiceDatabase](Remove-SPStateServiceDatabase.md)** |
+**[Resume-SPStateServiceDatabase](Resume-SPStateServiceDatabase.md)** |
+**[Set-SPStateServiceApplication](Set-SPStateServiceApplication.md)** |
+**[Set-SPStateServiceApplicationProxy](Set-SPStateServiceApplicationProxy.md)** |
+**[Set-SPStateServiceDatabase](Set-SPStateServiceDatabase.md)** |
+**[Suspend-SPStateServiceDatabase](Suspend-SPStateServiceDatabase.md)** |
+
+## Subscription Settings Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[New-SPSubscriptionSettingsServiceApplication](New-SPSubscriptionSettingsServiceApplication.md)** |
+**[New-SPSubscriptionSettingsServiceApplicationProxy](New-SPSubscriptionSettingsServiceApplicationProxy.md)** |
+**[Set-SPSubscriptionSettingsServiceApplication](Set-SPSubscriptionSettingsServiceApplication.md)** |
+
+## Topology Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get-SPTopologyServiceApplication](Get-SPTopologyServiceApplication.md)** |
+**[Get-SPTopologyServiceApplicationProxy](Get-SPTopologyServiceApplicationProxy.md)** |
+**[Set-SPTopologyServiceApplication](Set-SPTopologyServiceApplication.md)** |
+**[Set-SPTopologyServiceApplicationProxy](Set-SPTopologyServiceApplicationProxy.md)** |
+
+## Usage and Health Services
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPDiagnosticsPerformanceCounter](Add-SPDiagnosticsPerformanceCounter.md)** |
+**[Disable-SPHealthAnalysisRule](Disable-SPHealthAnalysisRule.md)** |
+**[Enable-SPHealthAnalysisRule](Enable-SPHealthAnalysisRule.md)** |
+**[Get-SPDiagnosticConfig](Get-SPDiagnosticConfig.md)** |
+**[Get-SPDiagnosticsPerformanceCounter](Get-SPDiagnosticsPerformanceCounter.md)** |
+**[Get-SPDiagnosticsProvider](Get-SPDiagnosticsProvider.md)** |
+**[Get-SPHealthAnalysisRule](Get-SPHealthAnalysisRule.md)** |
+**[Get-SPHelpCollection](Get-SPHelpCollection.md)** |
+**[Get-SPUsageApplication](Get-SPUsageApplication.md)** |
+**[Get-SPUsageDefinition](Get-SPUsageDefinition.md)** |
+**[Get-SPUsageService](Get-SPUsageService.md)** |
+**[Merge-SPUsageLog](Merge-SPUsageLog.md)** |
+**[New-SPUsageApplication](New-SPUsageApplication.md)** |
+**[New-SPUsageLogFile](New-SPUsageLogFile.md)** |
+**[Remove-SPDiagnosticsPerformanceCounter](Remove-SPDiagnosticsPerformanceCounter.md)** |
+**[Remove-SPUsageApplication](Remove-SPUsageApplication.md)** |
+**[Set-SPDiagnosticConfig](Set-SPDiagnosticConfig.md)** |
+**[Set-SPDiagnosticsProvider](Set-SPDiagnosticsProvider.md)** |
+**[Set-SPUsageApplication](Set-SPUsageApplication.md)** |
+**[Set-SPUsageDefinition](Set-SPUsageDefinition.md)** |
+**[Set-SPUsageService](Set-SPUsageService.md)** |
+**[Start-SPDiagnosticsSession](Start-SPDiagnosticsSession.md)** |
+**[Stop-SPDiagnosticsSession](Stop-SPDiagnosticsSession.md)** |
+
+## User Licensing
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPUserLicenseMapping](Add-SPUserLicenseMapping.md)** |
+**[Disable-SPUserLicensing](Disable-SPUserLicensing.md)** |
+**[Enable-SPUserLicensing](Enable-SPUserLicensing.md)** |
+**[Get-SPUserLicense](Get-SPUserLicense.md)** |
+**[Get-SPUserLicenseMapping](Get-SPUserLicenseMapping.md)** |
+**[Get-SPUserLicensing](Get-SPUserLicensing.md)** |
+**[New-SPUserLicenseMapping](New-SPUserLicenseMapping.md)** |
+**[Remove-SPUserLicenseMapping](Remove-SPUserLicenseMapping.md)** |
+
+## User Profile Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPPluggableSecurityTrimmer](Add-SPPluggableSecurityTrimmer.md)** |
+**[Add-SPProfileLeader](Add-SPProfileLeader.md)** |
+**[Add-SPProfileSyncConnection](Add-SPProfileSyncConnection.md)** |
+**[Export-SPTagsAndNotesData](Export-SPTagsAndNotesData.md)** |
+**[Get-SPMicrofeedOptions](Get-SPMicrofeedOptions.md)** |
+**[Get-SPPluggableSecurityTrimmer](Get-SPPluggableSecurityTrimmer.md)** |
+**[Get-SPProfileLeader](Get-SPProfileLeader.md)** |
+**[Get-SPProfileServiceApplicationSecurity](Get-SPProfileServiceApplicationSecurity.md)** |
+**[New-SPProfileServiceApplication](New-SPProfileServiceApplication.md)** |
+**[New-SPProfileServiceApplicationProxy](New-SPProfileServiceApplicationProxy.md)** |
+**[Remove-SPActivityFeedItems](Remove-SPActivityFeedItems.md)** |
+**[Remove-SPPluggableSecurityTrimmer](Remove-SPPluggableSecurityTrimmer.md)** |
+**[Remove-SPProfileLeader](Remove-SPProfileLeader.md)** |
+**[Remove-SPProfileSyncConnection](Remove-SPProfileSyncConnection.md)** |
+**[Remove-SPSocialItemByDate](Remove-SPSocialItemByDate.md)** |
+**[Move-SPSocialComment](Move-SPSocialComment.md)** |
+**[Set-SPDefaultProfileConfig](Set-SPDefaultProfileConfig.md)** |
+**[Set-SPProfileServiceApplication](Set-SPProfileServiceApplication.md)** |
+**[Set-SPProfileServiceApplicationProxy](Set-SPProfileServiceApplicationProxy.md)** |
+**[Set-SPProfileServiceApplicationSecurity](Set-SPProfileServiceApplicationSecurity.md)** |
+**[Set-SPMicrofeedOptions](Set-SPMicrofeedOptions.md)** |
+**[Update-SPProfilePhotoStore](Update-SPProfilePhotoStore.md)** |
+**[Update-SPRepopulateMicroblogFeedCache](Update-SPRepopulateMicroblogFeedCache.md)** |
+**[Update-SPRepopulateMicroblogLMTCache](Update-SPRepopulateMicroblogLMTCache.md)** |
+**[Upgrade-SPProfileServiceApplication](Upgrade-SPProfileServiceApplication.md)** |
+
+## Visio Services
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Get-SPVisioExternalData](Get-SPVisioExternalData.md)** |
+**[Get-SPVisioPerformance](Get-SPVisioPerformance.md)** |
+**[Get-SPVisioSafeDataProvider](Get-SPVisioSafeDataProvider.md)** |
+**[Get-SPVisioServiceApplication](Get-SPVisioServiceApplication.md)** |
+**[Get-SPVisioServiceApplicationProxy](Get-SPVisioServiceApplicationProxy.md)** |
+**[New-SPVisioSafeDataProvider](New-SPVisioSafeDataProvider.md)** |
+**[New-SPVisioServiceApplication](New-SPVisioServiceApplication.md)** |
+**[New-SPVisioServiceApplicationProxy](New-SPVisioServiceApplicationProxy.md)** |
+**[Remove-SPVisioSafeDataProvider](Remove-SPVisioSafeDataProvider.md)** |
+**[Set-SPVisioExternalData](Set-SPVisioExternalData.md)** |
+**[Set-SPVisioPerformance](Set-SPVisioPerformance.md)** |
+**[Set-SPVisioSafeDataProvider](Set-SPVisioSafeDataProvider.md)** |
+**[Set-SPVisioServiceApplication](Set-SPVisioServiceApplication.md)** |
+
+## Web
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Disable-SPWebTemplateForSiteMaster](Disable-SPWebTemplateForSiteMaster.md)** |
+**[Enable-SPWebTemplateForSiteMaster](Enable-SPWebTemplateForSiteMaster.md)** |
+**[Get-SPWeb](Get-SPWeb.md)** |
+**[Get-SPWebTemplate](Get-SPWebTemplate.md)** |
+**[Get-SPWebTemplatesEnabledForSiteMaster](Get-SPWebTemplatesEnabledForSiteMaster.md)** |
+**[Import-SPWeb](Import-SPWeb.md)** |
+**[New-SPWeb](New-SPWeb.md)** |
+**[Remove-SPWeb](Remove-SPWeb.md)** |
+**[Set-SPWeb](Set-SPWeb.md)** |
+
+## Web Application
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Convert-SPWebApplication](Convert-SPWebApplication.md)** |
+**[Disable-SPWebApplicationHttpThrottling](Disable-SPWebApplicationHttpThrottling.md)** |
+**[Enable-SPWebApplicationHttpThrottling](Enable-SPWebApplicationHttpThrottling.md)** |
+**[Get-SPAlternateURL](Get-SPAlternateURL.md)** |
+**[Get-SPContentDeploymentJob](Get-SPContentDeploymentJob.md)** |
+**[Get-SPContentDeploymentPath](Get-SPContentDeploymentPath.md)** |
+**[Get-SPCustomLayoutsPage](Get-SPCustomLayoutsPage.md)** |
+**[Get-SPDesignerSettings](Get-SPDesignerSettings.md)** |
+**[Get-SPManagedPath](Get-SPManagedPath.md)** |
+**[Get-SPWebApplication](Get-SPWebApplication.md)** |
+**[Get-SPWebApplicationAppDomain](Get-SPWebApplicationAppDomain.md)** |
+**[Get-SPWebApplicationHttpThrottlingMonitor](Get-SPWebApplicationHttpThrottlingMonitor.md)** |
+**[New-SPAlternateURL](New-SPAlternateURL.md)** |
+**[New-SPContentDeploymentJob](New-SPContentDeploymentJob.md)** |
+**[New-SPContentDeploymentPath](New-SPContentDeploymentPath.md)** |
+**[New-SPManagedPath](New-SPManagedPath.md)** |
+**[New-SPWebApplication](New-SPWebApplication.md)** |
+**[New-SPWebApplicationAppDomain](New-SPWebApplicationAppDomain.md)** |
+**[New-SPWebApplicationExtension](New-SPWebApplicationExtension.md)** |
+**[Remove-SPAlternateURL](Remove-SPAlternateURL.md)** |
+**[Remove-SPContentDeploymentJob](Remove-SPContentDeploymentJob.md)** |
+**[Remove-SPContentDeploymentPath](Remove-SPContentDeploymentPath.md)** |
+**[Remove-SPManagedPath](Remove-SPManagedPath.md)** |
+**[Remove-SPWebApplication](Remove-SPWebApplication.md)** |
+**[Remove-SPWebApplicationAppDomain](Remove-SPWebApplicationAppDomain.md)** |
+**[Set-SPAlternateURL](Set-SPAlternateURL.md)** |
+**[Set-SPContentDeploymentJob](Set-SPContentDeploymentJob.md)** |
+**[Set-SPContentDeploymentPath](Set-SPContentDeploymentPath.md)** |
+**[Set-SPDesignerSettings](Set-SPDesignerSettings.md)** |
+**[Set-SPWebApplication](Set-SPWebApplication.md)** |
+**[Set-SPWebApplicationHttpThrottlingMonitor](Set-SPWebApplicationHttpThrottlingMonitor.md)** |
+**[Start-SPContentDeploymentJob](Start-SPContentDeploymentJob.md)** |
+
+## Word Automation Services
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[New-SPWordConversionServiceApplication](New-SPWordConversionServiceApplication.md)** |
+**[Remove-SPWordConversionServiceJobHistory](Remove-SPWordConversionServiceJobHistory.md)** |
+**[Set-SPWordConversionServiceApplication](Set-SPWordConversionServiceApplication.md)** |
+
+## Work Management Service
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[New-SPWorkManagementServiceApplication](New-SPWorkManagementServiceApplication.md)** |SharePoint 2010, SharePoint 2013
+**[New-SPWorkManagementServiceApplicationProxy](New-SPWorkManagementServiceApplicationProxy.md)** |SharePoint 2010, SharePoint 2013
+**[Set-SPWorkManagementServiceApplication](Set-SPWorkManagementServiceApplication.md)** |SharePoint 2010, SharePoint 2013
+**[Set-SPWorkManagementServiceApplicationProxy](Set-SPWorkManagementServiceApplicationProxy.md)** |SharePoint 2010, SharePoint 2013
+
+## Workflow Service (SharePoint 2013 Workflows / Workflow Manager)
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Copy-SPActivitiesToWorkflowService](Copy-SPActivitiesToWorkflowService.md)** |SharePoint 2013, SharePoint 2016
+**[Get-SPWorkflowConfig](Get-SPWorkflowConfig.md)** |SharePoint 2013, SharePoint 2016
+**[Get-SPWorkflowServiceApplicationProxy](Get-SPWorkflowServiceApplicationProxy.md)** |SharePoint 2013, SharePoint 2016
+**[New-SPWorkflowServiceApplicationProxy](New-SPWorkflowServiceApplicationProxy.md)** |SharePoint 2013, SharePoint 2016
+**[Register-SPWorkflowService](Register-SPWorkflowService.md)** |SharePoint 2013, SharePoint 2016
+**[Set-SPWorkflowConfig](Set-SPWorkflowConfig.md)** |SharePoint 2013, SharePoint 2016
+
+## DO NOT USE
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Add-SPEduClassMember](Add-SPEduClassMember.md)** |DO NOT USE
+**[Add-SPEduUser](Add-SPEduUser.md)** |DO NOT USE
+**[Dismount-SPSiteMapDatabase](Dismount-SPSiteMapDatabase.md)** |DO NOT USE
+**[Get-SPEduServiceSetting](Get-SPEduServiceSetting.md)** |DO NOT USE
+**[Get-SPSiteMapDatabase](Get-SPSiteMapDatabase.md)** |DO NOT USE
+**[Install-SPEduSites](Install-SPEduSites.md)** |DO NOT USE
+**[Mount-SPSiteMapDatabase](Mount-SPSiteMapDatabase.md)** |DO NOT USE
+**[New-SPEduClass](New-SPEduClass.md)** |DO NOT USE
+**[Remove-SPEduClassMember](Remove-SPEduClassMember.md)** |DO NOT USE
+**[Set-SPEduServiceSetting](Set-SPEduServiceSetting.md)** |DO NOT USE
+**[Upgrade-SPSiteMapDatabase](Upgrade-SPSiteMapDatabase.md)** |DO NOT USE
+**[Upgrade-SPAppManagementServiceApplication](Upgrade-SPAppManagementServiceApplication.md)** |DO NOT USE
