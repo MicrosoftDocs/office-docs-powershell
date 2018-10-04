@@ -480,9 +480,9 @@ Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
 
-- ReadOnly - Users will be unable to download attachments to their local computer and enable Offline Mode on non compliant computers.  They will still be able to view their attachments in the browser.
+- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser.
 
-- ReadOnlyPlusAttachmentsBlocked - In this mode all restrictions apply from the ReadOnly mode in addition they will not be able to view attachments even in the browser.
+- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser.
 
 ```yaml
 Type: Off | ReadOnly | ReadOnlyPlusAttachmentsBlocked
