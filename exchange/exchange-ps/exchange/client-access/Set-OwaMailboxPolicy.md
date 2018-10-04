@@ -474,13 +474,15 @@ Accept wildcard characters: False
 ### -ConditionalAccessPolicy
 This parameter is available only in the cloud-based service.
 
-The ConditionalAccessPolicy parameter specifies the conditional access policy for Outlook on the web. Valid values are:
+The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additioanlly configure a Conditional Access policy in the Azure Active Directory Portal.
+
+Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
 
-- ReadOnly
+- ReadOnly - Users will be unable to download attachments to their local computer and enable Offline Mode on non compliant computers.  They will still be able to view their attachments in the browser.
 
-- ReadOnlyPlusAttachmentsBlocked
+- ReadOnlyPlusAttachmentsBlocked - In this mode all restrictions apply from the ReadOnly mode in addition they will not be able to view attachments even in the browser.
 
 ```yaml
 Type: Off | ReadOnly | ReadOnlyPlusAttachmentsBlocked
