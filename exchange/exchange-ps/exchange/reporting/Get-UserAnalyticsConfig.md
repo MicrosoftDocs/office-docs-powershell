@@ -28,10 +28,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-UserAnalyticsConfig -Identity "Kathleen Reiter"
+Get-UserAnalyticsConfig -Identity KathleenReiter@Contoso.com
 ```
 
-This example returns the MyAnalytics privacy setting for the user named Kathleen Reiter.
+This example returns the MyAnalytics privacy setting for the user with email address KathleenReiter@Contoso.com.
 
 ## PARAMETERS
 

@@ -21,6 +21,8 @@ Add a new origin to the public or private CDN, on either Tenant level or on a si
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
+Once you've completed the setup steps, you can add new assets, and update or remove existing assets whenever you want. Just make your changes to the assets in the folder or SharePoint library that you identified as an origin. If you add a new asset, it is available through the CDN immediately. However, if you update the asset, it will take up to 15 minutes for the new copy to propagate and become available in the CDN.
+
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
@@ -71,5 +73,5 @@ Accept pipeline input: False
 ```
 
 ## RELATED LINKS
-
+[Use the Office 365 content delivery network with SharePoint Online](https://docs.microsoft.com/en-us/office365/enterprise/use-office-365-cdn-with-spo)
 [SharePoint Developer Patterns and Practices](http://aka.ms/sppnp)
