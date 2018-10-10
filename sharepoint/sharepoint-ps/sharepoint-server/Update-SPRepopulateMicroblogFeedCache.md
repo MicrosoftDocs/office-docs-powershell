@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPRepopulateMicroblogFeedCache
 schema: 2.0.0
 ---
@@ -70,7 +70,7 @@ Specifies the user's account name for the User Profile Service application.
 Type: String
 Parameter Sets: (All), Default
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ The type must be in one of the following forms:
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -114,7 +114,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ This parameter is mandatory in a hosted-environment and optional in a non-hosted
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All), Default
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: FollowableList
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -160,7 +160,7 @@ Specifies the Site's URL to repopulate the site feeds. If you don't specify this
 Type: String
 Parameter Sets: (All), Default
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ The ListId of the FollowableList.
 Type: Guid
 Parameter Sets: FollowableList
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -192,7 +192,7 @@ The RootFolderUrl of the FollowableList.
 Type: String
 Parameter Sets: FollowableList
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -208,7 +208,7 @@ The SiteId containing the FollowableList.
 Type: Guid
 Parameter Sets: FollowableList
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -224,7 +224,7 @@ The WebId containing the FollowableList.
 Type: Guid
 Parameter Sets: FollowableList
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named

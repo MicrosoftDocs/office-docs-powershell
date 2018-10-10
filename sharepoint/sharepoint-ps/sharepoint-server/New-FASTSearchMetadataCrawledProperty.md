@@ -53,7 +53,7 @@ The new category gets the property set value "e20d8de2-0b5c-46f8-993d-6cdacbda51
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchMetadataCrawledProperty | Where-Object -filterscript { $_.CategoryName -eq "Web"}
+PS C:\>Get-FASTSearchMetadataCrawledProperty | Where-Object -filterscript { $_.CategoryName -eq "Web"}
 New-FASTSearchMetadataCrawledProperty -Name Internaltitle -varianttype 31 -Propset d1b5d3f0-c0b3-11cf-9a92-00a0c908dbf1
 ```
 

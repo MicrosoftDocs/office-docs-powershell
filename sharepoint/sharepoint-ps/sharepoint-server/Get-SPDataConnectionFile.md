@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPDataConnectionFile
 schema: 2.0.0
 ---
@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1-------------- 
 ```
-C:\PS>Get-SPDataConnectionFile
+PS C:\>Get-SPDataConnectionFile
 ```
 
 This example lists the Identity, DisplayName, and WebAccessible properties ofeach .udcx file.
@@ -41,7 +41,7 @@ This example lists the Identity, DisplayName, and WebAccessible properties of th
 
 ### ---------------EXAMPLE 3-------------- 
 ```
-C:\PS>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}
+PS C:\>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}
 ```
 
 This example lists the Identity, DisplayName, and WebAccessible properties of all .udcx files with the specified Category.
@@ -57,7 +57,7 @@ The type must be a valid GUID, in form 12345678-90ab-cdef-1234-567890bcdefgh; a 
 Type: SPDataConnectionFilePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -79,7 +79,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

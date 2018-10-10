@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPSite
 schema: 2.0.0
 ---
@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------- 
 ```
-C:\PS>Copy-SPSite http://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl http://contoso/sites/NewTeam
+PS C:\>Copy-SPSite http://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl http://contoso/sites/NewTeam
 ```
 
 This example makes a copy of the http://contoso/sites/OldTeam site collection from its database to the WSS_Content database with the new URL, http://contoso/sites/NewTeam and a new Site ID.
@@ -49,7 +49,7 @@ This can be a valid URL or GUID.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -65,7 +65,7 @@ The URL that will be used for the destination copy of the site collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -87,7 +87,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ Specifies the location where the copy will be sent to.
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Use when the site collection is a host-named site collection that allows the sit
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ The valid values are True and False. The default value is False.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

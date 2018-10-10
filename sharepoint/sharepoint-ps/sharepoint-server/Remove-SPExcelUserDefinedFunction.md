@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-C:\PS>Get-SPExcelServiceApplication | Remove-SPExcelUserDefinedFunction -Identity "SampleCompany.SampleApplication.SampleUdf"
+PS C:\>Get-SPExcelServiceApplication | Remove-SPExcelUserDefinedFunction -Identity "SampleCompany.SampleApplication.SampleUdf"
 ```
 
 This example removes the SampleCompany.SampleApplication.SampleUdf user-defined function from the list of user-defined functions for every Excel Services Application Web service application in the farm.

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Reset-SPSites
 schema: 2.0.0
 ---
@@ -22,7 +22,7 @@ The Reset-SPSites cmdlet synchronizes the content database with the configuratio
 
 It also ensures that all site collections in the content database are registered in the configuration database and removes any site collection references in the configuration database if the site collection does not exist in the content database.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference (http://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference (http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
@@ -51,7 +51,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -67,7 +67,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ Specifies a specific content database. This could either be ID or Name of the co
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0
@@ -100,7 +100,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

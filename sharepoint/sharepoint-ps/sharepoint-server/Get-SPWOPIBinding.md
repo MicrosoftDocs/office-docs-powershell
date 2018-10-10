@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWOPIBinding
 schema: 2.0.0
 ---
@@ -30,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
+PS C:\>Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
 ```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the WOPI application "Server.corp.Contoso.com."  The WOPI application may be the server that runs Office Web Apps Server.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>Get-SPWOPIZone | Get-SPWOPIBinding
+PS C:\>Get-SPWOPIZone | Get-SPWOPIBinding
 ```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the zone configured for the WOPI application.
@@ -51,7 +51,7 @@ Specifies the action to return bindings for.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -67,7 +67,7 @@ Specifies the application to return bindings for.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ Specifies the file name extension to return bindings for.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Specifies the programmatic identifier (ProgID) for an application to return bind
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ Specifies the name of WOPI application (such as a server that runs Office Web Ap
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Specifies the zone to return bindings for.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

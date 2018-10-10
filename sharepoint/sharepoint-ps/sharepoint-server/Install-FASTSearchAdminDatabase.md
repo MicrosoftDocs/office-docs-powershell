@@ -34,21 +34,21 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Install-FASTSearchAdminDatabase -DbConnection "Data Source=sqlserver.contoso.com;Database=FASTSearchAdminDatabase;integrated Security=True;"
+PS C:\>Install-FASTSearchAdminDatabase -DbConnection "Data Source=sqlserver.contoso.com;Database=FASTSearchAdminDatabase;integrated Security=True;"
 ```
 
 This example installs the database schema in the database server specified by the connection string.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Install-FASTSearchAdminDatabase -Upgrade -DbServer "sqlserver.contoso.com"
+PS C:\>Install-FASTSearchAdminDatabase -Upgrade -DbServer "sqlserver.contoso.com"
 ```
 
 This example upgrades the database schema already installed in the FAST Search Server 2010 for SharePoint administration database on the given SQL Server instance.
 
 ### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Install-FASTSearchAdminDatabase -Force -DbServer "sqlserver.contoso.com"
+PS C:\>Install-FASTSearchAdminDatabase -Force -DbServer "sqlserver.contoso.com"
 ```
 
 This example deletes and reinstalls the database schema already installed in the FAST Search Server 2010 for SharePoint administration database on the given SQL Server instance.

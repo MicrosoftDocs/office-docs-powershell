@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPWOPIProofKey
 schema: 2.0.0
 ---
@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-C:\PS>Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
+PS C:\>Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
 ```
 
 This example obtains the current public key from the WOPI application (such as a server that runs Office Web Apps Server) and updates the key that is stored on the SharePoint farm.
@@ -49,7 +49,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -67,7 +67,7 @@ If this parameter is missing, public keys for all WOPI applications which are co
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

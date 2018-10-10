@@ -33,7 +33,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>new-FASTSearchSecurityLotusNotesUserStore ln1
+PS C:\>new-FASTSearchSecurityLotusNotesUserStore ln1
 ```
 
 This example creates a new security Lotus Notes user store with a user store identity of "ln1".
@@ -42,7 +42,7 @@ This example uses default values for all parameters except the required Identity
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1 | New-FASTSearchSecurityLotusNotesUserStore -Identity ln3 -UseViewSecurity $true
+PS C:\>Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1 | New-FASTSearchSecurityLotusNotesUserStore -Identity ln3 -UseViewSecurity $true
 ```
 
 This example creates a new Lotus Notes user store with an identity of "ln3" and enables view level security.

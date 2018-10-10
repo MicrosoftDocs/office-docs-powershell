@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchServiceApplicationBackupStore
 schema: 2.0.0
 ---
@@ -33,14 +33,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -BackupId 3222ad97-91ad-471f-a764-780ec1f05f74
+PS C:\>Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -BackupId 3222ad97-91ad-471f-a764-780ec1f05f74
 ```
 
 This example retrieves the backup of the search databases and index files that are located at \\\\sample\backup with the backup id 3222ad97-91ad-471f-a764-780ec1f05f74 from the search service application Search Service Application.
 
 ### ------------------EXAMPLE 2----------------- 
 ```
-C:\PS>Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -UseMostRecent
+PS C:\>Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -UseMostRecent
 ```
 
 This example retrieves the most recently taken backup of the search databases and index files that are located at \\\\sample\backup from the search service application Search Service Application.
@@ -54,7 +54,7 @@ Specifies the full file path of the backup files.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -73,7 +73,7 @@ Specifies the name of the search service application from which to retrieve the 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -89,7 +89,7 @@ Specifies the GUID of the backup in the referred package.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 4
@@ -105,7 +105,7 @@ A switch to specify if the most recent backup should be used.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 5
@@ -121,7 +121,7 @@ A switch to specify if messages should be printed out when the cmdlet is running
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 6
@@ -143,7 +143,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

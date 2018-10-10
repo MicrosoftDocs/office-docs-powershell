@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Repair-SPProjectWebInstance
 schema: 2.0.0
 ---
@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-C:\PS>Repair-SPProjectWebInstance -Identity http://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
+PS C:\>Repair-SPProjectWebInstance -Identity http://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
 ```
 
 This example enqueues any missing triggers for the Project Web App instance at http://contoso-appsrv/PWA.
@@ -44,7 +44,7 @@ The identity of the instance of Project Web App.
 Type: ProjectInstancePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -60,7 +60,7 @@ Valid values: QueueMissingTriggers searches the Project Web App for any triggers
 Type: ProjectSiteHealthRuleName
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -82,7 +82,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

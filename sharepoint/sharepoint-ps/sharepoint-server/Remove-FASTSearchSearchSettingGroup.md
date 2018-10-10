@@ -25,21 +25,21 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchSearchSettingGroup -Name marketinggroup
+PS C:\>Remove-FASTSearchSearchSettingGroup -Name marketinggroup
 ```
 
 This example deletes the "marketinggroup" search setting group.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchSearchSettingGroup -Name marketinggroup -Force
+PS C:\>Remove-FASTSearchSearchSettingGroup -Name marketinggroup -Force
 ```
 
 This example deletes the "marketinggroup" search setting group without being prompted to confirm the operation.
 
 ### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchSearchSettingGroup -Name marketinggroup -WhatIf
+PS C:\>Remove-FASTSearchSearchSettingGroup -Name marketinggroup -WhatIf
 ```
 
 This example describes what would happen if you executed the Remove-FASTSearchSearchSettingGroup cmdlet.

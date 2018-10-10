@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPUserSettingsProvider
 schema: 2.0.0
 ---
@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------- EXAMPLE---------------------------
 ```
-C:\PS>New-SPUserSettingsProvider -DisplayName "My User Settings Provider" -AssemblyName MyProvider.dll -Type MyProvider
+PS C:\>New-SPUserSettingsProvider -DisplayName "My User Settings Provider" -AssemblyName MyProvider.dll -Type MyProvider
 ```
 
 This example adds a user setting provider with a display name of "My User Settings Provider" which uses the MyProvider.dll file.
@@ -43,7 +43,7 @@ Specifies the assembly name for the provider.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -59,7 +59,7 @@ Specifies the display name to use for this provider.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -75,7 +75,7 @@ Specifies the type name to use for this provider.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -97,7 +97,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPSideBySideFiles
 schema: 2.0.0
 ---
@@ -40,7 +40,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -56,7 +56,7 @@ Specifies the fully-qualified logfile name of SideBySide copy operation. If LogF
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

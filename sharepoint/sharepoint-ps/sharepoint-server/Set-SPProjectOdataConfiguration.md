@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectOdataConfiguration
 schema: 2.0.0
 ---
@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
+PS C:\>Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
 ```
 
 This example clears any page size overrides that have been set for any specific entities.
@@ -41,7 +41,7 @@ This example clears any page size overrides that have been set for any specific 
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
+PS C:\>Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
 ```
 
 This example sets AcceptProjectionRequests to true.
@@ -49,7 +49,7 @@ This example sets AcceptProjectionRequests to true.
 
 ### ----------------------EXAMPLE 3-----------------------
 ```
-C:\PS>Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
+PS C:\>Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
 ```
 
 This example sets the default maximum page size to 50 rows.
@@ -57,7 +57,7 @@ This example sets the default maximum page size to 50 rows.
 
 ### ----------------------EXAMPLE 4-----------------------
 ```
-C:\PS>Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
+PS C:\>Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
 ```
 
 This example sets the page size override for the Assignments entity.
@@ -72,7 +72,7 @@ Sets whether requests with the $count path segment or the $inlinecount query opt
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ Projection requests are made by using the $select query option.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ Clears all page-size overrides that had been set for any entities.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ This is used for any entities that do not have an override set using the PageSiz
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Specifies the entity name that is used to set a page size override with PageSize
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ This parameter cannot be used in conjunction with paging.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ Overrides the page size that is used for a specific entity.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ Sets the service to use more verbose error messages (for example, stack trace).
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

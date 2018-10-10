@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPThrottlingRule
 schema: 2.0.0
 ---
@@ -30,10 +30,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE--------- 
 ```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-C:\PS>$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
-C:\PS>Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
+PS C:\>$web=Get-SPWebApplication -Identity <URL of web application>
+PS C:\>$rm=Get-SPRequestManagementSettings -Identity $web
+PS C:\>$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+PS C:\>Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
 ```
 
 This example adds a throttling rule for a specified identity by using the $rm and $c variables.
@@ -47,7 +47,7 @@ Specifies the name of the request management settings object to add.
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -63,7 +63,7 @@ Specifies the name of the throttling rule.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -85,7 +85,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ Specifies the criteria for the rule to match.
 Type: SPRequestManagementRuleCriteriaPipeBind[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Specifies the expiration date and time of the rule.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ The Request Manager will remove routing targets if their Health-Score becomes gr
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

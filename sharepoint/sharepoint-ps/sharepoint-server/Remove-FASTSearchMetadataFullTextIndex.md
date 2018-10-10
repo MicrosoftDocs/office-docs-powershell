@@ -34,7 +34,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchMetadataFullTextIndex -name secondarycontent
+PS C:\>Remove-FASTSearchMetadataFullTextIndex -name secondarycontent
 ```
 
 This example removes the full text index named "secondarycontent" from the FAST Search Server 2010 for SharePoint system.

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPRoutingMachineInfo
 schema: 2.0.0
 ---
@@ -34,7 +34,7 @@ C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
 C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
-C:\PS>Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+PS C:\>Get-SPRoutingMachineInfo -RequestManagementSettings $rm
 ```
 
 This example returns a routing target for a specified identity.
@@ -48,7 +48,7 @@ Specifies the name of the request management settings object to return.
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -70,7 +70,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ The valid values are:
 Type: SPRoutingMachineAvailability
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ Specifies the name of the computer for which you want to return routing informat
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE--------------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "ExcelServices" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB"}
+PS C:\>Get-SPExcelServiceApplication -Identity "ExcelServices" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB"}
 ```
 
 This example displays the data provider with the provider identifier (ID) SQLOLEDB from the list of data providers that is on the MyExcelService application.
@@ -37,7 +37,7 @@ To select a specific provider from the list of safe providers, you must pipe a w
 
 ### --------------EXAMPLE-------------- 
 ```
-C:\PS>Get-SPExcelDataProvider -ExcelServiceApplication "Excel Services" | format-table
+PS C:\>Get-SPExcelDataProvider -ExcelServiceApplication "Excel Services" | format-table
 ```
 
 This example displays a list of safe data providers for the specific Excel Services Application Web service application, and then formats the results of the data providers in a table.

@@ -26,21 +26,21 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchContentCollection -Name newscollection
+PS C:\>New-FASTSearchContentCollection -Name newscollection
 ```
 
 This example creates a new FAST Search Server 2010 for SharePoint content collection named "newscollection".
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchContentCollection -Name newscollection -Description "A collection for news content"
+PS C:\>New-FASTSearchContentCollection -Name newscollection -Description "A collection for news content"
 ```
 
 This example creates a new content collection named "newscollection", and attaches a description to it.
 
 ### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchContentCollection -Name newscollection -Description "A collection for news content" -Pipeline "Office14 (webcluster)"
+PS C:\>New-FASTSearchContentCollection -Name newscollection -Description "A collection for news content" -Pipeline "Office14 (webcluster)"
 ```
 
 This example creates a new content collection, and uses the FAST Search Server 2010 for SharePoint document processing pipeline "Office14 (webcluster)" to feed content to the content collection.

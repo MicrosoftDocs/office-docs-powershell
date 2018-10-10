@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
 ---
@@ -44,9 +44,9 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ###   ------------ Example 1 --------------------
 ```
-C:\PS>$groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
-C:\PS>[Guid[]]$groupUids = $groupGuids[0].ObjectGuid,$groupGuids[1].ObjectGuid
-C:\PS>Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync -Url http://pwa_site -GroupUids $groupUids
+PS C:\>$groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
+PS C:\>[Guid[]]$groupUids = $groupGuids[0].ObjectGuid,$groupGuids[1].ObjectGuid
+PS C:\>Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync -Url http://pwa_site -GroupUids $groupUids
 ```
 
 Retrieves the ObjectGuid values of the Domain Users and Domain Admins Active Directory groups and adds them to the Active Directory Enterprise Resource Pool Synchronization on the Project Web Apps site, http://pwa_site.
@@ -60,7 +60,7 @@ Specifies the URL of the Project Web App instance to enable Active Directory Ent
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -76,7 +76,7 @@ The Active Directory Group GUID to synchronize the Enterprise Resource Pool with
 Type: System.Collections.Generic.IEnumerable`1[System.Guid]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 2

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPDistributedCacheServiceInstance
 schema: 2.0.0
 ---
@@ -63,7 +63,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ If this parameter is not specified, the default value will be used.
 Type: Int32
 Parameter Sets: CacheSizeSet
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ Type: SPServerRole
 Parameter Sets: LocalServerRoleSet
 Aliases: 
 Accepted values: DistributedCache, SingleServerFarm, WebFrontEndWithDistributedCache
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

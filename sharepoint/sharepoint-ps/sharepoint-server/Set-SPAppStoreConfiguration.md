@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppStoreConfiguration
 schema: 2.0.0
 ---
@@ -21,7 +21,7 @@ Set-SPAppStoreConfiguration [-Url <String>] [-AssignmentCollection <SPAssignment
 ## DESCRIPTION
 Use the Set-SPAppStoreConfiguration cmdlet to set SharePoint Store settings for a specified app.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 
 ## EXAMPLES
@@ -36,14 +36,14 @@ This example sets the URL to the Office.com server.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>Set-SPAppStoreConfiguration -Enable $false
+PS C:\>Set-SPAppStoreConfiguration -Enable $false
 ```
 
 This example turns off the SharePoint Store.
 
 ### --------------------EXAMPLE 3---------------------
 ```
-C:\PS>Set-SPAppStoreConfiguration -Enable $true
+PS C:\>Set-SPAppStoreConfiguration -Enable $true
 ```
 
 This example turns on the SharePoint Store.
@@ -60,7 +60,7 @@ The SharePoint store value should not be changed unless instructed by a Microsof
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named

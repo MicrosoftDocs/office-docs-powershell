@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPStateServiceDatabase
 schema: 2.0.0
 ---
@@ -38,21 +38,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1---------------- 
 ```
-C:\PS>Get-SPStateServiceDatabase
+PS C:\>Get-SPStateServiceDatabase
 ```
 
 This example displays all of the state service databases on the farm.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-C:\PS>Get-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
+PS C:\>Get-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
 ```
 
 This example displays a specific state service database in the farm.
 
 ### --------------EXAMPLE 3-------------- 
 ```
-C:\PS>Get-SPStateServiceDatabase -ServiceApplication "StateServiceApp1"
+PS C:\>Get-SPStateServiceDatabase -ServiceApplication "StateServiceApp1"
 ```
 
 This example displays all state service databases associated with a specific service.
@@ -68,7 +68,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPStateDatabasePipeBind
 Parameter Sets: Default
 Aliases: Name
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -86,7 +86,7 @@ The type must be a valid name of a state service application (for example, State
 Type: SPStateServiceApplicationPipeBind
 Parameter Sets: ServiceApplication
 Aliases: Application
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -108,7 +108,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

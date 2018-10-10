@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWOPIBinding
 schema: 2.0.0
 ---
@@ -47,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-C:\PS>Remove-SPWOPIBinding -Application "Excel"
+PS C:\>Remove-SPWOPIBinding -Application "Excel"
 ```
 
 This example removes all bindings for Excel on the current SharePoint farm where this cmdlet is run.
@@ -55,7 +55,7 @@ This example removes all bindings for Excel on the current SharePoint farm where
 
 ### --------------EXAMPLE 2-----------------
 ```
-C:\PS>Remove-SPWOPIBinding -All:$true
+PS C:\>Remove-SPWOPIBinding -All:$true
 ```
 
 This example removes all bindings on the current SharePoint farm where this cmdlet is run.
@@ -63,7 +63,7 @@ This example removes all bindings on the current SharePoint farm where this cmdl
 
 ### --------------EXAMPLE 3-----------------
 ```
-C:\PS>Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
+PS C:\>Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
 ```
 
 This example removes all bindings for Office Mobile Web Apps on the current SharePoint farm where this cmdlet is run.
@@ -78,7 +78,7 @@ Specifies the binding.
 Type: SPWopiBindingPipeBind
 Parameter Sets: Identity
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -97,7 +97,7 @@ If you specify some actions but not others, some features in SharePoint may not 
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Removes all bindings.
 Type: SwitchParameter
 Parameter Sets: RemoveAll
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ Possible applications are as follows: "Word," "Excel," "PowerPoint," or "OneNote
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ Run `Get-SPWOPIBinding` to get the list of file name extensions.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ You may only want to use this parameter to remove bindings for OneNote.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ Specifies the name of WOPI application (like Office Web Apps Server) to remove b
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ Specifies the zone to remove bindings for.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -25,7 +25,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchSearchSettingGroup -Name marketinggroup
+PS C:\>New-FASTSearchSearchSettingGroup -Name marketinggroup
 ```
 
 This example creates a new FAST Search Server 2010 for SharePoint search setting group named "marketinggroup".

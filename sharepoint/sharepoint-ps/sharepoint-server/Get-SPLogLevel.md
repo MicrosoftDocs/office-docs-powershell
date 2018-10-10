@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPLogLevel
 schema: 2.0.0
 ---
@@ -29,14 +29,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPLogLevel
+PS C:\>Get-SPLogLevel
 ```
 
 This example displays throttle levels for all categories.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>Get-SPLogLevel -Identity "Category1"
+PS C:\>Get-SPLogLevel -Identity "Category1"
 ```
 
 This example displays the throttle level for the Category1 category.
@@ -50,7 +50,7 @@ This example displays the throttle level for multiple categories.
 
 ### --------------EXAMPLE 4----------------- 
 ```
-C:\PS>Get-SPLogLevel -Identity "Area:*"
+PS C:\>Get-SPLogLevel -Identity "Area:*"
 ```
 
 This example displays the throttle level for all categories in one area.
@@ -70,7 +70,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ Specifies a valid category name; for example, Backup and Restore, or Administrat
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

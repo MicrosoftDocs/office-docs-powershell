@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPThrottlingRule
 schema: 2.0.0
 ---
@@ -39,7 +39,7 @@ C:\PS>$throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name 
 
 C:\PS>$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
 
-C:\PS>Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
+PS C:\>Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
 ```
 
 This example sets throttling rule property
@@ -54,7 +54,7 @@ Specifies the throttling rule object to set.
 Type: SPThrottlingRulePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -76,7 +76,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Specifies the criteria for the rule to match.
 Type: SPRequestManagementRuleCriteriaPipeBind[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Specifies the expiration date and time of the rule.
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ The Request Manager will remove routing targets if the Health-Score becomes grea
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

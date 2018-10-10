@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAlternateURL
 schema: 2.0.0
 ---
@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
+PS C:\>Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
@@ -37,7 +37,7 @@ This example changes the zone of the alternate URL https://www.contoso.com.
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
+PS C:\>Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
 ```
 
 This example changes the URL and zone of the alternate URL https://www.contoso.com.
@@ -45,7 +45,7 @@ This example changes the URL and zone of the alternate URL https://www.contoso.c
 
 ### ------------------EXAMPLE 3------------------
 ```
-C:\PS>Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
+PS C:\>Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
@@ -53,7 +53,7 @@ This example changes the zone of the alternate URL https://www.contoso.com.
 
 ### ------------------EXAMPLE 4------------------
 ```
-C:\PS>Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
+PS C:\>Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
 ```
 
 This example changes the zone of the alternate URL for the specified Web application from Extranet to Intranet.
@@ -70,7 +70,7 @@ The type must be a valid URL, in the form http://server_name/WebApplication/site
 Type: SPAlternateUrlPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -86,7 +86,7 @@ Specifies the new alternate URL.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ The type must be any one of the following values: Default, Intranet, Internet, E
 Type: SPUrlZone
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUserLicenseMapping
 schema: 2.0.0
 ---
@@ -34,21 +34,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPUserLicenseMapping
+PS C:\>Get-SPUserLicenseMapping
 ```
 
 This example returns all claim-to-user license mappings for the entire SharePoint farm.
 
 ### ---------------EXAMPLE 2 ----------------- 
 ```
-C:\PS>Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
+PS C:\>Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
 ```
 
 This example returns all claim-to-user license mappings for the web application with the name "SharePoint - 80".
 
 ### ---------------EXAMPLE 3 ----------------- 
 ```
-C:\PS>Get-SPUserLicenseMapping -WebApplication http://<server_name>/sitename
+PS C:\>Get-SPUserLicenseMapping -WebApplication http://<server_name>/sitename
 ```
 
 This example returns all claim-to-user license mappings for the Web application with the URL http://\<server_name\>/sites/sitename.
@@ -68,7 +68,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -85,7 +85,7 @@ The type must be an URL in the form http://server_name or http://server_name/sit
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPTagsAndNotesData
 schema: 2.0.0
 ---
@@ -42,7 +42,7 @@ For example: http://site.contoso.com
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -61,7 +61,7 @@ If the file already exists, the cmdlet won't perform the export and will ask you
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 2
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

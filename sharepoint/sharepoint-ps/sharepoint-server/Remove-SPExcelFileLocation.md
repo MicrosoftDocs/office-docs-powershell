@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-C:\PS>Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -ne "http://"} | Remove-SPExcelFileLocation
+PS C:\>Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -ne "http://"} | Remove-SPExcelFileLocation
 ```
 
 This example removes all nondefault trusted file locations from every Excel Services Application Web service application in the farm.

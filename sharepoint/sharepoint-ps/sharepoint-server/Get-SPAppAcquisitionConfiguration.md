@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppAcquisitionConfiguration
 schema: 2.0.0
 ---
@@ -60,7 +60,7 @@ Specifies the site collection for which app acquisition settings are to be retur
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: MarketplaceSettingsInSiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -79,7 +79,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ Specifies the web application for which app acquisition settings are to be retur
 Type: SPWebApplicationPipeBind
 Parameter Sets: MarketplaceSettingsInWebApplication
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named

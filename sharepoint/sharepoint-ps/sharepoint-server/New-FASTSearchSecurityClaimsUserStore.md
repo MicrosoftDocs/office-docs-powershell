@@ -26,7 +26,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchSecurityClaimsUserStore -Identity clm
+PS C:\>New-FASTSearchSecurityClaimsUserStore -Identity clm
 ```
 
 This example creates a new security claims user store with a user store Identity of "clm".
@@ -35,7 +35,7 @@ This example uses default values for all parameters except the required Identity
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchSecurityClaimsUserStore -Identity clm | New-FASTSearchSecurityClaimsUserStore -Identity cl2
+PS C:\>Get-FASTSearchSecurityClaimsUserStore -Identity clm | New-FASTSearchSecurityClaimsUserStore -Identity cl2
 ```
 
 This example creates a new security claims user store with an identity of "cl2" using all properties from the claims user store "clm" as a baseline.

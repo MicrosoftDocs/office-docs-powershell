@@ -36,14 +36,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataFullTextIndex -name content -description "Central content repository"
+PS C:\>Set-FASTSearchMetadataFullTextIndex -name content -description "Central content repository"
 ```
 
 This example updates the description of the existing full text index named "content".
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataFullTextIndex -Name content -StemmingEnabled 1
+PS C:\>Set-FASTSearchMetadataFullTextIndex -Name content -StemmingEnabled 1
 ```
 
 This example enables stemming on the full text index named "content".

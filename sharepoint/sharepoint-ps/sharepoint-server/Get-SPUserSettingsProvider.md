@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUserSettingsProvider
 schema: 2.0.0
 ---
@@ -37,7 +37,7 @@ C:\PS>$site = Get-SPSite -Identity http://someserver
 
 C:\PS>$user = $site.RootWeb.CurrentUser
 
-C:\PS>ctx = $provider.GetProviderContext($user)
+PS C:\>ctx = $provider.GetProviderContext($user)
 
 C:\PS>$provider.GetUserRegionalSettings($ctx,$user)
 ```
@@ -53,7 +53,7 @@ Specifies the GUID ID for a User Settings Provider.
 Type: SPUserSettingsProviderPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -75,7 +75,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPProcessAccount
 schema: 2.0.0
 ---
@@ -44,14 +44,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------- 
 ```
-C:\PS>Get-SPProcessAccount -NetworkService
+PS C:\>Get-SPProcessAccount -NetworkService
 ```
 
 This example creates the SPProcessAccountPipeBind type by using the NetworkService account.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-C:\PS>Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
+PS C:\>Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
 ```
 
 This example creates an SPServiceApplicationPool account by using the NetworkService account returned by the Get-SPProcessAccount cmdlet.
@@ -71,7 +71,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ Returns the LocalService account.
 Type: SwitchParameter
 Parameter Sets: LocalService
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ Returns the LocalSystem account.
 Type: SwitchParameter
 Parameter Sets: LocalSystem
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Returns the NetworkService account.
 Type: SwitchParameter
 Parameter Sets: NetworkService
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

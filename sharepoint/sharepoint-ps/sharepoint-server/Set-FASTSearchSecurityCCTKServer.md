@@ -26,7 +26,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1---------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchSecurityCCTKServer -Port 13271 -Enable $true
+PS C:\>Set-FASTSearchSecurityCCTKServer -Port 13271 -Enable $true
 ```
 
 This example updates the CCTK server port number and enables the CCTK server to accept requests.

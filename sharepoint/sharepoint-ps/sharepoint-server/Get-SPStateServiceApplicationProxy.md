@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPStateServiceApplicationProxy
 schema: 2.0.0
 ---
@@ -27,14 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPStateServiceApplicationProxy
+PS C:\>Get-SPStateServiceApplicationProxy
 ```
 
 This example displays all the state service application proxies on the farm.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>Get-SPStateServiceApplicationProxy -Identity 81dc50e0-c0f9-4d2c-8284-bb03bb1ea676
+PS C:\>Get-SPStateServiceApplicationProxy -Identity 81dc50e0-c0f9-4d2c-8284-bb03bb1ea676
 ```
 
 This example displays a specific state service application proxy on the farm.
@@ -50,7 +50,7 @@ The type must be a valid name of a state service application proxy (for example,
 Type: SPStateServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases: Name
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -72,7 +72,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

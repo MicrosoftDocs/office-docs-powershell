@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSecureStoreDefaultProvider
 schema: 2.0.0
 ---
@@ -35,7 +35,7 @@ C:\PS>[Reflection.Assembly]::LoadFrom("C:\ContosoFolder\contosoSecureStore.dll")
 
 C:\PS>$type = [Contoso.SecureStore.ContosoSecureStoreProvider]
 
-C:\PS>Set-SPSecureStoreDefaultProvider -Type $type
+PS C:\>Set-SPSecureStoreDefaultProvider -Type $type
 ```
 
 This example sets the custom implemented secure store provider.
@@ -50,7 +50,7 @@ The type must be a secure store provider type enclosed in square brackets; for e
 Type: Type
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

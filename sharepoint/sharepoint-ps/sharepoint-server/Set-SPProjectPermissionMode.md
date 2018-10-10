@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectPermissionMode
 schema: 2.0.0
 ---
@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------EXAMPLE 1-------------------
 ```
-C:\PS>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode ProjectServer
+PS C:\>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode ProjectServer
 ```
 
 This example shows the syntax for transitioning a server into Project Server permission mode.
@@ -37,7 +37,7 @@ This example shows the syntax for transitioning a server into Project Server per
 
 ### --------------EXAMPLE 2-------------------
 ```
-C:\PS>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode SharePoint
+PS C:\>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode SharePoint
 ```
 
 This example shows the syntax for transitioning a server into SharePoint permission mode.
@@ -54,7 +54,7 @@ The type must be a valid URL, in the form http://\<ServerName\>/\<PWAName\>.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -72,7 +72,7 @@ The type must be a valid permission mode, in the form SharePoint or ProjectServe
 Type: PermissionMode
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 2
@@ -94,7 +94,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

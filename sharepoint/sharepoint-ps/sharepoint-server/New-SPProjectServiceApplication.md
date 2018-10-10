@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: New-SPProjectServiceApplication
 schema: 2.0.0
 ---
@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>New-SPProjectServiceApplication -Name "PsiApplication" -ApplicationPool "PsiApplicationPool" -Proxy
+PS C:\>New-SPProjectServiceApplication -Name "PsiApplication" -ApplicationPool "PsiApplicationPool" -Proxy
 ```
 
 This example creates a Project Server Service application with the name PsiApplication and an application pool with the name PsiApplicationPool and it creates a Project Server Service application proxy for the application.
@@ -36,7 +36,7 @@ This example creates a Project Server Service application with the name PsiAppli
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Get-SPIisWebServiceApplicationPool "PsiApplicationPool" | New-SPProjectServiceApplication -Name "PsiApplication"
+PS C:\>Get-SPIisWebServiceApplicationPool "PsiApplicationPool" | New-SPProjectServiceApplication -Name "PsiApplication"
 ```
 
 This example creates a Project Server Service application with the name PsiApplication.
@@ -54,7 +54,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ The type must be a valid name of a Project Server Service application; for examp
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -94,7 +94,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ Specifies that a proxy for new service application is automatically created.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

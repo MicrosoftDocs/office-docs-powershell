@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPRoutingRule
 schema: 2.0.0
 ---
@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
-C:\PS>Get-SPRoutingRule -RequestManagementSettings $rm
+PS C:\>Get-SPRoutingRule -RequestManagementSettings $rm
 
 C:\PS>$machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
 
@@ -41,7 +41,7 @@ C:\PS>$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchTyp
 
 C:\PS>$rule=Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
 
-C:\PS>Remove-SPRoutingRule -Identity $rule
+PS C:\>Remove-SPRoutingRule -Identity $rule
 ```
 
 This example removes a routing for a specified identity by using the $rule variable.
@@ -56,7 +56,7 @@ Specifies the rule object to remove.
 Type: SPRoutingRulePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -78,7 +78,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

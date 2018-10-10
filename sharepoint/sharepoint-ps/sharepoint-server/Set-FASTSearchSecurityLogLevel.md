@@ -28,14 +28,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchSecurityLogLevel -DefaultLogLevel debug -IncludeExceptionStack $True
+PS C:\>Set-FASTSearchSecurityLogLevel -DefaultLogLevel debug -IncludeExceptionStack $True
 ```
 
 This example sets the default log level to the "Debug" level and enables the setting to include the exception stack in the log.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchSecurityLogLevel -WarningNameSpaceLogLevel Microsoft
+PS C:\>Set-FASTSearchSecurityLogLevel -WarningNameSpaceLogLevel Microsoft
 ```
 
 This example sets the log level setting for the "Microsoft" namespace to the "Warning" level.

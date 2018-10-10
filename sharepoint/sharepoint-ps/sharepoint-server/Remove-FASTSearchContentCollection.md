@@ -26,14 +26,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchContentCollection -Name newscollection -Force
+PS C:\>Remove-FASTSearchContentCollection -Name newscollection -Force
 ```
 
 This example removes the content collection named "newscollection" without asking the user to confirm the operation.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchContentCollection -Name newscollection -WhatIf
+PS C:\>Remove-FASTSearchContentCollection -Name newscollection -WhatIf
 ```
 
 This example describes what would happen if you executed the Remove-FASTSearchContentCollection cmdlet.

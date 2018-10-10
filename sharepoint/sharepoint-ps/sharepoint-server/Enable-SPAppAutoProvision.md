@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPAppAutoProvision
 schema: 2.0.0
 ---
@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------- 
 ```
-C:\PS>Enable-SPAppAutoProvision
+PS C:\>Enable-SPAppAutoProvision
 ```
 
 This example enables auto provisioning for the farm.
@@ -37,7 +37,7 @@ This setting overrides site subscription level setting.
 ### --------------EXAMPLE 2-------- 
 ```
 C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
-C:\PS>Enable-SPAppAutoProvision -SiteSubscription $subscription
+PS C:\>Enable-SPAppAutoProvision -SiteSubscription $subscription
 ```
 
 This example enables app auto provisioning for the site subscription for Contoso.Com site.
@@ -58,7 +58,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -74,7 +74,7 @@ Specifies the site collection for which auto provisioning is to be enabled.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

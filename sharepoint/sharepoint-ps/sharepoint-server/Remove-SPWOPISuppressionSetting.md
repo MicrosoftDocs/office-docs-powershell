@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWOPISuppressionSetting
 schema: 2.0.0
 ---
@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-C:\PS>Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+PS C:\>Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
 ```
 
 This example removes suppression settings for viewing Excel workbooks that have the file name extension ".xlsx."
@@ -43,7 +43,7 @@ This example removes suppression settings for viewing Excel workbooks that have 
 
 ### --------------EXAMPLE 2-----------------
 ```
-C:\PS>Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
+PS C:\>Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
 ```
 
 This example removes all suppression settings on the current SharePoint farm where this cmdlet is run.
@@ -59,7 +59,7 @@ For example, "view," "edit," and "embedview."
 Type: String
 Parameter Sets: DocTypeAndAction
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Run `Get-SPWOPIBinding` to get the list of file name extensions the WOPI applica
 Type: String
 Parameter Sets: DocTypeAndAction
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Run `Get-SPWOPISuppressionSetting` to see examples of such strings.
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Run `Get-SPWOPIBinding` to get the list of ProgIDs that the WOPI application sup
 Type: String
 Parameter Sets: DocTypeAndAction
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

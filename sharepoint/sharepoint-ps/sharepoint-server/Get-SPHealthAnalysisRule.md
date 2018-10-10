@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPHealthAnalysisRule
 schema: 2.0.0
 ---
@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE 1--------------------------- 
 ```
-C:\PS>Get-SPHealthAnalysisRule -Identity "CustomRule"
+PS C:\>Get-SPHealthAnalysisRule -Identity "CustomRule"
 ```
 
 This example returns the health analyzer rule named CustomRule.
@@ -55,7 +55,7 @@ The type must be a valid name, an instance of a valid SPHealthAnalysisRule objec
 Type: SPHealthAnalysisRuleInstancePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -77,7 +77,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

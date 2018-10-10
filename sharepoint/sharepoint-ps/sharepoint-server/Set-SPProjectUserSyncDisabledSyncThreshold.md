@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectUserSyncDisabledSyncThreshold
 schema: 2.0.0
 ---
@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE---------------------
 ```
-C:\PS>Set-SPProjectUserSyncDisabledSyncThreshold -URL http//contoso-AppSrv/PWA -Threshold 400
+PS C:\>Set-SPProjectUserSyncDisabledSyncThreshold -URL http//contoso-AppSrv/PWA -Threshold 400
 ```
 
 This example sets the sync disable threshold for the Project Web App instance at http//contoso-AppSrv/PWA to 400.
@@ -47,7 +47,7 @@ The URL of the Project Web App instance where you want to set the threshold.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 2
@@ -63,7 +63,7 @@ A whole number consisting of the number of projects multiplied by the number of 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 3
@@ -85,7 +85,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

@@ -31,7 +31,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Uninstall-FASTSearchAdminDatabase -DbServer=sqlserver.contoso.com
+PS C:\>Uninstall-FASTSearchAdminDatabase -DbServer=sqlserver.contoso.com
 ```
 
 This example uninstalls the FAST Search Server 2010 for SharePoint administration database on the given SQL Server instance.

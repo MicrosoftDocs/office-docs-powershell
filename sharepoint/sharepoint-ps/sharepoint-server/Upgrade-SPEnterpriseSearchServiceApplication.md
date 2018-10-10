@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
 ---
@@ -31,21 +31,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1-----------------
 ```
-C:\PS>Get-SPEnterpriseSearchServiceApplication | Upgrade-SPEnterpriseSearchServiceApplication
+PS C:\>Get-SPEnterpriseSearchServiceApplication | Upgrade-SPEnterpriseSearchServiceApplication
 ```
 
 This example upgrades a search service application.
 
 ### ----------------EXAMPLE 2-----------------
 ```
-C:\PS>Upgrade-SPEnterpriseSearchServiceApplication -Identity 846ceb0b-31d6-4c79-82c1-3a9deafe0b45
+PS C:\>Upgrade-SPEnterpriseSearchServiceApplication -Identity 846ceb0b-31d6-4c79-82c1-3a9deafe0b45
 ```
 
 This example upgrades a search service application.
 
 ### ----------------EXAMPLE 3-----------------
 ```
-C:\PS>Upgrade-SPEnterpriseSearchServiceApplication "DefaultSearchApplication"
+PS C:\>Upgrade-SPEnterpriseSearchServiceApplication "DefaultSearchApplication"
 ```
 
 This example upgrades a search service application.
@@ -61,7 +61,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -83,7 +83,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FastSearchConfiguration -LogFile C:\log.txt
+PS C:\>Set-FastSearchConfiguration -LogFile C:\log.txt
 ```
 
 This example configures the local machine and writes the log output to C:\log.txt.

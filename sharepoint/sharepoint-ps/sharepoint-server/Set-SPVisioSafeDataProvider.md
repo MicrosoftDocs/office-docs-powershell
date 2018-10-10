@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPVisioSafeDataProvider
 schema: 2.0.0
 ---
@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1----------------------
 ```
-C:\PS>Set-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
+PS C:\>Set-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
 ```
 
 This example sets the description property of a safe data provider for a specific Visio Services application.
@@ -36,7 +36,7 @@ This example sets the description property of a safe data provider for a specifi
 
 ### -------------------EXAMPLE 2----------------------
 ```
-C:\PS>Get-SPVisioServiceApplication -Identity "VGS1" | Set-SPVisioSafeDataProvider -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
+PS C:\>Get-SPVisioServiceApplication -Identity "VGS1" | Set-SPVisioSafeDataProvider -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
 ```
 
 This example sets the Description property of a safe data provider for a specific Visio Services application.
@@ -57,7 +57,7 @@ The type must be a valid string that identifies the data provider.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ The type must be a valid identity of a data provider type.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -94,7 +94,7 @@ The type must be a string with a maximum of 4096 characters.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -112,7 +112,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPVisioServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -134,7 +134,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

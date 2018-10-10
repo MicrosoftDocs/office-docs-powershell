@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPSite
 schema: 2.0.0
 ---
@@ -41,7 +41,7 @@ If a site collection is backed up and restored to a different URL location withi
 
 ### ----------------------EXAMPLE 1----------------------
 ```
-C:\PS>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
+PS C:\>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL http://server_name/sites/site_name.
@@ -49,7 +49,7 @@ This example restores a site collection from the backup file C:\Backup\site_name
 
 ### ----------------------EXAMPLE 2----------------------
 ```
-C:\PS>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
+PS C:\>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
 ```
 
 This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at http://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
@@ -57,7 +57,7 @@ This example restores a site collection backup from the backup file C:\Backup\si
 
 ### ----------------------EXAMPLE 3----------------------
 ```
-C:\PS>Restore-SPSite http://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication http://server_name
+PS C:\>Restore-SPSite http://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication http://server_name
 ```
 
 This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection http://www.example.com on the Web application http://server_name.
@@ -78,7 +78,7 @@ The type must be a valid URL, in the form http://server_name/sites/site_name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -95,7 +95,7 @@ For example, C:\Backup\site_name.bak.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -117,7 +117,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ If no content database is specified, the content database with the greatest unus
 Type: SPContentDatabasePipeBind
 Parameter Sets: DatabaseFromPipebind
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ The type must be a valid database name, in the form SQLDB1.
 Type: String
 Parameter Sets: DatabaseParameter
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ The type must be a valid database server name, in the form SQLBE1 and needs to b
 Type: String
 Parameter Sets: DatabaseParameter
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ Specifies that the existing site collection at the URL location is to be overwri
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ This option is recommended for large site collections.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ When the HostHeaderWebApplication parameter is present, the value of the Identit
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -257,7 +257,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ Preserves the original Site ID instead of creating a new one.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

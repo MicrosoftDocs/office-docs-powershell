@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPServerScaleOutDatabaseTenantData
 schema: 2.0.0
 ---
@@ -10,9 +10,6 @@ schema: 2.0.0
 ## SYNOPSIS
 
 Removes all data related to the specified site subscription.
-
-
-
 
 ## SYNTAX
 
@@ -33,7 +30,7 @@ Use the Clear-SPServerScaleOutDatabaseTenantData cmdlet removes all data related
 
 ### ------------EXAMPLE--------- 
 ```
-C:\PS>Clear-SPServerScaleOutDatabaseTenantData -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
+PS C:\>Clear-SPServerScaleOutDatabaseTenantData -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
 ```
 
 This example clears all data related to the site subscription with id 5CAF2F99-A75F-4239-B9CD-7FE63D1CE904 from the specified service application.
@@ -44,15 +41,11 @@ This example clears all data related to the site subscription with id 5CAF2F99-A
 
 Specifies the service application in which to clear data.
 
-
-
-
-
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -65,15 +58,11 @@ Accept wildcard characters: False
 
 Specifies the site subscription id of the site subscription in which to clear data.
 
-
-
-
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -92,14 +81,11 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
-
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -113,15 +99,11 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
-
-
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -135,14 +117,11 @@ Accept wildcard characters: False
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
-
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
