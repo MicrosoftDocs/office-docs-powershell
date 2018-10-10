@@ -39,16 +39,19 @@ class LogParseService {
 	}
 
 	parseAll() {
-		const logs = this.logStoreService.getAllLogs();
-		const logObjs = [];
+		const parseLogs = []
+		const logs = [...this.logStoreService.getAllLogs().values()].reduce(
+			(acc, cur) => [...acc, ...cur],
+			[]
+		);
 
 		logs.forEach((log) => {
 			const logObj = this.parse(log);
 
-			logObjs.push(logObj);
+			parseLogs.push(logObj);
 		});
 
-		const msg = this.generateMailText(logObjs);
+		const msg = this.generateMailText(parseLogs);
 
 		if (msg) {
 			const outputText = msg.replace(new RegExp('<br>', 'g'), '\n');
