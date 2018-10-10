@@ -8,7 +8,7 @@ A repository to hold the help reference content for Office PowerShell cmdlets. T
 Anyone who is interested can contribute to the Microsoft Office PowerShell reference topics.
 When you contribute your work will go directly into the Microsoft Office products and show up in Get-Help for the given Office cmdlet.
 
-> Notice that if you are looking into contributing for the **PnP PowerShell cmdlets**, their documentation is automatically generated from the code and you should be submitting your change towards the original code at https://github.com/SharePoint/PnP-powershell. See for example how the attributes are used in the code for the [Get-PnPList](https://github.com/SharePoint/PnP-PowerShell/blob/master/Commands/Lists/GetList.cs) cmdlet.
+> Notice that if you are looking into contributing for the **PnP PowerShell cmdlets**, their documentation is automatically generated from the code, and you should be submitting your change towards the original code at https://github.com/SharePoint/PnP-powershell. See, for example, how the attributes are used in the code for the [Get-PnPList](https://github.com/SharePoint/PnP-PowerShell/blob/master/Commands/Lists/GetList.cs) cmdlet.
 
 # Quick Start
 
@@ -21,10 +21,10 @@ When you contribute your work will go directly into the Microsoft Office product
 3. Click the Edit icon which looks like a pencil in the upper right corner. 
 ![Image of Edit button on Github](images/edit_icon.png)
 
-4. Your browser will then open the file in an edit window. We want to add a link so we scroll down to the Related Links section and add the link in the correct format.
+4. Your browser will then open the file in an edit window. We want to add a link. So we scroll down to the Related Links section and add the link in the correct format.
 ![Image of Edit button on Github](images/add_related_link.png)
 
-**Note** Since you are likely not a maintainer of the Git repository GitHub will automatically 'Fork' the project into your personal GitHub account. A fork is just an exact copy of the repository in your own account so that you have total access to make edits. You are now 'editing' a copy of the project in your own GitHub account. You can always find it again by looking at your GitHub Repositories in your GitHub Profile (drop-down from your name in the top right).
+**Note** Since you are likely not a maintainer of the Git repository, GitHub will automatically 'Fork' the project into your personal GitHub account. A fork is just an exact copy of the repository in your own account so that you have total access to make edits. You are now 'editing' a copy of the project in your own GitHub account. You can always find it again by looking at your GitHub Repositories in your GitHub Profile (drop-down from your name in the top right).
 ![Image of Automatic Fork message on Github](images/auto_fork.png)
 
 5. You can click the Preview changes link to see what the changes will look like.
@@ -32,7 +32,7 @@ When you contribute your work will go directly into the Microsoft Office product
    **IMPORTANT** The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
    Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
 
-6. Once you are satisfied with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title and other description information and then click **Propose file change**.
+6. Once you are satisfied with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title and other description information, and then click **Propose file change**.
 ![Image of Propose file change on Github](images/propose_file_change.png)
 
 7. On the next screen, click **Create pull request**.
@@ -46,7 +46,7 @@ Looking for more in-depth content? Check out the following:
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.microsoft.com.
 
