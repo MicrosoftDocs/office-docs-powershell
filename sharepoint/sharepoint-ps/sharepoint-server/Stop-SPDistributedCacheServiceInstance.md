@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>
 ```
-Please see referenced article instead of using this cmdlet directly.
+Please see referenced article instead of using this cmdlet directly: [Manage the Distributed Cache service in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/jj219613.aspx)
 
 ## PARAMETERS
 
@@ -82,6 +82,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-SPDistributedCacheServiceInstanceOnLocalServer](Remove-SPDistributedCacheServiceInstanceOnLocalServer.md)
+[Remove-SPDistributedCacheServiceInstance](Remove-SPDistributedCacheServiceInstance.md)
 
-[Add-SPDistributedCacheServiceInstanceOnLocalServer](Add-SPDistributedCacheServiceInstanceOnLocalServer.md)
+[Add-SPDistributedCacheServiceInstance](Add-SPDistributedCacheServiceInstance.md)
