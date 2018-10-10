@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>
 ```
-Please see referenced article instead of using this cmdlet directly: [Manage the Distributed Cache service in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/jj219613.aspx)
+Please see referenced article above instead of using this cmdlet directly.
 
 ## PARAMETERS
 
