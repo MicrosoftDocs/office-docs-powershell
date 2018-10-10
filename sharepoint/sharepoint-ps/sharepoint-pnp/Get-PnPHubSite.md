@@ -18,17 +18,17 @@ Get-PnPHubSite [-Connection <SPOnlineConnection>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPStorageEntity
+Get-PnPHubSite
 ```
 
-Returns all site storage entities/farm properties
+Returns all hubsite properties
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPTenantSite -Key MyKey
+Get-PnPHubSite -Identity https://contoso.sharepoint.com/sites/myhubsite
 ```
 
-Returns the storage entity/farm property with the given key.
+Returns the properties of the specified hubsite
 
 ## PARAMETERS
 

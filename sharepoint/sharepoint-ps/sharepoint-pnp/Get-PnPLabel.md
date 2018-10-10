@@ -1,35 +1,46 @@
 ---
 external help file:
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+applicable: SharePoint Online
 schema: 2.0.0
 ---
-# New-PnPProvisioningTemplate
+# Get-PnPLabel
 
 ## SYNOPSIS
-Creates a new provisioning template object
+Gets the label/tag of the specfied list or library (if applicable)
 
 ## SYNTAX 
 
 ```powershell
-New-PnPProvisioningTemplate [-Web <WebPipeBind>]
-                            [-Connection <SPOnlineConnection>]
+Get-PnPLabel -List <ListPipeBind>
+             [-Web <WebPipeBind>]
+             [-Connection <SPOnlineConnection>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-$template = New-PnPProvisioningTemplate
+Get-PnPLabel -List "Demo List"
 ```
 
-Creates a new instance of a provisioning template object.
+This gets the label which is set to a list or a library.
 
 ## PARAMETERS
 
+### -List
+The ID or Url of the list.
+
+```yaml
+Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: 0
+Accept pipeline input: True
+```
+
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
-
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
 
 ```yaml
 Type: SPOnlineConnection
@@ -42,8 +53,6 @@ Accept pipeline input: False
 
 ### -Web
 This parameter allows you to optionally apply the cmdlet action to a subweb within the current web. In most situations this parameter is not required and you can connect to the subweb using Connect-PnPOnline instead. Specify the GUID, server relative url (i.e. /sites/team1) or web instance of the web to apply the command to. Omit this parameter to use the current web.
-
-Only applicable to: SharePoint Server 2013, SharePoint Server 2016
 
 ```yaml
 Type: WebPipeBind

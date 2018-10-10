@@ -134,7 +134,7 @@ Parameter Sets: __AllParameterSets
 
 Required: True
 Position: 0
-Accept pipeline input: False
+Accept pipeline input: True
 ```
 
 ### -PageSize
