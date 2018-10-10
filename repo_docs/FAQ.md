@@ -89,7 +89,7 @@ You can find the PowerShell Browser here: https://docs.microsoft.com/powershell/
 
 ## I am a Microsoft employee but new to GitHub, what should I do?
 
-You can learn about workign with GitHub as a Microsoft employee here: https://docs.opensource.microsoft.com/github/
+You can learn about working with GitHub as a Microsoft employee here: https://docs.opensource.microsoft.com/github/
 
 In a nutshell you need to create a GitHub account and link it with your Microsoft account so you can contribute openly.
 

@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: Get-Recipient
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # Get-Recipient
@@ -19,51 +19,85 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### AnrSet
 ```
-Get-Recipient [-Anr <String>] [-AuthenticationType <Managed | Federated>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
+Get-Recipient [-Anr <String>]
+ [-AuthenticationType <Managed | Federated>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>] [-ReadFromDomainController]
- [-RecipientType <RecipientType[]>] [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>]
- [-SortBy <String>] [-AccountPartition <AccountPartitionIdParameter>] [-Capabilities <MultiValuedProperty>]
- [-Database <DatabaseIdParameter>] [-Properties <String[]>] [-IncludeSoftDeletedRecipients]
+ [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>]
+ [-ReadFromDomainController]
+ [-RecipientType <RecipientType[]>]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-Capabilities <MultiValuedProperty>]
+ [-Database <DatabaseIdParameter>]
+ [-Properties <String[]>]
+ [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+```
+
+### Identity
+```
+Get-Recipient [[-Identity] <RecipientIdParameter>]
+ [-AuthenticationType <Managed | Federated>]
+ [-BookmarkDisplayName <String>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-IncludeBookmarkObject <$true | $false>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>]
+ [-ReadFromDomainController]
+ [-RecipientType <RecipientType[]>]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-Capabilities <MultiValuedProperty>]
+ [-Properties <String[]>]
+ [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+```
+
+### DatabaseSet
+```
+Get-Recipient [-Database <DatabaseIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-Properties <String[]>]
+ [-PropertySet <PropertySet>]
+ [-ReadFromDomainController]
+ [-RecipientType <RecipientType[]>]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-IncludeSoftDeletedRecipients] [<CommonParameters>]
  [<CommonParameters>]
 ```
 
-### Set1
+### RecipientPreviewFilterSet
 ```
-Get-Recipient [[-Identity] <RecipientIdParameter>] [-AuthenticationType <Managed | Federated>]
- [-BookmarkDisplayName <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
- [-IgnoreDefaultScope] [-IncludeBookmarkObject <$true | $false>]
+Get-Recipient [-RecipientPreviewFilter <String>]
+ [-AuthenticationType <AuthenticationType>]
+ [-Capabilities <MultiValuedProperty>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-IncludeSoftDeletedRecipients]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>] [-ReadFromDomainController]
- [-RecipientType <RecipientType[]>] [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>]
- [-SortBy <String>] [-AccountPartition <AccountPartitionIdParameter>] [-Capabilities <MultiValuedProperty>]
- [-Properties <String[]>] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
-```
-
-### Set2
-```
-Get-Recipient [-AuthenticationType <Managed | Federated>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>] [-ReadFromDomainController]
- [-RecipientPreviewFilter <String>] [-RecipientType <RecipientType[]>]
- [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-AccountPartition <AccountPartitionIdParameter>] [-Capabilities <MultiValuedProperty>]
- [-Properties <String[]>] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
-```
-
-### Set4
-```
-Get-Recipient [-AccountPartition <AccountPartitionIdParameter>] [-Anr <String>]
- [-AuthenticationType <Managed | Federated>] [-Capabilities <MultiValuedProperty>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-Properties <String[]>]
- [-PropertySet <All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum>] [-ReadFromDomainController]
- [-RecipientType <RecipientType[]>] [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>]
- [-SortBy <String>] [-IncludeSoftDeletedRecipients] [<CommonParameters>]
+ [-Properties <String[]>]
+ [-PropertySet <PropertySet>]
+ [-ReadFromDomainController]
+ [-RecipientType <RecipientType[]>]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -111,9 +145,9 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set4
+Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +166,7 @@ The AuthenticationType parameter specifies the recipient by authentication type.
 
 ```yaml
 Type: Managed | Federated
-Parameter Sets: (All)
+Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
 Aliases:
 Applicable: Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
@@ -147,9 +181,24 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Capabilities
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: AnrSet, Identity, RecipientPreviewFilterSet
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -168,11 +217,28 @@ This parameter requires the creation and passing of a credential object. This cr
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Database
+This parameter is available only in on-premises Exchange.
+
+The Database parameter specifies a mailbox database. Use this parameter to return all recipients stored on a specific mailbox database. Use the mailbox database Name property as the value for this parameter.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: DatabaseSet
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -185,7 +251,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +268,7 @@ For more information about the filterable properties, see Filterable properties 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -231,9 +297,9 @@ For example:
 
 ```yaml
 Type: RecipientIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: 1
 Default value: None
@@ -256,7 +322,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -269,9 +335,28 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+### -IncludeSoftDeletedRecipients
+The IncludeSoftDeletedRecipients switch specifies whether to include soft deleted recipients in the results. You don't need to specify a value with this switch.
+
+This switch is required to return soft-deleted recipients.
+
+Soft-deleted recipients are deleted recipients that are still recoverable.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -294,7 +379,22 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Properties
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -309,7 +409,7 @@ This parameter is reserved for internal Microsoft use.
 Type: All | ControlPanel | ConsoleSmallSet | ConsoleLargeSet | Minimum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -328,7 +428,7 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -341,9 +441,9 @@ The RecipientPreviewFilter parameter specifies a recipient filter that would def
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: RecipientPreviewFilterSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -376,7 +476,7 @@ You can specify multiple values separated by commas.
 Type: RecipientType[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -449,7 +549,7 @@ The value of the RecipientType parameter affects the values that you can use for
 Type: RecipientTypeDetails[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -464,7 +564,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -499,88 +599,7 @@ You can sort by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccountPartition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: AccountPartitionIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Capabilities
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Database
-This parameter is available only in on-premises Exchange.
-
-The Database parameter specifies a mailbox database. Use this parameter to return all recipients stored on a specific mailbox database. Use the mailbox database Name property as the value for this parameter.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Properties
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeSoftDeletedRecipients
-The IncludeSoftDeletedRecipients switch specifies whether to include soft deleted recipients in the results. You don't need to specify a value with this switch.
-
-This switch is required to return soft-deleted recipients.
-
-Soft-deleted recipients are deleted recipients that are still recoverable.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

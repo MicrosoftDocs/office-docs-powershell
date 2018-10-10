@@ -72,17 +72,15 @@ This example enables the Exchange Client Access server for Outlook Anywhere. The
 ## PARAMETERS
 
 ### -ClientAuthenticationMethod
-The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. This parameter accepts the following values:
+The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. Valid values are:
 
 - Basic
 
 - Ntlm
 
-- MaxValidValue Also known as Negotiate Ex authentication (NegoEx). This authentication type is reserved for future Microsoft use and shouldn't be used. Use of this setting will cause authentication to fail.
-
 This parameter must be specified if you don't use the DefaultAuthenticationMethod parameter. When you use this parameter without specifying the IISAuthenticationMethods parameter, IISAuthenticationMethods parameter is set to both NTLM and Basic.
 
-Although this parameter only allows setting one authentication method, the Shell doesn't return an error if you include multiple values.
+Although this parameter only allows setting one authentication method, the command won't return an error if you include multiple values.
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
@@ -99,13 +97,11 @@ Accept wildcard characters: False
 ### -DefaultAuthenticationMethod
 The DefaultAuthenticationMethod parameter specifies whether to set both the ClientAuthenticationMethod and IISAuthenticationMethods parameters to the same authentication value.
 
-When you set an authentication value by using the DefaultAuthenticationMethod parameter, you force the specified authentication method to be used on the /rpc virtual directory in Internet Information Services (IIS). This parameter accepts the following values:
+When you set an authentication value by using the DefaultAuthenticationMethod parameter, you force the specified authentication method to be used on the /rpc virtual directory in Internet Information Services (IIS). Valid values are:
 
 - Basic
 
 - Ntlm
-
-- MaxValidValue Also known as Negotiate Ex authentication (NegoEx). This authentication type is reserved for future Microsoft use and shouldn't be used. Use of this setting will cause authentication to fail.
 
 If the DefaultAuthenticationMethod parameter is specified, neither the ClientAuthenticationMethod nor the IISAuthenticationMethods parameter can be used.
 

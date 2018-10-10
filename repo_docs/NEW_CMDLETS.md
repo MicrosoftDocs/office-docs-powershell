@@ -12,7 +12,7 @@ Install-Module -Name platyPS -Scope CurrentUser
 
 **Notes**:
 
-- You need platyPS v0.10.2 or later, which was released on or about June 18, 2018. If you have an earlier version of platyPS installed, run the command `Uninstall-Module platyPS` from an elevated Windows PowerShell window, and then reinstall platyPS.
+- You need platyPS v0.11.1 or later, released on or about September 13, 2018. If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded (or run the command `Remove-Module platyPS`) and then run `Update-Module platyPS` from an elevated Windows PowerShell window.
 
 - Windows PowerShell 5.x is part of the Windows Management Framework (WMF) and can be [downloaded](http://aka.ms/wmf5download) and installed on these versions of Windows:
   
@@ -53,7 +53,7 @@ You probably know how to do this already, but the available workloads and connec
 
 - You might need to connect to the service in an elevated Windows PowerShell prompt (required for Skype for Business Online and Teams, but not Exchange). The connection instructions topic should contain this and other connection requirements.
 
-- In Exchange environments, the cmdlets available to you are controlled by role-based access control (RBAC). Most cmdlets and parameters are avaialble to administrators by default, but some aren't (for example, the "Mailbox Search" and "Mailbox Import Export" roles).
+- In Exchange environments, the cmdlets available to you are controlled by role-based access control (RBAC). Most cmdlets and parameters are available to administrators by default, but some aren't (for example, the "Mailbox Search" and "Mailbox Import Export" roles).
 
 ## Step 3: Load platyPS in the PowerShell environment
 After you've connected in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), run the following command to make the platyPS cmdlets available in your session:
@@ -63,6 +63,8 @@ Import-Module platyPS
 ```
 
 ### Step 4: Find your module name
+**Note**: This step is required only if you're interested in creating cmdlet reference topics for **all** available cmdlets in your product (the _Module_ parameter in `New-MarkdownHelp`). If you're going to manually specify the cmdlet names (the _Command_ parameter in `New-MarkdownHelp`), you can skip this step.
+
 platyPS needs the name of the loaded PowerShell module or snap-in that contains the cmdlets you want to update. To find the name, run the following command:
 
 ```
@@ -96,7 +98,7 @@ Manifest   3.1.0.0     Microsoft.PowerShell.Utility           {Add-Member, Add-T
 Script     1.2         PSReadline                             {Get-PSReadlineKeyHandler, Get-PSReadlineOption, Remov...
 ```
 
-For services that use remote PowerShell (Skype for Business Online, Teams, Exchange Online, Security & Compliance Center, and Exchange Online Protection), the module name is a temporary value that changes every time you connect. In this output, the module name is `tmp_byivwzpq.e1k`.
+For services that use remote PowerShell (Skype for Business Online, Teams, Exchange Online, Security & Compliance Center, and Exchange Online Protection), the module name is a temporary value that changes every time you connect. In this output, the module name is `tmp_byivwzpq.e1k`, but yours will be different.
 
 For SharePoint Online in the SharePoint Online Management Shell, the module name is always `Microsoft.Online.SharePoint.PowerShell`.
 
@@ -150,7 +152,7 @@ Check the details of your connection instructions, but your session information 
 ### Step 6: Run platyPS to generate topic files
 You have two choices:
 
-- **Dump _all_ cmdlets in the module/snap-in to files**: This is simple, but could take a while, and you'll end up with dozens or possibly hundreds of cmdlets files you don't need. The basic sytax is:
+- **Dump _all_ cmdlets in the module/snap-in to files**: This is simple, but could take a while, and you'll end up with dozens or possibly hundreds of cmdlets files you don't need. The basic syntax is:
   ```
   New-MarkdownHelp -Module <ModuleName> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
   ``` 
@@ -174,7 +176,7 @@ You have two choices:
 
 - \<PSSessionVariableName\> is the remote PowerShell session variable from [Step 5](#step-5-verify-your-your-pssession-variable-name) (for example, `$Session`) _and is required only if the connection instructions used remote PowerShell (one or more **xxx-xxxSession** commands)_.
 
-   Failure to use the _Session_ parameter in remote PowerShell environments leads to weird results: multiple syntax blocks/parameter sets aren't recogonized and are collapsed into one big block, the Type value is Object for all parameters, the Required value is False for all parameters, etc.
+   Failure to use the _Session_ parameter in remote PowerShell environments leads to weird results: multiple syntax blocks/parameter sets aren't recognized and are collapsed into one big block, the Type value is Object for all parameters, the Required value is False for all parameters, etc.
 
 - If the \<Path\> location doesn't exist, it's created for you.
 
@@ -186,7 +188,7 @@ New-MarkdownHelp -Module tmp_byivwzpq.e1k -OutputFolder "C:\My Docs\SfBO" -Sessi
 ```
 
 #### Dump specific cmdlets to files
-This example create a topic file for the cmdlet named Get-CoolFeature in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
+This example creates a topic file for the cmdlet named Get-CoolFeature in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
 
 ```
 New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO" -Session $Session
@@ -217,7 +219,7 @@ These are the basic topic elements that require your attention, regardless of th
 
 - **A description for every parameter in each parameter section**
 
-We highly enourage you to plagerize existing content and formatting from other cmdlet topics in the product or service. Many parameters are common across a wide variety of cmdlets.
+We highly encourage you to plagiarize existing content and formatting from other cmdlet topics in the product or service. Many parameters are common across a wide variety of cmdlets.
 
 #### Metadata in the new cmdlet
 Less obvious but still important information that's often manually required in every topic is **cmdlet metadata** at the top of the topic and **parameter metadata** in every parameter section.
@@ -234,7 +236,7 @@ Here's an example of the cmdlet metadata that's required at the top of every top
     schema: 2.0.0
     ```
 
-- **external help file**: Defines which MAML/XML file the cmdlet help topic goes in for `Get-Help` at the command line. This value very product-specific, and the location is specified somewhere in product code. Some products (Skype) use only one XML file that's well-known and the same for all cmdlets; others (Exchange, SharePoint) use multiple XML files. See other topics for available values. Don't guess; a wrong value here will affect the avaialbility of the help topic at the command line.
+- **external help file**: Defines which MAML/XML file the cmdlet help topic goes in for `Get-Help` at the command line. This value very product-specific, and the location is specified somewhere in product code. Some products (Skype) use only one XML file that's well-known and the same for all cmdlets; others (Exchange, SharePoint) use multiple XML files. See other topics for available values. Don't guess; a wrong value here will affect the availability of the help topic at the command line.
 
 - **Module Name**: Not used in Exchange topics (remove it). For other products, this is the module name of the product.
 
@@ -261,7 +263,7 @@ Here's an example of the parameter metadata that's present in every parameter se
     Accept wildcard characters: False
     ```
 
-Most of the atrributes and values are generated automatically by platyPS. The ones that require manual intervention are:
+Most of the attributes and values are generated automatically by platyPS. The ones that require manual intervention are:
 
 - **Applicable**: You need to add this attribute and value yourself. Notice the capital 'A'. See other topics for available values (same available values as the **applicable** attribute at the top of the topic). Don't invent new values here. The value **must** come from the list of predefined values.
 
@@ -270,11 +272,11 @@ Most of the atrributes and values are generated automatically by platyPS. The on
 ### Step 8: Add the new cmdlet topic files to the repository
 When you're done editing the topics, upload them to GitHub.
 
-1. Go to the correct location in the appropriate GiHub repository:
+1. Go to the correct location in the appropriate GitHub repository:
 
     - Exchange: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange)
 
-       For Exchage, you also need to go one level deepter into an appropriate subfolder. Choose wisely based on the surrounding cmdlet topics. Don't create new folders.
+       For Exchange, you also need to go one level deeper into an appropriate subfolder. Choose wisely based on the surrounding cmdlet topics. Don't create new folders.
 
     - Office Web Apps: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps)
 
@@ -296,7 +298,7 @@ When you're done editing the topics, upload them to GitHub.
  
     ![Upload file](../images/upload_files.png)
 
-3. After you're done adding files, go to the **Propose file change** area at the bottom of the page. Enter a title and optional description informaton and then click **Propose file change**. 
+3. After you're done adding files, go to the **Propose file change** area at the bottom of the page. Enter a title and optional description information and then click **Propose file change**. 
 
 4. On the next screen, click **Create pull request**.
 
@@ -330,10 +332,15 @@ After you're done editing the TOC file:
 ## Appendix
 
 ### Reference
-* https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
-* https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
-* https://github.com/PowerShell/platyPS
-* https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
+
+- https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6
+
+- https://docs.microsoft.com/en-us/powershell/module/powershellget/update-module?view=powershell-6
+
+- https://github.com/PowerShell/platyPS
+
+- https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6
+
 
 ### Install platyPS on older versions of Windows
 
@@ -351,7 +358,7 @@ After you're done editing the TOC file:
 
     **Notes**:
 
-    - The target folder/path must already exsist.
+    - The target folder/path must already exist.
 
     - The command will create two new folders in the target path:
     
@@ -373,7 +380,7 @@ After you're done editing the TOC file:
 
     - C:\Program Files\WindowsPowerShell\Modules\PowerShellGet
 
-5. From an elevated Windows PowerShell window, run the followinng command:
+5. From an elevated Windows PowerShell window, run the following command:
 
     ```
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted

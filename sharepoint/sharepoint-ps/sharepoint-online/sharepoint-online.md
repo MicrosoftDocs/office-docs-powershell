@@ -358,9 +358,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Submit-SPOMigrationJob](Submit-SPOMigrationJob.md)
 {{Manually Enter Submit-SPOMigrationJob Description Here}}
 
-### [Test-SPO365LinkSettings](Test-SPO365LinkSettings.md)
-{{Manually Enter Test-SPO365LinkSettings Description Here}}
-
 ### [Test-SPOSite](Test-SPOSite.md)
 {{Manually Enter Test-SPOSite Description Here}}
 

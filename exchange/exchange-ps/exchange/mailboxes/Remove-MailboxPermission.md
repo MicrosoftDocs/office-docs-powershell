@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MailboxPermission
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-MailboxPermission
@@ -17,43 +17,60 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### AccessRights
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]>
- -User <SecurityPrincipalIdParameter> [-Confirm] [-Deny] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-WhatIf] [<CommonParameters>]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Instance
 ```
-Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] [-AccessRights <MailboxRights[]>]
- -Instance <MailboxAcePresentationObject> [-User <SecurityPrincipalIdParameter>] [-Confirm] [-Deny]
+Remove-MailboxPermission -Instance <MailboxAcePresentationObject>
+ [-AccessRights <MailboxRights[]>]
+ [-Confirm]
+ [-Deny]
  [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-WhatIf] [-ResetDefault]
- [<CommonParameters>]
+ [[-Identity] <MailboxIdParameter>]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-ResetDefault]
+ [-User <SecurityPrincipalIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Owner
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [-AccessRights <MailboxRights[]>] -Instance <MailboxAcePresentationObject>
- [-User <SecurityPrincipalIdParameter>] [-Deny]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-ClearAutoMapping]
- [<CommonParameters>]
-```
-
-### Set4
-```
-Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] [-AccessRights <MailboxRights[]>]
- -Instance <MailboxAcePresentationObject> [-User <SecurityPrincipalIdParameter>] [-Confirm] [-Deny]
- [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-WhatIf] [<CommonParameters>]
+Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### ClearAutoMapping
 ```
-Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [<CommonParameters>]
+Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
+ [-AccessRights <MailboxRights[]>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-User <SecurityPrincipalIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ResetDefault
+```
+Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ResetDefault]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,9 +108,9 @@ The AccessRights parameter specifies the rights required to perform the operatio
 
 ```yaml
 Type: MailboxRights[]
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -103,9 +120,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxRights[]
-Parameter Sets: Set2, Set3, Set4
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -142,9 +159,9 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1, Set3, Set5
+Parameter Sets: AccessRights, Owner, ClearAutoMapping, ResetDefault
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -154,9 +171,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2, Set4
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -171,9 +188,9 @@ The Instance parameter enables you to pass an entire object to the command to be
 
 ```yaml
 Type: MailboxAcePresentationObject
-Parameter Sets: Set2, Set3, Set4
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -186,9 +203,9 @@ The User parameter specifies the user mailbox that will get permissions removed.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -198,10 +215,29 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set2, Set3, Set4
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearAutoMapping
+This parameter is available only in the cloud-based service.
+
+The ClearAutoMapping switch specifies that the mailbox is automatically mapped (auto-mapped) by Autodiscover only into the mailbox owner's Outlook profile. The mailbox isn't auto-mapped to other users who have FullAccess permission to the mailbox.
+
+To re-add auto-mapping capability on the mailbox for other users, run the command: Add-MailboxPermission -Identity \<Mailbox\> -AccessRights FullAccess -AutoMapping $true.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ClearAutoMapping
+Aliases:
+Applicable: Exchange Online
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -219,7 +255,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -232,9 +268,9 @@ The Deny parameter denies permissions to the user on the Active Directory object
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2, Set3, Set4
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -251,7 +287,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -272,7 +308,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -285,44 +321,10 @@ The InheritanceType parameter specifies whether permissions are inherited to fol
 
 ```yaml
 Type: None | All | Descendents | SelfAndChildren | Children
-Parameter Sets: Set1, Set2, Set3, Set4
+Parameter Sets: AccessRights, Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClearAutoMapping
-This parameter is available only in the cloud-based service.
-
-The ClearAutoMapping switch specifies that the mailbox is automatically mapped (auto-mapped) by Autodiscover only into the mailbox owner's Outlook profile. The mailbox isn't auto-mapped to other users who have FullAccess permission to the mailbox.
-
-To re-add auto-mapping capability on the mailbox for other users, run the command: Add-MailboxPermission -Identity \<Mailbox\> -AccessRights FullAccess -AutoMapping $true.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Online
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -344,10 +346,25 @@ Also, because this switch removes FullAccess permission from other users on the 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Online
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

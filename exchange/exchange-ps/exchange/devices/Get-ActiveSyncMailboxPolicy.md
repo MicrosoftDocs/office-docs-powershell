@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-ActiveSyncMailboxPolicy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-ActiveSyncMailboxPolicy
@@ -13,7 +13,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ActiveSyncMailboxPolicy cmdlet to retrieve the Mobile Device mailbox policy settings for a specific Mobile Device mailbox policy.
 
-The Get-ActiveSyncMailboxPolicy cmdlet will be removed in a future version of Microsoft Exchange. Use the Get-MobileDeviceMailboxPolicy cmdlet instead. If you have any scripts that use the Get-ActiveSyncMailboxPolicy cmdlet, update them to use the Get-MobileDeviceMailboxPolicy cmdlet.
+Note: In Exchange 2013 or later, use the Get-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use Get-ActiveSyncMailboxPolicy, update them to use Get-MobileDeviceMailboxPolicy.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -63,7 +63,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +78,7 @@ The Identity parameter specifies the policy name.
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None

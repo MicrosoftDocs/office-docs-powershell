@@ -35,7 +35,7 @@ PS C:\>$passwordField = New-SPSecureStoreApplicationField -Name "Password" -Type
 PS C:\>$fields = $usernameField,$passwordField
 PS C:\>$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
 PS C:\>$contosoTargetApp = New-SPSecureStoreTargetApplication -Name "ContosoTargetApplication" -FriendlyName "Contoso Target Application" -ApplicationType Group
-PS C:\>New-SPSecureStoreApplication -ServiceContext http://contoso -TargetApplication $contosoTargetApp -Fields $fields -Administrator $claimUser
+PS C:\>New-SPSecureStoreApplication -ServiceContext http://contoso -TargetApplication $contosoTargetApp -Fields $fields -Administrator $userClaim
 ```
 
 This example creates a new group target application ContosoTargetApplication and then a new application for that target application. This new application has two fields; UserName of type WindowsUserName and Password of type WindowsPassword. The user with identity janedoe on the CONTOSO domain is set as the target application administrator.
