@@ -484,7 +484,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredInternetCodePageForShiftJis
-The PreferredInternetCodePageForShiftJis parameter specifies the specific code page to use for Shift JIS character encoding in messages that are sent to recipients in the remote domain. Valid values are are:
+The PreferredInternetCodePageForShiftJis parameter specifies the specific code page to use for Shift JIS character encoding in messages that are sent to recipients in the remote domain. Valid values are:
 
 - 50220: Use ISO-2022-JP codepage.
 
