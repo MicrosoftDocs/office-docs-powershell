@@ -32,7 +32,7 @@ After you've connected in PowerShell to the server or service (either in a regul
 Import-Module platyPS
 ```
 
-### Step 4: Verify your your PSSession variable name
+### Step 4: Verify your PSSession variable name
 This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-verify-your-your-pssession-variable-name).
 
 To recap: this step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present), and the value is most likely `$Session`.
