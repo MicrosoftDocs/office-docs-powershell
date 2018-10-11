@@ -19,7 +19,7 @@ Set-SPInternalAppStateUpdateInterval -AppStateSyncHours <Int32>
 ```
 
 ## DESCRIPTION
-Use the `Set-SPInternalAppStateUpdateInterval` cmdlet to set the interval in hours between updates of the the internal app state update job.
+Use the `Set-SPInternalAppStateUpdateInterval` cmdlet to set the interval in hours between updates of the internal app state update job.
 The internal app state update job gets app upgrades from the internal app directory and sets them on app instances.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
