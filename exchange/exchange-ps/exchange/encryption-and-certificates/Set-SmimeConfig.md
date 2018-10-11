@@ -293,7 +293,7 @@ Valid values are::
 
 - 6601: DES (56-bit)
 
-- 6602: RC2. Supported key lengths are 40, 56, 64, and 128. RC2 is the only supported algorithm that that offers multiple key lengths.
+- 6602: RC2. Supported key lengths are 40, 56, 64, and 128. RC2 is the only supported algorithm that offers multiple key lengths.
 
 - 6603: 3DES (168-bit)
 
