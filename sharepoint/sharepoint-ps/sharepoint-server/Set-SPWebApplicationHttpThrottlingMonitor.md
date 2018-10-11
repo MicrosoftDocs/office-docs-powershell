@@ -43,7 +43,7 @@ C:\PS>Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint
 0 -Category Memory -Counter 'Available Mbytes' -IsDesc -UpperLimit 3000
 ```
 
-This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the the http://sharepoint Web application.
+This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the http://sharepoint Web application.
 
 
 ## PARAMETERS

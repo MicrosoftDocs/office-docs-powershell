@@ -32,7 +32,7 @@ After you've connected in PowerShell to the server or service (either in a regul
 Import-Module platyPS
 ```
 
-### Step 4: Verify your your PSSession variable name
+### Step 4: Verify your PSSession variable name
 This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-verify-your-your-pssession-variable-name).
 
 To recap: this step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present), and the value is most likely `$Session`.
@@ -134,7 +134,7 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
     **IMPORTANT**: The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
     Any deviation will throw errors in the Pull Request. The schema can be found here: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md 
  
-4. Once you're satisified with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title title and other description informaton and then click **Propose file change**.
+4. Once you're satisfied with your work, go to the **Propose file change** area at the bottom of the topic. Enter a title and other description information and then click **Propose file change**.
 
     ![Image of Propose file change on Github](../images/propose_file_change.png)
 

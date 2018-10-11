@@ -6,7 +6,7 @@ schema: 2.0.0
 # Test-PnPOffice365GroupAliasIsUsed
 
 ## SYNOPSIS
-Tests if a given alias is already used used
+Tests if a given alias is already used
 
 ## SYNTAX 
 

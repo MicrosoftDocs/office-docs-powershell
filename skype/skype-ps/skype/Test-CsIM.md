@@ -347,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsSsl
-When set to True, specifies that that test is being conducted using the Secure Socket Layer (SSL) protocol.
+When set to True, specifies that the test is being conducted using the Secure Socket Layer (SSL) protocol.
 
 ```yaml
 Type: Boolean
