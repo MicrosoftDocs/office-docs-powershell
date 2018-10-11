@@ -21,14 +21,14 @@ Publish-PnPApp -Identity <AppMetadataPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Publish-PnPApp -Identity -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
+Publish-PnPApp -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
 ```
 
 This will deploy/trust an app into the app catalog. Notice that the app needs to be available in the tenant scoped app catalog
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Publish-PnPApp -Identity -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f -Scope Site
+Publish-PnPApp -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f -Scope Site
 ```
 
 This will deploy/trust an app into the app catalog. Notice that the app needs to be available in the site collection scoped app catalog
