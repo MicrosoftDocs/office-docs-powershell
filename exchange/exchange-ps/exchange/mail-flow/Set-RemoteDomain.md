@@ -528,9 +528,9 @@ Accept wildcard characters: False
 ### -TargetDeliveryDomain
 The TargetDeliveryDomain parameter specifies whether the remote domain is used in cross-forest deployments to generate target email addresses for new mail users that represent users in the other organization (for example, all mailboxes hosted on Exchange Online are represented as mail users in your on-premises organization). Valid values are:
 
-- $true: The remote domain is used used for the target email address of mail users that represent the users in the other forest.
+- $true: The remote domain is used for the target email address of mail users that represent the users in the other forest.
 
-- $false: The remote domain isn't used used for the target email address of mail users that represent the users in the other forest. This is the default value.
+- $false: The remote domain isn't used for the target email address of mail users that represent the users in the other forest. This is the default value.
 
 ```yaml
 Type: $true | $false
