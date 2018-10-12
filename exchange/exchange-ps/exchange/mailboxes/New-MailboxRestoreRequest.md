@@ -17,36 +17,74 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### MailboxLocationIDMigrationLocalMailboxRestore
 ```
-New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter>
- -TargetMailbox <MailboxOrMailUserIdParameter>
+New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
  [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
  [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-Name <String>]
+ [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetIsArchive]
+ [-TargetRootFolder <String>]
+ [-TargetType <Primary | Archive | MailboxLocation>]
+ [-WhatIf]
+ [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [<CommonParameters>]
+```
+
+###  MailboxIDMigrationLocalMailboxRestore
+```
+New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
+ [-AcceptLargeDataLoss]
+ [-AllowLegacyDNMismatch]
+ [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
  [-MRSServer <Fqdn>]
  [-Name <String>]
  [-Priority <Normal | High>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
  [-Suspend]
  [-SuspendComment <String>]
  [-TargetIsArchive]
  [-TargetRootFolder <String>]
- [-WhatIf] [<CommonParameters>]
+ [-TargetType <Primary | Archive | MailboxLocation>]
+ [-WhatIf]
+ [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### MailboxLocationIDRemoteMailboxRestore
 ```
-New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter>
- -TargetMailbox <MailboxOrMailUserIdParameter>
+New-MailboxRestoreRequest -RemoteCredential <PSCredential> -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -RemoteRestoreType <None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient> -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
  [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
@@ -76,11 +114,9 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [<CommonParameters>]
 ```
 
-### Set2
+### MailboxIDRemoteMailboxRestore
 ```
-New-MailboxRestoreRequest -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn>
- -RemoteRestoreType <None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient>
- -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
+New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
  [-AcceptLargeDataLoss]
  [-AllowLegacyDNMismatch]
  [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
@@ -97,7 +133,6 @@ New-MailboxRestoreRequest -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn>
  [-LargeItemLimit <Unlimited>]
  [-Name <String>]
  [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RemoteCredential <PSCredential>]
  [-SkipMerging <SkippableMergeComponent[]>]
  [-SourceRootFolder <String>]
  [-Suspend]
@@ -106,12 +141,10 @@ New-MailboxRestoreRequest -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn>
  [-TargetRootFolder <String>]
  [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-RequestExpiryInterval <Unlimited>]
- [-TargetType <Primary | Archive | MailboxLocation>]
  [<CommonParameters>]
 ```
 
-### Set3
+### SourceMailbox
 ```
 New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMailbox <MailboxLocationIdParameter>
  [-AcceptLargeDataLoss]
@@ -186,6 +219,74 @@ This example restores the content of the source mailbox with the DisplayName of 
 
 ## PARAMETERS
 
+### -RemoteCredential
+This parameter is avaialble only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: PSCredential
+Parameter Sets: MailboxLocationIDRemoteMailboxRestore
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteDatabaseGuid
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
+Parameter Sets: MailboxLocationIDRemoteMailboxRestore
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteHostName
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: MailboxLocationIDRemoteMailboxRestore
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteRestoreType
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient
+Parameter Sets: MailboxLocationIDRemoteMailboxRestore
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SourceDatabase
 This parameter is available only in on-premises Exchange.
 
@@ -193,9 +294,24 @@ The SourceDatabase parameter specifies the identity of the database from which y
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxIDMigrationLocalMailboxRestore
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceMailbox
+The SourceMailbox parameter specifies the soft-deleted mailbox that you want to restore. The best way to identify the soft-deleted mailbox is by its GUID value. You can find the GUID value by running the following command: Get-Mailbox -SoftDeletedMailbox.
+
+```yaml
+Type: SourceMailbox
+Parameter Sets: SourceMailbox
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -212,7 +328,7 @@ You can find the MailboxGUID by running the Get-MailboxStatistics cmdlet.
 
 ```yaml
 Type: StoreMailboxIdParameter
-Parameter Sets: (All), Set2, Set1
+Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, MailboxIDRemoteMailboxRestore
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -227,11 +343,15 @@ The TargetMailbox parameter specifies the GUID of the target mailbox or mail use
 
 You can find the GUID value for the mailbox or mail user by running the Get-Mailbox or Get-MailUser cmdlets.
 
+In Exchange 2016 or later and Exchange Online, this parameter is the type MailboxLocationIdParameter.
+
+In Exchange 2013 or earlier, this parameter is the type MailboxOrMailUserIdParameter.
+
 ```yaml
-Type: MailboxOrMailUserIdParameter
-Parameter Sets: (All)
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -240,10 +360,10 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: MailboxLocationIdParameter
-Parameter Sets: (All)
+Type: MailboxOrMailUserIdParameter
+Parameter Sets: MailboxIDMigrationLocalMailboxRestore, MailboxIDRemoteMailboxRestore
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013
 Required: True
 Position: Named
 Default value: None
@@ -333,6 +453,21 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompletedRequestAgeLimit
+The CompletedRequestAgeLimit parameter specifies how long the status of a completed restore request is set to Completed. If this parameter is set to a value of 0, the status is cleared immediately instead of being changed to Completed.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -542,6 +677,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InternalFlags
+This parameter is available only in on-premises Exchange.
+
+The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
+
+```yaml
+Type: InternalMrsFlag[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LargeItemLimit
+The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
+
+For more information about maximum message size values, see the following topics:
+
+- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
+
+- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
+
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
+
+If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MRSServer
 This parameter is available or functional only in Exchange Server 2010.
 
@@ -549,7 +726,7 @@ The MRSServer parameter specifies the FQDN of the Client Access server on which 
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: MailboxIDMigrationLocalMailboxRestore
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -602,6 +779,71 @@ Type: Normal | High
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestExpiryInterval
+This parameter is available only in on-premises Exchange.
+
+The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
+
+- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
+
+- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+When you use the value Unlimited, the completed request isn't automatically removed.
+
+```yaml
+Type: Unlimited
+Parameter Sets: MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, SourceMailbox
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMerging
+This parameter is available only in on-premises Exchange.
+
+The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
+
+- FolderRules
+
+- FolderACLs
+
+- InitialConnectionValidation
+
+Use this parameter only if a restore request fails because of folder rules, folder access control lists (ACLs), or initial connection validation.
+
+```yaml
+Type: SkippableMergeComponent[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceIsArchive
+The SourceIsArchive switch specifies that the source mailbox is an archive mailbox. You can use this switch only with the SourceMailbox parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SourceMailbox
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -684,6 +926,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TargetType
+The TargetType parameter specifies the type of mailbox that's the target for the restore operation. Valid values are:
+
+- Archive
+
+- MailboxLocation
+
+- Primary (This is the default value)
+
+```yaml
+Type: Primary | Archive | MailboxLocation
+Parameter Sets:  MailboxLocationIDMigrationLocalMailboxRestore, MailboxLocationIDRemoteMailboxRestore, SourceMailbox
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -699,148 +962,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoteDatabaseGuid
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteHostName
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteRestoreType
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the status of a completed restore request is set to Completed. If this parameter is set to a value of 0, the status is cleared immediately instead of being changed to Completed.
-
-```yaml
-Type: Unlimited
-Parameter Sets: Set2, Set1, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InternalFlags
-This parameter is available only in on-premises Exchange.
-
-The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
-
-```yaml
-Type: InternalMrsFlag[]
-Parameter Sets: Set2, Set1, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LargeItemLimit
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
-
-- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
-
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-```yaml
-Type: Unlimited
-Parameter Sets: Set2, Set1, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteCredential
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PSCredential
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipMerging
-This parameter is available only in on-premises Exchange.
-
-The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
-
-- FolderRules
-
-- FolderACLs
-
-- InitialConnectionValidation
-
-Use this parameter only if a restore request fails because of folder rules, folder access control lists (ACLs), or initial connection validation.
-
-```yaml
-Type: SkippableMergeComponent[]
-Parameter Sets: Set2, Set1, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WorkloadType
 This parameter is available only in on-premises Exchange.
 
@@ -848,85 +969,9 @@ The WorkloadType parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
-Parameter Sets: Set2, Set1, Set3
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceMailbox
-The SourceMailbox parameter specifies the soft-deleted mailbox that you want to restore. The best way to identify the soft-deleted mailbox is by its GUID value. You can find the GUID value by running the following command: Get-Mailbox -SoftDeletedMailbox.
-
-```yaml
-Type: MailboxLocationIdParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestExpiryInterval
-This parameter is available only in on-premises Exchange.
-
-The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
-
-- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
-
-- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-When you use the value Unlimited, the completed request isn't automatically removed.
-
-```yaml
-Type: Unlimited
-Parameter Sets: Set2, Set1, Set3
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceIsArchive
-The SourceIsArchive switch specifies that the source mailbox is an archive mailbox. You can use this switch only with the SourceMailbox parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetType
-The TargetType parameter specifies the type of mailbox that's the target for the restore operation. Valid values are:
-
-- Archive
-
-- MailboxLocation
-
-- Primary (This is the default value)
-
-```yaml
-Type: Primary | Archive | MailboxLocation
-Parameter Sets: Set2, Set1, Set3
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
