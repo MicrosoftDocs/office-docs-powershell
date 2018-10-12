@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. Please read description for more details. You can also find more guidance here: https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype
+IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. Please read description for more details. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 If TeamsUpgradePolicy has mode=Legacy, TeamsInteropPolicy  determines how calls are routed between Skype for Business and Microsoft Teams. Otherwise it is ignored.  
 
