@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsTeamsUpgradePolicy
 
 ## SYNOPSIS
-TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy.  Aspects of TeamsUpgradePolicy are still in preview mode as described below.
+TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy.  However, aspects of TeamsUpgradePolicy are still in preview mode as described below.
 
 
 ## SYNTAX
@@ -34,7 +34,7 @@ NOTES:
   - Instances with mode set to SfBWithTeamsCollab are not yet functional. From a routing perspective, this will behave like SfBOnly mode.
   - Action property is redundnant with the combination of NotifySfBUsers and Mode. It will eventually be removed.  
 
-IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy are being updated to honor TeamsUpgradePolicy instead. During the transition, use of these 2 policies must be coordinated during the transition. After transition is complete, TeamsInteorpPolicy will be removed.
+IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead.
 
 
 ## EXAMPLES
