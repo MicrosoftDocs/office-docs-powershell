@@ -78,7 +78,7 @@ Set-ImapSettings -X509CertificateName mail.contoso.com
 
 This example specifies the certificate that contains mail.contoso.com is used to encrypt IMAP4 client connections.
 
-**Note**: For single subject certificates or a SAN certificates, you also need to assign the the certificate to the Exchange IMAP service by using the Enable-ExchangeCertificate cmdlet. For wildcard certificates, you don't need to assign the certificate to the Exchange IMAP service (you'll receive an error if you try).
+**Note**: For single subject certificates or a SAN certificates, you also need to assign the certificate to the Exchange IMAP service by using the Enable-ExchangeCertificate cmdlet. For wildcard certificates, you don't need to assign the certificate to the Exchange IMAP service (you'll receive an error if you try).
 
 ## PARAMETERS
 

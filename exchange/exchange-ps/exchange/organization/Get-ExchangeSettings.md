@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameter filters the results by Exchange server. You can use any value that uniquely identifies the sever. For example:
+The Server parameter filters the results by Exchange server. You can use any value that uniquely identifies the server. For example:
 
 - Name
 

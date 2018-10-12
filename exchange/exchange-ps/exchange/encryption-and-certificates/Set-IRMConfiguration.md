@@ -66,7 +66,7 @@ This parameter is available only in the cloud-based service.
 
 The AutomaticServiceUpdateEnabled parameter specifies whether to automatically enable the protection features in Azure Information Protection for your cloud-based organization. Valid values are:
 
-- $true: Starting July 1, 2018, the protection features in Azure Information Protection will be automatically enabled in your cloud-based organization. This means you can can start using the new Office 365 Message Encryption capabilities without additional set up steps. This is the default value.
+- $true: Starting July 1, 2018, the protection features in Azure Information Protection will be automatically enabled in your cloud-based organization. This means you can start using the new Office 365 Message Encryption capabilities without additional set up steps. This is the default value.
 
 - $false: If you're using Active Directory Rights Management Services (AD RMS) in your on-premises environment, you must use this value to prevent the automatic enabling of the protection features in Azure Information Protection for your cloud-based organization. 
 
