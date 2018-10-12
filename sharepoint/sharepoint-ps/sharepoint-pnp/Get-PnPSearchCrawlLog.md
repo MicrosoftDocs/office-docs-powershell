@@ -32,7 +32,7 @@ Returns the last 100 crawl log entries for site content.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPSearchCrawlLog "https://<tenant>-my.sharepoint.com/personal"
+Get-PnPSearchCrawlLog -Filter "https://<tenant>-my.sharepoint.com/personal"
 ```
 
 Returns the last 100 crawl log entries for OneDrive content.

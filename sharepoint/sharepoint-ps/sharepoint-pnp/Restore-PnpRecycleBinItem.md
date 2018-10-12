@@ -35,7 +35,7 @@ Restores the recycle bin item with Id 72e4d749-d750-4989-b727-523d6726e442 to it
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPRecycleBinItems | ? FileLeafName -like "*.docx" | Restore-PnpRecycleBinItem
+Get-PnPRecycleBinItem | ? FileLeafName -like "*.docx" | Restore-PnpRecycleBinItem
 ```
 
 Restores all the items in the first and second stage recycle bins to their original location of which the filename ends with the .docx extension
