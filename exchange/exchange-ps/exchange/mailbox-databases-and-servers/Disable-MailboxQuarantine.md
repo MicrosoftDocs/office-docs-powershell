@@ -17,32 +17,38 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+###  MailboxIdentity
 ```
-Disable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Disable-MailboxQuarantine -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter>
- [-Confirm] [-IncludePassive] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Disable-MailboxQuarantine -Database <DatabaseIdParameter> [-IncludeAllMailboxes] [-Confirm] [-IncludePassive]
+Disable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter>
+ [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### MailboxOrMailUserIdentity
 ```
-Disable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Confirm] [-IncludePassive]
+Disable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter> [-IncludePassive]
+ [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### StoreMailboxIdentity
 ```
-Disable-MailboxQuarantine [-IncludeAllDatabases] -Server <ServerIdParameter> [-Confirm] [-IncludePassive]
+Disable-MailboxQuarantine -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter> [-IncludePassive]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### IncludeAllMailboxes
+```
+Disable-MailboxQuarantine -Database <DatabaseIdParameter> [-IncludeAllMailboxes] [-IncludePassive]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### IncludeAllDatabases
+```
+Disable-MailboxQuarantine -Server <ServerIdParameter> [-IncludeAllDatabases] [-IncludePassive]
+ [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -93,9 +99,9 @@ You can't use this parameter with the Database or Server parameters.
 
 ```yaml
 Type: GeneralMailboxIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: MailboxIdentity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013
 Required: True
 Position: 1
 Default value: None
@@ -103,37 +109,15 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
+Type: GeneralMailboxOrMailUserIdParameter
+Parameter Sets: MailboxOrMailUserIdentity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: 1
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -152,7 +136,7 @@ You can't use this parameter with the Identity or Server parameters.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: StoreMailboxIdentity, IncludeAllMailboxes
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -169,7 +153,7 @@ You can only use this switch with the Identity or Database parameters.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: IncludeAllDatabases
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -186,7 +170,7 @@ You can't use this switch with the StoreMailboxIdentity parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: IncludeAllMailboxes
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -211,7 +195,7 @@ You can't use this parameter with the Identity or Database parameters.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set4
+Parameter Sets: IncludeAllDatabases
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -230,10 +214,29 @@ You can't use this switch with the IncludeAllMailboxes switch.
 
 ```yaml
 Type: StoreMailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: StoreMailboxIdentity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -245,9 +248,24 @@ The IncludePassive switch specifies that you also want to release inactive copie
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set3, Set1, Set4
+Parameter Sets: StoreMailboxIdentity, IncludeAllMailboxes, MailboxOrMailUserIdentity, IncludeAllDatabases
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

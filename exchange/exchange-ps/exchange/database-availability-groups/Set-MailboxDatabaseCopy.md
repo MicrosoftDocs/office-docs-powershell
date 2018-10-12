@@ -17,27 +17,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### 
 ```
-Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationPreference <UInt32>] [-Confirm]
- [-DomainController <Fqdn>] [-ReplayLagTime <EnhancedTimeSpan>] [-TruncationLagTime <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationPreference <UInt32>] [-Confirm]
- [-DatabaseCopyAutoActivationPolicy <Unrestricted | IntrasiteOnly | Blocked>] [-DomainController <Fqdn>]
- [-ReplayLagTime <EnhancedTimeSpan>] [-TruncationLagTime <EnhancedTimeSpan>] [-WhatIf]
- [-ReplayLagMaxDelay <EnhancedTimeSpan>] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ClearHostServer] [-Confirm]
- [-DatabaseCopyAutoActivationPolicy <Unrestricted | IntrasiteOnly | Blocked>] [-DomainController <Fqdn>]
- [-ReplayLagMaxDelay <EnhancedTimeSpan>] [-ReplayLagTime <EnhancedTimeSpan>]
- [-TruncationLagTime <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationPreference <UInt32>] [-Confirm]  [-DatabaseCopyAutoActivationPolicy <DatabaseCopyAutoActivationPolicyType>] [-DomainController <Fqdn>] [-ReplayLagMaxDelay <EnhancedTimeSpan>] [-ReplayLagTime <EnhancedTimeSpan>] [-TruncationLagTime <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +65,7 @@ The ActivationPreference parameter value is used as part of Active Manager's bes
 
 ```yaml
 Type: UInt32
-Parameter Sets: (All), Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -187,25 +169,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unrestricted | IntrasiteOnly | Blocked
-Parameter Sets: Set1, Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClearHostServer
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -223,7 +190,7 @@ Note that when the disk is running out of space, the value of this parameter is 
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set1, Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False

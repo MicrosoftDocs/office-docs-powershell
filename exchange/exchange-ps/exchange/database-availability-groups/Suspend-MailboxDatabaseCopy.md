@@ -17,22 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Identity
+
+### EnableReplayLag
 ```
-Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationOnly] [-Confirm]
- [-DomainController <Fqdn>] [-SuspendComment <String>] [-WhatIf] [<CommonParameters>]
+Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-EnableReplayLag]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Identity
 ```
-Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-EnableReplayLag] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationOnly] [-Confirm]
- [-DomainController <Fqdn>] [-SuspendComment <String>] [-WhatIf] [<CommonParameters>]
+Suspend-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationOnly] [-SuspendComment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,7 +76,7 @@ The ActivationOnly switch specifies whether to suspend only activation for the m
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -125,7 +125,7 @@ The SuspendComment parameter specifies the reason that the database copy is bein
 
 ```yaml
 Type: String
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -155,7 +155,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: EnableReplayLag
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True

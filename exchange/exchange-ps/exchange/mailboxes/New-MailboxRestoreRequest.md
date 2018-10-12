@@ -20,12 +20,60 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ###  (Default)
 ```
 New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter>
- -TargetMailbox <MailboxOrMailUserIdParameter> [-AcceptLargeDataLoss] [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-Confirm] [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
- [-DomainController <Fqdn>] [-ExcludeDumpster] [-ExcludeFolders <String[]>] [-IncludeFolders <String[]>]
- [-MRSServer <Fqdn>] [-Name <String>] [-Priority <Normal | High>] [-SourceRootFolder <String>] [-Suspend]
- [-SuspendComment <String>] [-TargetIsArchive] [-TargetRootFolder <String>] [-WhatIf] [<CommonParameters>]
+ -TargetMailbox <MailboxOrMailUserIdParameter>
+ [-AcceptLargeDataLoss]
+ [-AllowLegacyDNMismatch]
+ [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-Confirm]
+ [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-MRSServer <Fqdn>]
+ [-Name <String>]
+ [-Priority <Normal | High>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetIsArchive]
+ [-TargetRootFolder <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Set1
+```
+New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter>
+ -TargetMailbox <MailboxOrMailUserIdParameter>
+ [-AcceptLargeDataLoss]
+ [-AllowLegacyDNMismatch]
+ [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-Name <String>]
+ [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetIsArchive]
+ [-TargetRootFolder <String>]
+ [-TargetType <Primary | Archive | MailboxLocation>]
+ [-WhatIf]
+ [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
+ [<CommonParameters>]
 ```
 
 ### Set2
@@ -33,48 +81,65 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
 New-MailboxRestoreRequest -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn>
  -RemoteRestoreType <None | RecoveryDatabase | DisconnectedMailbox | SoftDeletedRecipient>
  -SourceStoreMailbox <StoreMailboxIdParameter> -TargetMailbox <MailboxOrMailUserIdParameter>
- [-AcceptLargeDataLoss] [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>] [-DomainController <Fqdn>]
- [-ExcludeDumpster] [-ExcludeFolders <String[]>] [-IncludeFolders <String[]>]
- [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>] [-Name <String>]
+ [-AcceptLargeDataLoss]
+ [-AllowLegacyDNMismatch]
+ [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-Name <String>]
  [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RemoteCredential <PSCredential>] [-SkipMerging <SkippableMergeComponent[]>] [-SourceRootFolder <String>]
- [-Suspend] [-SuspendComment <String>] [-TargetIsArchive] [-TargetRootFolder <String>] [-WhatIf]
+ [-RemoteCredential <PSCredential>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetIsArchive]
+ [-TargetRootFolder <String>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-RequestExpiryInterval <Unlimited>] [-TargetType <Primary | Archive | MailboxLocation>] [<CommonParameters>]
-```
-
-### Set1
-```
-New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMailbox <StoreMailboxIdParameter>
- -TargetMailbox <MailboxOrMailUserIdParameter> [-AcceptLargeDataLoss] [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll>] [-DomainController <Fqdn>]
- [-ExcludeDumpster] [-ExcludeFolders <String[]>] [-IncludeFolders <String[]>]
- [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>] [-Name <String>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-SkipMerging <SkippableMergeComponent[]>] [-SourceRootFolder <String>] [-Suspend] [-SuspendComment <String>]
- [-TargetIsArchive] [-TargetRootFolder <String>] [-WhatIf]
- [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-RequestExpiryInterval <Unlimited>] [-TargetType <Primary | Archive | MailboxLocation>] [<CommonParameters>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-TargetType <Primary | Archive | MailboxLocation>]
+ [<CommonParameters>]
 ```
 
 ### Set3
 ```
-New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter>
- -TargetMailbox <MailboxLocationIdParameter> [-AcceptLargeDataLoss] [-AllowLegacyDNMismatch]
- [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
+New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter> -TargetMailbox <MailboxLocationIdParameter>
+ [-AcceptLargeDataLoss]
+ [-AllowLegacyDNMismatch]
+ [-AssociatedMessagesCopyOption <DoNotCopy | MapByMessageClass | Copy>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
  [-ConflictResolutionOption <KeepSourceItem | KeepLatestItem | KeepAll | UpdateFromSource | ForceCopy | KeepTargetItem>]
- [-DomainController <Fqdn>] [-ExcludeDumpster] [-ExcludeFolders <String[]>] [-IncludeFolders <String[]>]
- [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>] [-Name <String>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpster]
+ [-ExcludeFolders <String[]>]
+ [-IncludeFolders <String[]>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-Name <String>]
  [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RequestExpiryInterval <Unlimited>] [-SkipMerging <SkippableMergeComponent[]>] [-SourceIsArchive]
- [-SourceRootFolder <String>] [-Suspend] [-SuspendComment <String>] [-TargetIsArchive]
- [-TargetRootFolder <String>] [-TargetType <Primary | Archive | MailboxLocation>] [-WhatIf]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SourceIsArchive]
+ [-SourceRootFolder <String>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-TargetIsArchive]
+ [-TargetRootFolder <String>]
+ [-TargetType <Primary | Archive | MailboxLocation>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
  [<CommonParameters>]
 ```
@@ -166,7 +231,19 @@ You can find the GUID value for the mailbox or mail user by running the Get-Mail
 Type: MailboxOrMailUserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None

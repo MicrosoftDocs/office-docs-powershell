@@ -17,21 +17,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Thumbprint
 ```
-Remove-ExchangeCertificate [-Thumbprint] <String> [-Confirm] [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-Remove-ExchangeCertificate [-Thumbprint] <String> [-Confirm] [-DomainController <Fqdn>]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Remove-ExchangeCertificate [-Thumbprint] <String> [-Server <ServerIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Identity
 ```
-Remove-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>] [-Confirm] [-DomainController <Fqdn>]
+Remove-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -69,7 +67,7 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 
 ```yaml
 Type: String
-Parameter Sets: (All), Set1
+Parameter Sets: Thumbprint
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -132,7 +130,7 @@ You can't use this parameter with the Identity parameter, but you can use it wit
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Thumbprint
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -172,7 +170,7 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 
 ```yaml
 Type: ExchangeCertificateIdParameter
-Parameter Sets: Set2
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
