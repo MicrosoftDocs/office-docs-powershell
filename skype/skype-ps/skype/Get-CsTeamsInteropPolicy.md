@@ -160,5 +160,5 @@ TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. It is not honored ex
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype)
 
