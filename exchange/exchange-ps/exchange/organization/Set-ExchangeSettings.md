@@ -17,99 +17,145 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set12
+### ClearHistory
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-ClearHistory] -Reason <String> [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
-```
-
-### Set5
-```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ConfigName <String> -ConfigValue <String>
- -Reason <String> [-UpdateSetting] [-Confirm] [-DomainController <Fqdn>] [-Force] [-GroupName <String>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-ClearHistory] -Reason <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set9
+### UpdateSetting
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ConfigName <String> -Reason <String>
- [-RemoveSetting] [-Confirm] [-DomainController <Fqdn>] [-Force] [-GroupName <String>] [-WhatIf]
- [<CommonParameters>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ConfigName <String> -ConfigValue <String> -Reason <String> [-UpdateSetting]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-GroupName <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### RemoveSetting
+```
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -ConfigName <String> -Reason <String> [-RemoveSetting]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-GroupName <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### CreateSettingsGroup
 ```
 Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup]
- -ExpirationDate <DateTime> -Reason <String> [-ConfigPairs <String[]>] [-Confirm] [-Disable]
- [-DomainController <Fqdn>] [-Force] [-GroupName <String>] [-MaxVersion <String>] [-MinVersion <String>]
- [-NameMatch <String>] [-Priority <Int32>]
+ -ExpirationDate <DateTime> -Reason <String> [-ConfigPairs <String[]>]
+ [-Confirm]
+ [-Disable]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-GroupName <String>]
+ [-MaxVersion <String>]
+ [-MinVersion <String>]
+ [-NameMatch <String>]
+ [-Priority <Int32>]
  [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>] [-ScopeFilter <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### CreateSettingsGroupGuid
 ```
 Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup]
- -ExpirationDate <DateTime> -GuidMatch <Guid> -Reason <String> [-ConfigPairs <String[]>] [-Confirm] [-Disable]
- [-DomainController <Fqdn>] [-Force] [-GroupName <String>] [-Priority <Int32>]
+ -ExpirationDate <DateTime> -GuidMatch <Guid> -Reason <String> [-ConfigPairs <String[]>] [-Confirm]
+ [-Disable]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-GroupName <String>]
+ [-Priority <Int32>]
  [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>] [-WhatIf]
  [<CommonParameters>]
 ```
 
-### Set3
+### CreateSettingsGroupAdvanced
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup] -Reason <String>
- -SettingsGroup <String> [-Confirm] [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup] -Reason <String> -SettingsGroup <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### CreateSettingsGroupGeneric
 ```
 Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-CreateSettingsGroup]
- -ExpirationDate <DateTime> -Reason <String> [-ConfigPairs <String[]>] [-Confirm] [-Disable]
- [-DomainController <Fqdn>] [-Force] [-GenericScopeName <String>] [-GenericScopeValue <String>]
- [-GroupName <String>] [-Priority <Int32>]
- [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>] [-WhatIf]
+ -ExpirationDate <DateTime> -Reason <String> [-ConfigPairs <String[]>] [-GenericScopeName <String>] [-GenericScopeValue <String>] [-GroupName <String>]
+ [-Confirm]
+ [-Disable]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Priority <Int32>]
+ [-Scope <Forest | Dag | Server | Process | Database | Organization | User | Generic>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### UpdateSettingsGroup
+```
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-ExpirationDate <DateTime>] -Reason <String> [-GroupName <String>] [-UpdateSettingsGroup]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Priority <Int32>]
+ [-ScopeFilter <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RemoveMultipleSettings
+```
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
+ -ConfigPairs <String[]> [-GroupName <String>] [-RemoveSetting]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
-### Set7
+### RemoveSettingsGroup
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> [-ExpirationDate <DateTime>] -Reason <String>
- [-UpdateSettingsGroup] [-Confirm] [-DomainController <Fqdn>] [-Force] [-GroupName <String>]
- [-Priority <Int32>] [-ScopeFilter <String>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set10
-```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> [-RemoveSetting]
- -ConfigPairs <String[]> [-Confirm] [-DomainController <Fqdn>] [-Force] [-GroupName <String>] [-WhatIf]
- [<CommonParameters>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> [-GroupName <String>] [-RemoveSettingsGroup]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set11
+### UpdateSettingsGroupAdvanced
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> [-RemoveSettingsGroup]
- [-Confirm] [-DomainController <Fqdn>] [-Force] [-GroupName <String>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set8
-```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> -SettingsGroup <String>
- [-UpdateSettingsGroup] [-Confirm] [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> -SettingsGroup <String> [-UpdateSettingsGroup]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set6
+### UpdateMultipleSettings
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> [-UpdateSetting]
- -ConfigPairs <String[]> [-Confirm] [-DomainController <Fqdn>] [-Force] [-GroupName <String>] [-WhatIf]
- [<CommonParameters>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
+ -ConfigPairs <String[]> [-GroupName <String>] [-UpdateSetting]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set13
+### EnableSettingsGroup
 ```
-Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> [-Confirm]
- [-DisableGroup <String>] [-DomainController <Fqdn>] [-EnableGroup <String>] [-Force] [-WhatIf]
- [<CommonParameters>]
+Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
+ [-EnableGroup <String> [-DisableGroup <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -126,12 +172,29 @@ This example allows users to see the results of Unified Audit Logging. This exam
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of the existing Exchange settings object that contains the Exchange settings that you want to configure.
+
+The value of this parameter is the value of the Name parameter on the New-ExchangeSetting cmdlet when the Exchange settings object was created.
+
+```yaml
+Type: ExchangeSettingsIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ClearHistory
 The ClearHistory switch specifies that you want to clear the entries in the modification history for the Exchange setting object. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set12
+Parameter Sets: ClearHistory
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -148,10 +211,39 @@ For add and update operations, you also need to use the ConfigValue parameter to
 
 ```yaml
 Type: String
-Parameter Sets: Set5, Set9
+Parameter Sets: UpdateSetting, RemoveSetting
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConfigPairs
+The ConfigName parameter specifies the available Exchange setting that you want to add, remove, or update in the Exchange settings object. Valid values for this parameter are determined by the configuration schema that was specified by the Name parameter on the New-ExchangeSettings cmdlet. The syntax for a value is \<key\>=\<value\>. You can separate multiple values separated by commas.
+
+You can't use the ConfigPairs parameter with the ConfigName or ConfigValue parameters.
+
+```yaml
+Type: String[]
+Parameter Sets: RemoveMultipleSettings, UpdateMultipleSettings
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String[]
+Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -165,7 +257,7 @@ You can't use the ConfigValue parameter with the ConfigPairs parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set5
+Parameter Sets: UpdateSetting
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -182,7 +274,7 @@ Depending on how you want to configure the settings group, you use either the Gr
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2, Set3, Set4
+Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupAdvanced, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -201,7 +293,7 @@ You can only use the ExpirationDate parameter with the CreateSettingsGroup or Up
 
 ```yaml
 Type: DateTime
-Parameter Sets: Set1, Set2, Set4
+Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -213,7 +305,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: DateTime
-Parameter Sets: Set7
+Parameter Sets: UpdateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -232,30 +324,13 @@ You can't use this parameter with the GenericScopeName, GenericScopeValue, MaxVe
 
 ```yaml
 Type: Guid
-Parameter Sets: Set2
+Parameter Sets: CreateSettingsGroupGuid
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the existing Exchange settings object that contains the Exchange settings that you want to configure.
-
-The value of this parameter is the value of the Name parameter on the New-ExchangeSetting cmdlet when the Exchange settings object was created.
-
-```yaml
-Type: ExchangeSettingsIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -281,7 +356,7 @@ You use the ConfigPairs parameter or the ConfigName parameter to specify the set
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set9, Set10
+Parameter Sets: RemoveSetting, RemoveMultipleSettings
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -298,7 +373,7 @@ You use the GroupName parameter to specify the Exchange settings group that you 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set11
+Parameter Sets: RemoveSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -315,7 +390,7 @@ You can't use the SettingsGroup parameter with the GroupName parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set8
+Parameter Sets: CreateSettingsGroupAdvanced, UpdateSettingsGroupAdvanced
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -332,7 +407,7 @@ You use the ConfigPairs parameter or the ConfigName and ConfigValue parameters t
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5, Set6
+Parameter Sets: UpdateSetting, UpdateMultipleSettings
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -349,36 +424,7 @@ Depending on how you want to configure the settings group, you use either the Gr
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set7, Set8
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConfigPairs
-The ConfigName parameter specifies the available Exchange setting that you want to add, remove, or update in the Exchange settings object. Valid values for this parameter are determined by the configuration schema that was specified by the Name parameter on the New-ExchangeSettings cmdlet. The syntax for a value is \<key\>=\<value\>. You can separate multiple values separated by commas.
-
-You can't use the ConfigPairs parameter with the ConfigName or ConfigValue parameters.
-
-```yaml
-Type: String[]
-Parameter Sets: Set1, Set2, Set4
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String[]
-Parameter Sets: Set10, Set6
+Parameter Sets: UpdateSettingsGroup, UpdateSettingsGroupAdvanced
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -416,7 +462,7 @@ To use this switch to enable an Exchange settings group, use the syntax -Disable
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2, Set4
+Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -433,7 +479,7 @@ You can use the DisableGroup and EnableGroup parameters together in the same com
 
 ```yaml
 Type: String
-Parameter Sets: Set13
+Parameter Sets: EnableSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -465,7 +511,7 @@ You can use the DisableGroup and EnableGroup parameters together in the same com
 
 ```yaml
 Type: String
-Parameter Sets: Set13
+Parameter Sets: EnableSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -495,7 +541,7 @@ The GenericScopeName parameter specifies the name of the scope. The available va
 
 ```yaml
 Type: String
-Parameter Sets: Set4
+Parameter Sets: CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -510,7 +556,7 @@ The GenericScopeValue parameter specifies the value of the scope specified by th
 
 ```yaml
 Type: String
-Parameter Sets: Set4
+Parameter Sets: CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -535,7 +581,7 @@ If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
-Parameter Sets: Set5, Set9, Set1, Set2, Set4, Set7, Set10, Set11, Set6
+Parameter Sets: UpdateSetting, RemoveSetting, CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric, UpdateSettingsGroup, RemoveMultipleSettings, RemoveSettingsGroup, UpdateMultipleSettings
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -554,7 +600,7 @@ You can't use this parameter with the GuidMatch, GenericScopeName, or GenericSco
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: CreateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -573,7 +619,7 @@ You can't use this parameter with GuidMatch, GenericScopeName, or GenericScopeVa
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: CreateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -592,7 +638,7 @@ You can't use this parameter with the GuidMatch, GenericScopeName, or GenericSco
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: CreateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -607,7 +653,7 @@ The Priority parameter specifies the priority of an Exchange settings group. The
 
 ```yaml
 Type: Int32
-Parameter Sets: Set1, Set2, Set4, Set7
+Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric, UpdateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -638,7 +684,7 @@ The Scope parameter specifies the scope of the Exchange settings object. Valid v
 
 ```yaml
 Type: Forest | Dag | Server | Process | Database | Organization | User | Generic
-Parameter Sets: Set1, Set2, Set4
+Parameter Sets: CreateSettingsGroup, CreateSettingsGroupGuid, CreateSettingsGroupGeneric
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -657,7 +703,7 @@ You can't use this parameter with other scope-related parameters.
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set7
+Parameter Sets: CreateSettingsGroup, UpdateSettingsGroup
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False

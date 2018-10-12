@@ -17,23 +17,31 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+###  MailboxIdentity
 ```
-Enable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter> [-AllowMigration] [-Confirm]
- [-Duration <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Enable-MailboxQuarantine -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter>
- [-AllowMigration] [-Confirm] [-Duration <EnhancedTimeSpan>] [-QuarantineReason <String>] [-WhatIf]
- [<CommonParameters>]
+Enable-MailboxQuarantine [-Identity] <GeneralMailboxIdParameter>
+ [-AllowMigration]
+ [-Confirm]
+ [-Duration <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### MailboxOrMailUserIdentity
 ```
-Enable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter> [-AllowMigration] [-Confirm]
- [-Duration <EnhancedTimeSpan>] [-QuarantineReason <String>] [-WhatIf] [<CommonParameters>]
+Enable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter> [-QuarantineReason <String>]
+ [-AllowMigration]
+ [-Confirm]
+ [-Duration <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### StoreMailboxIdentity
+```
+Enable-MailboxQuarantine -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter> [-QuarantineReason <String>]
+ [-AllowMigration]
+ [-Confirm]
+ [-Duration <EnhancedTimeSpan>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,13 +89,69 @@ You can't use this parameter with the Database parameter.
 
 ```yaml
 Type: GeneralMailboxIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: MailboxIdentity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+```yaml
+Type: GeneralMailboxOrMailUserIdParameter
+Parameter Sets: MailboxOrMailUserIdentity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Database
+The Database parameter specifies the database that contains the mailboxes you want to quarantine. You can use any value that uniquely identifies the database. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You identify the mailbox by using the StoreMailboxIdentity parameter.
+
+You can't use this parameter with the Identity parameter.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: StoreMailboxIdentity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StoreMailboxIdentity
+The StoreMailboxIdentity parameter specifies the mailbox that you want to quarantine when you use the Database parameter.
+
+You identify the mailbox by its GUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
+
+You can't use this parameter with the Identity parameter.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: StoreMailboxIdentity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -144,6 +208,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -QuarantineReason
+The QuarantineReason parameter specifies why you quarantined the mailbox. The maximum length is 255 characters. If the value contains spaces, enclose the value in quotation marks.
+
+```yaml
+Type: String
+Parameter Sets: StoreMailboxIdentity, MailboxOrMailUserIdentity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -152,65 +231,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Database
-The Database parameter specifies the database that contains the mailboxes you want to quarantine. You can use any value that uniquely identifies the database. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-You identify the mailbox by using the StoreMailboxIdentity parameter.
-
-You can't use this parameter with the Identity parameter.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreMailboxIdentity
-The StoreMailboxIdentity parameter specifies the mailbox that you want to quarantine when you use the Database parameter.
-
-You identify the mailbox by its GUID value. You can find the GUID value by using the Get-Mailbox or Get-MailboxStatistics cmdlets.
-
-You can't use this parameter with the Identity parameter.
-
-```yaml
-Type: StoreMailboxIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QuarantineReason
-The QuarantineReason parameter specifies why you quarantined the mailbox. The maximum length is 255 characters. If the value contains spaces, enclose the value in quotation marks.
-
-```yaml
-Type: String
-Parameter Sets: Set2, Set1
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -17,22 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Identity
 ```
-Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>] [-DomainController <Fqdn>]
- [-IncludeContainers] [-SingleNodeOnly] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>] [-DomainController <Fqdn>]
- [-IncludeContainers] [-ResultSize <Unlimited>] [-SingleNodeOnly] [<CommonParameters>]
+Get-OrganizationalUnit [[-Identity] <ExtendedOrganizationalUnitIdParameter>] [-SingleNodeOnly]
+ [-DomainController <Fqdn>]
+ [-IncludeContainers]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### Search
 ```
-Get-OrganizationalUnit [-DomainController <Fqdn>] [-IncludeContainers] [-ResultSize <Unlimited>]
- [-SearchText <String>] [<CommonParameters>]
+Get-OrganizationalUnit [-SearchText <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeContainers]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,23 +60,6 @@ For more information about pipelining and the Format-Table cmdlet, see Pipelinin
 
 ## PARAMETERS
 
-### -DomainController
-This parameter is available only in on-premises Exchange.
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the OU or domain that you want to view. You can use any value that uniquely identifies the OU or domain. For example:
 
@@ -94,13 +75,30 @@ You can use this parameter with the SearchText parameter.
 
 ```yaml
 Type: ExtendedOrganizationalUnitIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -124,7 +122,7 @@ The SingleNodeOnly switch instructs the command to return only the first level c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -139,7 +137,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1, Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -156,7 +154,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Search
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

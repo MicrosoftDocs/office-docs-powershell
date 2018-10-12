@@ -28,12 +28,11 @@ Get-MailboxExportRequest [[-Identity] <MailboxExportRequestIdParameter>]
 
 ### MailboxFiltering
 ```
-Get-MailboxExportRequest
+Get-MailboxExportRequest [-Mailbox <MailboxOrMailUserIdParameter>]
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-HighPriority <$true | $false>]
- [-Mailbox <MailboxOrMailUserIdParameter>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
@@ -43,12 +42,11 @@ Get-MailboxExportRequest
 
 ### MailboxLocationFiltering
 ```
-Get-MailboxExportRequest
+Get-MailboxExportRequest [-Mailbox <MailboxLocationIdParameter>]
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-HighPriority <$true | $false>]
- [-Mailbox <MailboxLocationIdParameter>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]

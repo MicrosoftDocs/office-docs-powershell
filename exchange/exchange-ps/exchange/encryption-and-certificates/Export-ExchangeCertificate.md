@@ -17,22 +17,26 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Thumbprint
 ```
-Export-ExchangeCertificate [-Thumbprint] <String> [-BinaryEncoded] [-Confirm] [-DomainController <Fqdn>]
- [-Password <SecureString>] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Export-ExchangeCertificate [-Thumbprint] <String> [-Server <ServerIdParameter>]
+ [-BinaryEncoded]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FileName <String>]
+ [-Password <SecureString>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Export-ExchangeCertificate [-Thumbprint] <String> [-BinaryEncoded] [-Confirm] [-DomainController <Fqdn>]
- [-FileName <String>] [-Password <SecureString>] [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Export-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>] [-BinaryEncoded] [-Confirm]
- [-DomainController <Fqdn>] [-FileName <String>] [-Password <SecureString>] [-WhatIf] [<CommonParameters>]
+Export-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
+ [-BinaryEncoded]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-FileName <String>]
+ [-Password <SecureString>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +87,7 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 
 ```yaml
 Type: String
-Parameter Sets: (All), Set1
+Parameter Sets: Thumbprint
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -180,7 +184,7 @@ You can't use this parameter with the Identity parameter, but you can use it wit
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Thumbprint
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -210,7 +214,7 @@ The FileName parameter specifies the name and path of the exported certificate o
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -235,7 +239,7 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 
 ```yaml
 Type: ExchangeCertificateIdParameter
-Parameter Sets: Set2
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

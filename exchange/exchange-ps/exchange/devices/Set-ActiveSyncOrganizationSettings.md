@@ -17,57 +17,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### 
 ```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>]
- [-AdminMailRecipients <MultiValuedProperty>] [-Confirm] [-DefaultAccessLevel <Allow | Block | Quarantine>]
- [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Set-ActiveSyncOrganizationSettings [-Identity] <ActiveSyncOrganizationSettingsIdParameter>
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
-```
-
-### Set3
-```
-Set-ActiveSyncOrganizationSettings [-Identity] <ActiveSyncOrganizationSettingsIdParameter>
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
-```
-
-### Set4
-```
-Set-ActiveSyncOrganizationSettings [-Identity] <ActiveSyncOrganizationSettingsIdParameter>
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
-```
-
-### Set5
-```
-Set-ActiveSyncOrganizationSettings [-Identity] <ActiveSyncOrganizationSettingsIdParameter>
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
-```
-
-### Set1
-```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>]
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
+Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [-Confirm] [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -96,6 +48,40 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowAccessForUnSupportedPlatform
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowRMSSupportForUnenlightenedApps
+The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
+
+- $true
+
+- $false (This is the default value)
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -159,22 +145,10 @@ The Identity parameter specifies the ActiveSync organization settings object tha
 
 ```yaml
 Type: ActiveSyncOrganizationSettingsIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: ActiveSyncOrganizationSettingsIdParameter
-Parameter Sets: Set2, Set3, Set4, Set5
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
@@ -223,40 +197,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowAccessForUnSupportedPlatform
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set2, Set3, Set4, Set5, Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowRMSSupportForUnenlightenedApps
-The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
-
-- $true
-
-- $false (This is the default value)
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set2, Set3, Set4, Set5, Set1
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
