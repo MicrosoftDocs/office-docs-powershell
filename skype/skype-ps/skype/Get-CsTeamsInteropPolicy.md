@@ -155,6 +155,7 @@ Accept wildcard characters: False
 ### System.Object
 
 ## NOTES
+TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. It is not honored except if TeamsUpgradePolicy mode=Legacy. Legacy mode is being deprecated so customers should update their configuration of TeamsUpgradePolicy to use modes other than Legacy. 
 
 
 ## RELATED LINKS
