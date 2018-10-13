@@ -15,20 +15,16 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Get-CsConferencingPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsConferencingPolicy [-Tenant <Guid>] [-Include <PolicyFilter>] [-ApplicableTo <UserIdParameter>]
+ [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsConferencingPolicy [-Filter <String>] [-LocalStore] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Get-CsConferencingPolicy [[-Identity] <Object>] [-ApplicableTo <Object>] [-BypassDualWrite <Object>]
- [-Filter <Object>] [-Include <Object>] [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsConferencingPolicy [-Tenant <Guid>] [-Include <PolicyFilter>] [-ApplicableTo <UserIdParameter>]
+ [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -193,7 +189,7 @@ For example, if Ken Myer works in China, country/region restrictions might limit
 If you call Get-CsConferencingPolicy without using the ApplicableTo parameter you will get back a collection of all the available policies, including any policies that can't actually be assigned to a specific user.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -204,28 +200,11 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Include
 PARAMVALUE: Automatic | All | SubscriptionDefaults | TenantDefinedOnly
 
 ```yaml
-Type: Object
+Type: PolicyFilter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -241,7 +220,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
