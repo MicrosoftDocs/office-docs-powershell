@@ -12,9 +12,21 @@ Use the Get-CsHybridPSTNAppliance cmdlet to retrieve information about your Skyp
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsHybridPSTNAppliance [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-Name <Object>] [-SiteName <Object>] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsHybridPSTNAppliance [-Tenant <Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### SiteName
+```
+Get-CsHybridPSTNAppliance [-Tenant <Guid>] [-SiteName <String>] [-Name <String>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsHybridPSTNAppliance [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,27 +72,11 @@ The command shown in Example 4 returns information for the Skype for Business Cl
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -128,7 +124,7 @@ Accept wildcard characters: False
 Name of Skype for Business Cloud Connector Edition appliance.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -144,7 +140,7 @@ Accept wildcard characters: False
 Name of Skype for Business Cloud Connector Edition site that the appliance belongs to.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -160,7 +156,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
