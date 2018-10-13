@@ -14,7 +14,7 @@ The updated URL uses a simpler, more standardized format that makes it easier fo
 ## SYNTAX
 
 ```
-Update-CsTenantMeetingUrl [-BypassDualWrite <Object>] [-Confirm] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Update-CsTenantMeetingUrl [-Confirm] [-Force] [-Tenant <Guid>] [-WhatIf] [-AsJob]
  [<CommonParameters>]
 ```
 
@@ -87,22 +87,6 @@ In this case, as soon as you press ENTER the command will run and your Skype for
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before executing the command.
 
@@ -151,7 +135,7 @@ You can return your tenant ID by running this command:
 If you do not include the Tenant parameter then `Update-CsMeetingUrl` will prompt you to enter that parameter before you can continue.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
