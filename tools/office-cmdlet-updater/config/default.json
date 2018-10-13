@@ -10,11 +10,14 @@
 				"name": "skype",
 				"path": "..\\..\\skype\\skype-ps\\skype",
 				"metaTags": ["Skype for Business Online"]
+			},
+			{
+				"name": "sharepoint",
+				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
+				"metaTags": []
 			}
 		],
-		"ignoreFiles": [
-			"..\\..\\teams\\teams-ps\\teams\\teams.md"
-		]
+		"ignoreFiles": ["..\\..\\teams\\teams-ps\\teams\\teams.md"]
 	},
 	"sendgrid": {
 		"sendMailNotification": false,

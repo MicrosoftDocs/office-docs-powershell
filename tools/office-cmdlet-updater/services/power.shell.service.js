@@ -43,6 +43,23 @@ class PowerShellService {
 
 		result += output;
 
+        [output, err] = await of(this.preInstallSharepoint());
+
+        if (err) {
+            await this.dispose();
+            throw new Error(err);
+        }
+
+        result += output;
+
+		return result;
+	}
+
+	async preInstallSharepoint() {
+		let result;
+
+		result += await this._invokeCommand(commands.SHAREPOINT_INSTALL_MODULE);
+
 		return result;
 	}
 

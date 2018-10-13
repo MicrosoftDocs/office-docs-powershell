@@ -9,5 +9,6 @@ module.exports = {
 	SKYPE_INSTALL_MODULE: 'Import-Module "C:\\\\Program Files\\\\Common Files\\\\Skype for Business Online\\\\Modules\\\\SkypeOnlineConnector\\\\SkypeOnlineConnector.psd1" -Force',
 	SKYPE_GET_CRED: '$cred = Get-Credential',
 	SKYPE_CREATE_SESSION: '$session = New-CsOnlineSession -Credential $cred -Verbose',
-	SKYPE_IMPORT_SESSION: 'Import-PSSession -Session $session'
+	SKYPE_IMPORT_SESSION: 'Import-PSSession -Session $session',
+	SHAREPOINT_INSTALL_MODULE: 'Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking'
 };
