@@ -11,9 +11,16 @@ schema: 2.0.0
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>]
- [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsExternalUserCommunicationPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsExternalUserCommunicationPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,27 +37,11 @@ Get-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-BypassDualWrite <
 
 ## PARAMETERS
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 {{Fill Filter Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -66,7 +57,7 @@ Accept wildcard characters: False
 {{Fill Identity Description}}
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -98,7 +89,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
