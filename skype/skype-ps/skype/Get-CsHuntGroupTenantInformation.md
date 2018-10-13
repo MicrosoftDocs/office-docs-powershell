@@ -13,8 +13,7 @@ The Get-CsHuntGroupTenantInformation cmdlet returns additional call queue inform
 ## SYNTAX
 
 ```
-Get-CsHuntGroupTenantInformation [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsHuntGroupTenantInformation [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,27 +29,11 @@ This example returns additional call queue information for the tenant.
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DomainController
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -82,7 +65,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
