@@ -13,8 +13,7 @@ Use the Get-CsCallingLineIdentity cmdlet to display the Caller ID policies for y
 ## SYNTAX
 
 ```
-Get-CsCallingLineIdentity [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsCallingLineIdentity [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,27 +30,11 @@ The example gets and displays the Caller ID policies for your organization.
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 The Filter parameter lets you insert a string through which your search results are filtered.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -67,7 +50,7 @@ Accept wildcard characters: False
 The Identity parameter identifies the Caller ID policy.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -99,7 +82,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
