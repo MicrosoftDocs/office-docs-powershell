@@ -17,13 +17,13 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 
 ### Identity (Default)
 ```
-Get-CsPushNotificationConfiguration [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+Get-CsPushNotificationConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
  [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsPushNotificationConfiguration [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore]
+Get-CsPushNotificationConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore]
  [<CommonParameters>]
 ```
 
