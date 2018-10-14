@@ -13,9 +13,9 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Get-CsOnlineDialInConferencingUserState [[-Identity] <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-LicenseState <Object>] [-Provider <Object>] [-ResultSize <Object>]
- [-Tenant <Object>] [-TenantDomain <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineDialInConferencingUserState [[-Identity] <UserIdParameter>] [-Tenant <Guid>]
+ [-TenantDomain <String>] [-Provider <ProviderType>] [-LicenseState <String[]>]
+ [-ResultSize <Unlimited>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,41 +23,22 @@ Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-
-
 ## PARAMETERS
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DomainController
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -72,12 +53,11 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -86,15 +66,14 @@ Accept wildcard characters: False
 PARAMVALUE: UserIdParameter
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -102,10 +81,9 @@ Accept wildcard characters: False
 PARAMVALUE: String\[\]
 
 ```yaml
-Type: Object
+Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -118,10 +96,9 @@ Accept wildcard characters: False
 PARAMVALUE: AllProviders | NoProviders | Microsoft | ThirdParty
 
 ```yaml
-Type: Object
+Type: ProviderType
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -134,10 +111,9 @@ Accept wildcard characters: False
 PARAMVALUE: Unlimited
 
 ```yaml
-Type: Object
+Type: Unlimited
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -150,10 +126,9 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -166,26 +141,9 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -204,4 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
