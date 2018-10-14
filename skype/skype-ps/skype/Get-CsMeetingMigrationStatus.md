@@ -12,9 +12,21 @@ Provide the topic introduction here.
 
 ## SYNTAX
 
+### QueueSize (Default)
 ```
-Get-CsMeetingMigrationStatus [[-Identity] <Object>] [-Confirm] [-EndTime <Object>] [-StartTime <Object>]
- [-SummaryOnly] [-Tenant <Object>] [-WhatIf] [-AsJob] [-State <Object>] [<CommonParameters>]
+Get-CsMeetingMigrationStatus [-SummaryOnly] [-Tenant <Guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### TenantId
+```
+Get-CsMeetingMigrationStatus [-SummaryOnly] [-Tenant <Guid>] [-StartTime <DateTime>]
+ [-EndTime <DateTime>] [-State <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UserId
+```
+Get-CsMeetingMigrationStatus [-Tenant <Guid>] [-Identity] <UserIdParameter> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +48,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: UserIdParameter
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -68,7 +80,7 @@ Accept wildcard characters: False
 PARAMVALUE: DateTime
 
 ```yaml
-Type: Object
+Type: DateTime
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -84,7 +96,7 @@ Accept wildcard characters: False
 PARAMVALUE: DateTime
 
 ```yaml
-Type: Object
+Type: DateTime
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -116,7 +128,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -164,7 +176,7 @@ Accept wildcard characters: False
 {{Fill State Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
