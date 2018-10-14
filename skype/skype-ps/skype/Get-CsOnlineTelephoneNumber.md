@@ -11,13 +11,12 @@ schema: 2.0.0
 Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
 
 ## SYNTAX
-
 ```
-Get-CsOnlineTelephoneNumber [-ActivationState <Object>] [-Assigned <Object>] [-BypassDualWrite <Object>]
- [-CapitalOrMajorCity <Object>] [-DomainController <Object>] [-ExpandLocation] [-Force]
- [-InventoryType <Object>] [-IsNotAssigned] [-ResultSize <Object>] [-TelephoneNumber <Object>]
- [-TelephoneNumberGreaterThan <Object>] [-TelephoneNumberLessThan <Object>]
- [-TelephoneNumberStartsWith <Object>] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineTelephoneNumber [-TelephoneNumber <String>] [-Tenant <Guid>] [-Assigned <String>]
+ [-InventoryType <String>] [-CapitalOrMajorCity <String>] [-TelephoneNumberStartsWith <String>]
+ [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>] [-ResultSize <Int32>] [-IsNotAssigned]
+ [-ActivationState <String>] [-ExpandLocation] [-NumberType <NumberType>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,7 +67,7 @@ This example gets the phone numbers with the city code designating New York, New
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -91,23 +90,7 @@ The acceptable values are:
 The values for the Assigned parameter are case-sensitive.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -126,7 +109,7 @@ For example, "NOAM-US-OR-PO" would specify Portland, Oregon.
 The values for the CapitalOrMajorCity parameter are case-sensitive.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: CityCode
 Applicable: Skype for Business Online
@@ -142,7 +125,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -197,7 +180,7 @@ Acceptable values are:
 "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -231,7 +214,7 @@ The result size can be set to any whole number between 0 and 2147483647, inclusi
 If set to 0, the command will run, but no data will be returned.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -250,7 +233,7 @@ For example:
 `-TelephoneNumber tel:+18005551234, or -TelephoneNumber +14251234567`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -268,7 +251,7 @@ The telephone numbers returned will all be greater than the number provided.
 The telephone number should be in E.164 format.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -286,7 +269,7 @@ The telephone numbers returned will all be less than the number provided.
 The telephone number should be in E.164 format.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -305,7 +288,7 @@ To return numbers that are in the 206 area code and that begin with 88, use this
 You can use up to nine digits.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -321,7 +304,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
