@@ -8,12 +8,12 @@ schema: 2.0.0
 # ConvertTo-JsonForPSWS
 
 ## SYNOPSIS
-ConvertTo-JsonForPSWS \[-InputObject\] \<Object\> \[-Depth \<int\>\] \[-Compress\] \[\<CommonParameters\>\]
+
 
 ## SYNTAX
 
 ```
-ConvertTo-JsonForPSWS [[-InputObject] <Object>] [-Compress] [-Depth <Object>] [-AsJob] [<CommonParameters>]
+ConvertTo-JsonForPSWS [-InputObject] <Object> [-Depth <Int32>] [-Compress] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
