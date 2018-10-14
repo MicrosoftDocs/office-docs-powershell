@@ -13,11 +13,11 @@ Use the Get-CsOnlineVoiceUser cmdlet to retrieve a voice user's telephone number
 ## SYNTAX
 
 ```
-Get-CsOnlineVoiceUser [-BypassDualWrite <Object>] [-CivicAddressId <Object>] [-DomainController <Object>]
- [-EnterpriseVoiceStatus <Object>] [-ExpandLocation] [-First <Object>] [-Force] [-GetFromAAD]
- [-GetPendingUsers] [-Identity <Object>] [-LocationId <Object>] [-NumberAssigned] [-NumberNotAssigned]
- [-PSTNConnectivity <Object>] [-SearchQuery <Object>] [-Skip <Object>] [-Tenant <Object>] [-AsJob]
- [<CommonParameters>]
+Get-CsOnlineVoiceUser [-Identity <UserIdParameter>] [-Tenant <Guid>]
+ [-PSTNConnectivity <InputPSTNConnectivity>] [-EnterpriseVoiceStatus <InputEnterpriseVoiceStatus>]
+ [-LocationId <Guid>] [-CivicAddressId <Guid>] [-Skip <Int32>] [-First <Int32>]
+ [-NumberAssigned] [-NumberNotAssigned] [-GetFromAAD] [-ExpandLocation] [-GetPendingUsers]
+ [-SearchQuery <String>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,27 +34,11 @@ This example uses the User Principal Name (UPN) to retrieve the location and pho
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CivicAddressId
 Specifies the identity of the civic address that is assigned to the target users.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -70,7 +54,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -86,7 +70,7 @@ Accept wildcard characters: False
 PARAMVALUE: All | Enabled | Disabled
 
 ```yaml
-Type: Object
+Type: InputEnterpriseVoiceStatus
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -119,7 +103,7 @@ Specifies the number of users to return.
 The default is 100.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -192,7 +176,7 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -209,7 +193,7 @@ Specifies the location identity of the location whose users will be returned.
 You can find location identifiers by using the Get-CsOnlineLisLocation cmdlet.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -257,7 +241,7 @@ Accept wildcard characters: False
 PARAMVALUE: All | Online | OnPremises
 
 ```yaml
-Type: Object
+Type: InputPSTNConnectivity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -273,7 +257,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -291,7 +275,7 @@ If you used the First parameter to return the first 50 users and wanted to get a
 The default is 0.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -307,7 +291,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
