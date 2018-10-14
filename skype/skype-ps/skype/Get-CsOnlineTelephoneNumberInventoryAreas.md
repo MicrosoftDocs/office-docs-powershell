@@ -13,9 +13,9 @@ Use the `Get-CsOnlineTelephoneNumberInventoryAreas` cmdlet to retrieve the geogr
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumberInventoryAreas [-CountryOrRegion <Object>] [-InventoryType <Object>]
- [-RegionalGroup <Object>] [-Area <Object>] [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineTelephoneNumberInventoryAreas [-Tenant <Guid>] -RegionalGroup <String>
+ -CountryOrRegion <String> [-Area <String>] -InventoryType <String> [-DomainController <Fqdn>] [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +71,7 @@ This example returns the areas with Subscriber inventory in the specified region
 Specifies the target country for the cmdlet.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Country
 Applicable: Skype for Business Online
@@ -92,7 +92,7 @@ Acceptable values are:
 "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 Specifies the target geographical region for the cmdlet.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Region
 Applicable: Skype for Business Online
@@ -124,23 +124,7 @@ Accept wildcard characters: False
 Specifies the target geographical area for the cmdlet.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -156,7 +140,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -190,7 +174,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
