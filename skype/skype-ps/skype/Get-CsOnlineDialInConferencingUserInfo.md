@@ -12,10 +12,17 @@ Provide the topic introduction here.
 
 ## SYNTAX
 
+### IdentityParams
 ```
-Get-CsOnlineDialInConferencingUserInfo [[-Identity] <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Filter <Object>] [-First <Object>] [-Force] [-SearchQuery <Object>]
- [-Select <Object>] [-Skip <Object>] [-SortDescending] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineDialInConferencingUserInfo [-Identity] <UserIdParameter> [-DomainController <Fqdn>] [-Force]
+ [<CommonParameters>]
+```
+
+### TenantIdParams
+```
+Get-CsOnlineDialInConferencingUserInfo [-Tenant <Guid>] [-Skip <Int32>] [-First <Int32>]
+ [-SearchQuery <String>] [-Select <FilterSelection>] [-Filter <String>] [-SortDescending]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +43,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: UserIdParameter
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -48,27 +55,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DomainController
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -84,7 +75,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -100,7 +91,7 @@ Accept wildcard characters: False
 PARAMVALUE: Int32
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -132,7 +123,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -148,7 +139,7 @@ Accept wildcard characters: False
 PARAMVALUE: DialInConferencingOn | DialInConferencingOff | ConferencingProviderMS | ConferencingProviderOther | NoFilter
 
 ```yaml
-Type: Object
+Type: FilterSelection
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -164,7 +155,7 @@ Accept wildcard characters: False
 PARAMVALUE: Int32
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -196,7 +187,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
