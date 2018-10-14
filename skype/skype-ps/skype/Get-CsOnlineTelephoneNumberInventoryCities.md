@@ -13,9 +13,9 @@ Use the `Get-CsOnlineTelephoneNumberInventoryCities` to retrieve the cities that
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumberInventoryCities [-Area <Object>] [-CountryOrRegion <Object>]
- [-InventoryType <Object>] [-RegionalGroup <Object>] [-BypassDualWrite <Object>] [-CapitalOrMajorCity <Object>]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOnlineTelephoneNumberInventoryCities [-Tenant <Guid>] -RegionalGroup <String>
+ -CountryOrRegion <String> -Area <String> [-CapitalOrMajorCity <String>] -InventoryType <String>
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +54,7 @@ The following example retrieves the cities defined as supporting "Subscriber" in
 Specifies the target geographical area for the cmdlet.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 Specifies the target country for the cmdlet.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Country
 Applicable: Skype for Business Online
@@ -91,7 +91,7 @@ Acceptable values are:
 "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -107,25 +107,9 @@ Accept wildcard characters: False
 Specifies the target geographical region for the cmdlet.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Region
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
@@ -139,7 +123,7 @@ Accept wildcard characters: False
 Specifies the target geographical city for the cmdlet.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: City
 Applicable: Skype for Business Online
@@ -155,7 +139,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -189,7 +173,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -202,7 +186,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
