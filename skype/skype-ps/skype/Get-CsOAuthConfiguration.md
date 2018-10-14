@@ -15,20 +15,14 @@ This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
+### Identity (Default)
+```
+Get-CsOAuthConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+```
+
 ### Filter
 ```
-Get-CsOAuthConfiguration [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-### Identity
-```
-Get-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Get-CsOAuthConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOAuthConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,19 +91,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LocalStore
 Retrieves the OAuth configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 
@@ -142,22 +123,6 @@ Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
