@@ -12,11 +12,35 @@ Use the Get-CsOnlineDialInConferencingUser cmdlet to view the properties and set
 
 ## SYNTAX
 
+### EmptySet (Default)
 ```
-Get-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-BridgeId <Object>] [-BridgeName <Object>]
- [-ServiceNumber <Object>] [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-LdapFilter <Object>] [-ResultSize <Object>] [-Tenant <Object>] [-TenantDomain <Object>] [-AsJob]
+Get-CsOnlineDialInConferencingUser [-Tenant <Guid>] [-TenantDomain <String>] [-LdapFilter <String>]
+ [-ResultSize <Int32>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### IdentityParams
+```
+Get-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-Tenant <Guid>]
+ [-TenantDomain <String>] [-LdapFilter <String>] [-ResultSize <Int32>] [-DomainController <Fqdn>] [-Force]
  [<CommonParameters>]
+```
+
+### UniqueBridgeParams
+```
+Get-CsOnlineDialInConferencingUser [-Tenant <Guid>] [-TenantDomain <String>] [-LdapFilter <String>]
+ -BridgeId <Guid> [-ResultSize <Int32>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### BridgeNameParams
+```
+Get-CsOnlineDialInConferencingUser [-Tenant <Guid>] [-TenantDomain <String>] [-LdapFilter <String>]
+ -BridgeName <String> [-ResultSize <Int32>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### UniqueNumberParams
+```
+Get-CsOnlineDialInConferencingUser [-Tenant <Guid>] [-TenantDomain <String>] [-LdapFilter <String>]
+ -ServiceNumber <String> [-ResultSize <Int32>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +80,7 @@ The Format-Table cmdlet then uses the Property parameter to select the propertie
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -72,7 +96,7 @@ Accept wildcard characters: False
 Specifies the name of the audio conferencing bridge.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -90,7 +114,7 @@ The user can be specified by using one of four formats: 1) the user's SIP addres
 You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -108,23 +132,7 @@ Only users who have been assigned the specified number will be returned.
 The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -140,7 +148,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -177,7 +185,7 @@ The LdapFilter parameter uses the LDAP query language when creating filters.
 For example, a filter that returns only users who work in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -198,7 +206,7 @@ If set to 0 the command will run, but no data will be returned.
 If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -214,7 +222,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -230,7 +238,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -243,7 +251,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
