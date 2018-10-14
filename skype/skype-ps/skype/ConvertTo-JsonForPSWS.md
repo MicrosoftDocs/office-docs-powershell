@@ -50,7 +50,7 @@ Accept wildcard characters: False
 {{Fill Depth Description}}
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
