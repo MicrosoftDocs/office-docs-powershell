@@ -13,8 +13,8 @@ Grant-CsDialoutPolicy \[-Identity\] \<UserIdParameter\> \[-PolicyName\] \<string
 ## SYNTAX
 
 ```
-Grant-CsDialoutPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm] [-DomainController <Object>]
- [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsDialoutPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 {{Fill DomainController Description}}
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 {{Fill Identity Description}}
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 {{Fill PolicyName Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
