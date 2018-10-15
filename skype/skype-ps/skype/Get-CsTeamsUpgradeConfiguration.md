@@ -10,16 +10,17 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns information related to managing the upgrade to Teams from Skype for Business. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. It allows administrators to determine which application end users should use to join Skype for Business meetings.
 
-
-Get-CsTeamsUpgradeConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[\<CommonParameters\>\]
-
-Get-CsTeamsUpgradeConfiguration \[-Tenant \<guid\>\] \[-Filter \<string\>\]  \[\<CommonParameters\>\]
-
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsUpgradeConfiguration [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
- [-AsJob]
+Get-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +47,7 @@ The above cmdlet lists the properties of TeamsUpgradeConfiguration.
 {{Fill Identity Description}}
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -78,7 +79,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
