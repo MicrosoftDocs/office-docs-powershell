@@ -38,7 +38,7 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-DatabaseCopyActivationDisabledAndMoveNow <$true | $false>]
  [-DatabaseCopyAutoActivationPolicy <Unrestricted | IntrasiteOnly | Blocked>]
  [-DirectoryProcessorWorkCycle <EnhancedTimeSpan>]
- [-DirectoryProcessorWorkCycleCheckpoint <EnhancedTimeSpan>] [-DomainController <Fqdn>]
+ [-DirectoryProcessorWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-DomainController <Fqdn>]
  [-FaultZone <String>]
  [-FolderLogForManagedFoldersEnabled <$true | $false>]
