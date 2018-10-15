@@ -18,8 +18,14 @@ Note: This document is provided for early evaluation of Calling Plans support fo
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsInteropPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsInteropPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsInteropPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,7 +99,7 @@ PS C:\> {{ Add example code here }}
 {{Fill Filter Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online 
@@ -109,7 +115,7 @@ Accept wildcard characters: False
 {{Fill Identity Description}}
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online 
@@ -141,7 +147,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online 
