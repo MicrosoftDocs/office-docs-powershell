@@ -17,15 +17,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Owner
 ```
-Get-ADPermission [-Identity] <ADRawEntryIdParameter> [-DomainController <Fqdn>] [-Owner] [<CommonParameters>]
+Get-ADPermission [-Identity] <ADRawEntryIdParameter> [-Owner]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### AccessRights
 ```
-Get-ADPermission [-Identity] <ADRawEntryIdParameter> [-DomainController <Fqdn>]
- [-User <SecurityPrincipalIdParameter>] [<CommonParameters>]
+Get-ADPermission [-Identity] <ADRawEntryIdParameter> [-User <SecurityPrincipalIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,7 +89,7 @@ The Owner switch specifies that the owner of the object specified in the Identit
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Owner
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -105,7 +106,7 @@ If the name of the user contains spaces, enclose the name in quotation marks (")
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: AccessRights
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

@@ -17,22 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Identity
 ```
-Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-ReplicationOnly] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-DisableReplayLag] [-Confirm]
- [-DisableReplayLagReason <String>] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ReplicationOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### DisableReplayLag
 ```
-Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-ReplicationOnly] [-WhatIf] [<CommonParameters>]
+Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-DisableReplayLag] [-DisableReplayLagReason <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -112,7 +110,7 @@ The ReplicationOnly switch specifies whether to resume replication without affec
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -142,7 +140,7 @@ The DisableReplayLag parameter specifies that any configured replay lag time for
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: DisableReplayLag
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -157,7 +155,7 @@ The DisableReplayLagReason parameter is used with the DisableReplayLag parameter
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: DisableReplayLag
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### GlobalCache
 ```
 Reset-ProvisioningCache [-Server] <Fqdn> -Application <String> [-GlobalCache]
- [-CacheKeys <MultiValuedProperty>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-CacheKeys <MultiValuedProperty>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### OrganizationCache
 ```
-Reset-ProvisioningCache [-Server] <Fqdn> -Application <String> [-CacheKeys <MultiValuedProperty>] [-Confirm]
- [-CurrentOrganization] [-Organizations <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Reset-ProvisioningCache [-Server] <Fqdn> -Application <String>] [-CurrentOrganization] [-Organizations <MultiValuedProperty>]
+ [-CacheKeys <MultiValuedProperty>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,7 +90,7 @@ The GlobalCache switch specifies that all cache keys are cleared.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: GlobalCache
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -152,7 +156,7 @@ The CurrentOrganization switch specifies that the provision cache is reset for t
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: OrganizationCache
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -167,7 +171,7 @@ The Organizations parameter specifies the organizations that the provisioning ca
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: OrganizationCache
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
