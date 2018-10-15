@@ -17,20 +17,14 @@ This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
+### Identity (Default)
+```
+Get-CsUserServicesPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+```
+
 ### Filter
 ```
-Get-CsUserServicesPolicy [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-### Identity
-```
-Get-CsUserServicesPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Get-CsUserServicesPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsUserServicesPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,9 +95,6 @@ This syntax returns all the policies that have been configured at the per-user s
 
 You cannot use both the Filter and the Identity parameters in the same command.
 
-
-
-
 ```yaml
 Type: String
 Parameter Sets: Filter, (All)
@@ -140,21 +131,6 @@ To return one of these policies, use syntax similar to this:
 
 If this parameter is not included then all of the user services policies configured for use in your organization will be returned.
 
-
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
@@ -170,8 +146,6 @@ Accept wildcard characters: False
 
 ### -LocalStore
 Retrieves the user services policy data from the local replica of the Central Management store rather than from the Central Management store itself.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -194,8 +168,6 @@ For example:
 
 You should not use the Tenant parameter and the Identity parameter in the same command.
 
-
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
@@ -209,24 +181,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
