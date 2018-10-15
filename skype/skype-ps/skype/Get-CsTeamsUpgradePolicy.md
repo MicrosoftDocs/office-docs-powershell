@@ -10,15 +10,16 @@ schema: 2.0.0
 ## SYNOPSIS
 TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy.  Aspects of TeamsUpgradePolicy are still in preview mode as described below.
 
-
-Get-CsTeamsUpgradePolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[\<CommonParameters\>\]
-
-Get-CsTeamsUpgradePolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsUpgradePolicy [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsUpgradePolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsUpgradePolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -119,8 +120,6 @@ List the global instance of TeamsUpgradePolicy
 
 ## PARAMETERS
 
-
-
 ### -Identity
 If identity parameter is passed, this will return a specific instance. If no identity parameter is specified, the cmdlet returns all instances.
 
@@ -140,7 +139,7 @@ Accept wildcard characters: False
 {{Fill Filter Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -172,7 +171,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
