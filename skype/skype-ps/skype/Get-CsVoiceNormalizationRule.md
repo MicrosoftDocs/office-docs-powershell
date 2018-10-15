@@ -12,24 +12,17 @@ Returns information about the voice normalization rules used in your organizatio
 Voice normalization rules convert telephone dialing requirements (for example, dialing 9 to access an outside line) to the E.164 phone number format used by Skype for Business Server.
 This cmdlet was introduced in Lync Server 2010.
 
-
-
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Get-CsVoiceNormalizationRule [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsVoiceNormalizationRule [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsVoiceNormalizationRule [-Filter <String>] [-LocalStore] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Get-CsVoiceNormalizationRule [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>]
- [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsVoiceNormalizationRule [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,8 +32,6 @@ They define the requirements for converting--or translating--numbers from an int
 An understanding of regular expressions is helpful in order to define number patterns that will be translated.
 
 The same rules accessed by this cmdlet can also be accessed through the NormalizationRules property returned by a call to the Get-CsDialPlan cmdlet.
-
-
 
 ## EXAMPLES
 
@@ -81,24 +72,8 @@ We then pipe this collection to the Where-Object cmdlet to find all the items in
 ## PARAMETERS
 
 ### -Identity
-
 A unique identifier for the rule.
 If a value is specified for this parameter, it must be in the format scope/name; for example, site:Redmond/Rule1, where site:Redmond is the scope and Rule1 is the name.
-
-
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ```yaml
 Type: XdsIdentity
@@ -118,7 +93,6 @@ Uses wildcard strings to return a collection of normalization rules based on Ide
 Note that Filter works only on the scope portion of the Identity, not on the name.
 For example, the filter value *lob* will return all rules at the global scope (scopes that contain the letters lob), but not a rule with the identity site:Redmond/lobby, where lob is only in the name portion of the identity, not the scope.
 
-
 ```yaml
 Type: String
 Parameter Sets: Filter, (All)
@@ -135,7 +109,6 @@ Accept wildcard characters: False
 ### -LocalStore
 Retrieves the voice normalization rule from the local replica of the Central Management store, rather than the Central Management store itself.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -149,27 +122,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
