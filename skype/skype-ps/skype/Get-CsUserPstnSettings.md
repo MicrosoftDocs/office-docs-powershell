@@ -13,7 +13,7 @@ Use the Get-CsUserPstnSettings cmdlet to retrieve a voice-enabled user's public 
 ## SYNTAX
 
 ```
-Get-CsUserPstnSettings [[-Identity] <Object>] [-Confirm] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Get-CsUserPstnSettings [-Identity] <UserIdParameter> [-Tenant <Guid>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -87,7 +87,7 @@ Instead, the tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -117,7 +117,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter
