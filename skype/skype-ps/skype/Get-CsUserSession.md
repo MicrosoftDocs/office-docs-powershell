@@ -13,7 +13,7 @@ Use the Get-CsUserSession cmdlet to retrieve user session information within a s
 ## SYNTAX
 
 ```
-Get-CsUserSession [-StartTime <Object>] [-User <Object>] [-EndTime <Object>] [-AsJob] [<CommonParameters>]
+Get-CsUserSession -User <String> -StartTime <DateTimeOffset> [-EndTime <DateTimeOffset>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ This example returns user session information for Ken Myer from "02/22/2016 07:3
 PARAMVALUE: DateTimeOffset
 
 ```yaml
-Type: Object
+Type: DateTimeOffset
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -56,7 +56,7 @@ The input format is any form of user URI defined in Skype for Business Server 20
 For instance: -User "Ken.Myer@Contoso.com".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 PARAMVALUE: DateTimeOffset
 
 ```yaml
-Type: Object
+Type: DateTimeOffset
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
