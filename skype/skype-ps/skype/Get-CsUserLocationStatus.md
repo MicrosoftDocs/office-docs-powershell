@@ -13,7 +13,7 @@ Get-CsUserLocationStatus \[\[-Tenant\] \<guid\>\] \[\[-Identity\] \<UserIdParame
 ## SYNTAX
 
 ```
-Get-CsUserLocationStatus [[-Tenant] <Object>] [[-Identity] <Object>] [-Confirm] [-WhatIf] [-AsJob]
+Get-CsUserLocationStatus [[-Tenant] <Guid>] [[-Identity] <UserIdParameter>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 {{Fill Identity Description}}
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
