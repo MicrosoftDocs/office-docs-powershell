@@ -9,16 +9,18 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
-
-Get-CsTeamsMeetingPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
-
-Get-CsTeamsMeetingPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsMeetingPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsMeetingPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,8 +60,9 @@ This collection is then piped to the Where-Object cmdlet, which selects only tho
 
 ### -Filter
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -73,8 +76,9 @@ Accept wildcard characters: False
 ### -Identity
 Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: -Identity global. To refer to a per-user policy, use syntax similar to this: -Identity SalesDepartmentPolicy.
 If this parameter is omitted, then all the meeting policies configured for use in your organization will be returned.
+
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -102,7 +106,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
