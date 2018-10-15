@@ -8,10 +8,22 @@ schema: 2.0.0
 # Add-SPOGeoAdministrator
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a new SharePoint user or security Group as Get-Administrator of the current Multi-Geo Tenant.
 
 
 ## SYNTAX
+
+```powershell
+Add-SPOGeoAdministrator
+  -Title <string>
+  -WebTemplate <string>
+  -SiteScripts <SPOSiteScriptPipeBind[]>
+  [-Description <string>]
+  [-PreviewImageUrl <string>]
+  [-PreviewImageAltText <string>]
+  [-IsDefault]
+  [<CommonParameters>]
+```
 
 ### Group
 ```
@@ -24,16 +36,16 @@ Add-SPOGeoAdministrator [-User] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This Cmdlet requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to run this script and allows you to add a user or group in the SharePoint Tenant as GeoAdministrator
 
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
+```powershell
+Add-SPOGeoAdministrator -user contosoadmin
 ```
-{{ Add example code here }}
-```
-{{ Add example description here }}
+Add the user contosoadmin to the SharePoint Online multi-geo tenant
 
 
 ## PARAMETERS
@@ -77,12 +89,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
+
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
+
+[Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
+
+
+

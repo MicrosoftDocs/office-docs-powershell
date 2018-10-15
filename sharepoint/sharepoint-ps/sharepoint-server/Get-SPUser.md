@@ -13,7 +13,7 @@ Returns the user account or accounts that match a given search criteria.
 
 
 
-## SYNTAX
+## SYNTAX 
 
 ```
 Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
@@ -24,25 +24,39 @@ Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentColle
 The Get-SPUser cmdlet returns all SharePoint user accounts that match the scope given by the Identity, Web, or Group parameters.
 
 The Identity parameter can use the alias of a user for returning exact matches.
-However, a scope must be provided if the Get-SPUser cmdlet is to work.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### ------------------EXAMPLE 1------------------ 
 ```
-C:\PS>Get-SPUser -Web "http://zsharepoint2" -Group "Viewers"
+PS C:\>Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
 ```
 
-This example returns all members of the group Viewers on the Web site http://zsharepoint2.
+This example returns all members of the SharePoint group Viewers on the site https://sharepoint.contoso.com.
+
+
+### ------------------EXAMPLE 2------------------ 
+```
+PS C:\>Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+```
+
+This example returns the specific user identified via Windows Claims on the site https://sharepoint.contoso.com.
+
+### ------------------EXAMPLE 3------------------ 
+```
+PS C:\>Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+```
+
+This example returns the specific user identified via Classic Windows authentication on the site https://sharepoint.contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
-Specifies the GUID or login name of the user to be returned.
+Specifies the ID or login name of the user to be returned.
 
-The type must be a valid URL, in the form http://server_name, or GUID, in the form1234-5678-9807.
+The type must be a valid ID or login name, such as the format of 'CONTOSO\jdoe' for Classic Windows Authentication or 'i:0#.w|CONTOSO\jdoe' for Windows Claims.
 
 ```yaml
 Type: SPUserPipeBind

@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Set-DlpSensitiveInformationTypeConfig cmdlet to update existing data loss prevention (DLP) sensitive information type rule packages in the Security & Compliance Center.
+Use the Set-DlpSensitiveInformationTypeRulePackage cmdlet to update existing data loss prevention (DLP) sensitive information type rule packages in the Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

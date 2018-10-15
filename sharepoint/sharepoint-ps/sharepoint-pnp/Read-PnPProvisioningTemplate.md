@@ -22,14 +22,14 @@ Read-PnPProvisioningTemplate -Path <String>
 Read-PnPProvisioningTemplate -Path template.pnp
 ```
 
-Loads a PnP file from the file systems
+Loads a PnP file from the file system
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Read-PnPProvisioningTemplate -Path template.pnp -TemplateProviderExtensions $extensions
 ```
 
-Loads a PnP file from the file systems using some custom template provider extenions while loading the file.
+Loads a PnP file from the file system using some custom template provider extenions while loading the file.
 
 ## PARAMETERS
 

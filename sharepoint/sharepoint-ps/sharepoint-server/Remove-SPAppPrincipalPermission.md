@@ -63,15 +63,11 @@ Specifies the scope to which to apply the principal permission.
 
 The value is any of the following scopes:
 
---Farm
+--Site
 
---Site collection
+--SiteCollection
 
---SharePoint Online
-
---Web
-
---Documents, List, or Library
+--SiteSubscription
 
 ```yaml
 Type: SPCmdletAppPrincipalPermissionScope

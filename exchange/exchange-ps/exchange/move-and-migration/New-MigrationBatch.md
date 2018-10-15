@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MigrationBatch
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MigrationBatch
@@ -216,7 +216,7 @@ The Local switch specifies a local move (mailboxes are moved to a different mail
 Type: SwitchParameter
 Parameter Sets: Local
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -231,7 +231,7 @@ The Name parameter specifies an unique name for the migration batch. The maximum
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -248,7 +248,7 @@ The SourcePublicFolderDatabase parameter specifies the name of the source public
 Type: DatabaseIdParameter
 Parameter Sets: LocalPublicFolder
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -267,7 +267,7 @@ To disable the migration of the users in the original migration batch, use the D
 Type: MultiValuedProperty
 Parameter Sets: PreexistingUserIds
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -290,7 +290,7 @@ To disable the migration of the users in the original migration batch, use the D
 Type: MultiValuedProperty
 Parameter Sets: Preexisting
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -311,7 +311,7 @@ The AllowIncrementalSyncs parameter specifies whether to enable or disable incre
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -330,7 +330,7 @@ The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns 
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -349,7 +349,7 @@ You can use the TargetArchiveDatabases parameter to specify the database to migr
 Type: SwitchParameter
 Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -368,7 +368,7 @@ If you don't use this switch, you need to run the Complete-MigrationBatch cmdlet
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -385,7 +385,7 @@ The AutoRetryCount parameter specifies the number of attempts to restart the mig
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -402,7 +402,7 @@ If you don't use this switch, you need to manually start the migration batch by 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -419,7 +419,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 Type: Unlimited
 Parameter Sets: Local, LocalPublicFolder, Onboarding, Offboarding, XO1, PublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -467,7 +467,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -484,7 +484,7 @@ Use the following format for the value of this parameter: ([System.IO.File]::Rea
 Type: Byte[]
 Parameter Sets: LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, Abch
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -496,7 +496,7 @@ Accept wildcard characters: False
 Type: Byte[]
 Parameter Sets: Local, Onboarding
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -511,7 +511,7 @@ The DisableOnCopyswitch disables the original migration job item for a user if y
 Type: SwitchParameter
 Parameter Sets: PreexistingUserIds, Preexisting
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -530,7 +530,7 @@ A validation warning is displayed for any pre-existing mailbox in the target des
 Type: SwitchParameter
 Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -547,7 +547,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -604,7 +604,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 Type: Unlimited
 Parameter Sets: LocalPublicFolder, Onboarding, Offboarding, PublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -623,7 +623,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -640,7 +640,7 @@ Don't use this parameter with the SkipMoving parameter.
 Type: MultiValuedProperty
 Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -657,7 +657,7 @@ If you don't use this parameter, the status report isn't sent.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -693,7 +693,7 @@ Note : If the users don't have archive mailboxes, don't use this switch.
 Type: SwitchParameter
 Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -729,7 +729,7 @@ This parameter should only be used in the cloud-based service.
 Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -744,7 +744,7 @@ The SkipMerging parameter specifies the stages of the migration that you want to
 Type: MultiValuedProperty
 Parameter Sets: LocalPublicFolder, Onboarding, Offboarding, XO1
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -761,7 +761,7 @@ The SkipMoving parameter specifies the stages of the migration that you want to 
 Type: MultiValuedProperty
 Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -776,7 +776,7 @@ The SkipReports switch specifies that you want to skip automatic reporting for t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -799,7 +799,7 @@ This parameter is only enforced for staged Exchange migrations.
 Type: SkippableMigrationSteps[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -820,7 +820,7 @@ This parameter defines the settings that are used to connect to the server where
 Type: MigrationEndpointIdParameter
 Parameter Sets: Onboarding, PublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -866,7 +866,7 @@ You can only use this parameter for local moves and remote move migrations.
 Type: MultiValuedProperty
 Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -891,7 +891,7 @@ You can only use this parameter for local moves and remote move migrations.
 Type: MultiValuedProperty
 Parameter Sets: Local, Onboarding, Offboarding, XO1, Abch
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -908,7 +908,7 @@ This parameter is required for remote move onboarding and remote offboarding mig
 Type: String
 Parameter Sets: Onboarding, Offboarding
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -929,7 +929,7 @@ This parameter defines the settings that are used to connect to the destination 
 Type: MigrationEndpointIdParameter
 Parameter Sets: Offboarding
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -950,7 +950,7 @@ If the value contains spaces, enclose the value in quotation marks ("). The defa
 Type: ExTimeZoneValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -965,7 +965,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -988,7 +988,7 @@ Don't use this parameter unless you're directed to do so by Microsoft Customer S
 Type: MigrationWorkflowControlFlags
 Parameter Sets: Local, Onboarding, XO1
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1003,7 +1003,7 @@ The WorkflowControlFlags parameter specifies advanced controls for the steps tha
 Type: String
 Parameter Sets: WorkflowTemplate
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1020,7 +1020,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType
 Parameter Sets: Local
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

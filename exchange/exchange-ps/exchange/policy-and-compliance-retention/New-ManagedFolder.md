@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the managed folder object in Active Directory. The name can have up to 65 characters. Whereas the FolderName parameter specifies the folder name as displayed to users in e-mail clients, the Name parameter is used by Exchange administration tools to represent the managed folder object.
+The Name parameter specifies a unique name for the managed folder object in Active Directory. The name can have up to 65 characters. Whereas the FolderName parameter specifies the folder name as displayed to users in  clients, the Name parameter is used by Exchange administration tools to represent the managed folder object.
 
 The Name parameter shouldn't be confused with the FolderName parameter.
 

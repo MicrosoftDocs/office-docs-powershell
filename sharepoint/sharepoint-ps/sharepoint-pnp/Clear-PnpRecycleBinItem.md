@@ -29,7 +29,7 @@ Clear-PnPRecycleBinItem -Identity <RecycleBinItemPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPRecycleBinItems | ? FileLeafName -like "*.docx" | Clear-PnpRecycleBinItem
+Get-PnPRecycleBinItem | ? FileLeafName -like "*.docx" | Clear-PnpRecycleBinItem
 ```
 
 Permanently deletes all the items in the first and second stage recycle bins of which the file names have the .docx extension

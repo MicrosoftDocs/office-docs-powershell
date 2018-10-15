@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-ActiveSyncOrganizationSettings
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-ActiveSyncOrganizationSettings
@@ -17,57 +17,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### 
 ```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>]
- [-AdminMailRecipients <MultiValuedProperty>] [-Confirm] [-DefaultAccessLevel <Allow | Block | Quarantine>]
- [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Set-ActiveSyncOrganizationSettings [-Identity] <ActiveSyncOrganizationSettingsIdParameter>
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
-```
-
-### Set3
-```
-Set-ActiveSyncOrganizationSettings [-Identity] <ActiveSyncOrganizationSettingsIdParameter>
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
-```
-
-### Set4
-```
-Set-ActiveSyncOrganizationSettings [-Identity] <ActiveSyncOrganizationSettingsIdParameter>
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
-```
-
-### Set5
-```
-Set-ActiveSyncOrganizationSettings [-Identity] <ActiveSyncOrganizationSettingsIdParameter>
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
-```
-
-### Set1
-```
-Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>]
- [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-Confirm]
- [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>]
- [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf]
- [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [<CommonParameters>]
+Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [-Confirm] [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,7 +47,41 @@ To add or remove one or more values without affecting any existing entries, use 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowAccessForUnSupportedPlatform
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowRMSSupportForUnenlightenedApps
+The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
+
+- $true
+
+- $false (This is the default value)
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -114,7 +100,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -129,7 +115,7 @@ The DefaultAccessLevel parameter specifies the access level for new devices. Val
 Type: Allow | Block | Quarantine
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +132,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -159,22 +145,10 @@ The Identity parameter specifies the ActiveSync organization settings object tha
 
 ```yaml
 Type: ActiveSyncOrganizationSettingsIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: ActiveSyncOrganizationSettingsIdParameter
-Parameter Sets: Set2, Set3, Set4, Set5
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
@@ -190,7 +164,7 @@ The maximum length is 256 characters. If the value contains spaces, enclose the 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +181,7 @@ The maximum length is 256 characters. If the value contains spaces, enclose the 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -222,41 +196,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowAccessForUnSupportedPlatform
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set2, Set3, Set4, Set5, Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowRMSSupportForUnenlightenedApps
-The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
-
-- $true
-
-- $false (This is the default value)
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set2, Set3, Set4, Set5, Set1
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

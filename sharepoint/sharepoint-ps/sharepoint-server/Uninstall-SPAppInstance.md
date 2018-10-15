@@ -11,7 +11,7 @@ schema: 2.0.0
 Uninstalls an instance of an app.
 
 
-## SYNTAX
+## SYNTAX 
 
 ```
 Uninstall-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE--------------
 ```
-PS C:\>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
+PS C:\>$spapp = Get-SPAppInstance -AppInstanceId $instance.Id
 PS C:\>Uninstall-SPAppInstance -Identity $spapp
 ```
 

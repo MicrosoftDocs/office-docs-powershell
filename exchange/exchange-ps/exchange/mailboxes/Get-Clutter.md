@@ -36,17 +36,29 @@ This example returns the Clutter settings for the user Constancia Pena.
 
 ### -Identity
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
+
 For example:
+
 - Name
+
 - Display name
+
 - Alias
+
 - Distinguished name (DN)
+
 - Canonical DN
+
 - \<domain name>\\\<account name>
+
 - Email address
+
 - GUID
+
 - LegacyExchangeDN 
+
 - SamAccountName 
+
 - User ID or user principal name (UPN)
 
 ```yaml

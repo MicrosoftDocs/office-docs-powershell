@@ -29,6 +29,9 @@ Copies Workflow activites from SharePoint Server to Workflow Manager.
 ```
 PS C:\>$credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
 PS C:\>$site = Get-SPSite <siteurl>
+PS C:\>$proxy = Get-SPWorkflowServiceApplicationProxy
+PS C:\>$svcAddress = $proxy.GetWorkflowServiceAddress($site)
+PS C:\>Copy-SPActivitiesToWorkflowService -WorkflowServiceAddress $svcAddress -Credential $credential -Force $true
 ```
 
 

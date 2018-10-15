@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-WebServicesConnectivity
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Test-WebServicesConnectivity
@@ -13,36 +13,56 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-WebServicesConnectivity cmdlet to test client connectivity to Exchange Web Services virtual directories.
 
+**Note**: This cmdlet works best in Exchange 2010. In Exchange 2013 or later, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-###  (Default)
+### ClientAccessServer2010
 ```
-Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-AllowUnsecureAccess] [-Confirm]
- [-DomainController <Fqdn>] [-LightMode] [-MailboxCredential <PSCredential>]
- [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-ResetTestAccountCredentials] [-Timeout <UInt32>]
- [-TrustAnySSLCertificate] [-UseAutodiscoverForClientAccessServer] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>]
- -AutoDiscoverServer <ClientAccessServerIdParameter> [-Confirm] [-LightMode]
- [-MailboxCredential <PSCredential>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-MonitoringContext] [-Confirm] [-LightMode]
- [-MailboxCredential <PSCredential>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+Test-WebServicesConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-MailboxServer <ServerIdParameter>]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-UseAutodiscoverForClientAccessServer]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### AutoDiscoverServer
 ```
-Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>]
- [-ClientAccessServer <ClientAccessServerIdParameter>] [-Confirm] [-LightMode]
- [-MailboxCredential <PSCredential>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+Test-WebServicesConnectivity -AutoDiscoverServer <ClientAccessServerIdParameter>
+ [-Confirm]
+ [[-Identity] <MailboxIdParameter>]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### MonitoringContext
+```
+Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-MonitoringContext]
+ [-Confirm]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ClientAccessServer
+```
+Test-WebServicesConnectivity [[-Identity] <MailboxIdParameter>] [-ClientAccessServer <ClientAccessServerIdParameter>]
+ [-Confirm]
+ [-LightMode]
+ [-MailboxCredential <PSCredential>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,6 +86,8 @@ The test results are displayed on-screen. The cmdlet returns the following infor
 
 You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding \> \<filename\> to the command. For example:
 
+Test-WebServicesConnectivity -ClientAccessServer MBX01 | ConvertTo-Html \> "C:\\My Documents\\EWS Test.html"
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -85,17 +107,27 @@ This example tests the client connection to Exchange Web Services on the server 
 
 ## PARAMETERS
 
-### -AllowUnsecureAccess
-This parameter is available or functional only in Exchange Server 2010.
+### -AutoDiscoverServer
+The AutoDiscoverServer parameter specifies the server with the Client Access server role installed that's used for Autodiscover.
 
-The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Secure Sockets Layer (SSL).
+You can use any value that uniquely identifies the server. For example:
+
+- Name (for example, Exchange01)
+
+- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
+
+- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
+
+- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+
+You can't use this parameter with the ClientAccessServer parameter.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: ClientAccessServerIdParameter
+Parameter Sets: AutoDiscoverServer
 Aliases:
-Applicable: Exchange Server 2010
-Required: False
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -119,9 +151,9 @@ You can't use this parameter with the AutoDiscoverServer parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: (All)
+Parameter Sets: ClientAccessServer2010
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010
 Required: False
 Position: 1
 Default value: None
@@ -131,13 +163,71 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: ClientAccessServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the mailbox to use for the test. You can use any value that uniquely identifies the mailbox.
+
+For example:
+
+- Name
+
+- Display name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+When you use this parameter, you also need to use the MailboxCredential parameter.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: AutoDiscoverServer, MonitoringContext, ClientAccessServer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AllowUnsecureAccess
+This parameter is available or functional only in Exchange Server 2010.
+
+The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Secure Sockets Layer (SSL).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -152,7 +242,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +276,7 @@ When you use this switch, the EWS: ConvertId test is run instead of the EWS: Get
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -205,7 +295,7 @@ This parameter is required when you use the Identity parameter.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -235,7 +325,7 @@ The MonitoringContext switch includes the associated monitoring events and perfo
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -245,9 +335,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: MonitoringContext
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -294,7 +384,7 @@ This switch is useful for testing internal URLs, because a URL that has an assoc
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -303,6 +393,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseAutodiscoverForClientAccessServer
+This parameter is available or functional only in Exchange Server 2010.
+
 The UseAutodiscoverForClientAccessServer parameter specifies whether the test should use the Autodiscover service to locate the Client Access server.
 
 ```yaml
@@ -324,79 +416,11 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoDiscoverServer
-The AutoDiscoverServer parameter specifies the server with the Client Access server role installed that's used for Autodiscover.
-
-You can use any value that uniquely identifies the server. For example:
-
-- Name (for example, Exchange01)
-
-- Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
-
-- Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
-
-- GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
-
-You can't use this parameter with the ClientAccessServer parameter.
-
-```yaml
-Type: ClientAccessServerIdParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox to use for the test. You can use any value that uniquely identifies the mailbox.
-
-For example:
-
-- Name
-
-- Display name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-When you use this parameter, you also need to use the MailboxCredential parameter.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: Set3, Set2, Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

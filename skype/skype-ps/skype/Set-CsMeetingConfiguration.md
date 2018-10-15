@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomFooterText
-Text to be used on custom meeting invitations.
+Text to be used on custom meeting invitations. Multiple lines are supported using the Enter key.
 
 ```yaml
 Type: String

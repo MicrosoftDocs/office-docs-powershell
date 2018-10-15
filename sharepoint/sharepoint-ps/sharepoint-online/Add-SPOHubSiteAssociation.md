@@ -21,9 +21,6 @@ Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> `
 ## DESCRIPTION
 Use this cmdlet to associate a site with a hub site.
 
-> [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
-
 ## EXAMPLES
 
 ### Example 1

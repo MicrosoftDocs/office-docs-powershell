@@ -68,5 +68,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+During a Cummulative Update installation if you face a situation where the full PSConfig cannot run then this cmdlet should be executed on all SharePoint servers to keep the Farm in a supported state. 
+
 ## RELATED LINKS
 

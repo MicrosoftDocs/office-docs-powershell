@@ -1,8 +1,21 @@
 ---
-Module Name: Skype for Business PowerShell
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Module Name: SkypeForBusiness
+Module Guid: 01dfdcd9-c48d-46a9-b09a-587ca5c4829a
+Help Version:  17.0.15229.2100
+Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/skype/
 title: skype
 Locale: en-US
+Additional Locale: de-DE,es-ES,fr-FR,it-IT,ja-JP,ko-KR,pt-BR,ru-RU,zh-CN,zh-TW
+de-DE Version: 17.0.15229.2100
+es-ES Version: 17.0.15229.2100
+fr-FR Version: 17.0.15229.2100
+it-IT Version: 17.0.15229.2100
+ja-JP Version: 17.0.15229.2100
+ko-KR Version: 17.0.15229.2100
+pt-BR Version: 17.0.15229.2100
+ru-RU Version: 17.0.15229.2100
+zh-CN Version: 17.0.15229.2100
+zh-TW Version: 17.0.15229.2100
 ---
 
 # Skype for Business PowerShell

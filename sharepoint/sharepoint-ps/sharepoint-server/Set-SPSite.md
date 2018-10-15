@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSize
-Sets the maximum storage size for the site collection in megabytes.
+Sets the maximum storage size for the site collection in bytes.
 
 The integer value must be larger than the WarningSize value.
 You cannot use this parameter if the site collection is using a quota template.
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -WarningSize
-Sets the storage warning level for the site collection.
+Sets the storage warning level for the site collection in bytes.
 
 The integer value must be between 0 and the MaxSize value.
 You cannot use this parameter if the site collection is using a quota template.

@@ -124,7 +124,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: cf cf
+Aliases: cf
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ The EnableOrganizationDomainsProtection parameter specifies whether to enable 
 
 - $true: Domain impersonation protection is enabled for all registered domains in the Office 365 organization.
 
-- $false: Domain impersonation protection protection isn't enabled for all registered domains in the Office 365 organization. This is the default value. You can enable domain impersonation protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
+- $false: Domain impersonation protection isn't enabled for all registered domains in the Office 365 organization. This is the default value. You can enable domain impersonation protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
 
 ```yaml
 Type: $true | $false

@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-This cmdlet will be deprecated after January 29, 2018. For information about the available replacement Microsoft Graph reports in Office 365, see the subtopics of Working with Office 365 usage reports in Microsoft Graph (https://go.microsoft.com/fwlink/p/?LinkID=865135).
+This cmdlet was deprecated in January, 2018. For information about the available replacement Microsoft Graph reports in Office 365, see the subtopics of Working with Office 365 usage reports in Microsoft Graph (https://go.microsoft.com/fwlink/p/?LinkID=865135).
 
 Use the Get-ConnectionByClientTypeReport cmdlet to view a summary of the different types of clients that connected to all mailboxes in your organization. The client types indicate different protocols, for example, Outlook on the web, MAPI, POP3, IMAP4, Exchange ActiveSync, and Exchange Web Services.
 

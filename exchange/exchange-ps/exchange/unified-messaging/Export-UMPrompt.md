@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Export-UMPrompt
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Export-UMPrompt
@@ -17,56 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### AACustomGreeting
 ```
-Export-UMPrompt [-AfterHoursWelcomeGreeting] -UMAutoAttendant <UMAutoAttendantIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-TestBusinessName <String>] [-WhatIf] [-ExportAsWav <$true | $false>]
- [<CommonParameters>]
-```
-
-### Set4
-```
-Export-UMPrompt [-AfterHoursWelcomeGreetingAndMenu] -UMAutoAttendant <UMAutoAttendantIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-TestMenuKeyMapping <CustomMenuKeyMapping[]>] [-WhatIf]
- [-ExportAsWav <$true | $false>] [<CommonParameters>]
+Export-UMPrompt -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExportAsWav <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### DPCustomGreeting
 ```
-Export-UMPrompt [-BusinessHours] -UMAutoAttendant <UMAutoAttendantIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-ExportAsWav <$true | $false>] [<CommonParameters>]
-```
-
-### Set1
-```
-Export-UMPrompt [-BusinessHoursWelcomeGreeting] -UMAutoAttendant <UMAutoAttendantIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-TestBusinessName <String>] [-WhatIf] [-ExportAsWav <$true | $false>]
- [<CommonParameters>]
-```
-
-### Set7
-```
-Export-UMPrompt [-BusinessHoursWelcomeGreetingAndMenu] -UMAutoAttendant <UMAutoAttendantIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-TestMenuKeyMapping <CustomMenuKeyMapping[]>] [-WhatIf] -PromptFileName <String>
- [-ExportAsWav <$true | $false>] [<CommonParameters>]
-```
-
-### Set6
-```
-Export-UMPrompt [-BusinessLocation] -UMAutoAttendant <UMAutoAttendantIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-ExportAsWav <$true | $false>] [<CommonParameters>]
-```
-
-### Set5
-```
-Export-UMPrompt -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-ExportAsWav <$true | $false>] [<CommonParameters>]
-```
-
-### Set8
-```
-Export-UMPrompt -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-ExportAsWav <$true | $false>] [<CommonParameters>]
+Export-UMPrompt -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExportAsWav <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,113 +58,17 @@ Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoA
 
 This example exports a custom greeting for the UM auto attendant MyUMAutoAttendant and saves it to the file welcomegreetingbackup.mp3.
 
-### -------------------------- Example 3 --------------------------
-```
-Export-UMPrompt -AfterHoursWelcomeGreeting -UMAutoAttendant MyUMAutoAttendant -TestBusinessName "Northwind Traders"; set-content -Path "d:\ AfterHoursWelcomeGreeting.mp3" -Value $prompt.AudioData -Encoding Byte
-```
-
-In Exchange Server 2010, this example exports the after hours welcome greeting for the UM auto attendant MyUMAutoAttendant, saves it as the file AfterHoursWelcomeGreeting.mp3 and uses Northwind Traders as the test business name.
 
 ## PARAMETERS
-
-### -AfterHoursWelcomeGreeting
-The AfterHoursWelcomeGreeting parameter specifies the system generated, after hours welcome greeting for the UM auto attendant specified.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2010
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AfterHoursWelcomeGreetingAndMenu
-The AfterHoursWelcomeGreetingAndMenu parameter specifies the system- generated after hours welcome greeting and menu prompts for the UM auto attendant specified.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Server 2010
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BusinessHours
-The BusinessHours parameter specifies that the prompt to be returned is the business hours prompt of the auto attendant.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BusinessHoursWelcomeGreeting
-The BusinessHoursWelcomeGreeting parameter specifies the system-generated business hours welcome greeting for the UM auto attendant specified.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BusinessHoursWelcomeGreetingAndMenu
-The BusinessHoursWelcomeGreetingAndMenu parameter specifies the system-generated business hours welcome greeting and menu prompts for the UM auto attendant specified.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set7
-Aliases:
-Applicable: Exchange Server 2010
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BusinessLocation
-The BusinessLocation parameter specifies the business location greeting played for callers when the caller calls into a UM auto attendant and specifies the business location.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set6
-Aliases:
-Applicable: Exchange Server 2010
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -PromptFileName
 The PromptFileName parameter specifies the name of the custom prompt to export.
 
 ```yaml
 Type: String
-Parameter Sets: Set7, Set5, Set8
+Parameter Sets: AACustomGreeting, DPCustomGreeting
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -211,9 +81,9 @@ The UMAutoAttendant parameter specifies the UM auto attendant ID. This parameter
 
 ```yaml
 Type: UMAutoAttendantIdParameter
-Parameter Sets: Set3, Set4, Set2, Set1, Set7, Set6, Set5
+Parameter Sets: AACustomGreeting
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -226,9 +96,9 @@ The UMDialPlan parameter specifies the UM dial plan ID. This parameter specifies
 
 ```yaml
 Type: UMDialPlanIdParameter
-Parameter Sets: Set8
+Parameter Sets: DPCustomGreeting
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -247,7 +117,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +134,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -272,33 +142,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TestBusinessName
-This parameter is available or functional only in Exchange Server 2010.
+### -ExportAsWav
+This parameter is only available in the cloud-based service.
 
-The TestBusinessName parameter specifies whether the business name configured on a UM auto attendant or the business name specified by this parameter is used to generate the welcome greeting prompt.
-
-```yaml
-Type: String
-Parameter Sets: Set3, Set1
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TestMenuKeyMapping
-This parameter is available or functional only in Exchange Server 2010.
-
-The TestMenuKeyMapping parameter specifies whether the existing key mappings configured on a UM auto attendant or the key mapping menu specified by this parameter is used to generate the welcome greeting and menu.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: CustomMenuKeyMapping[]
-Parameter Sets: Set4, Set7
+Type: $true | $false
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -313,22 +166,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExportAsWav
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

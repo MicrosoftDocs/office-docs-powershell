@@ -8,28 +8,29 @@ schema: 2.0.0
 # New-SPOPublicCdnOrigin
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a new public CDN on a document library in your Sharepoint Online Tenant
 
 
 ## SYNTAX
 
-```
+```powershell
 New-SPOPublicCdnOrigin [-Url] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This Cmdlet creates a new Public CDN Origin in your SPO Tenant
 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
-```
+### EXAMPLE 1
+```powershell
 New-SPOPublicCdnOrigin –URL https://contoso.sharepoint.com/sites/CDN/CDNFilesLibrary/
 ```
 
 This example shows how to you can setup a new Public CDN on a document library in your SharePoint online tenant.
+
 
 
 ## PARAMETERS
@@ -51,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-{{Fill Url Description}}
+Specify the URL that will be enabled for Public CDN in your tenant
 
 ```yaml
 Type: String
@@ -86,14 +87,23 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-### System.String
-
-## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
+
+[SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+
+[Get-SPOPublicCdnOrigins](Get-SPOPublicCdnOrigins.md)
+
+[Remove-SPOPublicCdnOrigin](Remove-SPOPublicCdnOrigin.md)
+
+
+
+
+
