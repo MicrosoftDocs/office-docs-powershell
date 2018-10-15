@@ -13,8 +13,6 @@ Assigns a client policy to a user or a group of users.
 Among other things, client policies help determine the features of Skype for Business Server that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 This cmdlet was introduced in Lync Server 2010.
 
-
-
 ## SYNTAX
 
 ### Identity (Default)
@@ -44,16 +42,13 @@ In order to assign per-user policies to users, you must use the Grant-CsClientPo
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 Grant-CsClientPolicy -Identity "Ken Myer" -PolicyName SalesPolicy
 ```
 
 In Example 1, the client policy SalesPolicy is assigned to the user with the Identity Ken Myer.
 
-
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 Get-CsUser -LDAPFilter "Department=Sales" | Grant-CsClientPolicy -PolicyName SalesPolicy
 ```
 
@@ -61,12 +56,9 @@ In Example 2, all the users who belong to the Sales department are assigned the 
 The command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the users who are members of the Sales department.
 This collection of users is then piped to the Grant-CsClientPolicy cmdlet, which assigns the policy SalesPolicy to each user in the collection.
 
-
 ### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-
 Get-CsUser -LDAPFilter "(&(Title=Accountant)(l=Redmond))" | Grant-CsClientPolicy -PolicyName RedmondAccountingPolicy
-
 ```
 
 In Example 3, the client policy RedmondAccountingPolicy is assigned to all the users who meet two criteria: 1) the user must have the job title Accountant; and, 2) the user must work in the city of Redmond.
@@ -76,10 +68,8 @@ The filter value "(&(Title=Accountant)(l=Redmond))" limits the returned data to 
 
 The resulting collection is then piped to the Grant-CsClientPolicy cmdlet, which assigns the policy RedmondAccountingPolicy to each user in the collection.
 
-
 ### -------------------------- EXAMPLE 4 -------------------------- 
 ```
-
 Get-CsUser -LdapFilter "(|(Title=Accountant)(Title=Senior Accountant))" | Grant-CsClientPolicy -PolicyName AccountingPolicy
 ```
 
@@ -88,10 +78,8 @@ To carry out this task, the Get-CsUser cmdlet and the LdapFilter parameter are u
 The filter value "(|(Title=Accountant)(Title=Senior Accountant))" limits the returned data to users with the job title Accountant (Title=Accountant) or (|) users with the job title Senior Accountant (Title=Senior Accountant).
 This filtered collection is then piped to the Grant-CsClientPolicy cmdlet, which assigns the client policy AccountingPolicy to each user in the collection.
 
-
 ### -------------------------- EXAMPLE 5 -------------------------- 
 ```
-
 Get-CsUser -Filter {RegistrarPool -eq "atl-cs-001.litwareinc.com"} | Grant-CsClientPolicy -PolicyName AtlantaBranchPolicy
 ```
 
