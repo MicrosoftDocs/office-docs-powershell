@@ -21,9 +21,9 @@ This cmdlet was introduced in Lync Server 2010.
 
 **Below Content Applies To:** Skype for Business Online
 
-Get-CsUCPhoneConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
+Get-CsUCPhoneConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
 
-Get-CsUCPhoneConfiguration \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
+Get-CsUCPhoneConfiguration \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
 
 **Below Content Applies To:** Skype for Business Server 2015
 
