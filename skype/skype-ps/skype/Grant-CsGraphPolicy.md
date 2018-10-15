@@ -38,7 +38,6 @@ To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has 
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
 Grant-CsGraphPolicy -PolicyName "GraphDisabled" -Identity Ken.Myer
 ```
 
