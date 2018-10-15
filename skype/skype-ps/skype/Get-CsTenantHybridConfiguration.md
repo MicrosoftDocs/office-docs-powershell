@@ -13,9 +13,15 @@ A hybrid scenario (also known as a split-domain scenario) is a Skype for Busines
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTenantHybridConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>]
- [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsTenantHybridConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTenantHybridConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,22 +67,6 @@ In Example 2, property values are returned for the custom tenant hybrid configur
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 Enables you to use wildcard characters in order to return a collection of tenant hybrid configuration settings.
 Because you are limited to a single, global collection of hybrid configuration settings there is no need to use the Filter parameter.
@@ -85,7 +75,7 @@ However, this is valid syntax for the Get-CsTenantHybridConfiguration cmdlet:
 `Get-CsTenantHybridConfiguration -Filter "g*"`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -106,7 +96,7 @@ Because you are limited to a single, global collection of hybrid configuration s
 To modify the settings for an individual tenant, use the Tenant parameter instead of the Identity parameter.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -145,7 +135,7 @@ Instead, the tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
