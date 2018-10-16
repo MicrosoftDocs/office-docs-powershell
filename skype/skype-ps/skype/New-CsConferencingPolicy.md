@@ -17,27 +17,25 @@ This cmdlet was introduced in Lync Server.
 ## SYNTAX
 
 ```
-New-CsConferencingPolicy [-Identity] <XdsIdentity> [-AllowAnnotations <Boolean>]
- [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
- [-AllowConferenceRecording <Boolean>] [-AllowExternalUserControl <Boolean>]
- [-AllowExternalUsersToSaveContent <Boolean>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
- [-AllowParticipantControl <Boolean>] [-AllowPolls <Boolean>]
- [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-Description <String>]
- [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-EnableDataCollaboration <Boolean>]
- [-EnableDialInConferencing <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
- [-EnableP2PRecording <Boolean>] [-EnableP2PVideo <Boolean>] [-MaxMeetingSize <UInt32>]
- [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-Force] [-InMemory] [-WhatIf] [-Confirm]
- [-AllowExternalUsersToRecordMeeting <Boolean>] [-AppSharingBitRateKb <Int64>] [-AudioBitRateKb <UInt32>]
- [-FileTransferBitRateKb <Int64>] [-VideoBitRateKb <Int64>] [-AllowLargeMeetings <Boolean>]
- [-AllowMultiView <Boolean>] [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowSharedNotes <Boolean>]
- [-DisablePowerPointAnnotations <Boolean>] [-EnableMultiViewJoin <Boolean>]
- [-TotalReceiveVideoBitRateKb <Int64>] [-AllowFederatedParticipantJoinAsSameEnterprise <Object>]
- [-AllowOfficeContent <Object>] [-AllowQandA <Object>] [-ApplicationSharingMode <Object>]
- [-BypassDualWrite <Object>] [-CloudRecordingServiceSupport <Object>]
- [-EnableOnlineMeetingPromptForLyncResources <Object>] [-EnableReliableConferenceDeletion <Object>]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+New-CsConferencingPolicy [-Tenant <System.Guid>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowMultiView <Boolean>] [-Description <String>] [-AllowParticipantControl <Boolean>]
+ [-AllowAnnotations <Boolean>] [-DisablePowerPointAnnotations <Boolean>]
+ [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-ApplicationSharingMode <String>]
+ [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
+ [-AllowExternalUsersToSaveContent <Boolean>] [-AllowExternalUserControl <Boolean>]
+ [-AllowExternalUsersToRecordMeeting <Boolean>] [-AllowPolls <Boolean>] [-AllowSharedNotes <Boolean>]
+ [-AllowQandA <Boolean>] [-AllowOfficeContent <Boolean>] [-EnableDialInConferencing <Boolean>]
+ [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-AllowConferenceRecording <Boolean>]
+ [-EnableP2PRecording <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
+ [-EnableP2PVideo <Boolean>] [-AllowLargeMeetings <Boolean>]
+ [-EnableOnlineMeetingPromptForLyncResources <Boolean>] [-EnableDataCollaboration <Boolean>]
+ [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-MaxMeetingSize <UInt32>]
+ [-AudioBitRateKb <UInt32>] [-VideoBitRateKb <Int64>] [-AppSharingBitRateKb <Int64>]
+ [-FileTransferBitRateKb <Int64>] [-TotalReceiveVideoBitRateKb <Int64>] [-EnableMultiViewJoin <Boolean>]
+ [-CloudRecordingServiceSupport <CloudRecordingServiceSupport>] [-EnableReliableConferenceDeletion <Boolean>]
+ [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-
 ## DESCRIPTION
 
 Conferencing is an important part of Skype for Business Server: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
@@ -67,7 +65,6 @@ The following parameters are not applicable to Skype for Business Online: Applic
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 New-CsConferencingPolicy -Identity SalesConferencingPolicy -MaxMeetingSize 50
 ```
 
@@ -77,7 +74,6 @@ This policy will use all the default values for a conferencing policy except one
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 New-CsConferencingPolicy -Identity site:Redmond -MaxMeetingSize 100 -AllowParticipantControl $False
 ```
 
@@ -89,12 +85,10 @@ All other policy properties will use the default values.
 ## PARAMETERS
 
 ### -Identity
-
 Unique identifier for the conferencing policy to be created.
 Conferencing policies can be created at the site or per-user scopes.
 To create a site policy, use syntax similar to this: `-Identity site:Redmond.`
 To create a per-user policy, use syntax similar to this: `-Identity SalesConferencingPolicy.`
-
 
 ```yaml
 Type: XdsIdentity
@@ -110,7 +104,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnnotations
-
 Indicates whether or not participants are allowed to make on-screen annotations on any content shared during the meeting; in addition, this setting determines whether or not whiteboarding is allowed in the conference.
 The default value is True.
 
@@ -945,13 +938,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFederatedParticipantJoinAsSameEnterprise
-
 When set to True ($True), allows federated meeting participants to join the meeting as though they were internal users rather than external users.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -964,13 +954,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfficeContent
-
 When set to False, prevents users from using Office content in their conferences.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -983,17 +970,14 @@ Accept wildcard characters: False
 ```
 
 ### -AllowQandA
-
 When set to True (the default value) the user will be able to include the Questions and Answers Manager in any online conference that he or she organizes.
 When set to False, the user will be prohibited from including Questions and Answers Manager in any of his or her conferences.
 
 This setting applies to the user who organizes the conference: if set to False, no conference created by a user affected by this policy will allow the use of the Questions and Answers Manager.
 However, the user can make use of the Questions and Answers Manager in other conferences where polls are allowed.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1009,25 +993,10 @@ Accept wildcard characters: False
 Determines the protocol used for screen sharing - VbSS vs RDP.  This parameter is used only in SfB Server.  To disable VbSS for a user, use the value "RDP".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -1040,7 +1009,7 @@ Accept wildcard characters: False
 {{Fill CloudRecordingServiceSupport Description}}
 
 ```yaml
-Type: Object
+Type: CloudRecordingServiceSupport
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NotSupported, Supported, Required
@@ -1054,14 +1023,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineMeetingPromptForLyncResources
-
 When set to True, users will be prompted any time they schedule a meeting in Outlook that includes invitees (such as a meeting room) that would benefit from having the meeting held online.
 The default value is False.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Server 2015, Skype for Business Server 2019
@@ -1077,7 +1043,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1090,7 +1056,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the new conferencing policy is being created.
 For example:
 
@@ -1100,10 +1065,8 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
-
-
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
