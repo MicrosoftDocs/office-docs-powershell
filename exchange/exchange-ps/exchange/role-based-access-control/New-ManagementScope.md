@@ -17,42 +17,55 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set4
+### DatabaseList
 ```
-New-ManagementScope [-Name] <String> -DatabaseList <DatabaseIdParameter[]> [-Confirm]
- [-DomainController <Fqdn>] [-Exclusive] [-Force] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set5
-```
-New-ManagementScope [-Name] <String> -DatabaseRestrictionFilter <String> [-Confirm] [-DomainController <Fqdn>]
- [-Exclusive] [-Force] [-WhatIf] [<CommonParameters>]
-```
-
-### Set6
-```
-New-ManagementScope [-Name] <String> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-New-ManagementScope [-Name] <String> -RecipientRestrictionFilter <String> [-Confirm] [-DomainController <Fqdn>]
- [-Exclusive] [-Force] [-RecipientRoot <OrganizationalUnitIdParameter>] 
+New-ManagementScope [-Name] <String> -DatabaseList <DatabaseIdParameter[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Exclusive]
+ [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### DatabaseFilter
 ```
-New-ManagementScope [-Name] <String> -ServerList <ServerIdParameter[]> [-Confirm] [-DomainController <Fqdn>]
- [-Exclusive] [-Force] [-WhatIf] [<CommonParameters>]
+New-ManagementScope [-Name] <String> -DatabaseRestrictionFilter <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Exclusive]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### RecipientFilter
 ```
-New-ManagementScope [-Name] <String> -ServerRestrictionFilter <String> [-Confirm] [-DomainController <Fqdn>]
- [-Exclusive] [-Force] [-WhatIf] [<CommonParameters>]
+New-ManagementScope [-Name] <String> -RecipientRestrictionFilter <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Exclusive]
+ [-Force]
+ [-RecipientRoot <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ServerList
+```
+New-ManagementScope [-Name] <String> -ServerList <ServerIdParameter[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Exclusive]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ServerFilter
+```
+New-ManagementScope [-Name] <String> -ServerRestrictionFilter <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Exclusive]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,6 +116,21 @@ This example creates the Seattle Databases scope and sets a database restriction
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the name of the management scope. The name can be up to 64 characters. If the name contains spaces, enclose the name in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DatabaseList
 This parameter is available only in on-premises Exchange.
 
@@ -110,7 +138,7 @@ The DatabaseList parameter specifies a list of databases to which the scope shou
 
 ```yaml
 Type: DatabaseIdParameter[]
-Parameter Sets: Set4
+Parameter Sets: DatabaseList
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -127,26 +155,11 @@ The DatabaseRestrictionFilter parameter specifies the filter to apply to databas
 
 ```yaml
 Type: String
-Parameter Sets: Set5
+Parameter Sets: DatabaseFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the name of the management scope. The name can be up to 64 characters. If the name contains spaces, enclose the name in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -157,7 +170,7 @@ The RecipientRestrictionFilter parameter specifies the filter to apply to recipi
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: RecipientFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
@@ -174,7 +187,7 @@ The ServerList parameter specifies a list of servers to which the scope should b
 
 ```yaml
 Type: ServerIdParameter[]
-Parameter Sets: Set3
+Parameter Sets: ServerList
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -191,7 +204,7 @@ The ServerRestrictionFilter parameter specifies the filter to apply to server ob
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ServerFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -244,7 +257,7 @@ When you create exclusive management scopes, only users or universal security gr
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set5, Set1, Set3, Set2
+Parameter Sets: DatabaseList, DatabaseFilter, RecipientFilter, ServerList, ServerFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -259,7 +272,7 @@ The Force switch specifies that an exclusive scope should be created without sho
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set5, Set1, Set3, Set2
+Parameter Sets: DatabaseList, DatabaseFilter, RecipientFilter, ServerList, ServerFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -274,7 +287,7 @@ The RecipientRoot parameter specifies the organizational unit (OU) under which t
 
 ```yaml
 Type: OrganizationalUnitIdParameter
-Parameter Sets: Set1
+Parameter Sets: RecipientFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
