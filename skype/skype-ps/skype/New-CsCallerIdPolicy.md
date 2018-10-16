@@ -13,9 +13,9 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-New-CsCallerIdPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-CallerIDSubstitute <Object>]
- [-Confirm] [-Description <Object>] [-EnableUserOverride <Object>] [-Force] [-InMemory] [-Name <Object>]
- [-ServiceNumber <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+New-CsCallerIdPolicy [-Tenant <Guid>] [-Description <String>] [-Name <String>]
+ [-EnableUserOverride <Boolean>] [-ServiceNumber <String>] [-CallerIDSubstitute <CallerIDSubstitute>]
+ [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +25,6 @@ Provide the detailed description here.
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
 Insert example commands for example 1.
 ```
 
@@ -38,7 +37,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: XdsIdentity
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -50,27 +49,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CallerIDSubstitute
 PARAMVALUE: Anonymous | Service | LineUri
 
 ```yaml
-Type: Object
+Type: CallerIDSubstitute
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -102,7 +85,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -118,7 +101,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -166,7 +149,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -182,7 +165,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -198,7 +181,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
