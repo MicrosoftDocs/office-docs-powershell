@@ -1733,11 +1733,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMediaRedirection
-
 When set to True ($True) allows audio and video streams to be separated from other network traffic; in turn, this allows client devices to do encoding and decoding of audio and video locally.
 Media redirection typically results in lower bandwidth usage, higher server scalability, and a more-optimal user experience compared to similar techniques such as device remoting or codec compression.
-
-
 
 ```yaml
 Type: Boolean
@@ -1753,12 +1750,9 @@ Accept wildcard characters: False
 ```
 
 ### -HelpEnvironment
-
 When set to Office 365, the Skype for Business Online client help documentation for Skype for Business will be shown to users rather than the on-premises help shown by default.
 You can either set HelpEnvironment to Office 365 or to a null value ($Null).
 If set to a null value (the default value) then the on-premises help will be shown to users.
-
-
 
 ```yaml
 Type: String
@@ -1774,7 +1768,6 @@ Accept wildcard characters: False
 ```
 
 ### -TracingLevel
-
 Enables Administrators to manage event tracing and logging in Skype for Business.
 Allowed values are:
 
@@ -1785,7 +1778,6 @@ Light - Minimal tracing is performed, and the user cannot change this setting.
 Full - Verbose tracing is performed, and the user cannot change this setting.
 
 By default TracingLevel is set to Light.
-
 
 
 ```yaml
@@ -1801,27 +1793,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableClientAutoPopulateWithTeam
-
 When set to true, allows a user's Skype client to be autopopulated with members of his or her immediate team.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1834,11 +1810,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeContactsFolder
-
 When set to false, this allows admins to hide Skype for Business contacts from showing up in users' Outlook and Outlook on the Web clients.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1851,14 +1826,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHighPerformanceConferencingAppSharing
-
 When set to True, enables better performance in applications (such as CAD/CAM applications) that have a high screen refresh rate.
 However, this improved performance will reduce the system resources and network bandwidth available to other applications.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1871,14 +1843,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHighPerformanceP2PAppSharing
-
 When set to True, allows a peer-to-peer application sharing session to exceed the maximum frame rate of 2.5 frames per second.
 The default value is False.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1894,7 +1863,7 @@ Accept wildcard characters: False
 {{Fill EnableMeetingEngagement Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1907,11 +1876,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedback
-
 When set to true, allows users to provide feedback through the "help->report a problem" menu options in the client.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1927,7 +1895,7 @@ Accept wildcard characters: False
 When set to true, allows users to provide screenshots of their clients when reporting problems.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1940,16 +1908,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableServerConversationHistory
-
 When set to True ($True), allows conversation histories, missed call notifications, and missed IM notifications to be stored on the server instead of in client mailboxes.
 This makes it easier for users to retrieve that information from a mobile device.
 
 The default value is False ($False).
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1962,13 +1927,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSkypeUI
-
 When set to True ($True), this parameter allows administrators to enable the Skype for Business user interface instead of the Lync interface for the Skype for Business client.
 
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1984,7 +1946,7 @@ Accept wildcard characters: False
 {{Fill EnableViewBasedSubscriptionMode Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1997,13 +1959,10 @@ Accept wildcard characters: False
 ```
 
 ### -IMLatencyErrorThreshold
-
 If IM latency is greater than the threshold value (in milliseconds), the client will submit a CER.
 
-
-
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2016,13 +1975,10 @@ Accept wildcard characters: False
 ```
 
 ### -IMLatencySpinnerDelay
-
 Amount of time, in milliseconds, to wait before showing the spinner in the client when IM message delivery is delayed.
 
-
-
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2038,7 +1994,7 @@ Accept wildcard characters: False
 {{Fill PublicationBatchDelay Description}}
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2052,12 +2008,8 @@ Accept wildcard characters: False
 
 ### -RateMyCallAllowCustomUserFeedback
 
-PARAMVALUE: $true | $false
-
-
-
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2071,12 +2023,8 @@ Accept wildcard characters: False
 
 ### -RateMyCallDisplayPercentage
 
-PARAMVALUE: UInt16
-
-
-
 ```yaml
-Type: Object
+Type: UInt16
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -2092,7 +2040,7 @@ Accept wildcard characters: False
 {{Fill RequireContentPin Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2108,7 +2056,7 @@ Accept wildcard characters: False
 {{Fill SupportModernFilePicker Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2124,7 +2072,7 @@ Accept wildcard characters: False
 {{Fill TelemetryTier Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -2137,7 +2085,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the new client policy is being created.
 For example:
 
@@ -2146,8 +2093,6 @@ For example:
 You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
-
-
 
 ```yaml
 Type: Object
