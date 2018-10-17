@@ -104,7 +104,7 @@ For SharePoint Online in the SharePoint Online Management Shell, the module name
 
 Either way, take note of your module name. You'll need it in the next steps.
 
-### Step 5: Verify your your PSSession variable name
+### Step 5: Verify your PSSession variable name
 **Note**: This step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present). **If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell, you can skip this step**.
 
 Check the details of your connection instructions, but your session information is stored in a variable. For example, in the Exchange connection instructions, the variable is `$Session`. You'll use this variable name in later steps.

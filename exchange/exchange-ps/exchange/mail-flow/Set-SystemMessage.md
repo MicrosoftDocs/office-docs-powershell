@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-SystemMessage En\Internal\5.3.5 -Text "The recipient email system can't process this email message. Please contact your system administrator for more information."
 ```
 
-This example modifies the text of the custom English system message for the enhanced status code code 5.3.5 for internal senders.
+This example modifies the text of the custom English system message for the enhanced status code 5.3.5 for internal senders.
 
 ### -------------------------- Example 2 --------------------------
 ```

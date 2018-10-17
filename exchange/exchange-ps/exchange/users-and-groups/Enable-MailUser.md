@@ -17,29 +17,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### EnabledUser (Default)
 ```
-Enable-MailUser [-Identity] <UserIdParameter> -ExternalEmailAddress <ProxyAddress> [-Alias <String>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>]
+Enable-MailUser [-Identity] <UserIdParameter> -ExternalEmailAddress <ProxyAddress>
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
  [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
- [-PrimarySmtpAddress <SmtpAddress>] [-UsePreferMessageFormat <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-MessageBodyFormat <Text | Html | TextAndHtml>]
+ [-MessageFormat <Text | Mime>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-UsePreferMessageFormat <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### EnableGuestUser
 ```
-Enable-MailUser [-Identity] <UserIdParameter> [-Alias <String>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-PrimarySmtpAddress <SmtpAddress>] [-WhatIf]
- [-ExternalEmailAddress <ProxyAddress>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Enable-MailUser [-Identity] <UserIdParameter> -ExternalEmailAddress <ProxyAddress> [-Alias <String>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>]
- [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
- [-PrimarySmtpAddress <SmtpAddress>] [-UsePreferMessageFormat <$true | $false>] [-WhatIf] [<CommonParameters>]
+Enable-MailUser [-Identity] <UserIdParameter> [-ExternalEmailAddress <ProxyAddress>]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -92,7 +93,7 @@ The ExternalEmailAddress parameter specifies an email address outside the organi
 
 ```yaml
 Type: ProxyAddress
-Parameter Sets: Set1, (All)
+Parameter Sets: EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -104,7 +105,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ProxyAddress
-Parameter Sets: Set2
+Parameter Sets: EnableGuestUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -211,7 +212,7 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 
 ```yaml
 Type: BinHex | UuEncode | AppleSingle | AppleDouble
-Parameter Sets: Set1, (All)
+Parameter Sets: EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -238,7 +239,7 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 
 ```yaml
 Type: Text | Html | TextAndHtml
-Parameter Sets: Set1, (All)
+Parameter Sets: EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -265,7 +266,7 @@ Therefore, if you want to change the MessageFormat parameter from Mime to Text, 
 
 ```yaml
 Type: Text | Mime
-Parameter Sets: Set1, (All)
+Parameter Sets: EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -303,7 +304,7 @@ The UsePreferMessageFormat specifies whether the message format settings configu
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1, (All)
+Parameter Sets: EnabledUser
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

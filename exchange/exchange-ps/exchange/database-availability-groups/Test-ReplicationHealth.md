@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the the Mailbox server that you want to test.
+The Identity parameter specifies the Mailbox server that you want to test.
 
 You can use any value that uniquely identifies the server. For example:
 

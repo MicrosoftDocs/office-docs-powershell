@@ -6,7 +6,7 @@ schema: 2.0.0
 # Save-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Saves a PnP file to the file systems
+Saves a PnP provisioning tempalte to the file system
 
 ## SYNTAX 
 
@@ -24,7 +24,7 @@ Save-PnPProvisioningTemplate -InputInstance <ProvisioningTemplate>
 Save-PnPProvisioningTemplate -InputInstance $template -Out .\template.pnp
 ```
 
-Saves a PnP file to the file systems
+Saves a PnP provisioning template to the file system as a PnP file.
 
 ## PARAMETERS
 

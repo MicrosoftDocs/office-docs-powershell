@@ -2048,15 +2048,15 @@ This parameter uses the syntax: MeetingProperty1:MeetingStartTimeWithinXMinutes1
 
 The valid meeting properties to monitor for updates are:
 
-- Location: The meeting Location field.
+- Location: The meeting location field.
 
 - Subject: The meeting subject or title.
 
 - Sensitivity: The sensitivity (privacy) of the event.
 
-- Body: The meeting body.
+- Body: The meeting body or description.
 
-- OnlineMeetingLinks
+- OnlineMeetingLinks: The meeting join URL.
 
 - AllowForwarding: The option to allow or prevent forwarding of meetings.
 
@@ -2074,13 +2074,15 @@ If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting prop
 
 The default value is `Location,AllProperties:15`: changes to the meeting location at any time, or changes to other meeting properties within 15 minutes of the meeting start time results in visisble meeting update messages.
 
-There are three scenarios where this parameter auto-process meeting update messages (attendees will see meeting update messages in their Inbox):
+There are three scenarios where meeting update messages are not auto-processed regardless of the values specified in this paramater (in these scenarios, attendees will always see meeting update messages in their Inbox):
 
 - The update contains a change to the meeting date, time, or recurrence pattern.
 
 - The meeting message is received for a delegated shared calendar.
 
 - The receiving attendee is @ mentioned in the meeting body.
+
+- The attendee has not yet responded to the meeting.
 
 ```yaml
 Type: String
