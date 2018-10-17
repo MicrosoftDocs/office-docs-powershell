@@ -19,14 +19,11 @@ Note: the command will return immediately, but the Teams application will not re
 
 Note: last owner cannot be removed from the team.
 
-To turn an existing Member into an Owner, 
-first Add-TeamUser -Role Owner -User foo,
-then Remove-TeamUser -User foo to remove them from the members list.
 
 ## SYNTAX
 
 ```
-Remove-TeamUser -GroupId <String> -User <String>
+Remove-TeamUser -GroupId <String> -User <String> -Role <String>
 ```
 
 ## DESCRIPTION
@@ -70,6 +67,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Role
+Use this to demote a user from owner to member of the team
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
