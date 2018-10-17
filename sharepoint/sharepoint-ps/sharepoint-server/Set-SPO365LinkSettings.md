@@ -30,7 +30,7 @@ To run this cmdlet requires farm administrator permission and that the user acco
 PS C:\> Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
 ```
 
-This example sets the mysite host URL to Contoso-my.sharepoint.com
+This example sets the mysite host URL to contoso-my.sharepoint.com
 
 ## PARAMETERS
 
@@ -123,6 +123,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
+[Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)
 
+[Test-SPO365LinkSettings](Test-SPO365LinkSettings.md)
 
 

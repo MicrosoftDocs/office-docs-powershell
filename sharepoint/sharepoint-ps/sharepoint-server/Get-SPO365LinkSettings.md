@@ -65,6 +65,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
+[Set-SPO365LinkSettings](Set-SPO365LinkSettings.md)
 
-
-
+[Test-SPO365LinkSettings](Test-SPO365LinkSettings.md)

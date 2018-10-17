@@ -8,7 +8,7 @@ schema: 2.0.0
 # Test-SPO365LinkSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Validates whether the configured Office 365 hybrid site uses a valid template. 
 
 ## SYNTAX
 
@@ -18,16 +18,16 @@ Test-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] -MySite
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the **Test-SPO365LinkSettings** cmdlet to validate a templated against a configured Office 365 hybrid site.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```powershell
-{{ Add example code here }}
+Test-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/
 ```
 
-{{ Add example description here }}
+This example test a template using the contoso-my.sharepoint site.
 
 ## PARAMETERS
 
@@ -73,3 +73,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
+[Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)
+
+[Set-SPO365LinkSettings](Set-SPO365LinkSettings.md)
