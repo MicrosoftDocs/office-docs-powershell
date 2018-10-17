@@ -19,7 +19,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
 Get-CsPSTNUsageDetailReport [-EndDate <DateTime>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
 ```

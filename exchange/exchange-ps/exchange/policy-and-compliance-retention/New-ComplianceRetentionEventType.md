@@ -17,7 +17,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
 New-ComplianceRetentionEventType -Name <String> [-Comment <String>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```

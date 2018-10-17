@@ -17,17 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Identity
 ```
-Remove-UserPhoto [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
+Remove-UserPhoto [-Identity] <MailboxIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ClearMailboxPhoto
 ```
-Remove-UserPhoto [-Identity] <MailboxIdParameter> [-ClearMailboxPhotoRecord] [-Confirm]
- [-DomainController <Fqdn>] [-GroupMailbox] [-IgnoreDefaultScope] [-PhotoType <String>] [-WhatIf]
- [<CommonParameters>]
+Remove-UserPhoto [-Identity] <MailboxIdParameter> [-ClearMailboxPhotoRecord] [-GroupMailbox] [-PhotoType <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,6 +90,29 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -ClearMailboxPhotoRecord
+The ClearMailboxPhoto switch specifies that a deleted mailbox photo is considered blank instead of deleted.
+
+By default, when a user deletes their mailbox photo, a flag is set on the mailbox that causes subsequent photo requests to:
+
+- Return a blank photo.
+
+- Prevent searching Active Directory for a photo.
+
+Using this switch allows photo requests to search Active Directory for a photo. You don't have to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ClearMailboxPhoto
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -121,6 +149,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GroupMailbox
+The GroupMailbox switch indicates the specified user is an Office 365 Group. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ClearMailboxPhoto
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreDefaultScope
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
@@ -142,6 +185,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PhotoType
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: ClearMailboxPhoto
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -150,61 +208,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClearMailboxPhotoRecord
-This parameter is available only in the cloud-based service.
-
-The ClearMailboxPhoto switch specifies that a deleted mailbox photo is considered blank instead of deleted.
-
-By default, when a user deletes their mailbox photo, a flag is set on the mailbox that causes subsequent photo requests to:
-
-- Return a blank photo.
-
-- Prevent searching Active Directory for a photo.
-
-Using this switch allows photo requests to search Active Directory for a photo. You don't have to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GroupMailbox
-The GroupMailbox switch indicates the specified user is an Office 365 Group. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PhotoType
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

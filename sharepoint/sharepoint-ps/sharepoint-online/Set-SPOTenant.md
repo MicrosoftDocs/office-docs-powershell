@@ -1168,6 +1168,7 @@ Accept wildcard characters: False
 ### -UserVoiceForFeedbackEnabled
 PARAMVALUE: $true | $false
 
+When set to $true, the "Feedback" and "Get the mobile app" links will be shown at the bottom of all modern SharePoint Online pages. The "Feedback" link will allow the end user to fill out a feedback form inside SharePoint Online which will then create an entry in the public SharePoint UserVoice topic. "Get the mobile app" simple provides a direct link to where the SharePoint app can be downloaded for Android and Apple devices. When set to $false, both of these links will not be shown anymore. It may take up to an hour for a change of this property to be reflected consistently throughout your tenant.
 
 ```yaml
 Type: Boolean
@@ -1177,7 +1178,7 @@ Applicable: SharePoint Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: $true
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

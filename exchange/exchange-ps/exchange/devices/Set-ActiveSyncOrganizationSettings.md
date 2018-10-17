@@ -17,7 +17,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### 
 ```
 Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsIdParameter>] [-AdminMailRecipients <MultiValuedProperty>] [-AllowAccessForUnSupportedPlatform <$true | $false>] [-AllowRMSSupportForUnenlightenedApps <$true | $false>] [-Confirm] [-DefaultAccessLevel <Allow | Block | Quarantine>] [-DomainController <Fqdn>] [-OtaNotificationMailInsert <String>] [-UserMailInsert <String>] [-WhatIf] [<CommonParameters>]
 ```
