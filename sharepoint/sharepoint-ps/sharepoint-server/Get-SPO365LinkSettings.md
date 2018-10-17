@@ -1,35 +1,39 @@
 ---
 external help file: 
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-title: Test-SPO365LinkSettings
+title: Get-SPO365LinkSettings
 schema: 2.0.0
 ---
 
-# Test-SPO365LinkSettings
+# Get-SPO365LinkSettings
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets hybrid configurations.
 
 ## SYNTAX
 
 ```powershell
-Test-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] -MySiteHostUrl <Uri>
- [<CommonParameters>]
+Get-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the **Get-SPO365LinkSettings** cmdlet to display current hybrid configurations in the farm.
+
+
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```powershell
-{{ Add example code here }}
-```
+$gc = Start-SPAssignment
+Get-SPO365LinkSettings – AssignmentCollection $gc
+Stop-SPAssignment $gc
 
-{{ Add example description here }}
+```
+This example returns all hybrid configurations.
 
 ## PARAMETERS
+
 
 ### -AssignmentCollection
 Manages objects for the purpose of proper disposal.
@@ -52,24 +56,15 @@ Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
-### -MySiteHostUrl
-The root URL for the redirected pages
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 
 ## RELATED LINKS
+
+
+
+
