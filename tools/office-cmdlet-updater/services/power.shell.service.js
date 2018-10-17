@@ -52,6 +52,15 @@ class PowerShellService {
 
         result += output;
 
+        [output, err] = await of(this.preInstallWhiteboard());
+
+        if (err) {
+            await this.dispose();
+            throw new Error(err);
+        }
+
+        result += output;
+
 		return result;
 	}
 
@@ -59,6 +68,14 @@ class PowerShellService {
 		let result;
 
 		result += await this._invokeCommand(commands.SHAREPOINT_INSTALL_MODULE);
+
+		return result;
+	}
+
+	async preInstallWhiteboard() {
+		let result;
+
+		result += await this._invokeCommand(commands.WHITEBOARD_INSTALL_MODULE);
 
 		return result;
 	}

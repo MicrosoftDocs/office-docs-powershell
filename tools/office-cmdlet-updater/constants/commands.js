@@ -10,5 +10,6 @@ module.exports = {
 	SKYPE_GET_CRED: '$cred = Get-Credential',
 	SKYPE_CREATE_SESSION: '$session = New-CsOnlineSession -Credential $cred -Verbose',
 	SKYPE_IMPORT_SESSION: 'Import-PSSession -Session $session',
-	SHAREPOINT_INSTALL_MODULE: 'Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking'
+	SHAREPOINT_INSTALL_MODULE: 'Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking',
+	WHITEBOARD_INSTALL_MODULE: 'Install-Module -Name WhiteboardAdmin'
 };

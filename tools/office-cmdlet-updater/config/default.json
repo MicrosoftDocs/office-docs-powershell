@@ -15,9 +15,22 @@
 				"name": "sharepoint",
 				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
 				"metaTags": []
+			},
+			//			{
+			//				"name": "staffhub",
+			//				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+			//				"metaTags": []
+			//			},
+			{
+				"name": "whiteboard",
+				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
+				"metaTags": []
 			}
 		],
-		"ignoreFiles": ["..\\..\\teams\\teams-ps\\teams\\teams.md"]
+		"ignoreFiles": [
+			"..\\..\\teams\\teams-ps\\teams\\teams.md",
+			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md"
+		]
 	},
 	"sendgrid": {
 		"sendMailNotification": false,
