@@ -17,27 +17,32 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
 ```
-Set-PublicFolder [-Identity] <PublicFolderIdParameter> [-AgeLimit <EnhancedTimeSpan>] [-Confirm]
- [-DomainController <Fqdn>] [-EformsLocaleId <CultureInfo>] [-HiddenFromAddressListsEnabled <$true | $false>]
- [-IssueWarningQuota <Unlimited>] [-LocalReplicaAgeLimit <EnhancedTimeSpan>] [-MaxItemSize <Unlimited>]
- [-Name <String>] [-PerUserReadStateEnabled <$true | $false>] [-ProhibitPostQuota <Unlimited>]
- [-Replicas <DatabaseIdParameter[]>] [-ReplicationSchedule <Schedule>]
- [-RetainDeletedItemsFor <EnhancedTimeSpan>] [-Server <ServerIdParameter>]
- [-UseDatabaseAgeDefaults <$true | $false>] [-UseDatabaseQuotaDefaults <$true | $false>]
- [-UseDatabaseReplicationSchedule <$true | $false>] [-UseDatabaseRetentionDefaults <$true | $false>] [-WhatIf]
- [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-PublicFolder [-Identity] <PublicFolderIdParameter> [-AgeLimit <EnhancedTimeSpan>] [-Confirm]
- [-DomainController <Fqdn>] [-EformsLocaleId <CultureInfo>] [-Force] [-IssueWarningQuota <Unlimited>]
- [-MailEnabled <$true | $false>] [-MailRecipientGuid <Guid>] [-MaxItemSize <Unlimited>] [-Name <String>]
- [-OverrideContentMailbox <MailboxIdParameter>] [-Path <PublicFolderIdParameter>]
- [-PerUserReadStateEnabled <$true | $false>] [-ProhibitPostQuota <Unlimited>]
- [-RetainDeletedItemsFor <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+Set-PublicFolder [-Identity] <PublicFolderIdParameter>
+ [-AgeLimit <EnhancedTimeSpan>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EformsLocaleId <CultureInfo>]
+ [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-IssueWarningQuota <Unlimited>]
+ [-LocalReplicaAgeLimit <EnhancedTimeSpan>]
+ [-MailRecipientGuid <Guid>]
+ [-MailEnabled <$true | $false>]
+ [-MaxItemSize <Unlimited>]
+ [-Name <String>]
+ [-OverrideContentMailbox <MailboxIdParameter>]
+ [-Path <PublicFolderIdParameter>]
+ [-PerUserReadStateEnabled <$true | $false>]
+ [-ProhibitPostQuota <Unlimited>]
+ [-Replicas <DatabaseIdParameter[]>]
+ [-ReplicationSchedule <Schedule>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>]
+ [-Server <ServerIdParameter>]
+ [-UseDatabaseAgeDefaults <$true | $false>]
+ [-UseDatabaseQuotaDefaults <$true | $false>]
+ [-UseDatabaseReplicationSchedule <$true | $false>]
+ [-UseDatabaseRetentionDefaults <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -151,6 +156,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HiddenFromAddressListsEnabled
 This parameter is available or functional only in Exchange Server 2010.
 
@@ -158,7 +178,7 @@ The HiddenFromAddressListsEnabled parameter specifies whether to hide the public
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -202,13 +222,49 @@ Accept wildcard characters: False
 ```
 
 ### -LocalReplicaAgeLimit
+This parameter is available or functional only in Exchange Server 2010
+
 The LocalReplicaAgeLimit parameter specifies the age limit of the replica on the connected server, if there is a replica on it.
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailEnabled
+The MailEnabled parameter specifies that the public folder is mail-enabled. To do this, you use the value $true.
+
+You use this parameter to correct a mail-enabled public folder that lost its mail-enabled status. If you attempt to use this parameter to mail-enable a public folder that was never mail-enabled, the command will fail.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailRecipientGuid
+The MailRecipientGuid parameter specifies the MailRecipientGuid value of the public folder. You use this parameter to correct a mail-enabled public folder that lost its MailRecipientGuid value.
+
+The value that you specify for this parameter must match the MailRecipientGuid value of an existing mail-enabled public folder. Otherwise, the command will fail.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -255,6 +311,38 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideContentMailbox
+This parameter is available only in on-premises Exchange.
+
+The OverrideContentMailbox parameter specifies the identity of the public folder mailbox that you want to move this public folder's content to.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+The Path parameter specifies the path of the public folder, for example, \\TopLevelPublicFolder\\PublicFolder.
+
+```yaml
+Type: PublicFolderIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -309,6 +397,8 @@ Accept wildcard characters: False
 ```
 
 ### -Replicas
+This parameter is available or functional only in Exchange Server 2010
+
 The Replicas parameter specifies a list of public folder databases with which to replicate this public folder.
 
 ```yaml
@@ -324,6 +414,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationSchedule
+This parameter is available or functional only in Exchange Server 2010
+
 The ReplicationSchedule parameter specifies the replication schedule for the folder.
 
 The format is StartDay.Hour:Minute [AM/PM]-EndDay.Hour:Minute [AM/PM]. You can use the following values for the start and end days:
@@ -380,11 +472,13 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+This parameter is available or functional only in Exchange Server 2010
+
 The Server parameter specifies the server on which to perform the selected operations.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -395,11 +489,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseAgeDefaults
+This parameter is available or functional only in Exchange Server 2010
+
 The UseDatabaseAgeDefaults parameter specifies whether to use the database age limit.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -410,11 +506,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseQuotaDefaults
+This parameter is available or functional only in Exchange Server 2010
+
 The UseDatabaseQuotaDefaults parameter specifies whether to use the public store quota limits.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -425,11 +523,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseReplicationSchedule
+This parameter is available or functional only in Exchange Server 2010
+
 The UseDatabaseReplicationSchedule parameter specifies whether to use the public folder replication schedule.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -440,11 +540,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseRetentionDefaults
+This parameter is available or functional only in Exchange Server 2010
+
 The UseDatabaseRetentionDefaults parameter specifies whether to use the database retention defaults.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -462,87 +564,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailEnabled
-The MailEnabled parameter specifies that the public folder is mail-enabled. To do this, you use the value $true.
-
-You use this parameter to correct a mail-enabled public folder that lost its mail-enabled status. If you attempt to use this parameter to mail-enable a public folder that was never mail-enabled, the command will fail.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailRecipientGuid
-The MailRecipientGuid parameter specifies the MailRecipientGuid value of the public folder. You use this parameter to correct a mail-enabled public folder that lost its MailRecipientGuid value.
-
-The value that you specify for this parameter must match the MailRecipientGuid value of an existing mail-enabled public folder. Otherwise, the command will fail.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverrideContentMailbox
-This parameter is available only in on-premises Exchange.
-
-The OverrideContentMailbox parameter specifies the identity of the public folder mailbox that you want to move this public folder's content to.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Path
-The Path parameter specifies the path of the public folder, for example, \\TopLevelPublicFolder\\PublicFolder.
-
-```yaml
-Type: PublicFolderIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
