@@ -17,73 +17,104 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AllTemplatesWithPrecannedFilter
 ```
-New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection>
- -RecipientFilter <String> [-Confirm] [-DisabledEmailAddressTemplates <ProxyAddressTemplateCollection>]
- [-DomainController <Fqdn>] [-Priority <EmailAddressPolicyPriority>]
- [-RecipientContainer <OrganizationalUnitIdParameter>] [-WhatIf] -EnabledPrimarySMTPAddressTemplate <String>
- [<CommonParameters>]
-```
-
-### Set4
-```
-New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection>
- -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
- [-ConditionalCompany <MultiValuedProperty>] [-ConditionalCustomAttribute1 <MultiValuedProperty>]
- [-ConditionalCustomAttribute10 <MultiValuedProperty>] [-ConditionalCustomAttribute11 <MultiValuedProperty>]
- [-ConditionalCustomAttribute12 <MultiValuedProperty>] [-ConditionalCustomAttribute13 <MultiValuedProperty>]
- [-ConditionalCustomAttribute14 <MultiValuedProperty>] [-ConditionalCustomAttribute15 <MultiValuedProperty>]
- [-ConditionalCustomAttribute2 <MultiValuedProperty>] [-ConditionalCustomAttribute3 <MultiValuedProperty>]
- [-ConditionalCustomAttribute4 <MultiValuedProperty>] [-ConditionalCustomAttribute5 <MultiValuedProperty>]
- [-ConditionalCustomAttribute6 <MultiValuedProperty>] [-ConditionalCustomAttribute7 <MultiValuedProperty>]
- [-ConditionalCustomAttribute8 <MultiValuedProperty>] [-ConditionalCustomAttribute9 <MultiValuedProperty>]
- [-ConditionalDepartment <MultiValuedProperty>] [-ConditionalStateOrProvince <MultiValuedProperty>] [-Confirm]
- [-DisabledEmailAddressTemplates <ProxyAddressTemplateCollection>] [-DomainController <Fqdn>]
- [-Priority <EmailAddressPolicyPriority>] [-RecipientContainer <OrganizationalUnitIdParameter>] 
+New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection> -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
+ [-ConditionalCompany <MultiValuedProperty>]
+ [-ConditionalCustomAttribute1 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute10 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute11 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute12 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute13 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute14 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute15 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute2 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute3 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute4 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute5 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute6 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute7 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute8 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute9 <MultiValuedProperty>]
+ [-ConditionalDepartment <MultiValuedProperty>]
+ [-ConditionalStateOrProvince <MultiValuedProperty>]
+ [-Confirm]
+ [-DisabledEmailAddressTemplates <ProxyAddressTemplateCollection>]
+ [-DomainController <Fqdn>]
+ [-Priority <EmailAddressPolicyPriority>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>] 
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### AllTemplatesWithCustomFilter
 ```
-New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String>
- -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
- [-ConditionalCompany <MultiValuedProperty>] [-ConditionalCustomAttribute1 <MultiValuedProperty>]
- [-ConditionalCustomAttribute10 <MultiValuedProperty>] [-ConditionalCustomAttribute11 <MultiValuedProperty>]
- [-ConditionalCustomAttribute12 <MultiValuedProperty>] [-ConditionalCustomAttribute13 <MultiValuedProperty>]
- [-ConditionalCustomAttribute14 <MultiValuedProperty>] [-ConditionalCustomAttribute15 <MultiValuedProperty>]
- [-ConditionalCustomAttribute2 <MultiValuedProperty>] [-ConditionalCustomAttribute3 <MultiValuedProperty>]
- [-ConditionalCustomAttribute4 <MultiValuedProperty>] [-ConditionalCustomAttribute5 <MultiValuedProperty>]
- [-ConditionalCustomAttribute6 <MultiValuedProperty>] [-ConditionalCustomAttribute7 <MultiValuedProperty>]
- [-ConditionalCustomAttribute8 <MultiValuedProperty>] [-ConditionalCustomAttribute9 <MultiValuedProperty>]
- [-ConditionalDepartment <MultiValuedProperty>] [-ConditionalStateOrProvince <MultiValuedProperty>] [-Confirm]
- [-DomainController <Fqdn>] [-Priority <EmailAddressPolicyPriority>]
- [-RecipientContainer <OrganizationalUnitIdParameter>] [-WhatIf] [<CommonParameters>]
+New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection> -RecipientFilter <String>
+ [-Confirm]
+ [-DisabledEmailAddressTemplates <ProxyAddressTemplateCollection>]
+ [-DomainController <Fqdn>]
+ [-Priority <EmailAddressPolicyPriority>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### SMTPTemplateWithPrecannedFilter
+```
+New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String> -IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>
+ [-ConditionalCompany <MultiValuedProperty>]
+ [-ConditionalCustomAttribute1 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute10 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute11 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute12 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute13 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute14 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute15 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute2 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute3 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute4 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute5 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute6 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute7 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute8 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute9 <MultiValuedProperty>]
+ [-ConditionalDepartment <MultiValuedProperty>]
+ [-ConditionalStateOrProvince <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Priority <EmailAddressPolicyPriority>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### SMTPTemplateWithCustomFilter
 ```
 New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String> -RecipientFilter <String>
- [-Confirm] [-DomainController <Fqdn>] [-Priority <EmailAddressPolicyPriority>] 
- [-RecipientContainer <OrganizationalUnitIdParameter>] [-WhatIf]
- -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection>
- [-DisabledEmailAddressTemplates <ProxyAddressTemplateCollection>] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Priority <EmailAddressPolicyPriority>] 
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set6
+### AllTemplatesForUnifiedGroupRecipientsFilter
 ```
-New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection>
- [-IncludeUnifiedGroupRecipients] [-Confirm] [-DisabledEmailAddressTemplates <ProxyAddressTemplateCollection>]
- [-DomainController <Fqdn>] [-ManagedByFilter <String>] [-Priority <EmailAddressPolicyPriority>]
- [-RecipientContainer <OrganizationalUnitIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set5
-```
-New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String>
- [-IncludeUnifiedGroupRecipients] [-Confirm] [-DomainController <Fqdn>] [-ManagedByFilter <String>]
- [-Priority <EmailAddressPolicyPriority>] [-RecipientContainer <OrganizationalUnitIdParameter>] [-WhatIf]
+New-EmailAddressPolicy [-Name] <String> -EnabledEmailAddressTemplates <ProxyAddressTemplateCollection> [-IncludeUnifiedGroupRecipients] [-ManagedByFilter <String>]
+ [-Confirm]
+ [-DisabledEmailAddressTemplates <ProxyAddressTemplateCollection>]
+ [-DomainController <Fqdn>]
+ [-Priority <EmailAddressPolicyPriority>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
+```
+
+### SMTPTemplateForUnifiedGroupRecipientsFilter
+```
+New-EmailAddressPolicy [-Name] <String> -EnabledPrimarySMTPAddressTemplate <String> [-IncludeUnifiedGroupRecipients] [-ManagedByFilter <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Priority <EmailAddressPolicyPriority>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -139,6 +170,21 @@ This example creates an email address policy in an on-premises Exchange organiza
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the unique name of the email address policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnabledEmailAddressTemplates
 The EnabledEmailAddressTemplates parameter specifies the rules in the email address policy that are used to generate email addresses for recipients.
 
@@ -158,7 +204,7 @@ In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients,
 
 ```yaml
 Type: ProxyAddressTemplateCollection
-Parameter Sets: Set2, Set4, Set3, Set6
+Parameter Sets: AllTemplatesWithPrecannedFilter, AllTemplatesWithCustomFilter, AllTemplatesForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -179,7 +225,7 @@ In Office 365, if you use this parameter with the IncludeUnifiedGroupRecipients,
 
 ```yaml
 Type: String
-Parameter Sets: Set2, Set1, Set3, Set5
+Parameter Sets: SMTPTemplateWithPrecannedFilter, SMTPTemplateWithCustomFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -212,7 +258,7 @@ You need to use this parameter when you use any of the Conditional parameters. Y
 
 ```yaml
 Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -222,16 +268,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-The Name parameter specifies the unique name of the email address policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+### -IncludeUnifiedGroupRecipients
+This parameter is available only in the cloud-based service.
+
+The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies to Office 365 groups. You don't need to specify a value with this switch.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: AllTemplatesForUnifiedGroupRecipientsFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -254,7 +302,7 @@ You can't use this parameter with the IncludedRecipients parameter or any of the
 
 ```yaml
 Type: String
-Parameter Sets: Set2, Set3
+Parameter Sets: AllTemplatesWithCustomFilter, SMTPTemplateWithCustomFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -275,7 +323,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -296,7 +344,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -317,7 +365,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -338,7 +386,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -359,7 +407,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -380,7 +428,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -401,7 +449,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -422,7 +470,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -443,7 +491,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -464,7 +512,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -485,7 +533,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -506,7 +554,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -527,7 +575,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -548,7 +596,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -569,7 +617,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -590,7 +638,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -611,7 +659,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -632,7 +680,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set4, Set1
+Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -676,7 +724,7 @@ You can specify multiple disabled email address templates separated by commas: "
 
 ```yaml
 Type: ProxyAddressTemplateCollection
-Parameter Sets: Set2, Set4, Set3, Set6
+Parameter Sets: AllTemplatesWithPrecannedFilter, AllTemplatesWithCustomFilter, AllTemplatesForUnifiedGroupRecipientsFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -696,6 +744,37 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedByFilter
+This parameter is available only in the cloud-based service.
+
+The ManagedByFilter parameter specifies the email address policies to apply to Office 365 groups based on the properties of the users who create the Office 365 groups.
+
+This parameter is an OPath filter that's based on the value of any available recipient property (for example, {Department -eq 'Sales'}). You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. When you use this parameter, remember the following OPath filter rules:
+
+- Use braces { } around the whole OPath syntax string.
+
+- Include a hyphen before all operators.
+
+- You can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
+
+For more information, see Multi-domain support for Office 365 groups - Admin help (https://go.microsoft.com/fwlink/p/?linkid=838413).
+
+For a list of the filterable properties, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
+
+You need to use this parameter with the IncludeUnifiedGroupRecipients switch.
+
+```yaml
+Type: String
+Parameter Sets: AllTemplatesForUnifiedGroupRecipientsFilter, SMTPTemplateForUnifiedGroupRecipientsFilter
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -757,54 +836,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeUnifiedGroupRecipients
-This parameter is available only in the cloud-based service.
-
-The IncludeUnifiedGroupRecipients switch specifies that the email address policy applies to Office 365 groups. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set6, Set5
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ManagedByFilter
-This parameter is available only in the cloud-based service.
-
-The ManagedByFilter parameter specifies the email address policies to apply to Office 365 groups based on the properties of the users who create the Office 365 groups.
-
-This parameter is an OPath filter that's based on the value of any available recipient property (for example, {Department -eq 'Sales'}). You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. When you use this parameter, remember the following OPath filter rules:
-
-- Use braces { } around the whole OPath syntax string.
-
-- Include a hyphen before all operators.
-
-- You can't use a wildcard as the first character. For example, Sales\* is allowed, but \*Sales isn't allowed.
-
-For more information, see Multi-domain support for Office 365 groups - Admin help (https://go.microsoft.com/fwlink/p/?linkid=838413).
-
-For a list of the filterable properties, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
-
-You need to use this parameter with the IncludeUnifiedGroupRecipients switch.
-
-```yaml
-Type: String
-Parameter Sets: Set6, Set5
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

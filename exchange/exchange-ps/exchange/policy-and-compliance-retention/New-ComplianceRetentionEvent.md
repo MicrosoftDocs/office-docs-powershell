@@ -17,7 +17,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
 New-ComplianceRetentionEvent -Name <String> [-AssetId <String>] [-Comment <String>] [-Confirm] [-EventDateTime <DateTime>] [-EventTags <MultiValuedProperty>] [-EventType <ComplianceRuleIdParameter>] [-ExchangeAssetIdQuery <String>] [-SharePointAssetIdQuery <String>] [-WhatIf] [<CommonParameters>]
 ```
