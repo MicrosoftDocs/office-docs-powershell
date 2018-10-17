@@ -26,7 +26,7 @@ then Remove-TeamUser -User foo to remove them from the members list.
 ## SYNTAX
 
 ```
-Remove-TeamUser -GroupId <String> -User <String>
+Remove-TeamUser -GroupId <String> -User <String> -Role <String>
 ```
 
 ## DESCRIPTION
@@ -71,6 +71,22 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
+```
+
+### -Role
+Valid input is owner - use this to demote a user from owner to member.  If not provided the user is removed completely from the team
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard character: False
 ```
 
 ## INPUTS
