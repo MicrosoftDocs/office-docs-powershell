@@ -22,6 +22,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Add-SPOSiteDesign](Add-SPOSiteDesign.md)
 {{Manually Enter Add-SPOSiteDesign Description Here}}
 
+### [Add-SPOSiteDesign](Add-SPOSiteDesignTask.md)
+{{Manually Enter Add-SPOSiteDesignTask Description Here}}
+
 ### [Add-SPOSiteScript](Add-SPOSiteScript.md)
 {{Manually Enter Add-SPOSiteScript Description Here}}
 
@@ -121,10 +124,16 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOSiteDesignRights](Get-SPOSiteDesignRights.md)
 {{Manually Enter Get-SPOSiteDesignRights Description Here}}
 
+### [Get-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
+{{Manually Enter Add-SPOSiteDesign Description Here}}
+
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 {{Manually Enter Get-SPOSiteGroup Description Here}}
 
 ### [Get-SPOSiteScript](Get-SPOSiteScript.md)
+{{Manually Enter Get-SPOSiteScript Description Here}}
+
+### [Get-SPOSiteScriptFromList](Get-SPOSiteScriptFromList.md)
 {{Manually Enter Get-SPOSiteScript Description Here}}
 
 ### [Get-SPOTenant](Get-SPOTenant.md)
@@ -242,6 +251,9 @@ The following cmdlet references are for SharePoint Online.
 {{Manually Enter Remove-SPOSite Description Here}}
 
 ### [Remove-SPOSiteDesign](Remove-SPOSiteDesign.md)
+{{Manually Enter Remove-SPOSiteDesign Description Here}}
+
+### [Remove-SPOSiteDesignTask](Remove-SPOSiteDesignTask.md)
 {{Manually Enter Remove-SPOSiteDesign Description Here}}
 
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)
