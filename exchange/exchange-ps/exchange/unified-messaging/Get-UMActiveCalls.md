@@ -17,24 +17,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### DialPlan
 ```
 Get-UMActiveCalls -DialPlan <UMDialPlanIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set2
+### ServerInstance
 ```
 Get-UMActiveCalls -InstanceServer <UMServer> [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set4
+### UMIPGateway
 ```
 Get-UMActiveCalls -IPGateway <UMIPGatewayIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Server
 ```
-Get-UMActiveCalls [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-UMActiveCalls [-Server <ServerIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +83,7 @@ The DialPlan parameter specifies the UM dial plan for which you want to retrieve
 
 ```yaml
 Type: UMDialPlanIdParameter
-Parameter Sets: Set3
+Parameter Sets: DialPlan
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -98,7 +98,7 @@ The InstanceServer parameter specifies the Mailbox server running the Microsoft 
 
 ```yaml
 Type: UMServer
-Parameter Sets: Set2
+Parameter Sets: ServerInstance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -113,7 +113,7 @@ The IPGateway parameter specifies the UM IP gateway for which you want to retrie
 
 ```yaml
 Type: UMIPGatewayIdParameter
-Parameter Sets: Set4
+Parameter Sets: UMIPGateway
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -143,7 +143,7 @@ The Server parameter specifies the Mailbox server running the Microsoft Exchange
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

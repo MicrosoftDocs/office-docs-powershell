@@ -17,38 +17,36 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### IntranetLicensingUrl
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]>
- -IntranetLicensingUrl <Uri> -Password <SecureString> [-Confirm] [-Default] [-DomainController <Fqdn>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString>
+ [-Confirm]
+ [-Default]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ImportFromFile
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]>
- -IntranetLicensingUrl <Uri> -Password <SecureString> [-Confirm] [-Default] [-DomainController <Fqdn>]
- [-ExtranetCertificationUrl <Uri>] [-IntranetCertificationUrl <Uri>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString> [-Confirm]
- [-Default] [-DomainController <Fqdn>] [-RefreshTemplates] [-WhatIf] [<CommonParameters>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -ExtranetLicensingUrl <Uri> -FileData <Byte[]> -IntranetLicensingUrl <Uri> -Password <SecureString> [-ExtranetCertificationUrl <Uri>] [-IntranetCertificationUrl <Uri>]
+ [-Confirm]
+ [-Default]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### RefreshTemplates
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> [-RMSOnline] [-Confirm] [-Default]
- [-DomainController <Fqdn>] [-RefreshTemplates] [-RMSOnlineAuthCertThumbprintOverride <String>]
- [-RMSOnlineOrgOverride <Guid>] [-WhatIf] [<CommonParameters>]
+Import-RMSTrustedPublishingDomain [-Name] <String> -FileData <Byte[]> -Password <SecureString> [-RefreshTemplates]
+ [-Confirm]
+ [-Default]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### RMSOnline
 ```
-Import-RMSTrustedPublishingDomain [-Name] <String> -RMSOnlineConfig <Byte[]> -RMSOnlineKeys <Hashtable>
- [-Confirm] [-Default] [-DomainController <Fqdn>] [-RMSOnlineAuthorTest <Hashtable>] [-WhatIf]
- [<CommonParameters>]
+Import-RMSTrustedPublishingDomain [-Name] <String> [-RMSOnline] [-RefreshTemplates]
+ [-Confirm]
+ [-Default]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,7 +84,7 @@ By default, the value of the ExtranetLicensingUrl parameter is https://\<FQDN\>/
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1, Set2
+Parameter Sets: IntranetLicensingUrl, ImportFromFile
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -103,7 +101,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: IntranetLicensingUrl, ImportFromFile, RefreshTemplates
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -120,7 +118,7 @@ By default, the value of the IntranetLicensingUrl parameter is https://\<server 
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1, Set2
+Parameter Sets: IntranetLicensingUrl, ImportFromFile
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -152,7 +150,7 @@ This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -A
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: IntranetLicensingUrl, ImportFromFile, RefreshTemplates
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -163,43 +161,11 @@ Accept wildcard characters: False
 ```
 
 ### -RMSOnline
-This parameter is available only in the cloud-based service.
-
 The RMSOnline switch specifies that the TPD is imported from RMS Online. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineConfig
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Byte[]
-Parameter Sets: Set5
-Aliases:
-Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineKeys
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable
-Parameter Sets: Set5
+Parameter Sets: RMSOnline
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -247,21 +213,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExtranetCertificationUrl
 The ExtranetCertificationUrl parameter specifies the external certification URL of the on-premises AD RMS server that's stamped into the Rights Account Certificate (RAC). The RAC establishes a user's identity in the AD RMS system, and is used to decrypt content.
 
@@ -269,7 +220,7 @@ By default, the value of the ExtranetCertificationUrl parameter is https://\<FQD
 
 ```yaml
 Type: Uri
-Parameter Sets: Set2
+Parameter Sets: ImportFromFile
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -286,7 +237,7 @@ By default, the value of the IntranetCertificationUrl parameter is https://\<ser
 
 ```yaml
 Type: Uri
-Parameter Sets: Set2
+Parameter Sets: ImportFromFile
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -311,52 +262,7 @@ When you add, modify, or remove RMS templates in a TPD on the AD RMS server, you
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set4
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineAuthCertThumbprintOverride
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineAuthorTest
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable
-Parameter Sets: Set5
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RMSOnlineOrgOverride
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: Set4
+Parameter Sets: RefreshTemplates, RMSOnline
 Aliases:
 Applicable: Exchange Online
 Required: False

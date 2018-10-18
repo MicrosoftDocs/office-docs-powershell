@@ -17,42 +17,57 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### RelativeRecipientWriteScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Confirm]
- [-CustomConfigWriteScope <ManagementScopeIdParameter>] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
- [-WhatIf] [-Force] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Confirm]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+ [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-WhatIf] [-Force] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### CustomRecipientWriteScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Confirm]
- [-CustomConfigWriteScope <ManagementScopeIdParameter>] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>] [-WhatIf] [-Force] [<CommonParameters>]
-```
-
-### Set4
-```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-WhatIf] [-Force]
- -RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter> [<CommonParameters>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-CustomConfigWriteScope <ManagementScopeIdParameter>]
+ [-Confirm]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### RecipientOrganizationalUnitScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force] [-WhatIf] [<CommonParameters>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-Confirm]
+ [-CustomConfigWriteScope <ManagementScopeIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ExclusiveScope
+```
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>] [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RecipientAdministrativeUnitScope
+```
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> -RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,7 +156,7 @@ To remove a scope, specify a value of $null.
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: RelativeRecipientWriteScope, CustomRecipientWriteScope, RecipientOrganizationalUnitScope
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -160,7 +175,7 @@ To remove a scope, specify a value of $null.
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: Set2
+Parameter Sets: CustomRecipientWriteScope
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -213,7 +228,7 @@ To remove a scope, specify a value of $null.
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: Set4, Set5
+Parameter Sets: ExclusiveScope
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -232,63 +247,8 @@ To remove a scope, specify a value of $null.
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: Set4, Set5
+Parameter Sets: ExclusiveScope
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientOrganizationalUnitScope
-The RecipientOrganizationalUnitScope parameter specifies the OU to scope the new role assignment to. If the OU name contains spaces, enclose the domain and OU in quotation marks (").
-
-If you use the RecipientOrganizationalUnitScope parameter, you can't use the CustomRecipientWriteScope, ExclusiveRecipientWriteScope, or RecipientRelativeWriteScope parameters and any predefined scopes or custom scopes on the role assignment are overwritten.
-
-To specify an OU, use the syntax: domain/ou. To remove an OU, specify a value of $null.
-
-```yaml
-Type: OrganizationalUnitIdParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientRelativeWriteScope
-The RecipientRelativeWriteScope parameter specifies the type of restriction to apply to a recipient scope.
-
-If you use the RecipientRelativeWriteScope parameter, you can't use the CustomRecipientWriteScope, ExclusiveRecipientWriteScope, or RecipientOrganizationalUnitScope parameters.
-
-The available types are: None, Organization, MyGAL, Self and MyDistributionGroups. If you specify a predefined scope, any custom scope or configured OU on the role assignment is overwritten.
-
-Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExecutive, MailboxICanDelegate, and ExclusiveRecipientScope values appear in the syntax block for this parameter, they can't be used directly on the command line. They're used internally by the cmdlet.
-
-```yaml
-Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
@@ -323,10 +283,65 @@ You can't use this parameter with any of the other scope parameters.
 
 ```yaml
 Type: AdministrativeUnitIdParameter
-Parameter Sets: Set4
+Parameter Sets: RecipientAdministrativeUnitScope
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientOrganizationalUnitScope
+The RecipientOrganizationalUnitScope parameter specifies the OU to scope the new role assignment to. If the OU name contains spaces, enclose the domain and OU in quotation marks (").
+
+If you use the RecipientOrganizationalUnitScope parameter, you can't use the CustomRecipientWriteScope, ExclusiveRecipientWriteScope, or RecipientRelativeWriteScope parameters and any predefined scopes or custom scopes on the role assignment are overwritten.
+
+To specify an OU, use the syntax: domain/ou. To remove an OU, specify a value of $null.
+
+```yaml
+Type: OrganizationalUnitIdParameter
+Parameter Sets: RecipientOrganizationalUnitScope
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientRelativeWriteScope
+The RecipientRelativeWriteScope parameter specifies the type of restriction to apply to a recipient scope.
+
+If you use the RecipientRelativeWriteScope parameter, you can't use the CustomRecipientWriteScope, ExclusiveRecipientWriteScope, or RecipientOrganizationalUnitScope parameters.
+
+The available types are: None, Organization, MyGAL, Self and MyDistributionGroups. If you specify a predefined scope, any custom scope or configured OU on the role assignment is overwritten.
+
+Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExecutive, MailboxICanDelegate, and ExclusiveRecipientScope values appear in the syntax block for this parameter, they can't be used directly on the command line. They're used internally by the cmdlet.
+
+```yaml
+Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
+Parameter Sets: RelativeRecipientWriteScope
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -17,16 +17,23 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### StreamBased
 ```
-Export-MigrationReport [-Identity] <MigrationReportIdParameter> -CsvStream <Stream> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+Export-MigrationReport [-Identity] <MigrationReportIdParameter> -CsvStream <Stream>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
-### Set3
+### Paged
 ```
 Export-MigrationReport [-Identity] <MigrationReportIdParameter> -RowCount <Int32> -StartingRowIndex <Int32>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-Partition <MailboxIdParameter>] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Partition <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +55,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Stream
-Parameter Sets: Set2
+Parameter Sets: StreamBased
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -78,7 +85,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
-Parameter Sets: Set3
+Parameter Sets: Paged
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -93,7 +100,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
-Parameter Sets: Set3
+Parameter Sets: Paged
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -139,6 +146,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: false
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -151,21 +175,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type:
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: false
 Accept wildcard characters: False
 ```
 

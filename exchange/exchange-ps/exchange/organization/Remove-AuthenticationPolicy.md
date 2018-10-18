@@ -9,9 +9,6 @@ monikerRange: "exchonline-ps"
 # Remove-AuthenticationPolicy
 
 ## SYNOPSIS
-> [!NOTE]
-> This topic describes a preview feature that isn't available to everyone, and is subject to change.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the Remove-AuthenticationPolicy cmdlet to remove authentication policies from Exchange Online.

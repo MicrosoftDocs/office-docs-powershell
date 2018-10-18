@@ -235,7 +235,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: MailboxFiltering, MailboxLocationFiltering
+Parameter Sets: MailboxFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
 Required: False
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: MailboxFiltering, MailboxLocationFiltering
+Parameter Sets: MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
