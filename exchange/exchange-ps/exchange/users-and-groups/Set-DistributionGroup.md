@@ -733,13 +733,11 @@ Accept wildcard characters: False
 ### -ExpansionServer
 This parameter is available only in on-premises Exchange.
 
-The ExpansionServer parameter specifies the Exchange server that's used to expand the distribution group. The default value is blank ($null), which means expansion happens on the closest available Exchange 2016 Mailbox server. If you specify an expansion server, and that server is unavailable, any messages that are sent to the distribution group can't be delivered.
+The ExpansionServer parameter specifies the Exchange server that's used to expand the distribution group. The default value is blank ($null), which means expansion happens on the closest available Exchange server. If you specify an expansion server, and that server is unavailable, any messages that are sent to the distribution group can't be delivered.
 
 You can specify the following types of servers as expansion servers:
 
-- An Exchange 2016 Mailbox server.
-
-- An Exchange 2013 Mailbox server.
+- An Exchange 2013 or later Mailbox server.
 
 - An Exchange 2010 Hub Transport server.
 
