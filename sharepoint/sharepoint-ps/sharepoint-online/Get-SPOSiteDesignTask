@@ -72,5 +72,7 @@ Accept wildcard characters: False
 ## RELATED COMMANDS
 
 - [Add-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
+
 - [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
+
 - [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
