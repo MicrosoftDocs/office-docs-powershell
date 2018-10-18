@@ -1114,7 +1114,7 @@ Aliases:
 Applicable: Exchange Online
 Required: False
 Position: Named
-Default value: None
+Default value: $false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
