@@ -17,23 +17,31 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### AuthMetadataUrl
 ```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String> [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-New-AuthServer [-Name] <String> -AuthMetadataUrl <String>
- -Type <Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD> [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### NativeClientAuthServer
+```
+New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD> [-TrustAnySSLCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### AppSecret
 ```
 New-AuthServer [-Name] <String> -Type <Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD>
- [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +67,7 @@ The AuthMetadataUrl parameter specifies the URL for the Office 365 authorization
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2
+Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -89,7 +97,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unknown | MicrosoftACS | Facebook | LinkedIn | ADFS | AzureAD
-Parameter Sets: Set2, Set3
+Parameter Sets: NativeClientAuthServer, AppSecret
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -153,7 +161,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

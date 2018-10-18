@@ -17,29 +17,41 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### CurrentCertificateParameter
 ```
-Set-AuthConfig -CertificateThumbprint <String> [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-Server <ServerIdParameter>] [-SkipImmediateCertificateDeployment] [-WhatIf] [<CommonParameters>]
-```
-
-### Set4
-```
-Set-AuthConfig [-ClearPreviousCertificate] [-Confirm] [-DomainController <Fqdn>] [-Force] [-PublishCertificate]
+Set-AuthConfig -CertificateThumbprint <String> [-SkipImmediateCertificateDeployment]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### PublishAuthCertificateParameter
 ```
-Set-AuthConfig [-Confirm] [-DomainController <Fqdn>] [-Force] [-NewCertificateEffectiveDate <DateTime>]
- [-NewCertificateThumbprint <String>] [-Server <ServerIdParameter>] [-SkipImmediateCertificateDeployment]
+Set-AuthConfig [-ClearPreviousCertificate] [-PublishCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### NewCertificateParameter
 ```
-Set-AuthConfig [-Confirm] [-DomainController <Fqdn>] [-Realm <String>] [-ServiceName <String>] [-WhatIf]
- [<CommonParameters>]
+Set-AuthConfig [-NewCertificateEffectiveDate <DateTime>] [-NewCertificateThumbprint <String>] [-SkipImmediateCertificateDeployment]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### AuthConfigSettings
+```
+Set-AuthConfig [-Realm <String>] [-ServiceName <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,7 +82,7 @@ The CertificateThumbprint parameter specifies the thumbprint of the certificate 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: CurrentCertificateParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -85,7 +97,7 @@ The ClearPreviousCertificate switch clears the certificate saved as the previous
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: PublishAuthCertificateParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -134,7 +146,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set4, Set3
+Parameter Sets: CurrentCertificateParameter, PublishAuthCertificateParameter, NewCertificateParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -149,7 +161,7 @@ The NewCertificateEffectiveDate parameter specifies a date when the certificate 
 
 ```yaml
 Type: DateTime
-Parameter Sets: Set3
+Parameter Sets: NewCertificateParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -164,7 +176,7 @@ The NewCertificateThumbprint parameter specifies the thumbprint of the new certi
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: NewCertificateParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -179,7 +191,7 @@ The PublishCertificate switch specifies that the specified certificate be immedi
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: PublishAuthCertificateParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -194,7 +206,7 @@ The Realm parameter specifies a security realm for partner applications. If a se
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: AuthConfigSettings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -209,7 +221,7 @@ The Server parameter isn't available in this release.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: CurrentCertificateParameter, NewCertificateParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -226,7 +238,7 @@ Exchange Setup configures the ServiceName parameter with a specific constant val
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: AuthConfigSettings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -241,7 +253,7 @@ The SkipImmediateCertificateDeployment switch specifies that the certificate sho
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: CurrentCertificateParameter, NewCertificateParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

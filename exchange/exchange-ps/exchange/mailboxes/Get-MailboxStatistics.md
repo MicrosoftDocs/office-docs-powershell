@@ -17,33 +17,41 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Database
 ```
-Get-MailboxStatistics -Database <DatabaseIdParameter> [-DomainController <Fqdn>]
- [[-Identity] <GeneralMailboxOrMailUserIdParameter>] [-AuditLog] [-IncludeMoveHistory] [-IncludeMoveReport]
- [-IncludeQuarantineDetails] [-NoADLookup] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive] [-DomainController <Fqdn>]
- [-IncludeMoveHistory] [-IncludeMoveReport] [-CopyOnServer <ServerIdParameter>] [-IncludeQuarantineDetails]
+Get-MailboxStatistics -Database <DatabaseIdParameter> [[-StoreMailboxIdentity] <StoreMailboxIdParameter>]
+ [-CopyOnServer <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IncludeMoveHistory]
+ [-IncludeMoveReport]
+ [-IncludeQuarantineDetails]
  [-NoADLookup] [<CommonParameters>]
 ```
 
-### Set3
+### Identity
 ```
-Get-MailboxStatistics -Server <ServerIdParameter> [-DomainController <Fqdn>]
- [[-StoreMailboxIdentity] <StoreMailboxIdParameter>] -Database <DatabaseIdParameter>
- [-CopyOnServer <ServerIdParameter>] [-Filter <String>] [-IncludeMoveHistory] [-IncludeMoveReport]
- [-IncludeQuarantineDetails] [-NoADLookup] [<CommonParameters>]
+Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter> [-Archive]
+ [-CopyOnServer <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-IncludeMoveHistory]
+ [-IncludeMoveReport]
+ [-IncludeQuarantineDetails]
+ [-IncludeSoftDeletedRecipients]
+ [-NoADLookup]
+ [<CommonParameters>]
 ```
 
-### Set4
+### Server
 ```
-Get-MailboxStatistics -Server <ServerIdParameter> [-DomainController <Fqdn>] [-Filter <String>]
- [-IncludeMoveHistory] [-IncludeMoveReport] [-IncludePassive] [-IncludeQuarantineDetails] [-NoADLookup]
- [<CommonParameters>]
+Get-MailboxStatistics -Server <ServerIdParameter>
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IncludeMoveHistory]
+ [-IncludeMoveReport]
+ [-IncludePassive]
+ [-IncludeQuarantineDetails]
+ [-NoADLookup] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -139,7 +147,7 @@ This parameter accepts pipeline input from the Get-MailboxDatabase cmdlet.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -178,19 +186,7 @@ For example:
 
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-```yaml
-Type: GeneralMailboxOrMailUserIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -213,7 +209,7 @@ When you specify a value for the Server parameter, the command returns statistic
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set3, Set4
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -230,9 +226,26 @@ You don't have to specify a value with this parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CopyOnServer
+This parameter is available only in on-premises Exchange.
+
+The CopyOnServer parameter is used to retrieve statistics from a specific database copy on the server specified with the Server parameter.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: Database, Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -250,6 +263,23 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+This parameter is available only in on-premises Exchange.
+
+The Filter parameter specifies a filter to filter the results of the Get-MailboxStatistics cmdlet. For example, to display all disconnected mailboxes on a specific mailbox database, use the following syntax for this parameter: -Filter 'DisconnectDate -ne $null'
+
+```yaml
+Type: String
+Parameter Sets: Database, Server
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -289,55 +319,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuditLog
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CopyOnServer
-This parameter is available only in on-premises Exchange.
-
-The CopyOnServer parameter is used to retrieve statistics from a specific database copy on the server specified with the Server parameter.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Set1, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Filter
-This parameter is available only in on-premises Exchange.
-
-The Filter parameter specifies a filter to filter the results of the Get-MailboxStatistics cmdlet. For example, to display all disconnected mailboxes on a specific mailbox database, use the following syntax for this parameter: -Filter 'DisconnectDate -ne $null'
-
-```yaml
-Type: String
-Parameter Sets: Set3, Set4
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -IncludePassive
 This parameter is available only in on-premises Exchange.
 
@@ -345,9 +326,26 @@ Without the IncludePassive parameter, the cmdlet retrieves statistics from activ
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSoftDeletedRecipients
+This parameter is available only in the cloud-based service.
+
+{{Fill IncludeSoftDeletedRecipients Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -404,7 +402,7 @@ Use this syntax to retrieve information about disconnected mailboxes, which don'
 
 ```yaml
 Type: StoreMailboxIdParameter
-Parameter Sets: Set3
+Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
