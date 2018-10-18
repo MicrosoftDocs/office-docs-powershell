@@ -17,31 +17,46 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### AnrSet
 ```
-Get-DistributionGroup [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
- [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-AccountPartition <AccountPartitionIdParameter>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-DistributionGroup [[-Identity] <DistributionGroupIdParameter>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
- [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-AccountPartition <AccountPartitionIdParameter>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
+Get-DistributionGroup [-Anr <String>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
-### Set2
+### Identity
 ```
-Get-DistributionGroup [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
- [-IgnoreDefaultScope] [-ManagedBy <GeneralRecipientIdParameter>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
- [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-AccountPartition <AccountPartitionIdParameter>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
+Get-DistributionGroup [[-Identity] <DistributionGroupIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
+```
+
+### ManagedBySet
+```
+Get-DistributionGroup [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-ManagedBy <GeneralRecipientIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -87,7 +102,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -169,7 +184,7 @@ For example:
 
 ```yaml
 Type: DistributionGroupIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -223,7 +238,7 @@ For example:
 
 ```yaml
 Type: GeneralRecipientIdParameter
-Parameter Sets: Set2
+Parameter Sets: ManagedBySet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -343,36 +358,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccountPartition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: AccountPartitionIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UsnForReconciliationSearch
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

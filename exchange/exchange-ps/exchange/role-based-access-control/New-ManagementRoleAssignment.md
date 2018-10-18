@@ -17,56 +17,71 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set4
+### Computer
 ```
 New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> -Role <RoleIdParameter>
- [-Confirm] [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-DomainController <Fqdn>]
+ [-Confirm]
+ [-CustomConfigWriteScope <ManagementScopeIdParameter>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-DomainController <Fqdn>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
- [-UnScopedTopLevel] [-WhatIf] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
- [<CommonParameters>]
+ [-UnScopedTopLevel]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Policy
 ```
 New-ManagementRoleAssignment [[-Name] <String>] -Policy <MailboxPolicyIdParameter> -Role <RoleIdParameter>
- [-Confirm] [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-DomainController <Fqdn>]
- [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force]
- [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
- [-UnScopedTopLevel] [-WhatIf] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
- [<CommonParameters>]
-```
-
-### Set2
-```
-New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter>
- -SecurityGroup <SecurityGroupIdParameter> [-Confirm] [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Delegating] [-DomainController <Fqdn>]
- [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force]
- [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
- [-UnScopedTopLevel] [-WhatIf] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
- [<CommonParameters>]
-```
-
-### Set1
-```
-New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <UserIdParameter> [-Confirm]
+ [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Delegating] [-DomainController <Fqdn>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-DomainController <Fqdn>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Force]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
- [-UnScopedTopLevel] [-WhatIf] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
- [<CommonParameters>]
+ [-UnScopedTopLevel]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### SecurityGroup
+```
+New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -SecurityGroup <SecurityGroupIdParameter> [-Delegating]
+ [-Confirm]
+ [-CustomConfigWriteScope <ManagementScopeIdParameter>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Force]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+ [-UnScopedTopLevel]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### User
+```
+New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <UserIdParameter> [-Delegating]
+ [-Confirm]
+ [-CustomConfigWriteScope <ManagementScopeIdParameter>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Force]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
+ [-UnScopedTopLevel]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -157,7 +172,7 @@ If you specify the Computer parameter, you can't specify the SecurityGroup, User
 
 ```yaml
 Type: ComputerIdParameter
-Parameter Sets: Set4
+Parameter Sets: Computer
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -176,7 +191,7 @@ If you specify the Policy parameter, you can't specify the SecurityGroup, Comput
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: Set3
+Parameter Sets: Policy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
@@ -208,7 +223,7 @@ If you specify the SecurityGroup parameter, you can't specify the Policy, Comput
 
 ```yaml
 Type: SecurityGroupIdParameter
-Parameter Sets: Set2
+Parameter Sets: SecurityGroup
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
@@ -225,7 +240,7 @@ If you specify the User parameter, you can't specify the SecurityGroup, Computer
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set1
+Parameter Sets: User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
@@ -291,7 +306,7 @@ The Delegating parameter specifies whether the user or USG assigned to the role 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set1
+Parameter Sets: SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -357,9 +372,26 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientAdministrativeUnitScope
+The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the new role assignment to.
+
+Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+
+```yaml
+Type: AdministrativeUnitIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -428,25 +460,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientAdministrativeUnitScope
-This parameter is available only in the cloud-based service.
-
-The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the new role assignment to.
-
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
-
-```yaml
-Type: AdministrativeUnitIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

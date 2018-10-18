@@ -17,35 +17,59 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### CancelPhoto
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-Cancel] [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [-GroupMailbox] [-PhotoType <String>] [<CommonParameters>]
+Set-UserPhoto [-Identity] <MailboxIdParameter> [-Cancel]
+ [-Confirm]
+ [-GroupMailbox]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-PhotoType <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### UploadPhotoData
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureData <Byte[]> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [-GroupMailbox] [-PhotoType <String>] [<CommonParameters>]
+Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureData <Byte[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-GroupMailbox]
+ [-IgnoreDefaultScope]
+ [-PhotoType <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### UploadPreview
 ```
 Set-UserPhoto [-Identity] <MailboxIdParameter> [-PictureData <Byte[]>] [-PictureStream <Stream>] [-Preview]
- [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-WhatIf] [-GroupMailbox] [-PhotoType <String>]
- [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-GroupMailbox]
+ [-IgnoreDefaultScope]
+ [-PhotoType <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### UploadPhotoStream
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureStream <Stream> [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [-GroupMailbox] [-PhotoType <String>] [<CommonParameters>]
+Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureStream <Stream>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-GroupMailbox]
+ [-IgnoreDefaultScope]
+ [-PhotoType <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### SavePhoto
 ```
-Set-UserPhoto [-Identity] <MailboxIdParameter> [-Save] [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-WhatIf] [-GroupMailbox] [-PhotoType <String>] [<CommonParameters>]
+Set-UserPhoto [-Identity] <MailboxIdParameter> [-Save]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-GroupMailbox]
+ [-IgnoreDefaultScope]
+ [-PhotoType <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -87,7 +111,7 @@ To delete the photo that's currently associated with a user's account, use the R
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: CancelPhoto
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -143,7 +167,7 @@ This parameter uses the syntax ([System.IO.File]::ReadAllBytes("\<file name and 
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1
+Parameter Sets: UploadPhotoData
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -155,7 +179,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set5
+Parameter Sets: UploadPreview
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -170,10 +194,10 @@ The PictureStream parameter specifies the photo that will be uploaded to the use
 
 ```yaml
 Type: Stream
-Parameter Sets: Set5
+Parameter Sets: UploadPhotoStream
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -182,10 +206,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Stream
-Parameter Sets: Set2
+Parameter Sets: UploadPreview
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -199,7 +223,7 @@ A preview photo is the photo object that is uploaded to the user's account, but 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5
+Parameter Sets: UploadPreview
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -214,7 +238,7 @@ The Saveswitch specifies that the photo that's uploaded to the user's account wi
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: SavePhoto
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -260,6 +284,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GroupMailbox
+The GroupMailbox switch indicates the specified user is an Office 365 Group. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreDefaultScope
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
@@ -281,36 +320,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GroupMailbox
-The GroupMailbox switch indicates the specified user is an Office 365 Group. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PhotoType
 This parameter is reserved for internal Microsoft use.
 
@@ -319,6 +328,21 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

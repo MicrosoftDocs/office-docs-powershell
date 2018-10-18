@@ -17,23 +17,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Instance
 ```
-Set-AdServerSettings [-PreferredServer] <Fqdn> [-Confirm] [-RecipientViewRoot <String>]
- [-ViewEntireForest <$true | $false>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Set-AdServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentationObject> [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Set-AdServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentationObject>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### FullParams
 ```
-Set-AdServerSettings [-ConfigurationDomainController <Fqdn>] [-Confirm] [-PreferredGlobalCatalog <Fqdn>]
- [-RecipientViewRoot <String>] [-SetPreferredDomainControllers <MultiValuedProperty>]
- [-ViewEntireForest <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-AdServerSettings [-ConfigurationDomainController <Fqdn>] [-PreferredGlobalCatalog <Fqdn>] [-RecipientViewRoot <String>] [-SetPreferredDomainControllers <MultiValuedProperty>] [-ViewEntireForest <$true | $false>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### SingleDC
+```
+Set-AdServerSettings [[-PreferredServer] <Fqdn>] [-RecipientViewRoot <String>] [-ViewEntireForest <$true | $false>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +64,7 @@ The PreferredServer parameter specifies the FQDN of the domain controller to be 
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: SingleDC
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -77,7 +79,7 @@ The RunspaceServerSettings parameter specifies whether to pass an entire configu
 
 ```yaml
 Type: RunspaceServerSettingsPresentationObject
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -92,7 +94,7 @@ The ConfigurationDomainController parameter specifies the fully qualified domain
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -126,7 +128,7 @@ The PreferredGlobalCatalog parameter specifies the FQDN of the global catalog se
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -141,7 +143,7 @@ The RecipientViewRoot parameter specifies the organizational unit (OU) to includ
 
 ```yaml
 Type: String
-Parameter Sets: Set2, Set1
+Parameter Sets: SingleDC, FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -156,7 +158,7 @@ The SetPreferredDomainControllers parameter specifies the list of domain control
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -173,7 +175,7 @@ When you specify a value of $true, the value stored in the RecipientViewRoot par
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2, Set1
+Parameter Sets: SingleDC, FullParams
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

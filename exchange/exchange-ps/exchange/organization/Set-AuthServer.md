@@ -17,24 +17,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### AuthMetadataUrl
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Name <String>] [-TrustAnySSLCertificate] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set2
-```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-Confirm]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-IsDefaultAuthorizationEndpoint <$true | $false>]
- [-Name <String>] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-TrustAnySSLCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### NativeClientAuthServer
 ```
-Set-AuthServer [-Identity] <AuthServerIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-Name <String>] [-RefreshAuthMetadata] [-WhatIf] [<CommonParameters>]
+Set-AuthServer [-Identity] <AuthServerIdParameter> [-AuthMetadataUrl <String>] [-IsDefaultAuthorizationEndpoint <$true | $false>] [-TrustAnySSLCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RefreshAuthMetadata
+```
+Set-AuthServer [-Identity] <AuthServerIdParameter> [-RefreshAuthMetadata]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,7 +85,7 @@ The AuthMetadataUrl parameter specifies the URL of the authorization server. Thi
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2
+Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -141,7 +151,7 @@ Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -171,7 +181,7 @@ The RefreshAuthMetadata switch specifies whether Exchange should refresh the aut
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: RefreshAuthMetadata
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -186,7 +196,7 @@ The TrustAnySSLCertificate switch specifies whether Exchange should accept certi
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
