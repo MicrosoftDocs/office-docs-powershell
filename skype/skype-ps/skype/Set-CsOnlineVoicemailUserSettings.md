@@ -14,7 +14,7 @@ New online voicemail user settings of the user would be returned after executing
 ## SYNTAX
 
 ```
-Set-CsOnlineVoicemailUserSettings -Identity <String> [-VoicemailEnabled <Boolean>] [-PromptLanguage <String>] [-OofGreetingEnabled <Boolean>] [-OofGreetingFollowAutomaticRepliesEnabled <Boolean>] [-OofGreetingFollowCalendarEnabled <Boolean>] [-CallAnswerRule <DeclineCall | PromptOnly | PromptOnlyWithTransfer | RegularVoicemail | VoicemailWithTransferOption>] [-TransferTarget <String>] [-Tenant <Guid>] [<CommonParameters>]
+Set-CsOnlineVoicemailUserSettings -Identity <String> [-VoicemailEnabled <Boolean>] [-PromptLanguage <String>] [-OofGreetingEnabled <Boolean>] [-OofGreetingFollowAutomaticRepliesEnabled <Boolean>] [-OofGreetingFollowCalendarEnabled <Boolean>] [-CallAnswerRule <DeclineCall | PromptOnly | PromptOnlyWithTransfer | RegularVoicemail | VoicemailWithTransferOption>] [-TransferTarget <String>] [-DefaultGreetingPromptOverwrite <String>] [-DefaultOofGreetingPromptOverwrite <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,6 +46,13 @@ Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-00000000000
 ```
 
 This example changes CallAnswerRule setting to PromptOnlyWithTransfer and set TransferTarget to "sip:user2@contoso.com" for the user with Object ID "00000000-0000-0000-0000-000000000000".
+
+### -------------------------- Example 4 --------------------------
+```
+Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000" -DefaultGreetingPromptOverwrite "Hi, I am currently not available."
+```
+
+This example changes DefaultGreetingPromptOverwrite setting to "Hi, I am currently not available." for the user with Object ID "00000000-0000-0000-0000-000000000000".
 
 
 ## PARAMETERS
@@ -115,6 +122,16 @@ Now the following languages are supported:
 - "zh-CN" (Chinese - Simplified, PRC)
 - "zh-TW" (Chinese - Traditional, Taiwan)
 - "zh-HK" (Chinese - Traditional, Hong Kong S.A.R.)
+- "cs-CZ" (Czech - Czech Republic)
+- "th-TH" (Thai - Thailand)
+- "el-GR" (Greek - Greece)
+- "hu-HU" (Hungarian - Hungary)
+- "sk-SK" (Slovak - Slovakia)
+- "hr-HR" (Croatian - Croatia)
+- "sl-SI" (Slovenian - Slovenia)
+- "id-ID" (Indonesian - Indonesia)
+- "ro-RO" (Romanian - Romania)
+- "vi-VN" (Vietnamese - Viet Nam)
 
 ```yaml
 Type: System.String
@@ -216,6 +233,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultGreetingPromptOverwrite
+The DefaultGreetingPromptOverwrite parameter represents the contents that overwrite the default normal greeting prompt.
+If user normal custom greeting is not set and DefaultGreetingPromptOverwrite is not empty, voicemail service will play this overwrite greeting instead of default normal greeting in voicemail deposit scenario.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultOofGreetingPromptOverwrite
+The DefaultOofGreetingPromptOverwrite parameter represents the contents that overwrite the default out-of-office greeting prompt.
+If user out-of-office custom greeting is not set and DefaultOofGreetingPromptOverwrite is not empty, voicemail service will play this overwrite greeting instead of default out-of-office greeting in voicemail deposit scenario.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
 
 ```yaml
@@ -248,4 +299,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
+
+[Get-CsOnlineVoicemailUserSettings](Get-CsOnlineVoicemailUserSettings.md)
 
