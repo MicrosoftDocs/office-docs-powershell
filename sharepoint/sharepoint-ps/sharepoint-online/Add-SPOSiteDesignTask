@@ -72,7 +72,9 @@ Accept wildcard characters: False
 ```
 ## RELATED COMMANDS
 
-- [Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteDesignTask?view=sharepoint-ps)
-- [Get-SPOSiteDesignRun](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteDesignRun?view=sharepoint-ps)
-- [Get-SPOSiteDesignRunStatus](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteDesignRunStatus?view=sharepoint-ps)
+- [Get-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
+
+- [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
+
+- [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
 
