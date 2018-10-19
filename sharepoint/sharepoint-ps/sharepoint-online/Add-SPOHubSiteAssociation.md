@@ -13,7 +13,7 @@ Associates a site with a hub site.
 ## SYNTAX
 
 ```
-Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> `
+Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> 
 -HubSite <SpoHubSitePipeBind> `
 [<CommonParameters>]
 ```
@@ -26,7 +26,7 @@ Use this cmdlet to associate a site with a hub site.
 ### Example 1
 
 ```
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research `
+Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research 
 -HubSite https://contoso.sharepoint.com/sites/Marketing 
 ```
 
