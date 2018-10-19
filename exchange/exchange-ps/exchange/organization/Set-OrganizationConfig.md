@@ -65,6 +65,7 @@ Set-OrganizationConfig
  [-RequiredCharsetCoverage <Int32>]
  [-SCLJunkThreshold <Int32>]
  [-VisibleMeetingUpdateProperties <String>]
+ [-WebSuggestedRepliesDisabled  <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -2112,6 +2113,27 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -WebSuggestedRepliesDisabled
+The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web.  This feature provides suggested replies to emails to easily and quickly respond to messages. Valid values are:
+
+- $true: Suggested Replies are disabled. 
+
+- $false: Connectors are disabled. This is the default value.
+
+The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Yammer.
+
+```yaml
+Type: $true | $false
+Parameter Sets: All
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
 
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
