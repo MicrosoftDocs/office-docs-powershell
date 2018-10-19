@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Identity (Default)
+### Default
 ```
 Set-OrganizationConfig
  [-ACLableSyncedObjectEnabled <true | $false>]
@@ -60,6 +60,7 @@ Set-OrganizationConfig
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicFolderContentReplicationDisabled <$true | $false>]
  [-PublicFolderMigrationComplete <$true | $false>]
+ [-PublicFolderShowClientControl <$true | $false>]
  [-PublicFoldersLockedForMigration <$true | $false>]
  [-ReadTrackingEnabled <$true | $false>]
  [-RequiredCharsetCoverage <Int32>]
@@ -145,6 +146,7 @@ Set-OrganizationConfig
  [-PublicFolderMailboxesMigrationComplete <$true | $false>]
  [-PublicFolderMigrationComplete <$true | $false>]
  [-PublicFoldersEnabled <None | Local | Remote>]
+ [-PublicFolderShowClientControl <$true | $false>]
  [-PublicFoldersLockedForMigration <$true | $false>]
  [-ReadTrackingEnabled <$true | $false>]
  [-RefreshSessionEnabled <$true | $false>]
@@ -239,6 +241,7 @@ Set-OrganizationConfig
  [-PublicFolderMailboxesMigrationComplete <$true | $false>]
  [-PublicFolderMigrationComplete <$true | $false>]
  [-PublicFoldersEnabled <None | Local | Remote>]
+ [-PublicFolderShowClientControl <$true | $false>]
  [-PublicFoldersLockedForMigration <$true | $false>]
  [-ReadTrackingEnabled <$true | $false>]
  [-RefreshSessionEnabled <$true | $false>]
@@ -1867,6 +1870,27 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Ex
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolderShowClientControl
+This parameter is available only in the cloud-based service.
+
+The PublicFolderShowClientControl parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
+
+- $true: Users can access public folders in Outlook if the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet is set to the value $true (the default value is $false).
+
+- $false: User can't access public folders in Outlook. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: $false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
