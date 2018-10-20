@@ -2115,7 +2115,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebSuggestedRepliesDisabled
-The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web.  This feature provides suggested replies to emails to easily and quickly respond to messages. Valid values are:
+The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web.  This feature provides suggested replies to emails so users can easily and quickly respond to messages. Valid values are:
 
 - $true: Suggested Replies are disabled. 
 
