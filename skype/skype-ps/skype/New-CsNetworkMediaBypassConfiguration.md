@@ -20,8 +20,8 @@ This cmdlet was introduced in Lync Server 2010.
 ```
 New-CsNetworkMediaBypassConfiguration [-AlwaysBypass <Boolean>] [-BypassID <String>] [-Enabled <Boolean>]
  [-EnableDefaultBypassID <Boolean>] [-ExternalBypassMode <BypassModeEnumType>]
- [-InternalBypassMode <BypassModeEnumType>] [-EnabledForAudioVideoConferences <Boolean>] [-Tenant <Object>]
- [-AsJob] [<CommonParameters>]
+ [-InternalBypassMode <BypassModeEnumType>] [-EnabledForAudioVideoConferences <Boolean>] [-Tenant <Guid>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +61,6 @@ The following parameters are not applicable to Skype for Business Online: AsJob,
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 $a = (Get-CsNetworkConfiguration).MediaBypassSettings
 
 $a.AlwaysBypass = $false
@@ -267,23 +266,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
