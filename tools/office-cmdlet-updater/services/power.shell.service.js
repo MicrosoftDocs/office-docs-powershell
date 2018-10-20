@@ -1,6 +1,5 @@
 const Shell = require('node-powershell');
 const of = require('await-of').default;
-const { powerShellErrors } = require('../constants/errors');
 const commands = require('../constants/commands');
 const format = require('string-format');
 
@@ -14,74 +13,45 @@ class PowerShellService {
 	}
 
 	async preInstall() {
-		let output, err, result;
+		let result = '';
 
-		[output, err] = await of(this.installPlatyPsIfNeeded());
+		result += await this.installPlatyPsIfNeeded();
 
-		if (err) {
-			await this.dispose();
-			throw new Error(err);
-		}
+		// result += await this.preInstallTeams();
 
-		result += output;
+		// result += await this.preInstallSkype();
 
-		[output, err] = await of(this.preInstallTeams());
+		// result += await this.preInstallSharepoint();
 
-		if (err) {
-			await this.dispose();
-			throw new Error(err);
-		}
-
-		result += output;
-
-		[output, err] = await of(this.preInstallSkype());
-
-		if (err) {
-			await this.dispose();
-			throw new Error(err);
-		}
-
-		result += output;
-
-        [output, err] = await of(this.preInstallSharepoint());
-
-        if (err) {
-            await this.dispose();
-            throw new Error(err);
-        }
-
-        result += output;
-
-        [output, err] = await of(this.preInstallWhiteboard());
-
-        if (err) {
-            await this.dispose();
-            throw new Error(err);
-        }
-
-        result += output;
+		result += await this.preInstallWhiteboard();
 
 		return result;
 	}
 
-	async preInstallSharepoint() {
-		let result;
+	async installPlatyPsIfNeeded() {
+		let result = '';
 
-		result += await this._invokeCommand(commands.SHAREPOINT_INSTALL_MODULE);
+		result += await this._invokeCommand(commands.INSTALL_PLATYPS);
+
+		result += await this._invokeCommand(commands.IMPORT_PLATYPS);
 
 		return result;
 	}
 
-	async preInstallWhiteboard() {
-		let result;
+	async preInstallTeams() {
+		let result = '';
 
-		result += await this._invokeCommand(commands.WHITEBOARD_INSTALL_MODULE);
+		// TODO: check if user already auth
+
+		result += await this._invokeCommand(commands.INSTALL_MICROSOFT_TEAM);
+
+		result += await this._invokeCommand(commands.CONNECT_MICROSOFT_TEAM);
 
 		return result;
 	}
 
 	async preInstallSkype() {
-		let result;
+		let result = '';
 
 		//result += await this._invokeCommand(commands.SKYPE_SET_POLICY);
 
@@ -96,89 +66,29 @@ class PowerShellService {
 		return result;
 	}
 
-	async _invokeCommand(command) {
-		const [output, err] = await of(this.invokeCommand(command));
+	async preInstallSharepoint() {
+		let result = '';
 
-		if (err) {
-			throw new Error(err);
-		}
-
-		return output;
-	}
-
-	async preInstallTeams() {
-		let output, err, result;
-
-		// TODO: check if user already auth
-
-		const installModule = commands.INSTALL_MICROSOFT_TEAM;
-
-		[output, err] = await of(this.invokeCommand(installModule));
-
-		result += output;
-
-		if (err) {
-			throw new Error(powerShellErrors.INSTALL_MICROSOFT_TEAM_ERROR);
-		}
-
-		const auth = commands.CONNECT_MICROSOFT_TEAM;
-
-		[output, err] = await of(this.invokeCommand(auth));
-
-		result += output;
-
-		if (err) {
-			throw new Error(powerShellErrors.AUTH_MICROSOFT_TEAM_ERROR);
-		}
+		result += await this._invokeCommand(commands.SHAREPOINT_INSTALL_MODULE);
 
 		return result;
 	}
 
-	async installPlatyPsIfNeeded() {
-		let output,
-			err,
-			result = '';
+	async preInstallWhiteboard() {
+		let result = '';
 
-		const installModule = commands.INSTALL_PLATYPS;
-
-		[output, err] = await of(this.invokeCommand(installModule));
-
-		if (err) {
-			throw new Error(powerShellErrors.INSTALL_PLATYPS_ERROR);
-		}
-
-		result += output;
-
-		const importModule = commands.IMPORT_PLATYPS;
-
-		[output, err] = await of(this.invokeCommand(importModule));
-
-		if (err) {
-			throw new Error(powerShellErrors.IMPORT_PLATYPS_ERROR);
-		}
-
-		result += output;
+		result += await this._invokeCommand(commands.WHITEBOARD_INSTALL_MODULE);
 
 		return result;
 	}
 
 	async updateMarkdown(docPath, logPath) {
-		const command = this.createUpdateMarkdownCommand(docPath, logPath);
+		const command = format(commands.UPDATE_MARKDOWN, docPath, logPath);
 
-		const [output, err] = await of(this.invokeCommand(command));
-
-		if (err) {
-			throw new Error(err);
-		}
-
-		return output;
+		return await this._invokeCommand(command);
 	}
 
-	createUpdateMarkdownCommand(docPath, logPath) {
-		return format(commands.UPDATE_MARKDOWN, docPath, logPath);
-	}
-
-	async invokeCommand(command) {
+	async _invokeCommand(command) {
 		await this.ps.addCommand(command);
 
 		const [output, err] = await of(this.ps.invoke());
