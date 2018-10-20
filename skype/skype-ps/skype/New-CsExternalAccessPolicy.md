@@ -18,7 +18,6 @@ This cmdlet was introduced in Lync Server 2010.
 ## SYNTAX
 
 ```
-```
 New-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableOutsideAccess <Boolean>] [-Identity] <XdsIdentity>
