@@ -66,6 +66,7 @@ Set-OrganizationConfig
  [-RequiredCharsetCoverage <Int32>]
  [-SCLJunkThreshold <Int32>]
  [-VisibleMeetingUpdateProperties <String>]
+ [-WebSuggestedRepliesDisabled <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -2130,6 +2131,27 @@ Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WebSuggestedRepliesDisabled
+This parameter is available only in the cloud-based service.
+
+The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web. This feature provides suggested replies to emails so users can easily and quickly respond to messages. Valid values are:
+
+- $true: Suggested Replies are disabled. 
+
+- $false: Suggested Replies are enabled. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: All
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
