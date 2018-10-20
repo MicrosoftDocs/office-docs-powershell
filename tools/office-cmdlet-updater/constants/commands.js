@@ -1,8 +1,8 @@
 module.exports = {
 	GET_TEAM: 'Get-Team',
-	INSTALL_MICROSOFT_TEAM: 'Install-Module MicrosoftTeams -SkipPublisherCheck',
+	INSTALL_MICROSOFT_TEAM: 'Install-Module MicrosoftTeams -SkipPublisherCheck -Force',
 	CONNECT_MICROSOFT_TEAM: 'Connect-MicrosoftTeams',
-	INSTALL_PLATYPS: 'Install-Module -Name platyPS -SkipPublisherCheck -Scope CurrentUser',
+	INSTALL_PLATYPS: 'Install-Module -Name platyPS -SkipPublisherCheck -Scope CurrentUser -Force',
 	IMPORT_PLATYPS: 'Import-Module platyPS',
 	UPDATE_MARKDOWN: 'Update-MarkdownHelp -Path "{}" -LogPath "{}"',
 	SKYPE_SET_POLICY: 'Set-ExecutionPolicy RemoteSigned ',

@@ -30,7 +30,6 @@ class MarkdownService {
 	}
 
 	async addMdFilesInQueue(doc) {
-		const mdExt = '.md';
 		const { ignoreFiles } = this.config.get('platyPS');
 		const ignoreAbsolutePathsArr = ignoreFiles.map((f) => path.resolve(f));
 		const metaTagRegex = /(?<=applicable: ).+/gmu;
@@ -64,12 +63,9 @@ class MarkdownService {
 			return false;
 		};
 
-		const mdFiles = (await fs.readdir(doc.path))
-			.map((f) => path.resolve(doc.path, f))
-			.filter(
-				(fn) =>
-					fn.endsWith(mdExt) && !isFileIgnore(fn) && isContainTag(fn)
-			);
+		const mdFiles = (await this._getMdFiles(doc.path)).filter(
+			(fn) => !isFileIgnore(fn) && isContainTag(fn)
+		);
 
 		mdFiles.forEach((file) => {
 			this.queue
@@ -77,6 +73,33 @@ class MarkdownService {
 				.on('failed', this.queueFailedHandler)
 				.on('finish', this.queueFinishHandler);
 		});
+	}
+
+	async _getMdFiles(path) {
+		const mdExt = '.md';
+
+		const allFiles = await this._getFolderFiles(path);
+
+		return allFiles.filter((file) => file.endsWith(mdExt));
+	}
+
+	async _getFolderFiles(folderPath) {
+		const files = await fs.readdir(folderPath);
+
+		return await files.reduce(async (promiseResult, filePath) => {
+			const result = await promiseResult;
+			const absolute = path.resolve(folderPath, filePath);
+
+			const fileStat = await fs.stat(absolute);
+
+			if (fileStat.isDirectory()) {
+				const subDirFiles = await this._getFolderFiles(absolute);
+
+				return [...result, ...subDirFiles];
+			}
+
+			return [...result, absolute];
+		}, []);
 	}
 
 	async processQueue({ file, doc }, cb) {
