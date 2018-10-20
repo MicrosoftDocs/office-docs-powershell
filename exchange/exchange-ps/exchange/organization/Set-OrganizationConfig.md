@@ -2121,8 +2121,6 @@ The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable
 
 - $false: Suggested Replies are disabled. This is the default value.
 
-The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Yammer.
-
 ```yaml
 Type: $true | $false
 Parameter Sets: All
