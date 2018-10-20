@@ -2119,7 +2119,7 @@ The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable
 
 - $true: Suggested Replies are disabled. 
 
-- $false: Connectors are disabled. This is the default value.
+- $false: Suggested Replies are disabled. This is the default value.
 
 The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Yammer.
 
@@ -2133,7 +2133,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
+```
 
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
