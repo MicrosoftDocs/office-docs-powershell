@@ -65,7 +65,7 @@ Set-OrganizationConfig
  [-RequiredCharsetCoverage <Int32>]
  [-SCLJunkThreshold <Int32>]
  [-VisibleMeetingUpdateProperties <String>]
- [-WebSuggestedRepliesDisabled  <$true | $false>]
+ [-WebSuggestedRepliesDisabled <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -2115,11 +2115,13 @@ Accept wildcard characters: False
 ```
 
 ### -WebSuggestedRepliesDisabled
-The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web.  This feature provides suggested replies to emails so users can easily and quickly respond to messages. Valid values are:
+This parameter is available only in the cloud-based service.
+
+The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web. This feature provides suggested replies to emails so users can easily and quickly respond to messages. Valid values are:
 
 - $true: Suggested Replies are disabled. 
 
-- $false: Suggested Replies are disabled. This is the default value.
+- $false: Suggested Replies are enabled. This is the default value.
 
 ```yaml
 Type: $true | $false
