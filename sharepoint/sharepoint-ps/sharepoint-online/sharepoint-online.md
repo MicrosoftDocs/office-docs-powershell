@@ -118,6 +118,12 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOSiteDesign](Get-SPOSiteDesign.md)
 {{Manually Enter Get-SPOSiteDesign Description Here}}
 
+### [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
+### [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
 ### [Get-SPOSiteDesignRights](Get-SPOSiteDesignRights.md)
 {{Manually Enter Get-SPOSiteDesignRights Description Here}}
 
