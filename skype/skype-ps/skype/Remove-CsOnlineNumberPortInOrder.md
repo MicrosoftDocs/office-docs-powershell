@@ -14,8 +14,8 @@ New third party provider ports should be provisioned through the Skype for Busin
 ## SYNTAX
 
 ```
-Remove-CsOnlineNumberPortInOrder [-PortInOrderId <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Remove-CsOnlineNumberPortInOrder [-Tenant <Guid>] -PortInOrderId <String> [-DomainController <Fqdn>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,23 +37,7 @@ Insert descriptive text for example 1.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -85,7 +69,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -117,7 +101,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -136,22 +120,6 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
