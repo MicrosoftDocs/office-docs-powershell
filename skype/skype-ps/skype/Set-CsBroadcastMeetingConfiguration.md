@@ -12,15 +12,36 @@ Use the `Set-CsBroadcastMeetingConfiguration` cmdlet to modify the settings of y
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsBroadcastMeetingConfiguration [[-Identity] <Object>] [-SdnApiTemplateUrl <Object>]
- [-SdnProviderName <Object>] [-BroadcastMeetingSupportUrl <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-EnableAnonymousBroadcastMeeting <Object>] [-EnableBroadcastMeeting <Object>]
- [-EnableBroadcastMeetingRecording <Object>] [-EnableOpenBroadcastMeeting <Object>]
- [-EnableSdnProviderForBroadcastMeeting <Object>] [-EnableTechPreviewFeatures <Object>]
- [-EnforceBroadcastMeetingRecording <Object>] [-Force] [-Instance <Object>] [-SdnApiToken <Object>]
- [-SdnAzureSubscriptionId <Object>] [-SdnFallbackAttendeeThresholdCountForBroadcastMeeting <Object>]
- [-SdnLicenseId <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsBroadcastMeetingConfiguration [-Tenant <Guid>] [-EnableBroadcastMeeting <Boolean>]
+ [-EnableOpenBroadcastMeeting <Boolean>] [-EnableBroadcastMeetingRecording <Boolean>]
+ [-EnableAnonymousBroadcastMeeting <Boolean>] [-EnforceBroadcastMeetingRecording <Boolean>]
+ [-BroadcastMeetingSupportUrl <String>] [-EnableSdnProviderForBroadcastMeeting <Boolean>]
+ [-SdnFallbackAttendeeThresholdCountForBroadcastMeeting <UInt32>] [-EnableTechPreviewFeatures <Boolean>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ParameterSetEnableSdn
+```
+Set-CsBroadcastMeetingConfiguration -SdnProviderName <String> [-SdnLicenseId <String>]
+ [-SdnAzureSubscriptionId <String>] -SdnApiTemplateUrl <String> [-SdnApiToken <String>] [-Tenant <Guid>]
+ [-EnableBroadcastMeeting <Boolean>] [-EnableOpenBroadcastMeeting <Boolean>]
+ [-EnableBroadcastMeetingRecording <Boolean>] [-EnableAnonymousBroadcastMeeting <Boolean>]
+ [-EnforceBroadcastMeetingRecording <Boolean>] [-BroadcastMeetingSupportUrl <String>]
+ [-EnableSdnProviderForBroadcastMeeting <Boolean>]
+ [-SdnFallbackAttendeeThresholdCountForBroadcastMeeting <UInt32>] [-EnableTechPreviewFeatures <Boolean>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsBroadcastMeetingConfiguration [-Tenant <Guid>] [-EnableBroadcastMeeting <Boolean>]
+ [-EnableOpenBroadcastMeeting <Boolean>] [-EnableBroadcastMeetingRecording <Boolean>]
+ [-EnableAnonymousBroadcastMeeting <Boolean>] [-EnforceBroadcastMeetingRecording <Boolean>]
+ [-BroadcastMeetingSupportUrl <String>] [-EnableSdnProviderForBroadcastMeeting <Boolean>]
+ [-SdnFallbackAttendeeThresholdCountForBroadcastMeeting <UInt32>] [-EnableTechPreviewFeatures <Boolean>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +85,7 @@ This information is provided to you by the SDN provider.
 This parameter is only required if EnableSdnProviderForBroadcastMeeting is set to $true.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -81,7 +102,7 @@ Specifies the Software Defined Network (SDN) provider's name.
 This parameter is only required if EnableSdnProviderForBroadcastMeeting is set to $true.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -98,23 +119,7 @@ Specifies a URL where broadcast meeting attendees can find support information o
 The URL will be displayed during the broadcast meeting.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-@{Text=}
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -148,7 +153,7 @@ Valid input for this parameter is $true or $false.
 The default value is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -166,7 +171,7 @@ Valid input for this parameter is $true or $false.
 The default value is $false.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -184,7 +189,7 @@ Valid input for this parameter is $true or $false.
 The default value is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -201,7 +206,7 @@ Specifies if the organizer is allowed to create broadcast meetings that allows a
 The default and only setting is $true.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -218,7 +223,7 @@ If set to $true, broadcast meeting streams are enabled to take advantage of the 
 The default is $false.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -235,7 +240,7 @@ Set to $true to enable use of features available in a technical preview program.
 Set to $false to disable the technical preview features.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -253,7 +258,7 @@ Valid input for this parameter is $true or $false.
 The default value is $false.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -287,7 +292,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -303,7 +308,7 @@ Accept wildcard characters: False
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -321,7 +326,7 @@ This is required by some SDN providers who will give you the required token.
 This parameter is only required if EnableSdnProviderForBroadcastMeeting is set to $true.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -339,7 +344,7 @@ Specifies your Microsoft Azure subscription id which is required by some provide
 The SdnAzureSubscriptionId parameter is not currently supported.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -358,7 +363,7 @@ If this number is exceeded, additional meeting attendees who are not able to use
 The SdnFallbackAttendeeThresholdCountForBroadcastMeeting parameter is not currently supported.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -376,7 +381,7 @@ This is required and provided by some SDN providers.
 This parameter is only required if EnableSdnProviderForBroadcastMeeting is set to $true.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -392,7 +397,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -412,22 +417,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
