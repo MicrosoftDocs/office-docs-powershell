@@ -12,10 +12,18 @@ Use the `Set-CsHybridPSTNSite` cmdlet to modify an existing hybrid public switch
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsHybridPSTNSite [[-Identity] <Object>] [-BitsUpdateTimeWindow <Object>] [-BypassDualWrite <Object>]
- [-Confirm] [-EdgeFQDN <Object>] [-EnableAutoUpdate <Object>] [-Force] [-Instance <Object>]
- [-OsUpdateTimeWindow <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsHybridPSTNSite [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-EdgeFQDN <String>]
+ [-EnableAutoUpdate <Boolean>] [-BitsUpdateTimeWindow <Int32>] [-OsUpdateTimeWindow <Int32>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsHybridPSTNSite [-Tenant <Guid>] [-EdgeFQDN <String>] [-EnableAutoUpdate <Boolean>]
+ [-BitsUpdateTimeWindow <>] [-OsUpdateTimeWindow <>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +51,7 @@ Specifies the identity of the hybrid public switched telephone network (PSTN) si
 For example: `-Identity "SeattlePSTN"`.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -59,7 +67,7 @@ Accept wildcard characters: False
 Time window for updating Skype for Business Cloud Connector Edition bits on the appliance.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
