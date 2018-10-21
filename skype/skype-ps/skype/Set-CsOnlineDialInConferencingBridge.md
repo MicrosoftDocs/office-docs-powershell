@@ -12,10 +12,25 @@ Use the `Set-CsOnlineDialInConferencingBridge` cmdlet to modify the settings of 
 
 ## SYNTAX
 
+### UniqueBridgeParams (Default)
 ```
-Set-CsOnlineDialInConferencingBridge [[-Identity] <Object>] [[-Instance] <Object>] [-Name <Object>]
- [-BypassDualWrite <Object>] [-Confirm] [-DefaultServiceNumber <Object>] [-DomainController <Object>] [-Force]
- [-SetDefault] [-Tenant <Object>] [-TenantDomain <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineDialInConferencingBridge [-Identity] <Guid> [-Tenant <Guid>] [-TenantDomain <String>]
+ [-DefaultServiceNumber <String>] [-SetDefault] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### BridgeNameParams
+```
+Set-CsOnlineDialInConferencingBridge -Name <String> [-Tenant <Guid>] [-TenantDomain <String>]
+ [-DefaultServiceNumber <String>] [-SetDefault] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### InstanceParams
+```
+Set-CsOnlineDialInConferencingBridge [-Instance] <ConferencingBridge> [-Tenant <Guid>]
+ [-TenantDomain <String>] [-DefaultServiceNumber <String>] [-SetDefault] [-DomainController <Fqdn>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +64,7 @@ This example changes the name of a conference bridge by creating an conference b
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge to be modified.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -65,7 +80,7 @@ Accept wildcard characters: False
 Allows you to pass a reference to a Microsoft audio conferencing bridge object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: ConferencingBridge
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -81,23 +96,7 @@ Accept wildcard characters: False
 Specifies the name of the audio conferencing bridge to be modified.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -133,7 +132,7 @@ The DefaultServiceNumber must be assigned to the audio conferencing bridge.
 Also, when the default service number is changed, the service number of existing users will not be changed.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -154,7 +153,7 @@ Fully qualified domain name (FQDN): -DomainController atl-cs-001.Contoso.com.
 Computer name: -DomainController atl-cs-001
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -204,7 +203,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -220,7 +219,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -240,22 +239,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
