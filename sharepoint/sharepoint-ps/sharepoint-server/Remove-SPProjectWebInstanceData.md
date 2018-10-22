@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2016
+applicable: Project Server 2016, Project Server 2019
 title: Remove-SPProjectWebInstanceData
 schema: 2.0.0
 ---
@@ -42,7 +42,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -58,7 +58,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -74,7 +74,7 @@ The site collection to disassociate from the Project Server instance.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -91,7 +91,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

@@ -26,7 +26,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchResource dictionaries\spellcheck\check_en.aut
+PS C:\>Remove-FASTSearchResource dictionaries\spellcheck\check_en.aut
 ```
 
 This example deletes the resource dictionaries\spellcheck\check_en.aut from the resource store.

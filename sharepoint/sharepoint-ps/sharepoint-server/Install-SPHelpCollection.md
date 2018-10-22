@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Install-SPHelpCollection
 schema: 2.0.0
 ---
@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
+PS C:\>Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
 ```
 
 This example installs the specified help collection in the current farm.
@@ -55,7 +55,7 @@ If the LiteralPath parameter is not specified, specifies that all Help Collectio
 Type: SwitchParameter
 Parameter Sets: InstallAll
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ The type must be a valid path in either of the following forms:
 Type: String
 Parameter Sets: InstallOne
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -98,7 +98,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

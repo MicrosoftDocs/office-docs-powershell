@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address "http://myPortal/myTeam" -includechildren -locationType SharePoint -description "This is my team's site on myPortal." -workbooksizemax 50 -externaldataallowed DclAndEmbedded -WarnOnDataRefresh:$false
+PS C:\>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address "http://myPortal/myTeam" -includechildren -locationType SharePoint -description "This is my team's site on myPortal." -workbooksizemax 50 -externaldataallowed DclAndEmbedded -WarnOnDataRefresh:$false
 ```
 
 This example adds a new trusted file location to the list of trusted file locations that is in the Excel Services Application Web service application named MyExcelService.
@@ -56,7 +56,7 @@ A warning message that the workbook is attempting to refresh external data will 
 
 ### ------------------EXAMPLE 2------------------
 ```
-C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address http://myPortal/myTeam/managers -locationType SharePoint -description "This is the manager's subsite for myTeam."
+PS C:\>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address http://myPortal/myTeam/managers -locationType SharePoint -description "This is the manager's subsite for myTeam."
 ```
 
 This example adds a new trusted file location to the list of trusted file locations that is in the Excel Services Application Web service application named MyExcelService with a given address and description.
