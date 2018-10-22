@@ -29,14 +29,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchSecurityXMLAliaser -Identity xmlalias1 -PathToXMLFile "C:\dev\temp\mapping1.xml"
+PS C:\>Set-FASTSearchSecurityXMLAliaser -Identity xmlalias1 -PathToXMLFile "C:\dev\temp\mapping1.xml"
 ```
 
 This example uploads and updates the XML mapping for an XML aliaser.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchSecurityAliaser myxmlalias | Set-FASTSearchSecurityXMLAliaser -OutputUserStoreIds ln2 -InputPropertyName '$PRINCIPAL_REFERENCE_ALIAS'
+PS C:\>Get-FASTSearchSecurityAliaser myxmlalias | Set-FASTSearchSecurityXMLAliaser -OutputUserStoreIds ln2 -InputPropertyName '$PRINCIPAL_REFERENCE_ALIAS'
 ```
 
 This example changes the OutputUserStoreIds and InputPropertyName for the XML aliaser piped from a Get-FASTSearchSecurityAliaser cmdlet.

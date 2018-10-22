@@ -32,7 +32,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchMetadataRankProfile -Name newrankdistribution
+PS C:\>New-FASTSearchMetadataRankProfile -Name newrankdistribution
 ```
 
 This example adds a new rank profile based on the default settings.

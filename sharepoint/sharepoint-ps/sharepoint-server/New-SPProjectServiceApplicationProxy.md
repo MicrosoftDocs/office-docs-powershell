@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: New-SPProjectServiceApplicationProxy
 schema: 2.0.0
 ---
@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### -------------------EXAMPLE 1------------------
 ```
-C:\PS>New-SPProjectServiceApplicationProxy -Name PsiApplicationProxy -ServiceApplication PsiApplication
+PS C:\>New-SPProjectServiceApplicationProxy -Name PsiApplicationProxy -ServiceApplication PsiApplication
 ```
 
 This example creates a Project Server Service application proxy with the name PsiApplicationProxy for the application PsiApplication.
@@ -36,7 +36,7 @@ This example creates a Project Server Service application proxy with the name Ps
 
 ### -------------------EXAMPLE 2------------------
 ```
-C:\PS>Get-SPServiceApplication | ?{ $_.Name -eq "PsiApplication" } | New-SPProjectServiceApplicationProxy -Name "PsiApplicationProxy" -Default
+PS C:\>Get-SPServiceApplication | ?{ $_.Name -eq "PsiApplication" } | New-SPProjectServiceApplicationProxy -Name "PsiApplicationProxy" -Default
 ```
 
 This example creates a Project Server Service application proxy with the name PsiApplicationProxy for the application PsiApplication and adds the proxy to the Default proxy group.
@@ -53,7 +53,7 @@ The type must be a valid name of a Project Server Service application proxy; for
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -71,7 +71,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

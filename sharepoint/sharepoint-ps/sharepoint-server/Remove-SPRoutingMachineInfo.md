@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPRoutingMachineInfo
 schema: 2.0.0
 ---
@@ -34,7 +34,7 @@ C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
 C:\PS>$M=Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName>
 
-C:\PS>Remove-SPRoutingMachineInfo -Identity $M
+PS C:\>Remove-SPRoutingMachineInfo -Identity $M
 ```
 
 This example removes a routing target for a specified identity.
@@ -49,7 +49,7 @@ Specifies the computer object that Request Manager will remove.
 Type: SPRoutingMachineInfoPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -71,7 +71,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

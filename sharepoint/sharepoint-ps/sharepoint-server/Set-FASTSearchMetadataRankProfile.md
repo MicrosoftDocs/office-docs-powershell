@@ -43,7 +43,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -QualityWeight 100 -AuthorityWeight 200 -QueryAuthorityWeight 10 -FreshnessWeight 0
+PS C:\>Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -QualityWeight 100 -AuthorityWeight 200 -QueryAuthorityWeight 10 -FreshnessWeight 0
 ```
 
 This example changes the weights of the relevancy components on the rank profile named "ExtraRankProfile".
@@ -64,7 +64,7 @@ The time the item was processed is stored in the "processingtime" managed proper
 
 ### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -StopWordThreshold 100000
+PS C:\>Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -StopWordThreshold 100000
 ```
 
 This example sets the stop word threshold of the rank profile named "ExtraRankProfile" to 100000.

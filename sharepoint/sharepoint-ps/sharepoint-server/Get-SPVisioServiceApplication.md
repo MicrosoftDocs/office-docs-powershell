@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPVisioServiceApplication
 schema: 2.0.0
 ---
@@ -27,14 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1------------------------- 
 ```
-C:\PS>Get-SPVisioServiceApplication
+PS C:\>Get-SPVisioServiceApplication
 ```
 
 This example returns a collection of all Visio Services applications in the farm.
 
 ### -----------------------EXAMPLE 2------------------------- 
 ```
-C:\PS>Get-SPVisioServiceApplication "VGS1"
+PS C:\>Get-SPVisioServiceApplication "VGS1"
 ```
 
 This example returns properties of the VGS1  Visio Services application.
@@ -50,7 +50,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPVisioServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -72,7 +72,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

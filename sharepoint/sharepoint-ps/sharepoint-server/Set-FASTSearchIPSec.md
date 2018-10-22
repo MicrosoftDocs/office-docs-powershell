@@ -36,14 +36,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchIPSec -Create -UserName user1 -Password xxx
+PS C:\>Set-FASTSearchIPSec -Create -UserName user1 -Password xxx
 ```
 
 This example sets up Internet Protocol security on the local machine.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchIPSec -Remove
+PS C:\>Set-FASTSearchIPSec -Remove
 ```
 
 This example removes Internet Protocol security rules from the local machine.
