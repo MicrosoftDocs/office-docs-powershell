@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPServer
 schema: 2.0.0
 ---
@@ -28,14 +28,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-C:\PS>Get-SPServer
+PS C:\>Get-SPServer
 ```
 
 This example returns all servers in the local farm in a list.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-C:\PS>Get-SPServer | Where{ $_.NeedsUpgrade -eq $TRUE}
+PS C:\>Get-SPServer | Where{ $_.NeedsUpgrade -eq $TRUE}
 ```
 
 This example returns a list of all servers in the farm that need an upgrade.
@@ -49,7 +49,7 @@ Specifies the address of the server to return.
 Type: SPServerPipeBind
 Parameter Sets: (All)
 Aliases: Address
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -71,7 +71,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

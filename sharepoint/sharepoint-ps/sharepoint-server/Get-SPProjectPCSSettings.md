@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectPCSSettings
 schema: 2.0.0
 ---
@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE----------------------- 
 ```
-C:\PS>Get-SPProjectPCSSettings -sa "Project Service Application"
+PS C:\>Get-SPProjectPCSSettings -sa "Project Service Application"
 ```
 
 This example reads the settings for the Project Calculation Engine running on the "Project Service Application" service application.
@@ -41,7 +41,7 @@ The Project Server Service Application for which the settings are to be read.
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -63,7 +63,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

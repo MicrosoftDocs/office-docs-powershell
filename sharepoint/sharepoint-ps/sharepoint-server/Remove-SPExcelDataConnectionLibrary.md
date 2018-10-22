@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-C:\PS>Get-SPExcelServiceApplication | Get-SPExcelDataConnectionLibrary | Remove-SPExcelDataConnectionLibrary
+PS C:\>Get-SPExcelServiceApplication | Get-SPExcelDataConnectionLibrary | Remove-SPExcelDataConnectionLibrary
 ```
 
 This example removes all data connection libraries from all Excel Services Application running in the farm.

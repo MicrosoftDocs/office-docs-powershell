@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPHelp
 schema: 2.0.0
 ---
@@ -35,14 +35,14 @@ Updates SharePoint cmdlet help.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>Update-SPHelp -Force
+PS C:\>Update-SPHelp -Force
 ```
 
 This example over-rides the throttling logic and checks for updates to the help files even if a check was made in the last 24 hours.
 
 ### --------------------EXAMPLE 3---------------------
 ```
-C:\PS>Update-SPHelp -Verbose
+PS C:\>Update-SPHelp -Verbose
 ```
 
 This example checks for updates to the help files and provides detailed feedback for each step of the process.
@@ -58,7 +58,7 @@ NOTE: When the Global parameter is used, all objects are contained in the global
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -74,7 +74,7 @@ Over-rides the throttling logic and checks for updates to the help files even if
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

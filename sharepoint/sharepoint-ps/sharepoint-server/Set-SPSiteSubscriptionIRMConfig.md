@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSiteSubscriptionIRMConfig
 schema: 2.0.0
 ---
@@ -29,11 +29,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-C:\PS>site = Get-SPSite  HYPERLINK "http://<myspserver>" http:// <myspserver>
+PS C:\>site = Get-SPSite  HYPERLINK "http://<myspserver>" http:// <myspserver>
 
 C:\PS>$subscription = $site.SiteSubscription
 
-C:\PS>Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl http:// <rmsserver>
+PS C:\>Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl http:// <rmsserver>
 ```
 
 This example enables IRM for the tenant and configures it to use the specified RMS server.
@@ -41,11 +41,11 @@ This example enables IRM for the tenant and configures it to use the specified R
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>site = Get-SPSite  HYPERLINK "http://myspserver" http:// <myspserver>
+PS C:\>site = Get-SPSite  HYPERLINK "http://myspserver" http:// <myspserver>
 
 C:\PS>$subscription = $site.SiteSubscription
 
-C:\PS>Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
+PS C:\>Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
 ```
 
 This example disables IRM for the tenant.
@@ -60,7 +60,7 @@ Specifies a site subscription for a particular tenant.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -78,7 +78,7 @@ The default value is false.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ Specifies the address of the RMS certificate server to use for the tenant.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Specifies that the output object can be passed through the pipeline.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

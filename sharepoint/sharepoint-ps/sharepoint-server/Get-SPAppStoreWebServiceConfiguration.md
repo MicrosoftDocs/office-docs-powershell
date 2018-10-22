@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppStoreWebServiceConfiguration
 schema: 2.0.0
 ---
@@ -21,7 +21,7 @@ Use the `Get-SPAppStoreWebServiceConfiguration` cmdlet to return property settin
 
 This cmdlet is not intended for the IT Pro audience.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

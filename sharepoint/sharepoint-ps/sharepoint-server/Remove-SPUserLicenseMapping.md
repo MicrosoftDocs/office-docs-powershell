@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPUserLicenseMapping
 schema: 2.0.0
 ---
@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE---------------
 ```
-C:\PS>Remove-SPUserLicenseMapping -Identity e69ba7cc-4be0-4723-ad63-58d06173afff
+PS C:\>Remove-SPUserLicenseMapping -Identity e69ba7cc-4be0-4723-ad63-58d06173afff
 ```
 
 This example removes the claim-to-license mapping that has the unique ID, e69ba7cc-4be0-4723-ad63-58d06173afff.
@@ -44,7 +44,7 @@ The type must be a valid GUID (that is, e69ba7cc-4be0-4723-ad63-58d06173afff).
 Type: System.Collections.Generic.List`1[System.Guid]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -66,7 +66,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

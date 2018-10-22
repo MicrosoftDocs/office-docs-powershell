@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPRoutingMachinePool
 schema: 2.0.0
 ---
@@ -34,7 +34,7 @@ C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
 C:\PS>$pool=Get-SPRoutingMachinePool -RequestManagementSettings $rm
 
-C:\PS>Remove-SPRoutingMachinePool -Identity $pool
+PS C:\>Remove-SPRoutingMachinePool -Identity $pool
 ```
 
 This example removes a routing pool for the specified identity by using the $pool variable.
@@ -49,7 +49,7 @@ Specifies the Request Manager object to remove.
 Type: SPRoutingMachinePoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -71,7 +71,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
