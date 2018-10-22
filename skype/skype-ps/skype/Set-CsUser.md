@@ -16,13 +16,12 @@ This cmdlet was introduced in Lync Server 2010.
 ## SYNTAX
 
 ```
-Set-CsUser [-Identity] <UserIdParameter> [-AudioVideoDisabled <Boolean>] [-Enabled <Boolean>]
- [-DomainController <Fqdn>] [-EnterpriseVoiceEnabled <Boolean>] [-HostedVoiceMail <Boolean>]
- [-LineURI <String>] [-LineServerURI <String>] [-PrivateLine <String>]
- [-RemoteCallControlTelephonyEnabled <Boolean>] [-SipAddress <String>] [-PassThru] [-WhatIf] [-Confirm]
- [-AcpInfo <Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[Microsoft.Rtc.Management.ADConnect.Collections.AcpInfo]>]
- [-ExchangeArchivingPolicy <ExchangeArchivingPolicyOptionsEnum>] [-OnPremLineURI <Object>] [-AsJob]
- [<CommonParameters>]
+Set-CsUser [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm]
+ [-OnPremLineURI <String>] [-LineServerURI <String>] [-AudioVideoDisabled <Boolean>]
+ [-RemoteCallControlTelephonyEnabled <Boolean>] [-PrivateLine <String>] [-AcpInfo <AcpInfo>]
+ [-HostedVoiceMail <Boolean>] [-EnterpriseVoiceEnabled <Boolean>]
+ [-ExchangeArchivingPolicy <ExchangeArchivingPolicyOptionsEnum>] [-LineURI <String>] [-SipAddress <String>]
+ [-Enabled <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -346,7 +345,7 @@ However, it is recommended that you use the `Set-CsUserAcp` cmdlet to assign Aud
 
 
 ```yaml
-Type: Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[Microsoft.Rtc.Management.ADConnect.Collections.AcpInfo]
+Type: AcpInfo
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -397,23 +396,7 @@ For example, in some organizations dialing 1-425-555-1297 routes your call to an
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
