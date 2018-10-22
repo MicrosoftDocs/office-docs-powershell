@@ -17,109 +17,223 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set4
+### MigrationOutbound
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteCredential <PSCredential>]
- [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn> [-AcceptLargeDataLoss] [-AllowLargeItems]
- [-ArchiveDomain <String>] [-ArchiveOnly] [-BadItemLimit <Unlimited>] [-BatchName <String>] [-Confirm]
- [-DomainController <Fqdn>] [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly]
- [-Priority <Normal | High>] [-Protect] [-RemoteArchiveTargetDatabase <String>]
- [-RemoteOrganizationName <String>] [-RemoteTargetDatabase <String>] [-Suspend] [-SuspendComment <String>]
- [-SuspendWhenReadyToComplete] [-TargetDeliveryDomain <Fqdn>] [-WhatIf]
- [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>] [-ForceOffline]
- [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
- [-PreventCompletion] [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
+New-MoveRequest [-Identity]
+ <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteCredential <PSCredential>] [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn>
+ [-AcceptLargeDataLoss]
+ [-AllowLargeItems]
+ [-ArchiveDomain <String>]
+ [-ArchiveOnly]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompleteAfter <DateTime>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ForceOffline]
+ [-IgnoreRuleLimitErrors]
+ [-IncrementalSyncInterval <TimeSpan>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-MRSServer <Fqdn>]
+ [-PreventCompletion]
+ [-PrimaryOnly]
+ [-Priority <Normal | High>]
+ [-Protect]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-RemoteArchiveTargetDatabase <String>]
+ [-RemoteOrganizationName <String>]
+ [-RemoteTargetDatabase <String>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMoving <SkippableMoveComponent[]>]
+ [-StartAfter <DateTime>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-SuspendWhenReadyToComplete]
+ [-TargetDeliveryDomain <Fqdn>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-Remote] -RemoteTenant <SmtpDomain> [-ArchiveTargetDatabase <DatabaseIdParameter>]
- [-IgnoreTenantMigrationPolicies] [-MoveOptions <MultiValuedProperty>] [-ProxyToMailbox <MailboxIdParameter>]
- [-RequestExpiryInterval <Unlimited>] [-TargetDatabase <DatabaseIdParameter>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
-### Set3
+### MigrationRemote
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCredential <PSCredential>]
- [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn> [-AcceptLargeDataLoss] [-AllowLargeItems]
- [-ArchiveDomain <String>] [-ArchiveOnly] [-ArchiveTargetDatabase <DatabaseIdParameter>]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly] [-Priority <Normal | High>] [-Protect]
- [-RemoteOrganizationName <String>] [-Suspend] [-SuspendComment <String>] [-SuspendWhenReadyToComplete]
- [-TargetDatabase <DatabaseIdParameter>] [-TargetDeliveryDomain <Fqdn>] [-WhatIf] [-RemoteLegacy]
- [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
- [-ForceOffline] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
- [-LargeItemLimit <Unlimited>] [-PreventCompletion] [-RemoteTargetDatabase <String>]
- [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] [-RemoteCredential <PSCredential>] [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn>
+ [-AcceptLargeDataLoss]
+ [-AllowLargeItems]
+ [-ArchiveDomain <String>]
+ [-ArchiveOnly]
+ [-ArchiveTargetDatabase <DatabaseIdParameter>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompleteAfter <DateTime>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ForceOffline]
+ [-IgnoreRuleLimitErrors]
+ [-IncrementalSyncInterval <TimeSpan>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-MRSServer <Fqdn>]
+ [-PreventCompletion]
+ [-PrimaryOnly]
+ [-Priority <Normal | High>]
+ [-Protect]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-RemoteOrganizationName <String>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMoving <SkippableMoveComponent[]>]
+ [-StartAfter <DateTime>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-SuspendWhenReadyToComplete]
+ [-TargetDatabase <DatabaseIdParameter>]
+ [-TargetDeliveryDomain <Fqdn>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-IgnoreTenantMigrationPolicies] [-MigrationMailbox <MailboxIdParameter>] [-MoveOptions <MultiValuedProperty>]
- [-ProxyToMailbox <MailboxIdParameter>] [-RequestExpiryInterval <Unlimited>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
-### Set2
+### MigrationRemoteLegacy
 ```
 New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PSCredential>
- -RemoteGlobalCatalog <Fqdn> [-RemoteLegacy] [-AcceptLargeDataLoss] [-AllowLargeItems]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-Priority <Normal | High>] [-Protect]
- [-RemoteTargetDatabase <String>] [-Suspend] [-SuspendComment <String>] [-SuspendWhenReadyToComplete]
- [-TargetDatabase <DatabaseIdParameter>] [-TargetDeliveryDomain <Fqdn>] [-WhatIf] [-Remote]
- -RemoteHostName <Fqdn> [-ArchiveDomain <String>] [-ArchiveOnly] [-ArchiveTargetDatabase <DatabaseIdParameter>]
- [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
- [-ForceOffline] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
- [-LargeItemLimit <Unlimited>] [-PreventCompletion] [-PrimaryOnly] [-RemoteOrganizationName <String>]
- [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
+ -RemoteGlobalCatalog <Fqdn> [-RemoteLegacy]
+ [-AcceptLargeDataLoss]
+ [-AllowLargeItems]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompleteAfter <DateTime>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ForceOffline]
+ [-IgnoreRuleLimitErrors]
+ [-IncrementalSyncInterval <TimeSpan>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-MRSServer <Fqdn>]
+ [-PreventCompletion]
+ [-Priority <Normal | High>]
+ [-Protect]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-RemoteTargetDatabase <String>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMoving <SkippableMoveComponent[]>]
+ [-StartAfter <DateTime>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-SuspendWhenReadyToComplete]
+ [-TargetDatabase <DatabaseIdParameter>]
+ [-TargetDeliveryDomain <Fqdn>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-IgnoreTenantMigrationPolicies] [-MigrationMailbox <MailboxIdParameter>] [-MoveOptions <MultiValuedProperty>]
- [-ProxyToMailbox <MailboxIdParameter>] [-RequestExpiryInterval <Unlimited>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### MigrationLocal
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-AcceptLargeDataLoss] [-AllowLargeItems]
- [-ArchiveOnly] [-ArchiveTargetDatabase <DatabaseIdParameter>] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>] [-DoNotPreserveMailboxSignature]
- [-IgnoreRuleLimitErrors] [-MRSServer <Fqdn>] [-PrimaryOnly] [-Priority <Normal | High>] [-Protect] [-Suspend]
- [-SuspendComment <String>] [-SuspendWhenReadyToComplete] [-TargetDatabase <DatabaseIdParameter>] [-WhatIf]
- [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
- [-ForceOffline] [-ForcePull] [-ForcePush] [-IncrementalSyncInterval <TimeSpan>]
- [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>] [-PreventCompletion]
- [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
+ [-AcceptLargeDataLoss]
+ [-AllowLargeItems]
+ [-ArchiveOnly]
+ [-ArchiveTargetDatabase <DatabaseIdParameter>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompleteAfter <DateTime>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotPreserveMailboxSignature]
+ [-ForceOffline]
+ [-ForcePull]
+ [-ForcePush]
+ [-IgnoreRuleLimitErrors]
+ [-IncrementalSyncInterval <TimeSpan>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-MRSServer <Fqdn>]
+ [-PreventCompletion]
+ [-PrimaryOnly]
+ [-Priority <Normal | High>]
+ [-Protect]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMoving <SkippableMoveComponent[]>]
+ [-StartAfter <DateTime>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-SuspendWhenReadyToComplete]
+ [-TargetDatabase <DatabaseIdParameter>]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport>]
- [-MigrationMailbox <MailboxIdParameter>] [-MoveOptions <MultiValuedProperty>]
- [-ProxyToMailbox <MailboxIdParameter>] [-RequestExpiryInterval <Unlimited>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
-### Set5
+### MigrationOutboundCrossTenant
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] [-RemoteCredential <PSCredential>]
- [-RemoteGlobalCatalog <Fqdn>] -RemoteHostName <Fqdn> [-TargetDeliveryDomain <Fqdn>] [-AcceptLargeDataLoss]
- [-AllowLargeItems] [-ArchiveDomain <String>] [-ArchiveOnly] [-BadItemLimit <Unlimited>] [-BatchName <String>]
- [-CompleteAfter <DateTime>] [-CompletedRequestAgeLimit <Unlimited>]
- [-Confirm] [-DomainController <Fqdn>] [-ForceOffline] [-IgnoreTenantMigrationPolicies]
- [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
- [-MigrationMailbox <MailboxIdParameter>] [-MoveOptions <MultiValuedProperty>] [-PreventCompletion]
- [-PrimaryOnly] [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>] [-Protect]
- [-ProxyToMailbox <MailboxIdParameter>] [-RemoteArchiveTargetDatabase <String>]
- [-RemoteTargetDatabase <String>] [-RequestExpiryInterval <Unlimited>] [-SkipMoving <SkippableMoveComponent[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>] [-StartAfter <DateTime>] [-Suspend]
- [-SuspendComment <String>] [-SuspendWhenReadyToComplete] [-WhatIf]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn>
+ [-AcceptLargeDataLoss]
+ [-AllowLargeItems]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompleteAfter <DateTime>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ForceOffline]
+ [-IncrementalSyncInterval <TimeSpan>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-PreventCompletion]
+ [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Protect]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMoving <SkippableMoveComponent[]>]
+ [-StartAfter <DateTime>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-SuspendWhenReadyToComplete]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
  [<CommonParameters>]
 ```
 
-### Set6
+### MigrationRemoteCrossTenant
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Outbound] -RemoteTenant <SmtpDomain>
- -TargetDeliveryDomain <Fqdn> [-AcceptLargeDataLoss] [-AllowLargeItems] [-BadItemLimit <Unlimited>]
- [-BatchName <String>] [-CompleteAfter <DateTime>]
- [-CompletedRequestAgeLimit <Unlimited>] [-Confirm] [-DomainController <Fqdn>] [-ForceOffline]
- [-IgnoreTenantMigrationPolicies] [-IncrementalSyncInterval <TimeSpan>] [-InternalFlags <InternalMrsFlag[]>]
- [-LargeItemLimit <Unlimited>] [-MoveOptions <MultiValuedProperty>] [-PreventCompletion]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>] [-Protect]
- [-ProxyToMailbox <MailboxIdParameter>] [-RequestExpiryInterval <Unlimited>]
- [-SkipMoving <SkippableMoveComponent[]>] [-StartAfter <DateTime>] [-Suspend] [-SuspendComment <String>]
- [-SuspendWhenReadyToComplete] [-WhatIf]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> [-Remote] -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn> [-TargetDatabase <DatabaseIdParameter>]
+ [-AcceptLargeDataLoss]
+ [-AllowLargeItems]
+ [-ArchiveTargetDatabase <DatabaseIdParameter>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompleteAfter <DateTime>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ForceOffline]
+ [-IncrementalSyncInterval <TimeSpan>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-PreventCompletion]
+ [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-Protect]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMoving <SkippableMoveComponent[]>]
+ [-StartAfter <DateTime>]
+ [-Suspend]
+ [-SuspendComment <String>]
+ [-SuspendWhenReadyToComplete]
+ [-WhatIf]
  [-WorkloadType <None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport | XO1Migration | CrossResourceForest | ShadowSync | XrmSharing | ThirdPartyContactSync>]
  [<CommonParameters>]
 ```
@@ -188,7 +302,7 @@ You can't use this switch with the Remote switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set5, Set6
+Parameter Sets: MigrationOutbound, MigrationOutboundCrossTenant
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -205,7 +319,7 @@ You can't use this switch with the Outbound switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set3, Set2
+Parameter Sets: MigrationRemote, MigrationRemoteCrossTenant
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -222,10 +336,10 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set4, Set3, Set5
+Parameter Sets: MigrationRemoteLegacy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -234,10 +348,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2
+Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -249,10 +363,10 @@ The RemoteGlobalCatalog parameter specifies the fully qualified domain name (FQD
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set4, Set3, Set5
+Parameter Sets: MigrationRemoteLegacy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -261,10 +375,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -276,7 +390,7 @@ The RemoteHostName parameter specifies the FQDN of the cross-forest organization
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set4, Set3, Set2, Set5
+Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -293,10 +407,55 @@ The RemoteLegacy switch specifies that this mailbox move is from a remote forest
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set2
+Parameter Sets: MigrationRemoteLegacy
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteTenant
+This parameter is avaialble only in the cloud-based service.
+
+PARAMVALUE: SmtpDomain
+
+```yaml
+Type: SmtpDomain
+Parameter Sets: MigrationOutboundCrossTenant, MigrationRemoteCrossTenant
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -TargetDeliveryDomain
+The TargetDeliveryDomain parameter specifies the FQDN of the external email address created in the source forest for the mail-enabled user when the move request is complete. This parameter is allowed only when performing remote moves with the Remote or RemoteLegacy parameter.
+
+```yaml
+Type: Fqdn
+Parameter Sets: MigrationOutboundCrossTenant, MigrationRemoteCrossTenant
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: Fqdn
+Parameter Sets: MigrationOutbound, MigrationRemote, MigrationRemoteLegacy
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -342,7 +501,7 @@ The ArchiveDomain parameter specifies the FQDN of the external domain to which y
 
 ```yaml
 Type: String
-Parameter Sets: Set4, Set3, Set2, Set5
+Parameter Sets: MigrationOutbound, MigrationRemote
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -359,7 +518,7 @@ You can't use this switch with the PrimaryOnlyswitch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set3, Set2, Set1, Set5
+Parameter Sets: MigrationOutbound, MigrationRemote, MigrationLocal
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -382,7 +541,7 @@ You can use the following values for this parameter:
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set4, Set3, Set2, Set1
+Parameter Sets: MigrationRemote, MigrationLocal, MigrationRemoteCrossTenant
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -419,6 +578,46 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompleteAfter
+The CompleteAfter parameter specifies a delay before the request is completed. The request is started, but not completed until the date/time you specify with this parameter.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+
+In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
+
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompletedRequestAgeLimit
+The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -471,309 +670,9 @@ We recommend that you use this switch only if the move request fails because the
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: MigrationLocal
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreRuleLimitErrors
-The IgnoreRuleLimitErrors parameter specifies that the command doesn't move the user's rules to the target server running Exchange.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set4, Set3, Set2, Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MRSServer
-This parameter is available or functional only in Exchange Server 2010.
-
-The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
-
-```yaml
-Type: Fqdn
-Parameter Sets: Set4, Set3, Set2, Set1
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrimaryOnly
-The PrimaryOnly switch specifies that the command should only move the primary mailbox (the personal archive isn't moved). You don't need to specify a value with this switch.
-
-You use this switch only if the user has a personal archive that you don't want to move. If the user doesn't have personal archive, don't use this switch.
-
-You can't use this parameter with the ArchiveOnly parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set4, Set3, Set2, Set1, Set5
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Priority
-This parameter is available only in on-premises Exchange.
-
-The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
-
-- Lowest
-
-- Lower
-
-- Low
-
-- Normal: This is the default value.
-
-- High
-
-- Higher
-
-- Highest
-
-- Emergency
-
-```yaml
-Type: Normal | High
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Protect
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteArchiveTargetDatabase
-The RemoteArchiveTargetDatabase parameter specifies the name of the target database in the remote forest to which you're moving the personal archive. Use this parameter when moving users with archives from the local forest to a remote forest. For moves from a remote forest to the local forest, use the ArchiveTargetDatabase parameter.
-
-If you use this parameter, you must specify the Remote or RemoteLegacy parameter.
-
-```yaml
-Type: String
-Parameter Sets: Set4, Set5
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteOrganizationName
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Set4, Set3, Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteTargetDatabase
-The RemoteTargetDatabase parameter specifies the name of the target database in the remote forest. Use this parameter when moving mailboxes from the local forest to a remote forest. For moves from a remote forest to the local forest, use the TargetDatabase parameter.
-
-If you use this parameter, you must specify the Remote or RemoteLegacy parameter.
-
-```yaml
-Type: String
-Parameter Sets: Set4, Set3, Set2, Set5
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SuspendComment
-The SuspendComment parameter specifies a description about why the request was suspended. You can only use this parameter if you specify the Suspend parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SuspendWhenReadyToComplete
-The SuspendWhenReadyToComplete switch specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this switch, we recommend that you use the CompleteAfter parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetDatabase
-This parameter is available only in on-premises Exchange.
-
-The TargetDatabase parameter specifies the identity of the database that you're moving the mailbox to. If you don't use this parameter, the automatic distribution logic will select a random database from the Active Directory site where you are running the command.
-
-You can use the following values:
-
-- GUID of the database
-
-- Database name
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Set4, Set3, Set2, Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TargetDeliveryDomain
-The TargetDeliveryDomain parameter specifies the FQDN of the external email address created in the source forest for the mail-enabled user when the move request is complete. This parameter is allowed only when performing remote moves with the Remote or RemoteLegacy parameter.
-
-```yaml
-Type: Fqdn
-Parameter Sets: Set4, Set3, Set2, Set5
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: Fqdn
-Parameter Sets: Set6
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-You can use this switch to test a mailbox's readiness to be moved, and to view any errors that will occur without adding the mailbox to the move request queue.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompleteAfter
-The CompleteAfter parameter specifies a delay before the request is completed. The request is started, but not completed until the date/time you specify with this parameter.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-In Exchange Online, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
-
-To specify a date/time value for this parameter, use either of the following options:
-
-- Specify the date/time value in UTC: For example, "2016-05-06 14:30:00z".
-
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, (Get-Date "5/6/2016 9:30 AM").ToUniversalTime(). For more information, see Get-Date (https://go.microsoft.com/fwlink/p/?LinkID=113313).
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -807,7 +706,7 @@ You use this parameter only for local moves.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: MigrationLocal
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -826,9 +725,26 @@ You use this parameter only for local moves.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: MigrationLocal
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IgnoreRuleLimitErrors
+This parameter is available only in Exchange Server 2010 or Exchange Server 2013
+
+The IgnoreRuleLimitErrors parameter specifies that the command doesn't move the user's rules to the target server running Exchange.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MigrationOutbound, MigrationRemote, MigrationRemoteLegacy, MigrationLocal
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013
 Required: False
 Position: Named
 Default value: None
@@ -897,6 +813,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MoveOptions
+The MoveOptions parameter specifies the stages of the move that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
+
+Don't use this parameter with the SkipMoving parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MRSServer
+This parameter is available or functional only in Exchange Server 2010.
+
+The MRSServer parameter specifies the FQDN of the Client Access server on which the instance of the Microsoft Exchange Mailbox Replication service (MRS) is running. This parameter is used for debugging purposes only. Use this parameter only if directed by support personnel.
+
+```yaml
+Type: Fqdn
+Parameter Sets: MigrationOutbound, MigrationRemote, MigrationRemoteLegacy, MigrationLocal
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreventCompletion
 The PreventCompletion switch specifies whether to run the move request, but not allow it to complete. Instead of this switch, we recommend using the CompleteAfter parameter.
 
@@ -905,6 +855,186 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrimaryOnly
+The PrimaryOnly switch specifies that the command should only move the primary mailbox (the personal archive isn't moved). You don't need to specify a value with this switch.
+
+You use this switch only if the user has a personal archive that you don't want to move. If the user doesn't have personal archive, don't use this switch.
+
+You can't use this parameter with the ArchiveOnly parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MigrationOutbound, MigrationRemote, MigrationLocal
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Priority
+This parameter is available only in on-premises Exchange.
+
+The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
+
+- Lowest
+
+- Lower
+
+- Low
+
+- Normal: This is the default value.
+
+- High
+
+- Higher
+
+- Highest
+
+- Emergency
+
+```yaml
+Type: Normal | High
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Protect
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyToMailbox
+This parameter is available only in the cloud-based service.
+
+The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
+
+For example:
+
+- Name
+
+- Display name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteArchiveTargetDatabase
+The RemoteArchiveTargetDatabase parameter specifies the name of the target database in the remote forest to which you're moving the personal archive. Use this parameter when moving users with archives from the local forest to a remote forest. For moves from a remote forest to the local forest, use the ArchiveTargetDatabase parameter.
+
+If you use this parameter, you must specify the Remote or RemoteLegacy parameter.
+
+```yaml
+Type: String
+Parameter Sets: MigrationOutbound
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteOrganizationName
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: MigrationOutbound, MigrationRemote
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteTargetDatabase
+The RemoteTargetDatabase parameter specifies the name of the target database in the remote forest. Use this parameter when moving mailboxes from the local forest to a remote forest. For moves from a remote forest to the local forest, use the TargetDatabase parameter.
+
+If you use this parameter, you must specify the Remote or RemoteLegacy parameter.
+
+```yaml
+Type: String
+Parameter Sets: MigrationOutbound, MigrationRemote
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestExpiryInterval
+The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
+
+- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
+
+- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+When you use the value Unlimited, the completed request isn't automatically removed.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -954,157 +1084,101 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Suspend
+The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuspendComment
+The SuspendComment parameter specifies a description about why the request was suspended. You can only use this parameter if you specify the Suspend parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SuspendWhenReadyToComplete
+The SuspendWhenReadyToComplete switch specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this switch, we recommend that you use the CompleteAfter parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetDatabase
+This parameter is available only in on-premises Exchange.
+
+The TargetDatabase parameter specifies the identity of the database that you're moving the mailbox to. If you don't use this parameter, the automatic distribution logic will select a random database from the Active Directory site where you are running the command.
+
+You can use the following values:
+
+- GUID of the database
+
+- Database name
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: MigrationRemote, MigrationRemoteLegacy, MigrationLocal, MigrationRemoteCrossTenant
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+You can use this switch to test a mailbox's readiness to be moved, and to view any errors that will occur without adding the mailbox to the move request queue.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WorkloadType
 This parameter is available only in on-premises Exchange.
 
-The WorkloadType parameter is reserved for internal Microsoft use.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteTenant
-PARAMVALUE: SmtpDomain
-
-```yaml
-Type: SmtpDomain
-Parameter Sets: Set4, Set6
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreTenantMigrationPolicies
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set4, Set3, Set2, Set5, Set6
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MigrationMailbox
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: Set3, Set2, Set1, Set5
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MoveOptions
-The MoveOptions parameter specifies the stages of the move that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
-
-Don't use this parameter with the SkipMoving parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyToMailbox
-This parameter is available only in the cloud-based service.
-
-The ProxyToMailbox parameter specifies the move destination by the location of the specified mailbox (also known as proxying). You can use any value that uniquely identifies the mailbox.
-
-For example:
-
-- Name
-
-- Display name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- \<domain name\>\\\<account name\>
-
-- Email address
-
-- GUID
-
-- LegacyExchangeDN
-
-- SamAccountName
-
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestExpiryInterval
-The RequestExpiryInterval parameter specifies an age limit for a completed or failed request. When you use this parameter, the completed or failed request is automatically removed after the specified interval expires. If you don't use this parameter:
-
-- The completed request is automatically removed based on the CompletedRequestAgeLimit parameter value.
-
-- If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-When you use the value Unlimited, the completed request isn't automatically removed.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceEndpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MigrationEndpointIdParameter
-Parameter Sets: Set3, Set2, Set1, Set5
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

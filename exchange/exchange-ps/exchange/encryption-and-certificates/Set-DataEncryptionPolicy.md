@@ -17,26 +17,39 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### DCAdminPurgeKeyRequest
 ```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -PermanentDataPurgeContact <String>
- -PermanentDataPurgeReason <String> [-PermanentDataPurgeRequested] [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Force] [-Name <String>] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set4
-```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-PermanentDataPurgeContact <String>]
- -PermanentDataPurgeReason <String> [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-Force] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-PermanentDataPurgeContact <String>] -PermanentDataPurgeReason <String>
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### TenantAdminPurgeKeyRequest
 ```
-Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Refresh] [-Confirm]
- [-Description <String>] [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Name <String>] [-WhatIf]
- [<CommonParameters>]
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -PermanentDataPurgeContact <String> -PermanentDataPurgeReason <String> [-PermanentDataPurgeRequested]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RefreshKey
+```
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Refresh]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,7 +101,7 @@ You need to use this parameter with the PermanentDataPurgeRequested and Permanen
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
@@ -100,7 +113,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Set4
+Parameter Sets: DCAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: False
@@ -117,7 +130,7 @@ You need to use this parameter with the PermanentDataPurgeRequested and Permanen
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set4
+Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
@@ -136,7 +149,7 @@ After you use this switch, you can't assign the data encryption policy to other 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
@@ -151,7 +164,7 @@ Use the Refresh switch to update the data encryption policy in Exchange Online a
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: RefreshKey
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
@@ -234,7 +247,7 @@ Use the Force switch when you're trying to initiate the deletion of all data tha
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set4
+Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: False

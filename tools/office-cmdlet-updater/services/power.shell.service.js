@@ -25,7 +25,16 @@ class PowerShellService {
 
 		result += output;
 
-		[output, err] = await of(this.authIfNeeded());
+		[output, err] = await of(this.preInstallTeams());
+
+		if (err) {
+			await this.dispose();
+			throw new Error(err);
+		}
+
+		result += output;
+
+		[output, err] = await of(this.preInstallSkype());
 
 		if (err) {
 			await this.dispose();
@@ -37,14 +46,35 @@ class PowerShellService {
 		return result;
 	}
 
-	async authIfNeeded() {
+	async preInstallSkype() {
+		let result;
+
+		//result += await this._invokeCommand(commands.SKYPE_SET_POLICY);
+
+		result += await this._invokeCommand(commands.SKYPE_INSTALL_MODULE);
+
+		result += await this._invokeCommand(commands.SKYPE_GET_CRED);
+
+		result += await this._invokeCommand(commands.SKYPE_CREATE_SESSION);
+
+		result += await this._invokeCommand(commands.SKYPE_IMPORT_SESSION);
+
+		return result;
+	}
+
+	async _invokeCommand(command) {
+		const [output, err] = await of(this.invokeCommand(command));
+
+		if (err) {
+			throw new Error(err);
+		}
+
+		return output;
+	}
+
+	async preInstallTeams() {
 		let output, err, result;
 
-		// const checkAuthCommand = commands.GET_TEAM;
-		//
-		// [output, err] = await of(this.invokeCommand(checkAuthCommand));
-		//
-		// result += output;
 		// TODO: check if user already auth
 
 		const installModule = commands.INSTALL_MICROSOFT_TEAM;

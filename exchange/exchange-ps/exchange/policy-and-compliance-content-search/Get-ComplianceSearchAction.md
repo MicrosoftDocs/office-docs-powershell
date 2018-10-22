@@ -17,27 +17,43 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### Identity
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-Export]
- [-IncludeCredential] [-ResultSize <Unlimited>] [<CommonParameters>]
-```
-
-### Set1
-```
-Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>] [-Case <String>] [-Details]
- [-DomainController <Fqdn>] [-IncludeCredential] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### Preview
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-IncludeCredential]
- [-Preview] [-ResultSize <Unlimited>] [<CommonParameters>]
+Get-ComplianceSearchAction [-Preview]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set4
+### Purge
 ```
-Get-ComplianceSearchAction [-Case <String>] [-Details] [-DomainController <Fqdn>] [-IncludeCredential] [-Purge]
+Get-ComplianceSearchAction [-Purge]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
+```
+
+### Export
+```
+Get-ComplianceSearchAction [-Export]
+ [-Case <String>]
+ [-Details]
+ [-DomainController <Fqdn>]
+ [-IncludeCredential]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
@@ -120,7 +136,7 @@ The Export switch filters the results by Export compliance search actions. You d
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
@@ -139,7 +155,7 @@ The Identity parameter specifies the compliance search action that you want to v
 
 ```yaml
 Type: ComplianceSearchActionIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
@@ -169,7 +185,7 @@ The Preview switch filters the results by Preview compliance search actions.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Preview
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
@@ -184,7 +200,7 @@ The Purge switch filters the results by Purge compliance search actions.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Purge
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False

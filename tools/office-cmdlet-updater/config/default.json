@@ -3,10 +3,18 @@
 		"docs": [
 			{
 				"name": "teams",
-				"path": "..\\..\\teams\\teams-ps\\teams"
+				"path": "..\\..\\teams\\teams-ps\\teams",
+				"metaTags": []
+			},
+			{
+				"name": "skype",
+				"path": "..\\..\\skype\\skype-ps\\skype",
+				"metaTags": ["Skype for Business Online"]
 			}
 		],
-		"ignoreFiles": []
+		"ignoreFiles": [
+			"..\\..\\teams\\teams-ps\\teams\\teams.md"
+		]
 	},
 	"sendgrid": {
 		"sendMailNotification": false,

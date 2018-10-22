@@ -1,4 +1,4 @@
----
+ ---
 external help file: 
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
@@ -35,7 +35,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchMetadataFullTextIndex -Name CommonSharePoint -Description "Content from the common SharePoint site."
+PS C:\>New-FASTSearchMetadataFullTextIndex -Name CommonSharePoint -Description "Content from the common SharePoint site."
 ```
 
 This example creates a new full text index named "CommonSharePoint".

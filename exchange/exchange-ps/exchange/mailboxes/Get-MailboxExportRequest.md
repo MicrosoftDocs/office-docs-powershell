@@ -28,12 +28,11 @@ Get-MailboxExportRequest [[-Identity] <MailboxExportRequestIdParameter>]
 
 ### MailboxFiltering
 ```
-Get-MailboxExportRequest
+Get-MailboxExportRequest [-Mailbox <MailboxOrMailUserIdParameter>]
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-HighPriority <$true | $false>]
- [-Mailbox <MailboxOrMailUserIdParameter>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
@@ -43,12 +42,11 @@ Get-MailboxExportRequest
 
 ### MailboxLocationFiltering
 ```
-Get-MailboxExportRequest
+Get-MailboxExportRequest [-Mailbox <MailboxLocationIdParameter>]
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-HighPriority <$true | $false>]
- [-Mailbox <MailboxLocationIdParameter>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Completed | CompletedWithWarning | Suspended | Failed>]
@@ -231,7 +229,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: MailboxFiltering, MailboxLocationFiltering
+Parameter Sets: MailboxFiltering
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
 Required: False
@@ -243,7 +241,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: MailboxFiltering, MailboxLocationFiltering
+Parameter Sets: MailboxLocationFiltering
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False

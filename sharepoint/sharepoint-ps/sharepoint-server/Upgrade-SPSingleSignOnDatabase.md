@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPSingleSignOnDatabase
 schema: 2.0.0
 ---
@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-C:\PS>Upgrade-SPSingleSignOnDatabase -SSOConnectionString "Data Source=oldServer;Database=SSO;Trusted_Connection=yes;" -SecureStoreConnectionString "Data Source=CONTOSO\SQLDatabase;Database=ContosoSSDatabase;Trusted_Connection=yes;" -SecureStorePassphrase "abcDEF123!@#"
+PS C:\>Upgrade-SPSingleSignOnDatabase -SSOConnectionString "Data Source=oldServer;Database=SSO;Trusted_Connection=yes;" -SecureStoreConnectionString "Data Source=CONTOSO\SQLDatabase;Database=ContosoSSDatabase;Trusted_Connection=yes;" -SecureStorePassphrase "abcDEF123!@#"
 ```
 
 This example migrates the SSO database at the SSO connection to a Secure Store database at the Secure Store connection.
@@ -43,7 +43,7 @@ Specifies the SQL Server connection string for the Secure Store database.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -59,7 +59,7 @@ Specifies the passphrase used for the Secure Store database.
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -75,7 +75,7 @@ Specifies the SQL Server connection string for the SSO database.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -97,7 +97,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

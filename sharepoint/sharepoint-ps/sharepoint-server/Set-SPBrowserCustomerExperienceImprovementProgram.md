@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPBrowserCustomerExperienceImprovementProgram
 schema: 2.0.0
 ---
@@ -45,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
+PS C:\>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the farm.
@@ -53,7 +53,7 @@ This example turns on the browser Customer Experience Improvement Program for th
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
+PS C:\>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
 ```
 
 This example turns off the browser Customer Experience Improvement Program for the farm.
@@ -61,7 +61,7 @@ This example turns off the browser Customer Experience Improvement Program for t
 
 ### ------------------EXAMPLE 3-----------------------
 ```
-C:\PS>Set-SPWebApplication http://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
+PS C:\>Set-SPWebApplication http://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the Web application, MyOfficeApp1.
@@ -76,7 +76,7 @@ This example turns on the browser Customer Experience Improvement Program for th
 Type: SwitchParameter
 Parameter Sets: Farm
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -94,7 +94,7 @@ The type must be a valid URL, in the form http://server_name; a valid GUID, in t
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -112,7 +112,7 @@ The type must be a valid URL, in the form http://server_name; a valid GUID, in t
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -134,7 +134,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ The default value is True.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

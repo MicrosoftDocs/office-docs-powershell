@@ -17,52 +17,68 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
-```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -GetDefaultsFromAutodiscover <$true | $false>
- [-Archive <$true | $false>] [-Confirm] [-MailboxCredential <PSCredential>] [-MonitoringContext]
- [-RpcAuthenticationType <Negotiate | NTLM | Kerberos>]
- [-RpcClientAccessServer <ClientAccessServerIdParameter>]
- [-RpcProxyAuthenticationType <Basic | NTLM | Negotiate>] [-RpcProxyServer <ServerIdParameter>]
- [-TotalTimeoutInMinutes <Int32>] [-TrustAnySslCert] [-WhatIf] [<CommonParameters>]
-```
-
-### Set4
-```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -GetDefaultsFromAutodiscover <$true | $false>
- [-Archive <$true | $false>] [-Confirm] [-MailboxCredential <PSCredential>] [-MonitoringContext]
- [-TotalTimeoutInMinutes <Int32>] [-TrustAnySslCert] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -Protocol <HTTP | TCP | WS>
- [-Archive <$true | $false>] [-Confirm] [-MailboxCredential <PSCredential>] [-MonitoringContext]
- [-TotalTimeoutInMinutes <Int32>] [-TrustAnySslCert] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -RpcTestType <Array | Server>
- [-Archive <$true | $false>] [-Confirm] [-MailboxCredential <PSCredential>] [-MonitoringContext]
- [-RpcAuthenticationType <Negotiate | NTLM | Kerberos>]
- [-RpcClientAccessServer <ClientAccessServerIdParameter>]
- [-RpcProxyAuthenticationType <Basic | NTLM | Negotiate>] [-RpcProxyTestType <External | Internal>]
- [-TotalTimeoutInMinutes <Int32>] [-TrustAnySslCert] [-WhatIf] [<CommonParameters>]
-```
-
-### Set5
-```
-Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -WSTestType <Unknown | Internal | External>
- [-Archive <$true | $false>] [-Confirm] [-MailboxCredential <PSCredential>] [-MonitoringContext]
- [-TotalTimeoutInMinutes <Int32>] [-TrustAnySslCert] [-WhatIf] [<CommonParameters>]
-```
-
-###  (Default)
+### Probe
 ```
 Test-OutlookConnectivity [-ProbeIdentity] <String> [-Credential <PSCredential>] [-Hostname <String>]
  [-MailboxId <MailboxIdParameter>] [-RunFromServerId <ServerIdParameter>] [-TimeOutSeconds <String>]
  [<CommonParameters>]
+```
+
+### Protocol
+```
+Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -Protocol <HTTP | TCP | WS>
+ [-Archive <$true | $false>]
+ [-Confirm]
+ [-MailboxCredential <PSCredential>]
+ [-MonitoringContext]
+ [-TotalTimeoutInMinutes <Int32>]
+ [-TrustAnySslCert]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RpcProxyServer
+```
+Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -GetDefaultsFromAutodiscover <$true | $false>
+ [-Archive <$true | $false>]
+ [-Confirm]
+ [-MailboxCredential <PSCredential>]
+ [-RpcAuthenticationType <Negotiate | NTLM | Kerberos>]
+ [-RpcClientAccessServer <ClientAccessServerIdParameter>]
+ [-RpcProxyAuthenticationType <Basic | NTLM | Negotiate>]
+ [-RpcProxyServer <ServerIdParameter>]
+ [-TotalTimeoutInMinutes <Int32>]
+ [-TrustAnySslCert]
+ [-WhatIf] [<CommonParameters>]
+
+ [-MonitoringContext]
+```
+
+### RpcTestType
+```
+Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -RpcTestType <Array | Server>
+ [-Archive <$true | $false>]
+ [-Confirm]
+ [-MailboxCredential <PSCredential>]
+ [-MonitoringContext]
+ [-RpcAuthenticationType <Negotiate | NTLM | Kerberos>]
+ [-RpcClientAccessServer <ClientAccessServerIdParameter>]
+ [-RpcProxyAuthenticationType <Basic | NTLM | Negotiate>]
+ [-RpcProxyTestType <External | Internal>]
+ [-TotalTimeoutInMinutes <Int32>]
+ [-TrustAnySslCert]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### WSTestType
+```
+Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -WSTestType <Unknown | Internal | External>
+ [-Archive <$true | $false>]
+ [-Confirm]
+ [-MailboxCredential <PSCredential>]
+ [-MonitoringContext]
+ [-TotalTimeoutInMinutes <Int32>]
+ [-TrustAnySslCert]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +116,7 @@ In Exchange 2010, this example tests the most common end-to-end Outlook connecti
 Test-OutlookConnectivity -ProbeIdentity "OutlookRpcSelfTestProbe"
 ```
 
-This example runs an OutlookRpcSelfTestProbe on the mailbox server that you're currently connected to.
+In Exchange 2013 or later, this example runs an OutlookRpcSelfTestProbe on the mailbox server that you're currently connected to.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -114,7 +130,7 @@ In Exchange 2010, this example tests for Outlook Anywhere connectivity using the
 Test-OutlookConnectivity "OutlookRpcDeepTestProbe\Mailbox Database 1234512345" -RunFromServerId PrimaryMailbox -MailboxId johnd@contoso.com
 ```
 
-This example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
+In Exchange 2013 or later, this example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
 
 ### -------------------------- Example 5 --------------------------
 ```
@@ -129,23 +145,25 @@ $TestCredentials = Get-Credential;
 Test-OutlookConnectivity -ProbeIdentity OutlookRpcCtpProbe -MailboxId johnd@contoso.com -Credential $TestCredentials
 ```
 
-This example runs the OutlookRpcCtpProbe and verifies the log-on credentials for the "johnd@contoso.com" mailbox.
+In Exchange 2013 or later, this example runs the OutlookRpcCtpProbe and verifies the log-on credentials for the "johnd@contoso.com" mailbox.
 
 ### -------------------------- Example 7 --------------------------
 ```
 Test-OutlookConnectivity -ProbeIdentity "OutlookRpcCTPProbe" -MailboxID johnd@contoso.com
 ```
 
-This example runs a logon test from the client access services on a Mailbox server for the mailbox johnd@contoso.com.
+In Exchange 2013 or later, this example runs a logon test from the client access services on a Mailbox server for the mailbox johnd@contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
+This parameter is available or functional only in Exchange Server 2010.
+
 The Identity parameter specifies a target user mailbox. This value can be the mailbox GUID or can be the domain name\\user, for example, contoso.com\\erin. If the parameter isn't specified, the command looks for a test user in Active Directory. You need to create the test user with the New-TestCasConnectivityUser.ps1 script.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2, Set4, Set1, Set3, Set5
+Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -156,11 +174,13 @@ Accept wildcard characters: False
 ```
 
 ### -GetDefaultsFromAutodiscover
+This parameter is available or functional only in Exchange Server 2010.
+
 The GetDefaultsFromAutodiscover parameter specifies whether to get default values for all of the other parameters for the command from the Autodiscover service settings. If you run the command specifying values for other parameters, those values override the default values from the Autodiscover service. The default value for this parameter is $true.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2, Set4
+Parameter Sets: RpcProxyServer
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -171,11 +191,13 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
+This parameter is available or functional only in Exchange Server 2010.
+
 The Protocol parameter specifies whether to test for Outlook Anywhere connectivity or directly test for RPC or TCP/IP connectivity. The value is either HTTP or TCP.
 
 ```yaml
 Type: HTTP | TCP | WS
-Parameter Sets: Set1
+Parameter Sets: Protocol
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -186,11 +208,13 @@ Accept wildcard characters: False
 ```
 
 ### -RpcTestType
+This parameter is available or functional only in Exchange Server 2010.
+
 The RpcTestType parameter specifies which type of RPC endpoint the command should test. Valid values are Server or Array. If Server is specified, the command uses the local server as the RPC endpoint. If Array is specified, the command looks for a ClientAccessArray object in the same Active Directory site where the command is being run.
 
 ```yaml
 Type: Array | Server
-Parameter Sets: Set3
+Parameter Sets: RpcTestType
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -201,6 +225,8 @@ Accept wildcard characters: False
 ```
 
 ### -WSTestType
+This parameter is available or functional only in Exchange Server 2010.
+
 The WSTestType parameter specifies type of servers that you want to include in your Outlook connectivity test. You can use the following values:
 
 - Unknown
@@ -213,7 +239,7 @@ The WSTestType parameter specifies type of servers that you want to include in y
 
 ```yaml
 Type: Unknown | Internal | External
-Parameter Sets: Set5
+Parameter Sets: WSTestType
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -224,11 +250,13 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
+This parameter is available or functional only in Exchange Server 2010.
+
 The Archive parameter specifies whether tests should be performed to connect to the user's on-premises archive mailbox. You don't need to specify a value for this parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2, Set4, Set1, Set3, Set5
+Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -239,6 +267,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+This parameter is available or functional only in Exchange Server 2010.
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
@@ -247,7 +277,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set4, Set1, Set3, Set5
+Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases: cf
 Applicable: Exchange Server 2010
 Required: False
@@ -257,14 +287,61 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Credential
+The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default. This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+
+```yaml
+Type: PSCredential
+Parameter Sets: Probe
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Hostname
+TheHostname parameter specifies the protocol endpoint target of the probe. You can use a specific Mailbox server or route through Distributed Name Service server.
+
+```yaml
+Type: String
+Parameter Sets: Probe
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MailboxCredential
+This parameter is available or functional only in Exchange Server 2010.
+
 The MailboxCredential parameter specifies certain credentials to allow logon access to a user's mailbox. Use the parameter along with the Identity parameter to access a user's mailbox when you don't have access permissions.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2, Set4, Set1, Set3, Set5
+Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
 Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -MailboxId
+The MailboxID parameter specifies the target mailbox. IF not specified, this uses the test account.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Probe
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -273,140 +350,14 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
+This parameter is available or functional only in Exchange Server 2010.
+
 The MonitoringContext parameter specifies whether the command returns additional information that can be used with Microsoft System Center Operations Manager 2007. The default value is $false.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set4, Set1, Set3, Set5
+Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
 Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RpcAuthenticationType
-The RpcAuthenticationType parameter specifies the authentication setting to test for the RPC layer. Using this parameter is helpful if a different authentication type is set at the RPC proxy virtual directory. You can use the following values:
-
-- NTLM
-
-- Kerberos
-
-- Negotiate
-
-The default value is Negotiate.
-
-```yaml
-Type: Negotiate | NTLM | Kerberos
-Parameter Sets: Set2, Set3
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RpcClientAccessServer
-The RpcClientAccessServer parameter specifies the target server with the Client Access server role installed that you want to test. This can be a server fully qualified domain name (FQDN) or a GUID.
-
-```yaml
-Type: ClientAccessServerIdParameter
-Parameter Sets: Set2, Set3
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -RpcProxyAuthenticationType
-The RpcProxyAuthenticationType parameter specifies the authentication setting for the RPC Proxy endpoint. The value can be specified as Basic, NTLM, or Negotiate. There is no default value unless used with the GetDefaultsFromAutodiscover parameter.
-
-```yaml
-Type: Basic | NTLM | Negotiate
-Parameter Sets: Set2, Set3
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RpcProxyServer
-The RpcProxyServer parameter specifies whether to set the target RpcProxy server for testing. This parameter can be used when the RpcProxy server is different from the Client Access server.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -RpcProxyTestType
-The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. The value can be Internal or External. The Internal value refers to the local computer name (http://\<localcomputername\>, for example, http://CAS01). The External value refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, http://mail.contoso.com).
-
-```yaml
-Type: External | Internal
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TotalTimeoutInMinutes
-The TotalTimeoutInMinutes parameter specifies the time limit, in minutes, for the command to wait for test results before ending the request. The default value is two minutes.
-
-```yaml
-Type: Int32
-Parameter Sets: Set2, Set4, Set1, Set3, Set5
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TrustAnySslCert
-The TrustAnySslCert parameter can be set to $true to ignore any Secure Sockets Layer (SSL) certificate warnings. The default value is $false.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2, Set4, Set1, Set3, Set5
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2, Set4, Set1, Set3, Set5
-Aliases: wi
 Applicable: Exchange Server 2010
 Required: False
 Position: Named
@@ -424,7 +375,7 @@ The ProbeIdentity parameter specifies the probe to use.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -434,14 +385,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
-The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default. This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+### -RpcAuthenticationType
+This parameter is available or functional only in Exchange Server 2010.
+
+The RpcAuthenticationType parameter specifies the authentication setting to test for the RPC layer. Using this parameter is helpful if a different authentication type is set at the RPC proxy virtual directory. You can use the following values:
+
+- NTLM
+
+- Kerberos
+
+- Negotiate
+
+The default value is Negotiate.
 
 ```yaml
-Type: PSCredential
-Parameter Sets: (All)
+Type: Negotiate | NTLM | Kerberos
+Parameter Sets: RpcProxyServer, RpcTestType
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
@@ -449,33 +410,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Hostname
-TheHostname parameter specifies the protocol endpoint target of the probe. You can use a specific Mailbox server or route through Distributed Name Service server.
+### -RpcClientAccessServer
+This parameter is available or functional only in Exchange Server 2010.
+
+The RpcClientAccessServer parameter specifies the target server with the Client Access server role installed that you want to test. This can be a server fully qualified domain name (FQDN) or a GUID.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: ClientAccessServerIdParameter
+Parameter Sets: RpcProxyServer, RpcTestType
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxId
-The MailboxID parameter specifies the target mailbox. IF not specified, this uses the test account.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RpcProxyAuthenticationType
+This parameter is available or functional only in Exchange Server 2010.
+
+The RpcProxyAuthenticationType parameter specifies the authentication setting for the RPC Proxy endpoint. The value can be specified as Basic, NTLM, or Negotiate. There is no default value unless used with the GetDefaultsFromAutodiscover parameter.
+
+```yaml
+Type: Basic | NTLM | Negotiate
+Parameter Sets: RpcProxyServer, RpcTestType
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RpcProxyServer
+This parameter is available or functional only in Exchange Server 2010.
+
+The RpcProxyServer parameter specifies whether to set the target RpcProxy server for testing. This parameter can be used when the RpcProxy server is different from the Client Access server.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: RpcProxyServer
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RpcProxyTestType
+This parameter is available or functional only in Exchange Server 2010.
+
+The RpcProxyTestType parameter specifies which HTTP endpoint the command should connect to. The value can be Internal or External. The Internal value refers to the local computer name (http://\<localcomputername\>, for example, http://CAS01). The External value refers to a public namespace (the external HTTP URL on the /rpc virtual directory, for example, http://mail.contoso.com).
+
+```yaml
+Type: External | Internal
+Parameter Sets: RpcTestType
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -484,7 +483,7 @@ The RunFromServerID parameter specifies the server on which the probe should be 
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: (All)
+Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -499,9 +498,60 @@ The TimeOutSeconds parameter specifies the timeout period in seconds before the 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Probe
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TotalTimeoutInMinutes
+This parameter is available or functional only in Exchange Server 2010.
+
+The TotalTimeoutInMinutes parameter specifies the time limit, in minutes, for the command to wait for test results before ending the request. The default value is two minutes.
+
+```yaml
+Type: Int32
+Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TrustAnySslCert
+This parameter is available or functional only in Exchange Server 2010.
+
+The TrustAnySslCert parameter can be set to $true to ignore any Secure Sockets Layer (SSL) certificate warnings. The default value is $false.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+This parameter is available or functional only in Exchange Server 2010.
+
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RpcProxyServer, Protocol, RpcTestType, WSTestType
+Aliases: wi
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None

@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the New-OwaVirtualDirectory cmdlet to create Outlook on the web virtual directoriesthat are used in Internet Information Services on Exchange servers. Typically, you create virtual directories on Exchange servers that have the Client Access server role installed.
+Use the New-OwaVirtualDirectory cmdlet to create Outlook on the web virtual directories that are used in Internet Information Services on Exchange servers. Typically, you create virtual directories on Exchange servers that have the Client Access server role installed.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1--------------
 ```
-C:\PS>Set-SPExcelUserDefinedFunction -ExcelServiceApplication "My Excel Service" -Identity SampleCompany.SampleApplication.SampleUdf -Description "This is the new description for the sample UDF"
+PS C:\>Set-SPExcelUserDefinedFunction -ExcelServiceApplication "My Excel Service" -Identity SampleCompany.SampleApplication.SampleUdf -Description "This is the new description for the sample UDF"
 ```
 
 This example changes the description of the user-defined function (UDF) to the UDF SampleCompany.SampleApplication.SampleUdf file for the Excel Services Application Web service application named My Excel Service.
@@ -42,7 +42,7 @@ This example changes the description of the user-defined function (UDF) to the U
 
 ### --------------EXAMPLE 2--------------
 ```
-C:\PS>Get-SPExcelServiceApplication "My Excel Service" | Set-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf -Enable: $false
+PS C:\>Get-SPExcelServiceApplication "My Excel Service" | Set-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf -Enable: $false
 ```
 
 This example disables the sample UDF SampleCompany.SampleApplication.SampleUdf file from the Excel Services Application named My Excel Service.

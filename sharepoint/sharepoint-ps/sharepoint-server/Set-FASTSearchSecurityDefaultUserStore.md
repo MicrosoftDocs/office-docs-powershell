@@ -31,7 +31,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchSecurityDefaultUserStore -DefaultUserStoreId win
+PS C:\>Set-FASTSearchSecurityDefaultUserStore -DefaultUserStoreId win
 ```
 
 This example sets the default user store to "win".

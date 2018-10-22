@@ -199,3 +199,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+[Get-Team](Get-Team.md)
+
+[Set-Team](Set-Team.md)

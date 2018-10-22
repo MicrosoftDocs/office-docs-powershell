@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPUser
 schema: 2.0.0
 ---
@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web http://webUrl
-C:\PS>Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
+PS C:\>Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
@@ -39,7 +39,7 @@ This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
 ### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>$user = Get-SPUser -Identity "DomainA\JaneDoe" -Web http://webUrl
-C:\PS>Move-SPUser -Identity $user -NewAlias "DomainB\JaneDoe"
+PS C:\>Move-SPUser -Identity $user -NewAlias "DomainB\JaneDoe"
 ```
 
 This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\JaneDoe in DomainB with SID History enabled.
@@ -47,7 +47,7 @@ This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\
 ### ------------------EXAMPLE 3------------------ 
 ```
 C:\PS>$user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web http://webUrl
-C:\PS>Move-SPUser -Identity $user -NewAlias "i:0#.W|Domain\JaneSmith" -IgnoreSid
+PS C:\>Move-SPUser -Identity $user -NewAlias "i:0#.W|Domain\JaneSmith" -IgnoreSid
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith when using Windows Claims. `-IgnoreSid` must always be used with `Move-SPUser` when using a Claims Identity, such as Windows Claims.
@@ -63,7 +63,7 @@ The type must be a valid `SPUser` object.
 Type: SPUserPipeBind
 Parameter Sets: (All)
 Aliases: UserAlias
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -81,7 +81,7 @@ The type must be a valid login name, in the form DOMAIN\username.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -103,7 +103,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ Indicates (if present) that Active Directory will not be queried for the SID his
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

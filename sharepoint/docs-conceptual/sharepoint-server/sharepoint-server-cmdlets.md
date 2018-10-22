@@ -17,7 +17,6 @@ Whether you use the SharePoint Management Shell or the PowerShell console, you c
 Before you can use the Add-SPShellAdmin cmdlet to grant permissions for users to run SharePoint Server cmdlets, verify that you meet all of the following minimum requirements:
 
 * You must have membership in the **securityadmin** fixed server role on the SQL Server instance.
-* You must have membership in the **securityadmin** fixed server role on the SQL Server instance.
 * You must be a member of the Administrators group on the server on which you are running the PowerShell cmdlet.
 
 **NOTE:** If these permissions are not satisfied, contact your Setup administrator or SQL Server administrator to request these permissions.

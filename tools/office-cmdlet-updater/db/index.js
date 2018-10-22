@@ -4,7 +4,11 @@ const Memory = require('lowdb/adapters/Memory');
 module.exports = () => {
 	const db = low(new Memory());
 
-	db.defaults({ logs: [], errors: [] }).write();
+	db.defaults({
+		logs: new Map(),
+		errors: new Map(),
+		tempFolders: new Map()
+	}).write();
 
 	return db;
 };

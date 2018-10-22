@@ -28,14 +28,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchSecurityRegexAliaser -Identity regex1 -OutputUserStoreIds ln2, ln3
+PS C:\>Set-FASTSearchSecurityRegexAliaser -Identity regex1 -OutputUserStoreIds ln2, ln3
 ```
 
 This example modifies the output user store ids for the "regex1" regular expression aliaser.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1" | Set-FASTSearchSecurityRegexAliaser -Identity regexalias1
+PS C:\>New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1" | Set-FASTSearchSecurityRegexAliaser -Identity regexalias1
 ```
 
 This example sets the regular expression pattern for the Regex Aliaser "regexalias1".

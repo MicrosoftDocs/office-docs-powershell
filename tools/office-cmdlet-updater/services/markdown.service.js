@@ -23,22 +23,17 @@ class MarkdownService {
 
 		this.queue = new Queue(this.processQueue);
 		this.queue.on('empty', this.queueEmptyHandler);
-
-		this.tempFolderPath = null;
 	}
 
 	async updateMd(doc) {
-		const { path } = doc;
-
-		this.tempFolderPath = `${path}\\${shortId()}`;
-
-		await this.addMdFilesInQueue(path);
+		return this.addMdFilesInQueue(doc);
 	}
 
-	async addMdFilesInQueue(folderPath) {
+	async addMdFilesInQueue(doc) {
 		const mdExt = '.md';
 		const { ignoreFiles } = this.config.get('platyPS');
 		const ignoreAbsolutePathsArr = ignoreFiles.map((f) => path.resolve(f));
+		const metaTagRegex = /(?<=applicable: ).+/gmu;
 
 		const isFileIgnore = (fileName) => {
 			const absoluteFilePath = path.resolve(fileName);
@@ -46,25 +41,65 @@ class MarkdownService {
 			return ignoreAbsolutePathsArr.includes(absoluteFilePath);
 		};
 
-		const mdFiles = (await fs.readdir(folderPath))
-			.map((f) => path.resolve(folderPath, f))
-			.filter((fn) => fn.endsWith(mdExt) && !isFileIgnore(fn));
+		const isContainTag = (filePath) => {
+			if (!doc.metaTags.length) {
+				return true;
+			}
+
+			const groups = fs
+				.readFileSync(filePath, 'utf8')
+				.toString()
+				.match(metaTagRegex);
+
+			if (!groups) {
+				return false;
+			}
+
+			for (const metaTag of doc.metaTags) {
+				if (groups[0].indexOf(metaTag) !== -1) {
+					return true;
+				}
+			}
+
+			return false;
+		};
+
+		const mdFiles = (await fs.readdir(doc.path))
+			.map((f) => path.resolve(doc.path, f))
+			.filter(
+				(fn) =>
+					fn.endsWith(mdExt) && !isFileIgnore(fn) && isContainTag(fn)
+			);
 
 		mdFiles.forEach((file) => {
 			this.queue
-				.push(file)
+				.push({ file, doc })
 				.on('failed', this.queueFailedHandler)
 				.on('finish', this.queueFinishHandler);
 		});
 	}
 
-	async processQueue(input, cb) {
+	async processQueue({ file, doc }, cb) {
 		let result, err;
-		const logFilePath = `${this.tempFolderPath}\\${shortId()}.log`;
 
-		[result, err] = await of(
-			this.copyMdInTempFolder(input, this.tempFolderPath)
-		);
+		const getTempFolderName = () => {
+			let tempFolders = this.logStoreService.getAllTempFolders();
+
+			if (!tempFolders.has(doc.name)) {
+				const tempFolderPath = `${doc.path}\\${shortId()}`;
+
+				this.logStoreService.addTempFolder(tempFolderPath, doc.name);
+
+				tempFolders = this.logStoreService.getAllTempFolders();
+			}
+
+			return tempFolders.get(doc.name);
+		};
+
+		const [tempFolderPath] = getTempFolderName();
+		const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
+
+		[result, err] = await of(this.copyMdInTempFolder(file, tempFolderPath));
 
 		if (err) {
 			return cb(err, null);
@@ -77,7 +112,7 @@ class MarkdownService {
 		if (err) {
 			console.error(err);
 
-			this.logStoreService.addError(err);
+			this.logStoreService.addError(err, doc.name);
 
 			return cb(null, '');
 		}
@@ -92,34 +127,36 @@ class MarkdownService {
 			return cb(err, null);
 		}
 
-		return cb(null, result);
+		return cb(null, { result, doc });
 	}
 
 	async queueFailedHandler(err) {
 		throw new Error(err);
 	}
 
-	queueFinishHandler(result) {
+	queueFinishHandler({ result, doc }) {
 		if (!result) {
 			return;
 		}
-		this.logStoreService.addLog(result);
+		this.logStoreService.addLog(result, doc.name);
 	}
 
 	async queueEmptyHandler() {
 		this.powerShellService.dispose();
 
-		const [, err] = await of(this.logStoreService.saveInFs());
+		this.logStoreService.saveInFs();
 
-		if (err) {
-			throw new Error(err);
-		}
+		const tempFolders = [
+			...this.logStoreService.getAllTempFolders().values()
+		].map((path) => path[0]);
 
-		if (fs.pathExists(this.tempFolderPath)) {
-			const [, fsError] = await of(this.clearTempFolder());
+		for (const path of tempFolders) {
+			if (fs.pathExists(path)) {
+				const [, fsError] = await of(fs.remove(path));
 
-			if (fsError) {
-				throw new Error(fsError);
+				if (fsError) {
+					throw new Error(fsError);
+				}
 			}
 		}
 
@@ -157,10 +194,6 @@ class MarkdownService {
 		}
 
 		return (await fs.readFile(logFilePath)).toString();
-	}
-
-	clearTempFolder() {
-		return fs.remove(this.tempFolderPath);
 	}
 }
 

@@ -17,14 +17,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### GlobalCatalog
 ```
-Get-DomainController [-GlobalCatalog] [-Credential <NetworkCredential>] [-Forest <Fqdn>] [<CommonParameters>]
+Get-DomainController [-GlobalCatalog] [-Forest <Fqdn>]
+ [-Credential <NetworkCredential>] [<CommonParameters>]
 ```
 
-### Set1
+### DomainController
 ```
-Get-DomainController [-Credential <NetworkCredential>] [-DomainName <Fqdn>] [<CommonParameters>]
+Get-DomainController [-DomainName <Fqdn>]
+ [-Credential <NetworkCredential>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +55,7 @@ The GlobalCatalog switch specifies whether the command should return a list of g
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: GlobalCatalog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -87,7 +89,7 @@ The DomainName parameter specifies the fully qualified domain name (FQDN) of the
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: DomainController
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -102,7 +104,7 @@ The Forest parameter specifies the FQDN of the root domain of the forest for whi
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: GlobalCatalog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
