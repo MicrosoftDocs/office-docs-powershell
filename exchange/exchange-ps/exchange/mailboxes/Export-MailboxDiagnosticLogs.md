@@ -17,18 +17,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### MailboxLog
 ```
-Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> -ComponentName <String> [-Archive]
- [-Confirm] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> -ComponentName <String>
+ [-Archive]
+ [-Confirm]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ExtendedProperties
 ```
-Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> [-ExtendedProperties] [-Archive]
- [-Confirm] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [-WhatIf] [<CommonParameters>]
+Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> [-ExtendedProperties]
+ [-Archive]
+ [-Confirm]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,7 +91,7 @@ The ComponentName parameter specifies the component that you want to retrieve th
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: MailboxLog
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -96,7 +106,7 @@ The ExtendedProperties switch specifies whether to retrieve all of the well-know
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: ExtendedProperties
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True

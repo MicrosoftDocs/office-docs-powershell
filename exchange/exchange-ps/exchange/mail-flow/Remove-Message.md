@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Filter
 ```
-Remove-Message -Filter <String> [-Confirm] [-Server <ServerIdParameter>] [-WhatIf] [-WithNDR <$true | $false>]
- [<CommonParameters>]
+Remove-Message -Filter <String> [-Server <ServerIdParameter>]
+ [-Confirm]
+ [-WhatIf]
+ [-WithNDR <$true | $false>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Remove-Message [-Identity] <MessageIdentity> [-Confirm] [-WhatIf] [-WithNDR <$true | $false>]
- [<CommonParameters>]
+Remove-Message [-Identity] <MessageIdentity>
+ [-Confirm]
+ [-WhatIf]
+ [-WithNDR <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +60,7 @@ You can specify multiple criteria by using the and comparison operator. Property
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -71,7 +75,7 @@ The Identity parameter specifies the message. Valid input for this parameter use
 
 ```yaml
 Type: MessageIdentity
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -117,7 +121,7 @@ You can use the Server parameter and the Filter parameter in the same command. Y
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

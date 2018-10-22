@@ -17,15 +17,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-OutlookAnywhere -Server <ServerIdParameter> [-ADPropertiesOnly] [-DomainController <Fqdn>]
+Get-OutlookAnywhere -Server <ServerIdParameter>
+ [-ADPropertiesOnly]
+ [-DomainController <Fqdn>]
  [-ShowMailboxVirtualDirectories] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-OutlookAnywhere [[-Identity] <VirtualDirectoryIdParameter>] [-ADPropertiesOnly] [-DomainController <Fqdn>]
+Get-OutlookAnywhere [[-Identity] <VirtualDirectoryIdParameter>]
+ [-ADPropertiesOnly]
+ [-DomainController <Fqdn>]
  [-ShowMailboxVirtualDirectories] [<CommonParameters>]
 ```
 
@@ -63,7 +67,7 @@ The Server parameter specifies the Exchange server that hosts the virtual direct
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -116,7 +120,7 @@ The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from
 
 ```yaml
 Type: VirtualDirectoryIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
