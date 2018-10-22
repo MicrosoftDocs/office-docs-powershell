@@ -14,7 +14,7 @@ When enabled, Skype for Business Online users will be able to exchange IM and pr
 ## SYNTAX
 
 ```
-Set-CsTenantPublicProvider [-Confirm] [-Provider <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Set-CsTenantPublicProvider [-Provider <String[]>] [-Tenant <Guid>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -122,7 +122,7 @@ You can enable multiple providers by separating the provider names by using comm
 `-Provider "AOL","WindowsLive"`
 
 ```yaml
-Type: Object
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -145,7 +145,7 @@ You can return your tenant ID by running this command
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -164,22 +164,6 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
