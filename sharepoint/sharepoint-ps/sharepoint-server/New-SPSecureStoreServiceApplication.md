@@ -247,6 +247,8 @@ Accept wildcard characters: False
 Specifies that the service application restricts data by subscription ID.
 This property cannot be changed after the service application is created.
 
+This property has no effect on SharePoint Server 2019.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
