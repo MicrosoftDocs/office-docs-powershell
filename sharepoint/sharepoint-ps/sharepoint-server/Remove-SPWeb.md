@@ -14,16 +14,14 @@ Completely deletes the specified Web.
 ## SYNTAX
 
 ```
-Remove-SPWeb [-Identity] <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
- [-Recycle] [<CommonParameters>]
+Remove-SPWeb [-Identity] <SPWebPipeBind> [-Recycle] [-CheckComplianceFlags <Boolean>]
+ [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Remove-SPWeb` cmdlet completely deletes the Web specified by the Identity parameter.
+The **Remove-SPWeb** cmdlet completely deletes the Web specified by the Identity parameter.
 
 Deleting the top level Web site of a site collection causes the entire site collection to be removed.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
@@ -53,6 +51,20 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+### -CheckComplianceFlags
+Specifies if compliance flags are enabled. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable:  SharePoint Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

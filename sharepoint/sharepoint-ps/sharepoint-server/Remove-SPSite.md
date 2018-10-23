@@ -14,15 +14,14 @@ Completely deletes an existing site collection and all subsites.
 ## SYNTAX
 
 ```
-Remove-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
- [-DeleteADAccounts] [-GradualDelete] [-WhatIf] [<CommonParameters>]
+Remove-SPSite  [-Identity] <SPSitePipeBind> [-DeleteADAccounts] [-GradualDelete]
+ [-CheckComplianceFlags <Boolean>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Remove-SPSite` cmdlet completely deletes an existing site collection and all subsites.
+The **Remove-SPSite** cmdlet completely deletes an existing site collection and all subsites.
 This operation cannot be undone.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
 ## EXAMPLES
@@ -57,6 +56,35 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+### -DeleteADAccounts
+Forces deletion of user accounts from Active Directory Domain Services (AD DS).
+This applies when in AD DS account creation mode and the value of this parameter is True, AD DS accounts associated with the site collection are also deleted from AD DS.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable:  SharePoint Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -CheckComplianceFlags
+Specifies if compliance flags are enabled. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable:  SharePoint Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
