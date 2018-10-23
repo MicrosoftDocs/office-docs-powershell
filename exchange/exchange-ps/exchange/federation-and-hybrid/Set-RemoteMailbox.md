@@ -1204,7 +1204,13 @@ The Type parameter specifies the type for the mailbox in the service. Valid valu
 
 - Equipment
 
-- Shared (This value is available only in Exchange 2013 CU21 or later and Exchange 2016 CU10 or later. To use this value, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605/cmdlets-to-create-modify-remote-shared-mailbox-in-on-premises-exchange).)
+- Shared
+
+Notes on the value Shared:
+
+- Shared is available only in Exchange 2013 CU21 or later and Exchange 2016 CU10 or later. To use this value, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605/cmdlets-to-create-modify-remote-shared-mailbox-in-on-premises-exchange).
+
+- You can only use Shared on a mailbox that was originally created in Exchange Online. If the mailbox was originally created in on-premises Exchange and then migrated to Exchange Online, you need to migrate the mailbox back to on-premises Exchange, convert the mailbox to a shared mailbox in on-premises Exchange, and then migrate the shared mailbox to Exchange Online.
 
 ```yaml
 Type: Regular | Room | Equipment

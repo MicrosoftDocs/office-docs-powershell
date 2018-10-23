@@ -26,7 +26,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchSecurityAliaser -Identity xmlalias2
+PS C:\>Remove-FASTSearchSecurityAliaser -Identity xmlalias2
 ```
 
 This example deletes an XML aliaser.
@@ -34,7 +34,7 @@ A prompt is displayed to confirm the request.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchSecurityAliaser -Identity xmlalias4 -Confirm:$False
+PS C:\>Remove-FASTSearchSecurityAliaser -Identity xmlalias4 -Confirm:$False
 ```
 
 This example deletes an XML aliaser without displaying a prompt.

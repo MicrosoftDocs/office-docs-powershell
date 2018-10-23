@@ -25,7 +25,7 @@ This cmdlet enables admins to apply TeamsUpgradePolicy to either individual user
 
 IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been fully updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is not honored, except if TeamsUpgradePolicy mode=Legacy. However, Legacy mode is being deprecated.
 
-When you use Grant-CsTeamsUpgradePolicy you should NOT set grant-csTeamsUpgradePolicy, except if you choose mode=Legacy.  
+When you use Grant-CsTeamsUpgradePolicy you should NOT use Grant-CsTeamsInteropPolicy except if you choose mode=Legacy.  Additionally, do not grant both policies at the same time. Instead grant one policy and then wait 30 minutes before granting the next policy.
 
 
 

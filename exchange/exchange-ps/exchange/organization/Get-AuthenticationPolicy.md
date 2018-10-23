@@ -9,9 +9,6 @@ monikerRange: "exchonline-ps"
 # Get-AuthenticationPolicy
 
 ## SYNOPSIS
-> [!NOTE]
-> This topic describes a preview feature that isn't available to everyone, and is subject to change.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the Get-AuthenticationPolicy cmdlet to view authentication policies in Exchange Online.

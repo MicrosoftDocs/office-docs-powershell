@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Mailbox (Default)
+### Mailbox
 ```
 New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath>
  [-AcceptLargeDataLoss]
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxLocationIdParameter
-Parameter Sets: Mailbox
+Parameter Sets: MailboxImportRequest
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -302,9 +302,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013
 Required: False
 Position: Named
 Default value: None
@@ -763,7 +763,7 @@ The MRSServer parameter specifies the FQDN of the Client Access server on which 
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
