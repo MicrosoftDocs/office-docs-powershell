@@ -194,7 +194,10 @@ Accept wildcard characters: False
 
 ### -Partitioned
 Specifies that the search service application uses web-hosted mode.
-web-hosted mode segregates results for a given hosted subscription.
+Web-hosted mode segregates results for a given hosted subscription.
+
+This property has no effect on SharePoint Server 2019.
+
 
 ```yaml
 Type: SwitchParameter
