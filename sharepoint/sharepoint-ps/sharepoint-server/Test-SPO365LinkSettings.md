@@ -12,7 +12,7 @@ Validates whether the configured Office 365 hybrid site uses a valid template.
 
 ## SYNTAX
 
-```powershell
+```
 Test-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] -MySiteHostUrl <Uri>
  [<CommonParameters>]
 ```
@@ -44,11 +44,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-<<<<<<< HEAD
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-=======
 Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
->>>>>>> master
 
 Required: False
 Position: Named
