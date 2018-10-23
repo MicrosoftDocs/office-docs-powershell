@@ -23,8 +23,6 @@ The **Remove-SPWeb** cmdlet completely deletes the Web specified by the Identity
 
 Deleting the top level Web site of a site collection causes the entire site collection to be removed.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
 
 ## EXAMPLES
 
