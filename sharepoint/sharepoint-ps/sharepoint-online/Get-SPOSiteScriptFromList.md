@@ -40,7 +40,7 @@ C:\> Add-SPOSiteScript `
     -Content $extracted
 ```
 
-## REQUIRED PARAMETERS
+## PARAMETERS
 
 ### -ListUrl
 The url of the list to be referenced for the JSON output.
