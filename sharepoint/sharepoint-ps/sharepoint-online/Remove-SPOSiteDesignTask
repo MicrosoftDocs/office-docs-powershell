@@ -21,7 +21,7 @@ Remove-SPOSiteDesignTask
 
 ## DESCRIPTION
 
-Removes a scheduled site design by providing the site design ID. If the execution of the associated site script has already started the execution will not be terminated. 
+Removes a scheduled site design by providing the site design ID. If the execution of the associated site script has already started the execution will not be terminated.
 
 > [!NOTE]
 > This command only removes a scheduled request. To check on the job status or to view details of the scheduled run, use the commands in the related section below.
