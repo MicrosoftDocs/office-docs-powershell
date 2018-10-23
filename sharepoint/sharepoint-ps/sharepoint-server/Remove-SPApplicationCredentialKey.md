@@ -13,7 +13,7 @@ Removes the application credential key from the local server.
 
 ## SYNTAX
 
-```powershell
+```
 Remove-SPApplicationCredentialKey [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```

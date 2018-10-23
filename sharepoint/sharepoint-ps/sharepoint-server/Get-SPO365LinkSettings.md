@@ -12,7 +12,7 @@ Gets hybrid configurations.
 
 ## SYNTAX
 
-```powershell
+```
 Get-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 

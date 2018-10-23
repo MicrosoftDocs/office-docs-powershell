@@ -12,7 +12,7 @@ Set SharePoint O365 Link Settings for Hybrid Configuration.
 
 ## SYNTAX
 
-```powershell
+```
 Set-SPO365LinkSettings -MySiteHostUrl <String> [-Audiences <String[]>] [-RedirectSites <Boolean>]
  [-HybridAppLauncherEnabled <Boolean>] [-OnedriveDefaultToCloudEnabled <Boolean>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]

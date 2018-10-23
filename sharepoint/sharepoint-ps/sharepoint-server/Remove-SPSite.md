@@ -20,7 +20,7 @@ Remove-SPSite  [-Identity] <SPSitePipeBind> [-DeleteADAccounts] [-GradualDelete]
 ```
 
 ## DESCRIPTION
-The `Remove-SPSite` cmdlet completely deletes an existing site collection and all subsites.
+The **Remove-SPSite** cmdlet completely deletes an existing site collection and all subsites.
 This operation cannot be undone.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).

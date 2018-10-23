@@ -12,7 +12,7 @@ Clears synchronization information from the content databases that have not been
 
 ## SYNTAX
 
-```powershell
+```
 Clear-SPContentDatabaseSyncData [-DaysSinceLastProfileSync] <Int32>]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

@@ -13,7 +13,7 @@ Gets orphaned data in content database.
 
 ## SYNTAX
 
-```powershell
+```
 Get-SPContentDatabaseOrphanedData [-Identity] <SPContentDatabasePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```

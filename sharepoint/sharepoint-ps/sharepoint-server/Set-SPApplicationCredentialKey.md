@@ -13,7 +13,7 @@ Sets the application credential key on the local server.
 
 ## SYNTAX
 
-```powershell
+```
 Set-SPApplicationCredentialKey [-Password] <SecureString> [-AssignmentCollection <SPAssignmentCollection>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
