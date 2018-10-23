@@ -80,4 +80,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
-- [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
+
+[Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
