@@ -24,6 +24,8 @@ class PowerShellService {
 		const [output, err] = await of(this.ps.invoke());
 
 		if (err) {
+			console.error(err);
+
 			throw new Error(err);
 		}
 

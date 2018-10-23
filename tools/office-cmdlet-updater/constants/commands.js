@@ -19,5 +19,6 @@ module.exports = {
 	SET_LOGIN: '$Username = \'{}\'',
 	SET_PASS: '$Password = \'{}\'',
 	CONVERT_PASS_TO_SEC_STRING: '$SecureString = ConvertTo-SecureString -AsPlainText $Password -Force',
-	CREAT_CRED: '$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username,$SecureString'
+	CREAT_CRED: '$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username,$SecureString',
+	STUFFHUB_INSTALL: 'Install-Module -Name MicrosoftStaffHub -RequiredVersion 1.0.0-alpha -AllowPrerelease'
 };

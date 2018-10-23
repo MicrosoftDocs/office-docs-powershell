@@ -36,7 +36,7 @@ class CmdletDependenciesService {
 				break;
 			}
 			case 'staffhub': {
-				throw new Error('Not implemented exception');
+				await this.preInstallStuffHub();
 				break;
 			}
 		}
@@ -78,6 +78,11 @@ class CmdletDependenciesService {
 		//await this.ps.invokeCommand(commands.EXCHANGE_INSTALL_MODULE);
 		await this.ps.invokeCommand(commands.EXCHANGE_GET_SESSION);
 		await this.ps.invokeCommand(commands.EXCHANGE_SESSION_IMPORT);
+	}
+
+	async preInstallStuffHub() {
+		// TODO: install module when installation error will be fix
+		// await this.ps.invokeCommand(commands.STUFFHUB_INSTALL);
 	}
 
 	_getCredentialsFromConfig() {
