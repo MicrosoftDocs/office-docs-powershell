@@ -189,6 +189,8 @@ Accept wildcard characters: False
 Specifies that the service application restrict data by site group.
 After the PartitionMode parameter is set and the service application is created, it cannot be changed.
 
+This property has no effect on SharePoint Server 2019.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
