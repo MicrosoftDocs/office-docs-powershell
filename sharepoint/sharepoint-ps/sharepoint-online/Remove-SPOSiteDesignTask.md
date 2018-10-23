@@ -55,8 +55,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- [Get-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
+[Get-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
 
-- [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
+[Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
 
-- [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
+[Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
