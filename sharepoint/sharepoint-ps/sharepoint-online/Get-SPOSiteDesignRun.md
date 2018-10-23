@@ -20,7 +20,7 @@ Get-SPOSiteDesignRun [-WebUrl] <String> [[-SiteDesignId] <SPOSiteDesignPipeBind>
 ## DESCRIPTION
 Retrieves a list of site designs applied to a specified site collection. The WebUrl is required to know which site collection to query. The returned output includes the ID of the scheduled job, the web and site IDs, and the site design ID, version, and title.
 
-## EXAMPLE
+## EXAMPLES
 
 This example would return a list of the site designs applied to the specified site. Providing a specific site design ID will return the details for just that applied site design.
 
