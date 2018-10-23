@@ -314,6 +314,8 @@ Specifies that the service application restrict data by subscription.
 
 Note This property cannot be changed after the service application has been created.
 
+This property has no effect on SharePoint Server 2019.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
