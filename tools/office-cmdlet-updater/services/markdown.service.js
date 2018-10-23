@@ -6,11 +6,18 @@ const shortId = require('shortid');
 const { markdownErrors } = require('../constants/errors');
 
 class MarkdownService {
-	constructor(powerShellService, logStoreService, logParseService, config) {
+	constructor(
+		powerShellService,
+		logStoreService,
+		logParseService,
+		cmdletDependenciesService,
+		config
+	) {
 		this.logStoreService = logStoreService;
 		this.powerShellService = powerShellService;
 		this.logParseService = logParseService;
 		this.config = config;
+		this.cds = cmdletDependenciesService;
 
 		this.processQueue = this.processQueue.bind(this);
 		this.copyMdInTempFolder = this.copyMdInTempFolder.bind(this);
@@ -23,6 +30,8 @@ class MarkdownService {
 
 		this.queue = new Queue(this.processQueue);
 		this.queue.on('empty', this.queueEmptyHandler);
+
+		this.installedDependencies = [];
 	}
 
 	async updateMd(doc) {
@@ -104,6 +113,14 @@ class MarkdownService {
 
 	async processQueue({ file, doc }, cb) {
 		let result, err;
+
+		const { name } = doc;
+
+		if (!this.installedDependencies.includes(name)) {
+			this.installedDependencies.push(name);
+
+			await this.cds.installDependencies({ cmdletName: name });
+		}
 
 		const getTempFolderName = () => {
 			let tempFolders = this.logStoreService.getAllTempFolders();

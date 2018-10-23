@@ -1,5 +1,9 @@
 {
 	"platyPS": {
+		"credentials": {
+			"login": "",
+			"pass": ""
+		},
 		"docs": [
 			{
 				"name": "teams",
@@ -16,14 +20,19 @@
 				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
 				"metaTags": []
 			},
-			//			{
-			//				"name": "staffhub",
-			//				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
-			//				"metaTags": []
-			//			},
+			{
+				"name": "staffhub",
+				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+				"metaTags": []
+			},
 			{
 				"name": "whiteboard",
 				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
+				"metaTags": []
+			},
+			{
+				"name": "exchange",
+				"path": "..\\..\\exchange\\exchange-ps\\exchange",
 				"metaTags": []
 			}
 		],
