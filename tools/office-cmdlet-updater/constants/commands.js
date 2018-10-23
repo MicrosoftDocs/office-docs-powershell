@@ -14,7 +14,7 @@ module.exports = {
 	WHITEBOARD_INSTALL_MODULE: 'Install-Module -Name WhiteboardAdmin',
 	EXCHANGE_INSTALL_MODULE: 'Install-Module -Name ExchangeOnlineShell -Force',
 	EXCHANGE_GET_CRED: '$UserCredential = Get-Credential',
-	EXCHANGE_GET_SESSION: '$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection',
+	EXCHANGE_GET_SESSION: '$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $cred -Authentication Basic -AllowRedirection',
 	EXCHANGE_SESSION_IMPORT: 'Import-PSSession $Session -DisableNameChecking',
 	SET_LOGIN: '$Username = \'{}\'',
 	SET_PASS: '$Password = \'{}\'',
