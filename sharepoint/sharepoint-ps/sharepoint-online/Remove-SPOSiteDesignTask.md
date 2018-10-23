@@ -53,7 +53,7 @@ Accept pipeline input: False
 Accept wildcard characters: False  
 ```
 
-## RELATED COMMANDS
+## RELATED LINKS
 
 - [Get-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
 
