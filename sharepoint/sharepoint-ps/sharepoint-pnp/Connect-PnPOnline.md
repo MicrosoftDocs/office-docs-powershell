@@ -247,9 +247,9 @@ If no credentials have been specified, and the CurrentCredentials parameter has 
 >Failed to connect to (site), Exception calling "ExecuteQuery" with "0" argument(s): "Cannot contact web site (site) or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'. The response headers are 'X-SharePointHealthScore=0, X-MSDAVEXT_Error=917656; Access+denied.+Before+opening+files+in+this+location%2c+you+must+first+browse+to+the+web+site+and+select+the+option+to+login+automatically.
 
 You can determine whether the SharePoint Online Tenant has disabled legacy authentication methods by running the following powershell snippet
-```powershell
+`
 (Get-PnPTenant).LegacyAuthProtocolsEnabled
-``` 
+` 
 and if this returns False, then legacy authentication methods have been disabled on the tenant that you are connecting to.
 
 This will then instead mean that you need to ensure that you specify the appropriate options that support modern authentication, such as connections with the "-UseWebLogin" or "-PnPO365ManagementShell" parameters or certificate based authentication.
