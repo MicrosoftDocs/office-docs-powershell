@@ -20,12 +20,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-Test-ExchangeUMCallFlow -Mode <Gateway> -Diversion <String> -NextHop <String> [-CertificateThumbprint <String>] [-HuntGroup <String>] [-VoIPSecurity <Unsecured | SIPSecured | Secured>] [<CommonParameters>]
+Test-ExchangeUMCallFlow -Mode <Gateway> -Diversion <String> -NextHop <String> [-CertificateThumbprint <String>] [-HuntGroup <String>] [-VoIPSecurity <Unsecured | SIPSecured | Secured>
+ <CommonParameters>]
 ```
 
 ### Set2
 ```
-Test-ExchangeUMCallFlow -Mode <SIPClient> -CalledParty <String> -CallingParty <String> -NextHop <String> [-Credential <PSCredential>] [<CommonParameters>]
+Test-ExchangeUMCallFlow -Mode <SIPClient> -CalledParty <String> -CallingParty <String> -NextHop <String> [-Credential <PSCredential>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

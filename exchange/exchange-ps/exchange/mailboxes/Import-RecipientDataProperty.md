@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### ImportPicture
 ```
-Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-Confirm]
- [-DomainController <Fqdn>] [-Picture] [-WhatIf] [<CommonParameters>]
+Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-Picture]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ImportSpokenName
 ```
-Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-Confirm]
- [-DomainController <Fqdn>] [-SpokenName] [-WhatIf] [<CommonParameters>]
+Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileData <Byte[]> [-SpokenName]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -137,7 +141,7 @@ The picture must be a JPEG file and shouldn't be larger than 10 kilobytes (KB). 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: ImportPicture
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -160,7 +164,7 @@ You can't use this switch with the Picture switch. You can only import one file 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: ImportSpokenName
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
