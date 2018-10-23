@@ -1,5 +1,9 @@
 {
 	"platyPS": {
+		"credentials": {
+			"login": "",
+			"pass": ""
+		},
 		"docs": [
 			{
 				"name": "teams",
@@ -10,10 +14,31 @@
 				"name": "skype",
 				"path": "..\\..\\skype\\skype-ps\\skype",
 				"metaTags": ["Skype for Business Online"]
+			},
+			{
+				"name": "sharepoint",
+				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
+				"metaTags": []
+			},
+			{
+				"name": "staffhub",
+				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+				"metaTags": []
+			},
+			{
+				"name": "whiteboard",
+				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
+				"metaTags": []
+			},
+			{
+				"name": "exchange",
+				"path": "..\\..\\exchange\\exchange-ps\\exchange",
+				"metaTags": []
 			}
 		],
 		"ignoreFiles": [
-			"..\\..\\teams\\teams-ps\\teams\\teams.md"
+			"..\\..\\teams\\teams-ps\\teams\\teams.md",
+			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md"
 		]
 	},
 	"sendgrid": {

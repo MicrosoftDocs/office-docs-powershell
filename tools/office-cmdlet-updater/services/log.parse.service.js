@@ -39,8 +39,11 @@ class LogParseService {
 	}
 
 	parseAll() {
-		const parseLogs = []
-		const logs = [...this.logStoreService.getAllLogs().values()].reduce(
+		const parseLogs = [];
+
+		const allLogs = [...this.logStoreService.getAllLogs().values()];
+
+		const logs = allLogs.reduce(
 			(acc, cur) => [...acc, ...cur],
 			[]
 		);
