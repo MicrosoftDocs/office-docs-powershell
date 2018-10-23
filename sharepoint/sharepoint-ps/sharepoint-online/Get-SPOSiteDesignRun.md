@@ -22,6 +22,8 @@ Retrieves a list of site designs applied to a specified site collection. The Web
 
 ## EXAMPLES
 
+###   ------------ Example 1 --------------------
+
 This example would return a list of the site designs applied to the specified site. Providing a specific site design ID will return the details for just that applied site design.
 
 ```powershell
