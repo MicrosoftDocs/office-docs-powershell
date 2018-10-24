@@ -68,6 +68,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-ResetAutoBlockedDevices]
  [-SamAccountName <String>]
  [-ShowGalAsDefaultView <$true | $false>]
+ [-SmtpClientAuthenticationDisabled <$true | $false>]
  [-UniversalOutlookEnabled <$true | $false>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -1161,6 +1162,41 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpClientAuthenticationDisabled
+This parameter is available only in the cloud-based service.
+
+The SmtpClientAuthenticationDisabled parameter specifies whether to disable authenticated SMTP (SMTP AUTH) for the mailbox. Examples of clients and services that require authenticated SMTP to send email messages include:
+
+- POP3 and IMAP4 clients.
+
+- Devices with scan to email capability.
+
+- Workflow applications that send email notifications.
+
+- Online services that send messages using internal email addresses in the organization.
+
+Valid values for this parameter are:
+
+- $true: Authenticated SMTP is disabled for the mailbox.
+
+- $false: Authenticated SMTP is enaled for the mailbox.
+
+- blank ($null): This is the default value. The authenticated SMTP setting for the mailbox is controlled by the corresponding SmtpClientAuthenticationDisabled parameter on the Set-TransportConfig cmdlet for the whole organization. By default, authenticated SMTP is enabled for the organization ($false), which means authenticated SMTP is also enabled for the mailbox.
+
+To selectively enable authenticated SMTP for specific mailboxes only: disable authenticated SMTP at the organizational level ($true), enable it for the specific mailboxes ($false), and leave the rest of the mailboxes with their default value ($null).
+
+```yaml
+Type:$true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

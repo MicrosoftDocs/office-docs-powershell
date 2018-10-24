@@ -17,22 +17,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
-Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter> [-ApplyComplianceTag <String>]
- [-Comment <String>] [-Confirm] [-ContentContainsSensitiveInformation <PswsHashtable[]>]
- [-ContentDateFrom <DateTime>] [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionDurationDisplayHint <Days | Months | Years>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-RetentionComplianceRule [-ApplyComplianceTag <String>] [-Comment <String>] [-Confirm]
- [-ContentContainsSensitiveInformation <PswsHashtable[]>] [-ContentDateFrom <DateTime>]
- [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>] [-ExcludedItemClasses <MultiValuedProperty>]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionDurationDisplayHint <Days | Months | Years>] [-WhatIf] [<CommonParameters>]
+Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
+ [-ApplyComplianceTag <String>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentDateFrom <DateTime>]
+ [-ContentDateTo <DateTime>]
+ [-ContentMatchQuery <String>]
+ [-ExcludedItemClasses <MultiValuedProperty>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionDurationDisplayHint <Days | Months | Years>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +59,7 @@ The Identity parameter specifies the retention rule that you want to modify. You
 
 ```yaml
 Type: ComplianceRuleIdParameter
-Parameter Sets: Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -216,7 +215,7 @@ You can specify multiple item class values by using the syntax "Value1","Value2"
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False

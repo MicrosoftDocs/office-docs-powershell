@@ -6,7 +6,7 @@ schema: 2.0.0
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
-# Get-eventloglevel
+# Get-EventLogLevel
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -17,14 +17,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-eventloglevel -Server <ServerIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
+Get-EventLogLevel -Server <ServerIdParameter> [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-eventloglevel [[-Identity] <ECIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-EventLogLevel [[-Identity] <ECIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +58,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -92,7 +92,7 @@ You can't use this parameter with the Server parameter.
 
 ```yaml
 Type: ECIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

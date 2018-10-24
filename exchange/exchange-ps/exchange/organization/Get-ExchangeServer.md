@@ -19,14 +19,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Domain
 ```
-Get-ExchangeServer -Domain <Fqdn> [-DomainController <Fqdn>] [-Status] [<CommonParameters>]
+Get-ExchangeServer -Domain <Fqdn>
+ [-DomainController <Fqdn>]
+ [-Status] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-ExchangeServer [[-Identity] <ServerIdParameter>] [-DomainController <Fqdn>] [-Status] [<CommonParameters>]
+Get-ExchangeServer [[-Identity] <ServerIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Status] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +63,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: Domain
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -101,7 +105,7 @@ You can't use this parameter with the Domain parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

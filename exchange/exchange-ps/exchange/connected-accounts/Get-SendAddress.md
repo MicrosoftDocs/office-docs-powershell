@@ -17,12 +17,12 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### LookUpId
 ```
 Get-SendAddress [-AddressId <String>] [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-SendAddress [[-Identity] <SendAddressIdParameter>] [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
 ```
@@ -72,7 +72,7 @@ If you use the AddressId parameter, you must also use the Mailbox parameter. If 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LookUpId
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -97,7 +97,7 @@ If you use the Identity parameter, you can't use the AddressId parameter.
 
 ```yaml
 Type: SendAddressIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
