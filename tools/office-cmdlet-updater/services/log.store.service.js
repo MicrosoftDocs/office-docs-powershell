@@ -5,6 +5,8 @@ const moment = require('moment');
 class LogStoreService {
 	constructor(db) {
 		this.db = db;
+
+		this.getAllTempFolders = this.getAllTempFolders.bind(this);
 	}
 
 	addLog(log, name) {
