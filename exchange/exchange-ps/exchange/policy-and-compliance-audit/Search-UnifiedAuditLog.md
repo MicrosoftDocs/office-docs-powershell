@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Online
+applicable: Azure Active Directory, Exchange Online, OneDrive, PowerBI, SharePoint Online, Skype for Business Online, Sway, Teams, Yammer
 title: Search-UnifiedAuditLog
 schema: 2.0.0
 monikerRange: "exchonline-ps"
