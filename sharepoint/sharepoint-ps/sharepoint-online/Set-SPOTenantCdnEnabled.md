@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPOTenantCdnEnabled
 
 ## SYNOPSIS
-Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. 
+Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. Requires Tenant administrator permissions.
 
 
 ## SYNTAX
