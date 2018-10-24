@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOTenantCdnOrigins
 
 ## SYNOPSIS
-Lists all the configured origins under the tenancy or under a given site.
+Lists all the configured origins under the tenancy or under a given site. Requires Tenant administrator permissions.
 
 
 ## SYNTAX

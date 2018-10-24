@@ -1193,7 +1193,7 @@ Accept wildcard characters: False
 ### -UserVoiceForFeedbackEnabled
 PARAMVALUE: $true | $false
 
-When set to $true, the "Feedback" and "Get the mobile app" links will be shown at the bottom of all modern SharePoint Online pages. The "Feedback" link will allow the end user to fill out a feedback form inside SharePoint Online which will then create an entry in the public SharePoint UserVoice topic. "Get the mobile app" simply provides a direct link to where the SharePoint app can be downloaded for Android and Apple devices. When set to $false, both of these links will not be shown anymore. It may take up to an hour for a change of this property to be reflected consistently throughout your tenant.
+When set to $true, the "Feedback" link will be shown at the bottom of all modern SharePoint Online pages. The "Feedback" link will allow the end user to fill out a feedback form inside SharePoint Online which will then create an entry in the public SharePoint UserVoice topic. When set to $false, feedback link will not be shown anymore. It may take up to an hour for a change of this property to be reflected consistently throughout your tenant.
 
 ```yaml
 Type: Boolean
@@ -1219,9 +1219,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Upgrade-SPOSite](Upgrade-SPOSite.md)
 
