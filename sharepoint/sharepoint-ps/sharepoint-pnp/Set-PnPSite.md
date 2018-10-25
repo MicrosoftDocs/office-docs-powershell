@@ -47,12 +47,6 @@ Set-PnPSite -DisableFlows:$false
 
 Enables Flows for this site
 
-### ------------------EXAMPLE 5------------------
-```powershell
-Set-PnPSite -SiteLogoPath c:\images\mylogo.png
-```
-
-Sets the logo if the site is a modern team site
 
 ## PARAMETERS
 
