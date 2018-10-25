@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddCreatorAsMember
-This setting lets you decide if you will be added as a member of the group. 
+This setting lets you decide, if you will be added as a member of the group. 
 Because you are automatically an owner of the group, you will always be added as a member to the team.
 
 ```yaml
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-The Alias parameter specifies the alias for the associated Office 365 Group. This value will be used for the mail enabled object and will be used as PrimarySmtpAddress for this Office 365 Group. The value of the Alias parameter has to be unique across your tenant.
+The Alias parameter specifies the alias for the associated Office 365 Group. This value will be used for the mail enabled object and will be used as _PrimarySmtpAddress_ for this Office 365 Group. The value of the Alias parameter has to be unique across your tenant.
 
 For more details about the naming conventions see here: [New-UnifiedGroup, Parameter: -Alias](https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-groups/new-unifiedgroup?view=exchange-ps#optional-parameters).
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 ### -Group
 Use this parameter to specify the GroupId of a group you would like to convert to a team.
-If you use this parameter, do not specify other parameters.
+If you are using this parameter, do not specify other parameters.
 
 ```yaml
 Type: String

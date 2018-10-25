@@ -19,15 +19,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### DefaultOnly
 ```
-Get-GlobalAddressList [-DefaultOnly] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-GlobalAddressList [-DefaultOnly]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-GlobalAddressList [[-Identity] <GlobalAddressListIdParameter>] [-DomainController <Fqdn>]
- [<CommonParameters>]
+Get-GlobalAddressList [[-Identity] <GlobalAddressListIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +59,7 @@ The DefaultOnly switch filters the results so only the default GAL is returned. 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: DefaultOnly
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -96,7 +97,7 @@ The Identity parameter specifies the global address list that you want to view. 
 
 ```yaml
 Type: GlobalAddressListIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

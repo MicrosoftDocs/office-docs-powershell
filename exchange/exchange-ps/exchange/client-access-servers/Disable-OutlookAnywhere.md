@@ -17,16 +17,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Disable-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter> [-Confirm] [-DomainController <Fqdn>]
+Disable-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
+ [-Confirm] [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Server
 ```
-Disable-OutlookAnywhere [-Confirm] [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [-WhatIf]
- [<CommonParameters>]
+Disable-OutlookAnywhere [-Server <ServerIdParameter>]
+ [-Confirm] [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +63,7 @@ The Identity parameter specifies the identity of the virtual directory that you 
 
 ```yaml
 Type: VirtualDirectoryIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -110,7 +112,7 @@ The Server parameter specifies the name of the Client Access server to be disabl
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010
 Required: False

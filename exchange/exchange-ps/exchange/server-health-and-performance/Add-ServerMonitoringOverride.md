@@ -17,18 +17,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### ApplyVersion
 ```
-Add-ServerMonitoringOverride [-Identity] <String> -ApplyVersion <Version>
- -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String>
- -Server <ServerIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
+Add-ServerMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Duration
 ```
-Add-ServerMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance>
- -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter> [-Confirm]
- [-Duration <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+Add-ServerMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String> -Server <ServerIdParameter> [-Duration <EnhancedTimeSpan>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +54,7 @@ You can't use this parameter with the Duration parameter.
 
 ```yaml
 Type: Version
-Parameter Sets: Set2
+Parameter Sets: ApplyVersion
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -187,7 +187,7 @@ You can't use this parameter with the ApplyVersion parameter.
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set1
+Parameter Sets: Duration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

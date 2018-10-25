@@ -17,24 +17,46 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Request
 ```
-New-ExchangeCertificate [-BinaryEncoded] [-Confirm] [-DomainController <Fqdn>]
- [-DomainName <MultiValuedProperty>] [-Force] [-FriendlyName <String>] [-GenerateRequest]
- [-IncludeAcceptedDomains] [-IncludeAutoDiscover] [-IncludeServerFQDN] [-IncludeServerNetBIOSName]
- [-Instance <X509Certificate2>] [-KeySize <Int32>] [-PrivateKeyExportable <$true | $false>]
- [-Server <ServerIdParameter>] [-SubjectKeyIdentifier <String>] [-SubjectName <X500DistinguishedName>]
- [-WhatIf] [-RequestFile <String>] [<CommonParameters>]
+New-ExchangeCertificate [-BinaryEncoded] [-GenerateRequest] [-RequestFile <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
+ [-Force]
+ [-FriendlyName <String>]
+ [-IncludeAcceptedDomains]
+ [-IncludeAutoDiscover]
+ [-IncludeServerFQDN]
+ [-IncludeServerNetBIOSName]
+ [-Instance <X509Certificate2>]
+ [-KeySize <Int32>]
+ [-PrivateKeyExportable <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-SubjectKeyIdentifier <String>]
+ [-SubjectName <X500DistinguishedName>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Certificate
 ```
-New-ExchangeCertificate [-Confirm] [-DomainController <Fqdn>] [-DomainName <MultiValuedProperty>] [-Force]
- [-FriendlyName <String>] [-IncludeAcceptedDomains] [-IncludeAutoDiscover] [-IncludeServerFQDN]
- [-IncludeServerNetBIOSName] [-Instance <X509Certificate2>] [-KeySize <Int32>]
- [-PrivateKeyExportable <$true | $false>] [-Server <ServerIdParameter>]
- [-Services <None | IMAP | POP | UM | IIS | SMTP | Federation>] [-SubjectKeyIdentifier <String>]
- [-SubjectName <X500DistinguishedName>] [-WhatIf] [<CommonParameters>]
+New-ExchangeCertificate [-Services <None | IMAP | POP | UM | IIS | SMTP | Federation>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
+ [-Force]
+ [-FriendlyName <String>]
+ [-IncludeAcceptedDomains]
+ [-IncludeAutoDiscover]
+ [-IncludeServerFQDN]
+ [-IncludeServerNetBIOSName]
+ [-Instance <X509Certificate2>]
+ [-KeySize <Int32>]
+ [-PrivateKeyExportable <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-SubjectKeyIdentifier <String>]
+ [-SubjectName <X500DistinguishedName>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,7 +154,7 @@ For Base64 encoded requests, you send the contents of the file to the certificat
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Request
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -248,7 +270,7 @@ If you don't use this switch,thecommand creates a new self-signed certificate on
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Request
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -397,6 +419,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequestFile
+The RequestFile parameter specifies the name and path of the certificate request file. The file contains the same information that's displayed on-screen when you generate a Base64 encoded certificate request (you don't use the BinaryEncoded switch).
+
+You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
+
+You can use this parameter only when you use the GenerateRequest switch.
+
+```yaml
+Type: String
+Parameter Sets: Request
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Server
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -449,7 +490,7 @@ Once you enable a certificate for a service, you can't remove the service from t
 
 ```yaml
 Type: None | IMAP | POP | UM | IIS | SMTP | Federation
-Parameter Sets: Set1
+Parameter Sets: Certificate
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -515,25 +556,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestFile
-The RequestFile parameter specifies the name and path of the certificate request file. The file contains the same information that's displayed on-screen when you generate a Base64 encoded certificate request (you don't use the BinaryEncoded switch).
-
-You can use a local path if the certificate or certificate request is located on the same Exchange server where you're running the command. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>). If the value contains spaces, enclose the value in quotation marks (").
-
-You can use this parameter only when you use the GenerateRequest switch.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

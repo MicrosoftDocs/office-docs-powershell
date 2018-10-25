@@ -17,15 +17,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-ManagedFolder [[-Identity] <ELCFolderIdParameter>] [-DomainController <Fqdn>]
+Get-ManagedFolder [[-Identity] <ELCFolderIdParameter>]
+ [-DomainController <Fqdn>]
  [-Organization <OrganizationIdParameter>] [<CommonParameters>]
 ```
 
-### Set2
+### Mailbox
 ```
-Get-ManagedFolder [-DomainController <Fqdn>] [-Mailbox <MailboxIdParameter>]
+Get-ManagedFolder [-Mailbox <MailboxIdParameter>]
+ [-DomainController <Fqdn>]
  [-Organization <OrganizationIdParameter>] [<CommonParameters>]
 ```
 
@@ -73,7 +75,7 @@ The Identity parameter specifies the name, distinguished name (DN), or GUID of t
 
 ```yaml
 Type: ELCFolderIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -88,7 +90,7 @@ The Mailbox parameter specifies the identity of the mailbox. Valid values includ
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
