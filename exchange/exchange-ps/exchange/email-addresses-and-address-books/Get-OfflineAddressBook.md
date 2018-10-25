@@ -19,13 +19,13 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
 Get-OfflineAddressBook -Server <ServerIdParameter> 
 [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-OfflineAddressBook [[-Identity] <OfflineAddressBookIdParameter>] 
 [-DomainController <Fqdn>] [<CommonParameters>]
@@ -80,7 +80,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -120,7 +120,7 @@ You can't use this parameter with the Server parameter.
 
 ```yaml
 Type: OfflineAddressBookIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

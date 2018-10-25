@@ -17,18 +17,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity (Default)
 ```
-Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -Comment <String>
- -ReportDate <ExDateTime> [-Confirm] [-DowntimeMinutes <Double>] [-Force] [-ReportingDatabase <String>]
- [-ReportingServer <Fqdn>] [-WhatIf] [<CommonParameters>]
+Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -Comment <String> -ReportDate <ExDateTime> [-DowntimeMinutes <Double>]
+ [-Confirm]
+ [-Force]
+ [-ReportingDatabase <String>]
+ [-ReportingServer <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ResetToOriginal
 ```
-Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -ReportDate <ExDateTime>
- [-ResetToOriginal] [-Confirm] [-Force] [-ReportingDatabase <String>] [-ReportingServer <Fqdn>] [-WhatIf]
- [<CommonParameters>]
+Set-AvailabilityReportOutage [-Identity] <AvailabilityReportOutageIdParameter> -ReportDate <ExDateTime> [-ResetToOriginal]
+ [-Confirm]
+ [-Force]
+ [-ReportingDatabase <String>]
+ [-ReportingServer <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +56,7 @@ The Comment parameter describes the outage that was inserted.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -95,7 +101,7 @@ The ResetToOriginal parameter specifies whether to reset the previously selected
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: ResetToOriginal
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -129,7 +135,7 @@ The DowntimeMinutes parameter specifies the number of minutes of downtime to ins
 
 ```yaml
 Type: Double
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False

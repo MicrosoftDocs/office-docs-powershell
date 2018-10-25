@@ -17,22 +17,53 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Remove-Mailbox [-Identity] <MailboxIdParameter> [-Arbitration] [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-IgnoreLegalHold] [-KeepWindowsLiveID] [-Permanent <$true | $false>]
- [-RemoveLastArbitrationMailboxAllowed] [-WhatIf] [-Force] [-PublicFolder]
- [-RemoveArbitrationMailboxWithOABsAllowed] [-AuditLog] [-AuxAuditLog] [-PermanentlyDelete]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <$true | $false>]
+ [-Arbitration]
+ [-AuditLog]
+ [-AuxAuditLog]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-IgnoreDefaultScope]
+ [-IgnoreLegalHold]
+ [-Migration]
+ [-PublicFolder]
+ [-RemoveArbitrationMailboxWithOABsAllowed]
+ [-RemoveLastArbitrationMailboxAllowed]
+ [-SupervisoryReviewPolicy]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### StoreMailboxIdentity
 ```
-Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter> [-Arbitration]
- [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-IgnoreLegalHold]
- [-RemoveLastArbitrationMailboxAllowed] [-WhatIf] [-Force] [-PublicFolder]
- [-RemoveArbitrationMailboxWithOABsAllowed] [-AuditLog] [-AuxAuditLog] [-PermanentlyDelete]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailboxIdParameter>
+ [-Arbitration]
+ [-AuditLog]
+ [-AuxAuditLog]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-IgnoreDefaultScope]
+ [-IgnoreLegalHold]
+ [-Migration]
+ [-PublicFolder]
+ [-RemoveArbitrationMailboxWithOABsAllowed]
+ [-RemoveLastArbitrationMailboxAllowed]
+ [-SupervisoryReviewPolicy]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Default
+```
+Remove-Mailbox [-Identity] <MailboxIdParameter> [-PermanentlyDelete]
+ [-Confirm]
+ [-Force]
+ [-IgnoreLegalHold]
+ [-Migration]
+ [-PublicFolder]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +131,7 @@ You can't use this parameter with the Database parameter.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity, Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -127,7 +158,7 @@ If you've disconnected a mailbox from its associated user and want to remove the
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: StoreMailboxIdentity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -148,7 +179,7 @@ If you've disconnected a mailbox from its associated user and want to remove the
 
 ```yaml
 Type: StoreMailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: StoreMailboxIdentity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -173,9 +204,55 @@ Notes:
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditLog
+This parameter is available only in on-premises Exchange.
+
+The AuditLog switch specifies the mailbox you're removing is an arbitration mailbox that's used to store audit log settings. You don't need to specify a value with this switch.
+
+Notes:
+
+- If you don't use this switch, the command can't find this type of arbitration mailbox.
+
+- The Arbitration switch doesn't work for removing this type of arbitration mailbox.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: StoreMailboxIdentity, Identity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuxAuditLog
+This parameter is available only in on-premises Exchange.
+
+The AuxAuditLog switch specifies the mailbox you're removing is an arbitration mailbox that's used to store audit log data. You don't need to specify a value with this switch.
+
+Notes:
+
+- If you don't use this switch, the command can't find this type of arbitration mailbox.
+
+- The Arbitration switch doesn't work for removing this type of arbitration mailbox.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: StoreMailboxIdentity, Identity
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -209,9 +286,24 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -230,7 +322,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -257,14 +349,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -KeepWindowsLiveID
-This parameter is reserved for internal Microsoft use.
+### -Migration
+{{Fill Migration Description}}
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -283,7 +375,7 @@ The Permanent parameter specifies whether to permanently delete the mailbox from
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -293,46 +385,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveLastArbitrationMailboxAllowed
-This parameter is available only in on-premises Exchange.
+### -PermanentlyDelete
+This parameter is available only in the cloud-based service.
 
-The RemoveLastArbitrationMailboxAllowed switch specifies whether to remove the specified mailbox, even if it's the last arbitration mailbox in the organization. If you remove the last arbitration mailbox in the organization, you can't have user-created distribution groups or moderated recipients. You don't need to specify a value with this switch.
+The PermanentlyDelete switch specifies whether to immediately and permanently delete (purge) the mailbox, which prevents you from recovering or restoring the mailbox. You don't need to specify a value with this switch.
+
+Notes:
+
+- This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes).
+
+- This switch doesn't work on soft-deleted mailboxes that are on In-Place Hold or Litigation Hold (known as inactive mailboxes).
+
+Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet with this switch. For example, Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -364,7 +434,7 @@ The RemoveArbitrationMailboxWithOABsAllowed switch specifies whether to bypass t
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -374,70 +444,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuditLog
+### -RemoveLastArbitrationMailboxAllowed
 This parameter is available only in on-premises Exchange.
 
-The AuditLog switch specifies the mailbox you're removing is an arbitration mailbox that's used to store audit log settings. You don't need to specify a value with this switch.
-
-Notes:
-
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for removing this type of arbitration mailbox.
+The RemoveLastArbitrationMailboxAllowed switch specifies whether to remove the specified mailbox, even if it's the last arbitration mailbox in the organization. If you remove the last arbitration mailbox in the organization, you can't have user-created distribution groups or moderated recipients. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuxAuditLog
-This parameter is available only in on-premises Exchange.
-
-The AuxAuditLog switch specifies the mailbox you're removing is an arbitration mailbox that's used to store audit log data. You don't need to specify a value with this switch.
-
-Notes:
-
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for removing this type of arbitration mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PermanentlyDelete
-This parameter is available only in the cloud-based service.
-
-The PermanentlyDelete switch specifies whether to immediately and permanently delete (purge) the mailbox, which prevents you from recovering or restoring the mailbox. You don't need to specify a value with this switch.
-
-Notes:
-
-- This switch works only on mailboxes that have already been deleted, but are still recoverable (known as soft-deleted mailboxes).
-
-- This switch doesn't work on soft-deleted mailboxes that are on In-Place Hold or Litigation Hold (known as inactive mailboxes).
-
-Use the Get-Mailbox cmdlet to identify the soft-deleted mailbox, and then pipe the results to the Remove-Mailbox cmdlet with this switch. For example, Get-Mailbox -Identity Laura -SoftDeleted | Remove-Mailbox -PermanentlyDelete.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -450,9 +466,24 @@ PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

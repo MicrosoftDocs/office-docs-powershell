@@ -17,24 +17,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### CustomIdentity
 ```
-Enable-OutlookAnywhere
- -ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
- -ExternalHostname <Hostname> -SSLOffloading <$true | $false> [-Confirm] [-DomainController <Fqdn>]
- [-ExtendedProtectionFlags <MultiValuedProperty>] [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>] [-IISAuthenticationMethods <MultiValuedProperty>]
- [-Server <ServerIdParameter>] [-WhatIf] [-XropUrl <Uri>] [<CommonParameters>]
+Enable-OutlookAnywhere -ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
+ -ExternalHostname <Hostname> -SSLOffloading <$true | $false> [-IISAuthenticationMethods <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### DefaultIdentity
 ```
-Enable-OutlookAnywhere
- -DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
- -ExternalHostname <Hostname> -SSLOffloading <$true | $false> [-Confirm] [-DomainController <Fqdn>]
- [-ExtendedProtectionFlags <MultiValuedProperty>] [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>] [-Server <ServerIdParameter>] [-WhatIf]
- [-XropUrl <Uri>] [<CommonParameters>]
+Enable-OutlookAnywhere -DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
+ -ExternalHostname <Hostname> -SSLOffloading <$true | $false>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +90,7 @@ Although this parameter only allows setting one authentication method, the comma
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
-Parameter Sets: Set2
+Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -107,7 +113,7 @@ If the DefaultAuthenticationMethod parameter is specified, neither the ClientAut
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
-Parameter Sets: Set1
+Parameter Sets: DefaultIdentity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -265,7 +271,7 @@ For more information about configuring this parameter with multiple values, see 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -297,21 +303,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -XropUrl
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Server 2010
 Required: False
 Position: Named

@@ -17,22 +17,32 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AnrSet
 ```
-Get-MailContact [-ANR <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
+Get-MailContact [-ANR <String>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
  [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
- [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-AccountPartition <AccountPartitionIdParameter>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MailContact [[-Identity] <MailContactIdParameter>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
- [-RecipientTypeDetails <RecipientTypeDetails[]>] [-ResultSize <Unlimited>] [-SortBy <String>]
- [-AccountPartition <AccountPartitionIdParameter>] [-UsnForReconciliationSearch <Int64>] [<CommonParameters>]
+Get-MailContact [[-Identity] <MailContactIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,7 +83,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -157,7 +167,7 @@ For example:
 
 ```yaml
 Type: MailContactIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -286,61 +296,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccountPartition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: AccountPartitionIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ANR
-The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
-
-- CommonName (CN)
-
-- DisplayName
-
-- FirstName
-
-- LastName
-
-- Alias
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UsnForReconciliationSearch
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int64
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

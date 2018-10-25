@@ -17,16 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### DefaultSet
 ```
-Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]> [-DetailLevel <Basic | Advanced>]
- [-GlobalObjectId <String>] [-OutputAs <HTML | CSV | XML>] [<CommonParameters>]
+Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]>
+ [-DetailLevel <Basic | Advanced>]
+ [-GlobalObjectId <String>]
+ [-OutputAs <HTML | CSV | XML>]
+ [<CommonParameters>]
 ```
 
-### Set2
+### LocationSet
 ```
-Get-CalendarDiagnosticAnalysis -LogLocation <String[]> [-DetailLevel <Basic | Advanced>]
- [-GlobalObjectId <String>] [-OutputAs <HTML | CSV | XML>] [<CommonParameters>]
+Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
+ [-DetailLevel <Basic | Advanced>]
+ [-GlobalObjectId <String>]
+ [-OutputAs <HTML | CSV | XML>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,7 +107,7 @@ You can't use this parameter with the LogLocation parameter.
 
 ```yaml
 Type: CalendarLog[]
-Parameter Sets: Set1
+Parameter Sets: DefaultSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -120,7 +126,7 @@ You can't use this parameter with the CalendarLogs parameter.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set2
+Parameter Sets: LocationSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
