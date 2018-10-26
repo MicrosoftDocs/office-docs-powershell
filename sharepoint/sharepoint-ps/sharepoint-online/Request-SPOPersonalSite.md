@@ -34,7 +34,7 @@ get-MSOLUser | Where {$_.PreferredDataLocation -eq "EUR"]
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-$emails = “user1@contoso.com", "user2@contoso.com”
+$emails = "user1@contoso.com", "user2@contoso.com"
 Request-SPOPersonalSite –UserEmails $emails
 ```
 

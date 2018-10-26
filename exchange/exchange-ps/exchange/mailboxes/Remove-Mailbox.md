@@ -71,7 +71,7 @@ Use the Identity parameter alone to disconnect the mailbox from the user and rem
 
 Use the Identity and Permanent parameters to disconnect the mailbox from the user, remove the user account, and immediately remove the mailbox from the mailbox database. The mailbox doesn't remain in the mailbox database as a disconnected mailbox.
 
-Use the Disable-Mailbox cmdlet to disconnect the mailbox from the user account, but keep the user account. The mailbox is retained until the deleted mailbox retention period for the database or the mailbox expires, and then the mailbox is permanently deleted (purged). Or, you can immediately the disconnected mailbox by using the Database and StoreMailboxIdentity parameters on the Remove-Mailbox cmdlet.
+Use the Disable-Mailbox cmdlet to disconnect the mailbox from the user account, but keep the user account. The mailbox is retained until the deleted mailbox retention period for the database or the mailbox expires, and then the mailbox is permanently deleted (purged). Or, you can immediately purge the disconnected mailbox by using the Database and StoreMailboxIdentity parameters on the Remove-Mailbox cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
