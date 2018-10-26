@@ -12,14 +12,9 @@ schema: 2.0.0
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-Get-CsIPPhonePolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
-```
-
-### Filter
-```
-Get-CsIPPhonePolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsIPPhonePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
+ [-Tenant <Object>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,11 +31,27 @@ Get-CsIPPhonePolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonPa
 
 ## PARAMETERS
 
+### -BypassDualWrite
+{{Fill BypassDualWrite Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Filter
 {{Fill Filter Description}}
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -56,7 +67,7 @@ Accept wildcard characters: False
 {{Fill Identity Description}}
 
 ```yaml
-Type: XdsIdentity
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -88,7 +99,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
