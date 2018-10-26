@@ -13,10 +13,10 @@ Use the Disable-CsOnlineDialInConferencingUser cmdlet to prevent a Skype for Bus
 ## SYNTAX
 
 ```
-Disable-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-TenantDomain <String>]
- [-Tenant <Guid>] [-SendEmailToAddress <String>] [-SendEmailFromAddress <String>]
- [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Disable-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
+ [-DomainController <Object>] [-Force] [-SendEmail] [-SendEmailFromAddress <Object>]
+ [-SendEmailFromDisplayName <Object>] [-SendEmailToAddress <Object>] [-Tenant <Object>]
+ [-TenantDomain <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,13 +48,29 @@ A user identity can be specified by using one of four formats: 1) the user's SIP
 You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
-Type: UserIdParameter
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -77,10 +93,10 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use.
+PARAMVALUE: Fqdn
 
 ```yaml
-Type: Fqdn
+Type: Object
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -130,7 +146,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -146,7 +162,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -162,7 +178,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -184,7 +200,7 @@ You can find your tenant ID by running this command:
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -202,7 +218,7 @@ NOTE: This parameter is reserved for internal Microsoft use.
 Specifies the domain name for the tenant or organization.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -222,6 +238,22 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
