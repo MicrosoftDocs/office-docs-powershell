@@ -43,6 +43,7 @@ class CmdletDependenciesService {
 	}
 
 	async installPlatyPs() {
+		await this.ps.invokeCommand(commands.INSTALL_PACKAGE_PROVIDER);
 		await this.ps.invokeCommand(commands.INSTALL_PLATYPS);
 		await this.ps.invokeCommand(commands.IMPORT_PLATYPS);
 	}
