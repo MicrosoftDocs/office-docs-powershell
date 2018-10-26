@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-CsIPPhonePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
+Get-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
  [-Tenant <Object>] [-AsJob] [<CommonParameters>]
 ```
 
