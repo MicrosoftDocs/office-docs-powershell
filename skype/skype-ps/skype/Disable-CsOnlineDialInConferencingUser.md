@@ -13,10 +13,10 @@ Use the Disable-CsOnlineDialInConferencingUser cmdlet to prevent a Skype for Bus
 ## SYNTAX
 
 ```
-Disable-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-TenantDomain <String>]
- [-Tenant <Guid>] [-SendEmailToAddress <String>] [-SendEmailFromAddress <String>]
- [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Disable-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
+ [-DomainController <Object>] [-Force] [-SendEmail] [-SendEmailFromAddress <Object>]
+ [-SendEmailFromDisplayName <Object>] [-SendEmailToAddress <Object>] [-Tenant <Object>]
+ [-TenantDomain <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
