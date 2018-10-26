@@ -45,7 +45,7 @@ Example 1 exports the query log for a user who has the e-mail address user1@cont
 
 ###   ------------ Example 2 --------------------
 ```
-Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com -StartTime “2018-10-21” -OutputFolder “c:\users\contosoadmin\Documents”
+Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com -StartTime "2018-10-21" -OutputFolder "c:\users\contosoadmin\Documents"
 ```
 Example 2 exports the query log from the starting time 21. October 2018, for a user who has the e-mail address user1@contoso.sharepoint.com, to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the folder c:\users\contosoadmin\Documents.
 
