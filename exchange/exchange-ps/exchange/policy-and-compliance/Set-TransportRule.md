@@ -21,97 +21,181 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-TransportRule [-Identity] <RuleIdParameter>
+ [-ActivationDate <DateTime>]
  [-ADComparisonAttribute <DisplayName | FirstName | Initials | LastName | Office | PhoneNumber | OtherPhoneNumber | Email | Street | POBox | City | State | ZipCode | Country | UserLogonName | HomePhoneNumber | OtherHomePhoneNumber | PagerNumber | MobileNumber | FaxNumber | OtherFaxNumber | Notes | Title | Department | Company | Manager | CustomAttribute1 | CustomAttribute2 | CustomAttribute3 | CustomAttribute4 | CustomAttribute5 | CustomAttribute6 | CustomAttribute7 | CustomAttribute8 | CustomAttribute9 | CustomAttribute10 | CustomAttribute11 | CustomAttribute12 | CustomAttribute13 | CustomAttribute14 | CustomAttribute15>]
- [-ADComparisonOperator <Equal | NotEqual>] [-AddManagerAsRecipientType <To | Cc | Bcc | Redirect>]
- [-AddToRecipients <RecipientIdParameter[]>] [-AnyOfCcHeader <RecipientIdParameter[]>]
- [-AnyOfCcHeaderMemberOf <RecipientIdParameter[]>] [-AnyOfRecipientAddressContainsWords <Word[]>]
- [-AnyOfRecipientAddressMatchesPatterns <Pattern[]>] [-AnyOfToCcHeader <RecipientIdParameter[]>]
- [-AnyOfToCcHeaderMemberOf <RecipientIdParameter[]>] [-AnyOfToHeader <RecipientIdParameter[]>]
- [-AnyOfToHeaderMemberOf <RecipientIdParameter[]>] [-ApplyClassification <String>]
+ [-ADComparisonOperator <Equal | NotEqual>]
+ [-AddManagerAsRecipientType <To | Cc | Bcc | Redirect>]
+ [-AddToRecipients <RecipientIdParameter []>]
+ [-AnyOfCcHeader <RecipientIdParameter []>]
+ [-AnyOfCcHeaderMemberOf <RecipientIdParameter []>]
+ [-AnyOfRecipientAddressContainsWords <Word []>]
+ [-AnyOfRecipientAddressMatchesPatterns <Pattern []>]
+ [-AnyOfToCcHeader <RecipientIdParameter []>]
+ [-AnyOfToCcHeaderMemberOf <RecipientIdParameter []>]
+ [-AnyOfToHeader <RecipientIdParameter []>]
+ [-AnyOfToHeaderMemberOf <RecipientIdParameter []>]
+ [-ApplyClassification <String>]
  [-ApplyHtmlDisclaimerFallbackAction <Wrap | Ignore | Reject>]
- [-ApplyHtmlDisclaimerLocation <Append | Prepend>] [-ApplyHtmlDisclaimerText <DisclaimerText>]
- [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>] [-AttachmentContainsWords <Word[]>]
- [-AttachmentIsUnsupported <$true | $false>] [-AttachmentMatchesPatterns <Pattern[]>]
- [-AttachmentNameMatchesPatterns <Pattern[]>] [-AttachmentSizeOver <ByteQuantifiedSize>]
- [-BetweenMemberOf1 <RecipientIdParameter[]>] [-BetweenMemberOf2 <RecipientIdParameter[]>]
- [-BlindCopyTo <RecipientIdParameter[]>] [-Comments <String>] [-Confirm] [-CopyTo <RecipientIdParameter[]>]
- [-DeleteMessage <$true | $false>] [-Disconnect <$true | $false>] [-DomainController <Fqdn>]
+ [-ApplyHtmlDisclaimerLocation <Append | Prepend>]
+ [-ApplyHtmlDisclaimerText <DisclaimerText>]
+ [-ApplyOME <$true | $false>]
+ [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>]
+ [-AttachmentContainsWords <Word []>]
+ [-AttachmentExtensionMatchesWords <Word []>]
+ [-AttachmentHasExecutableContent <$true | $false>]
+ [-AttachmentIsPasswordProtected <$true | $false>]
+ [-AttachmentIsUnsupported <$true | $false>]
+ [-AttachmentMatchesPatterns <Pattern []>]
+ [-AttachmentNameMatchesPatterns <Pattern []>]
+ [-AttachmentProcessingLimitExceeded <$true | $false>]
+ [-AttachmentPropertyContainsWords <Word []>]
+ [-AttachmentSizeOver <ByteQuantifiedSize>]
+ [-BetweenMemberOf1 <RecipientIdParameter []>]
+ [-BetweenMemberOf2 <RecipientIdParameter []>]
+ [-BlindCopyTo <RecipientIdParameter []>]
+ [-Comments <String>]
+ [-Confirm]
+ [-ContentCharacterSetContainsWords <Word []>]
+ [-CopyTo <RecipientIdParameter []>]
+ [-DeleteMessage <$true | $false>]
+ [-Disconnect <$true | $false>]
+ [-DlpPolicy <String>]
+ [-DomainController <Fqdn>]
  [-ExceptIfADComparisonAttribute <DisplayName | FirstName | Initials | LastName | Office | PhoneNumber | OtherPhoneNumber | Email | Street | POBox | City | State | ZipCode | Country | UserLogonName | HomePhoneNumber | OtherHomePhoneNumber | PagerNumber | MobileNumber | FaxNumber | OtherFaxNumber | Notes | Title | Department | Company | Manager | CustomAttribute1 | CustomAttribute2 | CustomAttribute3 | CustomAttribute4 | CustomAttribute5 | CustomAttribute6 | CustomAttribute7 | CustomAttribute8 | CustomAttribute9 | CustomAttribute10 | CustomAttribute11 | CustomAttribute12 | CustomAttribute13 | CustomAttribute14 | CustomAttribute15>]
- [-ExceptIfADComparisonOperator <Equal | NotEqual>] [-ExceptIfAnyOfCcHeader <RecipientIdParameter[]>]
- [-ExceptIfAnyOfCcHeaderMemberOf <RecipientIdParameter[]>]
- [-ExceptIfAnyOfRecipientAddressContainsWords <Word[]>]
- [-ExceptIfAnyOfRecipientAddressMatchesPatterns <Pattern[]>]
- [-ExceptIfAnyOfToCcHeader <RecipientIdParameter[]>]
- [-ExceptIfAnyOfToCcHeaderMemberOf <RecipientIdParameter[]>] [-ExceptIfAnyOfToHeader <RecipientIdParameter[]>]
- [-ExceptIfAnyOfToHeaderMemberOf <RecipientIdParameter[]>] [-ExceptIfAttachmentContainsWords <Word[]>]
- [-ExceptIfAttachmentIsUnsupported <$true | $false>] [-ExceptIfAttachmentMatchesPatterns <Pattern[]>]
- [-ExceptIfAttachmentNameMatchesPatterns <Pattern[]>] [-ExceptIfAttachmentSizeOver <ByteQuantifiedSize>]
- [-ExceptIfBetweenMemberOf1 <RecipientIdParameter[]>] [-ExceptIfBetweenMemberOf2 <RecipientIdParameter[]>]
- [-ExceptIfFrom <RecipientIdParameter[]>] [-ExceptIfFromAddressContainsWords <Word[]>]
- [-ExceptIfFromAddressMatchesPatterns <Pattern[]>] [-ExceptIfFromMemberOf <RecipientIdParameter[]>]
- [-ExceptIfFromScope <InOrganization | NotInOrganization>] [-ExceptIfHasClassification <String>]
- [-ExceptIfHasNoClassification <$true | $false>] [-ExceptIfHeaderContainsMessageHeader <HeaderName>]
- [-ExceptIfHeaderContainsWords <Word[]>] [-ExceptIfHeaderMatchesMessageHeader <HeaderName>]
- [-ExceptIfHeaderMatchesPatterns <Pattern[]>] [-ExceptIfManagerAddresses <RecipientIdParameter[]>]
- [-ExceptIfManagerForEvaluatedUser <Sender | Recipient>]
- [-ExceptIfMessageTypeMatches <OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt>]
- [-ExceptIfRecipientADAttributeContainsWords <Word[]>]
- [-ExceptIfRecipientADAttributeMatchesPatterns <Pattern[]>] [-ExceptIfRecipientAddressContainsWords <Word[]>]
- [-ExceptIfRecipientAddressMatchesPatterns <Pattern[]>] [-ExceptIfRecipientInSenderList <Word[]>]
- [-ExceptIfSCLOver <SclValue>] [-ExceptIfSenderADAttributeContainsWords <Word[]>]
- [-ExceptIfSenderADAttributeMatchesPatterns <Pattern[]>] [-ExceptIfSenderInRecipientList <Word[]>]
- [-ExceptIfSenderManagementRelationship <Manager | DirectReport>] [-ExceptIfSentTo <RecipientIdParameter[]>]
- [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
- [-ExceptIfSentToScope <InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner>]
- [-ExceptIfSubjectContainsWords <Word[]>] [-ExceptIfSubjectMatchesPatterns <Pattern[]>]
- [-ExceptIfSubjectOrBodyContainsWords <Word[]>] [-ExceptIfSubjectOrBodyMatchesPatterns <Pattern[]>]
- [-ExceptIfWithImportance <Low | Normal | High>] [-From <RecipientIdParameter[]>]
- [-FromAddressContainsWords <Word[]>] [-FromAddressMatchesPatterns <Pattern[]>]
- [-FromMemberOf <RecipientIdParameter[]>] [-FromScope <InOrganization | NotInOrganization>]
- [-HasClassification <String>] [-HasNoClassification <$true | $false>]
- [-HeaderContainsMessageHeader <HeaderName>] [-HeaderContainsWords <Word[]>]
- [-HeaderMatchesMessageHeader <HeaderName>] [-HeaderMatchesPatterns <Pattern[]>] [-LogEventText <EventLogText>]
- [-ManagerAddresses <RecipientIdParameter[]>] [-ManagerForEvaluatedUser <Sender | Recipient>]
- [-MessageTypeMatches <OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt>]
- [-ModerateMessageByManager <$true | $false>] [-ModerateMessageByUser <RecipientIdParameter[]>]
- [-Name <String>] [-PrependSubject <SubjectPrefix>] [-Priority <Int32>] [-Quarantine <$true | $false>]
- [-RecipientADAttributeContainsWords <Word[]>] [-RecipientADAttributeMatchesPatterns <Pattern[]>]
- [-RecipientAddressContainsWords <Word[]>] [-RecipientAddressMatchesPatterns <Pattern[]>]
- [-RecipientInSenderList <Word[]>] [-RedirectMessageTo <RecipientIdParameter[]>]
- [-RejectMessageEnhancedStatusCode <RejectEnhancedStatus>] [-RejectMessageReasonText <RejectText>]
- [-RemoveHeader <HeaderName>] [-SCLOver <SclValue>] [-SenderADAttributeContainsWords <Word[]>]
- [-SenderADAttributeMatchesPatterns <Pattern[]>] [-SenderInRecipientList <Word[]>]
- [-SenderManagementRelationship <Manager | DirectReport>] [-SentTo <RecipientIdParameter[]>]
- [-SentToMemberOf <RecipientIdParameter[]>]
- [-SentToScope <InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner>]
- [-SetHeaderName <HeaderName>] [-SetHeaderValue <HeaderValue>] [-SetSCL <SclValue>]
- [-SmtpRejectMessageRejectStatusCode <RejectStatusCode>] [-SmtpRejectMessageRejectText <RejectText>]
- [-SubjectContainsWords <Word[]>] [-SubjectMatchesPatterns <Pattern[]>] [-SubjectOrBodyContainsWords <Word[]>]
- [-SubjectOrBodyMatchesPatterns <Pattern[]>] [-WhatIf] [-WithImportance <Low | Normal | High>]
- [-ActivationDate <DateTime>] [-ApplyOME <$true | $false>] [-AttachmentExtensionMatchesWords <Word[]>]
- [-AttachmentHasExecutableContent <$true | $false>] [-AttachmentIsPasswordProtected <$true | $false>]
- [-AttachmentProcessingLimitExceeded <$true | $false>] [-AttachmentPropertyContainsWords <Word[]>]
- [-ContentCharacterSetContainsWords <Word[]>] [-DlpPolicy <String>]
- [-ExceptIfAttachmentExtensionMatchesWords <Word[]>] [-ExceptIfAttachmentHasExecutableContent <$true | $false>]
+ [-ExceptIfADComparisonOperator <Equal | NotEqual>]
+ [-ExceptIfAnyOfCcHeader <RecipientIdParameter []>]
+ [-ExceptIfAnyOfCcHeaderMemberOf <RecipientIdParameter []>]
+ [-ExceptIfAnyOfRecipientAddressContainsWords <Word []>]
+ [-ExceptIfAnyOfRecipientAddressMatchesPatterns <Pattern []>]
+ [-ExceptIfAnyOfToCcHeader <RecipientIdParameter []>]
+ [-ExceptIfAnyOfToCcHeaderMemberOf <RecipientIdParameter []>]
+ [-ExceptIfAnyOfToHeader <RecipientIdParameter []>]
+ [-ExceptIfAnyOfToHeaderMemberOf <RecipientIdParameter []>]
+ [-ExceptIfAttachmentContainsWords <Word []>]
+ [-ExceptIfAttachmentExtensionMatchesWords <Word []>]
+ [-ExceptIfAttachmentHasExecutableContent <$true | $false>]
  [-ExceptIfAttachmentIsPasswordProtected <$true | $false>]
+ [-ExceptIfAttachmentIsUnsupported <$true | $false>]
+ [-ExceptIfAttachmentMatchesPatterns <Pattern []>]
+ [-ExceptIfAttachmentNameMatchesPatterns <Pattern []>]
  [-ExceptIfAttachmentProcessingLimitExceeded <$true | $false>]
- [-ExceptIfAttachmentPropertyContainsWords <Word[]>] [-ExceptIfContentCharacterSetContainsWords <Word[]>]
- [-ExceptIfHasSenderOverride <$true | $false>] [-ExceptIfMessageContainsDataClassifications <Hashtable[]>]
- [-ExceptIfMessageSizeOver <ByteQuantifiedSize>] [-ExceptIfRecipientDomainIs <Word[]>]
- [-ExceptIfSenderDomainIs <Word[]>] [-ExceptIfSenderIpRanges <MultiValuedProperty>] [-ExpiryDate <DateTime>]
- [-GenerateIncidentReport <RecipientIdParameter>] [-GenerateNotification <DisclaimerText>]
- [-HasSenderOverride <$true | $false>] [-IncidentReportContent <IncidentReportContent[]>]
+ [-ExceptIfAttachmentPropertyContainsWords <Word []>]
+ [-ExceptIfAttachmentSizeOver <ByteQuantifiedSize>]
+ [-ExceptIfBetweenMemberOf1 <RecipientIdParameter []>]
+ [-ExceptIfBetweenMemberOf2 <RecipientIdParameter []>]
+ [-ExceptIfContentCharacterSetContainsWords <Word []>]
+ [-ExceptIfFrom <RecipientIdParameter []>]
+ [-ExceptIfFromAddressContainsWords <Word []>]
+ [-ExceptIfFromAddressMatchesPatterns <Pattern []>]
+ [-ExceptIfFromMemberOf <RecipientIdParameter []>]
+ [-ExceptIfFromScope <InOrganization | NotInOrganization>]
+ [-ExceptIfHasClassification <String>]
+ [-ExceptIfHasNoClassification <$true | $false>]
+ [-ExceptIfHasSenderOverride <$true | $false>]
+ [-ExceptIfHeaderContainsMessageHeader <HeaderName>]
+ [-ExceptIfHeaderContainsWords <Word []>]
+ [-ExceptIfHeaderMatchesMessageHeader <HeaderName>]
+ [-ExceptIfHeaderMatchesPatterns <Pattern []>]
+ [-ExceptIfManagerAddresses <RecipientIdParameter []>]
+ [-ExceptIfManagerForEvaluatedUser <Sender | Recipient>]
+ [-ExceptIfMessageContainsAllDataClassifications <Hashtable []>]
+ [-ExceptIfMessageContainsDataClassifications <Hashtable []>]
+ [-ExceptIfMessageSizeOver <ByteQuantifiedSize>]
+ [-ExceptIfMessageTypeMatches <OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt>]
+ [-ExceptIfRecipientADAttributeContainsWords <Word []>]
+ [-ExceptIfRecipientADAttributeMatchesPatterns <Pattern []>]
+ [-ExceptIfRecipientAddressContainsWords <Word []>]
+ [-ExceptIfRecipientAddressMatchesPatterns <Pattern []>]
+ [-ExceptIfRecipientDomainIs <Word []>]
+ [-ExceptIfRecipientInSenderList <Word []>]
+ [-ExceptIfSCLOver <SclValue>]
+ [-ExceptIfSenderADAttributeContainsWords <Word []>]
+ [-ExceptIfSenderADAttributeMatchesPatterns <Pattern []>]
+ [-ExceptIfSenderDomainIs <Word []>]
+ [-ExceptIfSenderInRecipientList <Word []>]
+ [-ExceptIfSenderIpRanges <MultiValuedProperty>]
+ [-ExceptIfSenderManagementRelationship <Manager | DirectReport>]
+ [-ExceptIfSentTo <RecipientIdParameter []>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter []>]
+ [-ExceptIfSentToScope <InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner>]
+ [-ExceptIfSubjectContainsWords <Word []>]
+ [-ExceptIfSubjectMatchesPatterns <Pattern []>]
+ [-ExceptIfSubjectOrBodyContainsWords <Word []>]
+ [-ExceptIfSubjectOrBodyMatchesPatterns <Pattern []>]
+ [-ExceptIfWithImportance <Low | Normal | High>]
+ [-ExpiryDate <DateTime>]
+ [-From <RecipientIdParameter []>]
+ [-FromAddressContainsWords <Word []>]
+ [-FromAddressMatchesPatterns <Pattern []>]
+ [-FromMemberOf <RecipientIdParameter []>]
+ [-FromScope <InOrganization | NotInOrganization>]
+ [-GenerateIncidentReport <RecipientIdParameter>]
+ [-GenerateNotification <DisclaimerText>]
+ [-HasClassification <String>]
+ [-HasNoClassification <$true | $false>]
+ [-HasSenderOverride <$true | $false>]
+ [-HeaderContainsMessageHeader <HeaderName>]
+ [-HeaderContainsWords <Word []>]
+ [-HeaderMatchesMessageHeader <HeaderName>]
+ [-HeaderMatchesPatterns <Pattern []>]
+ [-IncidentReportContent <IncidentReportContent []>]
  [-IncidentReportOriginalMail <IncludeOriginalMail | DoNotIncludeOriginalMail>]
- [-MessageContainsDataClassifications <Hashtable[]>] [-MessageSizeOver <ByteQuantifiedSize>]
+ [-LogEventText <EventLogText>]
+ [-ManagerAddresses <RecipientIdParameter []>]
+ [-ManagerForEvaluatedUser <Sender | Recipient>]
+ [-MessageContainsAllDataClassifications <Hashtable []>]
+ [-MessageContainsDataClassifications <Hashtable []>]
+ [-MessageSizeOver <ByteQuantifiedSize>]
+ [-MessageTypeMatches <OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voicemail | Signed | ApprovalRequest | ReadReceipt>]
  [-Mode <Audit | AuditAndNotify | Enforce>]
+ [-ModerateMessageByManager <$true | $false>]
+ [-ModerateMessageByUser <RecipientIdParameter []>]
+ [-Name <String>]
  [-NotifySender <NotifyOnly | RejectMessage | RejectUnlessFalsePositiveOverride | RejectUnlessSilentOverride | RejectUnlessExplicitOverride>]
- [-RecipientDomainIs <Word[]>] [-RemoveOME <$true | $false>]
+ [-PrependSubject <SubjectPrefix>]
+ [-Priority <Int32>]
+ [-Quarantine <$true | $false>]
+ [-RecipientADAttributeContainsWords <Word []>]
+ [-RecipientADAttributeMatchesPatterns <Pattern []>]
+ [-RecipientAddressContainsWords <Word []>]
+ [-RecipientAddressMatchesPatterns <Pattern []>]
+ [-RecipientDomainIs <Word []>]
+ [-RecipientInSenderList <Word []>]
+ [-RedirectMessageTo <RecipientIdParameter []>]
+ [-RejectMessageEnhancedStatusCode <RejectEnhancedStatus>]
+ [-RejectMessageReasonText <RejectText>]
+ [-RemoveHeader <HeaderName>]
+ [-RemoveOME <$true | $false>]
+ [-RemoveOMEv2 <$true | $false>]
  [-RouteMessageOutboundConnector <OutboundConnectorIdParameter>]
- [-RouteMessageOutboundRequireTls <$true | $false>] [-RuleErrorAction <Ignore | Defer>]
- [-RuleSubType <None | Dlp>] [-SenderAddressLocation <Header | Envelope | HeaderOrEnvelope>]
- [-SenderDomainIs <Word[]>] [-SenderIpRanges <MultiValuedProperty>] [-SetAuditSeverity <String>]
- [-StopRuleProcessing <$true | $false>] [-ExceptIfMessageContainsAllDataClassifications <Hashtable[]>]
- [-MessageContainsAllDataClassifications <Hashtable[]>] [<CommonParameters>]
+ [-RouteMessageOutboundRequireTls <$true | $false>]
+ [-RuleErrorAction <Ignore | Defer>]
+ [-RuleSubType <None | Dlp>]
+ [-SCLOver <SclValue>]
+ [-SenderADAttributeContainsWords <Word []>]
+ [-SenderADAttributeMatchesPatterns <Pattern []>]
+ [-SenderAddressLocation <Header | Envelope | HeaderOrEnvelope>]
+ [-SenderDomainIs <Word []>]
+ [-SenderInRecipientList <Word []>]
+ [-SenderIpRanges <MultiValuedProperty>]
+ [-SenderManagementRelationship <Manager | DirectReport>]
+ [-SentTo <RecipientIdParameter []>]
+ [-SentToMemberOf <RecipientIdParameter []>]
+ [-SentToScope <InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner>]
+ [-SetAuditSeverity <String>]
+ [-SetHeaderName <HeaderName>]
+ [-SetHeaderValue <HeaderValue>]
+ [-SetSCL <SclValue>]
+ [-SmtpRejectMessageRejectStatusCode <RejectStatusCode>]
+ [-SmtpRejectMessageRejectText <RejectText>]
+ [-StopRuleProcessing <$true | $false>]
+ [-SubjectContainsWords <Word []>]
+ [-SubjectMatchesPatterns <Pattern []>]
+ [-SubjectOrBodyContainsWords <Word []>]
+ [-SubjectOrBodyMatchesPatterns <Pattern []>]
+ [-WhatIf]
+ [-WithImportance <Low | Normal | High>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -152,6 +236,23 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ActivationDate
+The ActivationDate parameter specifies when the rule starts processing messages. The rule won't take any action on messages until the specified date/time.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -693,13 +794,36 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 
 The ApplyHtmlDisclaimerText parameter specifies an action that adds the disclaimer text to messages. Disclaimer text can include HTML tags and inline cascading style sheet (CSS) tags. You can add images using the IMG tag.
 
-You use the ApplyHtmlDisclaimerLocation parameter to specify where to insert the text in the message body (the default value is Append) and the ApplyHtmlDisclaimerFallbackAction parameter to specify what to do if the disclaimer can't be added to the message (the default value is Wrap).
+You use the ApplyHtmlDisclaimerLocation parameter to specify where to insert the text in the message body (the default value is Append), and the ApplyHtmlDisclaimerFallbackAction parameter to specify what to do if the disclaimer can't be added to the message (the default value is Wrap).
 
 ```yaml
 Type: DisclaimerText
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyOME
+This parameter is available only in the cloud-based service.
+
+This parameter specifies an action or part of an action for the rule.
+
+The ApplyOME parameter specifies an action that encrypts messages and their attachments by using Office 365 Message Encryption. Valid values are:
+
+- $true: The message and attachments are encrypted.
+
+- $false: The message and attachments aren't encrypted.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -753,12 +877,77 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AttachmentExtensionMatchesWords
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The AttachmentExtensionMatchesWords parameter specifies a condition that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttachmentHasExecutableContent
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The AttachmentHasExecutableContent parameter specifies a condition that looks for executable content in message attachments. Valid values are:
+
+- $true: Look for executable content in message attachments.
+
+- $false: Don't look for executable content in message attachments.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttachmentIsPasswordProtected
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+
+- $true: Look for password protected attachments.
+
+- $false: Don't look for password protected attachments.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AttachmentIsUnsupported
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentIsUnsupported parameter specifies a condition that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange and the required IFilter isn't installed. Valid values are:
+The AttachmentIsUnsupported parameter specifies a condition that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
 
 - $true: Look for unsupported file types in messages.
 
@@ -813,6 +1002,82 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttachmentProcessingLimitExceeded
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The AttachmentProcessingLimitExceeded parameter specifies a condition that looks for messages where attachment scanning didn't complete. Valid values are:
+
+- $true: Look for messages where attachment scanning didn't complete.
+
+- $false: Don't look for messages where attachment scanning didn't complete.
+
+You use this condition to create rules that work together with other attachment processing rules to handle messages where the content can't be fully scanned.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttachmentPropertyContainsWords
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The AttachmentPropertyContainsWords parameter specifies a condition that looks for words in the properties of attached Office documents. This condition helps integrate mail flow rules (transport rules) with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
+
+- Business Impact
+
+- Compliancy
+
+- Confidentiality
+
+- Department
+
+- Impact
+
+- Intellectual Property
+
+- Personally Identifiable Information
+
+- Personal Information
+
+- Personal Use
+
+- Required Clearance
+
+- PHI
+
+- PII
+
+- Project
+
+- Protected Health Information
+
+The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2,...","PropertyName2:Word3,Phrase with spaces,word4,...". Don't use leading or trailing spaces.
+
+When you specify multiple properties, or multiple values for the same property, the or operator is used.
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -998,6 +1263,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentCharacterSetContainsWords
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The ContentCharacterSetContainsWords parameter specifies a condition that looks for character set names in messages.
+
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CopyTo
 This parameter specifies an action or part of an action for the rule.
 
@@ -1061,7 +1347,7 @@ Accept wildcard characters: False
 ### -Disconnect
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Edge Transport servers.
+This action is available only on Edge Transport servers in on-premises Exchange.
 
 The Disconnect parameter specifies an action that ends the SMTP connection between the sending server and the Edge Transport server without generating an NDR.
 
@@ -1073,7 +1359,22 @@ The Disconnect parameter specifies an action that ends the SMTP connection betwe
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpPolicy
+The DlpPolicy parameter specifies the data loss prevention (DLP) policy that's associated with the rule. Each DLP policy is enforced using a set of mail flow rules (transport rules). To learn more about DLP, see Data loss prevention (https://technet.microsoft.com/library/jj150527.aspx).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1513,6 +1814,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfAttachmentExtensionMatchesWords
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfAttachmentExtensionMatchesWords parameter specifies an exception that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAttachmentHasExecutableContent
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that looks for executable content in message attachments. Valid values are:
+
+- $true: Look for executable content in message attachments.
+
+- $false: Don't look for executable content in message attachments.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAttachmentIsPasswordProtected
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+
+- $true: Look for password protected attachments.
+
+- $false: Don't look for password protected attachments.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfAttachmentIsUnsupported
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
@@ -1573,6 +1939,82 @@ Type: Pattern[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAttachmentProcessingLimitExceeded
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfAttachmentProcessingLimitExceeded parameter specifies an exception that looks for messages where attachment scanning didn't complete. Valid values are:
+
+- $true: Look for messages where attachment scanning didn't complete.
+
+- $false: Don't look for messages where attachment scanning didn't complete.
+
+You use this exception to create rules that work together with other attachment processing rules to handle messages where the content can't be fully scanned.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAttachmentPropertyContainsWords
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfAttachmentPropertyContainsWords parameter specifies an exception that looks for words in the properties of attached Office documents. This condition helps integrate rules with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
+
+- Business Impact
+
+- Compliancy
+
+- Confidentiality
+
+- Department
+
+- Impact
+
+- Intellectual Property
+
+- Personally Identifiable Information
+
+- Personal Information
+
+- Personal Use
+
+- Required Clearance
+
+- PHI
+
+- PII
+
+- Project
+
+- Protected Health Information
+
+The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2,...","PropertyName2:Word3,Phrase with spaces,word4,...". Don't use values with leading or trailing spaces.
+
+When you specify multiple properties, or multiple values for the same property, the or operator is used.
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1680,6 +2122,27 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfContentCharacterSetContainsWords
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfContentCharacterSetContainsWords parameter specifies an exception that looks for character set names in messages.
+
+To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1878,6 +2341,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfHasSenderOverride
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfHasSenderOverride parameter specifies an exception that looks for messages where the sender chose to override a DLP policy. Valid values are:
+
+- $true: Look for messages where the sender took action to override a DLP policy.
+
+- $false: Don't look for messages where the sender took action to override a DLP policy.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfHeaderContainsMessageHeader
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
@@ -2017,6 +2503,79 @@ Type: Sender | Recipient
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfMessageContainsAllDataClassifications
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfMessageContainsDataClassifications
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfMessageContainsDataClassifications parameter specifies an exception that looks for sensitive information types in the body of messages, and in any attachments.
+
+This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
+
+For a list of sensitive information types available, see Sensitive information types (https://technet.microsoft.com/library/jj150541.aspx).
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfMessageSizeOver
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
+
+The ExceptIfMessageSizeOver parameter specifies an exception that looks for messages larger than the specified size. The size includes the message and all attachments.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+```yaml
+Type: ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -2261,7 +2820,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfRecipientDomainIs
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+
+If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the ExceptIfRecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfRecipientInSenderList
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -2461,7 +3043,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfSenderDomainIs
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfSenderDomainIs parameter specifies an exception that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
+
+If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+
+You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfSenderInRecipientList
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -2469,6 +3076,33 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSenderIpRanges
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is only available on Mailbox servers.
+
+The ExceptIfSenderIpRanges parameter specifies an exception that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+
+- Single IP address: For example, 192.168.1.1.
+
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+You can specify multiple IP addresses or ranges separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -2693,6 +3327,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExpiryDate
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+
+The ExpiryDate parameter specifies when this rule will stop processing messages. The rule won't take any action on messages after the specified date/time.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -From
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -2836,6 +3489,76 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GenerateIncidentReport
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is only available on Mailbox servers.
+
+The GenerateIncidentReport parameter specifies where to send the incident report that's defined by the IncidentReportContent parameter. You can use any value that uniquely identifies the recipient.
+
+For example:
+
+- Name
+
+- Display name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+An incident report is generated for messages that violate a DLP policy in your organization.
+
+```yaml
+Type: RecipientIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GenerateNotification
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is only available on Mailbox servers.
+
+The GenerateNotification parameter specifies an action that sends a notification message to recipients. For example, you can use this parameter to notify recipients that a message was rejected by the rule, or marked as spam and delivered to their Junk Email folder.
+
+This parameter supports plain text, HTML tags and the following keywords that use values from the original message:
+
+- %%From%%
+
+- %%To%%
+
+- %%Cc%%
+
+- %%Subject%%
+
+- %%Headers%%
+
+- %%MessageDate%%
+
+```yaml
+Type: DisclaimerText
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HasClassification
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -2877,6 +3600,29 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HasSenderOverride
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The HasSenderOverride parameter specifies a condition that looks for messages where the sender chose to override a DLP policy. Valid values are:
+
+- $true: Look for messages where the sender took action to override a DLP policy.
+
+- $false: Don't look for messages where the sender took action to override a DLP policy.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -2966,10 +3712,86 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncidentReportContent
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is only available on Mailbox servers.
+
+The IncidentReportContent parameter specifies the message properties that are included in the incident report that's generated when a message violates a DLP policy. Valid values are:
+
+- Sender: The sender of the message.
+
+- Recipients: The recipients in the To field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
+
+- Subject: The Subject field of the message.
+
+- CC: The recipients in the Cc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
+
+- BCC: The recipients in the Bcc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
+
+- Severity: The audit severity of the rule that was triggered. If the message was processed by more than one rule, the highest severity is displayed.
+
+- Override: The override if the sender chose to override a PolicyTip. If the sender provided a justification, the first 100 characters of the justification is also included.
+
+- RuleDetections: The list of rules that the message triggered.
+
+- FalsePositive: The false positive if the sender marked the message as a false positive for a PolicyTip.
+
+- DataClassifications: The list of sensitive information types that were detected in the message.
+
+- IdMatch: The sensitive information type that was detected, the exact matched content from the message, and the 150 characters before and after the matched sensitive information.
+
+- AttachOriginalMail: The entire original message as an attachment.
+
+The message ID is always included in the incident report.
+
+You can specify multiple values separated by commas.
+
+You use this parameter with the GenerateIncidentReport parameter.
+
+```yaml
+Type: IncidentReportContent[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncidentReportOriginalMail
+This parameter is available or functional only in Exchange Server 2013.
+
+This parameter has been deprecated and is no longer used. Use the IncidentReportContent parameter instead. The value AttachOriginalMail on the IncidentReportContent parameter is equivalent to setting this parameter to the value IncludeOriginalMail.
+
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is only available on Mailbox servers.
+
+The IncidentReportOriginalMail parameter specifies whether to include the original message with the incident report. This parameter is used together with the GenerateIncidentReport parameter. Valid values are:
+
+- IncludeOriginalMail
+
+- DoNotIncludeOriginalMail (this is the default value)
+
+```yaml
+Type: IncludeOriginalMail | DoNotIncludeOriginalMail
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogEventText
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Edge Transport servers.
+This action is available only on Edge Transport servers in on-premises Exchange.
 
 The LogEventText parameter specifies an action that creates an entry in the Application log on the local Edge Transport server. The value for this parameter specifies the text that you want to include in the event log entry. If the text contains spaces, enclose the value in quotation marks (").
 
@@ -2989,7 +3811,7 @@ The entry contains the following information:
 Type: EventLogText
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -3061,6 +3883,81 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageContainsAllDataClassifications
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageContainsDataClassifications
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The MessageContainsDataClassifications parameter specifies a condition that looks for sensitive information types in the body of messages, and in any attachments.
+
+This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
+
+For a list of sensitive information types available, see Sensitive information types (https://technet.microsoft.com/library/jj150541.aspx).
+
+You can specify the notification options by using the NotifySender parameter.
+
+```yaml
+Type: Hashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageSizeOver
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
+
+The MessageSizeOver parameter specifies a condition that looks for messages larger than the specified size. The size includes the message and all attachments.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+```yaml
+Type: ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageTypeMatches
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3091,6 +3988,27 @@ Type: OOF | AutoForward | Encrypted | Calendaring | PermissionControlled | Voice
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Mode
+The Mode parameter specifies how the rule operates. Valid values are:
+
+- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
+
+- AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
+
+- Enforce: All actions specified in the rule are taken. This is the default value.
+
+```yaml
+Type: Audit | AuditAndNotify | Enforce
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -3177,6 +4095,39 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotifySender
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is only available on Mailbox servers.
+
+The NotifySender parameter specifies an action that notifies the sender when messages violate DLP policies. Valid values are:
+
+- NotifyOnly: The sender is notified, but the message is delivered normally.
+
+- RejectMessage: The message is rejected, and the sender is notified.
+
+- RejectUnlessFalsePositiveOverride: The message is rejected unless it's marked as a false positive by the sender.
+
+- RejectUnlessSilentOverride: The message is rejected unless the sender has chosen to override the policy restriction.
+
+- RejectUnlessExplicitOverride: This is the same as RejectUnlessSilentOverride, but the sender can also provide a justification for overriding the policy restriction.
+
+For all values except NotifyOnly, you can specify an enhanced status code and a rejection reason by using the RejectMessageEnhancedStatusCode and RejectMessageReasonText parameters. The default enhanced status code is 5.7.1, and the default rejection reason is Delivery not authorized, message refused.
+
+If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter.
+
+```yaml
+Type: NotifyOnly | RejectMessage | RejectUnlessFalsePositiveOverride | RejectUnlessSilentOverride | RejectUnlessExplicitOverride
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PrependSubject
 This parameter specifies an action or part of an action for the rule.
 
@@ -3226,7 +4177,7 @@ Accept wildcard characters: False
 ### -Quarantine
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Edge Transport servers.
+This action is available only on Edge Transport servers in on-premises Exchange.
 
 The Quarantine parameter specifies an action that quarantines messages.
 
@@ -3238,7 +4189,7 @@ The Quarantine parameter specifies an action that quarantines messages.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -3446,7 +4397,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecipientDomainIs
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+
+If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the RecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecipientInSenderList
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -3556,6 +4530,139 @@ Type: HeaderName
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOME
+This parameter is available only in the cloud-based service.
+
+This parameter specifies an action or part of an action for the rule.
+
+The RemoveOME parameter specifies an action that removes the previous version of Office 365 Message Encryption from messages and their attachments. Valid values are:
+
+- $true: The message and attachments are decrypted.
+
+- $false: The message and attachments aren't decrypted.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOMEv2
+This parameter is available only in the cloud-based service.
+
+This parameter specifies an action or part of an action for the rule.
+
+The RemoveOMEv2 parameter specifies an action that removes Office 365 Message Encryption from messages and their attachments. Valid values are:
+
+- $true: The message and attachments are decrypted.
+
+- $false: The message and attachments aren't decrypted.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RouteMessageOutboundConnector
+This parameter is available only in the cloud-based service.
+
+This parameter specifies an action or part of an action for the rule.
+
+The RouteMessageOutboundConnector parameter specifies an action that routes messages through the specified Outbound connector in Office 365. You can use any value that uniquely identifies the connector. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+```yaml
+Type: OutboundConnectorIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RouteMessageOutboundRequireTls
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is only available on Mailbox servers.
+
+The RouteMessageOutboundRequireTls parameter specifies an action that uses Transport Layer Security (TLS) encryption to deliver messages outside your organization. Valid values are:
+
+- $true: The messages must be delivered over a TLS encrypted channel.
+
+- $false: A TLS encrypted channel isn't required to deliver the messages.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RuleErrorAction
+The RuleErrorAction parameter specifies what to do if rule processing can't be completed on messages. Valid values are:
+
+- Ignore: The message is sent anyway. This is the default value.
+
+- Defer: The message is deferred so the rules engine can attempt to process the message again.
+
+```yaml
+Type: Ignore | Defer
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RuleSubType
+The RuleSubType parameter specifies the rule type. Valid values are:
+
+- Dlp: The rule is associated with a DLP policy.
+
+- None: The rule is a regular rule that isn't associated with a DLP policy.
+
+```yaml
+Type: None | Dlp
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -3748,7 +4855,65 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SenderAddressLocation
+The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
+
+- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
+
+- Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
+
+- HeaderOrEnvelope: Examine senders in the message header and the message envelope.
+
+Note that message envelope searching is only available for the following conditions and exceptions:
+
+- From and ExceptIfFrom
+
+- FromAddressContainsWords and ExceptIfFromAddressContainsWords
+
+- FromAddressMatchesPatterns and ExceptIfFromAddressMatchesPatterns
+
+- FromMemberOf and ExceptIfFromMemberOf
+
+- SenderDomainIs and ExceptIfSenderDomainIs
+
+```yaml
+Type: Header | Envelope | HeaderOrEnvelope
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderDomainIs
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The SenderDomainIs parameter specifies a condition that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
+
+If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+
+You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
+
+```yaml
+Type: Word[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SenderInRecipientList
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -3756,6 +4921,33 @@ Type: Word[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderIpRanges
+This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
+
+In on-premises Exchange, this condition is only available on Mailbox servers.
+
+The SenderIpRanges parameter specifies a condition that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+
+- Single IP address: For example, 192.168.1.1.
+
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+You can specify multiple IP addresses or ranges separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -3863,13 +5055,40 @@ The SentToScope parameter specifies a condition that looks for the location of r
 
 - ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
 
-- ExternalNonPartner: The recipients are external to your organization and the organization isn't a partner organization. This value is only available in on-premises Exchange.
+- ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
 
 ```yaml
 Type: InOrganization | NotInOrganization | ExternalPartner | ExternalNonPartner
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SetAuditSeverity
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is only available on Mailbox servers.
+
+The SetAuditSeverity parameter specifies an action that sets the severity level of the incident report and the corresponding entry that's written to the message tracking log when messages violate DLP policies. Valid values are:
+
+- DoNotAudit: No audit entry is logged.
+
+- Low: The audit entry is assigned low severity.
+
+- Medium: The audit entry is assigned medium severity.
+
+- High: The audit entry is assigned high severity.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -3901,7 +5120,7 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available on Mailbox servers and Edge Transport servers.
 
-The SetHeaderValue parameter specifies an action that adds or modifies a header field in the message header. The value of this parameter is the value that you want to apply to the header field. When you use this parameter, you also need to use the SetHeaderName parameter to specify the name of the header field that you want to add or modify..
+The SetHeaderValue parameter specifies an action that adds or modifies a header field in the message header. The value of this parameter is the value that you want to apply to the header field. When you use this parameter, you also need to use the SetHeaderName parameter to specify the name of the header field that you want to add or modify.
 
 ```yaml
 Type: HeaderValue
@@ -3941,7 +5160,7 @@ Accept wildcard characters: False
 ### -SmtpRejectMessageRejectStatusCode
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Edge Transport servers.
+This action is available only on Edge Transport servers in on-premises Exchange.
 
 The SmtpRejectMessageRejectStatusCode parameter specifies an action that disconnects the sending server from the Edge Transport server. The value of this parameter is the SMTP code that's used. Valid values are the integers 400 through 500.
 
@@ -3951,7 +5170,7 @@ You can use this parameter with the SmtpRejectMessageRejectText parameter. If yo
 Type: RejectStatusCode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -3962,7 +5181,7 @@ Accept wildcard characters: False
 ### -SmtpRejectMessageRejectText
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Edge Transport servers.
+This action is available only on Edge Transport servers in on-premises Exchange.
 
 The SmtpRejectMessageRejectText parameter specifies an action that disconnects the sending server from the Edge Transport server. The value of this parameter is the explanation text that's used. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -3972,7 +5191,30 @@ You can use this parameter with the SmtpRejectMessageRejectStatusCode parameter.
 Type: RejectText
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StopRuleProcessing
+This parameter specifies an action or part of an action for the rule.
+
+In on-premises Exchange, this action is available on Mailbox servers and Edge Transport servers.
+
+The StopRuleProcessing parameter specifies an action that stops processing more rules. Valid values are:
+
+- $true: Stop processing more rules.
+
+- $false: Continue processing more rules after this one.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -4093,1128 +5335,6 @@ Type: Low | Normal | High
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActivationDate
-The ActivationDate parameter specifies when the rule starts processing messages. The rule won't take any action on messages until the specified date/time.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApplyOME
-This parameter is available only in the cloud-based service.
-
-This parameter specifies an action or part of an action for the rule.
-
-The ApplyOME parameter specifies an action that encrypts messages and their attachments by using Office 365 Message Encryption. Valid values are:
-
-- $true: The message and attachments are encrypted.
-
-- $false: The message and attachments aren't encrypted.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AttachmentExtensionMatchesWords
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The AttachmentExtensionMatchesWords parameter specifies a condition that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AttachmentHasExecutableContent
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The AttachmentHasExecutableContent parameter specifies a condition that looks for executable content in message attachments. Valid values are:
-
-- $true: Look for executable content in message attachments.
-
-- $false: Don't look for executable content in message attachments.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AttachmentIsPasswordProtected
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
-
-- $true: Look for password protected attachments.
-
-- $false: Don't look for password protected attachments.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AttachmentProcessingLimitExceeded
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The AttachmentProcessingLimitExceeded parameter specifies a condition that looks for messages where attachment scanning didn't complete. Valid values are:
-
-- $true: Look for messages where attachment scanning didn't complete.
-
-- $false: Don't look for messages where attachment scanning didn't complete.
-
-You use this condition to create rules that work together with other attachment processing rules to handle messages where the content can't be fully scanned.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AttachmentPropertyContainsWords
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The AttachmentPropertyContainsWords parameter specifies a condition that looks for words in the properties of attached Office documents. This condition helps integrate mail flow rules (transport rules) with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
-
-- Business Impact
-
-- Compliancy
-
-- Confidentiality
-
-- Department
-
-- Impact
-
-- Intellectual Property
-
-- Personally Identifiable Information
-
-- Personal Information
-
-- Personal Use
-
-- Required Clearance
-
-- PHI
-
-- PII
-
-- Project
-
-- Protected Health Information
-
-The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2,...","PropertyName2:Word3,Phrase with spaces,word4,...". Don't use leading or trailing spaces.
-
-When you specify multiple properties, or multiple values for the same property, the or operator is used.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContentCharacterSetContainsWords
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The ContentCharacterSetContainsWords parameter specifies a condition that looks for character set names in messages.
-
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DlpPolicy
-The DlpPolicy parameter specifies the data loss prevention (DLP) policy that's associated with the rule. Each DLP policy is enforced using a set of mail flow rules (transport rules). To learn more about DLP, see Data loss prevention (https://technet.microsoft.com/library/jj150527.aspx).
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfAttachmentExtensionMatchesWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfAttachmentExtensionMatchesWords parameter specifies an exception that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfAttachmentHasExecutableContent
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that looks for executable content in message attachments. Valid values are:
-
-- $true: Look for executable content in message attachments.
-
-- $false: Don't look for executable content in message attachments.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfAttachmentIsPasswordProtected
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
-
-- $true: Look for password protected attachments.
-
-- $false: Don't look for password protected attachments.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfAttachmentProcessingLimitExceeded
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfAttachmentProcessingLimitExceeded parameter specifies an exception that looks for messages where attachment scanning didn't complete. Valid values are:
-
-- $true: Look for messages where attachment scanning didn't complete.
-
-- $false: Don't look for messages where attachment scanning didn't complete.
-
-You use this exception to create rules that work together with other attachment processing rules to handle messages where the content can't be fully scanned.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfAttachmentPropertyContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfAttachmentPropertyContainsWords parameter specifies an exception that looks for words in the properties of attached Office documents. This condition helps integrate rules with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
-
-- Business Impact
-
-- Compliancy
-
-- Confidentiality
-
-- Department
-
-- Impact
-
-- Intellectual Property
-
-- Personally Identifiable Information
-
-- Personal Information
-
-- Personal Use
-
-- Required Clearance
-
-- PHI
-
-- PII
-
-- Project
-
-- Protected Health Information
-
-The syntax for this parameter is "PropertyName:Word". To specify multiple properties, or multiple words for the same property, use the following syntax: "PropertyName1:Word1,Phrase with spaces,word2,...","PropertyName2:Word3,Phrase with spaces,word4,...". Don't use values with leading or trailing spaces.
-
-When you specify multiple properties, or multiple values for the same property, the or operator is used.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfContentCharacterSetContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfContentCharacterSetContainsWords parameter specifies an exception that looks for character set names in messages.
-
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfHasSenderOverride
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfHasSenderOverride parameter specifies an exception that looks for messages where the sender chose to override a DLP policy. Valid values are:
-
-- $true: Look for messages where the sender took action to override a DLP policy.
-
-- $false: Don't look for messages where the sender took action to override a DLP policy.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfMessageContainsDataClassifications
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfMessageContainsDataClassifications parameter specifies an exception that looks for sensitive information types in the body of messages, and in any attachments.
-
-This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
-
-For a list of sensitive information types available, see Sensitive information types (https://technet.microsoft.com/library/jj150541.aspx).
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfMessageSizeOver
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
-
-The ExceptIfMessageSizeOver parameter specifies an exception that looks for messages larger than the specified size. The size includes the message and all attachments.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-```yaml
-Type: ByteQuantifiedSize
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfRecipientDomainIs
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
-
-If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the ExceptIfRecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfSenderDomainIs
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfSenderDomainIs parameter specifies an exception that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
-
-If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
-
-You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfSenderIpRanges
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-In on-premises Exchange, this exception is only available on Mailbox servers.
-
-The ExceptIfSenderIpRanges parameter specifies an exception that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
-
-- Single IP address: For example, 192.168.1.1.
-
-- IP address range: For example, 192.168.0.1-192.168.0.254.
-
-- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
-
-You can specify multiple IP addresses or ranges separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExpiryDate
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-The ExpiryDate parameter specifies when this rule will stop processing messages. The rule won't take any action on messages after the specified date/time.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GenerateIncidentReport
-This parameter specifies an action or part of an action for the rule.
-
-In on-premises Exchange, this action is only available on Mailbox servers.
-
-The GenerateIncidentReport parameter specifies where to send the incident report that's defined by the IncidentReportContent parameter. You can use any value that uniquely identifies the recipient.
-
-For example:
-
-- Name
-
-- Display name
-
-- Alias
-
-- Distinguished name (DN)
-
-- Canonical DN
-
-- Email address
-
-- GUID
-
-An incident report is generated for messages that violate a DLP policy in your organization.
-
-```yaml
-Type: RecipientIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GenerateNotification
-This parameter specifies an action or part of an action for the rule.
-
-In on-premises Exchange, this action is only available on Mailbox servers.
-
-The GenerateNotification parameter specifies an action that sends a notification message to recipients. For example, you can use this parameter to notify recipients that a message was rejected by the rule, or marked as spam and delivered to their Junk Email folder.
-
-This parameter supports plain text, HTML tags and the following keywords that use values from the original message:
-
-- %%From%%
-
-- %%To%%
-
-- %%Cc%%
-
-- %%Subject%%
-
-- %%Headers%%
-
-- %%MessageDate%%
-
-```yaml
-Type: DisclaimerText
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HasSenderOverride
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The HasSenderOverride parameter specifies a condition that looks for messages where the sender chose to override a DLP policy. Valid values are:
-
-- $true: Look for messages where the sender took action to override a DLP policy.
-
-- $false: Don't look for messages where the sender took action to override a DLP policy.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncidentReportContent
-This parameter specifies an action or part of an action for the rule.
-
-In on-premises Exchange, this action is only available on Mailbox servers.
-
-The IncidentReportContent parameter specifies the message properties that are included in the incident report that's generated when a message violates a DLP policy. Valid values are:
-
-- Sender: The sender of the message.
-
-- Recipients: The recipients in the To field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
-
-- Subject: The Subject field of the message.
-
-- CC: The recipients in the Cc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
-
-- BCC: The recipients in the Bcc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
-
-- Severity: The audit severity of the rule that was triggered. If the message was processed by more than one rule, the highest severity is displayed.
-
-- Override: The override if the sender chose to override a PolicyTip. If the sender provided a justification, the first 100 characters of the justification is also included.
-
-- RuleDetections: The list of rules that the message triggered.
-
-- FalsePositive: The false positive if the sender marked the message as a false positive for a PolicyTip.
-
-- DataClassifications: The list of sensitive information types that were detected in the message.
-
-- IdMatch: The sensitive information type that was detected, the exact matched content from the message, and the 150 characters before and after the matched sensitive information.
-
-- AttachOriginalMail: The entire original message as an attachment.
-
-The message ID is always included in the incident report.
-
-You can specify multiple values separated by commas.
-
-You use this parameter with the GenerateIncidentReport parameter.
-
-```yaml
-Type: IncidentReportContent[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncidentReportOriginalMail
-This parameter is available or functional only in Exchange Server 2013.
-
-This parameter has been deprecated and is no longer used. Use the IncidentReportContent parameter instead. The value AttachOriginalMail on the IncidentReportContent parameter is equivalent to setting this parameter to the value IncludeOriginalMail.
-
-This parameter specifies an action or part of an action for the rule.
-
-In on-premises Exchange, this action is only available on Mailbox servers.
-
-The IncidentReportOriginalMail parameter specifies whether to include the original message with the incident report. This parameter is used together with the GenerateIncidentReport parameter. Valid values are:
-
-- IncludeOriginalMail
-
-- DoNotIncludeOriginalMail (this is the default value)
-
-```yaml
-Type: IncludeOriginalMail | DoNotIncludeOriginalMail
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MessageContainsDataClassifications
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The MessageContainsDataClassifications parameter specifies a condition that looks for sensitive information types in the body of messages, and in any attachments.
-
-This parameter uses the syntax @{\<SensitiveInformationType1\>},@{\<SensitiveInformationType2\>},...@{\<SensitiveInformationTypeN\>}. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
-
-For a list of sensitive information types available, see Sensitive information types (https://technet.microsoft.com/library/jj150541.aspx).
-
-You can specify the notification options by using the NotifySender parameter.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MessageSizeOver
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
-
-The MessageSizeOver parameter specifies a condition that looks for messages larger than the specified size. The size includes the message and all attachments.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-```yaml
-Type: ByteQuantifiedSize
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Mode
-The Mode parameter specifies how the rule operates. Valid values are:
-
-- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
-
-- AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
-
-- Enforce: All actions specified in the rule are taken. This is the default value.
-
-```yaml
-Type: Audit | AuditAndNotify | Enforce
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NotifySender
-This parameter specifies an action or part of an action for the rule.
-
-In on-premises Exchange, this action is only available on Mailbox servers.
-
-The NotifySender parameter specifies an action that notifies the sender when messages violate DLP policies. Valid values are:
-
-- NotifyOnly: The sender is notified, but the message is delivered normally.
-
-- RejectMessage: The message is rejected, and the sender is notified.
-
-- RejectUnlessFalsePositiveOverride: The message is rejected unless it's marked as a false positive by the sender.
-
-- RejectUnlessSilentOverride: The message is rejected unless the sender has chosen to override the policy restriction.
-
-- RejectUnlessExplicitOverride: This is the same as RejectUnlessSilentOverride, but the sender can also provide a justification for overriding the policy restriction.
-
-For all values except NotifyOnly, you can specify an enhanced status code and a rejection reason by using the RejectMessageEnhancedStatusCode and RejectMessageReasonText parameters. The default enhanced status code is 5.7.1, and the default rejection reason is Delivery not authorized, message refused.
-
-If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter.
-
-```yaml
-Type: NotifyOnly | RejectMessage | RejectUnlessFalsePositiveOverride | RejectUnlessSilentOverride | RejectUnlessExplicitOverride
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientDomainIs
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
-
-If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the RecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveOME
-This parameter is available only in the cloud-based service.
-
-This parameter specifies an action or part of an action for the rule.
-
-The RemoveOME parameter specifies an action that removes Office 365 Message Encryption from messages and their attachments. Valid values are:
-
-- $true: The message and attachments are decrypted.
-
-- $false: The message and attachments aren't decrypted.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RouteMessageOutboundConnector
-This parameter is available only in the cloud-based service.
-
-This parameter specifies an action or part of an action for the rule.
-
-The RouteMessageOutboundConnector parameter specifies an action that routes messages through the specified Outbound connector in Office 365. You can use any value that uniquely identifies the connector. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-```yaml
-Type: OutboundConnectorIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RouteMessageOutboundRequireTls
-This parameter specifies an action or part of an action for the rule.
-
-In on-premises Exchange, this action is only available on Mailbox servers.
-
-The RouteMessageOutboundRequireTls parameter specifies an action that uses Transport Layer Security (TLS) encryption to deliver messages outside your organization. Valid values are:
-
-- $true: The messages must be delivered over a TLS encrypted channel.
-
-- $false: A TLS encrypted channel isn't required to deliver the messages.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RuleErrorAction
-The RuleErrorAction parameter specifies what to do if rule processing can't be completed on messages. Valid values are:
-
-- Ignore: The message is sent anyway. This is the default value.
-
-- Defer: The message is deferred so the rules engine can attempt to process the message again.
-
-```yaml
-Type: Ignore | Defer
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RuleSubType
-The RuleSubType parameter specifies the rule type. Valid values are:
-
-- Dlp: The rule is associated with a DLP policy.
-
-- None: The rule is a regular rule that isn't associated with a DLP policy.
-
-```yaml
-Type: None | Dlp
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SenderAddressLocation
-The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
-
-- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
-
-- Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
-
-- HeaderOrEnvelope: Examine senders in the message header and the message envelope.
-
-Note that message envelope searching is only available for the following conditions and exceptions:
-
-- From and ExceptIfFrom
-
-- FromAddressContainsWords and ExceptIfFromAddressContainsWords
-
-- FromAddressMatchesPatterns and ExceptIfFromAddressMatchesPatterns
-
-- FromMemberOf and ExceptIfFromMemberOf
-
-- SenderDomainIs and ExceptIfSenderDomainIs
-
-```yaml
-Type: Header | Envelope | HeaderOrEnvelope
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SenderDomainIs
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The SenderDomainIs parameter specifies a condition that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
-
-If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
-
-You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
-
-```yaml
-Type: Word[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SenderIpRanges
-This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
-
-In on-premises Exchange, this condition is only available on Mailbox servers.
-
-The SenderIpRanges parameter specifies a condition that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
-
-- Single IP address: For example, 192.168.1.1.
-
-- IP address range: For example, 192.168.0.1-192.168.0.254.
-
-- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
-
-You can specify multiple IP addresses or ranges separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SetAuditSeverity
-This parameter specifies an action or part of an action for the rule.
-
-In on-premises Exchange, this action is only available on Mailbox servers.
-
-The SetAuditSeverity parameter specifies an action that sets the severity level of the incident report and the corresponding entry that's written to the message tracking log when messages violate DLP policies. Valid values are:
-
-- DoNotAudit: No audit entry is logged.
-
-- Low: The audit entry is assigned low severity.
-
-- Medium: The audit entry is assigned medium severity.
-
-- High: The audit entry is assigned high severity.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StopRuleProcessing
-This parameter specifies an action or part of an action for the rule.
-
-In on-premises Exchange, this action is available on Mailbox servers and Edge Transport servers.
-
-The StopRuleProcessing parameter specifies an action that stops processing more rules. Valid values are:
-
-- $true: Stop processing more rules.
-
-- $false: Continue processing more rules after this one.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfMessageContainsAllDataClassifications
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MessageContainsAllDataClassifications
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Hashtable[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
