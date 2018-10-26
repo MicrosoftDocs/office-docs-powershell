@@ -63,7 +63,7 @@ This collection is then piped to the `Remove-CsPublicProvider` cmdlet, which, in
 Get-CsPublicProvider | Where-Object {$_.Enabled -eq $False} | Remove-CsPublicProvider
 ```
 
-In Example 3, all the public providers that are currently disabled are removed from the set of configured pubic providers.
+In Example 3, all the public providers that are currently disabled are removed from the set of configured public providers.
 To carry out this task, the command first uses the `Get-CsPublicProvider` cmdlet to return a collection of all the public providers currently configured for use.
 This collection is piped to the `Where-Object` cmdlet, which selects only those providers where the Enabled property is equal to False.
 That filtered collection is then piped to the `Remove-CsPublicProvider` cmdlet, which deletes all the items in the collection.

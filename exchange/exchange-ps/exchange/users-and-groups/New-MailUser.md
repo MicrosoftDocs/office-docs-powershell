@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-MailUser
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # New-MailUser
@@ -17,171 +17,151 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### DisabledUser
 ```
-New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
+New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress>
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
  [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-MailboxRegion <String>]
+ [-MessageBodyFormat <Text | Html | TextAndHtml>]
+ [-MessageFormat <Text | Mime>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-OverrideRecipientQuotas] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-UsePreferMessageFormat <$true | $false>]
- [-WhatIf] [-ExternalDirectoryObjectId <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-UsageLocation <CountryInfo>] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <$true | $false>]
+ [-ResetPasswordOnNextLogon <$true | $false>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-UsePreferMessageFormat <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### EnabledUser
 ```
-New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> -Password <SecureString>
- -UserPrincipalName <String> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>]
- [-Initials <String>] [-LastName <String>]
+New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> -Password <SecureString> -UserPrincipalName <String>
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
  [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
- [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
- [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>]
+ [-MailboxRegion <String>]
+ [-MessageBodyFormat <Text | Html | TextAndHtml>]
+ [-MessageFormat <Text | Mime>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-OverrideRecipientQuotas] [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-UsePreferMessageFormat <$true | $false>]
- [-WhatIf] -WindowsLiveID <WindowsLiveId> [-EvictLiveId] [-ExternalDirectoryObjectId <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-UsageLocation <CountryInfo>] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <$true | $false>]
+ [-ResetPasswordOnNextLogon <$true | $false>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-UsePreferMessageFormat <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### MicrosoftOnlineServicesID
 ```
-New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] -Password <SecureString>
- -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-EvictLiveId] [-FirstName <String>]
- [-ImmutableId <String>] [-Initials <String>] [-LastName <String>] [-ModeratedBy <MultiValuedProperty>]
+New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Password <SecureString> [-ExternalEmailAddress <ProxyAddress>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] -UserPrincipalName <String>
- [-ExternalDirectoryObjectId <String>] [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MessageBodyFormat <Text | Html | TextAndHtml>]
- [-MessageFormat <Text | Mime>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-UsageLocation <CountryInfo>] [-UsePreferMessageFormat <$true | $false>] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <$true | $false>]
+ [-ResetPasswordOnNextLogon <$true | $false>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### FederatedUser
 ```
-New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] [-UseExistingLiveId]
- -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>]
- [-Initials <String>] [-LastName <String>] [-ModeratedBy <MultiValuedProperty>]
+New-MailUser [-Name] <String> -FederatedIdentity <String> [-ExternalEmailAddress <ProxyAddress>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf]
- -MicrosoftOnlineServicesID <WindowsLiveId> -Password <SecureString> [-ExternalDirectoryObjectId <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-UsageLocation <CountryInfo>] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <$true | $false>]
+ [-ResetPasswordOnNextLogon <$true | $false>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
-```
-New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] -FederatedIdentity <String>
- -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-EvictLiveId] [-FirstName <String>]
- [-ImmutableId <String>] [-Initials <String>] [-LastName <String>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-ImportLiveId]
- [-ExternalDirectoryObjectId <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-UsageLocation <CountryInfo>] [-MailboxRegion <String>] [-NetID <NetID>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
-```
-
-### Set6
-```
-New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] [-ImportLiveId]
- -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-FirstName <String>] [-ImmutableId <String>]
- [-Initials <String>] [-LastName <String>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-WhatIf] [-UseExistingLiveId] [-BypassLiveId]
- [-ExternalDirectoryObjectId <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-NetID <NetID>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-UsageLocation <CountryInfo>] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation]
- [<CommonParameters>]
-```
-
-### Set7
-```
-New-MailUser [-Name] <String> [-ExternalEmailAddress <ProxyAddress>] -FederatedIdentity <String>
- -WindowsLiveID <WindowsLiveId> [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm]
- [-DisplayName <String>] [-DomainController <Fqdn>] [-EvictLiveId] [-ExternalDirectoryObjectId <String>]
- [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>] [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-NetID <NetID>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-WhatIf] [-UseExistingLiveId] [-BypassLiveId] [-MailboxRegion <String>]
- [-SkipMailboxProvisioningConstraintValidation] [-UsageLocation <CountryInfo>] [<CommonParameters>]
-```
-
-### Set9
+### MicrosoftOnlineServicesFederatedUser
 ```
 New-MailUser [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServicesID <WindowsLiveId>
- [-Alias <String>] [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-ExternalDirectoryObjectId <String>] [-FirstName <String>] [-ImmutableId <String>]
- [-Initials <String>] [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <$true | $false>] [-NetID <NetID>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-WhatIf] [-MailboxRegion <String>] [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
+ [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <$true | $false>]
+ [-ResetPasswordOnNextLogon <$true | $false>]
+ [-SamAccountName <String>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set8
+### EnableRoomMailboxAccount
 ```
-New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-Confirm] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-ExternalDirectoryObjectId <String>] [-FirstName <String>] [-ImmutableId <String>] [-Initials <String>]
- [-LastName <String>] [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>] [-ModeratedBy <MultiValuedProperty>]
+New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <$true | $false>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas]
- [-PrimarySmtpAddress <SmtpAddress>] [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>] [-SamAccountName <String>]
- [-SendModerationNotifications <Never | Internal | Always>] [-SKUAssigned <$true | $false>]
- [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
- [-WhatIf] -FederatedIdentity <String> [-MailboxRegion <String>] [-NetID <NetID>]
- [-SkipMailboxProvisioningConstraintValidation] [<CommonParameters>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-RemotePowerShellEnabled <$true | $false>]
+ [-SendModerationNotifications <Never | Internal | Always>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -214,7 +194,7 @@ This value is also used for the DisplayName property if you don't use the Displa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: 1
 Default value: None
@@ -229,9 +209,9 @@ In on-premises environments, you can use the PrimarySMTPAddress parameter to set
 
 ```yaml
 Type: ProxyAddress
-Parameter Sets: Set1, Set3
+Parameter Sets: DisabledUser, EnabledUser
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None
@@ -241,9 +221,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ProxyAddress
-Parameter Sets: Set2, Set4, Set5, Set6, Set7
+Parameter Sets: MicrosoftOnlineServicesID, FederatedUser
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -258,7 +238,7 @@ The FederatedIdentity parameter associates an on-premises Active Directory user 
 
 ```yaml
 Type: String
-Parameter Sets: Set5, Set7, Set9, Set8
+Parameter Sets: FederatedUser, MicrosoftOnlineServicesFederatedUser
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
@@ -268,19 +248,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ImportLiveId
-This parameter is available only in the cloud-based service.
-
-The ImportLiveID switch specifies whether to import an unmanaged Microsoft account (formerly known as a Windows Live ID) into the cloud-based domain. You don't need to specify a value with this switch.
-
-An unmanaged Microsoft account was created in the domain before the domain was enrolled in the cloud-based service. Importing a Microsoft account into the domain lets you save any settings associated with the Microsoft account, like instant messaging contacts. However, the Microsoft account is now subject to the security and privacy policies of the organization.
+### -MicrosoftOnlineServicesID
+The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Set5, Set6
+Type: WindowsLiveId
+Parameter Sets: MicrosoftOnlineServicesID, MicrosoftOnlineServicesFederatedUser
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: WindowsLiveId
+Parameter Sets: EnableRoomMailboxAccount
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -292,28 +280,9 @@ The Password parameter specifies the password for the user's account. Valid valu
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set3, Set2, Set4
+Parameter Sets: EnabledUser, MicrosoftOnlineServicesID
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseExistingLiveId
-This parameter is available only in the cloud-based service.
-
-The UseExistingLiveId switch specifies whether to use the specified Microsoft account (formerly known as a Windows Live ID) that already exists in the cloud-based domain. The specified Microsoft account can't have a mail user associated with it.
-
-You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set4, Set6, Set7
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None
@@ -328,26 +297,9 @@ The UserPrincipalName parameter specifies the name of a system user in an email 
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set2
+Parameter Sets: EnabledUser
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WindowsLiveID
-This parameter is available only in the cloud-based service.
-
-The WindowsLiveID parameter creates a Microsoft account (formerly known as a Windows Live ID) for the mail user.
-
-```yaml
-Type: WindowsLiveId
-Parameter Sets: Set3, Set2, Set4, Set5, Set6, Set7
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -376,7 +328,7 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -415,9 +367,9 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: (All)
+Parameter Sets: DisabledUser, EnabledUser, FederatedUser, MicrosoftOnlineServicesID
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -436,7 +388,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -453,7 +405,7 @@ If you don't use the DisplayName parameter, the value of the Name parameter is u
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -468,28 +420,9 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: DisabledUser, EnabledUser, FederatedUser, MicrosoftOnlineServicesID
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EvictLiveId
-This parameter is available only in the cloud-based service.
-
-The EvictLiveId switch specifies whether to remove an unmanaged Microsoft account (formerly known as a Windows Live ID) from the cloud-based domain. An unmanaged Microsoft account was created in the domain before the domain was enrolled in the cloud-based service. Evicting a Microsoft account from the domain lets you save any settings associated with the Microsoft account, like instant messaging contacts.
-
-You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3, Set2, Set5, Set7
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -504,7 +437,7 @@ The FirstName parameter specifies the user's first name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -521,7 +454,7 @@ You need to set the ImmutableId parameter if Active Directory Federation Service
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -536,7 +469,7 @@ The Initials parameter specifies the user's middle initials.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -551,7 +484,7 @@ The LastName parameter specifies the user's last name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -578,9 +511,26 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 
 ```yaml
 Type: BinHex | UuEncode | AppleSingle | AppleDouble
-Parameter Sets: Set1, Set3, Set2
+Parameter Sets: DisabledUser, EnabledUser
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxRegion
+This parameter is avaialble only in the cloud-based service
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -605,9 +555,9 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 
 ```yaml
 Type: Text | Html | TextAndHtml
-Parameter Sets: Set1, Set3, Set2
+Parameter Sets: DisabledUser, EnabledUser
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -632,9 +582,9 @@ Therefore, if you want to change the MessageFormat parameter from Mime to Text, 
 
 ```yaml
 Type: Text | Mime
-Parameter Sets: Set1, Set3, Set2
+Parameter Sets: DisabledUser, EnabledUser
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -669,7 +619,7 @@ You need to use this parameter to specify at least one moderator when you set th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -690,7 +640,7 @@ You use the ModeratedBy parameter to specify the moderators.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -715,22 +665,7 @@ Valid input for this parameter is an organizational unit (OU) or domain that's v
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverrideRecipientQuotas
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -749,9 +684,9 @@ If you use the PrimarySmtpAddress parameter to specify the primary email address
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: (All)
+Parameter Sets: DisabledUser, EnabledUser, FederatedUser, MicrosoftOnlineServicesID
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -770,7 +705,7 @@ The RemotePowerShellEnabled parameter specifies whether the user can connect to 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -789,9 +724,9 @@ The ResetPasswordOnNextLogon parameter specifies whether the user must change th
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
+Parameter Sets: DisabledUser, EnabledUser, FederatedUser, MicrosoftOnlineServicesID
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -806,9 +741,9 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: DisabledUser, EnabledUser, FederatedUser, MicrosoftOnlineServicesID
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -831,7 +766,7 @@ This parameter is only meaningful when moderation is enabled (the ModerationEnab
 Type: Never | Internal | Always
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -848,9 +783,9 @@ The UsePreferMessageFormat specifies whether the message format settings configu
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1, Set3, Set2
+Parameter Sets: DisabledUser, EnabledUser
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -865,184 +800,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MicrosoftOnlineServicesID
-The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-```yaml
-Type: WindowsLiveId
-Parameter Sets: Set4, Set9
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: WindowsLiveId
-Parameter Sets: Set8
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassLiveId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set6, Set7
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalDirectoryObjectId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningConstraint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxProvisioningConstraint
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxProvisioningPreferences
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetID
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: NetID
-Parameter Sets: Set5, Set6, Set7, Set9, Set8
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SKUAssigned
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SKUCapability
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UsageLocation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: CountryInfo
-Parameter Sets: Set1, Set3, Set2, Set4, Set5, Set6, Set7
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxRegion
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipMailboxProvisioningConstraintValidation
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

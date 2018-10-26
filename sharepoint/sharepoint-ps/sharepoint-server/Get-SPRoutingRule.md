@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPRoutingRule
 schema: 2.0.0
 ---
@@ -33,7 +33,7 @@ C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
 C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
-C:\PS>Get-SPRoutingRule -RequestManagementSettings $rm
+PS C:\>Get-SPRoutingRule -RequestManagementSettings $rm
 ```
 
 This example returns a routing rule for the farm.
@@ -47,7 +47,7 @@ Specifies the name of the request management settings object to return.
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -69,7 +69,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -85,7 +85,7 @@ Specifies the name of the rule to return.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

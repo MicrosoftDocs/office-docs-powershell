@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 title: New-RoleGroup
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || o365scc-ps || eop-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || o365scc-ps || eop-ps"
 ---
 
 # New-RoleGroup
@@ -17,27 +17,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### CrossForest
 ```
-New-RoleGroup [-Name] <String> -LinkedDomainController <String>
- -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-Confirm]
+New-RoleGroup [-Name] <String> -LinkedDomainController <String> -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-LinkedCredential <PSCredential>]
+ [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Description <String>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-LinkedCredential <PSCredential>] [-ManagedBy <MultiValuedProperty>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Description <String>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedBy <MultiValuedProperty>]
  [-Members <MultiValuedProperty>]
- [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>] [-Roles <RoleIdParameter[]>]
- [-SamAccountName <String>] [-WhatIf] [<CommonParameters>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-Roles <RoleIdParameter[]>]
+ [-SamAccountName <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Default
 ```
-New-RoleGroup [-Name] <String> -LinkedDomainController <String>
- -LinkedForeignGroup <UniversalSecurityGroupIdParameter> [-Confirm]
+New-RoleGroup [-Name] <String>
+ [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Description <String>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-Force] [-LinkedCredential <PSCredential>] [-ManagedBy <MultiValuedProperty>]
- [-Members <MultiValuedProperty>] [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
- [-Roles <RoleIdParameter[]>] [-SamAccountName <String>] [-WhatIf] [<CommonParameters>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Description <String>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedBy <MultiValuedProperty>]
+ [-Members <MultiValuedProperty>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-Roles <RoleIdParameter[]>]
+ [-SamAccountName <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,9 +123,9 @@ If you use the LinkedDomainController parameter, you must specify a foreign USG 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -129,9 +142,9 @@ If you use the LinkedForeignGroup parameter, you must specify a domain controlle
 
 ```yaml
 Type: UniversalSecurityGroupIdParameter
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -148,7 +161,7 @@ Note: If you create a linked role group, we recommend that you include the name 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: True
 Position: 1
 Default value: None
@@ -167,7 +180,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -184,7 +197,7 @@ The CustomConfigWriteScope parameter specifies the existing configuration-based 
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +216,7 @@ If you use the CustomRecipientWriteScope parameter, you can't use the RecipientO
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +231,7 @@ The Description parameter specifies the description that's displayed when the ro
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +246,7 @@ The DisplayName parameter specifies the friendly name of the role group. If the 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +263,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -265,7 +278,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -282,9 +295,9 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential
-Parameter Sets: (All)
+Parameter Sets: CrossForest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -303,7 +316,7 @@ If you want to add more than one user or USG, separate them using commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -320,7 +333,7 @@ If you use the Members parameter, you can't use the LinkedForeignGroup, LinkedDo
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -337,7 +350,7 @@ The RecipientOrganizationalUnitScope parameter specifies the organizational unit
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -354,7 +367,7 @@ For a list of built-in management roles that you can assign to a role group, see
 Type: RoleIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -371,7 +384,7 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -388,7 +401,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

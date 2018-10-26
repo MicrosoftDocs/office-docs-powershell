@@ -20,8 +20,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-AccessScope <InOrganization | NotInOrganization | None>] [-AccessTimeControl <PswsHashtable>]
- [-ActivationDate <DateTime>] [-BlockAccess <$true | $false>] [-Comment <String>] [-Confirm]
- [-ContentContainsSensitiveInformation <PswsHashtable[]>] [-ContentPropertyContainsWords <MultiValuedProperty>]
+ [-ActivationDate <DateTime>] [-BlockAccess <$true | $false>] [-BlockAccessScope <$true | $false>]
+ [-Comment <String>] [-Confirm] [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <$true | $false>] [-DocumentIsUnsupported <$true | $false>]
  [-ExceptIfAccessScope <InOrganization | NotInOrganization | None>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
@@ -150,6 +151,18 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 - All: Block access to everyone except the owner and the last modifier.
 
 - PerUser: Block access to external users.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Comment
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".

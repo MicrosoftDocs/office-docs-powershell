@@ -26,14 +26,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchSecurityClaimsUserStore -Identity clm -Description "Sharepoint Users"
+PS C:\>Set-FASTSearchSecurityClaimsUserStore -Identity clm -Description "Sharepoint Users"
 ```
 
 This example updates the description of the "clm" claims user store.
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Get-FASTSearchSecurityClaimsUserStore -Identity cl2 | Set-FASTSearchSecurityClaimsUserStore -Issuer Windows
+PS C:\>Get-FASTSearchSecurityClaimsUserStore -Identity cl2 | Set-FASTSearchSecurityClaimsUserStore -Issuer Windows
 ```
 
 This example sets the issuer of the "cl2" claims user store to "Windows".

@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ADServerSettings
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-AdServerSettings
@@ -17,23 +17,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Instance
 ```
-Set-AdServerSettings [-PreferredServer] <Fqdn> [-Confirm] [-RecipientViewRoot <String>]
- [-ViewEntireForest <$true | $false>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set3
-```
-Set-AdServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentationObject> [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Set-AdServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentationObject>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### FullParams
 ```
-Set-AdServerSettings [-ConfigurationDomainController <Fqdn>] [-Confirm] [-PreferredGlobalCatalog <Fqdn>]
- [-RecipientViewRoot <String>] [-SetPreferredDomainControllers <MultiValuedProperty>]
- [-ViewEntireForest <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-AdServerSettings [-ConfigurationDomainController <Fqdn>] [-PreferredGlobalCatalog <Fqdn>] [-RecipientViewRoot <String>] [-SetPreferredDomainControllers <MultiValuedProperty>] [-ViewEntireForest <$true | $false>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### SingleDC
+```
+Set-AdServerSettings [[-PreferredServer] <Fqdn>] [-RecipientViewRoot <String>] [-ViewEntireForest <$true | $false>]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,9 +64,9 @@ The PreferredServer parameter specifies the FQDN of the domain controller to be 
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: SingleDC
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -77,9 +79,9 @@ The RunspaceServerSettings parameter specifies whether to pass an entire configu
 
 ```yaml
 Type: RunspaceServerSettingsPresentationObject
-Parameter Sets: Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -92,9 +94,9 @@ The ConfigurationDomainController parameter specifies the fully qualified domain
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +115,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -126,9 +128,9 @@ The PreferredGlobalCatalog parameter specifies the FQDN of the global catalog se
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -141,9 +143,9 @@ The RecipientViewRoot parameter specifies the organizational unit (OU) to includ
 
 ```yaml
 Type: String
-Parameter Sets: Set2, Set1
+Parameter Sets: SingleDC, FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -156,9 +158,9 @@ The SetPreferredDomainControllers parameter specifies the list of domain control
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -173,9 +175,9 @@ When you specify a value of $true, the value stored in the RecipientViewRoot par
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2, Set1
+Parameter Sets: SingleDC, FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +192,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

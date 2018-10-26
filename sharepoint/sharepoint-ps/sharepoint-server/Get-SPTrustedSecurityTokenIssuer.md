@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPTrustedSecurityTokenIssuer
 schema: 2.0.0
 ---
@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE---------- 
 ```
-C:\PS>Get-SPTrustedSecurityTokenService
+PS C:\>Get-SPTrustedSecurityTokenService
 ```
 
 This example displays all trusted security token service objects from the farm.
@@ -46,7 +46,7 @@ If you do not specify this parameter, the cmdlet returns all the objects.
 Type: SPTrustedSecurityTokenServicePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -68,7 +68,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

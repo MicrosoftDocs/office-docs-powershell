@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-PublicFolderMigrationRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-PublicFolderMigrationRequest
@@ -17,35 +17,48 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### Rehome
 ```
 Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdParameter> [-RehomeRequest]
- [-AuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] [-DomainController <Fqdn>] [-OutlookAnywhereHostName <Fqdn>] [-PreventCompletion <$true | $false>]
- [-RemoteMailboxLegacyDN <String>] [-RemoteMailboxServerLegacyDN <String>] [-WhatIf]
- [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-PreventCompletion <$true | $false>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
-```
-Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdParameter>
- -RemoteCredential <PSCredential>
- [-AuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] [-DomainController <Fqdn>] [-OutlookAnywhereHostName <Fqdn>] [-PreventCompletion <$true | $false>]
- [-RemoteMailboxLegacyDN <String>] [-RemoteMailboxServerLegacyDN <String>] [-WhatIf]
- [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
-```
-
-### Set1
+### Identity
 ```
 Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdParameter> [-AcceptLargeDataLoss]
  [-AuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
- [-OutlookAnywhereHostName <Fqdn>] [-PreventCompletion <$true | $false>]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-OutlookAnywhereHostName <Fqdn>]
+ [-PreventCompletion <$true | $false>]
  [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RemoteMailboxLegacyDN <String>] [-RemoteMailboxServerLegacyDN <String>]
- [-SkipMerging <SkippableMergeComponent[]>] [-WhatIf] [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
+ [-RemoteMailboxLegacyDN <String>]
+ [-RemoteMailboxServerLegacyDN <String>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### MigrationOutlookAnywherePublicFolder
+```
+Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdParameter> -RemoteCredential <PSCredential>
+ [-AuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-Confirm]
+ [-OutlookAnywhereHostName <Fqdn>]
+ [-PreventCompletion <$true | $false>]
+ [-RemoteMailboxLegacyDN <String>]
+ [-RemoteMailboxServerLegacyDN <String>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +84,7 @@ The Identity parameter specifies the identity of the public folder migration req
 Type: PublicFolderMigrationRequestIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -86,9 +99,9 @@ The RehomeRequest parameter specifies to the Microsoft Exchange Mailbox Replicat
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Rehome
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -105,7 +118,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2
+Parameter Sets: MigrationOutlookAnywherePublicFolder
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -120,9 +133,9 @@ The AcceptLargeDataLoss switch specifies the request should continue even if a l
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -131,13 +144,15 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationMethod
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
-Parameter Sets: (All)
+Parameter Sets: Identity, MigrationOutlookAnywherePublicFolder
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -154,9 +169,9 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -169,9 +184,9 @@ The BatchName parameter specifies a descriptive name for the public folder batch
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -184,9 +199,9 @@ The CompletedRequestAgeLimit parameter specifies how long the request is kept af
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -205,7 +220,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -220,9 +235,9 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Rehome, Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -235,9 +250,9 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 
 ```yaml
 Type: InternalMrsFlag[]
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -260,9 +275,9 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -271,13 +286,15 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookAnywhereHostName
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Identity, MigrationOutlookAnywherePublicFolder
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -296,7 +313,7 @@ The PreventCompletion parameter specifies whether to run the migration request, 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -327,9 +344,9 @@ The Priority parameter specifies the order in which the request should be proces
 
 ```yaml
 Type: Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -344,9 +361,9 @@ The RemoteMailboxLegacyDN parameter specifies the ExchangeLegacyDN of the remote
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity, MigrationOutlookAnywherePublicFolder
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -361,39 +378,9 @@ The RemoteMailboxServerLegacyDN parameter specifies the server legacy DN of the 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity, MigrationOutlookAnywherePublicFolder
 Aliases:
-Applicable:  Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipMerging
-The SkipMerging parameter specifies whether certain stages of a migration are to be skipped for debugging purposes. Don't use this parameter unless directed to do so by Microsoft Customer Service and Support or specific documentation.
-
-```yaml
-Type: SkippableMergeComponent[]
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -416,7 +403,37 @@ When you use the value Unlimited, the completed request isn't automatically remo
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMerging
+The SkipMerging parameter specifies whether certain stages of a migration are to be skipped for debugging purposes. Don't use this parameter unless directed to do so by Microsoft Customer Service and Support or specific documentation.
+
+```yaml
+Type: SkippableMergeComponent[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

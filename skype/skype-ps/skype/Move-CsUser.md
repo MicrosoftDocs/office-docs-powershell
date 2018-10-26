@@ -16,19 +16,12 @@ Moves one or more user accounts enabled for Skype for Business Server to a new R
 
 ###  (Default)
 ```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-Force] [-PassThru] [-WhatIf] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [<CommonParameters>]
+Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-MoveToTeams] [-HostedMigrationOverrideUrl <String>] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-Confirm] [-Force] [-PassThru] [-WhatIf]  [<CommonParameters>]
 ```
 
-### Identity
-```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-PassThru] [-Force] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-WhatIf] [<CommonParameters>]
-```
 
-### Users
-```
-Move-CsUser -UserList <String> [-Target] <Fqdn> [-Credential <PSCredential>] [MoveToTeams] [-HostedMigrationOverrideUrl <String>] [BypassEnterpriseVoiceCheck] [BypassAudioConferencingCheck] [TenantAdminUserName] [-Confirm] [-Report <String>] [-Force] [-PassThru] 
- [-WhatIf] [<CommonParameters>]
-```
+
+
 
 ## DESCRIPTION
 
@@ -135,13 +128,13 @@ Accept wildcard characters: False
 
 
 ### -MoveToTeams
-If specified, the user will be moved to Office 365 as a Teams-only user. This will ensure  incoming chats and calls land in the user's Teams client.
+If specified, the user will be moved to Office 365 as a Teams-only user. This will ensure  incoming chats and calls land in the user's Teams client. This parameter is only available with the upcoming releases of Skype for Business Server 2019 and CU8 for Skype for Business Server 2015.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -189,13 +182,13 @@ Accept wildcard characters: False
 ```
 
 ### -BypassAudioConferencingCheck
-By default, if the on-premise user is configured for dial in conferencing, moving the user to Office 365 will provision the user for Audio Conferencing, for an additional license is required.  If you want to move such a user to Office 365 but do not want to configure them for Audio Conferencing, specify this switch to by-pass the license check.
+By default, if the on-premise user is configured for dial in conferencing, moving the user to Office 365 will provision the user for Audio Conferencing, for an additional license is required.  If you want to move such a user to Office 365 but do not want to configure them for Audio Conferencing, specify this switch to by-pass the license check. This parameter is only available with the upcoming releases of Skype for Business Server 2019 and CU8 for Skype for Business Server 2015.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -203,13 +196,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -BypassEnterpriseVoiceCheck
-By default, if the on-premise user is configured for Enteprise Voice, moving the user to Office 365 will provision the user for Microsoft Phone System, for an additional license is required.  If you want to move such a user to Office 365 but do not want to configure them for Phone System, specify this switch to by-pass the license check.
+By default, if the on-premise user is configured for Enteprise Voice, moving the user to Office 365 will provision the user for Microsoft Phone System, for an additional license is required.  If you want to move such a user to Office 365 but do not want to configure them for Phone System, specify this switch to by-pass the license check. This parameter is only available with the upcoming releases of Skype for Business Server 2019 and CU8 for Skype for Business Server 2015.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -218,37 +211,19 @@ Accept wildcard characters: False
 ```
 
 ### -TenantAdminUserName
-This is an optional parameter that if, specified, pre-populates the username of the tenant admin when moving users to or from Office 365. This can be useful for scenarios involving smart card authentication or 2 factor auth.
+This is an optional parameter that if, specified, pre-populates the username of the tenant admin when moving users to or from Office 365. This can be useful for scenarios involving smart card authentication or 2 factor auth. This parameter is only available with the upcoming releases of Skype for Business Server 2019 and CU8 for Skype for Business Server 2015.
 
 
 ```yaml
 Type: UserIdParameter
 Aliases:
-Applicable: Skype for Business Server 2019
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
-### -UserList
-PARAMVALUE: String
-
-```yaml
-Type: String
-Parameter Sets: Users
-Aliases: 
-Applicable: Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 
 ### -Force

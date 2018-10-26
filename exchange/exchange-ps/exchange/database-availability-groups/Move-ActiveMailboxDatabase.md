@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Move-ActiveMailboxDatabase
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Move-ActiveMailboxDatabase
@@ -17,45 +17,76 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### ActivatePreferred
+```
+Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
+ [-MoveComment <String>]
+ [-SkipActiveCopyChecks]
+ [-SkipClientExperienceChecks]
+ [-SkipCpuChecks]
+ [-SkipHealthChecks]
+ [-SkipLagChecks]
+ [-SkipMaximumActiveDatabasesChecks]
+ [-SkipMoveSuppressionChecks]
+ [-TerminateOnWarning]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### Identity
 ```
 Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>]
- [-Confirm] [-DomainController <Fqdn>]
- [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
- [-MoveComment <String>] [-SkipActiveCopyChecks] [-SkipClientExperienceChecks] [-SkipHealthChecks]
- [-SkipLagChecks] [-TerminateOnWarning] [-WhatIf] [-SkipMaximumActiveDatabasesChecks] [-SkipCpuChecks]
- [-SkipMoveSuppressionChecks] [<CommonParameters>]
-```
-
-### Set2
-```
-Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter>
- [[-ActivateOnServer] <MailboxServerIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
- [-MoveComment <String>] [-TerminateOnWarning] [-WhatIf] [-SkipActiveCopyChecks] [-SkipClientExperienceChecks]
- [-SkipHealthChecks] [-SkipLagChecks] [-SkipMaximumActiveDatabasesChecks] [-Identity] <DatabaseIdParameter>
- [-SkipAllChecks] [-SkipCpuChecks] [-SkipMoveSuppressionChecks] [<CommonParameters>]
-```
-
-### Set3
-```
-Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParameter> [-Confirm]
+ [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
- [-MoveComment <String>] [-SkipActiveCopyChecks] [-SkipClientExperienceChecks] [-SkipHealthChecks]
- [-SkipLagChecks] [-SkipMaximumActiveDatabasesChecks] [-TerminateOnWarning] [-WhatIf]
- [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>]
- [-MoveAllDatabasesOrNone] [-SkipCpuChecks] [-SkipMoveSuppressionChecks] [<CommonParameters>]
+ [-MoveComment <String>]
+ [-SkipActiveCopyChecks]
+ [-SkipClientExperienceChecks]
+ [-SkipCpuChecks]
+ [-SkipHealthChecks]
+ [-SkipLagChecks]
+ [-SkipMaximumActiveDatabasesChecks]
+ [-SkipMoveSuppressionChecks]
+ [-TerminateOnWarning]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### Server
 ```
-Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParameter> [-Confirm]
+Move-ActiveMailboxDatabase [-Server] <MailboxServerIdParameter> [[-ActivateOnServer] <MailboxServerIdParameter>] [-MoveAllDatabasesOrNone]
+ [-Confirm]
  [-DomainController <Fqdn>]
  [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
- [-MoveComment <String>] [-SkipActiveCopyChecks] [-SkipClientExperienceChecks] [-SkipCpuChecks]
- [-SkipHealthChecks] [-SkipLagChecks] [-SkipMaximumActiveDatabasesChecks] [-SkipMoveSuppressionChecks]
- [-TerminateOnWarning] [-WhatIf] [<CommonParameters>]
+ [-MoveComment <String>]
+ [-SkipActiveCopyChecks]
+ [-SkipClientExperienceChecks]
+ [-SkipCpuChecks]
+ [-SkipHealthChecks]
+ [-SkipLagChecks]
+ [-SkipMaximumActiveDatabasesChecks]
+ [-SkipMoveSuppressionChecks]
+ [-TerminateOnWarning]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### SkipAllChecks
+```
+Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer] <MailboxServerIdParameter> [-SkipAllChecks]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MountDialOverride <None | Lossless | GoodAvailability | BestAvailability | BestEffort>]
+ [-MoveComment <String>]
+ [-SkipActiveCopyChecks]
+ [-SkipClientExperienceChecks]
+ [-SkipCpuChecks]
+ [-SkipHealthChecks]
+ [-SkipLagChecks]
+ [-SkipMaximumActiveDatabasesChecks]
+ [-SkipMoveSuppressionChecks]
+ [-TerminateOnWarning]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,9 +137,9 @@ You can't use this parameter with the Server parameter
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, SkipAllChecks
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -131,13 +162,57 @@ You can't use this parameter with the Identity parameter
 
 ```yaml
 Type: MailboxServerIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ActivatePreferredOnServer
+The ActivatePreferredOnServer parameter specifies the Mailbox server where you want to activate all mailbox databases that have copies with an ActivationPreference value of 1. You can use any value that uniquely identifies the server. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- ExchangeLegacyDN
+
+- GUID
+
+You can use this parameter as part of ending maintenance mode on a Mailbox server.
+
+```yaml
+Type: MailboxServerIdParameter
+Parameter Sets: ActivatePreferred
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -SkipAllChecks
+The SkipAllChecks switch specifies whether to skip all checks. You don't need to specify a value with this switch.
+
+This switch is equivalent to specifying all of the individual skip parameters that are available on this cmdlet.
+
+You can only use this switch with the ActivateOnServer parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SkipAllChecks
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -146,9 +221,9 @@ The ActivateOnServer parameter specifies the name of the Mailbox server on which
 
 ```yaml
 Type: MailboxServerIdParameter
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: Identity, Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 2
 Default value: None
@@ -167,7 +242,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +257,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +282,22 @@ The MountDialOverride parameter is used to override the auto database mount dial
 Type: None | Lossless | GoodAvailability | BestAvailability | BestEffort
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveAllDatabasesOrNone
+The MoveAllDatabasesOrNone switch specifies whether to prevent any databases from moving if a single active database on the server can't be moved. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Server
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -222,7 +312,7 @@ The MoveComment parameter specifies an optional administrative reason for the mo
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +329,7 @@ Note: When you use this switch, you can move a database that's currently a seedi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -256,7 +346,22 @@ If the search catalog for the database copy you're activating is in an unhealthy
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCpuChecks
+The SkipCpuChecks switch specifies whether to skip the high CPU utilization checks. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -273,7 +378,7 @@ When you use this switch, you can move the active copy to a database copy that's
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -288,66 +393,11 @@ The SkipLagChecks switch specifies whether to allow a copy to be activated that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TerminateOnWarning
-The TerminateOnWarning switch specifies whether to terminate the task and output an error message if a warning is encountered during the switchover operation. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActivatePreferredOnServer
-The ActivatePreferredOnServer parameter specifies the Mailbox server where you want to activate all mailbox databases that have copies with an ActivationPreference value of 1. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- ExchangeLegacyDN
-
-- GUID
-
-You can use this parameter as part of ending maintenance mode on a Mailbox server.
-
-```yaml
-Type: MailboxServerIdParameter
-Parameter Sets: Set3, Set4
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -360,56 +410,7 @@ Any configured value for MaximumActiveDatabases will still be honored during the
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipAllChecks
-The SkipAllChecks switch specifies whether to skip all checks. You don't need to specify a value with this switch.
-
-This switch is equivalent to specifying all of the individual skip parameters that are available on this cmdlet.
-
-You can only use this switch with the ActivateOnServer parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MoveAllDatabasesOrNone
-The MoveAllDatabasesOrNone switch specifies whether to prevent any databases from moving if a single active database on the server can't be moved. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipCpuChecks
-The SkipCpuChecks switch specifies whether to skip the high CPU utilization checks. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -424,7 +425,37 @@ The SkipMoveSuppressionChecks switch specifies whether to skip the move suppress
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TerminateOnWarning
+The TerminateOnWarning switch specifies whether to terminate the task and output an error message if a warning is encountered during the switchover operation. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

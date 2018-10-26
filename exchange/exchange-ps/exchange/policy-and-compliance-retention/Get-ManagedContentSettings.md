@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### FolderName
 ```
-Get-ManagedContentSettings [-DomainController <Fqdn>] [-FolderName <ELCFolderIdParameter>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Get-ManagedContentSettings [-FolderName <ELCFolderIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-ManagedContentSettings [[-Identity] <ELCContentSettingsIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Get-ManagedContentSettings [[-Identity] <ELCContentSettingsIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +87,7 @@ This parameter can't be used with the Identity parameter.
 
 ```yaml
 Type: ELCFolderIdParameter
-Parameter Sets: Set2
+Parameter Sets: FolderName
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -100,7 +104,7 @@ This parameter can't be used with the FolderName parameter.
 
 ```yaml
 Type: ELCContentSettingsIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False

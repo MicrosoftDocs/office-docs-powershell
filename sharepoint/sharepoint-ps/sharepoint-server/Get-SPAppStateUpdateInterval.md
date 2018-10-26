@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppStateUpdateInterval
 schema: 2.0.0
 ---
@@ -18,7 +18,7 @@ Get-SPAppStateUpdateInterval [-AssignmentCollection <SPAssignmentCollection>] [<
 ```
 
 ## DESCRIPTION
-Use the Get-SPAppStateUpdateInterval cmdlet to return the interval in hours between updates of the the app state update job.
+Use the Get-SPAppStateUpdateInterval cmdlet to return the interval in hours between updates of the app state update job.
 The app state update job updates the app states, including app updates, in SharePoint based on information in the SharePoint Store.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
@@ -47,7 +47,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

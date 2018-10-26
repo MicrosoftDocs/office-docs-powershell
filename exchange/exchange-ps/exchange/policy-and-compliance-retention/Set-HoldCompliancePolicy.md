@@ -13,25 +13,32 @@ This cmdlet is available only in the Office 365 Security & Compliance Center. Fo
 
 Use the Set-HoldCompliancePolicy cmdlet to modify existing preservation policies in the Security & Compliance Center.
 
-The Set-HoldCompliancePolicy cmdlet has been replaced by the Set-RetentionCompliancePolicy cmdlet. If you have any scripts that use the Set-HoldCompliancePolicy cmdlet, update them to use the Set-RetentionCompliancePolicy cmdlet.
+Note: The Set-HoldCompliancePolicy cmdlet has been replaced by the Set-RetentionCompliancePolicy cmdlet. If you have scripts that use Set-HoldCompliancePolicy, update them to use Set-RetentionCompliancePolicy.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set2
+### RetryDistribution
 ```
-Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter> [-AddExchangeLocation <MultiValuedProperty>]
- [-AddPublicFolderLocation <MultiValuedProperty>] [-AddSharePointLocation <MultiValuedProperty>]
- [-Comment <String>] [-Confirm] [-Enabled <$true | $false>] [-Force]
- [-RemoveExchangeLocation <MultiValuedProperty>] [-RemovePublicFolderLocation <MultiValuedProperty>]
- [-RemoveSharePointLocation <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Set-HoldCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-AddExchangeLocation <MultiValuedProperty>]
+ [-AddPublicFolderLocation <MultiValuedProperty>]
+ [-AddSharePointLocation <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <$true | $false>] [-Force]
+ [-RemoveExchangeLocation <MultiValuedProperty>]
+ [-RemovePublicFolderLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocation <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +89,7 @@ The RetryDistribution switch specifies whether to redistribute the policy to all
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -113,7 +120,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -128,7 +135,7 @@ The AddPublicFolderLocation parameter specifies that you want to add all public 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -147,7 +154,7 @@ SharePoint Online sites can't be added to the policy until they have been indexe
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -162,7 +169,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -200,7 +207,7 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -215,7 +222,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -246,7 +253,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -261,7 +268,7 @@ The RemovePublicFolderLocation parameter specifies that you want to remove all p
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -278,7 +285,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False

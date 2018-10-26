@@ -170,11 +170,15 @@ The EventType parameter filters the report by the event type. Valid values are:
 
 - Malicious URL reputation
 
+- URL detonation\*
+
 - Message passed
 
 - Phish ZAP
 
 - User impersonation\*
+
+- Brand impersonation
 
 - ZAP
 

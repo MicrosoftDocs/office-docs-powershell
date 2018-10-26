@@ -31,21 +31,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation
+PS C:\>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation
 ```
 
 This example displays a list of trusted file locations for the Excel Services Application Web service application named MyExcelService.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation | Format-list *
+PS C:\>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation | Format-list *
 ```
 
 This example displays a list of trusted file locations for the Excel Services Application Web service application named MyExcelService, and then formats the list of properties into a table.
 
 ### --------------EXAMPLE 3-------------- 
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation | where {$_.ExternalDataAllowed -ne "None"}
+PS C:\>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelFileLocation | where {$_.ExternalDataAllowed -ne "None"}
 ```
 
 This example displays a list of trusted file locations that allow external data connectivity for the Excel Services Application Web service application named MyExcelService.

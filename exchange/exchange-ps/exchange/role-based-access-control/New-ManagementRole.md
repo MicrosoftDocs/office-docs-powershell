@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-ManagementRole
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # New-ManagementRole
@@ -17,17 +17,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### NewDerivedRole
 ```
-New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf]
- [-EnabledCmdlets <String[]>] [<CommonParameters>]
+New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-EnabledCmdlets <String[]>]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### UnScopedTopLevelRole
 ```
-New-ManagementRole [-Name] <String> [-UnScopedTopLevel] [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+New-ManagementRole [-Name] <String> [-UnScopedTopLevel]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,7 +85,7 @@ The Name parameter specifies the name of the role. The maximum length of the nam
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: 1
 Default value: None
@@ -91,9 +98,9 @@ The Parent parameter specifies the identity of the role to copy. If the name of 
 
 ```yaml
 Type: RoleIdParameter
-Parameter Sets: Set1
+Parameter Sets: NewDerivedRole
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None
@@ -106,15 +113,17 @@ This parameter is available on in on-premises Exchange.
 
 By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
-The UnScopedTopLevel switch specifies that the role should be a custom, empty role. You don't need to specify a value with this switch.
+The UnScopedTopLevel switch specifies that the role new role is an unscoped top-level management role (a custom, empty role). You don't need to specify a value with this switch.
 
-If you use this switch, you can't use the Parent parameter.
+You can only add custom scripts or non-Exchange cmdlets to an unscoped top-level management role. For more information, see Create an unscoped role(https://technet.microsoft.com/library/dd876886.aspx).
+
+You can't use this switch with the Parent parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: UnScopedTopLevelRole
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -133,7 +142,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -148,7 +157,7 @@ The Description parameter specifies the description that's displayed when the ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -165,11 +174,28 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnabledCmdlets
+The EnabledCmdlets parameter specifies the cmdlets that are copied from the parent role. You can specify multiple values separated by commas.
+
+You can only use this parameter with the Parent parameter when you copy a role.
+
+```yaml
+Type: String[]
+Parameter Sets: NewDerivedRole
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -197,28 +223,11 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnabledCmdlets
-The EnabledCmdlets parameter specifies the cmdlets that are copied from the parent role. You can specify multiple values separated by commas.
-
-You can only use this parameter with the Parent parameter when you copy a role.
-
-```yaml
-Type: String[]
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

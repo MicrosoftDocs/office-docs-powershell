@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWebApplication
 schema: 2.0.0
 ---
@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>Get-SPWebApplication http://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
+PS C:\>Get-SPWebApplication http://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
 ```
 
 This example prompts and then removes the Internet zone Web application extension on the Web application at http://sitename.
@@ -49,7 +49,7 @@ This command does not remove the content databases or the IIS Web site.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Remove-SPWebApplication http://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
+PS C:\>Remove-SPWebApplication http://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
 ```
 
 This example permanently removes the Web application, all content databases and the IIS Web site at http://sitename
@@ -66,7 +66,7 @@ The type must be a valid URL, in the form http://server_name, or a valid name, i
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -85,7 +85,7 @@ The type must be any one of the following values: Default, Intranet, Internet, E
 Type: SPUrlZone
 Parameter Sets: RemoveZoneOfWebApp
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -107,7 +107,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ If this parameter is not provided, the IIS site is not removed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ If this parameter is not provided, no content databases are removed.
 Type: SwitchParameter
 Parameter Sets: RemoveWebApp
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
