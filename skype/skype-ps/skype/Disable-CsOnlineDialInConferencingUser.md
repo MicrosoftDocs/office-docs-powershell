@@ -13,7 +13,7 @@ Use the Disable-CsOnlineDialInConferencingUser cmdlet to prevent a Skype for Bus
 ## SYNTAX
 
 ```
-Disable-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
+Disable-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-Confirm]
  [-DomainController <Object>] [-Force] [-SendEmail] [-SendEmailFromAddress <Object>]
  [-SendEmailFromDisplayName <Object>] [-SendEmailToAddress <Object>] [-Tenant <Object>]
  [-TenantDomain <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
@@ -55,22 +55,6 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
