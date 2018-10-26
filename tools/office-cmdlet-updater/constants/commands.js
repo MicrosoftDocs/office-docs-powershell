@@ -11,7 +11,7 @@ module.exports = {
 	SKYPE_CREATE_SESSION: '$session = New-CsOnlineSession -Credential $cred -Verbose',
 	SKYPE_IMPORT_SESSION: 'Import-PSSession -Session $session',
 	SHAREPOINT_INSTALL_MODULE: 'Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking',
-	WHITEBOARD_INSTALL_MODULE: 'Install-Module -Name WhiteboardAdmin',
+	WHITEBOARD_INSTALL_MODULE: 'Install-Module -Name WhiteboardAdmin -Force',
 	EXCHANGE_INSTALL_MODULE: 'Install-Module -Name ExchangeOnlineShell -Force',
 	EXCHANGE_GET_CRED: '$UserCredential = Get-Credential',
 	EXCHANGE_GET_SESSION: '$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $cred -Authentication Basic -AllowRedirection',
@@ -20,5 +20,5 @@ module.exports = {
 	SET_PASS: '$Password = \'{}\'',
 	CONVERT_PASS_TO_SEC_STRING: '$SecureString = ConvertTo-SecureString -AsPlainText $Password -Force',
 	CREAT_CRED: '$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username,$SecureString',
-	STUFFHUB_INSTALL: 'Install-Module -Name MicrosoftStaffHub -RequiredVersion 1.0.0-alpha -AllowPrerelease'
+	STUFFHUB_INSTALL: 'Install-Module -Name MicrosoftStaffHub -RequiredVersion 1.0.0-alpha -AllowPrerelease -Force'
 };
