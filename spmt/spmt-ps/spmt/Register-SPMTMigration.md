@@ -27,8 +27,8 @@ After a session is registered, the user can add a migration task to the migratio
 ### Create a migration session and connecting to SPO. 
 ```
 #Define SPO target#
-$Global:SPOUrl = “https://contoso.sharepoint.com”
-$Global:UserName = “admin@contoso.onmicrosoft.com”
+$Global:SPOUrl = "https://contoso.sharepoint.com"
+$Global:UserName = "admin@contoso.onmicrosoft.com"
 $Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
 $Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
 
