@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ExchangeServer
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-ExchangeServer
@@ -24,6 +24,7 @@ Set-ExchangeServer [-Identity] <ServerIdParameter> [-Confirm] [-CustomerFeedback
  [-StaticDomainControllers <MultiValuedProperty>] [-StaticExcludedDomainControllers <MultiValuedProperty>]
  [-StaticGlobalCatalogs <MultiValuedProperty>] [-WhatIf]
  [-MailboxProvisioningAttributes <MailboxProvisioningAttributes>] [-MonitoringGroup <String>]
+ [-InternetWebProxyBypassList <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -64,7 +65,7 @@ The Identity parameter specifies the GUID, distinguished name (DN), or name of t
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -83,7 +84,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -98,7 +99,7 @@ The CustomerFeedbackEnabled parameter specifies whether the Exchange server is e
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -115,7 +116,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -130,7 +131,7 @@ The ErrorReportingEnabled parameter specifies whether error reporting is enabled
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -139,13 +140,15 @@ Accept wildcard characters: False
 ```
 
 ### -InternetWebProxy
-The InternetWebProxy parameter specifies which web proxy servers, such as computers running Forefront Threat Management Gateway, Exchange should use to reach the Internet.
+The InternetWebProxy parameter specifies the web proxy server that the Exchange server uses to reach the internet. A valid value for this parameter is the URL of the web proxy server.
+
+In Exchange 2016 or later, to configure a list of servers that bypass the web proxy server and connect to the internet directly, use the InternetWebProxyBypassList parameter.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +163,7 @@ The ProductKey parameter specifies the server product key.
 Type: ProductKey
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -175,7 +178,7 @@ The StaticConfigDomainController parameter specifies whether to configure a doma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +193,7 @@ The StaticDomainControllers parameter specifies whether to configure a list of d
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -205,7 +208,7 @@ The StaticExcludedDomainControllers parameter specifies whether to exclude a lis
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -220,7 +223,7 @@ The StaticGlobalCatalogs parameter specifies whether to configure a list of glob
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -235,7 +238,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +253,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MailboxProvisioningAttributes
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -265,12 +268,33 @@ The MonitoringGroup parameter specifies how to add your Exchange servers to moni
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -InternetWebProxyBypassList
+The InternetWebProxyBypassList parameter specifies a list of servers that bypass the web proxy server specified by the InternetWebProxy parameter. You identify the servers by their FQDN (for example, server01.contoso.com).
+
+To enter multiple values and overwrite any existing FQDN entries, use the following syntax: \<FQDN1\>,\<FQDN2\>,...\<FQDNX\>.
+
+To add or remove one or more values without affecting any existing FQDN entries, use the following syntax: @{Add="\<FQDN1\>","\<FQDN2\>"...; Remove="\<FQDN1\>","\<FQDN\>"...}.
+
+The maximum number of servers you can enter with this parameter is 100.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters

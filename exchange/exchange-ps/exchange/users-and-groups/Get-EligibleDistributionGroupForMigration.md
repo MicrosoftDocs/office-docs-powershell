@@ -17,17 +17,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### Identity
 ```
 Get-EligibleDistributionGroupForMigration [[-Identity] <DistributionGroupIdParameter>]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-Organization <OrganizationIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### ManagedBy
 ```
 Get-EligibleDistributionGroupForMigration [-ManagedBy <GeneralRecipientIdParameter>]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-Organization <OrganizationIdParameter>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
@@ -52,7 +54,7 @@ You can't use this parameter with the ManagedBy parameter.
 
 ```yaml
 Type: DistributionGroupIdParameter
-Parameter Sets: Set3
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -85,7 +87,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: GeneralRecipientIdParameter
-Parameter Sets: Set2
+Parameter Sets: ManagedBy
 Aliases:
 Applicable: Exchange Online
 Required: False

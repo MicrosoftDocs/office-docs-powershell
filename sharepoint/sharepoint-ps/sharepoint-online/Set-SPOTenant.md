@@ -25,6 +25,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StartASiteFormUrl <String>] [-UsePersistentCookiesForExplorerView <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultSharingLinkType <SharingLinkType>]
+ [-DisableWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>] [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>] [-IPAddressEnforcement <Boolean>] [-IPAddressWACTokenLifetime <Int32>]
@@ -571,6 +572,30 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisabledWebPartIds
+PARAMVALUE: <Guid>[,<Guid>,...]
+ 
+Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Only web parts that utilize third-party services (Amazon Kindle, YouTube, Twitter) can be disabled in such a manner.
+ 
+To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4)
+
+You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOSite to get DisabledWebPartIds.
+
+To reenable disabled web parts, use the Set-SPOSite with the -DisabledWebPartIds parameter and corresponding GUIDs. 
+ 
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+ 
 Required: False
 Position: Named
 Default value: None
@@ -1168,6 +1193,7 @@ Accept wildcard characters: False
 ### -UserVoiceForFeedbackEnabled
 PARAMVALUE: $true | $false
 
+When set to $true, the "Feedback" link will be shown at the bottom of all modern SharePoint Online pages. The "Feedback" link will allow the end user to fill out a feedback form inside SharePoint Online which will then create an entry in the public SharePoint UserVoice topic. When set to $false, feedback link will not be shown anymore. It may take up to an hour for a change of this property to be reflected consistently throughout your tenant.
 
 ```yaml
 Type: Boolean
@@ -1177,7 +1203,7 @@ Applicable: SharePoint Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: $true
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1193,9 +1219,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Upgrade-SPOSite](Upgrade-SPOSite.md)
 

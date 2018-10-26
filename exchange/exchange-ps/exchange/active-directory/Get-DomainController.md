@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-DomainController
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-DomainController
@@ -17,14 +17,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### GlobalCatalog
 ```
-Get-DomainController [-GlobalCatalog] [-Credential <NetworkCredential>] [-Forest <Fqdn>] [<CommonParameters>]
+Get-DomainController [-GlobalCatalog] [-Forest <Fqdn>]
+ [-Credential <NetworkCredential>] [<CommonParameters>]
 ```
 
-### Set1
+### DomainController
 ```
-Get-DomainController [-Credential <NetworkCredential>] [-DomainName <Fqdn>] [<CommonParameters>]
+Get-DomainController [-DomainName <Fqdn>]
+ [-Credential <NetworkCredential>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,9 +55,9 @@ The GlobalCatalog switch specifies whether the command should return a list of g
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: GlobalCatalog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -74,7 +76,7 @@ If you use the Forest parameter, the credentials are used to access the forest.
 Type: NetworkCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -87,9 +89,9 @@ The DomainName parameter specifies the fully qualified domain name (FQDN) of the
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: DomainController
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -102,9 +104,9 @@ The Forest parameter specifies the FQDN of the root domain of the forest for whi
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2
+Parameter Sets: GlobalCatalog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

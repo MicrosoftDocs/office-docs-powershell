@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-ReceiveConnector
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-ReceiveConnector
@@ -17,190 +17,347 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Custom
 ```
-New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty>
+New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty> [-Custom]
  [-AdvertiseClientSettings <$true | $false>]
  [-AuthMechanism <None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
- [-Banner <String>] [-BinaryMimeEnabled <$true | $false>] [-ChunkingEnabled <$true | $false>]
- [-Comment <String>] [-Confirm] [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
- [-ConnectionTimeout <EnhancedTimeSpan>] [-Custom] [-DefaultDomain <AcceptedDomainIdParameter>]
- [-DeliveryStatusNotificationEnabled <$true | $false>] [-DomainController <Fqdn>]
- [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
- [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
- [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
- [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
- [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
- [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
- [-MaxMessageSize <ByteQuantifiedSize>] [-MaxProtocolErrors <Unlimited>] [-MaxRecipientsPerMessage <Int32>]
- [-MessageRateLimit <Unlimited>] [-MessageRateSource <None | IPAddress | User | All>]
+ [-AuthTarpitInterval <EnhancedTimeSpan>]
+ [-Banner <String>]
+ [-BinaryMimeEnabled <$true | $false>]
+ [-ChunkingEnabled <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
+ [-ConnectionTimeout <EnhancedTimeSpan>]
+ [-DefaultDomain <AcceptedDomainIdParameter>]
+ [-DeliveryStatusNotificationEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-DomainSecureEnabled <$true | $false>]
+ [-EightBitMimeEnabled <$true | $false>]
+ [-EnableAuthGSSAPI <$true | $false>]
+ [-Enabled <$true | $false>]
+ [-EnhancedStatusCodesEnabled <$true | $false>]
+ [-ExtendedProtectionPolicy <None | Allow | Require>]
+ [-Fqdn <Fqdn>]
+ [-LongAddressesEnabled <$true | $false>]
+ [-MaxAcknowledgementDelay <EnhancedTimeSpan>]
+ [-MaxHeaderSize <ByteQuantifiedSize>]
+ [-MaxHopCount <Int32>]
+ [-MaxInboundConnection <Unlimited>]
+ [-MaxInboundConnectionPercentagePerSource <Int32>]
+ [-MaxInboundConnectionPerSource <Unlimited>]
+ [-MaxLocalHopCount <Int32>]
+ [-MaxLogonFailures <Int32>]
+ [-MaxMessageSize <ByteQuantifiedSize>]
+ [-MaxProtocolErrors <Unlimited>]
+ [-MaxRecipientsPerMessage <Int32>]
+ [-MessageRateLimit <Unlimited>]
+ [-MessageRateSource <None | IPAddress | User | All>]
  [-OrarEnabled <$true | $false>]
  [-PermissionGroups <None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom>]
- [-PipeliningEnabled <$true | $false>] [-ProtocolLoggingLevel <None | Verbose>]
- [-RequireEHLODomain <$true | $false>] [-RequireTLS <$true | $false>] [-Server <ServerIdParameter>]
- [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>] [-SuppressXAnonymousTls <$true | $false>]
- [-TarpitInterval <EnhancedTimeSpan>] [-TlsDomainCapabilities <MultiValuedProperty>] [-WhatIf]
- [-ServiceDiscoveryFqdn <Fqdn>] [-TlsCertificateName <SmtpX509Identifier>]
- [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
- [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
+ [-PipeliningEnabled <$true | $false>]
+ [-ProtocolLoggingLevel <None | Verbose>]
+ [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
  [-RejectReservedTopLevelRecipientDomains <$true | $false>]
- [-RejectSingleLabelRecipientDomains <$true | $false>] [<CommonParameters>]
+ [-RejectSingleLabelRecipientDomains <$true | $false>]
+ [-RequireEHLODomain <$true | $false>]
+ [-RequireTLS <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-ServiceDiscoveryFqdn <Fqdn>]
+ [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>]
+ [-SuppressXAnonymousTls <$true | $false>]
+ [-TarpitInterval <EnhancedTimeSpan>]
+ [-TlsCertificateName <SmtpX509Identifier>]
+ [-TlsDomainCapabilities <MultiValuedProperty>]
+ [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Internet
 ```
 New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> [-Internet]
- [-RemoteIPRanges <MultiValuedProperty>] [-AdvertiseClientSettings <$true | $false>]
+ [-RemoteIPRanges <MultiValuedProperty>]
+ [-AdvertiseClientSettings <$true | $false>]
  [-AuthMechanism <None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
- [-Banner <String>] [-BinaryMimeEnabled <$true | $false>] [-ChunkingEnabled <$true | $false>]
- [-Comment <String>] [-Confirm] [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
- [-ConnectionTimeout <EnhancedTimeSpan>] [-DefaultDomain <AcceptedDomainIdParameter>]
- [-DeliveryStatusNotificationEnabled <$true | $false>] [-DomainController <Fqdn>]
- [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
- [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
- [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
- [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
- [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
- [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
- [-MaxMessageSize <ByteQuantifiedSize>] [-MaxProtocolErrors <Unlimited>] [-MaxRecipientsPerMessage <Int32>]
- [-MessageRateLimit <Unlimited>] [-MessageRateSource <None | IPAddress | User | All>]
+ [-AuthTarpitInterval <EnhancedTimeSpan>]
+ [-Banner <String>]
+ [-BinaryMimeEnabled <$true | $false>]
+ [-ChunkingEnabled <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
+ [-ConnectionTimeout <EnhancedTimeSpan>]
+ [-DefaultDomain <AcceptedDomainIdParameter>]
+ [-DeliveryStatusNotificationEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-DomainSecureEnabled <$true | $false>]
+ [-EightBitMimeEnabled <$true | $false>]
+ [-EnableAuthGSSAPI <$true | $false>]
+ [-Enabled <$true | $false>]
+ [-EnhancedStatusCodesEnabled <$true | $false>]
+ [-ExtendedProtectionPolicy <None | Allow | Require>]
+ [-Fqdn <Fqdn>]
+ [-LongAddressesEnabled <$true | $false>]
+ [-MaxAcknowledgementDelay <EnhancedTimeSpan>]
+ [-MaxHeaderSize <ByteQuantifiedSize>]
+ [-MaxHopCount <Int32>]
+ [-MaxInboundConnection <Unlimited>]
+ [-MaxInboundConnectionPercentagePerSource <Int32>]
+ [-MaxInboundConnectionPerSource <Unlimited>]
+ [-MaxLocalHopCount <Int32>]
+ [-MaxLogonFailures <Int32>]
+ [-MaxMessageSize <ByteQuantifiedSize>]
+ [-MaxProtocolErrors <Unlimited>]
+ [-MaxRecipientsPerMessage <Int32>]
+ [-MessageRateLimit <Unlimited>]
+ [-MessageRateSource <None | IPAddress | User | All>]
  [-OrarEnabled <$true | $false>]
  [-PermissionGroups <None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom>]
- [-PipeliningEnabled <$true | $false>] [-ProtocolLoggingLevel <None | Verbose>]
- [-RequireEHLODomain <$true | $false>] [-RequireTLS <$true | $false>] [-Server <ServerIdParameter>]
- [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>] [-SuppressXAnonymousTls <$true | $false>]
- [-TarpitInterval <EnhancedTimeSpan>] [-TlsDomainCapabilities <MultiValuedProperty>] [-WhatIf]
- [-ServiceDiscoveryFqdn <Fqdn>] [-TlsCertificateName <SmtpX509Identifier>]
- [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
- [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
+ [-PipeliningEnabled <$true | $false>]
+ [-ProtocolLoggingLevel <None | Verbose>]
+ [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
  [-RejectReservedTopLevelRecipientDomains <$true | $false>]
- [-RejectSingleLabelRecipientDomains <$true | $false>] [<CommonParameters>]
+ [-RejectSingleLabelRecipientDomains <$true | $false>]
+ [-RequireEHLODomain <$true | $false>]
+ [-RequireTLS <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-ServiceDiscoveryFqdn <Fqdn>]
+ [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>]
+ [-SuppressXAnonymousTls <$true | $false>]
+ [-TarpitInterval <EnhancedTimeSpan>]
+ [-TlsCertificateName <SmtpX509Identifier>]
+ [-TlsDomainCapabilities <MultiValuedProperty>]
+ [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### Partner
 ```
-New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> [-Partner]
- -RemoteIPRanges <MultiValuedProperty> [-AdvertiseClientSettings <$true | $false>]
+New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPRanges <MultiValuedProperty> [-Partner]
+ [-AdvertiseClientSettings <$true | $false>]
  [-AuthMechanism <None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
- [-Banner <String>] [-BinaryMimeEnabled <$true | $false>] [-ChunkingEnabled <$true | $false>]
- [-Comment <String>] [-Confirm] [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
- [-ConnectionTimeout <EnhancedTimeSpan>] [-DefaultDomain <AcceptedDomainIdParameter>]
- [-DeliveryStatusNotificationEnabled <$true | $false>] [-DomainController <Fqdn>]
- [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
- [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
- [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
- [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
- [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
- [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
- [-MaxMessageSize <ByteQuantifiedSize>] [-MaxProtocolErrors <Unlimited>] [-MaxRecipientsPerMessage <Int32>]
- [-MessageRateLimit <Unlimited>] [-MessageRateSource <None | IPAddress | User | All>]
+ [-AuthTarpitInterval <EnhancedTimeSpan>]
+ [-Banner <String>]
+ [-BinaryMimeEnabled <$true | $false>]
+ [-ChunkingEnabled <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
+ [-ConnectionTimeout <EnhancedTimeSpan>]
+ [-DefaultDomain <AcceptedDomainIdParameter>]
+ [-DeliveryStatusNotificationEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-DomainSecureEnabled <$true | $false>]
+ [-EightBitMimeEnabled <$true | $false>]
+ [-EnableAuthGSSAPI <$true | $false>]
+ [-Enabled <$true | $false>]
+ [-EnhancedStatusCodesEnabled <$true | $false>]
+ [-ExtendedProtectionPolicy <None | Allow | Require>]
+ [-Fqdn <Fqdn>]
+ [-LongAddressesEnabled <$true | $false>]
+ [-MaxAcknowledgementDelay <EnhancedTimeSpan>]
+ [-MaxHeaderSize <ByteQuantifiedSize>]
+ [-MaxHopCount <Int32>]
+ [-MaxInboundConnection <Unlimited>]
+ [-MaxInboundConnectionPercentagePerSource <Int32>]
+ [-MaxInboundConnectionPerSource <Unlimited>]
+ [-MaxLocalHopCount <Int32>]
+ [-MaxLogonFailures <Int32>]
+ [-MaxMessageSize <ByteQuantifiedSize>]
+ [-MaxProtocolErrors <Unlimited>]
+ [-MaxRecipientsPerMessage <Int32>]
+ [-MessageRateLimit <Unlimited>]
+ [-MessageRateSource <None | IPAddress | User | All>]
  [-OrarEnabled <$true | $false>]
  [-PermissionGroups <None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom>]
- [-PipeliningEnabled <$true | $false>] [-ProtocolLoggingLevel <None | Verbose>]
- [-RequireEHLODomain <$true | $false>] [-RequireTLS <$true | $false>] [-Server <ServerIdParameter>]
- [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>] [-SuppressXAnonymousTls <$true | $false>]
- [-TarpitInterval <EnhancedTimeSpan>] [-TlsDomainCapabilities <MultiValuedProperty>] [-WhatIf]
- [-ServiceDiscoveryFqdn <Fqdn>] [-TlsCertificateName <SmtpX509Identifier>]
- [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
- [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
+ [-PipeliningEnabled <$true | $false>]
+ [-ProtocolLoggingLevel <None | Verbose>]
+ [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
  [-RejectReservedTopLevelRecipientDomains <$true | $false>]
- [-RejectSingleLabelRecipientDomains <$true | $false>] [<CommonParameters>]
+ [-RejectSingleLabelRecipientDomains <$true | $false>]
+ [-RequireEHLODomain <$true | $false>]
+ [-RequireTLS <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-ServiceDiscoveryFqdn <Fqdn>]
+ [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>]
+ [-SuppressXAnonymousTls <$true | $false>]
+ [-TarpitInterval <EnhancedTimeSpan>]
+ [-TlsDomainCapabilities <MultiValuedProperty>]
+ [-TlsCertificateName <SmtpX509Identifier>]
+ [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Internal
 ```
-New-ReceiveConnector [-Name] <String> [-Bindings <MultiValuedProperty>] [-Internal]
- -RemoteIPRanges <MultiValuedProperty> [-AdvertiseClientSettings <$true | $false>]
+New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bindings <MultiValuedProperty>] [-Internal]
+ [-AdvertiseClientSettings <$true | $false>]
  [-AuthMechanism <None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
- [-Banner <String>] [-BinaryMimeEnabled <$true | $false>] [-ChunkingEnabled <$true | $false>]
- [-Comment <String>] [-Confirm] [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
- [-ConnectionTimeout <EnhancedTimeSpan>] [-DefaultDomain <AcceptedDomainIdParameter>]
- [-DeliveryStatusNotificationEnabled <$true | $false>] [-DomainController <Fqdn>]
- [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
- [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
- [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
- [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
- [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
- [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
- [-MaxMessageSize <ByteQuantifiedSize>] [-MaxProtocolErrors <Unlimited>] [-MaxRecipientsPerMessage <Int32>]
- [-MessageRateLimit <Unlimited>] [-MessageRateSource <None | IPAddress | User | All>]
+ [-AuthTarpitInterval <EnhancedTimeSpan>]
+ [-Banner <String>]
+ [-BinaryMimeEnabled <$true | $false>]
+ [-ChunkingEnabled <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
+ [-ConnectionTimeout <EnhancedTimeSpan>]
+ [-DefaultDomain <AcceptedDomainIdParameter>]
+ [-DeliveryStatusNotificationEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-DomainSecureEnabled <$true | $false>]
+ [-EightBitMimeEnabled <$true | $false>]
+ [-EnableAuthGSSAPI <$true | $false>]
+ [-Enabled <$true | $false>]
+ [-EnhancedStatusCodesEnabled <$true | $false>]
+ [-ExtendedProtectionPolicy <None | Allow | Require>]
+ [-Fqdn <Fqdn>]
+ [-LongAddressesEnabled <$true | $false>]
+ [-MaxAcknowledgementDelay <EnhancedTimeSpan>]
+ [-MaxHeaderSize <ByteQuantifiedSize>]
+ [-MaxHopCount <Int32>]
+ [-MaxInboundConnection <Unlimited>]
+ [-MaxInboundConnectionPercentagePerSource <Int32>]
+ [-MaxInboundConnectionPerSource <Unlimited>]
+ [-MaxLocalHopCount <Int32>]
+ [-MaxLogonFailures <Int32>]
+ [-MaxMessageSize <ByteQuantifiedSize>]
+ [-MaxProtocolErrors <Unlimited>]
+ [-MaxRecipientsPerMessage <Int32>]
+ [-MessageRateLimit <Unlimited>]
+ [-MessageRateSource <None | IPAddress | User | All>]
  [-OrarEnabled <$true | $false>]
  [-PermissionGroups <None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom>]
- [-PipeliningEnabled <$true | $false>] [-ProtocolLoggingLevel <None | Verbose>]
- [-RequireEHLODomain <$true | $false>] [-RequireTLS <$true | $false>] [-Server <ServerIdParameter>]
- [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>] [-SuppressXAnonymousTls <$true | $false>]
- [-TarpitInterval <EnhancedTimeSpan>] [-TlsDomainCapabilities <MultiValuedProperty>] [-WhatIf]
- [-ServiceDiscoveryFqdn <Fqdn>] [-TlsCertificateName <SmtpX509Identifier>]
- [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
- [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
+ [-PipeliningEnabled <$true | $false>]
+ [-ProtocolLoggingLevel <None | Verbose>]
+ [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
  [-RejectReservedTopLevelRecipientDomains <$true | $false>]
- [-RejectSingleLabelRecipientDomains <$true | $false>] [<CommonParameters>]
+ [-RejectSingleLabelRecipientDomains <$true | $false>]
+ [-RequireEHLODomain <$true | $false>]
+ [-RequireTLS <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-ServiceDiscoveryFqdn <Fqdn>]
+ [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>]
+ [-SuppressXAnonymousTls <$true | $false>]
+ [-TarpitInterval <EnhancedTimeSpan>]
+ [-TlsCertificateName <SmtpX509Identifier>]
+ [-TlsDomainCapabilities <MultiValuedProperty>]
+ [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### Client
 ```
-New-ReceiveConnector [-Name] <String> [-Bindings <MultiValuedProperty>] [-Client]
- -RemoteIPRanges <MultiValuedProperty> [-AdvertiseClientSettings <$true | $false>]
+New-ReceiveConnector [-Name] <String> -RemoteIPRanges <MultiValuedProperty> [-Bindings <MultiValuedProperty>] [-Client]
+ [-AdvertiseClientSettings <$true | $false>]
  [-AuthMechanism <None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
- [-Banner <String>] [-BinaryMimeEnabled <$true | $false>] [-ChunkingEnabled <$true | $false>]
- [-Comment <String>] [-Confirm] [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
- [-ConnectionTimeout <EnhancedTimeSpan>] [-DefaultDomain <AcceptedDomainIdParameter>]
- [-DeliveryStatusNotificationEnabled <$true | $false>] [-DomainController <Fqdn>]
- [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
- [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
- [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
- [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
- [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
- [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
- [-MaxMessageSize <ByteQuantifiedSize>] [-MaxProtocolErrors <Unlimited>] [-MaxRecipientsPerMessage <Int32>]
- [-MessageRateLimit <Unlimited>] [-MessageRateSource <None | IPAddress | User | All>]
+ [-AuthTarpitInterval <EnhancedTimeSpan>]
+ [-Banner <String>]
+ [-BinaryMimeEnabled <$true | $false>]
+ [-ChunkingEnabled <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
+ [-ConnectionTimeout <EnhancedTimeSpan>]
+ [-DefaultDomain <AcceptedDomainIdParameter>]
+ [-DeliveryStatusNotificationEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-DomainSecureEnabled <$true | $false>]
+ [-EightBitMimeEnabled <$true | $false>]
+ [-EnableAuthGSSAPI <$true | $false>]
+ [-Enabled <$true | $false>]
+ [-EnhancedStatusCodesEnabled <$true | $false>]
+ [-ExtendedProtectionPolicy <None | Allow | Require>]
+ [-Fqdn <Fqdn>]
+ [-LongAddressesEnabled <$true | $false>]
+ [-MaxAcknowledgementDelay <EnhancedTimeSpan>]
+ [-MaxHeaderSize <ByteQuantifiedSize>]
+ [-MaxHopCount <Int32>]
+ [-MaxInboundConnection <Unlimited>]
+ [-MaxInboundConnectionPercentagePerSource <Int32>]
+ [-MaxInboundConnectionPerSource <Unlimited>]
+ [-MaxLocalHopCount <Int32>]
+ [-MaxLogonFailures <Int32>]
+ [-MaxMessageSize <ByteQuantifiedSize>]
+ [-MaxProtocolErrors <Unlimited>]
+ [-MaxRecipientsPerMessage <Int32>]
+ [-MessageRateLimit <Unlimited>]
+ [-MessageRateSource <None | IPAddress | User | All>]
  [-OrarEnabled <$true | $false>]
  [-PermissionGroups <None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom>]
- [-PipeliningEnabled <$true | $false>] [-ProtocolLoggingLevel <None | Verbose>]
- [-RequireEHLODomain <$true | $false>] [-RequireTLS <$true | $false>] [-Server <ServerIdParameter>]
- [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>] [-SuppressXAnonymousTls <$true | $false>]
- [-TarpitInterval <EnhancedTimeSpan>] [-TlsDomainCapabilities <MultiValuedProperty>] [-WhatIf]
- [-ServiceDiscoveryFqdn <Fqdn>] [-TlsCertificateName <SmtpX509Identifier>]
- [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
- [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
+ [-PipeliningEnabled <$true | $false>]
+ [-ProtocolLoggingLevel <None | Verbose>]
+ [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
  [-RejectReservedTopLevelRecipientDomains <$true | $false>]
- [-RejectSingleLabelRecipientDomains <$true | $false>] [<CommonParameters>]
+ [-RejectSingleLabelRecipientDomains <$true | $false>]
+ [-RequireEHLODomain <$true | $false>]
+ [-RequireTLS <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-ServiceDiscoveryFqdn <Fqdn>]
+ [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>]
+ [-SuppressXAnonymousTls <$true | $false>]
+ [-TarpitInterval <EnhancedTimeSpan>]
+ [-TlsCertificateName <SmtpX509Identifier>]
+ [-TlsDomainCapabilities <MultiValuedProperty>]
+ [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set6
+### UsageType
 ```
-New-ReceiveConnector [-Name] <String> [-Bindings <MultiValuedProperty>] [-RemoteIPRanges <MultiValuedProperty>]
- -Usage <Custom | Internet | Internal | Client | Partner> [-AdvertiseClientSettings <$true | $false>]
+New-ReceiveConnector [-Name] <String> -Usage <Custom | Internet | Internal | Client | Partner> [-Bindings <MultiValuedProperty>] [-RemoteIPRanges <MultiValuedProperty>]
+ [AdvertiseClientSettings <$true | $false>]
  [-AuthMechanism <None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative>]
- [-Banner <String>] [-BinaryMimeEnabled <$true | $false>] [-ChunkingEnabled <$true | $false>]
- [-Comment <String>] [-Confirm] [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
- [-ConnectionTimeout <EnhancedTimeSpan>] [-DefaultDomain <AcceptedDomainIdParameter>]
- [-DeliveryStatusNotificationEnabled <$true | $false>] [-DomainController <Fqdn>]
- [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
- [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
- [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
- [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
- [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
- [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
- [-MaxMessageSize <ByteQuantifiedSize>] [-MaxProtocolErrors <Unlimited>] [-MaxRecipientsPerMessage <Int32>]
- [-MessageRateLimit <Unlimited>] [-MessageRateSource <None | IPAddress | User | All>]
+ [-AuthTarpitInterval <EnhancedTimeSpan>]
+ [-Banner <String>]
+ [-BinaryMimeEnabled <$true | $false>]
+ [-ChunkingEnabled <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ConnectionInactivityTimeout <EnhancedTimeSpan>]
+ [-ConnectionTimeout <EnhancedTimeSpan>]
+ [-DefaultDomain <AcceptedDomainIdParameter>]
+ [-DeliveryStatusNotificationEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-DomainSecureEnabled <$true | $false>]
+ [-EightBitMimeEnabled <$true | $false>]
+ [-EnableAuthGSSAPI <$true | $false>]
+ [-Enabled <$true | $false>]
+ [-EnhancedStatusCodesEnabled <$true | $false>]
+ [-ExtendedProtectionPolicy <None | Allow | Require>]
+ [-Fqdn <Fqdn>]
+ [-LongAddressesEnabled <$true | $false>]
+ [-MaxAcknowledgementDelay <EnhancedTimeSpan>]
+ [-MaxHeaderSize <ByteQuantifiedSize>]
+ [-MaxHopCount <Int32>]
+ [-MaxInboundConnection <Unlimited>]
+ [-MaxInboundConnectionPercentagePerSource <Int32>]
+ [-MaxInboundConnectionPerSource <Unlimited>]
+ [-MaxLocalHopCount <Int32>]
+ [-MaxLogonFailures <Int32>]
+ [-MaxMessageSize <ByteQuantifiedSize>]
+ [-MaxProtocolErrors <Unlimited>]
+ [-MaxRecipientsPerMessage <Int32>]
+ [-MessageRateLimit <Unlimited>]
+ [-MessageRateSource <None | IPAddress | User | All>]
  [-OrarEnabled <$true | $false>]
  [-PermissionGroups <None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom>]
- [-PipeliningEnabled <$true | $false>] [-ProtocolLoggingLevel <None | Verbose>]
- [-RequireEHLODomain <$true | $false>] [-RequireTLS <$true | $false>] [-Server <ServerIdParameter>]
- [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>] [-SuppressXAnonymousTls <$true | $false>]
- [-TarpitInterval <EnhancedTimeSpan>] [-TlsDomainCapabilities <MultiValuedProperty>] [-WhatIf]
- [-ServiceDiscoveryFqdn <Fqdn>] [-TlsCertificateName <SmtpX509Identifier>]
- [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
- [-AuthTarpitInterval <EnhancedTimeSpan>] [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
+ [-PipeliningEnabled <$true | $false>]
+ [-ProtocolLoggingLevel <None | Verbose>]
+ [-RejectReservedSecondLevelRecipientDomains <$true | $false>]
  [-RejectReservedTopLevelRecipientDomains <$true | $false>]
- [-RejectSingleLabelRecipientDomains <$true | $false>] [<CommonParameters>]
+ [-RejectSingleLabelRecipientDomains <$true | $false>]
+ [-RequireEHLODomain <$true | $false>]
+ [-RequireTLS <$true | $false>]
+ [-Server <ServerIdParameter>]
+ [-ServiceDiscoveryFqdn <Fqdn>]
+ [-SizeEnabled <Disabled | Enabled | EnabledWithoutValue>]
+ [-SuppressXAnonymousTls <$true | $false>]
+ [-TarpitInterval <EnhancedTimeSpan>]
+ [-TlsCertificateName <SmtpX509Identifier>]
+ [-TlsDomainCapabilities <MultiValuedProperty>]
+ [-TransportRole <None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -232,7 +389,7 @@ The Name parameter specifies the unique name for the Receive connector. The maxi
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -267,9 +424,9 @@ The values for this parameter must satisfy one of the following uniqueness requi
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1, Set2, Set5
+Parameter Sets: Custom, Internet, Partner
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -279,9 +436,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set3, Set4, Set6
+Parameter Sets: Internal, Client, UsageType
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -304,9 +461,9 @@ You can't use this switch with any other usage type parameters (Internal, Intern
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Client
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -329,9 +486,9 @@ You can't use this switch with any other usage type parameters (Client, Internet
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Internal
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -354,9 +511,9 @@ You can't use this switch with any other usage type parameters (Client, Internal
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Internet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -379,9 +536,9 @@ You can't use this switch with any other usage type parameters (Client, Internal
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5
+Parameter Sets: Partner
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -424,9 +581,9 @@ You can't use this parameter with the Internet usage type (the default value is 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1, Set5, Set3, Set4
+Parameter Sets: Custom, Partner, Internal, Client
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -436,9 +593,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2, Set6
+Parameter Sets: Internet, UsageType
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -483,9 +640,9 @@ You can't use this parameter with any other usage type switches (Client, Interna
 
 ```yaml
 Type: Custom | Internet | Internal | Client | Partner
-Parameter Sets: Set6
+Parameter Sets: UsageType
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -504,7 +661,7 @@ The AdvertiseClientSettings parameter specifies whether the SMTP server name, po
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -545,7 +702,28 @@ You can specify multiple values separated by commas, but some values have depend
 Type: None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthTarpitInterval
+The AuthTarpitInterval parameter specifies the period of time to delay responses to failed authentication attempts from remote servers that may be abusing the connection. The default value is 5 seconds.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+When you set the value to 00:00:00, you disable the authentication tarpit interval. Setting the value to more than a few seconds can cause timeouts and mail flow issues.
+
+You can configure the delay for other SMTP failure responses by using the TarpitInterval parameter.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -564,7 +742,7 @@ The default value of this parameter is blank ($null), which uses the following S
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -585,7 +763,7 @@ The binary MIME extension is defined in RFC 3030.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -606,7 +784,7 @@ Chunking is defined in RFC 3030.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -621,7 +799,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -640,7 +818,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -663,7 +841,7 @@ The value of this parameter must be less than the value of the ConnectionTimeout
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -686,7 +864,7 @@ The value of this parameter must be greater than the value of the ConnectionInac
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -711,9 +889,9 @@ You can't use this switch with any other usage type parameters (Client, Internal
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Custom
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -742,7 +920,7 @@ Although you can configure any accepted domain as the default domain, you typica
 Type: AcceptedDomainIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -763,7 +941,7 @@ Delivery status notifications are defined in RFC 3461.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -780,7 +958,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -811,7 +989,7 @@ Note that setting this parameter to the value $true is only part of the requirem
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -832,7 +1010,7 @@ The EightBitMimeEnabled parameter specifies whether the 8BITMIME Extended SMTP e
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -853,7 +1031,7 @@ The Generic Security Services application programming interface (GSSAPI) is an I
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -872,7 +1050,7 @@ The Enabled parameter specifies whether to enable or disable the Receive connect
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -893,7 +1071,7 @@ Enhanced status codes are defined in RFC 2034.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -916,7 +1094,7 @@ Extended Protection for Authentication enhances the protection and handling of c
 Type: None | Allow | Require
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -941,7 +1119,7 @@ The default value is the FQDN of theExchange server that contains the Receive co
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -970,7 +1148,7 @@ You can only configure this parameter on Receive connectors in the Transport ser
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -991,7 +1169,7 @@ The default value is 30 seconds.
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1022,7 +1200,7 @@ A valid value is from 1 to 2147483647 bytes.
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1039,7 +1217,7 @@ A valid value is from 1 to 500. The default value is 30.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1058,7 +1236,7 @@ To disable the inbound connection limit on a Receive connector, enter a value of
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1075,7 +1253,7 @@ A valid value is from 1 to 100 without the percent sign (%). The default value i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1094,7 +1272,7 @@ To disable the inbound connection per source limit on a Receive connector, enter
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1113,7 +1291,7 @@ When you specify the value 0, the message is never rejected based on the number 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1132,7 +1310,7 @@ When you specify the value 0, the connection is never closed because of logon fa
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1165,7 +1343,7 @@ For any message size limit, you need to set a value that's larger than the actua
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1184,7 +1362,7 @@ When you specify the value unlimited, a connection is never closed because of pr
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1201,7 +1379,7 @@ A valid value is from 1 to 512000. The default value is 200.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1222,7 +1400,7 @@ The default value for Receive connectors on Mailbox servers is unlimited. The de
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1245,7 +1423,7 @@ The MessageRateSource parameter specifies how the message submission rate is cal
 Type: None | IPAddress | User | All
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1266,7 +1444,7 @@ If the email address specified in the ORAR information is a long X.400 email add
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1301,7 +1479,7 @@ For more information about the default permissions and security principals for p
 Type: None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1322,7 +1500,7 @@ Pipelining is defined in RFC 2920.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1343,7 +1521,64 @@ For more information about protocol logging, see Protocol logging (https://techn
 Type: None | Verbose
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectReservedSecondLevelRecipientDomains
+The RejectReservedSecondLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved second-level domains as specified in RFC 2606 (example.com, example.net, or example.org). Valid value are:
+
+- $true: RCPT TO commands that contain reserved second-level domains are rejected.
+
+- $false: RCPT TO commands that contain reserved second-level domains aren't rejected. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectReservedTopLevelRecipientDomains
+The RejectReservedTopLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved top-level domains (TLDs) as specified in RFC 2606 (.test, .example, .invalid, or .localhost). Valid value are:
+
+- $true: RCPT TO commands that contain reserved TLDs are rejected.
+
+- $false: RCPT TO commands that contain reserved TLDs aren't rejected. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectSingleLabelRecipientDomains
+The RejectSingleLabelRecipientDomains parameter specifies whether to reject connections that contain recipients in single-label domains (for example, chris@contoso instead of chris@contoso.com). Valid values are:
+
+- $true: RCPT TO commands that contain single-label domains are rejected.
+
+- $false: RCPT TO commands that contain single-label domains aren't rejected. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1362,7 +1597,7 @@ The RequireEHLODomain parameter specifies whether the client must provide a doma
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1381,7 +1616,7 @@ The RequireTLS parameter specifies whether to require TLS transmission for inbou
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1406,11 +1641,26 @@ If you don't use this parameter, the command is run on the local server.
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ServiceDiscoveryFqdn
+The ServiceDiscoveryFqdn parameter specifies the service discovery fully-qualified domain name (FQDN) for the Receive connector.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -1429,7 +1679,7 @@ SIZE is defined in RFC 1870.
 Type: Disabled | Enabled | EnabledWithoutValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1450,7 +1700,7 @@ The X-ANONYMOUSTLS extension is important when the AuthMechanism parameter conta
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1471,7 +1721,22 @@ You can configure the delay for authentication failure responses by using the Au
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TlsCertificateName
+The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)", and then use the value $TLSCertName for this parameter.
+
+```yaml
+Type: SmtpX509Identifier
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1500,52 +1765,7 @@ For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptOorgProtocol,A
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceDiscoveryFqdn
-The ServiceDiscoveryFqdn parameter specifies the service discovery fully-qualified domain name (FQDN) for the Receive connector.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TlsCertificateName
-The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)", and then use the value $TLSCertName for this parameter.
-
-```yaml
-Type: SmtpX509Identifier
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1564,7 +1784,7 @@ The TransportRole parameter specifies the transport service on the Mailbox serve
 Type: None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1572,77 +1792,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuthTarpitInterval
-The AuthTarpitInterval parameter specifies the period of time to delay responses to failed authentication attempts from remote servers that may be abusing the connection. The default value is 5 seconds.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-When you set the value to 00:00:00, you disable the authentication tarpit interval. Setting the value to more than a few seconds can cause timeouts and mail flow issues.
-
-You can configure the delay for other SMTP failure responses by using the TarpitInterval parameter.
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
-Type: EnhancedTimeSpan
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RejectReservedSecondLevelRecipientDomains
-The RejectReservedSecondLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved second-level domains as specified in RFC 2606 (example.com, example.net, or example.org). Valid value are:
-
-- $true: RCPT TO commands that contain reserved second-level domains are rejected.
-
-- $false: RCPT TO commands that contain reserved second-level domains aren't rejected. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RejectReservedTopLevelRecipientDomains
-The RejectReservedTopLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved top-level domains (TLDs) as specified in RFC 2606 (.test, .example, .invalid, or .localhost). Valid value are:
-
-- $true: RCPT TO commands that contain reserved TLDs are rejected.
-
-- $false: RCPT TO commands that contain reserved TLDs aren't rejected. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RejectSingleLabelRecipientDomains
-The RejectSingleLabelRecipientDomains parameter specifies whether to reject connections that contain recipients in single-label domains (for example, chris@contoso instead of chris@contoso.com). Valid values are:
-
-- $true: RCPT TO commands that contain single-label domains are rejected.
-
-- $false: RCPT TO commands that contain single-label domains aren't rejected. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

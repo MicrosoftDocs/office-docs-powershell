@@ -4,6 +4,12 @@ Before you get started using PowerShell to manage SharePoint Online, make sure t
 
 Install the SharePoint Online Management Shell by downloading and running the [SharePoint Online Management Shell](https://go.microsoft.com/fwlink/p/?LinkId=255251) or installing module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell/16.0.8029.0). You only need to do this once for each computer from which you are running SharePoint Online PowerShell commands.
 
+First you can check if you have already installed SharePoint Online Management Shell by running the following command in administrative mode in PowerShell.
+
+```ps
+Get-Module -Name Microsoft.Online.SharePoint.PowerShell -ListAvailable | Select Name,Version
+```
+
 If your operating system is using PowerShell 5 or newer, you can install Sharepoint Online Management Shell also by running following command in administrative mode.
 
 ```ps

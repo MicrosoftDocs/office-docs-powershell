@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-ExchangeCertificate
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ExchangeCertificate
@@ -17,23 +17,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Identity
 ```
-Get-ExchangeCertificate [-DomainController <Fqdn>] [-DomainName <MultiValuedProperty>]
- [-Instance <X509Certificate2>] [-Server <ServerIdParameter>] [[-Identity] <ExchangeCertificateIdParameter>]
+Get-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
+ [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
-### Set1
+### Instance
 ```
-Get-ExchangeCertificate [[-Thumbprint] <String>] [-DomainController <Fqdn>] [-DomainName <MultiValuedProperty>]
- [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-ExchangeCertificate [-Instance <X509Certificate2>]
+ [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
-### Set3
+### Thumbprint
 ```
-Get-ExchangeCertificate [-DomainController <Fqdn>] [-DomainName <MultiValuedProperty>]
- [-Instance <X509Certificate2>] [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-ExchangeCertificate [[-Thumbprint] <String>]
+ [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
+ [-Server <ServerIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -156,7 +163,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -171,9 +178,32 @@ The DomainName parameter filters the results by the fully qualified domain name 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the certificate that you want to view. Valid values are:
+
+- \<ServerNameorFQDN\>\\\<Thumbprint\>
+
+- \<Thumbprint\>
+
+You can't use this parameter with the Server parameter.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: ExchangeCertificateIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -184,9 +214,9 @@ This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: X509Certificate2
-Parameter Sets: Set2, Set3
+Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -211,9 +241,9 @@ You can't use this parameter with the Identity parameter, but you can use it wit
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: (All)
+Parameter Sets: Instance, Thumbprint
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -228,36 +258,13 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Thumbprint
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the certificate that you want to view. Valid values are:
-
-- \<ServerNameorFQDN\>\\\<Thumbprint\>
-
-- \<Thumbprint\>
-
-You can't use this parameter with the Server parameter.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: ExchangeCertificateIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

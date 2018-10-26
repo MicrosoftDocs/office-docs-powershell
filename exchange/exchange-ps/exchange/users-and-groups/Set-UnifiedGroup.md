@@ -54,7 +54,7 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <$true | $false>]
- [-HiddenFromExchangeClientsEnabled <$true | $false>]
+ [-HiddenFromExchangeClientsEnabled]
  [-Language <CultureInfo>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -805,14 +805,14 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromExchangeClientsEnabled
-The HiddenFromExchangeClientsEnabled parameter specifies whether the Office 365 Group is hidden from Outlook clients connected to Office 365. When this value is set to true, the group will no longer be visible in the Outlook left hand navigation and the group will not resolve when attempting to resolve the address while authoring a new mail message in Outlook. Additionally, the property HiddenFromAddressListsEnabled will also be set to true to prevent the group from showing in the Global Address Book (GAL) and Offline Address Book (OAB). Valid values are:
+The HiddenFromExchangeClientsEnabled switch specifies whether the Office 365 Group is hidden from Outlook clients connected to Office 365.
 
-- $true: The Office 365 Group is hidden from Outlook experiences. The group will not be visible in the Outlook left hand navigation and will not be visible in the address book. Additionally, the group name will not resolve when attempting to resolve the address while authoring a new mail message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. 
+- To enable this setting, you don't need to specify a value with this switch. The Office 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
 
-- $false: The Office 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
+- To disable this setting, use this exact syntax: -HiddenFromExchangeClientsEnabled:$false. The Office 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

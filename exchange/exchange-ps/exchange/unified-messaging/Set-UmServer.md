@@ -18,14 +18,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-UMServer [-Identity] <UMServerIdParameter> [-Confirm] [-DialPlans <MultiValuedProperty>]
- [-DomainController <Fqdn>] [-ExternalHostFqdn <UMSmartHost>] [-ExternalServiceFqdn <UMSmartHost>]
- [-GrammarGenerationSchedule <ScheduleInterval[]>] [-IrmLogEnabled <$true | $false>]
- [-IrmLogMaxAge <EnhancedTimeSpan>] [-IrmLogMaxDirectorySize <Unlimited>]
- [-IrmLogMaxFileSize <ByteQuantifiedSize>] [-IrmLogPath <LocalLongFullPath>] [-MaxCallsAllowed <Int32>]
- [-SIPAccessService <ProtocolConnectionSettings>] [-SipTcpListeningPort <Int32>] [-SipTlsListeningPort <Int32>]
- [-Status <Enabled | Disabled | NoNewCalls>] [-UMForwardingAddressTemplate <String>]
- [-UMPodRedirectTemplate <String>] [-UMStartupMode <TCP | TLS | Dual>] [-WhatIf] [<CommonParameters>]
+Set-UMServer [-Identity] <UMServerIdParameter>
+ [-Confirm]
+ [-DialPlans <MultiValuedProperty>]
+ [-DomainController <Fqdn>]
+ [-ExternalServiceFqdn <UMSmartHost>]
+ [-GrammarGenerationSchedule <ScheduleInterval[]>]
+ [-IrmLogEnabled <$true | $false>]
+ [-IrmLogMaxAge <EnhancedTimeSpan>]
+ [-IrmLogMaxDirectorySize <Unlimited>]
+ [-IrmLogMaxFileSize <ByteQuantifiedSize>]
+ [-IrmLogPath <LocalLongFullPath>]
+ [-MaxCallsAllowed <Int32>]
+ [-SIPAccessService <ProtocolConnectionSettings>]
+ [-SipTcpListeningPort <Int32>]
+ [-SipTlsListeningPort <Int32>]
+ [-Status <Enabled | Disabled | NoNewCalls>]
+ [-UMStartupMode <TCP | TLS | Dual>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -121,21 +131,6 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalHostFqdn
-The ExternalHostFqdn parameter is the external FQDN or host name of a Unified Messaging server. This host name is sent as the target of a redirect when a Unified Messaging server receives an incoming call. This allows the Microsoft Exchange Unified Messaging service to redirect to the UM Worker Process on the same Unified Messaging server. The ExternalHostFqdn parameter must be used when a Unified Messaging server is located behind a load balancer. The host FQDN is limited to 256 characters.
-
-```yaml
-Type: UMSmartHost
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -344,36 +339,6 @@ The Status parameter specifies the Unified Messaging server status. The availabl
 
 ```yaml
 Type: Enabled | Disabled | NoNewCalls
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UMForwardingAddressTemplate
-The UMForwardingAddressTemplate parameter specifies the FQDN template for forwarding calls to another data center and is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UMPodRedirectTemplate
-The UMPodRedirectTemplate parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010

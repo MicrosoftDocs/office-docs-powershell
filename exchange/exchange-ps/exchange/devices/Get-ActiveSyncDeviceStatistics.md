@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-ActiveSyncDeviceStatistics
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-ActiveSyncDeviceStatistics
@@ -19,17 +19,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-ActiveSyncDeviceStatistics [-Identity] <ActiveSyncDeviceIdParameter> [-DomainController <Fqdn>]
- [-GetMailboxLog] [-NotificationEmailAddresses <MultiValuedProperty>] [-ShowRecoveryPassword]
- [<CommonParameters>]
+Get-ActiveSyncDeviceStatistics [-Identity] <ActiveSyncDeviceIdParameter>
+ [-DomainController <Fqdn>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-ShowRecoveryPassword] [<CommonParameters>]
 ```
 
-### Set2
+### Mailbox
 ```
-Get-ActiveSyncDeviceStatistics -Mailbox <MailboxIdParameter> [-DomainController <Fqdn>] [-GetMailboxLog]
- [-NotificationEmailAddresses <MultiValuedProperty>] [-ShowRecoveryPassword] [<CommonParameters>]
+Get-ActiveSyncDeviceStatistics -Mailbox <MailboxIdParameter>
+ [-DomainController <Fqdn>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-ShowRecoveryPassword] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,9 +72,9 @@ The Identity parameter specifies the user's device ID. If the Mailbox parameter 
 
 ```yaml
 Type: ActiveSyncDeviceIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -82,9 +87,9 @@ The Mailbox parameter specifies the user mailbox for which you want to retrieve 
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -101,7 +106,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -116,7 +121,7 @@ The GetMailboxLog parameter specifies whether to send the mailbox logs via email
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +136,7 @@ The NotificationEmailAddresses parameter specifies an optional list of comma-sep
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -146,7 +151,7 @@ The ShowRecoveryPassword parameter specifies whether to return the recovery pass
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

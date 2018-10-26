@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-CalendarDiagnosticAnalysis
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-CalendarDiagnosticAnalysis
@@ -17,16 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### DefaultSet
 ```
-Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]> [-DetailLevel <Basic | Advanced>]
- [-GlobalObjectId <String>] [-OutputAs <HTML | CSV | XML>] [<CommonParameters>]
+Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]>
+ [-DetailLevel <Basic | Advanced>]
+ [-GlobalObjectId <String>]
+ [-OutputAs <HTML | CSV | XML>]
+ [<CommonParameters>]
 ```
 
-### Set2
+### LocationSet
 ```
-Get-CalendarDiagnosticAnalysis -LogLocation <String[]> [-DetailLevel <Basic | Advanced>]
- [-GlobalObjectId <String>] [-OutputAs <HTML | CSV | XML>] [<CommonParameters>]
+Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
+ [-DetailLevel <Basic | Advanced>]
+ [-GlobalObjectId <String>]
+ [-OutputAs <HTML | CSV | XML>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,9 +107,9 @@ You can't use this parameter with the LogLocation parameter.
 
 ```yaml
 Type: CalendarLog[]
-Parameter Sets: Set1
+Parameter Sets: DefaultSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -120,9 +126,9 @@ You can't use this parameter with the CalendarLogs parameter.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set2
+Parameter Sets: LocationSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -141,7 +147,7 @@ The DetailLevel parameter specifies the level of detail you want to see in the a
 Type: Basic | Advanced
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -158,7 +164,7 @@ The GlobalObjectId property of the meeting uses the same format as the CleanGlob
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -179,7 +185,7 @@ The OutputAs parameter specifies the output format of the command. Valid values 
 Type: HTML | CSV | XML
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

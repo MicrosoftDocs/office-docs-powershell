@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPDataConnectionFile
 schema: 2.0.0
 ---
@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-C:\PS>Set-SPDataConnectionFile -Identity "sample.udcx" -Category "Temp"
+PS C:\>Set-SPDataConnectionFile -Identity "sample.udcx" -Category "Temp"
 ```
 
 This example updates the Category of the specified .udcx file.
@@ -37,7 +37,7 @@ This example updates the Category of the specified .udcx file.
 
 ### --------------EXAMPLE 2-----------------
 ```
-C:\PS>Set-SPDataConnectionFile -Identity "sample.udcx" -DisplayName "NewDisplayName"
+PS C:\>Set-SPDataConnectionFile -Identity "sample.udcx" -DisplayName "NewDisplayName"
 ```
 
 This example updates the DisplayName of the specified .udcx file.
@@ -45,7 +45,7 @@ This example updates the DisplayName of the specified .udcx file.
 
 ### --------------EXAMPLE 3-----------------
 ```
-C:\PS>Sample.udcx" | Set-SPDataConnectionFile -Category "Temp"
+PS C:\>Sample.udcx" | Set-SPDataConnectionFile -Category "Temp"
 ```
 
 This example updates the Category of the specified .udcx file.
@@ -53,7 +53,7 @@ This example updates the Category of the specified .udcx file.
 
 ### --------------EXAMPLE 4-----------------
 ```
-C:\PS>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}  | Set-SPDataConnectionFile -Category "Category2"
+PS C:\>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}  | Set-SPDataConnectionFile -Category "Category2"
 ```
 
 This example updates the Category field for the collection of .udcx files that are returned from a query used by the `Get-SPDataConnectionFile` cmdlet.
@@ -70,7 +70,7 @@ The type must be a valid GUID, in form 12345678-90ab-cdef-1234-567890bcdefgh; a 
 Type: SPDataConnectionFilePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -92,7 +92,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ The type must be a valid string value; for example, Category1.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ The type must be a valid string; for example, Description of my universal data c
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ The type must be a valid string; for example, InfoPathUDC1.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ The default value is False.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

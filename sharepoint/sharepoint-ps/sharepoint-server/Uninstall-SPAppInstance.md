@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPAppInstance
 schema: 2.0.0
 ---
@@ -11,7 +11,7 @@ schema: 2.0.0
 Uninstalls an instance of an app.
 
 
-## SYNTAX
+## SYNTAX 
 
 ```
 Uninstall-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE--------------
 ```
-PS C:\>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
+PS C:\>$spapp = Get-SPAppInstance -AppInstanceId $instance.Id
 PS C:\>Uninstall-SPAppInstance -Identity $spapp
 ```
 
@@ -44,7 +44,7 @@ Specifies the app instance for which to find metadata.
 Type: SPAppInstance
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -66,7 +66,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

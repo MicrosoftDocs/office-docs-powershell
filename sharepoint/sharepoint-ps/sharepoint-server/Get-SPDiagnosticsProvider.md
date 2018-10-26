@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPDiagnosticsProvider
 schema: 2.0.0
 ---
@@ -30,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-C:\PS>Get-SPDiagnosticsProvider
+PS C:\>Get-SPDiagnosticsProvider
 ```
 
 This example returns all the diagnostics providers in the farm.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-C:\PS>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
+PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
 ```
 
 This example returns the event log diagnostics provider.
@@ -53,7 +53,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPDiagnosticsProviderPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -75,7 +75,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Add-GlobalMonitoringOverride
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Add-GlobalMonitoringOverride
@@ -17,18 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### ApplyVersion
 ```
-Add-GlobalMonitoringOverride [-Identity] <String> -ApplyVersion <Version>
- -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-Roles <String>] [<CommonParameters>]
+Add-GlobalMonitoringOverride [-Identity] <String> -ApplyVersion <Version> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Roles <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Duration
 ```
-Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance>
- -PropertyName <String> -PropertyValue <String> [-Confirm] [-DomainController <Fqdn>]
- [-Duration <EnhancedTimeSpan>] [-WhatIf] [-BuildRange <String>] [-Roles <String>] [<CommonParameters>]
+Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <String> -PropertyValue <String> [-BuildRange <String>] [-Duration <EnhancedTimeSpan>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Roles <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,9 +65,9 @@ You can't use this parameter with the Duration parameter.
 
 ```yaml
 Type: Version
-Parameter Sets: Set2
+Parameter Sets: ApplyVersion
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -78,7 +82,7 @@ The Identity parameter specifies the identity of the probe, monitor, or responde
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -99,7 +103,7 @@ The ItemType parameter specifies the item type for the property that you want to
 Type: Probe | Monitor | Responder | Maintenance
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -114,7 +118,7 @@ The PropertyName parameter specifies the property that you want to override.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -129,7 +133,7 @@ The PropertyValue parameter specifies the new value for the property that you wa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -148,7 +152,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -165,7 +169,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -184,9 +188,9 @@ You can't use this parameter with the ApplyVersion parameter.
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set1
+Parameter Sets: Duration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +205,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -214,9 +218,9 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Duration
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -231,7 +235,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

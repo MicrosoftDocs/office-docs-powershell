@@ -13,6 +13,7 @@ Sets Site Collection properties.
 ```powershell
 Set-PnPSite [-Classification <String>]
             [-DisableFlows [<SwitchParameter>]]
+            [-LogoFilePath <String>]
             [-Connection <SPOnlineConnection>]
 ```
 
@@ -46,6 +47,7 @@ Set-PnPSite -DisableFlows:$false
 
 Enables Flows for this site
 
+
 ## PARAMETERS
 
 ### -Classification
@@ -65,6 +67,18 @@ Disables flows for this site
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -LogoFilePath
+Sets the logo if the site is modern team site. If you want to set the logo for a classic site, use Set-PnPWeb -SiteLogoUrl
+
+```yaml
+Type: String
 Parameter Sets: (All)
 
 Required: False

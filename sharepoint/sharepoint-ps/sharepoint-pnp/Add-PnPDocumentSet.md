@@ -30,7 +30,7 @@ This will add a new document set based upon the 'Test Document Set' content type
 ## PARAMETERS
 
 ### -ContentType
-The name of the content type, its ID or an actual content object referencing to the document set.
+The name of the content type, its ID or an actual content object referencing to the document set
 
 ```yaml
 Type: ContentTypePipeBind

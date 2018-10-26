@@ -1,2 +1,0 @@
-# microsoft-teams-generator-tool
-

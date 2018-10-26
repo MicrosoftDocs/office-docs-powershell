@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MigrationEndpoint
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # New-MigrationEndpoint
@@ -17,106 +17,162 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set4
+### ExchangeRemoteMoveAutoDiscover
 ```
-New-MigrationEndpoint [-Autodiscover] -EmailAddress <SmtpAddress> [-ExchangeOutlookAnywhere] -Name <String>
- [-SourceMailboxLegacyDN <String>] [-Confirm] -Credentials <PSCredential> [-DomainController <Fqdn>]
- [-MailboxPermission <Admin | FullAccess>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-SkipVerification] [-TestMailbox <MailboxIdParameter>] [-WhatIf]
- [-ExchangeRemoteMove] [-Partition <MailboxIdParameter>] [<CommonParameters>]
-```
-
-### Set5
-```
-New-MigrationEndpoint [-Autodiscover] -EmailAddress <SmtpAddress> [-ExchangeRemoteMove] -Name <String>
- [-Confirm] -Credentials <PSCredential> [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-SkipVerification] [-WhatIf] [-PSTImport] -RemoteServer <Fqdn>
- [-Partition <MailboxIdParameter>] [<CommonParameters>]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeRemoteMove]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### ExchangeOutlookAnywhereAutoDiscover
 ```
-New-MigrationEndpoint [-EmailAddress <SmtpAddress>] [-ExchangeOutlookAnywhere] -Name <String>
- [-RpcProxyServer <Fqdn>] [-SourceMailboxLegacyDN <String>]
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-SourceMailboxLegacyDN <String>]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### ExchangeOutlookAnywhere
+```
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> [-EmailAddress <SmtpAddress>] [-ExchangeOutlookAnywhere] [-ExchangeServer <String>]
  [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] -Credentials <PSCredential> [-DomainController <Fqdn>] [-ExchangeServer <String>]
- [-MailboxPermission <Admin | FullAccess>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-NspiServer <String>] [-SkipVerification]
- [-TestMailbox <MailboxIdParameter>] [-WhatIf] [-Autodiscover] [-Partition <MailboxIdParameter>]
- [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MailboxPermission <Admin | FullAccess>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-NspiServer <String>]
+ [-Partition <MailboxIdParameter>]
+ [-RpcProxyServer <Fqdn>]
+ [-SkipVerification]
+ [-SourceMailboxLegacyDN <String>]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### ExchangeRemoteMove
 ```
-New-MigrationEndpoint [-ExchangeRemoteMove] -Name <String> -RemoteServer <Fqdn> [-Confirm]
- [-Credentials <PSCredential>] [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-SkipVerification] [-WhatIf] [-Partition <MailboxIdParameter>]
- [<CommonParameters>]
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-Credentials <PSCredential>] [-ExchangeRemoteMove]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set7
+### PSTImport
 ```
-New-MigrationEndpoint [-IMAP] -Name <String> -RemoteServer <Fqdn>
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-Credentials <PSCredential>] [-PSTImport]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### IMAP
+```
+New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn> [-IMAP] [-Port <Int32>] [-Security <None | Ssl | Tls>]
  [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-Port <Int32>] [-Security <None | Ssl | Tls>] [-SkipVerification]
- [-WhatIf] [-Compliance] -Credentials <PSCredential> [-Partition <MailboxIdParameter>] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set6
+### PublicFolder
 ```
-New-MigrationEndpoint -Name <String> [-PSTImport] -RemoteServer <Fqdn> [-Confirm] [-Credentials <PSCredential>]
- [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>] [-MaxConcurrentMigrations <Unlimited>]
- [-SkipVerification] [-WhatIf] [-PublicFolder] -PublicFolderDatabaseServerLegacyDN <String>
- -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
  [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Partition <MailboxIdParameter>] [-TestMailbox <MailboxIdParameter>] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>] 
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Compliance
 ```
-New-MigrationEndpoint -Name <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-Compliance]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### MrsProxyPublicFolderToUnifiedGroup
+```
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolderToUnifiedGroup]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### MrsProxyPublicFolder
+```
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -RemoteServer <Fqdn> [-PublicFolder]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### LegacyPublicFolderToUnifiedGroup
+```
+New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolderToUnifiedGroup]
  [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] -Credentials <PSCredential> [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-SkipVerification] [-TestMailbox <MailboxIdParameter>] [-WhatIf]
- [-EmailAddress <SmtpAddress>] [-ExchangeOutlookAnywhere] [-ExchangeServer <String>]
- [-MailboxPermission <Admin | FullAccess>] [-NspiServer <String>] [-Partition <MailboxIdParameter>]
- [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set11
+### Other
 ```
-New-MigrationEndpoint [-IMAP] -Name <String> -RemoteServer <Fqdn>
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-Partition <MailboxIdParameter>] [-Port <Int32>]
- [-Security <None | Ssl | Tls>] [-SkipVerification] [-WhatIf] [<CommonParameters>]
-```
-
-### Set8
-```
-New-MigrationEndpoint -Name <String> [-PublicFolder] -RemoteServer <Fqdn> [-Confirm]
- -Credentials <PSCredential> [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-Partition <MailboxIdParameter>] [-SkipVerification] [-WhatIf]
- [<CommonParameters>]
-```
-
-### Set9
-```
-New-MigrationEndpoint -Name <String> -PublicFolderDatabaseServerLegacyDN <String> [-PublicFolderToUnifiedGroup]
- -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
- [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] -Credentials <PSCredential> [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-Partition <MailboxIdParameter>] [-SkipVerification]
- [-TestMailbox <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set10
-```
-New-MigrationEndpoint -Name <String> [-PublicFolderToUnifiedGroup] -RemoteServer <Fqdn> [-Confirm]
- -Credentials <PSCredential> [-DomainController <Fqdn>] [-MaxConcurrentIncrementalSyncs <Unlimited>]
- [-MaxConcurrentMigrations <Unlimited>] [-Partition <MailboxIdParameter>] [-SkipVerification]
- [-TestMailbox <MailboxIdParameter>] [-WhatIf] [<CommonParameters>]
+New-MigrationEndpoint -Name <String> [-EmailAddress <SmtpAddress>]
+ [-Confirm]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-SkipVerification]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -184,15 +240,74 @@ This example creates an IMAP migration endpoint that supports 50 concurrent migr
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the name you give to the new migration endpoint. You can use the Name parameter when you run the New-MigrationBatch cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Autodiscover
 For an Exchange migration, the Autodiscover switch specifies whether to get other connection settings for the on-premises server from the Autodiscover service. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set5, Set3
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Compliance
+The Compliance switch specifies that the endpoint type is compliance. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Compliance
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credentials
+The Credentials parameter specifies the credentials to connect to the source or target endpoint for all Exchange migration types.
+
+This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
+
+```yaml
+Type: PSCredential
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: PSCredential
+Parameter Sets: ExchangeRemoteMove, PSTImport
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -204,9 +319,9 @@ The EmailAddress parameter specifies the email address used by the Autodiscover 
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set4, Set5
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -216,9 +331,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set3, Set2
+Parameter Sets: ExchangeOutlookAnywhere, Other
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +348,7 @@ The ExchangeOutlookAnywhere switch specifies the type of endpoint for staged and
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set3, Set2
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -248,9 +363,9 @@ The ExchangeRemoteMoveswitch specifies the type of endpoint for cross-forest mov
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4, Set5, Set1
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeRemoteMove
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -265,24 +380,9 @@ The IMAPswitch specifies the type of endpoint for IMAP migrations. You don't nee
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set7, Set11
+Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the name you give to the new migration endpoint. You can use the Name parameter when you run the New-MigrationBatch cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -295,9 +395,58 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5, Set6
+Parameter Sets: PSTImport
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolder
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PublicFolder, MrsProxyPublicFolder
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolderDatabaseServerLegacyDN
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
+Aliases:
+Applicable: Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolderToUnifiedGroup
+The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public folders to Office 365 groups. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
+Aliases:
+Applicable: Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -314,9 +463,9 @@ The RemoteServer parameter specifies the FQDN of the remote server, which depend
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set5, Set1, Set7, Set6, Set11, Set8, Set10
+Parameter Sets: ExchangeRemoteMove, PSTImport, IMAP, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -333,10 +482,10 @@ This parameter is required only when you don't use the Autodiscover parameter.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set3
+Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -345,10 +494,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set6, Set2, Set9
+Parameter Sets: ExchangeOutlookAnywhere
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
+Applicable: Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -362,10 +511,10 @@ The SourceMailboxLegacyDN parameter specifies the LegacyExchangeDNvalue of an on
 
 ```yaml
 Type: String
-Parameter Sets: Set4, Set3
+Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -374,10 +523,10 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Set6, Set2, Set9
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
+Applicable: Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -391,7 +540,7 @@ The Authentication parameter specifies the authentication method used by the on-
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured
-Parameter Sets: Set3, Set7, Set6, Set2, Set11, Set9
+Parameter Sets: ExchangeOutlookAnywhere, IMAP, PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -412,36 +561,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Credentials
-The Credentials parameter specifies the credentials to connect to the source or target endpoint for all Exchange migration types.
-
-This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-```yaml
-Type: PSCredential
-Parameter Sets: Set4, Set5, Set3, Set7, Set2, Set8, Set9, Set10
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSCredential
-Parameter Sets: Set1, Set6
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -456,9 +576,9 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, ExchangeRemoteMove, PSTImport, IMAP, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -475,7 +595,7 @@ This parameter is required only when you don't use the Autodiscover parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set2
+Parameter Sets: ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -502,7 +622,7 @@ This parameter can't be used for creating non-Outlook Anywhere migration endpoin
 
 ```yaml
 Type: Admin | FullAccess
-Parameter Sets: Set4, Set3, Set2
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -519,7 +639,7 @@ The MaxConcurrentIncrementalSyncs parameter specifies the maximum number of incr
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -534,7 +654,7 @@ The MaxConcurrentMigrations parameter specifies the maximum number of mailboxes 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -549,7 +669,24 @@ The NspiServer parameter specifies the remote Name Service Provider Interface (N
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set2
+Parameter Sets: ExchangeOutlookAnywhere
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -566,7 +703,7 @@ For an IMAP migration, the Port parameter specifies the TCP port number used by 
 
 ```yaml
 Type: Int32
-Parameter Sets: Set7, Set11
+Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -583,7 +720,7 @@ For an IMAP migration, the Security parameter specifies the encryption method us
 
 ```yaml
 Type: None | Ssl | Tls
-Parameter Sets: Set7, Set11
+Parameter Sets: IMAP
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -600,7 +737,7 @@ The SkipVerification switch specifies whether to skip verifying that the remote 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -617,7 +754,7 @@ This parameter is only used to create Outlook Anywhere migration endpoints.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set4, Set3, Set6, Set2, Set9, Set10
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup, Other
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -634,82 +771,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Compliance
-The Compliance switch specifies that the endpoint type is compliance. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set7
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolder
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set6, Set8
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderDatabaseServerLegacyDN
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: Set6, Set9
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderToUnifiedGroup
-The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public folders to Office 365 groups. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set9, Set10
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Partition
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

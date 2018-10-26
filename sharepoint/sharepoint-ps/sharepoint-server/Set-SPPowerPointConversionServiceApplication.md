@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPPowerPointConversionServiceApplication
 schema: 2.0.0
 ---
@@ -28,7 +28,7 @@ Use the `Set-SPPowerPointConversionServiceApplication` cmdlet to set properties 
 
 ### --------------------EXAMPLE 1---------------------
 ```
-C:\PS>Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -CacheExpirationPeriodInSeconds 1200
+PS C:\>Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -CacheExpirationPeriodInSeconds 1200
 ```
 
 This example establishes new operational defaults for the conversion cache expiration.
@@ -36,7 +36,7 @@ This example establishes new operational defaults for the conversion cache expir
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -DisableBinaryScan:$false
+PS C:\>Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -DisableBinaryScan:$false
 ```
 
 This example disables binary scanning of documents.
@@ -51,7 +51,7 @@ Specifies the unique name of this PowerPoint Conversion Service application.
 Type: SPPowerPointConversionServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -73,7 +73,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ The default value is 600 seconds (10 minutes).
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ The default value is 5.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ The default value is 120 seconds.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ The default value is 3.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ The default is 300 seconds (5 minutes).
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

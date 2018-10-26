@@ -78,8 +78,6 @@ Accept pipeline input: False
 ### -InSiteHierarchy
 Search site hierarchy for fields
 
-Only applicable to: SharePoint Online
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
