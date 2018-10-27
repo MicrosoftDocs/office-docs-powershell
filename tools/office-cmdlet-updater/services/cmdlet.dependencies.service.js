@@ -65,8 +65,6 @@ class CmdletDependenciesService {
 		// await this.ps.invokeCommand(commands.SKYPE_INSTALL_MODULE);
 		await this.ps.invokeCommand(commands.SKYPE_CREATE_SESSION);
 		await this.ps.invokeCommand(commands.SKYPE_IMPORT_SESSION);
-
-		return result;
 	}
 
 	async preInstallWhiteboard() {
