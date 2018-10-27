@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime> [-Formatted] [-FreeText <String>]
+Search-UnifiedAuditLog [-EndDate <ExDateTime>] [-StartDate <ExDateTime>] [-Formatted] [-FreeText <String>]
  [-IPAddresses <String[]>] [-ObjectIds <String[]>] [-Operations <String[]>]
  [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
  [-ResultSize <Int32>] [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
