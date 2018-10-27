@@ -17,10 +17,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
-Get-LabelPolicy [[-Identity] <PolicyIdParameter>]
+Get-LabelPolicy [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
 ```
+
+## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
@@ -77,6 +78,9 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

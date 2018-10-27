@@ -1,58 +1,116 @@
----
+﻿---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: Remove-Label
+title: New-LabelExplorerConfig
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Remove-Label
+# New-LabelExplorerConfig
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Remove-Label cmdlet to remove labels from your organization.
+Use the New-LabelExplorerConfig cmdlet to create label explorer configurations in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Remove-Label [[-Identity] <ComplianceRuleIdParameter>] [-Confirm] [-ForceDeletion] [-WhatIf] [<CommonParameters>]
+New-LabelExplorerConfig [-Name] <String> -Filter <String> -Labels <MultiValuedProperty> -Users <MultiValuedProperty>
+ [-Actions <None | View | ChangeLabel | UnRecord>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx)Find the permissions required to run any Exchange cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
-Remove-Label -Identity "Marketing Group"
+{{ Add example code here }}
 ```
 
-This example removes the label named Margeting Group.
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the label that you want to remove. You can use any value that uniquely identifies the label. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
+### -Name
+{{Fill Name Description}}
 
 ```yaml
-Type: PolicyIdParameter
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+{{Fill Filter Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Labels
+{{Fill Labels Description}}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Users
+{{Fill Users Description}}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Actions
+{{Fill Actions Description}}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -75,13 +133,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceDeletion
-The ForceDeletion switch forces the removal of the label. You don't need to specify a value with this switch.
+### -DisplayName
+{{Fill DisplayName Description}}
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -122,4 +180,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-label)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelexplorerconfig)

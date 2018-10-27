@@ -17,9 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
-Set-Label [-Identity] <ComplianceRuleIdParameter> [-Comment <String>] [-Conditions <MultiValuedProperty>] [-Confirm] [-DisplayName <String>] [-LabelActions <MultiValuedProperty>] [-Order <Int32>] [-ParentId <ComplianceRuleIdParameter>] [-Settings <PswsHashtable>] [-WhatIf]
+Set-Label [-Identity] <ComplianceRuleIdParameter>
+ [-Comment <String>]
+ [-Conditions <MultiValuedProperty>]
+ [-Confirm]
+ [-Disabled <$true | $false>]
+ [-DisplayName <String>]
+ [-LabelActions <MultiValuedProperty>]
+ [-LocaleSettings <MultiValuedProperty>]
+ [-NextLabel <ComplianceRuleIdParameter>]
+ [-ParentId <ComplianceRuleIdParameter>]
+ [-PreviousLabel <ComplianceRuleIdParameter>]
+ [-Priority <Int32>]
+ [-Setting <PswsHashtable>]
+ [-Tooltip <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,6 +119,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Disabled
+{{Fill Disabled Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayName
 The DisplayName parameter specifies the display name for the label. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate label before they send a message.
 
@@ -136,23 +164,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Order
-The Order parameter specifies a priority value for the label that determines the order of label processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and labels can't have the same priority value.
-
-Valid values and the default value for this parameter depend on the number of existing labels. For example, if there are 8 existing labels:
-
-- Valid priority values for the existing 8 labels are from 0 through 7.
-
-- Valid priority values for a new label (the 9th label) are from 0 through 8.
-
-- The default value for a new label (the 9th label) is 8.
-
-If you modify the priority value of a label, the position of the label in the list changes to match the priority value you specify. In other words, if you set the priority value of a label to the same value as an existing label, the priority value of the existing label and all other lower priority labels after it is increased by 1.
+### -LocaleSettings
+{{Fill LocaleSettings Description}}
 
 ```yaml
-Type: Int32
+Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NextLabel
+{{Fill NextLabel Description}}
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -182,13 +215,68 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Settings
+### -PreviousLabel
+{{Fill PreviousLabel Description}}
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Priority
+The Priority parameter specifies a priority value for the label that determines the order of label processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and labels can't have the same priority value.
+
+Valid values and the default value for this parameter depend on the number of existing labels. For example, if there are 8 existing labels:
+
+- Valid priority values for the existing 8 labels are from 0 through 7.
+
+- Valid priority values for a new label (the 9th label) are from 0 through 8.
+
+- The default value for a new label (the 9th label) is 8.
+
+If you modify the priority value of a label, the position of the label in the list changes to match the priority value you specify. In other words, if you set the priority value of a label to the same value as an existing label, the priority value of the existing label and all other lower priority labels after it is increased by 1.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Setting
 PARAMVALUE: PswsHashtable
 
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tooltip
+{{Fill Tooltip Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -211,6 +299,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

@@ -17,9 +17,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
-New-LabelPolicy -Labels <MultiValuedProperty> -Name <String> [-Comment <String>] [-Confirm] [-ExchangeLocation <MultiValuedProperty>] [-ExchangeLocationException <MultiValuedProperty>] [-ModernGroupLocation <MultiValuedProperty>] [-ModernGroupLocationException <MultiValuedProperty>] [-OneDriveLocation <MultiValuedProperty>] [-OneDriveLocationException <MultiValuedProperty>] [-PublicFolderLocation <MultiValuedProperty>] [-Settings <PswsHashtable>] [-SharePointLocation <MultiValuedProperty>] [-SharePointLocationException <MultiValuedProperty>] [-SkypeLocation <MultiValuedProperty>] [-SkypeLocationException <MultiValuedProperty>] [-WhatIf]
+New-LabelPolicy -Labels <MultiValuedProperty> -Name <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-ExchangeLocation <MultiValuedProperty>]
+ [-ExchangeLocationException <MultiValuedProperty>]
+ [-Force]
+ [-ModernGroupLocation <MultiValuedProperty>]
+ [-ModernGroupLocationException <MultiValuedProperty>]
+ [-OneDriveLocation <MultiValuedProperty>]
+ [-OneDriveLocationException <MultiValuedProperty>]
+ [-PublicFolderLocation <MultiValuedProperty>]
+ [-Setting <PswsHashtable>]
+ [-SharePointLocation <MultiValuedProperty>]
+ [-SharePointLocationException <MultiValuedProperty>]
+ [-SkypeLocation <MultiValuedProperty>]
+ [-SkypeLocationException <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -279,7 +294,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Settings
+### -Setting
 PARAMVALUE: PswsHashtable
 
 ```yaml
@@ -384,6 +399,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

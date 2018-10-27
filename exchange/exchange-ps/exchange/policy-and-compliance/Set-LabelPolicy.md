@@ -17,19 +17,52 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Set-LabelPolicy [-Identity] <PolicyIdParameter> [-AddExchangeLocation <MultiValuedProperty>] [-AddModernGroupLocation <MultiValuedProperty>] [-AddOneDriveLocation <MultiValuedProperty>] [-AddPublicFolderLocation <MultiValuedProperty>] [-AddSharePointLocation <MultiValuedProperty>] [-AddSkypeLocation <MultiValuedProperty>] [-Comment <String>] [-Enabled <$true | $false>] [-Force] [-RemoveExchangeLocation <MultiValuedProperty>] [-RemoveModernGroupLocation <MultiValuedProperty>] [-RemoveOneDriveLocation <MultiValuedProperty>] [-RemovePublicFolderLocation <MultiValuedProperty>] [-RemoveSharePointLocation <MultiValuedProperty>] [-RemoveSkypeLocation <MultiValuedProperty>] [-AddExchangeLocationException <MultiValuedProperty>] [-AddModernGroupLocationException <MultiValuedProperty>] [-AddOneDriveLocationException <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>] [-AddSkypeLocationException <MultiValuedProperty>] [-Confirm] [-RemoveExchangeLocationException <MultiValuedProperty>] [-RemoveModernGroupLocationException <MultiValuedProperty>] [-RemoveOneDriveLocationException <MultiValuedProperty>] [-RemoveSharePointLocationException <MultiValuedProperty>] [-RemoveSkypeLocationException <MultiValuedProperty>] [-Settings <PswsHashtable>] [-WhatIf]
+Set-LabelPolicy [-Identity] <PolicyIdParameter>
+ [-AddExchangeLocation <MultiValuedProperty>]
+ [-AddExchangeLocationException <MultiValuedProperty>]
+ [-AddLabels <MultiValuedProperty>]
+ [-AddModernGroupLocation <MultiValuedProperty>]
+ [-AddModernGroupLocationException <MultiValuedProperty>]
+ [-AddOneDriveLocation <MultiValuedProperty>]
+ [-AddOneDriveLocationException <MultiValuedProperty>]
+ [-AddPublicFolderLocation <MultiValuedProperty>]
+ [-AddSharePointLocation <MultiValuedProperty>]
+ [-AddSharePointLocationException <MultiValuedProperty>]
+ [-AddSkypeLocation <MultiValuedProperty>]
+ [-AddSkypeLocationException <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-NextLabelPolicy <PolicyIdParameter>]
+ [-RemoveExchangeLocation <MultiValuedProperty>]
+ [-RemoveExchangeLocationException <MultiValuedProperty>]
+ [-RemoveLabels <MultiValuedProperty>]
+ [-RemoveModernGroupLocation <MultiValuedProperty>]
+ [-RemoveModernGroupLocationException <MultiValuedProperty>]
+ [-RemoveOneDriveLocation <MultiValuedProperty>]
+ [-RemoveOneDriveLocationException <MultiValuedProperty>]
+ [-RemovePublicFolderLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocation <MultiValuedProperty>]
+ [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-RemoveSkypeLocation <MultiValuedProperty>]
+ [-RemoveSkypeLocationException <MultiValuedProperty>]
+ [-Setting <PswsHashtable>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### RetryDistribution
 ```
-Set-LabelPolicy [-Identity] <PolicyIdParameter> -RetryDistribution [-AddExchangeLocationException <MultiValuedProperty>] [-AddModernGroupLocationException <MultiValuedProperty>] [-AddOneDriveLocationException <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>] [-AddSkypeLocationException <MultiValuedProperty>] [-Confirm] [-RemoveExchangeLocationException <MultiValuedProperty>] [-RemoveModernGroupLocationException <MultiValuedProperty>] [-RemoveOneDriveLocationException <MultiValuedProperty>] [-RemoveSharePointLocationException <MultiValuedProperty>] [-RemoveSkypeLocationException <MultiValuedProperty>] [-Settings <PswsHashtable>] [-WhatIf]
-```
-
-### Set3
-```
-Set-LabelPolicy [-Identity] <PolicyIdParameter> [-AddExchangeLocationException <MultiValuedProperty>] [-AddModernGroupLocationException <MultiValuedProperty>] [-AddOneDriveLocationException <MultiValuedProperty>] [-AddSharePointLocationException <MultiValuedProperty>] [-AddSkypeLocationException <MultiValuedProperty>] [-Confirm [<SwitchParameter>]] [-RemoveExchangeLocationException <MultiValuedProperty>] [-RemoveModernGroupLocationException <MultiValuedProperty>] [-RemoveOneDriveLocationException <MultiValuedProperty>] [-RemoveSharePointLocationException <MultiValuedProperty>] [-RemoveSkypeLocationException <MultiValuedProperty>] [-Settings <PswsHashtable>] [-WhatIf]
+Set-LabelPolicy [-Identity] <PolicyIdParameter> -RetryDistribution
+ [-AddLabels <MultiValuedProperty>]
+ [-Confirm]
+ [-NextLabelPolicy <PolicyIdParameter>]
+ [-PreviousLabelPolicy <PolicyIdParameter>]
+ [-RemoveLabels <MultiValuedProperty>]
+ [-Setting <PswsHashtable>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,7 +105,7 @@ The RetryDistribution switch specifies whether to redistribute the policy to all
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: RetryDistribution
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -103,7 +136,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -134,8 +167,23 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddLabels
+{{Fill AddLabels Description}}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -161,7 +209,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -188,7 +236,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -205,7 +253,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -222,7 +270,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -237,7 +285,7 @@ The AddPublicFolderLocation parameter specifies that you want to add all public 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -256,7 +304,7 @@ SharePoint Online sites can't be added to the policy until they have been indexe
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -273,7 +321,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -300,7 +348,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -315,7 +363,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -330,7 +378,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -369,7 +417,7 @@ The Enabled parameter enables or disable the policy. Valid values are:
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -384,8 +432,38 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NextLabelPolicy
+{{Fill NextLabelPolicy Description}}
+
+```yaml
+Type: PolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviousLabelPolicy
+{{Fill PreviousLabelPolicy Description}}
+
+```yaml
+Type: PolicyIdParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -415,7 +493,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -446,8 +524,23 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveLabels
+{{Fill RemoveLabels Description}}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -473,7 +566,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -500,7 +593,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -517,7 +610,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -534,7 +627,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -549,7 +642,7 @@ he RemovePublicFolderLocation parameter specifies that you want to remove all pu
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -566,7 +659,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -583,7 +676,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -610,7 +703,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -625,7 +718,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -635,7 +728,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Settings
+### -Setting
 PARAMVALUE: PswsHashtable
 
 ```yaml
@@ -664,6 +757,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

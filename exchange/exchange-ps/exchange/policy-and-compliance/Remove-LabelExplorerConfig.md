@@ -1,24 +1,24 @@
----
+﻿---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: Get-Label
+title: Remove-LabelExplorerConfig
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Get-Label
+# Remove-LabelExplorerConfig
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-Label cmdlet to view labels in your organization.
+Use the Remove-LabelExplorerConfig cmdlet to remove label explorer configurations from your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Get-Label [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
+Remove-LabelExplorerConfig [-Identity] <LabelExplorerConfigIdParameter> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,40 +26,61 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
-Get-Label
-```
-
-This example returns a summary list of all labels in the organization.
-
-### -------------------------- Example 2 --------------------------
-```
-Get-Label -Identity "Engineering Group" | Format-List
+{{ Add example code here }}
 ```
 
-This example returns detailed information for the label named Engineering Group.
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the label that you want to view. You can use any value that uniquely identifies the label. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
+The Identity parameter specifies the label explorer configuration that you want to remove.
 
 ```yaml
-Type: ComplianceRuleIdParameter
+Type: LabelExplorerConfigIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Office 365 Security & Compliance Center
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch doesn't work in the Office 365 Security & Compliance Center.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -80,4 +101,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-label)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-labelexplorerconfig)

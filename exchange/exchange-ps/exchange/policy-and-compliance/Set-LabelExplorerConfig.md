@@ -1,74 +1,73 @@
----
+﻿---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: New-Label
+title: Set-LabelExplorerConfig
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# New-Label
+# Set-LabelExplorerConfig
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-Label cmdlet to create labels in your organization.
+Use the Set-LabelExplorerConfig cmdlet to modify label explorer configurations from your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-Label -Name <String>
- [-Comment <String>]
- [-Conditions <MultiValuedProperty>]
+Set-LabelExplorerConfig [-Identity] <LabelExplorerConfigIdParameter>
+ [-Actions <None | View | ChangeLabel | UnRecord>]
+ [-AddLabels <MultiValuedProperty>]
+ [-AddUsers <MultiValuedProperty>]
  [-Confirm]
  [-DisplayName <String>]
- [-LabelActions <MultiValuedProperty>]
- [-LocaleSettings <<MultiValuedProperty>]
- [-ParentId <ComplianceRuleIdParameter>]
- [-Setting <PswsHashtable>]
- [-Tooltip <String>]
+ [-Filter <String>]
+ [-Labels <MultiValuedProperty>]
+ [-RemoveLabels <MultiValuedProperty>]
+ [-RemoveUsers <MultiValuedProperty>]
+ [-Users <MultiValuedProperty>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
-
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx)Find the permissions required to run any Exchange cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
-Insert example commands for example 1.
+{{ Add example code here }}
 ```
 
-Insert descriptive text for example 1.
-
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Name
-The Name parameter specifies the unique name for the label. The maiximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+### -Identity
+The Identity parameter specifies the label explorer configuration that you want to modify.
 
 ```yaml
-Type: String
+Type: LabelExplorerConfigIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Comment
-The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+### -Actions
+{{Fill Actions Description}}
 
 ```yaml
-Type: String
+Type: None | View | ChangeLabel | UnRecord
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -77,13 +76,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Conditions
-PARAMVALUE: MultiValuedProperty
+### -AddLabels
+{{Fill AddLabels Description}}
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddUsers
+{{Fill AddUsers Description}}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -112,12 +126,12 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The DisplayName parameter specifies the display name for the label. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate label before they send a message.
+{{Fill DisplayName Description}}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -126,13 +140,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LabelActions
-PARAMVALUE: MultiValuedProperty
+### -Filter
+{{Fill Filter Description}}
 
 ```yaml
-Type: MultiValuedProperty
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -141,8 +155,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocaleSettings
-{{Fill LocaleSettings Description}}
+### -Labels
+{{Fill Labels Description}}
 
 ```yaml
 Type: MultiValuedProperty
@@ -156,19 +170,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ParentId
-The ParentId parameter specifies the policy that contains the label. You can use any value that uniquely identifies the policy. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
+### -RemoveLabels
+{{Fill RemoveLabels Description}}
 
 ```yaml
-Type: ComplianceRuleIdParameter
+Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -177,13 +185,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Setting
-PARAMVALUE: PswsHashtable
+### -RemoveUsers
+{{Fill RemoveUsers Description}}
 
 ```yaml
-Type: PswsHashtable
+Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -192,11 +200,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tooltip
-{{Fill Tooltip Description}}
+### -Users
+{{Fill Users Description}}
 
 ```yaml
-Type: String
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -239,4 +247,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelexplorerconfig)
