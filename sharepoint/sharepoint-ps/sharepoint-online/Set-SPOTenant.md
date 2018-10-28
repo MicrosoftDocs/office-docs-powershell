@@ -302,6 +302,9 @@ False (default) - When a document is shared with an external user, bob@contoso.c
 True - User must accept this invitation with bob@contoso.com.
 
 > [!NOTE] 
+> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Azure AD, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation). 
+
+> [!NOTE] 
 > Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect. 
 
 
