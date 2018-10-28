@@ -8,8 +8,9 @@ schema: 2.0.0
 # Disable-CsOnlineSipDomain
 
 ## SYNOPSIS
-**THIS IS PRELIMINARY DOCUMENTATION OF UPCOMING FUNCTIONALITY**
-These cmdlets are only for use by complex organizations having multiple on-premises deployments of Skype for Business Server or Lync Server. By using Disable-CsOnlineSipDomain as described below, organizations can safely synchronize users from multiple on-premises forests  containing Skype for Business Server into a single Office 365 tenant.  Note however, only 1 on-premise tenant can be in hybrid mode at a time.  Users in the non-hybrid forests would continue to be served by their on-premises deployment of Skype for Business Server (or Lync Server).
+**THIS IS PRELIMINARY DOCUMENTATION OF UPCOMING FUNCTIONALITY**</br>
+This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain. This cmdlet allows organizations with multiple on-premises deployments of Skype For Business Server or Lync Server to safely synchronize users from multiple forests into a single Office 365 tenant. **IMPORTANT:** Only 1 Skype for Business forest can by in hybrid mode at a given time.
+.  
 ## SYNTAX
 
 ```
@@ -18,9 +19,23 @@ Disable-CsOnlineSipDomain -Domain <String> [-Tenant <System.Guid>] [-DomainContr
 ```
 
 ## DESCRIPTION
-*This cmdlet is useful for organizations with multiple on-premises deployments of Skype for Business Server (or Lync Server).* If an organization intends to configure hybrid for 1 of those deployments, then this cmdlet must be run for all sip domains in any other on-premises deployment(s).
+This cmdlet enables organizations with *multiple on-premises deployments of Skype for Business Server (or Lync Server)* to safely synchronize users from multiple forests into a single Office 365 tenant.  When an an online SIP domain is disabled in Skype for Business Online, provisioning is blocked for users in this SIP domain. This ensures routing for any on-premises users in this SIP domain continues to function properly.
 
-This cmdlet may also be useful for organizations with on-premises deployments of Skype for Business Server that have not properly configured Azure AD Connect. If the organization does not sync msRTCSIP-DeploymentLocator for its users, then Skype for Business Online will attempt to provision users online, despite there being users on-premises.  While the correct fix is to update the configuration for Azure AD Connect to sync those attributes, using Disable-CsOnlineSipDomain, can also mitigate the problem until that configuration change can be made.  If this comdlet is run, any users that were previously provisioned online in that domain will be de-provisioned in Skype for Business Online.
+This cmdlet facilitates consolidation of *multiple Skype for Business Server deployments* into a single Office 365 tenant. Consolidation can be achieved by moving one deployment at a time into Office 365, provided the following key requirements are met:
+ - There must be at most 1 O365 tenant involved. Consolidation in scenarios with >1 O365 tenant is not supported.
+ - At any given time, only 1 on-premise SfB forest can be in hybrid mode (shared sip address space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably federated with each other.)  
+ - If 1 deployment is in hybrid mode, all sip domains from any other SfB forests must be disabled using this cmdlet before they can be synchronized into the tenant with Azure AD Connect. Users in all SfB forests other than the hybrid forest must remain on-premises.
+  - Organizations must fully migrate each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the “hybrid” deployment, *before* moving on to migrate the next on-premise SfB deployment.   
+
+
+This cmdlet may also be useful for organizations with on-premises deployments of Skype for Business Server that have not properly configured Azure AD Connect. If the organization does not sync msRTCSIP-DeploymentLocator for its users, then Skype for Business Online will attempt to provision users online, despite there being users on-premises.  While the correct fix is to update the configuration for Azure AD Connect to sync those attributes, using Disable-CsOnlineSipDomain can also mitigate the problem until that configuration change can be made.  If this cmdlet is run, any users that were previously provisioned online in that domain will be de-provisioned in Skype for Business Online.
+
+**IMPORTANT**
+This cmdlet should not be run for domains that contain users hosted in Skype for Business Online.  Any users in a sip domain that are already provisioned *online* will cease to function if you disable the online sip domain:
+ - Their SIP addresses will be removed.
+ - All contacts and meetings for these users hosted in Skype for Business Online will be deleted.
+ - These users will no longer be able to login to the Skype for Business Online environment.
+ - If these users use Teams, they will no longer be able to inter-operate with Skype for Business users, nor will they be able to federate with any users in other organizations.
 
 
 ## EXAMPLES
