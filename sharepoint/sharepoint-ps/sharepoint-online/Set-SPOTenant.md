@@ -301,6 +301,9 @@ The valid values are:
 False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
 True - User must accept this invitation with bob@contoso.com.
 
+> [!NOTE] 
+> Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect. 
+
 
 ```yaml
 Type: Boolean
