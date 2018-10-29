@@ -129,8 +129,8 @@ Use this parameter if one or more of the front end servers cannot be started.
 Note that there is a minimum number of servers required for the pool to be functional.
 The cmdlet will check for those conditions while trying to implement this parameter.
 
-For example, to specify a single server use the following syntax: `-SkipServer "AtlServerOne"`.
-To specify more than one server use the syntax: `-SkipServer "AtlServerOne","AtlServerTwo"`
+For example, to specify a single server use the following syntax: `-SkipServer "AtlServerOne.litwareinc.com"`.
+To specify more than one server use the syntax: `-SkipServer "AtlServerOne.litwareinc.com","AtlServerTwo.litwareinc.com"`
 
 ```yaml
 Type: String[]
