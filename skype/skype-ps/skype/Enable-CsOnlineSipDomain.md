@@ -31,28 +31,29 @@ Before running this cmdlet for any SIP domain in a Skype for Business Server dep
 **IMPORTANT**
 If you have more than one on-premises deployment of Skype for Business Server, you *must* ensure SharedSipAddressSpace is disabled in all other Skype for Business Server deployments except the deployment containing the SID domain that is being enabled. 
 
-### HOW TO DETACH A HYBRID DEPLOYMENT FROM OFFICE 365
+**HOW TO DETACH A HYBRID DEPLOYMENT FROM OFFICE 365**
+
 Once you have moved all users from on-premises into the cloud, you can decommission the on-premises Skype for Business deployment. Aside from removing any hardware, a critical step is to logically detach that on-premises deployment from Office 365. Detaching hybrid consists of 3 steps:
  -	Disable shared sip address space in the O365 tenant.
  - Disable the ability in the on-premises environment to communicate with O365
  - Update DNS records to point to Office 365.
 These steps should be done together as a unit. 
 
-#### Disable shared sip address space in the Office 365 tenant
+- Disable shared sip address space in the Office 365 tenant
 The command below needs to be done from a Skype for Business Online PowerShell window. 
 
-```powershell
+```
 PS C:\> Set-CsTenantFederationConfiguration -SharedSipAddressSpace $false
 ```
 
-### Disable ability in on-premise to communicate with Office 365 
+- Disable ability in on-premise to communicate with Office 365 
 The command below needs to be done from an on-premises PowerShell window.  If you have previously imported an Office 365 session, start a new Skype for Business PowerShell session.
 
-```powershell
+```
 Get-CsHostingProvider|Set-CsHostingProvider -Enabled $false
 ```
 
-### Update DNS to point to O365
+- Update DNS to point to O365
 The organization’s external DNS for the former on-premises deployment needs to be updated so that Skype for Business records point to Office 365 instead of Onprem. Specifically:
 </br>
 </br>
