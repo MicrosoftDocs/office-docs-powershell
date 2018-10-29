@@ -17,14 +17,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### MyAnalytics
 ```
-Set-TenantAnalyticsConfig -MinRecipients <Int32> [<CommonParameters>]
+Set-TenantAnalyticsConfig -MinRecipients <Int32>
+ [<CommonParameters>]
 ```
 
-### Set2
+### TeamAnalytics
 ```
-Set-TenantAnalyticsConfig [-MinRecipients <Int32>] -MinTeamSize <Int32> -TeamAnalyticsEnabled <$true | $false>
+Set-TenantAnalyticsConfig -MinTeamSize <Int32> -TeamAnalyticsEnabled <$true | $false>
+ [-MinRecipients <Int32>]
  [<CommonParameters>]
 ```
 
@@ -47,7 +49,7 @@ The MinRecipients parameter specifies the minimum number of recipients required 
 
 ```yaml
 Type: Int32
-Parameter Sets: Set1
+Parameter Sets: MyAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -59,7 +61,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Int32
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -74,7 +76,7 @@ PARAMVALUE: Int32
 
 ```yaml
 Type: Int32
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -89,7 +91,7 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
