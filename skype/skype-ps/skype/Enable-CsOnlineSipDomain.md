@@ -42,16 +42,16 @@ These steps should be done together as a unit.
 - Disable shared sip address space in the Office 365 tenant
 The command below needs to be done from a Skype for Business Online PowerShell window. 
 
-```
+`
 PS C:\> Set-CsTenantFederationConfiguration -SharedSipAddressSpace $false
-```
+`
 
 - Disable ability in on-premise to communicate with Office 365 
 The command below needs to be done from an on-premises PowerShell window.  If you have previously imported an Office 365 session, start a new Skype for Business PowerShell session.
 
-```
+`
 Get-CsHostingProvider|Set-CsHostingProvider -Enabled $false
-```
+`
 
 - Update DNS to point to O365
 The organization’s external DNS for the former on-premises deployment needs to be updated so that Skype for Business records point to Office 365 instead of Onprem. Specifically:
