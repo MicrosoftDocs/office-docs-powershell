@@ -43,6 +43,7 @@ class CmdletDependenciesService {
 	}
 
 	async installPlatyPs() {
+		await this.ps.invokeCommand(commands.INSTALL_PACKAGE_PROVIDER);
 		await this.ps.invokeCommand(commands.INSTALL_PLATYPS);
 		await this.ps.invokeCommand(commands.IMPORT_PLATYPS);
 	}
@@ -64,8 +65,6 @@ class CmdletDependenciesService {
 		// await this.ps.invokeCommand(commands.SKYPE_INSTALL_MODULE);
 		await this.ps.invokeCommand(commands.SKYPE_CREATE_SESSION);
 		await this.ps.invokeCommand(commands.SKYPE_IMPORT_SESSION);
-
-		return result;
 	}
 
 	async preInstallWhiteboard() {

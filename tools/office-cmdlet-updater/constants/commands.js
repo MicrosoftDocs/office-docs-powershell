@@ -1,5 +1,6 @@
 module.exports = {
 	GET_TEAM: 'Get-Team',
+	INSTALL_PACKAGE_PROVIDER: 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force',
 	INSTALL_MICROSOFT_TEAM: 'Install-Module MicrosoftTeams -SkipPublisherCheck -Force',
 	CONNECT_MICROSOFT_TEAM: 'Connect-MicrosoftTeams',
 	INSTALL_PLATYPS: 'Install-Module -Name platyPS -SkipPublisherCheck -Scope CurrentUser -Force',
