@@ -752,13 +752,12 @@ Also, this will also block apps using the SharePointOnlineCredentials class to a
 > [!NOTE] 
 > The change is not instant. It might take up to 24 hours to be applied.
 
-#### EXAMPLES
-
-##### -----------------------EXAMPLE 1-----------------------------
-```
+EXAMPLE
+`
 Connect-SPOService
 Set-SPOTenant -LegacyAuthProtocolsEnabled $True
-```
+`
+
 This example enables legacy authentication protocols on the tenant. This can help to enable login in situations where the admin users get an error like "Cannot contact web site 'https://contoso-admin.sharepoint.com/' or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'.", and the underlying error is "Access denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically."
 
 ```yaml
