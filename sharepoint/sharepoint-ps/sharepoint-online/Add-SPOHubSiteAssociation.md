@@ -13,24 +13,18 @@ Associates a site with a hub site.
 ## SYNTAX
 
 ```
-Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> `
--HubSite <SpoHubSitePipeBind> `
-[<CommonParameters>]
+Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> -HubSite <SpoHubSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Use this cmdlet to associate a site with a hub site.
-
-> [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research `
--HubSite https://contoso.sharepoint.com/sites/Marketing 
+Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research -HubSite https://contoso.sharepoint.com/sites/Marketing 
 ```
 
 This example associates the research site with the marketing hub site.

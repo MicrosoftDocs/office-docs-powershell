@@ -1,4 +1,4 @@
----
+ ---
 external help file: 
 applicable: SharePoint Server 2013
 title: Get-SPExcelBIServer

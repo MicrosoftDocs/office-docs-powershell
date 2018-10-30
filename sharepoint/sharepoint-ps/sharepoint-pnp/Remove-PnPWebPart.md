@@ -42,20 +42,6 @@ Remove-PnPWebPart -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Titl
 
 This will remove the webpart specified by title to the specified page in the first row and the first column of the HTML table present on the page
 
-### ------------------EXAMPLE 3------------------
-```powershell
-Remove-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Identity a2875399-d6ff-43a0-96da-be6ae5875f82
-```
-
-This will remove the webpart as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
-
-### ------------------EXAMPLE 4------------------
-```powershell
-Remove-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Name MyWebpart
-```
-
-This will remove the webpart as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
-
 ## PARAMETERS
 
 ### -Identity

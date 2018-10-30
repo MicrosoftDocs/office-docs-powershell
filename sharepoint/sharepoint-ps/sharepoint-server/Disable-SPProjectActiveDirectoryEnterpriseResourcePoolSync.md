@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: Project Server 2013, Project Server 2016
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
 ---
@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE--------------------- 
 ```
-C:\PS>Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
+PS C:\>Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
 ```
 
 This example disables Timer Job execution of the Active Directory Enterprise Resource Pool synchronization on http://localhost/pwa.
@@ -57,7 +57,7 @@ Specifies the URL of the Project Web App (PWA) instance to disable Active Direct
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: 1
@@ -79,7 +79,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named

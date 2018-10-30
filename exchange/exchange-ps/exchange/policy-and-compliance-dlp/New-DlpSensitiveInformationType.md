@@ -87,9 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -SensitiveInformationTypeRuleCollectionIdentity
-The SensitiveInformationTypeRuleCollectionIdentity parameter is reserved for future use.
-
-New sensitive information type rules that you create are automatically added to the rule collection named Fingerprint Classification Collection.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ClassificationRuleCollectionIdParameter

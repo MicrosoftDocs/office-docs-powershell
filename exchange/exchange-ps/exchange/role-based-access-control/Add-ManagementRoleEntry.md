@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Add-ManagementRoleEntry
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Add-ManagementRoleEntry
@@ -17,17 +17,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Add-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Overwrite]
- [-Parameters <String[]>] [-PSSnapinName <String>] [-Type <Cmdlet | Script | ApplicationPermission | All>]
- [-UnScopedTopLevel] [-WhatIf] [-Force] [<CommonParameters>]
+Add-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Overwrite]
+ [-Parameters <String[]>]
+ [-PSSnapinName <String>]
+ [-Type <Cmdlet | Script | ApplicationPermission | All>]
+ [-UnScopedTopLevel]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ParentRoleEntry
 ```
-Add-ManagementRoleEntry [-ParentRoleEntry] <RoleEntryIdParameter> -Role <RoleIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-Overwrite] [-WhatIf] [-Force] [<CommonParameters>]
+Add-ManagementRoleEntry [-ParentRoleEntry] <RoleEntryIdParameter> -Role <RoleIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Overwrite]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,9 +91,9 @@ The role entry you want to add must exist in the parent role. If the role entry 
 
 ```yaml
 Type: RoleEntryIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: 1
 Default value: None
@@ -95,9 +106,9 @@ The ParentRoleEntry parameter specifies the role entry in the parent role to add
 
 ```yaml
 Type: RoleEntryIdParameter
-Parameter Sets: Set2
+Parameter Sets: ParentRoleEntry
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: 1
 Default value: None
@@ -110,9 +121,9 @@ The Role parameter specifies the role to which the new role entry, specified by 
 
 ```yaml
 Type: RoleIdParameter
-Parameter Sets: Set2
+Parameter Sets: ParentRoleEntry
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: Named
 Default value: None
@@ -131,7 +142,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -148,105 +159,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Overwrite
-The Overwrite parameter causes existing role entries to be overwritten by the role entries being added.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Parameters
-The Parameters parameter specifies the parameters to be included in the role being added. The parameters specified must exist on the cmdlet associated with the role entry. You can specify multiple parameters, separated with commas.
-
-```yaml
-Type: String[]
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PSSnapinName
-This parameter is available only in on-premises Exchange.
-
-The PSSnapinName parameter specifies the Windows PowerShell snap-in that contains the cmdlet associated with the role being added. Use the Get-PSSnapin cmdlet to retrieve a list of available Windows PowerShell snap-ins.
-
-```yaml
-Type: String
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Type
-The Type parameter specifies the type of role entry being added. The valid values are Cmdlet, Script and ApplicationPermission.
-
-```yaml
-Type: Cmdlet | Script | ApplicationPermission | All
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UnScopedTopLevel
-This parameter is available on in on-premises Exchange.
-
-By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
-
-The UnScopedTopLevel switch specifies that you're adding a custom script or non-Exchange cmdlet to an unscoped top-level management role. You don't need to specify a value with this switch.
-
-You can only use this switch when you add a role entry to an unscoped top-level role. When you use this switch, you can't use the ParentRoleEntry parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -264,6 +177,106 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Overwrite
+The Overwrite parameter causes existing role entries to be overwritten by the role entries being added.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Parameters
+The Parameters parameter specifies the parameters to be included in the role being added. The parameters specified must exist on the cmdlet associated with the role entry. You can specify multiple parameters, separated with commas.
+
+```yaml
+Type: String[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PSSnapinName
+This parameter is available only in on-premises Exchange.
+
+The PSSnapinName parameter specifies the Windows PowerShell snap-in that contains the cmdlet associated with the role being added. Use the Get-PSSnapin cmdlet to retrieve a list of available Windows PowerShell snap-ins.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+The Type parameter specifies the type of role entry being added. The valid values are Cmdlet, Script and ApplicationPermission.
+
+```yaml
+Type: Cmdlet | Script | ApplicationPermission | All
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UnScopedTopLevel
+This parameter is available on in on-premises Exchange.
+
+By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+
+The UnScopedTopLevel switch specifies that you're adding the role entry to an unscoped top-level management role. You don't need to specify a value with this switch.
+
+Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see Create an unscoped role(https://technet.microsoft.com/library/dd876886.aspx).
+
+You can't use this switch with the ParentRoleEntry parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

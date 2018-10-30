@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016 Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OwaMailboxPolicy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-OwaMailboxPolicy
@@ -175,7 +175,7 @@ The Identity parameter specifies the Outlook on the web mailbox policy that you 
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -196,7 +196,7 @@ The ActionForUnknownFileAndMIMETypes parameter specifies how to handle file type
 Type: Allow | ForceSave | Block
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -209,13 +209,13 @@ The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disabl
 
 - $true: ActiveSync is available in Outlook on the web. This is the default value.
 
-- $false: ActiveSync isn't avaialble in Outlook on the web.
+- $false: ActiveSync isn't available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +234,7 @@ The AllAddressListsEnabled parameter specifies which address lists are available
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -253,7 +253,7 @@ The AllowCopyContactsToDeviceAddressBook parameter specifies whether users can c
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -280,7 +280,7 @@ If the same file types are specified in multiple lists:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -313,7 +313,7 @@ If the same MIME types are specified in multiple lists:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfflineOn
-The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is avaialble for supported web browsers. Valid values are:
+The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is available for supported web browsers. Valid values are:
 
 - PrivateComputersOnly: Offline mode is available in private computer sessions. By default in Exchange 2013 or later and Exchange Online, all Outlook on the web sessions are considered to be on private computers. In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
@@ -336,7 +336,7 @@ When offline mode is available, uers can turn offline mode on or off themselves 
 Type: PrivateComputersOnly | NoComputers | AllComputers
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -363,7 +363,7 @@ If the same file types are specified in multiple lists:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -404,7 +404,7 @@ If the same MIME types are specified in multiple lists:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -423,7 +423,7 @@ The CalendarEnabled parameter specifies whether to enable or disable the calenda
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -444,7 +444,7 @@ The ChangePasswordEnabled parameter specifies whether users can change their pas
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -463,7 +463,7 @@ The ClassicAttachmentsEnabled parameter specifies whether users can attach local
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -474,19 +474,21 @@ Accept wildcard characters: False
 ### -ConditionalAccessPolicy
 This parameter is available only in the cloud-based service.
 
-The ConditionalAccessPolicy parameter specifies the conditional access policy for Outlook on the web. Valid values are:
+The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access.  For this feature to properly work, you will need to additioanlly configure a Conditional Access policy in the Azure Active Directory Portal.
+
+Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
 
-- ReadOnly
+- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser.
 
-- ReadOnlyPlusAttachmentsBlocked
+- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser.
 
 ```yaml
 Type: Off | ReadOnly | ReadOnlyPlusAttachmentsBlocked
 Parameter Sets: (All)
 Aliases:
-Applicable: xchange Online
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -505,7 +507,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -524,7 +526,7 @@ The ContactsEnabled parameter specifies whether to enable or disable Contacts in
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -539,7 +541,7 @@ This parameter has been deprecated and is no longer used.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -548,7 +550,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultTheme
-The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are avaialble in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
+The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are available in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
 
 Note that this parameter is a text string, and the value you specify isn't validated against the list of available themes.
 
@@ -556,7 +558,7 @@ Note that this parameter is a text string, and the value you specify isn't valid
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -598,7 +600,7 @@ By default in Exchange 2013 or later and Exchange Online, all Outlook on the web
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -619,7 +621,7 @@ In Exchange 2013 or later, users can only specify public computer sessions if yo
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -661,7 +663,7 @@ The DisplayPhotosEnabled parameter specifies whether users see sender photos in 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -678,7 +680,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -697,7 +699,7 @@ The ExplicitLogonEnabled parameter specifies whether to allow a user to open som
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -714,7 +716,7 @@ This parameter is part of rich document collaboration that allows links to docum
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -733,7 +735,7 @@ The ForceSaveAttachmentFilteringEnabled parameter specifies whether files are fi
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -760,7 +762,7 @@ If the same file types are specified in multiple lists:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -795,7 +797,7 @@ If the same MIME types are specified in multiple lists:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -816,7 +818,7 @@ By default in Exchange 2013 or later and Exchange Online, all Outlook on the web
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -837,7 +839,7 @@ In Exchange 2013 or later, users can only specify public computer sessions if yo
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -923,7 +925,7 @@ The GlobalAddressListEnabled parameter specifies whether the global address list
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -963,7 +965,7 @@ The InstantMessagingEnabled parameter specifies whether instant messaging is ava
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -982,7 +984,7 @@ The InstantMessagingType parameter specifies the type of instant messaging provi
 Type: None | Ocs | Msn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -992,7 +994,7 @@ Accept wildcard characters: False
 ### -InterestingCalendarsEnabled
 This parameter is available only in the cloud-based service.
 
-The InterestingCalendarsEnabled parameter specifies whether interesting calendars are avaialble in Outlook on the web. Valid values are:
+The InterestingCalendarsEnabled parameter specifies whether interesting calendars are available in Outlook on the web. Valid values are:
 
 - $true: Interesting calendars are available in Outlook on thew web. This is the default value.
 
@@ -1019,7 +1021,7 @@ This parameter is part of rich document collaboration that allows links to docum
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1038,7 +1040,7 @@ The IRMEnabled parameter specifies whether Information Rights Management (IRM) f
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1055,7 +1057,7 @@ The IsDefault switch specifies whether the Outlook on the web policy is the defa
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1074,7 +1076,7 @@ The JournalEnabled parameter specifies whether the Journal folder is available i
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1087,7 +1089,7 @@ This parameter is available only in on-premises Exchange.
 
 The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web.
 
-- $true: The Junk Email folder and junk email management are avaialble in Outlook on the web. This is the default value.
+- $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
 
 - $false: The Junk Email folder and junk email management aren't available in Outlook on the web.
 
@@ -1095,7 +1097,7 @@ The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1109,7 +1111,7 @@ This parameter is available only in the cloud-based service.
 The LinkedInEnabled parameter specifies whether users can synchronize their LinkedIn contacts to their Contacts folder. Valid values are:
 
 - $true: LinkedIn integration is enabled. This is the default value.
-- 
+
 - $false: LinkedIn integration is disabled.
 
 ```yaml
@@ -1156,7 +1158,7 @@ The default value is 0, which means the logon and error language selection is un
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1171,7 +1173,7 @@ The Name parameter specifies the unique name for the policy. The maximum length 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1190,7 +1192,7 @@ The NotesEnabled parameter specifies whether the Notes folder is available in Ou
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1209,7 +1211,7 @@ The OneDriveAttachmentsEnabled parameter specifies whether to allow OneDrive att
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1245,7 +1247,7 @@ When the OrganizationEnabled parameter is set to $false, the Automatic Reply opt
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1266,7 +1268,7 @@ The OutboundCharset parameter specifies the character set that's used for outgoi
 Type: AlwaysUTF8 | AutoDetect | UserLanguageChoice
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1298,15 +1300,15 @@ Accept wildcard characters: False
 ### -OWALightEnabled
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
-- $true: The light version of Outlook on the web is avaialble. This is the default value.
+- $true: The light version of Outlook on the web is available. This is the default value.
 
-- $false: The light version of Outlook on the web is isn't avaialble. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
+- $false: The light version of Outlook on the web is isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1319,9 +1321,9 @@ This parameter is available or functional only in Exchange Server 2010.
 
 The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
 
-- $true: The mini version of Outlook Web App is avaialble. This is the default value.
+- $true: The mini version of Outlook Web App is available. This is the default value.
 
-- $false: The mini version of Outlook Web App isn't avaialble.
+- $false: The mini version of Outlook Web App isn't available.
 
 ```yaml
 Type: $true | $false
@@ -1342,7 +1344,7 @@ The PhoneticSupportEnabled parameter specifies phonetically spelled entries in t
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1374,15 +1376,15 @@ Accept wildcard characters: False
 ### -PremiumClientEnabled
 The PremiumClientEnabled parameter controls the availability of the full version of Outlook Web App. Valid values are:
 
-- $true: The full version of Outlook Web App is avaialble for supported browsers. This is the default value.
+- $true: The full version of Outlook Web App is available for supported browsers. This is the default value.
 
-- $false: The full version of Outlook Web App isn't avaialble.
+- $false: The full version of Outlook Web App isn't available.
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1424,7 +1426,7 @@ The PublicFoldersEnabled parameter specifies whether a user can browse or read i
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1445,7 +1447,7 @@ The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outloo
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1464,7 +1466,7 @@ The ReferenceAttachmentsEnabled parameter specifies whether users can attach fil
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1485,7 +1487,7 @@ This parameter doesn't apply to the light version of Outlook Web App.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1506,7 +1508,7 @@ This parameter is meaningful only when the JunkEmailEnabled parameter is set to 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1525,7 +1527,7 @@ The RulesEnabled parameter specifies whether a user can view, create, or modify 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1544,7 +1546,7 @@ The SatisfactionEnabled parameter specifies whether to enable or disable the sat
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1563,7 +1565,7 @@ The SaveAttachmentsToCloudEnabled parameter specifies whether users can save reg
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1582,7 +1584,7 @@ The SearchFoldersEnabled parameter specifies whether Search Folders are availabl
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1601,7 +1603,7 @@ The SetPhotoEnabled parameter specifies whether users can add, change, and remov
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1616,7 +1618,7 @@ The SetPhotoURL parameter specifies the location (URL) of user photos. The defau
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1635,7 +1637,7 @@ The SignaturesEnabled parameter specifies whether to enable or disable the use o
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1744,7 +1746,7 @@ This parameter doesn't apply to the light version of Outlook on the web.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1765,7 +1767,7 @@ This parameter doesn't apply to the light version of Outlook on the web.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1784,7 +1786,7 @@ The ThemeSelectionEnabled parameter specifies whether users can change the theme
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1847,7 +1849,7 @@ This parameter doesn't apply to the light version of Outlook on the web.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1864,7 +1866,7 @@ This parameter has been deprecated and is no longer used.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1881,7 +1883,7 @@ This parameter has been deprecated and is no longer used.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1900,7 +1902,7 @@ The UseGB18030 parameter specifies whether to use the GB18030 character set inst
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1919,7 +1921,7 @@ The UseISO885915 parameter specifies whether to use the character set ISO8859-15
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1959,7 +1961,7 @@ The WacEditingEnabled parameter specifies whether to enable or disable editing d
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1978,7 +1980,7 @@ The WacExternalServicesEnabled parameter specifies whether to enable or disable 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1997,7 +1999,7 @@ The WacOMEXEnabled parameter specifies whether to enable or disable apps for Out
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2018,7 +2020,7 @@ By default in Exchange 2013 or later and Exchange Online, all Outlook on the web
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2039,7 +2041,7 @@ In Exchange 2013 or later, users can only specify public computer sessions if yo
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2081,7 +2083,7 @@ The WebPartsFrameOptionsType parameter specifies what sources can access web par
 Type: Deny | AllowFrom | None | SameOrigin
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2094,9 +2096,9 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingForAllSupportedTypes parameter specifies whether to enable WebReady Document Viewing for all supported file and MIME types. Valid values are:
 
-- $true: All supported attachment types are avaialble for WebReady Document Viewing. This is the default value.
-- 
-- $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are avaialble for WebReady Document Viewing (you can remove values from the lists).
+- $true: All supported attachment types are available for WebReady Document Viewing. This is the default value.
+
+- $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are available for WebReady Document Viewing (you can remove values from the lists).
 
 ```yaml
 Type: $true | $false
@@ -2285,7 +2287,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2300,7 +2302,7 @@ This parameter has been deprecated and is no longer used.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2315,7 +2317,7 @@ This parameter has been deprecated and is no longer used.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

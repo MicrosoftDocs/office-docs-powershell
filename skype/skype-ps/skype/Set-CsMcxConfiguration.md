@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -SessionExpirationInterval
-Length of time, in seconds, of a mobile session for iPhone or Widows Phone users.
+Length of time, in seconds, of a mobile session for iPhone or Windows Phone users.
 If Skype for Business is running in the background on these phones, users will receive push notifications as long as the session expiration interval has not expired.
 
 The mobile device must send a notice to the server indicating that the device is still active before the session timeout is reached.

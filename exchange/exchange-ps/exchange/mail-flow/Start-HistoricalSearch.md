@@ -103,11 +103,11 @@ The ReportType parameter specifies the type of historical search that you want t
 
 - MessageTraceDetail: Message Trace Details Report.
 
-- Phish: Exchange Online Protetion and Advanced Threat Protection E-mail Phish Report.
+- Phish: Exchange Online Protection and Advanced Threat Protection E-mail Phish Report.
 
 - SPAM: SPAM Detections Report.
 
-- Spoof: Spood Mail Report.
+- Spoof: Spoof Mail Report.
 
 - TransportRule: Transport or Mail FLow Rules Report.
 

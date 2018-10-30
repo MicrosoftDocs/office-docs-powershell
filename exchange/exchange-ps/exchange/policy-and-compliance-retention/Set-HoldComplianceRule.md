@@ -13,7 +13,7 @@ This cmdlet is available only in the Office 365 Security & Compliance Center. Fo
 
 Use the Set-HoldComplianceRule cmdlet to modify existing preservation rules in the Security & Compliance Center.
 
-The Set-HoldComplianceRule cmdlet has been replaced by the Set-RetentionComplianceRule cmdlet. If you have any scripts that use the Set-HoldComplianceRule cmdlet, update them to use the Set-RetentionComplianceRule cmdlet.
+Note: The Set-HoldComplianceRule cmdlet has been replaced by the Set-RetentionComplianceRule cmdlet. If you have scripts that use Set-HoldComplianceRule, update them to use Set-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

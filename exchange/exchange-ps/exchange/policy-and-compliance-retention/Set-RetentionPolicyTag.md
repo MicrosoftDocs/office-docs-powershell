@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-RetentionPolicyTag
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Set-RetentionPolicyTag
@@ -19,25 +19,46 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter>
- [-AgeLimitForRetention <EnhancedTimeSpan>] [-Comment <String>]
- [-Confirm] [-DomainController <Fqdn>] [-Force] [-LegacyManagedFolder <ELCFolderIdParameter>]
- [-LocalizedComment <MultiValuedProperty>] [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
- [-MessageClass <String>] [-MustDisplayCommentEnabled <$true | $false>] [-Name <String>]
+Set-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter> 
+ [-AddressForJournaling <RecipientIdParameter>]
+ [-AgeLimitForRetention <EnhancedTimeSpan>]
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-JournalingEnabled <Boolean>]
+ [-LabelForJournaling <String>] 
+ [-LegacyManagedFolder <ELCFolderIdParameter>]
+ [-LocalizedComment <MultiValuedProperty>]
+ [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
+ [-MessageClass <String>]
+ [-MessageFormatForJournaling <JournalingFormat>]
+ [-MustDisplayCommentEnabled <$true | $false>]
+ [-Name <String>]
  [-RetentionAction <MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive>]
- [-RetentionEnabled <$true | $false>] [-RetentionId <Guid>] [-SystemTag <$true | $false>] [-WhatIf]
- [<CommonParameters>]
+ [-RetentionEnabled <$true | $false>]
+ [-RetentionId <Guid>] [-SystemTag <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### MailboxTask
 ```
-Set-RetentionPolicyTag -Mailbox <MailboxIdParameter> [-Comment <String>] [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-LegacyManagedFolder <ELCFolderIdParameter>] [-LocalizedComment <MultiValuedProperty>]
- [-LocalizedRetentionPolicyTagName <MultiValuedProperty>] [-MustDisplayCommentEnabled <$true | $false>]
- [-Name <String>] [-OptionalInMailbox <RetentionPolicyTagIdParameter[]>] [-RetentionId <Guid>]
- [-SystemTag <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-RetentionPolicyTag -Mailbox <MailboxIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-LegacyManagedFolder <ELCFolderIdParameter>]
+ [-LocalizedComment <MultiValuedProperty>]
+ [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
+ [-MustDisplayCommentEnabled <$true | $false>]
+ [-Name <String>]
+ [-OptionalInMailbox <RetentionPolicyTagIdParameter[]>]
+ [-RetentionId <Guid>]
+ [-SystemTag <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,9 +89,9 @@ The Identity parameter specifies the name, distinguished name (DN), or GUID of t
 
 ```yaml
 Type: RetentionPolicyTagIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -85,10 +106,27 @@ You must use this parameter with the OptionalInMailbox parameter.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: MailboxTask
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddressForJournaling
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -100,9 +138,9 @@ The AgeLimitForRetention parameter specifies the age at which retention is enfor
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +155,7 @@ The Comment parameter specifies a comment for the retention policy tag.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +174,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +191,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +206,41 @@ The Force switch overrides the confirmation prompt displayed by the cmdlet when 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JournalingEnabled
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelForJournaling
+This parameter is available or funcational only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +255,7 @@ The LegacyManagedFolder parameter specifies the name of a managed folder. The re
 Type: ELCFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -198,7 +270,7 @@ The LocalizedComment parameter specifies the localized comment and language for 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -213,7 +285,7 @@ The LocalizedRetentionPolicyTagName parameter specifies a localized name for the
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -232,9 +304,26 @@ A DPT for voice mail messages applies only to Microsoft Exchange Unified Messagi
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageFormatForJournaling
+This parameter is available or functional only in Exchange Server 2010.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: JournalingFormat
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
 Required: False
 Position: Named
 Default value: None
@@ -249,7 +338,7 @@ The MustDisplayCommentEnabled parameter specifies whether the comment can be hid
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -264,7 +353,7 @@ The Name parameter specifies the name of the retention policy tag.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -277,9 +366,9 @@ The OptionalInMailbox parameter is used with the Mailbox parameter to specify op
 
 ```yaml
 Type: RetentionPolicyTagIdParameter[]
-Parameter Sets: Set2
+Parameter Sets: MailboxTask
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -304,9 +393,9 @@ If this parameter isn't present and the RetentionEnabled parameter is set to $tr
 
 ```yaml
 Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -323,9 +412,9 @@ When you set the RetentionEnabled parameter to $false, the retention period for 
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -342,7 +431,7 @@ It's not ordinarily required to specify or modify the RetentionId parameter for 
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -357,7 +446,7 @@ The SystemTag parameter specifies whether the retention policy tag is created fo
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -372,7 +461,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

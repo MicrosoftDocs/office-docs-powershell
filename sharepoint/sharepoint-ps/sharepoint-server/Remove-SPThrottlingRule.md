@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPThrottlingRule
 schema: 2.0.0
 ---
@@ -36,7 +36,7 @@ C:\PS>$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchTyp
 
 C:\PS>$throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
 
-C:\PS>Remove-SPThrottlingRule -Identity $throttlingrule
+PS C:\>Remove-SPThrottlingRule -Identity $throttlingrule
 ```
 
 This example removes a throttling rule for a specified identity by using the $throttlingrule variable.
@@ -51,7 +51,7 @@ Specifies the throttling rule object to remove.
 Type: SPThrottlingRulePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -73,7 +73,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

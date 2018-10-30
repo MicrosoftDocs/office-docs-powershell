@@ -17,7 +17,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
 New-ComplianceRetentionEvent -Name <String> [-AssetId <String>] [-Comment <String>] [-Confirm] [-EventDateTime <DateTime>] [-EventTags <MultiValuedProperty>] [-EventType <ComplianceRuleIdParameter>] [-ExchangeAssetIdQuery <String>] [-SharePointAssetIdQuery <String>] [-WhatIf] [<CommonParameters>]
 ```
@@ -216,4 +215,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/en-us/powershell/module/exchange/policy-and-compliance-retention/New-ComplianceRetentionEvent)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/New-ComplianceRetentionEvent)

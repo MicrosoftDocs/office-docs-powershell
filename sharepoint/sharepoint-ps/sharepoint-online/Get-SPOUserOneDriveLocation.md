@@ -8,26 +8,24 @@ schema: 2.0.0
 # Get-SPOUserOneDriveLocation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This cmdlet will return the UPN of a user, current location this user locates, user’s corresponding MySite(ODB) Url and the site id.
 
 ## SYNTAX
 
-```
+```powershell
 Get-SPOUserOneDriveLocation -UserPrincipalName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This command will return information about the onedrive location from the current user
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
+```powershell
+Get-SPOUserOneDriveLocation -UserPrincipalName admin@contoso.com
 ```
-{{ Add example code here }}
-```
-
-{{ Add example description here }}
-
+Get the current location this user locates, user's corresponding MySite(ODB) Url and site ID.
 
 ## PARAMETERS
 
@@ -51,14 +49,9 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
 
 ## RELATED LINKS
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
+

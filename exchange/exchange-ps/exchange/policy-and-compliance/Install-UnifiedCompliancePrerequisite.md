@@ -19,15 +19,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Initialize
 ```
 Install-UnifiedCompliancePrerequisite [-ForceInitialize] [-PolicyCenterSiteOwner <SmtpAddress>]
  [<CommonParameters>]
 ```
 
-### Set2
+### LoadOnly
 ```
-Install-UnifiedCompliancePrerequisite [-LoadOnly] [<CommonParameters>]
+Install-UnifiedCompliancePrerequisite [-LoadOnly]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,7 +76,7 @@ You can't use this switch with the LoadOnly switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Initialize
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -92,7 +93,7 @@ You can't use this switch with the ForceInitialize switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: LoadOnly
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -107,7 +108,7 @@ The PolicyCenterSiteOwner parameter specifies the email address of the owner of 
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set1
+Parameter Sets: Initialize
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False

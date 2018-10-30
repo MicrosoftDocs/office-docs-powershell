@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-MailboxDatabaseCopy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-MailboxDatabaseCopy
@@ -17,27 +17,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
 ```
-Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationPreference <UInt32>] [-Confirm]
- [-DomainController <Fqdn>] [-ReplayLagTime <EnhancedTimeSpan>] [-TruncationLagTime <EnhancedTimeSpan>]
- [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationPreference <UInt32>] [-Confirm]
- [-DatabaseCopyAutoActivationPolicy <Unrestricted | IntrasiteOnly | Blocked>] [-DomainController <Fqdn>]
- [-ReplayLagTime <EnhancedTimeSpan>] [-TruncationLagTime <EnhancedTimeSpan>] [-WhatIf]
- [-ReplayLagMaxDelay <EnhancedTimeSpan>] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ClearHostServer] [-Confirm]
- [-DatabaseCopyAutoActivationPolicy <Unrestricted | IntrasiteOnly | Blocked>] [-DomainController <Fqdn>]
- [-ReplayLagMaxDelay <EnhancedTimeSpan>] [-ReplayLagTime <EnhancedTimeSpan>]
- [-TruncationLagTime <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
+Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ActivationPreference <UInt32>] [-Confirm]  [-DatabaseCopyAutoActivationPolicy <DatabaseCopyAutoActivationPolicyType>] [-DomainController <Fqdn>] [-ReplayLagMaxDelay <EnhancedTimeSpan>] [-ReplayLagTime <EnhancedTimeSpan>] [-TruncationLagTime <EnhancedTimeSpan>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,7 +51,7 @@ The Identity parameter specifies the name of the database whose copy is being mo
 Type: DatabaseCopyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -83,9 +64,9 @@ The ActivationPreference parameter value is used as part of Active Manager's bes
 
 ```yaml
 Type: UInt32
-Parameter Sets: (All), Set1
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +85,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -119,7 +100,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +121,7 @@ For example, to specify a 14-day replay lag period, enter 14.00:00:00. The defau
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +140,7 @@ The default value is 00.00:00:00, which specifies that there's no truncation lag
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -174,7 +155,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -187,25 +168,10 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unrestricted | IntrasiteOnly | Blocked
-Parameter Sets: Set1, Set2
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClearHostServer
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -223,9 +189,9 @@ Note that when the disk is running out of space, the value of this parameter is 
 
 ```yaml
 Type: EnhancedTimeSpan
-Parameter Sets: Set1, Set2
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-FailedContentIndexDocuments
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-FailedContentIndexDocuments
@@ -17,25 +17,44 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Mailbox
 ```
-Get-FailedContentIndexDocuments [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-Archive] [-EndDate <DateTime>] [-ErrorCode <Int32>] [-FailureMode <Transient | Permanent | All>]
- [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-FailedContentIndexDocuments [-Identity] <MailboxIdParameter>
+ [-Archive]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EndDate <DateTime>]
+ [-ErrorCode <Int32>]
+ [-FailureMode <Transient | Permanent | All>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Database
 ```
-Get-FailedContentIndexDocuments -MailboxDatabase <DatabaseIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-WhatIf] [-EndDate <DateTime>] [-ErrorCode <Int32>] [-FailureMode <Transient | Permanent | All>]
- [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-FailedContentIndexDocuments -MailboxDatabase <DatabaseIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EndDate <DateTime>]
+ [-ErrorCode <Int32>]
+ [-FailureMode <Transient | Permanent | All>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Server
 ```
-Get-FailedContentIndexDocuments -Server <ServerIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [-EndDate <DateTime>] [-ErrorCode <Int32>] [-FailureMode <Transient | Permanent | All>]
- [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
+Get-FailedContentIndexDocuments -Server <ServerIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-EndDate <DateTime>]
+ [-ErrorCode <Int32>]
+ [-FailureMode <Transient | Permanent | All>]
+ [-ResultSize <Unlimited>]
+ [-StartDate <DateTime>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,9 +103,9 @@ The Identity parameter specifies the mailbox. You can use one of the following v
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -105,9 +124,9 @@ The MailboxDatabase parameter specifies the database from which to get the mailb
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set3
+Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -126,9 +145,9 @@ The Server parameter specifies a Mailbox server. You can use the following value
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -147,7 +166,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -162,22 +181,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -190,9 +194,9 @@ The Archive switch restricts the scope of the cmdlet to the user's archive. When
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -209,7 +213,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -224,7 +228,7 @@ The ErrorCode parameter allows you to retrieve documents that failed indexing wi
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -245,7 +249,7 @@ The FailureMode parameter specifies the type of error. Use the following values.
 Type: Transient | Permanent | All
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -260,7 +264,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -277,7 +281,22 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

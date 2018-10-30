@@ -32,7 +32,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchSecurityPublicFilter -Filter docacl:unknown
+PS C:\>Set-FASTSearchSecurityPublicFilter -Filter docacl:unknown
 ```
 
 This example updates the search security filter that is used to find documents that all users have access to.
