@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Enable-CsOnlineSipDomain
 schema: 2.0.0
@@ -59,8 +59,8 @@ The organization’s external DNS for the former on-premises deployment needs to
 </br>
 |Record Type|Name|TTL|Value|
 |---|---|---|---|
-|SRV  |`_sipfederationtls._tcp` | 	3600|	100 1 5061 sipfed.online.lync.com|
-|SRV	|`_sip._tls` |	3600	|100 1 443 sipdir.online.lync.com|
+|SRV  |\_sipfederationtls.\_tcp | 	3600|	100 1 5061 sipfed.online.lync.com|
+|SRV	|\_sip.\_tls |	3600	|100 1 443 sipdir.online.lync.com|
 |CNAME |	lyncdiscover |	3600	| webdir.online.lync.com|
 |CNAME |	sip	|3600	| sipdir.online.lync.com|
 |CNAME |	meet	| 3600	| webdir.online.lync.com|
@@ -184,3 +184,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
+[Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)

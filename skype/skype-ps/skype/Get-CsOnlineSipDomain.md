@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOnlineSipDomain
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet lists online sip domains and their enabled/disabled status. In a dis
 
 ```
 Get-CsOnlineSipDomain [-Domain <String>] [-DomainType <DomainStatus>] [-Tenant <System.Guid>]
- [-DomainController <String>] [-Force] [<CommonParameters>]
+ [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,20 +55,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-{{Fill DomainController Description}}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: DC
-applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DomainType
 This indicates the status of an online sip domain, which can be either enabled or disabled.
@@ -130,3 +116,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
+[Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md) 
