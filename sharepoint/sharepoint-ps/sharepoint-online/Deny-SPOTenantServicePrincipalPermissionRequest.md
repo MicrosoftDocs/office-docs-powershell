@@ -7,10 +7,8 @@ schema: 2.0.0
 # Deny-SPOTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
+
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
-
-> **Note** - This is a preview feature and should not be used in production.
-
 
 ## SYNTAX
 
