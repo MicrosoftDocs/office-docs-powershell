@@ -29,7 +29,6 @@ When you use Grant-CsTeamsUpgradePolicy you should NOT use Grant-CsTeamsInteropP
 
 
 
-|||||
 
 Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are listed below.
 </br>
@@ -93,7 +92,7 @@ Applicable: Skype for Business Online, Skype for Business Server 2019
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
