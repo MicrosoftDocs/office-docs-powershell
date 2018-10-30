@@ -9,8 +9,8 @@ schema: 2.0.0
 
 ## SYNOPSIS
 **THIS IS PRELIMINARY DOCUMENTATION OF UPCOMING FUNCTIONALITY**</br>
-This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain. This cmdlet allows organizations with multiple on-premises deployments of Skype For Business Server or Lync Server to safely synchronize users from multiple forests into a single Office 365 tenant. **IMPORTANT:** Only 1 Skype for Business forest can by in hybrid mode at a given time.
-.  
+This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain. This cmdlet allows organizations with multiple on-premises deployments of Skype For Business Server or Lync Server to safely synchronize users from multiple forests into a single Office 365 tenant. **IMPORTANT:** Only 1 Skype for Business forest can be in hybrid mode at a given time.
+  
 ## SYNTAX
 
 ```
@@ -21,7 +21,7 @@ Disable-CsOnlineSipDomain -Domain <String> [-Tenant <System.Guid>] [-DomainContr
 ## DESCRIPTION
 This cmdlet enables organizations with *multiple on-premises deployments of Skype for Business Server (or Lync Server)* to safely synchronize users from multiple forests into a single Office 365 tenant.  When an an online SIP domain is disabled in Skype for Business Online, provisioning is blocked for users in this SIP domain. This ensures routing for any on-premises users in this SIP domain continues to function properly.
 
-This cmdlet facilitates consolidation of *multiple Skype for Business Server deployments* into a single Office 365 tenant. Consolidation can be achieved by moving one deployment at a time into Office 365, provided the following key requirements are met:
+This cmdlet facilitates consolidation of multiple Skype for Business Server deployments into a single Office 365 tenant. Consolidation can be achieved by moving one deployment at a time into Office 365, **provided the following key requirements are met**:
  - There must be at most 1 O365 tenant involved. Consolidation in scenarios with >1 O365 tenant is not supported.
  - At any given time, only 1 on-premise SfB forest can be in hybrid mode (shared sip address space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably federated with each other.)  
  - If 1 deployment is in hybrid mode, all sip domains from any other SfB forests must be disabled using this cmdlet before they can be synchronized into the tenant with Azure AD Connect. Users in all SfB forests other than the hybrid forest must remain on-premises.
@@ -49,21 +49,6 @@ The cmdlet above disables the online sip domain Fabrikam.com.  This would be use
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Domain
 {{Fill Domain Description}}
 
@@ -79,14 +64,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-{{Fill DomainController Description}}
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: DC
-applicable: Skype for Business Online
+Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
@@ -152,6 +137,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### System.Object
 ## NOTES
-This cmdlets is for advanced scenarios only.  Organizations that are pure online or have only 1 on-premise deployment need not run this cmdlet.
+This cmdlet is for advanced scenarios only.  Organizations that are pure online or have only 1 on-premise deployment need not run this cmdlet.
 
 ## RELATED LINKS
+
+[Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
+[Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)
