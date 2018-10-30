@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Enable-CsOnlineSipDomain
 schema: 2.0.0
@@ -184,3 +184,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
+[Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)
