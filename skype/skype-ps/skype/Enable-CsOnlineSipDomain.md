@@ -40,7 +40,7 @@ Once you have moved all users from on-premises into the cloud, you can decommiss
 These steps should be done together as a unit. 
 
 - Disable shared sip address space in the Office 365 tenant
-The command below needs to be done from a Skype for Business Online PowerShell window. 
+\_sipfederationtls.\_tcpThe command below needs to be done from a Skype for Business Online PowerShell window. 
 
 `
 PS C:\> Set-CsTenantFederationConfiguration -SharedSipAddressSpace $false
@@ -55,18 +55,18 @@ Get-CsHostingProvider|Set-CsHostingProvider -Enabled $false
 
 - Update DNS to point to O365
 The organization’s external DNS for the former on-premises deployment needs to be updated so that Skype for Business records point to Office 365 instead of Onprem. Specifically:
-</br>
-</br>
-|Record Type|Name|TTL|Value|
-|---|---|---|---|
-|SRV  |\_sipfederationtls.\_tcp | 	3600|	100 1 5061 sipfed.online.lync.com|
-|SRV	|\_sip.\_tls |	3600	|100 1 443 sipdir.online.lync.com|
-|CNAME |	lyncdiscover |	3600	| webdir.online.lync.com|
-|CNAME |	sip	|3600	| sipdir.online.lync.com|
-|CNAME |	meet	| 3600	| webdir.online.lync.com|
-|CNAME	| dialin |	3600 |	webdir.online.lync.com|
-|||||
-</br>
+
+
+| Record Type   | Name                     | TTL  | Value                             |
+|:--------------|:-------------------------|:----:|:----------------------------------|
+| SRV           | \_sipfederationtls.\_tcp | 3600 | 100 1 5061 sipfed.online.lync.com |
+| SRV           | \_sip.\_tls              | 3600 | 100 1 443 sipdir.online.lync.com  |
+| CNAME         | lyncdiscover             | 3600 | webdir.online.lync.com            |
+| CNAME         | sip                      | 3600 | sipdir.online.lync.com            |
+| CNAME         | meet                     | 3600 | webdir.online.lync.com            |
+| CNAME         | dialin                   | 3600 | webdir.online.lync.com            |
+
+
 
 ## EXAMPLES
 
