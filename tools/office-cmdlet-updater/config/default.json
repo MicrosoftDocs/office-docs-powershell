@@ -39,7 +39,8 @@
 		"ignoreFiles": [
 			"..\\..\\teams\\teams-ps\\teams\\teams.md",
 			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md"
-		]
+		],
+		"tempFolderPath": ".\\.local\\temp"
 	},
 	"sendgrid": {
 		"sendMailNotification": false,
