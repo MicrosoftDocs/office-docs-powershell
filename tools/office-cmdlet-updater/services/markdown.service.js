@@ -49,6 +49,7 @@ class MarkdownService {
 	async processQueue({ file, doc }, cb) {
 		let result, err;
 
+		let { tempFolderPath } = this.config.get('platyPS');
 		const {
 			copyMdInTempFolder,
 			getTempFolderPath,
@@ -57,7 +58,7 @@ class MarkdownService {
 
 		await this._installDependenceIfNeeded(doc);
 
-		const [tempFolderPath] = getTempFolderPath(doc);
+		[tempFolderPath] = await getTempFolderPath(doc, tempFolderPath);
 
 		const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
 
