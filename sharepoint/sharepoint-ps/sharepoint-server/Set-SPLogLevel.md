@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPLogLevel
 schema: 2.0.0
 ---
@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-C:\PS>set-sploglevel -TraceSeverity Monitorable
+PS C:\>set-sploglevel -TraceSeverity Monitorable
 ```
 
 This example sets the TraceSeverity values for all categories to Monitorable.
@@ -38,7 +38,7 @@ This example sets the TraceSeverity values for all categories to Monitorable.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-C:\PS>Set-SPLogLevel -TraceSeverity High -EventSeverity Warning -Identity "Cat1"
+PS C:\>Set-SPLogLevel -TraceSeverity High -EventSeverity Warning -Identity "Cat1"
 ```
 
 This example sets the EventSeverity and TraceSeverity values for a single category.
@@ -54,7 +54,7 @@ This example sets the EventSeverity values for multiple categories.
 
 ### ------------------EXAMPLE 4-----------------------
 ```
-C:\PS>Set-SPLogLevel -EventSeverity Warning -Identity "AreaName:*"
+PS C:\>Set-SPLogLevel -EventSeverity Warning -Identity "AreaName:*"
 ```
 
 This example sets the EventSeverity values for all categories in the same area.
@@ -75,7 +75,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ The category level is any one of the following values:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ If the Identity parameter is not specified, the event-throttling setting is appl
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ The user can retrieve one or more categories from the `Get-SPLogLevel` cmdlet, m
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ The type must be any one of the following values:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

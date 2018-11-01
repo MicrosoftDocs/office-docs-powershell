@@ -44,7 +44,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataCategory -Name Titles -DiscoverNewProperties 1 -MapToContents 1
+PS C:\>Set-FASTSearchMetadataCategory -Name Titles -DiscoverNewProperties 1 -MapToContents 1
 ```
 
 With this example, all new crawled properties for the category "Titles" are automatically discovered and added to the category.
@@ -55,7 +55,7 @@ If you do not want a newly discovered crawled property made available through th
 
 ### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Set-FASTSearchMetadataCategory -Name ExtendedTitle -Newname Titles
+PS C:\>Set-FASTSearchMetadataCategory -Name ExtendedTitle -Newname Titles
 ```
 
 This example changes the name of the category "ExtendedTitle" to "Titles".

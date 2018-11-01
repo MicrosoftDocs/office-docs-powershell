@@ -105,8 +105,8 @@ $Global:SourceListName = "SourceListName"
 
 
 #Define SPO target#
-$Global:SPOUrl = “https://contoso.sharepoint.com”
-$Global:UserName = “admin@contoso.onmicrosoft.com”
+$Global:SPOUrl = "https://contoso.sharepoint.com"
+$Global:UserName = "admin@contoso.onmicrosoft.com"
 $Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
 $Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
 $Global:TargetListName = "TargetListName"

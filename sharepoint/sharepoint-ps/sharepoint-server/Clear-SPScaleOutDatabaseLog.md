@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPScaleOutDatabaseLog
 schema: 2.0.0
 ---
@@ -27,9 +27,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE------- 
 ```
-C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-C:\PS>$database = $databases[0]
-C:\PS>Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
+PS C:\>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+PS C:\>$database = $databases[0]
+PS C:\>Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
 ```
 
 This example removes all scale-out log entries in the first scale-out database of the specified service application unless there is a scale-out log entry which is more recent than 30 minutes.
@@ -43,7 +43,7 @@ Specifies the scale-out database from which to clear the logs.
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -65,7 +65,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ If there is at least one log entry which is more recent than this value, no log 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

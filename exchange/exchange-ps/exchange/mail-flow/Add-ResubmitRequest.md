@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Add-ResubmitRequest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Add-ResubmitRequest
@@ -17,19 +17,26 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### MDBResubmit
 ```
-Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-Confirm] [-CorrelationId <Guid>]
- [-Destination <Guid>] [-Server <ServerIdParameter>] [-TestOnly <$true | $false>]
- [-UnresponsivePrimaryServers <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-Destination <Guid>]
+ [-Confirm]
+ [-CorrelationId <Guid>]
+ [-Server <ServerIdParameter>]
+ [-TestOnly <$true | $false>]
+ [-UnresponsivePrimaryServers <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ConditionalResubmit
 ```
-Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-Confirm] [-CorrelationId <Guid>]
- [-Recipient <String>] [-Sender <String>] [-Server <ServerIdParameter>] [-TestOnly <$true | $false>]
- [-UnresponsivePrimaryServers <MultiValuedProperty>] [-WhatIf] [-MessageId <String>] [-ResubmitTo <String>]
- [<CommonParameters>]
+Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-MessageId <String>] [-Recipient <String>] [-ResubmitTo <String>] [-Sender <String>]
+ [-Confirm]
+ [-CorrelationId <Guid>]
+ [-Server <ServerIdParameter>]
+ [-TestOnly <$true | $false>]
+ [-UnresponsivePrimaryServers <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +64,7 @@ The date and time specified by the EndTime parameter must be later than the date
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -76,7 +83,7 @@ The date and time specified by the StartTime parameter must be earlier than the 
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -95,7 +102,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +117,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -125,9 +132,24 @@ You can't use this parameter with the Recipient, ResubmitTo, or Sender parameter
 
 ```yaml
 Type: Guid
-Parameter Sets: Set1
+Parameter Sets: MDBResubmit
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageId
+The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string. This may include angle brackets.
+
+```yaml
+Type: String
+Parameter Sets: ConditionalResubmit
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -142,9 +164,24 @@ You can't use this parameter with the Destination parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ConditionalResubmit
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResubmitTo
+The ResubmitTo parameter specifies the recipient's email address for resubmitted messages that are identified by using the Recipient or Sender parameters.
+
+```yaml
+Type: String
+Parameter Sets: ConditionalResubmit
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -159,9 +196,9 @@ You can't use this parameter with the Destination parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ConditionalResubmit
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +223,7 @@ If you don't use this parameter, the command is run on the local server.
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +238,7 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -216,7 +253,7 @@ The UnresponsivePrimaryServers parameter identifies the primary servers that sho
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -231,37 +268,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MessageId
-The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string. This may include angle brackets.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResubmitTo
-The ResubmitTo parameter specifies the recipient's email address for resubmitted messages that are identified by using the Recipient or Sender parameters.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

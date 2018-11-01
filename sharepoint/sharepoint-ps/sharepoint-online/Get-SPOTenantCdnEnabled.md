@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOTenantCdnEnabled
 
 ## SYNOPSIS
-Returns whether Public content delivery network (CDN) or Private CDN is enabled on the tenant level. 
+Returns whether Public content delivery network (CDN) or Private CDN is enabled on the tenant level. Requires Tenant administrator permissions.
 
 
 ## SYNTAX

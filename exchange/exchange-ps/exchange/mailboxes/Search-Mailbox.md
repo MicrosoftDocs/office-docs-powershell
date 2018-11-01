@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-Mailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Search-Mailbox
@@ -17,26 +17,50 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### EstimateResult
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly] [-Confirm]
- [-DomainController <Fqdn>] [-DoNotIncludeArchive] [-Force] [-IncludeUnsearchableItems] [-SearchDumpster]
- [-SearchDumpsterOnly] [-SearchQuery <String>] [-WhatIf] [<CommonParameters>]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotIncludeArchive]
+ [-Force]
+ [-IncludeUnsearchableItems]
+ [-SearchDumpster]
+ [-SearchDumpsterOnly]
+ [-SearchQuery <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Mailbox
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String>
- -TargetMailbox <MailboxIdParameter> [-Confirm] [-DeleteContent] [-DomainController <Fqdn>]
- [-DoNotIncludeArchive] [-Force] [-IncludeUnsearchableItems] [-LogLevel <Suppress | Basic | Full>] [-LogOnly]
- [-SearchDumpster] [-SearchDumpsterOnly] [-SearchQuery <String>] [-WhatIf] [<CommonParameters>]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String> -TargetMailbox <MailboxIdParameter>
+ [-Confirm]
+ [-DeleteContent]
+ [-DomainController <Fqdn>]
+ [-DoNotIncludeArchive]
+ [-Force]
+ [-IncludeUnsearchableItems]
+ [-LogLevel <Suppress | Basic | Full>]
+ [-LogOnly]
+ [-SearchDumpster]
+ [-SearchDumpsterOnly]
+ [-SearchQuery <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-Confirm] [-DeleteContent]
- [-DomainController <Fqdn>] [-DoNotIncludeArchive] [-Force] [-IncludeUnsearchableItems] [-SearchDumpster]
- [-SearchDumpsterOnly] [-SearchQuery <String>] [-WhatIf] [<CommonParameters>]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
+ [-Confirm]
+ [-DeleteContent]
+ [-DomainController <Fqdn>]
+ [-DoNotIncludeArchive]
+ [-Force]
+ [-IncludeUnsearchableItems]
+ [-SearchDumpster]
+ [-SearchDumpsterOnly]
+ [-SearchQuery <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,9 +118,9 @@ The EstimateResultOnly switch specifies that only an estimate of the total numbe
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: EstimateResult
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -135,7 +159,7 @@ For example:
 Type: MailboxOrMailUserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -148,9 +172,9 @@ The TargetFolder parameter specifies a folder name in which search results are s
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -181,9 +205,9 @@ When you specify a value for the TargetMailbox parameter, you must also specify 
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -202,7 +226,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -221,9 +245,9 @@ Before you use the DeleteContent switch to delete content, we recommend that you
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set1
+Parameter Sets: Mailbox, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +264,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -257,7 +281,7 @@ If auto-expanding archiving is enabled for an Exchange Online mailbox, only the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -272,7 +296,7 @@ The Force switch overrides the confirmation prompt displayed when your use the D
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +311,7 @@ The IncludeUnsearchableItems switch specifies whether to include items that coul
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -308,9 +332,9 @@ The default log level is Basic.
 
 ```yaml
 Type: Suppress | Basic | Full
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -323,9 +347,9 @@ The LogOnly switch specifies that a search be performed and only a log be genera
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -340,7 +364,7 @@ The SearchDumpster parameter specifies whether to search the Recoverable Items f
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -355,7 +379,7 @@ The SearchDumpsterOnly switch specifies that only the Recoverable Items folder o
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -374,7 +398,7 @@ If this parameter is empty, all messages are returned.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -389,7 +413,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

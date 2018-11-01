@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Disable-Mailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Disable-Mailbox
@@ -17,29 +17,43 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set4
+### Arbitration
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Arbitration] [-Confirm]
- [-DisableLastArbitrationMailboxAllowed] [-DomainController <Fqdn>] [-IgnoreDefaultScope] [-IgnoreLegalHold]
- [-WhatIf] [-DisableArbitrationMailboxWithOABsAllowed] [-PermanentlyDisable] [<CommonParameters>]
-```
-
-### Set2
-```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Archive] [-Confirm] [-DomainController <Fqdn>]
- [-IgnoreDefaultScope] [-IgnoreLegalHold] [-WhatIf] [-PermanentlyDisable] [<CommonParameters>]
+Disable-Mailbox [-Identity] <MailboxIdParameter> [-Arbitration] [-DisableLastArbitrationMailboxAllowed] [-DisableArbitrationMailboxWithOABsAllowed]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IgnoreLegalHold]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### Archive
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-IgnoreLegalHold] [-RemoteArchive] [-WhatIf] [-PermanentlyDisable] [<CommonParameters>]
+Disable-Mailbox [-Identity] <MailboxIdParameter> [-Archive] [-PermanentlyDisable]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IgnoreLegalHold]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set5
+### PublicFolder
 ```
-Disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-IgnoreDefaultScope]
- [-IgnoreLegalHold] [-PublicFolder] [-WhatIf] [-PermanentlyDisable] [<CommonParameters>]
+Disable-Mailbox [-Identity] <MailboxIdParameter> [-Confirm] [-PublicFolder]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IgnoreLegalHold]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RemoteArchive
+```
+Disable-Mailbox [-Identity] <MailboxIdParameter> [-RemoteArchive]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-IgnoreDefaultScope]
+ [-IgnoreLegalHold]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +114,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -115,9 +129,9 @@ The Arbitration parameter specifies that the mailbox for which you are executing
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Arbitration
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -130,9 +144,9 @@ The Archive switch specifies whether to disconnect the archive mailbox from the 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -151,7 +165,24 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableArbitrationMailboxWithOABsAllowed
+This parameter is available only in on-premises Exchange.
+
+The DisableArbitrationMailboxWithOABsAllowed switch specifies whether to bypass the checks for offline address books (OABs) within the specified arbitration mailbox that is being mail-disabled. When you use this switch, the arbitration mailbox is disabled even if OABs are present in the mailbox. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Arbitration
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -166,9 +197,9 @@ The DisableLastArbitrationMailboxAllowed switch specifies whether to disable the
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Arbitration
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -185,7 +216,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +239,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -225,77 +256,7 @@ After you disable or remove a mailbox, you can't include it in a discovery searc
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoteArchive
-This parameter is available only in on-premises Exchange.
-
-The RemoteArchiveswitch specifies whether to disconnect the remote archive for this mailbox. A remote archive exists in the cloud-based service. When you use this switch, the RemoteRecipientType property for the mailbox is reset to specify that this mailbox doesn't have a remote archive. You don't need to specify a value with this switch.
-
-You can't use this switch with the Archive switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableArbitrationMailboxWithOABsAllowed
-This parameter is available only in on-premises Exchange.
-
-The DisableArbitrationMailboxWithOABsAllowed switch specifies whether to bypass the checks for offline address books (OABs) within the specified arbitration mailbox that is being mail-disabled. When you use this switch, the arbitration mailbox is disabled even if OABs are present in the mailbox. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolder
-This parameter is available only in on-premises Exchange.
-
-The PublicFolderswitch specifies that the mailbox to mailbox-disable is a public folder mailbox. You need to use this switch to mailbox-disable a public folder mailbox. You don't need to specify a value with this switch.
-
-Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set5
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -312,9 +273,62 @@ You can only use this switch on user mailboxes that aren't licensed and aren't o
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Archive
 Aliases:
 Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolder
+This parameter is available only in on-premises Exchange.
+
+The PublicFolderswitch specifies that the mailbox to mailbox-disable is a public folder mailbox. You need to use this switch to mailbox-disable a public folder mailbox. You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PublicFolder
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteArchive
+This parameter is available only in on-premises Exchange.
+
+The RemoteArchiveswitch specifies whether to disconnect the remote archive for this mailbox. A remote archive exists in the cloud-based service. When you use this switch, the RemoteRecipientType property for the mailbox is reset to specify that this mailbox doesn't have a remote archive. You don't need to specify a value with this switch.
+
+You can't use this switch with the Archive switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RemoteArchive
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

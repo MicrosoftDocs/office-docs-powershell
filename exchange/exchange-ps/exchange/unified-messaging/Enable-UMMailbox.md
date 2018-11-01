@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Enable-UMMailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Enable-UMMailbox
@@ -17,31 +17,40 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+###  Identity (Default)
 ```
 Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolicyIdParameter>
- [-AutomaticSpeechRecognitionEnabled <$true | $false>] [-Confirm] [-DomainController <Fqdn>]
- [-Extensions <MultiValuedProperty>] [-IgnoreDefaultScope] [-NotifyEmail <String>] [-PilotNumber <String>]
- [-PIN <String>] [-PINExpired <$true | $false>] [-SIPResourceIdentifier <String>] [-ValidateOnly] [-WhatIf]
- [<CommonParameters>]
+ [-AutomaticSpeechRecognitionEnabled <$true | $false>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Extensions <MultiValuedProperty>]
+ [-IgnoreDefaultScope]
+ [-NotifyEmail <String>]
+ [-PilotNumber <String>]
+ [-PIN <String>]
+ [-PINExpired <$true | $false>]
+ [-SIPResourceIdentifier <String>]
+ [-ValidateOnly]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### CloudVoiceMail
 ```
 Enable-UMMailbox [-Identity] <MailboxIdParameter> [-EnableCloudVoiceMail]
- [-UMMailboxPolicy <MailboxPolicyIdParameter>] [-AutomaticSpeechRecognitionEnabled <$true | $false>] [-Confirm]
- [-DomainController <Fqdn>] [-Extensions <MultiValuedProperty>] [-IgnoreDefaultScope] [-NotifyEmail <String>]
- [-PilotNumber <String>] [-Pin <String>] [-PinExpired <$true | $false>] [-SendWelcomeMail <$true | $false>]
- [-SIPResourceIdentifier <String>] [-ValidateOnly] [-WhatIf] [<CommonParameters>]
-```
-
-### Set1
-```
-Enable-UMMailbox [-Identity] <MailboxIdParameter> -UMMailboxPolicy <MailboxPolicyIdParameter>
- [-AutomaticSpeechRecognitionEnabled <$true | $false>] [-Confirm] [-DomainController <Fqdn>]
- [-Extensions <MultiValuedProperty>] [-IgnoreDefaultScope] [-NotifyEmail <String>] [-PilotNumber <String>]
- [-Pin <String>] [-PinExpired <$true | $false>] [-SendWelcomeMail <$true | $false>]
- [-SIPResourceIdentifier <String>] [-ValidateOnly] [-WhatIf] [<CommonParameters>]
+ [-AutomaticSpeechRecognitionEnabled <$true | $false>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Extensions <MultiValuedProperty>]
+ [-IgnoreDefaultScope]
+ [-NotifyEmail <String>]
+ [-PilotNumber <String>]
+ [-Pin <String>]
+ [-PinExpired <$true | $false>]
+ [-SendWelcomeMail <$true | $false>]
+ [-SIPResourceIdentifier <String>]
+ [-UMMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ValidateOnly]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -98,7 +107,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -117,9 +126,9 @@ The UMMailboxPolicy parameter specifies the UM mailbox policy that you want to a
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -129,9 +138,9 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: Set2
+Parameter Sets: CloudVoiceMail
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -150,7 +159,7 @@ The AutomaticSpeechRecognitionEnabled parameter specifies whether to enable Auto
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -169,7 +178,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -186,8 +195,23 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCloudVoiceMail
+The EnableCloudVoiceMail switch specifies whether to enable the mailbox for UM in Skype for Business Online. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CloudVoiceMail
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -203,7 +227,7 @@ If you don't use this parameter, the command attempts to use a default telephone
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -226,7 +250,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -241,7 +265,7 @@ The NotifyEmail parameter specifies the email address where the Unified Messagin
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -256,7 +280,7 @@ The PilotNumber parameter specifies the subscriber access number users can dial 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -273,7 +297,7 @@ If you don't use this parameter, a system-generated PIN is sent to the user. By 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -292,104 +316,8 @@ The PINExpired parameter specifies whether the PIN is treated as expired. If the
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SIPResourceIdentifier
-The SIPResourceIdentifier parameter specifies the SIP address or E.164 address for the user. This property is compared to the URI type defined on the UM dial plan.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ValidateOnly
-The ValidateOnly switch tells the cmdlet to evaluate the conditions and requirements necessary to perform the operation and then reports whether the operation will succeed or fail. No changes are made when the ValidateOnly switch is used.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PIN
-The PIN parameter specifies the value for the initial PIN that's used for the UM mailbox. The PIN is checked against the UM mailbox policy rules. The PIN value must be from 4 through 24 numeric characters.
-
-If you don't use this parameter, a system-generated PIN is sent to the user. By default, the PIN generated by the system contains six numeric characters.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PINExpired
-The PINExpired parameter specifies whether the PIN is treated as expired. If the PIN isn't supplied, the PIN is treated as expired and users are prompted to reset their PIN the next time they log on.
-
-- $true: The user is required to reset their PIN the next time they log on.
-
-- $false: The user isn't required to reset their PIN the next time they log on.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableCloudVoiceMail
-The EnableCloudVoiceMail switch specifies whether to enable the mailbox for UM in Skype for Business Online. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Online
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -405,9 +333,54 @@ The SendWelcomeMail parameter specifies whether you want to send a welcome messa
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2, Set1
+Parameter Sets: CloudVoiceMail
 Aliases:
-Applicable: Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SIPResourceIdentifier
+The SIPResourceIdentifier parameter specifies the SIP address or E.164 address for the user. This property is compared to the URI type defined on the UM dial plan.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidateOnly
+The ValidateOnly switch tells the cmdlet to evaluate the conditions and requirements necessary to perform the operation and then reports whether the operation will succeed or fail. No changes are made when the ValidateOnly switch is used.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

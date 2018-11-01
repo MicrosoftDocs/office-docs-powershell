@@ -14,6 +14,7 @@ Uploads a file to Web
 ```powershell
 Add-PnPFile -Path <String>
             -Folder <String>
+            [-NewFileName <String>]
             [-Checkout [<SwitchParameter>]]
             [-CheckInComment <String>]
             [-Approve [<SwitchParameter>]]
@@ -88,6 +89,13 @@ Add-PnPFile -FileName sample.docx -Folder "Documents" -Values @{Modified="1/1/20
 ```
 
 This will add a file sample.docx to the Documents folder and will set the Modified date to 1/1/2016, Created date to 1/1/2017 and the Modified By field to the user with ID 23. To find out about the proper user ID to relate to a specific user, use Get-PnPUser.
+
+### ------------------EXAMPLE 7------------------
+```powershell
+Add-PnPFile -FileName sample.docx -Folder "Documents" -NewFileName "differentname.docx"
+```
+
+This will upload a local file sample.docx to the Documents folder giving it the filename differentname.docx on SharePoint
 
 ## PARAMETERS
 
@@ -171,6 +179,18 @@ Type: String
 Parameter Sets: (All)
 
 Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -NewFileName
+Filename to give the file on SharePoint
+
+```yaml
+Type: String
+Parameter Sets: Upload file
+
+Required: False
 Position: Named
 Accept pipeline input: False
 ```

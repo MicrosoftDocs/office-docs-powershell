@@ -53,7 +53,7 @@ Get-CsThirdPartyVideoSystemPolicy | Remove-CsThirdPartyVideoSystemPolicy
 ```
 
 In Example 2, all the third-party video system policies configured for use in the organization are deleted.
-This is done by first using the `Get-CsThirdPartyVideoSystemPolicy` to return a collection of all the video system policies; that collection is then then piped to and deleted by, the `Remove-CsThirdPartyVideoSystemPolicy`.
+This is done by first using the `Get-CsThirdPartyVideoSystemPolicy` to return a collection of all the video system policies; that collection is then piped to and deleted by, the `Remove-CsThirdPartyVideoSystemPolicy`.
 Note that the global policy will not actually be deleted; Skype for Business Server does not allow you to delete global policies.
 However, all the properties within the global policy will be reset to their default values.
 

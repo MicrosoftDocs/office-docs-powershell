@@ -9,11 +9,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-IMPORTANT: TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. Please read description for more details. You can also find more guidance here: https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype
+IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. Please read description for more details. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
-This cmdlet determines how calls are routed between Skype for Business and Microsoft Teams. This cmdlet is typically used by organizations that have users on both Skype for Business and Microsoft Teams and want to configure how calls are handled in their organization.
-
-Note: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings, and the current implementation may change in the future.
+If TeamsUpgradePolicy has mode=Legacy, TeamsInteropPolicy  determines how calls are routed between Skype for Business and Microsoft Teams. Otherwise it is ignored.
 
 
 ## SYNTAX
@@ -24,9 +22,9 @@ Get-CsTeamsInteropPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>]
 
 ## DESCRIPTION
 
-IMPORTANT: TeamsInteropPolicy is being replaced by TeamsUpgradePolicy. During the transition, some components will honor TeamsInteropPolicy while others honor TeamsUpgradePolicy. Therefore, use of these two policies must be coordinated during the transition. After the transition is complete, TeamsInteropPolicy will be removed. To prepare for these upcoming changes, customers should do the following:
- 
-Ensure that users with TeamsInteropPolicy are assigned only one of these three built-in instances for which CallingDefaultClient = ChatDefaultClient, and for which AllowEndUserClientOverride = false. The other instances are no longer valid configurations and will not be supported. 
+IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. TeamsInteropPolicy is only honored if TeamsUpgradePolicy mode=Legacy.  However, Legacy mode has been deprecated and TeamsInteropPolicy will be removed in the near future.  Any customer still using TeamsUpgradePolicy with mode=Legacy must update their configuration of TeamsUpgradePolicy to use a different mode.
+
+For any user that is still assigned TeamsInteropPolicy and in Legacy mode, these users must be assigned only one of these three built-in instances for which CallingDefaultClient = ChatDefaultClient, and for which AllowEndUserClientOverride = false. The other instances are not longer valid configurations, are not supported and will be removed. 
 
 The valid instances are:
 
@@ -54,28 +52,7 @@ Use the following cmdlet syntax, where $policy is one of the above values of ide
 If you customized the built-in global policy, undo this by running `Remove-CsTeamsInteropPolicy`. This will remove the tenant-specific global policy and revert back to the system-wide built-in policy (which cannot be removed). Use the following syntax:
 Remove-CsTeamsInteropPolicy -Identity Global
  
-Grant TeamsInteropPolicy and TeamsUpgradePolicy together as noted below to manage users:
- 
-- Coordinate granting of TeamsUpgradePolicy and TeamsInteropPolicy:
-
-
-    **Grant instance of TeamsUpgradePolicy using mode: Islands**  
-    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingDefaultChatDefault**
-
-    **Grant instance of TeamsUpgradePolicy using mode: SfBonly, SfBWithTeamsCollab**  
-    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingSfbChatSfb**
-
-    **Grant instance of TeamsUpgradePolicy using mode: TeamsOnly**    
-    **Grant instance of TeamsInteropPolicy: DisallowOverrideCallingTeamsChatTeams**
-
-
-In particular, if you grant the TeamsUpgradePolicy instance “UpgradeToTeams” (Mode =TeamsOnly) to any user, you must also grant the DisallowOverrideCallingTeamsChatTeams instance of TeamsInteropPolicy to ensure that the user can receive chats and calls.
-
-Interoperability (interop for short) enables Skype for Business and Teams users to chat and call with one another, ensuring that communications remain fluid across your organization. This policy helps IT pros manage the adoption of Teams by determining how to route calls across apps and whether to enable users to choose which app to use for calling. Teams interop policy can be defined at the tenant or per-user level.
-
-Teams interop policy can be configured to keep voice communications in Teams and Skype for Business siloed, or it can be configured to enable users to communicate across application boundaries.
-
-For comprehensive documentation on this policy and its settings, see [Microsoft Teams and Skype for Business Interoperability](https://docs.microsoft.com/MicrosoftTeams/teams-and-skypeforbusiness-interoperability).
+For comprehensive documentation on this policy and its settings, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 
 ## EXAMPLES
@@ -178,26 +155,10 @@ Accept wildcard characters: False
 ### System.Object
 
 ## NOTES
-
-**External Calling Support**
-Calls from external callers on PSTN is only available for users who have been provisioned with a Calling Plan.
-
-**Supported Topologies**
-Interoperability between Teams and Skype for Business is supported between users who are purely online (Skype for Business Online and Teams) and users homed in a Skype for Business on-premises deployment in a mixed (Hybrid) deployment topology.
-
-**Hybrid Voice is not supported at this time**
-Interop support for Skype for Business Hybrid does not include Hybrid Voice capabilities delivered through CCE (Cloud Connector Edition) or on-premises PSTN connectivity using existing deployment--commonly called OPCH (On Prem Config Hybrid). 
-Teams users cannot be enabled for PSTN calling capabilities using CCE or OPCH.
-
-**IP Phone Support**
-Currently, changing CallingDefaultClient to Teams will also affect calls to Skype for Business IP phones. 
-Incoming calls will not be received on the phones and will only ring Teams clients. 
-Please consult the [Skype for Business to Microsoft Teams Capabilities Roadmap](https://aka.ms/skype2teamsroadmap) for information about support for existing certified SIP phones.
+TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. It is not honored except if TeamsUpgradePolicy mode=Legacy. Legacy mode is being deprecated so customers should update their configuration of TeamsUpgradePolicy to use modes other than Legacy. 
 
 
 ## RELATED LINKS
 
-[Skype for Business to Microsoft Teams Capabilities Roadmap](https://aka.ms/skype2teamsroadmap)
-
-[Microsoft Teams and Skype for Business Interoperability](https://docs.microsoft.com/MicrosoftTeams/teams-and-skypeforbusiness-interoperability)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype)
 

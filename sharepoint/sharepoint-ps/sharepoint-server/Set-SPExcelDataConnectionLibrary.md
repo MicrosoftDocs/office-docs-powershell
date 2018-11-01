@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1--------------
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Description "This is the DCL where all the connections to the sales data are stored
+PS C:\>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Description "This is the DCL where all the connections to the sales data are stored
 ```
 
 This example sets a display description for the entry http://portal/site/salesDCL in the list of trusted data connection libraries (DCLs) that is on the Excel Services Application Web service application named MyExcelService.
@@ -44,7 +44,7 @@ This example sets a display description for the entry http://portal/site/salesDC
 
 ### --------------EXAMPLE 2--------------
 ```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL
+PS C:\>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL
 ```
 
 This example updates the address of the data connection library for the entry http://portal/test/site/salesDCL to http://portal/site/salesDCL in the list of trusted data connection libraries, which is on the Excel Services Application Web service application named MyExcelService.

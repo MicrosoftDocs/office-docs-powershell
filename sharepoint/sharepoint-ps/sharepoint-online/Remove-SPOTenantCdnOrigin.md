@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SPOTenantCdnOrigin
 
 ## SYNOPSIS
-Removes a new origin from the Public or Private content delivery network (CDN).
+Removes a new origin from the Public or Private content delivery network (CDN). Requires Tenant administrator permissions.
 
 
 ## SYNTAX

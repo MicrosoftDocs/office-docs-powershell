@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPSite
 schema: 2.0.0
 ---
@@ -36,21 +36,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE 1----------------------- 
 ```
-C:\PS>Move-SPSite http://servername/sites/sitename -DestinationDatabase ContentDb2
+PS C:\>Move-SPSite http://servername/sites/sitename -DestinationDatabase ContentDb2
 ```
 
 This example moves the site collection http://servername/sites/sitename to the content database ContentDb2.
 
 ### ---------------------EXAMPLE 2----------------------- 
 ```
-C:\PS>Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
+PS C:\>Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
 ```
 
 This example moves all site collections in ContentDb1 to ContentDb2.
 
 ### ---------------------EXAMPLE 3----------------------- 
 ```
-C:\PS>Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
+PS C:\>Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
 ```
 
 This example moves all site collections where DOMAIN\username is the site collection owner to ContentDb2.
@@ -59,7 +59,7 @@ You can access the properties of the SPSiteAdministration object as a SharePoint
 
 ### ---------------------EXAMPLE 4----------------------- 
 ```
-C:\PS>Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
+PS C:\>Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
        @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
 ```
 
@@ -75,7 +75,7 @@ For example, http://servername/sites/sitename.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -92,7 +92,7 @@ For example, ContentDB2.
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -114,7 +114,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ The same providers must be enabled on the target content database and the source
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ The valid values are True or False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

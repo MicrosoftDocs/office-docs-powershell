@@ -17,6 +17,6 @@ Security & Compliance Center PowerShell is the administrative interface that ena
   
 - To create a remote PowerShell session to the Security & Compliance Center, see [Connect to Office 365 Security & Compliance Center PowerShell](connect-to-scc-powershell/connect-to-scc-powershell.md). Note that the connection instructions are different from Exchange Online or Exchange Online Protection (the _ConnectionUri_ value is different).
     
-- Note that some cmdlets are available only in the Security & Compliance Center. Other cmdlets have the same names and functionality as those in Exchange Online, but they are also available in the Security & Compliance Center.
+- A cmdlet is a lightweight command that is imported into your local Windows PowerShell session. Note that some cmdlets are available only in the Security & Compliance Center. Other cmdlets have the same names and functionality as those in Exchange Online, but they are also available in the Security & Compliance Center.
     
 

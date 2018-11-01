@@ -19,7 +19,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
 Get-CsPSTNConferenceTimeReport [-EndDate <DateTime>] [-ReportType <Daily | Weekly | Monthly | Yearly>] [-ResultSize <Unlimited>] [-StartDate <DateTime>] [<CommonParameters>]
 ```

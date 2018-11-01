@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-PowerShellConnectivity
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Test-PowerShellConnectivity
@@ -13,25 +13,36 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-PowerShellConnectivity cmdlet to test client connectivity to Exchange remote PowerShell virtual directories.
 
+**Note**: This cmdlet works best in Exchange 2010. In Exchange 2013 or later, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set2
+### URL
 ```
 Test-PowerShellConnectivity -ConnectionUri <Uri> -TestCredential <PSCredential>
  [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
- [-Confirm] [-DomainController <Fqdn>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-ResetTestAccountCredentials] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-ResetTestAccountCredentials]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestType <Internal | External>] [-VirtualDirectoryName <String>]
  [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
- [-Confirm] [-DomainController <Fqdn>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-ResetTestAccountCredentials] [-TestType <Internal | External>] [-TrustAnySSLCertificate]
- [-VirtualDirectoryName <String>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-ResetTestAccountCredentials]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,9 +99,9 @@ You can't use this parameter with the ClientAccessServer parameter.
 
 ```yaml
 Type: Uri
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -107,9 +118,9 @@ You can only use this parameter with the ConnectionUri parameter.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -136,7 +147,7 @@ The Authentication parameter specifies the type of authentication that's used to
 Type: Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -161,9 +172,9 @@ You can't use this parameter with the ConnectionUri parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -182,7 +193,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -197,7 +208,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -224,7 +235,7 @@ If you don't use this parameter, connections to all Mailbox servers in the local
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +250,7 @@ The MonitoringContext switch includes the associated monitoring events and perfo
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -254,7 +265,7 @@ The ResetTestAccountCredentials switch resets the password for the test account 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -269,9 +280,9 @@ You can only use this parameter with the ClientAccessServer parameter.
 
 ```yaml
 Type: Internal | External
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -288,7 +299,7 @@ This switch is useful for testing internal URLs, because a URL that has an assoc
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -303,9 +314,9 @@ You can only use this parameter with the ClientAccessServer parameter. If you do
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -320,7 +331,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

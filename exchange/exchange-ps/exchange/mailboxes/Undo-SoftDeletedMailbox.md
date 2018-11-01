@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### PublicFolder
 ```
-Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-PublicFolder] [-Confirm]
- [-DisplayName <String>] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-DisplayName <String>] [-PublicFolder]
+ [-Confirm]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### SoftDeletedMailbox
 ```
-Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-Confirm] [-DisplayName <String>]
- [-Name <String>] [-Password <SecureString>] [-WhatIf] [-WindowsLiveID <WindowsLiveId>] [<CommonParameters>]
+Undo-SoftDeletedMailbox [-SoftDeletedObject] <MailboxIdParameter> [-Password <SecureString>] [-WindowsLiveID <WindowsLiveId>]
+ [-Confirm] [-DisplayName <String>]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +63,7 @@ The PublicFolder switch specifies that the deleted mailbox you want to recover i
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: PublicFolder
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -142,7 +146,7 @@ You have to include the Password parameter to recover a deleted mailbox with an 
 
 ```yaml
 Type: SecureString
-Parameter Sets: Set1
+Parameter Sets: SoftDeletedMailbox
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -170,11 +174,11 @@ Accept wildcard characters: False
 ### -WindowsLiveID
 The WindowsLiveID parameter specifies a new Microsoft account (formerly known as a Windows Live ID) and primary SMTP for the mailbox. The previous Microsoft account is retained as a proxy address for the mailbox.
 
-You have to include the WindowsLiveID parameter to recover a deleted mailbox with an existing Microsoft account (formerly known as a Windows Live ID) that wasn't deleted with the mailbox.
+You have to include the WindowsLiveID parameter to recover a deleted mailbox with an existing Microsoft account that wasn't deleted with the mailbox.
 
 ```yaml
 Type: WindowsLiveId
-Parameter Sets: Set1
+Parameter Sets: SoftDeletedMailbox
 Aliases:
 Applicable: Exchange Online
 Required: False
