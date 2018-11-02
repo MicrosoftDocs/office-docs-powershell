@@ -13,9 +13,16 @@ Federation configuration settings are used to determine which domains (if any) y
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTenantFederationConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>]
- [-LocalStore] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsTenantFederationConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTenantFederationConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,22 +60,6 @@ Expanding a property simply means displaying all the information stored in that 
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 Enables you to use wildcard characters in order to return a collection of tenant federation configuration settings.
 Because each tenant is limited to a single, global collection of federation configuration settings there is no need to use the Filter parameter.
@@ -77,7 +68,7 @@ However, this is valid syntax for the Get-CsTenantFederationConfiguration cmdlet
 `Get-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Filter "g*"`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -98,7 +89,7 @@ For example:
 `Get-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Identity "global"`
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -141,7 +132,7 @@ Instead, the tenant ID will automatically be filled in for you based on your con
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

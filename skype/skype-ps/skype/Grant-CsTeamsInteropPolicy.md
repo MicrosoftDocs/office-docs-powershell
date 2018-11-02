@@ -16,10 +16,16 @@ This cmdlet determines how calls are routed between Skype for Business and Micro
 Note: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings, and the current implementation may change in the future.
 
 ## SYNTAX
-
+### Identity (Default)
 ```
-Grant-CsTeamsInteropPolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-Identity] <Object>]
- [-Tenant <Object>] [-DomainController <Object>] [-WhatIf] [-AsJob]
+Grant-CsTeamsInteropPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <.Guid>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsInteropPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,10 +147,10 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{Fill DomainController Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online 
@@ -160,7 +166,7 @@ Accept wildcard characters: False
 For this cmdlet, the full UserPrincipleName/SIP address is required. If you don't provide the full UPN/SIP and instead provide an Alias, the cmdlet can throw an "Object reference not set to an instance of an object" error.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online 
@@ -192,7 +198,7 @@ Accept wildcard characters: False
 {{Fill PolicyName Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online 
@@ -208,7 +214,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online 

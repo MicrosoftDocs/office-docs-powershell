@@ -20,14 +20,14 @@ The following parameters are not applicable to Skype for Business Online: AllowA
 ## SYNTAX
 
 ```
-New-CsMobilityPolicy [-Identity] <XdsIdentity> [-Confirm] [-Description <String>]
- [-EnableIPAudioVideo <Boolean>] [-EnableMobility <Boolean>] [-EnableOutsideVoice <Boolean>] [-Force]
- [-InMemory] [-RequireWIFIForIPAudio <Boolean>] [-RequireWIFIForIPVideo <Boolean>] [-WhatIf]
- [-AllowAutomaticPstnFallback <Object>] [-AllowCustomerExperienceImprovementProgram <Object>]
- [-AllowDeviceContactsSync <Object>] [-AllowExchangeConnectivity <Object>] [-AllowSaveCallLogs <Object>]
- [-AllowSaveCredentials <Object>] [-AllowSaveIMHistory <Object>] [-BypassDualWrite <Object>]
- [-EnablePushNotifications <Object>] [-EncryptAppData <Object>] [-RequireIntune <Object>]
- [-RequireWiFiForSharing <Object>] [-Tenant <Object>] [-VoiceSettings <Object>] [-AsJob] [<CommonParameters>]
+New-CsMobilityPolicy [-Tenant <Guid>] [-Description <String>] [-EnableOutsideVoice <Boolean>]
+ [-EnableMobility <Boolean>] [-EnableIPAudioVideo <Boolean>] [-RequireWIFIForIPVideo <Boolean>]
+ [-AllowCustomerExperienceImprovementProgram <Boolean>] [-RequireWiFiForSharing <Boolean>]
+ [-AllowSaveCallLogs <Boolean>] [-AllowExchangeConnectivity <Boolean>] [-AllowSaveIMHistory <Boolean>]
+ [-AllowSaveCredentials <Boolean>] [-EnablePushNotifications <Boolean>] [-EncryptAppData <Boolean>]
+ [-AllowDeviceContactsSync <Boolean>] [-RequireIntune <Boolean>] [-AllowAutomaticPstnFallback <Boolean>]
+ [-VoiceSettings <String>] [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,11 +88,9 @@ After that, command 3 uses the Set-CsMobilityPolicy cmdlet and the Instance para
 If you do not call the Set-CsMobilityPolicy cmdlet, the policy will not be created, and, in fact, will disappear as soon as you end your Windows PowerShell command-line interface session or delete the variable $x.
 
 
-
 ## PARAMETERS
 
 ### -Identity
-
 Unique Identity to be assigned to the policy.
 New mobility policies can be created at the site or per-user scope.
 To create a new site policy, use the prefix "site:" and the name of the site as your Identity.
@@ -108,8 +106,6 @@ Note that you cannot create a new global policy; if you want to make changes to 
 Likewise, you cannot create a new site or per-user policy if a policy with that Identity already exists.
 If you need to make changes to an existing policy, use the Set-CsMobilityPolicy cmdlet.
 
-
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
@@ -124,11 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
-
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -335,7 +327,7 @@ Accept wildcard characters: False
 {{Fill AllowAutomaticPstnFallback Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
@@ -354,7 +346,7 @@ When set to True (the default value) mobile users will be allowed to participate
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -370,7 +362,7 @@ Accept wildcard characters: False
 {{Fill AllowDeviceContactsSync Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -389,7 +381,7 @@ When set to True (the default value) users will be allowed to connect to Exchang
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -410,7 +402,7 @@ Note that this setting does not apply to Android devices.
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -430,7 +422,7 @@ This information can then be applied to auto-logon scenarios.
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -449,26 +441,10 @@ When set to True (the default value) users will be allowed to save transcripts o
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -481,7 +457,7 @@ Accept wildcard characters: False
 {{Fill EnablePushNotifications Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -497,7 +473,7 @@ Accept wildcard characters: False
 {{Fill EncryptAppData Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -513,7 +489,7 @@ Accept wildcard characters: False
 {{Fill RequireIntune Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -536,7 +512,7 @@ If this value is set to False users can use the Options page to modify their sha
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -562,7 +538,7 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -578,7 +554,7 @@ Accept wildcard characters: False
 {{Fill VoiceSettings Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

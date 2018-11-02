@@ -12,13 +12,24 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 
 ## SYNTAX
 
+### TenantIdParams (Default)
 ```
-Set-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-TenantDomain <Object>]
- [-AllowPSTNOnlyMeetings <Object>] [-BridgeId <Object>] [-BridgeName <Object>] [-BypassDualWrite <Object>]
- [-ConferenceId <Object>] [-Confirm] [-DomainController <Object>] [-Force] [-ResetConferenceId]
- [-ResetLeaderPin] [-SendEmail] [-SendEmailFromAddress <Object>] [-SendEmailFromDisplayName <Object>]
- [-SendEmailToAddress <Object>] [-ServiceNumber <Object>] [-Tenant <Object>] [-TollFreeServiceNumber <Object>]
- [-WhatIf] [-AllowTollFreeDialIn <Object>] [-AsJob] [<CommonParameters>]
+Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
+ [-BridgeName <String>] [-Tenant <Guid>] [-ConferenceId <System.Int32>] [-ResetConferenceId]
+ [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### TenantDomainParams
+```
+Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
+ [-BridgeName <String>] -TenantDomain <String> [-ConferenceId <Int32>] [-ResetConferenceId]
+ [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +63,7 @@ A user identity can be specified by using one of four formats: 1) the user's SIP
 You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -70,7 +81,7 @@ Specifies the domain name for the tenant or organization.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -89,7 +100,7 @@ An authenticated user is a user who joins the meeting using a Skype for Business
 The default is false.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -105,7 +116,7 @@ Accept wildcard characters: False
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -121,23 +132,7 @@ Accept wildcard characters: False
 Specifies the name of the audio conferencing bridge.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -162,7 +157,7 @@ When ConferenceId is specified the new ConferenceId will be assigned to the user
 When ResetConferenceId is specified, the user will get an auto-generated ConferenceId.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: Passcode
 Applicable: Skype for Business Online
@@ -201,7 +196,7 @@ Computer name: `-DomainController atl-cs-001`
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -289,7 +284,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -305,7 +300,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -321,7 +316,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -341,7 +336,7 @@ The cmdlet will verify that the service number is assigned to the user's current
 The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -361,7 +356,7 @@ You can find your tenant ID by running this command: `Get-CsTenant | Select-Obje
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -377,7 +372,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -410,23 +405,7 @@ Accept wildcard characters: False
 If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. Please note that making modifications to this value could trigger rescheduling all existing meetings organized by the given users, and all meeting invites will be resent to all participants. 
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

@@ -13,9 +13,8 @@ Use the `Get-CsOnlineTelephoneNumberInventoryRegions` cmdlet to retrieve the reg
 ## SYNTAX
 
 ```
-Get-CsOnlineTelephoneNumberInventoryRegions [-InventoryType <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-RegionalGroup <Object>] [-Tenant <Object>] [-AsJob]
- [<CommonParameters>]
+Get-CsOnlineTelephoneNumberInventoryRegions [-Tenant <Guid>] [-RegionalGroup <String>]
+ -InventoryType <String> [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,23 +55,7 @@ Acceptable values are:
 "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -88,7 +71,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -122,7 +105,7 @@ Accept wildcard characters: False
 Specifies the target geographical region for the cmdlet.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: Region
 Applicable: Skype for Business Online
@@ -138,7 +121,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -151,7 +134,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter

@@ -12,10 +12,22 @@ Provide the topic introduction here.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTenantMigrationConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
- [-Instance <Object>] [-MeetingMigrationEnabled <Object>] [-Tenant <Object>] [-WhatIf]
- [-ACPMeetingMigrationTriggerEnabled <Object>] [-AsJob] [<CommonParameters>]
+Set-CsTenantMigrationConfiguration [-Tenant <Guid>] [-MeetingMigrationEnabled <Boolean>]
+ [-ACPMeetingMigrationTriggerEnabled <Boolean>]
+ [-MeetingMigrationSourceMeetingTypes <MeetingMigrationSourceMeetingTypes>]
+ [-MeetingMigrationTargetMeetingTypes <MeetingMigrationTargetMeetingTypes>] [[-Identity] <XdsIdentity>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTenantMigrationConfiguration [-Tenant <Guid>] [-MeetingMigrationEnabled <Boolean>]
+ [-ACPMeetingMigrationTriggerEnabled <Boolean>]
+ [-MeetingMigrationSourceMeetingTypes <MeetingMigrationSourceMeetingTypes>]
+ [-MeetingMigrationTargetMeetingTypes <MeetingMigrationTargetMeetingTypes>] [-Instance <PSObject>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,22 +44,6 @@ Insert descriptive text for example 1.
 
 
 ## PARAMETERS
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 PARAMVALUE: SwitchParameter
@@ -85,7 +81,7 @@ Accept wildcard characters: False
 PARAMVALUE: XdsIdentity
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -101,7 +97,7 @@ Accept wildcard characters: False
 PARAMVALUE: PSObject
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -117,7 +113,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -133,7 +129,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -165,23 +161,7 @@ Accept wildcard characters: False
 {{Fill ACPMeetingMigrationTriggerEnabled Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

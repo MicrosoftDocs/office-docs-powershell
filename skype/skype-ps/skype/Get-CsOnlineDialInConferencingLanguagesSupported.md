@@ -13,8 +13,7 @@ Use the Get-CsOnlineDialInConferencingLanguagesSupported cmdlet to view the list
 ## SYNTAX
 
 ```
-Get-CsOnlineDialInConferencingLanguagesSupported [-BypassDualWrite <Object>] [-DomainController <Object>]
- [-Force] [-AsJob] [<CommonParameters>]
+Get-CsOnlineDialInConferencingLanguagesSupported [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,22 +36,6 @@ This example allows returns the list of supported languages when you are using M
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DomainController
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
@@ -62,7 +45,7 @@ Fully qualified domain name (FQDN): `-DomainController atl-cs-001.Contoso.com`
 Computer name: `-DomainController atl-cs-001`
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online

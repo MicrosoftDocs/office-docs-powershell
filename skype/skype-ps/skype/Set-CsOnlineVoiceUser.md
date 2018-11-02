@@ -13,9 +13,8 @@ Use the `Set-CsOnlineVoiceUser` to set the PSTN specific parameters (like teleph
 ## SYNTAX
 
 ```
-Set-CsOnlineVoiceUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-LocationID <Object>] [-TelephoneNumber <Object>] [-Tenant <Object>]
- [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOnlineVoiceUser [-Identity] <UserIdParameter> [-Tenant <Guid>] [-TelephoneNumber <String>]
+ [-LocationID <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,22 +56,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
@@ -93,7 +76,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -130,7 +113,7 @@ Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmd
 This parameter is required for users based in the US.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -148,7 +131,7 @@ The value must be in E.164 format: +14255043920.
 Setting the value to $Null clears the user's telephone number.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -164,7 +147,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -184,22 +167,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

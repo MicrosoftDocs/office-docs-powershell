@@ -14,9 +14,9 @@ This cmdlet can only be used with Skype for Business Online.
 ## SYNTAX
 
 ```
-Get-CsOnlineUser [[-Identity] <Object>] [-Credential <Object>] [-DomainController <Object>] [-Filter <Object>]
- [-LdapFilter <Object>] [-OnModernServer] [-OnOfficeCommunicationServer] [-OU <Object>] [-ResultSize <Object>]
- [-SkipUserPolicies] [-UnassignedUser] [-AsJob] [<CommonParameters>]
+Get-CsOnlineUser [-Filter <String>] [-LdapFilter <String>] [-OnOfficeCommunicationServer] [-OnModernServer]
+ [-UnassignedUser] [-SkipUserPolicies] [-OU <OUIdParameter>] [-DomainController <Fqdn>]
+ [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,7 +93,7 @@ This filter limits the returned data to online users assigned to the tenant "bf1
 This parameter is not used with Skype for Business Online.
 
 ```yaml
-Type: Object
+Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 This parameter is not used with Skype for Business Online.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -131,7 +131,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 `{EnterpriseVoiceEnabled -eq $True}`
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -151,7 +151,7 @@ You can use the asterisk (*) wildcard character when using the Display Name as t
 For example, the Identity "* Smith" returns all the users who have a display name that ends with the string value " Smith".
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -171,7 +171,7 @@ The LdapFilter parameter uses the LDAP query language when creating filters.
 For example, a filter that returns only users who work in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 This parameter is not used with Skype for Business Online.
 
 ```yaml
-Type: Object
+Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -242,7 +242,7 @@ If set to 0 the command will run, but no data will be returned.
 If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

@@ -15,25 +15,19 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsPrivacyConfiguration [[-Identity] <XdsIdentity>] [-AutoInitiateContacts <Boolean>]
- [-DisplayPublishedPhotoDefault <Boolean>] [-EnablePrivacyMode <Boolean>]
- [-PublishLocationDataDefault <Boolean>] [-Force] [-Tenant <Guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsPrivacyConfiguration [-Tenant <Guid>] [-EnablePrivacyMode <Boolean>]
+ [-AutoInitiateContacts <Boolean>] [-PublishLocationDataDefault <Boolean>]
+ [-DisplayPublishedPhotoDefault <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsPrivacyConfiguration [-Instance <PSObject>] [-AutoInitiateContacts <Boolean>]
- [-DisplayPublishedPhotoDefault <Boolean>] [-EnablePrivacyMode <Boolean>]
- [-PublishLocationDataDefault <Boolean>] [-Force] [-Tenant <Guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsPrivacyConfiguration [[-Identity] <Object>] [-AutoInitiateContacts <Object>] [-BypassDualWrite <Object>]
- [-Confirm] [-DisplayPublishedPhotoDefault <Object>] [-EnablePrivacyMode <Object>] [-Force]
- [-Instance <Object>] [-PublishLocationDataDefault <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
+Set-CsPrivacyConfiguration [-Tenant <Guid>] [-EnablePrivacyMode <Boolean>]
+ [-AutoInitiateContacts <Boolean>] [-PublishLocationDataDefault <Boolean>]
+ [-DisplayPublishedPhotoDefault <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -120,19 +114,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
@@ -140,19 +121,6 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -310,38 +278,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
