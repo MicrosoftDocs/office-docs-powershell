@@ -7,10 +7,8 @@ schema: 2.0.0
 # Get-SPOTenantServicePrincipalPermissionGrants
 
 ## SYNOPSIS
-Gets the collection of permission grants for the "SharePoint Online Client" service principal
 
-> [!NOTE] 
-> This is a preview feature and should not be used in production.
+Gets the collection of permission grants for the "SharePoint Online Client" service principal
 
 ## SYNTAX
 

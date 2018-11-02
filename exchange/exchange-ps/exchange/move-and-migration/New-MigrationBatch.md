@@ -19,114 +19,264 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Local
 ```
-New-MigrationBatch [-Local] -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-ArchiveOnly] [-AutoComplete] [-AutoRetryCount <System.Int32>]
- [-AutoStart] [-BadItemLimit <Unlimited>] [-Confirm] [-CSVData <Byte[]>] [-DisallowExistingUsers]
- [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-MoveOptions <MultiValuedProperty>] [-NotificationEmails <MultiValuedProperty>] [-PrimaryOnly]
- [-ReportInterval <System.TimeSpan>] [-SkipMoving <MultiValuedProperty>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TargetArchiveDatabases <MultiValuedProperty>] [-TargetDatabases <MultiValuedProperty>] [-TimeZone <ExTimeZoneValue>] [-WhatIf]
- [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>]
- [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>] [-StartAfter <System.DateTime>]
- [<CommonParameters>]
+New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers] [-WorkloadType <Microsoft.Exchange.MailboxReplicationService.RequestWorkloadType>] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### LocalPublicFolder
 ```
-New-MigrationBatch -Name <String> -SourcePublicFolderDatabase <DatabaseIdParameter>
- [-AllowIncrementalSyncs <System.Boolean>] [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete]
- [-AutoRetryCount <System.Int32>] [-AutoStart] [-BadItemLimit <Unlimited>] [-Confirm] -CSVData <Byte[]>
- [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>] [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <System.TimeSpan>] [-SkipMerging <MultiValuedProperty>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase <DatabaseIdParameter>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### PreexistingUserIds
 ```
-New-MigrationBatch [-UserIds] <MultiValuedProperty> -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart] [-Confirm]
- [-DisableOnCopy] [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <System.TimeSpan>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch <MultiValuedProperty> -Name <String> [-UserIds]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DisableOnCopy]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Preexisting
 ```
-New-MigrationBatch [-Users] <MultiValuedProperty> -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart] [-Confirm]
- [-DisableOnCopy] [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <System.TimeSpan>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DisableOnCopy]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Onboarding
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-ArchiveOnly] [-AutoComplete] [-AutoRetryCount <System.Int32>]
- [-AutoStart] [-BadItemLimit <Unlimited>] [-Confirm] [-CSVData <Byte[]>] [-DisallowExistingUsers]
- [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>] [-Locale <CultureInfo>] [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>] [-PrimaryOnly] [-ReportInterval <System.TimeSpan>] [-SkipMerging <MultiValuedProperty>] [-SkipMoving <MultiValuedProperty>]
- [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>] [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-TargetArchiveDatabases <MultiValuedProperty>] [-TargetDatabases <MultiValuedProperty>] [-TargetDeliveryDomain <String>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-CompleteAfter <System.DateTime>] [-ExcludeFolders <MultiValuedProperty>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [-ExcludeDumpsters] [<CommonParameters>]
+New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpsters]
+ [-ExcludeFolders <MultiValuedProperty>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Offboarding
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-ArchiveOnly] [-AutoComplete] [-AutoRetryCount <System.Int32>]
- [-AutoStart] [-BadItemLimit <Unlimited>] [-Confirm] -CSVData <Byte[]> [-DisallowExistingUsers]
- [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>] [-Locale <CultureInfo>] [-MoveOptions <MultiValuedProperty>]
- [-NotificationEmails <MultiValuedProperty>] [-PrimaryOnly] [-ReportInterval <System.TimeSpan>] [-SkipMerging <MultiValuedProperty>] [-SkipMoving <MultiValuedProperty>]
- [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>] [-TargetArchiveDatabases <MultiValuedProperty>] [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>] [-TargetEndpoint <MigrationEndpointIdParameter>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-CompleteAfter <System.DateTime>] [-Partition <MailboxIdParameter>]
- [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TargetEndpoint <MigrationEndpointIdParameter>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### XO1
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart]
- [-BadItemLimit <Unlimited>] [-Confirm] -CSVData <Byte[]> [-DomainController <Fqdn>] [-Locale <CultureInfo>]
- [-NotificationEmails <MultiValuedProperty>] [-ReportInterval <System.TimeSpan>] [-SkipMerging <MultiValuedProperty>] [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>] [-TargetDatabases <MultiValuedProperty>] [-TimeZone <ExTimeZoneValue>] [-WhatIf]
- [-WorkflowControlFlags <MigrationWorkflowControlFlags>] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <System.DateTime>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [<CommonParameters>]
 ```
 
 ### PublicFolderToUnifiedGroup
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart]
- [-BadItemLimit <Unlimited>] [-Confirm] -CSVData <Byte[]> [-DomainController <Fqdn>] [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>] [-ReportInterval <System.TimeSpan>] [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>] [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-PublicFolderToUnifiedGroup] [-CompleteAfter <System.DateTime>]
- [-Partition <MailboxIdParameter>] [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### Abch
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart] [-Confirm]
- -CSVData <Byte[]> [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-NotificationEmails <MultiValuedProperty>]
- [-ReportInterval <System.TimeSpan>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TargetDatabases <MultiValuedProperty>] [-TimeZone <ExTimeZoneValue>] [-WhatIf] [<CommonParameters>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### WorkflowTemplate
 ```
-New-MigrationBatch -Name <String> [-AllowIncrementalSyncs <System.Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>] [-AutoComplete] [-AutoRetryCount <System.Int32>] [-AutoStart] [-Confirm]
- [-DomainController <Fqdn>] [-Locale <CultureInfo>] [-NotificationEmails <>]
- [-ReportInterval <System.TimeSpan>] [-SkipReports] [-SkipSteps <SkippableMigrationSteps[]>]
- [-TimeZone <ExTimeZoneValue>] [-WhatIf] [-WorkflowTemplate <String>] [-CompleteAfter <System.DateTime>]
- [-Partition <MailboxIdParameter>] [-StartAfter <System.DateTime>] [<CommonParameters>]
+New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
+ [-AllowIncrementalSyncs <$true | $false>]
+ [-AllowUnknownColumnsInCsv <$true | $false>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -207,6 +357,50 @@ This example creates a migration endpoint for the connection settings to the IMA
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies an unique name for the migration batch. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CSVData
+The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see CSV files for mailbox migration (https://technet.microsoft.com/library/dn170437.aspx).
+
+Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
+
+```yaml
+Type: Byte[]
+Parameter Sets: Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, Abch
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: Byte[]
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Local
 This parameter is available only in on-premises Exchange.
 
@@ -217,21 +411,6 @@ Type: SwitchParameter
 Parameter Sets: Local
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies an unique name for the migration batch. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -308,7 +487,7 @@ The AllowIncrementalSyncs parameter specifies whether to enable or disable incre
 - $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization by using the Set-MigrationBatch cmdlet.
 
 ```yaml
-Type: System.Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -327,7 +506,7 @@ The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns 
 - $false: The migration fails if there are any unknown columns in the CSV file.This setting protects against spelling errors in column headers. This is the default value.
 
 ```yaml
-Type: System.Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -445,8 +624,8 @@ To specify a date/time value for this parameter, use either of the following opt
 This parameter should only be used in the cloud-based service.
 
 ```yaml
-Type: System.DateTime
-Parameter Sets: Local, LocalPublicFolder, PreexistingUserIds, Preexisting, Onboarding, Offboarding, PublicFolderToUnifiedGroup, WorkflowTemplate
+Type: DateTime
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -467,35 +646,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CSVData
-The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see CSV files for mailbox migration (https://technet.microsoft.com/library/dn170437.aspx).
-
-Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
-
-```yaml
-Type: Byte[]
-Parameter Sets: LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, Abch
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: Byte[]
-Parameter Sets: Local, Onboarding
-Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
@@ -845,7 +995,7 @@ To specify a date/time value for this parameter, use either of the following opt
 
 ```yaml
 Type: DateTime
-Parameter Sets: Sets: Local, LocalPublicFolder, PreexistingUserIds, Preexisting, Onboarding, Offboarding, PublicFolderToUnifiedGroup, WorkflowTemplate
+Parameter Sets: Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False

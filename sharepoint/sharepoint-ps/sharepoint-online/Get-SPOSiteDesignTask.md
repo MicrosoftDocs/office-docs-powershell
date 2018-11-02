@@ -36,6 +36,7 @@ This example applies a site design that includes two site scripts - totaling ove
 
 ```powershell
 Get-SPOSiteDesignTask -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectawesome”
+
 ```
 
 ## PARAMETERS

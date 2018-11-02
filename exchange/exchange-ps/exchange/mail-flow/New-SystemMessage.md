@@ -17,17 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Dsn
 ```
-New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <$true | $false> -Language <CultureInfo>
- -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <$true | $false> -Language <CultureInfo> -Text <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Quota
 ```
-New-SystemMessage -Language <CultureInfo>
- -QuotaMessageType <WarningMailboxUnlimitedSize | WarningPublicFolderUnlimitedSize | WarningMailbox | WarningPublicFolder | ProhibitSendMailbox | ProhibitPostPublicFolder | ProhibitSendReceiveMailBox>
- -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+New-SystemMessage -Language <CultureInfo> -QuotaMessageType <WarningMailboxUnlimitedSize | WarningPublicFolderUnlimitedSize | WarningMailbox | WarningPublicFolder | ProhibitSendMailbox | ProhibitPostPublicFolder | ProhibitSendReceiveMailBox> -Text <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +69,7 @@ You can't use this parameter with the QuotaMessageType parameter.
 
 ```yaml
 Type: EnhancedStatusCode
-Parameter Sets: Set1
+Parameter Sets: Dsn
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -89,7 +92,7 @@ You can't use this parameter with the QuotaMessageType parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1
+Parameter Sets: Dsn
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -173,7 +176,7 @@ You can't use this parameter with the DsnCode or Internal parameters.
 
 ```yaml
 Type: WarningMailboxUnlimitedSize | WarningPublicFolderUnlimitedSize | WarningMailbox | WarningPublicFolder | ProhibitSendMailbox | ProhibitPostPublicFolder | ProhibitSendReceiveMailBox
-Parameter Sets: Set2
+Parameter Sets: Quota
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True

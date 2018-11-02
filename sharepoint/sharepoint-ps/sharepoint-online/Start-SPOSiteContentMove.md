@@ -43,7 +43,7 @@ This command starts the information and the status of a move request of a user b
 ```powershell
 Start-SPOSiteContentMove -Url $url -DestinationDataLocation $DestLocation -PreferredMoveBeginDate ((Get-Date).AddHour(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12)) 
 ```
-Starts the movement of the content on $url to the destination defined on $DestLocation variable prefered to start 1 hour ahead from now, until 12 hours to that relative time.
+Starts the movement of the content on $url to the destination defined on $DestLocation variable preferred to start 1 hour ahead from now, until 12 hours to that relative time.
 
 ### EXAMPLE 2
 ```powershell

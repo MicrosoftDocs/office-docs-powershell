@@ -17,15 +17,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-ReceiveConnector [[-Identity] <ReceiveConnectorIdParameter>] [-DomainController <Fqdn>]
- [<CommonParameters>]
+Get-ReceiveConnector [[-Identity] <ReceiveConnectorIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set2
+### Server
 ```
-Get-ReceiveConnector [-DomainController <Fqdn>] [-Server <ServerIdParameter>] [<CommonParameters>]
+Get-ReceiveConnector [-Server <ServerIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +84,7 @@ You can't use this parameter with the Server parameter.
 
 ```yaml
 Type: ReceiveConnectorIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -108,7 +109,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

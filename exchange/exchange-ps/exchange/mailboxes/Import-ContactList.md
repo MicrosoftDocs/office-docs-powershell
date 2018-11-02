@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Data
 ```
-Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVData <Byte[]> [-DateCultureName] <String> [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVData <Byte[]>
+ [-DateCultureName] <String>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Stream
 ```
-Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVStream <Stream> [-DateCultureName] <String> [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Import-ContactList [-Identity] <MailboxIdParameter> [-CSV] -CSVStream <Stream>
+ [-DateCultureName] <String>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +69,7 @@ The CSVData parameter specifies the .csv file you want to import. Use the follow
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1
+Parameter Sets: Data
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -80,7 +84,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Stream
-Parameter Sets: Set2
+Parameter Sets: Stream
 Aliases:
 Applicable: Exchange Online
 Required: True
