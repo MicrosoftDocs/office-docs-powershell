@@ -1,4 +1,5 @@
 ---
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOSiteDesignTask
 schema: 2.0.0
@@ -71,10 +72,12 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False  
 ```
-## RELATED COMMANDS
+
+## RELATED LINKS
 
 - [Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps)
 
 - [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps)
+
 
 
