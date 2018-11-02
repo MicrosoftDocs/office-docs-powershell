@@ -12,16 +12,9 @@ Provide the topic introduction here.
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-Grant-CsExternalUserCommunicationPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String>
- [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### GrantToTenant
-```
-Grant-CsExternalUserCommunicationPolicy [-PolicyName] <String> [-Tenant <Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm]
+ [-DomainController <Object>] [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +24,7 @@ Provide the detailed description here.
 
 ### -------------------------- Example 1 -------------------------- 
 ```
+
 Insert example commands for example 1.
 ```
 
@@ -43,7 +37,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: String
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -75,7 +69,7 @@ Accept wildcard characters: False
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Fqdn
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -91,7 +85,7 @@ Accept wildcard characters: False
 PARAMVALUE: UserIdParameter
 
 ```yaml
-Type: UserIdParameter
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -123,7 +117,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
