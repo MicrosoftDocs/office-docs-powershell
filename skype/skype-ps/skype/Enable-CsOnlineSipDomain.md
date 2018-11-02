@@ -40,7 +40,8 @@ Once you have moved all users from on-premises into the cloud, you can decommiss
 </br>
 These steps should be done together as a unit. 
 
-> [!NOTE] Any federated organizations that have an allowed domain entry for your sip domain(s) will need to update their allowed domain entries to remove the proxy FQDN. We recommend you send all your federated partners a communication about this as you prepare to complete your migration to the cloud.
+> [!NOTE]
+> Any federated organizations that have an allowed domain entry for your sip domain(s) will need to update their allowed domain entries to remove the proxy FQDN. We recommend you send all your federated partners a communication about this as you prepare to complete your migration to the cloud.
 
 The steps are:
 </br>
