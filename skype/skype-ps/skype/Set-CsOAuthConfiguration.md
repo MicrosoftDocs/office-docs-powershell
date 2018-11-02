@@ -15,19 +15,26 @@ This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
-### Identity (Default)
+### Identity
 ```
-Set-CsOAuthConfiguration [-Tenant <Guid>] [-Realm <String>] [-ServiceName <String>]
- [-ClientAuthorizationOAuthServerIdentity <String>] [-ExchangeAutodiscoverAllowedDomains <String>]
- [-ExchangeAutodiscoverUrl <String>] [-ClientAdalAuthOverride <ClientAdalAuthOverride>]
- [-AlternateAudienceUrl <String>] [-AdditionalAudienceUrls <String>] [[-Identity] <XdsIdentity>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-Confirm] [-ExchangeAutodiscoverAllowedDomains <String>]
+ [-ExchangeAutodiscoverUrl <String>] [-Force] [-Realm <String>] [-ServiceName <String>] [-Tenant <Guid>]
+ [-WhatIf] [-ClientAuthorizationOAuthServerIdentity <String>] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsOAuthConfiguration [-Tenant <Guid>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+Set-CsOAuthConfiguration [-Confirm] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-WhatIf]
  [<CommonParameters>]
+```
+
+###  (Default)
+```
+Set-CsOAuthConfiguration [[-Identity] <Object>] [-AdditionalAudienceUrls <Object>]
+ [-AlternateAudienceUrl <Object>] [-BypassDualWrite <Object>] [-ClientAdalAuthOverride <Object>]
+ [-ClientAuthorizationOAuthServerIdentity <Object>] [-Confirm] [-ExchangeAutodiscoverAllowedDomains <Object>]
+ [-ExchangeAutodiscoverUrl <Object>] [-Force] [-Instance <Object>] [-Realm <Object>] [-ServiceName <Object>]
+ [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -148,8 +155,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+```yaml
+Type: XdsIdentity
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
 
 ```yaml
 Type: PSObject
@@ -164,9 +185,23 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+```yaml
+Type: PSObject
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Realm
 Server-to-server security container.
 By default, Skype for Business Server uses your default SIP domain as its OAuth realm.
+
 
 ```yaml
 Type: String
@@ -243,7 +278,7 @@ Accept wildcard characters: False
 {{Fill AdditionalAudienceUrls Description}}
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -259,7 +294,23 @@ Accept wildcard characters: False
 {{Fill AlternateAudienceUrl Description}}
 
 ```yaml
-Type: String
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+{{Fill BypassDualWrite Description}}
+
+```yaml
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -275,7 +326,7 @@ Accept wildcard characters: False
 {{Fill ClientAdalAuthOverride Description}}
 
 ```yaml
-Type: ClientAdalAuthOverride
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Accepted values: NoOverride, Allowed, Disallowed
@@ -293,10 +344,26 @@ URI of the OAuth server used for client authentication.
 
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: Identity, (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named

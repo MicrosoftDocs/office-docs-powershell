@@ -14,16 +14,9 @@ For example, you might enable the Better Together Over Ethernet feature for some
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### GrantToTenant
-```
-Grant-CsIPPhonePolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru]
- [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsIPPhonePolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm] [-DomainController <Object>]
+ [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +27,7 @@ IP phone policies are applied each time a user accesses the system, regardless o
 
 ### -------------------------- Example 1 -------------------------- 
 ```
+
 Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName SkypePolicy
 ```
 
@@ -42,6 +36,7 @@ This example assigns the IP phone policy "SkypePolicy" to the user with the iden
 
 ### -------------------------- Example 2 -------------------------- 
 ```
+
 Get-CsUser -LDAPFilter "Department=Sales" | Grant-CsIPPhonePolicy -PolicyName SalesPolicy
 ```
 
@@ -60,7 +55,7 @@ If you set PolicyName to a null value, then the command will unassign any per-us
 For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -92,7 +87,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Fqdn
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -115,7 +110,7 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 ```yaml
-Type: UserIdParameter
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -148,7 +143,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -178,11 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter

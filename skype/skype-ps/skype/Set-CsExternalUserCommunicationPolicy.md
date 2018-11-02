@@ -12,20 +12,11 @@ schema: 2.0.0
 
 ## SYNTAX
 
-## SYNTAX
-
-### Identity (Default)
 ```
-Set-CsExternalUserCommunicationPolicy [-Tenant <Guid>] [-EnableFileTransfer <Boolean>]
- [-EnableP2PFileTransfer <Boolean>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>]
- [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsExternalUserCommunicationPolicy [-Tenant <Guid>] [-EnableFileTransfer <Boolean>]
- [-EnableP2PFileTransfer <Boolean>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>]
- [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-AllowPresenceVisibility <Object>]
+ [-AllowTitleVisibility <Object>] [-BypassDualWrite <Object>] [-Confirm] [-EnableFileTransfer <Object>]
+ [-EnableP2PFileTransfer <Object>] [-Force] [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +38,7 @@ PS C:\> {{ Add example code here }}
 {{Fill AllowPresenceVisibility Description}}
 
 ```yaml
-Type: Boolean
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -63,7 +54,23 @@ Accept wildcard characters: False
 {{Fill AllowTitleVisibility Description}}
 
 ```yaml
-Type: Boolean
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+{{Fill BypassDualWrite Description}}
+
+```yaml
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -95,7 +102,7 @@ Accept wildcard characters: False
 {{Fill EnableFileTransfer Description}}
 
 ```yaml
-Type: Boolean
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -111,7 +118,7 @@ Accept wildcard characters: False
 {{Fill EnableP2PFileTransfer Description}}
 
 ```yaml
-Type: Boolean
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -143,7 +150,7 @@ Accept wildcard characters: False
 {{Fill Identity Description}}
 
 ```yaml
-Type: XdsIdentity
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -159,7 +166,7 @@ Accept wildcard characters: False
 {{Fill Instance Description}}
 
 ```yaml
-Type: PSObject
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -175,7 +182,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -195,6 +202,22 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

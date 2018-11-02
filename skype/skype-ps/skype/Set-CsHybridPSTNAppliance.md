@@ -12,18 +12,10 @@ Use the `Set-CsHybridPSTNAppliance` cmdlet to modify an existing Skype for Busin
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-Set-CsHybridPSTNAppliance [-MaintenanceMode <Boolean>] [-MediationServerGruu <String>]
- [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsHybridPSTNAppliance [-MaintenanceMode <Boolean>] [-MediationServerGruu <String>]
- [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Instance <PSObject>] [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CsHybridPSTNAppliance [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
+ [-Instance <Object>] [-MaintenanceMode <Object>] [-MediationServerGruu <Object>] [-Tenant <Object>] [-WhatIf]
+ [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,13 +44,29 @@ Insert descriptive text for example 1.
 PARAMVALUE: XdsGlobalRelativeIdentity
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -100,7 +108,7 @@ Accept wildcard characters: False
 PARAMVALUE: PSObject
 
 ```yaml
-Type: PSObject
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -119,7 +127,7 @@ This allows administrators to make manual maintenance changes on the host machin
 If set to $False, service resilience detection will be on and checks for Bits and OS updates will run if Auto Update is also set to $True.
 
 ```yaml
-Type: Boolean
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -135,7 +143,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -151,7 +159,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -170,6 +178,22 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

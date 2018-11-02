@@ -13,8 +13,8 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Set-CsOnlineVoiceUserBulk [-Tenant <Guid>] [-NumberAssignmentDetails <>] [-DomainController <Fqdn>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOnlineVoiceUserBulk [-BypassDualWrite <Object>] [-Confirm] [-DomainController <Object>] [-Force]
+ [-NumberAssignmentDetails <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +31,22 @@ Insert descriptive text for example 1.
 
 
 ## PARAMETERS
+
+### -BypassDualWrite
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 PARAMVALUE: SwitchParameter
@@ -52,7 +68,7 @@ Accept wildcard characters: False
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Fqdn
+Type: Object
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -84,7 +100,7 @@ Accept wildcard characters: False
 PARAMVALUE: List
 
 ```yaml
-Type: List
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -100,7 +116,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -119,6 +135,22 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
