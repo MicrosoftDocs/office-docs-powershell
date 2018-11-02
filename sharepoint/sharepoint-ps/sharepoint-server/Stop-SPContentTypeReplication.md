@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SSharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPContentTypeReplication
 schema: 2.0.0

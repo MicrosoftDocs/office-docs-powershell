@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: Project Server 2016, Project Server 2019
 title: Start-SPProjectGenerateWsdl
 schema: 2.0.0

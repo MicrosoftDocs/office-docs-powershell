@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2016
 title: Mount-SPSiteMapDatabase
 schema: 2.0.0

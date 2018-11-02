@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPSiteMapDatabase
 schema: 2.0.0
