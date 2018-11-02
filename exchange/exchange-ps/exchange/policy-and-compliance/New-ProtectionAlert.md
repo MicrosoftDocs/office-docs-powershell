@@ -37,17 +37,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+New-ProtectionAlert -Name "Content search deleted" -Category Others -NotifyUser admin@contoso.com -ThreatType Activity -Operation SearchRemoved -Description "Custom alert policy to track when content searches are deleted" -AggregationType None
 ```
 
-Insert descriptive text for example 1.
-
-### -------------------------- Example 2 --------------------------
-```
-Insert example commands for example 2.
-```
-
-Insert descriptive text for example 2.
+This example creates an alert policy that triggers an alert whenever anyone in the organization deletes a Content Search in the Office 365 Security & Compliance Center.
 
 ## PARAMETERS
 

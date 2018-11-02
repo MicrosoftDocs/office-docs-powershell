@@ -3118,3 +3118,9 @@ The following cmdlet references are for Skype for Business.
 ### [Set-CsAuthConfig](Set-CsAuthConfig.md)
 
 ### [Get-CsAuthConfig](Get-CsAuthConfig.md)
+
+### [Get-CsOnlineSipDomains](Get-CsOnlineSipDomains.md)
+
+### [Enable-CsOnlineSipDomains](Enable-CsOnlineSipDomains.md)
+
+### [Disable-CsOnlineSipDomains](Disable-CsOnlineSipDomains.md)

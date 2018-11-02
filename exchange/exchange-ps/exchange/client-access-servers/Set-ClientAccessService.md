@@ -17,19 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AlternateServiceAccount
 ```
-Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter>
- [-AlternateServiceAccountCredential <PSCredential[]>] [-CleanUpInvalidAlternateServiceAccountCredentials]
- [-Confirm] [-DomainController <Fqdn>] [-RemoveAlternateServiceAccountCredentials] [-WhatIf]
- [<CommonParameters>]
+Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter> [-AlternateServiceAccountCredential <PSCredential[]>] [-CleanUpInvalidAlternateServiceAccountCredentials] [-RemoveAlternateServiceAccountCredentials]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter> [-Array <ClientAccessArrayIdParameter>]
- [-AutoDiscoverServiceInternalUri <Uri>] [-AutoDiscoverSiteScope <MultiValuedProperty>] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Set-ClientAccessService [-Identity] <ClientAccessServerIdParameter> [-Array <ClientAccessArrayIdParameter>] [-AutoDiscoverServiceInternalUri <Uri>] [-AutoDiscoverSiteScope <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,7 +77,7 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential[]
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -91,7 +92,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ClientAccessArrayIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -106,7 +107,7 @@ The AutoDiscoverServiceInternalUri parameter specifies the internal URL of the A
 
 ```yaml
 Type: Uri
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -127,7 +128,7 @@ To add or remove one or more values without affecting any existing entries, use 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -142,7 +143,7 @@ The CleanUpInvalidAlternateServiceAccountCredentialsswitch specifies whether to 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -191,7 +192,7 @@ The RemoveAlternateServiceAccountCredentialsswitch specifies whether to remove a
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: AlternateServiceAccount
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False

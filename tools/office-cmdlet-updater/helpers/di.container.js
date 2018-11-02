@@ -7,6 +7,8 @@ const LogParseService = require('../services/log.parse.service');
 const MailNotificationService = require('../services/mail.notification.service');
 const MarkdownController = require('../controllers/markdown.controller');
 const db = require('../db')();
+const CmdletDependenciesService = require('../services/cmdlet.dependencies.service');
+const FsService = require('../services/fs.service');
 
 module.exports = () => {
 	const container = awilix.createContainer({
@@ -26,8 +28,12 @@ module.exports = () => {
 		logStoreService: awilix.asClass(LogStoreService).singleton(),
 		logParseService: awilix.asClass(LogParseService).singleton(),
 		powerShellService: awilix.asClass(PowerShellService).singleton(),
-		markdownService: awilix.asClass(MarkdownService).singleton()
-	});
+		cmdletDependenciesService: awilix
+			.asClass(CmdletDependenciesService)
+			.singleton(),
+		fsService: awilix.asClass(FsService).singleton(),
+        markdownService: awilix.asClass(MarkdownService).singleton()
+    });
 
 	container.register({
 		markdownController: awilix.asClass(MarkdownController).singleton()

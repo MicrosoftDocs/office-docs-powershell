@@ -80,6 +80,14 @@ Set-SPOTenant -UsePersistentCookiesForExplorerView $true
 ```
 This example enables the use of special persisted cookie for Open with Explorer.
 
+### -----------------------EXAMPLE 5-----------------------------
+
+```
+Set-SPOTenant -LegacyAuthProtocolsEnabled $True
+```
+
+This example enables legacy authentication protocols on the tenant. This can help to enable login in situations where the admin users get an error like "Cannot contact web site 'https://contoso-admin.sharepoint.com/' or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'.", and the underlying error is "Access denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically."
+
 
 ## PARAMETERS
 
@@ -300,6 +308,12 @@ Note, this only applies to new external users accepting new sharing invitations.
 The valid values are:  
 False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
 True - User must accept this invitation with bob@contoso.com.
+
+> [!NOTE] 
+> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Azure AD, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation). 
+
+> [!NOTE] 
+> Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect. 
 
 
 ```yaml
@@ -737,18 +751,20 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyAuthProtocolsEnabled
-By default this value is set to $True. 
+By default this value is set to $True, which means that authentication using legacy protocols is enabled.
 
-Setting this parameter prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+Setting this parameter to $False prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 A value of True- Enables Office clients using non-modern authentication protocols (such as, Forms-Based Authentication (FBA) or Identity Client Runtime Library (IDCRL)) to access SharePoint resources. 
 
-A value of False-Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+A value of False- Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 > [!NOTE] 
 > This may also prevent third-party apps from accessing SharePoint Online resources.
 Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class.  
 
+> [!NOTE] 
+> The change is not instant. It might take up to 24 hours to be applied.
 
 ```yaml
 Type: Boolean

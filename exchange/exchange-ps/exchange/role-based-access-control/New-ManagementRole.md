@@ -17,17 +17,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### NewDerivedRole
 ```
-New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf]
- [-EnabledCmdlets <String[]>] [<CommonParameters>]
+New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-EnabledCmdlets <String[]>]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### UnScopedTopLevelRole
 ```
-New-ManagementRole [-Name] <String> [-UnScopedTopLevel] [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
+New-ManagementRole [-Name] <String> [-UnScopedTopLevel]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +98,7 @@ The Parent parameter specifies the identity of the role to copy. If the name of 
 
 ```yaml
 Type: RoleIdParameter
-Parameter Sets: Set1
+Parameter Sets: NewDerivedRole
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
@@ -114,7 +121,7 @@ You can't use this switch with the Parent parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: UnScopedTopLevelRole
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -175,6 +182,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnabledCmdlets
+The EnabledCmdlets parameter specifies the cmdlets that are copied from the parent role. You can specify multiple values separated by commas.
+
+You can only use this parameter with the Parent parameter when you copy a role.
+
+```yaml
+Type: String[]
+Parameter Sets: NewDerivedRole
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Force
 This parameter is available only in the cloud-based service.
 
@@ -204,23 +228,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnabledCmdlets
-The EnabledCmdlets parameter specifies the cmdlets that are copied from the parent role. You can specify multiple values separated by commas.
-
-You can only use this parameter with the Parent parameter when you copy a role.
-
-```yaml
-Type: String[]
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

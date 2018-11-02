@@ -19,21 +19,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### URL
 ```
 Test-PowerShellConnectivity -ConnectionUri <Uri> -TestCredential <PSCredential>
  [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
- [-Confirm] [-DomainController <Fqdn>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-ResetTestAccountCredentials] [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-ResetTestAccountCredentials]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>]
+Test-PowerShellConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-TestType <Internal | External>] [-VirtualDirectoryName <String>]
  [-Authentication <Default | Basic | Negotiate | NegotiateWithImplicitCredential | Credssp | Digest | Kerberos>]
- [-Confirm] [-DomainController <Fqdn>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-ResetTestAccountCredentials] [-TestType <Internal | External>] [-TrustAnySSLCertificate]
- [-VirtualDirectoryName <String>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MailboxServer <ServerIdParameter>]
+ [-MonitoringContext]
+ [-ResetTestAccountCredentials]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,7 +99,7 @@ You can't use this parameter with the ClientAccessServer parameter.
 
 ```yaml
 Type: Uri
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -109,7 +118,7 @@ You can only use this parameter with the ConnectionUri parameter.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -163,7 +172,7 @@ You can't use this parameter with the ConnectionUri parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -271,7 +280,7 @@ You can only use this parameter with the ClientAccessServer parameter.
 
 ```yaml
 Type: Internal | External
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -305,7 +314,7 @@ You can only use this parameter with the ClientAccessServer parameter. If you do
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

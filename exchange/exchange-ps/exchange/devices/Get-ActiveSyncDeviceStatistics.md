@@ -19,17 +19,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-ActiveSyncDeviceStatistics [-Identity] <ActiveSyncDeviceIdParameter> [-DomainController <Fqdn>]
- [-GetMailboxLog] [-NotificationEmailAddresses <MultiValuedProperty>] [-ShowRecoveryPassword]
- [<CommonParameters>]
+Get-ActiveSyncDeviceStatistics [-Identity] <ActiveSyncDeviceIdParameter>
+ [-DomainController <Fqdn>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-ShowRecoveryPassword] [<CommonParameters>]
 ```
 
-### Set2
+### Mailbox
 ```
-Get-ActiveSyncDeviceStatistics -Mailbox <MailboxIdParameter> [-DomainController <Fqdn>] [-GetMailboxLog]
- [-NotificationEmailAddresses <MultiValuedProperty>] [-ShowRecoveryPassword] [<CommonParameters>]
+Get-ActiveSyncDeviceStatistics -Mailbox <MailboxIdParameter>
+ [-DomainController <Fqdn>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-ShowRecoveryPassword] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +72,7 @@ The Identity parameter specifies the user's device ID. If the Mailbox parameter 
 
 ```yaml
 Type: ActiveSyncDeviceIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -82,7 +87,7 @@ The Mailbox parameter specifies the user mailbox for which you want to retrieve 
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True

@@ -19,20 +19,33 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### SearchAsSender
 ```
 Search-MessageTrackingReport [-Identity] <MailboxIdParameter> -Sender <SmtpAddress> [-BypassDelegateChecking]
- [-Confirm] [-DomainController <Fqdn>] [-DoNotResolve] [-MessageEntryId <String>] [-MessageId <String>]
- [-ResultSize <Unlimited>] [-Subject <String>] [-TraceLevel <Low | Medium | High>] [-WhatIf]
- [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotResolve]
+ [-MessageEntryId <String>]
+ [-MessageId <String>]
+ [-ResultSize <Unlimited>]
+ [-Subject <String>]
+ [-TraceLevel <Low | Medium | High>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### SearchAsRecipient
 ```
-Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-BypassDelegateChecking] [-Confirm]
- [-DomainController <Fqdn>] [-DoNotResolve] [-MessageEntryId <String>] [-MessageId <String>]
- [-Recipients <SmtpAddress[]>] [-ResultSize <Unlimited>] [-Subject <String>]
- [-TraceLevel <Low | Medium | High>] [-WhatIf] [<CommonParameters>]
+Search-MessageTrackingReport [-Identity] <MailboxIdParameter> [-Recipients <SmtpAddress[]>]
+ [-BypassDelegateChecking]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotResolve]
+ [-MessageEntryId <String>]
+ [-MessageId <String>]
+ [-ResultSize <Unlimited>]
+ [-Subject <String>]
+ [-TraceLevel <Low | Medium | High>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,7 +121,7 @@ You need to use this parameter with the Identity parameter.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: Set2
+Parameter Sets: SearchAsSender
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -225,7 +238,7 @@ You can't use this parameter with the Sender parameter.
 
 ```yaml
 Type: SmtpAddress[]
-Parameter Sets: Set1
+Parameter Sets: SearchAsRecipient
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

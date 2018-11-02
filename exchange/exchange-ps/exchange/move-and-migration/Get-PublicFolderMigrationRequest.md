@@ -17,19 +17,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Filtering
 ```
-Get-PublicFolderMigrationRequest [-BatchName <String>] [-DomainController <Fqdn>]
- [-HighPriority <$true | $false>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>]
+Get-PublicFolderMigrationRequest [-BatchName <String>]
+ [-DomainController <Fqdn>]
+ [-HighPriority <$true | $false>]
+ [-Name <String>]
+ [-RequestQueue <DatabaseIdParameter>]
  [-ResultSize <Unlimited>]
  [-Status <None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed>]
- [-Suspend <$true | $false>] [<CommonParameters>]
+ [-Suspend <$true | $false>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-PublicFolderMigrationRequest [[-Identity] <PublicFolderMigrationRequestIdParameter>]
- [-DomainController <Fqdn>] [-ResultSize <Unlimited>] [<CommonParameters>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +66,7 @@ You can't use this parameter in conjunction with the Identity parameter.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -100,7 +106,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -129,7 +135,7 @@ You can't use this parameter in conjunction with the following parameters:
 
 ```yaml
 Type: PublicFolderMigrationRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -144,7 +150,7 @@ The Name parameter specifies the name of the public folder migration request.
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -167,7 +173,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -219,7 +225,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: None | Queued | InProgress | AutoSuspended | CompletionInProgress | Synced | Completed | CompletedWithWarning | Suspended | Failed
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -236,7 +242,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Filtering
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

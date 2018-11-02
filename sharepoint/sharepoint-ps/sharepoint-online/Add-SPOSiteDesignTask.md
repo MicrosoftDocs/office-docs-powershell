@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOSiteDesignTask
@@ -75,8 +75,9 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps)
+- [Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps)
 
-[Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps)
+- [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps)
+
 
 
