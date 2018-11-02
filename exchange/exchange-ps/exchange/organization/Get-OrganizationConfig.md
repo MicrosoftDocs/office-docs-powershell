@@ -35,7 +35,7 @@ This example gets the organization configuration information for the domain cont
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-OrganizationConfig Export-Cli c:\myFile.xml
+Get-OrganizationConfig Export-CliXML c:\myFile.xml
 ```
 
 This example gets the configuration information for the tenant organization.
