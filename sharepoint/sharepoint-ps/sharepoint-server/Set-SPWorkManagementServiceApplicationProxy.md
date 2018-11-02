@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPWorkManagementServiceApplicationProxy
 schema: 2.0.0

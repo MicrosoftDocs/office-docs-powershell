@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPProfileServiceApplication
 schema: 2.0.0
@@ -188,6 +188,8 @@ Accept wildcard characters: False
 ### -PartitionMode
 Specifies that the service application restrict data by site group.
 After the PartitionMode parameter is set and the service application is created, it cannot be changed.
+
+This property has no effect on SharePoint Server 2019.
 
 ```yaml
 Type: SwitchParameter

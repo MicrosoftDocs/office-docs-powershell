@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchResultItemType
 schema: 2.0.0

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPMetadataServiceApplication
 schema: 2.0.0
@@ -313,6 +313,8 @@ Accept wildcard characters: False
 Specifies that the service application restrict data by subscription.
 
 Note This property cannot be changed after the service application has been created.
+
+This property has no effect on SharePoint Server 2019.
 
 ```yaml
 Type: SwitchParameter

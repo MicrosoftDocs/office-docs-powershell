@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPTranslationServiceApplicationProxy
 schema: 2.0.0

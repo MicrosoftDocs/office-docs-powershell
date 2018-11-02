@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPBusinessDataCatalogServiceApplication
 schema: 2.0.0
@@ -218,6 +218,8 @@ Accept wildcard characters: False
 ### -PartitionMode
 Specifies that the service application restricts data by subscription ID.
 This property cannot be changed after the service application is created.
+
+This property has no effect on SharePoint Server 2019.
 
 ```yaml
 Type: SwitchParameter
