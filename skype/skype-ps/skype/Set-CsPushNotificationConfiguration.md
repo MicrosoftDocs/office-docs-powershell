@@ -15,18 +15,25 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 
 ## SYNTAX
 
-### Identity (Default)
+### Identity
 ```
-Set-CsPushNotificationConfiguration [-Tenant <Guid>] [-EnableApplePushNotificationService <Boolean>]
- [-EnableMicrosoftPushNotificationService <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CsPushNotificationConfiguration [[-Identity] <XdsIdentity>] [-Confirm]
+ [-EnableApplePushNotificationService <Boolean>] [-EnableMicrosoftPushNotificationService <Boolean>] [-Force]
+ [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsPushNotificationConfiguration [-Tenant <Guid>] [-EnableApplePushNotificationService <Boolean>]
- [-EnableMicrosoftPushNotificationService <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+Set-CsPushNotificationConfiguration [-Confirm] [-EnableApplePushNotificationService <Boolean>]
+ [-EnableMicrosoftPushNotificationService <Boolean>] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-WhatIf]
  [<CommonParameters>]
+```
+
+###  (Default)
+```
+Set-CsPushNotificationConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
+ [-EnableApplePushNotificationService <Object>] [-EnableMicrosoftPushNotificationService <Object>] [-Force]
+ [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -182,8 +189,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+```yaml
+Type: XdsIdentity
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+
+```yaml
+Type: PSObject
+Parameter Sets: Instance
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ```yaml
 Type: PSObject
@@ -235,6 +269,38 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+{{Fill BypassDualWrite Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
 
 Required: False
 Position: Named
