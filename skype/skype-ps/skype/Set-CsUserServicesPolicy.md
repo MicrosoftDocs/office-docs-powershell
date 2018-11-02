@@ -17,24 +17,18 @@ This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsUserServicesPolicy [[-Identity] <XdsIdentity>] [-Confirm] [-Force] [-Tenant <Guid>]
- [-UcsAllowed <Boolean>] [-WhatIf] [-EnableAwaySinceIndication <Boolean>] [-MigrationDelayInDays <Int32>]
+Set-CsUserServicesPolicy [-Tenant <Guid>] [-UcsAllowed <Boolean>] [-MigrationDelayInDays <Int32>]
+ [-EnableAwaySinceIndication <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsUserServicesPolicy [-Confirm] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-UcsAllowed <Boolean>]
- [-WhatIf] [-EnableAwaySinceIndication <Boolean>] [-MigrationDelayInDays <Int32>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsUserServicesPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-EnableAwaySinceIndication <Object>] [-Force] [-Instance <Object>] [-MigrationDelayInDays <Object>]
- [-Tenant <Object>] [-UcsAllowed <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsUserServicesPolicy [-Tenant <Guid>] [-UcsAllowed <Boolean>] [-MigrationDelayInDays <Int32>]
+ [-EnableAwaySinceIndication <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -145,19 +139,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
@@ -165,19 +146,6 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -247,28 +215,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableAwaySinceIndication
 PARAMVALUE: $true | $false
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -287,26 +239,10 @@ The default value is 0.
 
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named

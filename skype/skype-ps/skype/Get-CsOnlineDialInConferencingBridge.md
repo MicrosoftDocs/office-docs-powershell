@@ -12,10 +12,22 @@ Use the Get-CsOnlineDialInConferencingBridge cmdlet to view the settings on an a
 
 ## SYNTAX
 
+### EmptySet (Default)
 ```
-Get-CsOnlineDialInConferencingBridge [[-Identity] <Object>] [-Name <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-TenantDomain <Object>] [-AsJob]
- [<CommonParameters>]
+Get-CsOnlineDialInConferencingBridge [-Tenant <Guid>] [-TenantDomain <String>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### UniqueBridgeParams
+```
+Get-CsOnlineDialInConferencingBridge [-Identity] <Guid> [-Tenant <Guid>] [-TenantDomain <String>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+### BridgeNameParams
+```
+Get-CsOnlineDialInConferencingBridge -Name <String> [-Tenant <Guid>] [-TenantDomain <String>]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,7 +57,7 @@ This example shows how to return all of the audio conferencing bridges for the g
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -61,23 +73,7 @@ Accept wildcard characters: False
 Specifies the name of the audio conferencing bridge.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -104,7 +100,7 @@ Computer name:
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -138,7 +134,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -154,7 +150,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

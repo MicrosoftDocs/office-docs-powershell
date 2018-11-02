@@ -13,8 +13,8 @@ Use the Grant-DsTenantDialPlan cmdlet to assign an existing tenant dial plan to 
 ## SYNTAX
 
 ```
-Grant-CsTenantDialPlan [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm] [-DomainController <Object>]
- [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsTenantDialPlan [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +28,6 @@ You can check whether a user has been granted a per-user tenant dial plan by cal
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
-
 Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUser Vt1_User1).SipAddress
 ```
 
@@ -41,7 +40,7 @@ This example grants the Vt1tenantDialPlan 9 dial plan to Vt1_User1.
 The Identity parameter identifies the user to whom the policy should be assigned.
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -57,7 +56,7 @@ Accept wildcard characters: False
 The PolicyName parameter is the name of the tenant dial plan to assign to the specified user.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -90,7 +89,7 @@ Specifies the domain controller that's used by the cmdlet to read or write the s
 Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -124,7 +123,7 @@ For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
 You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

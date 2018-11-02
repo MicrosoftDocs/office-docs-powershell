@@ -13,8 +13,8 @@ Sets the external FQDN of an Edge server access proxy as the hosting provider fo
 ## SYNTAX
 
 ```
-Set-CsHybridMediationServer [[-Identity] <Object>] [-AccessProxyExternalFqdn <Object>] [-Fqdn <Object>]
- [-Confirm] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsHybridMediationServer -Fqdn <String> -AccessProxyExternalFqdn <String> [-Identity] <String>
+ [-Tenant <Guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +41,7 @@ This command sets the FQDN of a mediation server.
 The fully qualified domain name of the Edge server's access proxy.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 Specifies the fully qualified domain name of the mediation server that includes the internal Active Directory domain, such as mediationserver.contoso.com
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -74,7 +74,7 @@ Specifies the identity of the hybrid public switched telephone network (PSTN) si
 For example: `-Identity "SeattlePSTN"`.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -112,7 +112,7 @@ The tenant ID will be determined by your connection and credentials.
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -132,22 +132,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

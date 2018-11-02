@@ -13,9 +13,9 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Unregister-CsOnlineDialInConferencingServiceNumber [[-Identity] <Object>] [[-Instance] <Object>]
- [-BridgeId <Object>] [-BridgeName <Object>] [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-RemoveDefaultServiceNumber] [-Tenant <Object>] [-TenantDomain <Object>] [-AsJob] [<CommonParameters>]
+Unregister-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-BridgeId <Guid>]
+ [-BridgeName <String>] [-Tenant <Guid>] [-TenantDomain <String>] [-RemoveDefaultServiceNumber]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +37,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 PARAMVALUE: ConferencingServiceNumber
 
 ```yaml
-Type: Object
+Type: ConferencingServiceNumber
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -85,23 +85,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -117,7 +101,7 @@ Accept wildcard characters: False
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -165,7 +149,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -181,7 +165,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
