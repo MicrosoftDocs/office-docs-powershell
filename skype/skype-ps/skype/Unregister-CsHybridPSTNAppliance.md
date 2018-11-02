@@ -12,16 +12,10 @@ Use the `Unregister-CsHybridPSTNAppliance` cmdlet to unregister a previously spe
 
 ## SYNTAX
 
-### Identity (Default)
 ```
-Unregister-CsHybridPSTNAppliance [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Unregister-CsHybridPSTNAppliance [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Force]
+ [-Instance <Object>] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
-
-### Instance
-```
-Unregister-CsHybridPSTNAppliance [-Identity] <XdsGlobalRelativeIdentity> [-Tenant <Guid>]
- [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## DESCRIPTION
 Skype for Business Cloud Connector Edition appliances are registered, retrieved, modified, and unregistered by the CsHybridPSTNAppliance cmdlet group (Register, Get, Set, and Unregister).
@@ -50,13 +44,29 @@ Insert descriptive text for example 1.
 Specifies the identity of the Skype for Business Cloud Connector Edition appliance.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -100,7 +110,7 @@ Accept wildcard characters: False
 PARAMVALUE: PSObject
 
 ```yaml
-Type: PSObject
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -116,7 +126,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

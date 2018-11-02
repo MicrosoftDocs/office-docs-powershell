@@ -13,8 +13,7 @@ Tests the ability to use ported phone numbers from your current service provider
 ## SYNTAX
 
 ```
-Test-CsOnlinePortabilityIn [-TelephoneNumbers <String[]>] [-TelephoneNumberRanges <String[][]>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Test-CsOnlinePortabilityIn [-Confirm] [-DomainController <Object>] [-Force] [-TelephoneNumberRanges <String>] [-TelephoneNumbers <String>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +52,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: Fqdn
+Type: Object
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -85,7 +84,7 @@ Accept wildcard characters: False
 Defines a telephone number range to test. For example, let's say you want to test all of your 25 phone numbers (+1 425-555-1235 through 1259). You should enter: "+14255551234-+14255551259".
 
 ```yaml
-Type: String[][]
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -101,7 +100,7 @@ Accept wildcard characters: False
 Defines a list of telephone numbers to test. For example, let's say you want to test +1 425-555-1235, +1 425-555-1245 and +1 425-555-1259. You should enter: "+14255551235,+14255551245,+14255551259".
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -120,6 +119,22 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

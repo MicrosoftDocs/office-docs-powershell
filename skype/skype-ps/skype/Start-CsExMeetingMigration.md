@@ -13,8 +13,8 @@ Provide the topic introduction here.
 ## SYNTAX
 
 ```
-Start-CsExMeetingMigration [-SourceMeetingType <MmsSourceMeetingTypes>] [-TargetMeetingType <MmsTargetMeetingTypes>]
- [-Tenant <Guid>] [-Identity] <UserIdParameter> [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-CsExMeetingMigration [[-Identity] <Object>] [-Confirm] [-Tenant <Object>] [-WhatIf] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: UserIdParameter
 
 ```yaml
-Type: UserIdParameter
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -87,6 +87,22 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
