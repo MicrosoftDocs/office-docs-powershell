@@ -1,6 +1,9 @@
 ---
-Module Name: SharePoint Online PowerShell
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+external help file: sharepointonline.xml 
+Module Name: SharePointOnlinePowerShell
+Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXZ
+Help Version:  17.0.15229.2100
+Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/sharepoint/
 title: sharepoint-online
 Locale: en-US
 ---
@@ -11,8 +14,6 @@ Locale: en-US
 
 The following cmdlet references are for SharePoint Online.
 
-## sharepoint-online Cmdlets
-
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 {{Manually Enter Add-SPOGeoAdministrator Description Here}}
 
@@ -21,6 +22,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Add-SPOSiteDesign](Add-SPOSiteDesign.md)
 {{Manually Enter Add-SPOSiteDesign Description Here}}
+
+### [Add-SPOSiteDesign](Add-SPOSiteDesignTask.md)
+{{Manually Enter Add-SPOSiteDesignTask Description Here}}
 
 ### [Add-SPOSiteScript](Add-SPOSiteScript.md)
 {{Manually Enter Add-SPOSiteScript Description Here}}
@@ -118,13 +122,25 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOSiteDesign](Get-SPOSiteDesign.md)
 {{Manually Enter Get-SPOSiteDesign Description Here}}
 
+### [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
+### [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
+{{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
 ### [Get-SPOSiteDesignRights](Get-SPOSiteDesignRights.md)
 {{Manually Enter Get-SPOSiteDesignRights Description Here}}
+
+### [Get-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
+{{Manually Enter Add-SPOSiteDesign Description Here}}
 
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 {{Manually Enter Get-SPOSiteGroup Description Here}}
 
 ### [Get-SPOSiteScript](Get-SPOSiteScript.md)
+{{Manually Enter Get-SPOSiteScript Description Here}}
+
+### [Get-SPOSiteScriptFromList](Get-SPOSiteScriptFromList.md)
 {{Manually Enter Get-SPOSiteScript Description Here}}
 
 ### [Get-SPOTenant](Get-SPOTenant.md)
@@ -242,6 +258,9 @@ The following cmdlet references are for SharePoint Online.
 {{Manually Enter Remove-SPOSite Description Here}}
 
 ### [Remove-SPOSiteDesign](Remove-SPOSiteDesign.md)
+{{Manually Enter Remove-SPOSiteDesign Description Here}}
+
+### [Remove-SPOSiteDesignTask](Remove-SPOSiteDesignTask.md)
 {{Manually Enter Remove-SPOSiteDesign Description Here}}
 
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)

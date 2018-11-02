@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOTenantCdnPolicies
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOTenantCdnPolicies
 
 ## SYNOPSIS
-Get the public or private Policies applied on your SharePoint Online Tenant
+Get the public or private Policies applied on your SharePoint Online Tenant. Requires Tenant administrator permissions.
 
 ## SYNTAX
 

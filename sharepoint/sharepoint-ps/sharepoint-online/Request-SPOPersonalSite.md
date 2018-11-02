@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Request-SPOPersonalSite
 schema: 2.0.0
@@ -35,16 +35,16 @@ get-MSOLUser | Where {$_.PreferredDataLocation -eq "EUR"]
 ### ----------------------EXAMPLE 1-----------------------
 ```
 $emails = “user1@contoso.com", "user2@contoso.com”
-Request-SPOPersonalSite –UserEmails $emails -Verbose
+Request-SPOPersonalSite –UserEmails $emails
 ```
 
-This example requests that two users to be enqueued for the creation of a Personal Site and the status of the command will be displayed.
+This example requests that two users to be enqueued for the creation of a Personal Site.
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-Request-SPOPersonalSite –UserEmails $emails -NoWait
+Request-SPOPersonalSite –UserEmails $emails
 ```
-This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails. The status of the operation will not be displayed.
+This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails. 
 
 
 ## PARAMETERS

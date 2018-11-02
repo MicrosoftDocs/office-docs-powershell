@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenantSyncClientRestriction
 schema: 2.0.0
