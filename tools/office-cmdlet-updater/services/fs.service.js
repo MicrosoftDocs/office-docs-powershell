@@ -87,8 +87,10 @@ class FsService {
 
 	// endregion
 
-	getTempFolderPath({ name, path }) {
+	async getTempFolderPath({ name }, path) {
 		let tempFolders = this.logStoreService.getAllTempFolders();
+
+		await fs.ensureDir(path);
 
 		if (!tempFolders.has(name)) {
 			const tempFolderPath = `${path}\\${shortId()}`;
