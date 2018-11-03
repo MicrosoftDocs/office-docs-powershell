@@ -64,7 +64,7 @@ This will return all registered event receivers in the provided "ProjectList" li
 Get-PnPEventReceiver -List "ProjectList" -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
 ```
 
-This will return the event receiver in the provided "ProjectList" list with with the provided ReceiverId "fb689d0e-eb99-4f13-beb3-86692fd39f22"
+This will return the event receiver in the provided "ProjectList" list with the provided ReceiverId "fb689d0e-eb99-4f13-beb3-86692fd39f22"
 
 ### ------------------EXAMPLE 6------------------
 ```powershell

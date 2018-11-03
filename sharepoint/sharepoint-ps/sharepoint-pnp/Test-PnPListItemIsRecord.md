@@ -21,7 +21,7 @@ Test-PnPListItemIsRecord -List <ListPipeBind>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Test-PnPListItemAsRecord -List "Documents" -Identity 4
+Test-PnPListItemIsRecord -List "Documents" -Identity 4
 ```
 
 Returns true if the document in the documents library with id 4 is a record

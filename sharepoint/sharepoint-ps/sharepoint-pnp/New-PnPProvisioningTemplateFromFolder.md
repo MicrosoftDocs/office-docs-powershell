@@ -86,7 +86,7 @@ Creates an empty provisioning template as a pnp package file, and includes all f
 ## PARAMETERS
 
 ### -AsIncludeFile
-If specified, the output will only contain the <pnp:Files> element. This allows the output to be included in another template.
+If specified, the output will only contain the &lt;pnp:Files&gt; element. This allows the output to be included in another template.
 
 ```yaml
 Type: SwitchParameter

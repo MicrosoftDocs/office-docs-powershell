@@ -11,14 +11,14 @@ monikerRange: "exchonline-ps || eop-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailDetailATPReport cmdlet to list details about Advanced Threat protection actions in your cloud-based organization.
+Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Advanced Threat protection (ATP) detections in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Get-MailDetailATPReport [-Action <MultiValuedProperty>] [-Direction <MultiValuedProperty>]
+Get-MailDetailATPReport [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>] [-EndDate <DateTime>] [-EventType <MultiValuedProperty>]
  [-Expression <Expression>] [-MalwareName <MultiValuedProperty>] [-MessageId <MultiValuedProperty>]
  [-MessageTraceId <MultiValuedProperty>] [-Page <Int32>] [-PageSize <Int32>] [-ProbeTag <String>]
@@ -43,21 +43,6 @@ Get-MailDetailATPReport -StartDate 7/1/2017 -EndDate 7/31/2017
 This example returns the Advanced Threat Protection actions for July, 2017.
 
 ## PARAMETERS
-
-### -Action
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Direction
 The Direction parameter filters the results by incoming or outgoing messages. Valid values for this parameter are Inbound and Outbound.
@@ -109,15 +94,37 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
+- Advanced phish filter\*
+
 - Anti-malware engine
 
-- ATP safe attachments
+- ATP safe attachments\*
 
-- ATP safe links
+- ATP safe links\*
+
+- Anti-spoof: Intra-org
+
+- Anti-spoof: external domain\*
+
+- Domain impersonation\*
+
+- General phish filter
+
+- Malicious URL reputation
+
+- URL detonation\*
 
 - Message passed
 
+- Phish ZAP
+
+- User impersonation\*
+
+- Brand impersonation
+
 - ZAP
+
+\* These features require a standalone Office 365 ATP or E5 subscription.
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 

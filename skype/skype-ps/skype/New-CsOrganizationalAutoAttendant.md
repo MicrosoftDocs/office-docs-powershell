@@ -1,5 +1,5 @@
 ---
-external help file: New-CsOrganizationalAutoAttendant.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendant
 schema: 2.0.0
@@ -56,7 +56,7 @@ $afterHoursSchedule = New-CsOnlineSchedule -Name "After Hours Schedule" -WeeklyR
 
 $afterHoursCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $afterHoursSchedule.Id -CallFlowId $afterHoursCallFlow.Id
 
-$inclusionScopeGroupIds = @(“4c3053a6-20bf-43df-bf7a-156124168856”)
+$inclusionScopeGroupIds = @("4c3053a6-20bf-43df-bf7a-156124168856")
 $inclusionScope = New-CsOrganizationalAutoAttendantDialScope -GroupScope -GroupIds $inclusionScopeGroupIds
 
 $o=New-CsOrganizationalAutoAttendant -Name "Main auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule) -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope

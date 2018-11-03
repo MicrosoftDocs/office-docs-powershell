@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsBusyOptions
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns the settings for processing of incoming calls for users who are already engaged in another communication stream. This cmdlet was introduced in Skype for Business Server 2015 June 2016 Cumulative Update.
 
 ## SYNTAX
 
@@ -17,23 +17,29 @@ Get-CsBusyOptions [-Identity] <UserIdParameter> [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet retrieves configuration information about Busy Options for a specific user. It returns one of two Action Type options:
+
+* BusyOnBusy - In which new incoming calls will be rejected with a busy signal if the user is busy.
+
+* VoicemailOnBusy - In which new incoming calls will be forwarded to voice mail if the user is busy.
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-CsBusyOptions -Identity sip:KenMyer@Contoso.com
 ```
 
-{{ Add example description here }}
+This example returns the Busy Options setting for "KenMyer@Contoso.com".
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Indicates the Identity of the user account to be modified. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
+
+You can use the asterisk (*) wildcard character when using the display name as the user Identity. For example, the Identity "*Smith" returns all the users who have a display name that ends with the string value "Smith".
 
 ```yaml
 Type: UserIdParameter
@@ -49,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -70,16 +76,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.AD.UserIdParameter
+### 
+Microsoft.Rtc.Management.AD.UserIdParameter object.
 
 
 ## OUTPUTS
 
-### System.Object
+### 
+Microsoft.Rtc.Management.Bob.Cmdlets.ActionType object.
+Microsoft.Rtc.Management.AD.UserIdParameter object.
 
 
 ## NOTES
 
 
 ## RELATED LINKS
+[Remove-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
 
+[Set-CsBusyOptions](https://docs.microsoft.com/en-us/powershell/module/skype/set-csbusyoptions?view=skype-ps)

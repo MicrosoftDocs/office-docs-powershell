@@ -8,25 +8,24 @@ schema: 2.0.0
 # Reset-CsNotificationQueues
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+The `Reset-CsNotificationQueues` cmdlet resets all presence notification queues. This cmdlet was introduced in Skype for Business Server 2015 November 2015 Cumulative Update.
 
 ## SYNTAX
-
 ```
 Reset-CsNotificationQueues [[-Fqdn] <Fqdn>] [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Reset-CsNotificationQueues` cmdlet resets all presence notification queues. Pending notifications will not be sent.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Reset-CsNotificationQueues -Fqdn FE01.contoso.com
 ```
 
-{{ Add example description here }}
+This example resets the notification queues on server FE01.contoso.com.
 
 ## PARAMETERS
 
@@ -47,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fqdn
-{{Fill Fqdn Description}}
+Specifies the fqdn of the server which you want to reset notification queues.
 
 ```yaml
 Type: Fqdn

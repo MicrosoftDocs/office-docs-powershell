@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PolicyTipConfig
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-PolicyTipConfig
@@ -17,15 +17,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Paramters
 ```
-Get-PolicyTipConfig [-Action <NotifyOnly | RejectOverride | Reject | Url>] [-DomainController <Fqdn>]
- [-Locale <CultureInfo>] [-Original] [<CommonParameters>]
+Get-PolicyTipConfig [-Action <NotifyOnly | RejectOverride | Reject | Url>] [-Locale <CultureInfo>] [-Original]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-PolicyTipConfig [[-Identity] <PolicyTipConfigIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-PolicyTipConfig [[-Identity] <PolicyTipConfigIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,9 +72,9 @@ You can't use the Action parameter with the Identity parameter.
 
 ```yaml
 Type: NotifyOnly | RejectOverride | Reject | Url
-Parameter Sets: Set2
+Parameter Sets: Paramters
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +91,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -113,9 +114,9 @@ You can't use the Identity parameter with the Action, Locale or Original paramet
 
 ```yaml
 Type: PolicyTipConfigIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -132,9 +133,9 @@ You can't use the Locale parameter with the Identity parameter.
 
 ```yaml
 Type: CultureInfo
-Parameter Sets: Set2
+Parameter Sets: Paramters
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -147,9 +148,9 @@ The Original switch includes built-in Policy Tips in the results. You don't spec
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Paramters
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

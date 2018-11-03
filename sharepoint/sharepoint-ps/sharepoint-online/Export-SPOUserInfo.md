@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Export-SPOUserInfo
 schema: 2.0.0
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-Target folder where teh CSV file is generated.
+Target folder where the CSV file is generated.
 
 ```yaml
 Type: String
@@ -103,9 +103,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [New-SPOSiteGroup](New-SPOSiteGroup.md)
 

@@ -18,9 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm]
- [-ContentDateFrom <DateTime>] [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>]
- [-Disabled <$true | $false>] [-WhatIf] [<CommonParameters>]
+New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter> [-Comment <String>] [-Confirm] [-ContentMatchQuery <String>] [-Disabled <$true | $false>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,6 +34,13 @@ New-CaseHoldRule -Name "2016 Budget Spreadsheets" -Policy "Internal Company Poli
 ```
 
 This example creates a new case hold rule named 2016 Budget Spreadsheets and adds it to the existing case hold policy named "Internal Company Policy". The rule applies to Excel worksheets that contain the phrase 2016 budget, such as "2016 budget planning.xlsx" and "2016 budget review.xlsx"
+
+### -------------------------- Example 2 --------------------------
+```
+New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2017"
+```
+
+This example places email messages received by the recipients between December 1, 2016 and December 31, 2017 on hold.
 
 ## PARAMETERS
 
@@ -109,42 +114,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContentDateFrom
-The ContentDateFrom parameter specifies the start date of the date range.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContentDateTo
-The ContentDateTo parameter specifies the end date of the date range.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ContentMatchQuery
-The ContentMatchQuery parameter specifies a content search filter.
+The ContentMatchQuery parameter specifies a content search filter. Use this parameter to create a query-based hold so only the content that matches the specified search query is placed on hold.
 
 This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
 

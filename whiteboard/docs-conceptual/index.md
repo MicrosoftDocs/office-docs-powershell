@@ -1,4 +1,4 @@
-#Microsoft Whiteboard cmdlet reference
+# Microsoft Whiteboard PowerShell
 
 Welcome to the Microsoft Whiteboard PowerShell cmdlet help references. The Microsoft Whiteboard cmdlets provide the command line interface for service administration and management.
 

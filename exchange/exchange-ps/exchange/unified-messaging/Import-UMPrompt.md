@@ -1,9 +1,9 @@
 ---
-external help file: Microsoft.Exchange.MediaAndDevices-Help.xmll
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Import-UMPrompt
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Import-UMPrompt
@@ -17,29 +17,36 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### UploadDialPlanPrompts
 ```
 Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### UploadAutoAttendantPrompts
 ```
 Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] -PromptFileStream <Stream> [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### UploadAutoAttendantPromptsStream
 ```
-Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream>
- -UMAutoAttendant <UMAutoAttendantIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- -PromptFileData <Byte[]> [<CommonParameters>]
+Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMAutoAttendant <UMAutoAttendantIdParameter>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### UploadDialPlanPromptsStream
 ```
 Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMDialPlan <UMDialPlanIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,9 +86,9 @@ The PromptFileData parameter specifies the byte array of the custom prompt.
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Set1, Set2, Set3
+Parameter Sets: UploadDialPlanPrompts, UploadAutoAttendantPrompts
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -96,7 +103,7 @@ The PromptFileName parameter specifies the name of the custom prompt.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -109,9 +116,9 @@ The PromptFileStream parameter specifies whether the audio file will be uploaded
 
 ```yaml
 Type: Stream
-Parameter Sets: Set2, Set3, Set4
+Parameter Sets: UploadAutoAttendantPromptsStream, UploadDialPlanPromptsStream
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -124,9 +131,9 @@ The UMAutoAttendant parameter specifies the UM auto attendant ID. This parameter
 
 ```yaml
 Type: UMAutoAttendantIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: UploadAutoAttendantPrompts, UploadAutoAttendantPromptsStream
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -139,9 +146,9 @@ The UMDialPlan parameter specifies the UM dial plan ID. This parameter specifies
 
 ```yaml
 Type: UMDialPlanIdParameter
-Parameter Sets: Set1, Set4
+Parameter Sets: UploadDialPlanPrompts, UploadDialPlanPromptsStream
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -160,7 +167,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -177,7 +184,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +199,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

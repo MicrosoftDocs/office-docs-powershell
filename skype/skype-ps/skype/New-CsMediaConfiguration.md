@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVideoBasedSharing
-{{Fill EnableVideoBasedSharing Description}}
+Use this parameter to enable video based sharing.
 
 ```yaml
 Type: Boolean

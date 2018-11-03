@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-UnifiedGroup cmdlet to modify Office 365 groups in your cloud-based organization. To modify members, owners, and subscribers of Office 365 groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
+Use the Set-UnifiedGroup cmdlet to modify Office 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Office 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -19,27 +19,56 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
- [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-AccessType <Public | Private>]
- [-Alias <String>] [-AlwaysSubscribeMembersToCalendarEvents] [-AutoSubscribeNewMembers]
- [-CalendarMemberReadOnly] [-Classification <String>] [-Confirm] [-ConnectorsEnabled]
- [-CustomAttribute1 <String>] [-CustomAttribute10 <String>] [-CustomAttribute11 <String>]
- [-CustomAttribute12 <String>] [-CustomAttribute13 <String>] [-CustomAttribute14 <String>]
- [-CustomAttribute15 <String>] [-CustomAttribute2 <String>] [-CustomAttribute3 <String>]
- [-CustomAttribute4 <String>] [-CustomAttribute5 <String>] [-CustomAttribute6 <String>]
- [-CustomAttribute7 <String>] [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-DisplayName <String>]
- [-EmailAddresses <ProxyAddressCollection>] [-ExtensionCustomAttribute1 <MultiValuedProperty>]
- [-ExtensionCustomAttribute2 <MultiValuedProperty>] [-ExtensionCustomAttribute3 <MultiValuedProperty>]
- [-ExtensionCustomAttribute4 <MultiValuedProperty>] [-ExtensionCustomAttribute5 <MultiValuedProperty>]
- [-ForceUpgrade] [-GrantSendOnBehalfTo <MultiValuedProperty>] [-HiddenFromAddressListsEnabled <$true | $false>] 
- [-HideFromExchangeClients <$true | $false>] [-Language <CultureInfo>] [-MailboxRegion <String>] [-MailTip <String>]
- [-MailTipTranslations <MultiValuedProperty>] [-Notes <String>] [-PrimarySmtpAddress <SmtpAddress>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-AccessType <Public | Private>]
+ [-Alias <String>]
+ [-AlwaysSubscribeMembersToCalendarEvents]
+ [-AutoSubscribeNewMembers]
+ [-CalendarMemberReadOnly]
+ [-Classification <String>]
+ [-Confirm]
+ [-ConnectorsEnabled]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DisplayName <String>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ForceUpgrade]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-HiddenFromExchangeClientsEnabled]
+ [-Language <CultureInfo>]
+ [-MailboxRegion <String>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-Notes <String>]
+ [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RequireSenderAuthenticationEnabled <$true | $false>] [-UnifiedGroupWelcomeMessageEnabled] [-WhatIf]
- [<CommonParameters>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-UnifiedGroupWelcomeMessageEnabled]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Office 365 groups are group objects that are available across Office 365 services.
+Office 365 Groups are group objects that are available across Office 365 services.
 
 The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Office 365 Group group.
 
@@ -163,7 +192,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Office 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 ```yaml
 Type: String
@@ -283,7 +312,7 @@ The ConnectorsEnabled specifies whether to enable the ability to use connectors 
 
 To use this switch, the value of the ConnectorsEnabled parameter on the Set-OrganizationConfig cmdlet must be set to $true (which is the default value).
 
-For more information about connectors for Office 365 groups, see Connect apps to your groups (https://go.microsoft.com/fwlink/p/?LinkId=787545).
+For more information about connectors for Office 365 Groups, see Connect apps to your groups (https://go.microsoft.com/fwlink/p/?LinkId=787545).
 
 ```yaml
 Type: SwitchParameter
@@ -512,6 +541,29 @@ The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataEncryptionPolicy
+The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Office 365 Group. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+To remove an existing policy, use the value $null.
+
+```yaml
+Type: DataEncryptionPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -752,15 +804,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HideFromExchangeClients
-The HideFromExchangeClients parameter specifies whether the Office 365 Group is hidden from Outlook clients connected to Office 365. When this value is set to true, the group will no longer be visible in the Outlook left hand navigation and the group will not resolve when attempting to resolve the address while authoring a new mail message in Outlook. Additionally, the parameter HiddenFromAddressListsEnabled will also be set to true to prevent the group from showing in the Global Address Book (GAL) and Offline Address Book (OAB). Valid values are:
+### -HiddenFromExchangeClientsEnabled
+The HiddenFromExchangeClientsEnabled switch specifies whether the Office 365 Group is hidden from Outlook clients connected to Office 365.
 
-- $true: The Office 365 Group is hidden from Outlook experiences. The group will not be visible in the Outlook left hand navigation and will not be visible in the address book. Additionally, the group name will not resolve when attempting to resolve the address while authoring a new mail message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. 
+- To enable this setting, you don't need to specify a value with this switch. The Office 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
 
-- $false: The Office 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
+- To disable this setting, use this exact syntax: -HiddenFromExchangeClientsEnabled:$false. The Office 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
 
 ```yaml
-Type: $true | $false
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

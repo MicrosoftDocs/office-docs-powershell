@@ -107,6 +107,8 @@ When present, indicates that failover is being performed in "disaster mode." If 
 
 If this parameter is not present that means that the pool is still up and running and that failover occurred by administrator choice; for example, the pool might temporarily be failed over in order to do hardware or software upgrades on the server.
 
+Note: The parameteris required for an Enterprise pool if the backend SQL services are down but the front end servers are still up.
+
 
 
 ```yaml

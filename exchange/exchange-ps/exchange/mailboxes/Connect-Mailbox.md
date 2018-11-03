@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Connect-Mailbox
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Connect-Mailbox
@@ -17,67 +17,90 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### Equipment
 ```
 Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Equipment]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>] [-WhatIf] [-Shared] [-Force]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-User <UserIdParameter>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
-### Set5
+### Linked
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
- -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
- [-LinkedCredential <PSCredential>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>]
- [-WhatIf] [-Equipment] [-Force] [-Room] [<CommonParameters>]
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter>
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-LinkedCredential <PSCredential>]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-User <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set6
+### Room
 ```
 Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Room]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>] [-WhatIf]
- -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter> [-Force]
- [-LinkedCredential <PSCredential>] [-Equipment] [<CommonParameters>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-User <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### Shared
 ```
 Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-Shared]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
- [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>] [-WhatIf] [-Room] [-Force]
- -LinkedDomainController <Fqdn> -LinkedMasterAccount <UserIdParameter> [-LinkedCredential <PSCredential>]
- [<CommonParameters>]
+ [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-User <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ValidateOnly
 ```
 Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-ValidateOnly]
- [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-Force] [<CommonParameters>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### User
 ```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
+Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter> [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-AllowLegacyDNMismatch] [-Archive]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>] [-Alias <String>] [-Archive] [-Confirm]
- [-DomainController <Fqdn>] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
- [-ManagedFolderMailboxPolicyAllowed] [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>]
- [-WhatIf] [-AllowLegacyDNMismatch] [-Force] [<CommonParameters>]
-```
-
-### Set7
-```
-Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdParameter>
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>] [-Alias <String>] [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>] [-ManagedFolderMailboxPolicyAllowed]
- [-RetentionPolicy <MailboxPolicyIdParameter>] [-User <UserIdParameter>] [-WhatIf] [<CommonParameters>]
+ [-Alias <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-ManagedFolderMailboxPolicy <MailboxPolicyIdParameter>]
+ [-ManagedFolderMailboxPolicyAllowed]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-User <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -152,7 +175,7 @@ You use this parameter with the Database parameter to specify the mailbox that y
 Type: StoreMailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -175,7 +198,7 @@ You use this parameter with the Identity parameter to specify the mailbox that y
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 2
 Default value: None
@@ -188,9 +211,9 @@ The Equipment switch specifies that you are connecting an equipment mailbox, if 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set5, Set6
+Parameter Sets: Equipment
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -205,9 +228,9 @@ This parameter is required only if you're connecting a linked mailbox.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set5, Set6, Set4
+Parameter Sets: Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -217,8 +240,6 @@ Accept wildcard characters: False
 
 ### -LinkedMasterAccount
 The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. This parameter is required only if you're creating a linked mailbox. You can use any value that uniquely identifies the master account. For example:
-
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account to which the mailbox links. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
 
 For example:
 
@@ -236,9 +257,9 @@ This parameter is required only if you're connecting a linked mailbox.
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set5, Set6, Set4
+Parameter Sets: Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -251,9 +272,9 @@ The Room switch specifies that you are connecting a room mailbox, if this mailbo
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set5, Set6, Set4
+Parameter Sets: Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -268,9 +289,9 @@ A shared mailbox is a mailbox where multiple users can log on to access the mail
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set4
+Parameter Sets: Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -283,9 +304,9 @@ The ValidateOnly switch tells the cmdlet to evaluate the conditions and requirem
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: ValidateOnly
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -306,9 +327,9 @@ If you don't use this parameter, the default mobile device mailbox policy is use
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: Set3, Set5, Set6, Set4, Set1, Set7
+Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -329,9 +350,9 @@ For more information about address book policies, see Address book policies (htt
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
-Parameter Sets: Set1
+Parameter Sets: User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -342,7 +363,7 @@ Accept wildcard characters: False
 ### -Alias
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
-The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
+The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, \`, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
 
 When you create a recipient without specifying an email address, the Alias value you specify is used to generate the primary email address (\<alias\>@\<domain\>). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to oe in the primary email address.
 
@@ -358,9 +379,24 @@ The Alias parameter never generates or updates the primary email address of a ma
 
 ```yaml
 Type: String
-Parameter Sets: Set3, Set5, Set6, Set4, Set1, Set7
+Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLegacyDNMismatch
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: User
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -373,9 +409,9 @@ The Archive switch specifies whether to connect the associated archive mailbox. 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -394,7 +430,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -409,7 +445,22 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -424,9 +475,9 @@ This parameter requires you to create a credentials object by using the Get-Cred
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set5, Set6, Set4
+Parameter Sets: Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -439,9 +490,9 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: Set3, Set5, Set6, Set4, Set1, Set7
+Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -454,9 +505,9 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3, Set5, Set6, Set4, Set1, Set7
+Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -477,9 +528,9 @@ Retention policies consist of tags that are applied to mailbox folders and mail 
 
 ```yaml
 Type: MailboxPolicyIdParameter
-Parameter Sets: Set3, Set5, Set6, Set4, Set1, Set7
+Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -506,9 +557,9 @@ If you don't use this parameter, the command uses the LegacyExchangeDN and Displ
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set3, Set5, Set6, Set4, Set1, Set7
+Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -523,37 +574,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowLegacyDNMismatch
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

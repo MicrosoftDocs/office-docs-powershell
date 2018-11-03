@@ -1,5 +1,5 @@
-- name: Overview
+- name: Home
   href: index.md
   items:
-  - name: Introduction
-    href: intro.md
+  - name: Overview
+    href: overview.md

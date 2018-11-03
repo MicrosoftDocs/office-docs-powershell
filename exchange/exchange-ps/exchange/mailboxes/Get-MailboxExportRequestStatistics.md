@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxExportRequestStatistics
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxExportRequestStatistics
@@ -13,25 +13,25 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-MailboxExportRequestStatistics cmdlet to view detailed information about export requests.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
 Get-MailboxExportRequestStatistics [-Identity] <MailboxExportRequestIdParameter> [-DomainController <Fqdn>]
- [-IncludeReport] [-Diagnostic] [-DiagnosticArgument <String>] [-ReportOnly] [<CommonParameters>]
+ [-IncludeReport] [-Diagnostic] [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-ReportOnly] [<CommonParameters>]
 ```
 
-### Set3
+### MRSInstance
 ```
 Get-MailboxExportRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
-### Set2
+### MigrationRequestQueue
 ```
 Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter> [-DomainController <Fqdn>]
  [-IncludeReport] [-RequestGuid <Guid>] [-Diagnostic] [-DiagnosticArgument <String>] [-ReportOnly]
@@ -98,9 +98,9 @@ This parameter can't be used with the RequestGuid or RequestQueue parameters.
 
 ```yaml
 Type: MailboxExportRequestIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -109,13 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -MRSInstance
+This parameter is available or functional only in Exchange Server 2010.
+
 The MRSInstance parameter specifies the fully qualified domain name (FQDN) of the Client Access server on which the Microsoft Exchange Mailbox Replication service (MRS) resides. When using this parameter, all records are returned for this instance of MRS.
 
 This parameter can't be used in conjunction with the Identity or RequestQueue parameters.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set3
+Parameter Sets: MRSInstance
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -136,10 +138,57 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Diagnostic
+The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, MigrationRequestQueue
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticArgument
+The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: Identity, MigrationRequestQueue
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiagnosticInfo
+This parameter is available only in the cloud-based service.
+
+Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -153,7 +202,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -166,54 +215,9 @@ The IncludeReport switch specifies whether to return additional details, which c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequestGuid
-The RequestGuid parameter specifies the unique identifier for the export request. To find the export request GUID, use the Get-MailboxExportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
-
-```yaml
-Type: Guid
-Parameter Sets: Set3, Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Diagnostic
-The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DiagnosticArgument
-The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
-
-```yaml
-Type: String
-Parameter Sets: Set1, Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -226,9 +230,24 @@ The ReportOnly switch returns the results as an array of report entries. You don
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: Identity, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestGuid
+The RequestGuid parameter specifies the unique identifier for the export request. To find the export request GUID, use the Get-MailboxExportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
+
+```yaml
+Type: Guid
+Parameter Sets: MRSInstance, MigrationRequestQueue
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

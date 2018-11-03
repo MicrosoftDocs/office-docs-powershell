@@ -1,5 +1,5 @@
 ---
-external help file: Export-CsOrganizationalAutoAttendantHolidays.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Export-CsOrganizationalAutoAttendantHolidays
 schema: 2.0.0

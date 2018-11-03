@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsCallerIdPolicy
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsCallerIdPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The CsCallerIdPolicy cmdlets have been deprecated. Please use the CsCallingLineIdentity cmdlets to manage caller ID policies for your organization.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ New-CsCallerIdPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Caller
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The CsCallerIdPolicy cmdlets have been deprecated. Please use the CsCallingLineIdentity cmdlets to manage caller ID policies for your organization.
 
 ## EXAMPLES
 

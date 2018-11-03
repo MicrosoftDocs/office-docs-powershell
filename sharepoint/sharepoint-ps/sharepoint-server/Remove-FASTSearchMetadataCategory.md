@@ -1,5 +1,5 @@
----
-external help file: 
+ ---
+external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 title: Remove-FASTSearchMetadataCategory
@@ -35,7 +35,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-C:\PS>Remove-FASTSearchMetadataCategory -name Sharepoint
+PS C:\>Remove-FASTSearchMetadataCategory -name Sharepoint
 ```
 
 This example deletes the category named "Sharepoint".

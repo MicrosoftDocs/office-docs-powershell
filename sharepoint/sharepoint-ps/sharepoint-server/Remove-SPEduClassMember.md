@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2013
 title: Remove-SPEduClassMember
 schema: 2.0.0

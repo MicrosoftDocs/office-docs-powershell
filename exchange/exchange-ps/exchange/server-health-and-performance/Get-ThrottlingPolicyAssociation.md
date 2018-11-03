@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-ThrottlingPolicyAssociation
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-ThrottlingPolicyAssociation
@@ -17,20 +17,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AnrSet
 ```
-Get-ThrottlingPolicyAssociation [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-ResultSize <Unlimited>]
- [-SortBy <String>] [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
+Get-ThrottlingPolicyAssociation [-Anr <String>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Get-ThrottlingPolicyAssociation [[-Identity] <ThrottlingPolicyAssociationIdParameter>]
- [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-Organization <OrganizationIdParameter>] [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-SortBy <String>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>] [<CommonParameters>]
 ```
 
@@ -86,26 +87,9 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Credential
-The Credential parameter specifies the user name and password to use to access Active Directory.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkid=142122).
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -122,24 +106,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Filter
-The Filter parameter indicates the OPath filter used to filter recipients.
-
-For more information about the filterable properties, see Filterable Properties for the -Filter Parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -182,83 +149,13 @@ For example:
 
 ```yaml
 Type: ThrottlingPolicyAssociationIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -IgnoreDefaultScope
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the distinguished name (DN) for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-- You can't use the OrganizationalUnit and Identity parameters together.
-
-- You can't use the Credential parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter specifies the organization that the object specified by the Identity parameter is in.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OrganizationalUnit
-The OrganizationalUnit parameter specifies an organizational unit (OU) and is used to limit the results. If you use this parameter, you only get mailboxes in the container that you specify. You can use either the OU or the domain name. If you use the OU, you must specify the canonical name of the OU.
-
-```yaml
-Type: OrganizationalUnitIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReadFromDomainController
-The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain. If you set the recipient scope to include all recipients in the forest and don't use this parameter, it's possible that the user information is read from a global catalog with outdated information. If you use this parameter, multiple reads might be necessary to get the information.
-
-By default, the recipient scope is set to the domain that hosts your servers that run Exchange.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -269,7 +166,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -284,7 +181,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -305,7 +202,7 @@ The ThrottlingPolicy parameter filters the results by throttling policy. You can
 Type: ThrottlingPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

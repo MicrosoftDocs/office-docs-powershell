@@ -19,7 +19,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-UnifiedGroupLinks [-Identity] <UnifiedGroupIdParameter>
- -LinkType <Members | Owners | Subscribers | Aggregators | EventSubscribers> [-ResultSize <Unlimited>]
+ -LinkType <Members | Owners | Subscribers | Aggregators> [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -72,8 +72,6 @@ Accept wildcard characters: False
 
 ### -LinkType
 The LinkType parameter specifies the Office 365 Group property that you want to view. Valid values are:
-
-- EventSubscribers
 
 - Members
 

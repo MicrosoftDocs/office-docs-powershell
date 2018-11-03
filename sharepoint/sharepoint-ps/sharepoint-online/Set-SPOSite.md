@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
@@ -29,9 +29,11 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
+ [-DisabledWebpartIds <Guid>]
  [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] [<CommonParameters>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset] 
+ [-DefaultSharingLinkType] [-DefaultLinkPermission] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -207,6 +209,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisabledWebpartIds
+This parameter is used for eanbling disabled web parts that use third-party service (Amazon Kindle, YouTube, Twitter).  The GUIDs that can be used are 46698648-fcd5-41fc-9526-c7f7b2ace919 (Amazon Kindle), 544dd15b-cf3c-441b-96da-004d5a8cea1d (YouTube), f6fdf4f8-4a24-437b-a127-32e66a5dd9b4 (Twitter).
+
+The Set-SPOTenant cmdlet is used for disabling these web parts with third-party services. 
+
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -LocaleId
 Specifies the language of this site collection.
 For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911).
@@ -335,9 +356,9 @@ Accept wildcard characters: False
 
 ### -SharingCapability
 Determines what level of sharing is available for the site.
-The possible values are: Disabled - external user sharing (share by email) and guest link sharing are both disabled, ExternalUserSharingOnly - external user sharing (share by email) is enabled, but guest link sharing is disabled, or ExternalUserAndGuestSharing - external user sharing (share by email) and guest link sharing are both enabled.
+The possible values are: Disabled - don't allow sharing outside your organization, ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory, ExternalUserSharingOnly - allow external users who accept sharing invitations and sign in as authenticated users, or ExternalUserAndGuestSharing - allow sharing with all external users, and by using anonymous access links.
 
-For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Turn external sharing on or off for SharePoint Online (https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off).
 
 
 ```yaml
@@ -676,6 +697,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
+
+### -DefaultSharingLinkType 
+
+The default link type for the site collection
+
+PARAMVALUE: None | AnonymousAccess | Internal | Direct
+
+None - Respect the organization default sharing link type
+AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
+Internal - Sets the default sharing link for this site to the “organization” link or company shareable link
+Direct - Sets the default sharing link for this site to the “Specific people” link
+
+
+```yaml
+Type: SharingLinkType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -DefaultLinkPermission
+
+The default link permission for the site collection
+
+PARAMVALUE: None | View | Edit
+
+None - Respect the organization default link permission
+View - Sets the default link permission for the site to “view” permissions
+Edit - Sets the default link permission for the site to “edit” permissions
+
+```yaml
+Type: SharingPermissionType
+Parameter Sets: ParamSet1
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -687,8 +759,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Set-SPOTenant](Set-SPOTenant.md)

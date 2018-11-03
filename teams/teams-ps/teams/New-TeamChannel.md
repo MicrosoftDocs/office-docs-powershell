@@ -49,8 +49,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 Channel display name.
-Names must be 50 characters or less, and can't contain the characters # % & * { } / \ : \< \> ?
-+ | ' "
+Names must be 50 characters or less, and can't contain the characters # % & * { } / \ : \< \> ? + | ' "
 
 ```yaml
 Type: String

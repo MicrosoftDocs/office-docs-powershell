@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailPublicFolder
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailPublicFolder
@@ -17,19 +17,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AnrSet
 ```
-Get-MailPublicFolder [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
- [-IgnoreDefaultScope] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [-Server <ServerIdParameter>] [-SortBy <String>] [<CommonParameters>]
+Get-MailPublicFolder [-Anr <String>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-Server <ServerIdParameter>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MailPublicFolder [[-Identity] <MailPublicFolderIdParameter>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-ReadFromDomainController] 
- [-ResultSize <Unlimited>] [-Server <ServerIdParameter>] [-SortBy <String>]
- [<CommonParameters>]
+Get-MailPublicFolder [[-Identity] <MailPublicFolderIdParameter>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-Server <ServerIdParameter>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,9 +86,9 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +105,7 @@ This parameter requires the creation and passing of a credential object. This cr
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +122,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +139,7 @@ For more information about the filterable properties, see Filterable properties 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -143,9 +154,9 @@ You can omit the parameter label so that only the public folder name or GUID is 
 
 ```yaml
 Type: MailPublicFolderIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -166,7 +177,7 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -185,7 +196,7 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -200,7 +211,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -209,6 +220,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+This parameter is available or functional only in Exchange Server 2010.
+
 The Server parameter specifies the identity of the server to perform the operation from. If a server isn't specified, the command checks whether the local server is a Mailbox server with a public folder store. If it is, the folder is created locally. If it isn't, the command finds the closest (by site cost) computer running Microsoft Exchange Server 2010 that has the Mailbox server role installed and that has a mounted public folder store.
 
 ```yaml
@@ -242,7 +255,7 @@ You can sort by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

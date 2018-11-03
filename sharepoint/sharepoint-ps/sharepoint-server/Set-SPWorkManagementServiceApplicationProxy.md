@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPWorkManagementServiceApplicationProxy
 schema: 2.0.0
@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE--------
 ```
-C:\PS>Set-SPWorkManagementServiceApplicationProxy -Identity "9187d901-e0e0-4509-b117-9eca20d3ead5" -DefaultProxyGroup
+PS C:\>Set-SPWorkManagementServiceApplicationProxy -Identity "9187d901-e0e0-4509-b117-9eca20d3ead5" -DefaultProxyGroup
 ```
 
 This example makes the Work Management service part of the default proxy group.

@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MailboxDatabaseCopyStatus
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-MailboxDatabaseCopyStatus
@@ -17,16 +17,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-MailboxDatabaseCopyStatus -Server <MailboxServerIdParameter> [-ConnectionStatus] [-DomainController <Fqdn>]
- [-ExtendedErrorInfo] [-Active] [-UseServerCache] [<CommonParameters>]
+Get-MailboxDatabaseCopyStatus -Server <MailboxServerIdParameter>
+ [-Active]
+ [-ConnectionStatus]
+ [-DomainController <Fqdn>]
+ [-ExtendedErrorInfo]
+ [-UseServerCache] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>] [-Active] [-ConnectionStatus]
- [-DomainController <Fqdn>] [-Local] [-ExtendedErrorInfo] [-UseServerCache] [<CommonParameters>]
+Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>] [-Local]
+ [-Active]
+ [-ConnectionStatus]
+ [-DomainController <Fqdn>]
+ [-ExtendedErrorInfo]
+ [-UseServerCache] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,9 +72,9 @@ The Server parameter specifies that a Mailbox server returns status information 
 
 ```yaml
 Type: MailboxServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -81,7 +89,7 @@ The Active switch specifies whether to return mailbox database copy status for t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -90,13 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionStatus
-The ConnectionStatus switch is obsolete and in the process of being deprecated. Use of this switch will be ignored by the task. The information previously provided by this switch is now provided through an internal caching mechanism and, as such, the switch is no longer needed.
+This parameter has been deprecated and is no longer used.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +119,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -124,9 +132,9 @@ The Identity parameter specifies the name of the database copy for which the com
 
 ```yaml
 Type: DatabaseCopyIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 1
 Default value: None
@@ -139,9 +147,9 @@ The Local switch specifies whether to return mailbox database copy status inform
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +164,7 @@ The ExtendedErrorInfo switch specifies whether to return an output object contai
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -171,7 +179,7 @@ The UseServerCache switch specifies whether to enable a server-side remote proce
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

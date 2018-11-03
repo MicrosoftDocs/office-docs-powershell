@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsExternalUserCommunicationPolicy
 schema: 2.0.0
@@ -11,10 +11,8 @@ schema: 2.0.0
 Creates a new external user communication policy for use in your organization to block P2P file transfer with Federated partners only.
 
 ## SYNTAX
-
 ```
-New-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-EnableP2PFileTransfer <Object>] [-Tenant <Object>] [-AsJob] [-WhatIf]
- [<CommonParameters>]
+New-CsExternalUserCommunicationPolicy [[-Identity] <XdsIdentity>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>] [-Confirm] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>] [-Force] [-InMemory] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,7 +22,7 @@ This cmdlet allows you to block P2P file transfer with Federated partners only.
 
 ## EXAMPLES
 
-### Example 1 
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> New-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
 ```
@@ -33,11 +31,91 @@ This example creates a new policy to block external file transfer. Then you can 
 
 ## PARAMETERS
 
+### -AllowPresenceVisibility
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTitleVisibility
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableP2PFileTransfer
 Indicates whether file transfers to Federated partners are allowed. The default value is True.
 
 ```yaml
-Type: Object
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFileTransfer
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -53,13 +131,28 @@ Accept wildcard characters: False
 Unique identifier for the external user communication policy to be created.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InMemory
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -77,7 +170,7 @@ You can return your tenant ID by running this command:
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

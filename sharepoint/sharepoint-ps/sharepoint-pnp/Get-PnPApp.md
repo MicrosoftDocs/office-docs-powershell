@@ -37,7 +37,7 @@ This will return all available apps from the site collection scoped app catalog.
 Get-PnPApp -Identity 2646ccc3-6a2b-46ef-9273-81411cbbb60f
 ```
 
-This willr retrieve the specific app from the app catalog.
+This will retrieve the specific app from the app catalog.
 
 ## PARAMETERS
 

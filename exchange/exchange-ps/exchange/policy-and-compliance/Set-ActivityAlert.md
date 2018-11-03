@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the unique name of the activity alert. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String

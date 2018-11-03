@@ -192,4 +192,8 @@ Instead, the `Remove-CsPushNotificationConfiguration` cmdlet deletes instances o
 ## NOTES
 
 ## RELATED LINKS
+[Set-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-cspushnotificationconfiguration?view=skype-ps)
 
+[New-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-cspushnotificationconfiguration?view=skype-ps)
+
+[Get-CsPushNotificationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cspushnotificationconfiguration?view=skype-ps)

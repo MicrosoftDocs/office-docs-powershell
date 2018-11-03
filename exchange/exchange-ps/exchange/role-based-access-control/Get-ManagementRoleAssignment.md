@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-ManagementRoleAssignment
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps || eop-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
 # Get-ManagementRoleAssignment
@@ -17,38 +17,50 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
 Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
  [-ConfigWriteScope <None | NotApplicable | OrganizationConfig | CustomConfigScope | PartnerDelegatedTenantScope | ExclusiveConfigScope>]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Delegating <$true | $false>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Exclusive <$true | $false>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Delegating <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Exclusive <$true | $false>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-GetEffectiveUsers]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-GetEffectiveUsers]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
  [-RoleAssigneeType <User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup>]
- [-WritableDatabase <DatabaseIdParameter>] [-WritableRecipient <GeneralRecipientIdParameter>]
- [-WritableServer <ServerIdParameter>] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-WritableDatabase <DatabaseIdParameter>]
+ [-WritableRecipient <GeneralRecipientIdParameter>]
+ [-WritableServer <ServerIdParameter>]
  [<CommonParameters>]
 ```
 
-### Set2
+### RoleAssignee
 ```
-Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
+Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>] [-Role <RoleIdParameter>]
  [-ConfigWriteScope <None | NotApplicable | OrganizationConfig | CustomConfigScope | PartnerDelegatedTenantScope | ExclusiveConfigScope>]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
- [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Delegating <$true | $false>]
- [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Exclusive <$true | $false>]
+ [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Delegating <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-Exclusive <$true | $false>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-GetEffectiveUsers]
+ [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-GetEffectiveUsers]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
- [-Role <RoleIdParameter>] [-RoleAssignee <RoleAssigneeIdParameter>]
+ [-RoleAssignee <RoleAssigneeIdParameter>]
  [-RoleAssigneeType <User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup>]
- [-WritableDatabase <DatabaseIdParameter>] [-WritableRecipient <GeneralRecipientIdParameter>]
- [-WritableServer <ServerIdParameter>] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-WritableDatabase <DatabaseIdParameter>]
+ [-WritableRecipient <GeneralRecipientIdParameter>]
+ [-WritableServer <ServerIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -117,9 +129,9 @@ The Identity parameter specifies the name of the role assignment to retrieve. If
 
 ```yaml
 Type: RoleAssignmentIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: 1
 Default value: None
@@ -144,9 +156,9 @@ You must specify a value with the RoleAssignee parameter if you use the Assignme
 
 ```yaml
 Type: AssignmentMethod[]
-Parameter Sets: Set2
+Parameter Sets: RoleAssignee
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +173,7 @@ The ConfigWriteScope parameter specifies the type of management configuration sc
 Type: None | NotApplicable | OrganizationConfig | CustomConfigScope | PartnerDelegatedTenantScope | ExclusiveConfigScope
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -182,7 +194,7 @@ If the scope name contains spaces, enclose it in quotation marks (").
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +213,7 @@ If the scope name contains spaces, enclose it in quotation marks (").
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +230,7 @@ By default, both delegating and regular scopes are returned. To return only dele
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -235,7 +247,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -250,7 +262,7 @@ The Enabled parameter specifies whether enabled or disabled role assignments sho
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -267,7 +279,7 @@ By default, both exclusive and regular scopes are returned. To return only exclu
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -288,7 +300,7 @@ If the scope name contains spaces, enclose it in quotation marks (").
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -307,7 +319,7 @@ If the scope name contains spaces, enclose it in quotation marks (").
 Type: ManagementScopeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -322,141 +334,7 @@ The GetEffectiveUsers switch specifies that the command should show the list of 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientOrganizationalUnitScope
-The RecipientOrganizationalUnitScope parameter returns only the role assignments that include the specified organizational unit (OU). If the OU tree contains spaces, enclose it in quotation marks (").
-
-```yaml
-Type: OrganizationalUnitIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientWriteScope
-The RecipientWriteScope parameter returns only the role assignments associated with the recipient scope restriction type specified. The valid values are None, MyGAL, Self, OU, CustomRecipientScope, MyDistributionGroups and ExclusiveRecipientScope.
-
-```yaml
-Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Role
-The Role parameter returns only the role assignments associated with the specified management role. If the name of the role contains spaces, enclose it in quotation marks (").
-
-```yaml
-Type: RoleIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -RoleAssignee
-The RoleAssignee parameter specifies the role group, assignment policy, user, or universal security group (USG) for which you want to view role assignments. If the RoleAssignee parameter is used, you can't use the Identity parameter.
-
-By default, the command returns both direct role assignments to the role assignee and indirect role assignments granted to a role assignee through role groups or assignment policies.
-
-If the name of the user or USG contains spaces, enclose it in quotation marks (").
-
-```yaml
-Type: RoleAssigneeIdParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoleAssigneeType
-The RoleAssigneeType parameter specifies the type of role assignee to return. The valid values are User, SecurityGroup, RoleAssignmentPolicy, ForeignSecurityPrincipal, RoleGroup, LinkedRoleGroup and Computer.
-
-```yaml
-Type: User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WritableDatabase
-This parameter is available only in on-premises Exchange.
-
-The WritableDatabase parameter specifies the database object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the database name contains spaces, enclose it in quotation marks (").
-
-If this parameter is used with the GetEffectiveUsers switch, all the users who can modify the database object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WritableRecipient
-The WritableRecipient parameter specifies the recipient object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the recipient name contains spaces, enclose it in quotation marks (").
-
-If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the recipient object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
-
-```yaml
-Type: GeneralRecipientIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WritableServer
-This parameter is available only in on-premises Exchange.
-
-The WritableServer parameter specifies the server object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the server object name contains spaces, enclose it in quotation marks (").
-
-If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the server object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -476,6 +354,140 @@ Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientOrganizationalUnitScope
+The RecipientOrganizationalUnitScope parameter returns only the role assignments that include the specified organizational unit (OU). If the OU tree contains spaces, enclose it in quotation marks (").
+
+```yaml
+Type: OrganizationalUnitIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientWriteScope
+The RecipientWriteScope parameter returns only the role assignments associated with the recipient scope restriction type specified. The valid values are None, MyGAL, Self, OU, CustomRecipientScope, MyDistributionGroups and ExclusiveRecipientScope.
+
+```yaml
+Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Role
+The Role parameter returns only the role assignments associated with the specified management role. If the name of the role contains spaces, enclose it in quotation marks (").
+
+```yaml
+Type: RoleIdParameter
+Parameter Sets: RoleAssignee
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RoleAssignee
+The RoleAssignee parameter specifies the role group, assignment policy, user, or universal security group (USG) for which you want to view role assignments. If the RoleAssignee parameter is used, you can't use the Identity parameter.
+
+By default, the command returns both direct role assignments to the role assignee and indirect role assignments granted to a role assignee through role groups or assignment policies.
+
+If the name of the user or USG contains spaces, enclose it in quotation marks (").
+
+```yaml
+Type: RoleAssigneeIdParameter
+Parameter Sets: RoleAssignee
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoleAssigneeType
+The RoleAssigneeType parameter specifies the type of role assignee to return. The valid values are User, SecurityGroup, RoleAssignmentPolicy, ForeignSecurityPrincipal, RoleGroup, LinkedRoleGroup and Computer.
+
+```yaml
+Type: User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WritableDatabase
+This parameter is available only in on-premises Exchange.
+
+The WritableDatabase parameter specifies the database object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the database name contains spaces, enclose it in quotation marks (").
+
+If this parameter is used with the GetEffectiveUsers switch, all the users who can modify the database object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WritableRecipient
+The WritableRecipient parameter specifies the recipient object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the recipient name contains spaces, enclose it in quotation marks (").
+
+If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the recipient object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
+
+```yaml
+Type: GeneralRecipientIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WritableServer
+This parameter is available only in on-premises Exchange.
+
+The WritableServer parameter specifies the server object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the server object name contains spaces, enclose it in quotation marks (").
+
+If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the server object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

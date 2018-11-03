@@ -18,7 +18,7 @@ Updates a team.
 
 ```
 Set-Team -GroupId <String> [-DisplayName <String>] [-Description <String>] [-Alias <String>]
- [-Classification <String>] [-AccessType <String>]
+ [-Classification <String>] [-Visibility <String>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +27,7 @@ Set-Team -GroupId <String> [-DisplayName <String>] [-Description <String>] [-Ali
 
 ### --------------------------  Example 1  --------------------------
 ```
-Set-Team -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -DisplayName "Updated TeamName" -AccessType Public
+Set-Team -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -DisplayName "Updated TeamName" -Visibility Public
 ```
 
 ## PARAMETERS
@@ -115,8 +115,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AccessType
-Team access type.
+### -Visibility
+Team visibility.
 Valid values are "Private" and "Public"
 
 ```yaml

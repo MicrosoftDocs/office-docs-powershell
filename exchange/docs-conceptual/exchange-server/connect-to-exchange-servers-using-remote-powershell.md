@@ -18,7 +18,7 @@ description: "Use Windows PowerShell on a local computer to connect to an Exchan
 If you don't have the Exchange management tools installed on your local computer, you can use Windows PowerShell to create a remote PowerShell session to an Exchange server. It's a simple three-step process, where you enter your credentials, provide the required connection settings, and then import the Exchange cmdlets into your local Windows PowerShell session so that you can use them.
   
 > [!NOTE]
-> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://technet.microsoft.com/library/71fcbe4c-783b-4f77-aabb-a21aa7a4ef23.aspx) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md). 
+> We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You'll get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](https://technet.microsoft.com/library/71fcbe4c-783b-4f77-aabb-a21aa7a4ef23.aspx) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md). 
   
 ## What do you need to know before you begin?
 
@@ -40,11 +40,11 @@ If you don't have the Exchange management tools installed on your local computer
     
    \*\* After you install the .NET Framework 4.5.2 or later, you also need to install the Windows Management Framework 4.0. For more information, see [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?LinkId=391344).
     
-- Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You get the following error when you try to connect:
+- Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
     
      `Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.`
     
-    To enable Windows PowerShell to run signed scripts, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
+    To require all scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
     
   ```
   Set-ExecutionPolicy RemoteSigned
@@ -76,7 +76,7 @@ If you don't have the Exchange management tools installed on your local computer
 3. Run the following command:
     
     ```
-    Import-PSSession $Session
+    Import-PSSession $Session -DisableNameChecking
     ```
 
 > [!NOTE]

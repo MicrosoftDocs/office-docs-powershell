@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPDistributedCacheServiceInstance
 schema: 2.0.0
 ---
@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------ Example 1 ----------
 ```
-C:\PS>
+PS C:\>
 ```
 Please see referenced article instead of using this cmdlet directly.
 
@@ -40,7 +40,7 @@ Specifies whether to gracefully stop an instance of the Distributed Cache servic
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -62,7 +62,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

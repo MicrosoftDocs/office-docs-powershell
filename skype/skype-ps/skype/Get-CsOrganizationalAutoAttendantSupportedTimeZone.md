@@ -1,5 +1,5 @@
 ---
-external help file: Get-CsOrganizationalAutoAttendantSupportedTimeZone.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantSupportedTimeZone
 schema: 2.0.0

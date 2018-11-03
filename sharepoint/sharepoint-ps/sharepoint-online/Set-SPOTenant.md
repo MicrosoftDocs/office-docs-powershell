@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
@@ -25,6 +25,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StartASiteFormUrl <String>] [-UsePersistentCookiesForExplorerView <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultSharingLinkType <SharingLinkType>]
+ [-DisableWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>] [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>] [-IPAddressEnforcement <Boolean>] [-IPAddressWACTokenLifetime <Int32>]
@@ -78,6 +79,14 @@ This example hides the "All Users" claim group in People Picker.
 Set-SPOTenant -UsePersistentCookiesForExplorerView $true 
 ```
 This example enables the use of special persisted cookie for Open with Explorer.
+
+### -----------------------EXAMPLE 5-----------------------------
+
+```
+Set-SPOTenant -LegacyAuthProtocolsEnabled $True
+```
+
+This example enables legacy authentication protocols on the tenant. This can help to enable login in situations where the admin users get an error like "Cannot contact web site 'https://contoso-admin.sharepoint.com/' or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'.", and the underlying error is "Access denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically."
 
 
 ## PARAMETERS
@@ -300,6 +309,12 @@ The valid values are:
 False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
 True - User must accept this invitation with bob@contoso.com.
 
+> [!NOTE] 
+> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Azure AD, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation). 
+
+> [!NOTE] 
+> Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect. 
+
 
 ```yaml
 Type: Boolean
@@ -315,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchResolveExactEmailOrUPN
-Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired.
+Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired. This also does not allow SharePoint users to search for security groups or SharePoint groups.
 
 SharePoint Administrators will still be able to use starts with or partial name matching when enabled.
 
@@ -578,6 +593,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisabledWebPartIds
+PARAMVALUE: <Guid>[,<Guid>,...]
+ 
+Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Only web parts that utilize third-party services (Amazon Kindle, YouTube, Twitter) can be disabled in such a manner.
+ 
+To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4)
+
+You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOSite to get DisabledWebPartIds.
+
+To reenable disabled web parts, use the Set-SPOSite with the -DisabledWebPartIds parameter and corresponding GUIDs. 
+ 
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+ 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisallowInfectedFileDownload
 Prevents the Download button from being displayed on the Virus Found warning page. 
 
@@ -712,18 +751,20 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyAuthProtocolsEnabled
-By default this value is set to $True. 
+By default this value is set to $True, which means that authentication using legacy protocols is enabled.
 
-Setting this parameter prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+Setting this parameter to $False prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 A value of True- Enables Office clients using non-modern authentication protocols (such as, Forms-Based Authentication (FBA) or Identity Client Runtime Library (IDCRL)) to access SharePoint resources. 
 
-A value of False-Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+A value of False- Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 > [!NOTE] 
 > This may also prevent third-party apps from accessing SharePoint Online resources.
 Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class.  
 
+> [!NOTE] 
+> The change is not instant. It might take up to 24 hours to be applied.
 
 ```yaml
 Type: Boolean
@@ -1168,6 +1209,7 @@ Accept wildcard characters: False
 ### -UserVoiceForFeedbackEnabled
 PARAMVALUE: $true | $false
 
+When set to $true, the "Feedback" link will be shown at the bottom of all modern SharePoint Online pages. The "Feedback" link will allow the end user to fill out a feedback form inside SharePoint Online which will then create an entry in the public SharePoint UserVoice topic. When set to $false, feedback link will not be shown anymore. It may take up to an hour for a change of this property to be reflected consistently throughout your tenant.
 
 ```yaml
 Type: Boolean
@@ -1177,7 +1219,7 @@ Applicable: SharePoint Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: $true
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1193,9 +1235,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Introduction to the SharePoint Online management shell]()
-
-[Set up the SharePoint Online Management Shell Windows PowerShell environment]()
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Upgrade-SPOSite](Upgrade-SPOSite.md)
 

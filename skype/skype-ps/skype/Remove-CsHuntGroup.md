@@ -1,5 +1,5 @@
 ---
-external help file: Remove-CsHuntGroup.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Remove-CsHuntGroup
 schema: 2.0.0

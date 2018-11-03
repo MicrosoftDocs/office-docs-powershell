@@ -6,7 +6,7 @@ schema: 2.0.0
 # Grant-PnPHubSiteRights
 
 ## SYNOPSIS
-Retrieve all or a specific hubsite.
+Grant Permissions to associate sites to Hub Sites.
 
 ## SYNTAX 
 
@@ -18,17 +18,10 @@ Grant-PnPHubSiteRights [-Connection <SPOnlineConnection>]
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPStorageEntity
+Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com","myotheruser@mydomain.com" -Rights Join
 ```
 
-Returns all site storage entities/farm properties
-
-### ------------------EXAMPLE 2------------------
-```powershell
-Get-PnPTenantSite -Key MyKey
-```
-
-Returns the storage entity/farm property with the given key.
+This example shows how to grant right to myuser and myotheruser to associate their sites with hubsite
 
 ## PARAMETERS
 

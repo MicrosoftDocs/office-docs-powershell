@@ -17,19 +17,31 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### TeamLocation
 ```
-Set-TeamsRetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-AddTeamsChannelLocation <MultiValuedProperty>] [-AddTeamsChannelLocationException <MultiValuedProperty>] [-Comment <String>] [-AddTeamsChatLocation <MultiValuedProperty>] [-AddTeamsChatLocationException <MultiValuedProperty>] [-Enabled <$true | $false>] [-Force] [-RemoveTeamsChannelLocationException <MultiValuedProperty>] [-RemoveTeamsChannelLocation <MultiValuedProperty>] [-RemoveTeamsChatLocation <MultiValuedProperty>] [-RemoveTeamsChatLocationException <MultiValuedProperty>] [-Confirm] [-WhatIf]
+Set-TeamsRetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-AddTeamsChannelLocation <MultiValuedProperty>] [-AddTeamsChannelLocationException <MultiValuedProperty>] [-AddTeamsChatLocation <MultiValuedProperty>] [-AddTeamsChatLocationException <MultiValuedProperty>] [-RemoveTeamsChannelLocation <MultiValuedProperty>] [-RemoveTeamsChannelLocationException <MultiValuedProperty>] [-RemoveTeamsChatLocation <MultiValuedProperty>] [-RemoveTeamsChatLocationException <MultiValuedProperty>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Identity
 ```
-Set-TeamsRetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-Comment <String>] [-Enabled <$true | $false>] [-Force] [-RestrictiveRetention <$true | $false>] [-Confirm] [-WhatIf]
+Set-TeamsRetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RestrictiveRetention <$true | $false>]
+ [-Comment <String>]
+ [-Confirm]
+ [-Enabled <$true | $false>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### RetryDistribution
 ```
-Set-TeamsRetentionCompliancePolicy [-Identity] <PolicyIdParameter> -RetryDistribution [-Confirm] [-WhatIf]
+Set-TeamsRetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,7 +102,22 @@ Therefore, before you lock a retention policy, it's critical that you understand
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: Identity
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetryDistribution
+The RetryDistribution switch specifies whether to redistribute the policy to all Microsoft Teams locations. Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RetryDistribution
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -115,6 +142,18 @@ You can use any value that uniquely identifies the mailbox. For example:
 
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AddTeamsChannelLocationException
 The AddTeamsChannelLocationException parameter specifies the teams (group mailboxes) to add to the list of excluded teams whose channel messages are targeted by this policy, when you aren't using the value All for the TeamsChannelLocation parameter.
 
@@ -131,10 +170,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
-Parameter Sets: Set1
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -158,10 +197,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
-Parameter Sets: Set1
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -185,10 +224,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
-Parameter Sets: Set1
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -201,7 +240,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Set1, Set2
+Parameter Sets: TeamLocation, Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -239,7 +278,7 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set1, Set2
+Parameter Sets: TeamLocation, Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -254,7 +293,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set2
+Parameter Sets: TeamLocation, Identity
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
@@ -277,11 +316,13 @@ You can use any value that uniquely identifies the mailbox. For example:
 
 - GUID
 
-```yaml
-Type: Object
-Parameter Sets: Set1
-Aliases:
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -305,10 +346,10 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
-Parameter Sets: Set1
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
 Aliases:
-
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -329,11 +370,13 @@ You can use any value that uniquely identifies the mailbox. For example:
 
 - GUID
 
-```yaml
-Type: Object
-Parameter Sets: Set1
-Aliases:
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
+Aliases:
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -357,26 +400,11 @@ You can use any value that uniquely identifies the mailbox. For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 ```yaml
-Type: Object
-Parameter Sets: Set1
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetryDistribution
-The RetryDistribution switch specifies whether to redistribute the policy to all Microsoft Teams locations. Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3
+Type: MultiValuedProperty
+Parameter Sets: TeamLocation
 Aliases:
 Applicable: Office 365 Security & Compliance Center
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

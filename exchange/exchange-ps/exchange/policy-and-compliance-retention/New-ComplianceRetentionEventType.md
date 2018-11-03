@@ -17,7 +17,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
 New-ComplianceRetentionEventType -Name <String> [-Comment <String>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -117,4 +116,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/en-us/powershell/module/exchange/policy-and-compliance-retention/New-ComplianceRetentionEventType)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-retention/New-ComplianceRetentionEventType)

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPWorkManagementServiceApplication
 schema: 2.0.0
@@ -34,7 +34,7 @@ C:\PS>$wmservice = Get-SPServiceApplication -Name "Work Management Service Appli
 
 C:\PS>$refreshTime = New-Timespan -Minutes 10
 
-C:\PS>Set-SPWorkManagementServiceApplication -Identity $wmservice -MinimumTimeBetweenProviderRefreshes $refreshTime
+PS C:\>Set-SPWorkManagementServiceApplication -Identity $wmservice -MinimumTimeBetweenProviderRefreshes $refreshTime
 ```
 
 This example sets the minimum time between provider refreshes to 10 minutes on the service application named "Work Management Service Application".

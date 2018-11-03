@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2013, Skype for Business Server 2015
 title: Test-CsMcxConference
 schema: 2.0.0
 ---
@@ -64,7 +64,7 @@ Allowed values are: TrustedServer; Negotiate; ClientCertificate; and LiveID.
 Type: AuthenticationMechanism
 Parameter Sets: (All)
 Aliases: Ath
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -86,7 +86,7 @@ You need to supply the user password when running this command.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: oc
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -107,7 +107,7 @@ The OrganizerSipAddress parameter must reference the same user account as the Or
 Type: String
 Parameter Sets: (All)
 Aliases: oa
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: Named
@@ -123,7 +123,7 @@ Fully qualified domain name (FQDN) of the pool to be tested.
 Type: String
 Parameter Sets: (All)
 Aliases: t
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: True
 Position: 2

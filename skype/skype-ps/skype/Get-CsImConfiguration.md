@@ -8,37 +8,36 @@ schema: 2.0.0
 # Get-CsImConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations. This cmdlet was introduced in Skype for Business June 2016 Cumulative Update.
 
 ## SYNTAX
 
-### Filter
+### Identity (Default)
 ```
-Get-CsImConfiguration [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsImConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
-### Identity
+### Filter
 ```
-Get-CsImConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsImConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-CsImConfiguration
 ```
 
-{{ Add example description here }}
-
+This example returns information for all Instant Messaging (IM) configurations in your organization.
 
 ## PARAMETERS
 
 ### -Filter
-{{Fill Filter Description}}
+Enables you to use wildcard characters in order to return a collection of items. For instance the following usage specifies all the site scoped IM configurations: -Filter "site:*" . Filter and Identity are mutually exclusive.
 
 ```yaml
 Type: String
@@ -54,7 +53,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+A unique identifier specifying the scope and, in some cases the name, of the IM configuration. If this parameter is omitted, all IM configurations for the organization are returned.
+
 
 ```yaml
 Type: XdsIdentity
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-{{Fill LocalStore Description}}
+Presence of this switch causes the cmdlet to retrieve information from the local replica of the Central Management store, rather than from Central Management store itself. 
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
@@ -117,4 +117,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[New-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/new-csimconfiguration?view=skype-ps)
 
+[Set-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-csimconfiguration?view=skype-ps)
+
+[Remove-CsImConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/remove-csimconfiguration?view=skype-ps)

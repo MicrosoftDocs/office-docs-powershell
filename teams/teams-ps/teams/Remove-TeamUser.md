@@ -13,20 +13,17 @@ schema: 2.0.0
 Note: This cmdlet is currently in Beta.
 
 Remove an owner or member from a team,
-and to the unified group which backs the team. 
+and from the unified group which backs the team. 
 
 Note: the command will return immediately, but the Teams application will not reflect the update immediately. The Teams application may need to be open for up to an hour before changes are reflected.
 
 Note: last owner cannot be removed from the team.
 
-To turn an existing Member into an Owner, 
-first Add-TeamUser -Role Owner -User foo,
-then Remove-TeamUser -User foo to remove them from the members list.
 
 ## SYNTAX
 
 ```
-Remove-TeamUser -GroupId <String> -User <String>
+Remove-TeamUser -GroupId <String> -User <String> -Role <String>
 ```
 
 ## DESCRIPTION
@@ -70,6 +67,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Role
+Use this to demote a user from owner to member of the team
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

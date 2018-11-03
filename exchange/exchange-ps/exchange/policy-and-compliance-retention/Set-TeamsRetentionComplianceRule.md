@@ -1,8 +1,9 @@
 ---
-external help file: tmp_bkgpccvf.or0-help.xml
-Module Name: tmp_bkgpccvf.or0
-online version:
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+applicable: Office 365 Security & Compliance Center
+title: Set-TeamsRetentionComplianceRule
 schema: 2.0.0
+monikerRange: "o365scc-ps"
 ---
 
 # Set-TeamsRetentionComplianceRule

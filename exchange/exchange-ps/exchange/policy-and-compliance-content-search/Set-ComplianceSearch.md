@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: Set-ComplianceSearch
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016 || o365scc-ps"
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # Set-ComplianceSearch
@@ -24,7 +24,7 @@ Set-ComplianceSearch [-Identity] <ComplianceSearchIdParameter> [-AddExchangeLoca
  [-AddPublicFolderLocationExclusion <String[]>] [-AddSharePointLocation <String[]>]
  [-AddSharePointLocationExclusion <String[]>] [-AllowNotFoundExchangeLocationsEnabled <$true | $false>]
  [-Confirm] [-ContentMatchQuery <String>] [-Description <String>] [-ExchangeLocation <String[]>]
- [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>] [-Language <CultureInfo>]
+ [-ExchangeLocationExclusion <String[]>] [-Force] [-HoldNames <String[]>] [-IncludeUserAppContent <$true | $false>] [-Language <CultureInfo>]
  [-Name <String>] [-OneDriveLocation <String[]>] [-OneDriveLocationExclusion <String[]>]
  [-PublicFolderLocation <String[]>] [-PublicFolderLocationExclusion <String[]>] [-RefinerNames <String[]>]
  [-RemoveExchangeLocation <String[]>] [-RemoveExchangeLocationExclusion <String[]>]
@@ -84,7 +84,7 @@ You can find these values by running the command Get-ComplianceSearch | Format-T
 Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: True
 Position: 1
 Default value: None
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ### -AddExchangeLocation
 The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
-- A mailbox
+- A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Office 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
 
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
@@ -115,7 +115,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ### -AddExchangeLocationExclusion
 This parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
 
-- A mailbox
+- A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Office 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
 
 - A distribution group or mail-enabled security group
 
@@ -146,7 +146,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -161,7 +161,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -176,7 +176,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -191,7 +191,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -206,7 +206,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -223,7 +223,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -240,7 +240,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -249,17 +249,27 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNotFoundExchangeLocationsEnabled
-The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to allow inactive mailboxes in the compliance search. An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. Valid values are:
+The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to include mailboxes other than regular user mailboxes in the compliance search. Valid values are:
 
-- $true: The search doesn't try to validate the existence of the mailbox before proceeding. This value is required if you want to include inactive mailboxes in the search, because inactive mailboxes don't resolve as regular mailboxes.
+- $true: The search doesn't try to validate the existence of the mailbox before proceeding. This value is required if you want to search mailboxes that don't resolve as regular mailboxes.
 
-- $false: The search tries to validate the existence of the mailbox before proceeding. If you specify an inactive mailbox or a mailbox that otherwise can't be found, the search will fail. This is the default value.
+- $false: The search tries to validate the existence of the mailbox before proceeding. If you specify a mailbox that isn't a regular user mailbox, the search will fail. This is the default value.
+
+The mailbox types that are affected by the value of this parameter include:
+
+- Inactive mailboxes
+
+- Users without an Exchange Online license who use Office applications
+
+- Office 365 guest users
+
+- On-premises users whose identity is synchronized with your Office 365 organization
 
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -278,7 +288,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -295,7 +305,7 @@ This parameter uses a text search string or a query that's formatted by using th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -310,7 +320,7 @@ The Description parameter specifies a description for the compliance search. If 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -321,7 +331,7 @@ Accept wildcard characters: False
 ### -ExchangeLocation
 The ExchangeLocation parameter specifies the mailboxes to include. Valid values are:
 
-- A mailbox
+- A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Office 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
 
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
@@ -343,7 +353,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -354,7 +364,7 @@ Accept wildcard characters: False
 ### -ExchangeLocationExclusion
 This parameter specifies the mailboxes to exclude when you use the value All for the ExchangeLocation parameter. Valid values are:
 
-- A mailbox
+- A regular user mailbox. Including other types of mailboxes (for example, inactive mailboxes or Office 365 guest users) is controlled by the AllowNotFoundExchangeLocationsEnabled parameter.
 
 - A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
 
@@ -374,7 +384,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -389,7 +399,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -408,7 +418,28 @@ Also, if a content location was placed on a query-based case hold, only items th
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeUserAppContent
+This parameter is available only in the cloud-based service.
+
+The IncludeUserAppContent parameter specifies that you want to search the cloud-based storage location for users who don't have a regular Office 365 user account in your organization. These types of users include users without an Exchange Online license who use Office applications, Office 365 guest users, and on-premises users whose identity is synchronized with your Office 365 organization. Valid values are:
+
+- $true: The cloud-based storage location for the users specified in any of the Exchange location parameters will be included in the search. If you use the value All for the ExchangeLocation parameter, the cloud-based storage location for any guest or on-premises user will be included in the search.
+
+- $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value. 
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -425,7 +456,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -440,7 +471,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -455,7 +486,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -470,7 +501,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -485,7 +516,7 @@ The PublicFolderLocation parameter specifies that you want to include all public
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -500,7 +531,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -515,7 +546,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -546,7 +577,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -577,7 +608,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -592,7 +623,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -607,7 +638,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -622,7 +653,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -637,7 +668,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -654,7 +685,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -671,7 +702,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -686,7 +717,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -703,7 +734,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -720,7 +751,7 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -737,7 +768,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -9,10 +9,11 @@ schema: 2.0.0
 
 ## SYNOPSIS
  The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
+ 
 ## SYNTAX
 
 ```
-New-CsTeamsMeetingPolicy [-AppDesktopSharingMode <Object>] [-Description <Object>] [[-Identity] <Object>]
+New-CsTeamsMeetingPolicy [-Description <Object>] [[-Identity] <Object>]
  [-InMemory] [-Confirm] [-AllowSharedNotes <Object>] [-AutoAdmittedUsers <Object>]
  [-AllowOutlookAddIn <Object>] [-Force] [-AllowTranscription <Object>]
  [-AllowPrivateMeetingScheduling <Object>] [-Tenant <Object>] [-MediaBitRateKb <Object>]
@@ -27,6 +28,9 @@ New-CsTeamsMeetingPolicy [-AppDesktopSharingMode <Object>] [-Description <Object
 The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users
 
 The New-CsTeamsMeetingPolicy cmdlet allows administrators to define new meeting policies that can be assigned to particular users to control Teams features related to meetings.
+
+NOTE: This feature is rolling out in waves so you may not see it until it is available to your instance.
+
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
@@ -262,7 +266,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAdmittedUsers
-Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to None to send all users to the Lobby and have an attendee allow them to join a meeting
+Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to None to send all users to the Lobby and have an attendee allow them to join a meeting.  Set this to EveryoneInSameAndFederatedCompany if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby.
+
 ```yaml
 Type: Object
 Parameter Sets: (All)

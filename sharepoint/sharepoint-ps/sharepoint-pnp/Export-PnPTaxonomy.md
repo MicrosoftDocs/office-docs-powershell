@@ -84,7 +84,7 @@ Accept pipeline input: False
 ```
 
 ### -IncludeID
-If specified will include the ids of the taxonomy items in the output. Format: <label>;#<guid>
+If specified will include the ids of the taxonomy items in the output. Format: &lt;label&gt;;#&lt;guid&gt;
 
 ```yaml
 Type: SwitchParameter

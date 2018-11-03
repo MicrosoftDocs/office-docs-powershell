@@ -25,7 +25,7 @@ Get-MessageTrace [-EndDate <DateTime>] [-Expression <Expression>] [-FromIP <Stri
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 7 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
+You can use this cmdlet to search message data for the last 10 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
 
 This cmdlet returns a maximum of 1000000 results, and will timeout on very large queries. If your query returns too many results, consider splitting it up using smaller StartDate and EndDate intervals.
 
@@ -167,8 +167,6 @@ Accept wildcard characters: False
 ### -RecipientAddress
 The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
 
-You can use wildcards in the format \*@contoso.com, user@\* or \*@\*. However, if you use a value that contains wildcards, you can't specify any other values.
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -183,8 +181,6 @@ Accept wildcard characters: False
 
 ### -SenderAddress
 The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas.
-
-You can use wildcards in the format \*@contoso.com, user@\* or \*@\*. However, if you use a value that contains wildcards, you can't specify any other values.
 
 ```yaml
 Type: MultiValuedProperty

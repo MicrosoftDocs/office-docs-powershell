@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelDataProvider
 schema: 2.0.0
@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$provider = Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataProvider | { where {$_.providerID -eq "MyCustomProvider"}
 
-C:\PS>Remove-SPExcelDataProvider $provider
+PS C:\>Remove-SPExcelDataProvider $provider
 ```
 
 This example removes a custom data provider from the list of safe data providers that is on the Excel Services Application Web service application named MyExcelService.

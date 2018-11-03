@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Register-SPOHubSite
 schema: 2.0.0
@@ -24,20 +24,17 @@ Register-SPOHubSite
 Use this cmdlet to register an existing site collection as a hub site.
 
 > [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
-
-> [!IMPORTANT]
-> A maximum of 50 hub sites may be created per tenant.
+> A maximum of 100 hub sites may be created per tenant, with 'unlimited' number of site collections associated to a hub site.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```
-Register-SPOHubSite https://contoso.sharepoint.com/sites/Marketing
+Register-SPOHubSite https://contoso.sharepoint.com/sites/Marketing  -Principals $null
 ```
 
-This example registers the marketing site on Contoso as hub site.
+This example registers the marketing site on Contoso as hub site without setting any principals for it.
 
 ## PARAMETERS
 
@@ -58,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Principals
-Specifies One or more principles to be granted rights to the specified HubSite.
+Specifies One or more principles (user or group) to be granted rights to the specified HubSite. Can be used to filter who can associate sites to this hub site.
 
 ```yaml
 Type: string[]

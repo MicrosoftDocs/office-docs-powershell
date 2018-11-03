@@ -359,7 +359,7 @@ Accept pipeline input: False
 ```
 
 ### -ResourceFilePrefix
-If specified, resource files will be saved with the specified prefix instead of using the template name specified. If no template name is specified the files will be called PnP-Resources.<language>.resx. See examples for more info.
+If specified, resource files will be saved with the specified prefix instead of using the template name specified. If no template name is specified the files will be called PnP-Resources.&lt;language&gt;.resx. See examples for more info.
 
 Only applicable to: SharePoint Online, SharePoint Server 2016
 
