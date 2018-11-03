@@ -13,7 +13,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MigrationBatch cmdlet to submit a new migration request for a batch of users. You use this cmdlet to:
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/exchange-cmdlet-syntax?view=exchange-ps).
 
 ## SYNTAX
 
@@ -302,7 +302,7 @@ Onboarding and offboarding in Exchange Online
 
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://docs.microsoft.com/en-us/powershell/exchange/exchange-server/find-exchange-cmdlet-permissions?view=exchange-ps).
 
 ## EXAMPLES
 
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -CSVData
-The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see CSV files for mailbox migration (https://technet.microsoft.com/library/dn170437.aspx).
+The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see CSV files for mailbox migration (https://docs.microsoft.com/en-us/exchange/csv-files-for-mailbox-migration-exchange-2013-help).
 
 Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
 
@@ -744,7 +744,7 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
+- Exchange 2016: Message size limits in Exchange 2016 (https://docs.microsoft.com/en-us/Exchange/mail-flow/message-size-limits?view=exchserver-2019)
 
 - Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
