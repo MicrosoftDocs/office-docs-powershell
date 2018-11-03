@@ -155,8 +155,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-<<<<<<< HEAD
-=======
 ### -AsJob
 Indicates that this cmdlet runs as a background job.
 
@@ -177,7 +175,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->>>>>>> 8c76936a2430e931d44733a3c8d07caa4927208c
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
