@@ -8,12 +8,12 @@ schema: 2.0.0
 # ConvertTo-JsonForPSWS
 
 ## SYNOPSIS
-ConvertTo-JsonForPSWS \[-InputObject\] \<Object\> \[-Depth \<int\>\] \[-Compress\] \[\<CommonParameters\>\]
+
 
 ## SYNTAX
 
 ```
-ConvertTo-JsonForPSWS [[-InputObject] <Object>] [-Compress] [-Depth <Object>] [-AsJob] [<CommonParameters>]
+ConvertTo-JsonForPSWS [-InputObject] <Object> [-Depth <Int32>] [-Compress] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 {{Fill Depth Description}}
 
 ```yaml
-Type: Object
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -73,22 +73,6 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
