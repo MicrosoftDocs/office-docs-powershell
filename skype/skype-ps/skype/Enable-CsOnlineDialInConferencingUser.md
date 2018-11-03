@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: Enable-CsOnlineDialInConferencingUser
 schema: 2.0.0
@@ -8,20 +8,20 @@ schema: 2.0.0
 # Enable-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
-Use the `Enable-CsOnlineDialInConferencingUser` cmdlet to enable a Skype for Business user to access audio conferencing through Skype for Business Online.
+Use the Enable-CsOnlineDialInConferencingUser cmdlet to enable a Skype for Business user to access audio conferencing through Skype for Business Online.
 
 ## SYNTAX
 
 ```
-Enable-CsOnlineDialInConferencingUser [-AllowPstnOnlyMeetings <Boolean>] [-ServiceNumber <String>]
- [-SendEmailFromDisplayName <String>] [-ConferenceId <Int32>] [-TenantDomain <String>]
- [-TollFreeServiceNumber <String>] [-SendEmailToAddress <String>] [-SendEmailFromAddress <String>] [-SendEmail]
- [[-Identity] <UserIdParameter>] [-Tenant <Guid>] [-AllowTollFreeDialIn <Boolean>] [-DomainController <Fqdn>]
- [-ReplaceProvider] [-Force] [-AsJob] [<CommonParameters>]
+Enable-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-Tenant <Guid>]
+ [-TenantDomain <String>] [-ReplaceProvider] [-AllowPstnOnlyMeetings <Boolean>]
+ [-AllowTollFreeDialIn <Boolean>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>]
+ [-ConferenceId <Int32>] [-SendEmailToAddress <String>] [-SendEmailFromAddress <String>]
+ [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Enable-CsOnlineDialInConferencingUser` cmdlet allows a Skype for Business user to access audio conferencing through Skype for Business Online.
+The Enable-CsOnlineDialInConferencingUser cmdlet allows a Skype for Business user to access audio conferencing through Skype for Business Online.
 The cmdlet will validate if the user has the correct license assigned.
 If the user already uses Microsoft as the audio conferencing provider, the cmdlet will run without any errors but no changes are made to the user.
 The user can be moved from a third-party audio conferencing provider to Microsoft as the PSTN conferencing provider by using the ReplaceProvider parameter.
@@ -35,7 +35,7 @@ The audio conferencing provider name and domain information is automatically set
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:> Enable-CsOnlineDialInConferencingUser -Identity "Ken Meyer" -AllowPstnOnlyMeetings $false -ConferenceId 3659305 -ReplaceProvider -ServiceNumber 14255551234
+Enable-CsOnlineDialInConferencingUser -Identity "Ken Meyer" -AllowPstnOnlyMeetings $false -ConferenceId 3659305 -ReplaceProvider -ServiceNumber 14255551234
 ```
 
 This example enables a user named Ken Meyer to use audio conferencing and set up Skype for Business Online dial-in meetings.
@@ -81,13 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConferenceId
-Specifies the ConferenceId that will be used by the user for dial-in meetings. The cmdlet will fail if:
-
-The ConferenceId is already being used in the bridge where the user is assigned, or to which the user would be assigned.
-
-The ConferenceId doesn't meet the ConferenceId format requirements.
-
-ConferenceId and ResetConferenceId are mutually exclusive. When ConferenceId is specified the new ConferenceId will be assigned to the user. When ResetConferenceId is specified, the user will get an auto-generated ConferenceId.
+PARAMVALUE: Int32
 
 ```yaml
 Type: Int32
@@ -103,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use.
+PARAMVALUE: Fqdn
 
 ```yaml
 Type: Fqdn
@@ -156,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmail
-Send an email to the user that contains his Audio Conference information.
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -172,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromAddress
-You can specify the From Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromDisplayName and -SendEmail.
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -188,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromDisplayName
-You can specify the Display Name to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromAddress and -SendEmail.
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -204,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailToAddress
-You can specify the To Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmail.
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -277,8 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -TollFreeServiceNumber
-Specifies a toll-free phone number to be used by the user. This number is then used in meeting invitations.
-The toll-free number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -294,32 +287,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTollFreeDialIn
-If true, specified toll-free number is used in meeting invitations.
-If false, specified toll-free number is not allowed to be used in meeting invitations.
-The default is true.
+{{Fill AllowTollFreeDialIn Description}}
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -341,8 +312,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
-
-[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)

@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Set-CsOrganizationalAutoAttendant.xml
 applicable: Skype for Business Online
 title: Set-CsOrganizationalAutoAttendant
 schema: 2.0.0

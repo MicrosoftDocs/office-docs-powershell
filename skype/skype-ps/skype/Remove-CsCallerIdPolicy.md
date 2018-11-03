@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: Remove-CsCallerIdPolicy
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsCallerIdPolicy
 
 ## SYNOPSIS
-The CsCallerIdPolicy cmdlets have been deprecated. Please use the CsCallingLineIdentity cmdlets to manage caller ID policies for your organization.
+Provide the topic introduction here.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-CsCallerIdPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Con
 ```
 
 ## DESCRIPTION
-The CsCallerIdPolicy cmdlets have been deprecated. Please use the CsCallingLineIdentity cmdlets to manage caller ID policies for your organization.
+Provide the detailed description here.
 
 ## EXAMPLES
 
