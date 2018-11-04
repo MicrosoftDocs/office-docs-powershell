@@ -14,6 +14,8 @@ Locale: en-US
 
 The following cmdlet references are for SharePoint Online.
 
+## SharePoint Online Cmdlets
+
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 {{Manually Enter Add-SPOGeoAdministrator Description Here}}
 
