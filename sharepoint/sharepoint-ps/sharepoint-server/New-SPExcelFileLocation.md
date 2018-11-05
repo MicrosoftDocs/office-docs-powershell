@@ -36,7 +36,7 @@ The properties that the trusted file location uses are determined through compar
 The longest match takes precedence.
 For example, if http://portal/site/ and http://portal/site/subsite are trusted locations and you load a workbook from the subsite, the application uses the properties from the subsite trusted location because it has the longest matching address.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

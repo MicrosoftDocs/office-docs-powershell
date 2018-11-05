@@ -25,7 +25,7 @@ By default, the initial activation state of all file formats is $TRUE (enabled).
 Use this cmdlet to temporarily disable a malfunctioning parser.
 The system will only consider the change after a restart of the content processing components.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

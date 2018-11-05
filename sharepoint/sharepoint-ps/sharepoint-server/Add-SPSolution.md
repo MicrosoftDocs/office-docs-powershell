@@ -23,7 +23,7 @@ The Add-SPSolution cmdlet adds a SharePoint solution package to the farm.
 This cmdlet does not deploy the uploaded SharePoint solution.
 Use the Install-SPSolution cmdlet to deploy the SharePoint solution in the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

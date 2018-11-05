@@ -32,7 +32,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 
 The Enable-SPSessionStateService cmdlet creates a session state database, installs the ASP.NET session state schema, and updates the Web.config files on the farm to turn on the session state service.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

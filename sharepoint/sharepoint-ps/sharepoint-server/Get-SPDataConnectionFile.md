@@ -21,7 +21,7 @@ Get-SPDataConnectionFile [[-Identity] <SPDataConnectionFilePipeBind>]
 The Get-SPDataConnectionFile cmdlet gets a specified data connection file or a collection of data connection files.
 If the Identity parameter is not specified, the cmdlet returns the collection of data connection files for the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

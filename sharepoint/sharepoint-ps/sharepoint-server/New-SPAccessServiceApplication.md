@@ -26,7 +26,7 @@ New-SPAccessServiceApplication [-Name <String>] -ApplicationPool <SPIisWebServic
 The New-SPAccessServiceApplication cmdlet creates a new instance of an Access Services application in SharePoint Server 2010, SharePoint Server 2013.
 After you create a new Access Services application, use the Set-SPAccessServiceApplication cmdlet to modify its global settings.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

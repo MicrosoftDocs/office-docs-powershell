@@ -24,7 +24,7 @@ Disable-SPWebApplicationHttpThrottling [-Identity] <SPWebApplicationPipeBind>
 The Disable-SPWebApplicationHttpThrottling cmdlet turns off network throttling for a Web application.
 This operation prompts you to confirm that you want to turn off network throttling.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

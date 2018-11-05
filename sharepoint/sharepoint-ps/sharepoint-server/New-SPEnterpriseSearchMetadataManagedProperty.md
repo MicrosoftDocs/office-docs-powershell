@@ -27,7 +27,7 @@ New-SPEnterpriseSearchMetadataManagedProperty [-AssignmentCollection <SPAssignme
 This cmdlet creates a new managed property.
 SPEnterpriseSearchMetadataManagedProperty represents a managed property in the enterprise search metadata property schema.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -25,7 +25,7 @@ Grant-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject> -Principal 
 The Grant-SPBusinessDataCatalogMetadataObject cmdlet grants the right to a specified principal (user) for a Business Data Connectivity Metadata Store metadata object.
 This cmdlet checks to verify that the Identity parameter is a valid IndividuallySecurableMetadata object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

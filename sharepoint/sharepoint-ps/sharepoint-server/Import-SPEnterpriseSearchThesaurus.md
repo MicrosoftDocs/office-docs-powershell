@@ -24,7 +24,7 @@ A previously deployed thesaurus is overwritten by an import of a new .cvs file.
 NOTE: If an empty .cvs file is imported, an empty thesaurus will be deployed.
 No synonyms will then be added to the queries.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

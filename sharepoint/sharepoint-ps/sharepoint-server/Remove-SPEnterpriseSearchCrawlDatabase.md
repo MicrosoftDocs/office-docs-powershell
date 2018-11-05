@@ -23,7 +23,7 @@ Remove-SPEnterpriseSearchCrawlDatabase [-Identity] <CrawlStorePipeBind>
 The `Remove-SPEnterpriseSearchCrawlDatabase` cmdlet deletes a specified crawl database from a search service application.
 A crawl database stores crawl history for a search service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

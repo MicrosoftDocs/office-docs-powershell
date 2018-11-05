@@ -24,7 +24,7 @@ Grant-SPObjectSecurity [-Identity] <SPObjectSecurity> [-Principal] <SPClaim> [-R
 The Grant-SPObjectSecurity cmdlet adds a new security principal, such as a user, to a SPObjectSecurity object.
 An SPObjectSecurity object is a common object that is used to represent the security access control list (ACL) of SharePoint administrative objects, in particular, service applications.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

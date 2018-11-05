@@ -32,7 +32,7 @@ Modify the PSCustomObject object and pass it to the `Set-SPFarmConfig` cmdlet to
 The properties collected in the PSCustomObject object must be farm-wide settings and must be configurable only once for the entire farm.
 The parameter name added to the PSCustomObject object must match exactly the input parameter name for the `Set-SPFarmConfig` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

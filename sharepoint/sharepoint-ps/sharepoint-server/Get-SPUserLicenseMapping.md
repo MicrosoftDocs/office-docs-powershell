@@ -28,7 +28,7 @@ Getting the mappings for the entire farm does not retrieve any specific mappings
 If you specify no parameters, the license mappings for the entire farm are returned.
 To display the license mappings for a specific web application, use the WebApplication parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

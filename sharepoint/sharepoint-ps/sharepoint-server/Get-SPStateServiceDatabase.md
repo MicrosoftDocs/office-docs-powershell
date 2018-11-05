@@ -32,7 +32,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 The Get-SPStateServiceDatabase cmdlet returns a state service database on the farm.
 If the Identity parameter is not specified, this cmdlet returns the collection of all state service databases on the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -22,7 +22,7 @@ Remove-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
 ## DESCRIPTION
 The `Remove-SPEnterpriseSearchCrawlContentSource` cmdlet deletes a specified crawl content source from a service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

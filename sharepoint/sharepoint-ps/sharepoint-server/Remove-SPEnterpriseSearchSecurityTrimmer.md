@@ -23,7 +23,7 @@ Remove-SPEnterpriseSearchSecurityTrimmer [[-Identity] <SecurityTrimmerPipeBind>]
 This cmdlet deletes the customized security trimmer that is used for a search application's query results.
 A custom security trimmer trims search results before the results are returned to the user.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

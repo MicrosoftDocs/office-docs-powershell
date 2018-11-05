@@ -21,7 +21,7 @@ Dismount-SPStateServiceDatabase [-Identity] <SPStateDatabasePipeBind>
 The Dismount-SPStateServiceDatabase cmdlet removes a state service database from a service application and deletes the associated SharePoint object.
 This cmdlet does not delete or alter the state service database.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

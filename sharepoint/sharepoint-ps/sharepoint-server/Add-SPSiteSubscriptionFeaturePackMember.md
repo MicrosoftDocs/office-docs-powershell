@@ -27,7 +27,7 @@ Feature sets are an Allow List of  SharePoint Features that can be associated wi
 If a Feature set is assigned to a site subscription, only the SPFeatures object in that Feature set are available for use on the site collections and Web sites that are members of the site subscription.
 Feature sets contain a list of the GUIDs of each Feature that are on the Allow List for associated site subscriptions.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

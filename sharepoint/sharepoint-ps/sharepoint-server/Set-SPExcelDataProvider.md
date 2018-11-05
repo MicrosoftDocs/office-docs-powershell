@@ -25,7 +25,7 @@ Excel Services Application refreshes external data connections only if the data 
 Excel Services Application include a set of common data providers in this list.
 Therefore, using cmdlets to modify safe data providers is typically an operation of custom data connection scenarios.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

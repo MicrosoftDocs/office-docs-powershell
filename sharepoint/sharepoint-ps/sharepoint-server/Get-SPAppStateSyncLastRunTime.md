@@ -23,7 +23,7 @@ Get-SPAppStateSyncLastRunTime [-AssignmentCollection <SPAssignmentCollection>] [
 Use the Get-SPAppStateSyncLastRunTime cmdlet to return the latest time the app state update job was invoked.
 The app state update job updates the app states in SharePoint from the marketplace including app updates.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

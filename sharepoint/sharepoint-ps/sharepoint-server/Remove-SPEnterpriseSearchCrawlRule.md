@@ -22,7 +22,7 @@ Remove-SPEnterpriseSearchCrawlRule [-Identity] <CrawlRulePipeBind>
 ## DESCRIPTION
 The `Remove-SPEnterpriseSearchCrawlRule` cmdlet deletes a crawl rule that is used to crawl content for a content source.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

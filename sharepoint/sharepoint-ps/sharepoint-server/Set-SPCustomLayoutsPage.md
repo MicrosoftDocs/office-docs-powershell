@@ -35,7 +35,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 The `Set-SPCustomLayoutsPage` cmdlet maps a new path for a custom layouts page in a Web application.
 To remove the mapping for a custom layouts page, use the Reset parameter instead of the RelativePath parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

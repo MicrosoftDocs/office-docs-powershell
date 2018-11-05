@@ -28,7 +28,7 @@ Use the Convert-SPWebApplication cmdlet to convert the authentication mode of a 
 
 When retaining permissions, users within Sites are only converted if the source account is enabled and queryable by SharePoint. For example, if the Active Directory account is deleted or disabled prior to a Classic Windows to Windows Claims conversion, the account in the database will not be updated to the Claims format.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

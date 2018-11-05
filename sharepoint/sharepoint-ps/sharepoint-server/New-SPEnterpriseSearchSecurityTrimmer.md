@@ -24,7 +24,7 @@ New-SPEnterpriseSearchSecurityTrimmer [-Id] <Int32> [-RulePath <String>]
 This cmdlet creates a new object to configure the security trimmer.
 SPEnterpriseSearchSecurityTrimmer represents a security trimmer that performs customized security trimming of search results at query time, when the results are returned to the user.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

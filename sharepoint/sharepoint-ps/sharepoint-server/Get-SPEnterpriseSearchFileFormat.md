@@ -26,7 +26,7 @@ Get-SPEnterpriseSearchFileFormat [[-Identity] <DocumentParserFileFormatPipeBind>
 The Get-SPEnterpriseSearchFileFormat cmdlet returns the file format information for a given format ID.
 If no format ID is provided, the cmdlet returns all the parseable file formats.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 

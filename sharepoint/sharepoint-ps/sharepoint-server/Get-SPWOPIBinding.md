@@ -24,7 +24,7 @@ Get-SPWOPIBinding [-Action <String>] [-Application <String>] [-AssignmentCollect
 The Get-SPWOPIBinding returns a list of bindings that were created by using New-SPWOPIBinding on the current SharePoint farm where this cmdlet is run.
 Results include actions, applications, file types and zones that are configured for a WOPI application (such as a server that runs Office Web Apps Server).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

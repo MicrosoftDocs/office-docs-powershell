@@ -34,7 +34,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 The `Restore-SPFarm` cmdlet restores one or more items from a backup such as an individual database, Web application, or the entire farm.
 This cmdlet can also be used to apply a farm template to the entire farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

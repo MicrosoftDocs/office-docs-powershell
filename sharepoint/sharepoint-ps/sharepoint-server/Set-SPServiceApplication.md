@@ -24,7 +24,7 @@ Set-SPServiceApplication [-Identity] <SPServiceApplicationPipeBind>
 ## DESCRIPTION
 Use the `Set-SPServiceApplication` cmdlet to set various properties of a service application such as the default endpoint and the application pool used by the service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -24,7 +24,7 @@ Set-SPWorkManagementServiceApplication [-Identity] <SPWorkManagementServiceCmdle
 ## DESCRIPTION
 Use the `Set-SPWorkManagementServiceApplication` cmdlet to set settings (that is, minimum time between refreshes for aggregating tasks and load per machine for synchronization with Exchange) for the specified Work Management Service Application by using the Identity parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

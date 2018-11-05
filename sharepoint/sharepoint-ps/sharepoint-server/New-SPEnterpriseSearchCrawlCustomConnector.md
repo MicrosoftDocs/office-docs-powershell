@@ -23,7 +23,7 @@ The New-SPEnterpriseSearchCrawlCustomConnector cmdlet registers, for a search sy
 
 If the Name parameter is not provided, in the administration application user interface (UI) the name protocol identifies the protocol specified.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

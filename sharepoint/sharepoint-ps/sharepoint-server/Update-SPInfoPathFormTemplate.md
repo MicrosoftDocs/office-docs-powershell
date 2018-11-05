@@ -21,7 +21,7 @@ Update-SPInfoPathFormTemplate [-AssignmentCollection <SPAssignmentCollection>] [
 The `Update-SPInfoPathFormTemplate` cmdlet upgrades all the InfoPath form templates on a farm that were deployed by an administrator.
 Use this cmdlet after the farm is upgraded to a new version.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

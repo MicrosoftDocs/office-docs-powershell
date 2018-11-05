@@ -23,7 +23,7 @@ Remove-SPEnterpriseSearchQueryDemoted [-Identity] <DemotedPipeBind> -Owner <Sear
 The `Remove-SPEnterpriseSearchQueryDemoted` cmdlet adjusts query rank by deleting a demoted site rule from the demoted site collection.
 Query demoted sites are de-emphasized in relevance.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

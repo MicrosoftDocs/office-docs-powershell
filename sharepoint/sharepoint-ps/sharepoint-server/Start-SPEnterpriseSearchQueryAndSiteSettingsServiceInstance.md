@@ -21,7 +21,7 @@ Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
 ## DESCRIPTION
 The `Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance` cmdlet starts the query and site settings service instance on the server instance in the same farm as the search service application to host the query object model (OM), Windows Communication Foundation (WCF) endpoint and query processor for the search service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

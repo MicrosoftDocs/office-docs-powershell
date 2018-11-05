@@ -25,7 +25,7 @@ Get-SPEnterpriseSearchComponent [[-Identity] <SearchComponentPipeBind>]
 This cmdlet retrieves the search component with the specified identity from the given search topology.
 If an identity is not provided, all search components in the given search topology will be retrieved.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -28,7 +28,7 @@ When you run this cmdlet to add a user to the SharePoint_Shell_Access role, the 
 - Security_Admin role access on the instance of SQL Server and the db_owner role in the database.
 - Administrative permission to the local computer.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

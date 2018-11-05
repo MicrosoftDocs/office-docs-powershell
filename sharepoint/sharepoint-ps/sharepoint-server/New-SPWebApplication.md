@@ -29,7 +29,7 @@ New-SPWebApplication -ApplicationPool <String> -Name <String>
 Creates a new Web application specified by the Name parameter.
 The user specified by the DatabaseCredentials parameter must be a member of the dbcreator fixed server role on the database server.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

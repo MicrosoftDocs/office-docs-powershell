@@ -40,7 +40,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 The Get-SPDatabase cmdlet displays all public properties of a database to the current window.
 If the Identity parameter is specified, only properties of that ID are displayed.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

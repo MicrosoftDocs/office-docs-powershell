@@ -23,7 +23,7 @@ New-SPEnterpriseSearchCrawlDatabase -DatabaseName <String>
 The New-SPEnterpriseSearchCrawlDatabase cmdlet is used during initial configuration and farm scale-out to create a new crawl database, which can be added to a search service application.
 A crawl database stores crawl history for a search application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

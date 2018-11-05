@@ -26,7 +26,7 @@ The scope of results can be narrowed by using the optional WebApplication parame
 The scope does not include any Web Part packages installed in the global assembly cache (GAC) unless the GlobalOnly parameter is used.
 If this parameter is used, only Web Part packages that have been installed in the GAC are returned.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

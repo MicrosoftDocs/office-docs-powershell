@@ -21,7 +21,7 @@ New-SPServiceApplicationProxyGroup [-Name] <String> [-AssignmentCollection <SPAs
 ## DESCRIPTION
 The `New-SPServiceApplicationProxyGroup` cmdlet creates a new service application proxy group specified by the Name parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

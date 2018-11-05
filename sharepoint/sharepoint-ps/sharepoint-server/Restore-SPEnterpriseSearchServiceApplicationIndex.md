@@ -37,7 +37,7 @@ This cmdlet will clear the complete search index for a specified search service 
 This cmdlet supports parameter sets.
 The first set of parameters is for Application Configuration Attach mode and the second set of parameters is for Search Application Attach mode.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

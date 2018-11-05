@@ -66,7 +66,7 @@ Valid values for LockState are: Unlock, NoAdditions, ReadOnly, NoAccess.
 It is important to note that every site collection that the Get-SPSite cmdlet returns is automatically destroyed at the end of the pipeline.
 To store the results of Get-SPSite in a local variable, use the Start-SPAssignment and Stop-SPAssignment cmdlets to avoid memory leaks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

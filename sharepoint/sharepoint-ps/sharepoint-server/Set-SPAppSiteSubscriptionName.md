@@ -21,7 +21,7 @@ Set-SPAppSiteSubscriptionName -Name <String> [-AssignmentCollection <SPAssignmen
 ## DESCRIPTION
 Use the `Set-SPAppSiteSubscriptionName` cmdlet to set or change the name for a specified site subscription by using the Name parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

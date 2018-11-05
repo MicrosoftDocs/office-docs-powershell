@@ -39,7 +39,7 @@ The set of site subscriptions can be specified directly, or discovered by compar
 
 If this cmdlet is run on a federated service application without specifying the complete list of site subscription IDs for the AlternativeSiteSubscriptions parameter, data loss can result.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

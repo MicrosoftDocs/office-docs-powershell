@@ -22,7 +22,7 @@ New-SPClaimTypeMapping [-IncomingClaimType] <String> [-IncomingClaimTypeDisplayN
 ## DESCRIPTION
 The New-SPClaimTypeMapping cmdlet creates a claim mapping rule for a security token service (STS) identity provider.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

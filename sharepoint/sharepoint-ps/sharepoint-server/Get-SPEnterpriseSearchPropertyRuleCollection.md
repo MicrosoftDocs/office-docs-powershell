@@ -21,7 +21,7 @@ Get-SPEnterpriseSearchPropertyRuleCollection [-AssignmentCollection <SPAssignmen
 The Get-SPEnterpriseSearchPropertyRuleCollection cmdlet returns the collection of rules that are applied to search results.
 Rules can be added and removed from the rule collection.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

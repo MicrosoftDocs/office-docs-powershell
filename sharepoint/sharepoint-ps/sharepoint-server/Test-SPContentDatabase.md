@@ -39,7 +39,7 @@ It can be used to test content databases from SharePoint 2010 Products and from 
 The `Test-SPContentDatabase` cmdlet does not change any of the data or structure of the content database, but can cause load on the database while the checks are in progress, which could temporarily block use of the content database.
 This cmdlet should only be used against a content database that is currently under low or no usage.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

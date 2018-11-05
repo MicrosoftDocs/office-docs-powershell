@@ -26,7 +26,7 @@ Use the Get-SPScaleOutDatabase cmdlet to returns all scale-out database objects 
 A scale-out database is a database which implements the Shared Service Database Scale Out Generic Protocol.
 For additional information about the Database Scale Out Generic Protocol, see SharePoint Shared Service Database Scale Out Generic Protocol Specification (http://msdn.microsoft.com/en-us/library/hh656675(office.12).aspx)
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

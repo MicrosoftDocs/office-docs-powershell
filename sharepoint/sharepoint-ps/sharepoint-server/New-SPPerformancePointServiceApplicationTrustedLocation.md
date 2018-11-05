@@ -25,7 +25,7 @@ New-SPPerformancePointServiceApplicationTrustedLocation
 The `New-SPPerformancePointServiceApplicationTrustedLocation` cmdlet creates a new trusted location for a PerformancePoint Service application.
 The new trusted location can be a Content or Data Source trusted location type and is enforced only when it is enabled in the PerformancePoint Service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

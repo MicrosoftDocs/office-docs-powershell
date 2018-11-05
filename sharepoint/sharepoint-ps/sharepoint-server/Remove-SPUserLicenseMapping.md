@@ -21,7 +21,7 @@ Remove-SPUserLicenseMapping -Identity <System.Collections.Generic.List`1[System.
 ## DESCRIPTION
 The `Remove-SPUserLicenseMapping` cmdlet uses the Identity parameter to remove a claim-to-SharePoint user license mapping.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

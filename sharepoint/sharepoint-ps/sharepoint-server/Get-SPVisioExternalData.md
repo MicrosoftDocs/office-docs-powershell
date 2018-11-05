@@ -20,7 +20,7 @@ Get-SPVisioExternalData -VisioServiceApplication <SPVisioServiceApplicationPipeB
 ## DESCRIPTION
 The Get-SPVisioExternalData cmdlet reads the service settings for managing settings that are related to connecting to external data.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

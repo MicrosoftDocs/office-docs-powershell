@@ -51,7 +51,7 @@ This cmdlet must be used first before the `Add-SPUserLicenseMapping` cmdlet can 
 The object created by using the `New-SPUserLicenseMapping` cmdlet is stored in memory and is not written to any database in SharePoint Server.
 After the object is created you can pipe the result to the `Add-SPUserLicenseMapping` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

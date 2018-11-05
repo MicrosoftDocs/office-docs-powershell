@@ -37,7 +37,7 @@ If you are using host-named site collections, specify the HostHeader parameter.
 To delete a host-named site collection managed path, provide the HostHeader switch.
 Otherwise, you must specify the Web application that contains the managed path to be deleted.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

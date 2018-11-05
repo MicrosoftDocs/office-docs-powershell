@@ -38,7 +38,7 @@ If an Identity parameter is not provided, all managed paths for the given scope 
 Host-named sites (no matter the Web application in which they are contained) share a single set of managed paths.
 Use the HostHeader parameter to return host-named site collections-scoped managed paths.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

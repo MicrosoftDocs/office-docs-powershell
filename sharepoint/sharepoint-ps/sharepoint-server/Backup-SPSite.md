@@ -26,7 +26,7 @@ The Backup-SPSite cmdlet performs a backup of the site collection when the Ident
 By default, the site collection will be set to read-only for the duration of the backup to reduce the potential for user activity during the backup operation to corrupt the backup.
 If you have SQL Server Enterprise Edition, we recommend that UseSqlSnapshot parameter be used because this ensures a valid backup while it allows users to continue reading and writing to the site collection during the backup.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -23,7 +23,7 @@ New-SPEnterpriseSearchQueryDemoted [-Url] <String> -Owner <SearchObjectOwner>
 The `New-SPEnterpriseSearchQueryDemoted` cmdlet adjusts query rank by adding a demoted site rule to the shared search application.
 Query demoted sites are de-emphasized in relevance.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

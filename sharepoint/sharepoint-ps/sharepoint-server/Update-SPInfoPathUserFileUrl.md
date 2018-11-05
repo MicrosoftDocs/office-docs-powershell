@@ -39,7 +39,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 The `Update-SPInfoPathAdminFileUrl` cmdlet updates data connections in InfoPath form templates (.xsn files) and universal data connections (.udcx files).
 This allows for InfoPath data connections that reference the current farm to be updated when content is migrated to a different farm URL.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

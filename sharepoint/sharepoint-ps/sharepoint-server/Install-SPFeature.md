@@ -45,7 +45,7 @@ The SharePoint Feature's files must already be put in the proper directory, eith
 If the value of the AllExistingFeatures parameter is true, the file system is scanned and all new features that are in both FEATURES folders are installed.
 This is generally only used during deployment and upgrade.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

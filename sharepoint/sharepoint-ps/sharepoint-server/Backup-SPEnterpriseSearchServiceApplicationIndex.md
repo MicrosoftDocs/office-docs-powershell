@@ -34,7 +34,7 @@ The cmdlet has to be run in two phases.
 Phase one will take a backup of what is present in the index at the time that the backup cmdlet is run. 
 Phase two will take a differential backup of what was added to the index after you started the first phase index backup.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 

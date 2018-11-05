@@ -39,7 +39,7 @@ The result of the `New-SPSecureStoreServiceApplication` cmdlet can be passed to 
 Similarly, if you want to specify an unpartitioned service application proxy, an unpartitioned service application can be created by using the `New-SPSecureStoreServiceApplication` cmdlet.
 The result of the `New-SPSecureStoreServiceApplication` cmdlet can be passed to the `New-SPSecureStoreServiceApplicationProxy` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -22,7 +22,7 @@ Get-SPEnterpriseSearchQuerySuggestionCandidates -Owner <SearchObjectOwner>
 Use the Get-SPEnterpriseSearchQuerySuggestionCandidates cmdlet to return a list of popular queries that can be displayed in a related queries Web Part.
 The list gives the administrator a chance to review potential queries and add some of them to the related queries list.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

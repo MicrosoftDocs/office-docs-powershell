@@ -22,7 +22,7 @@ Start-SPDiagnosticsSession [-AssignmentCollection <SPAssignmentCollection>] [-Co
 Use the `Start-SPDiagnosticsSession` cmdlet to report diagnostic information to the usage database.
 After a diagnostic session starts, all Windows PowerShell for SharePoint cmdlets in Windows PowerShell scripts will use the same correlation to report diagnostic information.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

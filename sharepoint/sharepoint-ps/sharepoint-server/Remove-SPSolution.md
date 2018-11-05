@@ -22,7 +22,7 @@ Remove-SPSolution [-Identity] <SPSolutionPipeBind> [-AssignmentCollection <SPAss
 The `Remove-SPSolution` cmdlet deletes a SharePoint solution from a farm.
 Before you use this cmdlet, you must use the `Uninstall-SPSolution` cmdlet to retract the solution files from the front-end Web server.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

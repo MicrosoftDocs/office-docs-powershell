@@ -23,7 +23,7 @@ The `Set-SPLogLevel` cmdlet sets the Windows event logging and trace logging lev
 If an event or trace associated with a category occurs, but is less severe than that category's logging level, the event or trace is not written to the event log or the trace log.
 If an event or trace associated with a category occurs and is equally severe or more severe than that category's logging level, the event or trace is written to the event log or the trace log.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -31,7 +31,7 @@ You just need to specify the starting portion of the URL that has changed from o
 
 For example, OldBaseUri: http://server1/my/ProfilePhotos; NewBaseUri: http://server1/my/NewLocation/ProfilePhotos
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

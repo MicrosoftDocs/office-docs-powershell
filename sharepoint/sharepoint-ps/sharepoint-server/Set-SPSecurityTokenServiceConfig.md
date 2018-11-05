@@ -78,7 +78,7 @@ If a certificate file is used, the certificate must be an X509 certificate with 
 This cmdlet operates only with certificates that can be exported.
 To create a certificate which can be used in this cmdlet specify the X509KeyStorageFlags.Exportable bit in the keyStorageFlags parameter of the x509Certificate2 object constructor.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

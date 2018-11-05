@@ -26,7 +26,7 @@ The zone for the URL of the WOPI application page is determined by this setting.
 If you do not set the zone, the default is "internal-HTTPS." If you select a zone that is not supported by the WOPI application, Office Web Apps will not work.
 Only use HTTP when you are on a fully secure network that uses IPSEC (full encryption) or in a test environment that does not contain sensitive data.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

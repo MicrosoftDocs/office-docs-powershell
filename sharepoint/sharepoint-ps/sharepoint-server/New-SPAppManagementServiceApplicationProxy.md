@@ -36,7 +36,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 Use the New-SPAppManagementServiceApplicationProxy cmdlet to create an App Management Service application proxy with the specified name for the specified App Management Service application or the specified endpoint.
 Depending on the parameter value, it also adds the new proxy to the default proxy group.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

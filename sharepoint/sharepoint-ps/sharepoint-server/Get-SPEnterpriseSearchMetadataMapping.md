@@ -22,7 +22,7 @@ Get-SPEnterpriseSearchMetadataMapping -SearchApplication <SearchServiceApplicati
 This cmdlet reads a Mapping object when a managed property mapping is created, updated, or deleted.
 SPEnterpriseSearchMetadataMapping represents a category of a mapping between a managed property and one or more crawled properties in the enterprise search metadata property schema.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -23,7 +23,7 @@ The Get-SPTimerJob cmdlet reads a specified timer job, timer jobs of a specified
 
 If no parameters are specified, this cmdlet returns all timer job definitions for the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 ### ---------------------EXAMPLE 01--------------------- 

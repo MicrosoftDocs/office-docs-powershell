@@ -24,7 +24,7 @@ Remove-SPSocialItemByDate -EndDate <DateTime>
 ## DESCRIPTION
 Use the `Remove-SPSocialItemByDate` cmdlet to delete, tags, notes, ratings created before a particular date.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

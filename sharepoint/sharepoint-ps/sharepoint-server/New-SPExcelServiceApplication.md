@@ -45,7 +45,7 @@ New-SPExcelServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPi
 The `New-SPExcelServiceApplication` cmdlet creates a new Excel Services Application Web service application with new settings. 
 After you create a new Excel Services Application Web service application, you can use the `Set-SPExcelServiceApplication` cmdlet to modify the global settings of the new application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -30,7 +30,7 @@ The Add-SPUserLicenseMapping cmdlet maps a claim, Active Directory Domain Servic
 To specify a mapping to a specific web application, use the WebApplication parameter.
 If you do not specify parameters, mapping applies to the entire SharePoint farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -36,7 +36,7 @@ If you try to use the Url parameter on a farm-scoped feature, you receive the fo
 
 The feature '\<feature name\>' applies to the entire farm; the Url parameter cannot be used with farm-scoped features.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

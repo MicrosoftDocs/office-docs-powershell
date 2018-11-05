@@ -22,7 +22,7 @@ Remove-SPUsageApplication [-Identity] <SPUsageApplicationPipeBind>
 ## DESCRIPTION
 The `Remove-SPUsageApplication` cmdlet deletes a usage application from the local farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

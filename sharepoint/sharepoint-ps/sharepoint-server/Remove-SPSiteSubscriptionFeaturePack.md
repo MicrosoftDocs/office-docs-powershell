@@ -21,7 +21,7 @@ Remove-SPSiteSubscriptionFeaturePack [-Identity] <SPSiteSubscriptionFeaturePackP
 ## DESCRIPTION
 The `Remove-SPSiteSubscriptionFeaturePack` cmdlet removes a SharePoint Feature set by specifying the GUID or Feature set object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

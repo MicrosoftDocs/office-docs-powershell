@@ -23,7 +23,7 @@ Use the `Repair-SPManagedAccountDeployment` cmdlet to repair the local deploymen
 It re-deploys each local service and Web applications credentials and also determines if the passphrase is not correct on the server and repairs provides warnings accordingly.
 The `Repair-SPManagedAccountDeployment` cmdlet should not be used as part of the regular credential update process, but should be one of the first troubleshooting steps, specifically if a servers' services are failing to start when other servers' services are working correctly.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -26,7 +26,7 @@ User-defined functions are managed code assemblies that can be called from an Ex
 The assemblies can perform custom logic or other actions, such as refresh data.
 Windows PowerShell cmdlets operate on the entries that are in the list of user-defined functions, but they do not operate on the assemblies.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

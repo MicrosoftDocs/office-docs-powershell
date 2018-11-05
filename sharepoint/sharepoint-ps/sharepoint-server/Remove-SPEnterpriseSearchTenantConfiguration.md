@@ -25,7 +25,7 @@ The removed settings are: query Rules, result types, result sources, managed met
 Use this cmdlet when removing tenants and in conjunction with moving tenants.
 When moving a tenant, copy the tenant configuration from the source to the destination and then use this cmdlet to remove the tenant configuration from the source farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

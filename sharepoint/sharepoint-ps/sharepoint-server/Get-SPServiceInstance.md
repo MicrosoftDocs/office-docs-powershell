@@ -35,7 +35,7 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 The Get-SPServiceInstance cmdlet returns the services instance specified by the Identity parameter for a specific server.
 If the Server parameter is not specified, the Get-SPServiceInstance cmdlet returns results for the entire farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

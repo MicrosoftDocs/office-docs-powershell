@@ -40,7 +40,7 @@ If you remove all the bindings on the SharePoint farm where this cmdlet is run, 
 
 If you want to stop using Office Web Apps for default clicks, but must preserve the bindings' discovery information and the ability for users to use the SharePoint Share by link feature to send a link to a document and allow the recipient to use Office Web Apps for that document type, use the `New-SPWOPISuppression` cmdlet instead.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

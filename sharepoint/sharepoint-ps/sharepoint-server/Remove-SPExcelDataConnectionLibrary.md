@@ -23,7 +23,7 @@ Remove-SPExcelDataConnectionLibrary [-Identity] <SPExcelDCLPipeBind>
 The `Remove-SPExcelDataConnectionLibrary` cmdlet removes a library from the Excel Services Application trusted data connection libraries list. 
 Excel Services Application loads data connection files only if they are stored in a data connection library that is on the trusted data connection libraries list.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

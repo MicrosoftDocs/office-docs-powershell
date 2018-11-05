@@ -32,7 +32,7 @@ During an upgrade from SharePoint Server, to preserve legacy settings, local sco
 In a SharePoint Server farm, the scopes of a site or site collection that is in SharePoint Server mode are read-write, whereas the scopes of a site or site collection after upgrade to SharePoint Server mode are read-only.
 This cmdlet can be used to read a scope rule of a migrated local scope in either situation.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

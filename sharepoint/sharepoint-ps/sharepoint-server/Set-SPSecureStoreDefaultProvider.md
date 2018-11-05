@@ -24,7 +24,7 @@ To register a third-party secure store, implement the ISecureStoreProvider inter
 With the interface defined, place the DLL file in the global assembly cache, and then load the DLL and load the type, as shown in the example.
 You can then set the secure store provider.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

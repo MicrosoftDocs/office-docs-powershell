@@ -28,7 +28,7 @@ A no-access lock is applied to the site collection to prevent users from alterin
 Once the move is complete, the site collection is returned to its original lock state. 
 The destination content database specified must already exist, must be attached to the same SQL Server as the site collection's current content database, and must be attached to the site collection's current Web application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 

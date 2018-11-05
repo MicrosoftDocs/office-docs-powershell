@@ -22,7 +22,7 @@ Request-SPUpgradeEvaluationSite [-Identity] <SPSitePipeBind> [-AssignmentCollect
 Use the `Request-SPUpgradeEvaluationSite` cmdlet to initiate a request to create temporary copy of a site collection at an auto-generated URL and upgrade the site collection to a newer experience.
 Users can view the site to see how their site will work in the new experience.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -21,7 +21,7 @@ Unpublish-SPServiceApplication [-Identity] <SPServiceApplicationPipeBind>
 ## DESCRIPTION
 Use the `Unpublish-SPServiceApplication` cmdlet to stop publishing the service application, specified by the Identity parameter, outside the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

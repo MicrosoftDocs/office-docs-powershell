@@ -23,7 +23,7 @@ The `Set-SPWOPIBinding` cmdlet updates the default click action for an applicati
 For example, you can set the default click action to view for a Word document in a SharePoint library.
 To do this, you set the default action to true for the "view"-"Word" bindings.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

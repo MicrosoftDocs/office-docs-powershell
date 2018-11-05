@@ -22,7 +22,7 @@ Mount-SPStateServiceDatabase [-Name] <String> [-AssignmentCollection <SPAssignme
 The Mount-SPStateServiceDatabase cmdlet attaches an existing state service database to the farm.
 If the session state database schema is not installed in the state service database, use the Initialize-SPStateServiceDatabase cmdlet to install the schema after the state service database has been mounted.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

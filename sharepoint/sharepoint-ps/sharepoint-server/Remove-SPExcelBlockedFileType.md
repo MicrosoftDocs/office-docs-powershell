@@ -23,7 +23,7 @@ Remove-SPExcelBlockedFileType [-Identity] <SPExcelBlockedFileTypePipeBind>
 The `Remove-SPExcelBlockedExcelFileType` cmdlet removes an entry from the list of file types that are prevented from loading on an Excel Services Application Web service application. 
 Excel Services Application does not load any file types that correspond to a file type that is on this list.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

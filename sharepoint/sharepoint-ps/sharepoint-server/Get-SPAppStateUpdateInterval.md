@@ -21,7 +21,7 @@ Get-SPAppStateUpdateInterval [-AssignmentCollection <SPAssignmentCollection>] [<
 Use the Get-SPAppStateUpdateInterval cmdlet to return the interval in hours between updates of the app state update job.
 The app state update job updates the app states, including app updates, in SharePoint based on information in the SharePoint Store.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

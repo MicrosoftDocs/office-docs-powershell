@@ -35,7 +35,7 @@ The Set-SPTrustedIdentityTokenIssuer cmdlet sets the identity providers of a Web
 For the ASP.NET Membership provider and Role provider, this cmdlet changes the identity provider only if the result is piped to a variable and passed to a Web application.
 For security token service (STS) identity providers, this cmdlet changes the persisted identity provider object in the SPFarm object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

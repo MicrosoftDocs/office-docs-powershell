@@ -21,7 +21,7 @@ Uninstall-SPHelpCollection -Name <String> [-AssignmentCollection <SPAssignmentCo
 ## DESCRIPTION
 The `Uninstall-SPHelpCollection` cmdlet removes the specified Help collection files from the product Help library in the current farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -24,7 +24,7 @@ The `Remove-SPEnterpriseSearchFileFormat` removes a file format from the search 
 The search parsing system will only consider the change after a restart of the content processing components.
 Afterwards the search parsing system will stop parsing the file format.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

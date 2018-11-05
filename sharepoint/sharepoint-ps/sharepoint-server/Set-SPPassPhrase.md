@@ -36,7 +36,7 @@ If the LocalServerOnly parameter is used, this is updated on the local machine o
 The Passphrase value must be the same on all servers in the farm if the farm is to function correctly.
 So if the Passphrase fails to propagate to all servers, the LocalServerOnly parameter can be used to set the remaining servers to the new Passphrase value manually.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

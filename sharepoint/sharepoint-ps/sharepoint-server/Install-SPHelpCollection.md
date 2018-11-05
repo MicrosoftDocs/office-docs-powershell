@@ -35,7 +35,7 @@ The Install-SPHelpCollection cmdlet installs the Help site collection files for 
 Use the LiteralPath parameter to install specific custom Help collection files.
 If the LiteralPath parameter is not specified, all available Help in the Help site collection is installed and existing Help collection files are overwritten.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

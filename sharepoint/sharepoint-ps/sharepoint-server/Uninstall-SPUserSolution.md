@@ -22,7 +22,7 @@ Uninstall-SPUserSolution [-Identity] <SPUserSolutionPipeBind> -Site <SPSitePipeB
 The `Uninstall-SPUserSolution` cmdlet deactivates a sandboxed solution in a site collection so that you can delete it by using the `Remove-SPUserSolution` cmdlet.
 A user solution is a sandboxed solution.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

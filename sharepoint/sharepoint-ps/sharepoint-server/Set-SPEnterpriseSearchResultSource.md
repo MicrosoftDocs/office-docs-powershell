@@ -26,7 +26,7 @@ Set-SPEnterpriseSearchResultSource [-AssignmentCollection <SPAssignmentCollectio
 This cmdlet updates properties of a user-created result source.
 This cmdlet supports the same update operations as are supported through the "Manage Result Sources" page in Central Administration.
 The result source cannot be a built-in source (a built-in source has the BuiltIn property set to true) for any update operation other than changing the default result source using the MakeDefault parameter.
-      For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+      For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

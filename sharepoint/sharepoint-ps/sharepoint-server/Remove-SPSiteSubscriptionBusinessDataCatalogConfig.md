@@ -22,7 +22,7 @@ Remove-SPSiteSubscriptionBusinessDataCatalogConfig -ServiceContext <SPServiceCon
 The `Remove-SPSiteSubscriptionBusinessDataCatalogConfig` cmdlet removes the Business Data Connectivity Metadata Store and all associated data for a specified partition.
 To completely remove a partition and the data that it contains, run the `Clear-SPSiteSubscriptionBusinessDataCatalogConfig` cmdlet to remove the data from the Business Data Connectivity Metadata Store and then run the `Remove-SPSiteSubscriptionBusinessDataCatalogConfig` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

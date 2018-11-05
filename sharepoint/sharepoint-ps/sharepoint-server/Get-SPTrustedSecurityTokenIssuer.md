@@ -25,7 +25,7 @@ Use the Get-SPTrustedSecurityTokenService cmdlet to return the trusted security 
 This cmdlet returns the T:Microsoft.SharePoint.Administration.Claims.SPSecurityTokenServiceManager object.
 The properties on this object can be set by using the Set-SPTrustedSecurityTokenIssuer cmdlet and then updated back to the object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -33,7 +33,7 @@ The SPHealthAnalysisRule cmdlets were first introduced in the February 2011 Cumu
 --Description of the SharePoint Foundation Cumulative Update Server Hotfix Package (SharePoint Foundation server-package) (http://support.microsoft.com/kb/2475880)
 --Description of the SharePoint Server Cumulative Update Server Hotfix Package (MOSS server-package (http://support.microsoft.com/kb/2475878)
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

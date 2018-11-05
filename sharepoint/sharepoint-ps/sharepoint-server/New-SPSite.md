@@ -28,7 +28,7 @@ New-SPSite [-Url] <String> -OwnerAlias <SPUserPipeBind> [-AdministrationSiteType
 The `New-SPSite` cmdlet creates a new site collection with the URL and owner that the Url and OwnerAlias parameters.
 This cmdlet can create site collections in either the SharePoint Server mode which uses the legacy versions of templates and features, or can be created in SharePoint Server mode which uses the new versions of templates and features.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

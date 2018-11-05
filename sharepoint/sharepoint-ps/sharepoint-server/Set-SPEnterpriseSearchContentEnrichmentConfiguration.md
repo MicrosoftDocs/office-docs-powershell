@@ -24,7 +24,7 @@ Set-SPEnterpriseSearchContentEnrichmentConfiguration
 This cmdlet validates the ContentEntrichmentConfiguration object and stores the provided configuration in the SearchServiceApplication.
 Both a ContentEnrichmentConfiguration and a SearchServiceApplication object have to be provided.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

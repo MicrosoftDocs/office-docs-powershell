@@ -37,7 +37,7 @@ Use the Get-SPSiteUpgradeSessionInfo cmdlet to manage or report site upgrade of 
 
 This cmdlet has two modes, get upgrade information for a specific SPSite object or for a given content database.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

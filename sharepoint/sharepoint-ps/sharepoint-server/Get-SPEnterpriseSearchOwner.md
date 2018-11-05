@@ -21,7 +21,7 @@ Get-SPEnterpriseSearchOwner [[-Identity] <SearchObjectOwner>] -Level <SearchObje
 The Get-SPEnterpriseSearchOwner cmdlet retrieves the search object owner.
 Get-SPEnterpriseSearchOwner provides scoping context to other cmdlets such as SPEnterpriseSearchResultItemType.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

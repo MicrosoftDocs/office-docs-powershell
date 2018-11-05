@@ -24,7 +24,7 @@ The `Update-SPSolution` cmdlet upgrades a deployed SharePoint solution in the fa
 Use this cmdlet only if a new solution contains the same set of files and features as the deployed solution.
 If files and features are different, the solution must be retracted and redeployed by using the `Uninstall-SPSolution` and `Install-SPSolution` cmdlets, respectively.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

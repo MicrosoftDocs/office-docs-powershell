@@ -37,7 +37,7 @@ Typically, the forward slash character (/) begins the relative URL and also deno
 
 For additional information about a server-relative URL or understanding general concepts about absolute and relative URLs, see Server-relative URL Property (http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spsite.serverrelativeurl.aspx) or Understanding Absolute and Relative URL Addresses (http://msdn.microsoft.com/en-us/library/bb208688(office.12).aspx).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

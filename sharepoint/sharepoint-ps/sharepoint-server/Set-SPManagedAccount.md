@@ -54,7 +54,7 @@ Additionally, you can use this cmdlet to change the password for the managed acc
 You can also use this cmdlet to change the password for the managed account to a new value, known to the administrator: Use the parameter set that includes the SetNewPassword parameter.
 Finally, you can use this cmdlet to change the password for the managed account to an existing value that has been already been changed in Active Directory Domain Services (AD DS): Use the parameter set that includes the UseExistingPassword parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

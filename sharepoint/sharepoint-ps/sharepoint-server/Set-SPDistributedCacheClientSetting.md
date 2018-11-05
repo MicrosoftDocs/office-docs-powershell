@@ -23,7 +23,7 @@ Set-SPDistributedCacheClientSetting [-ContainerType] <SPDistributedCacheContaine
 Use the `Set-SPDistributedCacheClientSettings` cmdlet to set the distributed cache service based on usage.
 Usage can be any type of cache that the ContainerType parameter specifies.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

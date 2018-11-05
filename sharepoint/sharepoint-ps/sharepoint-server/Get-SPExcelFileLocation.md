@@ -25,7 +25,7 @@ Properties of trusted file locations control how workbooks can be used when load
 Excel Services Application always enforces the properties that are defined by the trusted file location from which a workbook was loaded.
 The properties of the trusted file location to use are determined through comparison of the file path for the workbook with the address of the trusted file location.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

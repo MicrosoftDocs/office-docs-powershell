@@ -25,7 +25,7 @@ Use the Get-SPUserSettingsProvider cmdlet to return a list of User Settings Prov
 To return a list of a specific user setting provider, use the Identity parameter.
 Otherwise, the list for the entire farm is returned.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

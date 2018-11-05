@@ -22,7 +22,7 @@ Set-SPEnterpriseSearchMetadataCrawledProperty [-AssignmentCollection <SPAssignme
 This cmdlet updates properties of a crawled property when the search functionality is configured for the first time and after any new crawled property is added to create the rules for the crawled property.
 SPEnterpriseSearchMetadataCrawledProperty represents a crawled property in the enterprise search metadata property schema.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

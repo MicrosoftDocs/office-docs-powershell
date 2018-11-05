@@ -23,7 +23,7 @@ Clear-SPPerformancePointServiceApplicationTrustedLocation
 The Clear-SPPerformancePointServiceApplicationTrustedLocation cmdlet removes all the trusted locations for a PerformancePoint Service application.
 Use the TrustedLocationType parameter to remove only the trusted locations for a trusted location type.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
