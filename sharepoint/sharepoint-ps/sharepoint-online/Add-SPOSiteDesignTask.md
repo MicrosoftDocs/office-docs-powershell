@@ -76,15 +76,9 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-<<<<<<< HEAD
-[Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps)
-
-[Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps)
-=======
 ## OUTPUTS
 
 ## NOTES
->>>>>>> master
 
 ## RELATED LINKS
 
