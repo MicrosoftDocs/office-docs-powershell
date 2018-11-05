@@ -13,7 +13,7 @@ Converts an object to a JSON-formatted string for PowerShell Web Services.
 ## SYNTAX
 
 ```
-ConvertTo-JsonForPSWS [[-InputObject] <Object>] [-Compress] [-Depth <Object>] [-AsJob] [<CommonParameters>]
+ConvertTo-JsonForPSWS [-InputObject] <Object> [-Depth <Int>] [-Compress] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Specifies how many levels of contained objects are included in the JSON representation. The default value is 2.
 
 ```yaml
-Type: Object
+Type: Int
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
