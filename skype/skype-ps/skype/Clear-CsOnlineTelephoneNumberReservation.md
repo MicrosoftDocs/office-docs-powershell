@@ -14,8 +14,9 @@ The telephone numbers will then be available for search and reservation again.
 ## SYNTAX
 
 ```
-Clear-CsOnlineTelephoneNumberReservation [-Tenant <Guid>] -ReservationId <String>
- -InventoryType <String> [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+Clear-CsOnlineTelephoneNumberReservation [-InventoryType <Object>] [-ReservationId <Object>]
+ [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +44,7 @@ Acceptable values are:
 - "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -59,7 +60,23 @@ Accept wildcard characters: False
 Specifies the identification of the reservation you want to clear.
 
 ```yaml
-Type: String
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -75,7 +92,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Fqdn
+Type: Object
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -109,7 +126,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -122,11 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
+{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter
