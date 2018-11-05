@@ -44,6 +44,7 @@ Add-SPOSiteDesignTask -SiteDesignId 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl
 ## PARAMETERS
 
 ### -SiteDesignId
+
 The ID of the site design to apply.
 
 ```yaml
@@ -73,11 +74,20 @@ Accept pipeline input: False
 Accept wildcard characters: False  
 ```
 
+## INPUTS
+
+<<<<<<< HEAD
+[Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps)
+
+[Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps)
+=======
+## OUTPUTS
+
+## NOTES
+>>>>>>> master
+
 ## RELATED LINKS
 
 [Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps)
 
 [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps)
-
-
-

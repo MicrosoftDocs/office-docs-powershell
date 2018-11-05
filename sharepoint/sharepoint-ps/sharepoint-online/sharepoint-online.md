@@ -1,9 +1,6 @@
 ---
-external help file: sharepointonline.xml 
-Module Name: SharePointOnlinePowerShell
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXZ
-Help Version:  17.0.15229.2100
-Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/sharepoint/
+Module Name: SharePoint Online PowerShell
+Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-online
 Locale: en-US
 ---
@@ -13,6 +10,8 @@ Locale: en-US
 ## Description
 
 The following cmdlet references are for SharePoint Online.
+
+## sharepoint-online Cmdlets
 
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 {{Manually Enter Add-SPOGeoAdministrator Description Here}}

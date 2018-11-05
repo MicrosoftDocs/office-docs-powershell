@@ -75,8 +75,22 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## INPUTS
 
+<<<<<<< HEAD
 ## OUTPUTS
 
 ## RELATED LINKS
 
 [Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
+=======
+### Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignPipeBind
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-SPOSiteDesignRunStatus](Get-SPOSiteDesignRunStatus.md)
+>>>>>>> master
