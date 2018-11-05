@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsHostedVoicemailPolicy
 schema: 2.0.0
@@ -13,13 +13,11 @@ Assigns a hosted voice mail policy at the per-user scope.
 (The per-user scope enables you to assign policies to individual users or groups.) This cmdlet was introduced in Lync Server 2010.
 
 
-
-
 ## SYNTAX
 
 ```
-Grant-CsHostedVoicemailPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>]
- [-PassThru] [-WhatIf] [-Confirm] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Grant-CsHostedVoicemailPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,12 +33,10 @@ For example:
 If you assign to a user a hosted voice mail policy that does not include a destination, you cannot enable that user for hosted voice mail.
 
 
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 Grant-CsHostedVoicemailPolicy -Identity "Ken Myer" -PolicyName ExRedmond
 ```
 
@@ -49,7 +45,6 @@ This example assigns the hosted voice mail policy with the Identity ExRedmond to
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 Get-CsUser -OU "ou=Finance,ou=North America,dc=litwareinc,dc=com" | Grant-CsHostedVoicemailPolicy -PolicyName ExRedmond
 ```
 
@@ -70,7 +65,6 @@ For example, the Identity "* Smith" would return all the users with the last nam
 
 Full data type: Microsoft.Rtc.Management.AD.UserIdParameter
 
-
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
@@ -85,13 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
 The name (Identity) of the hosted voice mail policy to be assigned to the user.
 (Note that this includes only the name portion of the Identity.
 Per-user hosted voice mail policy identities include a prefix of tag: that should not be included with the PolicyName.)
-
-
-
 
 ```yaml
 Type: String
@@ -107,12 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
 Allows you to specify a domain controller.
 If no domain controller is specified, the first available will be used.
-
-
-
 
 ```yaml
 Type: Fqdn
@@ -128,12 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
 Returns the results of the command.
 By default, this cmdlet does not generate any output.
-
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -149,10 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Describes what would happen if you executed the command without actually executing the command.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -168,12 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
-
-
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -192,7 +166,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
