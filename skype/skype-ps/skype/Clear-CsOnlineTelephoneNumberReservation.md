@@ -20,7 +20,7 @@ Clear-CsOnlineTelephoneNumberReservation [-Tenant <Guid>] -ReservationId <String
 
 ## DESCRIPTION
 This cmdlet will fail if any of the numbers in the reservation have already been assigned.
-An error message will identify the source of the failure.
+An error message will identify the source of the failure. 
 
 ## EXAMPLES
 
