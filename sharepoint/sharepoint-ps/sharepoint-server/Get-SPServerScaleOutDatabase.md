@@ -25,7 +25,7 @@ Get-SPServerScaleOutDatabase -ServiceApplication <SPServiceApplicationPipeBind>
 Use the Get-SPServerScaleOutDatabase cmdlet to return all scale-out database objects for the specified service application.
 
 A scale-out database is a database which implements the Shared Service Database Scale Out Generic Protocol.
-For more information, see SharePoint Shared Service Database Scale Out Generic Protocol Specification (http://go.microsoft.com/fwlink/p/?LinkId=273867)
+For more information, see SharePoint Shared Service Database Scale Out Generic Protocol Specification (https://go.microsoft.com/fwlink/p/?LinkId=273867)
 
 
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
