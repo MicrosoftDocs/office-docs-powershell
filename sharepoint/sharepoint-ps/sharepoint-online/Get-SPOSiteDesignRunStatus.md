@@ -9,9 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-<<<<<<< HEAD
-### -Run
-=======
+
 Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
 
 ## SYNTAX
@@ -60,7 +58,6 @@ OutcomeText: |
 
 ### -Run
 
->>>>>>> master
 The site design run for the desired set of script action details.
 
 ```yaml
@@ -76,19 +73,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-<<<<<<< HEAD
-## OUTPUTS
-
-=======
 ### Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignRun
 
 ## OUTPUTS
@@ -97,7 +86,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## NOTES
 
->>>>>>> master
 ## RELATED LINKS
 
 [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
