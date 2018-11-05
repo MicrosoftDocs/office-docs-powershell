@@ -9,7 +9,10 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b03d319fb034ca9e42c29bec379f9bed7de5a468
 Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
 
 ## SYNTAX
@@ -73,6 +76,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+<<<<<<< HEAD
+=======
+
+>>>>>>> b03d319fb034ca9e42c29bec379f9bed7de5a468
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
