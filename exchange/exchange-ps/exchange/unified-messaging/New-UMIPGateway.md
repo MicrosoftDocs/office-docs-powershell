@@ -11,8 +11,6 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange. Some parameters and settings may be exclusive to one environment or the other.
 
-This cmdlet was removed in October, 2018 in Exchange online. For more information, see the article of discontinuation of support for session border controllers in Exchange online unified messaging at Microsoft TechNet (https://blogs.technet.microsoft.com/exchange/2018/04/24/new-date-for-discontinuation-of-support-for-session-border-controllers-in-exchange-online-unified-messaging/).
-
 Use the New-UMIPGateway cmdlet to create a Unified Messaging (UM) IP gateway. A UM IP gateway is used to connect Unified Messaging servers to an IP gateway or a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
@@ -20,14 +18,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-UMIPGateway [-Name] <String> -Address <UMSmartHost> [-Confirm] [-DomainController <Fqdn>]
+New-UMIPGateway [-Name] <String> -Address <UMSmartHost>
+ [-Confirm]
+ [-DomainController <Fqdn>]
  [-GlobalCallRoutingScheme <None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3>]
- [-UMDialPlan <UMDialPlanIdParameter>] [-WhatIf]
- [-IPAddressFamily <IPv4Only | IPv6Only | Any>] [<CommonParameters>]
+ [-IPAddressFamily <IPv4Only | IPv6Only | Any>]
+ [-UMDialPlan <UMDialPlanIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-UMIPGateway cmdlet creates a UM IP gateway. A UM IP gateway has organization-wide scope and references a single physical IP gateway. The UM IP gateway that's created is used to establish a connection to an IP gateway or a SIP-enabled IP PBX. After this task is completed, a new UM IP gateway is created.
+A UM IP gateway has organization-wide scope and references a single physical IP gateway. The UM IP gateway that's created is used to establish a connection to an IP gateway or a SIP-enabled IP PBX. After this task is completed, a new UM IP gateway is created.
+
+This cmdlet was removed from Exchange Online in October, 2018. For more information, see the announcement in the Exchange EHLO blog (https://blogs.technet.microsoft.com/exchange/2018/04/24/new-date-for-discontinuation-of-support-for-session-border-controllers-in-exchange-online-unified-messaging/).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -139,6 +142,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IPAddressFamily
+The IPAddressFamily parameter specifies whether the UM IP gateway uses Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway only uses IPv4 to communicate. If set to IPv6Only, the UM IP gateway only uses IPv6. If set to Any, IPv6 will be used first, and then, if necessary, it will fallback to IPv4. The default is IPv4Only.
+
+```yaml
+Type: IPv4Only | IPv6Only | Any
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UMDialPlan
 The UMDialPlan parameter specifies the UM dial plan to be associated with the UM IP gateway.
 
@@ -169,21 +187,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IPAddressFamily
-The IPAddressFamily parameter specifies whether the UM IP gateway uses Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway only uses IPv4 to communicate. If set to IPv6Only, the UM IP gateway only uses IPv6. If set to Any, IPv6 will be used first, and then, if necessary, it will fallback to IPv4. The default is IPv4Only.
-
-```yaml
-Type: IPv4Only | IPv6Only | Any
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
@@ -202,5 +205,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/598774bf-2a38-4779-be5a-9955c6b5ef4b.aspx)
-
-[Discontinuation of Support for Session Border Controllers in Exchange Online Unified Messaging](https://blogs.technet.microsoft.com/exchange/2018/04/24/new-date-for-discontinuation-of-support-for-session-border-controllers-in-exchange-online-unified-messaging/)
