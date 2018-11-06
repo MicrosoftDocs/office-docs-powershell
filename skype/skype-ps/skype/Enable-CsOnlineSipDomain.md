@@ -56,6 +56,7 @@ The command below needs to be done from an on-premises PowerShell window.  If yo
 `Get-CsHostingProvider|Set-CsHostingProvider -Enabled $false`</br>
 
 3. Update DNS to point to O365
+
 The organization’s external DNS for the former on-premises deployment needs to be updated so that Skype for Business records point to Office 365 instead of Onprem. Specifically:
 
 
