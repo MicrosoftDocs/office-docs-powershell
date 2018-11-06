@@ -37,6 +37,7 @@ Once you have moved all users from on-premises into the cloud, you can decommiss
  -	Disable shared sip address space in the O365 tenant.
  - Disable the ability in the on-premises environment to communicate with O365
  - Update DNS records to point to Office 365. </br> 
+
 These steps should be done together as a unit. 
 
 > [!NOTE]
