@@ -41,19 +41,19 @@ Once you have moved all users from on-premises into the cloud, you can decommiss
 These steps should be done together as a unit. 
 
 > [!NOTE]
-> Any federated organizations that have an allowed domain entry for your sip domain(s) will need to update their allowed domain entries to remove the proxy FQDN. We recommend you send all your federated partners a communication about this as you prepare to complete your migration to the cloud.
+> Any federated organizations that are using the older Direct Federation model (also known as Allowed Partner Server) will need to update their allowed domain entries for you organization to remove the proxy FQDN. This legacy federation model is not based on DNS SRV records, so such a config will become out of date, once your organization moves to the cloud. If you suspect any of your federated partners may be using Direct Federation, we suggest you send them a communication about this as you prepare to complete your migration to the cloud.
 
 The steps are:
 </br>
 1. Disable shared sip address space in the Office 365 tenant
 \_sipfederationtls.\_tcpThe command below needs to be done from a Skype for Business Online PowerShell window. 
 
-`PS C:\> Set-CsTenantFederationConfiguration -SharedSipAddressSpace $false`
+`PS C:\> Set-CsTenantFederationConfiguration -SharedSipAddressSpace $false`</br>
 
 2. Disable ability in on-premise to communicate with Office 365 
 The command below needs to be done from an on-premises PowerShell window.  If you have previously imported an Office 365 session, start a new Skype for Business PowerShell session.
 
-`Get-CsHostingProvider|Set-CsHostingProvider -Enabled $false`
+`Get-CsHostingProvider|Set-CsHostingProvider -Enabled $false`</br>
 
 3. Update DNS to point to O365
 The organization’s external DNS for the former on-premises deployment needs to be updated so that Skype for Business records point to Office 365 instead of Onprem. Specifically:
