@@ -13,16 +13,14 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsUpgradePolicy [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
-```
-
-```
-Get-CsTeamsUpgradePolicy [[-Identity] <XdsIdentity>] [-Tenant <guid>] [<CommonParameters>]
+Get-CsTeamsUpgradePolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
+### Filter
 ```
-Get-CsTeamsUpgradePolicy [-Tenant <guid>] [-Filter <string>] [<CommonParameters>]
+Get-CsTeamsUpgradePolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,10 +130,9 @@ NotifySfbUsers : False
 
 ```
 
-List all on-premises instances (if any) of TeamsUpgradePolicy
+List all on-premises instances (if any) of TeamsUpgradePolicy.
+
 ## PARAMETERS
-
-
 
 ### -Identity
 If identity parameter is passed, this will return a specific instance. If no identity parameter is specified, the cmdlet returns all instances.
@@ -156,7 +153,7 @@ Accept wildcard characters: False
 {{Fill Filter Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019
@@ -188,7 +185,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019
@@ -200,35 +197,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
-
 
 [Get-CsTeamsUpgradeConfiguration](Get-CsTeamsUpgradeConfiguration.md)
 
