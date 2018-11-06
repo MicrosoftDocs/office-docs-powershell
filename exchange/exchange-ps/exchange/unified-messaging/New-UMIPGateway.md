@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange. Some parameters and settings may be exclusive to one environment or the other.
 
-This cmdlet was deprecated in October, 2018 in Exchange online. For more information about the deprecation, see the article of discontinuation of support for session border controllers in Exchange online unified messaging at Microsoft TechNet (https://blogs.technet.microsoft.com/exchange/2018/04/24/new-date-for-discontinuation-of-support-for-session-border-controllers-in-exchange-online-unified-messaging/).
+This cmdlet was removed in October, 2018 in Exchange online. For more information, see the article of discontinuation of support for session border controllers in Exchange online unified messaging at Microsoft TechNet (https://blogs.technet.microsoft.com/exchange/2018/04/24/new-date-for-discontinuation-of-support-for-session-border-controllers-in-exchange-online-unified-messaging/).
 
 Use the New-UMIPGateway cmdlet to create a Unified Messaging (UM) IP gateway. A UM IP gateway is used to connect Unified Messaging servers to an IP gateway or a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX).
 
