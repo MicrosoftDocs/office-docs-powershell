@@ -20,11 +20,11 @@
 				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
 				"metaTags": []
 			},
-			{
-				"name": "staffhub",
-				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
-				"metaTags": []
-			},
+//			{
+//				"name": "staffhub",
+//				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+//				"metaTags": []
+//			},
 			{
 				"name": "whiteboard",
 				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
