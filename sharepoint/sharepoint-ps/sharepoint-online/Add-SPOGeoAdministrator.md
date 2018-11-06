@@ -8,7 +8,8 @@ schema: 2.0.0
 # Add-SPOGeoAdministrator
 
 ## SYNOPSIS
-Adds a new SharePoint user or security Group as Get-Administrator of the current Multi-Geo Tenant.
+
+Adds a new SharePoint user or security Group as Get-Administrator of the current Multi-Geo Tenant. 
 
 
 ## SYNTAX

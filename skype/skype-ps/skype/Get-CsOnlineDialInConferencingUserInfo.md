@@ -1,0 +1,212 @@
+---
+external help file: 
+applicable: Skype for Business Online
+title: Get-CsOnlineDialInConferencingUserInfo
+schema: 2.0.0
+---
+
+# Get-CsOnlineDialInConferencingUserInfo
+
+## SYNOPSIS
+Provide the topic introduction here.
+
+## SYNTAX
+
+### IdentityParams
+```
+Get-CsOnlineDialInConferencingUserInfo [-Identity] <UserIdParameter> [-DomainController <Fqdn>] [-Force]
+ [<CommonParameters>]
+```
+
+### TenantIdParams
+```
+Get-CsOnlineDialInConferencingUserInfo [-Tenant <Guid>] [-Skip <Int32>] [-First <Int32>]
+ [-SearchQuery <String>] [-Select <FilterSelection>] [-Filter <String>] [-SortDescending]
+ [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+```
+
+## DESCRIPTION
+Provide the detailed description here.
+
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+Insert example commands for example 1.
+```
+
+Insert descriptive text for example 1.
+
+## PARAMETERS
+
+### -Identity
+PARAMVALUE: UserIdParameter
+
+```yaml
+Type: UserIdParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+PARAMVALUE: Fqdn
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases: DC
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+PARAMVALUE: String
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -First
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+PARAMVALUE: SwitchParameter
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SearchQuery
+PARAMVALUE: String
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Select
+PARAMVALUE: DialInConferencingOn | DialInConferencingOff | ConferencingProviderMS | ConferencingProviderOther | NoFilter
+
+```yaml
+Type: FilterSelection
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Skip
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SortDescending
+PARAMVALUE: SwitchParameter
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tenant
+PARAMVALUE: Guid
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
