@@ -24,7 +24,7 @@ Set-DeviceConfigurationPolicy [-Identity] <PolicyIdParameter> [-RetryDistributio
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
 Set-DeviceConfigurationPolicy [-Identity] <PolicyIdParameter> [-Comment <String>] [-Enabled <$true | $false>] [-Force]
  [-Confirm]

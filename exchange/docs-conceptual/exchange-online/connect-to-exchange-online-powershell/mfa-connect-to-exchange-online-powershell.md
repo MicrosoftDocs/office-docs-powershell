@@ -15,7 +15,7 @@ description: "Learn how to connect to Exchange Online PowerShell by using multi-
 If you want to use multi-factor authentication (MFA) to connect to Exchange Online PowerShell, you can't use the instructions at [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) to use remote PowerShell to connect to Exchange Online. MFA requires you to install the Exchange Online Remote PowerShell Module, and use the **Connect-EXOPSSession** cmdlet to connect.
 
 > [!NOTE]
-> You can't use the Exchange Online Remote PowerShell Module to connect to Exchange Online PowerShell and Security & Compliance Center PowerShell in the same session (window). You need to use separate sessions of the Exchange Online Remote PowerShell Module. 
+> • You can't use the Exchange Online Remote PowerShell Module to connect to Exchange Online PowerShell and Security & Compliance Center PowerShell in the same session (window). You need to use separate sessions of the Exchange Online Remote PowerShell Module. <br/>• Delegated Access Permission (DAP) partners can't use the procedures in this topic to connect to their customer tenant organizations in Exchange Online PowerShell. MFA and the Exchange Online Remote PowerShell Module don't work with delegated authentication.
 
 ## What do you need to know before you begin?
 
@@ -39,7 +39,9 @@ If you want to use multi-factor authentication (MFA) to connect to Exchange Onli
 
 - The Exchange Online Remote PowerShell Module needs to be installed on your computer:
 
-  1. In Internet Explorer or Edge, open the Exchange admin center (EAC) for your Exchange Online organization (Google Chrome or Mozilla Firefox won't work). For instructions, see [Exchange Admin Center in Exchange Online](http://technet.microsoft.com/library/ace44f6b-4084-4f9c-89b3-e0317962472b.aspx).
+  1. In Internet Explorer or Edge, open the Exchange admin center (EAC) for your Exchange Online organization. For instructions, see [Exchange Admin Center in Exchange Online](http://technet.microsoft.com/library/ace44f6b-4084-4f9c-89b3-e0317962472b.aspx).
+
+    **Note**: Internet Explorer or Edge is required because the download in the next step uses ClickOnce, so Google Chrome or Mozilla Firefox won't work.
 
   2. In the EAC, go to **Hybrid** > **Setup** and click the appropriate **Configure** button to download the Exchange Online Remote PowerShell Module for multi-factor authentication.
 

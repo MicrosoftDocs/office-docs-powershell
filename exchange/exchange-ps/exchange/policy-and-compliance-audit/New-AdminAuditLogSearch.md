@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-AdminAuditLogSearch -Name "Mailbox Quota Change Audit" -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2015 -EndDate 02/12/2015 -StatusMailRecipients david@contoso.com, chris@contoso.com
+New-AdminAuditLogSearch -Name "Mailbox Quota Change Audit" -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2018 -EndDate 02/12/2018 -StatusMailRecipients david@contoso.com, chris@contoso.com
 ```
 
 This example finds all the administrator audit log entries that match the following criteria and sends the results to the david@contoso.com and chris@contoso.com SMTP addresses:
@@ -43,23 +43,23 @@ This example finds all the administrator audit log entries that match the follow
 
 - Parameters:UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
 
-- StartDate: 01/24/2015
+- StartDate: 01/24/2018
 
-- EndDate: 02/12/2015
+- EndDate: 02/12/2018
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-AdminAuditLogSearch -ExternalAccess $true -StartDate 07/25/2015 -EndDate 10/24/2015 -StatusMailRecipients admin@contoso.com,pilarp@contoso.com -Name "Datacenter admin audit log"
+New-AdminAuditLogSearch -ExternalAccess $true -StartDate 07/25/2018 -EndDate 10/24/2018 -StatusMailRecipients admin@contoso.com,pilarp@contoso.com -Name "Datacenter admin audit log"
 ```
 
-This example returns entries in the administrator audit log of an Exchange Online organization for cmdlets run by Microsoft datacenter administrators between September 25, 2015 and October 24, 2015. The search results are sent to the admin@contoso.com and pilarp@contoso.com SMTP addresses and the text "Datacenter admin audit log" is added to the subject line of the message.
+This example returns entries in the administrator audit log of an Exchange Online organization for cmdlets run by Microsoft datacenter administrators between September 25, 2018 and October 24, 2018. The search results are sent to the admin@contoso.com and pilarp@contoso.com SMTP addresses and the text "Datacenter admin audit log" is added to the subject line of the message.
 
 ## PARAMETERS
 
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
