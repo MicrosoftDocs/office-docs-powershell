@@ -14,7 +14,7 @@ This cmdlet prevents provisioning of users in Skype for Business Online for the 
 ## SYNTAX
 
 ```
-Disable-CsOnlineSipDomain -Domain <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Disable-CsOnlineSipDomain -Domain <String> [-Force] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,22 +93,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
