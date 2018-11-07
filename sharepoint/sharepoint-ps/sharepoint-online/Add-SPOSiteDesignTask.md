@@ -1,4 +1,5 @@
 ---
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Add-SPOSiteDesignTask
 schema: 2.0.0
@@ -43,6 +44,7 @@ Add-SPOSiteDesignTask -SiteDesignId 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl
 ## PARAMETERS
 
 ### -SiteDesignId
+
 The ID of the site design to apply.
 
 ```yaml
@@ -71,10 +73,15 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False  
 ```
-## RELATED COMMANDS
 
-- [Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps)
+## INPUTS
 
-- [Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps)
+## OUTPUTS
 
+## NOTES
 
+## RELATED LINKS
+
+[Get-SPOSiteDesignTask](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps)
+
+[Invoke-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps)

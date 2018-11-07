@@ -13,9 +13,14 @@ Audio conferencing providers are a third-party companies that provide organizati
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsAudioConferencingProvider [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>]
- [-LocalStore] [-AsJob] [<CommonParameters>]
+Get-CsAudioConferencingProvider [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsAudioConferencingProvider [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,22 +58,6 @@ In this example, the filter value "*Fabrikam*" returns all audio conferencing pr
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 Enables you to use wildcard characters when indicating the audio conferencing provider (or providers) to be returned.
 For example, this syntax returns information about all the audio conferencing providers that have the string value "fabrikam" somewhere in their Identity:
@@ -78,7 +67,7 @@ For example, this syntax returns information about all the audio conferencing pr
 Note that you cannot use the Filter parameter and the Identity parameters in the same command.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -99,7 +88,7 @@ For example:
 If neither the Identity parameter nor the Filter parameter are included in a command then the Get-CsAudioConferencingProvider cmdlet returns information for all the available providers.
 
 ```yaml
-Type: Object
+Type: XdsGlobalRelativeIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -113,22 +102,6 @@ Accept wildcard characters: False
 
 ### -LocalStore
 This parameter is not used with Skype for Business Online.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter

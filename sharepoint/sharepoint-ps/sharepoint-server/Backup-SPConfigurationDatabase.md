@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPConfigurationDatabase
 schema: 2.0.0
@@ -32,7 +32,7 @@ Backup-SPConfigurationDatabase [-AssignmentCollection <SPAssignmentCollection>]
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Backup-SPConfigurationDatabase cmdlet performs a configuration-only backup of the current farm or a configuration-only backup of a separate configuration database which is not attached to the current farm.
 If you wish to perform a configuration-only backup of the current farm, there is no need to specify the DatabaseServer and DatabaseName parameters.
@@ -40,7 +40,7 @@ However, using the Backup-SPFarm cmdlet with the ConfigurationOnly parameter is 
 
 An example of a configuration backup is an administrator creates a farm configuration template which then can be applied to other SharePoint farms by performing a restore using the Restore-SPFarm cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831.
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831.
 
 ## EXAMPLES
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUCPhoneConfiguration
 schema: 2.0.0
@@ -15,29 +15,22 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsUCPhoneConfiguration [[-Identity] <XdsIdentity>] [-CalendarPollInterval <TimeSpan>]
- [-EnforcePhoneLock <Boolean>] [-LoggingLevel <LoggingLevel>] [-MinPhonePinLength <Byte>]
- [-PhoneLockTimeout <TimeSpan>] [-SIPSecurityMode <SIPSecurityMode>] [-Voice8021p <Byte>]
- [-VoiceDiffServTag <Byte>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsUCPhoneConfiguration [-Tenant <Guid>] [-CalendarPollInterval <TimeSpan>]
+ [-EnforcePhoneLock <Boolean>] [-PhoneLockTimeout <TimeSpan>] [-MinPhonePinLength <Byte>]
+ [-SIPSecurityMode <SIPSecurityMode>] [-VoiceDiffServTag <Byte>] [-Voice8021p <Byte>]
+ [-LoggingLevel <LoggingLevel>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsUCPhoneConfiguration [-Instance <PSObject>] [-CalendarPollInterval <TimeSpan>]
- [-EnforcePhoneLock <Boolean>] [-LoggingLevel <LoggingLevel>] [-MinPhonePinLength <Byte>]
- [-PhoneLockTimeout <TimeSpan>] [-SIPSecurityMode <SIPSecurityMode>] [-Voice8021p <Byte>]
- [-VoiceDiffServTag <Byte>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsUCPhoneConfiguration [-Tenant <Guid>] [-CalendarPollInterval <TimeSpan>]
+ [-EnforcePhoneLock <Boolean>] [-PhoneLockTimeout <TimeSpan>] [-MinPhonePinLength <Byte>]
+ [-SIPSecurityMode <SIPSecurityMode>] [-VoiceDiffServTag <Byte>] [-Voice8021p <Byte>]
+ [-LoggingLevel <LoggingLevel>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-###  (Default)
-```
-Set-CsUCPhoneConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-CalendarPollInterval <Object>]
- [-Confirm] [-EnforcePhoneLock <Object>] [-Force] [-Instance <Object>] [-LoggingLevel <Object>]
- [-MinPhonePinLength <Object>] [-PhoneLockTimeout <Object>] [-SIPSecurityMode <Object>] [-Tenant <Object>]
- [-Voice8021p <Object>] [-VoiceDiffServTag <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
-```
 
 ## DESCRIPTION
 UC phones represent the merging of the telephone and Skype for Business Server.
@@ -139,19 +132,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
@@ -159,19 +139,6 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -401,43 +368,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

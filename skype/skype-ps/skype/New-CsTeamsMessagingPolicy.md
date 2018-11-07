@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: New-CsTeamsMessagingPolicy
 schema: 2.0.0
@@ -10,15 +10,14 @@ schema: 2.0.0
 ## SYNOPSIS
 The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.
 
-New-CsTeamsMessagingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowOwnerDeleteMessage \<bool\>\] \[-AllowUserEditMessage \<bool\>\] \[-AllowUserDeleteMessage \<bool\>\] \[-AllowUserChat \<bool\>\] \[-AllowUserTranslation \<bool\>\] \[-AllowGiphy \<bool\>\] \[-GiphyRatingType \<string\>\] \[-AllowMemes \<bool\>\] \[-AllowStickers \<bool\>\] \[-InMemory\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
 ## SYNTAX
 
 ```
-New-CsTeamsMessagingPolicy [-WhatIf] [-Description <Object>] [-AllowMemes <Object>] [-AllowGiphy <Object>]
- [-AllowStickers <Object>] [-AllowUserEditMessage <Object>] [-AllowOwnerDeleteMessage <Object>]
- [-AllowUserDeleteMessage <Object>] [[-Identity] <Object>] [-Tenant <Object>] [-InMemory]
- [-AllowUserChat <Object>] [-AllowUserTranslation <Object>] [-GiphyRatingType <Object>] [-Confirm] [-Force] [-AsJob]
+New-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPreviews <Boolean>]
+ [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
+ [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
+ [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-ReadReceiptsEnabledType <String>]
+ [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +41,7 @@ All other policy properties will use the default values.
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -57,7 +56,7 @@ Accept wildcard characters: False
 Determines whether a user is allowed to access and post memes. Set this to TRUE to allow. Set this FALSE to prohibit
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -72,7 +71,7 @@ Accept wildcard characters: False
 Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -87,7 +86,7 @@ Accept wildcard characters: False
 Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -102,7 +101,7 @@ Accept wildcard characters: False
 Determines whether a user is allowed to chat. Set this to TRUE to allow a user to chat across private chat, group chat and in meetings. Set this to FALSE to prohibit all chat
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -117,7 +116,7 @@ Accept wildcard characters: False
 Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -132,7 +131,7 @@ Accept wildcard characters: False
 Determines whether a user is allowed to edit their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -147,7 +146,7 @@ Accept wildcard characters: False
 Determines whether a user is allowed to translate messages to their client languages. Set this to TRUE to allow. Set this to FALSE to prohibit
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -177,7 +176,7 @@ Accept wildcard characters: False
 Provide a description of your policy to identify purpose of creating it.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -203,10 +202,10 @@ Accept wildcard characters: False
 ```
 
 ### -GiphyRatingType
-Determines the Giphy content restrictions applicable to a user. Set this to STRICT, MODERATE or NORESTRICTION
+Determines the Giphy content restrictions applicable to a user. Set this to STRICT, MODERATE or NORESTRICTION.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -221,7 +220,7 @@ Accept wildcard characters: False
 Unique identifier for the teams messaging policy to be created.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -249,7 +248,7 @@ Accept wildcard characters: False
 ### -Tenant
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -268,20 +267,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
