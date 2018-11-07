@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: Remove-CsOnlineLisLocation
 schema: 2.0.0
@@ -11,10 +11,9 @@ schema: 2.0.0
 Use the `Remove-CsOnlineLisLocation` cmdlet to remove an existing emergency location from the Location Information Service (LIS.) You can only remove locations that have no assigned users.
 
 ## SYNTAX
-
 ```
-Remove-CsOnlineLisLocation [-LocationId <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Remove-CsOnlineLisLocation -LocationId <Guid> [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,23 +36,7 @@ Specifies the unique identifier of the location to be deleted.
 Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmdlet.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -85,7 +68,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -119,7 +102,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -139,22 +122,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

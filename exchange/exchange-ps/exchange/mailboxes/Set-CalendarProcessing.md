@@ -286,7 +286,9 @@ The AutomateProcessing parameter enables or disables calendar processing on the 
 
 - AutoAccept: Both the Calendar Attendant and resource booking attendant are enabled on the mailbox. This means that the Calendar Attendant updates the calendar, and then the resource booking assistant accepts the meeting based upon the policies. Eligible meeting organizers receive the decision directly without human intervention (free = accept; busy = decline).
 
-The default value for resource mailboxes created in the Exchange admin center (EAC) is AutoAccept. The default value for resource mailboxes created in PowerShell is AutoUpdate.
+In on-premises Exchange, resource mailboxes created in the Exchange admin center (EAC) have the default value AutoAccept, while resource mailboxes created in PowerShell have the default value AutoUpdate.
+ 
+In Exchange Online, resource mailbox created in the EAC and resource mailboxes created in PowerShell after November 15, 2018 have the default value AutoAccept. Resource mailboxes created in PowerShell before November 15 have the default value AutoUpdate.
 
 The default value for user mailboxes is AutoUpdate, but you can't change the value on a user mailbox.
 

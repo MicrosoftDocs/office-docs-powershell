@@ -139,4 +139,3 @@ None
 ## RELATED LINKS
 
 [Online version:](https://docs.microsoft.com/en-us/powershell/module/skype/Clear-CsOnlineTelephoneNumberReservation?view=skype-ps)
-

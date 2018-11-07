@@ -15,10 +15,20 @@ Set-CsTeamsMeetingBroadcastPolicy \[-Tenant \<guid\>\] \[-Description \<string\>
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsMeetingBroadcastPolicy [-Description <Object>] [-BroadcastRecordingMode <Object>] [-WhatIf]
- [-BroadcastAttendeeVisibilityMode <Object>] [-AllowBroadcastTranscription <Object>] [[-Identity] <Object>]
- [-Tenant <Object>] [-AllowBroadcastScheduling <Object>] [-Confirm] [-Force] [-Instance <Object>] [-AsJob]
+Set-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
+ [-AllowBroadcastScheduling <Boolean>] [-AllowBroadcastTranscription <Boolean>]
+ [-BroadcastAttendeeVisibilityMode <String>] [-BroadcastRecordingMode <String>] [[-Identity] <XdsIdentity>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
+ [-AllowBroadcastScheduling <Boolean>] [-AllowBroadcastTranscription <Boolean>]
+ [-BroadcastAttendeeVisibilityMode <String>] [-BroadcastRecordingMode <String>] [-Instance <PSObject>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +50,7 @@ Specifies whether this user can create broadcast events in Teams.  This settng 
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -56,7 +66,7 @@ Specifies whether real-time transcription and translation can be enabled in the 
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -72,7 +82,7 @@ Specifies the attendee visibility mode of the broadcast events created by this u
 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -88,7 +98,7 @@ Specifies whether broadcast events created by this user are always recorded, nev
 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -118,7 +128,7 @@ Accept wildcard characters: False
 Enables administrators to provide additional text about the conferencing policy. For example, the Description might indicate the users the policy should be assigned to.
 
 ```yaml
-Type: Object
+Type: ObjStringect
 Parameter Sets: (All)
 Aliases:
 
@@ -150,7 +160,7 @@ Unique identifier for the policy to be modified. Policies can be configured at t
 Note that wildcards are not allowed when specifying an Identity. If you do not specify an Identity the cmdlet will automatically modify the global policy.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -165,7 +175,7 @@ Accept wildcard characters: False
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases:
 
@@ -180,7 +190,7 @@ Accept wildcard characters: False
 Not applicable to online service.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -207,29 +217,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

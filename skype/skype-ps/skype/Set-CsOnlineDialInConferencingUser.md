@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingUser
 schema: 2.0.0
@@ -12,13 +12,24 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 
 ## SYNTAX
 
+### TenantIdParams (Default)
 ```
-Set-CsOnlineDialInConferencingUser [-TollFreeServiceNumber <String>] [[-Identity] <UserIdParameter>]
- [-BridgeName <String>] [-SendEmail] [-Confirm] [-ServiceNumber <String>] [-ResetConferenceId] [-Force]
- [-Tenant <Guid>] [-SendEmailFromAddress <String>] [-ResetLeaderPin] [-ConferenceId <Int32>]
- [-DomainController <Fqdn>] [-SendEmailToAddress <String>] [-BridgeId <Guid>] [-TenantDomain <String>]
- [-AllowTollFreeDialIn <Boolean>] [-WhatIf] [-SendEmailFromDisplayName <String>]
- [-AllowPSTNOnlyMeetings <Boolean>] [-AsJob] [<CommonParameters>]
+Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
+ [-BridgeName <String>] [-Tenant <Guid>] [-ConferenceId <System.Int32>] [-ResetConferenceId]
+ [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### TenantDomainParams
+```
+Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
+ [-BridgeName <String>] -TenantDomain <String> [-ConferenceId <Int32>] [-ResetConferenceId]
+ [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +41,7 @@ The cmdlet will verify that the correct license is assigned to the user.
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:> Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -ConferenceId 3542699 -ResetLeaderPin -ServiceNumber 14255037265
+Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -ConferenceId 3542699 -ResetLeaderPin -ServiceNumber 14255037265
 ```
 
 This example shows how to set a ConferenceId for a user, reset the meeting leader's PIN and set the audio conferencing provider default meeting phone number.
@@ -38,7 +49,7 @@ This example shows how to set a ConferenceId for a user, reset the meeting leade
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:> Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -BridgeName "Conference Bridge" -ConferenceId 3542699
+Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -BridgeName "Conference Bridge" -ConferenceId 3542699
 ```
 
 This example sets a user's ConferenceId and conference bridge assignment.
@@ -118,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
-Specifies the name for the audio conferencing bridge.
+Specifies the name of the audio conferencing bridge.
 
 ```yaml
 Type: String
@@ -254,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmail
-Send an email to the user that contains his Audio Conference information.
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -270,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromAddress
-You can specify the From Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromDisplayName and -SendEmail.
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -286,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromDisplayName
-You can specify the Display Name to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromAddress and -SendEmail.
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -302,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailToAddress
-You can specify the To Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmail.
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -358,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -TollFreeServiceNumber
-Specifies a toll-free phone number to be used by the user. This number is then used in meeting invitations. The toll-free number can be specified in the following formats: E.164 number, +<E.164 number> and tel:<E.164 number>.
+PARAMVALUE: String
 
 ```yaml
 Type: String
@@ -406,26 +417,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -436,8 +427,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Enable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
-
-[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
