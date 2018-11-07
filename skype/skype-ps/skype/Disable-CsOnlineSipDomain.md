@@ -122,7 +122,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ### None
 
-### System.Object
 ## NOTES
 This cmdlet is for advanced scenarios only.  Organizations that are pure online or have only 1 on-premise deployment need not run this cmdlet.
 
