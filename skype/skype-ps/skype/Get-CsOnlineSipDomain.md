@@ -15,8 +15,7 @@ This cmdlet lists online sip domains and their enabled/disabled status. In a dis
 ## SYNTAX
 
 ```
-Get-CsOnlineSipDomain [-Domain <String>] [-DomainType <DomainStatus>] [-Tenant <System.Guid>]
- [-Force] [<CommonParameters>]
+Get-CsOnlineSipDomain [-Domain <String>] [-DomainType <DomainStatus>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,14 +28,14 @@ This cmdlet is useful for organizations consolidating multiple on-premises deplo
 PS C:\> Get-CsOnlineSipDomain
 ```
 
-List all online sip domains in the tenant and show their enabled/disabled status.
+List all online SIP domains in the tenant and show their enabled/disabled status.
 
 ### Example 2
 ```powershell
 PS C:\> Get-CsOnlineSipDomain -DomainType Disabled
 ```
 
-List all disabled online sip domains in the tenant.
+List all disabled online SIP domains in the tenant.
 
 ## PARAMETERS
 
@@ -72,35 +71,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-{{Fill Force Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-{{Fill Tenant Description}}
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
@@ -112,7 +82,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Rtc.Management.Hosted.Provision.OSD.OnlineSipDomainBase+DomainState
 ## NOTES
 
 ## RELATED LINKS
