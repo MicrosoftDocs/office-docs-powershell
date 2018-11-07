@@ -17,7 +17,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter> [-EntryID <String>] [-FilterEndTime <DateTime>] [-FilterItemType <String>] [-FilterStartTime <DateTime>] [-LastParentFolderID <String>] [-ResultSize <Unlimited>] [-SourceFolder <DeletedItems | RecoverableItems>] [-SubjectContains <String>] [<CommonParameters>]
+Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
+[-EntryID <String>]
+[-FilterEndTime <DateTime>]
+[-FilterItemType <String>]
+[-FilterStartTime <DateTime>]
+[-LastParentFolderID <String>]
+[-ResultSize <Unlimited>]
+[-SourceFolder <DeletedItems | RecoverableItems>]
+[-SubjectContains <String>]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
