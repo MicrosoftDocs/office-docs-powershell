@@ -15,33 +15,26 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsMeetingConfiguration [[-Identity] <XdsIdentity>] [-AdmitAnonymousUsersByDefault <Boolean>]
- [-AssignedConferenceTypeByDefault <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
- [-EnableAssignedConferenceType <Boolean>] [-PstnCallersBypassLobby <Boolean>] [-Force] [-Tenant <Guid>]
- [-WhatIf] [-Confirm] [-CustomFooterText <String>] [-HelpURL <String>] [-LegalURL <String>] [-LogoURL <String>]
- [-RequireRoomSystemsAuthorization <Boolean>] [<CommonParameters>]
+Set-CsMeetingConfiguration [-Tenant <Guid>] [-PstnCallersBypassLobby <Boolean>]
+ [-EnableAssignedConferenceType <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
+ [-AssignedConferenceTypeByDefault <Boolean>] [-AdmitAnonymousUsersByDefault <Boolean>]
+ [-RequireRoomSystemsAuthorization <Boolean>] [-LogoURL <String>] [-LegalURL <String>] [-HelpURL <String>]
+ [-CustomFooterText <String>] [-AllowConferenceRecording <Boolean>] [-AllowCloudRecordingService <Boolean>]
+ [-EnableMeetingReport <Boolean>] [-UserUriFormatForStUser <String>] [[-Identity] <XdsIdentity>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsMeetingConfiguration [-Instance <PSObject>] [-AdmitAnonymousUsersByDefault <Boolean>]
- [-AssignedConferenceTypeByDefault <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
- [-EnableAssignedConferenceType <Boolean>] [-PstnCallersBypassLobby <Boolean>] [-Force] [-Tenant <Guid>]
- [-WhatIf] [-Confirm] [-CustomFooterText <String>] [-HelpURL <String>] [-LegalURL <String>] [-LogoURL <String>]
- [-RequireRoomSystemsAuthorization <Boolean>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsMeetingConfiguration [[-Identity] <Object>] [-AdmitAnonymousUsersByDefault <Object>]
- [-AllowCloudRecordingService <Object>] [-AllowConferenceRecording <Object>]
- [-AssignedConferenceTypeByDefault <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-CustomFooterText <Object>] [-DesignateAsPresenter <Object>] [-EnableAssignedConferenceType <Object>]
- [-EnableMeetingReport <Object>] [-Force] [-HelpURL <Object>] [-Instance <Object>] [-LegalURL <Object>]
- [-LogoURL <Object>] [-PstnCallersBypassLobby <Object>] [-RequireRoomSystemsAuthorization <Object>]
- [-Tenant <Object>] [-UserUriFormatForStUser <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsMeetingConfiguration [-Tenant <Guid>] [-PstnCallersBypassLobby <Boolean>]
+ [-EnableAssignedConferenceType <Boolean>] [-DesignateAsPresenter <DesignateAsPresenter>]
+ [-AssignedConferenceTypeByDefault <Boolean>] [-AdmitAnonymousUsersByDefault <Boolean>]
+ [-RequireRoomSystemsAuthorization <Boolean>] [-LogoURL <String>] [-LegalURL <String>] [-HelpURL <String>]
+ [-CustomFooterText <String>] [-AllowConferenceRecording <Boolean>] [-AllowCloudRecordingService <Boolean>]
+ [-EnableMeetingReport <Boolean>] [-UserUriFormatForStUser <String>] [-Instance <PSObject>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -116,19 +109,6 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -396,7 +376,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -413,23 +393,7 @@ Determines whether or not users are allowed to record conference proceedings.
 The default value is True.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -445,7 +409,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -461,23 +425,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

@@ -15,9 +15,16 @@ Designates what meeting features guests using Microsoft Teams will have availabl
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsGuestMeetingConfiguration [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
- [-AsJob]
+Get-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +46,7 @@ Returns the TeamsGuestMeetingConfiguration set in your organization.
 Internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -54,7 +61,7 @@ Accept wildcard characters: False
 The only value accepted is Global
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -84,7 +91,7 @@ Accept wildcard characters: False
 Internal Microsoft use
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -95,30 +102,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Internal Microsoft use
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
