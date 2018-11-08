@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: Grant-CsIPPhonePolicy
 schema: 2.0.0
@@ -14,9 +14,16 @@ For example, you might enable the Better Together Over Ethernet feature for some
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [[-PolicyName] <String>] [-Confirm] [-DomainController <Fqdn>]
- [-PassThru] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsIPPhonePolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +34,6 @@ IP phone policies are applied each time a user accesses the system, regardless o
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
 Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName SkypePolicy
 ```
 
@@ -36,7 +42,6 @@ This example assigns the IP phone policy "SkypePolicy" to the user with the iden
 
 ### -------------------------- Example 2 -------------------------- 
 ```
-
 Get-CsUser -LDAPFilter "Department=Sales" | Grant-CsIPPhonePolicy -PolicyName SalesPolicy
 ```
 
@@ -140,16 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
--Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid

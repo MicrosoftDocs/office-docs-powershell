@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 title: New-ComplianceSearchAction
 schema: 2.0.0
-monikerRange: "exchserver-ps-2016 || o365scc-ps"
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || o365scc-ps"
 ---
 
 # New-ComplianceSearchAction
@@ -11,54 +11,83 @@ monikerRange: "exchserver-ps-2016 || o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-ComplianceSearchAction cmdlet to create actions for compliance searches in Exchange Server 2016 and in the Office 365 Security & Compliance Center.
+Use the New-ComplianceSearchAction cmdlet to create actions for content searches in Exchange Server and in the Office 365 Security & Compliance Center.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
-### Set3
+### Export
 ```
-New-ComplianceSearchAction [[-SearchName] <String[]>] [-ActionName <String>]
- [-ArchiveFormat <Unknown | SinglePst | PerUserPst | IndividualMessage | SingleZip | PerUserZip | SingleFolderPst>]
- [-Confirm] [-EnableDedupe <$true | $false>]
- [-ExchangeArchiveFormat <Unknown | SinglePst | PerUserPst | IndividualMessage | SingleZip | PerUserZip | SingleFolderPst>]
- [-Export] [-FileTypeExclusionsForUnindexedItems <String[]>] [-Force]
- [-Format <Unknown | FxStream | Mime | Msg | BodyText>] [-IncludeCredential]
- [-IncludeSharePointDocumentVersions <$true | $false>] [-JobOptions <Int32>] [-MaxUnindexedSize <Int32>]
- [-NotifyEmail <String>] [-NotifyEmailCC <String>] [-ReferenceActionName <String>] [-Region <String>] [-Report]
- [-RetentionReport] [-RetryOnError]
- [-Scenario <Unknown | General | AnalyzeWithZoom | GenerateReportsOnly | Inventory | RetentionReports | TriagePreview>]
- [-Scope <Unknown | IndexedItemsOnly | UnindexedItemsOnly | BothIndexedAndUnindexedItems>]
- [-ScopeDetails <ComplianceScopeDetail[]>] [-SearchNames <String[]>]
- [-SharePointArchiveFormat <Unknown | SinglePst | PerUserPst | IndividualMessage | SingleZip | PerUserZip | SingleFolderPst>]
- [-ShareRootPath <String>] [-Version <String>] [-WhatIf] [<CommonParameters>]
+New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
+ [-ActionName <String>]
+ [-ArchiveFormat <ComplianceExportArchiveFormat>]
+ [-Confirm]
+ [-FileTypeExclusionsForUnindexedItems <String[]>]
+ [-EnableDedupe <Boolean>]
+ [-ExchangeArchiveFormat <ComplianceExportArchiveFormat>]
+ [-Force]
+ [-Format <ComplianceDataTransferFormat>]
+ [-IncludeCredential]
+ [-IncludeSharePointDocumentVersions <Boolean>]
+ [-JobOptions <Int32>]
+ [-NotifyEmail <String>]
+ [-NotifyEmailCC <String>]
+ [-ReferenceActionName <String>]
+ [-Region <String>]
+ [-Report]
+ [-RetentionReport]
+ [-RetryOnError]
+ [-Scenario <ComplianceSearchActionScenario>]
+ [-Scope <ComplianceExportScope>]
+ [-SearchNames <String[]>]
+ [-SharePointArchiveFormat <ComplianceExportArchiveFormat>]
+ [-Version <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Preview
 ```
-New-ComplianceSearchAction [[-SearchName] <String[]>] [-ActionName <String>] [-Confirm] [-Force]
- [-Format <Unknown | FxStream | Mime | Msg | BodyText>] [-IncludeCredential] [-JobOptions <Int32>] [-Preview]
- [-ReferenceActionName <String>] [-Region <String>] [-RetryOnError]
- [-Scenario <Unknown | General | AnalyzeWithZoom | GenerateReportsOnly | Inventory | RetentionReports | TriagePreview>]
- [-SearchNames <String[]>] [-Version <String>] [-WhatIf] [<CommonParameters>]
+New-ComplianceSearchAction [-SearchName] <String[]> [-Preview]
+ [-ActionName <String>]
+ [-Confirm]
+ [-Force]
+ [-Format <ComplianceDataTransferFormat>]
+ [-IncludeCredential] [-JobOptions <Int32>]
+ [-ReferenceActionName <String>]
+ [-Region <String>]
+ [-RetryOnError]
+ [-Scenario <ComplianceSearchActionScenario>]
+ [-SearchNames <String[]>]
+ [-Version <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set4
+### Purge
 ```
-New-ComplianceSearchAction [[-SearchName] <String[]>] [-ActionName <String>] [-Confirm] [-Force]
- [-Format <Unknown | FxStream | Mime | Msg | BodyText>] [-IncludeCredential] [-JobOptions <Int32>] [-Purge]
- [-PurgeType <Unknown | SoftDelete>] [-ReferenceActionName <String>] [-Region <String>] [-RetryOnError]
- [-Scenario <Unknown | General | AnalyzeWithZoom | GenerateReportsOnly | Inventory | RetentionReports | TriagePreview>]
- [-SearchNames <String[]>] [-Version <String>] [-WhatIf] [<CommonParameters>]
+New-ComplianceSearchAction [-SearchName] <String[]> [-Purge]
+ [-ActionName <String>]
+ [-Confirm]
+ [-Force]
+ [-Format <ComplianceDataTransferFormat>]
+ [-IncludeCredential]
+ [-JobOptions <Int32>]
+ [-PurgeType <ComplianceDestroyType>]
+ [-Region <String>]
+ [-ReferenceActionName <String>]
+ [-RetryOnError]
+ [-Scenario <ComplianceSearchActionScenario>]
+ [-SearchNames <String[]>]
+ [-Version <String>]
+ [-WhatIf]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-After you create a compliance search using the New-ComplianceSearch cmdlet and run it using the Start-ComplianceSearch cmdlet, you assign a search action to the search using the New-ComplianceSearchAction cmdlet.
+After you create a content search using the New-ComplianceSearch cmdlet and run it using the Start-ComplianceSearch cmdlet, you assign a search action to the search using the New-ComplianceSearchAction cmdlet.
+
+In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group, and not to the Organization Management role group.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
-
-This cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group, and not to the Organization Management role group.
 
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
 
@@ -69,32 +98,59 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 New-ComplianceSearchAction -SearchName "Project X" -Preview
 ```
 
-This example creates a preview search action for the compliance search named Project X.
+This example creates a preview search action for the content search named Project X.
 
 ### -------------------------- Example 2 --------------------------
 ```
 New-ComplianceSearchAction -SearchName "Project X" -Export
 ```
 
-This example creates an export search action for the compliance search named Project X.
+This example creates an export search action for the content search named Project X.
 
 ### -------------------------- Example 3 --------------------------
 ```
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
 ```
 
-This example deletes the search results returned by a compliance search named Remove Phishing Message. Note that unindexed items aren't deleted when you use the Purge parameter.
+This example deletes the search results returned by a content search named Remove Phishing Message. Note that unindexed items aren't deleted when you use the Purge parameter.
+
+### -------------------------- Example 4 --------------------------
+
+```
+New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip
+```
+
+This example exports the results returned by the content search named "Case 321 All Sites". The search results are compressed and exported to a single ZIP file. If the search included any Exchange locations, the search results are exported as one PST file per mailbox (the default value of the ExchangeArchiveFormat parameter).
 
 ## PARAMETERS
 
+### -SearchName
+The SearchName parameter specifies the name of the existing content search to associate with the content search action. You can specify multiple content searches separated by commas.
+
+You can find the content search by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ActionName
-The ActionName parameter specifies a name for the compliance search action. You use this parameter only when you specify multiple compliance searches in the SearchName parameter.
+This parameter is available only in the cloud-based service.
+
+The ActionName parameter specifies a name for the content search action. You use this parameter only when you specify multiple content searches in the SearchName parameter.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -103,25 +159,19 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveFormat
-The ArchiveFormat parameter specifies how to export Exchange search results. Valid values are:
+This parameter is available only in the cloud-based service.
 
-- PerUserPst: One PST file for each mailbox. This is the default value.
+This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
-- SinglePst: One PST file that contains all exported messages.
+This parameter has been deprecated and is no longer used.
 
-- SingleFolderPst: One PST file with a single root folder for the entire export.
-
-- IndividualMessage: Export each message as a file, using the .msg format.
-
-- SingleZip: One ZIP file that contains all exported messages.
-
-- PerUserZip: One ZIP file for each mailbox.
+To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter. To specify the format for SharePoint and OneDrive search results, use the SharePointArchiveFormat parameter.
 
 ```yaml
-Type: Unknown | SinglePst | PerUserPst | IndividualMessage | SingleZip | PerUserZip | SingleFolderPst
-Parameter Sets: Set3
+Type: ComplianceExportArchiveFormat
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +190,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -149,17 +199,19 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDedupe
-The EnableDedupe parameter eliminates duplication of messages when you export compliance search results. Valid values are:
+This parameter is available only in the cloud-based service.
+
+The EnableDedupe parameter eliminates duplication of messages when you export content search results. Valid values are:
 
 - $true: Export a single copy of a message if the same message exists in multiple folders or mailboxes.
 
 - $false: Export all copies of a message if the same message exists in multiple folders or mailboxes. This is the default value.
 
 ```yaml
-Type: $true | $false
-Parameter Sets: Set3
+Type: Boolean
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -168,6 +220,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchiveFormat
+This parameter is available only in the cloud-based service.
+
+This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
+
 The ExchangeArchiveFormat parameter specifies how to export Exchange search results. Valid values are:
 
 - PerUserPst: One PST file for each mailbox. This is the default value.
@@ -176,17 +232,19 @@ The ExchangeArchiveFormat parameter specifies how to export Exchange search resu
 
 - SingleFolderPst: One PST file with a single root folder for the entire export.
 
-- IndividualMessage: Export each message as a file, using the .msg format.
+- IndividualMessage: Export each message as an .msg message file.
 
-- SingleZip: One ZIP file that contains all exported messages, using the .msg format.
+- PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
 
-- PerUserZip: One ZIP file for each mailbox.
+- SingleZip: One ZIP file for all mailboxes. The ZIP file contains all exported .msg message files from all mailboxes. This output setting is only available in PowerShell.
+
+To specify the format for SharePoint and OneDrive search results, use the SharePointArchiveFormat parameter.
 
 ```yaml
-Type: Unknown | SinglePst | PerUserPst | IndividualMessage | SingleZip | PerUserZip | SingleFolderPst
-Parameter Sets: Set3
+Type: ComplianceExportArchiveFormat
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -195,15 +253,19 @@ Accept wildcard characters: False
 ```
 
 ### -Export
-The Export switch specifies the action for the compliance search is to export the full set of results that match the search criteria. You don't need to specify a value with this switch.
+This parameter is available only in the cloud-based service.
+
+This parameter requires the Export role in the Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
+
+The Export switch specifies the action for the content search is to export the full set of results that match the search criteria. You don't need to specify a value with this switch.
 
 To only return the information about each detected item in a report, use the Report switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -216,9 +278,9 @@ The FileTypeExclusionsForUnindexedItems specifies the file types to exclude beca
 
 ```yaml
 Type: String[]
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +295,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -242,6 +304,8 @@ Accept wildcard characters: False
 ```
 
 ### -Format
+In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+
 The Format parameter specifies the format of the search results when you use the Export switch. Valid values are:
 
 - FxStream: Export to PST files. This is the only option that's available when you export search results from the Security & Compliance Center.
@@ -253,10 +317,10 @@ The Format parameter specifies the format of the search results when you use the
 - BodyText: Export to .txt files.
 
 ```yaml
-Type: Unknown | FxStream | Mime | Msg | BodyText
+Type: ComplianceDataTransferFormat
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -271,7 +335,7 @@ The IncludeCredential switch specifies whether to include the credential in the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -280,6 +344,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSharePointDocumentVersions
+This parameter is available only in the cloud-based service.
+
 The IncludeSharePointDocumentVersions parameter specifies whether to export previous versions of the document when you use the Export switch. Valid values are:
 
 - $true: Export all versions of the document.
@@ -287,10 +353,10 @@ The IncludeSharePointDocumentVersions parameter specifies whether to export prev
 - $false: Export only the current published version of the topic. This is the default value.
 
 ```yaml
-Type: $true | $false
-Parameter Sets: Set3
+Type: Boolean
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -305,22 +371,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaxUnindexedSize
-The MaxUnindexedSize parameter specifies the maximum size in bytes for unindexed items. A valid value is an integer.
-
-```yaml
-Type: Int32
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -329,15 +380,17 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmail
+In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+
 The NotifyEmail parameter specifies the email address target for the search results when you use the Export switch.
 
 The recipient you specify is in the To: field of the message.
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -346,15 +399,17 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmailCC
+In the Security & Compliance Center, this parameter requires the Export role. By default, the Export role is assigned only to the eDiscovery Manager role group.
+
 The NotifyEmailCC parameter specifies the email address target for the search results when you use the Export switch.
 
 The recipient you specify is in the Cc: field of the message.
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -363,13 +418,15 @@ Accept wildcard characters: False
 ```
 
 ### -Preview
-The Preview switch specifies the action for the compliance search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
+The Preview switch specifies the action for the content search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
+
+In the Security & Compliance Center, this parameter requires the Preivew role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Preview
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -378,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### -Purge
-The Purge switch specifies the action for the compliance search is to remove items that match the search criteria. You don't need to specify a value with this switch.
+The Purge switch specifies the action for the content search is to remove items that match the search criteria. You don't need to specify a value with this switch.
 
 Note that a maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
 
@@ -386,9 +443,9 @@ Additionally, unindexed items aren't removed from mailboxes when you use this sw
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Purge
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -402,10 +459,10 @@ The PurgeType parameter specifies how to remove items when the action is Purge.
 The valid value for this parameter is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
 
 ```yaml
-Type: Unknown | SoftDelete
-Parameter Sets: Set4
+Type: ComplianceDestroyType
+Parameter Sets: Purge
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -414,13 +471,15 @@ Accept wildcard characters: False
 ```
 
 ### -ReferenceActionName
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -429,13 +488,15 @@ Accept wildcard characters: False
 ```
 
 ### -Region
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -444,13 +505,15 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-The Report switch specifies the action for the compliance search is to export a report about the results (information about each item instead of the full set of results) that match the search criteria. You don't need to specify a value with this switch.
+This parameter is available only in the cloud-based service.
+
+The Report switch specifies the action for the content search is to export a report about the results (information about each item instead of the full set of results) that match the search criteria. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -459,13 +522,13 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionReport
-The RetentionReport switch specifies the action for the compliance search is to export a retention report. You don't need to specify a value with this switch.
+The RetentionReport switch specifies the action for the content search is to export a retention report. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -480,7 +543,7 @@ The RetryOnError switch specifies whether to retry the action on any items that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -489,6 +552,8 @@ Accept wildcard characters: False
 ```
 
 ### -Scenario
+In the Security & Compliance Center, this parameter requires the Preivew role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
+
 The Scenario parameter specifies the scenario type when you use the Export switch. Valid values are:
 
 - AnalyzeWithZoom: Prepare the search results for processing in Office 365 Advanced eDiscovery.
@@ -504,10 +569,10 @@ The Scenario parameter specifies the scenario type when you use the Export switc
 - TriagePreview:
 
 ```yaml
-Type: Unknown | General | AnalyzeWithZoom | GenerateReportsOnly | Inventory | RetentionReports | TriagePreview
+Type: ComplianceSearchActionScenario
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -524,13 +589,13 @@ The Scope parameter specifies the items to include when the action is Export. Va
 
 - BothIndexedAndUnindexedItems
 
-This parameter is only meaningful for compliance searches where the IncludeUnindexedItemsEnabled parameter is set to $true.
+This parameter is only meaningful for content searches where the IncludeUnindexedItemsEnabled parameter is set to $true.
 
 ```yaml
-Type: Unknown | IndexedItemsOnly | UnindexedItemsOnly | BothIndexedAndUnindexedItems
-Parameter Sets: Set3
+Type: ComplianceExportScope
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -539,13 +604,17 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeDetails
+This parameter is available only in the cloud-based service.
+
+This parameter requires the Export or Compliance Search roles in the Security & Compliance Center. By default, these roles are assigned only to the eDiscovery Manager role group.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: ComplianceScopeDetail[]
-Parameter Sets: Set3
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -553,33 +622,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SearchName
-The SearchName parameter specifies the name of the existing compliance search to associate with the compliance search action. You can specify multiple compliance searches separated by commas.
-
-You can find the compliance search by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SearchNames
-The SearchNames parameter specifies the names of the existing compliance searches to associate with the compliance search action. You separate the compliance searche names by commas.
+This parameter is available only in the cloud-based service.
 
-You can find compliance search names by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
+The SearchNames parameter specifies the names of the existing content searches to associate with the content search action. You separate the content searche names by commas.
+
+You can find content search names by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -588,40 +642,25 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointArchiveFormat
-The SharePointArchiveFormat parameter specifies how to export SharePoint search results. Valid values are:
+This parameter is available only in the cloud-based service.
 
-- PerUserPst: One PST file for each user. This is the default value.
+This parameter requires the Export role in the Office 365 Security & Compliance Center. By default, the Export role is assigned only to the eDiscovery Manager role group.
 
-- SinglePst: One PST file that contains all exported files.
+The SharePointArchiveFormat parameter specifies how to export SharePoint and OneDrive search results. Valid values are:
 
-- SingleFolderPst: One PST file with a single root folder for the entire export.
+- IndividualMessage: Export the files uncompressed. This is the default value.
 
-- IndividualMessage: Export each file to a message using the .msg format.
+- PerUserZip: One ZIP file for each user. Each ZIP file contains the exported files for the user. This value corresponds to the "export files in a compressed folder" checkbox in the Security & Compliance Center.
 
-- SingleZip: One ZIP file that contains all exported files.
+- SingleZip: One ZIP file for all users. The ZIP file contains all exported files from all users. This output setting is only available in PowerShell.
 
-- PerUserZip: One ZIP file for each user.
-
-```yaml
-Type: Unknown | SinglePst | PerUserPst | IndividualMessage | SingleZip | PerUserZip | SingleFolderPst
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShareRootPath
-This parameter is reserved for internal Microsoft use.
+To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter.
 
 ```yaml
-Type: String
-Parameter Sets: Set3
+Type: ComplianceExportArchiveFormat
+Parameter Sets: Export
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -636,7 +675,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None
@@ -653,7 +692,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Office 365 Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Office 365 Security & Compliance Center
 Required: False
 Position: Named
 Default value: None

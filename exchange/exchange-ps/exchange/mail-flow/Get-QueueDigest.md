@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-QueueDigest
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-QueueDigest
@@ -19,32 +19,48 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Dag
 ```
-Get-QueueDigest -Dag <MultiValuedProperty> [-DetailsLevel <None | Normal | Verbose>] [-Filter <String>]
+Get-QueueDigest -Dag <MultiValuedProperty>
+ [-DetailsLevel <None | Normal | Verbose>]
+ [-Filter <String>]
  [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
- [-IncludeE14Servers] [-ResultSize <Unlimited>] [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-IncludeE14Servers]
+ [-ResultSize <Unlimited>]
+ [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
 
-### Set4
+### Forest
 ```
-Get-QueueDigest [-Forest] [-DetailsLevel <None | Normal | Verbose>] [-Filter <String>]
+Get-QueueDigest [-Forest]
+ [-DetailsLevel <None | Normal | Verbose>]
+ [-Filter <String>]
  [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
- [-IncludeE14Servers] [-ResultSize <Unlimited>] [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-IncludeE14Servers]
+ [-ResultSize <Unlimited>]
+ [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
 
-### Set2
+### Server
 ```
-Get-QueueDigest -Server <MultiValuedProperty> [-DetailsLevel <None | Normal | Verbose>] [-Filter <String>]
+Get-QueueDigest -Server <MultiValuedProperty>
+ [-DetailsLevel <None | Normal | Verbose>]
+ [-Filter <String>]
  [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
- [-IncludeE14Servers] [-ResultSize <Unlimited>] [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-IncludeE14Servers]
+ [-ResultSize <Unlimited>]
+ [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
 
-### Set3
+### Site
 ```
-Get-QueueDigest -Site <MultiValuedProperty> [-DetailsLevel <None | Normal | Verbose>] [-Filter <String>]
+Get-QueueDigest -Site <MultiValuedProperty>
+ [-DetailsLevel <None | Normal | Verbose>]
+ [-Filter <String>]
  [-GroupBy <NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool>]
- [-IncludeE14Servers] [-ResultSize <Unlimited>] [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
+ [-IncludeE14Servers]
+ [-ResultSize <Unlimited>]
+ [-Timeout <EnhancedTimeSpan>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,9 +91,9 @@ You can't use the Dag parameter with the Server, Site or Forest parameters.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Dag
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -92,9 +108,9 @@ You can't use the Forest switch with the Server, Site or Dag parameters.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: Forest
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -109,9 +125,9 @@ You can't use the Server parameter with the Dag, Site or Forest parameters.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -126,9 +142,9 @@ You can't use the Site parameter with the Server, Dag or Forest parameters.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set3
+Parameter Sets: Site
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -143,7 +159,7 @@ The DetailsLevel parameter specifies the level of detail to display in the resul
 Type: None | Normal | Verbose
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -160,7 +176,7 @@ You can specify multiple criteria by using the and comparison operator. Property
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -195,7 +211,7 @@ The default value is NextHopDomain.
 Type: NextHopDomain | NextHopCategory | NextHopKey | DeliveryType | Status | RiskLevel | LastError | ServerName | OutboundIPPool
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -210,7 +226,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -225,7 +241,7 @@ The ResultSize parameter filters the delivery queue results by the number of mes
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -242,7 +258,7 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

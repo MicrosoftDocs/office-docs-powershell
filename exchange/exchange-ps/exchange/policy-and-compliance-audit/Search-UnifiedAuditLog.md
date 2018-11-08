@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Power BI, Sway, and other Office 365 services. You can search for all events in a specified date rage, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
+Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Power BI, Sway, and other Office 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -38,51 +38,53 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/2/2017
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/2/2018
 ```
 
-This example searches the unified audit log for all events from May 1, 201712:00AM to May 2, 2017 12:00AM.
+This example searches the unified audit log for all events from May 1, 201812:00AM to May 2, 2018 12:00AM.
 
 Note: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate "6/1/2017 8:00 AM" -EndDate "6/1/2017 6:00 PM" -RecordType ExchangeAdmin
+Search-UnifiedAuditLog -StartDate "6/1/2018 8:00 AM" -EndDate "6/1/2018 6:00 PM" -RecordType ExchangeAdmin
 ```
 
-This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2017.
+This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2018.
 
-Note: If you use the same date for the StartDate and EndDate parameters, you have to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
+>[!NOTE]
+> If you use the same date for the StartDate and EndDate parameters, you have to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnNextPreviewPage
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnNextPreviewPage
 ```
 
-This example searches the unified audit log for all events from May 1, 2017 to May 8, 2017. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
-Note: If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
+> [!NOTE]
+> If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
 
 ### -------------------------- Example 4 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnNextPreviewPage
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnNextPreviewPage
 ```
 
-This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2017 to May 8, 2017. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2018 to May 8, 2018. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
 ### -------------------------- Example 5 --------------------------
 ```
-Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx"
+Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx"
 ```
 
-This example searches the unified audit log from May 1, 2017 to May 8, 2017 for all events relating to a specific Word document identified by its ObjectIDs value.
+This example searches the unified audit log from May 1, 2018 to May 8, 2018 for all events relating to a specific Word document identified by its ObjectIDs value.
 
 ## PARAMETERS
 
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 If you don't include a timestamp in the value for this parameter, the default timestamp is 12:00 AM (midnight) on the specified date.
 
@@ -101,7 +103,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 If you don't include a timestamp in the value for this parameter, the default timestamp is 12:00 AM (midnight) on the specified date.
 
@@ -293,7 +295,8 @@ The SessionCommand parameter specifies how much information is returned and how 
 
 - Initialize: This value is for Microsoft Internal use only.
 
-Note: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID.
+> [!NOTE]
+> Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID.
 
 ```yaml
 Type: Initialize | ReturnLargeSet | ReturnNextPreviewPage

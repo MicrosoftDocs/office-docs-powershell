@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-FederationTrust
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # New-FederationTrust
@@ -17,17 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### SkipNamespaceProviderProvisioning
 ```
-New-FederationTrust [-Name] <String> -ApplicationUri <String> [-SkipNamespaceProviderProvisioning]
- -Thumbprint <String> [-AdministratorProvisioningId <String>] [-ApplicationIdentifier <String>] [-Confirm]
- [-DomainController <Fqdn>] [-MetadataUrl <Uri>] [-WhatIf] [<CommonParameters>]
+New-FederationTrust [-Name] <String> -Thumbprint <String> -ApplicationUri <String> [-SkipNamespaceProviderProvisioning] [-AdministratorProvisioningId <String>] [-ApplicationIdentifier <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MetadataUrl <Uri>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### FederationTrust
 ```
-New-FederationTrust [-Name] <String> -Thumbprint <String> [-Confirm] [-DomainController <Fqdn>]
- [-MetadataUrl <Uri>] [-SuppressDnsWarning] [-UseLegacyProvisioningService] [-WhatIf] [<CommonParameters>]
+New-FederationTrust [-Name] <String> -Thumbprint <String> [-SuppressDnsWarning] [-UseLegacyProvisioningService]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-MetadataUrl <Uri>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +60,7 @@ The Name parameter specifies a friendly name for the federation trust.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -70,9 +75,9 @@ If you specify the ApplicationUri parameter, you must use the SkipNamespaceProvi
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SkipNamespaceProviderProvisioning
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -87,9 +92,9 @@ If you use this switch, you must specify the ApplicationIdentifier, ApplicationU
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: SkipNamespaceProviderProvisioning
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -104,7 +109,7 @@ The Thumbprint parameter specifies the thumbprint of a certificate issued by a p
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -119,9 +124,9 @@ If you specify the AdministratorProvisioningId parameter, you must use the SkipN
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SkipNamespaceProviderProvisioning
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -136,9 +141,9 @@ If you specify the ApplicationIdentifier parameter, you must use the SkipNamespa
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: SkipNamespaceProviderProvisioning
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -157,7 +162,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -172,7 +177,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -187,7 +192,7 @@ The MetadataUrl parameter specifies the URL where WS-FederationMetadata is publi
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +207,7 @@ The SuppressDNSWarning parameter specifies whether to display the DNS warning me
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: FederationTrust
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -217,9 +222,9 @@ The UseLegacyProvisioningService parameter specifies if the legacy interface on 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: FederationTrust
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -234,7 +239,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

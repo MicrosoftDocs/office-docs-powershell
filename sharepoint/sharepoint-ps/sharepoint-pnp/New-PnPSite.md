@@ -89,22 +89,22 @@ This will create a new Communications Site collection with the title 'Contoso' a
 
 ### ------------------EXAMPLE 6------------------
 ```powershell
-New-PnPSite -Type TeamSite -Title Contoso -Alias contoso
+New-PnPSite -Type TeamSite -Title 'Team Contoso' -Alias contoso
 ```
 
-This will create a new Modern Team Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso'.
+This will create a new Modern Team Site collection with the title 'Team Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' or 'https://tenant.sharepoint.com/teams/contoso' based on the managed path configuration in the SharePoint Online Admin portal.
 
 ### ------------------EXAMPLE 7------------------
 ```powershell
-New-PnPSite -Type TeamSite -Title Contoso -Alias contoso -IsPublic
+New-PnPSite -Type TeamSite -Title 'Team Contoso' -Alias contoso -IsPublic
 ```
 
-This will create a new Modern Team Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' and sets the site to public.
+This will create a new Modern Team Site collection with the title 'Team Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' or 'https://tenant.sharepoint.com/teams/contoso' based on the managed path configuration in the SharePoint Online Admin portal and sets the site to public.
 
 ## PARAMETERS
 
 ### -Alias
-Specifies the alias of the new site collection
+Specifies the alias of the new site collection which represents the part of the URL that will be assigned to the site behind 'https://tenant.sharepoint.com/sites/' or 'https://tenant.sharepoint.com/teams/' based on the managed path configuration in the SharePoint Online Admin portal
 
 ```yaml
 Type: String

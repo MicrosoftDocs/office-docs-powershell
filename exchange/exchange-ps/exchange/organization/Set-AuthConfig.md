@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-AuthConfig
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Set-AuthConfig
@@ -17,29 +17,41 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### CurrentCertificateParameter
 ```
-Set-AuthConfig -CertificateThumbprint <String> [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-Server <ServerIdParameter>] [-SkipImmediateCertificateDeployment] [-WhatIf] [<CommonParameters>]
-```
-
-### Set4
-```
-Set-AuthConfig [-ClearPreviousCertificate] [-Confirm] [-DomainController <Fqdn>] [-Force] [-PublishCertificate]
+Set-AuthConfig -CertificateThumbprint <String> [-SkipImmediateCertificateDeployment]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Server <ServerIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### PublishAuthCertificateParameter
 ```
-Set-AuthConfig [-Confirm] [-DomainController <Fqdn>] [-Force] [-NewCertificateEffectiveDate <DateTime>]
- [-NewCertificateThumbprint <String>] [-Server <ServerIdParameter>] [-SkipImmediateCertificateDeployment]
+Set-AuthConfig [-ClearPreviousCertificate] [-PublishCertificate]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### NewCertificateParameter
 ```
-Set-AuthConfig [-Confirm] [-DomainController <Fqdn>] [-Realm <String>] [-ServiceName <String>] [-WhatIf]
- [<CommonParameters>]
+Set-AuthConfig [-NewCertificateEffectiveDate <DateTime>] [-NewCertificateThumbprint <String>] [-SkipImmediateCertificateDeployment]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### AuthConfigSettings
+```
+Set-AuthConfig [-Realm <String>] [-ServiceName <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,9 +82,9 @@ The CertificateThumbprint parameter specifies the thumbprint of the certificate 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: CurrentCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -85,9 +97,9 @@ The ClearPreviousCertificate switch clears the certificate saved as the previous
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: PublishAuthCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +118,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +133,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -134,9 +146,9 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set4, Set3
+Parameter Sets: CurrentCertificateParameter, PublishAuthCertificateParameter, NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -149,9 +161,9 @@ The NewCertificateEffectiveDate parameter specifies a date when the certificate 
 
 ```yaml
 Type: DateTime
-Parameter Sets: Set3
+Parameter Sets: NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -164,9 +176,9 @@ The NewCertificateThumbprint parameter specifies the thumbprint of the new certi
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -179,9 +191,9 @@ The PublishCertificate switch specifies that the specified certificate be immedi
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set4
+Parameter Sets: PublishAuthCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -194,9 +206,9 @@ The Realm parameter specifies a security realm for partner applications. If a se
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: AuthConfigSettings
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -209,9 +221,9 @@ The Server parameter isn't available in this release.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: CurrentCertificateParameter, NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -226,9 +238,9 @@ Exchange Setup configures the ServiceName parameter with a specific constant val
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: AuthConfigSettings
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -241,9 +253,9 @@ The SkipImmediateCertificateDeployment switch specifies that the certificate sho
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: CurrentCertificateParameter, NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -258,7 +270,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

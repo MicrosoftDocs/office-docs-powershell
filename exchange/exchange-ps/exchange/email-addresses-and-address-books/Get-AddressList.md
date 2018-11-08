@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-AddressList
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-AddressList
@@ -19,21 +19,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Container
 ```
-Get-AddressList -Container <AddressListIdParameter> [-DomainController <Fqdn>]
- [<CommonParameters>]
-```
-
-### Set1
-```
-Get-AddressList [[-Identity] <AddressListIdParameter>] [-DomainController <Fqdn>]
- [<CommonParameters>]
+Get-AddressList -Container <AddressListIdParameter>
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set3
+### Identity
 ```
-Get-AddressList [-DomainController <Fqdn>] [-SearchText <String>] [<CommonParameters>]
+Get-AddressList [[-Identity] <AddressListIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
+```
+
+### SearchSet
+```
+Get-AddressList [-SearchText <String>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,9 +77,9 @@ You can't use this parameter with the Identity or SearchText parameters.
 
 ```yaml
 Type: AddressListIdParameter
-Parameter Sets: Set2
+Parameter Sets: Container
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -95,7 +96,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -120,9 +121,9 @@ You can't use this parameter with the Container or SearchText parameters.
 
 ```yaml
 Type: AddressListIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -137,9 +138,9 @@ You can't use this parameter with the Container or Identity parameters.
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: SearchSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

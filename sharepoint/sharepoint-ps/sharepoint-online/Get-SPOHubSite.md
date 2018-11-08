@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOHubSite
 schema: 2.0.0
@@ -19,9 +19,6 @@ Get-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 
 ## DESCRIPTION
 Lists all hub sites found on the SharePoint tenant. If you provide **-Identity** the cmdlet returns detailed information about the specific hub. You can find which hub a site is associated with by providing the site's identity with this cmdlet.
-
-> [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
 If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
 

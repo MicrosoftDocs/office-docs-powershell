@@ -18,16 +18,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String>
- -ReportType <MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2>
- -StartDate <DateTime> [-DeliveryStatus <String>] [-Direction <All | Sent | Received>]
- [-DLPPolicy <MultiValuedProperty>] [-Locale <CultureInfo>] [-MessageID <MultiValuedProperty>]
- [-NotifyAddress <MultiValuedProperty>] [-OriginalClientIP <String>] [-RecipientAddress <MultiValuedProperty>]
- [-SenderAddress <MultiValuedProperty>] [-TransportRule <MultiValuedProperty>] [<CommonParameters>]
+Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <MessageTrace | MessageTraceDetail | DLP | TransportRule | SPAM | Malware | UnifiedDLP | ATPReport | Spoof | ATPV2>
+ -StartDate <DateTime> [-DeliveryStatus <String>]
+ [-Direction <All | Sent | Received>]
+ [-DLPPolicy <MultiValuedProperty>]
+ [-Locale <CultureInfo>]
+ [-MessageID <MultiValuedProperty>]
+ [-NotifyAddress <MultiValuedProperty>]
+ [-OriginalClientIP <String>]
+ [-RecipientAddress <MultiValuedProperty>]
+ [-SenderAddress <MultiValuedProperty>]
+ [-TransportRule <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and ninety days old. There is a limit of 250 historical searches that can be submitted in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -103,11 +109,11 @@ The ReportType parameter specifies the type of historical search that you want t
 
 - MessageTraceDetail: Message Trace Details Report.
 
-- Phish: Exchange Online Protetion and Advanced Threat Protection E-mail Phish Report.
+- Phish: Exchange Online Protection and Advanced Threat Protection E-mail Phish Report.
 
 - SPAM: SPAM Detections Report.
 
-- Spoof: Spood Mail Report.
+- Spoof: Spoof Mail Report.
 
 - TransportRule: Transport or Mail FLow Rules Report.
 

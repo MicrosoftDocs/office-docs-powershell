@@ -73,7 +73,7 @@ In addition to the Identity parameter (which specifies the service location), th
 Equally important, the Content parameter is used to import the audio file.
 File importing is carried out by calling the `Get-Content` cmdlet followed by the path to the file being imported.
 `Get-Content` also requires you to set the encoding type to byte and the ReadCount to 0.
-(Setting the ReadCount to 0 ensures that the entire file is read in in a single operation). The imported file is then stored in a variable named $x.
+(Setting the ReadCount to 0 ensures that the entire file is read in a single operation). The imported file is then stored in a variable named $x.
 
 After the file has been imported, `Set-CsRgsConfiguration` is called in order to set the DefaultMusicOnHoldFile property to the audio file stored in $x.
 

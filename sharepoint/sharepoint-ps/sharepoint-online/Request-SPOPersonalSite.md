@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Request-SPOPersonalSite
 schema: 2.0.0
@@ -26,21 +26,25 @@ The `Request-SPOPersonalSite` cmdlet requests that the users specified be enqueu
 > [!NOTE] 
 > The actor executing this cmdlet must be at least assigned the SharePoint Online administrator role and have been assigned a SharePoint Online license to be able to provision the OneDrive for Business sites.
 
+> [!NOTE]
+> This commandlet is NOT OneDrive Multi-Geo aware. If you need to request Personal Sites for Multi-Geo enabled tenants, you must run this commandlet for users in the region their data is to be hosted in. To retrieve users with a specific PDL, use the following sample: 
+get-MSOLUser | Where {$_.PreferredDataLocation -eq "EUR"]
+
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-$emails = “user1@contoso.com", "user2@contoso.com”
-Request-SPOPersonalSite –UserEmails $emails -Verbose
+$emails = "user1@contoso.com", "user2@contoso.com"
+Request-SPOPersonalSite –UserEmails $emails
 ```
 
-This example requests that two users to be enqueued for the creation of a Personal Site and the status of the command will be displayed.
+This example requests that two users to be enqueued for the creation of a Personal Site.
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-Request-SPOPersonalSite –UserEmails $emails -NoWait
+Request-SPOPersonalSite –UserEmails $emails
 ```
-This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails. The status of the operation will not be displayed.
+This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails. 
 
 
 ## PARAMETERS
@@ -90,6 +94,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-## NOTES
+## NOTES 
 
 ## RELATED LINKS

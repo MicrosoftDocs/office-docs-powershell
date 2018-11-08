@@ -13,7 +13,7 @@ This cmdlet is available only in the Office 365 Security & Compliance Center. Fo
 
 Use the New-HoldCompliancePolicy cmdlet to create new preservation policies in the Security & Compliance Center.
 
-The New-HoldCompliancePolicy cmdlet has been replaced by the New-RetentionCompliancePolicy cmdlet. If you have any scripts that use the New-HoldCompliancePolicy cmdlet, update them to use the New-RetentionCompliancePolicy cmdlet.
+Note: The New-HoldCompliancePolicy cmdlet has been replaced by the New-RetentionCompliancePolicy cmdlet. If you have scripts that use New-HoldCompliancePolicy, update them to use New-RetentionCompliancePolicy.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

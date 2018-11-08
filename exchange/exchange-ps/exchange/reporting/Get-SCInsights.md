@@ -47,10 +47,10 @@ This example returns all insights data.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-SCInsights -EndDate (Get-Date "3/3/2017 9:30 AM").ToUniversalTime()
+Get-SCInsights -EndDate (Get-Date "3/3/2018 9:30 AM").ToUniversalTime()
 ```
 
-This example return insights data for March 15, 2017.
+This example return insights data for March 15, 2018.
 
 ## PARAMETERS
 

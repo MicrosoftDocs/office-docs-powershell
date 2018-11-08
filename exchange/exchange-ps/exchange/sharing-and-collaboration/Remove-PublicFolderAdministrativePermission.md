@@ -17,20 +17,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Remove-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
- -AccessRights <MultiValuedProperty> -User <SecurityPrincipalIdParameter> [-Confirm] [-Deny]
- [-DomainController <Fqdn>] [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
- [-Server <ServerIdParameter>] [-WhatIf] [<CommonParameters>]
+Remove-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> -AccessRights <MultiValuedProperty> -User <SecurityPrincipalIdParameter>
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Instance
 ```
-Remove-PublicFolderAdministrativePermission [[-Identity] <PublicFolderIdParameter>]
- [-AccessRights <MultiValuedProperty>] -Instance <PublicFolderAdministrativeAceObject>
- [-User <SecurityPrincipalIdParameter>] [-Confirm] [-Deny] [-DomainController <Fqdn>]
- [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>] [-Server <ServerIdParameter>]
+Remove-PublicFolderAdministrativePermission -Instance <PublicFolderAdministrativeAceObject>
+ [-AccessRights <MultiValuedProperty>]
+ [-Confirm]
+ [-Deny]
+ [-DomainController <Fqdn>]
+ [[-Identity] <PublicFolderIdParameter>]
+ [-InheritanceType <None | All | Descendents | SelfAndChildren | Children>]
+ [-Server <ServerIdParameter>]
+ [-User <SecurityPrincipalIdParameter>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -73,7 +81,7 @@ The AccessRights parameter specifies the rights being removed. Valid values incl
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -85,7 +93,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -102,7 +110,7 @@ You can omit the parameter label so that only the public folder name or GUID is 
 
 ```yaml
 Type: PublicFolderIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -114,7 +122,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: PublicFolderIdParameter
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -129,7 +137,7 @@ The Instance parameter specifies whether to pass an entire object to the command
 
 ```yaml
 Type: PublicFolderAdministrativeAceObject
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -144,7 +152,7 @@ The User parameter specifies the user principal name (UPN), domain\\user, or ali
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -156,7 +164,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SecurityPrincipalIdParameter
-Parameter Sets: Set2
+Parameter Sets: Instance
 Aliases:
 Applicable: Exchange Server 2010
 Required: False

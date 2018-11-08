@@ -18,7 +18,7 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
- [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force]
+ [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -27,7 +27,7 @@ New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -SipSignallingPort <Int32> [-Cod
 New-CSOnlinePSTNGateway [-Tenant <System.Guid>] -Fqdn <String> -SipSignallingPort <Int32>
  [-CodecPriority <String>] [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>]
  [-ForwardCallHistory <Boolean>] [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>]
- [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-InMemory] [-Force]
+ [-MaxConcurrentSessions <System.Int32>] [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-InMemory] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -232,6 +232,36 @@ Accept wildcard characters: False
 
 ### -MediaBypass
 Parameter indicated of the SBC supports Media Bypass and the administrator wants to use it for this SBC.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: $false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewaySiteId
+PSTN Gateway Site Id.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GatewaySiteLbrEnabled
+Used to enable this SBC to report assigned site location. Site location is used for Location Based Routing. When this parameter is turned on, the SBC will report the site name as defined by tenant administrator. On incoming call to a Teams user the value of the site assigned to the SBC is compared with the value of the site assigned to the user to make a routing decision. The parameter is mandatory for enabling Location Based Routing feature. The default value is False ($False).
 
 ```yaml
 Type: Boolean

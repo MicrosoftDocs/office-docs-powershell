@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxFolder
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Get-MailboxFolder
@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### GetChildren
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-GetChildren] [-DomainController <Fqdn>]
- [-MailFolderOnly] [-ResultSize <Unlimited>] [-Recurse] [<CommonParameters>]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-GetChildren]
+ [-DomainController <Fqdn>]
+ [-MailFolderOnly]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### Recurse
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-Recurse] [-DomainController <Fqdn>]
- [-MailFolderOnly] [-ResultSize <Unlimited>] [-GetChildren] [<CommonParameters>]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-Recurse]
+ [-DomainController <Fqdn>]
+ [-MailFolderOnly]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,9 +84,9 @@ You can't use this switch with the Recurse switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: GetChildren
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -97,9 +101,9 @@ You can't use this switch with the GetChildren switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Recurse
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: Named
 Default value: None
@@ -116,7 +120,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -159,7 +163,7 @@ Values for \<Parent\> can be both the store object ID and a path string such as 
 Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: 1
 Default value: None
@@ -174,7 +178,7 @@ The MailFolderOnly switch specifies whether to return only the mail folders in t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -189,7 +193,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

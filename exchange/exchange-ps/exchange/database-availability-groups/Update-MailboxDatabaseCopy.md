@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-MailboxDatabaseCopy
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Update-MailboxDatabaseCopy
@@ -17,40 +17,46 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### CancelSeed
 ```
-Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-CatalogOnly] [-Confirm] [-DatabaseOnly]
- [-DeleteExistingFiles] [-DomainController <Fqdn>] [-Force] [-ManualResume]
- [-Network <DatabaseAvailabilityGroupNetworkIdParameter>]
- [-NetworkCompressionOverride <UseDagDefault | Off | On>]
- [-NetworkEncryptionOverride <UseDagDefault | Off | On>] [-WhatIf] [-SourceServer <ServerIdParameter>]
- [<CommonParameters>]
+Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-CancelSeed]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Identity
 ```
-Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-CancelSeed] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-BeginSeed] [-Force] [-Network <DatabaseAvailabilityGroupNetworkIdParameter>] [-SecondaryDatabasePartitionOnly] [-SourceServer <ServerIdParameter>]
+ [-CatalogOnly]
+ [-Confirm]
+ [-DatabaseOnly]
+ [-DeleteExistingFiles]
+ [-DomainController <Fqdn>]
+ [-ManualResume]
+ [-NetworkCompressionOverride <UseDagDefault | Off | On>]
+ [-NetworkEncryptionOverride <UseDagDefault | Off | On>]
+ [-NoThrottle]
+ [-PrimaryDatabasePartitionOnly]
+ [-SafeDeleteExistingFiles]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### ExplicitServer
 ```
-Update-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-BeginSeed] [-CatalogOnly] [-Confirm]
- [-DatabaseOnly] [-DeleteExistingFiles] [-DomainController <Fqdn>] [-Force] [-ManualResume]
- [-Network <DatabaseAvailabilityGroupNetworkIdParameter>]
+Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter> [-MaximumSeedsInParallel <Int32>]
+ [-CatalogOnly]
+ [-Confirm]
+ [-DatabaseOnly]
+ [-DeleteExistingFiles]
+ [-DomainController <Fqdn>]
+ [-ManualResume]
  [-NetworkCompressionOverride <UseDagDefault | Off | On>]
- [-NetworkEncryptionOverride <UseDagDefault | Off | On>] [-SafeDeleteExistingFiles]
- [-SourceServer <ServerIdParameter>] [-WhatIf] [-NoThrottle] [-PrimaryDatabasePartitionOnly]
- [-SecondaryDatabasePartitionOnly] [<CommonParameters>]
-```
-
-### Set3
-```
-Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter> [-CatalogOnly] [-Confirm] [-DatabaseOnly]
- [-DeleteExistingFiles] [-DomainController <Fqdn>] [-ManualResume] [-MaximumSeedsInParallel <Int32>]
- [-NetworkCompressionOverride <UseDagDefault | Off | On>]
- [-NetworkEncryptionOverride <UseDagDefault | Off | On>] [-SafeDeleteExistingFiles] [-WhatIf] [-NoThrottle]
- [-PrimaryDatabasePartitionOnly] [<CommonParameters>]
+ [-NetworkEncryptionOverride <UseDagDefault | Off | On>]
+ [-NoThrottle]
+ [-PrimaryDatabasePartitionOnly]
+ [-SafeDeleteExistingFiles]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,18 +107,65 @@ This example performs a full server reseed of all of the databases on the Mailbo
 
 ## PARAMETERS
 
+### -CancelSeed
+The CancelSeed switch specifies whether to cancel an in-progress seeding operation. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CancelSeed
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 The Identity parameter specifies the name or GUID of the mailbox database whose copy is being seeded.
 
 ```yaml
 Type: DatabaseCopyIdParameter
-Parameter Sets: (All), Set2, Set1
+Parameter Sets: CancelSeed, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Server
+The Server parameter is used as part of a full server reseed operation. It can be used with the MaximumSeedsInParallel parameter to start reseeds of database copies in parallel across the specified server in batches of up to the value of the MaximumSeedsInParallel parameter copies at a time.
+
+```yaml
+Type: MailboxServerIdParameter
+Parameter Sets: ExplicitServer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -BeginSeed
+The BeginSeed switch asynchronously starts the seeding operation and then exits the cmdlet. You don't need to specify a value with this switch.
+
+This switch is useful for scripting reseeds.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -121,9 +174,9 @@ The CatalogOnlyswitch specifies that only the content index catalog for the data
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1, Set3
+Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -142,7 +195,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -155,9 +208,9 @@ The DatabaseOnlyswitch specifies that only the database copy should be seeded. T
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1, Set3
+Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -172,9 +225,9 @@ This switch removes only the files that it checks for and fails if other files a
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1, Set3
+Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -189,7 +242,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -202,9 +255,9 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -219,131 +272,9 @@ With this switch, you can manually resume replication to the database copy.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1, Set3
+Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Network
-The Network parameter specifies which DAG network should be used for seeding. Note that content index catalog seeding always occurs over the MAPI network, even if you use this parameter to specify the DAG network.
-
-```yaml
-Type: DatabaseAvailabilityGroupNetworkIdParameter
-Parameter Sets: (All), Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkCompressionOverride
-The NetworkCompressionOverride parameter specifies whether to override the current DAG network compression settings.
-
-```yaml
-Type: UseDagDefault | Off | On
-Parameter Sets: (All), Set1, Set3
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NetworkEncryptionOverride
-The NetworkEncryptionOverride parameter specifies whether to override the current DAG encryption settings.
-
-```yaml
-Type: UseDagDefault | Off | On
-Parameter Sets: (All), Set1, Set3
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceServer
-The SourceServer parameter specifies the name of a Mailbox server with a passive copy of the mailbox database to be used as the source for the seed operation.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All), Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CancelSeed
-The CancelSeed switch specifies whether to cancel an in-progress seeding operation. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Server
-The Server parameter is used as part of a full server reseed operation. It can be used with the MaximumSeedsInParallel parameter to start reseeds of database copies in parallel across the specified server in batches of up to the value of the MaximumSeedsInParallel parameter copies at a time.
-
-```yaml
-Type: MailboxServerIdParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -BeginSeed
-The BeginSeed switch asynchronously starts the seeding operation and then exits the cmdlet. You don't need to specify a value with this switch.
-
-This switch is useful for scripting reseeds.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -356,9 +287,84 @@ The MaximumSeedsInParallel parameter is used with the Server parameter to specif
 
 ```yaml
 Type: Int32
-Parameter Sets: Set3
+Parameter Sets: ExplicitServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Network
+The Network parameter specifies which DAG network should be used for seeding. Note that content index catalog seeding always occurs over the MAPI network, even if you use this parameter to specify the DAG network.
+
+```yaml
+Type: DatabaseAvailabilityGroupNetworkIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkCompressionOverride
+The NetworkCompressionOverride parameter specifies whether to override the current DAG network compression settings.
+
+```yaml
+Type: UseDagDefault | Off | On
+Parameter Sets: Identity, ExplicitServer
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkEncryptionOverride
+The NetworkEncryptionOverride parameter specifies whether to override the current DAG encryption settings.
+
+```yaml
+Type: UseDagDefault | Off | On
+Parameter Sets: Identity, ExplicitServer
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoThrottle
+The NoThrottle switch prevents the seeding operation from being throttled. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, ExplicitServer
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrimaryDatabasePartitionOnly
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, ExplicitServer
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -373,39 +379,9 @@ Because this switch includes the redundancy safety check, it requires a lower le
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1, Set3
+Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NoThrottle
-The NoThrottle switch prevents the seeding operation from being throttled. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1, Set3
-Aliases:
-Applicable: Exchange Server 2016
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrimaryDatabasePartitionOnly
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1, Set3
-Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -418,9 +394,39 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2016
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceServer
+The SourceServer parameter specifies the name of a Mailbox server with a passive copy of the mailbox database to be used as the source for the seed operation.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

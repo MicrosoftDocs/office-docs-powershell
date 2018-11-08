@@ -17,24 +17,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### CustomIdentity
 ```
-Enable-OutlookAnywhere
- -ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
- -ExternalHostname <Hostname> -SSLOffloading <$true | $false> [-Confirm] [-DomainController <Fqdn>]
- [-ExtendedProtectionFlags <MultiValuedProperty>] [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>] [-IISAuthenticationMethods <MultiValuedProperty>]
- [-Server <ServerIdParameter>] [-WhatIf] [-XropUrl <Uri>] [<CommonParameters>]
+Enable-OutlookAnywhere -ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
+ -ExternalHostname <Hostname> -SSLOffloading <$true | $false> [-IISAuthenticationMethods <MultiValuedProperty>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### DefaultIdentity
 ```
-Enable-OutlookAnywhere
- -DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
- -ExternalHostname <Hostname> -SSLOffloading <$true | $false> [-Confirm] [-DomainController <Fqdn>]
- [-ExtendedProtectionFlags <MultiValuedProperty>] [-ExtendedProtectionSPNList <MultiValuedProperty>]
- [-ExtendedProtectionTokenChecking <None | Allow | Require>] [-Server <ServerIdParameter>] [-WhatIf]
- [-XropUrl <Uri>] [<CommonParameters>]
+Enable-OutlookAnywhere -DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>
+ -ExternalHostname <Hostname> -SSLOffloading <$true | $false>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-Server <ServerIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,21 +78,19 @@ This example enables the Exchange Client Access server for Outlook Anywhere. The
 ## PARAMETERS
 
 ### -ClientAuthenticationMethod
-The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. This parameter accepts the following values:
+The ClientAuthenticationMethod parameter specifies the authentication method that the Autodiscover service provides to the Outlook Anywhere clients to authenticate to the Client Access server. Valid values are:
 
 - Basic
 
 - Ntlm
 
-- MaxValidValue Also known as Negotiate Ex authentication (NegoEx). This authentication type is reserved for future Microsoft use and shouldn't be used. Use of this setting will cause authentication to fail.
-
 This parameter must be specified if you don't use the DefaultAuthenticationMethod parameter. When you use this parameter without specifying the IISAuthenticationMethods parameter, IISAuthenticationMethods parameter is set to both NTLM and Basic.
 
-Although this parameter only allows setting one authentication method, the Shell doesn't return an error if you include multiple values.
+Although this parameter only allows setting one authentication method, the command won't return an error if you include multiple values.
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
-Parameter Sets: Set2
+Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -99,19 +103,17 @@ Accept wildcard characters: False
 ### -DefaultAuthenticationMethod
 The DefaultAuthenticationMethod parameter specifies whether to set both the ClientAuthenticationMethod and IISAuthenticationMethods parameters to the same authentication value.
 
-When you set an authentication value by using the DefaultAuthenticationMethod parameter, you force the specified authentication method to be used on the /rpc virtual directory in Internet Information Services (IIS). This parameter accepts the following values:
+When you set an authentication value by using the DefaultAuthenticationMethod parameter, you force the specified authentication method to be used on the /rpc virtual directory in Internet Information Services (IIS). Valid values are:
 
 - Basic
 
 - Ntlm
 
-- MaxValidValue Also known as Negotiate Ex authentication (NegoEx). This authentication type is reserved for future Microsoft use and shouldn't be used. Use of this setting will cause authentication to fail.
-
 If the DefaultAuthenticationMethod parameter is specified, neither the ClientAuthenticationMethod nor the IISAuthenticationMethods parameter can be used.
 
 ```yaml
 Type: Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured
-Parameter Sets: Set1
+Parameter Sets: DefaultIdentity
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -269,7 +271,7 @@ For more information about configuring this parameter with multiple values, see 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: CustomIdentity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -301,21 +303,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -XropUrl
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
 Applicable: Exchange Server 2010
 Required: False
 Position: Named

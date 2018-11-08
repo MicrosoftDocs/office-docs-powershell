@@ -1,0 +1,54 @@
+{
+	"platyPS": {
+		"credentials": {
+			"login": "",
+			"pass": ""
+		},
+		"docs": [
+			{
+				"name": "teams",
+				"path": "..\\..\\teams\\teams-ps\\teams",
+				"metaTags": []
+			},
+			{
+				"name": "skype",
+				"path": "..\\..\\skype\\skype-ps\\skype",
+				"metaTags": ["Skype for Business Online"]
+			},
+			{
+				"name": "sharepoint",
+				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
+				"metaTags": []
+			},
+//			{
+//				"name": "staffhub",
+//				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+//				"metaTags": []
+//			},
+			{
+				"name": "whiteboard",
+				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
+				"metaTags": []
+			},
+			{
+				"name": "exchange",
+				"path": "..\\..\\exchange\\exchange-ps\\exchange",
+				"metaTags": []
+			}
+		],
+		"ignoreFiles": [
+			"..\\..\\teams\\teams-ps\\teams\\teams.md",
+			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md"
+		],
+		"tempFolderPath": ".\\.local\\temp"
+	},
+	"sendgrid": {
+		"sendMailNotification": false,
+		"apiKey": "<API_KEY>",
+		"emailSettings": {
+			"from": "no-replay@outlook.com",
+			"to": "test@gmail.com",
+			"subject": "Test subject"
+		}
+	}
+}

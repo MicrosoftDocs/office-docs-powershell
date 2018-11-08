@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 title: Set-FASTSearchMetadataCrawledProperty
@@ -31,7 +31,7 @@ When the IsMappedToContents parameter is set to "true", the crawled property is 
 
 To find the crawled property to update, specify a crawled property object, or the combination of name, property set, and variant type.
 
-For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
 
 ## EXAMPLES
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ### -VariantType
 An integer value specifying the variant type of the updated crawled property.
 
-See http://go.microsoft.com/fwlink/?LinkId=163232 (http://go.microsoft.com/fwlink/?LinkId=163232) for a list of common variant types.
+See https://go.microsoft.com/fwlink/?LinkId=163232 (https://go.microsoft.com/fwlink/?LinkId=163232) for a list of common variant types.
 
 ```yaml
 Type: Int32
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

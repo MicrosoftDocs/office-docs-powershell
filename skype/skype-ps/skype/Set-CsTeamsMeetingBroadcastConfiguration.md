@@ -17,11 +17,20 @@ Set-CsTeamsMeetingBroadcastConfiguration \[-Tenant \<guid\>\] \[-SupportURL \<st
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsMeetingBroadcastConfiguration [-Force] [-WhatIf] [-SupportURL <Object>]
- [-AllowSdnProviderForBroadcastMeeting <Object>] [-SdnProviderName <Object>] [-Confirm] [[-Identity] <Object>]
- [-Tenant <Object>] [-SdnApiToken <Object>] [-SdnApiTemplateUrl <Object>] [-SdnLicenseId <Object>]
- [-Instance <Object>] [-AsJob]
+Set-CsTeamsMeetingBroadcastConfiguration [-Tenant <Guid>] [-SupportURL <String>]
+ [-AllowSdnProviderForBroadcastMeeting <Boolean>] [-SdnProviderName <String>] [-SdnLicenseId <String>]
+ [-SdnApiTemplateUrl <String>] [-SdnApiToken <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsMeetingBroadcastConfiguration [-Tenant <Guid>] [-SupportURL <String>]
+ [-AllowSdnProviderForBroadcastMeeting <Boolean>] [-SdnProviderName <String>] [-SdnLicenseId <String>]
+ [-SdnApiTemplateUrl <String>] [-SdnApiToken <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +44,7 @@ Tenant level configuration for broadcast events in Teams
 If set to $true,  Teams meeting broadcast streams are enabled to take advantage of the network and bandwidth management capabilities of your Software Defined Network (SDN) provider. 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -80,7 +89,7 @@ Accept wildcard characters: False
 You can only have one configuration - "Global"
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -95,7 +104,7 @@ Accept wildcard characters: False
 You can pass in the output from Get-CsTeamsMeetingBroadcastConfiguration as input to this cmdlet (instead of Identity)
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases:
 
@@ -110,7 +119,7 @@ Accept wildcard characters: False
 Specifies the Software Defined Network (SDN) provider's HTTP API endpoint. This information is provided to you by the SDN provider. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -125,7 +134,7 @@ Accept wildcard characters: False
 Specifies the Software Defined Network (SDN) provider's authentication token which is required to use their SDN license. This is required by some SDN providers who will give you the required token. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -140,7 +149,7 @@ Accept wildcard characters: False
 Specifies the Software Defined Network (SDN) license identifier. This is required and provided by some SDN providers. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -155,7 +164,7 @@ Accept wildcard characters: False
 Specifies the Software Defined Network (SDN) provider's name. This parameter is only required if AllowSdnProviderForBroadcastMeeting is set to $true. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -170,7 +179,7 @@ Accept wildcard characters: False
 Specifies a URL where broadcast event attendees can find support information or FAQs specific to that event. The URL will be displayed to the attendees during the broadcast. 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -185,7 +194,7 @@ Accept wildcard characters: False
 Not applicable to online service.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -212,30 +221,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Not applicable to online service.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
