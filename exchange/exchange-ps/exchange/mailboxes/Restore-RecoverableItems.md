@@ -3,13 +3,13 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Online
 title: Restore-RecoverableItems
 schema: 2.0.0
-monikerRange: "exchonline-ps"
+monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps" 
 ---
 
 # Restore-RecoverableItems
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Restore-RecoverableItems items cmdlet to restore deleted items in the Recoverable Items folder in mailboxes. You use the Get-RecoverableItems cmdlet to find the deleted items to recover.
 
