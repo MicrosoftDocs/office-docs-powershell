@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOnlineDialInConferencingUserInfo
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the `Get-CsOnlineDialInConferencingUserInfo` cmdlet to view the properties and settings of users that are enabled for dial-in conferencing and are using Microsoft or third-party provider as their PSTN conferencing provider.
 
 ## SYNTAX
 
@@ -26,21 +26,30 @@ Get-CsOnlineDialInConferencingUserInfo [-Tenant <Guid>] [-Skip <Int32>] [-First 
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+This cmdlet will return users that have been enabled for audio conferencing using Microsoft or a third-party as the audio conferencing provider. If there are no users in the organization that have been enabled for audio conferencing, then the cmdlet will return no results.
+
+You can use [Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet to return only users that have been enabled for audio conferencing using Microsoft as the audio conferencing provider.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Get-CsOnlineDialInConferencingUserInfo -Filter {Provider -eq "InterCall"} -First 10
 ```
 
-Insert descriptive text for example 1.
+This example returns users who have been enabled for audio conferencing provided by InterCall, but it will show only the first 10 users.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-CsOnlineDialInConferencingUserInfo -Select ConferencingProviderOther
+```
+
+This example returns users who have been enabled for audio conferencing provided by other than Microsoft.
 
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: UserIdParameter
+Specifies the user to retrieve. The user can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: UserIdParameter
@@ -56,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
@@ -72,7 +81,11 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-PARAMVALUE: String
+Enables you to limit the returned data by filtering on Skype for Business specific attributes. For example, you can limit returned data to users who have been assigned a specific third-party provider.
+
+The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet. For example, a filter that returns only users who have InterCall as Audio Conferencing Provider, with Provider representing the attribute, and -eq representing the comparison operator (equal to):
+
+{Provider -eq "InterCall"}
 
 ```yaml
 Type: String
@@ -88,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-PARAMVALUE: Int32
+When present, the cmdlet returns the first X number of users from the list of all the users enabled for dial-in conferencing.
 
 ```yaml
 Type: Int32
@@ -120,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-PARAMVALUE: String
+The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL).
 
 ```yaml
 Type: String
@@ -136,7 +149,13 @@ Accept wildcard characters: False
 ```
 
 ### -Select
-PARAMVALUE: DialInConferencingOn | DialInConferencingOff | ConferencingProviderMS | ConferencingProviderOther | NoFilter
+Use next values to filter the output:
+* DialInConferencingOn: Display all the users who are enabled for dial-in conferencing.
+* DialInConferencingOff: Display all the users who are not enabled for dial-in conferencing.
+* ConferencingProviderMS: Display all the users who are CPC enabled.
+* ConferencingProviderOther: Display all the users who have 3rd party ACP.
+* ReadyForMigrationToCPC: Display all the users who have 3rd party ACP and have been assigned a CPC license.
+* NoFilter: Display all the users.
 
 ```yaml
 Type: FilterSelection
@@ -152,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-PARAMVALUE: Int32
+Skips (does not select) the specified number of items.
 
 ```yaml
 Type: Int32
@@ -168,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -SortDescending
-PARAMVALUE: SwitchParameter
+Indicates that the cmdlet sorts the objects in descending order. The default is ascending order.
 
 ```yaml
 Type: SwitchParameter
@@ -184,7 +203,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+You can return your tenant ID by running this command:
+
+Get-CsTenant | Select-Object DisplayName, TenantID
+
+If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
 Type: Guid
@@ -209,4 +236,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
+[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/en-us/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
