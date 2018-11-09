@@ -125,7 +125,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-EwsApplicationAccessPolicy <EnforceAllowList | EnforceBlockList>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <$true | $false>]
- []
+ [-Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <NotSpecified | Agriculture | Finance | BusinessServicesConsulting | Communications | ComputerRelatedProductsServices | Construction | Education | EngineeringArchitecture | Government | Healthcare | Hospitality | Legal | Manufacturing | MediaMarketingAdvertising | Mining | NonProfit | PersonalServices | PrintingPublishing | RealEstate | Retail | Transportation | Utilities | Wholesale | Other>]
  [-IsAgendaMailEnabled <$true | $false>]
@@ -741,7 +741,7 @@ This parameter is available only in the cloud-based service.
 {{Fill ConnectorsEnabledForSharepoint Description}}
 
 ```yaml
-Type: Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -758,7 +758,7 @@ This parameter is available only in the cloud-based service.
 {{Fill ConnectorsEnabledForTeams Description}}
 
 ```yaml
-Type: Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -775,7 +775,7 @@ This parameter is available only in the cloud-based service.
 {{Fill ConnectorsEnabledForYammer Description}}
 
 ```yaml
-Type: Boolean
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
