@@ -3,28 +3,28 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# New-PnPProvisioningHierarchy
+# New-PnPTenantTemplate
 
 ## SYNOPSIS
-Creates a new provisioning hierarchy object
+Creates a new tenant template object
 
 ## SYNTAX 
 
 ```powershell
-New-PnPProvisioningHierarchy [-Author <String>]
-                             [-Description <String>]
-                             [-DisplayName <String>]
-                             [-Generator <String>]
+New-PnPTenantTemplate [-Author <String>]
+                      [-Description <String>]
+                      [-DisplayName <String>]
+                      [-Generator <String>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-$hierarchy = New-PnPProvisioningHierarchy
+$template = New-PnPTenantTemplate
 ```
 
-Creates a new instance of a provisioning hierarchy object.
+Creates a new instance of a tenant template object.
 
 ## PARAMETERS
 
