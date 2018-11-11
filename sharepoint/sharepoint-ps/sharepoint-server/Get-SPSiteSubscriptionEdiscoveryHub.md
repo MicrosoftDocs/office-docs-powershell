@@ -35,7 +35,7 @@ This example displays the eDiscovery hub for the specified site collection.
 
 ### -Identity
 Specifies the URL of the site collections to the eDiscovery hub.
-Can pipe the result from the Get-SPSiteSubcription cmdlet.
+Can pipe the result from the Get-SPSiteSubscription cmdlet.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
