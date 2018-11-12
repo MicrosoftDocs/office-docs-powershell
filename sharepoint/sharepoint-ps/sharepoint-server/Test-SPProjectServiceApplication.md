@@ -74,7 +74,7 @@ Valid rules are:
 
 All, CalcServiceWorkerState, QueueInFlightJobs, QueueServiceInternalState
 
-Project Server 2013 has this additonal rule which is not available in Project Server 2016, Project Server 2019:
+Project Server 2013 has this additional rule which is not available in Project Server 2016, Project Server 2019:
 
 QueueSiteCheck
 
