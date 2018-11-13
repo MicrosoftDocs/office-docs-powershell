@@ -438,7 +438,7 @@ The Purge switch specifies the action for the content search is to remove items 
 
 Notes:
 
-- A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
+- A maximum of 10 items per mailbox can be removed at one time and a maximum of 50,000 mailboxes will searched. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
 
 - Unindexed items aren't removed from mailboxes when you use this switch.
 
