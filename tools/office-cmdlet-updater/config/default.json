@@ -1,4 +1,7 @@
 {
+	"name": "Office cmdlet updater",
+	"description": "Update documentation for modules in this repository",
+	"version": "0.0.3",
 	"platyPS": {
 		"credentials": {
 			"login": "",
