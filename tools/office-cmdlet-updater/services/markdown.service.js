@@ -40,6 +40,12 @@ class MarkdownService {
 			(file) => this._filterCmdlets(file, cmdlet)
 		);
 
+		if (!mdFiles.length) {
+			throw new Error(
+				`Can't find cmdlet "${cmdlet}" in module "${doc.name}"`
+			);
+		}
+
 		mdFiles.forEach((file) => {
 			this.queue
 				.push({ file, doc })

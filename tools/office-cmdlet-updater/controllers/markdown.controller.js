@@ -23,7 +23,7 @@ class MarkdownController {
 
 				if (err) {
 					this.powerShellService.dispose();
-					throw new Error(err);
+					console.error(err.message);
 				}
 			}
 		);
