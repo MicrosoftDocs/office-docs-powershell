@@ -23,13 +23,23 @@ class CliController {
 
 		this.cliServoce.addOption({
 			option: '-c --cmdlet <cmdet>',
-			description: 'update documentation for cmdlet in module'
+			description: 'update documentation for cmdlet in module',
+			action: (cli) => {
+				const { module, cmdlet } = cli;
+
+				if (module === 'all' && cmdlet) {
+					throw new Error('You must specify a module for cmdet.');
+				}
+			}
 		});
 
 		this.cliServoce.start(argv, async (cli) => {
 			const { module, cmdlet } = cli;
 
-			this.markdownController.updateMarkdown({ moduleName: module });
+			this.markdownController.updateMarkdown({
+				moduleName: module,
+				cmdlet
+			});
 			console.log(module);
 			console.log(cmdlet);
 		});

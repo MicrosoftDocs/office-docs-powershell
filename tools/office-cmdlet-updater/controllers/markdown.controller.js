@@ -19,7 +19,7 @@ class MarkdownController {
 					throw new Error(powerShellErrors.DOC_PATH_DOESNT_EXIST);
 				}
 
-				[, err] = await of(this.markdownService.updateMd(doc));
+				[, err] = await of(this.markdownService.updateMd(doc, cmdlet));
 
 				if (err) {
 					this.powerShellService.dispose();
