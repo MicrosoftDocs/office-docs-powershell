@@ -9,22 +9,32 @@ class MarkdownController {
 		this.config = config;
 	}
 
-	async updateMarkdown() {
+	async updateMarkdown({ moduleName, cmdlet }) {
 		let err;
 		const { docs } = this.config.get('platyPS');
 
-		docs.forEach(async (doc) => {
-			if (!(await fs.pathExists(doc.path))) {
-				throw new Error(powerShellErrors.DOC_PATH_DOESNT_EXIST);
-			}
+		docs.filter((doc) => this._filterModules(doc, moduleName)).forEach(
+			async (doc) => {
+				if (!(await fs.pathExists(doc.path))) {
+					throw new Error(powerShellErrors.DOC_PATH_DOESNT_EXIST);
+				}
 
-			[, err] = await of(this.markdownService.updateMd(doc));
+				[, err] = await of(this.markdownService.updateMd(doc));
 
-			if (err) {
-				this.powerShellService.dispose();
-				throw new Error(err);
+				if (err) {
+					this.powerShellService.dispose();
+					throw new Error(err);
+				}
 			}
-		});
+		);
+	}
+
+	_filterModules(doc, moduleName) {
+		if (moduleName === 'all') {
+			return true;
+		}
+
+		return doc.name === moduleName;
 	}
 }
 

@@ -16,7 +16,9 @@ class CliService {
 		defaultValue = '',
 		action = () => {}
 	}) {
-		this.cli.option(option, description, defaultValue).action(action);
+		this.cli
+			.option(option, description, defaultValue)
+			.action(() => action(this.cli));
 	}
 
 	start(argv, cb = () => {}) {

@@ -11,6 +11,7 @@ const CmdletDependenciesService = require('../services/cmdlet.dependencies.servi
 const FsService = require('../services/fs.service');
 const CliService = require('../services/cli.service');
 const CliController = require('../controllers/cli.controller');
+const CmdletService = require('../services/cmdlet.service');
 
 module.exports = () => {
 	const container = awilix.createContainer({
@@ -35,7 +36,8 @@ module.exports = () => {
 			.asClass(CmdletDependenciesService)
 			.singleton(),
 		fsService: awilix.asClass(FsService).singleton(),
-		markdownService: awilix.asClass(MarkdownService).singleton()
+		markdownService: awilix.asClass(MarkdownService).singleton(),
+		cmdletService: awilix.asClass(CmdletService).singleton()
 	});
 
 	container.register({
