@@ -19,7 +19,7 @@ Disable-PnPFeature -Identity <GuidPipeBind>
 ```
 
 ## DESCRIPTION
-Deactives a feature that was active on a site
+Deactivates a feature that was active on a site
 
 ## EXAMPLES
 

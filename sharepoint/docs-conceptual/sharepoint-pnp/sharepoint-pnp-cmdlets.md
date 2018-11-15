@@ -141,7 +141,7 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Add-PnPNavigationNode.md)** |Adds an item to a navigation element|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Get-PnPNavigationNode.md)** |Returns all or a specific navigation node|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Remove&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Remove-PnPNavigationNode.md)** |Removes a menu item from either the quicklaunch or top navigation|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Disable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Disable-PnPResponsiveUI.md)** |Deactive the PnP Response UI add-on|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Disable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Disable-PnPResponsiveUI.md)** |Deactivate the PnP Response UI add-on|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Enable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Enable-PnPResponsiveUI.md)** |Activates the PnP Response UI Add-on|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPTheme](../../sharepoint-ps/sharepoint-pnp/Get-PnPTheme.md)** |Returns the current theme/composed look of the current web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPTheme](../../sharepoint-ps/sharepoint-pnp/Set-PnPTheme.md)** |Sets the theme of the current web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
