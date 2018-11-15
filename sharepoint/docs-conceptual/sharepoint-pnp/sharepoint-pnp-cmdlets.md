@@ -329,7 +329,7 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Get-PnPProvisioningTemplate.md)** |Generates a provisioning template from a web|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[New&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/New-PnPProvisioningTemplate.md)** |Creates a new provisioning template object|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Read&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Read-PnPProvisioningTemplate.md)** |Loads/Reads a PnP file from the file system|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Save&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Save-PnPProvisioningTemplate.md)** |Saves a PnP provisioning tempalte to the file system|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Save&#8209;PnPProvisioningTemplate](../../sharepoint-ps/sharepoint-pnp/Save-PnPProvisioningTemplate.md)** |Saves a PnP provisioning template to the file system|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[New&#8209;PnPProvisioningTemplateFromFolder](../../sharepoint-ps/sharepoint-pnp/New-PnPProvisioningTemplateFromFolder.md)** |Generates a provisioning template from a given folder, including only files that are present in that folder|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPProvisioningTemplateMetadata](../../sharepoint-ps/sharepoint-pnp/Set-PnPProvisioningTemplateMetadata.md)** |Sets metadata of a provisioning template|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 
