@@ -6,7 +6,7 @@ schema: 2.0.0
 # Grant-PnPTenantServicePrincipalPermission
 
 ## SYNOPSIS
-Explicitely grants a specified permission to the "SharePoint Online Client" service principal
+Explicitly grants a specified permission to the "SharePoint Online Client" service principal
 
 ## SYNTAX 
 
@@ -23,7 +23,7 @@ Grant-PnPTenantServicePrincipalPermission -Scope <String>
 Grant-PnPTenantServicePrincipalPermission -Scope "Group.Read.All" -Resource "Microsoft Graph"
 ```
 
-This will explicitely grant the Group.Read.All permission on the Microsoft Graph resource
+This will explicitly grant the Group.Read.All permission on the Microsoft Graph resource
 
 ## PARAMETERS
 
