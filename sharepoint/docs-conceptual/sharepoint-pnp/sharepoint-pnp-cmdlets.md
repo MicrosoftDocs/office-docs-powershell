@@ -248,7 +248,7 @@ Cmdlet|Description|Platform
 ## Information Management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Get&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Get-PnPLabel.md)** |Gets the label/tag of the specfied list or library (if applicable)|SharePoint Online
+**[Get&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Get-PnPLabel.md)** |Gets the label/tag of the specified list or library (if applicable)|SharePoint Online
 **[Set&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Set-PnPLabel.md)** |Sets a label/tag on the specified list or library|SharePoint Online
 **[Get&#8209;PnPListInformationRightsManagement](../../sharepoint-ps/sharepoint-pnp/Get-PnPListInformationRightsManagement.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPListInformationRightsManagement](../../sharepoint-ps/sharepoint-pnp/Set-PnPListInformationRightsManagement.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
