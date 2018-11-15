@@ -296,8 +296,8 @@ Cmdlet|Description|Platform
 **[New&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/New-PnPUnifiedGroup.md)** |Creates a new Office 365 Group (aka Unified Group)|SharePoint Online
 **[Remove&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPUnifiedGroup.md)** |Removes one Office 365 Group (aka Unified Group) or a list of Office 365 Groups|SharePoint Online
 **[Set&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Set-PnPUnifiedGroup.md)** |Sets Office 365 Group (aka Unified Group) properties|SharePoint Online
-**[Get&#8209;PnPUnifiedGroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupMembers.md)** |Gets members of a paricular Office 365 Group (aka Unified Group)|SharePoint Online
-**[Get&#8209;PnPUnifiedGroupOwners](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupOwners.md)** |Gets owners of a paricular Office 365 Group (aka Unified Group)|SharePoint Online
+**[Get&#8209;PnPUnifiedGroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupMembers.md)** |Gets members of a particular Office 365 Group (aka Unified Group)|SharePoint Online
+**[Get&#8209;PnPUnifiedGroupOwners](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupOwners.md)** |Gets owners of a particular Office 365 Group (aka Unified Group)|SharePoint Online
 
 
 ## Provisioning 
