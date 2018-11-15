@@ -176,7 +176,7 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPFieldToContentType](../../sharepoint-ps/sharepoint-pnp/Add-PnPFieldToContentType.md)** |Adds an existing site column to a content type|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 
 
-## Diagnostic utilites 
+## Diagnostic utilities 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Measure&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Measure-PnPList.md)** |Returns statistics on the list object|SharePoint Online, SharePoint 2016
