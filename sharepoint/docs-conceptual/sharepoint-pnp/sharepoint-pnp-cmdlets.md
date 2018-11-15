@@ -97,7 +97,7 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppInstance.md)** |Returns a SharePoint AddIn Instance|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Uninstall&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPAppInstance.md)** |Removes an app from a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Import&#8209;PnPAppPackage](../../sharepoint-ps/sharepoint-pnp/Import-PnPAppPackage.md)** |Adds a SharePoint Addin to a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Grant&#8209;PnPTenantServicePrincipalPermission](../../sharepoint-ps/sharepoint-pnp/Grant-PnPTenantServicePrincipalPermission.md)** |Explicitely grants a specified permission to the "SharePoint Online Client" service principal|SharePoint Online
+**[Grant&#8209;PnPTenantServicePrincipalPermission](../../sharepoint-ps/sharepoint-pnp/Grant-PnPTenantServicePrincipalPermission.md)** |Explicitly grants a specified permission to the "SharePoint Online Client" service principal|SharePoint Online
 
 
 ## Base Cmdlets 
