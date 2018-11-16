@@ -17,23 +17,43 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Identity
+### IdentityOnPremises
 ```
-Get-MailboxRestoreRequestStatistics [-Identity] <MailboxRestoreRequestIdParameter> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-DomainController <Fqdn>]
- [-IncludeReport] [-ReportOnly] [<CommonParameters>]
+Get-MailboxRestoreRequestStatistics [-Identity] <MailboxRestoreRequestIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
-### MRSInstance
+### IdentityCloud
 ```
-Get-MailboxRestoreRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-RequestGuid <Guid>]
+Get-MailboxRestoreRequestStatistics [-Identity] <MailboxRestoreRequestIdParameter>
+ [-IncludeReport]
+ [-DiagnosticInfo <String>]
+ [-ReportOnly]
+ [<CommonParameters>]
+```
+
+### MigrationMRSInstance
+```
+Get-MailboxRestoreRequestStatistics -MRSInstance <Fqdn>
+ [-DomainController <Fqdn>]
+ [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-MailboxRestoreRequestStatistics -RequestQueue <DatabaseIdParameter> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [-IncludeReport] [-ReportOnly] [-RequestGuid <Guid>]
+Get-MailboxRestoreRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
@@ -88,7 +108,7 @@ This parameter can't be used in conjunction with the MRSInstance or RequestQueue
 
 ```yaml
 Type: MailboxRestoreRequestIdParameter
-Parameter Sets: Identity
+Parameter Sets: IdentityOnPremises, IdentityCloud
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -107,7 +127,7 @@ This parameter can't be used in conjunction with the Identity or RequestQueue pa
 
 ```yaml
 Type: Fqdn
-Parameter Sets: MRSInstance
+Parameter Sets: MigrationMRSInstance
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -119,6 +139,8 @@ Accept wildcard characters: False
 
 ### -RequestQueue
 This parameter is available only in on-premises Exchange.
+
+This parameter is for debugging purposes only.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
@@ -145,7 +167,7 @@ The IncludeReport switch specifies whether to return additional details, which c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Identity, MigrationRequestQueue
+Parameter Sets: IdentityOnPremises, IdentityCloud, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -162,7 +184,7 @@ The RequestGuid parameter specifies the unique identifier for the restore reques
 
 ```yaml
 Type: Guid
-Parameter Sets: MRSInstance, MigrationRequestQueue
+Parameter Sets: MigrationMRSInstance, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -179,7 +201,7 @@ The Diagnostic switch specifies whether to return extremely detailed information
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Identity, MigrationRequestQueue
+Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -196,7 +218,7 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 
 ```yaml
 Type: String
-Parameter Sets: Identity, MigrationRequestQueue
+Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -213,7 +235,7 @@ Typically, you use the DiagnosticInfo parameter only at the request of Microsoft
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -230,7 +252,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: IdentityOnPremises, MigrationMRSInstance, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -241,11 +263,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportOnly
-The ReportOnly switch returns the results as an array of report entries. You don't need to specify a value with this switch.
+The ReportOnly switch returns the results as an array of report entries (encoded strings). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Identity, MigrationRequestQueue
+Parameter Sets: IdentityOnPremises, IdentityCloud, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
