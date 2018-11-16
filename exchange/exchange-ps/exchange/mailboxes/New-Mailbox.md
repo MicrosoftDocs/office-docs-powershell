@@ -796,38 +796,6 @@ New-Mailbox [-Name] <String> [-Password <SecureString>] [-Shared] [-UserPrincipa
  [-WhatIf] [<CommonParameters>]
 ```
 
-### SupervisoryReviewPolicyMailbox
-```
-New-Mailbox [-Name] <String> [-SupervisoryReviewPolicy] [-UserPrincipalName <String>]
- [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
- [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
- [-Alias <String>]
- [-Archive]
- [-ArchiveDatabase <DatabaseIdParameter>]
- [-Confirm]
- [-Database <DatabaseIdParameter>]
- [-DisplayName <String>]
- [-DomainController <Fqdn>]
- [-FirstName <String>]
- [-Force]
- [-ImmutableId <String>]
- [-Initials <String>]
- [-LastName <String>]
- [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
- [-MailboxProvisioningPreferences <MultiValuedProperty>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>]
- [-RemotePowerShellEnabled <$true | $false>]
- [-ResetPasswordOnNextLogon <$true | $false>]
- [-RetentionPolicy <MailboxPolicyIdParameter>]
- [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
- [-SamAccountName <String>]
- [-SharingPolicy <SharingPolicyIdParameter>]
- [-SkipMailboxProvisioningConstraintValidation]
- [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
- [-WhatIf] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -2246,21 +2214,6 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: SupervisoryReviewPolicyMailbox
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
