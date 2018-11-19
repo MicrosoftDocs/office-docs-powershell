@@ -77,7 +77,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Filename of the .PNP Open XML provisioning template to read from, optionally including full path.
+Filename of the .PNP Open XML site template to read from, optionally including full path.
 
 ```yaml
 Type: String
