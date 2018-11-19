@@ -3,32 +3,32 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# New-PnPProvisioningSequence
+# New-PnPTenantSequence
 
 ## SYNOPSIS
-Creates a new provisioning sequence object
+Creates a new tenant sequence object
 
 ## SYNTAX 
 
 ```powershell
-New-PnPProvisioningSequence [-Id <String>]
+New-PnPTenantSequence [-Id <String>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-$sequence = New-PnPProvisioningSequence
+$sequence = New-PnPTenantSequence
 ```
 
-Creates a new instance of a provisioning sequence object.
+Creates a new instance of a tenant sequence object.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-$sequence = New-PnPProvisioningSequence -Id "MySequence"
+$sequence = New-PnPTenantSequence -Id "MySequence"
 ```
 
-Creates a new instance of a provisioning sequence object and sets the Id to the value specified.
+Creates a new instance of a tenant sequence object and sets the Id to the value specified.
 
 ## PARAMETERS
 

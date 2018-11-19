@@ -9,31 +9,17 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Adds a new SharePoint user or security Group as Get-Administrator of the current Multi-Geo Tenant. 
+Adds a new SharePoint user or security Group as GeoAdministrator of the current Multi-Geo Tenant. 
 
 
 ## SYNTAX
 
 ```powershell
 Add-SPOGeoAdministrator
-  -Title <string>
-  -WebTemplate <string>
-  -SiteScripts <SPOSiteScriptPipeBind[]>
-  [-Description <string>]
-  [-PreviewImageUrl <string>]
-  [-PreviewImageAltText <string>]
-  [-IsDefault]
+  -UserPrincipalName <string>
+  -GroupAlias <string>
+  -ObjectId <guid>
   [<CommonParameters>]
-```
-
-### Group
-```
-Add-SPOGeoAdministrator [-Group] <String> [<CommonParameters>]
-```
-
-### User
-```
-Add-SPOGeoAdministrator [-User] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,14 +30,14 @@ This Cmdlet requires a connection to a multi-geo tenant to run correctly. You mu
 
 ### EXAMPLE 1
 ```powershell
-Add-SPOGeoAdministrator -user contosoadmin
+Add-SPOGeoAdministrator -UserPrincipalName admin@contoso.onmicrosoft.com
 ```
-Add the user contosoadmin to the SharePoint Online multi-geo tenant
+Add a user as admin to the SharePoint Online multi-geo tenant
 
 
 ## PARAMETERS
 
-### -Group
+### -GroupAlias
 PARAMVALUE: String
 
 
@@ -68,7 +54,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -User
+### -ObjectId
+PARAMVALUE: Guid
+
+
+```yaml
+Type: Guid
+Parameter Sets: ObjectId
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -UserPrincipalName
 PARAMVALUE: String
 
 
