@@ -19,7 +19,7 @@ Note: This cmdlet is currently in Beta and functionality may change.
 
 ```
 New-Team [-Group <String>] [-DisplayName <String>] [-Description <String>] [-Alias <String>]
- [-Classification <String>] [-AccessType <String>] [-AddCreatorAsMember <Boolean>] [<CommonParameters>]
+ [-Classification <String>] [-AccessType <String>] [-AddCreatorAsMember <Boolean>] [-Template <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -18,7 +18,7 @@ Disable-CsOnlineSipDomain -Domain <String> [-Force] [-Confirm] [<CommonParameter
 ```
 
 ## DESCRIPTION
-This cmdlet enables organizations with *multiple on-premises deployments of Skype for Business Server (or Lync Server)* to safely synchronize users from multiple forests into a single Office 365 tenant.  When an an online SIP domain is disabled in Skype for Business Online, provisioning is blocked for users in this SIP domain. This ensures routing for any on-premises users in this SIP domain continues to function properly.
+This cmdlet enables organizations with *multiple on-premises deployments of Skype for Business Server (or Lync Server)* to safely synchronize users from multiple forests into a single Office 365 tenant.  When an online SIP domain is disabled in Skype for Business Online, provisioning is blocked for users in this SIP domain. This ensures routing for any on-premises users in this SIP domain continues to function properly.
 
 This cmdlet facilitates consolidation of multiple Skype for Business Server deployments into a single Office 365 tenant. Consolidation can be achieved by moving one deployment at a time into Office 365, **provided the following key requirements are met**:
  - There must be at most 1 O365 tenant involved. Consolidation in scenarios with >1 O365 tenant is not supported.

@@ -41,8 +41,6 @@ Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter> [-DomainC
 ## DESCRIPTION
 You can pipeline the Get-MailboxExportRequestStatistics cmdlet from the Get-MailboxExportRequest cmdlet.
 
-The RequestQueue parameter syntax set is for debugging purposes only.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -128,6 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
+This parameter is for debugging purposes only.
+
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Database GUID
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportOnly
-The ReportOnly switch returns the results as an array of report entries. You don't need to specify a value with this switch.
+The ReportOnly switch returns the results as an array of report entries (encoded strings). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
