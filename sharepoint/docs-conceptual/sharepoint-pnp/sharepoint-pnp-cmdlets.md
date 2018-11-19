@@ -99,7 +99,7 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppInstance.md)** |Returns a SharePoint AddIn Instance|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Uninstall&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPAppInstance.md)** |Removes an app from a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Import&#8209;PnPAppPackage](../../sharepoint-ps/sharepoint-pnp/Import-PnPAppPackage.md)** |Adds a SharePoint Addin to a site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Grant&#8209;PnPTenantServicePrincipalPermission](../../sharepoint-ps/sharepoint-pnp/Grant-PnPTenantServicePrincipalPermission.md)** |Explicitely grants a specified permission to the "SharePoint Online Client" service principal|SharePoint Online
+**[Grant&#8209;PnPTenantServicePrincipalPermission](../../sharepoint-ps/sharepoint-pnp/Grant-PnPTenantServicePrincipalPermission.md)** |Explicitly grants a specified permission to the "SharePoint Online Client" service principal|SharePoint Online
 
 
 ### Base Cmdlets 
@@ -143,7 +143,7 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Add-PnPNavigationNode.md)** |Adds an item to a navigation element|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Get-PnPNavigationNode.md)** |Returns all or a specific navigation node|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Remove&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Remove-PnPNavigationNode.md)** |Removes a menu item from either the quicklaunch or top navigation|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Disable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Disable-PnPResponsiveUI.md)** |Deactive the PnP Response UI add-on|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Disable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Disable-PnPResponsiveUI.md)** |Deactivate the PnP Response UI add-on|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Enable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Enable-PnPResponsiveUI.md)** |Activates the PnP Response UI Add-on|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPTheme](../../sharepoint-ps/sharepoint-pnp/Get-PnPTheme.md)** |Returns the current theme/composed look of the current web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPTheme](../../sharepoint-ps/sharepoint-pnp/Set-PnPTheme.md)** |Sets the theme of the current web.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
@@ -179,6 +179,7 @@ Cmdlet|Description|Platform
 
 
 ### Diagnostic utilites 
+=======
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Measure&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Measure-PnPList.md)** |Returns statistics on the list object|SharePoint Online, SharePoint 2016
@@ -251,7 +252,7 @@ Cmdlet|Description|Platform
 ### Information Management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Get&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Get-PnPLabel.md)** |Gets the label/tag of the specfied list or library (if applicable)|SharePoint Online
+**[Get&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Get-PnPLabel.md)** |Gets the label/tag of the specified list or library (if applicable)|SharePoint Online
 **[Set&#8209;PnPLabel](../../sharepoint-ps/sharepoint-pnp/Set-PnPLabel.md)** |Sets a label/tag on the specified list or library|SharePoint Online
 **[Get&#8209;PnPListInformationRightsManagement](../../sharepoint-ps/sharepoint-pnp/Get-PnPListInformationRightsManagement.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPListInformationRightsManagement](../../sharepoint-ps/sharepoint-pnp/Set-PnPListInformationRightsManagement.md)** |Get the site closure status of the site which has a site policy applied|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
@@ -298,8 +299,8 @@ Cmdlet|Description|Platform
 **[New&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/New-PnPUnifiedGroup.md)** |Creates a new Office 365 Group (aka Unified Group)|SharePoint Online
 **[Remove&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPUnifiedGroup.md)** |Removes one Office 365 Group (aka Unified Group) or a list of Office 365 Groups|SharePoint Online
 **[Set&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Set-PnPUnifiedGroup.md)** |Sets Office 365 Group (aka Unified Group) properties|SharePoint Online
-**[Get&#8209;PnPUnifiedGroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupMembers.md)** |Gets members of a paricular Office 365 Group (aka Unified Group)|SharePoint Online
-**[Get&#8209;PnPUnifiedGroupOwners](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupOwners.md)** |Gets owners of a paricular Office 365 Group (aka Unified Group)|SharePoint Online
+**[Get&#8209;PnPUnifiedGroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupMembers.md)** |Gets members of a particular Office 365 Group (aka Unified Group)|SharePoint Online
+**[Get&#8209;PnPUnifiedGroupOwners](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupOwners.md)** |Gets owners of a particular Office 365 Group (aka Unified Group)|SharePoint Online
 
 
 ### Provisioning 
@@ -410,7 +411,7 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPSite.md)** |Returns the current site collection from the context.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPSite.md)** |Sets Site Collection properties.|SharePoint Online
 **[Add&#8209;PnPSiteCollectionAdmin](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteCollectionAdmin.md)** |Adds one or more users as site collection administrators to the site collection in the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Get&#8209;PnPSiteCollectionAdmin](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteCollectionAdmin.md)** |Returns the current site collection administrators of the site colleciton in the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Get&#8209;PnPSiteCollectionAdmin](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteCollectionAdmin.md)** |Returns the current site collection administrators of the site collection in the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Remove&#8209;PnPSiteCollectionAdmin](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteCollectionAdmin.md)** |Removes one or more users as site collection administrators from the site collection in the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Install&#8209;PnPSolution](../../sharepoint-ps/sharepoint-pnp/Install-PnPSolution.md)** |Installs a sandboxed solution to a site collection. WARNING! This method can delete your composed look gallery due to the method used to activate the solution. We recommend you to only to use this cmdlet if you are okay with that.|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Uninstall&#8209;PnPSolution](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPSolution.md)** |Uninstalls a sandboxed solution from a site collection|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online

@@ -6,7 +6,7 @@ schema: 2.0.0
 # Disable-PnPResponsiveUI
 
 ## SYNOPSIS
-Deactive the PnP Response UI add-on
+Deactivate the PnP Response UI add-on
 
 ## SYNTAX 
 

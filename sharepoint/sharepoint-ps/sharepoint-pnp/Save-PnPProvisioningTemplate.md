@@ -6,6 +6,7 @@ schema: 2.0.0
 # Save-PnPProvisioningTemplate
 
 ## SYNOPSIS
+
 Saves a PnP site template to the file system
 
 ## SYNTAX 
