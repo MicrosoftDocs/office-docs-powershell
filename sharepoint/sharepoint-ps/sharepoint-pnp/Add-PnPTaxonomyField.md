@@ -190,7 +190,7 @@ Accept pipeline input: False
 ```
 
 ### -TermSetPath
-The path to the term that this needs to be bound to
+The path to the term that this needs be be bound
 
 ```yaml
 Type: String

@@ -3,23 +3,23 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Add-PnPProvisioningSite
+# Add-PnPTenantSequenceSite
 
 ## SYNOPSIS
-Adds a provisioning sequence object to a provisioning hierarchy
+Adds a existing tenant sequence site object to a tenant template
 
 ## SYNTAX 
 
 ```powershell
-Add-PnPProvisioningSite -Site <ProvisioningSitePipeBind>
-                        -Sequence <ProvisioningSequence>
+Add-PnPTenantSequenceSite -Site <ProvisioningSitePipeBind>
+                          -Sequence <ProvisioningSequence>
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Add-PnPProvisioningSite -Site $myteamsite -Sequence $mysequence
+Add-PnPTenantSequenceSite -Site $myteamsite -Sequence $mysequence
 ```
 
 Adds an existing site object to an existing hierarchy sequence

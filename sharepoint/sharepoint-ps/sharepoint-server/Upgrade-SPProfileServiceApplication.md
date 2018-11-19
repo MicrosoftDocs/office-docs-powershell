@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-pecifies the User Profile Service application to update.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a user profile service application (for example, UserProfileServiceApp); or an instance of a valid SPServiceApplication object.
+Specifies the User Profile Service application to update.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a user profile service application (for example, UserProfileServiceApp); or an instance of a valid SPServiceApplication object.
 
 ```yaml
 Type: SPServiceApplicationPipeBind
