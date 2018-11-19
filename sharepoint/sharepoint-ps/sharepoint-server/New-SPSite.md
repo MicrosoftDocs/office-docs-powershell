@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>New-SPSite http://<site name>/sites/test -OwnerAlias "DOMAIN\JDoe" -Language 1033 -Template STS#0
+PS C:\>New-SPSite http://webApp/sites/test -OwnerAlias "DOMAIN\JDoe" -Language 1033 -Template STS#0
 ```
 
 This example creates an English site collection at http://\<site name\>/sites/test that is owned by user DOMAIN\Jdow.
@@ -43,7 +43,7 @@ This example creates an English site collection at http://\<site name\>/sites/te
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>$w = Get-SPWebApplication http://<site name>
+PS C:\>$w = Get-SPWebApplication http://webApp
 PS C:\>New-SPSite http://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template STS#0
 ```
 
@@ -61,7 +61,7 @@ This example creates a site collection by using the "Team Site" Web template.
 
 ### ------------------EXAMPLE 4-----------------------
 ```
-PS C:\>New-SPSite -URL http://<site name>/sites/testsite -OwnerAlias "DOMAIN\JDow" -Language 1033 -CompatibilityLevel 14 -Template STS#0
+PS C:\>New-SPSite -URL http://webApp/sites/testsite -OwnerAlias "DOMAIN\JDow" -Language 1033 -CompatibilityLevel 14 -Template STS#0
 ```
 
 This example creates an English 14 mode site collection by using the Team site template at http://\<site name\>/sites/testsite that is owned by user DOMAIN\Jdow

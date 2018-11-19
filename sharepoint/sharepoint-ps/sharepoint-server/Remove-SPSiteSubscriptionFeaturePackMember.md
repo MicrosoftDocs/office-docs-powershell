@@ -32,7 +32,7 @@ This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
-The `Remove-SPSiteSubscriptionFeaturePackMember` cmdlet removes the provided FeatureDefintion parameter from the feature set specified by the Identity parameter.
+The `Remove-SPSiteSubscriptionFeaturePackMember` cmdlet removes the provided FeatureDefinition parameter from the feature set specified by the Identity parameter.
 If the AllFeatureDefinitions flag is provided, all feature definitions are removed from the given Feature set.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
