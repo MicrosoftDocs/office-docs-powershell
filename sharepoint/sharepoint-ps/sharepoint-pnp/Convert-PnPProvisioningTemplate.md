@@ -80,7 +80,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Path to the xml file containing the provisioning template
+Path to the xml file containing the site template
 
 ```yaml
 Type: String

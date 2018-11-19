@@ -3,71 +3,71 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Apply-PnPProvisioningHierarchy
+# Apply-PnPTenantTemplate
 
 ## SYNOPSIS
-Adds a provisioning sequence object to a provisioning site object
+Applies a tenant template to the current tenant.
 
 ## SYNTAX 
 
 ### By Path
 ```powershell
-Apply-PnPProvisioningHierarchy -Path <String>
-                               [-SequenceId <String>]
-                               [-ResourceFolder <String>]
-                               [-Handlers <Handlers>]
-                               [-ExcludeHandlers <Handlers>]
-                               [-ExtensibilityHandlers <ExtensibilityHandler[]>]
-                               [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
-                               [-Parameters <Hashtable>]
-                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
-                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
-                               [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
-                               [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
-                               [-ClearNavigation [<SwitchParameter>]]
-                               [-Connection <SPOnlineConnection>]
+Apply-PnPTenantTemplate -Path <String>
+                        [-SequenceId <String>]
+                        [-ResourceFolder <String>]
+                        [-Handlers <Handlers>]
+                        [-ExcludeHandlers <Handlers>]
+                        [-ExtensibilityHandlers <ExtensibilityHandler[]>]
+                        [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
+                        [-Parameters <Hashtable>]
+                        [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
+                        [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
+                        [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
+                        [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
+                        [-ClearNavigation [<SwitchParameter>]]
+                        [-Connection <SPOnlineConnection>]
 ```
 
 ### By Object
 ```powershell
-Apply-PnPProvisioningHierarchy -Hierarchy <ProvisioningHierarchy>
-                               [-SequenceId <String>]
-                               [-ResourceFolder <String>]
-                               [-Handlers <Handlers>]
-                               [-ExcludeHandlers <Handlers>]
-                               [-ExtensibilityHandlers <ExtensibilityHandler[]>]
-                               [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
-                               [-Parameters <Hashtable>]
-                               [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
-                               [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
-                               [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
-                               [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
-                               [-ClearNavigation [<SwitchParameter>]]
-                               [-Connection <SPOnlineConnection>]
+Apply-PnPTenantTemplate -Template <ProvisioningHierarchy>
+                        [-SequenceId <String>]
+                        [-ResourceFolder <String>]
+                        [-Handlers <Handlers>]
+                        [-ExcludeHandlers <Handlers>]
+                        [-ExtensibilityHandlers <ExtensibilityHandler[]>]
+                        [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
+                        [-Parameters <Hashtable>]
+                        [-OverwriteSystemPropertyBagValues [<SwitchParameter>]]
+                        [-IgnoreDuplicateDataRowErrors [<SwitchParameter>]]
+                        [-ProvisionContentTypesToSubWebs [<SwitchParameter>]]
+                        [-ProvisionFieldsToSubWebs [<SwitchParameter>]]
+                        [-ClearNavigation [<SwitchParameter>]]
+                        [-Connection <SPOnlineConnection>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Apply-PnPProvisioningHierarchy -Path myfile.pnp
+Apply-PnPTenantTemplate -Path myfile.pnp
 ```
 
-Will read the provisioning hierarchy from the filesystem and will apply the sequences in the hierarchy
+Will read the tenant template from the filesystem and will apply the sequences in the template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Apply-PnPProvisioningHierarchy -Path myfile.pnp -SequenceId "mysequence"
+Apply-PnPTenantTemplate -Path myfile.pnp -SequenceId "mysequence"
 ```
 
-Will read the provisioning hierarchy from the filesystem and will apply the specified sequence in the hierarchy
+Will read the tenant template from the filesystem and will apply the specified sequence in the template
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Apply-PnPProvisioningHierarchy -Path myfile.pnp -Parameters @{"ListTitle"="Projects";"parameter2"="a second value"}
+Apply-PnPTenantTemplate -Path myfile.pnp -Parameters @{"ListTitle"="Projects";"parameter2"="a second value"}
 ```
 
-Applies a provisioning hierarchy template to the current tenant. It will populate the parameter in the template the values as specified and in the template you can refer to those values with the {parameter:<key>} token.
+Applies a tenant template to the current tenant. It will populate the parameter in the template the values as specified and in the template you can refer to those values with the {parameter:<key>} token.
 
 For instance with the example above, specifying {parameter:ListTitle} in your template will translate to 'Projects' when applying the template. These tokens can be used in most string values in a template.
 
@@ -119,18 +119,6 @@ Parameter Sets: __AllParameterSets
 Required: False
 Position: Named
 Accept pipeline input: False
-```
-
-### -Hierarchy
-
-
-```yaml
-Type: ProvisioningHierarchy
-Parameter Sets: By Object
-
-Required: True
-Position: 0
-Accept pipeline input: True
 ```
 
 ### -IgnoreDuplicateDataRowErrors
@@ -206,7 +194,7 @@ Accept pipeline input: False
 ```
 
 ### -ResourceFolder
-Root folder where resources/files that are being referenced in the template are located. If not specified the same folder as where the provisioning template is located will be used.
+Root folder where resources/files that are being referenced in the template are located. If not specified the same folder as where the tenant template is located will be used.
 
 ```yaml
 Type: String
@@ -227,6 +215,19 @@ Parameter Sets: (All)
 Required: False
 Position: Named
 Accept pipeline input: False
+```
+
+### -Template
+
+
+```yaml
+Type: ProvisioningHierarchy
+Parameter Sets: By Object
+Aliases: Hierarchy
+
+Required: True
+Position: 0
+Accept pipeline input: True
 ```
 
 ### -TemplateProviderExtensions

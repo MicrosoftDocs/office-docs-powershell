@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-pecifies whether the Office Store services lets third- party add-ins to be found or downloaded.
+Specifies whether the Office Store services lets third- party add-ins to be found or downloaded.
 
 This is intended for administrators to disable discovery and downloads of third-party add-ins on their SharePoint tenants and site collections.
 

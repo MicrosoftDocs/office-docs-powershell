@@ -1651,7 +1651,7 @@ The LogonPageLightSelectionEnabled parameter specifies whether the Outlook on th
 
 - $true: The option to use the light version of Outlook on the web is available on the sign-in page. This is the default value.
 
-- $fase: The option to use the light version of Outlook on the web is available on the sign-in page.
+- $false: The option to use the light version of Outlook on the web is available on the sign-in page.
 
 This parameter is meaninful only for browsers that support the full version of Outlook on the web; unsupported browsers are always required to use the light version of Outlook on the web.
 
@@ -1672,7 +1672,7 @@ The LogonPagePublicPrivateSelectionEnabled parameter specifies whether the Outlo
 
 - $true: The public/private computer session selection is available on the Outlook on the web sign-in page.
 
-- $fase: The public/private computer session selection isn't available on the Outlook on the web sign-in page. All sessions are considered to be on private computers. This is the default value.
+- $false: The public/private computer session selection isn't available on the Outlook on the web sign-in page. All sessions are considered to be on private computers. This is the default value.
 
 By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers. Users can only specify public computer sessions if you've set this parameter value to $false.
 
