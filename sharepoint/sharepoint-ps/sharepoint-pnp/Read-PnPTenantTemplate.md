@@ -3,26 +3,26 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Read-PnPProvisioningHierarchy
+# Read-PnPTenantTemplate
 
 ## SYNOPSIS
-Loads/Reads a PnP provisioning hierarchy from the file system and returns an in-memory instance of this template.
+Loads/Reads a PnP tenant template from the file system and returns an in-memory instance of this template.
 
 ## SYNTAX 
 
 ```powershell
-Read-PnPProvisioningHierarchy -Path <String>
-                              [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
+Read-PnPTenantTemplate -Path <String>
+                       [-TemplateProviderExtensions <ITemplateProviderExtension[]>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Read-PnPProvisioningHierarchy -Path hierarchy.pnp
+Read-PnPTenantTemplate -Path template.pnp
 ```
 
-Reads a PnP provisioning hierarchy file from the file system and returns an in-memory instance
+Reads a PnP tenant templatey file from the file system and returns an in-memory instance
 
 ## PARAMETERS
 
