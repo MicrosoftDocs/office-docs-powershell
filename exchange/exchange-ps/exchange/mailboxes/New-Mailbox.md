@@ -1340,7 +1340,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -1400,7 +1400,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archiveswitch specifies that an archive mailbox is created for this mailbox. You don't need to specify a value with this switch.
+The Archive switch specifies that an archive mailbox is created for this mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1691,7 +1691,7 @@ Accept wildcard characters: False
 ### -MailboxPlan
 This parameter is available only in the cloud-based service.
 
-The MailboxPlan parameter specifies the mailbox plan to applytothe mailbox. You can use any value that uniquely identifies the mailbox plan. For example:
+The MailboxPlan parameter specifies the mailbox plan to apply to the mailbox. You can use any value that uniquely identifies the mailbox plan. For example:
 
 - Name
 
@@ -1720,7 +1720,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxProvisioningConstraint
-This parameter is only availble in the cloud-based service.
+This parameter is only available in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1737,7 +1737,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxProvisioningPreferences
-This parameter is only availble in the cloud-based service.
+This parameter is only available in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1952,7 +1952,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisionedForOfficeGraph
-This parameter is only availble in the cloud-based service.
+This parameter is only available in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2204,7 +2204,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipMailboxProvisioningConstraintValidation
-This parameter is only availble in the cloud-based service.
+This parameter is only available in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
