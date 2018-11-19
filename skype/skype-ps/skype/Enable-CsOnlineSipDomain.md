@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 THIS IS PRELIMINARY DOCUMENTATION OF UPCOMING FUNCTIONALITY</br>
 
-This cmdlet enables provisioning of users in Skype for Business Online for the specified domain. This cmdlet is only necessary to run if you previously disabled a domain using Disable-CsOnlineSipDomain. Enable-CsOnlineSipDomain is used to faciliate consolidation of separate Skype for Business deployments into a single Office 365 tenant.
+This cmdlet enables provisioning of users in Skype for Business Online for the specified domain. This cmdlet is only necessary to run if you previously disabled a domain using Disable-CsOnlineSipDomain. Enable-CsOnlineSipDomain is used to facilitate consolidation of separate Skype for Business deployments into a single Office 365 tenant.
 
 ## SYNTAX
 
