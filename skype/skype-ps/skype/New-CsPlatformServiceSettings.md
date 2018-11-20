@@ -181,7 +181,21 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Indicates the Identity of the Platform Service Settings to be modified.
+Unique identifier of the Platform Service Settings to be created.
+
+To create a new collection of settings at the site scope, use syntax similar to this:
+
+`-Identity site:Redmond`
+
+To create new settings at the service scope, use syntax like this:
+
+`-Identity service:WebServer:atl-cs-001.litwareinc.com`
+
+Privacy settings can only be created for the WebServer service. 
+An error will occur if you try to apply these settings to any other service.
+
+Note that your command will fail if Platform Service Settings already exist for the specified site or service.
+Likewise, your command will fail if you attempt to create a new collection of global settings.
 
 ```yaml
 Type: XdsIdentity
