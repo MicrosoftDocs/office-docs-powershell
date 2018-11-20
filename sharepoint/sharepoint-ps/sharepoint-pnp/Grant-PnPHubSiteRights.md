@@ -6,7 +6,7 @@ schema: 2.0.0
 # Grant-PnPHubSiteRights
 
 ## SYNOPSIS
-Grant Permissions to associate sites to Hub Sites.
+Grant additional permissions to the permissions already in place to associate sites to Hub Sites for one or more specific users
 
 ## SYNTAX 
 
@@ -21,7 +21,14 @@ Grant-PnPHubSiteRights [-Connection <SPOnlineConnection>]
 Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com","myotheruser@mydomain.com" -Rights Join
 ```
 
-This example shows how to grant right to myuser and myotheruser to associate their sites with hubsite
+This example shows how to grant rights to myuser and myotheruser to associate their sites with the provided Hub Site
+
+### ------------------EXAMPLE 2------------------
+```powershell
+Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/hubsite -Principals "myuser@mydomain.com" -Rights None
+```
+
+This example shows how to revoke rights from myuser to associate their sites with the provided Hub Site
 
 ## PARAMETERS
 

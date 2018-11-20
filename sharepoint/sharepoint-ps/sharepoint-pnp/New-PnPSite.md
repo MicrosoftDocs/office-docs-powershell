@@ -6,7 +6,7 @@ schema: 2.0.0
 # New-PnPSite
 
 ## SYNOPSIS
-BETA: This cmdlet is using early release APIs. Notice that functionality and parameters can change. Creates a new site collection
+Creates a new site collection
 
 ## SYNTAX 
 
@@ -28,6 +28,7 @@ New-PnPSite -Title <String>
 New-PnPSite -Title <String>
             -Alias <String>
             -Type <SiteType>
+            [-Lcid <UInt32>]
             [-Description <String>]
             [-Classification <String>]
             [-IsPublic <String>]
@@ -82,24 +83,38 @@ This will create a new Communications Site collection with the title 'Contoso' a
 
 ### ------------------EXAMPLE 5------------------
 ```powershell
-New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -AllowFileSharingForGuestUsers
+New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -ShareByEmailEnabled
 ```
 
-This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso'. File sharing for guest users will be enabled.
+This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso'. Allows owners to invite users outside of the organization.
 
 ### ------------------EXAMPLE 6------------------
+```powershell
+New-PnPSite -Type CommunicationSite -Title Contoso -Url https://tenant.sharepoint.com/sites/contoso -Lcid 1044
+```
+
+This will create a new Communications Site collection with the title 'Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' and sets the default language to Italian.
+
+### ------------------EXAMPLE 7------------------
 ```powershell
 New-PnPSite -Type TeamSite -Title 'Team Contoso' -Alias contoso
 ```
 
 This will create a new Modern Team Site collection with the title 'Team Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' or 'https://tenant.sharepoint.com/teams/contoso' based on the managed path configuration in the SharePoint Online Admin portal.
 
-### ------------------EXAMPLE 7------------------
+### ------------------EXAMPLE 8------------------
 ```powershell
 New-PnPSite -Type TeamSite -Title 'Team Contoso' -Alias contoso -IsPublic
 ```
 
 This will create a new Modern Team Site collection with the title 'Team Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' or 'https://tenant.sharepoint.com/teams/contoso' based on the managed path configuration in the SharePoint Online Admin portal and sets the site to public.
+
+### ------------------EXAMPLE 9------------------
+```powershell
+New-PnPSite -Type TeamSite -Title 'Team Contoso' -Alias contoso -Lcid 1040
+```
+
+This will create a new Modern Team Site collection with the title 'Team Contoso' and the url 'https://tenant.sharepoint.com/sites/contoso' or 'https://tenant.sharepoint.com/teams/contoso' based on the managed path configuration in the SharePoint Online Admin portal and sets the default language of the site to Italian.
 
 ## PARAMETERS
 

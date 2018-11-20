@@ -3,32 +3,32 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# New-PnPProvisioningTeamNoGroupSite
+# New-PnPTenantSequenceTeamNoGroupSubSite
 
 ## SYNOPSIS
-Creates a team site without an Office 365 group object
+Creates a team site subsite with no Office 365 group object
 
 ## SYNTAX 
 
 ```powershell
-New-PnPProvisioningTeamNoGroupSite -Url <String>
-                                   -Title <String>
-                                   -TimeZoneId <UInt32>
-                                   [-Language <UInt32>]
-                                   [-Owner <String>]
-                                   [-Description <String>]
-                                   [-HubSite [<SwitchParameter>]]
-                                   [-TemplateIds <String[]>]
+New-PnPTenantSequenceTeamNoGroupSubSite -Url <String>
+                                        -Title <String>
+                                        -TimeZoneId <UInt32>
+                                        [-Language <UInt32>]
+                                        [-Description <String>]
+                                        [-TemplateIds <String[]>]
+                                        [-QuickLaunchDisabled [<SwitchParameter>]]
+                                        [-UseDifferentPermissionsFromParentSite [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-$site = New-PnPProvisioningTeamNoGroupSite -Alias "MyTeamSite" -Title "My Team Site"
+$site = New-PnPTenantSequenceTeamNoGroupSubSite -Url "MyTeamSubsite" -Title "My Team Site" -TimeZoneId 4
 ```
 
-Creates a new team site object with the specified variables
+Creates a new team site subsite object with the specified variables
 
 ## PARAMETERS
 
@@ -37,18 +37,6 @@ Creates a new team site object with the specified variables
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Accept pipeline input: False
-```
-
-### -HubSite
-
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
@@ -68,11 +56,11 @@ Position: Named
 Accept pipeline input: False
 ```
 
-### -Owner
+### -QuickLaunchDisabled
 
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
@@ -124,6 +112,18 @@ Type: String
 Parameter Sets: (All)
 
 Required: True
+Position: Named
+Accept pipeline input: False
+```
+
+### -UseDifferentPermissionsFromParentSite
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
 Position: Named
 Accept pipeline input: False
 ```
