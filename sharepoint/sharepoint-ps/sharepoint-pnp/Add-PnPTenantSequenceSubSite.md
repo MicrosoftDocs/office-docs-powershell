@@ -3,26 +3,26 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Add-PnPProvisioningSubSite
+# Add-PnPTenantSequenceSubSite
 
 ## SYNOPSIS
-Adds a provisioning sequence object to a provisioning site object
+Adds a tenant sequence sub site object to a tenant sequence site object
 
 ## SYNTAX 
 
 ```powershell
-Add-PnPProvisioningSubSite -SubSite <TeamNoGroupSubSite>
-                           -Site <SiteCollection>
+Add-PnPTenantSequenceSubSite -SubSite <TeamNoGroupSubSite>
+                             -Site <SiteCollection>
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Add-PnPProvisioningSubSite -Site $mysite -SubSite $mysubsite
+Add-PnPTenantSequenceSubSite -Site $mysite -SubSite $mysubsite
 ```
 
-Adds an existing subsite object to an existing hierarchy sequence site object
+Adds an existing subsite object to an existing sequence site object
 
 ## PARAMETERS
 
