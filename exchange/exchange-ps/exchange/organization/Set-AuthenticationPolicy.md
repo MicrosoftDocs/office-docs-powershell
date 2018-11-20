@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-AuthenticationPolicy -Identity "Engineering Group" -AllowBasicAuthReportingWebServices
 ```
 
-This example modifies the authentication policy named Engineering Group to all Basic authentication for Exchange Remporting Web Services (EWS)
+This example modifies the authentication policy named Engineering Group to all Basic authentication for Exchange Reporting Web Services.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthActiveSync
-The AllowBasicAuthActiveSync switch specifies whther to allow Basic authentication with Exchange Active Sync.
+The AllowBasicAuthActiveSync switch specifies whether to allow Basic authentication with Exchange Active Sync.
 
 - To change the value to $true, use this switch without a value.
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthAutodiscover
-The AllowBasicAuthAutodiscover switch specifies whther to allow Basic authentication with Autodiscover.
+The AllowBasicAuthAutodiscover switch specifies whether to allow Basic authentication with Autodiscover.
 
 - To change the value to $true, use this switch without a value.
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthImap
-The AllowBasicAuthImap switch specifies whther to allow Basic authentication with IMAP.
+The AllowBasicAuthImap switch specifies whether to allow Basic authentication with IMAP.
 
 - To change the value to $true, use this switch without a value.
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthMapi
-The AllowBasicAuthMapi switch specifies whther to allow Basic authentication with MAPI.
+The AllowBasicAuthMapi switch specifies whether to allow Basic authentication with MAPI.
 
 - To change the value to $true, use this switch without a value.
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthOfflineAddressBook
-The AllowBasicAuthOfflineAddressBook switch specifies whther to allow Basic authentication with Offline Address Books.
+The AllowBasicAuthOfflineAddressBook switch specifies whether to allow Basic authentication with Offline Address Books.
 
 - To change the value to $true, use this switch without a value.
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthOutlookService
-The AllowBasicAuthOutlookService switch specifies whther to allow Basic authentication with the Outlook service.
+The AllowBasicAuthOutlookService switch specifies whether to allow Basic authentication with the Outlook service.
 
 - To change the value to $true, use this switch without a value.
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthPop
-The AllowBasicAuthPop switch specifies whther to allow Basic authentication with POP.
+The AllowBasicAuthPop switch specifies whether to allow Basic authentication with POP.
 
 - To change the value to $true, use this switch without a value.
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthPowershell
-The AllowBasicAuthPowerShell switch specifies whther to allow Basic authentication with PowerShell.
+The AllowBasicAuthPowerShell switch specifies whether to allow Basic authentication with PowerShell.
 
 - To change the value to $true, use this switch without a value.
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthReportingWebServices
-The AllowBasicAuthReporting Web Services switch specifies whther to allow Basic authentication with reporting web services.
+The AllowBasicAuthReporting Web Services switch specifies whether to allow Basic authentication with reporting web services.
 
 - To change the value to $true, use this switch without a value.
 
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthRest
-The AllowBasicAuthRest switch specifies whther to allow Basic authentication with REST.
+The AllowBasicAuthRest switch specifies whether to allow Basic authentication with REST.
 
 - To change the value to $true, use this switch without a value.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthRpc
-The AllowBasicAuthRpc switch specifies whther to allow Basic authentication with RPC.
+The AllowBasicAuthRpc switch specifies whether to allow Basic authentication with RPC.
 
 - To change the value to $true, use this switch without a value.
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthSmtp
-The AllowBasicAuthSmtp switch specifies whther to allow Basic authentication with SMTP.
+The AllowBasicAuthSmtp switch specifies whether to allow Basic authentication with SMTP.
 
 - To change the value to $true, use this switch without a value.
 
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBasicAuthWebServices
-The AllowBasicAuthWebServices switch specifies whther to allow Basic authentication with Exchange Web Services (EWS). You don't need to specify a value with this switch.
+The AllowBasicAuthWebServices switch specifies whether to allow Basic authentication with Exchange Web Services (EWS). You don't need to specify a value with this switch.
 
 - To change the value to $true, use this switch without a value.
 

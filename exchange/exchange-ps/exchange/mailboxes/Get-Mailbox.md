@@ -41,7 +41,7 @@ Get-Mailbox [-Anr <String>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### DatabaseSet
@@ -65,7 +65,7 @@ Get-Mailbox [-Database <DatabaseIdParameter>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### Identity
@@ -92,7 +92,7 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-ResultSize <Unlimited>]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### ServerSet
@@ -116,7 +116,7 @@ Get-Mailbox [-Server <ServerIdParameter>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
- [-SupervisoryReviewPolicy] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### MailboxPlanSet
@@ -822,23 +822,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-This parameter is available only in on-premises Exchange.
-
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
