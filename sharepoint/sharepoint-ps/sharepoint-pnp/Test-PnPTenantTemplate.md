@@ -3,7 +3,7 @@ external help file:
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 schema: 2.0.0
 ---
-# Test-PnPProvisioningHierarchy
+# Test-PnPTenantTemplate
 
 ## SYNOPSIS
 Tests a provisioning hierarchy for invalid references
@@ -11,8 +11,8 @@ Tests a provisioning hierarchy for invalid references
 ## SYNTAX 
 
 ```powershell
-Test-PnPProvisioningHierarchy -Hierarchy <ProvisioningHierarchy>
-                              [-Connection <SPOnlineConnection>]
+Test-PnPTenantTemplate -Template <ProvisioningHierarchy>
+                       [-Connection <SPOnlineConnection>]
 ```
 
 ## EXAMPLES
@@ -26,14 +26,15 @@ Checks for valid template references
 
 ## PARAMETERS
 
-### -Hierarchy
-The hierarchy to add the sequence to
+### -Template
+The in-memory template to test
 
 Only applicable to: SharePoint Online
 
 ```yaml
 Type: ProvisioningHierarchy
 Parameter Sets: __AllParameterSets
+Aliases: Hierarchy
 
 Required: True
 Position: Named

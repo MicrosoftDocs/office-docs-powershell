@@ -43,7 +43,7 @@ PS C:\> Get-CsTeamsUpgradePolicy
 
 Identity       : Global
 Description    : Users can use either Skype for Business client or Teams client
-Mode           : Legacy
+Mode           : Islands
 NotifySfbUsers : False
 Action         : None
 
@@ -112,7 +112,7 @@ PS C:\> Get-CsTeamsUpgradePolicy -Identity Global
 
 Identity       : Global
 Description    : Users can use either Skype for Business client or Teams client
-Mode           : Legacy
+Mode           : Islands
 NotifySfbUsers : False
 Action         : None
 
