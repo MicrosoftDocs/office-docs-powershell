@@ -738,7 +738,11 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForSharepoint
 This parameter is available only in the cloud-based service.
 
-{{Fill ConnectorsEnabledForSharepoint Description}}
+The ConnectorsEnabledForSharepoint parameter specifies whether to enable or disable connected apps on Sharepoint. Valid values are:
+
+- $true: Connectors are enabled. This is the default value.
+
+- $false: Connectors are disabled.
 
 ```yaml
 Type: $true | $false
@@ -755,7 +759,11 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForTeams
 This parameter is available only in the cloud-based service.
 
-{{Fill ConnectorsEnabledForTeams Description}}
+The ConnectorsEnabledForTeams parameter specifies whether to enable or disable connected apps on Teams. Valid values are:
+
+- $true: Connectors are enabled. This is the default value.
+
+- $false: Connectors are disabled.
 
 ```yaml
 Type: $true | $false
@@ -772,7 +780,11 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForYammer
 This parameter is available only in the cloud-based service.
 
-{{Fill ConnectorsEnabledForYammer Description}}
+The ConnectorsEnabledForYammer parameter specifies whether to enable or disable connected apps on Yammer. Valid values are:
+
+- $true: Connectors are enabled. This is the default value.
+
+- $false: Connectors are disabled.
 
 ```yaml
 Type: $true | $false
