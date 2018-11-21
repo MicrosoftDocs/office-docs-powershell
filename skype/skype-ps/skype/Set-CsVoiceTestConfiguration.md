@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -Instance
 An object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.TestConfiguration that contains an existing voice test configuration with the changes you'd like to make to that configuration.
-An object of this type can be retrieved by calling the `Get-CsVoiceTestConfiguraton` cmdlet.
+An object of this type can be retrieved by calling the `Get-CsVoiceTestConfiguration` cmdlet.
 
 ```yaml
 Type: PSObject
