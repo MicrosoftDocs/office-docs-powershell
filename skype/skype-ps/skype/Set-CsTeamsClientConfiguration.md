@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTBotProactiveMessaging
-When set to $true, T-bot will initiate a private chat session with users to help them use Teams.
+Deprecated, do not use.
 
 ```yaml
 Type: Boolean

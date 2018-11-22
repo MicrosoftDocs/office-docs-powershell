@@ -3,7 +3,7 @@ title: "Enable or disable access to Exchange Online PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: serdars
-ms.date: 2/20/2018
+ms.date: 
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
@@ -59,7 +59,7 @@ $<VariableName> = <Get-Mailbox | Get-User> -ResultSize unlimited -Filter <Filter
 ```
 
 ```
-$<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false}
+$<VariableName> | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
 ```
 
 This example removes access to Exchange Online PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
@@ -69,7 +69,7 @@ $DSA = Get-User -ResultSize unlimited -Filter {(RecipientType -eq 'UserMailbox')
 ```
 
 ```
-$DSA | foreach {Set-User -RemotePowerShellEnabled $false}
+$DSA | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
 ```
 
 ### Use a list of specific users
@@ -81,10 +81,10 @@ $<VariableName> = Get-Content <text file>
 ```
 
 ```
-$<VariableName> | foreach {Set-User -RemotePowerShellEnabled $false}
+$<VariableName> | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
 ```
 
-This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their email addresses. The text file must contain one email address on each line as follows:
+This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their accounts. The text file must contain one account on each line as follows:
   
 ```
 akol@contoso.com
@@ -99,7 +99,7 @@ $NPS = Get-Content "C:\My Documents\NoPowerShell.txt"
 ```
 
 ```
-$NPS | foreach {Set-User -RemotePowerShellEnabled $false}
+$NPS | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
 ```
 
 ## View the Exchange Online PowerShell access for users
