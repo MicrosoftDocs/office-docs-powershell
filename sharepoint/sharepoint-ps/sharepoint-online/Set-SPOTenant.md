@@ -1247,6 +1247,7 @@ By default Content Type Hub will no longer push content types to OneDrive for Bu
 
 In case you want the Content Type Hub to push content types to OneDrive for Business sites, use: 
 ```Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites```
+
 When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
 
 Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using: 
