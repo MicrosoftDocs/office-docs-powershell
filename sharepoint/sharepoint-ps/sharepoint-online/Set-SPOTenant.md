@@ -40,8 +40,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-UseFindPeopleInPeoplePicker <Boolean>]
- [-UserVoiceForFeedbackEnabled <Boolean>] [<CommonParameters>]
- [-ContentTypeSyncSitesList MySites] [-ExcludeSiteTemplate] 
+ [-UserVoiceForFeedbackEnabled <Boolean>] 
+ [-ContentTypeSyncSitesList MySites [-ExcludeSiteTemplate]] 
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
