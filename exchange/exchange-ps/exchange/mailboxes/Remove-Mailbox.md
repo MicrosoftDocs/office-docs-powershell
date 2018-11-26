@@ -32,7 +32,6 @@ Remove-Mailbox [-Identity] <MailboxIdParameter> [-Permanent <$true | $false>]
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
- [-SupervisoryReviewPolicy]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -51,7 +50,6 @@ Remove-Mailbox -Database <DatabaseIdParameter> -StoreMailboxIdentity <StoreMailb
  [-PublicFolder]
  [-RemoveArbitrationMailboxWithOABsAllowed]
  [-RemoveLastArbitrationMailboxAllowed]
- [-SupervisoryReviewPolicy]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -454,21 +452,6 @@ Type: SwitchParameter
 Parameter Sets: StoreMailboxIdentity, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: StoreMailboxIdentity, Identity
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
