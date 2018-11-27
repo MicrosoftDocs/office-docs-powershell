@@ -48,6 +48,7 @@ New-TeamChannel -GroupId $group.GroupId -DisplayName "Q4 planning"
 New-TeamChannel -GroupId $group.GroupId -DisplayName "Exec status"
 New-TeamChannel -GroupId $group.GroupId -DisplayName "Contracts"
 Set-TeamFunSettings -GroupId $group.GroupId -AllowCustomMemes true
+Set-TeamDiscoverySettings -GroupId $group.GroupId -ShowInSearchAndSuggestions true
 ```
 
 ## PARAMETERS
