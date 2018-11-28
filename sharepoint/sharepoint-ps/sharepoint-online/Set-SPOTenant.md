@@ -40,7 +40,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-UseFindPeopleInPeoplePicker <Boolean>]
- [-UserVoiceForFeedbackEnabled <Boolean>] [<CommonParameters>]
+ [-UserVoiceForFeedbackEnabled <Boolean>] 
+ [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,6 +90,21 @@ Set-SPOTenant -LegacyAuthProtocolsEnabled $True
 
 This example enables legacy authentication protocols on the tenant. This can help to enable login in situations where the admin users get an error like "Cannot contact web site 'https://contoso-admin.sharepoint.com/' or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'.", and the underlying error is "Access denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically."
 
+### -----------------------EXAMPLE 6------------------------------
+
+```
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
+```
+
+This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behaviour for other sites.
+
+### -----------------------EXAMPLE 7-------------------------------
+
+```
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
+```
+
+This example stops publishing content types to OneDrive for Business sites. 
 
 ## PARAMETERS
 
@@ -1222,6 +1239,19 @@ Position: Named
 Default value: $true
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
+By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites). 
+In case you want the Content Type Hub to push content types to OneDrive for Business sites, use:  
+```
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites 
+```
+When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
+
+Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using:
+```
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
 ### CommonParameters

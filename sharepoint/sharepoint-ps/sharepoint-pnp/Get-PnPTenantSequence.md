@@ -3,43 +3,43 @@ external help file:
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 schema: 2.0.0
 ---
-# Get-PnPProvisioningSite
+# Get-PnPTenantSequence
 
 ## SYNOPSIS
-Returns one ore more provisioning sequence object(s) from a provisioning hierarchy
+Returns one ore more provisioning sequence object(s) from a tenant template
 
 ## SYNTAX 
 
 ```powershell
-Get-PnPProvisioningSite -Sequence <ProvisioningSequence>
-                        [-Identity <ProvisioningSitePipeBind>]
+Get-PnPTenantSequence -Template <ProvisioningHierarchy>
+                      [-Identity <ProvisioningSequencePipeBind>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Get-PnPProvisioningSite -Sequence $mysequence
+Get-PnPTenantSequence -Template $myhierarchy
 ```
 
-Returns all sites from the specified sequence
+Returns all sequences from the specified tenant template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Get-PnPProvisioningSite -Sequence $mysequence -Identity 8058ea99-af7b-4bb7-b12a-78f93398041e
+Get-PnPTenantSequence -Template $myhierarchy -Identity "mysequence"
 ```
 
-Returns the specified site from the specified sequence
+Returns the specified sequence from the specified tenant template
 
 ## PARAMETERS
 
 ### -Identity
-Optional Id of the site
+Optional Id of the sequence
 
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: ProvisioningSitePipeBind
+Type: ProvisioningSequencePipeBind
 Parameter Sets: __AllParameterSets
 
 Required: False
@@ -47,13 +47,13 @@ Position: Named
 Accept pipeline input: True
 ```
 
-### -Sequence
-The sequence to retrieve the site from
+### -Template
+The hierarchy to retrieve the sequence from
 
 Only applicable to: SharePoint Online
 
 ```yaml
-Type: ProvisioningSequence
+Type: ProvisioningHierarchy
 Parameter Sets: __AllParameterSets
 
 Required: True

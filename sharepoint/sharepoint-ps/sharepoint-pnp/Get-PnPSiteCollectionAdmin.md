@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPSiteCollectionAdmin
 
 ## SYNOPSIS
-Returns the current site collection administrators of the site colleciton in the current context
+Returns the current site collection administrators of the site collection in the current context
 
 ## SYNTAX 
 

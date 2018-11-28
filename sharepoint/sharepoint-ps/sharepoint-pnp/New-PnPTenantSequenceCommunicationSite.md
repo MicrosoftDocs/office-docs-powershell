@@ -3,7 +3,7 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# New-PnPProvisioningCommunicationSite
+# New-PnPTenantSequenceCommunicationSite
 
 ## SYNOPSIS
 Creates a communication site object
@@ -11,23 +11,23 @@ Creates a communication site object
 ## SYNTAX 
 
 ```powershell
-New-PnPProvisioningCommunicationSite -Url <String>
-                                     -Title <String>
-                                     [-Language <UInt32>]
-                                     [-Owner <String>]
-                                     [-Description <String>]
-                                     [-Classification <String>]
-                                     [-SiteDesignId <String>]
-                                     [-HubSite [<SwitchParameter>]]
-                                     [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
-                                     [-TemplateIds <String[]>]
+New-PnPTenantSequenceCommunicationSite -Url <String>
+                                       -Title <String>
+                                       [-Language <UInt32>]
+                                       [-Owner <String>]
+                                       [-Description <String>]
+                                       [-Classification <String>]
+                                       [-SiteDesignId <String>]
+                                       [-HubSite [<SwitchParameter>]]
+                                       [-AllowFileSharingForGuestUsers [<SwitchParameter>]]
+                                       [-TemplateIds <String[]>]
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-$site = New-PnPProvisioningCommunicationSite -Url "/sites/mycommunicationsite" -Title "My Team Site"
+$site = New-PnPTenantSequenceCommunicationSite -Url "/sites/mycommunicationsite" -Title "My Team Site"
 ```
 
 Creates a new communication site object with the specified variables

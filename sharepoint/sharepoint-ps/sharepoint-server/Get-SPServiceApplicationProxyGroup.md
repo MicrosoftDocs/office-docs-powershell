@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Default
-Returns the default sevice proxy group for the farm.
+Returns the default service proxy group for the farm.
 
 ```yaml
 Type: SwitchParameter
