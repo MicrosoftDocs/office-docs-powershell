@@ -25,7 +25,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StartASiteFormUrl <String>] [-UsePersistentCookiesForExplorerView <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultSharingLinkType <SharingLinkType>]
- [-DisableWebPartIds <Guid>]
+ [-DisabledWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>] [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>] [-IPAddressEnforcement <Boolean>] [-IPAddressWACTokenLifetime <Int32>]
@@ -615,11 +615,11 @@ PARAMVALUE: <Guid>[,<Guid>,...]
  
 Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Only web parts that utilize third-party services (Amazon Kindle, YouTube, Twitter) can be disabled in such a manner.
  
-To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4)
+To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4).
 
-You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOSite to get DisabledWebPartIds.
+You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
 
-To reenable disabled web parts, use the Set-SPOSite with the -DisabledWebPartIds parameter and corresponding GUIDs. 
+To reenable disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs. To enable all of them again, use Set-SPOTenant -DisabledWebPartIds $null.
  
 ```yaml
 Type: Guid[]
