@@ -231,9 +231,9 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligence
 The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph) in domain and user impersonation protection. Valid values are:
 
-- $true: Use mailbox intelligence in domain and user impersonation protection.
+- $true: Use mailbox intelligence in domain and user impersonation protection. This is the default value.
 
-- $false: Don't use mailbox intelligence in domain and user impersonation protection. This is the default value.
+- $false: Don't use mailbox intelligence in domain and user impersonation protection.
 
 ```yaml
 Type: $true | $false

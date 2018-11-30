@@ -41,7 +41,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>] 
- [-ContentTypeSyncSitesList MySites [-ExcludeSiteTemplate]] 
+ [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
  [<CommonParameters>]
 ```
 
