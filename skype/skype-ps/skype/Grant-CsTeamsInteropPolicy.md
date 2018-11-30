@@ -26,14 +26,10 @@ Grant-CsTeamsInteropPolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-Id
 IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. It is no longer honored by the system, except if TeamsUpgradePolicy has mode=Legacy.  Legacy mode is being deprecated. Customers that are still using Legacy mode should update their configurations to use a mode other than Legacy.  Granting mode=Legacy is now blocked by default, although admins can override this using -Force for the time being. Eventually, the -Force switch will be removed and granting mode=Legacy will not be possible.
 
 Any customers still using Legacy mode must ensure the following:
- - The global policy must have CallingDefaultClient=ChatDefaultClient, and AllowEndUserClientOverride must be false.  If you customized the built-in global policy, undo this by running `Remove-CsTeamsInteropPolicy`. This will remove the tenant-specific global policy and revert back to the system-wide built-in policy (which cannot be removed). Use the following syntax:
- 
-```
-Remove-CsTeamsInteropPolicy -Identity Global
-```
+
+ - The global policy must have CallingDefaultClient=ChatDefaultClient, and AllowEndUserClientOverride must be false.  If you customized the built-in global policy, undo this by running `Remove-CsTeamsInteropPolicy`. This will remove the tenant-specific global policy and revert back to the system-wide built-in policy (which cannot be removed). Use the following syntax: `Remove-CsTeamsInteropPolicy -Identity Global`.
 
  - If TeamsInteropPolicy is explicitly assigned to any users, one of these three built-in instances for which CallingDefaultClient = ChatDefaultClient, and for which AllowEndUserClientOverride = false. The other instances are no longer valid configurations, are not supported, and will soon be removed from the system.  The valid instances are:
-
 
 **Identity: DisallowOverrideCallingDefaultChatDefault**   
 **AllowEndUserClientOverride: False**   
@@ -50,10 +46,7 @@ Remove-CsTeamsInteropPolicy -Identity Global
 **CallingDefaultClient: Teams**     
 **ChatDefaultClient: Teams**
 
-
-Use the following cmdlet syntax, where $policy is one of the above values of identity:
-`Grant-CsTeamsInteropPolicy -PolicyName $policy -Identity $SipAddress`
-
+Use the following cmdlet syntax, where $policy is one of the above values of identity: `Grant-CsTeamsInteropPolicy -PolicyName $policy -Identity $SipAddress`.
 
 For comprehensive documentation on this policy and its settings, see [Microsoft Teams and Skype for Business Interoperability](https://docs.microsoft.com/MicrosoftTeams/teams-and-skypeforbusiness-interoperability).
 
