@@ -23,11 +23,11 @@
 				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
 				"metaTags": []
 			},
-//			{
-//				"name": "staffhub",
-//				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
-//				"metaTags": []
-//			},
+			//			{
+			//				"name": "staffhub",
+			//				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+			//				"metaTags": []
+			//			},
 			{
 				"name": "whiteboard",
 				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
@@ -52,6 +52,25 @@
 			"from": "no-replay@outlook.com",
 			"to": "test@gmail.com",
 			"subject": "Test subject"
+		}
+	},
+	"github": {
+		"token": "<TOKEN>",
+		"login": "<LOGIN>",
+		"password": "<PASSWORD>",
+		"name": "<NAME_FOR_COMMIT>",
+		"email": "<EMAIL_FOR_COMMIT>",
+		"commitMessage": "<COMMIT_NAME>",
+		"repositoryName": "<REPOSITORY_NAME>",
+		"repositoryLocalPath": "<REPOSITORY_LOCAL_PATH>",
+		"remoteBranch": "<REMOTE_BRANCH_FOR_PUSH>",
+		"head": "<HEAD>",
+		"base": "<BASE>",
+		"pullRequest": {
+			"title": "<TITLE>",
+			"body": "<BODY>",
+			"head": "<HEAD>",
+			"base": "<BASE>"
 		}
 	}
 }

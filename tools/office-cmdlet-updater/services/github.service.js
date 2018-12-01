@@ -4,7 +4,7 @@ class GithubService {
 	constructor(config) {
 		this.config = config;
 
-		const token = config.get('');
+		const token = config.get('github');
 
 		this.client = client(token);
 	}

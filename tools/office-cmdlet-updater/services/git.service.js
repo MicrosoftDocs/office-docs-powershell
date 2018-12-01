@@ -4,7 +4,7 @@ class GitService {
 	constructor(config) {
 		this.config = config;
 
-		const { name, email } = this.config.get('');
+		const { name, email } = this.config.get('github');
 
 		this.author = Signature.create(name, email, new Date().getTime(), 60);
 		this.commiter = Signature.create(name, email, new Date().getTime(), 90);
@@ -22,9 +22,7 @@ class GitService {
 		return await index.writeTree();
 	}
 
-	async createCommit({ repository, commitMessage, id, parent }) {
-		const {} = this.config.get('');
-
+	async createCommit({ repository, commitMessage, id }) {
 		const commitHead = await Reference.nameToId(repository, 'HEAD');
 		const parentCommit = await repository.getCommit(commitHead);
 
@@ -34,14 +32,14 @@ class GitService {
 			this.commiter,
 			commitMessage,
 			id,
-			[parent]
+			[parentCommit]
 		);
 	}
 
-	async pushCommit({ remoteBranch, repository, login, pass }) {
+	async pushCommit({ remoteBranch, repository, login, pass, head, base }) {
 		const remote = await repository.getRemote(remoteBranch);
 
-		await remote.push(['refs/heads/develop:refs/heads/develop'], {
+		await remote.push([`${head}:${base}`], {
 			callbacks: {
 				certificateCheck: () => 1,
 				credentials: () => Cred.userpassPlaintextNew(login, pass)

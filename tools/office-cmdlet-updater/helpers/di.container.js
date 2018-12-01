@@ -12,6 +12,9 @@ const FsService = require('../services/fs.service');
 const CliService = require('../services/cli.service');
 const CliController = require('../controllers/cli.controller');
 const CmdletService = require('../services/cmdlet.service');
+const GitService = require('../services/git.service');
+const GithubService = require('../services/github.service');
+const GithubController = require('../controllers/github.controller');
 
 module.exports = () => {
 	const container = awilix.createContainer({
@@ -37,12 +40,15 @@ module.exports = () => {
 			.singleton(),
 		fsService: awilix.asClass(FsService).singleton(),
 		markdownService: awilix.asClass(MarkdownService).singleton(),
-		cmdletService: awilix.asClass(CmdletService).singleton()
+		cmdletService: awilix.asClass(CmdletService).singleton(),
+		gitService: awilix.asClass(GitService).singleton(),
+		githubService: awilix.asClass(GithubService).singleton()
 	});
 
 	container.register({
 		markdownController: awilix.asClass(MarkdownController).singleton(),
-		cliController: awilix.asClass(CliController).singleton()
+		cliController: awilix.asClass(CliController).singleton(),
+		githubController: awilix.asClass(GithubController).singleton()
 	});
 
 	return container;
