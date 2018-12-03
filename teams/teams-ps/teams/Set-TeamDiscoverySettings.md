@@ -3,7 +3,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Set-TeamDiscoverySettings
-online version: 
+online version:
 schema: 2.0.0
 ---
 
@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Note: This cmdlet is currently in Beta.
 
-Update Giphy, Stickers and Memes settings.
+Update a team's discovery settings.
 
 ## SYNTAX
 
