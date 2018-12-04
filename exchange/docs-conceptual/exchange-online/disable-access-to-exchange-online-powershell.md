@@ -59,7 +59,7 @@ $<VariableName> = <Get-Mailbox | Get-User> -ResultSize unlimited -Filter <Filter
 ```
 
 ```
-$<VariableName> | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
+$<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 This example removes access to Exchange Online PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
@@ -69,7 +69,7 @@ $DSA = Get-User -ResultSize unlimited -Filter {(RecipientType -eq 'UserMailbox')
 ```
 
 ```
-$DSA | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
+$DSA | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 ### Use a list of specific users
@@ -81,7 +81,7 @@ $<VariableName> = Get-Content <text file>
 ```
 
 ```
-$<VariableName> | foreach {Set-User -Identity $_.MicrosoftOnlineServicesID -RemotePowerShellEnabled $false}
+$<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their accounts. The text file must contain one account on each line as follows:
