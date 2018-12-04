@@ -1,52 +1,52 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: Get-CsOrganizationalAutoAttendantStatus
+title: Get-CsAutoAttendantStatus
 schema: 2.0.0
 ---
 
-# Get-CsOrganizationalAutoAttendantStatus
+# Get-CsAutoAttendantStatus
 
 ## SYNOPSIS
-Use Get-CsOrganizationalAutoAttendantStatus cmdlet to get the status of an Auto Attendant (AA) provisioning.
+Use Get-CsAutoAttendantStatus cmdlet to get the status of an Auto Attendant (AA) provisioning.
 
 
 ## SYNTAX
 
 ```
-Get-CsOrganizationalAutoAttendantStatus [-PrimaryUri] <Uri> [-IncludeResources <List>] [-ApplicationId <Guid>] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsAutoAttendantStatus -Identity <String> [-IncludeResources <List>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 
 ## DESCRIPTION
-This cmdlet provides a way to return the provisioning status of an auto attendant configured for use in your organization. 
+This cmdlet provides a way to return the provisioning status of an auto attendant configured for use in your organization.
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsOrganizationalAutoAttendantStatus -PrimaryUri "sip:mainoaa@contoso.com"
+Get-CsAutoAttendantStatus -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
 ```
 
-In Example 1, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records for all resources of an auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In Example 1, the Get-CsAutoAttendantStatus cmdlet is used to get status records for all resources of an auto attendant with identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsOrganizationalAutoAttendantStatus -PrimaryUri sip:mainoaa@contoso.com -IncludeResources @("AudioFile")
+Get-CsAutoAttendantStatus -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093" -IncludeResources @("AudioFile")
 ```
 
-In Example 2, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records pertaining to audio files only of an auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In Example 2, the Get-CsAutoAttendantStatus cmdlet is used to get status records pertaining to audio files only of an auto attendant with identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
 
 ## PARAMETERS
 
-### -PrimaryUri
-The Primary URI represents the SIP address of the auto attendant whose provisioning status is to be retrieved.
+### -Identity
+Represents the identifier for the auto attendant whose provisioning status is to be retrieved.
 
 ```yaml
-Type: System.Uri
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -58,31 +58,15 @@ Accept wildcard characters: False
 
 ### -IncludeResources
 The IncludeResources parameter identities the auto attendant resources whose status is to be retrieved. Available resources are:
-- AudioFile: Indicates status for audio files used by OAA.
-- DialByNameVoiceResponses: Indicates status for speech recognition when using dial-by-name (directory lookup) feature with OAA.
-- SipProvisioning: Indicates status for calling OAA through its SIP (Primary) URI.
+- AudioFile: Indicates status for audio files used by AA.
+- DialByNameVoiceResponses: Indicates status for speech recognition when using dial-by-name (directory lookup) feature with AA.
+- SipProvisioning: Indicates status for calling AA through its SIP (Primary) URI.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AudioFile, DialByNameVoiceResponses, SipProvisioning
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApplicationId
-Specifies a custom application ID to use for auto attendants. This parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
@@ -97,7 +81,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -113,7 +97,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-The Get-CsOrganizationalAutoAttendantStatus cmdlet accepts a string as the PrimaryUri parameter.
+The Get-CsAutoAttendantStatus cmdlet accepts a string as the Identity parameter.
 
 ## OUTPUTS
 
@@ -123,5 +107,5 @@ The Get-CsOrganizationalAutoAttendantStatus cmdlet accepts a string as the Prima
 
 ## RELATED LINKS
 
-[Get-CsOrganizationalAutoAttendant](Get-CsOrganizationalAutoAttendant.md)
+[Get-CsAutoAttendant](Get-CsAutoAttendant.md)
 

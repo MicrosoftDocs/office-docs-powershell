@@ -1,41 +1,39 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: New-CsOrganizationalAutoAttendantCallableEntity
+title: New-CsAutoAttendantCallableEntity
 schema: 2.0.0
 ---
 
-# New-CsOrganizationalAutoAttendantCallableEntity
+# New-CsAutoAttendantCallableEntity
 
 ## SYNOPSIS
-The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a callable entity.
+The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 
 ## SYNTAX
 
-```
-New-CsOrganizationalAutoAttendantCallableEntity -Identity <String> -Type <User | OrganizationalAutoAttendant | HuntGroup> [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | App> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Auto Attendant service. Callable entities can be created using either SIP or TEL URIs and can refer to any of the following entities:
+The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Auto Attendant service. Callable entities can be created using either Object ID or TEL URIs and can refer to any of the following entities:
 
 - User
-- OrganizationalAutoAttendant
-- HuntGroup
-
+- ApplicationEndpoint
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-$callableEntity = New-CsOrganizationalAutoAttendantCallableEntity -Identity sip:operator@contoso.com -Type User
+```powershell
+$callableEntity = New-CsAutoAttendantCallableEntity -Identity "9bad1a25-3203-5207-b34d-1bd933b867a5" -Type User
 ```
 
 This example creates a user callable entity.
 
 ### -------------------------- Example 2 --------------------------
-```
-$callableEntity = New-CsOrganizationalAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type OrganizationalAutoAttendant
+```powershell
+$callableEntity = New-CsAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type AutoAttendant
 ```
 
 This example creates an auto attendant callable entity.
@@ -43,17 +41,15 @@ This example creates an auto attendant callable entity.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter represents the ID of the callable entity; this can be either a SIP URI or a TEL URI.
+The Identity parameter represents the ID of the callable entity; this can be either a Object ID or a TEL URI.
 
-- Only the SIP URIs of users that have Enterprise Voice enabled are supported.
-- Only PSTN numbers that are acquired and assigned through Skype for Business Online are supported. 
-- SIP URIs can be used for a user only.
-- TEL URIs can be a user, an auto attendant, or a hunt group (call queue).
+- Only the Object IDs of users that have Enterprise Voice enabled are supported.
+- Only PSTN numbers that are acquired and assigned through Skype for Business Online are supported.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -67,14 +63,13 @@ Accept wildcard characters: False
 The Type parameter represents the type of the callable entity, which can be any of the following:
 
 - User
-- OrganizationalAutoAttendant
-- Huntgroup
+- ApplicationEndpoint
 
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -89,7 +84,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False

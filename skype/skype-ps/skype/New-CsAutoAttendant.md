@@ -12,27 +12,26 @@ Use the New-CsAutoAttendant cmdlet to create a new Auto Attendant (AA).
 
 ## SYNTAX
 
-```
-New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> -CallFlows <Object> -Schedules <Object> -CallHandlingAssociations <Object> [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> -CallFlows <Object> -CallHandlingAssociations <Object> [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Auto Attendants (AAs) are a key element in the Cloud PBX application.
 Each AA can be associated with phone numbers that allow callers to reach specific people in the organization through a directory lookup. Alternatively, it can route the calls to an operator, a user, another AA, or a call queue.
 
-You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random Primary (SIP) URI that serves as the identity of the AA.
+You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random string that serves as the identity of the AA.
 
 **NOTE**
-- PrimaryUri of AAs is a SIP URI.
 - The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
 - Holiday call flows have higher priority than after-hours call flows. Thus, if a holiday schedule and an after-hours schedule are both in effect at a particular time, the call flow corresponding to the holiday call flow will be rendered.
-- The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an “after hours” call flow was specified together with the corresponding schedule and call handling association.
+- The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an "after hours" call flow was specified together with the corresponding schedule and call handling association.
 - If a user is present in both inclusion and exclusion scopes, then exclusion scope always takes priority, i.e., the user will not be able to be contacted through directory lookup feature.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
+```powershell
 $operatorObjectId = "c06c5e04-e4bb-42f9-bd92-4704ca25a084"
 $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 
@@ -53,10 +52,10 @@ $afterHoursSchedule = New-CsOnlineSchedule -Name "After Hours Schedule" -WeeklyR
 
 $afterHoursCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $afterHoursSchedule.Id -CallFlowId $afterHoursCallFlow.Id
 
-$inclusionScopeGroupIds = @(“4c3053a6-20bf-43df-bf7a-156124168856”)
+$inclusionScopeGroupIds = @("4c3053a6-20bf-43df-bf7a-156124168856")
 $inclusionScope = New-CsAutoAttendantDialScope -GroupScope -GroupIds $inclusionScopeGroupIds
 
-$o=New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule) -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
+$o=New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
 ```
 
 This example creates a new AA named _Main auto attendant_ that has the following properties:
@@ -69,7 +68,7 @@ This example creates a new AA named _Main auto attendant_ that has the following
 - An inclusion scope is specified.
 
 ### -------------------------- Example 2 --------------------------
-```
+```powershell
 $operatorObjectId = "c06c5e04-e4bb-42f9-bd92-4704ca25a084"
 $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 
@@ -100,7 +99,7 @@ $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -Date
 
 $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-$o=New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule.Id, $christmasSchedule.Id) -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
+$o=New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
 ```
 
 This example creates a new AA named _Main auto attendant_ that has the following properties:
@@ -133,7 +132,7 @@ Accept wildcard characters: False
 ### -LanguageId
 The LanguageId parameter is the language that is used to read text-to-speech (TTS) prompts.
 
-You can query the supported languages using the Get-CsAutoAttendantSupportedLanguage cmdlet.
+You can query the supported languages using the [`Get-CsAutoAttendantSupportedLanguage`](Get-CsAutoAttendantSupportedLanguage.md) cmdlet.
 
 ```yaml
 Type: System.String
@@ -151,7 +150,7 @@ Accept wildcard characters: False
 ### -TimeZoneId
 The TimeZoneId parameter represents the AA time zone. All schedules are evaluated based on this time zone.
 
-You can query the supported timezones using the Get-CsAutoAttendantSupportedTimeZone cmdlet.
+You can query the supported timezones using the [`Get-CsAutoAttendantSupportedTimeZone`](Get-CsAutoAttendantSupportedTimeZone.md) cmdlet.
 
 ```yaml
 Type: System.String
@@ -169,7 +168,7 @@ Accept wildcard characters: False
 ### -DefaultCallFlow
 The DefaultCallFlow parameter is the flow to be executed when no other call flow is in effect (for example, during business hours).
 
-You can create the DefaultCallFlow by using the New-CsAutoAttendantCallFlow cmdlet.
+You can create the DefaultCallFlow by using the [`New-CsAutoAttendantCallFlow`](New-CsAutoAttendantCallFlow.md) cmdlet.
 
 
 ```yaml
@@ -188,26 +187,7 @@ Accept wildcard characters: False
 ### -CallFlows
 The CallFlows parameter represents call flows, which are required if they are referenced in the CallHandlingAssociations parameter.
 
-You can create CallFlows by using the New-CsAutoAttendantCallFlow cmdlet.
-
-
-```yaml
-Type: System.Collections.Generic.List
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Schedules
-The Schedules parameter reflects schedules' IDs that are associated with the AA. Schedules are required if they are referenced in the CallHandlingAssociations parameter.
-
-You can create schedules by using the New-CsOnlineSchedule cmdlet.
+You can create CallFlows by using the [`New-CsAutoAttendantCallFlow`](New-CsAutoAttendantCallFlow.md) cmdlet.
 
 
 ```yaml
@@ -227,7 +207,7 @@ Accept wildcard characters: False
 The CallHandlingAssociations parameter represents the call handling associations.
 The AA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
 
-You can create CallHandlingAssociations by using the New-CsAutoAttendantCallHandlingAssociation cmdlet.
+You can create CallHandlingAssociations by using the `New-CsAutoAttendantCallHandlingAssociation` cmdlet.
 
 ```yaml
 Type: System.Collections.Generic.List
@@ -245,7 +225,7 @@ Accept wildcard characters: False
 ### -Operator
 The Operator parameter represents the SIP address or PSTN number of the operator.
 
-You can create callable entities by using the New-CsAutoAttendantCallableEntity cmdlet.
+You can create callable entities by using the `New-CsAutoAttendantCallableEntity` cmdlet.
 
 
 ```yaml
@@ -264,7 +244,7 @@ Accept wildcard characters: False
 ### -VoiceId
 The VoiceId parameter represents the voice that is used to read text-to-speech (TTS) prompts.
 
-You can query the supported voices by using the Get-CsAutoAttendantSupportedLanguage cmdlet. You can determine the default voice for a language by issuing the following command:
+You can query the supported voices by using the `Get-CsAutoAttendantSupportedLanguage` cmdlet. You can determine the default voice for a language by issuing the following command:
 
 ```
 $language = Get-CsAutoAttendantSupportedLanguage -Identity "en-US"`
@@ -304,7 +284,7 @@ Accept wildcard characters: False
 Specifies the users to which call transfers are allowed through directory lookup feature.
 If not specified, all users in the organization can be reached through directory lookup.
 
-Dial scopes can be created by using the New-CsAutoAttendantDialScope cmdlet.
+Dial scopes can be created by using the [`New-CsAutoAttendantDialScope`](New-CsAutoAttendantDialScope.md) cmdlet.
 
 
 ```yaml
@@ -324,7 +304,7 @@ Accept wildcard characters: False
 Specifies the users to which call transfers are not allowed through directory lookup feature.
 If not specified, no user in the organization is excluded from directory lookup.
 
-Dial scopes can be created by using the New-CsAutoAttendantDialScope cmdlet.
+Dial scopes can be created by using the [`New-CsAutoAttendantDialScope`](New-CsAutoAttendantDialScope.md) cmdlet.
 
 
 ```yaml
@@ -365,7 +345,7 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.AA.Models.OrgAutoAttendant
+### Microsoft.Rtc.Management.OAA.Models.AutoAttendant
 
 
 ## NOTES
@@ -373,15 +353,24 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantCallFlow](New-CsAutoAttendantCallFlow.md)
+[Get-CsAutoAttendant](Get-CsAutoAttendant.md)
 
-[New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.md)
-
-[New-CsAutoAttendantCallableEntity](New-CsAutoAttendantCallableEntity.md)
-
-[New-CsOnlineSchedule](New-CsOnlineSchedule.md)
+[Get-CsAutoAttendantStatus](Get-CsAutoAttendantStatus.md)
 
 [Get-CsAutoAttendantSupportedLanguage](Get-CsAutoAttendantSupportedLanguage.md)
 
 [Get-CsAutoAttendantSupportedTimeZone](Get-CsAutoAttendantSupportedTimeZone.md)
 
+[New-CsAutoAttendantCallableEntity](New-CsAutoAttendantCallableEntity.md)
+
+[New-CsAutoAttendantCallFlow](New-CsAutoAttendantCallFlow.md)
+
+[New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.md)
+
+[New-CsOnlineSchedule](New-CsOnlineSchedule.md)
+
+[Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
+
+[Set-CsAutoAttendant](Set-CsAutoAttendant.md)
+
+[Update-CsAutoAttendant](Update-CsAutoAttendant.md)

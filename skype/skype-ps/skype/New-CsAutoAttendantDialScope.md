@@ -1,37 +1,37 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: New-CsOrganizationalAutoAttendantDialScope
+title: New-CsAutoAttendantDialScope
 schema: 2.0.0
 ---
 
-# New-CsOrganizationalAutoAttendantDialScope
+# New-CsAutoAttendantDialScope
 
 ## SYNOPSIS
-Use New-CsOrganizationalAutoAttendantDialScope cmdlet to create dial-scopes for use with Auto Attendant (AA) service.
+Use New-CsAutoAttendantDialScope cmdlet to create dial-scopes for use with Auto Attendant (AA) service.
 
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantDialScope -GroupScope -GroupIds <List> [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantDialScope -GroupScope -GroupIds <List> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet creates a new dial-scope to be used with Auto Attendant (AA) service. OAAs use dial-scopes to restrict the scope of call transfers that can be made through directory lookup feature. 
+This cmdlet creates a new dial-scope to be used with Auto Attendant (AA) service. AAs use dial-scopes to restrict the scope of call transfers that can be made through directory lookup feature.
 
 **NOTE**
-- The returned dial-scope model composes a member for the underlying type/implementation, e.g. in case of the group-based dial scope, in order to modify its Group IDs, you can access them through `DialScope.GroupScope.GroupIds`.  
+- The returned dial-scope model composes a member for the underlying type/implementation, e.g. in case of the group-based dial scope, in order to modify its Group IDs, you can access them through `DialScope.GroupScope.GroupIds`.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
+### -------------------------- Example 1 --------------------------
 ```
 $groupIds = @("00000000-0000-0000-0000-000000000000")
-$dialScope = New-CsOrganizationalAutoAttendantDialScope -GroupScope -GroupIds $groupIds
+$dialScope = New-CsAutoAttendantDialScope -GroupScope -GroupIds $groupIds
 ```
 
-In Example 1, the New-CsOrganizationalAutoAttendantDialScope cmdlet is used to create a dial-scope with a group whose id is 00000000-0000-0000-0000-000000000000.
+In Example 1, the New-CsAutoAttendantDialScope cmdlet is used to create a dial-scope with a group whose id is 00000000-0000-0000-0000-000000000000.
 
 ## PARAMETERS
 
@@ -41,7 +41,7 @@ Indicates that a dial-scope based on groups (distribution lists, security groups
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -54,12 +54,12 @@ Accept wildcard characters: False
 ### -GroupIds
 Refers to the IDs of the groups that are to be included in the dial-scope.
 
-Group IDs can be obtained by using the Find-CsGroup cmdlet. 
+Group IDs can be obtained by using the Find-CsGroup cmdlet.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False

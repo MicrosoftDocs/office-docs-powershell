@@ -1,43 +1,64 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: New-CsOnlineAudioFile
+title: Import-CsOnlineAudioFile
 schema: 2.0.0
 ---
 
-# New-CsOnlineAudioFile
+# Import-CsOnlineAudioFile
 
 ## SYNOPSIS
-Use the New-CsOnlineAudioFile cmdlet to create a new audio file.
+Use the Import-CsOnlineAudioFile cmdlet to upload a new audio file.
 
 ## SYNTAX
 
-```
-New-CsOnlineAudioFile -FileName <String> -Content <Byte[]> [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+Import-CsOnlineAudioFile -ApplicationId <string> -FileName <string> -Content <byte[]>
 ```
 
 ## DESCRIPTION
-The New-CsOnlineAudioFile cmdlet creates a new audio file for use with the Organizational Auto Attendant (OAA) service.
+The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Auto Attendant (AA) or Call Queue (CQ) service.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
-```
+### -------------------------- Example 1 --------------------------
+```powershell
 $content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
-$audioFile = New-CsOnlineAudioFile -FileName "Hello.wav" -Content $content
+$audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of Hello.wav.
+This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants.
 
 ## PARAMETERS
 
-### -FileName
-The FileName parameter is the name of the audio file. For example, the file name for the file C:\Media\Welcome.wav is Welcome.wav. 
+### -ApplicationId
+The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an organizational auto attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a hunt group (call queue), then it needs to be set to "HuntGroup".
+
+Supported values:
+
+- OrgAutoAttendant
+- HuntGroup
 
 ```yaml
 Type: System.string
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Skype for Business Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileName
+The FileName parameter is the name of the audio file. For example, the file name for the file C:\Media\Welcome.wav is Welcome.wav.
+
+```yaml
+Type: System.string
+Parameter Sets: (All)
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -53,25 +74,10 @@ The Content parameter represents the content of the audio file. Supported format
 ```yaml
 Type: System.Byte[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,39 +1,40 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: Remove-CsAutoAttendant
+title: Update-CsAutoAttendant
 schema: 2.0.0
 ---
 
-# Remove-CsAutoAttendant
+# Update-CsAutoAttendant
 
 ## SYNOPSIS
-Use the Remove-CsAutoAttendant cmdlet to delete an Auto Attendant (AA).
+Use Update-CsAutoAttendant cmdlet to force an update of resources associated with an Auto Attendant (AA) provisioning.
 
 ## SYNTAX
 
-```
-Remove-CsAutoAttendant -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+Update-CsAutoAttendant -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Remove-CsAutoAttendant cmdlet deletes an AA that is specified by the Identity parameter.
+This cmdlet provides a way to update the resources associated with an auto attendant configured for use in your organization. Currently, it repairs the Dial-by-Name recognition status of an auto attendant.
+
+Note: This cmdlet only triggers the refresh of auto attendant resources. It does not wait until all the resources have been refreshed. The last completed status of auto attendant can be retrieved using [`Get-CsAutoAttendantStatus`](Get-CsAutoAttendantStatus.md) cmdlet.
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-Remove-CsAutoAttendant -Identity "fa9081d6-b4f3-5c96-baec-0b00077709e5"
+Update-CsAutoAttendant -Identity "6abea1cd-904b-520b-be96-1092cc096432"
 ```
 
-This example deletes the AA that has a identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
-
+In Example 1, the Update-CsAutoAttendant cmdlet is used to update all resources of an auto attendant with Identity of 6abea1cd-904b-520b-be96-1092cc096432.
 
 ## PARAMETERS
 
 ### -Identity
-The identity for the AA to be removed.
-
+The identity for the AA whose resources are to be updated.
 
 ```yaml
 Type: System.String
@@ -69,7 +70,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### String
-The Remove-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
+The Update-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
 
 
 ## OUTPUTS
@@ -81,8 +82,10 @@ The Remove-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
 
 ## RELATED LINKS
 
-[New-CsAutoAttendant](New-CsAutoAttendant.md)
-
 [Get-CsAutoAttendant](Get-CsAutoAttendant.md)
 
+[Get-CsAutoAttendantStatus](Get-CsAutoAttendantStatus.md)
+
 [Set-CsAutoAttendant](Set-CsAutoAttendant.md)
+
+[Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)

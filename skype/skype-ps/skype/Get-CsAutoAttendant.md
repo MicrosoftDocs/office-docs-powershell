@@ -1,68 +1,68 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: Get-CsOrganizationalAutoAttendant
+title: Get-CsAutoAttendant
 schema: 2.0.0
 ---
 
-# Get-CsOrganizationalAutoAttendant
+# Get-CsAutoAttendant
 
 ## SYNOPSIS
-Use the Get-CsOrganizationalAutoAttendant cmdlet to get information about Auto Attendants (AAs). 
+Use the Get-CsAutoAttendant cmdlet to get information about your Auto Attendants (AA).
 
 ## SYNTAX
 
 ```
-Get-CsOrganizationalAutoAttendant [-PrimaryUri] <Uri> [-First <UInt64>] [-Skip <UInt64>] [-IncludeStatus] [-ApplicationId <Guid>] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsAutoAttendant [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-SortBy <String>] [-Descending] [-IncludeStatus] [-ExcludeContent] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsOrganizationalAutoAttendant cmdlet returns information about the OAAs in your organization.
+The Get-CsAutoAttendant cmdlet returns information about the AAs in your organization.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsOrganizationalAutoAttendant
+Get-CsAutoAttendant
 ```
 
-This example gets all OAAs in the organization.
+This example gets all AAs in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsOrganizationalAutoAttendant -PrimaryUri sip:mainoaa@contoso.com
+Get-CsAutoAttendant -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
 ```
 
-This example gets the OAAs that has the Primary URI of sip:mainoaa@contoso.com.
+This example gets the AAs that has the identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-CsOrganizationalAutoAttendant -First 10
+Get-CsAutoAttendant -First 10
 ```
 
 This example gets the first ten auto attendants configured for use in the organization.
 
 ### -------------------------- Example 4 --------------------------
 ```
-Get-CsOrganizationalAutoAttendant -Skip 5 -First 10
+Get-CsAutoAttendant -Skip 5 -First 10
 ```
 
-This example skips initial 5 auto attendants and gets the next 10 OAAs configured for use in the organization.
+This example skips initial 5 auto attendants and gets the next 10 AAs configured in the organization.
 
 
 ## PARAMETERS
 
-### -PrimaryUri
-The PrimaryUri parameter represents the SIP address for the OAA to be retrieved. If this parameter is not specified, then all created OAAs in the organization are returned.
+### -Identity
+The identity for the AA to be retrieved. If this parameter is not specified, then all created AAs in the organization are returned.
 
 ```yaml
-Type: System.Uri
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
-Required: True
-Position: 1
+Required: False
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -72,9 +72,9 @@ Accept wildcard characters: False
 The First parameter indicates the maximum number of auto attendants to retrieve as the result. It is intended to be used for pagination purposes.
 
 ```yaml
-Type: System.UInt64
+Type: System.UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -88,9 +88,57 @@ Accept wildcard characters: False
 The Skip parameter indicates the number of initial auto attendants to skip in the result. It is intended to be used for pagination purposes.
 
 ```yaml
-Type: System.UInt64
+Type: System.UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NameFilter
+If specified, only auto attendants whose names match that value would be returned.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SortBy
+If specified, the retrieved auto attendants would be sorted by the specified property.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Descending
+If specified, the retrieved auto attendants would be sorted in descending order.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -106,7 +154,7 @@ If specified, the status records for each auto attendant in the result set are a
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -116,13 +164,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ApplicationId
-Specifies a custom application ID to use for auto attendants. This parameter is reserved for Microsoft internal use only.
+### -ExcludeContent
+If specified, only auto attendants' names, identities and associated application instances will be retrieved.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -137,7 +185,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -154,12 +202,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### String
-The String is used as the PrimaryUri input.
+The String is used as the Identity input.
 
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.OAA.Models.OrgAutoAttendant 
+### Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant
 
 
 ## NOTES
@@ -167,9 +215,12 @@ The String is used as the PrimaryUri input.
 
 ## RELATED LINKS
 
-[New-CsOrganizationalAutoAttendant](New-CsOrganizationalAutoAttendant.md)
+[Get-CsAutoAttendantStatus](Get-CsAutoAttendantStatus.md)
 
-[Set-CsOrganizationalAutoAttendant](Set-CsOrganizationalAutoAttendant.md)
+[New-CsAutoAttendant](New-CsAutoAttendant.md)
 
-[Remove-CsOrganizationalAutoAttendant](Remove-CsOrganizationalAutoAttendant.md)
+[Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
 
+[Set-CsAutoAttendant](Set-CsAutoAttendant.md)
+
+[Update-CsAutoAttendant](Update-CsAutoAttendant.md)

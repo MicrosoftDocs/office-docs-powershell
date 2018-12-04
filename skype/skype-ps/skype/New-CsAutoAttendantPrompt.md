@@ -1,61 +1,60 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: New-CsOrganizationalAutoAttendantPrompt
+title: New-CsAutoAttendantPrompt
 schema: 2.0.0
 ---
 
-# New-CsOrganizationalAutoAttendantPrompt
+# New-CsAutoAttendantPrompt
 
 ## SYNOPSIS
-Use the New-CsOrganizationalAutoAttendantPrompt cmdlet to create a new prompt.
+Use the New-CsAutoAttendantPrompt cmdlet to create a new prompt.
 
 ## SYNTAX
 
 ### AudioFile
-```
-New-CsOrganizationalAutoAttendantPrompt -AudioFilePrompt <Object> [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+New-CsAutoAttendantPrompt -AudioFilePrompt <Object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ### TextToSpeech
-```
-New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt <String> [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+New-CsAutoAttendantPrompt -TextToSpeechPrompt <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ### Dual
-```
-New-CsOrganizationalAutoAttendantPrompt -ActiveType <None | TextToSpeech | AudioFile> -AudioFilePrompt <Object> -TextToSpeechPrompt <String> [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+New-CsAutoAttendantPrompt -ActiveType <None | TextToSpeech | AudioFile> -AudioFilePrompt <Object> -TextToSpeechPrompt <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantPrompt cmdlet creates a new prompt for the Auto Attendant (AA) service. A prompt is either an audio file that is played, or text that is read aloud to give callers additional information. A prompt can be disabled by setting the ActiveType to None. 
+The New-CsAutoAttendantPrompt cmdlet creates a new prompt for the Auto Attendant (AA) service. A prompt is either an audio file that is played, or text that is read aloud to give callers additional information. A prompt can be disabled by setting the ActiveType to None.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
-```
-$ttsPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
+### -------------------------- Example 1 --------------------------
+```powershell
+$ttsPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
 ```
 
 This example creates a new prompt that reads the supplied text.
 
 
-
-### -------------------------- Example 2 -------------------------- 
-```
+### -------------------------- Example 2 --------------------------
+```powershell
 $content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
-$audioFile = New-CsOnlineAudioFile -FileName "hello.wav" -Content $content
-$audioFilePrompt = New-CsOrganizationalAutoAttendantPrompt -AudioFilePrompt $audioFile
+$audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "hello.wav" -Content $content
+$audioFilePrompt = New-CsAutoAttendantPrompt -AudioFilePrompt $audioFile
 ```
 
 This example creates a new prompt that plays the selected audio file.
 
-### -------------------------- Example 3 -------------------------- 
-```
+### -------------------------- Example 3 --------------------------
+```powershell
 $content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
-$audioFile = New-CsOnlineAudioFile -FileName "hello.wav" -Content $content
-$dualPrompt = New-CsOrganizationalAutoAttendantPrompt -ActiveType AudioFile -AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to Contoso!"
+$audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "hello.wav" -Content $content
+$dualPrompt = New-CsAutoAttendantPrompt -ActiveType AudioFile -AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to Contoso!"
 ```
 
 This example creates a new prompt that has both audio file and text-to-speech data, but will play the audio file when the prompt is activated (rendered).
@@ -66,7 +65,7 @@ This example creates a new prompt that has both audio file and text-to-speech da
 ### -ActiveType
 PARAMVALUE: None | TextToSpeech | AudioFile
 
-The ActiveType parameter identifies the active type (modality) of the OAA prompt. It can be set to None (the prompt is disabled), TextToSpeech (text-to-speech is played when the prompt is rendered) or AudioFile (audio file data is played when the prompt is rendered).
+The ActiveType parameter identifies the active type (modality) of the AA prompt. It can be set to None (the prompt is disabled), TextToSpeech (text-to-speech is played when the prompt is rendered) or AudioFile (audio file data is played when the prompt is rendered).
 
 This is explicitly required if both Audio File and TTS prompts are specified. Otherwise, it is inferred.
 
@@ -74,7 +73,7 @@ This is explicitly required if both Audio File and TTS prompts are specified. Ot
 ```yaml
 Type: Object
 Parameter Sets: Dual
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -87,13 +86,13 @@ Accept wildcard characters: False
 ### -AudioFilePrompt
 The AudioFilePrompt parameter represents the audio to play when the prompt is activated (rendered).
 
-This parameter is required when audio file prompts are being created. You can create audio files by using the New-CsOnlineAudioFile cmdlet.
+This parameter is required when audio file prompts are being created. You can create audio files by using the `Import-CsOnlineAudioFile` cmdlet.
 
 
 ```yaml
 Type: Object
 Parameter Sets: AudioFile, Dual
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -104,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -TextToSpeechPrompt
-The TextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt that is to be read when the prompt is activated. 
+The TextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt that is to be read when the prompt is activated.
 
 This parameter is required when text to speech prompts are being created.
 
@@ -112,7 +111,7 @@ This parameter is required when text to speech prompts are being created.
 ```yaml
 Type: System.String
 Parameter Sets: TextToSpeech, Dual
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -127,7 +126,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -154,5 +153,5 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
+[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
 

@@ -1,74 +1,95 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: Set-CsOrganizationalAutoAttendant
+title: Set-CsAutoAttendant
 schema: 2.0.0
 ---
 
-# Set-CsOrganizationalAutoAttendant
+# Set-CsAutoAttendant
 
 ## SYNOPSIS
-Use the Set-CsOrganizationalAutoAttendant cmdlet to modify the properties of an existing Auto Attendant (AA).
+Use the Set-CsAutoAttendant cmdlet to modify the properties of an existing Auto Attendant (AA).
 
 ## SYNTAX
 
-```
-Set-CsOrganizationalAutoAttendant [-Instance] <Object> [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+Set-CsAutoAttendant -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of an auto attendant. For example, you can change the phone number, the operator, the greeting, or the menu prompts.
+The Set-CsAutoAttendant cmdlet lets you modify the properties of an auto attendant. For example, you can change the operator, the greeting, or the menu prompts.
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-$oaa = Get-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
-$oaa.LineUris = @([System.Uri] "tel:+11098765432")
-Set-CsOrganizationalAutoAttendant -Instance $oaa
-```
+```powershell
+$autoAttendant = Get-CsAutoAttendant -Identity "fa9081d6-b4f3-5c96-baec-0b00077709e5"
 
-This example changes the telephone number for the OAA that has a Primary URI of sip:mainoaa@contoso.com.
-
-### -------------------------- Example 2 --------------------------
-```
-$oaa = Get-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
-
-$christmasGreetingPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
-$christmasMenuOption = New-CsOrganizationalAutoAttendantMenuOption -Action DisconnectCall -DtmfResponse Automatic 
-$christmasMenu = New-CsOrganizationalAutoAttendantMenu -Name "Christmas Menu" -MenuOptions @($christmasMenuOption)
-$christmasCallFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Christmas" -Greetings @($christmasGreetingPrompt) -Menu $christmasMenu
+$christmasGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
+$christmasMenuOption = New-CsAutoAttendantMenuOption -Action DisconnectCall -DtmfResponse Automatic
+$christmasMenu = New-CsAutoAttendantMenu -Name "Christmas Menu" -MenuOptions @($christmasMenuOption)
+$christmasCallFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @($christmasGreetingPrompt) -Menu $christmasMenu
 
 $dtr = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
 $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr)
 
-$christmasCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
+$christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-$oaa.CallFlows = $oaa.CallFlows + @($christmasCallFlow)
-$oaa.Schedules = $oaa.Schedules + @($christmasSchedule)
-$oaa.CallHandlingAssociations = $oaa.CallHandlingAssociations + @($christmasCallHandlingAssociation)
+$autoAttendant.CallFlows += @($christmasCallFlow)
+$autoAttendant.CallHandlingAssociations += @($christmasCallHandlingAssociation)
 
-Set-CsOrganizationalAutoAttendant -Instance $oaa
+Set-CsAutoAttendant -Instance $autoAttendant
 ```
 
-This example adds a Christmas holiday to an OAA that a Primary URI of sip:mainoaa@contoso.com.
+This example adds a Christmas holiday to an AA that has an Identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
+
+### -------------------------- Example 2 --------------------------
+```powershell
+$autoAttendant = Get-CsAutoAttendant -Identity "fa9081d6-b4f3-5c96-baec-0b00077709e5"
+
+$autoAttendant.CallFlows
+
+        Id        : e68dfc2f-587b-42ee-98c7-b9c9ebd46fd1
+        Name      : After hours
+        Greetings :
+        Menu      : After Hours Menu
+
+        Id        : 8ab460f0-770c-4d30-a2ff-a6469718844f
+        Name      : Christmas CallFlow
+        Greetings :
+        Menu      : Christmas Menu
+
+$autoAttendant.CallFlows[1].Greetings
+
+        ActiveType         : TextToSpeech
+        TextToSpeechPrompt : We are closed for Christmas. Please call back later.
+        AudioFilePrompt    :
+
+$christmasGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
+
+ $autoAttendant.CallFlows[1].Greetings = @($christmasGreetingPrompt)
+
+Set-CsAutoAttendant -Instance $autoAttendant
+```
+
+This example modifies the Christmas holiday greeting for the AA that has an Identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
 
 ## PARAMETERS
 
 ### -Instance
-The Instance parameter is the object reference to the OAA to be modified. 
+The Instance parameter is the object reference to the AA to be modified.
 
-You can retrieve an object reference to an existing OAA by using the Get-CsOrganizationalAutoAttendant cmdlet and assigning the returned value to a variable.
+You can retrieve an object reference to an existing AA by using the Get-CsAutoAttendant cmdlet and assigning the returned value to a variable.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -79,7 +100,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -90,25 +111,31 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable`. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.Hosted.OAA.Models.OrgAutoAttendant
-The Set-CsOrganizationalAutoAttendant cmdlet accepts a Microsoft.Rtc.Management.Hosted.OAA.Models.OrgAutoAttendant object as the Instance parameter.
+### Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant
+The Set-CsAutoAttendant cmdlet accepts a `Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant` object as the Instance parameter.
 
 
 ## OUTPUTS
 
 ### None
-The Set-CsOrganizationalAutoAttendant cmdlet does not return any objects or values. Instead, the cmdlet modifies the instance of the Microsoft.Rtc.Management.Hosted.OAA.Models.OrgAutoAttendant object that is passed in as the Instance parameter.
+The Set-CsAutoAttendant cmdlet does not return any objects or values. Instead, the cmdlet modifies the instance of the `Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant` object that is passed in as the Instance parameter.
 
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsOrganizationalAutoAttendant](New-CsOrganizationalAutoAttendant.md)
+[New-CsAutoAttendant](New-CsAutoAttendant.md)
 
-[Get-CsOrganizationalAutoAttendant](Get-CsOrganizationalAutoAttendant.md)
+[Get-CsAutoAttendant](Get-CsAutoAttendant.md)
+
+[Get-CsAutoAttendantStatus](Get-CsAutoAttendantStatus.md)
+
+[Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
+
+[Update-CsAutoAttendant](Update-CsAutoAttendant.md)
 

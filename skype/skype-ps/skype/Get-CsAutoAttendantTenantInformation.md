@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: Get-CsOrganizationalAutoAttendantTenantInformation
+title: Get-CsAutoAttendantTenantInformation
 schema: 2.0.0
 ---
 
-# Get-CsOrganizationalAutoAttendantTenantInformation
+# Get-CsAutoAttendantTenantInformation
 
 ## SYNOPSIS
 Gets the default tenant information for Auto Attendant (AA) feature.
@@ -13,17 +13,17 @@ Gets the default tenant information for Auto Attendant (AA) feature.
 ## SYNTAX
 
 ```
-Get-CsOrganizationalAutoAttendantTenantInformation [-Tenant <Guid>] [<CommonParameters>]
+Get-CsAutoAttendantTenantInformation [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsOrganizationalAutoAttendantTenantInformation cmdlet gets the default tenant information for Auto Attendant (AA) feature.
+The Get-CsAutoAttendantTenantInformation cmdlet gets the default tenant information for Auto Attendant (AA) feature.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsOrganizationalAutoAttendantTenantInformation
+Get-CsAutoAttendantTenantInformation
 ```
 
 Gets the default auto attendant information for the logged in tenant.
@@ -36,7 +36,7 @@ Gets the default auto attendant information for the logged in tenant.
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False

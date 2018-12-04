@@ -1,45 +1,45 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
-title: New-CsOrganizationalAutoAttendantCallFlow
+title: New-CsAutoAttendantCallFlow
 schema: 2.0.0
 ---
 
-# New-CsOrganizationalAutoAttendantCallFlow
+# New-CsAutoAttendantCallFlow
 
 ## SYNOPSIS
-Use the New-CsOrganizationalAutoAttendantCallFlow cmdlet to create a new call flow.
+Use the New-CsAutoAttendantCallFlow cmdlet to create a new call flow.
 
 ## SYNTAX
 
-```
-New-CsOrganizationalAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [<CommonParameters>]
+```powershell
+New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantCallFlow cmdlet creates a new call flow for use with the Auto Attendant (AA) service. The OAA service uses the call flow to handle inbound calls by playing a greeting (if present), and provide callers with actions through a menu.
+The New-CsAutoAttendantCallFlow cmdlet creates a new call flow for use with the Auto Attendant (AA) service. The AA service uses the call flow to handle inbound calls by playing a greeting (if present), and provide callers with actions through a menu.
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-$menuPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
-$menu = New-CsOrganizationalAutoAttendantMenu -Name "Default Menu" -Prompts @($menuPrompt) -EnableDialByName 
-$callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu
+```powershell
+$menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
+$menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts @($menuPrompt) -EnableDialByName
+$callFlow = New-CsAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu
 ```
 
-This example creates a new call flow that renders the “Default Menu” menu.
+This example creates a new call flow that renders the "Default Menu" menu.
 
 ### -------------------------- Example 2 --------------------------
-```
-$menuPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
-$menu = New-CsOrganizationalAutoAttendantMenu -Name "Default Menu" -Prompts $menuPrompt -EnableDialByName 
-$greeting = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
-$callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu -Greetings $greeting
+```powershell
+$menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
+$menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts $menuPrompt -EnableDialByName
+$greeting = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
+$callFlow = New-CsAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu -Greetings $greeting
 ```
 
-This example creates a new call flow that plays a greeting before rendering the “Default Menu” menu.
+This example creates a new call flow that plays a greeting before rendering the "Default Menu" menu.
 
 ## PARAMETERS
 
@@ -49,7 +49,7 @@ The Name parameter represents a unique friendly name for the call flow.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -62,13 +62,13 @@ Accept wildcard characters: False
 ### -Menu
 The Menu parameter identifies the menu to render when the call flow is executed.
 
-You can create a new menu by using the New-CsOrganizationalAutoAttendantMenu cmdlet.
+You can create a new menu by using the [`New-CsAutoAttendantMenu`](New-CsAutoAttendantMenu.md) cmdlet.
 
 
 ```yaml
 Type: System.Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: True
@@ -81,13 +81,13 @@ Accept wildcard characters: False
 ### -Greetings
 If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow’s menu is rendered.
 
-You can create prompts by using the New-CsOrganizationalAutoAttendantPrompt cmdlet.
+You can create prompts by using the [`New-CsAutoAttendantPrompt`](New-CsAutoAttendantPrompt.md) cmdlet.
 
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -129,6 +129,6 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[New-CsOrganizationalAutoAttendantMenu](New-CsOrganizationalAutoAttendantMenu.md)
+[New-CsAutoAttendantMenu](New-CsAutoAttendantMenu.md)
 
-[New-CsOrganizationalAutoAttendantPrompt](New-CsOrganizationalAutoAttendantPrompt.md)
+[New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md)
