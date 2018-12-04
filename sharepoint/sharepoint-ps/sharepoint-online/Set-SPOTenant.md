@@ -619,7 +619,7 @@ To disable a specific web part you need to enter its GUID as the parameter: Amaz
 
 You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
 
-To reenable disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs. To reenable all disabled web parts, use Set-SPOTenant -DisabledWebPartIds @().
+To re-enable some disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled web parts, use Set-SPOTenant -DisabledWebPartIds @().
  
 ```yaml
 Type: Guid[]
