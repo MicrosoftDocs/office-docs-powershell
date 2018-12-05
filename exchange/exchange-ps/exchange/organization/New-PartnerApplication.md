@@ -17,19 +17,28 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### ACSTrustApplication
 ```
-New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String>
- [-AcceptSecurityIdentifierInformation <$true | $false>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-LinkedAccount <UserIdParameter>] [-Realm <String>] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] 
- [<CommonParameters>]
+New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String> [-Realm <String>]
+ [-AcceptSecurityIdentifierInformation <$true | $false>]
+ [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-LinkedAccount <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### AuthMetadataUrl
 ```
-New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String>
- [-AcceptSecurityIdentifierInformation <$true | $false>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-LinkedAccount <UserIdParameter>] [-TrustAnySSLCertificate] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] [<CommonParameters>]
+New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String> [-TrustAnySSLCertificate]
+ [-AcceptSecurityIdentifierInformation <$true | $false>]
+ [-AccountType <OrganizationalAccount | ConsumerAccount>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Enabled <$true | $false>]
+ [-LinkedAccount <UserIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +64,7 @@ The ApplicationIdentifier parameter specifies a unique application identifier fo
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ACSTrustApplication
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -72,7 +81,7 @@ The AuthMetadataUrl parameter specifies the URL that Exchange can retrieve the A
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: AuthMetadataUrl
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -105,6 +114,25 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AccountType
+The AccountType parameter specifies the type of Microsoft account that's required for the partner application. Valid values are:
+
+- OrganizationalAccount: This is the default value
+
+- ConsumerAccount
+
+```yaml
+Type: OrganizationalAccount | ConsumerAccount
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -185,7 +213,7 @@ The Realm parameter specifies a security realm for the partner application. If t
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ACSTrustApplication
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -204,7 +232,7 @@ We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: AuthMetadataUrl
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -222,25 +250,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccountType
-The AccountType parameter specifies the type of Microsoft account that's required for the partner application. Valid values are:
-
-- OrganizationalAccount: This is the default value
-
-- ConsumerAccount
-
-```yaml
-Type: OrganizationalAccount | ConsumerAccount
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

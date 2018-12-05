@@ -17,24 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### InvokeSynchronizer
 ```
-Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> [-Confirm] [-DomainController <Fqdn>] [-FullSync]
- [-InvokeSynchronizer] [-ReconcileFolders] [-SuppressStatus] [-WhatIf] [<CommonParameters>]
-```
-
-### Set4
-```
-Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> -FolderId <PublicFolderIdParameter>
- [-InvokeSynchronizer] [-Confirm] [-CreateAssociatedDumpster] [-DomainController <Fqdn>] [-WhatIf]
- [<CommonParameters>]
+Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> [-ForceOnlineSync] [-FullSync] [-ReconcileFolders] [-SuppressStatus]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InvokeSynchronizer]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set3
+### InvokeSingleFolderSynchronizer
 ```
-Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> [-InvokeSynchronizer] [-Confirm]
- [-DomainController <Fqdn>] [-ForceOnlineSync] [-FullSync] [-ReconcileFolders] [-SuppressStatus] [-WhatIf]
- [<CommonParameters>]
+Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> -FolderId <PublicFolderIdParameter> [-CreateAssociatedDumpster]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InvokeSynchronizer]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,6 +87,50 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -FolderId
+The FolderId parameter specifies the GUID or name of the public folder that you want to synchronize. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
+
+```yaml
+Type: PublicFolderIdParameter
+Parameter Sets: InvokeSingleFolderSynchronizer
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InvokeSynchronizer
+The InvokeSynchronizer switch can only be used on secondary hierarchy public folder mailboxes and triggers hierarchy synchronization from the primary public folder mailbox to the specified secondary public folder mailbox.
+
+This switch should only be used for troubleshooting purposes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: InvokeSingleFolderSynchronizer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: InvokeSynchronizer
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -101,6 +143,21 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CreateAssociatedDumpster
+The CreateAssociatedDumpster switch specifies whether to create the associated dumpster before synchronizing the folder. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: InvokeSingleFolderSynchronizer
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -125,44 +182,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForceOnlineSync
+The ForceOnlineSync switch specifies whether to force the secondary public folder mailbox to synchronize with the primary public folder mailbox. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: InvokeSynchronizer
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FullSync
 The FullSync switch specifies that you want to perform a full synchronization of the public folder mailbox.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: InvokeSynchronizer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InvokeSynchronizer
-The InvokeSynchronizer switch can only be used on secondary hierarchy public folder mailboxes and triggers hierarchy synchronization from the primary public folder mailbox to the specified secondary public folder mailbox.
-
-This switch should only be used for troubleshooting purposes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2, Set3
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -176,7 +219,7 @@ This switch should only be used for repair or troubleshooting purposes to look f
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: InvokeSynchronizer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -193,7 +236,7 @@ If you don't use this switch, the output will display status messages every 3 se
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set3
+Parameter Sets: InvokeSynchronizer
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -211,51 +254,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FolderId
-The FolderId parameter specifies the GUID or name of the public folder that you want to synchronize. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
-
-```yaml
-Type: PublicFolderIdParameter
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CreateAssociatedDumpster
-The CreateAssociatedDumpster switch specifies whether to create the associated dumpster before synchronizing the folder. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set4
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForceOnlineSync
-The ForceOnlineSync switch specifies whether to force the secondary public folder mailbox to synchronize with the primary public folder mailbox. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set3
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

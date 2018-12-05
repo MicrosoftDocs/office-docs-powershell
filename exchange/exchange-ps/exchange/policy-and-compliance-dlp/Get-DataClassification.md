@@ -19,16 +19,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### RuleCollectionIdentity
 ```
 Get-DataClassification [[-ClassificationRuleCollectionIdentity] <ClassificationRuleCollectionIdParameter>]
  [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-DataClassification [[-Identity] <DataClassificationIdParameter>] [-DomainController <Fqdn>]
- [<CommonParameters>]
+Get-DataClassification [[-Identity] <DataClassificationIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +66,7 @@ The ClassificationRuleCollectionIdentity parameter filters the results by the na
 
 ```yaml
 Type: ClassificationRuleCollectionIdParameter
-Parameter Sets: Set2
+Parameter Sets: RuleCollectionIdentity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -102,7 +102,7 @@ The Identity parameter specifies the data classification rule that you want to v
 
 ```yaml
 Type: DataClassificationIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

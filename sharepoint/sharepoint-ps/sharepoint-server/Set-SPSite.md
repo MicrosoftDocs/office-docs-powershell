@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSite
 schema: 2.0.0
 ---
@@ -32,21 +32,21 @@ Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrati
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The `Set-SPSite` cmdlet configures the site collection that is specified by the Identity parameter.
 If a parameter is not used, the value is not changed.
 
 The QuotaTemplate parameter is mutually exclusive to the MaxSize parameter and WarningSize parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 ```
-C:\PS>Get-SPSite http://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
+PS C:\>Get-SPSite http://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
 ```
 
 This example sets the secondary owner on a set of site collections to DOMAIN\Jdoe.
@@ -54,7 +54,7 @@ This example sets the secondary owner on a set of site collections to DOMAIN\Jdo
 
 ### --------------------EXAMPLE 2---------------------
 ```
-C:\PS>Set-SPSite -identity "http://sitename" -MaxSize 4000000 -WarningSize 2000000
+PS C:\>Set-SPSite -identity "http://sitename" -MaxSize 4000000 -WarningSize 2000000
 ```
 
 This example configures the Quota settings for the site collection http://sitename.
@@ -71,7 +71,7 @@ The type must be a valid URL, in the form http://server_name; a valid GUID, in t
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -89,7 +89,7 @@ Valid values are None or TentantAdministration.
 Type: SPAdministrationSiteType
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ This parameter is used in conjunction with the SiteSubscription parameter.
 Type: SwitchParameter
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ Users who attempt to access the site receive an access-denied message.
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -191,7 +191,7 @@ You cannot use this parameter if the site collection is using a quota template.
 Type: Int64
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ The type must be a valid e-mail alias, in the form domain\username.
 Type: SPUserPipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -227,7 +227,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef 
 Type: SPQuotaTemplatePipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ The type must be a valid e-mail alias, in the form domain\username.
 Type: SPUserPipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -261,7 +261,7 @@ Specifies whether external access a site collection should be disabled, limited 
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -277,7 +277,7 @@ Specifies the Site Group to get site collections.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef.
 Type: SPWebTemplatePipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -311,7 +311,7 @@ Specifies the URL of the new site.
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -327,7 +327,7 @@ Sets an organization unit to which to scope user accounts.
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -346,7 +346,7 @@ You cannot use this parameter if the site collection is using a quota template.
 Type: Int64
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -363,7 +363,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

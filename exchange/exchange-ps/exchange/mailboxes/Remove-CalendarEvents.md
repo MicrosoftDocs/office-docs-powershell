@@ -23,7 +23,7 @@ Remove-CalendarEvents [-Identity] <MailboxIdParameter> [-CancelOrganizedMeetings
 ```
 
 ## DESCRIPTION
-This cmdlet cancels meetings in the specified mailbox where the mailbox is the meeting organizer, and the meeting has one or more attendees or resources. It doesn't cancel appointments or meetings without attendees or resources.
+This cmdlet cancels meetings in the specified mailbox where the mailbox is the meeting organizer, and the meeting has one or more attendees or resources. It doesn't cancel appointments or meetings without attendees or resources. Because meeting cancellations must be sent out, the mailbox must still be enabled to send mail.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -48,7 +48,7 @@ This example cancels the meetings in Angela Gruber's calendar for the specified 
 Remove-CalendarEvents -Identity "Jacob Berger" -CancelOrganizedMeetings -QueryStartDate 9-1-2018 -QueryWindowInDays 90 -PreviewOnly -Verbose
 ```
 
-This example previews the meetings that would be cancelled in Jacob Berger's calender for the specified date range. No changes are made to the mailbox.
+This example previews the meetings that would be cancelled in Jacob Berger's calendar for the specified date range. No changes are made to the mailbox.
 
 ## PARAMETERS
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ### -QueryStartDate
 The QueryStartDate parameter specifies the start date to look for meetings that you want to cancel.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 If you don't use this parameter, today's date is used.
 

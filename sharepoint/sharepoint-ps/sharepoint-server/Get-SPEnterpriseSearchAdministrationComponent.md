@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.Office.Server.Search.dll-help.xml
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchAdministrationComponent
 schema: 2.0.0
 ---
@@ -20,7 +20,7 @@ Get-SPEnterpriseSearchAdministrationComponent [-AssignmentCollection <SPAssignme
 ## DESCRIPTION
 The Get-SPEnterpriseSearchAdmininstrationComponent cmdlet retrieves an administration component for a search service application in order to update or delete it.
 
-For permissions and the most current information about search cmdlets, see the online documentation, [http://go.microsoft.com/fwlink/?LinkId=163185](http://go.microsoft.com/fwlink/?LinkId=163185).
+For permissions and the most current information about search cmdlets, see the online documentation, [https://go.microsoft.com/fwlink/?LinkId=163185](https://go.microsoft.com/fwlink/?LinkId=163185).
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -61,7 +61,7 @@ The type must be a valid name (GUID), in the form 12345678-90ab-cdef-1234-567890
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Generates a provisioning template from a web
+Generates a provisioning site template from a web
 
 ## SYNTAX 
 

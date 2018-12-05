@@ -19,16 +19,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-EcpVirtualDirectory -Server <ServerIdParameter> [-ADPropertiesOnly] [-DomainController <Fqdn>]
+Get-EcpVirtualDirectory -Server <ServerIdParameter>
+ [-ADPropertiesOnly]
+ [-DomainController <Fqdn>]
  [-ShowMailboxVirtualDirectories] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-EcpVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>] [-ADPropertiesOnly]
- [-DomainController <Fqdn>] [-ShowMailboxVirtualDirectories] [<CommonParameters>]
+Get-EcpVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>]
+ [-ADPropertiesOnly]
+ [-DomainController <Fqdn>]
+ [-ShowMailboxVirtualDirectories] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,7 +78,7 @@ You can't use the Server and Identity parameters in the same command.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -131,7 +135,7 @@ You can't use the Identity and Server parameters in the same command.
 
 ```yaml
 Type: VirtualDirectoryIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

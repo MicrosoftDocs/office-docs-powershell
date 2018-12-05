@@ -19,27 +19,32 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Rehome
 ```
-Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter> [-AcceptLargeDataLoss]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>]
- [-Priority <Normal | High>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter> [-RehomeRequest] [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
+Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter> [-RehomeRequest]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>] 
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter> [-AcceptLargeDataLoss]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
+Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter>
+ [-AcceptLargeDataLoss]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
  [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
- [-RemoteCredential <PSCredential>] [-RemoteHostName <Fqdn>] [-SkipMerging <SkippableMergeComponent[]>]
- [-WhatIf] [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
+ [-RemoteCredential <PSCredential>]
+ [-RemoteHostName <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,7 +83,7 @@ The AcceptLargeDataLoss switch specifies the request should continue even if a l
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -97,7 +102,7 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -112,7 +117,7 @@ The BatchName parameter specifies the name of the batch.
 
 ```yaml
 Type: String
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -141,6 +146,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CompletedRequestAgeLimit
+The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default value is 30 days.
+
+```yaml
+Type: Unlimited
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -149,6 +169,46 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InternalFlags
+The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
+
+```yaml
+Type: InternalMrsFlag[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LargeItemLimit
+The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
+
+For more information about maximum message size values, see the following topics:
+
+- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
+
+- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
+
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
+
+If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+```yaml
+Type: Unlimited
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -177,23 +237,8 @@ The Priority parameter specifies the order in which the request should be proces
 
 ```yaml
 Type: Normal | High
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
@@ -207,65 +252,10 @@ The RehomeRequest parameter specifies to the Microsoft Exchange Mailbox Replicat
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Rehome
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default value is 30 days.
-
-```yaml
-Type: Unlimited
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InternalFlags
-The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
-
-```yaml
-Type: InternalMrsFlag[]
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LargeItemLimit
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2016: Message size limits in Exchange 2016 (https://technet.microsoft.com/library/bb124345.aspx)
-
-- Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
-
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-```yaml
-Type: Unlimited
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -277,7 +267,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -292,7 +282,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -307,7 +297,7 @@ The SkipMerging parameter specifies steps in the export that should be skipped. 
 
 ```yaml
 Type: SkippableMergeComponent[]
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -330,9 +320,24 @@ When you use the value Unlimited, the completed request isn't automatically remo
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set2, Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

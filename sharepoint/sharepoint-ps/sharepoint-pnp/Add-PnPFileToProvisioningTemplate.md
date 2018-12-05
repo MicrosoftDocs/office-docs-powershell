@@ -27,28 +27,28 @@ Add-PnPFileToProvisioningTemplate -Path <String>
 Add-PnPFileToProvisioningTemplate -Path template.pnp -Source $sourceFilePath -Folder $targetFolder
 ```
 
-Adds a file to a PnP Provisioning Template
+Adds a file to a PnP Site Template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Add-PnPFileToProvisioningTemplate -Path template.xml -Source $sourceFilePath -Folder $targetFolder
 ```
 
-Adds a file reference to a PnP Provisioning XML Template
+Adds a file reference to a PnP Site XML Template
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Add-PnPFileToProvisioningTemplate -Path template.pnp -Source "./myfile.png" -Folder "folderinsite" -FileLevel Published -FileOverwrite:$false
 ```
 
-Adds a file to a PnP Provisioning Template, specifies the level as Published and defines to not overwrite the file if it exists in the site.
+Adds a file to a PnP Site Template, specifies the level as Published and defines to not overwrite the file if it exists in the site.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
 Add-PnPFileToProvisioningTemplate -Path template.pnp -Source $sourceFilePath -Folder $targetFolder -Container $container
 ```
 
-Adds a file to a PnP Provisioning Template with a custom container for the file
+Adds a file to a PnP Site Template with a custom container for the file
 
 ## PARAMETERS
 
@@ -101,7 +101,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Filename of the .PNP Open XML provisioning template to read from, optionally including full path.
+Filename of the .PNP Open XML site template to read from, optionally including full path.
 
 ```yaml
 Type: String

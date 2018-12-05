@@ -17,18 +17,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Get-MobileDeviceStatistics [-Identity] <MobileDeviceIdParameter> [-ActiveSync] [-DomainController <Fqdn>]
- [-GetMailboxLog] [-NotificationEmailAddresses <MultiValuedProperty>] [-OWAforDevices] [-ShowRecoveryPassword]
- [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDeviceStatistics [-Identity] <MobileDeviceIdParameter>
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-OWAforDevices]
+ [-ShowRecoveryPassword]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
-### Set2
+### Mailbox
 ```
-Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter> [-ActiveSync] [-DomainController <Fqdn>]
- [-GetMailboxLog] [-NotificationEmailAddresses <MultiValuedProperty>] [-OWAforDevices] [-ShowRecoveryPassword]
- [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter>
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-GetMailboxLog]
+ [-NotificationEmailAddresses <MultiValuedProperty>]
+ [-OWAforDevices]
+ [-ShowRecoveryPassword]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +78,7 @@ The Identity parameter specifies the user's device ID. If the Mailbox parameter 
 
 ```yaml
 Type: MobileDeviceIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -81,7 +93,7 @@ The Mailbox parameter specifies the user mailbox for which you want to retrieve 
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True

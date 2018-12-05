@@ -17,27 +17,33 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-###  (Default)
+### Rehome
 ```
-Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-AcceptLargeDataLoss]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-Confirm] [-DomainController <Fqdn>]
- [-Priority <Normal | High>] [-WhatIf] [<CommonParameters>]
+Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-RehomeRequest]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-RemoteHostName <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Identity
 ```
-Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-RehomeRequest] [-Confirm]
- [-DomainController <Fqdn>] [-RemoteHostName <Fqdn>] [-WhatIf] [-RequestExpiryInterval <Unlimited>]
+Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
+ [-AcceptLargeDataLoss]
+ [-BadItemLimit <Unlimited>]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-InternalFlags <InternalMrsFlag[]>]
+ [-LargeItemLimit <Unlimited>]
+ [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>]
+ [-RemoteHostName <Fqdn>]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-WhatIf]
  [<CommonParameters>]
-```
-
-### Set1
-```
-Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-AcceptLargeDataLoss]
- [-BadItemLimit <Unlimited>] [-BatchName <String>] [-CompletedRequestAgeLimit <Unlimited>] [-Confirm]
- [-DomainController <Fqdn>] [-InternalFlags <InternalMrsFlag[]>] [-LargeItemLimit <Unlimited>]
- [-Priority <Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency>] [-RemoteHostName <Fqdn>]
- [-SkipMerging <SkippableMergeComponent[]>] [-WhatIf] [-RequestExpiryInterval <Unlimited>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +89,7 @@ The AcceptLargeDataLoss switch specifies the request should continue even if a l
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -102,7 +108,7 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -119,9 +125,24 @@ To remove a batch name, set the BatchName parameter value to an empty string or 
 
 ```yaml
 Type: String
-Parameter Sets: (All), Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompletedRequestAgeLimit
+The CompletedRequestAgeLimit parameter specifies how long the status of a completed restore request is set to Completed. If this parameter is set to a value of 0, the status is cleared immediately instead of changing it to Completed.
+
+```yaml
+Type: Unlimited
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -165,86 +186,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Priority
-This parameter is available only in on-premises Exchange.
-
-The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
-
-- Lowest
-
-- Lower
-
-- Low
-
-- Normal: This is the default value.
-
-- High
-
-- Higher
-
-- Highest
-
-- Emergency
-
-```yaml
-Type: Normal | High
-Parameter Sets: (All), Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RehomeRequest
-This parameter is available only in on-premises Exchange.
-
-The RehomeRequest switch specifies that the mailbox restore request be moved to a different mailbox database. Use this parameter to edit a mailbox restore request in the case where the source mailbox database from the original move request has to be removed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the status of a completed restore request is set to Completed. If this parameter is set to a value of 0, the status is cleared immediately instead of changing it to Completed.
-
-```yaml
-Type: Unlimited
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InternalFlags
 This parameter is available only in on-premises Exchange.
 
@@ -252,7 +193,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 
 ```yaml
 Type: InternalMrsFlag[]
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -277,10 +218,60 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Priority
+This parameter is available only in on-premises Exchange.
+
+The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
+
+- Lowest
+
+- Lower
+
+- Low
+
+- Normal: This is the default value.
+
+- High
+
+- Higher
+
+- Highest
+
+- Emergency
+
+```yaml
+Type: Normal | High
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RehomeRequest
+This parameter is available only in on-premises Exchange.
+
+The RehomeRequest switch specifies that the mailbox restore request be moved to a different mailbox database. Use this parameter to edit a mailbox restore request in the case where the source mailbox database from the original move request has to be removed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Rehome
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -292,30 +283,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Set2, Set1
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipMerging
-The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
-
-- FolderRules
-
-- FolderACLs
-
-- InitialConnectionValidation
-
-Use this parameter only if a restore request fails because of folder rules, folder access control lists (ACLs), or initial connection validation.
-
-```yaml
-Type: SkippableMergeComponent[]
-Parameter Sets: Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -338,9 +306,47 @@ When you use the value Unlimited, the completed request isn't automatically remo
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set2, Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMerging
+The SkipMerging parameter specifies folder-related items to skip when restoring the mailbox. Use one of the following values:
+
+- FolderRules
+
+- FolderACLs
+
+- InitialConnectionValidation
+
+Use this parameter only if a restore request fails because of folder rules, folder access control lists (ACLs), or initial connection validation.
+
+```yaml
+Type: SkippableMergeComponent[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

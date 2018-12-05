@@ -17,28 +17,47 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+
+### Filter
 ```
-Get-Message [[-Identity] <MessageIdentity>] [-BookmarkIndex <Int32>] [-BookmarkObject <ExtensibleMessageInfo>]
- [-IncludeBookmark <$true | $false>] [-IncludeComponentLatencyInfo] [-IncludeRecipientInfo]
- [-ResultSize <Unlimited>] [-ReturnPageInfo <$true | $false>] [-SearchForward <$true | $false>]
+Get-Message [-Filter <String>]
+ [-BookmarkIndex <Int32>]
+ [-BookmarkObject <ExtensibleMessageInfo>]
+ [-IncludeBookmark <$true | $false>]
+ [-IncludeComponentLatencyInfo]
+ [-IncludeRecipientInfo]
+ [-ResultSize <Unlimited>]
+ [-ReturnPageInfo <$true | $false>]
+ [-SearchForward <$true | $false>]
+ [-Server <ServerIdParameter>]
  [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-Message [-BookmarkIndex <Int32>] [-BookmarkObject <ExtensibleMessageInfo>] [-Filter <String>]
- [-IncludeBookmark <$true | $false>] [-IncludeComponentLatencyInfo] [-IncludeRecipientInfo]
- [-ResultSize <Unlimited>] [-ReturnPageInfo <$true | $false>] [-SearchForward <$true | $false>]
- [-Server <ServerIdParameter>] [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+Get-Message [[-Identity] <MessageIdentity>]
+ [-BookmarkIndex <Int32>]
+ [-BookmarkObject <ExtensibleMessageInfo>]
+ [-IncludeBookmark <$true | $false>]
+ [-IncludeComponentLatencyInfo]
+ [-IncludeRecipientInfo]
+ [-ResultSize <Unlimited>]
+ [-ReturnPageInfo <$true | $false>]
+ [-SearchForward <$true | $false>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
-
-### Set3
+### Queue
 ```
-Get-Message [-BookmarkIndex <Int32>] [-BookmarkObject <ExtensibleMessageInfo>]
- [-IncludeBookmark <$true | $false>] [-IncludeComponentLatencyInfo] [-IncludeRecipientInfo]
- [-Queue <QueueIdentity>] [-ResultSize <Unlimited>] [-ReturnPageInfo <$true | $false>]
- [-SearchForward <$true | $false>] [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
+Get-Message [-Queue <QueueIdentity>]
+ [-BookmarkIndex <Int32>]
+ [-BookmarkObject <ExtensibleMessageInfo>]
+ [-IncludeBookmark <$true | $false>]
+ [-IncludeComponentLatencyInfo]
+ [-IncludeRecipientInfo]
+ [-ResultSize <Unlimited>]
+ [-ReturnPageInfo <$true | $false>]
+ [-SearchForward <$true | $false>]
+ [-SortOrder <QueueViewerSortOrderEntry[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,7 +95,7 @@ The Identity parameter specifies the message. Valid input for this parameter use
 
 ```yaml
 Type: MessageIdentity
-Parameter Sets: Set2
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -123,7 +142,7 @@ You can specify multiple criteria by using the and comparison operator. Property
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -201,7 +220,7 @@ If you use the Queue parameter, you can't use the Identity, Filter or Server par
 
 ```yaml
 Type: QueueIdentity
-Parameter Sets: Set3
+Parameter Sets: Queue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -273,7 +292,7 @@ You can use the Server parameter and the Filter parameter in the same command. Y
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

@@ -16,8 +16,14 @@ Teams calling policies help determine which users are able to use calling functi
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsCallingPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTeamsCallingPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsCallingPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +47,7 @@ Enables you to use wildcard characters when indicating the policy (or policies) 
 To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -56,7 +62,7 @@ Accept wildcard characters: False
 Specify the TeamsCallingPolicy that you would like to retrieve.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -86,7 +92,7 @@ Accept wildcard characters: False
 Microsoft internal use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -97,30 +103,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Not applicable to online service.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

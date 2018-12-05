@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOSiteScript
 schema: 2.0.0
@@ -19,6 +19,7 @@ Set-SPOSiteScript
   -Title <string>
   -Content <string>
   [-Description <string>]
+  [-Version <Int32>]
   [<CommonParameters>]
 ```
 
@@ -33,6 +34,7 @@ Updates a previously uploaded site script.
 This example updates a previously created site script. Any site designs referencing it execute the updated script. 
 
 ```
+$newnavscript = @'
 {
     "$schema": "schema.json",
         "actions": [
@@ -55,7 +57,11 @@ This example updates a previously created site script. Any site designs referenc
         ],
             "bindata": { },
     "version": 2
-}
+};
+'@
+
+Set-SPOSiteScript -Identity edaec4ec-71e2-4026-ac1e-6686bb30190d -Content $newnavscript -Version 2
+
 ```
 
 ## PARAMETERS
@@ -114,6 +120,21 @@ A description of the script.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False 
+```
+### -Version
+
+A version number of the script.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online

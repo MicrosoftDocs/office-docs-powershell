@@ -14,9 +14,10 @@ New-CsTeamsMeetingBroadcastPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid
 ## SYNTAX
 
 ```
-New-CsTeamsMeetingBroadcastPolicy [-Description <Object>] [-BroadcastRecordingMode <Object>] [-WhatIf]
- [-BroadcastAttendeeVisibilityMode <Object>] [-AllowBroadcastTranscription <Object>] [[-Identity] <Object>]
- [-Tenant <Object>] [-InMemory] [-AllowBroadcastScheduling <Object>] [-Confirm] [-Force] [-AsJob]
+New-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
+ [-AllowBroadcastScheduling <Boolean>] [-AllowBroadcastTranscription <Boolean>]
+ [-BroadcastAttendeeVisibilityMode <String>] [-BroadcastRecordingMode <String>] [-Identity] <XdsIdentity>
+ [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +39,7 @@ Creates a new MeetingBroadcastPolicy with broadcast scheduling disabled, which c
 Specifies whether this user can create broadcast events in Teams.  This settng impacts broadcasts that use both self-service and external encoder production methods. 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -53,7 +54,7 @@ Accept wildcard characters: False
 Specifies whether real-time transcription and translation can be enabled in the broadcast event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -69,7 +70,7 @@ Specifies the attendee visibility mode of the broadcast events created by this u
 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -84,7 +85,7 @@ Accept wildcard characters: False
 Specifies whether broadcast events created by this user are always recorded, never recorded or user can choose whether to record or not.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -114,7 +115,7 @@ Accept wildcard characters: False
 Specifies why this policy is being created.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -144,7 +145,7 @@ Accept wildcard characters: False
 Specifies the name of the policy being created
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -174,7 +175,7 @@ Accept wildcard characters: False
 Not applicable, you can only specify policies for your own logged-in tenant.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -201,29 +202,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
+

@@ -104,7 +104,7 @@ For SharePoint Online in the SharePoint Online Management Shell, the module name
 
 Either way, take note of your module name. You'll need it in the next steps.
 
-### Step 5: Verify your your PSSession variable name
+### Step 5: Verify your PSSession variable name
 **Note**: This step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present). **If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell, you can skip this step**.
 
 Check the details of your connection instructions, but your session information is stored in a variable. For example, in the Exchange connection instructions, the variable is `$Session`. You'll use this variable name in later steps.
@@ -152,7 +152,7 @@ Check the details of your connection instructions, but your session information 
 ### Step 6: Run platyPS to generate topic files
 You have two choices:
 
-- **Dump _all_ cmdlets in the module/snap-in to files**: This is simple, but could take a while, and you'll end up with dozens or possibly hundreds of cmdlets files you don't need. The basic syntax is:
+- **Dump _all_ cmdlets in the module/snap-in to files**: This is simple but could take a while, and you'll end up with dozens or possibly hundreds of cmdlets files you don't need. The basic syntax is:
   ```
   New-MarkdownHelp -Module <ModuleName> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
   ``` 
@@ -325,7 +325,7 @@ In the TOC file, you can fill in a description or remove the template text line.
 
 After you're done editing the TOC file:
 
-1. Go to the **Propose file change** area at the bottom of the page. Enter a title and optional description informaton and then click **Propose file change**. 
+1. Go to the **Propose file change** area at the bottom of the page. Enter a title and optional description information and then click **Propose file change**. 
 
 2. On the next screen, click **Create pull request**.
 

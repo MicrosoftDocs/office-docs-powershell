@@ -17,17 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Set-Notification [-Identity] <EwsStoreObjectIdParameter> -NotificationEmails <MultiValuedProperty> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Set-Notification [-Identity] <EwsStoreObjectIdParameter> -NotificationEmails <MultiValuedProperty>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Settings
 ```
-Set-Notification -NotificationEmails <MultiValuedProperty>
- -ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Set-Notification -NotificationEmails <MultiValuedProperty> -ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +63,7 @@ You can't use this parameter with the ProcessType parameter.
 
 ```yaml
 Type: EwsStoreObjectIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -102,7 +105,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
-Parameter Sets: Set2
+Parameter Sets: Settings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True

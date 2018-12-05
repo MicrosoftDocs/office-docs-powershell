@@ -17,20 +17,42 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AnrSet
 ```
-Get-User [-Anr <String>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] 
- [-ResultSize <Unlimited>] [-Sortby <String>] [-AuditLog]
- [-PublicFolder] [-AuxAuditLog] [-SupervisoryReviewPolicy] [<CommonParameters>]
+Get-User [-Anr <String>]
+ [-Arbitration]
+ [-AuditLog]
+ [-AuxAuditLog]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PublicFolder]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-Sortby <String>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-User [[-Identity] <UserIdParameter>] [-Arbitration] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController] [-RecipientTypeDetails <RecipientTypeDetails[]>] 
- [-ResultSize <Unlimited>] [-Sortby <String>] [-AuditLog]
- [-PublicFolder] [-AuxAuditLog] [-SupervisoryReviewPolicy] [<CommonParameters>]
+Get-User [[-Identity] <UserIdParameter>]
+ [-Arbitration]
+ [-AuditLog]
+ [-AuxAuditLog]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PublicFolder]
+ [-ReadFromDomainController]
+ [-RecipientTypeDetails <RecipientTypeDetails[]>]
+ [-ResultSize <Unlimited>]
+ [-Sortby <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -85,7 +107,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
@@ -113,6 +135,52 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditLog
+This parameter is available only in on-premises Exchange.
+
+The AuditLog switch filters the results by arbitration mailboxes that are used to store audit log settings. You don't need to specify a value with this switch.
+
+Notes: 
+
+- If you don't use this switch, the command can't find this type of arbitration mailbox.
+
+- The Arbitration switch doesn't return this type of arbitration mailbox.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuxAuditLog
+This parameter is available only in on-premises Exchange.
+
+The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log data. You don't need to specify a value with this switch.
+
+Notes: 
+
+- If you don't use this switch, the command can't find this type of arbitration mailbox.
+
+- The Arbitration switch doesn't return this type of arbitration mailbox.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +258,7 @@ For example:
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
@@ -239,6 +307,23 @@ Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicFolder
+The PublicFolder switch specifies that the user object for which you're executing the command is a public folder mailbox.  You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders. This switch is required to retrieve information for a public folder mailbox.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -361,113 +446,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuditLog
-This parameter is available only in on-premises Exchange.
-
-The AuditLog switch filters the results by arbitration mailboxes that are used to store audit log settings. You don't need to specify a value with this switch.
-
-Notes: 
-
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't return this type of arbitration mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolder
-The PublicFolder switch specifies that the user object for which you're executing the command is a public folder mailbox. Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders. This switch is required to retrieve information for a public folder mailbox. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Sortby
-The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
-
-If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
-
-You can sort by the following properties:
-
-- Name
-
-- DisplayName
-
-- City
-
-- FirstName
-
-- LastName
-
-- Office
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuxAuditLog
-This parameter is available only in on-premises Exchange.
-
-The AuxAuditLog switch filters the results by arbitration mailboxes that are used to store audit log data. You don't need to specify a value with this switch.
-
-Notes: 
-
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't return this type of arbitration mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-The SupervisoryReviewPolicy switch specifies whether to return mailboxes that are subject to supervisory review policies. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

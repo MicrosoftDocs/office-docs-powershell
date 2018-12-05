@@ -8,21 +8,19 @@ schema: 2.0.0
 # Get-CsTeamsUpgradePolicy
 
 ## SYNOPSIS
-TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy.  Aspects of TeamsUpgradePolicy are still in preview mode as described below.
+TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy.  However, aspects of TeamsUpgradePolicy are still in preview mode as described below.
 
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsUpgradePolicy [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
-```
-
-```
-Get-CsTeamsUpgradePolicy [[-Identity] <XdsIdentity>] [-Tenant <guid>] [<CommonParameters>]
+Get-CsTeamsUpgradePolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
+### Filter
 ```
-Get-CsTeamsUpgradePolicy [-Tenant <guid>] [-Filter <string>] [<CommonParameters>]
+Get-CsTeamsUpgradePolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +32,7 @@ NOTES:
   - Instances with mode set to SfBWithTeamsCollab are not yet functional. From a routing perspective, this will behave like SfBOnly mode.
   - Action property is redundnant with the combination of NotifySfBUsers and Mode. It will eventually be removed.  
 
-IMPORTANT:  TeamsUpgradePolicy will replace TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy are being updated to honor TeamsUpgradePolicy instead. During the transition, use of these 2 policies must be coordinated during the transition. After transition is complete, TeamsInteorpPolicy will be removed.
+IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead.
 
 
 ## EXAMPLES
@@ -45,7 +43,7 @@ PS C:\> Get-CsTeamsUpgradePolicy
 
 Identity       : Global
 Description    : Users can use either Skype for Business client or Teams client
-Mode           : Legacy
+Mode           : Islands
 NotifySfbUsers : False
 Action         : None
 
@@ -114,7 +112,7 @@ PS C:\> Get-CsTeamsUpgradePolicy -Identity Global
 
 Identity       : Global
 Description    : Users can use either Skype for Business client or Teams client
-Mode           : Legacy
+Mode           : Islands
 NotifySfbUsers : False
 Action         : None
 
@@ -132,10 +130,9 @@ NotifySfbUsers : False
 
 ```
 
-List all on-premises instances (if any) of TeamsUpgradePolicy
+List all on-premises instances (if any) of TeamsUpgradePolicy.
+
 ## PARAMETERS
-
-
 
 ### -Identity
 If identity parameter is passed, this will return a specific instance. If no identity parameter is specified, the cmdlet returns all instances.
@@ -156,7 +153,7 @@ Accept wildcard characters: False
 {{Fill Filter Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019
@@ -188,7 +185,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019
@@ -200,35 +197,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
-
 
 [Get-CsTeamsUpgradeConfiguration](Get-CsTeamsUpgradeConfiguration.md)
 

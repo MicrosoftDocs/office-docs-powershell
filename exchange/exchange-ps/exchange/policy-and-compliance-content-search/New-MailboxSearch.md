@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-On July 1, 2017, you'll no longer be able to use the New-MailboxSearch cmdlet to create In-Place eDiscovery searches and In-Place Holds in Exchange Online. To create eDiscovery searches and eDiscovery case holds, please start using New-ComplianceSearch and New-CaseHoldPolicy in the Office 365 Security & Compliance Center. You'll still be able to use Set-MailboxSearch to modify existing In-Place eDiscovery searches and In-Place Holds. Creating new searches and holds in Exchange Server 2013 will still be supported, and searches run from your on-premises organization in an Exchange hybrid deployment aren't affected by this change.
+On July 1, 2018, you'll no longer be able to use the New-MailboxSearch cmdlet to create In-Place eDiscovery searches and In-Place Holds in Exchange Online. To create eDiscovery searches and eDiscovery case holds, please start using New-ComplianceSearch and New-CaseHoldPolicy in the Office 365 Security & Compliance Center. You'll still be able to use Set-MailboxSearch to modify existing In-Place eDiscovery searches and In-Place Holds. Creating new searches and holds in Exchange Server 2013 will still be supported, and searches run from your on-premises organization in an Exchange hybrid deployment aren't affected by this change.
 
 Use the New-MailboxSearch cmdlet to create a mailbox search and either get an estimate of search results, place search results on In-Place Hold or copy them to a Discovery mailbox. You can also place all contents in a mailbox on hold by not specifying a search query, which accomplishes similar results as Litigation Hold.
 
@@ -23,29 +23,36 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
 ```
-New-MailboxSearch [-Name] <String> [-EstimateOnly] [-Confirm] [-DomainController <Fqdn>] [-DoNotIncludeArchive]
- [-EndDate <ExDateTime>] [-ExcludeDuplicateMessages <$true | $false>] [-Force] [-IncludeUnsearchableItems]
- [-Language <CultureInfo>] [-LogLevel <Suppress | Basic | Full>] [-MessageTypes <KindKeyword[]>]
- [-Recipients <String[]>] [-SearchDumpster] [-SearchQuery <String>] [-Senders <String[]>]
- [-SourceMailboxes <RecipientIdParameter[]>] [-StartDate <ExDateTime>]
- [-StatusMailRecipients <RecipientIdParameter[]>] [-TargetMailbox <MailboxIdParameter>] [-WhatIf]
- [<CommonParameters>]
-```
-
-###  (Default)
-```
-New-MailboxSearch [-Name] <String> [-AllPublicFolderSources <$true | $false>]
- [-AllSourceMailboxes <$true | $false>] [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-EndDate <ExDateTime>] [-EstimateOnly] [-ExcludeDuplicateMessages <$true | $false>] [-Force]
- [-IncludeKeywordStatistics] [-IncludeUnsearchableItems] [-InPlaceHoldEnabled <$true | $false>]
- [-InPlaceHoldIdentity <String>] [-ItemHoldPeriod <Unlimited>] [-Language <CultureInfo>]
- [-LogLevel <Suppress | Basic | Full>] [-MessageTypes <KindKeyword[]>]
- [-PublicFolderSources <PublicFolderIdParameter[]>] [-Recipients <String[]>] [-SearchQuery <String>]
- [-Senders <String[]>] [-SourceMailboxes <RecipientIdParameter[]>] [-StartDate <ExDateTime>]
- [-StatusMailRecipients <RecipientIdParameter[]>] [-TargetMailbox <MailboxIdParameter>] [-WhatIf]
- [<CommonParameters>]
+New-MailboxSearch [-Name] <String>
+ [-AllPublicFolderSources <$true | $false>]
+ [-AllSourceMailboxes <$true | $false>]
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-DoNotIncludeArchive]
+ [-EndDate <ExDateTime>]
+ [-EstimateOnly]
+ [-ExcludeDuplicateMessages <$true | $false>]
+ [-Force]
+ [-IncludeKeywordStatistics]
+ [-IncludeUnsearchableItems]
+ [-InPlaceHoldEnabled <$true | $false>]
+ [-InPlaceHoldIdentity <String>]
+ [-ItemHoldPeriod <Unlimited>]
+ [-Language <CultureInfo>]
+ [-LogLevel <Suppress | Basic | Full>]
+ [-MessageTypes <KindKeyword[]>]
+ [-PublicFolderSources <PublicFolderIdParameter[]>]
+ [-Recipients <String[]>]
+ [-SearchDumpster]
+ [-SearchQuery <String>]
+ [-Senders <String[]>]
+ [-SourceMailboxes <RecipientIdParameter[]>]
+ [-StartDate <ExDateTime>]
+ [-StatusMailRecipients <RecipientIdParameter[]>]
+ [-TargetMailbox <MailboxIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +64,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2015" -EndDate "12/31/2015" -Recipients "@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
+New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2018" -EndDate "12/31/2018" -Recipients "@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
 ```
 
 This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the search query:
@@ -68,7 +75,7 @@ Recipients: This parameter specifies that the search includes all mail sent to t
 
 SearchQuery: This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
 
-StartDate and EndDate: These parameters specify the start date of January 1, 2015, and end date of December 31, 2015, for the search.
+StartDate and EndDate: These parameters specify the start date of January 1, 2018, and end date of December 31, 2018, for the search.
 
 TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
 
@@ -97,35 +104,6 @@ In on-premises Exchange, this example creates an In-Place Hold named Hold for al
 
 ## PARAMETERS
 
-### -EstimateOnly
-The EstimateOnly switch specifies that only an estimate of the number of items that will be returned is provided. You don't need to specify a value with this switch.
-
-If you don't use this switch, messages are copied to the target mailbox.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies a friendly name for the search. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -143,6 +121,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllPublicFolderSources
+This parameter is available only in on-premises Exchange.
+
+The AllPublicFolderSources parameter specifies whether to include all public folders in the organization in the search. Valid values are:
+
+- $true: All public folders are included in the search. This value is required when the value of the AllSourceMailboxes parameter is $false and you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
+
+- $false: No public folders are included in the search. This is the default value. You can use this value when the value of the AllSourceMailboxes parameter is $true or you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllSourceMailboxes
+This parameter is available only in on-premises Exchange.
+
+The AllSourceMailboxes parameter specifies whether to include all mailboxes in the search. Valid values are:
+
+- $true: All mailboxes are included in the search. This value is required when the value of the AllPublicFolderSources parameter is $false and you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
+
+- $false: All mailboxes aren't included in the search. This is the default value. You can use this value when the value of the AllPublicFolderSources parameter is $true or you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -155,6 +175,21 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The Description parameter specifies a description for the search. The description isn't displayed to users. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -186,7 +221,7 @@ The DoNotIncludeArchive parameter specifies whether archive mailboxes are includ
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -199,10 +234,27 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EstimateOnly
+The EstimateOnly switch specifies that only an estimate of the number of items that will be returned is provided. You don't need to specify a value with this switch.
+
+If you don't use this switch, messages are copied to the target mailbox.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
@@ -247,6 +299,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeKeywordStatistics
+The IncludeKeywordStatistics switch returns keyword statistics (number of instances for each keyword) in search results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludeUnsearchableItems
 The IncludeUnsearchableItems switch specifies that items that couldn't be indexed by Exchange Search should be included in the results. You don't need to specify a value with this switch.
 
@@ -257,6 +324,63 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InPlaceHoldEnabled
+The InPlaceHoldEnabled parameter specifies whether to set an In-Place Hold on items in the search results. Valid values are:
+
+- $true: In-Place Hold is enabled on the search results.
+
+- $false: In-Place Hold isn't enabled on the search results. This is the default value.
+
+You can't set an In-Place Hold on the search results when the AllSourceMailboxes parameter is $true.
+
+If you attempt to place a hold but don't specify mailboxes using the SourceMailboxes parameter, the command may succeed but the mailboxes are not placed on In-Place Hold.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InPlaceHoldIdentity
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ItemHoldPeriod
+The ItemHoldPeriod parameter specifies the number of days for the In-Place Hold onthe mailbox items (all mailbox items or the items that are returned in the search query results). The duration is calculated from the time the item is received or created in the mailbox. Valid values are:
+
+- An integer.
+
+- The value unlimited. This is the default value. Items are held until you remove the In-Place Hold by removing the search by using the Remove-MailboxSearch cmdlet, removing the source mailbox from the search by using the Set-MailboxSearch cmdlet and the SourceMailboxes parameter, or in on-premises Exchange, you remove all public folders from the search by using the Set-MailboxSearch cmdlet to change the AllPublicFolderSources parameter from $true to $false.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -337,6 +461,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PublicFolderSources
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: PublicFolderIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -Recipients
 The Recipients parameter specifies one or more recipients to include in the search query. Messages that have the specified recipients in the To, Cc, and Bcc fields are returned in the search results.
 
@@ -361,7 +501,7 @@ The SearchDumpster parameter enables searching the dumpster, which is a storage 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -463,7 +603,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -557,150 +697,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllPublicFolderSources
-This parameter is available only in on-premises Exchange.
-
-The AllPublicFolderSources parameter specifies whether to include all public folders in the organization in the search. Valid values are:
-
-- $true: All public folders are included in the search. This value is required when the value of the AllSourceMailboxes parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
-
-- $false: No public folders are included in the search. This is the default value. You can use this value when the value of the AllSourceMailboxes parameter is $trueor you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllSourceMailboxes
-This parameter is available only in on-premises Exchange.
-
-The AllSourceMailboxes parameter specifies whether to include all mailboxes in the search. Valid values are:
-
-- $true: All mailboxes are included in the search. This value is required when the value of the AllPublicFolderSources parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
-
-- $false: All mailboxes aren't included in the search. This is the default value. You can use this value when the value of the AllPublicFolderSources parameter is $trueor you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-The Description parameter specifies a description for the search. The description isn't displayed to users. If the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeKeywordStatistics
-The IncludeKeywordStatistics switch returns keyword statistics (number of instances for each keyword) in search results. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InPlaceHoldEnabled
-The InPlaceHoldEnabled parameter specifies whether to set an In-Place Hold on items in the search results. Valid values are:
-
-- $true: In-Place Hold is enabled on the search results.
-
-- $false: In-Place Hold isn't enabled on the search results. This is the default value.
-
-You can't set an In-Place Hold on the search results when the AllSourceMailboxes parameter is $true.
-
-If you attempt to place a hold but don't specify mailboxes using the SourceMailboxes parameter, the command may succeed but the mailboxes are not placed on In-Place Hold.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InPlaceHoldIdentity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ItemHoldPeriod
-The ItemHoldPeriod parameter specifies the number of days for the In-Place Hold onthe mailbox items (all mailbox items or the items that are returned in the search query results). The duration is calculated from the time the item is received or created in the mailbox. Valid values are:
-
-- An integer.
-
-- The value unlimited. This is the default value. Items are held until you remove the In-Place Hold by removing the search by using the Remove-MailboxSearch cmdlet, removing the source mailbox from the search by using the Set-MailboxSearch cmdlet and the SourceMailboxes parameter, or in on-premises Exchange, you remove all public folders from the search by using the Set-MailboxSearch cmdlet to change the AllPublicFolderSources parameter from $true to $false.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderSources
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: PublicFolderIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

@@ -6,7 +6,8 @@ schema: 2.0.0
 # Save-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Saves a PnP file to the file systems
+
+Saves a PnP site template to the file system
 
 ## SYNTAX 
 
@@ -20,6 +21,13 @@ Save-PnPProvisioningTemplate -InputInstance <ProvisioningTemplate>
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
+```powershell
+Save-PnPSiteTemplate -InputInstance $template -Out .\template.pnp
+```
+
+Saves a PnP site template to the file system as a PnP file.
+
+### ------------------EXAMPLE 2------------------
 ```powershell
 Save-PnPProvisioningTemplate -InputInstance $template -Out .\template.pnp
 ```

@@ -75,7 +75,7 @@ Accept pipeline input: False
 ```
 
 ### -Lcid
-Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft: https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splanguage.lcid.aspx
+Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft: https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splanguage.lcid.aspx. To get the list of supported languages use: (Get-PnPWeb -Includes RegionalSettings.InstalledLanguages).RegionalSettings.InstalledLanguages 
 
 ```yaml
 Type: UInt32
@@ -161,7 +161,7 @@ Accept pipeline input: False
 ```
 
 ### -Template
-Specifies the site collection template type. Use the Get-PnPWebTemplate cmdlet to get the list of valid templates. If no template is specified, one can be added later. The Template and LocaleId parameters must be a valid combination as returned from the Get-PnPWebTemplates cmdlet.
+Specifies the site collection template type. Use the Get-PnPWebTemplates cmdlet to get the list of valid templates. If no template is specified, one can be added later. The Template and LocaleId parameters must be a valid combination as returned from the Get-PnPWebTemplates cmdlet.
 
 ```yaml
 Type: String

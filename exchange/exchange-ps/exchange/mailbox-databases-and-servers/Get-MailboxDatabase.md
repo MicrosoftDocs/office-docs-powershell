@@ -17,16 +17,26 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Server
 ```
-Get-MailboxDatabase -Server <ServerIdParameter> [-DomainController <Fqdn>] [-DumpsterStatistics]
- [-IncludePreExchange2010] [-Status] [-IncludePreExchange2013] [-IncludeCorrupted] [<CommonParameters>]
+Get-MailboxDatabase -Server <ServerIdParameter>
+ [-DomainController <Fqdn>]
+ [-DumpsterStatistics]
+ [-IncludeCorrupted]
+ [-IncludePreExchange2010]
+ [-IncludePreExchange2013]
+ [-Status] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MailboxDatabase [[-Identity] <DatabaseIdParameter>] [-DomainController <Fqdn>] [-DumpsterStatistics]
- [-IncludePreExchange2010] [-Status] [-IncludePreExchange2013] [-IncludeCorrupted] [<CommonParameters>]
+Get-MailboxDatabase [[-Identity] <DatabaseIdParameter>]
+ [-DomainController <Fqdn>]
+ [-DumpsterStatistics]
+ [-IncludeCorrupted]
+ [-IncludePreExchange2010]
+ [-IncludePreExchange2013]
+ [-Status] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,7 +84,7 @@ The Server parameter specifies the name of the server from which to retrieve mai
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set2
+Parameter Sets: Server
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -127,7 +137,7 @@ If you have multiple databases with the same name, the command retrieves all dat
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -137,16 +147,46 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -IncludeCorrupted
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludePreExchange2010
 This parameter is available or functional only in Exchange Server 2010.
 
-The IncludePreExchange2010 parameter specifies whether to return information about the mailbox databases that reside on computers running Microsoft Exchange Server 2010 and earlier versions of Exchange.
+The IncludePreExchange2010 switch specifies whether to return information about Exchange 2007 ore earlier mailbox databases. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludePreExchange2013
+The IncludePreExchange2013 switch specifies whether to return information about Exchange 2010 or earlier mailbox databases. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -172,36 +212,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludePreExchange2013
-The IncludePreExchange2013 switch parameter specifies whether to return information about Exchange 2010 mailbox databases. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeCorrupted
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

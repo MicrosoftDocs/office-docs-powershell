@@ -6,13 +6,14 @@ schema: 2.0.0
 # Get-PnPUnifiedGroup
 
 ## SYNOPSIS
-Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups. You must first connect using Connect-PnPOnline -Graph, Connect-PnPOnline -Scopes or Connect-PnPOnline -AppId -AppSecret -AADDomain
+Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups
 
 ## SYNTAX 
 
 ```powershell
 Get-PnPUnifiedGroup [-Identity <UnifiedGroupPipeBind>]
                     [-ExcludeSiteUrl [<SwitchParameter>]]
+                    [-IncludeClassification [<SwitchParameter>]]
 ```
 
 ## EXAMPLES
@@ -71,6 +72,18 @@ The Identity of the Office 365 Group.
 
 ```yaml
 Type: UnifiedGroupPipeBind
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Accept pipeline input: False
+```
+
+### -IncludeClassification
+Include Classification value of Office 365 Groups.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False

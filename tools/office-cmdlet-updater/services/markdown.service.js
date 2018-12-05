@@ -1,20 +1,24 @@
-const fs = require('fs-extra');
-const path = require('path');
 const Queue = require('better-queue');
 const of = require('await-of').default;
 const shortId = require('shortid');
-const { markdownErrors } = require('../constants/errors');
 
 class MarkdownService {
-	constructor(powerShellService, logStoreService, logParseService, config) {
+	constructor(
+		powerShellService,
+		logStoreService,
+		logParseService,
+		cmdletDependenciesService,
+		fsService,
+		config
+	) {
 		this.logStoreService = logStoreService;
-		this.powerShellService = powerShellService;
+		this.pss = powerShellService;
 		this.logParseService = logParseService;
 		this.config = config;
+		this.cds = cmdletDependenciesService;
+		this.fsService = fsService;
 
 		this.processQueue = this.processQueue.bind(this);
-		this.copyMdInTempFolder = this.copyMdInTempFolder.bind(this);
-		this.getLogFileContent = this.getLogFileContent.bind(this);
 		this.queueFinishHandler = this.queueFinishHandler.bind(this);
 		this.updateMd = this.updateMd.bind(this);
 		this.addMdFilesInQueue = this.addMdFilesInQueue.bind(this);
@@ -23,53 +27,24 @@ class MarkdownService {
 
 		this.queue = new Queue(this.processQueue);
 		this.queue.on('empty', this.queueEmptyHandler);
+
+		this.installedDependencies = [];
 	}
 
-	async updateMd(doc) {
-		return this.addMdFilesInQueue(doc);
+	async updateMd(doc, cmdlet) {
+		return this.addMdFilesInQueue(doc, cmdlet);
 	}
 
-	async addMdFilesInQueue(doc) {
-		const mdExt = '.md';
-		const { ignoreFiles } = this.config.get('platyPS');
-		const ignoreAbsolutePathsArr = ignoreFiles.map((f) => path.resolve(f));
-		const metaTagRegex = /(?<=applicable: ).+/gmu;
+	async addMdFilesInQueue(doc, cmdlet) {
+		const mdFiles = (await this.fsService.getModuleFiles(doc)).filter(
+			(file) => this._filterCmdlets(file, cmdlet)
+		);
 
-		const isFileIgnore = (fileName) => {
-			const absoluteFilePath = path.resolve(fileName);
-
-			return ignoreAbsolutePathsArr.includes(absoluteFilePath);
-		};
-
-		const isContainTag = (filePath) => {
-			if (!doc.metaTags.length) {
-				return true;
-			}
-
-			const groups = fs
-				.readFileSync(filePath, 'utf8')
-				.toString()
-				.match(metaTagRegex);
-
-			if (!groups) {
-				return false;
-			}
-
-			for (const metaTag of doc.metaTags) {
-				if (groups[0].indexOf(metaTag) !== -1) {
-					return true;
-				}
-			}
-
-			return false;
-		};
-
-		const mdFiles = (await fs.readdir(doc.path))
-			.map((f) => path.resolve(doc.path, f))
-			.filter(
-				(fn) =>
-					fn.endsWith(mdExt) && !isFileIgnore(fn) && isContainTag(fn)
+		if (!mdFiles.length) {
+			throw new Error(
+				`Can't find cmdlet "${cmdlet}" in module "${doc.name}"`
 			);
+		}
 
 		mdFiles.forEach((file) => {
 			this.queue
@@ -79,35 +54,39 @@ class MarkdownService {
 		});
 	}
 
+	_filterCmdlets(mdPath, cmdletName) {
+		if (!cmdletName) {
+			return true;
+		}
+
+		const mdExt = '.md';
+
+		return mdPath.endsWith(`${cmdletName}${mdExt}`);
+	}
+
 	async processQueue({ file, doc }, cb) {
 		let result, err;
 
-		const getTempFolderName = () => {
-			let tempFolders = this.logStoreService.getAllTempFolders();
+		let { tempFolderPath } = this.config.get('platyPS');
+		const {
+			copyMdInTempFolder,
+			getTempFolderPath,
+			getFileContent
+		} = this.fsService;
 
-			if (!tempFolders.has(doc.name)) {
-				const tempFolderPath = `${doc.path}\\${shortId()}`;
+		await this._installDependenceIfNeeded(doc);
 
-				this.logStoreService.addTempFolder(tempFolderPath, doc.name);
+		[tempFolderPath] = await getTempFolderPath(doc, tempFolderPath);
 
-				tempFolders = this.logStoreService.getAllTempFolders();
-			}
-
-			return tempFolders.get(doc.name);
-		};
-
-		const [tempFolderPath] = getTempFolderName();
 		const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
 
-		[result, err] = await of(this.copyMdInTempFolder(file, tempFolderPath));
+		[result, err] = await of(copyMdInTempFolder(file, tempFolderPath));
 
 		if (err) {
 			return cb(err, null);
 		}
 
-		[result, err] = await of(
-			this.powerShellService.updateMarkdown(result, logFilePath)
-		);
+		[result, err] = await of(this.pss.updateMarkdown(result, logFilePath));
 
 		if (err) {
 			console.error(err);
@@ -119,7 +98,7 @@ class MarkdownService {
 
 		console.log(result); // print powershell command result
 
-		[result, err] = await of(this.getLogFileContent(logFilePath));
+		[result, err] = await of(getFileContent(logFilePath));
 
 		console.log(result); // print update file log
 
@@ -142,58 +121,21 @@ class MarkdownService {
 	}
 
 	async queueEmptyHandler() {
-		this.powerShellService.dispose();
+		this.pss.dispose();
 
 		this.logStoreService.saveInFs();
 
-		const tempFolders = [
-			...this.logStoreService.getAllTempFolders().values()
-		].map((path) => path[0]);
-
-		for (const path of tempFolders) {
-			if (fs.pathExists(path)) {
-				const [, fsError] = await of(fs.remove(path));
-
-				if (fsError) {
-					throw new Error(fsError);
-				}
-			}
-		}
+		await this.fsService.removeTempFolders();
 
 		this.logParseService.parseAll();
 	}
 
-	async copyMdInTempFolder(srcFilePath, tempFolderPath) {
-		let err;
+	async _installDependenceIfNeeded({ name }) {
+		if (!this.installedDependencies.includes(name)) {
+			this.installedDependencies.push(name);
 
-		const fileName = path.basename(srcFilePath);
-		const distFilePath = `${tempFolderPath}\\${fileName}`;
-
-		[, err] = await of(fs.ensureDir(tempFolderPath));
-
-		if (err) {
-			throw new Error(markdownErrors.CANT_CREATE_TEMP_FOLDER);
+			await this.cds.installDependencies({ cmdletName: name });
 		}
-
-		[, err] = await of(fs.copy(srcFilePath, distFilePath));
-
-		if (err) {
-			throw new Error(markdownErrors.CANT_COPY_MD_FILE);
-		}
-
-		return distFilePath;
-	}
-
-	async getLogFileContent(logFilePath) {
-		let err, result;
-
-		[result, err] = await of(fs.ensureFile(logFilePath));
-
-		if (result || err) {
-			throw new Error(markdownErrors.CANT_OPEN_LOG_FILE);
-		}
-
-		return (await fs.readFile(logFilePath)).toString();
 	}
 }
 

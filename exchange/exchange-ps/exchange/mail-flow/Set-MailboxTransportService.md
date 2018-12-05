@@ -18,30 +18,50 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-MailboxTransportService [-Identity] <MailboxTransportServerIdParameter> [-Confirm]
- [-ConnectivityLogEnabled <$true | $false>] [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
- [-ConnectivityLogMaxDirectorySize <Unlimited>] [-ConnectivityLogMaxFileSize <Unlimited>]
- [-ConnectivityLogPath <LocalLongFullPath>] [-ContentConversionTracingEnabled <$true | $false>]
- [-DomainController <Fqdn>] [-MailboxDeliveryAgentLogEnabled <$true | $false>]
- [-MailboxDeliveryConnectorSMTPUtf8Enabled <$true | $false>] 
- [-MailboxDeliveryAgentLogMaxAge <EnhancedTimeSpan>] [-MailboxDeliveryAgentLogMaxDirectorySize <Unlimited>]
- [-MailboxDeliveryAgentLogMaxFileSize <Unlimited>] [-MailboxDeliveryAgentLogPath <LocalLongFullPath>]
+Set-MailboxTransportService [-Identity] <MailboxTransportServerIdParameter>
+ [-Confirm]
+ [-ConnectivityLogEnabled <$true | $false>]
+ [-ConnectivityLogMaxAge <EnhancedTimeSpan>]
+ [-ConnectivityLogMaxDirectorySize <Unlimited>]
+ [-ConnectivityLogMaxFileSize <Unlimited>]
+ [-ConnectivityLogPath <LocalLongFullPath>]
+ [-ContentConversionTracingEnabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-MailboxDeliveryAgentLogEnabled <$true | $false>]
+ [-MailboxDeliveryAgentLogMaxAge <EnhancedTimeSpan>]
+ [-MailboxDeliveryAgentLogMaxDirectorySize <Unlimited>]
+ [-MailboxDeliveryAgentLogMaxFileSize <Unlimited>]
+ [-MailboxDeliveryAgentLogPath <LocalLongFullPath>]
+ [-MailboxDeliveryConnectorMaxInboundConnection <Unlimited>]
  [-MailboxDeliveryConnectorProtocolLoggingLevel <None | Verbose>]
+ [-MailboxDeliveryConnectorSMTPUtf8Enabled <$true | $false>]
  [-MailboxDeliveryThrottlingLogEnabled <$true | $false>]
  [-MailboxDeliveryThrottlingLogMaxAge <EnhancedTimeSpan>]
  [-MailboxDeliveryThrottlingLogMaxDirectorySize <Unlimited>]
- [-MailboxDeliveryThrottlingLogMaxFileSize <Unlimited>] [-MailboxDeliveryThrottlingLogPath <LocalLongFullPath>]
- [-MailboxSubmissionAgentLogEnabled <$true | $false>] [-MailboxSubmissionAgentLogMaxAge <EnhancedTimeSpan>]
- [-MailboxSubmissionAgentLogMaxDirectorySize <Unlimited>] [-MailboxSubmissionAgentLogMaxFileSize <Unlimited>]
- [-MailboxSubmissionAgentLogPath <LocalLongFullPath>] [-MaxConcurrentMailboxDeliveries <Int32>]
- [-MaxConcurrentMailboxSubmissions <Int32>] [-PipelineTracingEnabled <$true | $false>]
- [-PipelineTracingPath <LocalLongFullPath>] [-PipelineTracingSenderAddress <SmtpAddress>]
- [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>] [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
- [-ReceiveProtocolLogMaxFileSize <Unlimited>] [-ReceiveProtocolLogPath <LocalLongFullPath>]
- [-SendProtocolLogMaxAge <EnhancedTimeSpan>] [-SendProtocolLogMaxDirectorySize <Unlimited>]
- [-SendProtocolLogMaxFileSize <Unlimited>] [-SendProtocolLogPath <LocalLongFullPath>] [-WhatIf]
- [-MailboxDeliveryConnectorMaxInboundConnection <Unlimited>] [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
- [-RoutingTableLogMaxDirectorySize <Unlimited>] [-RoutingTableLogPath <LocalLongFullPath>] [<CommonParameters>]
+ [-MailboxDeliveryThrottlingLogMaxFileSize <Unlimited>]
+ [-MailboxDeliveryThrottlingLogPath <LocalLongFullPath>]
+ [-MailboxSubmissionAgentLogEnabled <$true | $false>]
+ [-MailboxSubmissionAgentLogMaxAge <EnhancedTimeSpan>]
+ [-MailboxSubmissionAgentLogMaxDirectorySize <Unlimited>]
+ [-MailboxSubmissionAgentLogMaxFileSize <Unlimited>]
+ [-MailboxSubmissionAgentLogPath <LocalLongFullPath>]
+ [-MaxConcurrentMailboxDeliveries <Int32>]
+ [-MaxConcurrentMailboxSubmissions <Int32>]
+ [-PipelineTracingEnabled <$true | $false>]
+ [-PipelineTracingPath <LocalLongFullPath>]
+ [-PipelineTracingSenderAddress <SmtpAddress>]
+ [-ReceiveProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-ReceiveProtocolLogMaxDirectorySize <Unlimited>]
+ [-ReceiveProtocolLogMaxFileSize <Unlimited>]
+ [-ReceiveProtocolLogPath <LocalLongFullPath>]
+ [-RoutingTableLogMaxAge <EnhancedTimeSpan>]
+ [-RoutingTableLogMaxDirectorySize <Unlimited>]
+ [-RoutingTableLogPath <LocalLongFullPath>]
+ [-SendProtocolLogMaxAge <EnhancedTimeSpan>]
+ [-SendProtocolLogMaxDirectorySize <Unlimited>]
+ [-SendProtocolLogMaxFileSize <Unlimited>]
+ [-SendProtocolLogPath <LocalLongFullPath>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -352,6 +372,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MailboxDeliveryConnectorMaxInboundConnection
+The MailboxDeliveryConnectorMaxInboundConnection parameter specifies the maximum number of inbound connections for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default value is 5000. If you enter the value unlimited, no connection limit is imposed on the mailbox delivery Receive connector.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MailboxDeliveryConnectorProtocolLoggingLevel
 The MailboxDeliveryConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Valid values are:
 
@@ -364,6 +399,25 @@ Type: None | Verbose
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxDeliveryConnectorSmtpUtf8Enabled
+The MailboxDeliveryConnectorSmtpUtf8Enabled parameters or disables email address internationalization (EAI) support for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Valid values are:
+
+- $true: Mail can be delivered to local mailboxes that have international characters in email addresses. This is the default value
+
+- $false: Mail can't be delivered to local mailboxes that have international characters in email addresses.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -784,6 +838,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RoutingTableLogMaxAge
+The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting this parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoutingTableLogMaxDirectorySize
+The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoutingTableLogPath
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\Routing. Setting this parameter to $null disables routing table logging.
+
+```yaml
+Type: LocalLongFullPath
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SendProtocolLogMaxAge
 The SendProtocolLogMaxAge parameter specifies the maximum age of a protocol log file for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. Log files that are older than the specified value are automatically deleted.
 
@@ -904,86 +1023,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxDeliveryConnectorMaxInboundConnection
-The MailboxDeliveryConnectorMaxInboundConnection parameter specifies the maximum number of inbound connections for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default value is 5000. If you enter the value unlimited, no connection limit is imposed on the mailbox delivery Receive connector.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogMaxAge
-The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting this parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogMaxDirectorySize
-The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
-
-The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\Routing. Setting this parameter to $null disables routing table logging.
-
-```yaml
-Type: LocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None

@@ -16,13 +16,24 @@ The CsTeamsMeetingConfiguration cmdlets enable administrators to control the mee
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsMeetingConfiguration [-ClientVideoPortRange <Object>] [-DisableAnonymousJoin <bool>]
- [[-Identity] <Object>] [-Confirm] [-Instance <Object>] [-ClientAppSharingPortRange <Object>] [-Force]
- [-EnableQoS <Object>] [-Tenant <Object>] [-LogoURL <Object>] [-ClientAppSharingPort <Object>]
- [-ClientVideoPort <Object>] [-ClientAudioPortRange <Object>] [-ClientMediaPortRangeEnabled <Object>]
- [-ClientAudioPort <Object>] [-CustomFooterText <Object>] [-WhatIf] [-HelpURL <Object>] [-LegalURL <Object>]
- [-AsJob]
+Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
+ [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
+ [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
+ [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
+ [-ClientMediaPortRangeEnabled <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
+ [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
+ [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
+ [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +57,7 @@ Maximum allowed value: 65535
 Default value: 50040
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -61,7 +72,7 @@ Accept wildcard characters: False
 Determines the total number of ports available for client sharing or application sharing. Default value is 20
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -79,7 +90,7 @@ Maximum allowed value: 65535
 Default value: 50000 
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -94,7 +105,7 @@ Accept wildcard characters: False
 Determines the total number of ports available for client audio. Default value is 20
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -109,7 +120,7 @@ Accept wildcard characters: False
 Determines whether custom media port and range selections need to be enforced. When set to True, clients will use the specified port range for media traffic. When set to False (the default value) for any available port (from port 1024 through port 65535) will be used to accommodate media traffic.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -127,7 +138,7 @@ Maximum allowed value: 65535
 Default value: 50020
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -143,7 +154,7 @@ Determines the total number of ports available for client video. Default value i
 
 
 ```yaml
-Type: Object
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -173,7 +184,7 @@ Accept wildcard characters: False
 Text to be used on custom meeting invitations 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -188,7 +199,7 @@ Accept wildcard characters: False
 Determines whether anonymous users are blocked from joining meetings in the tenant. Set this to TRUE to block anonymous users from joining. Set this to FALSE to allow anonymous users to join meetings.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -203,7 +214,7 @@ Accept wildcard characters: False
 Determines whether Quality of Service Marking for real-time media (audio, video, screen/app sharing) is enabled in the tenant. Set this to TRUE to enable and FALSE to disable
 
 ```yaml
-Type: bool
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -233,7 +244,7 @@ Accept wildcard characters: False
 URL to a website where users can obtain assistance on joining the meeting.This would be included in the meeting invite. Please ensure this URL is publicly accessible for invites that go beyond your federation boundaries
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -248,7 +259,7 @@ Accept wildcard characters: False
 The only valid input is Global
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -263,7 +274,7 @@ Accept wildcard characters: False
 Use this parameter to update a saved configuration instance
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases:
 
@@ -278,7 +289,7 @@ Accept wildcard characters: False
 URL to a website containing legal information and meeting disclaimers. This would be included in the meeting invite. Please ensure this URL is publicly accessible for invites that go beyond your federation boundaries
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -293,7 +304,7 @@ Accept wildcard characters: False
 URL to a logo image. This would be included in the meeting invite. Please ensure this URL is publicly accessible for invites that go beyond your federation boundaries
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -308,7 +319,7 @@ Accept wildcard characters: False
 Internal Microsoft use
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -335,30 +346,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Internal Microsoft use
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

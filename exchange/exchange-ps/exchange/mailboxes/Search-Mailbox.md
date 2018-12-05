@@ -17,26 +17,50 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### EstimateResult
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly] [-Confirm]
- [-DomainController <Fqdn>] [-DoNotIncludeArchive] [-Force] [-IncludeUnsearchableItems] [-SearchDumpster]
- [-SearchDumpsterOnly] [-SearchQuery <String>] [-WhatIf] [<CommonParameters>]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-EstimateResultOnly]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DoNotIncludeArchive]
+ [-Force]
+ [-IncludeUnsearchableItems]
+ [-SearchDumpster]
+ [-SearchDumpsterOnly]
+ [-SearchQuery <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Mailbox
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String>
- -TargetMailbox <MailboxIdParameter> [-Confirm] [-DeleteContent] [-DomainController <Fqdn>]
- [-DoNotIncludeArchive] [-Force] [-IncludeUnsearchableItems] [-LogLevel <Suppress | Basic | Full>] [-LogOnly]
- [-SearchDumpster] [-SearchDumpsterOnly] [-SearchQuery <String>] [-WhatIf] [<CommonParameters>]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> -TargetFolder <String> -TargetMailbox <MailboxIdParameter>
+ [-Confirm]
+ [-DeleteContent]
+ [-DomainController <Fqdn>]
+ [-DoNotIncludeArchive]
+ [-Force]
+ [-IncludeUnsearchableItems]
+ [-LogLevel <Suppress | Basic | Full>]
+ [-LogOnly]
+ [-SearchDumpster]
+ [-SearchDumpsterOnly]
+ [-SearchQuery <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-Confirm] [-DeleteContent]
- [-DomainController <Fqdn>] [-DoNotIncludeArchive] [-Force] [-IncludeUnsearchableItems] [-SearchDumpster]
- [-SearchDumpsterOnly] [-SearchQuery <String>] [-WhatIf] [<CommonParameters>]
+Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter>
+ [-Confirm]
+ [-DeleteContent]
+ [-DomainController <Fqdn>]
+ [-DoNotIncludeArchive]
+ [-Force]
+ [-IncludeUnsearchableItems]
+ [-SearchDumpster]
+ [-SearchDumpsterOnly]
+ [-SearchQuery <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,7 +118,7 @@ The EstimateResultOnly switch specifies that only an estimate of the total numbe
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: EstimateResult
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -148,7 +172,7 @@ The TargetFolder parameter specifies a folder name in which search results are s
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -181,7 +205,7 @@ When you specify a value for the TargetMailbox parameter, you must also specify 
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -221,7 +245,7 @@ Before you use the DeleteContent switch to delete content, we recommend that you
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set1
+Parameter Sets: Mailbox, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -308,7 +332,7 @@ The default log level is Basic.
 
 ```yaml
 Type: Suppress | Basic | Full
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -323,7 +347,7 @@ The LogOnly switch specifies that a search be performed and only a log be genera
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

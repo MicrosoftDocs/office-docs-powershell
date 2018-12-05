@@ -79,7 +79,7 @@ This example creates a fixed schedule that is active from December 24, 2017 to D
 ```powershell
 $dtr1 = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
 $dtr2 = New-CsOnlineDateTimeRange -Start "24/12/2018" -End "26/12/2018"
-$notInEffectSchedule = New-CsOnlineSchedule -Name “NotInEffect” -FixedSchedule
+$notInEffectSchedule = New-CsOnlineSchedule -Name "NotInEffect" -FixedSchedule
 ```
 
 This example creates a fixed schedule that is never active.

@@ -17,23 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### Settings
 ```
-Get-Notification [-Settings] [-DomainController <Fqdn>]
- -ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry> [<CommonParameters>]
-```
-
-### Set2
-```
-Get-Notification [[-Identity] <EwsStoreObjectIdParameter>] [-DomainController <Fqdn>] [-Summary]
- [<CommonParameters>]
+Get-Notification [-Settings] -ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-Notification [-DomainController <Fqdn>]
- [-ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>]
- [-ResultSize <Unlimited>] [-StartDate <ExDateTime>] [-Summary] [<CommonParameters>]
+Get-Notification [[-Identity] <EwsStoreObjectIdParameter>] [-Summary]
+ [-DomainController <Fqdn>] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-Notification [-ProcessType <Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry>] [-ResultSize <Unlimited>] [-StartDate <ExDateTime>] [-Summary]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,7 +74,7 @@ You can't use this switch with the Summary switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: Settings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -107,7 +106,7 @@ The Identity parameter specifies the notification event that you want to view. Y
 
 ```yaml
 Type: EwsStoreObjectIdParameter
-Parameter Sets: Set2
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -132,7 +131,7 @@ The ProcessType parameter filters the results by the type of notification event.
 
 ```yaml
 Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
-Parameter Sets: Set3
+Parameter Sets: Settings
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -144,7 +143,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
-Parameter Sets: Set1
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -159,7 +158,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Set1
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -172,11 +171,11 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
-Parameter Sets: Set1
+Parameter Sets: Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -193,7 +192,7 @@ You can't use this switch with the Settings switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2, Set1
+Parameter Sets: Identity, Filter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

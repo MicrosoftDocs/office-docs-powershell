@@ -10,24 +10,17 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns information related to managing the upgrade to Teams from Skype for Business. TeamsUpgradeConfiguration should be used in conjunction with TeamsUpgradePolicy. The settings in TeamsUpgradeConfiguration allow administrators to configure whether users subject to upgrade and who are running on Windows clients should automatically download Teams. For Office 365 users, it allows administrators to determine which application end users should use to join Skype for Business meetings.
 
-
-
-
-
-
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsUpgradeConfiguration [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
- [-AsJob]
-```
-
-```
-Get-CsTeamsUpgradeConfiguration [-Tenant <guid>] [-Filter <string>]  [<CommonParameters>]
+Get-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+ [<CommonParameters>]
 ```
 
+### Filter
 ```
-Get-CsTeamsUpgradeConfiguration [[-Identity] <XdsIdentity>] [-Tenant <guid>] [<CommonParameters>]
+Get-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +54,7 @@ The above cmdlet lists the properties of TeamsUpgradeConfiguration.
 {{Fill Identity Description}}
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019
@@ -93,7 +86,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019
@@ -105,18 +98,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
-
 These settings are only honored by newer versions of Skype for Business clients.
 
 ## RELATED LINKS

@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPConnection
 
 ## SYNOPSIS
-Returns the current connection
+Returns the current context
 
 ## DESCRIPTION
 Returns a PnP PowerShell Connection for use with the -Connection parameter on other cmdlets.

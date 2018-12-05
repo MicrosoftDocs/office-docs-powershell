@@ -19,28 +19,44 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### PrecannedFilter
 ```
-New-AddressList [-Name] <String> [-ConditionalCompany <MultiValuedProperty>]
- [-ConditionalCustomAttribute1 <MultiValuedProperty>] [-ConditionalCustomAttribute10 <MultiValuedProperty>]
- [-ConditionalCustomAttribute11 <MultiValuedProperty>] [-ConditionalCustomAttribute12 <MultiValuedProperty>]
- [-ConditionalCustomAttribute13 <MultiValuedProperty>] [-ConditionalCustomAttribute14 <MultiValuedProperty>]
- [-ConditionalCustomAttribute15 <MultiValuedProperty>] [-ConditionalCustomAttribute2 <MultiValuedProperty>]
- [-ConditionalCustomAttribute3 <MultiValuedProperty>] [-ConditionalCustomAttribute4 <MultiValuedProperty>]
- [-ConditionalCustomAttribute5 <MultiValuedProperty>] [-ConditionalCustomAttribute6 <MultiValuedProperty>]
- [-ConditionalCustomAttribute7 <MultiValuedProperty>] [-ConditionalCustomAttribute8 <MultiValuedProperty>]
- [-ConditionalCustomAttribute9 <MultiValuedProperty>] [-ConditionalDepartment <MultiValuedProperty>]
- [-ConditionalStateOrProvince <MultiValuedProperty>] [-Confirm] [-Container <AddressListIdParameter>]
- [-DisplayName <String>] [-DomainController <Fqdn>]
- [-IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>]
- [-RecipientContainer <OrganizationalUnitIdParameter>] [-WhatIf] [<CommonParameters>]
+New-AddressList [-Name] <String> [-IncludedRecipients <None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients>]
+ [-ConditionalCompany <MultiValuedProperty>]
+ [-ConditionalCustomAttribute1 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute10 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute11 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute12 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute13 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute14 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute15 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute2 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute3 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute4 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute5 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute6 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute7 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute8 <MultiValuedProperty>]
+ [-ConditionalCustomAttribute9 <MultiValuedProperty>]
+ [-ConditionalDepartment <MultiValuedProperty>]
+ [-ConditionalStateOrProvince <MultiValuedProperty>]
+ [-Confirm]
+ [-Container <AddressListIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### CustomFilter
 ```
-New-AddressList [-Name] <String> [-Confirm] [-Container <AddressListIdParameter>] [-DisplayName <String>]
- [-DomainController <Fqdn>] [-RecipientContainer <OrganizationalUnitIdParameter>] 
- [-RecipientFilter <String>] [-WhatIf] [<CommonParameters>]
+New-AddressList [-Name] <String> [-RecipientFilter <String>]
+ [-Confirm]
+ [-Container <AddressListIdParameter>]
+ [-DisplayName <String>]
+ [-DomainController <Fqdn>]
+ [-RecipientContainer <OrganizationalUnitIdParameter>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,7 +121,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -124,7 +140,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -143,7 +159,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -162,7 +178,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -181,7 +197,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -200,7 +216,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -219,7 +235,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -238,7 +254,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -257,7 +273,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -276,7 +292,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -295,7 +311,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -314,7 +330,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -333,7 +349,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -352,7 +368,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -371,7 +387,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -390,7 +406,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -409,7 +425,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -428,7 +444,7 @@ You can't use this parameter with the RecipientFilter parameter. You need to use
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -539,7 +555,7 @@ You need to use this parameter when you use any of the Conditional parameters. Y
 
 ```yaml
 Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
-Parameter Sets: Set1
+Parameter Sets: PrecannedFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -591,7 +607,7 @@ You can't use this parameter with the IncludedRecipients parameter or any of the
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: CustomFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
