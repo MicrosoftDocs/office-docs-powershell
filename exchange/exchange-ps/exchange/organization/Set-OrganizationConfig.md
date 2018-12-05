@@ -74,6 +74,7 @@ Set-OrganizationConfig
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <$true | $false>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
+ [-OutlookMobileGCCRestrictionsEnabled <$true | $false>]
  [-OutlookMobileHelpShiftEnabled <$true | $false>]
  [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -1836,14 +1837,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OutlookMobileGCCRestrictionsEnabled
+This parameter is available only in the cloud-based service.
+
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features in Outlook Mobile that are not part of Microsoft's GCC Offering and are not GCC Compliant. Valid values are:
+
+- $true: Outlook Mobile can't connect to features that aren't part of Microsoft's GCC Offering and aren't GCC Compliant. These features include multi-account support, 3rd party services, HelpShift and In-app support, and any Microsoft services that are outside of the GCC compliant boundary (for example, Bing and Cortana).
+
+- $false: Outlook Mobile can connect to features that aren't part of Microsoft's GCC Offering and aren't GCC Compliant.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OutlookMobileHelpShiftEnabled
 This parameter is available only in the cloud-based service.
 
 {{Fill OutlookMobileHelpShiftEnabled Description}}
 
 ```yaml
-Type: Boolean
-Parameter Sets: $true | $false
+Type: $true | $false
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
 Required: False
