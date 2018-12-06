@@ -1840,11 +1840,21 @@ Accept wildcard characters: False
 ### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features in Outlook Mobile that are not part of Microsoft's GCC Offering and are not GCC Compliant. Valid values are:
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that aren't compliant with the Office 365 US Government plans. Valid values are:
 
-- $true: Outlook Mobile can't connect to features that aren't part of Microsoft's GCC Offering and aren't GCC Compliant. These features include multi-account support, 3rd party services, HelpShift and In-app support, and any Microsoft services that are outside of the GCC compliant boundary (for example, Bing and Cortana).
+- $true: Disable features that aren't compliant with Office 365 US Government plans. This is the default value for all GCC tenants.
 
-- $false: Outlook Mobile can connect to features that aren't part of Microsoft's GCC Offering and aren't GCC Compliant.
+- $false: Enable features that aren't compliant with Office 355 US Government plans. This is the default value for all other type of tenants.
+
+The within Outlook for iOS and Android that aren't compliant with the Office 365 US Government plans include:
+
+- Multi-account support
+
+- Third-party services
+
+- HelpShift and in-app support
+
+- Any Microsoft services that are outside the Office 365 US Government compliance boundary (for example, Bing and Cortana).
 
 ```yaml
 Type: $true | $false
