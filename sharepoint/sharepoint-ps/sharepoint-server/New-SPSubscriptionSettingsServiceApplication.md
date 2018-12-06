@@ -34,6 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 
 PS C:\>$sa = New-SPSubscriptionSettingsServiceApplication -ApplicationPool 'SharePoint Web Services Default' -Name 'Subscriptions Settings Service Application' -DatabaseName 'Subscription'
+PS C:\>New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 
 ```
 
