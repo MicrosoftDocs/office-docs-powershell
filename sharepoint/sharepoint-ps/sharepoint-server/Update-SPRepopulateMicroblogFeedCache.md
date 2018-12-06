@@ -51,15 +51,27 @@ PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile 
 PS C:\>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
 ```
 
-This example refreshes the feeds for a specific user by using the AccountName parameter.
+This example refreshes the feed for a specific user by using the AccountName parameter.
 
 ### ------------EXAMPLE 2------------
 ```
+PS C:\>$site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
+PS C:\>$context = Get-SPServiceContext $site
+PS C:\>$upm = New-Object Microsoft.Office.Server.UserProfiles.UserProfileManager($context)
+PS C:\>$profiles = $upm.GetEnumerator()
 PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName -SiteSubscription 0C37852B-34D0-418e-91C6-2AC25AF4BE5B
+PS C:\>while($profiles.MoveNext()) {
+    $profile = $profiles.Current
+	   Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName $profile.AccountName }
 ```
 
-This example refreshes the feeds for a specific user by using the AccountName parameter.
+This example refreshes the feeds for all users in the User Profile Service Application.
+
+### ------------EXAMPLE 3------------
+```
+PS C:\>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -SiteUrl https://sharepoint.contoso.com
+```
+This example refreshes the feed on the site https://sharepoint.contoso.com.
 
 ## PARAMETERS
 
