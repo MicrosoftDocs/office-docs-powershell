@@ -79,22 +79,6 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
-
-### -ActiveSyncDebugLogging
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ActiveSyncEnabled
 The ActiveSyncEnabled parameter specifies whether to enable or disable Exchange ActiveSync access to mailboxes that have the CAS mailbox plan applied to them. Valid values are:
 
@@ -104,21 +88,6 @@ The ActiveSyncEnabled parameter specifies whether to enable or disable Exchange 
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActiveSyncMailboxPolicy
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -148,357 +117,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisplayName
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ECPEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsAllowEntourage
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsAllowList
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsAllowMacOutlook
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsAllowOutlook
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsApplicationAccessPolicy
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnforceAllowList | EnforceBlockList
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsBlockList
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EwsEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IgnoreDefaultScope
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ImapEnabled
 The ImapEnabled parameter specifies whether to enable or disable IMAP4 access to mailboxes that have the CAS mailbox plan applied to them. Valid values are:
 
 - $true: IMAP4 access to mailboxes is enabled.
 
 - $false: IMAP4 access to mailboxes is disabled.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapEnableExactRFC822Size
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapForceICalForCalendarRetrievalOption
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapMessagesRetrievalMimeFormat
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: TextOnly | HtmlOnly | HtmlAndTextAlternative | TextEnrichedOnly | TextEnrichedAndTextAlternative | BestBodyFormat | Tnef
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapProtocolLoggingEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapSuppressReadReceipt
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImapUseProtocolDefaults
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIBlockOutlookNonCachedMode
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIBlockOutlookRpcHttp
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIBlockOutlookVersions
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MAPIEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OWAEnabled
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OWAforDevicesEnabled
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: $true | $false
@@ -651,6 +275,21 @@ This parameter is reserved for internal Microsoft use.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 Applicable: Exchange Online
 Required: False
 Position: Named

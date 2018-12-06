@@ -10,6 +10,7 @@ ms.service: exchange-online
 localization_priority: Normal
 ms.assetid: f969816a-2607-4655-9d47-9e8767fb5633
 search.appverid: MET150
+monikerRange: "exchonline-ps"
 description: "Admins can learn how to enable or disable access to Exchange Online PowerShell for users in their organization"
 ---
 

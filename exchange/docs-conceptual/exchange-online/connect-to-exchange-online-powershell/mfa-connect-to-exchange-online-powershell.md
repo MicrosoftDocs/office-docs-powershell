@@ -9,6 +9,7 @@ ms.service: exchange-online
 localization_priority: Normal
 ms.assetid: 04dae4ce-34a7-49c5-bf75-11e72452e04a
 search.appverid: MET150
+monikerRange: "exchonline-ps"
 description: "Learn how to connect to Exchange Online PowerShell by using multi-factor authentication (MFA)."
 ---
 

@@ -10,6 +10,7 @@ ms.service: exchange-online
 localization_priority: Normal
 ms.assetid: 1cb603b0-2961-4afe-b879-b048fe0f64a2
 search.appverid: MET150
+monikerRange: "exchonline-ps"
 description: "Learn about using PowerShell in Exchange Online"
 ---
 

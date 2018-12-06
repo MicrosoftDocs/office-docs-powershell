@@ -6,4 +6,5 @@ _themes*/
 .vs/
 .local/
 
+_dependentPackages/
 .openpublishing.buildcore.ps1

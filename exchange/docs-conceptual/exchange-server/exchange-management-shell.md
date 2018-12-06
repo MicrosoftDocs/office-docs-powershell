@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: 925ad66f-2f05-4269-9923-c353d9c19312
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 description: "Learn about Exchange Server PowerShell, also known as the Exchange Management Shell. This topic describes how PowerShell works on Exchange servers, and provides links to other topics that can help you learn how to use the Exchange Management Shell."
 ---
 

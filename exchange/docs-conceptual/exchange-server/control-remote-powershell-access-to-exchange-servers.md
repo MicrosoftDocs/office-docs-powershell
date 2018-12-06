@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-itpro
 localization_priority: Normal
 ms.assetid: 064e3bb0-38bf-495e-9994-784f823b88dd
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016"
 description: "Administrators can learn how to block or allow users' remote PowerShell access to Exchange servers."
 ---
 

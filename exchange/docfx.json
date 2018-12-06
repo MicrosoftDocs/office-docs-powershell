@@ -2,9 +2,12 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
-        "version": "exchange-ps",
+        "version":"exchserver-ps-2010",
         "dest": "exchange",
         "exclude": [
           "**/obj/**",
@@ -12,26 +15,190 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
-        "version": "exchange-ps",
-        "dest": "exchange/exchange-ps"
+        "version":"exchserver-ps-2016",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
       },
       {
-      "files": ["**/*.md"],
-      "src": "exchange-ps",
-      "version": "exchange-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "exchange-ps",
-      "version": "exchange-ps",
-      "dest": "module/exchange-ps"
-    }
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"exchserver-ps-2013",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"exchonline-ps",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"o365scc-ps",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version":"eop-ps",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md"         
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "exchserver-ps-2016",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/exchserver-ps-2016",
+        "version": "exchserver-ps-2016",
+        "dest": "module/exchange-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "exchserver-ps-2013",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/exchserver-ps-2013",
+        "version": "exchserver-ps-2013",
+        "dest": "module/exchange-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "eop-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/eop-ps",
+        "version": "eop-ps",
+        "dest": "module/exchange-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "exchonline-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/exchonline-ps",
+        "version": "exchonline-ps",
+        "dest": "module/exchange-ps"
+      }, 
+      {
+        "files": [
+          "**/*.md"         
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "exchserver-ps-2010",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/exchserver-ps-2010",
+        "version": "exchserver-ps-2010",
+        "dest": "module/exchange-ps"
+      },
+      {
+        "files": [
+          "**/*.md"         
+        ],
+        "src": "exchange-ps/exchange",
+        "version": "o365scc-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/o365scc-ps",
+        "version": "o365scc-ps",
+        "dest": "module/exchange-ps"
+      }
     ],
     "resource": [
       {
@@ -39,7 +206,62 @@
           "**/*.png",
           "**/*.jpg"
         ],
-        "version": "exchange-ps",
+        "version": "exchserver-ps-2010",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "o365scc-ps",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "exchserver-ps-2016",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "exchserver-ps-2013",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "eop-ps",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "version": "exchonline-ps",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -47,30 +269,48 @@
       }
     ],
     "versions": {
-      "exchange-ps": {
-        "dest": "exchange-ps"
+      "exchserver-ps-2016": {
+        "dest": "exchserver-ps-2016"
+      },
+      "exchserver-ps-2013": {
+        "dest": "exchserver-ps-2013"
+      },
+      "eop-ps": {
+        "dest": "eop-ps"
+      },
+      "exchonline-ps": {
+        "dest": "exchonline-ps"
+      },
+      "exchserver-ps-2010": {
+        "dest": "exchserver-ps-2010"
+      },
+      "o365scc-ps": {
+        "dest": "o365scc-ps"
       }
     },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "chrisda",
-      "ms.author" : "chrisda",
-      "manager" : "serdars",
-      "ms.date" : "09/25/2017",
-      "ms.topic" : "reference",
-      "ms.service" : "exchange-powershell",
-      "ms.devlang" : "powershell",
+      "author": "chrisda",
+      "ms.author": "chrisda",
+      "manager": "serdars",
+      "ms.date": "09/25/2017",
+      "ms.topic": "reference",
+      "ms.service": "exchange-powershell",
+      "ms.devlang": "powershell",
+      "showPowerShellPicker": "true",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {
-      "apiPlatform":{
-        "exchange-ps/exchange" : [ "PowerShell" ]
+      "apiPlatform": {
+        "exchange-ps/exchange": [
+          "PowerShell"
+        ]
       }
     },
     "template": [],
-    "dest": "exchange-ps"
+    "dest": ""
   }
 }
