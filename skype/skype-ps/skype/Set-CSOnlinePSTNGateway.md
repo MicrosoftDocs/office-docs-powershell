@@ -230,6 +230,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReinviteResponceCode
+If Direct Routing receives any 4xx or 6xx SIP error code in response on outgoing Invite (outgoing means call from a Teams client to PSTN with traffic flow :Teams Client -> Direct Routing -> SBC -> Telephony network) the call considered completed by default.
+Setting the SIP codes in this parameter forces Direct Routing on receicving the specified codes try another SBC (if another SBC exists in the vocie routing policy of the user). Pelase find more in "Reference" section of "Phone System Direct Routing" documentation
+
+```yaml
+Type: Int
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: 408, 503, 504
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GatewaySiteId
 PSTN Gateway Site Id.
 
