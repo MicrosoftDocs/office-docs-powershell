@@ -36,7 +36,6 @@ New-CsOnlineApplicationInstanceAssociation -Identities @("76afc66a-5fe9-4a3d-ab7
 This example creates an association between application instances, with identities "76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19" and "85493bbf-72f9-508f-b006-bc6ef33f0012", and the application configuration, with identity "c2ee3e18-b738-5515-a97b-46be52dfc057" and type `AutoAttendant`.
 
 ## PARAMETERS
--ConfigurationId <String> -ConfigurationType <Object>
 
 ### -Identities
 The Identities parameter is the identities of application instances to be associated with the provided configuration ID.
