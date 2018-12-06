@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsPersistentChatRoom
 
 ## SYNOPSIS
-Modifies and existing Persistent Chat chat room.
+Modifies an existing Persistent Chat chat room.
 A chat room is a discussion forum that typically revolves around a specific topic.
 This cmdlet was introduced in Lync Server 2013.
 
