@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-IRMConfiguration [-AutomaticServiceUpdateEnabled <$true | $false>] [-AzureRMSLicensingEnabled <$true | $false>]
  [-ClientAccessServerEnabled <$true | $false>] [-Confirm] [-DecryptAttachmentForEncryptOnly <$true | $false>]
- [-DecryptAttachmentFromPortal <$true | $false>] [-DomainController <Fqdn>]
  [-EDiscoverySuperUserEnabled <$true | $false>] [-ExternalLicensingEnabled <$true | $false>] [-Force]
  [-InternalLicensingEnabled <$true | $false>] [-JournalReportDecryptionEnabled <$true | $false>]
  [-LicensingLocation <MultiValuedProperty>] [-PublishingLocation <Uri>] [-RefreshServerCertificates]
@@ -104,23 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAccessServerEnabled
-The ClientAccessServerEnabled parameter specifies whether to enable IRM for Outlook on the web (formerly known as Outlook Web App) and Exchange ActiveSync. Valid values are:
+This parameter id beign deprecated.
 
-- $true: IRM is enabled for Outlook on the web and Exchange ActiveSync. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see Information Rights Management in Outlook Web App (https://technet.microsoft.com/library/dd876891.aspx).
-
-- $false: IRM is disabled for Outlook on the web and Exchange ActiveSync.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -187,27 +171,6 @@ The DecryptAttachmentForEncryptOnly parameter specifies whether mail recipients 
 - $true: The recipients will have unrestricted rights on attachments sent using Encrypt-Only policy.
 
 - $false: The recipients will not have unrestricted rights on attachments sent using Encrypt-Only policy.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DecryptAttachmentFromPortal
-This parameter is available only in the cloud-based service.
-
-The DecryptAttachmentFromPortal parameter specifies whether Office attachments are protected for recipients outside of Office 365 when Encrypt-only policy is used for sending mails using new Office 365 Message Encryption capabilities. Use this option when you don't need to retain the original protection for the attachment upon download. Valid values are:
-
-- $true: The recipients will have permissions to download Encrypt-only attachments without protection.
-
-- $false: The recipients will continue to have Encrypt-only attachments protected even after download.
 
 ```yaml
 Type: $true | $false
