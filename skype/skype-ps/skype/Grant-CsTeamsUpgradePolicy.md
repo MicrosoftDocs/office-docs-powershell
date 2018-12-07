@@ -52,13 +52,13 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 NOTES: 
 - TeamsUpgradePolicy is available in both Office 365 and in on-premises versions of Skype for Business Server, but there are differences: 
     - In Office 365, admins can specify both coexistence mode and whether to trigger notifications of pending upgrade.  
-    - In on-premises with Skype for Business Server, the only availble option is to trigger notifications. 
+    - In on-premises with Skype for Business Server, the only available option is to trigger notifications. 
 - TeamsUpgradePolicy in Office 365 can be granted to users homed on-premises in hybrid deployments of Skype for Business as follows:
     - Coexistence mode is honored by users homed on-premises, however on-premises users cannot be granted the UpgradeToTeams instance (mode=TeamsOnly) of TeamsUpgradePolicy.  Users must be either homed in Skype for Business Online or have no Skype account anywhere to be upgraded to TeamsOnly mode.    
-    - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premise version of TeamsUpgradePolicy must be used. 
-- In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet avaiable. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
+    - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premises version of TeamsUpgradePolicy must be used. 
+- In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet available. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
 - Instances with mode set to SfBWithTeamsCollab are not yet functional. From a routing perspective, this will behave like SfBOnly mode.
-- The Action property is redundnant with the combination of NotifySfBUsers and Mode. It will eventually be removed. 
+- The Action property is redundant with the combination of NotifySfBUsers and Mode. It will eventually be removed. 
 
 
 ## EXAMPLES
@@ -68,14 +68,14 @@ NOTES:
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName UpgradeToTeams -Identity mike@contoso.com
 ```
 
-The above cmdlet assigns the "UpgradeToTeams" policy to user Mike@contoso.com.  This effectively upgrades the user to Teams only mode. This command will only succeed if the user does not have on-premises Skype for Business account. 
+The above cmdlet assigns the "UpgradeToTeams" policy to user Mike@contoso.com.  This effectively upgrades the user to Teams only mode. This command will only succeed if the user does not have an on-premises Skype for Business account. 
 
 ### Example 2: Grant Policy to the entire tenant 
 ```
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly 
 ```
 
-To grant a policy to all users in the org (except any that have an explicit policy assinged), omit the identity parameter.
+To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter.
 
 ## PARAMETERS
 

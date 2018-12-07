@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChatHistory
-When set the False ($False), the chat history feature will be disabled for the new category.
+When set to False ($False), the chat history feature will be disabled for the new category.
 Typically, chat history is only disabled for chat rooms that are used for announcements that are posted once and then never need to be referred to again.
 
 ```yaml

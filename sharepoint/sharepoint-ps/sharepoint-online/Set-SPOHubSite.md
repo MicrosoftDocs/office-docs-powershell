@@ -17,6 +17,8 @@ Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
   [-Title <string>]
   [-LogoUrl <string>]
   [-Description <string>]
+  [-SiteDesignId <guid>]
+  [-RequiresJoinApproval <bool>]
   [<CommonParameters>]
 ```
 
@@ -97,6 +99,40 @@ A description of the hub site.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteDesignId
+
+A description of the hub site.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequiresJoinApproval
+
+A description of the hub site.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Online
