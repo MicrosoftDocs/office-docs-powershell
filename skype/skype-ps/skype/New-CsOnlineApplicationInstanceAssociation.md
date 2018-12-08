@@ -19,21 +19,53 @@ New-CsOnlineApplicationInstanceAssociation -Identities <String[]> -Configuration
 ## DESCRIPTION
 The New-CsOnlineApplicationInstanceAssociation cmdlet associates either a single or multiple application instances with an application configuration, like auto attendant or call queue. When an association is created between an application instance and an application configuration, calls reaching that application instance would be handled based on the associated application configuration.
 
+You can get the Identity of the application instance from the ObjectId of the AD object.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-New-CsOnlineApplicationInstanceAssociation -Identities @("76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19") -ConfigurationId "c2ee3e18-b738-5515-a97b-46be52dfc057" -ConfigurationType AutoAttendant
+$applicationInstanceId = (Get-CsOnlineUser "main_auto_attendant@contoso.com").ObjectId      # 76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19
+$autoAttendantId = (Get-CsAutoAttendant -NameFilter "Main Auto Attendant").Id               # c2ee3e18-b738-5515-a97b-46be52dfc057
+
+New-CsOnlineApplicationInstanceAssociation -Identities @($applicationInstanceId) -ConfigurationId $autoAttendantId -ConfigurationType AutoAttendant
 ```
 
-This example creates an association between application instance, with identity "76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19", and the application configuration, with identity "c2ee3e18-b738-5515-a97b-46be52dfc057" and type `AutoAttendant`.
+This example creates an association between an application instance that we have already created with UPN "main_auto_attendant@contoso.com" whose identity is "76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057".
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
-New-CsOnlineApplicationInstanceAssociation -Identities @("76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19", "85493bbf-72f9-508f-b006-bc6ef33f0012") -ConfigurationId "c2ee3e18-b738-5515-a97b-46be52dfc057" -ConfigurationType AutoAttendant
+$applicationInstancesIdentities = (Find-CsOnlineApplicationInstance -SearchQuery "tel:+1206") | Select-Object -Property Id
+
+# Id
+# --
+# fa2f17ec-ebd5-43f8-81ac-959c245620fa
+# 56421bbe-5649-4208-a60c-24dbeded6f18
+# c7af9c3c-ae40-455d-a37c-aeec771e623d
+
+$autoAttendantId = (Get-CsAutoAttendant -NameFilter "Main Auto Attendant").Id   # c2ee3e18-b738-5515-a97b-46be52dfc057
+
+New-CsOnlineApplicationInstanceAssociation -Identities $applicationInstancesIdentities -ConfigurationId $autoAttendantId -ConfigurationType AutoAttendant
 ```
 
-This example creates an association between application instances, with identities "76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19" and "85493bbf-72f9-508f-b006-bc6ef33f0012", and the application configuration, with identity "c2ee3e18-b738-5515-a97b-46be52dfc057" and type `AutoAttendant`.
+This example creates an association between multiple application instances that we had created before and to which we assigned phone numbers starting with "tel:+1206", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057".
+
+### -------------------------- Example 3 --------------------------
+```powershell
+$applicationInstancesIdentities = (Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Attendant") | Select-Object -Property Id
+
+# Id
+# --
+# fa2f17ec-ebd5-43f8-81ac-959c245620fa
+# 56421bbe-5649-4208-a60c-24dbeded6f18
+# c7af9c3c-ae40-455d-a37c-aeec771e623d
+
+$autoAttendantId = (Get-CsAutoAttendant -NameFilter "Main Auto Attendant").Id   # c2ee3e18-b738-5515-a97b-46be52dfc057
+
+New-CsOnlineApplicationInstanceAssociation -Identities $applicationInstancesIdentities -ConfigurationId $autoAttendantId -ConfigurationType AutoAttendant
+```
+
+This example creates an association between multiple application instances that we had created before with display name starting with "Main Auto Attendant", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057".
 
 ## PARAMETERS
 
@@ -119,6 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
 
 [Get-CsOnlineApplicationInstanceAssociation](Get-CsOnlineApplicationInstanceAssociation.md)
 

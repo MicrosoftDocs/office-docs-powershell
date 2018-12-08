@@ -23,6 +23,7 @@ Each AA can be associated with phone numbers that allow callers to reach specifi
 You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random string that serves as the identity of the AA.
 
 **NOTE**
+- To setup your AA for calling, you need to create an application instance first using [`New-CsOnlineApplicationInstance`](New-CsOnlineApplicationInstance.md) cmdlet , then associate it with your AA configuration using [`New-CsOnlineApplicationInstanceAssociation`](New-CsOnlineApplicationInstanceAssociation.md) cmdlet.
 - The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
 - Holiday call flows have higher priority than after-hours call flows. Thus, if a holiday schedule and an after-hours schedule are both in effect at a particular time, the call flow corresponding to the holiday call flow will be rendered.
 - The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an "after hours" call flow was specified together with the corresponding schedule and call handling association.
@@ -55,7 +56,7 @@ $afterHoursCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation 
 $inclusionScopeGroupIds = @("4c3053a6-20bf-43df-bf7a-156124168856")
 $inclusionScope = New-CsAutoAttendantDialScope -GroupScope -GroupIds $inclusionScopeGroupIds
 
-$o=New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
+$aa = New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
 ```
 
 This example creates a new AA named _Main auto attendant_ that has the following properties:
@@ -99,7 +100,7 @@ $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -Date
 
 $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-$o=New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
+$aa = New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
 ```
 
 This example creates a new AA named _Main auto attendant_ that has the following properties:
@@ -352,6 +353,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 
 ## RELATED LINKS
+
+[`New-CsOnlineApplicationInstance`](New-CsOnlineApplicationInstance.md)
+
+[`New-CsOnlineApplicationInstanceAssociation`](New-CsOnlineApplicationInstanceAssociation.md)
 
 [Get-CsAutoAttendant](Get-CsAutoAttendant.md)
 
