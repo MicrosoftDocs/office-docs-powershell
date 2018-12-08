@@ -107,8 +107,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String
-The String is used as the Identity input.
+### System.String
+The Import-CsAutoAttendantHolidays cmdlet accepts a string as the Identity parameter.
 
 
 ## OUTPUTS

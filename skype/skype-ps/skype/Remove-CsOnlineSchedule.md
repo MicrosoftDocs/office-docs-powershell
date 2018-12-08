@@ -67,7 +67,8 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## INPUTS
 
-### None
+### System.String
+The Remove-CsOnlineSchedule cmdlet accepts a string as the Id parameter.
 
 
 ## OUTPUTS

@@ -76,6 +76,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
+### System.String
+The Get-CsAutoAttendantSupportedTimeZone cmdlet accepts a string as the Identity parameter.
 
 ## OUTPUTS
 

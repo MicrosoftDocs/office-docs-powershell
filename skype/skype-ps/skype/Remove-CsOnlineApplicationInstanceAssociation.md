@@ -69,8 +69,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String
-The String is used as the Identity input.
+### System.String[]
+The Remove-CsOnlineApplicationInstanceAssociation cmdlet accepts a string array as the Identities parameter.
 
 ## OUTPUTS
 

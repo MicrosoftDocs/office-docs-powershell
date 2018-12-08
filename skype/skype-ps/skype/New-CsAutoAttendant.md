@@ -17,7 +17,7 @@ New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -De
 ```
 
 ## DESCRIPTION
-Auto Attendants (AAs) are a key element in the Cloud PBX application.
+Auto Attendants (AAs) are a key element in the Office 365 Phone System.
 Each AA can be associated with phone numbers that allow callers to reach specific people in the organization through a directory lookup. Alternatively, it can route the calls to an operator, a user, another AA, or a call queue.
 
 You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random string that serves as the identity of the AA.

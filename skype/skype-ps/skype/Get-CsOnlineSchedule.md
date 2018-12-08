@@ -13,7 +13,7 @@ Use the Get-CsOnlineSchedule cmdlet to get information about schedules that belo
 ## SYNTAX
 
 ```
-Get-CsOnlineSchedule [-Identity <String>] [-Tenant <Guid>] [-CommonParameters]
+Get-CsOnlineSchedule [-Id <String>] [-Tenant <Guid>] [-CommonParameters]
 ```
 
 ## DESCRIPTION
@@ -30,15 +30,15 @@ This example retrieves all schedules that belong to your organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsOnlineSchedule -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
+Get-CsOnlineSchedule -Id "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
 ```
 
-This example gets the schedules that has the identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+This example gets the schedules that has the Id of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
 
 ## PARAMETERS
 
-### -Identity
-The identity for the schedule to be retrieved. If this parameter is not specified, then all schedules in the organization are returned.
+### -Id
+The Id for the schedule to be retrieved. If this parameter is not specified, then all schedules in the organization are returned.
 
 ```yaml
 Type: System.String
@@ -73,8 +73,8 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## INPUTS
 
-### None
-
+### System.String
+The Get-CsOnlineSchedule cmdlet accepts a string as the Id parameter.
 
 ## OUTPUTS
 

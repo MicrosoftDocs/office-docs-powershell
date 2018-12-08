@@ -90,7 +90,8 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## INPUTS
 
-### None
+### Microsoft.Rtc.Management.Hosted.Online.Models.Schedule
+The modified instance of the `Microsoft.Rtc.Management.Hosted.Online.Models.Schedule` object.
 
 
 ## OUTPUTS

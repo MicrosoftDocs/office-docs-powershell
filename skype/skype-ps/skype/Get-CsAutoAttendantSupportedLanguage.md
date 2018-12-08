@@ -73,7 +73,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+The Get-CsAutoAttendantSupportedLanguage cmdlet accepts a string as the Identity parameter.
 
 ## OUTPUTS
 

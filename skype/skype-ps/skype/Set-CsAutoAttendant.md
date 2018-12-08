@@ -121,8 +121,8 @@ The Set-CsAutoAttendant cmdlet accepts a `Microsoft.Rtc.Management.Hosted.OAA.Mo
 
 ## OUTPUTS
 
-### None
-The Set-CsAutoAttendant cmdlet does not return any objects or values. Instead, the cmdlet modifies the instance of the `Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant` object that is passed in as the Instance parameter.
+### Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant
+The modified instance of the `Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant` object.
 
 
 ## NOTES

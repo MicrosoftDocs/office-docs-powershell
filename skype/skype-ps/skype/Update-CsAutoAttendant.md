@@ -69,7 +69,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String
+### System.String
 The Update-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
 
 
