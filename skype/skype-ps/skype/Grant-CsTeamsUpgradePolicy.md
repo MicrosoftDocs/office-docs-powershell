@@ -23,9 +23,7 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization. TeamsUpgradePolicy can be granted either on a per user basis or on a tenant-wide basis.  
 
 
-IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been fully updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is not honored, except if TeamsUpgradePolicy mode=Legacy. However, Legacy mode is being deprecated.
-
-When you use Grant-CsTeamsUpgradePolicy you should NOT use Grant-CsTeamsInteropPolicy except if you choose mode=Legacy.  Additionally, do not grant both policies at the same time. Instead grant one policy and then wait 30 minutes before granting the next policy.
+IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been fully updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is not honored, except if TeamsUpgradePolicy mode=Legacy. However, Legacy mode has been deprecated and it is no longer possible to grant TeamsUpgradePolicy with mode=Legacy. Organizations with users in Legacy mode must update their configurations to use a different mode.
 
 
 
@@ -33,19 +31,21 @@ When you use Grant-CsTeamsUpgradePolicy you should NOT use Grant-CsTeamsInteropP
 Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are listed below.
 </br>
 </br>
-|Identity|Mode|NotifySfbUsers|Action|Comments|
-|---|---|---|---|---|
-|Islands|Islands|False|None||
-|IslandsWithNotify|Islands|True|Notify||
-|SfBOnly|SfBOnly|False|None|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
-|SfBOnlyWithNotify|SfBOnly|True|Notify|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
-|SfBWithTeamsCollab|SfBWithTeamsCollab|False|None|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPolicy is available, this will only allow Channels in Teams app.|
-|SfBWithTeamsCollabWithNotify|SfBWithTeamsCollab|True|Notify|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPolicy is available, this will only allow Channels in Teams app.|
-|UpgradeToTeams|TeamsOnly|False|Upgrade|Use this mode to upgrade users to Teams and to prevent chat, calling, and meeting scheduling in Skype for Business.|
-|Global|Legacy|False|None|The mode will soon be updated to Islands.|
-|NoUpgrade|Legacy|False|None|This instance will soon be retired.|
-|NotifyForTeams|Legacy|True|Notify|This instance will soon be retired.|
-||||||
+|Identity|Mode|NotifySfbUsers|Comments|
+|---|---|---|---|
+|Islands|Islands|False||
+|IslandsWithNotify|Islands|True||
+|SfBOnly|SfBOnly|False|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
+|SfBOnlyWithNotify|SfBOnly|True|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
+|SfBWithTeamsCollab|SfBWithTeamsCollab|False|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will only allow Channels in Teams app.|
+|SfBWithTeamsCollabWithNotify|SfBWithTeamsCollab|True|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will only allow Channels in Teams app.|
+|SfBWithTeamsCollab|SfBWithTeamsCollabAndMeetings|False|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will  allow Channels and meeting scheduling in Teams app.|
+|SfBWithTeamsCollabWithNotify|SfBWithTeamsCollabAndMeetings|True|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will allow Channels and meeting scheduling in Teams app.|
+|UpgradeToTeams|TeamsOnly|False|Use this mode to upgrade users to Teams and to prevent chat, calling, and meeting scheduling in Skype for Business.|
+|Global|Islands|False||
+|NoUpgrade|Legacy|False|This instance is deprecated and it is no longer possible to grant this. Organizations that have already granted this instance must update their configuration to use a difference policy instance.|
+|NotifyForTeams|Legacy|True|This instance is deprecated and it is no longer possible to grant this. Organizations that have already granted this instance must update their configuration to use a difference policy instance.|
+|||||
 
 
 
@@ -57,8 +57,7 @@ NOTES:
     - Coexistence mode is honored by users homed on-premises, however on-premises users cannot be granted the UpgradeToTeams instance (mode=TeamsOnly) of TeamsUpgradePolicy.  Users must be either homed in Skype for Business Online or have no Skype account anywhere to be upgraded to TeamsOnly mode.    
     - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premises version of TeamsUpgradePolicy must be used. 
 - In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet available. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
-- Instances with mode set to SfBWithTeamsCollab are not yet functional. From a routing perspective, this will behave like SfBOnly mode.
-- The Action property is redundant with the combination of NotifySfBUsers and Mode. It will eventually be removed. 
+- Instances with mode set to SfBWithTeamsCollab and SfBWithTeamsCollabAndMeetings are not yet functional. From a routing perspective, this will behave like SfBOnly mode.
 
 
 ## EXAMPLES
@@ -160,7 +159,9 @@ Accept wildcard characters: False
 
 ## NOTES
 
-It is *no longer required* to coordinate granting of TeamsUpgradePolicy and TeamsInteropPolicy.  TeamsInteropPolicy is no longer honored and should not be used.
+TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. All components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is no longer honored and should not be used.
+
+Microsoft previously introduced the “Legacy” mode in TeamsUpgradePolicy to facilitate the transition from TeamsInteropPolicy to TeamsUpgradePolicy. In Legacy mode, routing components that understood TeamsUpgradePolicy would revert back to TeamsInteropPolicy. Routing now fully supports TeamsUpgradePolicy and there is no further need to use Legacy mode. Legacy mode in TeamsUprgradePolicy has been deprecated and it is no longer possible to grant legacy mode. Customers using Legacy mode must update their configuration of TeamsUpgradePolicy to use one of the other modes.
 
 
 
