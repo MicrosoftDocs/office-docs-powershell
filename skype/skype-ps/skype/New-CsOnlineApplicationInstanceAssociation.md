@@ -17,7 +17,7 @@ New-CsOnlineApplicationInstanceAssociation -Identities <String[]> -Configuration
 ```
 
 ## DESCRIPTION
-The New-CsOnlineApplicationInstanceAssociation cmdlet associates either a single or multiple application instances with an application configuration, like auto attendant or call queue. When an association is created between an application instance and an application configuration, calls reaching that application instance would be handled based on the associated application configuration. For more information on how to create _Application Instances_, check [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md) cmdlet documentation.
+The New-CsOnlineApplicationInstanceAssociation cmdlet associates either a single or multiple application instances with an application configuration, like auto attendant or call queue. When an association is created between an application instance and an application configuration, calls reaching that application instance would be handled based on the associated application configuration. For more information on how to create _Application Instances_, check `New-CsOnlineApplicationInstance` cmdlet documentation.
 
 You can get the Identity of the application instance from the ObjectId of the AD object.
 
