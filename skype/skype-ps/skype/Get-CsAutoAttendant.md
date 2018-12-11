@@ -22,18 +22,35 @@ The Get-CsAutoAttendant cmdlet returns information about the AAs in your organiz
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
+```powershell
 Get-CsAutoAttendant
 ```
 
 This example gets all AAs in the organization.
 
 ### -------------------------- Example 2 --------------------------
-```
+```powershell
 Get-CsAutoAttendant -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
+
+# Id                       : f7a821dc-2d69-5ae8-8525-bcb4a4556093
+# TenantId                 : 977c9d5b-2dae-5d82-aada-628bc1c14213
+# Name                     : Main Auto Attendant
+# LanguageId               : en-US
+# VoiceId                  : Female
+# DefaultCallFlow          : Default Call Flow
+# Operator                 :
+# TimeZoneId               : Pacific Standard Time
+# VoiceResponseEnabled     : False
+# CallFlows                :
+# Schedules                :
+# CallHandlingAssociations :
+# Status                   :
+# DialByNameResourceId     :
+# DirectoryLookupScope     :
+# ApplicationInstances     : {fa2f17ec-ebd5-43f8-81ac-959c245620fa, 56421bbe-5649-4208-a60c-24dbeded6f18, c7af9c3c-ae40-455d-a37c-aeec771e623d}
 ```
 
-This example gets the AAs that has the identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+This example gets the AA that has the identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
 
 ### -------------------------- Example 3 --------------------------
 ```

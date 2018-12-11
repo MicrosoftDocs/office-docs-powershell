@@ -17,7 +17,7 @@ New-CsOnlineApplicationInstanceAssociation -Identities <String[]> -Configuration
 ```
 
 ## DESCRIPTION
-The New-CsOnlineApplicationInstanceAssociation cmdlet associates either a single or multiple application instances with an application configuration, like auto attendant or call queue. When an association is created between an application instance and an application configuration, calls reaching that application instance would be handled based on the associated application configuration.
+The New-CsOnlineApplicationInstanceAssociation cmdlet associates either a single or multiple application instances with an application configuration, like auto attendant or call queue. When an association is created between an application instance and an application configuration, calls reaching that application instance would be handled based on the associated application configuration. For more information on how to create _Application Instances_, check [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md) cmdlet documentation.
 
 You can get the Identity of the application instance from the ObjectId of the AD object.
 
@@ -29,9 +29,28 @@ $applicationInstanceId = (Get-CsOnlineUser "main_auto_attendant@contoso.com").Ob
 $autoAttendantId = (Get-CsAutoAttendant -NameFilter "Main Auto Attendant").Id               # c2ee3e18-b738-5515-a97b-46be52dfc057
 
 New-CsOnlineApplicationInstanceAssociation -Identities @($applicationInstanceId) -ConfigurationId $autoAttendantId -ConfigurationType AutoAttendant
+
+Get-CsAutoAttendant -Identity $autoAttendantId
+
+# Id                       : c2ee3e18-b738-5515-a97b-46be52dfc057
+# TenantId                 : 977c9d5b-2dae-5d82-aada-628bc1c14213
+# Name                     : Main Auto Attendant
+# LanguageId               : en-US
+# VoiceId                  : Female
+# DefaultCallFlow          : Default Call Flow
+# Operator                 :
+# TimeZoneId               : Pacific Standard Time
+# VoiceResponseEnabled     : False
+# CallFlows                :
+# Schedules                :
+# CallHandlingAssociations :
+# Status                   :
+# DialByNameResourceId     :
+# DirectoryLookupScope     :
+# ApplicationInstances     : {76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19}
 ```
 
-This example creates an association between an application instance that we have already created with UPN "main_auto_attendant@contoso.com" whose identity is "76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057".
+This example creates an association between an application instance that we have already created with UPN "main_auto_attendant@contoso.com" whose identity is "76afc66a-5fe9-4a3d-ab7a-37c0e37b1f19", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057". Once the association is created, the newly associated application instance would be listed under the `ApplicationInstances` property of the AA.
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
@@ -46,9 +65,28 @@ $applicationInstancesIdentities = (Find-CsOnlineApplicationInstance -SearchQuery
 $autoAttendantId = (Get-CsAutoAttendant -NameFilter "Main Auto Attendant").Id   # c2ee3e18-b738-5515-a97b-46be52dfc057
 
 New-CsOnlineApplicationInstanceAssociation -Identities $applicationInstancesIdentities -ConfigurationId $autoAttendantId -ConfigurationType AutoAttendant
+
+Get-CsAutoAttendant -Identity $autoAttendantId
+
+# Id                       : c2ee3e18-b738-5515-a97b-46be52dfc057
+# TenantId                 : 977c9d5b-2dae-5d82-aada-628bc1c14213
+# Name                     : Main Auto Attendant
+# LanguageId               : en-US
+# VoiceId                  : Female
+# DefaultCallFlow          : Default Call Flow
+# Operator                 :
+# TimeZoneId               : Pacific Standard Time
+# VoiceResponseEnabled     : False
+# CallFlows                :
+# Schedules                :
+# CallHandlingAssociations :
+# Status                   :
+# DialByNameResourceId     :
+# DirectoryLookupScope     :
+# ApplicationInstances     : {fa2f17ec-ebd5-43f8-81ac-959c245620fa, 56421bbe-5649-4208-a60c-24dbeded6f18, c7af9c3c-ae40-455d-a37c-aeec771e623d}
 ```
 
-This example creates an association between multiple application instances that we had created before and to which we assigned phone numbers starting with "tel:+1206", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057".
+This example creates an association between multiple application instances that we had created before and to which we assigned phone numbers starting with "tel:+1206", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057". Once the associations are created,  the newly associated application instances would listed under the `ApplicationInstances` property of the AA.
 
 ### -------------------------- Example 3 --------------------------
 ```powershell
@@ -153,6 +191,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+
+[Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
+
+[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 
 [Get-CsOnlineApplicationInstanceAssociation](Get-CsOnlineApplicationInstanceAssociation.md)
 
