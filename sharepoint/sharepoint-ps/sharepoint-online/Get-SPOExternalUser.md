@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOExternalUser
 
 ## SYNOPSIS
-Returns external users in the tenant's folder.
+Returns external users in the tenant.
 
 
 ## SYNTAX
@@ -20,7 +20,7 @@ Get-SPOExternalUser [[-Position] <Int32>] [[-PageSize] <Int32>] [[-Filter] <Stri
 ```
 
 ## DESCRIPTION
-The `Get-SPOExternalUser` cmdlet returns external users that are located in the tenant's folder based on specified criteria.
+The `Get-SPOExternalUser` cmdlet returns external users that are located in the tenant based on specified criteria.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
@@ -43,14 +43,14 @@ Example 2 returns two external users from the third page of the collection.
 
 ### -----------------------EXAMPLE 3-----------------------------
 ```
-Get-SPOExternalUser -Position 0 -PageSize 30 -Filter https://contosoe.testsite.com
+Get-SPOExternalUser -Position 0 -PageSize 30 -Filter https://contoso.sharepoint.com
 ```
-Example 3 returns the first 30 users that match the filter, https://contosoe.testsite.com.
+Example 3 returns the first 30 users that match the filter https://contoso.sharepoint.com.
 
 ## PARAMETERS
 
 ### -Filter
-Limits the results to only those users whose first name, last name or email address begins with the text in the string, using a case-insensitive comparison
+Limits the results to only those users whose first name, last name, or email address begins with the text in the string using a case-insensitive comparison.
 
 
 ```yaml
@@ -104,6 +104,7 @@ Accept wildcard characters: False
 
 ### -SiteUrl
 Specifies the site to retrieve external users for.
+
 If no site is specified, the external users for all sites are returned.
 
 
@@ -138,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowOnlyUsersWithAcceptingAccountNotMatchInvitedAccount
-System.Boolean
+Shows users who have accepted an invite but not using the account the invite was sent to.
 
 
 ```yaml
