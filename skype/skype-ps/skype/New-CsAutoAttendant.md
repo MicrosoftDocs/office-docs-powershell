@@ -23,7 +23,7 @@ Each AA can be associated with phone numbers that allow callers to reach specifi
 You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random string that serves as the identity of the AA.
 
 **NOTE**
-- To setup your AA for calling, you need to create an application instance first using [`New-CsOnlineApplicationInstance`](New-CsOnlineApplicationInstance.md) cmdlet , then associate it with your AA configuration using [`New-CsOnlineApplicationInstanceAssociation`](New-CsOnlineApplicationInstanceAssociation.md) cmdlet.
+- To setup your AA for calling, you need to create an application instance first using `New-CsOnlineApplicationInstance` cmdlet , then associate it with your AA configuration using `New-CsOnlineApplicationInstanceAssociation` cmdlet.
 - The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
 - Holiday call flows have higher priority than after-hours call flows. Thus, if a holiday schedule and an after-hours schedule are both in effect at a particular time, the call flow corresponding to the holiday call flow will be rendered.
 - The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an "after hours" call flow was specified together with the corresponding schedule and call handling association.
