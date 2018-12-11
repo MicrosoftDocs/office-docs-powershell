@@ -38,6 +38,22 @@ $callableEntity = New-CsAutoAttendantCallableEntity -Identity "tel:+1234567890" 
 
 This example creates an auto attendant callable entity.
 
+### -------------------------- Example 3 --------------------------
+```powershell
+$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
+$callableEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
+```
+
+This example gets a user object using Get-CsOnlineUser cmdlet. We then use the AAD ObjectId of that user object to create an auto attendant callable entity.
+
+### -------------------------- Example 3 --------------------------
+```powershell
+ $callableEntityId = (Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Attendant") -MaxResults 1 | Select-Object -Property Id
+ $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type AutoAttendant
+```
+
+This example gets an application instance by name using Find-CsOnlineApplicationInstance cmdlet. We then use the AAD ObjectId of that application instance to create an auto attendant callable entity.
+
 ## PARAMETERS
 
 ### -Identity
@@ -111,4 +127,6 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
+[Get-CsOnlineUser](Get-CsOnlineUser.md)
 
+[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)

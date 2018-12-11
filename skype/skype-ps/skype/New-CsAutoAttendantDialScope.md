@@ -33,6 +33,14 @@ $dialScope = New-CsAutoAttendantDialScope -GroupScope -GroupIds $groupIds
 
 In Example 1, the New-CsAutoAttendantDialScope cmdlet is used to create a dial-scope with a group whose id is 00000000-0000-0000-0000-000000000000.
 
+### -------------------------- Example 2 --------------------------
+```
+$groupIds = Find-CsGroup -SearchQuery "Contoso Sales" | % { $_.Id }
+$dialScope = New-CsAutoAttendantDialScope -GroupScope -GroupIds $groupIds
+```
+
+In Example 2, we use the Find-CsGroup to find groups with name "Contoso Sales", and then use the identities of those groups to create an auto attendant dial scope using the New-CsAutoAttendantDialScope cmdlet.
+
 ## PARAMETERS
 
 ### -GroupScope
@@ -101,4 +109,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-
+[Find-CsGroup](Find-CsGroup.md)

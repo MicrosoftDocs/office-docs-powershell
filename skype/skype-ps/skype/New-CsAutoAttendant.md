@@ -33,7 +33,7 @@ You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly creat
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-$operatorObjectId = "c06c5e04-e4bb-42f9-bd92-4704ca25a084"
+$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
 $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 
 $greetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
@@ -70,7 +70,7 @@ This example creates a new AA named _Main auto attendant_ that has the following
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
-$operatorObjectId = "c06c5e04-e4bb-42f9-bd92-4704ca25a084"
+$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
 $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 
 $dcfGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
