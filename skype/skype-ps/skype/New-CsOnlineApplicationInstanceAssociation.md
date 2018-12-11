@@ -190,12 +190,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-Find-CsOnlineApplicationInstance: _Coming Soon_
-
-Get-CsOnlineApplicationInstance: _Coming Soon_
-
-New-CsOnlineApplicationInstance: _Coming Soon_
-
 [Get-CsOnlineApplicationInstanceAssociation](Get-CsOnlineApplicationInstanceAssociation.md)
 
 [Get-CsOnlineApplicationInstanceAssociationStatus](Get-CsOnlineApplicationInstanceAssociationStatus.md)
