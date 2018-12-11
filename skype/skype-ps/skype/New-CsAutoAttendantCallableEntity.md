@@ -46,7 +46,7 @@ $callableEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId 
 
 This example gets a user object using Get-CsOnlineUser cmdlet. We then use the AAD ObjectId of that user object to create an auto attendant callable entity.
 
-### -------------------------- Example 3 --------------------------
+### -------------------------- Example 4 --------------------------
 ```powershell
  $callableEntityId = (Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Attendant") -MaxResults 1 | Select-Object -Property Id
  $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type AutoAttendant

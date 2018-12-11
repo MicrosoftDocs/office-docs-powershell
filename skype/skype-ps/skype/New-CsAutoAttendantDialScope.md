@@ -39,7 +39,7 @@ $groupIds = Find-CsGroup -SearchQuery "Contoso Sales" | % { $_.Id }
 $dialScope = New-CsAutoAttendantDialScope -GroupScope -GroupIds $groupIds
 ```
 
-In Example 2, we use the Find-CsGroup to find groups with name "Contoso Sales", and then use the identities of those groups to create an auto attendant dial scope using the New-CsAutoAttendantDialScope cmdlet.
+In Example 2, we use the Find-CsGroup cmdlet to find groups with name "Contoso Sales", and then use the identities of those groups to create an auto attendant dial scope using the New-CsAutoAttendantDialScope cmdlet.
 
 ## PARAMETERS
 
