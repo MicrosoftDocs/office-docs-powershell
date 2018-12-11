@@ -50,30 +50,65 @@ $autoAttendant = Get-CsAutoAttendant -Identity "fa9081d6-b4f3-5c96-baec-0b000777
 
 $autoAttendant.CallFlows
 
-        Id        : e68dfc2f-587b-42ee-98c7-b9c9ebd46fd1
-        Name      : After hours
-        Greetings :
-        Menu      : After Hours Menu
+# Id        : e68dfc2f-587b-42ee-98c7-b9c9ebd46fd1
+# Name      : After hours
+# Greetings :
+# Menu      : After Hours Menu
 
-        Id        : 8ab460f0-770c-4d30-a2ff-a6469718844f
-        Name      : Christmas CallFlow
-        Greetings :
-        Menu      : Christmas Menu
+# Id        : 8ab460f0-770c-4d30-a2ff-a6469718844f
+# Name      : Christmas CallFlow
+# Greetings :
+# Menu      : Christmas Menu
 
 $autoAttendant.CallFlows[1].Greetings
 
-        ActiveType         : TextToSpeech
-        TextToSpeechPrompt : We are closed for Christmas. Please call back later.
-        AudioFilePrompt    :
+# ActiveType         : TextToSpeech
+# TextToSpeechPrompt : We are closed for Christmas. Please call back later.
+# AudioFilePrompt    :
 
 $christmasGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
-
- $autoAttendant.CallFlows[1].Greetings = @($christmasGreetingPrompt)
+$autoAttendant.CallFlows[1].Greetings = @($christmasGreetingPrompt)
 
 Set-CsAutoAttendant -Instance $autoAttendant
 ```
 
 This example modifies the Christmas holiday greeting for the AA that has an Identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
+
+### -------------------------- Example 3 --------------------------
+```powershell
+$autoAttendant = Get-CsAutoAttendant -Identity "fa9081d6-b4f3-5c96-baec-0b00077709e5"
+$autoAttendant.CallHandlingAssociations
+
+# Type       : Holiday
+# ScheduleId : 578745b2-1f94-4a38-844c-6bf6996463ee
+# CallFlowId : a661e694-e2df-4aaa-a183-67bf819c3cac
+# Enabled    : True
+
+# Type       : AfterHours
+# ScheduleId : c2f160ca-119d-55d8-818c-def2bcb85515
+# CallFlowId : e7dd255b-ee20-57f0-8a2b-fc403321e284
+# Enabled    : True
+
+$autoAttendant.CallHandlingAssociations = $autoAttendant.CallHandlingAssociations | Where-Object {$_.ScheduleId -ne "578745b2-1f94-4a38-844c-6bf6996463ee"}
+
+$autoAttendant.CallFlows
+
+# Id        : e68dfc2f-587b-42ee-98c7-b9c9ebd46fd1
+# Name      : After hours
+# Greetings :
+# Menu      : After Hours Menu
+
+# Id        : 8ab460f0-770c-4d30-a2ff-a6469718844f
+# Name      : Christmas CallFlow
+# Greetings :
+# Menu      : Christmas Menu
+
+$autoAttendant.CallFlows = $autoAttendant.CallFlows | Where-Object {$_.Id -ne "8ab460f0-770c-4d30-a2ff-a6469718844f"}
+
+Set-CsAutoAttendant -Instance $autoAttendant
+```
+
+This example modifies an existing AA, removing the Christmas holiday call handling. We removed the call handling association for Christmas holiday, along with the related call flow.
 
 ## PARAMETERS
 

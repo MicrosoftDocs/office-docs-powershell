@@ -112,6 +112,94 @@ This example creates a new AA named _Main auto attendant_ that has the following
 - The default language is en-US.
 - The time zone is set to UTC.
 
+### -------------------------- Example 3 --------------------------
+```powershell
+# Create Christmas Schedule
+$dtr = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
+$christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr)
+
+# Create First Auto Attendant
+$dcfGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso Customer Support!"
+$dcfMenuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
+$dcfMenu=New-CsAutoAttendantMenu -Name "Default menu" -Prompts @($dcfMenuPrompt) -EnableDialByName
+$defaultCallFlow = New-CsAutoAttendantCallFlow -Name "Default call flow" -Greetings @($dcfGreetingPrompt) -Menu $dcfMenu
+
+$christmasGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
+$christmasMenuOption = New-CsAutoAttendantMenuOption -Action DisconnectCall -DtmfResponse Automatic
+$christmasMenu = New-CsAutoAttendantMenu -Name "Christmas Menu" -MenuOptions @($christmasMenuOption)
+$christmasCallFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @($christmasGreetingPrompt) -Menu $christmasMenu
+
+$christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
+
+New-CsAutoAttendant -Name "Customer Support Auto Attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC"
+
+# Id                       : a65b3434-05a1-48ed-883d-e3ca35a60af8
+# TenantId                 : f6b89083-a2f8-55cc-9f62-33b73af44164
+# Name                     : Customer Support Auto Attendant
+# LanguageId               : en-US
+# VoiceId                  : Female
+# DefaultCallFlow          : Default call flow
+# Operator                 :
+# TimeZoneId               : UTC
+# VoiceResponseEnabled     : True
+# CallFlows                : Christmas
+# Schedules                : Christmas
+# CallHandlingAssociations : Holiday(1)
+# Status                   : Successful
+# DialByNameResourceId     : caddaea5-c001-5a09-b997-9d3a33e834f2
+# DirectoryLookupScope     :
+# ApplicationInstances     :
+
+# Create Second Auto Attendant
+$dcfGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso Store!"
+$dcfMenuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
+$dcfMenu=New-CsAutoAttendantMenu -Name "Default menu" -Prompts @($dcfMenuPrompt) -EnableDialByName
+$defaultCallFlow = New-CsAutoAttendantCallFlow -Name "Default call flow" -Greetings @($dcfGreetingPrompt) -Menu $dcfMenu
+
+$christmasGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
+$christmasMenuOption = New-CsAutoAttendantMenuOption -Action DisconnectCall -DtmfResponse Automatic
+$christmasMenu = New-CsAutoAttendantMenu -Name "Christmas Menu" -MenuOptions @($christmasMenuOption)
+$christmasCallFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @($christmasGreetingPrompt) -Menu $christmasMenu
+
+$christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
+
+New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC"
+
+# Id                       : 236450c4-9f1e-4c19-80eb-d68819d36a15
+# TenantId                 : f6b89083-a2f8-55cc-9f62-33b73af44164
+# Name                     : Main auto attendant
+# LanguageId               : en-US
+# VoiceId                  : Female
+# DefaultCallFlow          : Default call flow
+# Operator                 :
+# TimeZoneId               : UTC
+# VoiceResponseEnabled     : True
+# CallFlows                : Christmas
+# Schedules                : Christmas
+# CallHandlingAssociations : Holiday(1)
+# Status                   : Successful
+# DialByNameResourceId     : 5abfa626-8f80-54ff-97eb-03c2aadcc329
+# DirectoryLookupScope     :
+# ApplicationInstances     :
+
+
+# Show the auto attendants associated with this holiday schedule:
+Get-CsOnlineSchedule $christmasSchedule.Id
+
+# Id                         : 578745b2-1f94-4a38-844c-6bf6996463ee
+# Name                       : Christmas
+# Type                       : Fixed
+# WeeklyRecurrentSchedule    :
+# FixedSchedule              : 24/12/2017 00:00 - 26/12/2017 00:00
+# AssociatedConfigurationIds : a65b3434-05a1-48ed-883d-e3ca35a60af8, 236450c4-9f1e-4c19-80eb-d68819d36a15
+```
+
+This example creates two new AAs named _Main auto attendant_ and _Customer Support Auto Attendant_. Both AAs share the same Christmas holiday schedule. This was done by reusing the Schedule ID of the _Christmas_ holiday when creating the call handling associations for those two AAs using New-CsAutoAttendantCallHandlingAssociation cmdlet.
+
+We can see when we ran the Get-CsOnlineSchedule cmdlet at the end, to get the _Christmas Holiday_ schedule information, that the configuration IDs for the newly created AAs have been added to the `AssociatedConfigurationIds` properties of that schedule. This means any updates made to this schedule would reflect in both associated AAs.
+
+Removing an association between an AA and a schedule is as simple as deleting the CallHandlingAssociation of that schedule in the AA you want to modify. Please refer to [Set-CsAutoAttendant](Set-CsAutoAttendant.md) cmdlet documentation for examples on how to do that.
+
 ## PARAMETERS
 
 ### -Name
