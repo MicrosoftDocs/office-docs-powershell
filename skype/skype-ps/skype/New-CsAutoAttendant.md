@@ -442,9 +442,9 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[`New-CsOnlineApplicationInstance`](New-CsOnlineApplicationInstance.md)
+New-CsOnlineApplicationInstance: _Coming Soon_
 
-[`New-CsOnlineApplicationInstanceAssociation`](New-CsOnlineApplicationInstanceAssociation.md)
+[New-CsOnlineApplicationInstanceAssociation](New-CsOnlineApplicationInstanceAssociation.md)
 
 [Get-CsAutoAttendant](Get-CsAutoAttendant.md)
 
