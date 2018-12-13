@@ -8,8 +8,7 @@ schema: 2.0.0
 # Disable-CsOnlineSipDomain
 
 ## SYNOPSIS
-**THIS IS PRELIMINARY DOCUMENTATION OF UPCOMING FUNCTIONALITY**</br>
-This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain. This cmdlet allows organizations with multiple on-premises deployments of Skype For Business Server or Lync Server to safely synchronize users from multiple forests into a single Office 365 tenant. **IMPORTANT:** Only 1 Skype for Business forest can be in hybrid mode at a given time.
+This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain. This cmdlet allows organizations with multiple on-premises deployments of Skype For Business Server or Lync Server to safely synchronize users from multiple forests into a single Office 365 tenant. **IMPORTANT:** Only 1 Skype for Business forest can be in hybrid mode at a given time. For full details on this scenario, including step-by-step instructions, see [Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/en-us/skypeforbusiness/hybrid/cloud-consolidation).
   
 ## SYNTAX
 
