@@ -13,7 +13,7 @@ Use the Remove-CsOnlineApplicationInstanceAssociation cmdlet to remove the assoc
 ## SYNTAX
 
 ```
-Remove-CsOnlineApplicationInstanceAssociation [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
+Remove-CsOnlineApplicationInstanceAssociation -Identities <String[]> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,8 +32,8 @@ This example removes the configuration association for the application instance 
 
 ## PARAMETERS
 
-### -Identity
-The identity for the application instance whose configuration association is to be removed.
+### -Identities
+The identities for the application instances whose configuration associations are to be removed.
 
 ```yaml
 Type: System.String
@@ -44,7 +44,7 @@ Applicable: Skype for Business Online
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

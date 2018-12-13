@@ -13,7 +13,7 @@ Use the Import-CsOnlineAudioFile cmdlet to upload a new audio file.
 ## SYNTAX
 
 ```powershell
-Import-CsOnlineAudioFile -ApplicationId <string> -FileName <string> -Content <byte[]>
+Import-CsOnlineAudioFile -ApplicationId <OrgAutoAttendant | HuntGroup> -FileName <string> -Content <byte[]>
 ```
 
 ## DESCRIPTION

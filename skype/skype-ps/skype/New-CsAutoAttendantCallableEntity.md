@@ -13,7 +13,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | App> [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,10 +33,10 @@ This example creates a user callable entity.
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
-$callableEntity = New-CsAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type AutoAttendant
+$callableEntity = New-CsAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type ApplicationEndpoint
 ```
 
-This example creates an auto attendant callable entity.
+This example creates an application endpoint callable entity.
 
 ### -------------------------- Example 3 --------------------------
 ```powershell
@@ -44,15 +44,15 @@ $operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
 $callableEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 ```
 
-This example gets a user object using Get-CsOnlineUser cmdlet. We then use the AAD ObjectId of that user object to create an auto attendant callable entity.
+This example gets a user object using Get-CsOnlineUser cmdlet. We then use the AAD ObjectId of that user object to create a user callable entity.
 
 ### -------------------------- Example 4 --------------------------
 ```powershell
  $callableEntityId = (Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Attendant") -MaxResults 1 | Select-Object -Property Id
- $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type AutoAttendant
+ $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId -Type ApplicationEndpoint
 ```
 
-This example gets an application instance by name using Find-CsOnlineApplicationInstance cmdlet. We then use the AAD ObjectId of that application instance to create an auto attendant callable entity.
+This example gets an application instance by name using Find-CsOnlineApplicationInstance cmdlet. We then use the AAD ObjectId of that application instance to create an application endpoint callable entity.
 
 ## PARAMETERS
 

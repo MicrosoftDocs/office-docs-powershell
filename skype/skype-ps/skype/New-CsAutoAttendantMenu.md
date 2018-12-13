@@ -13,7 +13,7 @@ The New-CsAutoAttendantMenu cmdlet creates a new menu.
 ## SYNTAX
 
 ```
-New-CsAutoAttendantMenu -Name <String> -MenuOptions <List> [-Prompts <List>] [-EnableDialByName] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantMenu -Name <String> [-MenuOptions <List>] [-Prompts <List>] [-EnableDialByName] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +51,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

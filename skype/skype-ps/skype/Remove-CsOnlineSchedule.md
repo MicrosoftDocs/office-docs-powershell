@@ -43,7 +43,7 @@ Applicable: Skype for Business Online
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

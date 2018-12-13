@@ -31,12 +31,12 @@ This example creates a menu option to call the operator when the 0 key is presse
 
 ### -------------------------- Example 2 --------------------------
 ```
-$troubleShootUri = "sip:troubleShoot@contoso.com"
-$troubleShootEntity = New-CsAutoAttendantCallableEntity -Identity $troubleShootUri -Type AutoAttendant
+$troubleShootObjectId = (Get-CsOnlineUser troubleShoot@contoso.com).ObjectId
+$troubleShootEntity = New-CsAutoAttendantCallableEntity -Identity $troubleShootObjectId -Type AApplicationEndpoint
 $menuOption = New-CsAutoAttendantMenuOption -Action TransferCallToTarget -DtmfResponse Tone1 -VoiceResponses "Sales" -CallTarget $troubleShootEntity
 ```
 
-This example creates a menu option to transfer the call to an auto attendant when the caller speaks the word "Sales" or presses the 1 key.
+This example creates a menu option to transfer the call to an application endpoint when the caller speaks the word "Sales" or presses the 1 key.
 
 
 ## PARAMETERS

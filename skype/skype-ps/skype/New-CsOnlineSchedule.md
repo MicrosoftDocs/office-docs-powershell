@@ -14,9 +14,7 @@ Use the New-CsOnlineSchedule cmdlet to create a new schedule.
 
 ### WeeklyRecurrentSchedule
 ```powershell
-New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List>]
-[-TuesdayHours <List>] [-WednesdayHours <List>] [-ThursdayHours <List>] [-FridayHours <List>]
-[-SaturdayHours <List>] [-SundayHours <List>] [-Complement] [-Tenant <Guid>] [-CommonParameters]
+New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List>] [-TuesdayHours <List>] [-WednesdayHours <List>] [-ThursdayHours <List>] [-FridayHours <List>] [-SaturdayHours <List>] [-SundayHours <List>] [-Complement] [-Tenant <Guid>] [-CommonParameters]
 ```
 
 ### FixedSchedule

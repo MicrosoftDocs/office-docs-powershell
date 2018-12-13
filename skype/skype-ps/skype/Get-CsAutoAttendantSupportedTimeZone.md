@@ -13,7 +13,7 @@ The Get-CsAutoAttendantSupportedTimeZone cmdlet gets supported time zones for th
 ## SYNTAX
 
 ```
-Get-CsAutoAttendantSupportedTimeZone -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
+Get-CsAutoAttendantSupportedTimeZone [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +50,7 @@ Applicable: Skype for Business Online
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
