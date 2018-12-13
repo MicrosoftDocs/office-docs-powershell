@@ -40,13 +40,15 @@ This example lists all hub sites in the tenant.
 ```
 Get-SPOHubSite https://contoso.sharepoint.com/sites/online-marketing
 
-ID          : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
-Title       : Marketing Hub
-SiteId      : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
-SiteUrl     : https://contoso.sharepoint.com/sites/Marketing
-LogoUrl     : https://contoso.sharepoint.com/sites/Marketing/SiteAssets/hublogo.png
-Description : Hub for the Marketing division
-Rights     : nestorw@contoso.onmicrosoft.com
+ID                   : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+Title                : Marketing Hub
+SiteId               : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+SiteUrl              : https://contoso.sharepoint.com/sites/Marketing
+LogoUrl              : https://contoso.sharepoint.com/sites/Marketing/SiteAssets/hublogo.png
+Description          : Hub for the Marketing division
+Permissions          : {Wilke, Nestor}
+SiteDesignId         : 00000000-0000-0000-0000-000000000000
+RequiresJoinApproval : False
 ```
 
 This example begins with the online-marketing site. The cmdlet finds the associated hub site, which is marketing. Then it lists all the details about the marketing hub site.
