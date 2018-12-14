@@ -13,9 +13,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-UnifiedGroup cmdlet to modify Office 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Office 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+**IMPORTANT**: When using this cmdlet, you can't remove all the MOERA addresses of the group. There must be at least one MOERA address attached to a group at any given point of time. To learn more about MOERA addresses, see How the proxyAddresses attribute is populated in Azure AD (https://support.microsoft.com/en-gb/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad). 
 
-**IMPORTANT** When using this cmdlet, administrators can not remove all the MOERA addresses of a group. There has to be at least one MOERA address attached to a group at any given point of time. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/en-gb/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad). 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
