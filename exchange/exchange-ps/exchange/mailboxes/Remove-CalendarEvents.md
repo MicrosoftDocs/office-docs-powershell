@@ -1,17 +1,17 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-applicable: Exchange Online
+applicable: Exchange Server 2019, Exchange Online
 title: Remove-CalendarEvents
 schema: 2.0.0
-monikerRange: "exchonline-ps"
+monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-CalendarEvents
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange 2019 and in the cloud-based service.
 
-Use the Remove-CalendarEvents cmdlet to cancel future meetings in user or resource mailboxes in Office 365. Cancelling future meetings removes them from attendee and resource calendars (for example, you're going to remove the mailbox, or the user is going on a leave of absence).
+Use the Remove-CalendarEvents cmdlet to cancel future meetings in user or resource mailboxes in Office 365 or Exchange Server 2019. Cancelling future meetings removes them from attendee and resource calendars (for example, you're going to remove the mailbox, or the user is going on a leave of absence).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -75,7 +75,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -92,7 +92,7 @@ To cancel meetings in the mailbox, you need to use this switch.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +111,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +128,7 @@ You use this switch with the Verbose switch.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +149,7 @@ You use the QueryWindowInDays parameter to specify the end date.
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +168,7 @@ If an instance of a recurring meeting occurs during the specified time period, t
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +183,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
