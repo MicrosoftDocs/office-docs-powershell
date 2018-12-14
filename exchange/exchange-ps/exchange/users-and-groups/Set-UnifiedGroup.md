@@ -15,6 +15,8 @@ Use the Set-UnifiedGroup cmdlet to modify Office 365 Groups in your cloud-based 
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
+**IMPORTANT** When using this cmdlet, administrators can not remove all the MOERA addresses of a group. There has to be at least one MOERA address attached to a group at any given point of time. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/en-gb/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad). 
+
 ## SYNTAX
 
 ```
