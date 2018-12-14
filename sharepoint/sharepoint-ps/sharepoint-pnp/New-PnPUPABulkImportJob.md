@@ -47,7 +47,8 @@ PS C:\>New-PnPUPABulkImportJob -Folder "Shared Documents" -Path profiles.json -I
 
 This will submit a new user profile bulk import job to SharePoint Online.
 
->[!NOTE] You must upload the json document to the Shared Documents library in the SharePoint Online tenant admin prior to running this cmdlet. You also must connect to the tenant admin via `Connect-PnPOnline` prior to running `New-PnPUPABulkImportJob`.
+> [!NOTE]
+> You must upload the json document to the Shared Documents library in the SharePoint Online tenant admin prior to running this cmdlet. You also must connect to the tenant admin via `Connect-PnPOnline` prior to running `New-PnPUPABulkImportJob`.
 
 ## PARAMETERS
 
