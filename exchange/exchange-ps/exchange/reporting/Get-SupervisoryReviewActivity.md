@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SupervisoryReviewActivity cmdlet to
+Use the Get-SupervisoryReviewActivity cmdlet to view all activities performed by a reviewer for a specific supervision policy. This information may be useful if reviewer activities are required in regulatory compliance audits or in litigation.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -29,10 +29,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```
-{{ Add example code here }}
+Get-SupervisoryReviewActivity -PolicyId $policyId -StartDate $startDate -EndDate $endDate | Sort-Object Timestamp -Descending | fl
 ```
+This example returns all the supervisory review activities for specified supervision policy.
 
-{{ Add example description here }}
+### Example 2
+```
+Get-SupervisoryReviewActivity -PolicyId $policyId -StartDate $startDate -EndDate $endDate | Sort-Object Timestamp -Descending | select-object PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusAfterAction | Export-csv 'C:\Temp\SupervisoryReviewActivity.csv'
+```
+This example exports all the supervisory review activities for a policy to a .csv file named "SupervisoryReviewActivity".
 
 ## PARAMETERS
 
