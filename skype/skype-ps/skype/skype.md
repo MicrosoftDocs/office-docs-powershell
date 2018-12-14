@@ -20,7 +20,7 @@ zh-TW Version: 17.0.15229.2100
 
 # Skype for Business PowerShell
 ## Description
-The following cmdlet references are for Skype for Business.
+The following cmdlet references are for Skype for Business and Microsoft Teams.
 
 ## Skype for Business Cmdlets
 ### [New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
@@ -3124,3 +3124,13 @@ The following cmdlet references are for Skype for Business.
 ### [Enable-CsOnlineSipDomains](Enable-CsOnlineSipDomains.md)
 
 ### [Disable-CsOnlineSipDomains](Disable-CsOnlineSipDomains.md)
+
+### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
+
+### [Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
+
+### [New-CsTeamsCallParkPolicy](New-CsTeamsCallParkPolicy.md)
+
+### [Grant-CsTeamsCallParkPolicy](Grant-CsTeamsCallParkPolicy.md)
+
+### [Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)
