@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Restore-RecoverableItems
 schema: 2.0.0
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps" 
