@@ -2,11 +2,11 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version:
 applicable: Skype for Business Online
-title: Set-CSOnlinePSTNGateway
+title: Set-CsOnlinePSTNGateway
 schema: 2.0.0
 ---
 
-# Set-CSOnlinePSTNGateway
+# Set-CsOnlinePSTNGateway
 
 ## SYNOPSIS
 Modifies the previously defined Session Border Controller (SBC) Configuration that describes the settings for the peer entity. This cmdlet was introduced with Microsoft Phone System Direct Routing.
@@ -15,7 +15,7 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 
 ### Identity (Default)
 ```
-Set-CSOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-CodecPriority <String>]
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf]
@@ -24,7 +24,7 @@ Set-CSOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-C
 
 ### Instance
 ```
-Set-CSOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-CodecPriority <String>]
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-CodecPriority <String>]
  [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
@@ -38,14 +38,14 @@ Use this cmdlet to modify the configuration of the previously created Session Bo
 
 ### Example 1
 ```powershell
-PS C:\> Set-CSOnlinePSTNGateway - Identity sbc.contoso.com -Enabled $true
+PS C:\> Set-CsOnlinePSTNGateway -Identity sbc.contoso.com -Enabled $true
 ```
 
 This example enables previously created SBC with Identity (and FQDN) sbc.contoso.com. All others parameters will stay default.
 
 ### Example 2
 ```powershell
-PS C:\> Set-CSOnlinePSTNGateway -Identity sbc.contoso.com -SIPSignallingPort 5064 -ForwardPAI $true -Enabled $true
+PS C:\> Set-CsOnlinePSTNGateway -Identity sbc.contoso.com -SIPSignallingPort 5064 -ForwardPAI $true -Enabled $true
 ```
 
 This example modifies the configuration of an SBC with identity (and FQDN)  sbc.contoso.com. It changes the SIPSignallingPort to 5064 and enabled P-Asserted-Identity field on outbound connections (outbound from Direct Routing to SBC). For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator set identity of the caller as "Anonymous" or a general number of the company, but for the billing purposes the real identity of the user should be reported.
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Used to enable this SBC for outbound calls. Can be used to temporarily remove the SBC, while it is being updated or during maintenance. Note of the parameter not set the SBC will be created as disabled (default value -Enabled $false).
+Used to enable this SBC for outbound calls. Can be used to temporarily remove the SBC from service while it is being updated or during maintenance. Note if the parameter is not set the SBC will be created as disabled (default value -Enabled $false).
 
 ```yaml
 Type: Boolean
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverTimeSeconds
-When set to 10 (default value), outbound calls that are not answered by the gateway within 10 seconds are routed to the next available trunk; if there are no additional trunks, then the call is automatically dropped. In an organization with slow networks and gateway responses, that could potentially result in calls being dropped unnecessarily. The default value is 10.
+When set to 10 (default value), outbound calls that are not answered by the gateway within 10 seconds are routed to the next available trunk; if there are no additional trunks, then the call is automatically dropped. In an organization with slow networks and slow gateway responses, that could potentially result in calls being dropped unnecessarily. The default value is 10.
 
 ```yaml
 Type: Int32
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxConcurrentSessions
-Used by alerting system. When any value is set, the alerting system will generate an alert to the tenant administrator when the number of concurrent session is 90% or higher than this value. If parameter is not set, the alerts are not generated. However, the monitoring system will report number of concurrent session every 24 hours.
+Used by the alerting system. When any value is set, the alerting system will generate an alert to the tenant administrator when the number of concurrent session is 90% or higher than this value. If this parameter is not set, the alerts are not generated. However, the monitoring system will report the number of concurrent sessions every 24 hours.
 
 ```yaml
 Type: System.Int32
@@ -226,6 +226,22 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: $false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReinviteResponceCode
+If Direct Routing receives any 4xx or 6xx SIP error code in response on outgoing Invite (outgoing means call from a Teams client to PSTN with traffic flow :Teams Client -> Direct Routing -> SBC -> Telephony network) the call considered completed by default.
+Setting the SIP codes in this parameter forces Direct Routing on receicving the specified codes try another SBC (if another SBC exists in the vocie routing policy of the user). Pelase find more in "Reference" section of "Phone System Direct Routing" documentation
+
+```yaml
+Type: Int
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+Required: False
+Position: Named
+Default value: 408, 503, 504
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -337,8 +353,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
+[New-CsOnlinePSTNGateway](New-CsOnlinePSTNGateway.md)
 
-[Get-CSOnlinePSTNGateway](Get-CSOnlinePSTNGateway.md)
+[Get-CsOnlinePSTNGateway](Get-CsOnlinePSTNGateway.md)
 
-[Remove-CSOnlinePSTNGateway](Remove-CSOnlinePSTNGateway.md)
+[Remove-CsOnlinePSTNGateway](Remove-CsOnlinePSTNGateway.md)

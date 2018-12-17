@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOUserOneDriveLocation
 
 ## SYNOPSIS
-This cmdlet will return the UPN of a user, current location this user locates, user’s corresponding MySite(ODB) Url and the site id.
+This cmdlet will return the user principal name, current location, and corresponding OneDrive for Business url, and the site ID. This cmdlet only supports Multi-Geo OneDrive sites.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-SPOUserOneDriveLocation -UserPrincipalName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This command will return information about the onedrive location from the current user
+This command will return information about the OneDrive location for the specified user.
 
 ## EXAMPLES
 
@@ -25,7 +25,7 @@ This command will return information about the onedrive location from the curren
 ```powershell
 Get-SPOUserOneDriveLocation -UserPrincipalName admin@contoso.com
 ```
-Get the current location this user locates, user's corresponding MySite(ODB) Url and site ID.
+Get the current location the user's OneDrive location, url, and site ID.
 
 ## PARAMETERS
 

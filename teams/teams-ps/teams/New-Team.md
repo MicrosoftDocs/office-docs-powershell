@@ -18,7 +18,7 @@ Note: This cmdlet is currently in Beta and functionality may change.
 ## SYNTAX
 
 ```
-New-Team [-Group <String>] [-DisplayName <String>] [-Description <String>] [-Alias <String>]
+New-Team [-Group <String>] [-DisplayName <String>] [-Description <String>] [-Alias <String>] [-Owner <String>]
  [-Classification <String>] [-AccessType <String>] [-AddCreatorAsMember <Boolean>] [-Template <String>] [<CommonParameters>]
 ```
 
@@ -71,8 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddCreatorAsMember
-This setting lets you decide, if you will be added as a member of the group. 
-Because you are automatically an owner of the group, you will always be added as a member to the team.
+This setting has been deprecated as of 0.9.6 release
 
 ```yaml
 Type: Boolean
@@ -172,6 +171,22 @@ If you have an EDU license, you can use this parameter to specify which template
 Do not use this parameter when converting an existing group.
 
 Valid values are: "EDU_Class" or "EDU_PLC"
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+
+### -Owner
+An admin who is allowed to create on behalf of another user should use this flag to specify the desired owner of the group.  This user will be added as both a member and an owner of the group.  If not specified, the user who creates the team will be added as both a member and an owner.
 
 ```yaml
 Type: String
