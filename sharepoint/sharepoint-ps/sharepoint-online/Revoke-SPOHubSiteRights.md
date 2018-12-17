@@ -54,7 +54,7 @@ Accept wildcard characters: False
 
 ### -Principals
 
-One or more principles to add permissions for.
+One or more principles to revoke the permissions for.
 
 ```yaml
 Type: String[]
