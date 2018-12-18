@@ -36,8 +36,8 @@ class GitService {
 		);
 	}
 
-	async pushCommit({ remoteBranch, repository, login, pass, head, base }) {
-		const remote = await repository.getRemote(remoteBranch);
+	async pushCommit({ remoteName, repository, login, pass, head, base }) {
+		const remote = await repository.getRemote(remoteName);
 
 		await remote.push([`${head}:${base}`], {
 			callbacks: {
@@ -47,3 +47,5 @@ class GitService {
 		});
 	}
 }
+
+module.exports = GitService;

@@ -33,6 +33,12 @@ class LogStoreService {
 		return this._getAll('tempFolders');
 	}
 
+	async getLogFileContent({ logFilePath }) {
+		await fs.ensureFile(logFilePath);
+
+		return (await fs.readFile(logFilePath)).toString();
+	}
+
 	_addMap(collection, obj, name) {
 		const map = this.db.get(collection).value();
 

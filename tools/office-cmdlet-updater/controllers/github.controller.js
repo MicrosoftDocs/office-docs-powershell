@@ -12,7 +12,7 @@ class GithubController {
 			commitMessage,
 			repositoryLocalPath: path,
 			repositoryName,
-			remoteBranch,
+			remoteName,
 			head,
 			base,
 			pullRequest
@@ -49,3 +49,5 @@ class GithubController {
 		console.log(data);
 	}
 }
+
+module.exports = GithubController;

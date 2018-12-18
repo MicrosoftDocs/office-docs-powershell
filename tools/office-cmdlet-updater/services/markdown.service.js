@@ -35,33 +35,13 @@ class MarkdownService {
 		return this.addMdFilesInQueue(doc, cmdlet);
 	}
 
-	async addMdFilesInQueue(doc, cmdlet) {
-		const mdFiles = (await this.fsService.getModuleFiles(doc)).filter(
-			(file) => this._filterCmdlets(file, cmdlet)
-		);
-
-		if (!mdFiles.length) {
-			throw new Error(
-				`Can't find cmdlet "${cmdlet}" in module "${doc.name}"`
-			);
-		}
-
-		mdFiles.forEach((file) => {
+	async addMdFilesInQueue(cmdlets) {
+        cmdlets.forEach((cmdlet) => {
 			this.queue
-				.push({ file, doc })
+				.push({ cmdlet, doc })
 				.on('failed', this.queueFailedHandler)
 				.on('finish', this.queueFinishHandler);
 		});
-	}
-
-	_filterCmdlets(mdPath, cmdletName) {
-		if (!cmdletName) {
-			return true;
-		}
-
-		const mdExt = '.md';
-
-		return mdPath.endsWith(`${cmdletName}${mdExt}`);
 	}
 
 	async processQueue({ file, doc }, cb) {

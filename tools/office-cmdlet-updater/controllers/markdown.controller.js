@@ -27,6 +27,8 @@ class MarkdownController {
 				}
 			}
 		);
+
+		console.log('END!');
 	}
 
 	_filterModules(doc, moduleName) {

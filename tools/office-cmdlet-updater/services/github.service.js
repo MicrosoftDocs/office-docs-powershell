@@ -17,3 +17,5 @@ class GithubService {
 		repository.pr({ title, body, head, base }, cb);
 	}
 }
+
+module.exports = GithubService;

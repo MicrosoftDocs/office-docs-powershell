@@ -13,7 +13,7 @@ class PowerShellService {
 	}
 
 	async updateMarkdown(docPath, logPath) {
-		const command = format(commands.UPDATE_MARKDOWN, docPath, logPath);
+		const command = format(commands.UPDATE_MARKDOWN, docPath, '');
 
 		return await this.invokeCommand(command);
 	}
