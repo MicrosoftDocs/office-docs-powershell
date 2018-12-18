@@ -17,19 +17,32 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### AnrSet
 ```
-Get-RemoteMailbox [-Anr <String>] [-Archive] [-Credential <PSCredential>] [-DomainController <Fqdn>]
- [-Filter <String>] [-IgnoreDefaultScope] [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
+Get-RemoteMailbox [-Anr <String>]
+ [-Archive]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-RemoteMailbox [[-Identity] <RemoteMailboxIdParameter>] [-Archive] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope]
- [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>] [-ReadFromDomainController]
- [-ResultSize <Unlimited>] [-SortBy <String>] [<CommonParameters>]
+Get-RemoteMailbox [[-Identity] <RemoteMailboxIdParameter>]
+ [-Archive]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OnPremisesOrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,7 +92,7 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: AnrSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -182,7 +195,7 @@ For example:
 
 ```yaml
 Type: RemoteMailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

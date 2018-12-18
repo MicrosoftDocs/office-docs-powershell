@@ -813,21 +813,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MigrationMailbox
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: MigrationRemote, MigrationRemoteLegacy, MigrationLocal, Set5
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MoveOptions
 The MoveOptions parameter specifies the stages of the move that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
@@ -1067,21 +1052,6 @@ Type: SkippableMoveComponent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceEndpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MigrationEndpointIdParameter
-Parameter Sets: MigrationRemote, MigrationRemoteLegacy, MigrationLocal, Set5
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

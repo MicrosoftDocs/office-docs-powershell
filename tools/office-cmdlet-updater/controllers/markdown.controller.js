@@ -13,12 +13,6 @@ class MarkdownController {
 		let err;
 		const { docs } = this.config.get('platyPS');
 
-		[, err] = await of(this.powerShellService.preInstall());
-
-		if (err) {
-			throw new Error(err);
-		}
-
 		docs.forEach(async (doc) => {
 			if (!(await fs.pathExists(doc.path))) {
 				throw new Error(powerShellErrors.DOC_PATH_DOESNT_EXIST);

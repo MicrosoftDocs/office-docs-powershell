@@ -13,7 +13,7 @@ schema: 2.0.0
 Note: This cmdlet is currently in Beta.
 
 Remove an owner or member from a team,
-and to the unified group which backs the team. 
+and from the unified group which backs the team. 
 
 Note: the command will return immediately, but the Teams application will not reflect the update immediately. The Teams application may need to be open for up to an hour before changes are reflected.
 

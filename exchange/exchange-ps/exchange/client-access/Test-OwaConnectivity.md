@@ -17,19 +17,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### URL
 ```
-Test-OwaConnectivity [-URL] <String> -MailboxCredential <PSCredential> [-AllowUnsecureAccess] [-Confirm]
- [-DomainController <Fqdn>] [-LightMode] [-ResetTestAccountCredentials] [-Timeout <UInt32>]
- [-TrustAnySSLCertificate] [-WhatIf] [<CommonParameters>]
+Test-OwaConnectivity [-URL] <String> -MailboxCredential <PSCredential>
+ [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-AllowUnsecureAccess] [-Confirm]
- [-DomainController <Fqdn>] [-LightMode] [-MailboxServer <ServerIdParameter>] [-MonitoringContext]
- [-ResetTestAccountCredentials] [-RSTEndpoint <String>] [-TestType <Internal | External>] [-Timeout <UInt32>]
- [-TrustAnySSLCertificate] [-VirtualDirectoryName <String>] [-WhatIf] [<CommonParameters>]
+Test-OwaConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-MailboxServer <ServerIdParameter>] [-MonitoringContext] [-RSTEndpoint <String>] [-TestType <Internal | External>] [-VirtualDirectoryName <String>]
+ [-AllowUnsecureAccess]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LightMode]
+ [-ResetTestAccountCredentials]
+ [-Timeout <UInt32>]
+ [-TrustAnySSLCertificate]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,7 +85,7 @@ The MailboxCredential parameter is required only when using the URL parameter.
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -93,7 +104,7 @@ You can't use the URL parameter with the TestType or ClientAccessServer paramete
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: URL
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -125,7 +136,7 @@ Don't use this parameter with the URL parameter.
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -191,7 +202,7 @@ The MailboxServer parameter specifies the name of the Mailbox server to test. If
 
 ```yaml
 Type: ServerIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -206,7 +217,7 @@ The MonitoringContext parameter shows you what information is returned to System
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -236,7 +247,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -251,7 +262,7 @@ The TestType parameter specifies whether the command tests internal or external 
 
 ```yaml
 Type: Internal | External
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -296,7 +307,7 @@ The VirtualDirectoryName parameter specifies the name of the virtual directory t
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 Required: False

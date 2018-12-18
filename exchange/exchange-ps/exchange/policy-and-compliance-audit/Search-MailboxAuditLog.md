@@ -17,19 +17,31 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Identity
 ```
-Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>] [-DomainController <Fqdn>] [-EndDate <ExDateTime>]
- [-ExternalAccess <$true | $false>] [-LogonTypes <MultiValuedProperty>]
- [-ResultSize <Int32>] [-ShowDetails] [-StartDate <ExDateTime>]
- [-Operations <MultiValuedProperty>] [-HasAttachments <$true | $false>] [<CommonParameters>]
+Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>] [-ShowDetails]
+ [-DomainController <Fqdn>]
+ [-EndDate <ExDateTime>]
+ [-ExternalAccess <$true | $false>]
+ [-HasAttachments <$true | $false>]
+ [-LogonTypes <MultiValuedProperty>]
+ [-Operations <MultiValuedProperty>]
+ [-ResultSize <Int32>]
+ [-StartDate <ExDateTime>]
+ [<CommonParameters>]
 ```
 
-### Set2
+### MultipleMailboxesSearch
 ```
-Search-MailboxAuditLog [-DomainController <Fqdn>] [-EndDate <ExDateTime>] [-ExternalAccess <$true | $false>]
- [-LogonTypes <MultiValuedProperty>] [-Mailboxes <MultiValuedProperty>] [-ResultSize <Int32>]
- [-StartDate <ExDateTime>] [-Operations <MultiValuedProperty>] [-HasAttachments <$true | $false>]
+Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
+ [-DomainController <Fqdn>]
+ [-EndDate <ExDateTime>]
+ [-ExternalAccess <$true | $false>]
+ [-HasAttachments <$true | $false>]
+ [-LogonTypes <MultiValuedProperty>]
+ [-Operations <MultiValuedProperty>]
+ [-ResultSize <Int32>]
+ [-StartDate <ExDateTime>]
  [<CommonParameters>]
 ```
 
@@ -112,12 +124,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HasAttachments
+The HasAttachments parameter filters the search by messages that have attachments. Valid values are:
+
+- $true: Only messages with attachments are included in the search.
+
+- $false: Messages with and without attachments are included in the search.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 The Identity parameter specifies the mailbox for which to retrieve mailbox audit log entries. You can use this parameter to search a single mailbox.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -155,56 +186,7 @@ The Mailboxes parameter specifies the mailboxes for which to retrieve mailbox au
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResultSize
-The ResultSize parameter specifies the maximum number of mailbox audit log entries to return. Valid values include an integer from 1 through 250000. By default, 1000 entries are returned.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowDetails
-The ShowDetails switch specifies that details of each log entry be retrieved. By default, all fields for each returned log entry are displayed in a list view.
-
-You can't use the Mailboxes parameter with the ShowDetails switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StartDate
-The StartDate parameter specifies the start date of the date range.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-```yaml
-Type: ExDateTime
-Parameter Sets: (All)
+Parameter Sets: MultipleMailboxesSearch
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -261,18 +243,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HasAttachments
-The HasAttachments parameter filters the search by messages that have attachments. Valid values are:
-
-- $true: Only messages with attachments are included in the search.
-
-- $false: Messages with and without attachments are included in the search.
+### -ResultSize
+The ResultSize parameter specifies the maximum number of mailbox audit log entries to return. Valid values include an integer from 1 through 250000. By default, 1000 entries are returned.
 
 ```yaml
-Type: $true | $false
+Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowDetails
+The ShowDetails switch specifies that details of each log entry be retrieved. By default, all fields for each returned log entry are displayed in a list view.
+
+You can't use the Mailboxes parameter with the ShowDetails switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartDate
+The StartDate parameter specifies the start date of the date range.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+
+```yaml
+Type: ExDateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

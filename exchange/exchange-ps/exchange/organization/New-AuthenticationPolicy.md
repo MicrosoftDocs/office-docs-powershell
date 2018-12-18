@@ -9,9 +9,6 @@ monikerRange: "exchonline-ps"
 # New-AuthenticationPolicy
 
 ## SYNOPSIS
-> [!NOTE]
-> This topic describes a preview feature that isn't available to everyone, and is subject to change.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the New-AuthenticationPolicy cmdlet to create authentication policies in Exchange Online.

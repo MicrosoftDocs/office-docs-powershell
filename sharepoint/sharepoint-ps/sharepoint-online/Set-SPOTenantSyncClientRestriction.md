@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenantSyncClientRestriction
 schema: 2.0.0
@@ -119,9 +119,7 @@ Note that it may take up to an hour for this change to be reflected.
 
 ### --------------------EXAMPLE---------------------
 ```
-Set-SPOTenantSyncClientRestriction  –Enable –DomainGuids “786548DD-877B-4760-A749-6B1EFBC1190A; 877564FF-877B-4760-A749-
-
-6B1EFBC1190A”
+Set-SPOTenantSyncClientRestriction  –Enable –DomainGuids "786548DD-877B-4760-A749-6B1EFBC1190A; 877564FF-877B-4760-A749-6B1EFBC1190A"
 ```
 
 This example enables the feature for the  tenancy and adds the domains GUIDs to the safe recipient list.
@@ -129,9 +127,7 @@ This example enables the feature for the  tenancy and adds the domains GUIDs to 
 ### --------------------EXAMPLE------------------
 
 ```
-Set-SPOTenantSyncClientRestriction  –Enable –DomainGuids “786548DD-877B-4760-A749-6B1EFBC1190A; 877564FF-877B-4760-A749-
-
-6B1EFBC1190A” -BlockMacSync:$true
+Set-SPOTenantSyncClientRestriction  –Enable –DomainGuids "786548DD-877B-4760-A749-6B1EFBC1190A; 877564FF-877B-4760-A749-6B1EFBC1190A" -BlockMacSync:$true
 ```
 
 This example turns on the Block Mac sync functionality.
