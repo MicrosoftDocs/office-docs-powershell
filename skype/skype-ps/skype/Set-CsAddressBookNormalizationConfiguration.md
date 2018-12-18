@@ -47,7 +47,7 @@ The commands shown in Example 1 remove the Address Book normalization rule LongD
 In order to carry out this task, the first command in the example uses the `Get-CsAddressBookNormalizationRule` cmdlet to create an object reference to the normalization rule with the Identity global/LongDistanceRule.
 The resulting object reference is stored in a variable named $x.
 
-The second command in the example then uses the `Set-CsAddressBookNormalizationConfiguraton` cmdlet to remove the rule global/LongDistanceRule from the global collection.
+The second command in the example then uses the `Set-CsAddressBookNormalizationConfiguration` cmdlet to remove the rule global/LongDistanceRule from the global collection.
 This is done by including the AddressBookNormalizationRules parameter and the syntax @{Remove=$x}.
 
 `$x = Get-CsAddressBookNormalizationRule -Identity "global/LongDistanceRule"`

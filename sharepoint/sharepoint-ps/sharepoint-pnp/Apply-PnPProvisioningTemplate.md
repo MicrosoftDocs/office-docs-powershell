@@ -6,7 +6,7 @@ schema: 2.0.0
 # Apply-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Applies a provisioning template to a web
+Applies a site template to a web
 
 ## SYNTAX 
 
@@ -71,46 +71,53 @@ Apply-PnPProvisioningTemplate -Path <String>
 Apply-PnPProvisioningTemplate -Path template.xml
 ```
 
-Applies a provisioning template in XML format to the current web.
+Applies a site template in XML format to the current web.
 
 ### ------------------EXAMPLE 2------------------
+```powershell
+Apply-PnPSPnPProvisioningTemplateiteTemplate -Path template.xml -ResourceFolder c:\provisioning\resources
+```
+
+Applies a site template in XML format to the current web. Any resources like files that are referenced in the template will be retrieved from the folder as specified with the ResourceFolder parameter.
+
+### ------------------EXAMPLE 3------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.xml -ResourceFolder c:\provisioning\resources
 ```
 
 Applies a provisioning template in XML format to the current web. Any resources like files that are referenced in the template will be retrieved from the folder as specified with the ResourceFolder parameter.
 
-### ------------------EXAMPLE 3------------------
+### ------------------EXAMPLE 4------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.xml -Parameters @{"ListTitle"="Projects";"parameter2"="a second value"}
 ```
 
-Applies a provisioning template in XML format to the current web. It will populate the parameter in the template the values as specified and in the template you can refer to those values with the {parameter:<key>} token.
+Applies a site template in XML format to the current web. It will populate the parameter in the template the values as specified and in the template you can refer to those values with the {parameter:<key>} token.
 
 For instance with the example above, specifying {parameter:ListTitle} in your template will translate to 'Projects' when applying the template. These tokens can be used in most string values in a template.
 
-### ------------------EXAMPLE 4------------------
+### ------------------EXAMPLE 5------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.xml -Handlers Lists, SiteSecurity
 ```
 
-Applies a provisioning template in XML format to the current web. It will only apply the lists and site security part of the template.
+Applies a site template in XML format to the current web. It will only apply the lists and site security part of the template.
 
-### ------------------EXAMPLE 5------------------
+### ------------------EXAMPLE 6------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path template.pnp
 ```
 
-Applies a provisioning template from a pnp package to the current web.
+Applies a site template from a pnp package to the current web.
 
-### ------------------EXAMPLE 6------------------
+### ------------------EXAMPLE 7------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path https://tenant.sharepoint.com/sites/templatestorage/Documents/template.pnp
 ```
 
-Applies a provisioning template from a pnp package stored in a library to the current web.
+Applies a site template from a pnp package stored in a library to the current web.
 
-### ------------------EXAMPLE 7------------------
+### ------------------EXAMPLE 8------------------
 ```powershell
 
 $handler1 = New-PnPExtensibilityHandlerObject -Assembly Contoso.Core.Handlers -Type Contoso.Core.Handlers.MyExtensibilityHandler1
@@ -120,12 +127,12 @@ Apply-PnPProvisioningTemplate -Path NewTemplate.xml -ExtensibilityHandlers $hand
 
 This will create two new ExtensibilityHandler objects that are run while provisioning the template
 
-### ------------------EXAMPLE 8------------------
+### ------------------EXAMPLE 9------------------
 ```powershell
 Apply-PnPProvisioningTemplate -Path .\ -InputInstance $template
 ```
 
-Applies a provisioning template from an in-memory instance of a ProvisioningTemplate type of the PnP Core Component, reading the supporting files, if any, from the current (.\) path. The syntax can be used together with any other supported parameters.
+Applies a site template from an in-memory instance of a ProvisioningTemplate type of the PnP Core Component, reading the supporting files, if any, from the current (.\) path. The syntax can be used together with any other supported parameters.
 
 ## PARAMETERS
 

@@ -33,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-Group -Identity "Legal Department" -Notes "Group members updated June 1, 2014"
+Set-Group -Identity "Legal Department" -Notes "Group members updated June 1, 2018"
 ```
 
 This example sets the Notes property to indicate the last time that the group was updated.

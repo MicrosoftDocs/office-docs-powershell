@@ -379,7 +379,7 @@ The PhishThresholdLevel parameter specifies the tolerance level that's used by m
 
 - 2: Aggressive
 
-- 3: More agressive
+- 3: More aggressive
 
 - 4: Most aggressive
 

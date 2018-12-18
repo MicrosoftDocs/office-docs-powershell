@@ -67,21 +67,6 @@ All other policy properties will use the existing values.
 
 ## PARAMETERS
 
-### -AllowAnonymousUsersToDialOut
-Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowAnonymousUsersToStartMeeting
 Determines whether anonymous users can initiate a meeting. Set this to TRUE to allow anonymous users to initiate a meeting. Set this to FALSE to prohibit them from initiating a meeting
 
@@ -279,7 +264,7 @@ Accept wildcard characters: False
 
 
 ### -AutoAdmittedUsers
-Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to None to send all users to the Lobby and have an attendee allow them to join a meeting
+Determines what types of participants will automatically be added to meetings organized by this user. Set this to EveryoneInCompany  if you would like meetings to place every external user in the lobby but allow all users in the company to join the meeting immediately. Set this to Everyone if you'd like to admit anonymous users by default. Set this to EveryoneInSameAndFederatedCompany if you would like meetings to allow federated users to join like your company's users, but place all other external users in a lobby.  This setting also applies to participants joining via a PSTN device (i.e. a traditional phone)
 
 ```yaml
 Type: String

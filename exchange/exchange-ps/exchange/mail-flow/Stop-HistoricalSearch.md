@@ -22,7 +22,7 @@ Stop-HistoricalSearch -JobId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are between seven and ninety days old.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are less than 90 days old.
 
 After you start a historical search by using the Start-HistoricalSearch cmdlet, the search is queued, but not actually running. While the search is queued and has the status value of NotStarted, you can use the Stop-HistoricalSearch cmdlet to stop it. After the search is actively running, and has a status value of InProgress, you can't stop it. When you stop a historical search, it's given a status value of Cancelled.
 
