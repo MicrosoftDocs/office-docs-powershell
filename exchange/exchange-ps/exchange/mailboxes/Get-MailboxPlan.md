@@ -18,14 +18,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-MailboxPlan [[-Identity] <MailboxPlanIdParameter>] [-AllMailboxPlanReleases] [-Credential <PSCredential>]
- [-Filter <String>] [-IgnoreDefaultScope]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-ResultSize <Unlimited>] [-SortBy <String>]
+Get-MailboxPlan [[-Identity] <MailboxPlanIdParameter>]
+ [-AllMailboxPlanReleases]
+ [-Credential <PSCredential>]
+ [-Filter <String>]
+ [-IgnoreDefaultScope]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A mailbox plan is a template that automatically configures properties on new mailboxes. Mailbox plans correspond to Microsoft Office 365 license types. The availability of a mailbox plan is determined by the selections you make when you enroll your domain in Office 365.
+A mailbox plan is a template that automatically configures properties on new mailboxes during creation. Mailbox plans correspond to Office 365 license types. The availability of a mailbox plan is determined by the selections you make when you enroll your domain in the service.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -46,6 +51,29 @@ Get-MailboxPlan -Identity ExchangeOnlineEnterprise | Format-List
 This example returns detailed information for the mailbox plan that has the display name ExchangeOnlineEnterprise.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the mailbox plan that you want to view. You can use any value that uniquely identifies the mailbox plan. For example:
+
+- Name
+
+- Display name
+
+- Distinguished name (DN)
+
+- GUID
+
+```yaml
+Type: MailboxPlanIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -AllMailboxPlanReleases
 The AllMailboxPlanReleases switch specifies whether to include mailbox plans that were used in previous versions of the service in the results. You don't need to specify a value with this switch.
@@ -95,33 +123,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox plan that you want to view. You can use any value that uniquely identifies the mailbox plan. For example:
-
-- Name
-
-- Alias
-
-- Display name
-
-- Distinguished name (DN)
-
-- GUID
-
-- LegacyExchangeDN
-
-```yaml
-Type: MailboxPlanIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
