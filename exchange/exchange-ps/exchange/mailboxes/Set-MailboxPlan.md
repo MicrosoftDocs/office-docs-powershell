@@ -34,7 +34,9 @@ Set-MailboxPlan [-Identity] <MailboxPlanIdParameter>
 ```
 
 ## DESCRIPTION
-A mailbox plan is a template that automatically configures properties on new mailboxes. Mailbox plans correspond to license types. The availability of a mailbox plan is determined by your selections when you enroll in Office 365.
+A mailbox plan is a template that automatically configures mailbox properties. Mailbox plans correspond to license types, and are applied when you license the user. The availability of a mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
+
+Modifying the settings in a mailbox plan doesn't affect existing mailboxes that were created using the mailbox plan. The only way to use a mailbox plan to modify the settings on an existing mailbox is to assign a different license to the user, which will apply the corresponding mailbox plan to the mailbox.
 
 Each mailbox plan has a corresponding Client Access services (CAS) mailbox plan with the same name and display name value. You can use the Set-CasMailboxPlan cmdlet to enable or disable POP3, IMAP4 or Exchange ActiveSync (EAS) access to new or newly-enabled mailboxes, and you can specify the Outlook on the web (formerly known as Outlook Web App) mailbox policy for the mailboxes.
 
@@ -126,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -IssueWarningQuota
-The IssueWarningQuota parameter specifies the warning threshold for the size of mailboxes that are created or enabled using the mailbox plan. If the mailbox reaches or exceeds this size, the user receives a descriptive warning message.
+The IssueWarningQuota parameter specifies the warning threshold for the size of the mailboxes that are created or enabled using the mailbox plan. If the mailbox reaches or exceeds this size, the user receives a descriptive warning message.
 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
@@ -159,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReceiveSize
-The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to mailboxes that are created or enabled using the mailbox plan. Messages larger than the maximum size are rejected.
+The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to the mailbox. Messages larger than the maximum size are rejected.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -194,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSendSize
-The MaxSendSize parameter specifies the maximum size of a message that can be sent by created or enabled mailboxes that are created using the mailbox plan.
+The MaxSendSize parameter specifies the maximum size of a message that can be sent by the mailbox.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -229,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProhibitSendQuota
-The ProhibitSendQuota parameter specifies a size limit for mailboxes that are created or enabled using the mailbox plan. If the mailbox reaches or exceeds this size, the mailbox can't send new messages, and the user receives a descriptive warning message.
+The ProhibitSendQuota parameter specifies a size limit for the mailbox. If the mailbox reaches or exceeds this size, the mailbox can't send new messages, and the user receives a descriptive warning message.
 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
@@ -262,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProhibitSendReceiveQuota
-The ProhibitSendReceiveQuota parameter specifies a size limit for mailboxes that are created or enabled using the mailbox plan. If the mailbox reaches or exceeds this size, the mailbox can't send or receive new messages. Messages sent to the mailbox are returned to the sender with a descriptive error message. This value effectively determines the maximum size of the mailbox.
+The ProhibitSendReceiveQuota parameter specifies a size limit for the mailbox. If the mailbox reaches or exceeds this size, the mailbox can't send or receive new messages. Messages sent to the mailbox are returned to the sender with a descriptive error message. This value effectively determines the maximum size of the mailbox.
 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. When you enter a number, you can qualify it with one of the following units:
 
@@ -295,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetainDeletedItemsFor
-The RetainDeletedItemsFor parameter specifies the length of time to keep soft-deleted items for mailboxes that are created or enabled using the mailbox plan. Soft-deleted items are items that have been deleted by using any of these methods:
+The RetainDeletedItemsFor parameter specifies the length of time to keep soft-deleted items for the mailbox. Soft-deleted items are items that have been deleted by using any of these methods:
 
 - Deleting items from the Deleted Items folder.
 
@@ -324,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPolicy
-The RetentionPolicy parameter specifies the retention policy that you want applied to mailboxes that are created or enabled using the mailbox plan. You can use any value that uniquely identifies the policy. For example:
+The RetentionPolicy parameter specifies the retention policy that's applied to the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -349,17 +351,15 @@ Accept wildcard characters: False
 ```
 
 ### -RoleAssignmentPolicy
-The RoleAssignmentPolicy parameter specifies the management role assignment policy that's assigned to mailboxes that are created or enabled using the mailbox plan.
-
-The default value is Default Role Assignment Policy.
-
-To associate a role assignment policy with the mailbox plan, you use any value that uniquely identifies the role assignment policy. For example:
+The RoleAssignmentPolicy parameter specifies the role assignment policy that's applied to the mailbox. You can use any value that uniquely identifies the role assignment policy. For example:
 
 - Name
 
 - Distinguished name (DN)
 
 - GUID
+
+The default value is Default Role Assignment Policy.
 
 To see the available role assignment policies, use the Get-RoleAssignmentPolicy cmdlet.
 

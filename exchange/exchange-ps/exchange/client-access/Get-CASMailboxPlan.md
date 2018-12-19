@@ -27,7 +27,7 @@ Get-CASMailboxPlan [[-Identity] <MailboxPlanIdParameter>]
 ```
 
 ## DESCRIPTION
-A CAS mailbox plan is tied to the corresponding mailbox plan (a mailbox plan with the same name and display name). CAS mailbox plans assign the specified Client Access settings to mailboxes at the time of creation.
+A CAS mailbox plan is tied to the corresponding mailbox plan that has the same name (and display name). Like mailbox plans, CAS mailbox plans correspond to license types, and are applied to a mailbox when you license the user. The availability of a CAS mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

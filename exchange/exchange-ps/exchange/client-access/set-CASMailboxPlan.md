@@ -28,7 +28,7 @@ Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
 ```
 
 ## DESCRIPTION
-A CAS mailbox plan is tied to the corresponding mailbox plan (a mailbox plan with the same name and display name). CAS mailbox plans assign the specified Client Access settings to mailboxes that you create or enable.
+A CAS mailbox plan is tied to the corresponding mailbox plan that has the same name (and display name). Like mailbox plans, CAS mailbox plans correspond to license types, and are applied to a mailbox when you license the user. The availability of a CAS mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -54,7 +54,7 @@ The Identity parameter specifies the CAS mailbox plan that you want to modify. Y
 
 - GUID
 
-The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise and ExchangeOnlineEnterprise-\<GUID\>).
+The display name and name of the CAS mailbox plan is the same as the corresponding mailbox plan (for example, ExchangeOnlineEnterprise and ExchangeOnlineEnterprise-\<GUID\>, respectively).
 
 ```yaml
 Type: MailboxPlanIdParameter
@@ -69,11 +69,11 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveSyncEnabled
-The ActiveSyncEnabled parameter specifies whether to enable or disable Exchange ActiveSync access to mailboxes that are created or enabled using the CAS mailbox plan. Valid values are:
+The ActiveSyncEnabled parameter enables or disables access to the mailbox by using Exchange Active Sync (EAS). Valid values are:
 
-- $true: ActiveSync access to mailboxes is enabled. This is the default value.
+- $true: ActiveSync access to the mailbox is enabled. This is the default value.
 
-- $false: ActiveSync access to mailboxes is disabled.
+- $false: ActiveSync access to the mailbox is disabled.
 
 ```yaml
 Type: $true | $false
@@ -107,11 +107,11 @@ Accept wildcard characters: False
 ```
 
 ### -ImapEnabled
-The ImapEnabled parameter specifies whether to enable or disable IMAP4 access to mailboxes that are created or enabled using the CAS mailbox plan. Valid values are:
+The ImapEnabled parameter enables or disables access to the mailbox by using IMAP4 clients. Valid values are:
 
-- $true: IMAP4 access to mailboxes is enabled. This is default value for all plans except ExchangeOnlineDeskless.
+- $true: IMAP4 access to the mailbox is enabled. This is default value for all CAS mailbox plans except ExchangeOnlineDeskless.
 
-- $false: IMAP4 access to mailboxes is disabled. This is default value for ExchangeOnlineDeskless.
+- $false: IMAP4 access to the mailbox is disabled. This is default value for ExchangeOnlineDeskless.
 
 ```yaml
 Type: $true | $false
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaMailboxPolicy
-The OwaMailboxPolicy parameter specifies the Outlook on the web (formerly known as Outlook Web App) mailbox policy that you want applied to mailboxes that are created or enabled using the CAS mailbox plan. You can use any value that uniquely identifies the policy. For example:
+The OwaMailboxPolicy parameter specifies the Outlook on the web (formerly known as Outlook Web App) mailbox policy for the mailbox. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -151,11 +151,11 @@ Accept wildcard characters: False
 ```
 
 ### -PopEnabled
-The PopEnabled parameter specifies whether to enable or disable POP3 access to mailboxes that are created or enabled using the CAS mailbox plan. Valid values are:
+The PopEnabled parameter enables or disables access to the mailbox by using POP3 clients. Valid values are:
 
-- $true: POP3 access to mailboxes is enabled. This is the default value.
+- $true: POP3 access to the mailbox is enabled. This is the default value.
 
-- $false: POP3 access to mailboxes is disabled.
+- $false: POP3 access to the mailbox is disabled.
 
 ```yaml
 Type: $true | $false
