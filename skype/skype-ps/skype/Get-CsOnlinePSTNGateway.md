@@ -2,11 +2,11 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version:
 applicable: Skype for Business Online
-title: Get-CSOnlinePSTNGateway
+title: Get-CsOnlinePSTNGateway
 schema: 2.0.0
 ---
 
-# Get-CSOnlinePSTNGateway
+# Get-CsOnlinePSTNGateway
 
 ## SYNOPSIS
 Shows the configuration of the previously defined Session Border Controller(s) (SBC(s))  that describes the settings for the peer entity. This cmdlet was introduced with Microsoft Phone System Direct Routing.
@@ -15,13 +15,13 @@ Shows the configuration of the previously defined Session Border Controller(s) (
 
 ### Identity (Default)
 ```
-Get-CSOnlinePSTNGateway [-Tenant <System.Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
+Get-CsOnlinePSTNGateway [-Tenant <System.Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
  [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CSOnlinePSTNGateway [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,10 +31,10 @@ Use this cmdlet to show the configuration of the previously created Session Bord
 
 ### Example 1
 ```powershell
-PS C:\> Get-CSOnlinePSTNGateway
+PS C:\> Get-CsOnlinePSTNGateway
 ```
 
-This example shows all SBCs paired with the tenant
+This example shows all SBCs paired with the tenant.
 
 ### Example 2
 ```powershell
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The parameter is optional for the cmdlet. If not set all SBC paired to the tenant are listed.
+The parameter is optional for the cmdlet. If not set all SBCs paired to the tenant are listed.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -119,8 +119,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[Set-CSOnlinePSTNGateway](Set-CSOnlinePSTNGateway.md)
+[Set-CsOnlinePSTNGateway](Set-CsOnlinePSTNGateway.md)
 
-[New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
+[New-CsOnlinePSTNGateway](New-CsOnlinePSTNGateway.md)
 
-[Remove-CSOnlinePSTNGateway](Remove-CSOnlinePSTNGateway.md)
+[Remove-CsOnlinePSTNGateway](Remove-CsOnlinePSTNGateway.md)
