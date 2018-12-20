@@ -18,7 +18,7 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 ```
 Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
  [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
- [-AllowUserControl <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
+  [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
  [-PreventTollBypass <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -26,7 +26,7 @@ Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-All
 ```
 Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
  [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
- [-AllowUserControl <Boolean>] [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
+  [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
  [-PreventTollBypass <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallForwardingToUser
-{{Fill AllowCallForwardingToUser Description}}
+Enables call forwarding or simultaneous ringing of inbound calls to other users
 
 ```yaml
 Type: Boolean
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallGroups
-{{Fill AllowCallGroups Description}}
+Enables inbound calls to be routed to call groups 
 
 ```yaml
 Type: Boolean
@@ -215,22 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDelegation
-{{Fill AllowDelegation Description}}
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowUserControl
-{{Fill AllowUserControl Description}}
+Enables inbound calls to be routed to delegates; allows delegates to make outbound calls on behalf of the users for whom they have delegated permissions.
 
 ```yaml
 Type: Boolean
@@ -245,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-{{Fill AllowVoicemail Description}}
+Enables inbound calls to be routed to voice mail.  Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride
 
 ```yaml
 Type: String
@@ -260,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreventTollBypass
-{{Fill PreventTollBypass Description}}
+Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
 
 ```yaml
 Type: Boolean
