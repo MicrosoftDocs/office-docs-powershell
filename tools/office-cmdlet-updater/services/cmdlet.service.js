@@ -18,6 +18,28 @@ class CmdletService {
 		}
 	}
 
+	async getModulesCmdlets({ modules, cliCmdletName, ignoreFiles }) {
+		let cmdletsArr = [];
+
+		for (let module of modules) {
+			const moduleCmdlets = await this.getModuleCmdlets({
+				cliCmdletName,
+				ignoreFiles,
+				module
+			});
+
+			if (!moduleCmdlets.length) {
+				throw new Error(
+					`Can't find cmdlets in module "${module.name}"`
+				);
+			}
+
+			cmdletsArr = [...cmdletsArr, ...moduleCmdlets];
+		}
+
+		return cmdletsArr;
+	}
+
 	// region getModuleCmdlets
 
 	async getModuleCmdlets({ module, ignoreFiles, cliCmdletName }) {

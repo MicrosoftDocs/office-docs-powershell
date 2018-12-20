@@ -1,4 +1,5 @@
 const shortId = require('shortid');
+const of = require('await-of').default;
 
 class ModuleController {
 	constructor(
@@ -6,65 +7,112 @@ class ModuleController {
 		moduleService,
 		cmdletService,
 		powerShellService,
-		logStoreService
+		logStoreService,
+		cmdletDependenciesService
 	) {
 		this.config = config;
 		this.moduleService = moduleService;
 		this.pss = powerShellService;
 		this.logStoreService = logStoreService;
+		this.cmdletService = cmdletService;
+		this.cds = cmdletDependenciesService;
+
+		this.installedDependencies = [];
 	}
 
 	async execute({ cliModuleName, cliCmdletName, isNeedPullRequest }) {
-		let { docs: modules, ignoreFiles, tempFolderPath } = this.config.get(
-			'platyPS'
-		);
+		const cmdlets = await this._getCmdletsAndInstallDependencies({
+			cliModuleName,
+			cliCmdletName
+		});
+
+		return this._getUpdateResult({ cmdlets, isNeedPullRequest });
+	}
+
+	async _installDependenciesForModules({ modules }) {
+		for (let module of modules) {
+			await this._installDependenceIfNeeded(module);
+		}
+	}
+
+	async _installDependenceIfNeeded({ name }) {
+		if (!this.installedDependencies.includes(name)) {
+			this.installedDependencies.push(name);
+
+			await this.cds.installDependencies({ cmdletName: name });
+		}
+	}
+
+	async _getCmdletsAndInstallDependencies({ cliModuleName, cliCmdletName }) {
+		let { docs: modules, ignoreFiles } = this.config.get('platyPS');
 
 		modules = this.moduleService.filterModules({ cliModuleName, modules });
 
-		let cmdlets = [];
-		for (let module of modules) {
-			const moduleCmdlets = await this.cmdletService.getModuleCmdlets({
-				cliCmdletName,
-				ignoreFiles,
-				module
-			});
+		await this._installDependenciesForModules({ modules });
 
-			if (!moduleCmdlets.length) {
-				throw new Error(
-					`Can't find cmdlets in module "${module.name}"`
-				);
-			}
+		return this.cmdletService.getModulesCmdlets({
+			cliCmdletName,
+			ignoreFiles,
+			modules
+		});
+	}
 
-			cmdlets = [...cmdlets, ...moduleCmdlets];
-		}
+	async _getUpdateResult({ cmdlets, isNeedPullRequest }) {
+		const { tempFolderPath } = this.config.get('platyPS');
 
-		const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
-		const cmdletTempPath = isNeedPullRequest
-			? `${tempFolderPath}\\${shortId()}`
-			: '';
+		let logs = [],
+			errors = [];
 
 		for (let cmdletPath of cmdlets) {
-			if (cmdletTempPath) {
+			const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
+
+			if (!isNeedPullRequest) {
+				const cmdletTempPath = `${tempFolderPath}\\${shortId()}`;
+
 				cmdletPath = await this.cmdletService.copyMdInTempFolder(
 					cmdletPath,
 					cmdletTempPath
 				);
 			}
 
-			const [consoleOutput, err] = await of(
-				this.pss.updateMarkdown(cmdletPath, logFilePath)
-			);
+			const { logContent, err } = await this._updateCmdletMarkdown({
+				cmdletPath,
+				logFilePath
+			});
 
 			if (err) {
 				console.log(err);
-				this.logStoreService.addError(err, '');
 
-				throw new Error(err);
+				errors = [...errors, err];
+				continue;
 			}
 
-			console.log(consoleOutput);
+			console.log(logContent);
 
-			const logContent = this.logStoreService.
+			logs = [...logs, logContent];
 		}
+
+		return {
+			logs,
+			errors
+		};
+	}
+
+	async _updateCmdletMarkdown({ cmdletPath, logFilePath }) {
+		const [, err] = await of(
+			this.pss.updateMarkdown(cmdletPath, logFilePath)
+		);
+
+		if (err) {
+			return { err };
+		}
+
+		const logContent = await this.logStoreService.getLogFileContent({
+			logFilePath
+		});
+
+		return { logContent };
 	}
 }
+
+module.exports = ModuleController;

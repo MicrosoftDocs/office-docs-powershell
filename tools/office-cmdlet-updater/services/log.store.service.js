@@ -76,6 +76,12 @@ class LogStoreService {
 		}
 	}
 
+	async getLogFileContent({logFilePath}) {
+        await fs.ensureFile(logFilePath);
+
+        return (await fs.readFile(logFilePath)).toString();
+	}
+
 	_getLogName() {
 		return moment().format('HH_mm_DD_MM_YY');
 	}

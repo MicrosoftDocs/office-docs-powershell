@@ -2,13 +2,13 @@ class CliController {
 	constructor(
 		cliService,
 		cmdletService,
-		markdownController,
-		powerShellService
+		powerShellService,
+		moduleController
 	) {
 		this.cliService = cliService;
 		this.cmdletService = cmdletService;
-		this.markdownController = markdownController;
 		this.powerShellService = powerShellService;
+		this.moduleController = moduleController;
 	}
 	start(argv) {
 		try {
@@ -50,10 +50,13 @@ class CliController {
 		this.cliService.start(argv, async (cli) => {
 			const { module, cmdlet } = cli;
 
-			await this.markdownController.updateMarkdown({
-				moduleName: module,
-				cmdlet
+			const { logs, errors } = await this.moduleController.execute({
+				cliModuleName: module,
+				cliCmdletName: cmdlet,
+				isNeedPullRequest: false
 			});
+
+			this.powerShellService.dispose();
 		});
 	}
 }
