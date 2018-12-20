@@ -39,21 +39,6 @@ class LogParseService {
 	}
 
 	parseAll() {
-		const parseLogs = [];
-
-		const allLogs = [...this.logStoreService.getAllLogs().values()];
-
-		const logs = allLogs.reduce(
-			(acc, cur) => [...acc, ...cur],
-			[]
-		);
-
-		logs.forEach((log) => {
-			const logObj = this.parse(log);
-
-			parseLogs.push(logObj);
-		});
-
 		const msg = this.generateMailText(parseLogs);
 
 		if (msg) {
@@ -69,7 +54,7 @@ class LogParseService {
 		}
 	}
 
-	parse(log) {
+	parse({ log }) {
 		const logObj = {};
 
 		this.keywords.forEach(({ value }) => {

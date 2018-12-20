@@ -57,29 +57,22 @@ class LogStoreService {
 		return this.db.get(collection).value();
 	}
 
-	saveInFs() {
-		const logs = this.getAllLogs();
+	async getLogFileContent({ logFilePath }) {
+		await fs.ensureFile(logFilePath);
 
-		for (const key of logs.keys()) {
-			const fileName = `${this._getLogName()}.log`;
-			const filePath = path.join('.local', 'logs', key, fileName);
-
-			fs.ensureFileSync(filePath);
-
-			const logs = this.getAllLogs().get(key);
-			const logsContent = logs ? logs.join('\n') : '';
-
-			const errors = this.getAllErrors().get(key);
-			const errorContent = errors ? errors.join('\n') : '';
-
-			fs.writeFile(filePath, logsContent + errorContent);
-		}
+		return (await fs.readFile(logFilePath)).toString();
 	}
 
-	async getLogFileContent({logFilePath}) {
-        await fs.ensureFile(logFilePath);
+	saveInFs({ logs, errors }) {
+		const fileName = `${this._getLogName()}.log`;
+		const filePath = path.join('.local', 'logs', fileName);
 
-        return (await fs.readFile(logFilePath)).toString();
+		fs.ensureFileSync(filePath);
+
+		const logsContent = logs ? logs.join('\n') : '';
+		const errorContent = errors ? errors.join('\n') : '';
+
+		fs.writeFile(filePath, logsContent + errorContent);
 	}
 
 	_getLogName() {

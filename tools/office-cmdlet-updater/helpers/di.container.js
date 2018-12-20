@@ -15,6 +15,7 @@ const GithubService = require('../services/github.service');
 const GithubController = require('../controllers/github.controller');
 const ModuleController = require('../controllers/module.controller');
 const ModuleService = require('../services/module.service');
+const LogsController = require('../controllers/logs.controller');
 
 module.exports = () => {
 	const container = awilix.createContainer({
@@ -48,7 +49,8 @@ module.exports = () => {
 	container.register({
 		moduleController: awilix.asClass(ModuleController),
 		cliController: awilix.asClass(CliController).singleton(),
-		githubController: awilix.asClass(GithubController).singleton()
+		githubController: awilix.asClass(GithubController).singleton(),
+		logsController: awilix.asClass(LogsController).singleton()
 	});
 
 	return container;

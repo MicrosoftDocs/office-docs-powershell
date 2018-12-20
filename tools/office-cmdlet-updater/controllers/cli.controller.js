@@ -3,12 +3,15 @@ class CliController {
 		cliService,
 		cmdletService,
 		powerShellService,
-		moduleController
+		moduleController,
+		logStoreService,
+		logsController
 	) {
 		this.cliService = cliService;
 		this.cmdletService = cmdletService;
 		this.powerShellService = powerShellService;
 		this.moduleController = moduleController;
+		this.logsController = logsController;
 	}
 	start(argv) {
 		try {
@@ -57,6 +60,13 @@ class CliController {
 			});
 
 			this.powerShellService.dispose();
+
+			const parsedLogs = this.logsController.saveAndParseLogs({
+				logs,
+				errors
+			});
+
+			console.log(parsedLogs);
 		});
 	}
 }

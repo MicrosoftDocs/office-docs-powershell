@@ -67,11 +67,11 @@ class ModuleController {
 			const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
 
 			if (!isNeedPullRequest) {
-				const cmdletTempPath = `${tempFolderPath}\\${shortId()}`;
+				const cmdletTempFolderPath = `${tempFolderPath}\\${shortId()}`;
 
 				cmdletPath = await this.cmdletService.copyMdInTempFolder(
 					cmdletPath,
-					cmdletTempPath
+					cmdletTempFolderPath
 				);
 			}
 
