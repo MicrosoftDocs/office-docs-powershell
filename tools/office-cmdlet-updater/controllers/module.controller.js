@@ -21,12 +21,12 @@ class ModuleController {
 	}
 
 	async execute({ cliModuleName, cliCmdletName, isNeedPullRequest }) {
-		const cmdlets = await this._getCmdletsAndInstallDependencies({
+		const modules = await this._getCmdletsAndInstallDependencies({
 			cliModuleName,
 			cliCmdletName
 		});
 
-		return this._getUpdateResult({ cmdlets, isNeedPullRequest });
+		return this._getUpdateResult({ modules, isNeedPullRequest });
 	}
 
 	async _installDependenciesForModules({ modules }) {
@@ -57,45 +57,47 @@ class ModuleController {
 		});
 	}
 
-	async _getUpdateResult({ cmdlets, isNeedPullRequest }) {
+	async _getUpdateResult({ modules, isNeedPullRequest }) {
 		const { tempFolderPath } = this.config.get('platyPS');
+		let moduleResults = [];
 
-		let logs = [],
-			errors = [];
+		for (let { cmdlets, module } of modules) {
+			let logs = [],
+				errors = [];
 
-		for (let cmdletPath of cmdlets) {
-			const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
+			for (let cmdletPath of cmdlets) {
+				const logFilePath = `${tempFolderPath}\\${shortId()}.log`;
 
-			if (!isNeedPullRequest) {
-				const cmdletTempFolderPath = `${tempFolderPath}\\${shortId()}`;
+				if (!isNeedPullRequest) {
+					const cmdletTempFolderPath = `${tempFolderPath}\\${shortId()}`;
 
-				cmdletPath = await this.cmdletService.copyMdInTempFolder(
+					cmdletPath = await this.cmdletService.copyMdInTempFolder(
+						cmdletPath,
+						cmdletTempFolderPath
+					);
+				}
+
+				const { logContent, err } = await this._updateCmdletMarkdown({
 					cmdletPath,
-					cmdletTempFolderPath
-				);
+					logFilePath
+				});
+
+				if (err) {
+					console.log(err);
+
+					errors = [...errors, err];
+					continue;
+				}
+
+				console.log(logContent);
+
+				logs = [...logs, logContent];
 			}
 
-			const { logContent, err } = await this._updateCmdletMarkdown({
-				cmdletPath,
-				logFilePath
-			});
-
-			if (err) {
-				console.log(err);
-
-				errors = [...errors, err];
-				continue;
-			}
-
-			console.log(logContent);
-
-			logs = [...logs, logContent];
+			moduleResults = [...moduleResults, { module, logs, errors }];
 		}
 
-		return {
-			logs,
-			errors
-		};
+		return moduleResults;
 	}
 
 	async _updateCmdletMarkdown({ cmdletPath, logFilePath }) {

@@ -63,9 +63,9 @@ class LogStoreService {
 		return (await fs.readFile(logFilePath)).toString();
 	}
 
-	saveInFs({ logs, errors }) {
+	saveInFs({ name, logs, errors }) {
 		const fileName = `${this._getLogName()}.log`;
-		const filePath = path.join('.local', 'logs', fileName);
+		const filePath = path.join('.local', 'logs', name, fileName);
 
 		fs.ensureFileSync(filePath);
 

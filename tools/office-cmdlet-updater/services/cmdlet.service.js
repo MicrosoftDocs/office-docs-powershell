@@ -22,19 +22,19 @@ class CmdletService {
 		let cmdletsArr = [];
 
 		for (let module of modules) {
-			const moduleCmdlets = await this.getModuleCmdlets({
+			const cmdlets = await this.getModuleCmdlets({
 				cliCmdletName,
 				ignoreFiles,
 				module
 			});
 
-			if (!moduleCmdlets.length) {
+			if (!cmdlets.length) {
 				throw new Error(
 					`Can't find cmdlets in module "${module.name}"`
 				);
 			}
 
-			cmdletsArr = [...cmdletsArr, ...moduleCmdlets];
+			cmdletsArr = [...cmdletsArr, { module: module.name, cmdlets }];
 		}
 
 		return cmdletsArr;

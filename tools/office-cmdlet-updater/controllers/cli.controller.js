@@ -53,7 +53,7 @@ class CliController {
 		this.cliService.start(argv, async (cli) => {
 			const { module, cmdlet } = cli;
 
-			const { logs, errors } = await this.moduleController.execute({
+			const moduleResults = await this.moduleController.execute({
 				cliModuleName: module,
 				cliCmdletName: cmdlet,
 				isNeedPullRequest: false
@@ -62,8 +62,7 @@ class CliController {
 			this.powerShellService.dispose();
 
 			const parsedLogs = this.logsController.saveAndParseLogs({
-				logs,
-				errors
+				moduleResults
 			});
 
 			console.log(parsedLogs);

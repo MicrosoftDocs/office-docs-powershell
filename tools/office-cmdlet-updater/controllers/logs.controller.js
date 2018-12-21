@@ -4,14 +4,22 @@ class LogsController {
 		this.logStoreService = logStoreService;
 	}
 
-	saveAndParseLogs({ logs, errors }) {
-		this._saveLogsIntoFs({ logs, errors });
+	saveAndParseLogs({ moduleResults }) {
+		let parsedModules = [];
 
-		return this._parseLogs({ logs });
+		for (let { module, logs, errors } of moduleResults) {
+			this._saveLogsIntoFs({ module, logs, errors });
+
+			const parsedLogs = this._parseLogs({ logs });
+
+			parsedModules = [...parsedModules, { module, parsedLogs }];
+		}
+
+		return parsedModules;
 	}
 
-	_saveLogsIntoFs({ logs, errors }) {
-		this.logStoreService.saveInFs({ logs, errors });
+	_saveLogsIntoFs({ module, logs, errors }) {
+		this.logStoreService.saveInFs({ name: module, logs, errors });
 	}
 
 	_parseLogs({ logs }) {
