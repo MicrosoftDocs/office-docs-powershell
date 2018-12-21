@@ -46,7 +46,6 @@
 		"tempFolderPath": ".\\.local\\temp"
 	},
 	"sendgrid": {
-		"sendMailNotification": false,
 		"apiKey": "<API_KEY>",
 		"emailSettings": {
 			"from": "no-replay@outlook.com",
@@ -57,20 +56,20 @@
 	"github": {
 		"token": "<TOKEN>",
 		"login": "<LOGIN>",
-		"password": "<PASSWORD>",
-		"name": "<NAME_FOR_COMMIT>",
-		"email": "<EMAIL_FOR_COMMIT>",
-		"commitMessage": "<COMMIT_NAME>",
-		"repositoryName": "<REPOSITORY_NAME>",
-		"repositoryLocalPath": "<REPOSITORY_LOCAL_PATH>",
-		"remoteBranch": "<REMOTE_BRANCH_FOR_PUSH>",
-		"head": "<HEAD>",
-		"base": "<BASE>",
+		"pass": "<PASSWORD>",
+		"name": "Bot",
+		"email": "bot@example.com",
+		"commitMessage": "Automatically created commit with cmdlets updates",
+		"repositoryName": "office-docs-powershell",
+		"repositoryLocalPath": "..\\..\\",
+		"remoteName": "origin",
+		"head": "refs/heads/tools",
+		"base": "refs/heads/tools",
 		"pullRequest": {
-			"title": "<TITLE>",
-			"body": "<BODY>",
-			"head": "<HEAD>",
-			"base": "<BASE>"
+			"title": "Automatically created commit with cmdlets updates",
+			"body": "Last cmdlets updates",
+			"head": "tools",
+			"base": "master"
 		}
 	}
 }

@@ -1,5 +1,5 @@
 class GithubController {
-	constructor({ config, gitService, githubService }) {
+	constructor(config, gitService, githubService) {
 		this.config = config;
 		this.gitService = gitService;
 		this.githubService = githubService;
@@ -20,9 +20,10 @@ class GithubController {
 
 		const repository = await this.gitService.openRepository({ path });
 		const id = await this.gitService.stageAllFiles({ repository });
+
 		await this.gitService.createCommit({ repository, commitMessage, id });
 		await this.gitService.pushCommit({
-			remoteBranch,
+			remoteName,
 			repository,
 			login,
 			pass,
@@ -33,6 +34,7 @@ class GithubController {
 		const githubRepository = this.githubService.openRepository({
 			repositoryName
 		});
+
 		this.githubService.createPullRequest({
 			repository: githubRepository,
 			...pullRequest,
