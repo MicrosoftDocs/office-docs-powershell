@@ -5,13 +5,15 @@ class CliController {
 		powerShellService,
 		moduleController,
 		logStoreService,
-		logsController
+		logsController,
+		notificationController
 	) {
 		this.cliService = cliService;
 		this.cmdletService = cmdletService;
 		this.powerShellService = powerShellService;
 		this.moduleController = moduleController;
 		this.logsController = logsController;
+		this.notificationController = notificationController;
 	}
 	start(argv) {
 		try {
@@ -50,8 +52,13 @@ class CliController {
 			}
 		});
 
+		this.cliService.addOption({
+			option: '-e --email',
+			description: 'send email notification'
+		});
+
 		this.cliService.start(argv, async (cli) => {
-			const { module, cmdlet } = cli;
+			const { module, cmdlet, email: isNeedEmail } = cli;
 
 			const moduleResults = await this.moduleController.execute({
 				cliModuleName: module,
@@ -61,11 +68,15 @@ class CliController {
 
 			this.powerShellService.dispose();
 
-			const parsedLogs = this.logsController.saveAndParseLogs({
+			const parsedModules = this.logsController.saveAndParseLogs({
 				moduleResults
 			});
 
-			console.log(parsedLogs);
+			if (isNeedEmail) {
+				this.notificationController.sendMailNotification({
+					parsedModules
+				});
+			}
 		});
 	}
 }
