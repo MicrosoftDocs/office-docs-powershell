@@ -31,7 +31,7 @@ NOTES:
   - If you are using Skype for Business Server, there are no built-in instances and you'll need to create one. Also, only the NotifySfBUsers property is available. Mode is not present
   - Instances with mode set to SfBWithTeamsCollab and SfBWithTeamsCollabAndMeetings are not yet fully functional. From a routing perspective, they will behave like SfBOnly mode.
 
-IMPORTANT: TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead. Do not use TeamsInteropPolicy.
+IMPORTANT: TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead. Do not use TeamsInteropPolicy. In addition, Legacy mode in TeamsUpgradePolicy has been retired.
 
 
 ## EXAMPLES
@@ -44,16 +44,6 @@ Identity       : Global
 Description    : Users can use either Skype for Business client or Teams client
 Mode           : Islands
 NotifySfbUsers : False
-
-Identity       : Tag:NoUpgrade
-Description    : Users can use either Skype for Business client or Teams client
-Mode           : Legacy
-NotifySfbUsers : False
-
-Identity       : Tag:NotifyForTeams
-Description    : Show notification of pending upgrade in Skype for Business client
-Mode           : Legacy
-NotifySfbUsers : True
 
 Identity       : Tag:UpgradeToTeams
 Description    : Use Teams Only
