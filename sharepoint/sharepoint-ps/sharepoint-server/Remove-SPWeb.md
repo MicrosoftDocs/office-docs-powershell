@@ -28,7 +28,7 @@ Deleting the top level Web site of a site collection causes the entire site coll
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPWeb http://sitename/subsite
+Remove-SPWeb http://sitename/subsite
 ```
 
 This example completely deletes a subsite.

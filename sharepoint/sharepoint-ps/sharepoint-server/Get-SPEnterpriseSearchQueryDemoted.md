@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$demotedRule = Get-SPEnterpriseSearchQueryDemoted -Identity http://somesite.com -SearchApplication 'Search Service Application'
-PS C:\>Remove-SPEnterpriseSearchQueryDemoted -Identity $demotedRule -SearchApplication 'Search Service Application'
+$demotedRule = Get-SPEnterpriseSearchQueryDemoted -Identity http://somesite.com -SearchApplication 'Search Service Application'
+Remove-SPEnterpriseSearchQueryDemoted -Identity $demotedRule -SearchApplication 'Search Service Application'
 ```
 
 This example obtains a reference to a site demotion rule for the URL http://somesite.com, and removes it.

@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web http://webUrl
-PS C:\>Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
+Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
@@ -39,7 +39,7 @@ This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
 ### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>$user = Get-SPUser -Identity "DomainA\JaneDoe" -Web http://webUrl
-PS C:\>Move-SPUser -Identity $user -NewAlias "DomainB\JaneDoe"
+Move-SPUser -Identity $user -NewAlias "DomainB\JaneDoe"
 ```
 
 This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\JaneDoe in DomainB with SID History enabled.
@@ -47,7 +47,7 @@ This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\
 ### ------------------EXAMPLE 3------------------ 
 ```
 C:\PS>$user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web http://webUrl
-PS C:\>Move-SPUser -Identity $user -NewAlias "i:0#.W|Domain\JaneSmith" -IgnoreSid
+Move-SPUser -Identity $user -NewAlias "i:0#.W|Domain\JaneSmith" -IgnoreSid
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith when using Windows Claims. `-IgnoreSid` must always be used with `Move-SPUser` when using a Claims Identity, such as Windows Claims.

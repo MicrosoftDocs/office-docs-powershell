@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$sitesub = Get-SPSiteSubscription http://my.contoso.com/
 
-PS C:\>Get-SPServiceContext $sitesub
+Get-SPServiceContext $sitesub
 ```
 
 This example returns the service context for a site in a hosted environment.

@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPTrustedSecurityTokenService -Identity FarmA
+Remove-SPTrustedSecurityTokenService -Identity FarmA
 ```
 
 This example removes the trusted security token issuer object named FarmA from the farm.

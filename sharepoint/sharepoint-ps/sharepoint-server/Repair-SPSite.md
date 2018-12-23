@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1---------------
 ```
-PS C:\>Repair-SPSite http://<site name>/sites/testsite
+Repair-SPSite http://<site name>/sites/testsite
 ```
 
 This example runs all the site collection health checks in repair mode on the http://\<site name\>/sites/testsite site collection.
@@ -39,7 +39,7 @@ This example runs all the site collection health checks in repair mode on the ht
 
 ### ------------EXAMPLE 2---------------
 ```
-PS C:\>Repair-SPSite http://<site name>/sites/testsite -Rule "ee967197-ccbe-4c00-88e4-e6fab81145e1"
+Repair-SPSite http://<site name>/sites/testsite -Rule "ee967197-ccbe-4c00-88e4-e6fab81145e1"
 ```
 
 This example runs just the "Missing Galleries Check" in repair mode on the http://\<site name\>/sites/testsite site collection.

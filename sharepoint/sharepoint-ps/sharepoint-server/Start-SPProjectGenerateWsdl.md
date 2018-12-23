@@ -24,7 +24,7 @@ Generates ASPX pages from WSDL files.
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>Start-SPProjectGenerateWsdl
+Start-SPProjectGenerateWsdl
 ```
 Generates ASPX files in C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\PSI from the pre-existing WSDL files.
 

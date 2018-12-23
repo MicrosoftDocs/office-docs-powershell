@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------- 
 ```
-PS C:\>Export-SPInfoPathAdministrationFiles -path d:\file.cab
+Export-SPInfoPathAdministrationFiles -path d:\file.cab
 ```
 
 This example saves all InfoPath form templates (.xsn files) and universal data connections (.udcx files) located on the SharePoint Central Administration Web site in a compressed cabinet file named file.cab.

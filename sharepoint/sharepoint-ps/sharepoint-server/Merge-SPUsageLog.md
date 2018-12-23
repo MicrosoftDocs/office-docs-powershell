@@ -31,7 +31,7 @@ This cmdlet requires PowerShell Remoting to be enabled.
 
 ### Example 1 
 ```
-PS C:\>Merge-SPUsageLog -Identity 'Timer Jobs' -Servers SPSERVER1
+Merge-SPUsageLog -Identity 'Timer Jobs' -Servers SPSERVER1
 ```
 
 Merges the Usage log for the Usage Definition 'Timer Jobs' from the specified server and outputs to the PowerShell console.

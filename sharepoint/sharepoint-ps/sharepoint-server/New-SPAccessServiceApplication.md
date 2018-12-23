@@ -32,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1---------------- 
 ```
-PS C:\>New-SPAccessServiceApplication -Name "MyAccessService" -SPIisWebServiceApplicationPool MyAppPool
+New-SPAccessServiceApplication -Name "MyAccessService" -SPIisWebServiceApplicationPool MyAppPool
 ```
 
 This example creates a new instance of Access Services named MyAccessService that runs under the application pool named MyAppPool.
 
 ### ------------EXAMPLE 2---------------- 
 ```
-PS C:\>New-SPAccessServiceApplication -Name "MyAccessService" -SPIisWebServiceApplicationPool MyAppPool -SessionsPerUserMax 25
+New-SPAccessServiceApplication -Name "MyAccessService" -SPIisWebServiceApplicationPool MyAppPool -SessionsPerUserMax 25
 ```
 
 This example creates a new instance of Access Services named MyAccessService that runs under the application pool named MyAppPool, which allows up to 25 sessions per user on each back end application server machine on which Access Services runs.

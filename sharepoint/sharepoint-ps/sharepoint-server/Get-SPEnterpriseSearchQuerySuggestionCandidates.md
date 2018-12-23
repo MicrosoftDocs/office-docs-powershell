@@ -28,8 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE------------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchQuerySuggestionCandidates -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchQuerySuggestionCandidates -SearchApplication $ssa
 ```
 
 This example returns popular search queries by using the search application contained in the variable $searchapp.

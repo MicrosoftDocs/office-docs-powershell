@@ -46,21 +46,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment
+Install-SPSolution -Identity contoso_solution.wsp -GACDeployment
 ```
 
 This example deploys the installed SharePoint solution contoso_solution.wsp in the farm and specifies that GAC can be deployed for the new SharePoint solution.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -AddtoLatestVersion $true
+Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -AddtoLatestVersion $true
 ```
 
 This example deploys the installed SharePoint solution contoso_solution.wsp in the farm within the latest version directories and specifies that global assembly cache (GAC) can be deployed for the new SharePoint solution.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-PS C:\>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -CompatibilityLevel {14,15}
+Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -CompatibilityLevel {14,15}
 ```
 
 This example deploys the installed SharePoint solution installs a previously added solution so it can be used correctly in both 14 and 15 mode site collections.

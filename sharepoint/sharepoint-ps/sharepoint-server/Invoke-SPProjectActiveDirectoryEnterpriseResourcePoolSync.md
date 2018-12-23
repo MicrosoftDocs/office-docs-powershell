@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE--------------------- 
 ```
-PS C:\>Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
+Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
 ```
 
 This example triggers an Active Directory Enterprise Resource Pool synchronization for the instance of Project Web App located at http://localhost/pwa.

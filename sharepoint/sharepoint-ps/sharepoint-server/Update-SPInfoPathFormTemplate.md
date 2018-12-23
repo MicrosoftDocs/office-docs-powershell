@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>Update-SPInfoPathFormTemplate
+Update-SPInfoPathFormTemplate
 ```
 
 This example updates InfoPath form templates on the entire farm.

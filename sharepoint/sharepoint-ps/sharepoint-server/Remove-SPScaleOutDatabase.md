@@ -32,7 +32,7 @@ C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplicatio
 
 C:\PS>$database = $databases[0]
 
-PS C:\>Remove-SPScaleOutDatabase -ServiceApplication $serviceApplication -Database $database
+Remove-SPScaleOutDatabase -ServiceApplication $serviceApplication -Database $database
 ```
 
 This example removes the specified scale-out database from the specified service application.

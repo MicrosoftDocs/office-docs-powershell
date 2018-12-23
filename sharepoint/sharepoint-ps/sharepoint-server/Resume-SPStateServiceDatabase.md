@@ -28,8 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------------
 ```
-PS C:\>$db = Get-SPStateServiceDatabase -Identity StateServceDbName
-PS C:\>Resume-SPStateServiceDatabase -Identity $db
+$db = Get-SPStateServiceDatabase -Identity StateServceDbName
+Resume-SPStateServiceDatabase -Identity $db
 ```
 
 This example resumes a paused state service database.

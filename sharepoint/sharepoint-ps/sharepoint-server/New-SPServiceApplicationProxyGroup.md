@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPServiceApplicationProxyGroup -Name RemoteProxyGroup
+New-SPServiceApplicationProxyGroup -Name RemoteProxyGroup
 ```
 
 This example creates a new service application proxy with the name RemoteProxyGroup.

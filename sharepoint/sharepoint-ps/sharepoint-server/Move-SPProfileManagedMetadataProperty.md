@@ -32,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE------------------ 
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Move-SPProfileManagedMetadataProperty -ProfileServiceApplicationProxy $proxy -Identity SPS-Interests -TermSetName Interests -AvailableForTagging
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Move-SPProfileManagedMetadataProperty -ProfileServiceApplicationProxy $proxy -Identity SPS-Interests -TermSetName Interests -AvailableForTagging
 ```
 
 This example moves values from the SPS-Interests property into a new term set called Interests and marks that term set as available for tagging.

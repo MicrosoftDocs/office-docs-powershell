@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------------
 ```
-PS C:\>Remove-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -RemoveData
+Remove-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -RemoveData
 ```
 
 This example deletes the service application and its database.

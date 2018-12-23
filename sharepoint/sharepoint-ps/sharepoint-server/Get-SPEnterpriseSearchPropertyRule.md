@@ -28,8 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName 'ContentTypeId' -Operator 'StartsWith'
-PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName 'ContentTypeId' -Operator 'StartsWith'
+$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
 ```
 
 This example returns a rule for the property "ContentTypeId", where the condition is that the property shall start with a specific value.

@@ -24,7 +24,7 @@ Do not use
 
 ### Example 1 
 ```
-PS C:\>Do not use
+Do not use
 ```
 
 Do not use

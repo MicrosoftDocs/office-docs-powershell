@@ -25,7 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE---------- 
 ```
-PS C:\>Get-SPSecureStoreSystemAccount
+Get-SPSecureStoreSystemAccount
 ```
 
 This example returns a list of user accounts for the secure store system.

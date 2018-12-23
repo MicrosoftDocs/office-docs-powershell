@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
-PS C:\>Reset-SPProjectPCSSettings -ServiceApplication $sa
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+Reset-SPProjectPCSSettings -ServiceApplication $sa
 ```
 
 This cmdlet resets the settings for the Project Calculation Engine that is running on a Project Server Service Application.

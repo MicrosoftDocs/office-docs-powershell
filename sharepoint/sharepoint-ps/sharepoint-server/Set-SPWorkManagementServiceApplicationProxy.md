@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE--------
 ```
-PS C:\>Set-SPWorkManagementServiceApplicationProxy -Identity "9187d901-e0e0-4509-b117-9eca20d3ead5" -DefaultProxyGroup
+Set-SPWorkManagementServiceApplicationProxy -Identity "9187d901-e0e0-4509-b117-9eca20d3ead5" -DefaultProxyGroup
 ```
 
 This example makes the Work Management service part of the default proxy group.

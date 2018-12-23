@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPSolution -Identity contoso_solution.wsp
+Remove-SPSolution -Identity contoso_solution.wsp
 ```
 
 This example removes the SharePoint solution contoso_solution.wsp.

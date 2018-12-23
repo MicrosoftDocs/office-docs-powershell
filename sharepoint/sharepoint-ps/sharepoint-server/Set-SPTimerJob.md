@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE------------------------
 ```
-PS C:\>Get-SPTimerJob job-recycle-bin-cleanup | Set-SPTimerJob -Schedule "weekly at sat 5:00"
+Get-SPTimerJob job-recycle-bin-cleanup | Set-SPTimerJob -Schedule "weekly at sat 5:00"
 ```
 
 This example sets the schedule to run the job-recylce-bin-cleanup timer job to weekly at sat 5:00.

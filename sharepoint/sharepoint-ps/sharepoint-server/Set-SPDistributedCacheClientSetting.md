@@ -30,9 +30,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$settings = Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
-PS C:\>$settings.MaxConnectionsToServer = 10
-PS C:\>Set-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache -DistributedCacheClientSettings $settings
+$settings = Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
+$settings.MaxConnectionsToServer = 10
+Set-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache -DistributedCacheClientSettings $settings
 ```
 
 This example updates the MaxConnectionsToServer to 10 for DistributedLogonTokenCache.

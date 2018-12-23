@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Restore-SPFarm -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -RestoreMethod new -ConfigurationOnly
+Restore-SPFarm -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -RestoreMethod new -ConfigurationOnly
 ```
 
 This example restores the configuration settings from the backup package in the \\\\file_server\share\Backup directory to the farm.
@@ -49,7 +49,7 @@ This example restores the configuration settings from the backup package in the 
 
 ### -------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Restore-SPFarm -ShowTree -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -Item "Microsoft SharePoint Foundation Web Application" -Verbose
+Restore-SPFarm -ShowTree -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example show which components of the farm would be restored under the Microsoft SharePoint Foundation Web Application node, but does not actually restore them.
@@ -57,7 +57,7 @@ This example show which components of the farm would be restored under the Micro
 
 ### -------------------EXAMPLE 3-----------------------
 ```
-PS C:\>Restore-SPFarm -Directory C:\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef  -RestoreMethod overwrite -RestoreThreads 10 -Force
+Restore-SPFarm -Directory C:\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef  -RestoreMethod overwrite -RestoreThreads 10 -Force
 ```
 
 This example restores a farm by using 10 threads and suppresses the overwrite warning.

@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-PS C:\>Get-SPCustomLayoutsPage -Identity '_layouts/accessdenied.aspx' -WebApplication 'http://webAppUrl'
+Get-SPCustomLayoutsPage -Identity '_layouts/accessdenied.aspx' -WebApplication 'http://webAppUrl'
 ```
 
 This example returns the mapping of the AccessDenied layout page in the Web application.

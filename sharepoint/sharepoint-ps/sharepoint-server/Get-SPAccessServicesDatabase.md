@@ -25,13 +25,13 @@ Returns an Access Services database.
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesDatabase -Identity https://apps-eec88dc5f597c6.contoso-apps.com/sites/team/accessApp
+Get-SPAccessServicesDatabase -Identity https://apps-eec88dc5f597c6.contoso-apps.com/sites/team/accessApp
 ```
 Using the App Web, this example returns the Access database named 'accessApp'.
 
 ### Example 2 
 ```
-PS C:\>Get-SPAccessServicesDatabase -ContentDb WSS_Content
+Get-SPAccessServicesDatabase -ContentDb WSS_Content
 ```
 This example returns all Access databases associated with sites in the content database, WSS_Content.
 

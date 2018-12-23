@@ -42,8 +42,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE---------
 ```
-PS C:\>$sa = New-SPTranslationServiceApplication -Name TranslationService -ApplicationPool 'SharePoint Web Services Default' -DatabaseServer Server1 -DatabaseName TranslationServiceDatabase
-PS C:\>New-SPTranslationServiceApplicationProxy -Name TranslationServiceProxy -ServiceApplication $sa -DefaultProxyGroup
+$sa = New-SPTranslationServiceApplication -Name TranslationService -ApplicationPool 'SharePoint Web Services Default' -DatabaseServer Server1 -DatabaseName TranslationServiceDatabase
+New-SPTranslationServiceApplicationProxy -Name TranslationServiceProxy -ServiceApplication $sa -DefaultProxyGroup
 ```
 
 This example creates a Machine Translation Service application and proxy in the default proxy group named TranslationServiceProxy.

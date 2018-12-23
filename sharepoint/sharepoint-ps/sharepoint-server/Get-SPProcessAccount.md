@@ -44,14 +44,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Get-SPProcessAccount -NetworkService
+Get-SPProcessAccount -NetworkService
 ```
 
 This example creates the SPProcessAccountPipeBind type by using the NetworkService account.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
+Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
 ```
 
 This example creates an SPServiceApplicationPool account by using the NetworkService account returned by the Get-SPProcessAccount cmdlet.

@@ -30,10 +30,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level SPWeb -SPWeb http://sharepoint/team
-PS C:\>[String]$rankmodel = Get-Content .\rankModel.xml
-PS C:\>New-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner -RankingModelXML $rankmodel
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$owner = Get-SPEnterpriseSearchOwner -Level SPWeb -SPWeb http://sharepoint/team
+[String]$rankmodel = Get-Content .\rankModel.xml
+New-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner -RankingModelXML $rankmodel
 ```
 
 This example creates a ranking model for the site http://sharepoint/team for the search service application Search Service Application from the file rankModel.xml which is stored in the current directory.

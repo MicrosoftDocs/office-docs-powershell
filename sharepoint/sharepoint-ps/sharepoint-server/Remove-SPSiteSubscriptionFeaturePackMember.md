@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$FS = Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a"
 
-PS C:\>Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
+Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
 ```
 
 This example removes the PublishingSite feature from the Feature set that has ID 30daa535-b0fe-4d10-84b0-fb04029d161a.
@@ -52,7 +52,7 @@ This example removes the PublishingSite feature from the Feature set that has ID
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
+Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
 ```
 
 This example removes all features from the Feature set 30daa535-b0fe-4d10-84b0-fb04029d161a.

@@ -42,7 +42,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Enable-SPFeature -identity "MyCustom" -URL http://somesite
+Enable-SPFeature -identity "MyCustom" -URL http://somesite
 ```
 
 This example enables the "MyCustom" site scoped SharePoint Feature at http://somesite.
@@ -50,7 +50,7 @@ This example enables the "MyCustom" site scoped SharePoint Feature at http://som
 ### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>$w = Get-SPWeb http://somesite/myweb | ForEach{ $_.URL }
-PS C:\>Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
+Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
 ```
 
 This example enables all SharePoint Features in the subsite at http://somesite/myweb.
