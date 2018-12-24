@@ -57,7 +57,7 @@ Accept pipeline input: True
 ```
 
 ### -List
-The list object, name or id where to update the field. If omited the field will be updated on the web.
+The list object, name or id where to update the field. If omitted the field will be updated on the web.
 
 ```yaml
 Type: ListPipeBind

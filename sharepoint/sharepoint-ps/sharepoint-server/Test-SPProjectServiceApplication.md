@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Test-SPProjectServiceApplication
 schema: 2.0.0
@@ -74,7 +74,7 @@ Valid rules are:
 
 All, CalcServiceWorkerState, QueueInFlightJobs, QueueServiceInternalState
 
-Project Server 2013 has this additonal rule which is not available in Project Server 2016, Project Server 2019:
+Project Server 2013 has this additional rule which is not available in Project Server 2016, Project Server 2019:
 
 QueueSiteCheck
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

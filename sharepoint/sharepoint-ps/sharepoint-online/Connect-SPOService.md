@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Connect-SPOService
 schema: 2.0.0
@@ -53,7 +53,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -credential admin@contoso.com
 ```
 
-Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com/.
+Example 1 shows how a SharePoint Online global administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
@@ -62,11 +62,18 @@ Example 1 shows how a SharePoint Online global administrator with credential adm
 $username = "admin@contoso.sharepoint.com"
 $password = "password"
 $cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(convertto-securestring $Password -asplaintext -force)
-Connect-SPOService -Url https://contoso-admin.sharepoint.com/ -Credential $cred
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -Credential $cred
 ```
 
-Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com/.
+Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com.
 
+### -----------------------EXAMPLE 3-----------------------------
+
+```
+Connect-SPOService -Url https://contoso-admin.sharepoint.com
+```
+
+Prompts for credentials. This is required if the account is using multi-factor authentication.
 
 ## PARAMETERS
 

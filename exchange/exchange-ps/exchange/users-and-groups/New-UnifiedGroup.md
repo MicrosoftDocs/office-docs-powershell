@@ -557,7 +557,7 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter specifies one or more owners for the Office 365 Group. Owners are group members who have certain privileges, such as the ability to edit group properties.
+The Owner parameter specifies the for the Office 365 Group. An owner is a group member who has certain privileges, such as the ability to edit group properties.
 
 The owner you specify for this parameter must be a mailbox or mail user (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
@@ -584,8 +584,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-You can specify multiple owners separated by commas
 
 ```yaml
 Type: RecipientIdParameter

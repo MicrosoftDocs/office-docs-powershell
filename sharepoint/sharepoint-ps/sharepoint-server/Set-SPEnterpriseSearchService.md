@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchService
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-SPEnterpriseSearchService [[-Identity] <SearchServicePipeBind>] [-Acknowledg
 ## DESCRIPTION
 This cmdlet updates properties of a search service for a farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
@@ -191,11 +191,9 @@ Accept wildcard characters: False
 ### -PerformanceLevel
 Specifies the relative number of threads for the indexer performance:
 
-Reduced: Total number of threads = number of processors, Max Threads/host =  number of processors
-
-Partly Reduced:  Total number of threads = 4 times the number of processors , Max Threads/host = 16 time the number of processors
-
-Maximum: Total number of threads = number of processors
+* Reduced: Total number of threads = number of processors.
+* Partly Reduced:  Total number of threads = 4 times the number of processors.
+* Maximum: Total number of threads = 16 times the number of processors.
 
 The type must be one of the following values: Reduced, PartlyReduced, or Maximum.
 
@@ -288,7 +286,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

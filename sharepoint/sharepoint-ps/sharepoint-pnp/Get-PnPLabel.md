@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPLabel
 
 ## SYNOPSIS
-Gets the label/tag of the specfied list or library (if applicable)
+Gets the label/tag of the specified list or library (if applicable)
 
 ## SYNTAX 
 

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: New-SPOMigrationEncryptionParameters
 schema: 2.0.0

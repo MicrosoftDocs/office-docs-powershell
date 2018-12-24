@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPProfileServiceApplication
 schema: 2.0.0
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-pecifies the User Profile Service application to update.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a user profile service application (for example, UserProfileServiceApp); or an instance of a valid SPServiceApplication object.
+Specifies the User Profile Service application to update.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a user profile service application (for example, UserProfileServiceApp); or an instance of a valid SPServiceApplication object.
 
 ```yaml
 Type: SPServiceApplicationPipeBind
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
