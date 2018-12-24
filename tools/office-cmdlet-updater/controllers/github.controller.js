@@ -5,7 +5,7 @@ class GithubController {
 		this.githubService = githubService;
 	}
 
-	async createPullRequest() {
+	async createPullRequest({ prBody, cb = () => {} }) {
 		const {
 			login,
 			pass,
@@ -19,7 +19,10 @@ class GithubController {
 		} = this.config.get('github');
 
 		const repository = await this.gitService.openRepository({ path });
-		const id = await this.gitService.stageAllFiles({ repository });
+		const id = await this.gitService.stageAllFiles({
+			filesMask: '*.md',
+			repository
+		});
 
 		await this.gitService.createCommit({ repository, commitMessage, id });
 		await this.gitService.pushCommit({
@@ -35,10 +38,13 @@ class GithubController {
 			repositoryName
 		});
 
+		const body = prBody || pullRequest.body;
+
 		this.githubService.createPullRequest({
 			repository: githubRepository,
 			...pullRequest,
-			cb: this._pullRequestCb
+			body,
+			cb
 		});
 	}
 

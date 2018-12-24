@@ -20,7 +20,7 @@ class ModuleController {
 		this.installedDependencies = [];
 	}
 
-	async execute({ cliModuleName, cliCmdletName, isNeedPullRequest }) {
+	async updateMarkdown({ cliModuleName, cliCmdletName, isNeedPullRequest }) {
 		const modules = await this._getCmdletsAndInstallDependencies({
 			cliModuleName,
 			cliCmdletName

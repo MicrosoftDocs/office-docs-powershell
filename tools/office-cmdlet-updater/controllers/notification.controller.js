@@ -6,22 +6,25 @@ class NotificationController {
 		this.config = config;
 	}
 
-	sendMailNotification({ parsedModules }) {
-		const mailText = this._generateMailText({ parsedModules });
-
+	sendMailNotification({ mailText }) {
 		this._sendMail({ mailText });
 	}
 
-	_generateMailText({ parsedModules }) {
+	generateMailText({ parsedModules }) {
 		let mailText = '';
 
 		for (let { module, parsedLogs } of parsedModules) {
-			const moduleText = this._generateMailTextForModule({
+			const {
+				isModuleChange,
+				moduleText
+			} = this._generateMailTextForModule({
 				parsedLogs,
 				module
 			});
 
-			mailText += moduleText;
+			if (isModuleChange) {
+				mailText += moduleText;
+			}
 		}
 
 		return mailText;
@@ -66,7 +69,10 @@ class NotificationController {
 			}
 		});
 
-		return logsContent.join('<br><br>');
+		return {
+			isModuleChange: logsContent.length > 1,
+			mailText: logsContent.join('<br><br>')
+		};
 	}
 
 	_sendMail({ mailText }) {

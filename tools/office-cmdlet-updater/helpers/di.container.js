@@ -15,6 +15,7 @@ const ModuleController = require('../controllers/module.controller');
 const ModuleService = require('../services/module.service');
 const LogsController = require('../controllers/logs.controller');
 const NotificationController = require('../controllers/notification.controller');
+const MarkdownController = require('../controllers/markdown.controller');
 
 module.exports = () => {
 	const container = awilix.createContainer({
@@ -50,7 +51,8 @@ module.exports = () => {
 		logsController: awilix.asClass(LogsController).singleton(),
 		notificationController: awilix
 			.asClass(NotificationController)
-			.singleton()
+			.singleton(),
+		markdownController: awilix.asClass(MarkdownController).singleton()
 	});
 
 	return container;

@@ -9,10 +9,10 @@ class GitService {
 		return await Repository.open(path);
 	}
 
-	async stageAllFiles({ repository }) {
+	async stageAllFiles({ repository, filesMask }) {
 		const index = await repository.index();
 
-		await index.addAll('*');
+		await index.addAll(filesMask);
 		await index.write();
 		return await index.writeTree();
 	}

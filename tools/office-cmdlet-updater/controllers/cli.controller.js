@@ -3,19 +3,12 @@ class CliController {
 		cliService,
 		cmdletService,
 		powerShellService,
-		moduleController,
-		logStoreService,
-		logsController,
-		notificationController,
-		githubController
+		markdownController
 	) {
 		this.cliService = cliService;
 		this.cmdletService = cmdletService;
+		this.markdownController = markdownController;
 		this.powerShellService = powerShellService;
-		this.moduleController = moduleController;
-		this.logsController = logsController;
-		this.notificationController = notificationController;
-		this.githubController = githubController;
 	}
 	start(argv) {
 		try {
@@ -55,44 +48,29 @@ class CliController {
 		});
 
 		this.cliService.addOption({
-			option: '-e --email',
+			option: '-e --send-email',
 			description: 'send email notification'
 		});
 
 		this.cliService.addOption({
-			option: '-p --pull-request',
+			option: '-p --create-pr',
 			description: 'create pull request'
 		});
 
 		this.cliService.start(argv, async (cli) => {
 			const {
-				module,
-				cmdlet,
-				email: isNeedEmail,
-				pullRequest: isNeedPullRequest
+				module: cliModuleName,
+				cmdlet: cliCmdletName,
+				sendEmail: isNeedEmail,
+				createPr: isNeedPullRequest
 			} = cli;
 
-			const moduleResults = await this.moduleController.execute({
-				cliModuleName: module,
-				cliCmdletName: cmdlet,
-				isNeedPullRequest
+			await this.markdownController.updateMarkdown({
+				cliModuleName,
+				cliCmdletName,
+				isNeedPullRequest,
+				isNeedEmail
 			});
-
-			this.powerShellService.dispose();
-
-			const parsedModules = this.logsController.saveAndParseLogs({
-				moduleResults
-			});
-
-			if (isNeedPullRequest) {
-				await this.githubController.createPullRequest();
-			}
-
-			if (isNeedEmail) {
-				this.notificationController.sendMailNotification({
-					parsedModules
-				});
-			}
 		});
 	}
 }
