@@ -4,7 +4,7 @@ class GithubService {
 	constructor(config) {
 		this.config = config;
 
-		const token = config.get('github');
+		const { token } = config.get('github');
 
 		this.client = client(token);
 	}
@@ -14,7 +14,15 @@ class GithubService {
 	}
 
 	createPullRequest({ repository, title, body, head, base, cb }) {
-		repository.pr({ title, body, head, base }, cb);
+		this.client.limit((err, left) => {
+			if (!left) {
+				console.log('Achieved GitHub token limit');
+
+				return;
+			}
+
+			repository.pr({ title, body, head, base }, cb);
+		});
 	}
 }
 
