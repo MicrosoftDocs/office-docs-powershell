@@ -3,11 +3,6 @@ const { Repository, Reference, Signature, Cred } = require('nodegit');
 class GitService {
 	constructor(config) {
 		this.config = config;
-
-		const { name, email } = this.config.get('github');
-
-		this.author = Signature.create(name, email, new Date().getTime(), 60);
-		this.commiter = Signature.create(name, email, new Date().getTime(), 90);
 	}
 
 	async openRepository({ path }) {
@@ -23,13 +18,18 @@ class GitService {
 	}
 
 	async createCommit({ repository, commitMessage, id }) {
+		const { name, email } = this.config.get('github');
+
+		const author = Signature.now(name, email);
+		const commiter = Signature.now(name, email);
+
 		const commitHead = await Reference.nameToId(repository, 'HEAD');
 		const parentCommit = await repository.getCommit(commitHead);
 
 		return await repository.createCommit(
 			'HEAD',
-			this.author,
-			this.commiter,
+			author,
+			commiter,
 			commitMessage,
 			id,
 			[parentCommit]
