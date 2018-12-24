@@ -129,5 +129,8 @@ For more information, see [about_CommonParameters](http://go.microsoft.com/fwlin
 
 ### System.Object
 ## NOTES
+Run the bootstrapper to get the changed configuration applied:
+"C:\Program Files\Skype for Business Server 2015\Deployment\Bootstrapper.exe"
+
 
 ## RELATED LINKS
