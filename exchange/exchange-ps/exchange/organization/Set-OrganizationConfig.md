@@ -40,6 +40,7 @@ Set-OrganizationConfig
  [-ConnectorsEnabledForTeams <$true | $false>]
  [-ConnectorsEnabledForYammer <$true | $false>]
  [-CustomerLockboxEnabled <$true | $false>]
+ [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
@@ -848,6 +849,29 @@ Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultAuthenticationPolicy
+The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication.
+
+```yaml
+Type: AuthPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
