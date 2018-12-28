@@ -19,7 +19,7 @@ Test-PnPTenantTemplate -Template <ProvisioningHierarchy>
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Test-PnPProvisioningHierarchy -Hierarchy $myhierarchy
+Test-PnPTenantTemplate -Template $myTemplate
 ```
 
 Checks for valid template references
