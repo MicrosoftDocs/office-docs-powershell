@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPWorkManagementServiceApplicationProxy
 
 ## SYNOPSIS
-Creates a new service application proxy group.
+Creates a new Work Management Service application proxy.
 
 
 ## SYNTAX
