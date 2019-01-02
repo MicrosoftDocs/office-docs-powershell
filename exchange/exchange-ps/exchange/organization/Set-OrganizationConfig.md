@@ -2293,7 +2293,9 @@ Accept wildcard characters: False
 ### -WACDiscoveryEndpoint
 This parameter is available only in on-premises Exchange.
 
-This parameter is reserved for internal Microsoft use.
+The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes in the organization. For example, https://oos.internal.contoso.com/hosting/discovery.
+
+Office Online Server enables users to view supported file attachments in Outlook on the web (formerly known as Outlook Web App).
 
 ```yaml
 Type: String
