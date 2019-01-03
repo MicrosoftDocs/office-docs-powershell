@@ -31,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa
 ```
 
 This example retrieves the metadata category collection of a search service application for the default search service application.

@@ -27,14 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPStateServiceApplication
+Get-SPStateServiceApplication
 ```
 
 This example displays all state service applications in the farm.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPStateServiceApplication -Identity "StateServiceApp1"
+Get-SPStateServiceApplication -Identity "StateServiceApp1"
 ```
 
 This example displays a specific state service application in the farm.

@@ -31,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchLinksDatabase -DatabaseName LinksDB_1 -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchLinksDatabase -DatabaseName LinksDB_1 -SearchApplication $ssa
 ```
 
 This example adds a new links database LinksDB_1 to the search service application.

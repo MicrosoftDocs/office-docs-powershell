@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE-----------------
 ```
-PS C:\>Get-SPServiceApplication -Name WordServices1 | Set-SPWordConversionServiceApplication -TimerJobFrequency 30
+Get-SPServiceApplication -Name WordServices1 | Set-SPWordConversionServiceApplication -TimerJobFrequency 30
 ```
 
 This example sets the timer job frequency of the WordServices1 application to 30 minutes.

@@ -28,7 +28,7 @@ Note: Consider using the cmdlet `Register-SPWorkflowService` instead which binds
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWorkflowServiceApplicationProxy
+New-SPWorkflowServiceApplicationProxy
 ```
 
 Creates a Workflow Service Application Proxy.

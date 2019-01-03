@@ -35,7 +35,7 @@ C:\PS>$source = Get-SPSite "http://source/"
 
 C:\PS>$credentials=Get-Credential
 
-PS C:\>New-SPContentDeploymentPath -Name "Deployment Path" -SourceSPWebApplication $source.WebApplication -SourceSPSite $source DestinationCentralAdministrationURL "http://destination:8080" -DestinationSPWebApplication "http://destination" -DestinationSPSite "http://destination" -KeepTemporaryFilesOptions "Failure" -PathAccount $credentials -PathEnabled:$true
+New-SPContentDeploymentPath -Name "Deployment Path" -SourceSPWebApplication $source.WebApplication -SourceSPSite $source DestinationCentralAdministrationURL "http://destination:8080" -DestinationSPWebApplication "http://destination" -DestinationSPSite "http://destination" -KeepTemporaryFilesOptions "Failure" -PathAccount $credentials -PathEnabled:$true
 ```
 
 This example creates a new deployment path called Deployment Path that connects a source at http://source to a destination at http://destination.

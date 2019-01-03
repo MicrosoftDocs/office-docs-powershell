@@ -31,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------EXAMPLE----------------- 
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Get-SPProfileLeader -ProfileServiceApplicationProxy $proxy
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Get-SPProfileLeader -ProfileServiceApplicationProxy $proxy
 ```
 
 This example returns a company leader from the specific user profile service application as indicated by the variable, $upaProxy.

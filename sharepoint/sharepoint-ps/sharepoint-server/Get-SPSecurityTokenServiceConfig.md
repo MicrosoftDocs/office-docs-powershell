@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Set-SPSecurityTokenServiceConfig -ServiceTokenLifetime 1000
+Set-SPSecurityTokenServiceConfig -ServiceTokenLifetime 1000
 ```
 
 This example gets the security token service (STS) for the farm and sets the expiration for the service token cache to 1000 minutes.

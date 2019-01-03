@@ -52,14 +52,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1------------ 
 ```
-PS C:\>Get-SPContentDatabase -WebApplication http://webAppUrl
+Get-SPContentDatabase -WebApplication http://webAppUrl
 ```
 
 This example returns all content databases used by the sitename Web application.
 
 ### ----------------EXAMPLE 2------------ 
 ```
-PS C:\>Get-SPContentDatabase -Site http://siteUrl
+Get-SPContentDatabase -Site http://siteUrl
 ```
 
 This example returns the content database that contains the site collection at http://siteUrl.

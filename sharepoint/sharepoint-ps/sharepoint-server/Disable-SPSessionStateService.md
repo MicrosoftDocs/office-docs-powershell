@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Disable-SPSessionStateService
+Disable-SPSessionStateService
 ```
 
 This example turns off ASP.NET session state on the farm.

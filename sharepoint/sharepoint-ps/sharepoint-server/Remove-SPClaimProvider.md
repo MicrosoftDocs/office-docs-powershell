@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove - SPClaimProvider -Identity "12345678-90ab-cdef-1234-567890bcdefgh"
+Remove - SPClaimProvider -Identity "12345678-90ab-cdef-1234-567890bcdefgh"
 ```
 
 This example removes a claim provider from the farm

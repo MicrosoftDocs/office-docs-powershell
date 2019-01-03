@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>Get-SPEnterpriseSearchOwner -Level SPSite
+Get-SPEnterpriseSearchOwner -Level SPSite
 ```
 
 This example shows how to retrieve the tenant owner of a search object at the SPSite level.

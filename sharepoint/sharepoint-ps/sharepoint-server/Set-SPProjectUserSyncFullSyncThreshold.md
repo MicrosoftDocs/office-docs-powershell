@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPProjectUserSyncFullSyncThreshold -URL http://contoso-AppSrv/ -Threshold 800
+Set-SPProjectUserSyncFullSyncThreshold -URL http://contoso-AppSrv/ -Threshold 800
 ```
 
 This example sets the full user sync threshold for the Project Web App instance at http//contoso-AppSrv/PWA to 800.

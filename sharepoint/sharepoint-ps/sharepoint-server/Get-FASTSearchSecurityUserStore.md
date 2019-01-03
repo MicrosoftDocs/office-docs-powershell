@@ -25,14 +25,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityUserStore -Identity ln1
+Get-FASTSearchSecurityUserStore -Identity ln1
 ```
 
 This example gets the user store with an identity of "ln1".
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchSecurityUserStore
+Get-FASTSearchSecurityUserStore
 ```
 
 This example gets a list of all user stores.

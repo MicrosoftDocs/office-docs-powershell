@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>Sync-SPProjectPermissions -Url http://pwa_site -Type Full
+Sync-SPProjectPermissions -Url http://pwa_site -Type Full
 ```
 
 Performs a full sync against the PWA site http://pwa_site.

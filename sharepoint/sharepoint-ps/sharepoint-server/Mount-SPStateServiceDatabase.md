@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost"
+Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost"
 ```
 
 This example associates a SharePoint Server farm with a SQL Server database.
@@ -39,7 +39,7 @@ The database cannot be used until the Initialize-SPStateServiceDatabase cmdlet i
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost" -ServiceApplication "ServiceApp1" -Weight 10 | Initialize-SPStateServiceDatabase
+Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost" -ServiceApplication "ServiceApp1" -Weight 10 | Initialize-SPStateServiceDatabase
 ```
 
 This example associates a SharePoint Server farm with a SQL Server database, at the same time that it also associates the database with a service application and gives a weight of 10.

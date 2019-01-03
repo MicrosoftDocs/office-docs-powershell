@@ -28,9 +28,9 @@ Use the Clear-SPServerScaleOutDatabaseLog cmdlet clears all scale-out logs in th
 
 ### -----------EXAMPLE------- 
 ```
-PS C:\>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-PS C:\>$database = $databases[0]
-PS C:\>Clear-SPServerScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+Clear-SPServerScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
 ```
 
 This example removes all scale-out log entries in the first scale-out database of the specified service application unless there is a scale-out log entry which is more recent than 30 minutes.

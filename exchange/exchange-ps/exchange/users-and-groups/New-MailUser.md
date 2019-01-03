@@ -522,7 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-This parameter is avaialble only in the cloud-based service
+This parameter is available only in the cloud-based service
 
 This parameter is reserved for internal Microsoft use.
 

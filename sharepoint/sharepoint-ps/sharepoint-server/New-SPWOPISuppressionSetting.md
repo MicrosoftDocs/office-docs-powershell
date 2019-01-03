@@ -30,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
-PS C:\>New-SPWOPISuppressionSetting -Extension "XLS" -Action "view"
+New-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+New-SPWOPISuppressionSetting -Extension "XLS" -Action "view"
 ```
 
 This example turns off the ability of a user to use Office Web Apps to view Excel workbooks that have file name extensions ".xlsx" or ".xls".

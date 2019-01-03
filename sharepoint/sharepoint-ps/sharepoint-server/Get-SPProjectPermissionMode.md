@@ -25,7 +25,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------EXAMPLE 1------------------- 
 ```
-PS C:\>Get-SPProjectPermissionMode -Url http://AppServer/pwa
+Get-SPProjectPermissionMode -Url http://AppServer/pwa
 ```
 
 This example returns the permission mode setting for a PWA instance.

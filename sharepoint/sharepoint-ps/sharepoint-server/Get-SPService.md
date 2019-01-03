@@ -24,7 +24,7 @@ The Get-SPService cmdlet gets a service in the farm.
 
 ### Example 1 
 ```
-PS C:\>Get-SPService -Identity 'Microsoft SharePoint Server Diagnostics Service'
+Get-SPService -Identity 'Microsoft SharePoint Server Diagnostics Service'
 ```
 
 This example gets the Microsoft SharePoint Server Diagnostics Service in the farm.

@@ -28,14 +28,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchMetadataRankProfile -Name newdefault
+Get-FASTSearchMetadataRankProfile -Name newdefault
 ```
 
 This example retrieves the rank profile named "newdefault".
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchMetadataRankProfile -Name *?default
+Get-FASTSearchMetadataRankProfile -Name *?default
 ```
 
 This example retrieves all rank profiles that match the pattern "*?default".

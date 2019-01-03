@@ -26,7 +26,7 @@ Use the **Remove-SPApplicationCredentialKey** cmdlet to remove the application c
 
 ### EXAMPLE 
 ```powershell
-PS C:\> Remove-SPApplicationCredentialKey -Confirm:$false
+ Remove-SPApplicationCredentialKey -Confirm:$false
 ```
 This example removes the application credential key from the local server without prompting for user confirmation.
 

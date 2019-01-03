@@ -25,7 +25,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSpelltuningStatus
+Get-FASTSearchSpelltuningStatus
 ```
 
 ## PARAMETERS

@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Receive-SPServiceApplicationConnectionInfo -FarmUrl http://FarmB/topology/topology.svc
+Receive-SPServiceApplicationConnectionInfo -FarmUrl http://FarmB/topology/topology.svc
 ```
 
 This example retreives a list of service applications published by a given farm.

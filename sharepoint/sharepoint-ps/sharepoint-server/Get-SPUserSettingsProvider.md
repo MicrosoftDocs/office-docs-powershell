@@ -37,7 +37,7 @@ C:\PS>$site = Get-SPSite -Identity http://someserver
 
 C:\PS>$user = $site.RootWeb.CurrentUser
 
-PS C:\>ctx = $provider.GetProviderContext($user)
+ctx = $provider.GetProviderContext($user)
 
 C:\PS>$provider.GetUserRegionalSettings($ctx,$user)
 ```

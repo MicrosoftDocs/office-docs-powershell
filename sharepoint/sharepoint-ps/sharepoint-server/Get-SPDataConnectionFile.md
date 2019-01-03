@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1-------------- 
 ```
-PS C:\>Get-SPDataConnectionFile
+Get-SPDataConnectionFile
 ```
 
 This example lists the Identity, DisplayName, and WebAccessible properties ofeach .udcx file.
@@ -41,7 +41,7 @@ This example lists the Identity, DisplayName, and WebAccessible properties of th
 
 ### ---------------EXAMPLE 3-------------- 
 ```
-PS C:\>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}
+Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}
 ```
 
 This example lists the Identity, DisplayName, and WebAccessible properties of all .udcx files with the specified Category.

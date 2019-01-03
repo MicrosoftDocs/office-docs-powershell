@@ -44,42 +44,42 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPLogEvent -MinimumLevel "Warning"
+Get-SPLogEvent -MinimumLevel "Warning"
 ```
 
 This example returns all log entries equal to or more severe than Warning from the default log directory.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPLogEvent -Directory "C:\Logs" | Where-Object {$_.Level -eq "Warning"}
+Get-SPLogEvent -Directory "C:\Logs" | Where-Object {$_.Level -eq "Warning"}
 ```
 
 This example returns all warning entries from log files in the C:\Logs directory.
 
 ### --------------EXAMPLE 3-----------------
 ```
-PS C:\>Get-SPLogEvent -StartTime "12/04/2007 17:00" -EndTime "12/04/2007 18:00"
+Get-SPLogEvent -StartTime "12/04/2007 17:00" -EndTime "12/04/2007 18:00"
 ```
 
 This example returns error entries that occurred during a particular time range, which is culture-specific to the United States.
 
 ### --------------EXAMPLE 4----------------- 
 ```
-PS C:\>Get-SPLogEvent -ContextKey @("UserName" ,"SiteName")
+Get-SPLogEvent -ContextKey @("UserName" ,"SiteName")
 ```
 
 This example returns the contents of the most recent log file and adds the specified context key data.
 
 ### --------------EXAMPLE 5----------------- 
 ```
-PS C:\>Get-SPLogEvent | Where-Object {$_.Level -eq "Error" -and {$_.Area -eq "SharePoint Foundation "}
+Get-SPLogEvent | Where-Object {$_.Level -eq "Error" -and {$_.Area -eq "SharePoint Foundation "}
 ```
 
 This example returns all error entries related to SharePoint Foundation.
 
 ### --------------EXAMPLE 6----------------- 
 ```
-PS C:\>Get-SPLogEvent -ContextKey @("Name") | %{$_.ToString() + "'t" + $_.Context["Name"]}
+Get-SPLogEvent -ContextKey @("Name") | %{$_.ToString() + "'t" + $_.Context["Name"]}
 ```
 
 This example returns the contents of the log file and adds context data.

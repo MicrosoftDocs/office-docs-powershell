@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE--------- 
 ```
-PS C:\>Clear-SPScaleOutDatabaseTenantData -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
+Clear-SPScaleOutDatabaseTenantData -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
 ```
 
 This example clears all data related to the site subscription with id 5CAF2F99-A75F-4239-B9CD-7FE63D1CE904 from the specified service application.

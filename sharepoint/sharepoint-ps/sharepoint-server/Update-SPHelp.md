@@ -29,20 +29,20 @@ Note: This cmdlet currently does not update cmdlet help.
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Update-SPHelp
+Update-SPHelp
 ```
 Updates SharePoint cmdlet help.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>Update-SPHelp -Force
+Update-SPHelp -Force
 ```
 
 This example over-rides the throttling logic and checks for updates to the help files even if a check was made in the last 24 hours.
 
 ### --------------------EXAMPLE 3---------------------
 ```
-PS C:\>Update-SPHelp -Verbose
+Update-SPHelp -Verbose
 ```
 
 This example checks for updates to the help files and provides detailed feedback for each step of the process.

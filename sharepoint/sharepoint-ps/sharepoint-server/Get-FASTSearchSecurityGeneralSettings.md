@@ -37,7 +37,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityGeneralSettings | fl
+Get-FASTSearchSecurityGeneralSettings | fl
 ```
 
 This example retrieves the configuration setting for all the general security settings and formats the information as a list.
