@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE--------------------- 
 ```
-PS C:\>Get-SPTimerJob job-ceip-datacollection | Enable-SPTimerJob
+Get-SPTimerJob job-ceip-datacollection | Enable-SPTimerJob
 ```
 
 This example enables the timer job named job-ceip-datacollection.

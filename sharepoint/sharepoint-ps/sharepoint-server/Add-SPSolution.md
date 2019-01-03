@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Add-SPSolution -LiteralPath c:\contoso_solution.wsp
+Add-SPSolution -LiteralPath c:\contoso_solution.wsp
 ```
 
 This example adds the SharePoint solution in the file contoso_solution.wsp to the farm.

@@ -41,8 +41,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$sa = New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
-PS C:\>New-ProfileServiceApplicationProxy -Name 'User Profile Service Application Proxy' -ServiceApplication $sa -DefaultProxyGroup
+$sa = New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
+New-ProfileServiceApplicationProxy -Name 'User Profile Service Application Proxy' -ServiceApplication $sa -DefaultProxyGroup
 ```
 
 This example creates a new User Profile Service application proxy.

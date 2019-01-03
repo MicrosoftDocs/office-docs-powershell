@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE--------------------
 ```
-PS C:\>Remove-SPTrustedIdentityTokenIssuer "LiveIDSTS"
+Remove-SPTrustedIdentityTokenIssuer "LiveIDSTS"
 ```
 
 This example removes an identity provider named LiveIDSTS from the farm.

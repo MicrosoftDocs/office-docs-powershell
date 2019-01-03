@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPAppStoreWebServiceConfiguration -Client=SP -ProxyVersion=16.1
+Set-SPAppStoreWebServiceConfiguration -Client=SP -ProxyVersion=16.1
 ```
 
 This example set the product type and version for a SharePoint Store app.

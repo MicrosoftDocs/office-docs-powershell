@@ -30,12 +30,12 @@ Use the Clear-SPServerScaleOutDatabaseDeletedDataSubRange cmdlet to clear all pa
 
 ### --------------EXAMPLE-------------- 
 ```
-PS C:\>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-PS C:\>$database = $databases[0]
-PS C:\>$state = Get-SPServerScaleOutDatabaseDataState -Database $database
-PS C:\>Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode Deleted -IsUpperSubRange $false
-PS C:\>$state = Get-SPServerScaleOutDatabaseDataState -Database $database
-PS C:\>Clear-SPServerScaleOutDatabaseDeletedDataSubRange -Database $database -Range $state.Range -IsUpperSubRange $false
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+$state = Get-SPServerScaleOutDatabaseDataState -Database $database
+Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode Deleted -IsUpperSubRange $false
+$state = Get-SPServerScaleOutDatabaseDataState -Database $database
+Clear-SPServerScaleOutDatabaseDeletedDataSubRange -Database $database -Range $state.Range -IsUpperSubRange $false
 ```
 
 This example creates a deleted subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.

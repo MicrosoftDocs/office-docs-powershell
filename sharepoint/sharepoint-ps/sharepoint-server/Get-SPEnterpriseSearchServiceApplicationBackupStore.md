@@ -33,14 +33,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -BackupId 3222ad97-91ad-471f-a764-780ec1f05f74
+Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -BackupId 3222ad97-91ad-471f-a764-780ec1f05f74
 ```
 
 This example retrieves the backup of the search databases and index files that are located at \\\\sample\backup with the backup id 3222ad97-91ad-471f-a764-780ec1f05f74 from the search service application Search Service Application.
 
 ### ------------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -UseMostRecent
+Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -UseMostRecent
 ```
 
 This example retrieves the most recently taken backup of the search databases and index files that are located at \\\\sample\backup from the search service application Search Service Application.

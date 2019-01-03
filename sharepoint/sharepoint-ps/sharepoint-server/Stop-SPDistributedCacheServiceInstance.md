@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------ Example 1 ----------
 ```
-PS C:\>
+
 ```
 Please see referenced article instead of using this cmdlet directly.
 

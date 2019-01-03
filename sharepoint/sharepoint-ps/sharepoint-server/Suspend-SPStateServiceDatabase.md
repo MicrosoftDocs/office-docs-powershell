@@ -27,8 +27,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>$db = Get-SPStateServiceDatabase
-PS C:\>Suspend-SPStateServiceDatabase -Identity $db
+$db = Get-SPStateServiceDatabase
+Suspend-SPStateServiceDatabase -Identity $db
 ```
 
 This example suspends a specified state service database.

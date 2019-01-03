@@ -38,7 +38,7 @@ Typically the following information is displayed:
 
 ### Example 1 
 ```
-PS C:\>Get-SPSiteMaster -ContentDatabase WSS_Content
+Get-SPSiteMaster -ContentDatabase WSS_Content
 ```
 
 This example returns the site master in the database WSS_Content.

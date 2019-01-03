@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPSessionStateService -SessionTimeout 120
+Set-SPSessionStateService -SessionTimeout 120
 ```
 
 This example changes the ASP.NET session state time-out to 2 hours.

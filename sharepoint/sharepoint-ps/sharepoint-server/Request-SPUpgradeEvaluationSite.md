@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>$site=Get-SPSite https://contoso.com/sites/TeamSite1
-PS C:\>Request-SPUpgradeEvaluationSite $site -NoUpgrade -Email
+$site=Get-SPSite https://contoso.com/sites/TeamSite1
+Request-SPUpgradeEvaluationSite $site -NoUpgrade -Email
 ```
 
 This example requests an upgrade evaluation site the specified contoso.com team site.

@@ -30,7 +30,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityCompleteGroupExpansion -Identity ln1 -User user1
+Get-FASTSearchSecurityCompleteGroupExpansion -Identity ln1 -User user1
 ```
 
 This example retrieves complete group expansion information for "user1" in the user store "ln1", showing all equivalent users and groups in all user stores, by finding all parents and processing all aliaser mappings.

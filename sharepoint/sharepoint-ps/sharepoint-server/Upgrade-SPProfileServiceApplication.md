@@ -24,8 +24,8 @@ Upgrades User Profile Service and its related profile and social store.
 
 ### -----------EXAMPLE---------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
-PS C:\>Upgrade-SPProfileServiceApplication $sa
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
+Upgrade-SPProfileServiceApplication $sa
 ```
 
 This example upgrades the specified user profile service application.

@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPEnterpriseSearchCrawlDatabase -Identity CrawlDB-0
+Remove-SPEnterpriseSearchCrawlDatabase -Identity CrawlDB-0
 -SearchApplication mySearchServiceApp
 ```
 

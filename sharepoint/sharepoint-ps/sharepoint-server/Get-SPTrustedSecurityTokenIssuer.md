@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE---------- 
 ```
-PS C:\>Get-SPTrustedSecurityTokenService
+Get-SPTrustedSecurityTokenService
 ```
 
 This example displays all trusted security token service objects from the farm.

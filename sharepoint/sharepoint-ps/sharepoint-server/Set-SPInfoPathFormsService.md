@@ -35,14 +35,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-PS C:\>Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
+Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
 ```
 
 This example modifies the AllowUserFormBrowserEnabling and AllowUserFormBrowserRendering parameter values.
 
 ### --------------EXAMPLE 2-----------------
 ```
-PS C:\>Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
+Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
 ```
 
 This example modifies the AllowViewState and ViewStateThreshold parameter values.

@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE--------- 
 ```
-PS C:\>Clear-SPAppDeniedEndpoint
+Clear-SPAppDeniedEndpoint
 ```
 
 This example removes all app-denied endpoints from the farm.

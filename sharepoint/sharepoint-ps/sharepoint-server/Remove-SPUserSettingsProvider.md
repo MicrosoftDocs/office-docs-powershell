@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPUserSettingsProvider -Identity "234bf0ed-70db-4158-a332-4dfd683b4148"
+Remove-SPUserSettingsProvider -Identity "234bf0ed-70db-4158-a332-4dfd683b4148"
 ```
 
 This example removes a specific User Settings Provider by using the GUID, 234bf0ed-70db-4158-a332-4dfd683b4148.

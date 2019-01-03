@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1 
 ```
-PS C:\>Get-SPExcelBlockedFileType -ExcelServiceApplication 'Excel Service Application'
+Get-SPExcelBlockedFileType -ExcelServiceApplication 'Excel Service Application'
 ```
 
 This example retrieves all blocked file types for the service application named 'Excel Service Application'.

@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE------------- 
 ```
-PS C:\>Get-SPUserLicensing
+Get-SPUserLicensing
 ```
 
 This example returns the state of user-license enforcement on the SharePoint farm.

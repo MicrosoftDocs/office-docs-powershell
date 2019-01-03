@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Disable-SPSingleSignOn myOldSSO -ServerName CONTOSO
+Disable-SPSingleSignOn myOldSSO -ServerName CONTOSO
 ```
 
 This example turns off the SSO Service on the server named CONTOSO.

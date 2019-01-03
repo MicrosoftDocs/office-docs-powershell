@@ -28,7 +28,7 @@ Set-SPAccessServicesApplication [-Identity] <SPServiceApplicationPipeBind>
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+ {{ Add example code here }}
 ```
 
 {{ Add example description here }}

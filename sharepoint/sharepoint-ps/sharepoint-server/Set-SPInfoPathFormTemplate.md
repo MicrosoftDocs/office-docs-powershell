@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>Set-InfoPathFormTemplate -Identity "Sample.xsn" -Category "WorkFlowCategory"
+Set-InfoPathFormTemplate -Identity "Sample.xsn" -Category "WorkFlowCategory"
 ```
 
 This example modifies the category property of a form template for a specified name.

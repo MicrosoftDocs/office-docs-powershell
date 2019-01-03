@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Initialize-SPResourceSecurity
+Initialize-SPResourceSecurity
 ```
 
 This example enforces resource security on the local server.

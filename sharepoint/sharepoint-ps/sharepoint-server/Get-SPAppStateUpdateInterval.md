@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE------- 
 ```
-PS C:\>Get-SPAppStateUpdateInterval
+Get-SPAppStateUpdateInterval
 ```
 
 This example returns the app state update timer job invocation interval in hours.

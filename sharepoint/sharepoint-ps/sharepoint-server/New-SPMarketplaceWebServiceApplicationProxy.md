@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>New-SPMarketplaceWebServiceApplicationProxy -Name ApplicationIdentityData -ServiceEndpointUri http://server:7800/ApplicationIdentityData.svc -DefaultProxyGroup
+New-SPMarketplaceWebServiceApplicationProxy -Name ApplicationIdentityData -ServiceEndpointUri http://server:7800/ApplicationIdentityData.svc -DefaultProxyGroup
 ```
 
 This example adds a proxy named ApplicationIdentityData to the app identity web service.

@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPUsageDefinition -Identity "Page Requests"
+Get-SPUsageDefinition -Identity "Page Requests"
 ```
 
 This example returns the SPRequestUsage provider on the local farm.

@@ -47,7 +47,7 @@ This example updates a SharePoint Farm trust using the trust certificate from a 
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" -FederationMetadataUrl "https://liveid.com/STS/2007/03/fedmetadata.xml"
+Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" -FederationMetadataUrl "https://liveid.com/STS/2007/03/fedmetadata.xml"
 ```
 
 This example updates a SharePoint farm trust using the trust certificate from the federation metadata endpoint URL.

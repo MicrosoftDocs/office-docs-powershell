@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Get-SPHelpCollection
+Get-SPHelpCollection
 ```
 
 This example gets all installed Help collection files.

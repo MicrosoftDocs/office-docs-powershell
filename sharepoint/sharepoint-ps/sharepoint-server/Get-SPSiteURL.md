@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$site = Get-SPSite 'http://www.contoso.com'
 
-PS C:\>Get-SPSiteURL -Identity $site
+Get-SPSiteURL -Identity $site
 ```
 
 This example displays all the URLs that bind to the site collection, http://www.contoso.com.

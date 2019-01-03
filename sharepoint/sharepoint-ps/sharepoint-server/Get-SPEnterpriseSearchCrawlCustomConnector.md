@@ -27,8 +27,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication $ssa -Protocol 'http://'
+$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
+Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication $ssa -Protocol 'http://'
 ```
 
 This example obtains a reference to all custom crawl connectors for the http:// protocol for a search service application named 'Search Service Application'.

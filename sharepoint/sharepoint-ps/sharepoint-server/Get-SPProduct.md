@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPProduct -Local
+Get-SPProduct -Local
 ```
 
 This example displays the SharePoint-related products installed on the local server.

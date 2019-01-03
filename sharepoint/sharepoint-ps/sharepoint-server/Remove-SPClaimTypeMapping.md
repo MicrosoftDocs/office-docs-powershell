@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-------------------------
 ```
-PS C:\>Remove-SPClaimMapping "Email" | Get-SPIdentityProvider "LiveIDSTS"
+Remove-SPClaimMapping "Email" | Get-SPIdentityProvider "LiveIDSTS"
 ```
 
 This example removes an identity provider named LiveIDSTS.

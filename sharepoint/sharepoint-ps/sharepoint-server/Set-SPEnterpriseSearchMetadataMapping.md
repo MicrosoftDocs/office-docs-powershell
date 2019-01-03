@@ -31,16 +31,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>## get the crawl property to set to, in this case a new property is created
-PS C:\>$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
-PS C:\>$cp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
-PS C:\>$ncp = New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name "MyNewCrawlProp" -PropSet $cp.PropSet -Category $cp.CategoryName -IsNameEnum $false -VariantType $cp.VariantType -IsMappedToContents $true
-PS C:\>## get the mapping to replace
-PS C:\>$mycp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name MyCrawlProp
-PS C:\>$map = Get-SPEnterpriseSearchMetadataMapping -SearchApplication $ssa -ManagedProperty $mp -CrawledProperty $mycp
+$ssa = Get-SPEnterpriseSearchServiceApplication
+## get the crawl property to set to, in this case a new property is created
+$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
+$cp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
+$ncp = New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name "MyNewCrawlProp" -PropSet $cp.PropSet -Category $cp.CategoryName -IsNameEnum $false -VariantType $cp.VariantType -IsMappedToContents $true
+## get the mapping to replace
+$mycp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name MyCrawlProp
+$map = Get-SPEnterpriseSearchMetadataMapping -SearchApplication $ssa -ManagedProperty $mp -CrawledProperty $mycp
 ## set the new crawl property to map to for this mapping
-PS C:\>Set-SPEnterpriseSearchMetadataMapping -Identity $map -SearchApplication $ssa -CrawledProperty $ncp
+Set-SPEnterpriseSearchMetadataMapping -Identity $map -SearchApplication $ssa -CrawledProperty $ncp
 ```
 
 This example updates an existing mapping between the managed property UserName and the crawled property MyCrawlProp (see `New-SPEnterpriseSearchMetadataMapping`) for the default search service application.

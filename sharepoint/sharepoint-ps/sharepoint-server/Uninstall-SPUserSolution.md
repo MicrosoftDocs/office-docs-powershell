@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------
 ```
-PS C:\>Uninstall-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename
+Uninstall-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename
 ```
 
 This example deactivates the sandboxed solution contoso_solution.wsp on the site http://sitename.

@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPTopologyServiceApplicationProxy 67877d63-bff4-4521-867a-ef4979ba07ce -BadListPeriod 1234
+Set-SPTopologyServiceApplicationProxy 67877d63-bff4-4521-867a-ef4979ba07ce -BadListPeriod 1234
 ```
 
 This example sets the bad list period for the given topology service application proxy.

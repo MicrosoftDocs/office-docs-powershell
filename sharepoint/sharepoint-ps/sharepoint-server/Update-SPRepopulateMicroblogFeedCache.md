@@ -47,20 +47,20 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1------------
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
 ```
 
 This example refreshes the feed for a specific user by using the AccountName parameter.
 
 ### ------------EXAMPLE 2------------
 ```
-PS C:\>$site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
-PS C:\>$context = Get-SPServiceContext $site
-PS C:\>$upm = New-Object Microsoft.Office.Server.UserProfiles.UserProfileManager($context)
-PS C:\>$profiles = $upm.GetEnumerator()
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>while($profiles.MoveNext()) {
+$site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
+$context = Get-SPServiceContext $site
+$upm = New-Object Microsoft.Office.Server.UserProfiles.UserProfileManager($context)
+$profiles = $upm.GetEnumerator()
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+while($profiles.MoveNext()) {
     $profile = $profiles.Current
 	   Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName $profile.AccountName }
 ```
@@ -69,7 +69,7 @@ This example refreshes the feeds for all users in the User Profile Service Appli
 
 ### ------------EXAMPLE 3------------
 ```
-PS C:\>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -SiteUrl https://sharepoint.contoso.com
+Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -SiteUrl https://sharepoint.contoso.com
 ```
 This example refreshes the feed on the site https://sharepoint.contoso.com.
 

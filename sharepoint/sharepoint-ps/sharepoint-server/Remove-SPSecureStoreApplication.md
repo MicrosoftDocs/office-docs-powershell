@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\>Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApp" | Remove -SPSecureStoreApplication
+Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApp" | Remove -SPSecureStoreApplication
 ```
 
 This example removes the specified application and target.

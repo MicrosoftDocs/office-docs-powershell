@@ -55,21 +55,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
+Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
 ```
 
 This example retrieves a list that has diagnostics information about all search components of the default Search Service Application.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchStatus -SearchApplication 'Search Service Application' -JobStatus -Text
+Get-SPEnterpriseSearchStatus -SearchApplication 'Search Service Application' -JobStatus -Text
 ```
 
 This example retrieves the background activity job status for the search analytics timer jobs.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
+Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
 ```
 
 This example retrieves the diagnostic information for the index component named IndexComponent1.
