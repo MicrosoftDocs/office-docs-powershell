@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-Remove-SPUser "Contoso \jdoe" -web http://test/web1
+Remove-SPUser "Contoso\jdoe" -web http://test/web1
 
 Get-SPWeb "http://test/web1" | Remove-SPUser "Contoso\jdoe"
 ```
