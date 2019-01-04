@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```
-$db = New-SPStateServiceDatabase -Name 'State Service'
+$db = New-SPStateServiceDatabase -Name 'StateSvcDB1'
 New-SPStateServiceApplication -Name 'State Service' -Database $db
 ```
 
