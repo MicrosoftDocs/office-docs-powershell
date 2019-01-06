@@ -9,10 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
-
-
-
+Remove all app-denied endpoints in the farm.
 
 ## SYNTAX
 
