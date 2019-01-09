@@ -8,7 +8,7 @@ schema: 2.0.0
 # Copy-SPActivitiesToWorkflowService
 
 ## SYNOPSIS
-This cmdlet copies the Workflow Activities from SharePoint Server to the Workflow Manager farm. Activities are defined within Microsoft provided or custom coded assemblies.
+Copies the Workflow Activities from SharePoint to Workflow Manager. Activities are defined within Microsoft provided or custom coded assemblies.
 
 
 

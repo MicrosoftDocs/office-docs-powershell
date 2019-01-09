@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Retrieves one or all search components in a given search topology..
+Retrieves one or all search components in a given search topology.
 
 
 

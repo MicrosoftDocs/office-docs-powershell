@@ -119,10 +119,7 @@ Forces the activation of a Feature.
 This causes any custom code associated with the Feature to rerun.
 
 > [!NOTE]
-> Please be aware ```-Force``` will not work if you updated the feature with Update-SPSolution.
-> In this case you have to disable feature first with ```Disable-SPFeature``` and then enable it back with ```Enable-SPFeature```
-
-
+> Please be aware `-Force` will not work if you updated the feature with Update-SPSolution. In this case you have to disable feature first with `Disable-SPFeature` and then enable it back with `Enable-SPFeature`
 
 ```yaml
 Type: SwitchParameter
