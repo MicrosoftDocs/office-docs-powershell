@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Use the Clear-SPServerScaleOutDatabaseLog cmdlet clears all scale-out logs in the specified scale-out database unless there is a scale-out log entry newer than the specified time-out value.
+Clears all scale-out logs in the specified scale-out database unless there is a scale-out log entry newer than the specified time-out value.
 
 
 ## SYNTAX
