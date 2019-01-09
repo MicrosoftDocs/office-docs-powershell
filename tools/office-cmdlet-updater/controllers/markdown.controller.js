@@ -1,40 +1,100 @@
-const fs = require('fs-extra');
-const of = require('await-of').default;
-const { powerShellErrors } = require('../constants/errors');
-
 class MarkdownController {
-	constructor(powerShellService, markdownService, config) {
+	constructor(
+		powerShellService,
+		moduleController,
+		logStoreService,
+		logsController,
+		notificationController,
+		githubController
+	) {
 		this.powerShellService = powerShellService;
-		this.markdownService = markdownService;
-		this.config = config;
-	}
+		this.moduleController = moduleController;
+		this.logsController = logsController;
+		this.notificationController = notificationController;
+		this.githubController = githubController;
 
-	async updateMarkdown({ moduleName, cmdlet }) {
-		let err;
-		const { docs } = this.config.get('platyPS');
+		this.isNeedEmail = false;
+		this.mailText = '';
 
-		docs.filter((doc) => this._filterModules(doc, moduleName)).forEach(
-			async (doc) => {
-				if (!(await fs.pathExists(doc.path))) {
-					throw new Error(powerShellErrors.DOC_PATH_DOESNT_EXIST);
-				}
-
-				[, err] = await of(this.markdownService.updateMd(doc, cmdlet));
-
-				if (err) {
-					this.powerShellService.dispose();
-					console.error(err.message);
-				}
-			}
+		this._handlePrResult = this._handlePrResult.bind(this);
+		this._successfulHandlePrResult = this._successfulHandlePrResult.bind(
+			this
 		);
 	}
 
-	_filterModules(doc, moduleName) {
-		if (moduleName === 'all') {
-			return true;
+	async updateMarkdown({
+		cliModuleName,
+		cliCmdletName,
+		isNeedPullRequest,
+		isNeedEmail
+	}) {
+		const moduleResults = await this.moduleController.updateMarkdown({
+			cliModuleName,
+			cliCmdletName,
+			isNeedPullRequest
+		});
+
+		this.powerShellService.dispose();
+
+		const parsedModules = this.logsController.saveAndParseLogs({
+			moduleResults
+		});
+		const mailText = this.notificationController.generateMailText({
+			parsedModules
+		});
+
+		if (!mailText) {
+			console.log(`No changes found in module ${cliModuleName}`);
+			return;
 		}
 
-		return doc.name === moduleName;
+		if (isNeedEmail && !isNeedPullRequest) {
+			this.notificationController.sendMailNotification({ mailText });
+		}
+
+		this.isNeedEmail = isNeedEmail;
+		this.mailText = mailText;
+
+		if (isNeedPullRequest) {
+			await this.githubController.createPullRequest({
+				prBody: mailText,
+				cb: this._handlePrResult
+			});
+		}
+	}
+
+	_handlePrResult(err, data) {
+		if (err) {
+			this._errorHandlePrResult(err);
+		}
+
+		this._successfulHandlePrResult(data);
+	}
+
+	_errorHandlePrResult(err) {
+		const {
+			body: { errors }
+		} = err;
+
+		errors.forEach(({ message }) => console.log(message));
+
+		throw new Error("Can't create new pull request");
+	}
+
+	_successfulHandlePrResult(data) {
+		const { html_url } = data;
+
+		console.log(`New pull request created. Url: ${html_url}`);
+
+		if (this.isNeedEmail) {
+			const mailTextWithPr =
+				`New pull request created. Url: ${html_url} <br><br><br>` +
+				this.mailText;
+
+			this.notificationController.sendMailNotification({
+				mailText: mailTextWithPr
+			});
+		}
 	}
 }
 
