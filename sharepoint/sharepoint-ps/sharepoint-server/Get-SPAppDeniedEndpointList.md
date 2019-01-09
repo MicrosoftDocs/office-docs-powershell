@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
+Returns the app-denied endpoint list for the entire farm.
 
 
 

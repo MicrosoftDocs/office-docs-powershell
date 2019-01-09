@@ -41,6 +41,9 @@ New-SPEnterpriseSearchMetadataMapping -SearchApplication $ssa -ManagedProperty $
 
 This example maps the created crawled property MyCrawlProp to the managed property UserName for the default search service application.
 
+>![NOTE]
+>The VarientType parameter is marked as obsolete but is still required when executing the `New-SPEnterpriseSearchMetadataCrawledProperty` cmdlet.
+
 
 ## PARAMETERS
 

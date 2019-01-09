@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPSideBySideFiles
 schema: 2.0.0
 ---

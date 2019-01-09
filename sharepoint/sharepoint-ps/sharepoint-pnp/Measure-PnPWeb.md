@@ -33,13 +33,6 @@ Measure-PnPWeb $web -Recursive
 
 Gets statistics on the provided web including all its subwebs
 
-### ------------------EXAMPLE 3------------------
-```powershell
-Measure-PnPList $web -Recursive
-```
-
-Gets statistics on the chosen including all sub webs
-
 ## PARAMETERS
 
 ### -Identity
