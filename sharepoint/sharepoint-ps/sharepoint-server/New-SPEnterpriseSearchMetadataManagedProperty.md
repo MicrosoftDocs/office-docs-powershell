@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeInAlertSignature
-{{Fill IncludeInAlertSignature Description}}
+Specifies whether this managed property should be included in the alert signature.
 
 ```yaml
 Type: Boolean
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -SafeForAnonymous
-{{Fill SafeForAnonymous Description}}
+Specifies whether it is acceptable to display the contents of the property in search results for anonymous searches.
 
 ```yaml
 Type: Boolean
