@@ -324,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadReceiptsEnabledType
-Use this setting to specify whether read receipts are user controlled, enabled for everyone, or disabled. Set this to CONTROLLED, ENABLED or DISABLED.
+Use this setting to specify whether read receipts are user controlled, enabled for everyone, or disabled. Set this to UserPreference, Everyone or None.
 
 ```yaml
 Type: String
