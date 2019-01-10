@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPTopologyServiceApplication 67877d63-bff4-4521-867a-ef4979ba07ce -LoadBalancedURL "https://testurl"
+Set-SPTopologyServiceApplication 67877d63-bff4-4521-867a-ef4979ba07ce -LoadBalancedURL "https://testurl"
 ```
 
 This example sets the load-balanced URL for the topology service application.

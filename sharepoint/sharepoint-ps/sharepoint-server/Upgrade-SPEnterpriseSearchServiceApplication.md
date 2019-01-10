@@ -31,21 +31,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplication | Upgrade-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchServiceApplication | Upgrade-SPEnterpriseSearchServiceApplication
 ```
 
 This example upgrades a search service application.
 
 ### ----------------EXAMPLE 2-----------------
 ```
-PS C:\>Upgrade-SPEnterpriseSearchServiceApplication -Identity 846ceb0b-31d6-4c79-82c1-3a9deafe0b45
+Upgrade-SPEnterpriseSearchServiceApplication -Identity 846ceb0b-31d6-4c79-82c1-3a9deafe0b45
 ```
 
 This example upgrades a search service application.
 
 ### ----------------EXAMPLE 3-----------------
 ```
-PS C:\>Upgrade-SPEnterpriseSearchServiceApplication "DefaultSearchApplication"
+Upgrade-SPEnterpriseSearchServiceApplication "DefaultSearchApplication"
 ```
 
 This example upgrades a search service application.

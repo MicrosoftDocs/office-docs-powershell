@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>New-SPEnterpriseSearchQueryKeyword -Term Tangible -Site http://myserver/sites/team
+New-SPEnterpriseSearchQueryKeyword -Term Tangible -Site http://myserver/sites/team
 ```
 
 This example creates a new query keyword for the site http://myserver/sites/team with the term Tangible.

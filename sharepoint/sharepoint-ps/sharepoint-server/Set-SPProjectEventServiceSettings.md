@@ -24,7 +24,7 @@ Allows you to change the Microsoft Project Server Events Service 2016 TCP port s
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPProjectEventServiceSettings -NetTcpPort 16100
+Set-SPProjectEventServiceSettings -NetTcpPort 16100
 ```
 
 This example tells the service to listen on port 16100.

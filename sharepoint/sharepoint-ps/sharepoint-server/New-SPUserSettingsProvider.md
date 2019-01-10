@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------- EXAMPLE---------------------------
 ```
-PS C:\>New-SPUserSettingsProvider -DisplayName "My User Settings Provider" -AssemblyName MyProvider.dll -Type MyProvider
+New-SPUserSettingsProvider -DisplayName "My User Settings Provider" -AssemblyName MyProvider.dll -Type MyProvider
 ```
 
 This example adds a user setting provider with a display name of "My User Settings Provider" which uses the MyProvider.dll file.

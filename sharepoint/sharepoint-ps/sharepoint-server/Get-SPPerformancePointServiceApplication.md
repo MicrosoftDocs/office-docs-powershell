@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE------------------ 
 ```
-PS C:\>Get-SPPerformancePointServiceApplication "PPSApp_01"
+Get-SPPerformancePointServiceApplication "PPSApp_01"
 ```
 
 This example gets a PerformancePoint Service application named PPSApp_01.

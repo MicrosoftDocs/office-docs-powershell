@@ -29,10 +29,10 @@ The change is effectuated when the search topology is enabled.
 
 ### ------------------EXAMPLE-----------------
 ```
-PS C:\>$si = Get-SPEnterpriseSearchServiceInstance
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
-PS C:\>New-SPEnterpriseSearchIndexComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa -IndexPartition 1 -RootDirectory E:\Index
+$si = Get-SPEnterpriseSearchServiceInstance
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+New-SPEnterpriseSearchIndexComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa -IndexPartition 1 -RootDirectory E:\Index
 ```
 
 This example adds a new Search Index Component to the inactive topology for the existing Search Service Application. The directory of the Index Component is set to E:\Index with a Partition number of 1.

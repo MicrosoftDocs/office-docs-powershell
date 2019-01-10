@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>UnPublish-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26
+UnPublish-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26
 ```
 
 This example stops publishing of the specified service application outside the farm.

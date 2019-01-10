@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$site= Get-SPSite http://test
 
-PS C:\>Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
+Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
 ```
 
 This example upgrades the search settings for the site collection referenced by $site.

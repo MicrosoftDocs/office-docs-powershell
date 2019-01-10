@@ -26,13 +26,13 @@ This cmdlet also deletes the Internet Information Services (IIS) port binding if
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
+Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
 ```
 Removes all of the app domains for the specified web application.
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com -Zone Internet
+Remove-SPWebApplicationAppDomain -WebApplication http://www.contoso.com -Zone Internet
 ```
 Removes the app domains for the internet zone for the specified web application.
 

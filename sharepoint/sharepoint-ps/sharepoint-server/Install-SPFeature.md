@@ -51,14 +51,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Install-SPFeature -path "MyCustomFeature"
+Install-SPFeature -path "MyCustomFeature"
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Install-SPFeature -AllExistingFeatures -Whatif
+Install-SPFeature -AllExistingFeatures -Whatif
 ```
 
 This example shows the unregistered features that are available on the file system and that are installed if this command is run without the WhatIf parameter.
@@ -66,14 +66,14 @@ This is commonly done after an upgrade process.
 
 ### --------------EXAMPLE 3----------------- 
 ```
-PS C:\>Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
+Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
 
 ### --------------EXAMPLE 4----------------- 
 ```
-PS C:\>Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 15
+Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 15
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.

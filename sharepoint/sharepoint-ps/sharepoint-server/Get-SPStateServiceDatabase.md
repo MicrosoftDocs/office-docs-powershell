@@ -38,21 +38,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1---------------- 
 ```
-PS C:\>Get-SPStateServiceDatabase
+Get-SPStateServiceDatabase
 ```
 
 This example displays all of the state service databases on the farm.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-PS C:\>Get-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
+Get-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
 ```
 
 This example displays a specific state service database in the farm.
 
 ### --------------EXAMPLE 3-------------- 
 ```
-PS C:\>Get-SPStateServiceDatabase -ServiceApplication "StateServiceApp1"
+Get-SPStateServiceDatabase -ServiceApplication "StateServiceApp1"
 ```
 
 This example displays all state service databases associated with a specific service.

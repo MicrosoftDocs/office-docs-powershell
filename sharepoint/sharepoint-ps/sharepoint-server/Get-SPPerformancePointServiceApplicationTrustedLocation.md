@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE---------------------- 
 ```
-PS C:\>Get-SPPerformancePointServiceApplication PPSApp_01 | Get-SPPerformancePointServiceApplicationTrustedLocation -Identity $_.ID | select *
+Get-SPPerformancePointServiceApplication PPSApp_01 | Get-SPPerformancePointServiceApplicationTrustedLocation -Identity $_.ID | select *
 ```
 
 This example retrieves TrustedLocation information for the PPSApp_01 PerformancePoint Service application.

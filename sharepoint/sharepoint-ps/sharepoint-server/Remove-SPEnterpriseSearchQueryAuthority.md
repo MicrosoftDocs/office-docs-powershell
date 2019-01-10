@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPEnterpriseSearchQueryAuthority -Identity http://contoso.com -SearchApplication MySSA
+Remove-SPEnterpriseSearchQueryAuthority -Identity http://contoso.com -SearchApplication MySSA
 ```
 
 This example removes the query authority URL http://contoso.com from the search service application named MySSA.

@@ -35,14 +35,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>New-SPWOPIBinding -ServerName "Server.corp.Contoso.com"
+New-SPWOPIBinding -ServerName "Server.corp.Contoso.com"
 ```
 
 This example creates bindings for all the applications and file name extensions that the WOPI application supports on the current SharePoint farm where this cmdlet is run.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>New-SPWOPIBinding -ServerName "Server.corp.Contoso.com" -Application "Excel"
+New-SPWOPIBinding -ServerName "Server.corp.Contoso.com" -Application "Excel"
 ```
 
 This example associates Excel with all the actions that the WOPI application supports for Excel on the current SharePoint farm where this cmdlet is run.

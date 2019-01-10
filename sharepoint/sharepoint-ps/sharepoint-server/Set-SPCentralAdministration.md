@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Set-SPCentralAdministration -Port 8282
+Set-SPCentralAdministration -Port 8282
 ```
 
 This example sets the port for the Central Administration web application on the local farm to 8282.

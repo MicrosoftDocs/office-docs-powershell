@@ -30,7 +30,7 @@ This may lead to a short downtime for queries.
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPEnterpriseSearchServiceInstance -Local | Start-SPEnterpriseSearchServiceInstance
+Get-SPEnterpriseSearchServiceInstance -Local | Start-SPEnterpriseSearchServiceInstance
 ```
 
 This example starts the local search service instance.

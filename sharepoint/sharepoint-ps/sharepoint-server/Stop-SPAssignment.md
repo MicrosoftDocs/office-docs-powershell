@@ -30,10 +30,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Start-SPAssignment -global
-PS C:\>$w = Get-SPWeb http://MyWeb
-PS C:\>$w | Set-SPWeb -title "Accounting"
-PS C:\>Stop-SPAssignment -global
+Start-SPAssignment -global
+$w = Get-SPWeb http://MyWeb
+$w | Set-SPWeb -title "Accounting"
+Stop-SPAssignment -global
 ```
 
 This example uses simple assignment.

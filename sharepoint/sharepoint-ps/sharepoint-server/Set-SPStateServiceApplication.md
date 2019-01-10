@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPStateServiceApplication -Identity "State Service Application 1" -Name "New name for State Service Application 1"
+Set-SPStateServiceApplication -Identity "State Service Application 1" -Name "New name for State Service Application 1"
 ```
 
 This example changes the display name of a state service application.

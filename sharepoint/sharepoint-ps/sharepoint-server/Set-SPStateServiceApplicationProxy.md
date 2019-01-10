@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPServiceApplicationProxy -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Name "New Service Application Proxy Name"
+Set-SPServiceApplicationProxy -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Name "New Service Application Proxy Name"
 ```
 
 This example changes the display name of a state service application proxy.

@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPWOPIZone
+Get-SPWOPIZone
 ```
 
 This example returns the zone that is configured for the WOPI application (such as a server that runs Office Web Apps Server) to use. 

@@ -28,7 +28,7 @@ The service application proxy is instantiated on the front-end web server and ac
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>New-SPPowerPointConversionServiceApplicationProxy -Name "MyWorkgroupPPTAppProxy" -ServiceApplication "MyWorkgroupPPTApp" -AddtoDefaultGroup
+New-SPPowerPointConversionServiceApplicationProxy -Name "MyWorkgroupPPTAppProxy" -ServiceApplication "MyWorkgroupPPTApp" -AddtoDefaultGroup
 ```
 
 This example creates a new instance of the PowerPoint Conversion Service application proxy named MyWorkgroupPPTAppProxy, binds it to the MyWorkgroupPPTApp service application and then adds it to the default service application proxy group

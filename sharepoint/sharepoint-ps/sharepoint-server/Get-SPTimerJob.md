@@ -28,14 +28,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 ### ---------------------EXAMPLE 01--------------------- 
 ```
-PS C:\>Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
+Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
 ```
 
 This example displays all timer jobs for a specified Web application.
 
 ### ---------------------EXAMPLE 02---------------------
 ```powershell
-PS C:\>Get-SPTimerJob | select -ExpandProperty HistoryEntries
+Get-SPTimerJob | select -ExpandProperty HistoryEntries
 ```
 The above example will show you timer job run history
 

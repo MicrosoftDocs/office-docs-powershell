@@ -28,7 +28,7 @@ The application credential key must be identical on each server in the farm wher
 
 ### EXAMPLE 
 ```powershell
-PS C:\> $key = ConvertTo-SecureString -String "New Password" -AsPlainText -Force
+ $key = ConvertTo-SecureString -String "New Password" -AsPlainText -Force
 Set-SPApplicationCredentialKey -Password $key
 ```
 

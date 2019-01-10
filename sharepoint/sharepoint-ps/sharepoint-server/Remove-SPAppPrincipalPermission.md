@@ -29,12 +29,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE------------
 ```
-PS C:\>$clientID = "11111111-2222-3333-4444-555555555555"
-PS C:\>$site = Get-SPSite http://siteUrl
-PS C:\>$realm = Get-SPAuthenticationRealm -ServiceContext $site
-PS C:\>$appIdentifier = $clientID + "@" + $realm
-PS C:\>$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb
-PS C:\>Remove-AppPrincipalPermission -AppPrincipal $appPrincipal -site $site.RootWeb -Scope Site
+$clientID = "11111111-2222-3333-4444-555555555555"
+$site = Get-SPSite http://siteUrl
+$realm = Get-SPAuthenticationRealm -ServiceContext $site
+$appIdentifier = $clientID + "@" + $realm
+$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Web $site.RootWeb
+Remove-AppPrincipalPermission -AppPrincipal $appPrincipal -site $site.RootWeb -Scope Site
 ```
 
 This example removes the App Principal permission from the site collection scope.

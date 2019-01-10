@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Clear-SPSiteSubscriptionBusinessDataCatalogConfig -ServiceContext http://contoso
+Clear-SPSiteSubscriptionBusinessDataCatalogConfig -ServiceContext http://contoso
 ```
 
 This example deletes all data from the Business Data Connectivity Metadata Store for the specified site.

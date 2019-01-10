@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPBusinessDataCatalogThrottleConfig -Scope Database -ThrottleType Items -ServiceApplicationProxy $contosoServAppProxy | Set-SPBusinessDataCatalogThrottleConfig -Maximum 1000000000 -Default 500000
+Get-SPBusinessDataCatalogThrottleConfig -Scope Database -ThrottleType Items -ServiceApplicationProxy $contosoServAppProxy | Set-SPBusinessDataCatalogThrottleConfig -Maximum 1000000000 -Default 500000
 ```
 
 This example sets the database item throttling to values of 1000000000 maximum and 500000 default for the given service application.

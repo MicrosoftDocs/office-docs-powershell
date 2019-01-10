@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Enable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site "http://TestSite"
+Enable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site "http://TestSite"
 ```
 
 This example activates an InfoPath form template to a site collection named TestSite.

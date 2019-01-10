@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE------- 
 ```
-PS C:\>Get-SPRequestManagementSettings -Identity <GUID>
+Get-SPRequestManagementSettings -Identity <GUID>
 ```
 
 This example returns a request manager object for a specified identity.

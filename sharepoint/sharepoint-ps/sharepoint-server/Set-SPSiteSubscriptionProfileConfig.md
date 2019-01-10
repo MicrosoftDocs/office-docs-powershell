@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+ {{ Add example code here }}
 ```
 
 {{ Add example description here }}

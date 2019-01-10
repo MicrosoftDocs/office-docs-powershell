@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPProjectQueueSettings -ServiceApplication "Project Service Application" -MaxDegreeOfConcurrency 6
+Set-SPProjectQueueSettings -ServiceApplication "Project Service Application" -MaxDegreeOfConcurrency 6
 ```
 
 This example sets a maximum of 6 for the number of jobs that can be processed at one time by the specified service application.

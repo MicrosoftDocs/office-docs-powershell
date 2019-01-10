@@ -41,14 +41,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$MetadataStore = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Catalog" -ServiceConext http://contoso
-PS C:\>Import-SPBusinessDataCatalogModel -Path "C:\folder\model.bdcm" -Identity $MetadataStore
+Import-SPBusinessDataCatalogModel -Path "C:\folder\model.bdcm" -Identity $MetadataStore
 ```
 
 This example gets the Business Data Connectivity Metadata Store and then imports a Business Data Connectivity Model of Model type to it from the path specified with the name model.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Import-SPBusinessDataCatalogModel -Path "C:\Program Files\Duet Enterprise\2.0\BDC Models\Reporting.en-us.bdcr -Identity $bdcCatalog -ModelsIncluded:$false
+Import-SPBusinessDataCatalogModel -Path "C:\Program Files\Duet Enterprise\2.0\BDC Models\Reporting.en-us.bdcr -Identity $bdcCatalog -ModelsIncluded:$false
 ```
 
 This example imports a resource only file by using the ModelsIncluded parameter.

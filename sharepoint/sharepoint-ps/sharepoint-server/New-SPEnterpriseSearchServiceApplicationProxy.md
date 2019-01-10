@@ -46,8 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchServiceApplicationProxy -Name 'Search Service Application Proxy' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchServiceApplicationProxy -Name 'Search Service Application Proxy' -SearchApplication $ssa
 ```
 
 This example adds a search service application proxy to a search service application.

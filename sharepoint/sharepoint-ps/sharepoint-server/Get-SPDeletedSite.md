@@ -43,21 +43,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1--------------------- 
 ```
-PS C:\>Get-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
+Get-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
 ```
 
 This example gets a specific deleted site collection by using a site ID.
 
 ### ------------------EXAMPLE 2--------------------- 
 ```
-PS C:\>Get-SPDeletedSite "/"
+Get-SPDeletedSite "/"
 ```
 
 This example gets a deleted site collection from the root site.
 
 ### ------------------EXAMPLE 3--------------------- 
 ```
-PS C:\>Get-SPDeletedSite '/Site/cat*'
+Get-SPDeletedSite '/Site/cat*'
 ```
 
 This example matches a deleted site collection that contains any combination with the string "cat".

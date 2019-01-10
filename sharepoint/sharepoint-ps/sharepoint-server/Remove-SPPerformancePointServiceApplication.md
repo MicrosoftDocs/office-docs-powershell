@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------
 ```
-PS C:\>Remove-SPPerformancePointServiceApplication -Identity PPSApp_01
+Remove-SPPerformancePointServiceApplication -Identity PPSApp_01
 ```
 
 This example removes the PPSApp_01 PerformancePoint Service application.

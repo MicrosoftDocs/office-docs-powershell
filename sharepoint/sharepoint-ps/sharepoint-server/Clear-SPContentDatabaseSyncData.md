@@ -24,7 +24,7 @@ Use the **Clear-SPContentDatabaseSyncData** to clear synchronization information
 
 ### EXAMPLE 1
 ```powershell
-PS C:\> Clear-SPContentDatabaseSyncData -DaysSinceLastProfileSync 12
+ Clear-SPContentDatabaseSyncData -DaysSinceLastProfileSync 12
 ```
 
 This example resets synchronization information from the content databases that have not been synchronized for more than or equal to 12 days, without prompting for user confirmation.

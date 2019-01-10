@@ -25,9 +25,9 @@ Resets the specified Access Services Database password with a randomly generated
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>$contentdb = Get-SPContentDatabase ContentDbName
-PS C:\>$db = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | select -First 1
-PS C:\>Reset-SPAccessServicesDatabasePassword -Database $db -ServiceContext http://site_url
+$contentdb = Get-SPContentDatabase ContentDbName
+$db = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | select -First 1
+Reset-SPAccessServicesDatabasePassword -Database $db -ServiceContext http://site_url
 ```
 
 Resets the database password for the specified Access Database.

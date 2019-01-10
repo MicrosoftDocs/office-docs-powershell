@@ -25,7 +25,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ------------ Example 1 --------------------  
 ```
-PS C:\>
+
 ```
 
 ## PARAMETERS

@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPWebApplication http://contoso2010 | Update-SPInfoPathAdminFileUrl
+Get-SPWebApplication http://contoso2010 | Update-SPInfoPathAdminFileUrl
 -find "http://contoso2007" 
 -replace "http://contoso2010"
 ```

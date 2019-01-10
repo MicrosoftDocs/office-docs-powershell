@@ -18,7 +18,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter> [-AllowBasicAuthActiveSync] [-AllowBasicAuthAutodiscover] [-AllowBasicAuthImap] [-AllowBasicAuthMapi] [-AllowBasicAuthOfflineAddressBook] [-AllowBasicAuthOutlookService] [-AllowBasicAuthPop] [-AllowBasicAuthPowershell] [-AllowBasicAuthReportingWebServices] [-AllowBasicAuthRest] [-AllowBasicAuthRpc] [-AllowBasicAuthSmtp] [-AllowBasicAuthWebServices] [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
+ [-AllowBasicAuthActiveSync]
+ [-AllowBasicAuthAutodiscover]
+ [-AllowBasicAuthImap]
+ [-AllowBasicAuthMapi]
+ [-AllowBasicAuthOfflineAddressBook]
+ [-AllowBasicAuthOutlookService]
+ [-AllowBasicAuthPop]
+ [-AllowBasicAuthPowershell]
+ [-AllowBasicAuthReportingWebServices]
+ [-AllowBasicAuthRpc]
+ [-AllowBasicAuthSmtp]
+ [-AllowBasicAuthWebServices]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -214,25 +228,6 @@ The AllowBasicAuthReporting Web Services switch specifies whether to allow Basic
 - To change the value to $true, use this switch without a value.
 
 - To change the value to $false, use this exact syntax: -AllowBasicAuthReportingWebServices:$false.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowBasicAuthRest
-The AllowBasicAuthRest switch specifies whether to allow Basic authentication with REST.
-
-- To change the value to $true, use this switch without a value.
-
-- To change the value to $false, use this exact syntax: -AllowBasicAuthRest:$false.
 
 ```yaml
 Type: SwitchParameter

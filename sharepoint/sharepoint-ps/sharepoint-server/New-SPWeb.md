@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWeb http://somesite/subweb1 -Template "STS#0"
+New-SPWeb http://somesite/subweb1 -Template "STS#0"
 ```
 
 This example creates a new subsite by using the Team Site template at the provided URL (http://somesite/subweb1).

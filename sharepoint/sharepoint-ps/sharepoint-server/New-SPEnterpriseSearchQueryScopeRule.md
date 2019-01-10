@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 C:\PS>$scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
-PS C:\>New-SPEnterpriseSearchQueryScopeRule -Scope $scope -RuleType AllContent -Url http://criticalSite
+New-SPEnterpriseSearchQueryScopeRule -Scope $scope -RuleType AllContent -Url http://criticalSite
 ```
 
 This example creates a new scope rule of type AllContent for the URL http://criticalSite.

@@ -27,7 +27,7 @@ Use the New-SPWebApplicationAppDomain cmdlet to create an AppDomain entry. If yo
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication http://www.contoso.com
+New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication http://www.contoso.com
 ```
 
 Creates a new app domain for apps for SharePoint for the specified web application in the default zone.
@@ -35,7 +35,7 @@ Creates a new app domain for apps for SharePoint for the specified web applicati
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication http://www.contoso.com -Zone Internet -Port 10000
+New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication http://www.contoso.com -Zone Internet -Port 10000
 ```
 
 Creates a new app domain for apps for SharePoint for the specified web application in the internet zone at port 10000.

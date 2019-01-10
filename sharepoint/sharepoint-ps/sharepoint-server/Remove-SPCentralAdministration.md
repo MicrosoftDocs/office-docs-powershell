@@ -26,7 +26,7 @@ Removes the SharePoint Central Administration web site from the local server.
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPCentralAdministration
+Remove-SPCentralAdministration
 ```
 This example removes the Central Administration web site from the local server.
 
