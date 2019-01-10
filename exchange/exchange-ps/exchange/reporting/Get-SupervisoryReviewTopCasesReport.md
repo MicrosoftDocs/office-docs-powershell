@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-SupervisoryReviewTopCasesReport cmdlet to view 
+Use the Get-SupervisoryReviewTopCasesReport cmdlet to view the current status of the top supervision policies configured in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -29,10 +29,9 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```
-{{ Add example code here }}
+Get-SupervisoryReviewTopCasesReport | Sort-Object Policy | Format-Table Policy,Pending,Total,Date
 ```
-
-{{ Add example description here }}
+This example returns detailed information on supervisory policies, including the policy name, the total number of communications under review and pending, and the date of the report.
 
 ## PARAMETERS
 
