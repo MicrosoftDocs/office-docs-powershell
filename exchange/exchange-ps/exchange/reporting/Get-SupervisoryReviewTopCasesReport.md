@@ -29,7 +29,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```
-Get-SupervisoryReviewTopCasesReport | Sort-Object Policy | ft Policy, Pending, Total, Date
+Get-SupervisoryReviewTopCasesReport | Sort-Object Policy | Format-Table Policy,Pending,Total,Date
 ```
 This example returns detailed information on supervisory policies, including the policy name, the total number of communications under review and pending, and the date of the report.
 
