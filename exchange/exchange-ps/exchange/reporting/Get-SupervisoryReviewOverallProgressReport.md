@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-SupervisoryReviewOverallProgressReport cmdlet to view 
+Use the Get-SupervisoryReviewOverallProgressReport cmdlet to view the total number of supervised communications classified as Pending, Resolved, Compliant, Non-compliant, and Questionable.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -29,10 +29,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### Example 1
 ```
-{{ Add example code here }}
+Get-SupervisoryReviewOverallProgressReport | ft Pending, Resolved, Compliant, Noncompliant, Questionable
 ```
 
-{{ Add example description here }}
+This example returns a list of the total number of supervised communications classified by status.
 
 ## PARAMETERS
 
