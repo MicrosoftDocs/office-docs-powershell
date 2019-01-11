@@ -459,11 +459,11 @@ Accept wildcard characters: False
 ```
 
 ### -PurgeType
-The PurgeType parameter specifies how to remove items when the action is Purge.
+The PurgeType parameter specifies how to remove items when the action is Purge. Valid values are:
 
-The valid value for this parameter is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
+- SoftDelete: Purged items are recoverable by users until the deleted item retention period expires.
 
-Note: To hard delete items, use the Search-Mailbox cmdlet with the DeleteContent switch. For more information, see Search for and delete messages (https://docs.microsoft.com/office365/SecurityCompliance/search-for-and-delete-messagesadmin-help).
+- HardDelete: Purged items are marked for permanent removal from the mailbox and will be permanently removed the next time the mailbox is processed by the Managed Folder Assistant. If single item recovery is enabled on the mailbox, purged items will be permanently removed after the deleted item retention period expires.
 
 ```yaml
 Type: ComplianceDestroyType
