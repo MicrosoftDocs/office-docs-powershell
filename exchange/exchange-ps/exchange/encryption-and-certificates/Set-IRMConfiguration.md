@@ -200,13 +200,8 @@ Accept wildcard characters: False
 ```
 
 ### -DecryptAttachmentFromPortal
-This parameter is available only in the cloud-based service.
+This parameter will be deprecated soon. It has been replaced by the DecryptAttachmentForEncryptOnly parameter.
 
-The DecryptAttachmentFromPortal parameter specifies whether Office attachments are protected for recipients outside of Office 365 when Encrypt-only policy is used for sending mails using new Office 365 Message Encryption capabilities. Use this option when you don't need to retain the original protection for the attachment upon download. Valid values are:
-
-- $true: The recipients will have permissions to download Encrypt-only attachments without protection.
-
-- $false: The recipients will continue to have Encrypt-only attachments protected even after download.
 
 ```yaml
 Type: $true | $false
