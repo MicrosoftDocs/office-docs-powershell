@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE-----------
 ```
-PS C:\>Set-SPAppScaleProfile -MaxDatabaseSize "2 GB" -RemoteWebSiteInstanceCount 1
+Set-SPAppScaleProfile -MaxDatabaseSize "2 GB" -RemoteWebSiteInstanceCount 1
 ```
 
 This example sets the farm level app scale profile.

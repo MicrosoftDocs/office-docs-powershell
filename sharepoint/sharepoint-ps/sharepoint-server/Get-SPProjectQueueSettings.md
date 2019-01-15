@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE--------------------- 
 ```
-PS C:\>Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
+Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
 ```
 
 This example retrieves the queue settings for the "Project Service Application" service application.

@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchCrawlContentSource -SearchApplication $ssa -Identity 'Local SharePoint Sites'
+$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
+Get-SPEnterpriseSearchCrawlContentSource -SearchApplication $ssa -Identity 'Local SharePoint Sites'
 ```
 
 This example retrieves the default content source for the search service application, 'Search Service Application'.

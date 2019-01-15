@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Get-SPWeb http://sitename/subweb | Set-SPWeb -Title "My Site Title"
+Get-SPWeb http://sitename/subweb | Set-SPWeb -Title "My Site Title"
 ```
 
 This example sets the title of an existing subsite.

@@ -27,14 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1------------------------- 
 ```
-PS C:\>Get-SPVisioServiceApplication
+Get-SPVisioServiceApplication
 ```
 
 This example returns a collection of all Visio Services applications in the farm.
 
 ### -----------------------EXAMPLE 2------------------------- 
 ```
-PS C:\>Get-SPVisioServiceApplication "VGS1"
+Get-SPVisioServiceApplication "VGS1"
 ```
 
 This example returns properties of the VGS1  Visio Services application.

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-applicable: SharePoint Server 2016
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteMaster
 schema: 2.0.0
 ---
@@ -38,7 +38,7 @@ Typically the following information is displayed:
 
 ### Example 1 
 ```
-PS C:\>Get-SPSiteMaster -ContentDatabase WSS_Content
+Get-SPSiteMaster -ContentDatabase WSS_Content
 ```
 
 This example returns the site master in the database WSS_Content.
@@ -54,7 +54,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -70,7 +70,7 @@ Specifies the name of the database to get the list of Site Masters. For example,
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0

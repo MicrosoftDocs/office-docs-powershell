@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE----------------------
 ```
-PS C:\>Set-SPUsageApplication -Identity "Usage and Health data collection" -DatabaseServer "Server Name" -DatabaseName "New Logging DB"
+Set-SPUsageApplication -Identity "Usage and Health data collection" -DatabaseServer "Server Name" -DatabaseName "New Logging DB"
 ```
 
 This example changes the database server and database name used by the usage logging service to store logging data.

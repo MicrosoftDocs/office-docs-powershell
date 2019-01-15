@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE------------- 
 ```
-PS C:\>Get-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1"
+Get-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1"
 ```
 
 This example retrieves an existing connection to a managed metadata service application.

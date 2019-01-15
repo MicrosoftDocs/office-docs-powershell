@@ -23,7 +23,7 @@ Disables Project Server functionality across the farm.
 
 ### Example 1 
 ```
-PS C:\> Disable-ProjectServerLicense
+ Disable-ProjectServerLicense
 ```
 
 This example disables Project Server functionality for the entire farm.

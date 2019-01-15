@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPEnterpriseSearchVssDataPath
+Get-SPEnterpriseSearchVssDataPath
 ```
 
 This example gets the index paths for all active index components on the current server.

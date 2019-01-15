@@ -62,13 +62,12 @@ This example enables licensing for external messages.
 ## PARAMETERS
 
 ### -AutomaticServiceUpdateEnabled
+The AutomaticServiceUpdateEnabled parameter specifies whether to allow the automatic addition of new features within Azure Information Protection for your cloud-based organization. Valid values are:
+
+- $true: New Azure Information Protection features announced through Office 365 message center will be enabled automatically in your cloud-based organization. This is the default value.
+
+- $false: Prevents new Azure Information Protection features from automatically being introduced into your tenant organization. 
 This parameter is available only in the cloud-based service.
-
-The AutomaticServiceUpdateEnabled parameter specifies whether to automatically enable the protection features in Azure Information Protection for your cloud-based organization. Valid values are:
-
-- $true: Starting July 1, 2018, the protection features in Azure Information Protection will be automatically enabled in your cloud-based organization. This means you can start using the new Office 365 Message Encryption capabilities without additional set up steps. This is the default value.
-
-- $false: If you're using Active Directory Rights Management Services (AD RMS) in your on-premises environment, you must use this value to prevent the automatic enabling of the protection features in Azure Information Protection for your cloud-based organization. 
 
 ```yaml
 Type: $true | $false
@@ -201,13 +200,8 @@ Accept wildcard characters: False
 ```
 
 ### -DecryptAttachmentFromPortal
-This parameter is available only in the cloud-based service.
+This parameter will be deprecated soon. It has been replaced by the DecryptAttachmentForEncryptOnly parameter.
 
-The DecryptAttachmentFromPortal parameter specifies whether Office attachments are protected for recipients outside of Office 365 when Encrypt-only policy is used for sending mails using new Office 365 Message Encryption capabilities. Use this option when you don't need to retain the original protection for the attachment upon download. Valid values are:
-
-- $true: The recipients will have permissions to download Encrypt-only attachments without protection.
-
-- $false: The recipients will continue to have Encrypt-only attachments protected even after download.
 
 ```yaml
 Type: $true | $false

@@ -47,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPManagedAccount
+Get-SPManagedAccount
 ```
 
 This example displays all the managed accounts in the farm.

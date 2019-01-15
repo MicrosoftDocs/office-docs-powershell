@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE--------------------
 ```
-PS C:\>Set-SPUsageDefinition -Identity "Page Requests" -DaysRetained 31
+Set-SPUsageDefinition -Identity "Page Requests" -DaysRetained 31
 ```
 
 This example sets the number of days that stores page requests usage data to 31.

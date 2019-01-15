@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------ 
 ```
-PS C:\>Get-SPUpgradeActions
+Get-SPUpgradeActions
 ```
 
 This example returns all upgrade actions within the farm.

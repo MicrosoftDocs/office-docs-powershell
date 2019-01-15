@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPEnterpriseSearchServiceApplicationProxy -Identity SearchProxy
+Remove-SPEnterpriseSearchServiceApplicationProxy -Identity SearchProxy
 ```
 
 This example removes a search service application proxy named SearchProxy.

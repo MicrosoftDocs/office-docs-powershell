@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPSocialItemByDate -RemoveTags 1 -ProfileServiceApplicationProxy c6681d53-e6c4-432f-9f31-22d3de81b00c -EndDate 9/15/2009
+Remove-SPSocialItemByDate -RemoveTags 1 -ProfileServiceApplicationProxy c6681d53-e6c4-432f-9f31-22d3de81b00c -EndDate 9/15/2009
 ```
 
 This example removes tags before 9/15/09 from the specified User Profile Service Application Proxy.

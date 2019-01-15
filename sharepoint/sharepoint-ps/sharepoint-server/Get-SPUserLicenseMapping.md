@@ -34,21 +34,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPUserLicenseMapping
+Get-SPUserLicenseMapping
 ```
 
 This example returns all claim-to-user license mappings for the entire SharePoint farm.
 
 ### ---------------EXAMPLE 2 ----------------- 
 ```
-PS C:\>Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
+Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
 ```
 
 This example returns all claim-to-user license mappings for the web application with the name "SharePoint - 80".
 
 ### ---------------EXAMPLE 3 ----------------- 
 ```
-PS C:\>Get-SPUserLicenseMapping -WebApplication http://<server_name>/sitename
+Get-SPUserLicenseMapping -WebApplication http://<server_name>/sitename
 ```
 
 This example returns all claim-to-user license mappings for the Web application with the URL http://\<server_name\>/sites/sitename.

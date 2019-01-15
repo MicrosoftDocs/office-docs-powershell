@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
 ```
 
 This example obtains a reference to a search service application named 'Search Service Application'.

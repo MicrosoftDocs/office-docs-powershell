@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE--------------------
 ```
-PS C:\>Remove-SPPerformancePointServiceApplicationProxy -Identity PPS_Application_Proxy_01
+Remove-SPPerformancePointServiceApplicationProxy -Identity PPS_Application_Proxy_01
 ```
 
 This example removes the PPS_Application_Proxy_01 application proxy from its associated PerformancePoint Service application.

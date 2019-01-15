@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPTrustedRootAuthority -Name "WFEFarm1"
+Remove-SPTrustedRootAuthority -Name "WFEFarm1"
 ```
 
 This example removes the trusted root authority WFEFarm1.

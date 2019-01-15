@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------- 
 ```
-PS C:\>Get-SPAppScaleProfile
+Get-SPAppScaleProfile
 ```
 
 This example returns the farm level app scale profile.

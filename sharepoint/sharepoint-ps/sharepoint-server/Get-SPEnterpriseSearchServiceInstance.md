@@ -26,14 +26,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceInstance -Local
+Get-SPEnterpriseSearchServiceInstance -Local
 ```
 
 This example obtains a reference to the local search service instance.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchServiceInstance | ?{$_.Server -match 'SP01'}
+Get-SPEnterpriseSearchServiceInstance | ?{$_.Server -match 'SP01'}
 ```
 
 This example obtains a reference to the search service instance on the SharePoint server named 'SP01'.

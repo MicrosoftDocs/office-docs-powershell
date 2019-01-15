@@ -38,8 +38,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchQueryScope -Name MustCrawl -Description "Sites we must crawl" -DisplayInAdminUI $true -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchQueryScope -Name MustCrawl -Description "Sites we must crawl" -DisplayInAdminUI $true -SearchApplication $ssa
 ```
 
 This example adds a scope named MustCrawl that will be displayed in the administration UI to the search service application named MySSA.

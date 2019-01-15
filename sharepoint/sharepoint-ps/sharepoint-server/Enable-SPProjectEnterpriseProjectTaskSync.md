@@ -28,7 +28,7 @@ Enables task sync between Project Web App and the associated project site.
 
 ### Example 1 
 ```
-PS C:\>Enable-SPProjectEnterpriseProjectTaskSync -Url http://pwa_site
+Enable-SPProjectEnterpriseProjectTaskSync -Url http://pwa_site
 ```
 
 Enables Project Task sync on the Project Web Apps site, http://pwa_site.

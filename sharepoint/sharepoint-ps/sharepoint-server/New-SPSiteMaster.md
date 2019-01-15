@@ -27,7 +27,7 @@ Use the New-SPSiteMaster cmdlet to create a site master information in the farm.
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
+New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
 ```
 
 This example creates a site master in the database WSS_Content.

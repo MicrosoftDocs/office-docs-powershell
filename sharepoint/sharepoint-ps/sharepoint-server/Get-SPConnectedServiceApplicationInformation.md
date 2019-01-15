@@ -26,15 +26,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1 
 ```
-PS C:\>$validProxy = $false
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq "User Profile Service Application Proxy"}
-PS C:\>$proxyHealth = Get-SPConnectedServiceApplicationInformation -ServiceApplicationProxy $proxy
-PS C:\>if(($proxyHealth -ne $null) -and ($proxyHealth.ApplicationAddressesState -eq "UpToDate")) {
+$validProxy = $false
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq "User Profile Service Application Proxy"}
+$proxyHealth = Get-SPConnectedServiceApplicationInformation -ServiceApplicationProxy $proxy
+if(($proxyHealth -ne $null) -and ($proxyHealth.ApplicationAddressesState -eq "UpToDate")) {
         $validProxy = $true
     } else {
         $validProxy = $false
     }
-PS C:\>$validProxy
+$validProxy
 ```
 
 This example checks the health of the service application proxy server.

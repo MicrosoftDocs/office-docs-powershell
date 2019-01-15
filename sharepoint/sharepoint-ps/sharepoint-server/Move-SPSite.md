@@ -41,21 +41,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Move-SPSite http://servername/sites/sitename -DestinationDatabase ContentDb2
+Move-SPSite http://servername/sites/sitename -DestinationDatabase ContentDb2
 ```
 
 This example moves the site collection http://servername/sites/sitename to the content database ContentDb2.
 
 ### ---------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
+Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
 ```
 
 This example moves all site collections in ContentDb1 to ContentDb2.
 
 ### ---------------------EXAMPLE 3----------------------- 
 ```
-PS C:\>Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
+Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
 ```
 
 This example moves all site collections where DOMAIN\username is the site collection owner to ContentDb2.
@@ -64,7 +64,7 @@ You can access the properties of the SPSiteAdministration object as a SharePoint
 
 ### ---------------------EXAMPLE 4----------------------- 
 ```
-PS C:\>Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
+Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
        @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
 ```
 

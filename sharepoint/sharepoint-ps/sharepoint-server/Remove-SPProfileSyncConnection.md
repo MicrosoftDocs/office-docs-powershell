@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\>Remove-SPProfileSyncConnection -ProfileServiceApplication 888ds256-9ad9-53a9-f135-99eecd245670b -ConnectionDomain "Fabrikam" -ConnectionUserName "Testupa" -ConnectionPassword convertto-securestring "Password1" -asplaintext -force -ConnectionSynchronizationOU "OU=SharePoint Users,DC=fabrikam,DC=com"
+Remove-SPProfileSyncConnection -ProfileServiceApplication 888ds256-9ad9-53a9-f135-99eecd245670b -ConnectionDomain "Fabrikam" -ConnectionUserName "Testupa" -ConnectionPassword convertto-securestring "Password1" -asplaintext -force -ConnectionSynchronizationOU "OU=SharePoint Users,DC=fabrikam,DC=com"
 ```
 
 This example removes a user from the fabrikam domain using a specific user profile service application.

@@ -38,7 +38,7 @@ Creates an Access Services Service Application.
 
 ### Example 1 
 ```
-PS C:\>New-SPAccessServicesApplication -DatabaseServer SQLServerName -ApplicationPool 'SharePoint Web Services Default' -Name 'Access Services Service Application' -Default
+New-SPAccessServicesApplication -DatabaseServer SQLServerName -ApplicationPool 'SharePoint Web Services Default' -Name 'Access Services Service Application' -Default
 ```
 
 Creates an Access Services Service Application.

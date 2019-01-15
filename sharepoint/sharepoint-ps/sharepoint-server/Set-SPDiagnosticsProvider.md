@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider | Set-SPDiagnosticsProvider -Enable:$false
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider | Set-SPDiagnosticsProvider -Enable:$false
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
 ```
 
 This example disables the event log diagnostics provider.
@@ -38,8 +38,8 @@ This example disables the event log diagnostics provider.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider | Set-SPDiagnosticsProvider -Enable -DaysRetained 10
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider | Set-SPDiagnosticsProvider -Enable -DaysRetained 10
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
 ```
 
 This example enables the event log diagnostics provider and changes its retention policy to 10 days.

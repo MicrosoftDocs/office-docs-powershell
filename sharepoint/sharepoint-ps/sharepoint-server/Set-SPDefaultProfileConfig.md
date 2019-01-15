@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Set-SPDefaultProfileConfig $proxy -MySitesPublicEnabled $true
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Set-SPDefaultProfileConfig $proxy -MySitesPublicEnabled $true
 ```
 
 This example changes the MySitesPublicEnabled property of the specified user profile service application.

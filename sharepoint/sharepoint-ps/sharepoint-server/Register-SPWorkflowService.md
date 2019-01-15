@@ -26,7 +26,7 @@ This cmdlet registers a Workflow Manager farm with the SharePoint farm in order 
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Register-SPWorkflowService -SPSite https://site_name -WorkflowHostUri https://workflow.contoso.com:12290 -ScopeName SharePoint
+Register-SPWorkflowService -SPSite https://site_name -WorkflowHostUri https://workflow.contoso.com:12290 -ScopeName SharePoint
 ```
 Registers the Workflow Manager farm located at https://workflow.contoso.com:12290 with the SharePoint farm using https://site_name as a reference. A custom Scope named 'SharePoint' is used.
 

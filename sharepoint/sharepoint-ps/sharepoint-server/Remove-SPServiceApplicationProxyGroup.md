@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-------------------------
 ```
-PS C:\>Remove-SPServiceApplicationProxyGroup RemoteProxyGroup
+Remove-SPServiceApplicationProxyGroup RemoteProxyGroup
 ```
 
 This example deletes the service application proxy group named RemoteProxyGroup.

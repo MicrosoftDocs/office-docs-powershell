@@ -30,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Add code example. 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchCrawlExtension -Identity 'pdf' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
+Get-SPEnterpriseSearchCrawlExtension -Identity 'pdf' -SearchApplication $ssa
 ```
 
 This example checks whether the pdf file type is included in the file types to be included in the content index.
