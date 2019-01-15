@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPOTenantCdnOrigin
 schema: 2.0.0
@@ -26,7 +26,7 @@ Removes a new origin from the Public or Private content delivery network (CDN).
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-Remove-SPOTenantCdnOrigin -CdnType Public -OriginScope Tenant -OriginUrl sites/pubsite/siteassets/subfolder
+Remove-SPOTenantCdnOrigin -CdnType Public -OriginUrl sites/pubsite/siteassets/subfolder
 ```
 
 The example removes a CDN from a tenant level.

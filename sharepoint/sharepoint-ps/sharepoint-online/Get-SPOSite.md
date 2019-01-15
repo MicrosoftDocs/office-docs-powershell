@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOSite
 schema: 2.0.0
@@ -71,7 +71,7 @@ Example 2 lists the site collection with detailed properties.
 ```
 Get-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwnersStatus
 ```
-Example 3 disables the ability for non owners of a site collection to share. 
+Example 3 Updates status on if the non owners of a site collection can share the site collection (does not set this value).
 
 ### -----------------------EXAMPLE 4-----------------------------
 ```

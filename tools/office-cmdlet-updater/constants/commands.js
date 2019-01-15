@@ -1,5 +1,6 @@
 module.exports = {
 	GET_TEAM: 'Get-Team',
+	INSTALL_PACKAGE_PROVIDER: 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force',
 	INSTALL_MICROSOFT_TEAM: 'Install-Module MicrosoftTeams -SkipPublisherCheck -Force',
 	CONNECT_MICROSOFT_TEAM: 'Connect-MicrosoftTeams',
 	INSTALL_PLATYPS: 'Install-Module -Name platyPS -SkipPublisherCheck -Scope CurrentUser -Force',
@@ -20,5 +21,5 @@ module.exports = {
 	SET_PASS: '$Password = \'{}\'',
 	CONVERT_PASS_TO_SEC_STRING: '$SecureString = ConvertTo-SecureString -AsPlainText $Password -Force',
 	CREAT_CRED: '$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username,$SecureString',
-	STUFFHUB_INSTALL: 'Install-Module -Name MicrosoftStaffHub -RequiredVersion 1.0.0-alpha -AllowPrerelease -Force'
+	STUFFHUB_INSTALL: 'Install-Module -Name MicrosoftStaffHub -Force'
 };

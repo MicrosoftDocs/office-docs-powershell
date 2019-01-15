@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOSiteScriptFromList
 schema: 2.0.0
@@ -22,9 +22,6 @@ Get-SPOSiteScriptFromList
 ## DESCRIPTION
 
 Uses an existing SharePoint list to output a JSON blob that can be used to create a site script for use in a site design. 
-
-[!NOTE]
-Most column data types and list configurations - including view formatting - are supported. Managed metadata fields cannot be extracted at this time. 
 
 ## EXAMPLES
 

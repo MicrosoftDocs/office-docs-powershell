@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPBlobStorageLocation
 schema: 2.0.0
@@ -28,20 +28,20 @@ If a content database is greater than 4 GB, the database cannot be copied direct
 The Move-SPBlobStorageLocation cmdlet uses the advantage of RBS and copies databases larger than 4 GB.
 RBS stores the data on the local hard disk and keeps the links to the data in the database, which results in a smaller database.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### -------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Move-SPBlobStorageLocation WSS_Content
+Move-SPBlobStorageLocation WSS_Content
 ```
 
 This example copies the content database named WSS_Content from the Windows Internal Database to the same database name in SQL Server 2008 Express by using RBS.
 
 ### -------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Move-SPBlobStorageLocation WSS_Content -DestinationDatabase WSS_V4_Content -BackupDatabase WSSBackupDB -VerboseMod:$true
+Move-SPBlobStorageLocation WSS_Content -DestinationDatabase WSS_V4_Content -BackupDatabase WSSBackupDB -VerboseMod:$true
 ```
 
 This example copies the content database named WSS_Content from the Windows Internal Database to a database in SQL Server 2008 Express.
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

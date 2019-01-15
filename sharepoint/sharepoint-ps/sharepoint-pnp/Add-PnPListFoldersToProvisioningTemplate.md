@@ -27,21 +27,21 @@ Add-PnPListFoldersToProvisioningTemplate -Path <String>
 Add-PnPListFoldersToProvisioningTemplate -Path template.pnp -List 'PnPTestList'
 ```
 
-Adds top level folders from a list to an existing template and returns an in-memory PnP Provisioning Template
+Adds top level folders from a list to an existing template and returns an in-memory PnP Site Template
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 Add-PnPListFoldersToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Recursive
 ```
 
-Adds all folders from a list to an existing template and returns an in-memory PnP Provisioning Template
+Adds all folders from a list to an existing template and returns an in-memory PnP Site Template
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
 Add-PnPListFoldersToProvisioningTemplate -Path template.pnp -List 'PnPTestList' -Recursive -IncludeSecurity
 ```
 
-Adds all folders from a list with unique permissions to an in-memory PnP Provisioning Template
+Adds all folders from a list with unique permissions to an in-memory PnP Site Template
 
 ## PARAMETERS
 
@@ -70,7 +70,7 @@ Accept pipeline input: False
 ```
 
 ### -Path
-Filename of the .PNP Open XML provisioning template to read from, optionally including full path.
+Filename of the .PNP Open XML site template to read from, optionally including full path.
 
 ```yaml
 Type: String

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectOdataConfiguration
 schema: 2.0.0
@@ -26,14 +26,14 @@ Paging can be specified per entity.
 If no paging overrides exist for a given entity, the DefaultMaxPageSize parameter is used. 
 MaxResultsPerCollection cannot be used in conjunction with paging.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
+Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
 ```
 
 This example clears any page size overrides that have been set for any specific entities.
@@ -41,7 +41,7 @@ This example clears any page size overrides that have been set for any specific 
 
 ### ----------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
+Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
 ```
 
 This example sets AcceptProjectionRequests to true.
@@ -49,7 +49,7 @@ This example sets AcceptProjectionRequests to true.
 
 ### ----------------------EXAMPLE 3-----------------------
 ```
-PS C:\>Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
+Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
 ```
 
 This example sets the default maximum page size to 50 rows.
@@ -57,7 +57,7 @@ This example sets the default maximum page size to 50 rows.
 
 ### ----------------------EXAMPLE 4-----------------------
 ```
-PS C:\>Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
+Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
 ```
 
 This example sets the page size override for the Assignments entity.
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

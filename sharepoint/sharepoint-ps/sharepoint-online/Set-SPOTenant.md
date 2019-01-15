@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
@@ -25,7 +25,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StartASiteFormUrl <String>] [-UsePersistentCookiesForExplorerView <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultSharingLinkType <SharingLinkType>]
- [-DisableWebPartIds <Guid>]
+ [-DisabledWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>] [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>] [-IPAddressEnforcement <Boolean>] [-IPAddressWACTokenLifetime <Int32>]
@@ -40,7 +40,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-UseFindPeopleInPeoplePicker <Boolean>]
- [-UserVoiceForFeedbackEnabled <Boolean>] [<CommonParameters>]
+ [-UserVoiceForFeedbackEnabled <Boolean>] 
+ [-ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]] 
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,6 +82,29 @@ Set-SPOTenant -UsePersistentCookiesForExplorerView $true
 ```
 This example enables the use of special persisted cookie for Open with Explorer.
 
+### -----------------------EXAMPLE 5-----------------------------
+
+```
+Set-SPOTenant -LegacyAuthProtocolsEnabled $True
+```
+
+This example enables legacy authentication protocols on the tenant. This can help to enable login in situations where the admin users get an error like "Cannot contact web site 'https://contoso-admin.sharepoint.com/' or the web site does not support SharePoint Online credentials. The response status code is 'Unauthorized'.", and the underlying error is "Access denied. Before opening files in this location, you must first browse to the web site and select the option to login automatically."
+
+### -----------------------EXAMPLE 6------------------------------
+
+```
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
+```
+
+This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behaviour for other sites.
+
+### -----------------------EXAMPLE 7-------------------------------
+
+```
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
+```
+
+This example stops publishing content types to OneDrive for Business sites. 
 
 ## PARAMETERS
 
@@ -300,6 +325,12 @@ Note, this only applies to new external users accepting new sharing invitations.
 The valid values are:  
 False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
 True - User must accept this invitation with bob@contoso.com.
+
+> [!NOTE] 
+> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Azure AD, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation). 
+
+> [!NOTE] 
+> Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect. 
 
 
 ```yaml
@@ -584,11 +615,12 @@ PARAMVALUE: <Guid>[,<Guid>,...]
  
 Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Only web parts that utilize third-party services (Amazon Kindle, YouTube, Twitter) can be disabled in such a manner.
  
-To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4)
+To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4). If you are looking for a GUID for any other web part, easiest way to achieve is to place the web part on a SharePoint page and move to maintenance mode. See more details around the [web part maintenance mode from Microsoft Support](https://support.office.com/en-us/article/Open-and-use-the-Web-Part-Maintenance-Page-EFF9CE22-D04A-44DD-AE83-AC29A5E396C2).
 
-You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOSite to get DisabledWebPartIds.
+You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
 
-To reenable disabled web parts, use the Set-SPOSite with the -DisabledWebPartIds parameter and corresponding GUIDs. 
+To re-enable some disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled web parts, use Set-SPOTenant -DisabledWebPartIds @().
+
  
 ```yaml
 Type: Guid[]
@@ -737,18 +769,20 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyAuthProtocolsEnabled
-By default this value is set to $True. 
+By default this value is set to $True, which means that authentication using legacy protocols is enabled.
 
-Setting this parameter prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+Setting this parameter to $False prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 A value of True- Enables Office clients using non-modern authentication protocols (such as, Forms-Based Authentication (FBA) or Identity Client Runtime Library (IDCRL)) to access SharePoint resources. 
 
-A value of False-Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+A value of False- Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
 
 > [!NOTE] 
 > This may also prevent third-party apps from accessing SharePoint Online resources.
 Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class.  
 
+> [!NOTE] 
+> The change is not instant. It might take up to 24 hours to be applied.
 
 ```yaml
 Type: Boolean
@@ -1206,6 +1240,19 @@ Position: Named
 Default value: $true
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
+By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites). 
+In case you want the Content Type Hub to push content types to OneDrive for Business sites, use:  
+```
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites 
+```
+When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
+
+Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using:
+```
+Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
 ### CommonParameters

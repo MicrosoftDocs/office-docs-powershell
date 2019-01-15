@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPSite
 schema: 2.0.0
@@ -28,14 +28,14 @@ This operation cannot be undone.
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Remove-SPSite -Identity 'http://sitename' -GradualDelete -Confirm:$False
+Remove-SPSite -Identity 'http://sitename' -GradualDelete -Confirm:$False
 ```
 
 This example removes the given site collection and all included sites by using GradualDelete which places the site in the site recycle bin; confirmation has been suppressed.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Remove-SPSite -Identity 'http://sitename'
+Remove-SPSite -Identity 'http://sitename'
 ```
 
 This example immediately deletes the site and it's contents from the farm.
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

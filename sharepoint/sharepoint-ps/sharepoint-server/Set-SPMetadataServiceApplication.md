@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPMetadataServiceApplication
 schema: 2.0.0
@@ -39,15 +39,15 @@ Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [
 ## DESCRIPTION
 Use the `Set-SPMetadataServiceApplication` cmdlet to set the properties of a managed metadata service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
-PS C:\>Set-SPMetadataServiceApplication -Identity $sa -HubUri 'http://sitename' -SyndicationErrorReportEnabled
+$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
+Set-SPMetadataServiceApplication -Identity $sa -HubUri 'http://sitename' -SyndicationErrorReportEnabled
 ```
 
 This example adds a content type hub to an existing managed metadata service application.
@@ -56,8 +56,8 @@ It also enables error reporting when content types are imported.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
-PS C:\>Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
+$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
+Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
 ```
 
 This example sets permissions on an existing managed metadata service application.
@@ -519,7 +519,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

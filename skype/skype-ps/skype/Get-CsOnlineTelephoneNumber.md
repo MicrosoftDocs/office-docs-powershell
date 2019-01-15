@@ -292,8 +292,8 @@ Accept wildcard characters: False
 
 ### -TelephoneNumberStartsWith
 Specifies the digits that the returned telephone numbers must begin with.
-To return numbers in the 425 area code, use this syntax: -TelephoneNumberStartsWith 425.
-To return numbers that are in the 206 area code and that begin with 88, use this syntax: -TelephoneNumberStartsWith 20688.
+To return numbers in the North American Numbering Plan 425 area code, use this syntax: -TelephoneNumberStartsWith 1425.
+To return numbers that are in the 206 area code and that begin with 88, use this syntax: -TelephoneNumberStartsWith 120688.
 You can use up to nine digits.
 
 ```yaml

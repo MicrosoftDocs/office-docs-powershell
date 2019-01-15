@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Word.Server.dll-Help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPWordConversionServiceApplication
 schema: 2.0.0
@@ -23,14 +23,14 @@ New-SPWordConversionServiceApplication [-Name] <String>
 ## DESCRIPTION
 The `New-SPWordConversionServiceApplication` cmdlet creates a new instance of a Word Automation Services application on the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWordConversionServiceApplication -Name 'Word Conversion Services' -ApplicationPool 'SharePoint Web Services Default' -DatabaseName 'Word'
+New-SPWordConversionServiceApplication -Name 'Word Conversion Services' -ApplicationPool 'SharePoint Web Services Default' -DatabaseName 'Word'
 ```
 
 This example creates a new Word Automation Services application named Word Conversion Services in an existing application pool named SharePoint Web Services Default.
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

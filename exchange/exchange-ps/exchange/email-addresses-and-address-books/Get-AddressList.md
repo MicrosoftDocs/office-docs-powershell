@@ -109,7 +109,6 @@ The Identity parameter specifies the address list that you want to view. You can
 
 - Name
 
-- Display name
 
 - Distinguished name (DN)
 

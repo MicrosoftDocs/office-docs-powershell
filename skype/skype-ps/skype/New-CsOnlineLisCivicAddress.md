@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: New-CsOnlineLisCivicAddress
 schema: 2.0.0
@@ -13,12 +13,11 @@ Use the New-CsOnlineLisCivicAddress cmdlet to create a civic address in the Loca
 ## SYNTAX
 
 ```
-New-CsOnlineLisCivicAddress [-CompanyName <Object>] [-CountryOrRegion <Object>] [-BypassDualWrite <Object>]
- [-City <Object>] [-CityAlias <Object>] [-CompanyTaxId <Object>] [-Confirm] [-Description <Object>]
- [-DomainController <Object>] [-Force] [-HouseNumber <Object>] [-HouseNumberSuffix <Object>]
- [-PostalCode <Object>] [-PostDirectional <Object>] [-PreDirectional <Object>] [-StateOrProvince <Object>]
- [-StreetName <Object>] [-StreetSuffix <Object>] [-Tenant <Object>] [-ValidationStatus <Object>] [-WhatIf]
- [-AsJob] [<CommonParameters>]
+New-CsOnlineLisCivicAddress [-HouseNumber <String>] [-HouseNumberSuffix <String>] [-StreetName <String>]
+ [-StreetSuffix <String>] [-PostDirectional <String>] [-PreDirectional <String>] [-City <String>]
+ [-CityAlias <String>] [-StateOrProvince <String>] -CountryOrRegion <String> [-PostalCode <String>]
+ [-Description <String>] -CompanyName <String> [-CompanyTaxId <String>] [-ValidationStatus <String>]
+ [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,9 +62,7 @@ NumberOfVoiceUsers : 0
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
-New -CsOnlineLisCivicAddress -HouseNumber 3910 -StreetName Smith -StreetSuffix Street -PostDirectional NE -City Redmond -StateorProvince Washington -Country US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso
-
+New-CsOnlineLisCivicAddress -HouseNumber 3910 -StreetName Smith -StreetSuffix Street -PostDirectional NE -City Redmond -StateorProvince Washington -Country US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso
 ```
 
 This example creates a new civic address described as "West Coast Headquarters": 3910 Smith Street NE, Redmond WA, 98052.
@@ -76,7 +73,7 @@ This example creates a new civic address described as "West Coast Headquarters":
 Specifies the name of your organization.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -93,23 +90,7 @@ Specifies the country or region of the new civic address.
 Needs to be a valid country code as contained in the ISO 3166-1 alpha-2 specification.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -125,7 +106,7 @@ Accept wildcard characters: False
 Specifies the city of the new civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -141,7 +122,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -157,7 +138,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -189,7 +170,7 @@ Accept wildcard characters: False
 Specifies an administrator defined description of the new civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -205,7 +186,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
 Applicable: Skype for Business Online
@@ -239,7 +220,7 @@ Accept wildcard characters: False
 Specifies the numeric portion of the new civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -256,7 +237,7 @@ Specifies the numeric suffix of the new civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -272,7 +253,7 @@ Accept wildcard characters: False
 Specifies the postal code of the new civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -289,7 +270,7 @@ Specifies the directional attribute of the new civic address which follows the s
 For example, "425 Smith Avenue NE".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -306,7 +287,7 @@ Specifies the directional attribute of the new civic address which precedes the 
 For example, "425 NE Smith Avenue ".
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -322,7 +303,7 @@ Accept wildcard characters: False
 Specifies the state or province of the new civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -338,7 +319,7 @@ Accept wildcard characters: False
 Specifies the street name of the new civic address.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -355,7 +336,7 @@ Specifies the street type of the new civic address.
 The street suffix will typically be something like street, avenue, way, or boulevard.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -371,7 +352,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -387,7 +368,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -407,22 +388,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

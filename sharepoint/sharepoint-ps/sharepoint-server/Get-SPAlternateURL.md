@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAlternateURL
 schema: 2.0.0
@@ -30,7 +30,7 @@ Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -WebApplication <SPWeb
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Get-SPAlternateURL cmdlet returns all alternate URLs that match the scope given by either the optional Identity parameter or by a combination of the optional WebApplication, Zone, or Resource parameters.
 Each criterion that is added narrows the scope.
@@ -39,20 +39,20 @@ If no criteria are specified then all alternate URLs are returned.
 If the Identity parameter is used, only the specific matching alternate URL is returned.
 If no alternate URL with the given identity exists at the given scope, nothing is returned.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPAlternateURL -WebApplication http://sitename
+Get-SPAlternateURL -WebApplication http://sitename
 ```
 
 This example displays all the alternate URLs on a given Web application.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPAlternateURL -ResourceName "MyResource"
+Get-SPAlternateURL -ResourceName "MyResource"
 ```
 
 This example displays all the alternate URLs for a given resource.
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

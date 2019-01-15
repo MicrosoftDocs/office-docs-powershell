@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Revoke-SPOHubSiteRights
 schema: 2.0.0
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 
 ### -Principals
 
-One or more principles to add permissions for.
+One or more principles to revoke the permissions for.
 
 ```yaml
 Type: String[]

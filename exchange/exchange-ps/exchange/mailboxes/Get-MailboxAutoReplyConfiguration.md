@@ -63,23 +63,29 @@ This example retrieves all Automatic Replies settings for all mailboxes in the E
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies a unique identifier associated with a mailbox. Accepted values for the mailbox are as follows:
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
-- GUID
+- Name
 
-- ADObjectID
+- Display name
+
+- Alias
 
 - Distinguished name (DN)
 
-- Domain\\Account
+- Canonical DN
 
-- User principal name (UPN)
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
 
 - LegacyExchangeDN
 
-- SmtpAddress
+- SamAccountName
 
-- Alias
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter

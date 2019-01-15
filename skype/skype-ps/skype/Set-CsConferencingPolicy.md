@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingPolicy
 schema: 2.0.0
@@ -15,67 +15,48 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsConferencingPolicy [[-Identity] <XdsIdentity>] [-AllowAnnotations <Boolean>]
- [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
- [-AllowConferenceRecording <Boolean>] [-AllowExternalUserControl <Boolean>]
- [-AllowExternalUsersToSaveContent <Boolean>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
- [-AllowParticipantControl <Boolean>] [-AllowPolls <Boolean>]
- [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-Description <String>]
- [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-EnableDataCollaboration <Boolean>]
- [-EnableDialInConferencing <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
- [-EnableP2PRecording <Boolean>] [-EnableP2PVideo <Boolean>] [-MaxMeetingSize <UInt32>]
- [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-Force] [-WhatIf] [-Confirm]
- [-AllowExternalUsersToRecordMeeting <Boolean>] [-AppSharingBitRateKb <Int64>] [-AudioBitRateKb <UInt32>]
- [-FileTransferBitRateKb <Int64>] [-VideoBitRateKb <Int64>] [-AllowLargeMeetings <Boolean>]
- [-AllowMultiView <Boolean>] [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowSharedNotes <Boolean>]
- [-DisablePowerPointAnnotations <Boolean>] [-EnableMultiViewJoin <Boolean>]
- [-TotalReceiveVideoBitRateKb <Int64>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
- [-AllowOfficeContent <Boolean>] [-AllowQandA <Boolean>] [-EnableOnlineMeetingPromptForLyncResources <Boolean>]
- [-Tenant <Guid>] [-ApplicationSharingMode <String>] [<CommonParameters>]
+Set-CsConferencingPolicy [-Tenant <Guid>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowMultiView <Boolean>] [-Description <String>] [-AllowParticipantControl <Boolean>]
+ [-AllowAnnotations <Boolean>] [-DisablePowerPointAnnotations <Boolean>]
+ [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-ApplicationSharingMode <String>]
+ [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
+ [-AllowExternalUsersToSaveContent <Boolean>] [-AllowExternalUserControl <Boolean>]
+ [-AllowExternalUsersToRecordMeeting <Boolean>] [-AllowPolls <Boolean>] [-AllowSharedNotes <Boolean>]
+ [-AllowQandA <Boolean>] [-AllowOfficeContent <Boolean>] [-EnableDialInConferencing <Boolean>]
+ [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-AllowConferenceRecording <Boolean>]
+ [-EnableP2PRecording <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
+ [-EnableP2PVideo <Boolean>] [-AllowLargeMeetings <Boolean>]
+ [-EnableOnlineMeetingPromptForLyncResources <Boolean>] [-EnableDataCollaboration <Boolean>]
+ [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-MaxMeetingSize <UInt32>]
+ [-AudioBitRateKb <UInt32>] [-VideoBitRateKb <Int64>] [-AppSharingBitRateKb <Int64>]
+ [-FileTransferBitRateKb <Int64>] [-TotalReceiveVideoBitRateKb <Int64>] [-EnableMultiViewJoin <Boolean>]
+ [-CloudRecordingServiceSupport <CloudRecordingServiceSupport>] [-EnableReliableConferenceDeletion <Boolean>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsConferencingPolicy [-Instance <PSObject>] [-AllowAnnotations <Boolean>]
- [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
- [-AllowConferenceRecording <Boolean>] [-AllowExternalUserControl <Boolean>]
- [-AllowExternalUsersToSaveContent <Boolean>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
- [-AllowParticipantControl <Boolean>] [-AllowPolls <Boolean>]
- [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-Description <String>]
- [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-EnableDataCollaboration <Boolean>]
- [-EnableDialInConferencing <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
- [-EnableP2PRecording <Boolean>] [-EnableP2PVideo <Boolean>] [-MaxMeetingSize <UInt32>]
- [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-Force] [-WhatIf] [-Confirm]
- [-AllowExternalUsersToRecordMeeting <Boolean>] [-AppSharingBitRateKb <Int64>] [-AudioBitRateKb <UInt32>]
- [-FileTransferBitRateKb <Int64>] [-VideoBitRateKb <Int64>] [-AllowLargeMeetings <Boolean>]
- [-AllowMultiView <Boolean>] [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowSharedNotes <Boolean>]
- [-DisablePowerPointAnnotations <Boolean>] [-EnableMultiViewJoin <Boolean>]
- [-TotalReceiveVideoBitRateKb <Int64>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
- [-AllowOfficeContent <Boolean>] [-AllowQandA <Boolean>] [-EnableOnlineMeetingPromptForLyncResources <Boolean>]
- [-Tenant <Guid>] [-ApplicationSharingMode <String>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsConferencingPolicy [[-Identity] <Object>] [-AllowAnnotations <Object>]
- [-AllowAnonymousParticipantsInMeetings <Object>] [-AllowAnonymousUsersToDialOut <Object>]
- [-AllowConferenceRecording <Object>] [-AllowExternalUserControl <Object>]
- [-AllowExternalUsersToRecordMeeting <Object>] [-AllowExternalUsersToSaveContent <Object>]
- [-AllowFederatedParticipantJoinAsSameEnterprise <Object>] [-AllowIPAudio <Object>] [-AllowIPVideo <Object>]
- [-AllowLargeMeetings <Object>] [-AllowMultiView <Object>] [-AllowNonEnterpriseVoiceUsersToDialOut <Object>]
- [-AllowOfficeContent <Object>] [-AllowParticipantControl <Object>] [-AllowPolls <Object>]
- [-AllowQandA <Object>] [-AllowSharedNotes <Object>] [-AllowUserToScheduleMeetingsWithAppSharing <Object>]
- [-ApplicationSharingMode <Object>] [-AppSharingBitRateKb <Object>] [-AudioBitRateKb <Object>]
- [-BypassDualWrite <Object>] [-CloudRecordingServiceSupport <Object>] [-Confirm] [-Description <Object>]
- [-DisablePowerPointAnnotations <Object>] [-EnableAppDesktopSharing <Object>]
- [-EnableDataCollaboration <Object>] [-EnableDialInConferencing <Object>] [-EnableFileTransfer <Object>]
- [-EnableMultiViewJoin <Object>] [-EnableOnlineMeetingPromptForLyncResources <Object>]
- [-EnableP2PFileTransfer <Object>] [-EnableP2PRecording <Object>] [-EnableP2PVideo <Object>]
- [-EnableReliableConferenceDeletion <Object>] [-FileTransferBitRateKb <Object>] [-Force] [-Instance <Object>]
- [-MaxMeetingSize <Object>] [-MaxVideoConferenceResolution <Object>] [-Tenant <Object>]
- [-TotalReceiveVideoBitRateKb <Object>] [-VideoBitRateKb <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsConferencingPolicy [-Tenant <Guid>] [-AllowIPAudio <Boolean>] [-AllowIPVideo <Boolean>]
+ [-AllowMultiView <Boolean>] [-Description <String>] [-AllowParticipantControl <Boolean>]
+ [-AllowAnnotations <Boolean>] [-DisablePowerPointAnnotations <Boolean>]
+ [-AllowUserToScheduleMeetingsWithAppSharing <Boolean>] [-ApplicationSharingMode <String>]
+ [-AllowNonEnterpriseVoiceUsersToDialOut <Boolean>] [-AllowAnonymousUsersToDialOut <Boolean>]
+ [-AllowAnonymousParticipantsInMeetings <Boolean>] [-AllowFederatedParticipantJoinAsSameEnterprise <Boolean>]
+ [-AllowExternalUsersToSaveContent <Boolean>] [-AllowExternalUserControl <Boolean>]
+ [-AllowExternalUsersToRecordMeeting <Boolean>] [-AllowPolls <Boolean>] [-AllowSharedNotes <Boolean>]
+ [-AllowQandA <Boolean>] [-AllowOfficeContent <Boolean>] [-EnableDialInConferencing <Boolean>]
+ [-EnableAppDesktopSharing <EnableAppDesktopSharing>] [-AllowConferenceRecording <Boolean>]
+ [-EnableP2PRecording <Boolean>] [-EnableFileTransfer <Boolean>] [-EnableP2PFileTransfer <Boolean>]
+ [-EnableP2PVideo <Boolean>] [-AllowLargeMeetings <Boolean>]
+ [-EnableOnlineMeetingPromptForLyncResources <Boolean>] [-EnableDataCollaboration <Boolean>]
+ [-MaxVideoConferenceResolution <MaxVideoConferenceResolution>] [-MaxMeetingSize <UInt32>]
+ [-AudioBitRateKb <UInt32>] [-VideoBitRateKb <Int64>] [-AppSharingBitRateKb <Int64>]
+ [-FileTransferBitRateKb <Int64>] [-TotalReceiveVideoBitRateKb <Int64>] [-EnableMultiViewJoin <Boolean>]
+ [-CloudRecordingServiceSupport <CloudRecordingServiceSupport>] [-EnableReliableConferenceDeletion <Boolean>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,7 +78,7 @@ This provides administrators with enormous flexibility when it comes to deciding
 Policy property values can be configured at the time a policy is created.
 In addition to that, you can, at any time, use the `Set-CsConferencingPolicy` cmdlet to modify the property values of an existing policy.
 
-The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AsJob, AudioBitRateKb, Description, EnableDialInConferencing, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, Instance, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb
+The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AsJob, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, Instance, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, and TotalReceiveVideoBitRateKb
 
 ## EXAMPLES
 
@@ -174,19 +155,6 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -554,11 +522,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PRecording
-If True, users will be able to record peer-to-peer audio communication sessions.
+If True, users will be able to record peer-to-peer communication sessions.
 The default value is False.
 
 This setting is enforced at the per-user level.
-That means that one user in a peer-to-peer audio communication session might be allowed to record the session while the other user is not. Recording is not available in peer-to-peer communication sessions with video or screen sharing.
+That means that one user in a peer-to-peer communication session might be allowed to record the session while the other user is not.
 
 
 ```yaml
@@ -631,8 +599,6 @@ VGA.
 VGA has a resolution of 640 pixels by 480 pixels.
 
 The default value is VGA.
-
-Note: The Skype for Business client and Skype for Business 2015 AVMCU will offer H.264
 
 ```yaml
 Type: MaxVideoConferenceResolution
@@ -931,7 +897,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -948,7 +914,7 @@ When set to False, prevents users from using Office content in their conferences
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -969,7 +935,7 @@ However, the user can make use of the Questions and Answers Manager in other con
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -986,26 +952,10 @@ Determines the protocol used for screen sharing - VbSS vs RDP.  This parameter i
 
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -1018,7 +968,7 @@ Accept wildcard characters: False
 PARAMVALUE: NotSupported | Supported | Required
 
 ```yaml
-Type: Object
+Type: CloudRecordingServiceSupport
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1035,7 +985,7 @@ When set to True, users will be prompted any time they schedule a meeting in Out
 The default value is False.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -1051,7 +1001,7 @@ Accept wildcard characters: False
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -1075,25 +1025,10 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named

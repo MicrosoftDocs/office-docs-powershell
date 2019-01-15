@@ -19,28 +19,46 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Identity
+### IdentityOnPremises
 ```
-Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter> [-Diagnostic] [-DiagnosticArgument <String>]
- [-DiagnosticInfo <String>] [-DomainController <Fqdn>] [-IncludeReport] [-ProxyToMailbox <MailboxIdParameter>]
- [-ReportOnly] [<CommonParameters>]
+Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [<CommonParameters>]
+```
+
+### IdentityCloud
+```
+Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
+ [-DiagnosticInfo <String>]
+ [-IncludeReport]
+ [-ProxyToMailbox <MailboxIdParameter>]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ### MigrationMoveRequestQueue
 ```
-Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter> [-Diagnostic] [-DiagnosticArgument <String>]
- [-DomainController <Fqdn>] [-IncludeReport] [-MailboxGuid <Guid>] [-ReportOnly] [<CommonParameters>]
+Get-MoveRequestStatistics -MoveRequestQueue <DatabaseIdParameter> [-MailboxGuid <Guid>]
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
-### MRSInstance
+### MigrationMRSInstance
 ```
-Get-MoveRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-MailboxGuid <Guid>]
+Get-MoveRequestStatistics -MRSInstance <Fqdn> [-MailboxGuid <Guid>]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The MoveRequestQueue parameter syntax set is for debugging purposes only.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -103,7 +121,7 @@ You can use this parameter with the MoveRequestQueue or MailboxGuid parameters.
 
 ```yaml
 Type: MoveRequestIdParameter
-Parameter Sets: Identity
+Parameter Sets: IdentityOnPremises, IdentityCloud
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -115,6 +133,8 @@ Accept wildcard characters: False
 
 ### -MoveRequestQueue
 This parameter is available only in on-premises Exchange.
+
+This parameter is for debugging purposes only.
 
 The MoveRequestQueue parameter specifies the mailbox database on which the move request resides. You can use one of the following values:
 
@@ -137,15 +157,15 @@ Accept wildcard characters: False
 ```
 
 ### -MRSInstance
-This parameter is available only in on-premises Exchange 2010.
+This parameter is available or functional only in on-premises Exchange Server 2010.
 
 The MRSInstance parameter specifies the fully qualified domain name (FQDN) of the Client Access server on which the Microsoft Exchange Mailbox Replication service (MRS) resides. When using this parameter, all records are returned for this instance of MRS.
 
-You can use this parameter with the Identity or MoveRequestQueue parameters.
+You can't use this parameter with the Identity or MoveRequestQueue parameters.
 
 ```yaml
 Type: Fqdn
-Parameter Sets: MRSInstance
+Parameter Sets: MigrationMRSInstance
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -164,7 +184,7 @@ Typically, you use this switch only at the request of Microsoft Customer Service
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Identity, MigrationMoveRequestQueue
+Parameter Sets: IdentityOnPremises, MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -183,7 +203,7 @@ Typically, you use the Diagnostic switch and the DiagnosticArgument parameter on
 
 ```yaml
 Type: String
-Parameter Sets: Identity, MigrationMoveRequestQueue
+Parameter Sets: IdentityOnPremises, MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -200,7 +220,7 @@ Typically, you use the DiagnosticInfo parameter only at the request of Microsoft
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -217,7 +237,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: IdentityOnPremises, MigrationMoveRequestQueue, MigrationMRSInstance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -232,7 +252,7 @@ The IncludeReport switch specifies whether to return additional details, which c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Identity, MigrationMoveRequestQueue
+Parameter Sets: IdentityOnPremises, IdentityCloud, MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -251,7 +271,7 @@ You can't use this parameter with the Identity parameter.
 
 ```yaml
 Type: Guid
-Parameter Sets: MigrationMoveRequestQueue, MRSInstance
+Parameter Sets: MigrationMoveRequestQueue, MigrationMRSInstance
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -292,7 +312,7 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Identity, MigrationMoveRequestQueue
+Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -303,11 +323,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReportOnly
-The ReportOnly switch returns the results as an array of report entries. You don't need to specify a value with this switch.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Identity, MigrationMoveRequestQueue
+Parameter Sets: IdentityOnPremises, IdentityCloud, MigrationMoveRequestQueue
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

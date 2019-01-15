@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPScaleOutDatabase
 schema: 2.0.0
@@ -26,7 +26,7 @@ Use the Get-SPScaleOutDatabase cmdlet to returns all scale-out database objects 
 A scale-out database is a database which implements the Shared Service Database Scale Out Generic Protocol.
 For additional information about the Database Scale Out Generic Protocol, see SharePoint Shared Service Database Scale Out Generic Protocol Specification (http://msdn.microsoft.com/en-us/library/hh656675(office.12).aspx)
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-PS C:\>Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example gets all scale-out databases for the given service application by using the $serviceApplication variable.
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

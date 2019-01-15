@@ -17,23 +17,39 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Identity
+### IdentityOnPremises
 ```
-Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationRequestIdParameter> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-DomainController <Fqdn>] [-IncludeReport]
+Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationRequestIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
  [-ReportOnly] [<CommonParameters>]
+```
+
+### IdentityCloud
+```
+Get-PublicFolderMigrationRequestStatistics [-Identity] <PublicFolderMigrationRequestIdParameter>
+ [-DiagnosticInfo <String>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-PublicFolderMigrationRequestStatistics -RequestQueue <DatabaseIdParameter> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [-IncludeReport] [-RequestGuid <Guid>] [-ReportOnly]
+Get-PublicFolderMigrationRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The RequestQueue parameter is for debugging purposes only.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -65,7 +81,7 @@ This parameter can't be used in conjunction with the RequestQueue or RequestGuid
 
 ```yaml
 Type: PublicFolderMigrationRequestIdParameter
-Parameter Sets: Identity
+Parameter Sets: IdentityOnPremises, IdentityCloud
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -77,6 +93,8 @@ Accept wildcard characters: False
 
 ### -RequestQueue
 This parameter is available only in on-premises Exchange.
+
+This parameter is for debugging purposes only.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
@@ -105,7 +123,7 @@ The Diagnostic switch specifies whether to return extremely detailed information
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -122,7 +140,7 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -139,7 +157,7 @@ Typically, you use the DiagnosticInfo parameter only at the request of Microsoft
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -156,7 +174,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -182,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportOnly
-The ReportOnly switch returns the results as an array of report entries. You don't need to specify a value with this switch.
+The ReportOnly switch returns the results as an array of report entries (encoded strings). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

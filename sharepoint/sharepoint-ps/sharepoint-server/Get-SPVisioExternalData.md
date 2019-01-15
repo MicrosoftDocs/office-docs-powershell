@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPVisioExternalData
 schema: 2.0.0
@@ -20,20 +20,20 @@ Get-SPVisioExternalData -VisioServiceApplication <SPVisioServiceApplicationPipeB
 ## DESCRIPTION
 The Get-SPVisioExternalData cmdlet reads the service settings for managing settings that are related to connecting to external data.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------------ 
 ```
-PS C:\>Get-SPVisioExternalData -VisioServiceApplication "VGS1"
+Get-SPVisioExternalData -VisioServiceApplication "VGS1"
 ```
 
 This example gets settings related to external data for a Visio Services application.
 
 ### ------------------EXAMPLE 2------------------------ 
 ```
-PS C:\>Get-SPVisioServiceApplication -identity "VGS1" | Get-SPVisioExternalData
+Get-SPVisioServiceApplication -identity "VGS1" | Get-SPVisioExternalData
 ```
 
 This example uses a pipe bind to get settings related to external data for a Visio Services application.
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

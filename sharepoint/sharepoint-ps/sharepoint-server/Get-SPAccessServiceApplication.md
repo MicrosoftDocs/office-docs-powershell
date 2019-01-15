@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.access.services.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAccessServiceApplication
 schema: 2.0.0
@@ -24,27 +24,27 @@ The properties returned from this cmdlet are read-only.
 If changes need to be made, use the Set-SPAccessServiceApplication cmdlet.
 These changes affect all computers in the farm in which this Access Services application runs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------EXAMPLE 1---------------- 
 ```
-PS C:\>Get-SPAccessServiceApplication -identity "MyAccessService"
+Get-SPAccessServiceApplication -identity "MyAccessService"
 ```
 
 This example displays an Access Services application named MyAccessService.
 
 ### ------------EXAMPLE 2---------------- 
 ```
-PS C:\>Get-SPAccessServiceApplication | where {$_.recordsintablemax -gt 10000}
+Get-SPAccessServiceApplication | where {$_.recordsintablemax -gt 10000}
 ```
 
 This example displays every Access Services application that run in the farm, which allows more than 10,000 records in a table.
 
 ### ------------EXAMPLE 3---------------- 
 ```
-PS C:\>Get-SPAccessServiceApplication
+Get-SPAccessServiceApplication
 ```
 
 This example displays every Access Services application in the farm.
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -28,10 +28,10 @@ Gets statistics on the current web
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-Measure-PnPList $web -Recursive
+Measure-PnPWeb $web -Recursive
 ```
 
-Gets statistics on the chosen including all sub webs
+Gets statistics on the provided web including all its subwebs
 
 ## PARAMETERS
 

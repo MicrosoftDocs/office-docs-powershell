@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Note: This cmdlet is currently in Beta.
 
-Gets all the teams that the user belongs to.
+Gets all the teams that the user belongs to or all teams in an organization
 
 ## SYNTAX
 
@@ -21,8 +21,7 @@ Get-Team [-User <String>]
 ```
 
 ## DESCRIPTION
-Gets all the teams the user is part of.
-The user must be you - you can only get information on yourself.
+Gets all the teams in an organization, or all teams that you belong to. The user must be you - you can only get information on yourself or all teams in the organization.  Note: we are still backfilling existing teams to get returned by this command.
 
 ## EXAMPLES
 
@@ -34,8 +33,9 @@ PS> Get-Team -User dmx1@example.com
 ## PARAMETERS
 
 ### -User
-User's UPN (user principal name - e.g.
-johndoe@example.com)
+User's UPN (user principal name - e.g. johndoe@example.com).  This can only be your own UPN.  If not specified, this cmdlet will return all groups that have been Teams-enabled in an organization. 
+
+Note: we are still backfilling existing teams to get returned by this command.
 
 ```yaml
 Type: String

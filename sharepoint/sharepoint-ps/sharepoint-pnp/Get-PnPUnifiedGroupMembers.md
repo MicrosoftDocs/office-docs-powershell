@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPUnifiedGroupMembers
 
 ## SYNOPSIS
-Gets members of a paricular Office 365 Group (aka Unified Group)
+Gets members of a particular Office 365 Group (aka Unified Group)
 
 ## SYNTAX 
 
