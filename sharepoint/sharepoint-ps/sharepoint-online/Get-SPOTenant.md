@@ -45,11 +45,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 | Property     | Description |
 |--------------|--------------|
-| StorageQuota       | EMPTY
-| StorageQuotaAllocated       | EMPTY
-| ResourceQuota| EMPTY
-| StorageQuota       | EMPTY 
-| ResourceQuotaAllocated | EMPTY
+| StorageQuota       | Specifies the value of the storage quota that is available for the tenant.
+| StorageQuotaAllocated       | Specifies the value of the storage quota that is allocated for all sites in the tenant
+| ResourceQuota| Specifies the value of the resource quota for the tenant.
+| ResourceQuotaAllocated | Specifies the value of the resource quota allocated to all sites in the tenant.
 | OneDriveStorageQuota | Default OneDrive for Business storage quota for tenant. Used when a new OneDrive for Business site is created. 
 | CompatibilityRange       | Specifies the lower and upper bound on the compatibility level for new sites 
 | ExternalServicesEnabled       | Specifies if external services are enabled for the tenant. 
@@ -62,19 +61,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 | OfficeClientADALDisabled       | When set to true this will disable the ability to use Modern Authentication that leverages ADAL across the tenant. Allowed values true,false
 | LegacyAuthProtocolsEnabled        | By default this value is set to true. Setting this parameter prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources. A value of true - Enables Office clients using non-modern authentication protocols(such as, Forms-Based Authentication (FBA) or Identity Client Runtime Library (IDCRL)) to access SharePoint resources. Allowed values true,false
 | ShowEveryoneExceptExternalUsersClaim       | Enables the administrator to hide the "Everyone except external users" claim in the People Picker. When users share an item with "Everyone except external users", it is accessible to all organization members in the tenant\'s Azure Active Directory, but not to any users who have previously accepted invitations. Allowed values true,false 
-| SearchResolveExactEmailOrUPN       | The display name of the site design. 
+| SearchResolveExactEmailOrUPN       | Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired. This also does not allow SharePoint users to search for security groups or SharePoint groups. SharePoint Administrators will still be able to use starts with or partial name matching when enabled. The valid values are: False (default) - Starts with / partial name search functionality is available. True - Disables starts with / partial name search functionality for all SharePoint users, except SharePoint Admins.
 | RequireAcceptingAccountMatchInvitedAccount       | Ensures that an external user can only accept an external sharing invitation with an account matching the invited email address. Administrators who desire increased control over external collaborators should consider enabling this feature. Allowed values true,false 
 | ProvisionSharedWithEveryoneFolder       | Creates a Shared with Everyone folder in every user\'s new OneDrive for Business document library. The valid values are: True (default) - The Shared with Everyone folder is created. False - No folder is created when the site and OneDrive for Business document library is created. Allowed values true,false 
 | SignInAccelerationDomain       | Specifies the home realm discovery value to be sent to Azure Active Directory (AAD) during the user sign-in process. When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company\'s Identity Provider\'s portal. This value can also be used with Azure Active Directory Premium to customize the Azure Active Directory login page. Acceleration will not occur on site collections that are shared externally. This value should be configured with the login domain that is used by your company (that is, example@contoso.com). If your company has multiple third-party identity providers, configuring the sign-in acceleration value will break sign-in for your organization. The valid values are: "" (default) - Blank by default, this will also remove or clear any value that has been set. Login Domain - For example: "contoso.com". No value assigned by default' 
 | EnableGuestSignInAcceleration       | Accelerates guest-enabled site collections as well as member-only site collections when the SignInAccelerationDomain parameter is set. Allowed values true,false 
 | UsePersistentCookiesForExplorerView       | Lets SharePoint issue a special cookie that will allow this feature to work even when "Keep Me Signed In" is not selected. "Open with Explorer" requires persisted cookies to operate correctly. When the user does not select "Keep Me Signed in" at the time of sign -in, "Open with Explorer" will fail. This special cookie expires after 30 minutes and cannot be cleared by closing the browser or signing out of SharePoint Online.To clear this cookie, the user must log out of their Windows session. The valid values are: False(default) - No special cookie is generated and the normal Office 365 sign -in length / timing applies. True - Generates a special cookie that will allow "Open with Explorer" to function if the "Keep Me Signed In" box is not checked at sign -in. Allowed values true,false
-| ContentTypeSyncSiteTemplatesList       | EMPTY
+| ContentTypeSyncSiteTemplatesList       | Enables ContentType syndication to OneDrive for Business. Example value: "MySites".
 | BccExternalSharingInvitations       | When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList. Allowed values true,false 
 | BccExternalSharingInvitationsList       | Specifies a list of e-mail addresses to be BCC\'d when the BCC for External Sharing feature is enabled. Multiple addresses can be specified by creating a comma separated list with no spaces'. 
 | UserVoiceForFeedbackEnabled       | Enables or disables the User Voice Feedback button. Allowed values true,false 
 | PublicCdnEnabled        | Enables or disables the publish CDN. Allowed values true,false
 | PublicCdnAllowedFileTypes       | Specifies public CDN allowed file types'
-| PublicCdnOrigins         | EMPTY
+| PublicCdnOrigins         | Specifies the public CDN locations (libraries) for assets.
 | RequireAnonymousLinksExpireInDays       | Specifies all anonymous links that have been created (or will be created) will expire after the set number of days. To remove the expiration requirement, set the value to zero (0)' 
 | SharingAllowedDomainList       | Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com"' 
 | SharingBlockedDomainList        | Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com"' 
@@ -104,7 +103,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 | PermissiveBrowserFileHandlingOverride       | Permissive browser fileHandling override. Allowed values true,false 
 | DisallowInfectedFileDownload         | Prevents the Download button from being displayed on the Virus Found warning page. Allowed values true,false
 | DefaultLinkPermission        | Choose the dafault permission that is selected when users share. This applies to anonymous access, internal and direct links. Allowed values None,View,Edit 
-| CustomizedExternalSharingServiceUrl        | EMPTY
+| CustomizedExternalSharingServiceUrl        | 
 | ConditionalAccessPolicy         | Configures conditional access policy. Allowed values AllowFullAccess,AllowLimitedAccess,BlockAccess
 | AllowDownloadingNonWebViewableFiles       | Allows downloading non web viewable files. The Allowed values true,false
 | AllowEditing         | Allows editing. Allowed values true,false
@@ -115,8 +114,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 | SyncPrivacyProfileProperties        | 	Syncs privacy profile properties. Allowed values true,false
 | DisabledWebPartIds        | Specifies disabled web part Ids. Array of GUIDs split by comma (','). Example:c9b1909e-901a-0000-2cdb-e91c3f46320a,c9b1909e-901a-0000-2cdb-e91c3f463201'
 | EnableMinimumVersionRequirement        | Specifies minimum version requirement. Allowed values true,false
-| MarkNewFilesSensitiveByDefault        | EMPTY
-| EnableAIPIntegration       | EMPTY
+| MarkNewFilesSensitiveByDefault        |
+| EnableAIPIntegration       | 
 
 
 ## NOTES
