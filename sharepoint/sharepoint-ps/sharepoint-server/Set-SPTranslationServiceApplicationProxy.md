@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPTranslationServiceApplicationProxy
 schema: 2.0.0
@@ -25,7 +25,7 @@ Use the `Set-SPTranslationServiceApplicationProxy` cmdlet to set properties on a
 
 ### -------------EXAMPLE---------
 ```
-PS C:\>Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
+Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
 ```
 
 This example adds the Machine Translation Service application proxy named TranslationServiceProxy to the default proxy group.
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

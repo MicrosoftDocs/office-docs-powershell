@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.access.services.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAccessServiceApplication
 schema: 2.0.0
@@ -26,20 +26,20 @@ New-SPAccessServiceApplication [-Name <String>] -ApplicationPool <SPIisWebServic
 The New-SPAccessServiceApplication cmdlet creates a new instance of an Access Services application in SharePoint Server 2010, SharePoint Server 2013.
 After you create a new Access Services application, use the Set-SPAccessServiceApplication cmdlet to modify its global settings.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------EXAMPLE 1---------------- 
 ```
-PS C:\>New-SPAccessServiceApplication -Name "MyAccessService" -SPIisWebServiceApplicationPool MyAppPool
+New-SPAccessServiceApplication -Name "MyAccessService" -SPIisWebServiceApplicationPool MyAppPool
 ```
 
 This example creates a new instance of Access Services named MyAccessService that runs under the application pool named MyAppPool.
 
 ### ------------EXAMPLE 2---------------- 
 ```
-PS C:\>New-SPAccessServiceApplication -Name "MyAccessService" -SPIisWebServiceApplicationPool MyAppPool -SessionsPerUserMax 25
+New-SPAccessServiceApplication -Name "MyAccessService" -SPIisWebServiceApplicationPool MyAppPool -SessionsPerUserMax 25
 ```
 
 This example creates a new instance of Access Services named MyAccessService that runs under the application pool named MyAppPool, which allows up to 25 sessions per user on each back end application server machine on which Access Services runs.
@@ -458,7 +458,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

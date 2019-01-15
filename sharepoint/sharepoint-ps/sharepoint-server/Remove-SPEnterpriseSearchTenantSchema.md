@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchTenantSchema
 schema: 2.0.0
@@ -24,16 +24,16 @@ Remove-SPEnterpriseSearchTenantSchema [-Identity] <TenantSchemaPipeBind>
 This cmdlet removes a search schema. 
 Use this cmdlet to remove an unused or unwanted search schema.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>[Guid]$guid = "909b84cb-90f2-4a1b-8df4-22547a9b2227"
-PS C:\>Remove-SPEnterpriseSearchTenantSchema -Identity $guid -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+[Guid]$guid = "909b84cb-90f2-4a1b-8df4-22547a9b2227"
+Remove-SPEnterpriseSearchTenantSchema -Identity $guid -SearchApplication $ssa
 ```
 
 This example removes the search schema for the tenant with GUID 909b84cb-90f2-4a1b-8df4-22547a9b2227.
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWebTemplate
 schema: 2.0.0
@@ -23,7 +23,7 @@ Get-SPWebTemplate [[-Identity] <SPWebTemplatePipeBind>] [-AssignmentCollection <
 ## DESCRIPTION
 The Get-SPWebTemplate cmdlet displays all installed site templates that match the full or partial identity that was given.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -31,14 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$template = Get-SPWebTemplate "STS#0"
 
-PS C:\>New-SPSite http://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
+New-SPSite http://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
 ```
 
 This example creates a site collection by using the team site Web template (ID=STS#0).
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPWebTemplate "STS*"
+Get-SPWebTemplate "STS*"
 ```
 
 This example displays basic information about all the STS templates.
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

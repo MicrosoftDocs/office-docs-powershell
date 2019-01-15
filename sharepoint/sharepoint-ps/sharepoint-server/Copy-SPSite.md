@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPSite
 schema: 2.0.0
@@ -28,13 +28,13 @@ The copy of the site collection has a new URL and a new SiteID.
 When you have database snapshot capabilities on a computer runningSQL Server, a temporary snapshot of the source database is created for the duration of the copy to prevent any data changes during the copy process.
 If you do not have database snapshot capabilities on the server running SQL Server, you can back up the source and restore it to the destination to get the same result.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE------------- 
 ```
-PS C:\>Copy-SPSite http://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl http://contoso/sites/NewTeam
+Copy-SPSite http://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl http://contoso/sites/NewTeam
 ```
 
 This example makes a copy of the http://contoso/sites/OldTeam site collection from its database to the WSS_Content database with the new URL, http://contoso/sites/NewTeam and a new Site ID.
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

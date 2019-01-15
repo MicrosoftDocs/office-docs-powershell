@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPFarm
 schema: 2.0.0
@@ -31,33 +31,33 @@ Backup-SPFarm [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>] [-Con
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Backup-SPFarm cmdlet creates a backup for the entire farm or individual components within the farm.
 It can also be used to back up just the configuration settings of a farm to be used as a farm template for other SharePoint farms.
 If you want to back up a single site collection, use the Backup-SPSite cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1--------------------- 
 ```
-PS C:\>Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
+Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
 ```
 
 This example backs up the configuration settings of the farm to the \\\\file_server\share\Backup directory.
 
 ### --------------------EXAMPLE 2--------------------- 
 ```
-PS C:\>Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
+Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example shows which components of the farm would be backed up under the "Microsoft SharePoint Foundation Web Application" node, but do not actually back them up.
 
 ### --------------------EXAMPLE 3--------------------- 
 ```
-PS C:\>Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
+Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
 ```
 
 This example performs a backup of a farm using 10 threads and forces the backup to be saved to the C:\Backup directory even though SharePoint estimates that it does not have sufficient space available.
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

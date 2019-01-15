@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWOPISuppressionSetting
 schema: 2.0.0
@@ -28,14 +28,14 @@ Remove-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>]
 ## DESCRIPTION
 The `Remove-SPWOPISuppressionSetting` cmdlet removes the suppression settings for a file name extension or programmatic indentifier (ProgID) and action on the current SharePoint farm where this cmdlet is run.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-----------------
 ```
-PS C:\>Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
 ```
 
 This example removes suppression settings for viewing Excel workbooks that have the file name extension ".xlsx."
@@ -43,7 +43,7 @@ This example removes suppression settings for viewing Excel workbooks that have 
 
 ### --------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
+Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
 ```
 
 This example removes all suppression settings on the current SharePoint farm where this cmdlet is run.
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

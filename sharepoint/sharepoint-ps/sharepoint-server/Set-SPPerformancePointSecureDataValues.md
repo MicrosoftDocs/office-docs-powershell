@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPPerformancePointSecureDataValues
 schema: 2.0.0
@@ -22,20 +22,20 @@ Set-SPPerformancePointSecureDataValues
 ## DESCRIPTION
 The `Set-SPPerformancePointSecureDataValues` cmdlet sets global settings and properties for the unattended service account.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1--------------------
 ```
-PS C:\>Set-SPPerformancePointSecureDataValues -ServiceApplication "PerformancePoint Service Application" -DataSourceUnattendedServiceAccount (get-credential)
+Set-SPPerformancePointSecureDataValues -ServiceApplication "PerformancePoint Service Application" -DataSourceUnattendedServiceAccount (get-credential)
 ```
 
 This example shows how to set the unattended service account by prompting the user for the user name and password.
 
 ### --------------------EXAMPLE 2--------------------
 ```
-PS C:\>Set-SPPerformancePointSecureDataValues -ServiceApplication "PerformancePoint Service Application" -DataSourceUnattendedServiceAccount (New-Object System.Management.Automation.PSCredential "domain\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
+Set-SPPerformancePointSecureDataValues -ServiceApplication "PerformancePoint Service Application" -DataSourceUnattendedServiceAccount (New-Object System.Management.Automation.PSCredential "domain\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
 ```
 
 This example shows how to pass the user name and password as parameters to the cmdlet.
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

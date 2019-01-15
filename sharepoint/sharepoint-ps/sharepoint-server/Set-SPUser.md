@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPUser
 schema: 2.0.0
@@ -23,18 +23,25 @@ Set-SPUser [-Identity] <SPUserPipeBind> [-AddPermissionLevel <String[]>]
 ## DESCRIPTION
 The `Set-SPUser` cmdlet configures properties of an existing user.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Set-SPUser -Identity 'Contoso\jdow' -Web http:// test -AddPermissionLevel "Contributor"
+Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -AddPermissionLevel "Contributor"
 ```
 
-This example sets a user (Contoso\jdow) to be a contributor on http://test.
+This example sets a user (Contoso\jdoe) to be a contributor on https://intranet.contoso.com.
 
+
+### ------------------EXAMPLE 2-----------------------
+```
+Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -SyncFromAD
+```
+
+This updates the User Information List for the user 'contoso\jdoe' with the current `displayName` and `mail` attribute values from the user's Active Directory account.
 
 ## PARAMETERS
 
@@ -250,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncFromAD
-If provided, specifies that user information will be synchronized from the user directory store.
+If provided, specifies that user information will be synchronized from the user directory store. This switch only retrieves the `displayName` and `mail` value from the directory store. It supports Active Directory (Classic or Windows authentication), Forms-based Authentication, and SAML. FBA and SAML providers must support resolving from their directory store for this switch to work. The switch only supports SharePoint User objects.
 
 ```yaml
 Type: SwitchParameter
@@ -302,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

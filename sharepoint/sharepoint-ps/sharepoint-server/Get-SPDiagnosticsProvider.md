@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPDiagnosticsProvider
 schema: 2.0.0
@@ -24,20 +24,20 @@ Get-SPDiagnosticsProvider [[-Identity] <SPDiagnosticsProviderPipeBind>]
 The Get-SPDiagnosticsProvider cmdlet reads the specified diagnostics provider.
 If the Identity parameter is not specified, this cmdlet returns the collection diagnostics providers in the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE----------------------- 
 ```
-PS C:\>Get-SPDiagnosticsProvider
+Get-SPDiagnosticsProvider
 ```
 
 This example returns all the diagnostics providers in the farm.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
 ```
 
 This example returns the event log diagnostics provider.
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

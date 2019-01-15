@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-SPOSiteDesignRunStatus
 
 ## SYNOPSIS
+
 Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
 
 ## SYNTAX
@@ -17,6 +18,7 @@ Get-SPOSiteDesignRunStatus [-Run] <SPOSiteDesignRun> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
 
 ## EXAMPLES
@@ -54,6 +56,7 @@ OutcomeText: |
 ## PARAMETERS
 
 ### -Run
+
 The site design run for the desired set of script action details.
 
 ```yaml
@@ -79,6 +82,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

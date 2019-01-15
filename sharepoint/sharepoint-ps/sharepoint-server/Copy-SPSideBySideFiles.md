@@ -1,6 +1,6 @@
 ---
-external help file: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPSideBySideFiles
 schema: 2.0.0
 ---
@@ -24,7 +24,7 @@ In SharePoint Server 2016, zero down time in-place upgrade is available. If the 
 
 ### Example 1 
 ```
-PS C:\>Copy-SPSideBySideFiles -LogFile "C:\CopySideBySideFiles.log"
+Copy-SPSideBySideFiles -LogFile "C:\CopySideBySideFiles.log"
 ```
 
 This example copies SideBySide files and writes a log data of the copy process to the CopySideBySideFiles.log file.
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

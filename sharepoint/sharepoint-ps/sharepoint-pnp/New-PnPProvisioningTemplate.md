@@ -22,7 +22,7 @@ New-PnPProvisioningTemplate [-Web <WebPipeBind>]
 $template = New-PnPProvisioningTemplate
 ```
 
-Creates a new instance of a provisioning template object.
+Creates a new instance of a site template object.
 
 ## PARAMETERS
 

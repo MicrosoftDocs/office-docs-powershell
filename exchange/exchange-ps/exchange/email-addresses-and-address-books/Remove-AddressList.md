@@ -49,8 +49,6 @@ The Identity parameter specifies the address list that you want to remove. You c
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - GUID

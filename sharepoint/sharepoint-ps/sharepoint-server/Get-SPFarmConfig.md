@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPFarmConfig
 schema: 2.0.0
@@ -30,15 +30,15 @@ The properties collected in the PSCustomObject object must be farm-wide settings
 
 The parameter name added to the PSCustomObject object must match exactly the input parameter name for the Set-SPFarmConfig cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
 ### -------------EXAMPLE---------------- 
 ```
-PS C:\>$a = Get-SPFarmConfig
-PS C:\>$a.AjaxTimeout = 200
-PS C:\>$a | Set-SPFarmConfig
+$a = Get-SPFarmConfig
+$a.AjaxTimeout = 200
+$a | Set-SPFarmConfig
 ```
 
 This example uses the Get-SPFarmConfig cmdlet to add the Ajax Timeout setting to the PSCustomObject object, sets the value for Ajax Timeout, and then passes PSCustomObject to the Set-SPFarmConfig cmdlet to change the Ajax Timeout setting. Ajax Timeout, a farm-wide setting, is a member of the SPWebService object and cannot be accessed with a Windows PowerShell cmdlet.
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

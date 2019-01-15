@@ -17,15 +17,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### MyAnalytics
 ```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String> [<CommonParameters>]
+Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -PrivacyMode <String>
+ [<CommonParameters>]
 ```
 
-### Set2
+### TeamAnalytics
 ```
-Set-UserAnalyticsConfig -Identity <RecipientIdParameter> [-PrivacyMode <String>]
- -TeamAnalyticsEnabled <$true | $false> [-TeamAnalyticsManagerViewEnabled <$true | $false>]
+Set-UserAnalyticsConfig -Identity <RecipientIdParameter> -TeamAnalyticsEnabled <$true | $false>
+ [-PrivacyMode <String>]
+ [-TeamAnalyticsManagerViewEnabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -85,7 +87,7 @@ The PrivacyMode parameter specifies the MyAnalytics privacy setting for the user
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: MyAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -97,7 +99,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -112,7 +114,7 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -127,7 +129,7 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: $true | $false
-Parameter Sets: Set2
+Parameter Sets: TeamAnalytics
 Aliases:
 Applicable: Exchange Online
 Required: False

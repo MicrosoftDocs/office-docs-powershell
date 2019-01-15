@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPManagedPath
 schema: 2.0.0
@@ -28,7 +28,7 @@ Remove-SPManagedPath [-Identity] <SPPrefixPipeBind> -WebApplication <SPWebApplic
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The `Remove-SPManagedPath` cmdlet deletes the managed path specified by the Identity parameter from the host header or the Web application.
 The Identity must be the partial URL of the managed path to be deleted.
@@ -37,14 +37,14 @@ If you are using host-named site collections, specify the HostHeader parameter.
 To delete a host-named site collection managed path, provide the HostHeader switch.
 Otherwise, you must specify the Web application that contains the managed path to be deleted.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1----------------------------
 ```
-PS C:\>Remove-SPManagedPath "sites" -HostHeader
+Remove-SPManagedPath "sites" -HostHeader
 ```
 
 This example removes the sites managed path from the list of host-named site collection managed paths.
@@ -54,7 +54,7 @@ Depending on the confirmation level of the local system, the preceding example c
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPWebApplication | Remove-SPManagedPath "personal" -confirm:$false
+Get-SPWebApplication | Remove-SPManagedPath "personal" -confirm:$false
 ```
 
 This example removes the personal managed path from all Web applications in the farm.
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

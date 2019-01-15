@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWebApplicationAppDomain
 schema: 2.0.0
@@ -27,7 +27,7 @@ Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -WebApplicatio
 
 ## DESCRIPTION
 
-This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the Get-SPWebApplicationAppDoman cmdlet to return all app domains for a specific web application or for all web applications. If you do not specify parameters, the default zone is used.
 
@@ -35,28 +35,28 @@ Use the Get-SPWebApplicationAppDoman cmdlet to return all app domains for a spec
 
 ### -----------EXAMPLE 1--------- 
 ```
-PS C:\>Get-SPWebApplicationAppDomain
+Get-SPWebApplicationAppDomain
 ```
 
 Returns a list of SPAppDomain objects, one for each of the app domains for all web applications in the farm.
 
 ### -----------EXAMPLE 2--------- 
 ```
-PS C:\>Get-SPWebApplicationAppDomain -Zone Default
+Get-SPWebApplicationAppDomain -Zone Default
 ```
 
 Returns a list of SPAppDomain objects, one for each of the app domains for the Default zone for all web applications in the farm.
 
 ### -----------EXAMPLE 3--------- 
 ```
-PS C:\>Get-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
+Get-SPWebApplicationAppDomain -WebApplication http://www.contoso.com
 ```
 
 Returns a list of SPAppDomain objects, one for each of all the app domains for the specified web application for all zones.
 
 ### -----------EXAMPLE 4--------- 
 ```
-PS C:\>Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
+Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
 ```
 
 Returns a list of SPAppDomain objects, one for each web application and zone pair that shares the specified app domain.
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

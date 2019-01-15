@@ -6,48 +6,50 @@ schema: 2.0.0
 # Add-PnPProvisioningTemplate
 
 ## SYNOPSIS
-Adds a provisioning template object to a provisioning hierarchy
+Adds a PnP Provisioning Template object to a tenant template
 
 ## SYNTAX 
 
 ```powershell
-Add-PnPProvisioningTemplate -Template <ProvisioningTemplate>
-                            -Hierarchy <ProvisioningHierarchy>
+Add-PnPProvisioningTemplate -SiteTemplate <ProvisioningTemplate>
+                            -TenantTemplate <ProvisioningHierarchy>
 ```
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-Add-PnPProvisioningTemplate -Hierarchy $myhierarchy -Template $mytemplate
+Add-PnpProvisioningTemplate -TenantTemplate $tenanttemplate -SiteTemplate $sitetemplate
 ```
 
-Adds an existing sequence object to an existing hierarchy object
+Adds an existing site template to an existing tenant template object
 
 ## PARAMETERS
 
-### -Hierarchy
-The hierarchy to add the template to
-
-```yaml
-Type: ProvisioningHierarchy
-Parameter Sets: (All)
-
-Required: True
-Position: Named
-Accept pipeline input: True
-```
-
-### -Template
-The template to add to the hierarchy
+### -SiteTemplate
+The template to add to the tenant template
 
 ```yaml
 Type: ProvisioningTemplate
 Parameter Sets: (All)
+Aliases: Template
 
 Required: True
 Position: Named
 Accept pipeline input: False
+```
+
+### -TenantTemplate
+The tenant template to add the template to
+
+```yaml
+Type: ProvisioningHierarchy
+Parameter Sets: (All)
+Aliases: Hierarchy
+
+Required: True
+Position: Named
+Accept pipeline input: True
 ```
 
 ## RELATED LINKS

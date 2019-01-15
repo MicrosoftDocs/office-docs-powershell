@@ -18,7 +18,33 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter> [-AdminDisplayName <String>] [-AuthenticationFailAction <MoveToJmf | Quarantine>] [-Confirm] [-EnableAntispoofEnforcement <$true | $false>] [-EnableAuthenticationSafetyTip <$true | $false>] [-EnableAuthenticationSoftPassSafetyTip <$true | $false>] [-Enabled <$true | $false>] [-EnableMailboxIntelligence <$true | $false>] [-EnableOrganizationDomainsProtection <$true | $false>] [-EnableSimilarDomainsSafetyTips <$true | $false>] [-EnableSimilarUsersSafetyTips <$true | $false>] [-EnableSuspiciousSafetyTip <$true | $false>] [-EnableTargetedDomainsProtection <$true | $false>] [-EnableTargetedUserProtection <$true | $false>] [-EnableUnusualCharactersSafetyTips <$true | $false>] [-ExcludedDomains <MultiValuedProperty>] [-ExcludedSenders <MultiValuedProperty>] [-PhishThresholdLevel <Int32>] [-TargetedDomainActionRecipients <MultiValuedProperty>] [-TargetedDomainProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedDomainsToProtect <MultiValuedProperty>] [-TargetedUserActionRecipients <MultiValuedProperty>] [-TargetedUserProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>] [-TargetedUsersToProtect <MultiValuedProperty>] [-TreatSoftPassAsAuthenticated <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
+ [-AdminDisplayName <Basic | High>]
+ [-AuthenticationFailAction <MoveToJmf | Quarantine>]
+ [-Confirm]
+ [-EnableAntispoofEnforcement <$true | $false>]
+ [-EnableAuthenticationSafetyTip <$true | $false>]
+ [-EnableAuthenticationSoftPassSafetyTip <$true | $false>]
+ [-Enabled <$true | $false>]
+ [-EnableMailboxIntelligence <$true | $false>]
+ [-EnableOrganizationDomainsProtection <$true | $false>]
+ [-EnableSimilarDomainsSafetyTips <$true | $false>]
+ [-EnableSimilarUsersSafetyTips <$true | $false>]
+ [-EnableTargetedDomainsProtection <$true | $false>]
+ [-EnableTargetedUserProtection <$true | $false>]
+ [-EnableUnusualCharactersSafetyTips <$true | $false>]
+ [-ExcludedDomains <MultiValuedProperty>]
+ [-ExcludedSenders <MultiValuedProperty>]
+ [-MakeDefault]
+ [-PhishThresholdLevel <Int32>]
+ [-TargetedDomainActionRecipients <MultiValuedProperty>]
+ [-TargetedDomainProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>]
+ [-TargetedDomainsToProtect <MultiValuedProperty>]
+ [-TargetedUserActionRecipients <MultiValuedProperty>]
+ [-TargetedUserProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>]
+ [-TargetedUsersToProtect <MultiValuedProperty>]
+ [-TreatSoftPassAsAuthenticated <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -184,9 +210,9 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligence
 The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph) in domain and user impersonation protection. Valid values are:
 
-- $true: Use mailbox intelligence in domain and user impersonation protection.
+- $true: Use mailbox intelligence in domain and user impersonation protection. This is the default value.
 
-- $false: Don't use mailbox intelligence in domain and user impersonation protection. This is the default value.
+- $false: Don't use mailbox intelligence in domain and user impersonation protection.
 
 ```yaml
 Type: $true | $false
@@ -344,6 +370,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MakeDefault
+{{Fill MakeDefault Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PhishThresholdLevel
 The PhishThresholdLevel parameter specifies the tolerance level that's used by machine learning in the handling of phishing messages. Valid values are:
 
@@ -351,7 +392,7 @@ The PhishThresholdLevel parameter specifies the tolerance level that's used by m
 
 - 2: Aggressive
 
-- 3: More agressive
+- 3: More aggressive
 
 - 4: Most aggressive
 
@@ -413,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainsToProtect
-The TargetedDomainsToProtect parameter specifies the domains that are included in domain impersonaton protection when the EnableTargetedDomainsProtection parameter is set to $true.
+The TargetedDomainsToProtect parameter specifies the domains that are included in domain impersonation protection when the EnableTargetedDomainsProtection parameter is set to $true.
 
 You can specify multiple domains separated by commas.
 

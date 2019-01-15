@@ -38,14 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Export-UMCallDataRecord -Date 02/01/12
 ```
 
-This example returns all Unified Messaging call data records on February 1, 2012, and exports them to a CSV file.
+This example returns all Unified Messaging call data records on February 1, 2018, and exports them to a CSV file.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Export-UMCallDataRecord -Date 02/01/12 -UMDialPlan MyUMDialPlan
 ```
 
-This example exports all Unified Messaging call data records for February 1, 2012, for the UM dial plan MyUMDialPlan.
+This example exports all Unified Messaging call data records for February 1, 2018, for the UM dial plan MyUMDialPlan.
 
 ## PARAMETERS
 

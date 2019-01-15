@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAccessServicesDatabaseServer
 schema: 2.0.0
@@ -29,7 +29,7 @@ This cmdlet adds additional Access Services database servers to host Access Serv
 
 ### Example 1 
 ```
-PS C:\>New-SPAccessServicesDatabaseServer -ServiceContext http://siteUrl -DatabaseServerName SQLSVR01 -ValidateServer:$true
+New-SPAccessServicesDatabaseServer -ServiceContext http://siteUrl -DatabaseServerName SQLSVR01 -ValidateServer:$true
 ```
 
 This example adds the SQL Server named SQLSVR01 as an Access Services database server using the context of the site, http://siteUrl. This also validates SQLSVR01 is capable of hosting Access Services databases.
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

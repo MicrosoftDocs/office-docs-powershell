@@ -22,7 +22,7 @@ Get-HistoricalSearch [-JobId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are between seven and ninety days old.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are less than 90 days old.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 

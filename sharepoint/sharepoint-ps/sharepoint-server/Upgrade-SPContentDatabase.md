@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPContentDatabase
 schema: 2.0.0
@@ -32,7 +32,7 @@ Upgrade-SPContentDatabase [-ForceDeleteLock] -Name <String> -WebApplication <SPW
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet Parameter Sets](http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see [Cmdlet Parameter Sets](https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the `Upgrade-SPContentDatabase` cmdlet to resume a failed database upgrade or begin a build-to-build database upgrade against a SharePoint content database.
 The `Upgrade-SPContentDatabase` cmdlet initiates an upgrade of an existing content database that is attached to the current farm.
@@ -52,7 +52,7 @@ This cmdlet does not trigger version-to-version upgrade of any site collections.
 
 ### --------------------------EXAMPLE 1------------------------------
 ```
-PS C:\>Upgrade-SPContentDatabase WSS_Content
+Upgrade-SPContentDatabase WSS_Content
 ```
 
 This example upgrades the existing WSS_Content content database schema and then performs only build-to-build upgrade actions on existing site collections if required.
@@ -60,7 +60,7 @@ This operation does not changed the CompatibilityLevel for existing site collect
 
 ### --------------------------EXAMPLE 2------------------------------
 ```
-PS C:\>Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade
+Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade
 ```
 
 This example upgrades the existing WSS_Content content database schema only.
@@ -69,7 +69,7 @@ This operation does not change The CompatibilityLevel for existing site collecti
 
 ### --------------------------EXAMPLE 3------------------------------
 ```
-PS C:\>Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade -UseSnapshot
+Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade -UseSnapshot
 ```
 
 This example upgrades the existing WSS_Content content database schema only while using a snapshot of the database to retain read-only access to the content during the upgrade. 
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

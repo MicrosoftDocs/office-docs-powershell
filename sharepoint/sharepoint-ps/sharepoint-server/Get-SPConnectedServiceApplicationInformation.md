@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPConnectedServiceApplicationInformation
 schema: 2.0.0
@@ -20,21 +20,21 @@ Get-SPConnectedServiceApplicationInformation [[-ServiceApplicationProxy] <SPServ
 ## DESCRIPTION
 The `Get-SPConnectedServiceApplicationInformation` cmdlet checks whether the proxy to a service application is in good health.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [http://go.microsoft.com/fwlink/p/?LinkId=671715](http://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [https://go.microsoft.com/fwlink/p/?LinkId=671715](https://go.microsoft.com/fwlink/p/?LinkId=671715).
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\>$validProxy = $false
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq "User Profile Service Application Proxy"}
-PS C:\>$proxyHealth = Get-SPConnectedServiceApplicationInformation -ServiceApplicationProxy $proxy
-PS C:\>if(($proxyHealth -ne $null) -and ($proxyHealth.ApplicationAddressesState -eq "UpToDate")) {
+$validProxy = $false
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq "User Profile Service Application Proxy"}
+$proxyHealth = Get-SPConnectedServiceApplicationInformation -ServiceApplicationProxy $proxy
+if(($proxyHealth -ne $null) -and ($proxyHealth.ApplicationAddressesState -eq "UpToDate")) {
         $validProxy = $true
     } else {
         $validProxy = $false
     }
-PS C:\>$validProxy
+$validProxy
 ```
 
 This example checks the health of the service application proxy server.
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

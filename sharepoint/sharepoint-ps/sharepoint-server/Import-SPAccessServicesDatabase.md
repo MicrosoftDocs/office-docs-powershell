@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPAccessServicesDatabase
 schema: 2.0.0
@@ -30,8 +30,8 @@ See more information about Data-Tier Framework at [Data-tier Applications](https
 
 ### Example 1 
 ```
-PS C:\>$accessDb = Get-SPAccessServicesDatabaseServer -ServiceContext http://site_url -DatabaseServer SQLSERVERNAME -DatabaseServerGroup DEFAULT
-PS C:\>Import-SPAccessServicesDatabase -DatabaseName accessDatabaseName -ServerReferenceId $accessDb.ServerReferenceId -Bacpac (Get-Content -Path C:\accessDb.bacpac -Encoding Byte)
+$accessDb = Get-SPAccessServicesDatabaseServer -ServiceContext http://site_url -DatabaseServer SQLSERVERNAME -DatabaseServerGroup DEFAULT
+Import-SPAccessServicesDatabase -DatabaseName accessDatabaseName -ServerReferenceId $accessDb.ServerReferenceId -Bacpac (Get-Content -Path C:\accessDb.bacpac -Encoding Byte)
 ```
 
 This example gets the ServerReferenceId value of the SQL Server for the Access Services Service Application; -DatabaseServerGroup is set to the value DEFAULT by default. The next step is to import the bacpac file to a byte array and finally, import the Access Services Database as the specified SQL database name to the specified SQL Server.
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

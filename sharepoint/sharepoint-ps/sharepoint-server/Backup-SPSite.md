@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPSite
 schema: 2.0.0
@@ -26,13 +26,13 @@ The Backup-SPSite cmdlet performs a backup of the site collection when the Ident
 By default, the site collection will be set to read-only for the duration of the backup to reduce the potential for user activity during the backup operation to corrupt the backup.
 If you have SQL Server Enterprise Edition, we recommend that UseSqlSnapshot parameter be used because this ensures a valid backup while it allows users to continue reading and writing to the site collection during the backup.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### -------------------EXAMPLE 1-------------------- 
 ```
-PS C:\>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
+Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example backs up a site collection at http://server_name/sites/site_name to the C:\Backup\site_name.bak file.
@@ -40,7 +40,7 @@ This example backs up a site collection at http://server_name/sites/site_name to
 
 ### -------------------EXAMPLE 2-------------------- 
 ```
-PS C:\>Get-SPSiteAdministration http://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
+Get-SPSiteAdministration http://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
 ```
 
 This example backs up a site collection at http://server_name/sites/site_name to the C:\Backup\site_name.bak file.
@@ -48,14 +48,14 @@ Same result as Example 1, but a different way of performing the operation.
 
 ### -------------------EXAMPLE 3-------------------- 
 ```
-PS C:\>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
+Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
 ```
 
 This example backs up a site collection using database snapshots to ensure backup integrity.
 
 ### -------------------EXAMPLE 4-------------------- 
 ```
-PS C:\>Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
+Backup-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
 ```
 
 This example backs up a site collection and prevents placing the site into a read only mode during the backup phase. Use the -NoSiteLock parameter when backing up a site in production where it is desirable to not place the site into a read only mode while the backup takes place.
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

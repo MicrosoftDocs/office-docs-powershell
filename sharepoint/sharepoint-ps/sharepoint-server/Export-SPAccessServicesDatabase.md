@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPAccessServicesDatabase
 schema: 2.0.0
@@ -30,9 +30,9 @@ See more information about Data-Tier Framework at [Data-tier Applications](https
 
 ### Example 1 
 ```
-PS C:\>$contentdb = Get-SPContentDatabase ContentDbName
-PS C:\>$accessDb = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | Select -First 1
-PS C:\>Export-SPAccessServicesDatabase -DatabaseName $accessDb.DatabaseName -ServerReferenceId $accessDb.ServerReferenceId | Set-Content -Path C:\accessDb.bacpac -Encoding Byte
+$contentdb = Get-SPContentDatabase ContentDbName
+$accessDb = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | Select -First 1
+Export-SPAccessServicesDatabase -DatabaseName $accessDb.DatabaseName -ServerReferenceId $accessDb.ServerReferenceId | Set-Content -Path C:\accessDb.bacpac -Encoding Byte
 ```
 
 This cmdlet retrieves the first Access Database from the specified Content Database and exports the Access Database to a BACPAC. This BACPAC file can then be imported via SQL Server Management Studio to restore the Access Database.
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

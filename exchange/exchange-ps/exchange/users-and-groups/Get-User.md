@@ -33,7 +33,6 @@ Get-User [-Anr <String>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
  [-Sortby <String>]
- [-SupervisoryReviewPolicy]
  [<CommonParameters>]
 ```
 
@@ -53,7 +52,6 @@ Get-User [[-Identity] <UserIdParameter>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
  [-Sortby <String>]
- [-SupervisoryReviewPolicy]
  [<CommonParameters>]
 ```
 
@@ -448,21 +446,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SupervisoryReviewPolicy
-The SupervisoryReviewPolicy switch specifies whether to return mailboxes that are subject to supervisory review policies. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None

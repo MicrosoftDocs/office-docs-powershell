@@ -17,17 +17,35 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Identity
+### IdentityOnPremises
 ```
-Get-MailboxRestoreRequestStatistics [-Identity] <PublicFolderMailboxMigrationRequestIdParameter> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DiagnosticInfo <String>] [-DomainController <Fqdn>]
- [-IncludeReport] [-ReportOnly] [<CommonParameters>]
+Get-MailboxRestoreRequestStatistics [-Identity] <PublicFolderMailboxMigrationRequestIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [<CommonParameters>]
+```
+
+### IdentityCloud
+```
+Get-PublicFolderMailboxMigrationRequestStatistics [-Identity] <PublicFolderMailboxMigrationRequestIdParameter>
+ [-DiagnosticInfo <String>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-MailboxRestoreRequestStatistics -RequestQueue <DatabaseIdParameter> [-Diagnostic]
- [-DiagnosticArgument <String>] [-DomainController <Fqdn>] [-IncludeReport] [-ReportOnly] [-RequestGuid <Guid>]
+Get-MailboxRestoreRequestStatistics -RequestQueue <DatabaseIdParameter>
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-IncludeReport]
+ [-ReportOnly]
+ [-RequestGuid <Guid>]
  [<CommonParameters>]
 ```
 
@@ -56,13 +74,13 @@ This example uses the Identity parameter to return information about the specifi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the public folder mailbox migration request. The default identity value is \\PublicFolderMailboxMigration\<UniqueIdentifier\> (for example, \\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
+The Identity parameter specifies the public folder mailbox migration request. The default identity value is \\PublicFolderMailboxMigration\<UniqueIdentifier\> (for example, \\PublicFolderMailboxMigration\ac6d9eb4-ee49-405f-b90d-04e9a258bd7e).
 
 You can't use this parameter with the RequestQueue and RequestGuid parameters.
 
 ```yaml
 Type: PublicFolderMailboxMigrationRequestIdParameter
-Parameter Sets: Identity
+Parameter Sets: IdentityOnPremises, IdentityCloud
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -74,6 +92,8 @@ Accept wildcard characters: False
 
 ### -RequestQueue
 This parameter is available only in on-premises Exchange.
+
+This parameter is for debugging purposes only.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
@@ -102,7 +122,7 @@ The Diagnostic switch specifies whether to return extremely detailed information
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -119,7 +139,7 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -136,7 +156,7 @@ Typically, you use the DiagnosticInfo parameter only at the request of Microsoft
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: IdentityCloud
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -153,7 +173,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -179,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportOnly
-The ReportOnly switch returns the results as an array of report entries. You don't need to specify a value with this switch.
+The ReportOnly switch returns the results as an array of report entries (encoded strings). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +216,7 @@ Accept wildcard characters: False
 ### -RequestGuid
 This parameter is available only in on-premises Exchange.
 
-The RequestGuid parameter specifies the unique RequestGuid identifier of the request that you want to remove. To find the RequestGuid value, use the Get-PublicFolderMailboxMigrationRequest cmdlet.
+The RequestGuid parameter specifies the unique RequestGuid identifier of the request that you want to view. To find the RequestGuid value, use the Get-PublicFolderMailboxMigrationRequest cmdlet.
 
 If you use this parameter, you also need to use the RequestQueue parameter. You can't use either of these parameters with the Identity parameter.
 

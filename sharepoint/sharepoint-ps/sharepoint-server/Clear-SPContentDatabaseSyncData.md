@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2019
 title: Clear-SPContentDatabaseSyncData
 schema: 2.0.0
@@ -24,7 +24,7 @@ Use the **Clear-SPContentDatabaseSyncData** to clear synchronization information
 
 ### EXAMPLE 1
 ```powershell
-PS C:\> Clear-SPContentDatabaseSyncData -DaysSinceLastProfileSync 12
+ Clear-SPContentDatabaseSyncData -DaysSinceLastProfileSync 12
 ```
 
 This example resets synchronization information from the content databases that have not been synchronized for more than or equal to 12 days, without prompting for user confirmation.
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSiteSubscription
 schema: 2.0.0
@@ -25,7 +25,7 @@ A site collection can be a member of only one site subscription and once set, ca
 Site subscriptions are not persisted in a database until used in conjunction with either an SPSite or the Site Subscription Settings Service.
 After a site subscription is applied to any site collection in the farm, the site subscription can be retrieved by using the `Get-SPSiteSubscription` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1-----------------------
 ```
 
-PS C:\>$subscription = New-SPSiteSubscription
+$subscription = New-SPSiteSubscription
 
 ```
 
@@ -42,8 +42,8 @@ This example creates a new site subscription.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>$subscription = New-SPSiteSubscription
-PS C:\>Set-SPSite -Identity http://siteUrl -SiteSubscription $subscription
+$subscription = New-SPSiteSubscription
+Set-SPSite -Identity http://siteUrl -SiteSubscription $subscription
 ```
 
 This example creates a new Site Subscription and sets it on the site collection http://siteUrl.
@@ -51,7 +51,7 @@ This example creates a new Site Subscription and sets it on the site collection 
 
 ### ------------------EXAMPLE 3-----------------------
 ```
-PS C:\>New-SPSite -URL http://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
+New-SPSite -URL http://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
 ```
 
 This example creates a new Site Collection at http://siteUrl along with a new Site Subscription.
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

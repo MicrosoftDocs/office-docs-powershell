@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPContentDatabase
 schema: 2.0.0
@@ -22,14 +22,14 @@ Set-SPContentDatabase [-Identity] <SPContentDatabasePipeBind> [-AssignmentCollec
 ## DESCRIPTION
 The `Set-SPContentDatabase` cmdlet sets global properties of a SharePoint content database.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1---------------
 ```
-PS C:\>Get-SPContentDatabase http://contoso.com | Set-SPContentDatabase -MaxSiteCount 1
+Get-SPContentDatabase http://contoso.com | Set-SPContentDatabase -MaxSiteCount 1
 ```
 
 This example sets the MaxSiteCount for the content database that contains contoso.com to 1.
@@ -37,7 +37,7 @@ This example sets the MaxSiteCount for the content database that contains contos
 
 ### ---------------EXAMPLE 2---------------
 ```
-PS C:\>Get-SPContentDatabase -WebApplication http://sitename | Set-SPContentDatabase -WarningSiteCount $null
+Get-SPContentDatabase -WebApplication http://sitename | Set-SPContentDatabase -WarningSiteCount $null
 ```
 
 This example clears the WarningSiteCount for all databases in the sitename Web application.
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

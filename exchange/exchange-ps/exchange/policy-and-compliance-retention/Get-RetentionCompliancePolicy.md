@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] [-RetentionRuleTypes]
+Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>] [-DistributionDetail] [-ExcludeTeamsPolicy] [-RetentionRuleTypes] [-TeamsPolicyOnly]
  [<CommonParameters>]
 ```
 
@@ -53,23 +53,6 @@ This example displays detailed information for the policy named "Regulation 123 
 
 ## PARAMETERS
 
-### -DistributionDetail
-The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
-
-If you don't use this switch, the values of the DistributionStatus and \*Location property values will be inaccurate.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the retention policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
@@ -91,10 +74,57 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -DistributionDetail
+The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+
+If you don't use this switch, the values of the DistributionStatus and \*Location property values will be inaccurate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeTeamsPolicy
+{{Fill ExcludeTeamsPolicy Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RetentionRuleTypes
 The RetentionRuleTypes switch specifies whether to return the value of the RetentionRuleTypes property in the results. You don't need to specify a value with this switch.
 
 To see the RetentionRuleTypes property, you need to pipe the command to a formatting cmdlet. For example, Get-RetentionCompliancePolicy -RetentionRuleTypes | Format-Table -Auto Name,RetentionRuleTypes. If you don't use the RetentionRuleTypes switch, the value appears blank.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsPolicyOnly
+{{Fill TeamsPolicyOnly Description}}
 
 ```yaml
 Type: SwitchParameter
