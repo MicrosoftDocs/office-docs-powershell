@@ -74,8 +74,6 @@ The Identity parameter specifies the address list that you want to modify. You c
 
 - Name
 
-- Display name
-
 - Distinguished name (DN)
 
 - GUID
