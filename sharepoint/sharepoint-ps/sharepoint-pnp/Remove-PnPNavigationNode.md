@@ -37,7 +37,7 @@ Removes the navigation node with the specified id
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-$nodes = Get-PnPNavigationNode -QuickLaunch
+$nodes = Get-PnPNavigationNode -Location QuickLaunch
 PS:>$nodes | Select-Object -First 1 | Remove-PnPNavigationNode -Force
 ```
 

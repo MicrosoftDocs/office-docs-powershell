@@ -13,13 +13,17 @@
        - https://www.microsoft.com/en-us/download/details.aspx?id=39366
        - execute into console `winrm quickconfig`
     - Microsoft Teams:
+       - https://www.powershellgallery.com/packages/MicrosoftTeams
     - SharePoint Online:
        - https://www.microsoft.com/en-us/download/details.aspx?id=35588
-    - Exchange Online:
+    - Exchange Online cmdlets could be imported using [this guide](https://docs.microsoft.com/en-us/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)
     - Whiteboard:
+       - https://www.powershellgallery.com/packages/WhiteboardAdmin
     - StaffHub:
-    - Office Online Server:
+       - https://www.powershellgallery.com/packages/MicrosoftStaffHub
+    - Office Online Server cmdlets are not distributed separately
     - SharePoint Migration Tool (SPMT):
+       - https://docs.microsoft.com/en-us/powershell/module/spmt
 7. Run the app, type `npm start` and press Enter.
 
 ## Notes
