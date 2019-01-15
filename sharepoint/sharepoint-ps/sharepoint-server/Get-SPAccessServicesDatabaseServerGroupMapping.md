@@ -24,7 +24,7 @@ This cmdlet shows the current mapping of the database server group associated wi
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServerGroupMapping -ServiceContext http://siteUrl
+Get-SPAccessServicesDatabaseServerGroupMapping -ServiceContext http://siteUrl
 ```
 
 Outputs the database server group associated with the site, http://siteUrl.

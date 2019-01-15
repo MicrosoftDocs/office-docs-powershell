@@ -6,20 +6,24 @@
 3. Confirm you have NodeJS installed.
     Open PowerShell or GitBash and type `npm --version`.
     If not, install from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-4. Open GitBash or PowerShell and cd into office-docs-powershell/tools/office-powershell-updater
+4. Open GitBash or PowerShell and go into office-docs-powershell/tools/office-powershell-updater
 5. Install the required modules, type `npm install` and press Enter.
 6. Install required PowerShell modules and connectors:
     - Skype for Business Online:
-       - https://www.microsoft.com/en-in/download/confirmation.aspx?id=39366
-       - execute into console winrm quickconfig
+       - https://www.microsoft.com/en-us/download/details.aspx?id=39366
+       - execute into console `winrm quickconfig`
     - Microsoft Teams:
+       - https://www.powershellgallery.com/packages/MicrosoftTeams
     - SharePoint Online:
-       - https://www.microsoft.com/en-gb/download/details.aspx?id=35588
-    - Exchange Online:
+       - https://www.microsoft.com/en-us/download/details.aspx?id=35588
+    - Exchange Online cmdlets could be imported using [this guide](https://docs.microsoft.com/en-us/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)
     - Whiteboard:
+       - https://www.powershellgallery.com/packages/WhiteboardAdmin
     - StaffHub:
-    - Office Online Server:
+       - https://www.powershellgallery.com/packages/MicrosoftStaffHub
+    - Office Online Server cmdlets are not distributed separately
     - SharePoint Migration Tool (SPMT):
+       - https://docs.microsoft.com/en-us/powershell/module/spmt
 7. Run the app, type `npm start` and press Enter.
 
 ## Notes

@@ -25,7 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Clear-SPSecureStoreDefaultProvider
+Clear-SPSecureStoreDefaultProvider
 ```
 
 This example clears the secure store provider.

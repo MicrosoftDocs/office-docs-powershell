@@ -2,38 +2,38 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version:
 applicable: Skype for Business Online
-title: Remove-CSOnlinePSTNGateway
+title: Remove-CsOnlinePSTNGateway
 schema: 2.0.0
 ---
 
-# Remove-CSOnlinePSTNGateway
+# Remove-CsOnlinePSTNGateway
 
 ## SYNOPSIS
 Removes the configuration of the previously defined Session Border Controller(s) (SBC(s))  that describes the settings for the peer entity. This cmdlet was introduced with Microsoft Phone System Direct Routing.
 
 ## SYNTAX
 ```
-Remove-CSOnlinePSTNGateway -Identity <SBCFQDN> 
+Remove-CsOnlinePSTNGateway -Identity <SBCFQDN> 
 ```
 
 ## DESCRIPTION
-Use this cmdlet to remove the configuration of the previously created Session Border Controller(s) (SBC(s)) configuration. Note the SBC must be removed from all voice routes before executing this cmdlet
+Use this cmdlet to remove the configuration of the previously created Session Border Controller(s) (SBC(s)) configuration. Note the SBC must be removed from all voice routes before executing this cmdlet.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-CSOnlinePSTNGateway -Identity sbc.contoso.com
+PS C:\> Remove-CsOnlinePSTNGateway -Identity sbc.contoso.com
 ```
 
-This example removes SBC with Identity (and FQDN) sbc.contoso.com
+This example removes SBC with Identity (and FQDN) sbc.contoso.com.
 
 ### Example 2
 ```powershell
 PS C:\> Removes-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
 ```
 
-This example removes the SBC with identities (and FQDNs) matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc
+This example removes the SBCs with identities (and FQDNs) matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc.
 
 ## PARAMETERS
 
@@ -69,8 +69,8 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[Set-CSOnlinePSTNGateway](Set-CSOnlinePSTNGateway.md)
+[Set-CsOnlinePSTNGateway](Set-CsOnlinePSTNGateway.md)
 
-[New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
+[New-CsOnlinePSTNGateway](New-CsOnlinePSTNGateway.md)
 
-[Get-CSOnlinePSTNGateway](Get-CSOnlinePSTNGateway.md)
+[Get-CsOnlinePSTNGateway](Get-CsOnlinePSTNGateway.md)

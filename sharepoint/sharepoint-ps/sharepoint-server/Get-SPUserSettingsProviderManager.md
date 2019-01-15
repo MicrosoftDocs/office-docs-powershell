@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------EXAMPLE-------- 
 ```
-PS C:\>Get-SPUserSettingsProviderManager
+Get-SPUserSettingsProviderManager
 ```
 
 This example returns the User Settings Provider Manager for the farm.

@@ -33,7 +33,7 @@ C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
 C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\>Get-SPRoutingRule -RequestManagementSettings $rm
+Get-SPRoutingRule -RequestManagementSettings $rm
 ```
 
 This example returns a routing rule for the farm.

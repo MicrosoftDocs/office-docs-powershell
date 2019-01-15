@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE---------
 ```
-PS C:\>Stop-SPDiagnosticsSession
+Stop-SPDiagnosticsSession
 ```
 
 This example stops a diagnostic session.

@@ -37,8 +37,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-PS C:\>New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1" -Certificate $cert
+$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
+New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1" -Certificate $cert
 ```
 
 This example shows how to create a new SharePoint Farm trust using the trust certificate from a file.

@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPServiceApplicationPool
+Get-SPServiceApplicationPool
 ```
 
 This example returns all the service application pools in the farm.

@@ -33,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$sa = Get-SPExcelServiceApplication
-PS C:\>New-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL" -Description "This is the DCL where all the connections to the sales data are stored." -ExcelServiceApplication $sa
+$sa = Get-SPExcelServiceApplication
+New-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL" -Description "This is the DCL where all the connections to the sales data are stored." -ExcelServiceApplication $sa
 ```
 
 This example adds a new data connection library (DCL) and then sets its description to the list of trusted data connection libraries that is in the Excel Services Application Web service application named MyExcelService.

@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE------------------------ 
 ```
-PS C:\>Get-SPDesignerSettings -webapplication http://contoso
+Get-SPDesignerSettings -webapplication http://contoso
 ```
 
 This example retrieves the SharePoint Designer settings for the Web application, http://contoso.

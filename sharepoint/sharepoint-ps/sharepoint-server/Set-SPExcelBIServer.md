@@ -27,8 +27,8 @@ Use the Set-SPExcelBIServer cmdlet to specify a description for an existing BI s
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
-PS C:\>Set-SPExcelBIServer -Identity "ExcelServices" -ExcelServiceApplication $sa
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Excel Services Application Web Service Application'}
+Set-SPExcelBIServer -Identity "ExcelServices" -ExcelServiceApplication $sa
 ```
 
 ## PARAMETERS

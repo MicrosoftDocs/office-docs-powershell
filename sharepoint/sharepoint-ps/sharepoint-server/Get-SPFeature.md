@@ -65,13 +65,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPFeature -Limit ALL | Where-Object {$_.Scope -eq "SITE"}
+Get-SPFeature -Limit ALL | Where-Object {$_.Scope -eq "SITE"}
 ```
 This example returns a list of all installed SITE scoped Features.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPSite http://somesite | Get-SPWeb -Limit ALL |%{ Get-SPFeature -Web $_ } | Select DisplayName,ID -Unique
+Get-SPSite http://somesite | Get-SPWeb -Limit ALL |%{ Get-SPFeature -Web $_ } | Select DisplayName,ID -Unique
 ```
 
 This example returns the name and identifier (ID) of each uniquely enabled Feature on every SPWeb object in the site collection at http://somesite.

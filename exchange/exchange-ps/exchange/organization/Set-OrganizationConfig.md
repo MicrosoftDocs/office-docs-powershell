@@ -40,6 +40,7 @@ Set-OrganizationConfig
  [-ConnectorsEnabledForTeams <$true | $false>]
  [-ConnectorsEnabledForYammer <$true | $false>]
  [-CustomerLockboxEnabled <$true | $false>]
+ [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
@@ -849,6 +850,29 @@ Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultAuthenticationPolicy
+The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication.
+
+```yaml
+Type: AuthPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -2301,7 +2325,9 @@ Accept wildcard characters: False
 ### -WACDiscoveryEndpoint
 This parameter is available only in on-premises Exchange.
 
-This parameter is reserved for internal Microsoft use.
+The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes in the organization. For example, https://oos.internal.contoso.com/hosting/discovery.
+
+Office Online Server enables users to view supported file attachments in Outlook on the web (formerly known as Outlook Web App).
 
 ```yaml
 Type: String

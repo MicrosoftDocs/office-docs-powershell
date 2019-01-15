@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>Uninstall-SPInfoPathFormTemplate -Identity formName.xsn
+Uninstall-SPInfoPathFormTemplate -Identity formName.xsn
 ```
 
 This example removes an InfoPath form template from a farm.

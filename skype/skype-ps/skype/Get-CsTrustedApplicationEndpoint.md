@@ -66,7 +66,7 @@ The next part of this command pipes the returned object or objects to the Select
 ## PARAMETERS
 
 ### -Identity
-The Identity (distinguished name), SIP address, or display name of the application endpoint to be modified.
+The Identity (distinguished name), SIP address, or display name of the application endpoint to be retrieved.
 
 ```yaml
 Type: UserIdParameter

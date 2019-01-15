@@ -23,7 +23,7 @@ Stops Content Type replication job to SharePoint Online and deletes the replicat
 
 ### -----------------EXAMPLE----------------
 ```
-PS C:\>Stop-SPContentTypeReplication
+Stop-SPContentTypeReplication
 ```
 Stops Content Type replication job to SharePoint Online.
 

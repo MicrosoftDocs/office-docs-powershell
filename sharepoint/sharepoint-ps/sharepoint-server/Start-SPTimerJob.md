@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE----------------
 ```
-PS C:\>Get-SPTimerJob job-recycle-bin-cleanup | Start-SPTimerJob
+Get-SPTimerJob job-recycle-bin-cleanup | Start-SPTimerJob
 ```
 
 This example starts the timer job named, job-recycle-bin-cleanup.

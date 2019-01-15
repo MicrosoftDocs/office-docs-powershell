@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-------------------
 ```
-PS C:\>Set-SPServiceApplicationEndpoint -Identity "ServiceApp1" -HostName http://sitename -ResetHostName $true
+Set-SPServiceApplicationEndpoint -Identity "ServiceApp1" -HostName http://sitename -ResetHostName $true
 ```
 
 This example associates the SPServiceEndpoint object with the specified identity and resets the hostname.

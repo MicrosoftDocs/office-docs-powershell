@@ -28,7 +28,7 @@ This cmdlet only controls service instances on servers that are managed by MinRo
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>Start-SPService -Identity "Microsoft SharePoint Foundation Sandboxed Code Service"
+Start-SPService -Identity "Microsoft SharePoint Foundation Sandboxed Code Service"
 ```
 
 This example enables the Microsoft SharePoint Foundation Sandboxed Code Service in the farm.

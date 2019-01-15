@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportOnly
-The ReportOnly switch returns the results as an array of report entries (encoded strings). You don't need to specify a value with this switch.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

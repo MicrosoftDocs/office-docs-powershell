@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Start-SPServiceInstance 67877d63-bff4-4521-867a-ef4979ba07ce
+Start-SPServiceInstance 67877d63-bff4-4521-867a-ef4979ba07ce
 ```
 
 This example starts the given service instance on the server.

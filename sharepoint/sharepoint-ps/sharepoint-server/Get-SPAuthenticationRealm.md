@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE------------- 
 ```
-PS C:\>Get-SPAuthenticationRealm
+Get-SPAuthenticationRealm
 ```
 
 This example displays the authentication realms in the entire farm.

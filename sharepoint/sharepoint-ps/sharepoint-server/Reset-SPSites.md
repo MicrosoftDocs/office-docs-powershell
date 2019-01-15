@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>$contentdb = Get-SPContentDatabase ContentDbName
-PS C:\>Reset-SPSites -Identity $contentDb
+$contentdb = Get-SPContentDatabase ContentDbName
+Reset-SPSites -Identity $contentDb
 ```
 
 Synchronizes the sites in the content database named ContentDbName with the configuration database.

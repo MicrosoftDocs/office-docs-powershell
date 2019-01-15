@@ -34,7 +34,7 @@ C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
 C:\PS>$M=Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName>
 
-PS C:\>Remove-SPRoutingMachineInfo -Identity $M
+Remove-SPRoutingMachineInfo -Identity $M
 ```
 
 This example removes a routing target for a specified identity.

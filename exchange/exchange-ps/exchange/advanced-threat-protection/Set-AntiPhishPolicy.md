@@ -20,7 +20,6 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-AdminDisplayName <Basic | High>]
- [-AntiSpoofEnforcementType <AntiSpoofEnforcementType>]
  [-AuthenticationFailAction <MoveToJmf | Quarantine>]
  [-Confirm]
  [-EnableAntispoofEnforcement <$true | $false>]
@@ -28,19 +27,14 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-EnableAuthenticationSoftPassSafetyTip <$true | $false>]
  [-Enabled <$true | $false>]
  [-EnableMailboxIntelligence <$true | $false>]
- [-EnableMailboxIntelligenceProtection <$true | $false>]
  [-EnableOrganizationDomainsProtection <$true | $false>]
  [-EnableSimilarDomainsSafetyTips <$true | $false>]
  [-EnableSimilarUsersSafetyTips <$true | $false>]
- [-EnableSuspiciousSafetyTip <$true | $false>]
  [-EnableTargetedDomainsProtection <$true | $false>]
  [-EnableTargetedUserProtection <$true | $false>]
  [-EnableUnusualCharactersSafetyTips <$true | $false>]
  [-ExcludedDomains <MultiValuedProperty>]
  [-ExcludedSenders <MultiValuedProperty>]
- [-ImpersonationProtectionState <Default | Automatic | Manual | Off>]
- [-MailboxIntelligenceProtectionAction <NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage>]
- [-MailboxIntelligenceProtectionActionRecipients <MultiValuedProperty>]
  [-MakeDefault]
  [-PhishThresholdLevel <Int32>]
  [-TargetedDomainActionRecipients <MultiValuedProperty>]
@@ -93,21 +87,6 @@ The AdminDisplayName parameter specifies a description for the policy. If the va
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AntiSpoofEnforcementType
-{{Fill AntiSpoofEnforcementType Description}}
-
-```yaml
-Type: Basic | High
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -247,21 +226,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableMailboxIntelligenceProtection
-{{Fill EnableMailboxIntelligenceProtection Description}}
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableOrganizationDomainsProtection
 The EnableOrganizationDomainsProtection parameter specifies whether to enable domain impersonation protection for all registered domains in the Office 365 organization. Valid values are:
 
@@ -306,21 +270,6 @@ The EnableSimilarUsersSafetyTips parameter specifies whether to enable safet
 - $true: Safety tips for similar users are enabled.
 
 - $false: Safety tips for similar users are disabled. This is the default value.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableSuspiciousSafetyTip
-{{Fill EnableSuspiciousSafetyTip Description}}
 
 ```yaml
 Type: $true | $false
@@ -408,51 +357,6 @@ Accept wildcard characters: False
 
 ### -ExcludedSenders
 The ExcludedSenders parameter specifies a list of trusted sender email addresses that are excluded from scanning by antiphishing protection. You can specify multiple email addresses separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImpersonationProtectionState
-{{Fill ImpersonationProtectionState Description}}
-
-```yaml
-Type: Default | Automatic | Manual | Off
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxIntelligenceProtectionAction
-{{Fill MailboxIntelligenceProtectionAction Description}}
-
-```yaml
-Type: NoAction | MoveToJmf | Redirect | Quarantine | Delete | BccMessage
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxIntelligenceProtectionActionRecipients
-{{Fill MailboxIntelligenceProtectionActionRecipients Description}}
 
 ```yaml
 Type: MultiValuedProperty

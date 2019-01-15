@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Set-SPAppStoreConfiguration -Url http://office.microsoft.com -Enable $true
+Set-SPAppStoreConfiguration -Url http://office.microsoft.com -Enable $true
 ```
 
 This example sets the URL to the Office.com server.
@@ -36,14 +36,14 @@ This example sets the URL to the Office.com server.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>Set-SPAppStoreConfiguration -Enable $false
+Set-SPAppStoreConfiguration -Enable $false
 ```
 
 This example turns off the SharePoint Store.
 
 ### --------------------EXAMPLE 3---------------------
 ```
-PS C:\>Set-SPAppStoreConfiguration -Enable $true
+Set-SPAppStoreConfiguration -Enable $true
 ```
 
 This example turns on the SharePoint Store.

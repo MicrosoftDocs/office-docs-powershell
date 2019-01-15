@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------- 
 ```
-PS C:\>Get-SPShellAdmin -database 4251d855-3c15-4501-8dd1-98f960359fa6
+Get-SPShellAdmin -database 4251d855-3c15-4501-8dd1-98f960359fa6
 ```
 
 This example returns the name of each user who has the SharePoint_Shell_Access role in the database specified.

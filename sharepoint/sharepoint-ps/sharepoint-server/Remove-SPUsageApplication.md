@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE--------------------
 ```
-PS C:\>Remove-SPUsageApplication -Identity "Usage and Health data collection" -RemoveData
+Remove-SPUsageApplication -Identity "Usage and Health data collection" -RemoveData
 ```
 
 This example removes the existing usage application and the associated logging DB.

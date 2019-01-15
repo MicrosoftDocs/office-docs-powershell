@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant '00000000-0000-0000-0000-000000000001'
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant '00000000-0000-0000-0000-000000000001'
 ```
 
 This example retrieves a list of users who have permission to view the crawl log information for a tenant with id '00000000-0000-0000-0000-000000000001' on the search application referenced by `$ssa`.

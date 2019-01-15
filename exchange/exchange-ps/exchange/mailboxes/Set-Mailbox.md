@@ -4265,7 +4265,7 @@ The RetainDeletedItemsFor parameter specifies the length of time to keep soft-de
 
 These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
 
-Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see Recoverable Items folder in Exchange Server (https://technet.microsoft.com/library/ee364755.aspx).
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -4393,7 +4393,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleAssignmentPolicy
-The RoleAssignmentPolicy parameter specifies the role assignment policy that's assigned to the mailbox.You can use any value that uniquely identifies the role assignment policy. For example:
+The RoleAssignmentPolicy parameter specifies the role assignment policy that's assigned to the mailbox. You can use any value that uniquely identifies the role assignment policy. For example:
 
 - Name
 

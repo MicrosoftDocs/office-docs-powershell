@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>Remove-SPDiagnosticsPerformanceCounter -category ASP.NET
+Remove-SPDiagnosticsPerformanceCounter -category ASP.NET
 ```
 
 This example removes all the counters in the category ASP.NET on front end Web servers.
@@ -42,7 +42,7 @@ This example removes all the counters in the category ASP.NET on front end Web s
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>Remove-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
+Remove-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
 ```
 
 This example removes the counters in the category ASP.NET that have requests queued on front end Web servers.
@@ -50,7 +50,7 @@ This example removes the counters in the category ASP.NET that have requests que
 
 ### ------------------EXAMPLE 3------------------
 ```
-PS C:\>Remove-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
+Remove-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
 ```
 
 This example removes the counters of the _Total instance, with the counter % Processor Time in the category Processor on database servers.

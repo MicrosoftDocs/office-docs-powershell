@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------- 
 ```
-PS C:\>Get-SPSiteSubscriptionEdiscoveryHub -Identity http://contoso.com
+Get-SPSiteSubscriptionEdiscoveryHub -Identity http://contoso.com
 ```
 
 This example displays the eDiscovery hub for the specified site collection.

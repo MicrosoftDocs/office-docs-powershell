@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPProjectPCSSettings -sa "Project Service Application" -MaximumSessionsPerUser 500
+Set-SPProjectPCSSettings -sa "Project Service Application" -MaximumSessionsPerUser 500
 ```
 
 This example sets 500 as the maximum allowed Project Calculation Engine sessions that a user can open on the "Project Service Application" service application.

@@ -24,6 +24,8 @@ Get-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter> [-DomainC
 ```
 
 ## DESCRIPTION
+To view the permissions that are avaialble on public folders, see Public folder permissions for Exchange Server (https://support.microsoft.com/help/2573274/public-folder-permissions-for-exchange-server).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
@@ -111,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the identity of the public folder mailbox for which you want to view the permissions. By default, the permissions are returned for the primary public folder mailbox. Using the Mailbox parameter allows you to specify a different public folder mailbox.
+The Mailbox parameter specifies the identity of the public folder mailbox from which you want to view the permissions. By default, the permissions are returned from the primary public folder mailbox. Using the Mailbox parameter allows you to specify a different public folder mailbox.
 
 ```yaml
 Type: MailboxIdParameter

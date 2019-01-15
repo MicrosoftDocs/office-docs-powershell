@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Get-SPTrustedServiceTokenIssuer "WFEFarm1"
+Get-SPTrustedServiceTokenIssuer "WFEFarm1"
 ```
 
 This example gets the trusted services token issuer WFEFarm1.

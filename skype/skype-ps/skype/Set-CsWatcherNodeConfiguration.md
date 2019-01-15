@@ -343,7 +343,7 @@ Accept wildcard characters: False
 
 ### -UseAutoDiscovery
 When set to True ($True), watcher nodes will use the Autodiscover service locate the target pool.
-When set the False (the default value), watcher nodes will use the pool FQDN and SRV records to locate pools.
+When set to False (the default value), watcher nodes will use the pool FQDN and SRV records to locate pools.
 
 ```yaml
 Type: Boolean

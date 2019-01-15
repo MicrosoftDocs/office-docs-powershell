@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE-------------------------
 ```
-PS C:\>New-SPUsageApplication -Name "Usage Application For Farm ABC"
+New-SPUsageApplication -Name "Usage Application For Farm ABC"
 ```
 
 This example creates a new usage application for the specified name.
