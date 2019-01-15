@@ -17,23 +17,27 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### MailboxGuid
 ```
-Get-MigrationUser -MailboxGuid <Guid> [-DomainController <Fqdn>] [-ResultSize <Unlimited>]
+Get-MigrationUser -MailboxGuid <Guid>
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>] [<CommonParameters>]
 ```
 
-### Set3
+### StatusAndBatchId
 ```
-Get-MigrationUser [-BatchId <MigrationBatchIdParameter>] [-DomainController <Fqdn>] [-ResultSize <Unlimited>]
- [-Status <Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing>]
- [-StatusSummary <Active | Failed | Synced | Completed | Stopped>] [-Partition <MailboxIdParameter>]
- [<CommonParameters>]
+Get-MigrationUser [-BatchId <MigrationBatchIdParameter>] [-Status <Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing>] [-StatusSummary <Active | Failed | Synced | Completed | Stopped>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [-Partition <MailboxIdParameter>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MigrationUser [[-Identity] <MigrationUserIdParameter>] [-DomainController <Fqdn>] [-ResultSize <Unlimited>]
+Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>] [<CommonParameters>]
 ```
 
@@ -63,7 +67,7 @@ The MailboxGuid parameter specifies the GUID of a mailbox for which you want to 
 
 ```yaml
 Type: Guid
-Parameter Sets: Set2
+Parameter Sets: MailboxGuid
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -78,7 +82,7 @@ The BatchId parameter specifies the name of the migration batch for which you wa
 
 ```yaml
 Type: MigrationBatchIdParameter
-Parameter Sets: Set3
+Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -110,7 +114,7 @@ The Identity parameter specifies the particular user that you want to retrieve i
 
 ```yaml
 Type: MigrationUserIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -182,7 +186,7 @@ The Status parameter returns information about migration users that have the spe
 
 ```yaml
 Type: Queued | Syncing | Failed | Synced | IncrementalFailed | Completing | Completed | CompletionFailed | Corrupted | Provisioning | ProvisionUpdating | CompletionSynced | Validating | IncrementalSyncing | IncrementalSynced | CompletedWithWarnings | Stopped | IncrementalStopped | Starting | Stopping | Removing
-Parameter Sets: Set3
+Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -207,7 +211,7 @@ The StatusSummary parameter returns abbreviated information about migration user
 
 ```yaml
 Type: Active | Failed | Synced | Completed | Stopped
-Parameter Sets: Set3
+Parameter Sets: StatusAndBatchId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

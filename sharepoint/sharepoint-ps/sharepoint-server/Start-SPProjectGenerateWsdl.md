@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Project Server 2016
+external help file: sharepointserver.xml
+applicable: Project Server 2016, Project Server 2019
 title: Start-SPProjectGenerateWsdl
 schema: 2.0.0
 ---
@@ -24,7 +24,7 @@ Generates ASPX pages from WSDL files.
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>Start-SPProjectGenerateWsdl
+Start-SPProjectGenerateWsdl
 ```
 Generates ASPX files in C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\PSI from the pre-existing WSDL files.
 
@@ -40,7 +40,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -56,7 +56,7 @@ The path to the location containing the WSDL files.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016
+Applicable: Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

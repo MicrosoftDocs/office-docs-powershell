@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: Project Server 2013, Project Server 2016
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectEnterpriseProjectTaskSync
 schema: 2.0.0
 ---
@@ -24,7 +24,7 @@ Returns whether the task list sync between Project Web App and project sites is 
 
 ### Example 1 
 ```
-PS C:\>Get-SPProjectEnterpriseProjectTaskSync -Url http://contoso/sites/PWA
+Get-SPProjectEnterpriseProjectTaskSync -Url http://contoso/sites/PWA
 ```
 
 This example shows the syntax for getting the task sync status for the Project Web App site at http://contoso/sites/PWA.
@@ -40,7 +40,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -56,7 +56,7 @@ The URL of the PWA site.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

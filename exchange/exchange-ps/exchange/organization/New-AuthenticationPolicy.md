@@ -9,9 +9,6 @@ monikerRange: "exchonline-ps"
 # New-AuthenticationPolicy
 
 ## SYNOPSIS
-> [!NOTE]
-> This topic describes a preview feature that isn't available to everyone, and is subject to change.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the New-AuthenticationPolicy cmdlet to create authentication policies in Exchange Online.
@@ -21,7 +18,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-AuthenticationPolicy [[-Name] <String>] [-AllowBasicAuthActiveSync] [-AllowBasicAuthAutodiscover] [-AllowBasicAuthImap] [-AllowBasicAuthMapi] [-AllowBasicAuthOfflineAddressBook] [-AllowBasicAuthOutlookService] [-AllowBasicAuthPop] [-AllowBasicAuthPowershell] [-AllowBasicAuthReportingWebServices] [-AllowBasicAuthRest] [-AllowBasicAuthRpc] [-AllowBasicAuthSmtp] [-AllowBasicAuthWebServices] [-Confirm] [-WhatIf] [<CommonParameters>]
+New-AuthenticationPolicy [[-Name] <String>]
+ [-AllowBasicAuthActiveSync]
+ [-AllowBasicAuthAutodiscover]
+ [-AllowBasicAuthImap]
+ [-AllowBasicAuthMapi]
+ [-AllowBasicAuthOfflineAddressBook]
+ [-AllowBasicAuthOutlookService]
+ [-AllowBasicAuthPop]
+ [-AllowBasicAuthPowershell]
+ [-AllowBasicAuthReportingWebServices]
+ [-AllowBasicAuthRpc]
+ [-AllowBasicAuthSmtp]
+ [-AllowBasicAuthWebServices]
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 
 ```
 
@@ -192,23 +203,6 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthReportingWebServices
 The AllowBasicAuthReporting Web Services switch specifies whther to allow Basic authentication with reporting web services. You don't need to specify a value with this switch.
-
-The default value is $false. Use this switch to set the value $true.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowBasicAuthRest
-The AllowBasicAuthRest switch specifies whther to allow Basic authentication with REST. You don't need to specify a value with this switch.
 
 The default value is $false. Use this switch to set the value $true.
 

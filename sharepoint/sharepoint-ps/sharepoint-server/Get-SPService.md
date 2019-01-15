@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPService
 schema: 2.0.0
 ---
@@ -24,7 +24,7 @@ The Get-SPService cmdlet gets a service in the farm.
 
 ### Example 1 
 ```
-PS C:\>Get-SPService -Identity 'Microsoft SharePoint Server Diagnostics Service'
+Get-SPService -Identity 'Microsoft SharePoint Server Diagnostics Service'
 ```
 
 This example gets the Microsoft SharePoint Server Diagnostics Service in the farm.
@@ -38,7 +38,7 @@ Specifies all services in the farm.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -55,7 +55,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -71,7 +71,7 @@ Specifies the name of the service to get.
 Type: SPServicePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 0
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### GetChildren
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-GetChildren] [-DomainController <Fqdn>]
- [-MailFolderOnly] [-ResultSize <Unlimited>] [-Recurse] [<CommonParameters>]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-GetChildren]
+ [-DomainController <Fqdn>]
+ [-MailFolderOnly]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
-### Set2
+### Recurse
 ```
-Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-Recurse] [-DomainController <Fqdn>]
- [-MailFolderOnly] [-ResultSize <Unlimited>] [-GetChildren] [<CommonParameters>]
+Get-MailboxFolder [[-Identity] <MailboxFolderIdParameter>] [-Recurse]
+ [-DomainController <Fqdn>]
+ [-MailFolderOnly]
+ [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +84,7 @@ You can't use this switch with the Recurse switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: GetChildren
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -97,7 +101,7 @@ You can't use this switch with the GetChildren switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Recurse
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True

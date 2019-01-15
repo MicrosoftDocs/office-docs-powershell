@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: Set-CsIPPhonePolicy
 schema: 2.0.0
@@ -12,10 +12,30 @@ Use the Set-CsIPPhonePolicy cmdlet to modify the settings of the Skype for Busin
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-BetterTogetherOverEthernetPairingMode <String>] [-Confirm] [-DateTimeFormat <Int>] [-EnableBetterTogetherOverEthernet <Boolean>] [-EnableDeviceUpdate <Boolean>] [-EnableExchangeCalendaring <Boolean>] [-EnableOneTouchVoicemail <Boolean>] [-EnablePowerSaveMode <Boolean>] [-Force] [-Instance <PSObject>] [-KeyboardLockMaxPinRetry <UInt64>]
- [-LocalProvisioningServerAddress <String>] [-LocalProvisioningServerPassword <String>] [-LocalProvisioningServerType <String>] [-LocalProvisioningServerUser <String>] [-PowerSaveDuringOfficeHoursTimeoutMS <UInt64>] [-PowerSavePostOfficeHoursTimeoutMS <UInt64>]
- [-PrioritizedCodecsList <String>] [-Tenant <Guid>] [-UserDialTimeoutMS <UInt64>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsIPPhonePolicy [-Tenant <Guid>] [-UserDialTimeoutMS <UInt64>] [-KeyboardLockMaxPinRetry <UInt64>]
+ [-PrioritizedCodecsList <String>] [-EnablePowerSaveMode <Boolean>]
+ [-PowerSaveDuringOfficeHoursTimeoutMS <UInt64>] [-PowerSavePostOfficeHoursTimeoutMS <UInt64>]
+ [-EnableOneTouchVoicemail <Boolean>] [-DateTimeFormat <Int32>] [-EnableDeviceUpdate <Boolean>]
+ [-EnableExchangeCalendaring <Boolean>] [-EnableBetterTogetherOverEthernet <Boolean>]
+ [-BetterTogetherOverEthernetPairingMode <String>] [-LocalProvisioningServerUser <String>]
+ [-LocalProvisioningServerPassword <String>] [-LocalProvisioningServerAddress <String>]
+ [-LocalProvisioningServerType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsIPPhonePolicy [-Tenant <Guid>] [-UserDialTimeoutMS <UInt64>] [-KeyboardLockMaxPinRetry <UInt64>]
+ [-PrioritizedCodecsList <String>] [-EnablePowerSaveMode <Boolean>]
+ [-PowerSaveDuringOfficeHoursTimeoutMS <UInt64>] [-PowerSavePostOfficeHoursTimeoutMS <UInt64>]
+ [-EnableOneTouchVoicemail <Boolean>] [-DateTimeFormat <Int32>] [-EnableDeviceUpdate <Boolean>]
+ [-EnableExchangeCalendaring <Boolean>] [-EnableBetterTogetherOverEthernet <Boolean>]
+ [-BetterTogetherOverEthernetPairingMode <String>] [-LocalProvisioningServerUser <String>]
+ [-LocalProvisioningServerPassword <String>] [-LocalProvisioningServerAddress <String>]
+ [-LocalProvisioningServerType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -377,32 +397,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+System.Management.Automation.SwitchParameter
+
 The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
@@ -425,11 +427,9 @@ Microsoft.Rtc.Management.ADConnect.Schema.ADUser
 ## OUTPUTS
 
 ### System.Object
-By default, the Set-CsIPPhonePolicy cmdlet returns no objects or values. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
+By default, the Grant-CsIPPhonePolicy cmdlet returns no objects or values. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
 
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsIPPhonePolicy](https://docs.microsoft.com/en-us/powershell/module/skype/grant-csipphonepolicy?view=skype-ps)
 
-[Get-CsIPPhonePolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csipphonepolicy?view=skype-ps)

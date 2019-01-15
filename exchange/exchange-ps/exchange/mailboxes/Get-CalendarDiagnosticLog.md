@@ -17,18 +17,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### MeetingId
 ```
-Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -MeetingID <String> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-LogLocation <String>] [-ReadFromDomainController] [-ResultSize <Unlimited>]
- [-EndDate <ExDateTime>] [-Latest] [-StartDate <ExDateTime>] [-Subject <String>] [-EntryId <String>]
- [-ExactMatch <$true | $false>] [-ItemClass <String[]>] [-ItemIds <String[]>] [<CommonParameters>]
+Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -MeetingID <String> [-EndDate <ExDateTime>] [-Latest] [-StartDate <ExDateTime>] [-Subject <String>] [-EntryId <String>] [-ExactMatch <$true | $false>] [-ItemClass <String[]>] [-ItemIds <String[]>]
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-LogLocation <String>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
 ```
 
-### Set1
+### MeetingSubject
 ```
-Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -Subject <String> [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-LogLocation <String>] [-ReadFromDomainController] [-ResultSize <Unlimited>]
+Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -Subject <String>
+ [-Credential <PSCredential>]
+ [-DomainController <Fqdn>]
+ [-LogLocation <String>]
+ [-ReadFromDomainController]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -60,10 +67,10 @@ This example retrieves the Calendar Diagnostic log entries for Shannon Steele's 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CalendarDiagnosticLog -Identity oevans -StartDate "6/1/2015 6:00:00 AM" -EndDate "6/30/2015 5:00:00 PM"
+Get-CalendarDiagnosticLog -Identity oevans -StartDate "6/1/2018 6:00:00 AM" -EndDate "6/30/2018 5:00:00 PM"
 ```
 
-This example retrieves the Calendar Diagnostic log entries for Oscar Evans' mailbox from 6/1/2015 to 6/30/2015.
+This example retrieves the Calendar Diagnostic log entries for Oscar Evans' mailbox from 6/1/2018 to 6/30/2018.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -135,7 +142,7 @@ Don't use this parameter with the Subject parameter, because the value of the Me
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MeetingId
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -152,7 +159,7 @@ Don't use this parameter with the MeetingID parameter, because the value of the 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: MeetingId
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -164,7 +171,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: MeetingSubject
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -203,6 +210,110 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndDate
+The EndDate parameter specifies the end date of the date range.
+
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+```yaml
+Type: ExDateTime
+Parameter Sets: MeetingId
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EntryId
+The EntryId parameter filters the results by entry ID. You can specify multiple values separated by commas.
+
+```yaml
+Type: String
+Parameter Sets: MeetingId
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExactMatch
+The ExactMatch parameter specifies whether to use an exact match or a partial match for text values that you specify for the Subject parameter. Valid values are:
+
+- $true: The subject search uses an exact match and searches all calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" anywhere in the subject, but not "budgeting".
+
+- $false: The subject search uses a partial match and searches a maximum of 1000 calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" and "budgeting" anywhere in the subject. This is the default value.
+
+A partial subject match search may not return all of the relevant calendar items. Try using an exact subject match search for more accurate results.
+
+You only use this parameter with the Subject parameter. 
+
+The value of this parameter is ignored when you use the MeetingId parameter.
+
+```yaml
+Type: $true | $false
+Parameter Sets: MeetingId
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ItemClass
+The ItemClass parameter filters the results by the specified MessageClass property value of the calendar item (for example, IPM.Appointment). You can specify multiple values separated by commas.
+
+You can only use this parameter with the MeetingID parameter.
+
+```yaml
+Type: String[]
+Parameter Sets: MeetingId
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ItemIds
+The ItemIds parameter filters the results by item ID. You can specify multiple values separated by commas.
+
+```yaml
+Type: String[]
+Parameter Sets: MeetingId
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Latest
+The Latest switch specifies whether to return calendar log data for only the most recent calendar item. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: MeetingId
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -265,120 +376,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EndDate
-The EndDate parameter specifies the end date of the date range.
-
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-```yaml
-Type: ExDateTime
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Latest
-The Latest switch specifies whether to return calendar log data for only the most recent calendar item. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
-Parameter Sets: Set2
+Parameter Sets: MeetingId
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EntryId
-The EntryId parameter filters the results by entry ID. You can specify multiple values separated by commas.
-
-```yaml
-Type: String
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExactMatch
-The ExactMatch parameter specifies whether to use an exact match or a partial match for text values that you specify for the Subject parameter. Valid values are:
-
-- $true: The subject search uses an exact match and searches all calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" anywhere in the subject, but not "budgeting".
-
-- $false: The subject search uses a partial match and searches a maximum of 1000 calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" and "budgeting" anywhere in the subject. This is the default value.
-
-A partial subject match search may not return all of the relevant calendar items. Try using an exact subject match search for more accurate results.
-
-You only use this parameter with the Subject parameter. 
-
-The value of this parameter is ignored when you use the MeetingId parameter.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ItemClass
-The ItemClass parameter filters the results by the specified MessageClass property value of the calendar item (for example, IPM.Appointment). You can specify multiple values separated by commas.
-
-You can only use this parameter with the MeetingID parameter.
-
-```yaml
-Type: String[]
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ItemIds
-The ItemIds parameter filters the results by item ID. You can specify multiple values separated by commas.
-
-```yaml
-Type: String[]
-Parameter Sets: Set2
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

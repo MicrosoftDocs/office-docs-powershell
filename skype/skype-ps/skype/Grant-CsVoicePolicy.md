@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsVoicePolicy
 schema: 2.0.0
@@ -16,9 +16,16 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsVoicePolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-DomainController <Fqdn>]
- [-PassThru] [-WhatIf] [-Confirm] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Grant-CsVoicePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
+ [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsVoicePolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +46,6 @@ For example:
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
 Grant-CsVoicePolicy -Identity "Ken Myer" -PolicyName VoicePolicyRedmond
 ```
 
@@ -48,7 +54,6 @@ This example assigns the voice policy with the Identity VoicePolicyRedmond to th
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
 Get-CsUser -OU "ou=Finance,ou=North America,dc=litwareinc,dc=com" | Grant-CsVoicePolicy -PolicyName VoicePolicyRedmond
 ```
 
@@ -60,7 +65,6 @@ This collection of users is then piped to the Grant-CsVoicePolicy cmdlet, which 
 ## PARAMETERS
 
 ### -Identity
-
 The Identity (unique identifier) of the user to whom the policy is being assigned.
 
 User identities can be specified by using one of four formats: 1) The user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -69,8 +73,6 @@ Note that you can use the asterisk (*) wildcard character when using the Display
 For example, the Identity "* Smith" would return all the users with the last name Smith.
 
 Full Data Type: Microsoft.Rtc.Management.AD.UserIdParameter
-
-
 
 ```yaml
 Type: UserIdParameter
@@ -86,11 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
 The name (Identity) of the voice policy to be assigned to the user.
 (Note that this includes only the name portion of the Identity.
 Per-user policy identities include a prefix of tag: that should not be included with the PolicyName.)
-
 
 ```yaml
 Type: String
@@ -106,11 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
 Allows you to specify a domain controller.
 If no domain controller is specified, the first available will be used.
-
-
 
 ```yaml
 Type: Fqdn
@@ -126,10 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
 Returns the results of the command.
 By default, this cmdlet does not generate any output.
-
 
 ```yaml
 Type: SwitchParameter
@@ -191,7 +186,7 @@ Instead, the tenant ID will automatically be filled in for you based on your con
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -204,7 +199,11 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+Indicates that this cmdlet runs as a background job.
+
+When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
 
 ```yaml
 Type: SwitchParameter

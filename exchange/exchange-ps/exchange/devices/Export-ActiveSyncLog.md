@@ -31,24 +31,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex060812.log" -StartDate:"06/08/12" -EndDate:"06/09/12" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
+Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex060818.log" -StartDate:"06/08/18" -EndDate:"06/09/18" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
 ```
 
-This example exports the Exchange ActiveSync log for the date range 06/08/12 to 06/09/12. The times on the report are in Coordinated Universal Time (UTC) and the report is saved in c:\\exreports\\easreports.
+This example exports the Exchange ActiveSync log for the date range 06/08/18 to 06/09/18. The times on the report are in Coordinated Universal Time (UTC) and the report is saved in c:\\exreports\\easreports.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Dir D:\Logs\*.log | Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex072012.log" -StartDate:"06/20/12" -EndDate:"07/20/12" -UseGMT:$true -Force $true -Confirm -OutputPath:"c:\exreports\easreports"
+Dir D:\Logs\*.log | Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex072018.log" -StartDate:"06/20/18" -EndDate:"07/20/18" -UseGMT:$true -Force $true -Confirm -OutputPath:"c:\exreports\easreports"
 ```
 
-This example exports the Exchange ActiveSync log for the date range 06/20/12 to 07/20/12 by reading all log files in the D:\\logs directory. All prompts are suppressed while running the report and a confirmation message is displayed. The times on the report are in UTC and the report is saved in c:\\exreports\\easreports.
+This example exports the Exchange ActiveSync log for the date range 06/20/18 to 07/20/18 by reading all log files in the D:\\logs directory. All prompts are suppressed while running the report and a confirmation message is displayed. The times on the report are in UTC and the report is saved in c:\\exreports\\easreports.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex020912.log" -StartDate:"02/01/12" -EndDate:"02/09/12" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
+Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex020918.log" -StartDate:"02/01/18" -EndDate:"02/09/18" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
 ```
 
-This example exports the Exchange ActiveSync log for the date range 02/01/12 to 02/09/12. The times on the report are in UTC, and the report is saved in c:\\exreports\\easreports.
+This example exports the Exchange ActiveSync log for the date range 02/01/18 to 02/09/18. The times on the report are in UTC, and the report is saved in c:\\exreports\\easreports.
 
 ## PARAMETERS
 

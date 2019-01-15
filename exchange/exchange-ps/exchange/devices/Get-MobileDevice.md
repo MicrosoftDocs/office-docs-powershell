@@ -17,18 +17,34 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Mailbox
 ```
-Get-MobileDevice -Mailbox <MailboxIdParameter> [-ActiveSync] [-DomainController <Fqdn>] [-Filter <String>]
- [-Monitoring] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OWAforDevices] [-ResultSize <Unlimited>]
- [-SortBy <String>] [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDevice -Mailbox <MailboxIdParameter>
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OWAforDevices]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>] [-ActiveSync] [-DomainController <Fqdn>]
- [-Filter <String>] [-Monitoring] [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OWAforDevices]
- [-ResultSize <Unlimited>] [-SortBy <String>] [-RestApi] [-UniversalOutlook] [<CommonParameters>]
+Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>]
+ [-ActiveSync]
+ [-DomainController <Fqdn>]
+ [-Filter <String>]
+ [-Monitoring]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OWAforDevices]
+ [-ResultSize <Unlimited>]
+ [-SortBy <String>]
+ [-RestApi]
+ [-UniversalOutlook] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +107,7 @@ For example:
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -205,7 +221,7 @@ The Identity parameter specifies the mobile device that you want to view. You ca
 
 ```yaml
 Type: MobileDeviceIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

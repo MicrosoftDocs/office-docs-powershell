@@ -17,16 +17,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### DefaultSet
 ```
-Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]> [-DetailLevel <Basic | Advanced>]
- [-GlobalObjectId <String>] [-OutputAs <HTML | CSV | XML>] [<CommonParameters>]
+Get-CalendarDiagnosticAnalysis -CalendarLogs <CalendarLog[]>
+ [-DetailLevel <Basic | Advanced>]
+ [-GlobalObjectId <String>]
+ [-OutputAs <HTML | CSV | XML>]
+ [<CommonParameters>]
 ```
 
-### Set2
+### LocationSet
 ```
-Get-CalendarDiagnosticAnalysis -LogLocation <String[]> [-DetailLevel <Basic | Advanced>]
- [-GlobalObjectId <String>] [-OutputAs <HTML | CSV | XML>] [<CommonParameters>]
+Get-CalendarDiagnosticAnalysis -LogLocation <String[]>
+ [-DetailLevel <Basic | Advanced>]
+ [-GlobalObjectId <String>]
+ [-OutputAs <HTML | CSV | XML>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,7 +107,7 @@ You can't use this parameter with the LogLocation parameter.
 
 ```yaml
 Type: CalendarLog[]
-Parameter Sets: Set1
+Parameter Sets: DefaultSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
@@ -114,13 +120,13 @@ Accept wildcard characters: False
 ### -LogLocation
 The LogLocation parameter specifies the location of the exported calendar items that you want to analyze. You can specify a local path, or a UNC path (\\\\\<Server\>\\\<Share\>\\\<User\>). If the value contains spaces, enclose the value in quotation marks (").
 
-You export the calender items to .msg files by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter. If the path contains multiple .msg files, all of those files are analyzed when you run Get-CalendarDiagnosticAnalysis.
+You export the calendar items to .msg files by using the Get-CalendarDiagnosticLog cmdlet with the LogLocation parameter. If the path contains multiple .msg files, all of those files are analyzed when you run Get-CalendarDiagnosticAnalysis.
 
 You can't use this parameter with the CalendarLogs parameter.
 
 ```yaml
 Type: String[]
-Parameter Sets: Set2
+Parameter Sets: LocationSet
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True

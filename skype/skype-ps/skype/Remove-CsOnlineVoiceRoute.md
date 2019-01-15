@@ -16,7 +16,7 @@ Remove-CsOnlineVoiceRoute [-Tenant <Guid>] [[-Identity] <XdsGlobalRelativeIdenti
 ```
 
 ## DESCRIPTION
-Use this cmdlet to remove an existing online voice route. Online voice routes are associated with online voice policies through online PSTN usages, so removing a online voice route does not change any values relating to an online voice policy, it simply changes the routing for the numbers that had matched the pattern for the deleted online voice route.
+Use this cmdlet to remove an existing online voice route. Online voice routes are associated with online voice policies through online PSTN usages, so removing an online voice route does not change any values relating to an online voice policy, it simply changes the routing for the numbers that had matched the pattern for the deleted online voice route.
 
 This cmdlet is used when configuring Microsoft Phone System Direct Routing.
 

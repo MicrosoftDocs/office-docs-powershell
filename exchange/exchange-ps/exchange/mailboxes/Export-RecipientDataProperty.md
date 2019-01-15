@@ -17,16 +17,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### ExportPicture
 ```
-Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Picture] [-WhatIf] [<CommonParameters>]
+Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> [-Picture]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### ExportSpokenName
 ```
-Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-SpokenName] [-WhatIf] [<CommonParameters>]
+Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> [-SpokenName]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -122,7 +126,7 @@ You can't use this switch with the SpokenName switch. You can only export one fi
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: ExportPicture
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -139,7 +143,7 @@ This cmdlet exports the WMA 9-voice format. You can't use this switch with the P
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: ExportSpokenName
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False

@@ -19,17 +19,24 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Database
 ```
 New-MailboxRepairRequest [-Database] <DatabaseIdParameter> -CorruptionType <MailboxStoreCorruptionType[]>
- [-Confirm] [-DetectOnly] [-DomainController <Fqdn>] [-WhatIf] [[-StoreMailbox] <StoreMailboxIdParameter>]
+ [-Confirm]
+ [-DetectOnly]
+ [-DomainController <Fqdn>]
  [-Force] [<CommonParameters>]
+ [-WhatIf] [[-StoreMailbox] <StoreMailboxIdParameter>]
 ```
 
-### Set1
+### Mailbox
 ```
-New-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> -CorruptionType <MailboxStoreCorruptionType[]>
- [-Archive] [-Confirm] [-DetectOnly] [-DomainController <Fqdn>] [-WhatIf] [-Force] [<CommonParameters>]
+New-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> -CorruptionType <MailboxStoreCorruptionType[]> [-Archive]
+ [-Confirm]
+ [-DetectOnly]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -122,7 +129,7 @@ You can't use this parameter in conjunction with the Mailbox parameter.
 
 ```yaml
 Type: DatabaseIdParameter
-Parameter Sets: Set2
+Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -153,7 +160,7 @@ You can't use this parameter in conjunction with the Database parameter.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Set1
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -170,7 +177,7 @@ You can't use this parameter in conjunction with the Database parameter.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Mailbox
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
@@ -229,21 +236,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 The Force switch specifies that the cmdlet should run immediately and not wait to be dispatched by workload management.
 
@@ -266,13 +258,28 @@ Run the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
 
 ```yaml
 Type: StoreMailboxIdParameter
-Parameter Sets: Set2
+Parameter Sets: Database
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

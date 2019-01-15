@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelFileLocation
 schema: 2.0.0
@@ -33,14 +33,14 @@ Properties of trusted file locations control how workbooks can be used when they
 Excel Services Application always enforces the properties that are defined by the trusted file location from which a workbook was loaded.
 The properties that are used by the trusted file location are determined by comparison of the file path for the workbook with the Address parameter of the trusted file location.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1--------------
 ```
-PS C:\>Get-SPExcelFileLocation -ExcelServiceApplication "My Excel Service" | where { $_.externaldataallowed -eq "DclAndEmbedded"} | Set-SPExcelFileLocation -ExernalDataAllowed Dcl
+Get-SPExcelFileLocation -ExcelServiceApplication "My Excel Service" | where { $_.externaldataallowed -eq "DclAndEmbedded"} | Set-SPExcelFileLocation -ExernalDataAllowed Dcl
 ```
 
 This example gets every trusted file location for the Excel Services Application Web service application named My Excel Service that allows data connections to load from workbook files and specifies that the locations must use a data connection library to load data connections.
@@ -48,7 +48,7 @@ This example gets every trusted file location for the Excel Services Application
 
 ### --------------EXAMPLE 2--------------
 ```
-PS C:\>Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "http://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
+Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "http://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
 ```
 
 This example changes the description of the default file location for every Excel Services Application Web service application in the farm.
@@ -602,7 +602,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

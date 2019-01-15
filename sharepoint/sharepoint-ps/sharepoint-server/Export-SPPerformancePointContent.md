@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPPerformancePointContent
 schema: 2.0.0
 ---
@@ -24,7 +24,7 @@ The Export-SPPerformancePointContent exports a PPS dashboard and its dependencie
 
 ### Example 1 
 ```
-PS C:\>Export-SPPerformancePointContent -ItemUrls http://contoso/sites/marketing/default.aspx -ExportFileURL "http://contoso/bicenter/SharedDocuments/bi/dashboard1.cmp"
+Export-SPPerformancePointContent -ItemUrls http://contoso/sites/marketing/default.aspx -ExportFileURL "http://contoso/bicenter/SharedDocuments/bi/dashboard1.cmp"
 ```
 
 This example exports a dashboard at the location specified with the ItemUrls parameter.
@@ -40,7 +40,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -56,7 +56,7 @@ Output name and path of the CMP file to which the data will be stored.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ The URL to the dashboard to be migrated or to the additional content URLs.
 Type: Array
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

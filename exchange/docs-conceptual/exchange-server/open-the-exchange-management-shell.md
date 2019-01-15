@@ -30,9 +30,9 @@ When you open the Exchange Management Shell you can perform administrative tasks
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351). 
   
-## Open the Exchange Management Shell in Windows 10
+## Open the Exchange Management Shell in Windows Server 2016 or Windows 10
 
-Click **Start** > **All Apps** > **Microsoft Exchange Server 2016 \>** **Exchange Management Shell**.
+Click **Start** > **Microsoft Exchange Server 2016 \>** **Exchange Management Shell**.
   
 ## Open the Exchange Management Shell in Windows Server 2012 R2 or Windows 8.1
 

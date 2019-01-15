@@ -17,22 +17,33 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### DatabaseFilter
 ```
-Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -DatabaseRestrictionFilter <String> [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-Name <String>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -ServerRestrictionFilter <String> [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-Name <String>] [-WhatIf] [<CommonParameters>]
+Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -DatabaseRestrictionFilter <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set1
+### ServerFilter
 ```
-Set-ManagementScope [-Identity] <ManagementScopeIdParameter> [-Confirm] [-DomainController <Fqdn>] [-Force]
- [-Name <String>] [-RecipientRestrictionFilter <String>] [-RecipientRoot <OrganizationalUnitIdParameter>]
+Set-ManagementScope [-Identity] <ManagementScopeIdParameter> -ServerRestrictionFilter <String>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Name <String>]
+ [-WhatIf] [<CommonParameters>]
+```
+
+### RecipientFilter
+```
+Set-ManagementScope [-Identity] <ManagementScopeIdParameter> [-RecipientRestrictionFilter <String>] [-RecipientRoot <OrganizationalUnitIdParameter>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Name <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -75,7 +86,7 @@ The DatabaseRestrictionFilter parameter specifies the filter to apply to databas
 
 ```yaml
 Type: String
-Parameter Sets: Set3
+Parameter Sets: DatabaseFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -107,7 +118,7 @@ The ServerRestrictionFilter parameter specifies the filter to apply to server ob
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: ServerFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
@@ -188,7 +199,7 @@ The RecipientRestrictionFilter parameter specifies the filter to apply to recipi
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: RecipientFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
@@ -203,7 +214,7 @@ The RecipientRoot parameter specifies the organizational unit (OU) under which t
 
 ```yaml
 Type: OrganizationalUnitIdParameter
-Parameter Sets: Set1
+Parameter Sets: RecipientFilter
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False

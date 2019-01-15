@@ -1,6 +1,6 @@
 ---
-external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteUpgradeSessionInfo
 schema: 2.0.0
 ---
@@ -31,13 +31,13 @@ Get-SPSiteUpgradeSessionInfo -Site <SPSitePipeBind> [-AssignmentCollection <SPAs
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the Get-SPSiteUpgradeSessionInfo cmdlet to manage or report site upgrade of the farm.
 
 This cmdlet has two modes, get upgrade information for a specific SPSite object or for a given content database.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$db = Get-SPContentDatabase -Identity wss_content
 
-C:\PS>Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
+Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
 ```
 
 This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
@@ -54,7 +54,7 @@ This example returns siteupgradeinfo for every SPContentDatabase returned from G
 ```
 C:\PS>$site=Get-SPSite -Identity http://localhost
 
-C:\PS>Get-SPSiteUpgradeSessionInfo -Site $site
+Get-SPSiteUpgradeSessionInfo -Site $site
 ```
 
 This example returns siteupgradeinfo for every SPSite object returned from Get-SPSite cmdlet.
@@ -68,7 +68,7 @@ Specifies the GUID of the content database from which to list site collections.T
 Type: SPContentDatabasePipeBind
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Type: SPSitePipeBind
 Parameter Sets: Site
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Specifies to hide site collections that upgrade has not started.
 Type: SwitchParameter
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ Specifies to show site collections that has completed upgrade.
 Type: SwitchParameter
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ Specifies to show site collections that have failed upgrade.
 Type: SwitchParameter
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Displays site collections that are in the process of being upgraded.
 Type: SwitchParameter
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ Specifies to limit the result to site collections within the site subscription.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

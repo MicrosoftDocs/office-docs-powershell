@@ -17,22 +17,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
 ```
-Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter> [-ApplyComplianceTag <String>]
- [-Comment <String>] [-Confirm] [-ContentContainsSensitiveInformation <PswsHashtable[]>]
- [-ContentDateFrom <DateTime>] [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionDurationDisplayHint <Days | Months | Years>] [-WhatIf] [<CommonParameters>]
-```
-
-### Set2
-```
-Set-RetentionComplianceRule [-ApplyComplianceTag <String>] [-Comment <String>] [-Confirm]
- [-ContentContainsSensitiveInformation <PswsHashtable[]>] [-ContentDateFrom <DateTime>]
- [-ContentDateTo <DateTime>] [-ContentMatchQuery <String>] [-ExcludedItemClasses <MultiValuedProperty>]
- [-ExpirationDateOption <String>] [-RetentionComplianceAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionDurationDisplayHint <Days | Months | Years>] [-WhatIf] [<CommonParameters>]
+Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
+ [-ApplyComplianceTag <String>]
+ [-Comment <String>]
+ [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentDateFrom <DateTime>]
+ [-ContentDateTo <DateTime>]
+ [-ContentMatchQuery <String>]
+ [-ExcludedItemClasses <MultiValuedProperty>]
+ [-ExpirationDateOption <String>]
+ [-RetentionComplianceAction <String>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionDurationDisplayHint <Days | Months | Years>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +59,7 @@ The Identity parameter specifies the retention rule that you want to modify. You
 
 ```yaml
 Type: ComplianceRuleIdParameter
-Parameter Sets: Set1
+Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: True
@@ -145,7 +144,7 @@ Accept wildcard characters: False
 ### -ContentDateFrom
 The ContentDateFrom parameter specifies the start date of the date range for content to include.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -162,7 +161,7 @@ Accept wildcard characters: False
 ### -ContentDateTo
 The ContentDateTo parameter specifies the end date of the date range for content to include.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -216,7 +215,7 @@ You can specify multiple item class values by using the syntax "Value1","Value2"
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Set2
+Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False

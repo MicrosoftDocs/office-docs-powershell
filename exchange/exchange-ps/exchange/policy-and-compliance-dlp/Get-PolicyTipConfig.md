@@ -17,15 +17,16 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set2
+### Parameters
 ```
-Get-PolicyTipConfig [-Action <NotifyOnly | RejectOverride | Reject | Url>] [-DomainController <Fqdn>]
- [-Locale <CultureInfo>] [-Original] [<CommonParameters>]
+Get-PolicyTipConfig [-Action <NotifyOnly | RejectOverride | Reject | Url>] [-Locale <CultureInfo>] [-Original]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
-### Set1
+### Identity
 ```
-Get-PolicyTipConfig [[-Identity] <PolicyTipConfigIdParameter>] [-DomainController <Fqdn>] [<CommonParameters>]
+Get-PolicyTipConfig [[-Identity] <PolicyTipConfigIdParameter>]
+ [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +72,7 @@ You can't use the Action parameter with the Identity parameter.
 
 ```yaml
 Type: NotifyOnly | RejectOverride | Reject | Url
-Parameter Sets: Set2
+Parameter Sets: Parameters
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -113,7 +114,7 @@ You can't use the Identity parameter with the Action, Locale or Original paramet
 
 ```yaml
 Type: PolicyTipConfigIdParameter
-Parameter Sets: Set1
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -132,7 +133,7 @@ You can't use the Locale parameter with the Identity parameter.
 
 ```yaml
 Type: CultureInfo
-Parameter Sets: Set2
+Parameter Sets: Parameters
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
@@ -147,7 +148,7 @@ The Original switch includes built-in Policy Tips in the results. You don't spec
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Parameters
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False

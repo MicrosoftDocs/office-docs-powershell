@@ -19,16 +19,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set3
+### CrossValidate
 ```
-Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-CrossValidate] [-Confirm]
- [-DomainController <Fqdn>] [-NumberOfSegments <Int32>] [-WhatIf] [<CommonParameters>]
+Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-CrossValidate] [-NumberOfSegments <Int32>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### Train
 ```
-Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-Clear] [-Confirm] [-DomainController <Fqdn>]
- [-Train] [-WhatIf] [<CommonParameters>]
+Start-RetentionAutoTagLearning [-Identity] <MailboxIdParameter> [-Clear] [-Train]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,7 +68,7 @@ The CrossValidate switch specifies whether items in the specified mailbox are be
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set3
+Parameter Sets: CrossValidate
 Aliases:
 Applicable: Exchange Server 2010
 Required: True
@@ -108,7 +112,7 @@ The Clear switch specifies whether to clear auto-tags from the specified mailbox
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Train
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -163,7 +167,7 @@ The NumberOfSegments parameter can be used only in conjunction with the CrossVal
 
 ```yaml
 Type: Int32
-Parameter Sets: Set3
+Parameter Sets: CrossValidate
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -178,7 +182,7 @@ The Train switch specifies whether to start the training algorithm for auto-tagg
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: Train
 Aliases:
 Applicable: Exchange Server 2010
 Required: False

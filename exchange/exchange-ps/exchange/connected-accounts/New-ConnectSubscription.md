@@ -17,16 +17,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Set1
+### Facebook
 ```
-New-ConnectSubscription -AppAuthorizationCode <String> [-Facebook] -Mailbox <MailboxIdParameter>
- -RedirectUri <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-ConnectSubscription -AppAuthorizationCode <String> [-Facebook] -Mailbox <MailboxIdParameter> -RedirectUri <String>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
-### Set2
+### LinkedIn
 ```
-New-ConnectSubscription [-LinkedIn] -Mailbox <MailboxIdParameter> -OAuthVerifier <String>
- -RequestSecret <String> -RequestToken <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+New-ConnectSubscription [-LinkedIn] -Mailbox <MailboxIdParameter> -OAuthVerifier <String> -RequestSecret <String> -RequestToken <String>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,7 +52,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Facebook
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -65,7 +67,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set1
+Parameter Sets: Facebook
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -80,7 +82,7 @@ The LinkedIn parameter specifies whether you want to edit a LinkedIn subscriptio
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -134,7 +136,7 @@ The OAuthVerifier parameter specifies the verification code associated with the 
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -149,7 +151,7 @@ The RedirectUri parameter specifies the host name used to connect to the Exchang
 
 ```yaml
 Type: String
-Parameter Sets: Set1
+Parameter Sets: Facebook
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -164,7 +166,7 @@ The RequestSecret parameter specifies the secret associated with the access toke
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
@@ -179,7 +181,7 @@ The RequestToken parameter specifies the access token that provides access to pr
 
 ```yaml
 Type: String
-Parameter Sets: Set2
+Parameter Sets: LinkedIn
 Aliases:
 Applicable: Exchange Online
 Required: True
