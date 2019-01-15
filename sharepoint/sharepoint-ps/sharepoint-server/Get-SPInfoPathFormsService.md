@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE---------------- 
 ```
-PS C:\>Get-SPInfoPathFormsService
+Get-SPInfoPathFormsService
 ```
 
 This example displays the InfoPath Forms Services settings for the entire farm.

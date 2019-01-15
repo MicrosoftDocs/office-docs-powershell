@@ -23,7 +23,7 @@ Enables monitoring Project Server queue statistics.
 
 ### Example 1 
 ```
-PS C:\>Enable-SPProjectQueueStatsMonitoring
+Enable-SPProjectQueueStatsMonitoring
 ```
 
 Enables monitoring Project Server queue statistics.

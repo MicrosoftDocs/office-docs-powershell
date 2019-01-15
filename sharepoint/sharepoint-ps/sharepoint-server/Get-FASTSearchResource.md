@@ -26,7 +26,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchResource dictionaries\spellcheck\check_en.aut c:\check_en.aut
+Get-FASTSearchResource dictionaries\spellcheck\check_en.aut c:\check_en.aut
 ```
 
 This example downloads dictionaries\spellcheck\check_en.aut from the resource store to c:\check_en.aut.

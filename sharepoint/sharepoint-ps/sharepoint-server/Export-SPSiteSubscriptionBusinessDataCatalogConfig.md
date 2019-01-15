@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Export-SPSiteSubscriptionBusinessDataCatalogConfig -ServiceContext http://contoso -Path "C:\folder\exportedFile.xml"
+Export-SPSiteSubscriptionBusinessDataCatalogConfig -ServiceContext http://contoso -Path "C:\folder\exportedFile.xml"
 ```
 
 This example exports the data file named exportedFile.xml.

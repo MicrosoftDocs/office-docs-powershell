@@ -23,9 +23,6 @@ Get-SPOSiteScriptFromList
 
 Uses an existing SharePoint list to output a JSON blob that can be used to create a site script for use in a site design. 
 
-[!NOTE]
-Most column data types and list configurations - including view formatting - are supported. Managed metadata fields cannot be extracted at this time. 
-
 ## EXAMPLES
 
 ### Example 1

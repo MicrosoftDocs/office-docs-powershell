@@ -23,7 +23,7 @@ Use the Get-SPWebTemplatesEnabledForSiteMaster cmdlet to display a full list of 
 
 ### Example 1 
 ```
-PS C:\>Get-SPWebTemplatesEnabledForSiteMaster
+Get-SPWebTemplatesEnabledForSiteMaster
 ```
 
 This example displays all the site master web templates in a farm.

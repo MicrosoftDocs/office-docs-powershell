@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPEnterpriseSearchServiceApplication -Identity MySSA
+Remove-SPEnterpriseSearchServiceApplication -Identity MySSA
 ```
 
 This example removes the search service application named MySSA from the farm.

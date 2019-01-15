@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPContentDeploymentJob -Identity "DeployJob1"
+Remove-SPContentDeploymentJob -Identity "DeployJob1"
 ```
 
 This example removes a deployment job named DeployJob1.

@@ -32,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE-------------------- 
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS PS C:\>Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy -Type MySiteReaderACL
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy -Type MySiteReaderACL
 ```
 
 This example displays MySite information on UPA Proxy 1.

@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String

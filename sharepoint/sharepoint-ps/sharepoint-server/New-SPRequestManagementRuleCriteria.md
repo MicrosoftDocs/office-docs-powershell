@@ -39,7 +39,7 @@ Use the `New-SPRequestManagementRuleCriteria` cmdlet to create criteria for the 
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPRequestManagementRuleCriteria -Property Host -Value Client01 -MatchType Equals
+New-SPRequestManagementRuleCriteria -Property Host -Value Client01 -MatchType Equals
 ```
 
 This example creates a new rule that matches the Host 'Client01'.

@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE------------------------
 ```
-PS C:\>Remove-SPFeatureSet -Identity "30daa535-b0fe-4d10-84b0-fb04029d161a"
+Remove-SPFeatureSet -Identity "30daa535-b0fe-4d10-84b0-fb04029d161a"
 ```
 
 This example removes a SharePoint Feature set that has the ID 30daa535-b0fe-4d10-84b0-fb04029d161a.

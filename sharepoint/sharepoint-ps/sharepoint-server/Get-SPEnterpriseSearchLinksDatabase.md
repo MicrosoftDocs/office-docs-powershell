@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------EXAMPLE--------- 
 ```
-PS C:\>Get-SPEnterpriseSearchLinksDatabase -Identity LinksDB_1 -SearchApplication 'Search Service Application'
+Get-SPEnterpriseSearchLinksDatabase -Identity LinksDB_1 -SearchApplication 'Search Service Application'
 ```
 
 This example gets a reference to the links database LinksDB_1 from the search service application 'Search Service Application'.

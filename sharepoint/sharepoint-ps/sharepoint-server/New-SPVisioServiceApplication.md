@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1---------------------
 ```
-PS C:\>New-SPVisioServiceApplication -Identity 'Visio Graphics Service Application' -ApplicationPool 'SharePoint Web Services Default' -CreateDefaultProxy
+New-SPVisioServiceApplication -Identity 'Visio Graphics Service Application' -ApplicationPool 'SharePoint Web Services Default' -CreateDefaultProxy
 ```
 
 This example creates a new Visio Services application named 'Visio Graphics Service Application' and also creates a service application proxy associated with it.

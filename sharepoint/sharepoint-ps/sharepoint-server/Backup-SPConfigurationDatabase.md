@@ -46,14 +46,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1-------------------- 
 ```
-PS C:\>Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -ShowTree
+Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -ShowTree
 ```
 
 This example displays components that are available for inclusion in a configuration-only backup.
 
 ### -------------------EXAMPLE 2-------------------- 
 ```
-PS C:\>Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -Verbose
+Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -Verbose
 ```
 
 This example performs a configuration-only backup with verbose output.

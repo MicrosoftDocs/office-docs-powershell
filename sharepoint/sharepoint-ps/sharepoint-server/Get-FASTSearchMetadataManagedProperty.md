@@ -30,7 +30,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchMetadataManagedProperty -name title
+Get-FASTSearchMetadataManagedProperty -name title
 ```
 
 This example retrieves a managed property named "title".
@@ -38,7 +38,7 @@ It returns an object representing the managed property.
 
 ### ---------------EXAMPLE 2-----------------
 ```
-PS C:\>Get-FASTSearchMetadataManagedProperty -name content*
+Get-FASTSearchMetadataManagedProperty -name content*
 ```
 
 This example returns all managed properties with names starting with "content".

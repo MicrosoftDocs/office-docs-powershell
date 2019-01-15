@@ -35,7 +35,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>New-FASTSearchMetadataFullTextIndex -Name CommonSharePoint -Description "Content from the common SharePoint site."
+New-FASTSearchMetadataFullTextIndex -Name CommonSharePoint -Description "Content from the common SharePoint site."
 ```
 
 This example creates a new full text index named "CommonSharePoint".

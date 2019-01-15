@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPSiteURL -Url http://contoso.sharepoint.com
+Remove-SPSiteURL -Url http://contoso.sharepoint.com
 ```
 
 This example removes the URL from the site collection, http://contoso.sharepoint.com.

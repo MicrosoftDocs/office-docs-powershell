@@ -15,8 +15,7 @@ Modifies the previously defined Session Border Controller (SBC) Configuration th
 
 ### Identity (Default)
 ```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-CodecPriority <String>]
- [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -24,8 +23,7 @@ Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-C
 
 ### Instance
 ```
-Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-CodecPriority <String>]
- [-ExcludedCodecs <String>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
+Set-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-SipSignallingPort <Int32>] [-FailoverTimeSeconds <Int32>] [-ForwardCallHistory <Boolean>]
  [-ForwardPai <Boolean>] [-SendSipOptions <Boolean>] [-MaxConcurrentSessions <System.Int32>]
  [-Enabled <Boolean>] [-MediaBypass <Boolean>] [-GatewaySiteId <String>] [-GatewaySiteLbrEnabled <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -51,21 +49,6 @@ PS C:\> Set-CsOnlinePSTNGateway -Identity sbc.contoso.com -SIPSignallingPort 506
 This example modifies the configuration of an SBC with identity (and FQDN)  sbc.contoso.com. It changes the SIPSignallingPort to 5064 and enabled P-Asserted-Identity field on outbound connections (outbound from Direct Routing to SBC). For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator set identity of the caller as "Anonymous" or a general number of the company, but for the billing purposes the real identity of the user should be reported.
 
 ## PARAMETERS
-
-### -CodecPriority
-Allows choosing codec priority when media is negotiated between Media Proxy and SBC. Default priority is ("SILKWB,SILKNB,PCMU,PCMA").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: ("SILKWB,SILKNB,PCMU,PCMA")
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -93,21 +76,6 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: $false
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExcludedCodecs
-Allows exclude some codecs during the process of media negotiation between Media Proxy and SBC.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

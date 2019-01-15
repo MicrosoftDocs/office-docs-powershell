@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPMobileMessagingAccount -WebApplication http://sitename
+Get-SPMobileMessagingAccount -WebApplication http://sitename
 ```
 
 This example retrieves the current mobile account settings information of the Web application http://sitename.

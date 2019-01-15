@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\>Remove-SPSecureStoreSystemAccount -Identity contoso\jdoe
+Remove-SPSecureStoreSystemAccount -Identity contoso\jdoe
 ```
 
 This example removes a specific user name jdoe by using the Identity parameter.
@@ -36,7 +36,7 @@ This example removes a specific user name jdoe by using the Identity parameter.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-PS C:\>Get-SPSecureStoreSystemAccount | Where-Object -filter {$_.AccountName -eq 'Contoso\admin'} | Remove-SPSecureStoreSystemAccount
+Get-SPSecureStoreSystemAccount | Where-Object -filter {$_.AccountName -eq 'Contoso\admin'} | Remove-SPSecureStoreSystemAccount
 ```
 
 This example removes the admin, user from the contoso domain by filtering the results from the `Get-SPSecureStoreSystemAccount` cmdlet.

@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Get-SPSite http://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
+Get-SPSite http://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
 ```
 
 This example sets the secondary owner on a set of site collections to DOMAIN\Jdoe.
@@ -54,7 +54,7 @@ This example sets the secondary owner on a set of site collections to DOMAIN\Jdo
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>Set-SPSite -identity "http://sitename" -MaxSize 4000000 -WarningSize 2000000
+Set-SPSite -identity "http://sitename" -MaxSize 4000000 -WarningSize 2000000
 ```
 
 This example configures the Quota settings for the site collection http://sitename.

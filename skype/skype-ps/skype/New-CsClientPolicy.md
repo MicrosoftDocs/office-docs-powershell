@@ -2007,6 +2007,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateMyCallAllowCustomUserFeedback
+When set to True, a free-text input field will be displayed in the Rate My Call window for users to submit custom feedback.
 
 ```yaml
 Type: Boolean
@@ -2022,6 +2023,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateMyCallDisplayPercentage
+This parameter controls how often the form is shown.
 
 ```yaml
 Type: UInt16

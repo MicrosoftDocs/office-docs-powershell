@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Stop-SPServiceInstance 67877d63-bff4-4521-867a-ef4979ba07ce
+Stop-SPServiceInstance 67877d63-bff4-4521-867a-ef4979ba07ce
 ```
 
 This example stops the service instance in the given server.

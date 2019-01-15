@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -AddPermissionLevel "Contributor"
+Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -AddPermissionLevel "Contributor"
 ```
 
 This example sets a user (Contoso\jdoe) to be a contributor on https://intranet.contoso.com.
@@ -38,7 +38,7 @@ This example sets a user (Contoso\jdoe) to be a contributor on https://intranet.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -SyncFromAD
+Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -SyncFromAD
 ```
 
 This updates the User Information List for the user 'contoso\jdoe' with the current `displayName` and `mail` attribute values from the user's Active Directory account.

@@ -14,7 +14,7 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 ## SYNTAX
 
 ```
-Grant-CsTeamsUpgradePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Global] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,8 +39,8 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 |SfBOnlyWithNotify|SfBOnly|True|For now, this mode is effectively the same as setting preferred client=SfB. We expect in the future this will restrict Teams functionality.|
 |SfBWithTeamsCollab|SfBWithTeamsCollab|False|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will only allow Channels in Teams app.|
 |SfBWithTeamsCollabWithNotify|SfBWithTeamsCollab|True|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will only allow Channels in Teams app.|
-|SfBWithTeamsCollab|SfBWithTeamsCollabAndMeetings|False|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will  allow Channels and meeting scheduling in Teams app.|
-|SfBWithTeamsCollabWithNotify|SfBWithTeamsCollabAndMeetings|True|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will allow Channels and meeting scheduling in Teams app.|
+|SfBWithTeamsCollabAndMeetings|SfBWithTeamsCollabAndMeetings|False|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will  allow Channels and meeting scheduling in Teams app.|
+|SfBWithTeamsCollabAndMeetingsWithNotify|SfBWithTeamsCollabAndMeetings|True|This mode exists at the PowerShell layer but is not yet exposed in the admin user experience. From a routing perspective, this is the same as SfBOnly mode. When TeamsAppPermissionsPolicy is available, this will allow Channels and meeting scheduling in Teams app.|
 |UpgradeToTeams|TeamsOnly|False|Use this mode to upgrade users to Teams and to prevent chat, calling, and meeting scheduling in Skype for Business.|
 |Global|Islands|False||
 |||||
@@ -69,10 +69,10 @@ The above cmdlet assigns the "UpgradeToTeams" policy to user Mike@contoso.com.  
 
 ### Example 2: Grant Policy to the entire tenant 
 ```
-PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly 
+PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 ```
 
-To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter.
+To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
 
 ## PARAMETERS
 
@@ -94,13 +94,29 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{Fill PolicyName Description}}
+The name of the policy instance.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+Use this switch if you want to grant the specified policy to be the default policy for all users in the tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
 
 Required: False
 Position: 1
@@ -157,7 +173,7 @@ Accept wildcard characters: False
 
 ## NOTES
 
-Legacy mode in TeamsUprgradePolicy has been deprecated and it is no longer possible to grant legacy mode. Customers using Legacy mode must update their configuration of TeamsUpgradePolicy to use one of the other modes.
+Legacy mode in TeamsUpgradePolicy has been deprecated and it is no longer possible to grant legacy mode. Customers using Legacy mode must update their configuration of TeamsUpgradePolicy to use one of the other modes.
 
 TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. All components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is no longer honored and should not be used for routing.
 

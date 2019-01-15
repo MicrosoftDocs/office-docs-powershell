@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 ```
 
 This example retrieves the ContentEnrichmentConfiguration object from the default SearchServiecApplication.

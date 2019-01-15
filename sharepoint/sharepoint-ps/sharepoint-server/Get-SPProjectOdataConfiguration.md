@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Get-SPProjectOdataConfiguration
+Get-SPProjectOdataConfiguration
 ```
 
 This example returns the OData configuration for the instance of Project Web App.

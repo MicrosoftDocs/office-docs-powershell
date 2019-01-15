@@ -30,7 +30,7 @@ Use the Clear-SPServerScaleOutDatabaseTenantData cmdlet removes all data related
 
 ### ------------EXAMPLE--------- 
 ```
-PS C:\>Clear-SPServerScaleOutDatabaseTenantData -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
+Clear-SPServerScaleOutDatabaseTenantData -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
 ```
 
 This example clears all data related to the site subscription with id 5CAF2F99-A75F-4239-B9CD-7FE63D1CE904 from the specified service application.

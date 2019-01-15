@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE 1----------- 
 ```
-PS C:\>Get-SPAppInstance -Web http://localhost
+Get-SPAppInstance -Web http://localhost
 ```
 
 This example returns a collection if more than one app is installed on http://localhost.
@@ -52,7 +52,7 @@ If only one app is installed, a single object is returned.
 
 ### -----------EXAMPLE 2----------- 
 ```
-PS C:\>Get-SPAppInstance -AppInstanceId $instance.Id
+Get-SPAppInstance -AppInstanceId $instance.Id
 ```
 
 This example returns the ID of an instance of an app.

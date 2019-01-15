@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1--------------
 ```
-PS C:\>Get-SPExcelFileLocation -ExcelServiceApplication "My Excel Service" | where { $_.externaldataallowed -eq "DclAndEmbedded"} | Set-SPExcelFileLocation -ExernalDataAllowed Dcl
+Get-SPExcelFileLocation -ExcelServiceApplication "My Excel Service" | where { $_.externaldataallowed -eq "DclAndEmbedded"} | Set-SPExcelFileLocation -ExernalDataAllowed Dcl
 ```
 
 This example gets every trusted file location for the Excel Services Application Web service application named My Excel Service that allows data connections to load from workbook files and specifies that the locations must use a data connection library to load data connections.
@@ -48,7 +48,7 @@ This example gets every trusted file location for the Excel Services Application
 
 ### --------------EXAMPLE 2--------------
 ```
-PS C:\>Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "http://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
+Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "http://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
 ```
 
 This example changes the description of the default file location for every Excel Services Application Web service application in the farm.

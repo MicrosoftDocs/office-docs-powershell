@@ -23,8 +23,8 @@ Creates a Proxy for an Access Services Service Application.
 
 ### Example 1 
 ```
-PS C:\>$sa = New-SPAccessServicesApplication -DatabaseServer spag.lab.cobaltatom.com -ApplicationPool 'SharePoint Web Services Default' -Name 'Access Services Service Application' -Default
-PS C:\>New-SPAccessServicesApplicationProxy -application $sa
+$sa = New-SPAccessServicesApplication -DatabaseServer spag.lab.cobaltatom.com -ApplicationPool 'SharePoint Web Services Default' -Name 'Access Services Service Application' -Default
+New-SPAccessServicesApplicationProxy -application $sa
 ```
 
 This example creates an Access Services Application, placing it into the `$sa` variable. Using the `$sa` variable, it is then used to create the Access Services Service Application Proxy.

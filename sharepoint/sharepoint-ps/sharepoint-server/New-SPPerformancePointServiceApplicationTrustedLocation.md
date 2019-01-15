@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------
 ```
-PS C:\>New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "http://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
+New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "http://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
 ```
 
 This example creates a new TrustedLocation for the PPSApp_01 service application.

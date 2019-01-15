@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Set-SPDiagnosticConfig -ErrorReportingEnabled -DownloadErrorReportingUpdatesEnabled:$false -DaysToKeepLog 60
+Set-SPDiagnosticConfig -ErrorReportingEnabled -DownloadErrorReportingUpdatesEnabled:$false -DaysToKeepLog 60
 ```
 
 This example enables ErrorReporting, disables DownloadErrorReportingUpdatesEnable and sets DaysToKeepLog to 60.
@@ -43,10 +43,10 @@ This example enables ErrorReporting, disables DownloadErrorReportingUpdatesEnabl
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>$config = Get-SPDiagnosticConfig
-PS C:\>$config.CustomerExperienceImprovementProgramEnabled = $false
-PS C:\>$config.LogCutInterval = 60
-PS C:\>$config | Set-SPDiagnosticConfig
+$config = Get-SPDiagnosticConfig
+$config.CustomerExperienceImprovementProgramEnabled = $false
+$config.LogCutInterval = 60
+$config | Set-SPDiagnosticConfig
 ```
 
 This example disables CEIP and sets LogCutInterval to 60 minutes.

@@ -35,21 +35,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get-SPDiagnosticsPerformanceCounter
+Get-SPDiagnosticsPerformanceCounter
 ```
 
 This example gets the performance counter settings for front end Web servers and database servers.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPDiagnosticsPerformanceCounter -WebFrontEnd
+Get-SPDiagnosticsPerformanceCounter -WebFrontEnd
 ```
 
 This example gets the performance counter settings for front end Web servers.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-PS C:\>Get-SPDiagnosticsPerformanceCounter -DatabaseServer
+Get-SPDiagnosticsPerformanceCounter -DatabaseServer
 ```
 
 This example gets the performance counter settings for database servers.

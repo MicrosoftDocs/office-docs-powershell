@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWordConversionServiceApplication -Name 'Word Conversion Services' -ApplicationPool 'SharePoint Web Services Default' -DatabaseName 'Word'
+New-SPWordConversionServiceApplication -Name 'Word Conversion Services' -ApplicationPool 'SharePoint Web Services Default' -DatabaseName 'Word'
 ```
 
 This example creates a new Word Automation Services application named Word Conversion Services in an existing application pool named SharePoint Web Services Default.
