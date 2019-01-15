@@ -46,7 +46,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 | Property     | Description |
 |--------------|--------------|
 | StorageQuota       | Specifies the value of the storage quota that is available for the tenant.
-| StorageQuotaAllocated       | Specifies the value of the storage quota that is allocated for all sites in the tenant
+| StorageQuotaAllocated       | Specifies the value of the storage quota that is allocated for all sites in the tenant.
 | ResourceQuota| Specifies the value of the resource quota for the tenant.
 | ResourceQuotaAllocated | Specifies the value of the resource quota allocated to all sites in the tenant.
 | OneDriveStorageQuota | Default OneDrive for Business storage quota for tenant. Used when a new OneDrive for Business site is created. 
