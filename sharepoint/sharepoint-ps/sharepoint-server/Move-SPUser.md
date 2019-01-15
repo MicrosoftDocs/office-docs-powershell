@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-C:\PS>$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web http://webUrl
+$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web http://webUrl
 Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
 ```
 
@@ -38,7 +38,7 @@ This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>$user = Get-SPUser -Identity "DomainA\JaneDoe" -Web http://webUrl
+$user = Get-SPUser -Identity "DomainA\JaneDoe" -Web http://webUrl
 Move-SPUser -Identity $user -NewAlias "DomainB\JaneDoe"
 ```
 
@@ -46,7 +46,7 @@ This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-C:\PS>$user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web http://webUrl
+$user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web http://webUrl
 Move-SPUser -Identity $user -NewAlias "i:0#.W|Domain\JaneSmith" -IgnoreSid
 ```
 

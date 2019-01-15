@@ -9,10 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
-
-
-
+Returns the disable sync list state for an app.
 
 ## SYNTAX
 
@@ -22,7 +19,7 @@ Get-SPAppDisablingConfiguration [-AssignmentCollection <SPAssignmentCollection>]
 
 ## DESCRIPTION
 
-Use the Get-SPAppDisablingConfiguration cmdlet to return the disable sync list state for an app .
+Use the Get-SPAppDisablingConfiguration cmdlet to return the disable sync list state for an app.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
