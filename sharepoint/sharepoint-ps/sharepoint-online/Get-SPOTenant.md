@@ -45,7 +45,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 | Property     | Description |
 |--------------|--------------|
-| StorageQuota       | EMPTY 
+| StorageQuota       | EMPTY
 | StorageQuotaAllocated       | EMPTY
 | ResourceQuota| EMPTY
 | StorageQuota       | EMPTY 
