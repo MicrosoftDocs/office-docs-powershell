@@ -5,7 +5,6 @@ ms.author:
 manager: 
 audience: ITPro 
 ms.topic: article 
-ms.service OR ms.prod 
 localization_priority: Priority
 description: 
 ms.custom: 
