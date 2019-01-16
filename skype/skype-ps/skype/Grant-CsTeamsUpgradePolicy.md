@@ -14,7 +14,7 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 ## SYNTAX
 
 ```
-Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Global] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Global] [-MigrateMeetingsToTeams] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,6 +124,27 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -MigrateMeetingsToTeams
+Specifies whether to move existing Skype for Business meetings organized by the user to Teams. This parameter can only be true if the mode of the specified policy instance is either TeamsOnly or SfBWithTeamsCollabAndMeetings, and if the policy instance is being granted to a specific user.  It not possible to trigger meeting migration when granting TeamsUpgradePolicy to the entire tenant. For more details, see [Using the meeting migration service](https://docs.microsoft.com/en-us/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
+
+> [!NOTE]
+>The ability to trigger meeting migration when granting TeamsUpgradePolicy  is currently available to TAP customers only. 
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
