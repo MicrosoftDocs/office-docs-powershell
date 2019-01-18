@@ -76,6 +76,7 @@ Set-OrganizationConfig
  [-MailTipsMailboxSourcedTipsEnabled <$true | $false>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
  [-OutlookMobileHelpShiftEnabled <$true | $false>]
+ [-OutlookPayEnabled <$true | $false>]
  [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <$true | $false>]
@@ -149,6 +150,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
  [-OrganizationSummary <MultiValuedProperty>]
+ [-OutlookPayEnabled <$true | $false>]
  [-PermanentlyDeleteDisabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <$true | $false>]
@@ -228,6 +230,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
  [-OrganizationSummary <MultiValuedProperty>]
+ [-OutlookPayEnabled <$true | $false>]
  [-PermanentlyDeleteDisabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <$true | $false>]
@@ -296,10 +299,10 @@ Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowLis
 
 This example allows only the client applications specified by the EwsAllowList parameter to use REST and EWS.
 
-### -------------------------- Example 6 -------------------------- 
-``` 
-Set-OrganizationConfig -VisibleMeetingUpdateProperties Location:15 
-``` 
+### -------------------------- Example 6 --------------------------
+```
+Set-OrganizationConfig -VisibleMeetingUpdateProperties Location:15
+```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
 
@@ -510,7 +513,7 @@ This parameter is available only in the cloud-based service.
 
 The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
 
-- $true: Mailbox auditing is disabled for the organization. 
+- $true: Mailbox auditing is disabled for the organization.
 
 - $false: Allow mailbox auditing in the organization. This is the default value.
 
@@ -1825,7 +1828,7 @@ The OAuth2ClientProfileEnabled parameter enables or disables modern authenticati
 
 - $true: Modern authentication is enabled.
 
-- $false: Modern authentication is disabled. 
+- $false: Modern authentication is disabled.
 
 Modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
 
@@ -1864,6 +1867,23 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 {{Fill OutlookMobileHelpShiftEnabled Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: $true | $false
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookPayEnabled
+This parameter is available only in the cloud-based service.
+
+The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization.
 
 ```yaml
 Type: Boolean
@@ -2314,7 +2334,7 @@ This parameter is available only in the cloud-based service.
 
 The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web. This feature provides suggested replies to emails so users can easily and quickly respond to messages. Valid values are:
 
-- $true: Suggested Replies are disabled. 
+- $true: Suggested Replies are disabled.
 
 - $false: Suggested Replies are enabled. This is the default value.
 
@@ -2350,12 +2370,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+###
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+###
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
