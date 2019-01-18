@@ -11,7 +11,6 @@ schema: 2.0.0
 
 IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. See description for more information. You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype).
 
-This cmdlet previously determined how calls are routed between Skype for Business and Microsoft Teams. It is no longer honored, except if TeamsUpgradePolicy mode=Legacy. However, Legacy mode has been deprecated and can no longer be granted.  Any customers with user or tenant policy using Legacy mode must update their configurations to use a mode other than Legacy.
 
 
 ## SYNTAX
@@ -22,11 +21,9 @@ Grant-CsTeamsInteropPolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-Id
 ```
 
 ## DESCRIPTION
+This cmdlet previously determined how calls are routed between Skype for Business and Microsoft Teams, in cases where TeamsUpgradePolicy had mode=Legacy.
 
-IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. It is no longer honored by the system, except if TeamsUpgradePolicy has mode=Legacy. However, Legacy mode has been deprecated. Granting mode=Legacy is now blocked. Customers that are still using Legacy mode must update their configurations to use a mode other than Legacy.  
-
-
-For comprehensive documentation on this policy and its settings, see [Microsoft Teams and Skype for Business Interoperability](https://docs.microsoft.com/MicrosoftTeams/teams-and-skypeforbusiness-interoperability).
+IMPORTANT: TeamsInteropPolicy has been replaced by TeamsUpgradePolicy, and Legacy mode has been retired. TeamsInteropPolicy is no longer honored by the system.  For comprehensive documentation on this policy and its settings, see [Microsoft Teams and Skype for Business Interoperability](https://docs.microsoft.com/MicrosoftTeams/teams-and-skypeforbusiness-interoperability).
 
 ## EXAMPLES
 
@@ -84,6 +81,22 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+By default, Grant-CsTeamsInteropPolicy fails, now that this cmdlet is retired. To override this behavior and perform the grant, use this parameter. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
