@@ -213,7 +213,7 @@ Now, when you run **Update-ExchangeHelp** in the Exchange Management Shell on yo
   
 More interesting is the long-term maintenance of this customized configuration. Basically, you'll need to repeat Step 1 through Step 3 when you discover an update has been made available for Exchange cmdlet reference help, and you want to deploy that updated help to your Exchange servers. 
   
-An easy way to find new update packages is to periodically run **Update-ExchangeHelp** on an Internet-connected Exchange server, or computer that has the Exchange mangement tools installed.
+An easy way to find new update packages is to periodically run **Update-ExchangeHelp** on an Internet-connected Exchange server, or computer that has the Exchange management tools installed.
   
 [Return to top](use-update-exchangehelp.md#RTT)
   
