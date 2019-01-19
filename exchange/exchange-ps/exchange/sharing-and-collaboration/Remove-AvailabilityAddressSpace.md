@@ -34,14 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-AvailabilityAddressSpace -Identity Contoso.com
 ```
 
-This example removes the availability address space objectnamed Contoso.com.
+This example removes the availability address space object named Contoso.com.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Remove-AvailabilityAddressSpace -Identity Contoso.com -Confirm:$false
 ```
 
-This example immediately removes the availability address space objectnamed Contoso.com without displaying the confirmation prompt.
+This example immediately removes the availability address space object named Contoso.com without displaying the confirmation prompt.
 
 ## PARAMETERS
 
