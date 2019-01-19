@@ -2117,9 +2117,9 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingOnPrivateComputersEnabled parameter specifies whether WebReady Document Viewing is available in private computer sessions. Valid values are:
 
-- $true: WebReady Document Viewing is availble in private computer sessions. This is the default value.
+- $true: WebReady Document Viewing is available in private computer sessions. This is the default value.
 
-- $false: WebReady Document Viewing isn't availble in private computer sessions.
+- $false: WebReady Document Viewing isn't available in private computer sessions.
 
 By default in Exchange 2013, all Outlook on the web sessions are considered to be on private computers.
 
@@ -2140,9 +2140,9 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether WebReady Document Viewing is in public computer sessions. Valid values are:
 
-- $true: WebReady Document Viewing is availble for public computer sessions. This is the default value.
+- $true: WebReady Document Viewing is available for public computer sessions. This is the default value.
 
-- $false: WebReady Document Viewing isn't availble for public computer sessions.
+- $false: WebReady Document Viewing isn't available for public computer sessions.
 
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true on the Set-OwaVirtualDirectory cmdlet).
 
