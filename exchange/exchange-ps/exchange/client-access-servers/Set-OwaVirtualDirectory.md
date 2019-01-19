@@ -1450,7 +1450,7 @@ The IntegratedFeaturesEnabled parameter specifies whether to allow Outlook on th
 
 - $true: Integrated featurs are enabled. For example, users logged on using Integrated Windows authentication can view and change meeting content. This is the default value.
 
-- $false: Itegrated features are disabled.
+- $false: Integrated features are disabled.
 
 ```yaml
 Type: $true | $false
