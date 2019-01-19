@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateServiceAccountCredential
-The AlternateServiceAccountCredential parameter specifies an alternative service account that'stypically used for Kerberos authentication in Exchange Server 2010 coexistence environments.
+The AlternateServiceAccountCredential parameter specifies an alternative service account that's typically used for Kerberos authentication in Exchange Server 2010 coexistence environments.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
 
