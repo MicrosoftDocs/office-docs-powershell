@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
-The Operation parameter specifies the activitiesthat trigger activity alerts.
+The Operation parameter specifies the activities that trigger activity alerts.
 
 A valid value for this parameter is an activity that's available in the Office 365 audit log. For a description of these activities, see Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=824986).
 
