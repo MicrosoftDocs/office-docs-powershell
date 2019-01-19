@@ -1030,7 +1030,7 @@ Accept wildcard characters: False
 ```
 
 ### -IRMEnabled
-The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are avaiable in Outlook on the web. Valid values are:
+The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are available in Outlook on the web. Valid values are:
 
 - $true: IRM is available in Outlook on the web. This is the default value.
 
