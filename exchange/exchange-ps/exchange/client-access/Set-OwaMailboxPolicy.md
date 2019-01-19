@@ -247,7 +247,7 @@ The AllowCopyContactsToDeviceAddressBook parameter specifies whether users can c
 
 - $true: Contacts can be copied to the device's address book in Outlook on the web for devices. This is the default value.
 
-- $false: Contacts cann't be copied to the device's address book in Outlook on the web for devices.
+- $false: Contacts can't be copied to the device's address book in Outlook on the web for devices.
 
 ```yaml
 Type: $true | $false
