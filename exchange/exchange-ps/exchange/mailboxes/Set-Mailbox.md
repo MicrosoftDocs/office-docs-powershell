@@ -2622,7 +2622,7 @@ Accept wildcard characters: False
 ### -GMGen
 This parameter is available only in on-premises Exchange.
 
-The GMGen parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used for group metrics generation for the organization. In MailTips, group metrics information is used to indicate the number of recipients in a message or whether recipients are outside your organization. You can use this parameter only on an arbitration mailbox.
+The GMGen parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for group metrics generation for the organization. In MailTips, group metrics information is used to indicate the number of recipients in a message or whether recipients are outside your organization. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -4899,7 +4899,7 @@ Accept wildcard characters: False
 ### -UMDataStorage
 This parameter is available only in on-premises Exchange.
 
-The UMDataStorage parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used to store UM call data records and UM custom prompts. This capability can be assigned to only one arbitration mailbox for the organization. You can use this parameter only on an arbitration mailbox.
+The UMDataStorage parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used to store UM call data records and UM custom prompts. This capability can be assigned to only one arbitration mailbox for the organization. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -4947,7 +4947,7 @@ Accept wildcard characters: False
 ### -UMGrammar
 This parameter is available only in on-premises Exchange.
 
-The UMGrammar parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
+The UMGrammar parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
