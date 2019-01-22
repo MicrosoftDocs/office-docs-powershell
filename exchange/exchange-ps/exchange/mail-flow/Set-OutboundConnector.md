@@ -390,7 +390,7 @@ The UseMXRecord parameter enables or disables DNS routing for the connector. Val
 
 - $true: The connector uses DNS routing (MX records in DNS) to deliver email. This is the default value.
 
-- $false: The connector delivers email to one or more smart hosts. When you use this value, you also need to specifiy the smart hosts by using the SmartHosts parameter in the same command.
+- $false: The connector delivers email to one or more smart hosts. When you use this value, you also need to specify the smart hosts by using the SmartHosts parameter in the same command.
 
 ```yaml
 Type: $true | $false
