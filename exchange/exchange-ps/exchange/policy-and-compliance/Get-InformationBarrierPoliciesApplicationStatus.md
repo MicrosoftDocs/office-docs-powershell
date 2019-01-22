@@ -1,31 +1,31 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 applicable: Office 365 Security & Compliance Center
-title: Get-InformationBarrierPolicy
+title: Get-InformationBarrierPoliciesApplicationStatus
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Get-InformationBarrierPolicy
+# Get-InformationBarrierPoliciesApplicationStatus
 
 ## SYNOPSIS
+
+## SYNTAX
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-InformationBarrierPolicy cmdlet to view information barrier policies in the Office 365 Security & Compliance Center. 
+Use the Get-InformationBarrierPoliciesApplicationStatus cmdlet to  
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
-
-## SYNTAX
-
-### InformationBarrierDefault (Default)
+### Default (Default)
 ```
-Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-InformationBarrierPolicy [-ExoPolicyId <Guid>] [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-InformationBarrierPoliciesApplicationStatus [-All <Boolean>] [[-Identity] <PolicyIdParameter>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +43,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the information barrier policy that you want to view.
+{{Fill Identity Description}}
 
 ```yaml
 Type: PolicyIdParameter
@@ -57,11 +57,11 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -ExoPolicyId
-{{Fill ExoPolicyId Description}}
+### -All
+{{Fill All Description}}
 
 ```yaml
-Type: Guid
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -89,4 +89,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-informationbarrierpolicy)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/get-informationbarrierpoliciesapplicationstatus)
