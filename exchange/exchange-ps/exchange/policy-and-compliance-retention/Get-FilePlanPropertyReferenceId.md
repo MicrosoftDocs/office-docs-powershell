@@ -11,15 +11,15 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
+Use the Get-FilePlanPropertyReferenceId cmdlet to
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```
 Get-FilePlanPropertyReferenceId [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
 ```
-
-Use the Get-FilePlanPropertyReferenceId cmdlet to
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## DESCRIPTION
 You need to be assigned permissions in the Office 365 Security & Compliance Center before you can use this cmdlet. For more information, see Permissions in Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=511920).
