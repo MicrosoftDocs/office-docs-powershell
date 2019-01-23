@@ -1653,7 +1653,7 @@ The LogonPageLightSelectionEnabled parameter specifies whether the Outlook on th
 
 - $false: The option to use the light version of Outlook on the web is available on the sign-in page.
 
-This parameter is meaninful only for browsers that support the full version of Outlook on the web; unsupported browsers are always required to use the light version of Outlook on the web.
+This parameter is meaningful only for browsers that support the full version of Outlook on the web; unsupported browsers are always required to use the light version of Outlook on the web.
 
 ```yaml
 Type: $true | $false

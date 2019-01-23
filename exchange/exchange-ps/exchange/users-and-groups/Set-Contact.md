@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ### -DisplayName
 The DisplayName parameter specifies the display name of the contact. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaninful only if the contact is mail-enabled.
+This parameter is meaningful only if the contact is mail-enabled.
 
 ```yaml
 Type: String
