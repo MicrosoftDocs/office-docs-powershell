@@ -62,7 +62,7 @@ This example modifies the name of an existing address list.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Set-Addresslist -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -IncludedRecipients MailboxUsers -ConditionalDepartment Sales
+Set-AddressList -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -IncludedRecipients MailboxUsers -ConditionalDepartment Sales
 ```
 
 This example modifies the type of recipients and the department of the recipients included in the existing address list identified by its GUID.
