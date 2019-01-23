@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter specifies the user or group that receives SendAs perimission on the recipient specified by the Identity parameter.
+The Trustee parameter specifies the user or group that receives SendAs permission on the recipient specified by the Identity parameter.
 
 You can specify the following types of users or groups (security principals) for this parameter:
 
