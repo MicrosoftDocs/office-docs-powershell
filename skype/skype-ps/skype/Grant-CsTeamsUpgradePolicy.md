@@ -22,7 +22,7 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization. 
 
-IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been fully updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is not honored and has been been deprecated. Organizations with users in Legacy mode must update their configurations to use a different mode.
+IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been fully updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is not honored and has been deprecated. Organizations with users in Legacy mode must update their configurations to use a different mode.
 
 
 
