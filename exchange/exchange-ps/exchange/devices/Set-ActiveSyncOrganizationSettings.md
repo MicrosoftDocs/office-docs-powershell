@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -OtaNotificationMailInsert
-The OtaNotificationMailInsert parameter specifies thetext to include in an email message that's sent to users who need to update their older devices to use the new Exchange ActiveSync features in Microsoft Exchange.
+The OtaNotificationMailInsert parameter specifies the text to include in an email message that's sent to users who need to update their older devices to use the new Exchange ActiveSync features in Microsoft Exchange.
 
 The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
