@@ -1632,7 +1632,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairDisabled
-The CalendarRepairDisabled parameter specifies whetherto prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
+The CalendarRepairDisabled parameter specifies whether to prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
 
 - $true: The Calendar Repair Assistant doesn't repair calendar items in the mailbox.
 
