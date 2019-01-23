@@ -13,7 +13,7 @@ This cmdlet is available only in on-premises Exchange.
 
 **Note**: In Exchange Online, this cmdlet has been replaced by the [New-DlpFingerPrint](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance-dlp/new-dlpfingerprint) cmdlet in Office 365 Security & Compliance Center PowerShell.
 
-Use the New-Fingerprint cmdlet to create document fingerprints that are used with data classification rules. Because the results of New-Fingerprint are not stored outside of the data classification rule, you always run New-Fingerprint and New-DataClassification or Set-Dataclassification in the same PowerShell session.
+Use the New-Fingerprint cmdlet to create document fingerprints that are used with data classification rules. Because the results of New-Fingerprint are not stored outside of the data classification rule, you always run New-Fingerprint and New-DataClassification or Set-DataClassification in the same PowerShell session.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
