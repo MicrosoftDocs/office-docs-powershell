@@ -220,7 +220,7 @@ This example restores the content of the source mailbox with the DisplayName of 
 ## PARAMETERS
 
 ### -RemoteCredential
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
