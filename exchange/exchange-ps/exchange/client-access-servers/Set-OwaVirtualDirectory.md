@@ -2470,7 +2470,7 @@ Accept wildcard characters: False
 ### -WebPartsFrameOptionsType
 The WebPartsFrameOptionsType parameter specifies what sources can access web parts in IFRAME or FRAME elements in Outlook on the web. Valid values are:
 
-- None: Tthere are no restrictions on displaying Outlook on the web content in a frame.
+- None: There are no restrictions on displaying Outlook on the web content in a frame.
 
 - SameOrigin: This is the default value and the recommended value. Display Outlook on the web content only in a frame that has the same origin as the content.
 
