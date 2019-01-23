@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Connect-Mailbox cmdlet to connect disconnected mailboxes to existing user accounts that don't already have mailboxess.
+Use the Connect-Mailbox cmdlet to connect disconnected mailboxes to existing user accounts that don't already have mailboxes.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -106,7 +106,7 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 ## DESCRIPTION
 If you link a mailbox to an existing user account, that user account has full access to the mailbox and all mail in the mailbox.
 
-If you use the User parameter to specify the user account, make sure you specify the correct account. If you don't use the User parameter, we recommend that you use the ValidateOnlyswitch to verify which user account the mailbox will try to connect to.
+If you use the User parameter to specify the user account, make sure you specify the correct account. If you don't use the User parameter, we recommend that you use the ValidateOnly switch to verify which user account the mailbox will try to connect to.
 
 There is no Disconnect-Mailbox cmdlet. You can use the Disable-Mailbox or Remove-Mailbox cmdlets to effectively disconnect mailboxes from user accounts.
 
@@ -553,7 +553,7 @@ For example:
 
 - GUID
 
-If you don't use this parameter, the command uses the LegacyExchangeDN and DisplayNameproperty values of the mailbox to find a user account that has those same values. If it can't find a unique match, it doesn't connect the mailbox.
+If you don't use this parameter, the command uses the LegacyExchangeDN and DisplayName property values of the mailbox to find a user account that has those same values. If it can't find a unique match, it doesn't connect the mailbox.
 
 ```yaml
 Type: UserIdParameter
