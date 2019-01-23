@@ -1448,7 +1448,7 @@ Accept wildcard characters: False
 ### -IntegratedFeaturesEnabled
 The IntegratedFeaturesEnabled parameter specifies whether to allow Outlook on the web users who are logged on using Integrated Windows authentication to access specific features. Valid values are:
 
-- $true: Integrated featurs are enabled. For example, users logged on using Integrated Windows authentication can view and change meeting content. This is the default value.
+- $true: Integrated features are enabled. For example, users logged on using Integrated Windows authentication can view and change meeting content. This is the default value.
 
 - $false: Itegrated features are disabled.
 
