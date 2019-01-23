@@ -150,7 +150,6 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
  [-OrganizationSummary <MultiValuedProperty>]
- [-OutlookPayEnabled <$true | $false>]
  [-PermanentlyDeleteDisabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <$true | $false>]
@@ -230,7 +229,6 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
  [-OrganizationSummary <MultiValuedProperty>]
- [-OutlookPayEnabled <$true | $false>]
  [-PermanentlyDeleteDisabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <$true | $false>]
@@ -1869,8 +1867,8 @@ This parameter is available only in the cloud-based service.
 {{Fill OutlookMobileHelpShiftEnabled Description}}
 
 ```yaml
-Type: Boolean
-Parameter Sets: $true | $false
+Type: $true | $false
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -1883,11 +1881,15 @@ Accept wildcard characters: False
 ### -OutlookPayEnabled
 This parameter is available only in the cloud-based service.
 
-The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization.
+The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization. Valid values are:
+
+- $true: Payments in Outlook are enabled.
+
+- $False: Payments in Outlook are disabled.
 
 ```yaml
-Type: Boolean
-Parameter Sets: $true | $false
+Type: $true | $false
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -1910,7 +1912,7 @@ A message that's permanently deleted can't be recovered by using the Recoverable
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
+Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
