@@ -44,7 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2018 -EndDate 1/7/2018 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
 ```
 
-This example starts a new historical search named "Fabirkam Search" that has the following properties:
+This example starts a new historical search named "Fabrikam Search" that has the following properties:
 
 - Date range: January 1, 2018 to January 7, 2018
 
