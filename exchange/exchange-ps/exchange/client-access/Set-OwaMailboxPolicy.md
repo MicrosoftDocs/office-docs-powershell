@@ -959,7 +959,7 @@ The InstantMessagingEnabled parameter specifies whether instant messaging is ava
 
 - $true: Instant messaging is available in Outlook on the web. This is the default value.
 
-- $false: Instnant messaging isn't available in Outlook on the web.
+- $false: Instant messaging isn't available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
