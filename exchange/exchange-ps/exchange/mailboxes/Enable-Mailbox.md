@@ -651,7 +651,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuditLog
-This parameter is availble only in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 This parameter is reserved for internal Microsoft use.
 
