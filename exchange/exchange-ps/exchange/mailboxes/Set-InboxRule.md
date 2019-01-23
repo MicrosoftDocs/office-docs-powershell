@@ -727,7 +727,7 @@ When you enter a value, qualify the value with one of the following units:
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-You need to use this parameter with the ExceptIfWithinSizeRangeMainimum parameter, and the value of this parameter must be greater than the value of ExceptIfWithinSizeRangeMinimum.
+You need to use this parameter with the ExceptIfWithinSizeRangeMinimum parameter, and the value of this parameter must be greater than the value of ExceptIfWithinSizeRangeMinimum.
 
 The corresponding condition parameter to this exception is WithinSizeRangeMaximum.
 
