@@ -66,14 +66,12 @@ Get-CsAllowedDomain -Filter *fabrikam*
 ```
 
 The command shown in Example 3 returns a collection of all the allowed domains that have the string value "fabrikam" anywhere in their Identity.
-To do this, the command uses the Filter parameter and the filter value "*fabrikam*".
+To do this, the command uses the Filter parameter and the filter value "\*fabrikam\*".
 This filter value tells the Get-CsAllowedDomain cmdlet to return only those domains where the Identity (the only property you can filter on) includes the string value "fabrikam".
 Domains such as fabrikam.com, fabrikam.net, and africa.fabrikam.org will all be returned by this command.
 
 ### -------------------------- Example 4 --------------------------
 ```
-Where-Object {$_.ProxyFqdn -ne $Null}
-
 Get-CsAllowedDomain | Where-Object {$_.ProxyFqdn -eq $Null}
 ```
 
@@ -81,6 +79,9 @@ In Example 4, the Get-CsAllowedDomain cmdlet and the Where-Object cmdlet are use
 To carry out this task, the Get-CsAllowedDomain cmdlet is first called without any additional parameters in order to return a collection of all the allowed domains.
 This collection is then piped to the Where-Object cmdlet, which selects only those allowed domains where the ProxyFqdn property is equal to a null value; a null value means that no value has been entered for ProxyFqdn.
 To find all the domains that have a value of some kind configured for the ProxyFqdn property, use this syntax instead:
+```
+Where-Object {$_.ProxyFqdn -ne $Null}
+```
 
 ### -------------------------- Example 5 --------------------------
 ```
@@ -122,7 +123,7 @@ To return all of the domains that have an Identity that begins with the letter "
 
 To return all of the domains that have an Identity that ends with ".net", use this syntax: `-Filter "*.net"`
 
-To return all of the domains that have an Identity that begins with the letter "r" or with the letter "g", use this syntax: `-Filter \[rg\]*`
+To return all of the domains that have an Identity that begins with the letter "r" or with the letter "g", use this syntax: `-Filter [rg]*`
 
 ```yaml
 Type: String
