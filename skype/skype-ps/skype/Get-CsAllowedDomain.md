@@ -41,7 +41,6 @@ Conversely, the blocked list represents domains that users are expressly forbidd
 
 The Get-CsAllowedDomain cmdlet provides a way for you to return information about all the domains on the allowed domains list.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -78,10 +77,7 @@ Get-CsAllowedDomain | Where-Object {$_.ProxyFqdn -eq $Null}
 In Example 4, the Get-CsAllowedDomain cmdlet and the Where-Object cmdlet are used to return a collection of all the domains where no value has been entered for the ProxyFqdn property.
 To carry out this task, the Get-CsAllowedDomain cmdlet is first called without any additional parameters in order to return a collection of all the allowed domains.
 This collection is then piped to the Where-Object cmdlet, which selects only those allowed domains where the ProxyFqdn property is equal to a null value; a null value means that no value has been entered for ProxyFqdn.
-To find all the domains that have a value of some kind configured for the ProxyFqdn property, use this syntax instead:
-```
-Where-Object {$_.ProxyFqdn -ne $Null}
-```
+To find all the domains that have a value of some kind configured for the ProxyFqdn property, use this syntax instead: `Where-Object {$_.ProxyFqdn -ne $Null}`.
 
 ### -------------------------- Example 5 --------------------------
 ```
@@ -91,7 +87,6 @@ Get-CsAllowedDomain | Where-Object {$_.MarkForMonitoring -eq $True}
 Example 5 returns all the allowed domains that have their health status checked by the Monitoring Server.
 To do this, the Get-CsAllowedDomain cmdlet is first used to return a collection of all the domains on the allowed domains list.
 That collection is then piped to the Where-Object cmdlet, which picks out only those domains where the MarkForMonitoring property is equal to True.
-
 
 ## PARAMETERS
 
