@@ -1289,7 +1289,7 @@ Accept wildcard characters: False
 ### -FormsAuthentication
 The FormsAuthentication parameter enables or disables forms-based authentication on the Outlook on the web virtual directory. Valid values are:
 
-- $true: Forms-based authentication is ensabled in Outlook on the web. This is the default value. The BasicAuthentication parameter is also set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
+- $true: Forms-based authentication is enabled in Outlook on the web. This is the default value. The BasicAuthentication parameter is also set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
 
 - $false: Forms-based authentication is disabled in Outlook on the web.
 
