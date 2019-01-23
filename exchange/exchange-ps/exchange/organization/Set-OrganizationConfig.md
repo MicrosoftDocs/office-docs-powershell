@@ -1310,7 +1310,7 @@ The EwsEnabled parameter specifies whether to globally enable or disable EWS acc
 
 - $false: All EWS access is disabled.
 
-- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the releated EWS parameters (for example EwsAllowEntourage). This is the default value.
+- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the related EWS parameters (for example EwsAllowEntourage). This is the default value.
 
 This parameter has no affect on access to REST.
 
