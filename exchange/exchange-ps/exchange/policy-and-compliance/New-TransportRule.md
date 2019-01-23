@@ -219,7 +219,7 @@ This example creates a rule with the following settings:
 
 - Actions: The message is rejected, and the custom rejection text is Messages sent between the Sales and Brokerage departments are strictly prohibited. Note that the default enhanced status code 5.7.1 is used, because we didn't use the RejectMessageEnhancedStatusCode parameter.
 
-- Exceptions: The Subject field contains the phrases Press Release or Corporate Communicationor the message was sent by Tony Smith or Pilar Ackerman.
+- Exceptions: The Subject field contains the phrases Press Release or Corporate Communication or the message was sent by Tony Smith or Pilar Ackerman.
 
 ## PARAMETERS
 
