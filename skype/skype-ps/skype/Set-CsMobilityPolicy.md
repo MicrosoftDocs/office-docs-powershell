@@ -403,6 +403,9 @@ Accept wildcard characters: False
 When set to True (the default value) users will be allowed to save credentials information (such as passwords) on their mobile device.
 This information can then be applied to auto-logon scenarios.
 
+Note: If a user has AllowSaveCredentials set to False in the CsMobility policy, Skype for business App for iOS may sign out automatically when bringing it from background to foreground. It is due to the password is not saved anywhere but in the IOS process memory, once the process is killed by the IOS system, the password will no longer be available, so user will need to enter it again. However, there is no impact if modern authenticaion is implemented.
+
+
 
 ```yaml
 Type: Boolean
