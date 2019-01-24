@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the administrative name for the message classification instance. The name is used to administer the message classification instance. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Adminstrative Name". The Name parameter can contain a maximum of 256 characters.
+The Name parameter specifies the administrative name for the message classification instance. The name is used to administer the message classification instance. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Administrative Name". The Name parameter can contain a maximum of 256 characters.
 
 ```yaml
 Type: String

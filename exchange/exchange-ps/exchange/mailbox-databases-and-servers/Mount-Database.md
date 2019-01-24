@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptDataLoss
-The AcceptDataLossswitch specifies that you accept the data loss caused by missing committed transaction log files without asking for confirmation. You don't need to specify a value with this switch.
+The AcceptDataLoss switch specifies that you accept the data loss caused by missing committed transaction log files without asking for confirmation. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

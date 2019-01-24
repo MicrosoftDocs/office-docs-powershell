@@ -464,7 +464,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexEnabled
-This parameter isn't avaialble in Exchange Server 2019.
+This parameter isn't available in Exchange Server 2019.
 
 The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox database. Valid values are:
 

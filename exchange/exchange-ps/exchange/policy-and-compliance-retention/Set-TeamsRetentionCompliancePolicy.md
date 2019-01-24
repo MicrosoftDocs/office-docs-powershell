@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsChatLocation
-The RemoveTeamChatLocation parameter specifies the Microsft Teams chats (mailboxes) to remove from the list of included chats when you aren't using the value All for the TeamsChannelLocation parameter.
+The RemoveTeamChatLocation parameter specifies the Microsoft Teams chats (mailboxes) to remove from the list of included chats when you aren't using the value All for the TeamsChannelLocation parameter.
 
 You can use any value that uniquely identifies the mailbox. For example:
 

@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationApp
-The OrganizationAppswitch includes apps that are installed for the organization (not bound to a specific user) in the results. You don't need to specify a value with this switch.
+The OrganizationApp switch includes apps that are installed for the organization (not bound to a specific user) in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

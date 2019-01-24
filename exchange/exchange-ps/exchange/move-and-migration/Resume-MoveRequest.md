@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendWhenReadyToComplete
-The SuspendWhenReadyToCompleteswitch specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this switch, we recommend using the Set-MoveRequest cmdlet with the CompleteAfter parameter.
+The SuspendWhenReadyToComplete switch specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this switch, we recommend using the Set-MoveRequest cmdlet with the CompleteAfter parameter.
 
 ```yaml
 Type: SwitchParameter
