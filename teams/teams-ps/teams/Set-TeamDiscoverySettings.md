@@ -17,7 +17,7 @@ Update a team's discovery settings.
 ## SYNTAX
 
 ```
-Set-TeamDiscoverySettings -GroupId <String> [-ShowInSearchAndSuggestions <String>]
+Set-TeamDiscoverySettings -GroupId <String> [-ShowInTeamsSearchAndSuggestions <String>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +26,7 @@ Set-TeamDiscoverySettings -GroupId <String> [-ShowInSearchAndSuggestions <String
 
 ### --------------------------  Example 1  --------------------------
 ```
-Set-TeamDiscoverySettings -GroupId 0ebb500c-f5f3-44dd-b155-cc8c4f383e2d -ShowInSearchAndSuggestions true
+Set-TeamDiscoverySettings -GroupId 0ebb500c-f5f3-44dd-b155-cc8c4f383e2d -ShowInTeamsSearchAndSuggestions true
 ```
 
 ## PARAMETERS
@@ -47,7 +47,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ShowInSearchAndSuggestions
+### -ShowInTeamsSearchAndSuggestions
 Setting to enable discovery in Teams search and suggestions. Non-private teams must be discoverable.
 
 ```yaml
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### GroupId, ShowInSearchAndSuggestions
+### GroupId, ShowInTeamsSearchAndSuggestions
 
 ## OUTPUTS
 
