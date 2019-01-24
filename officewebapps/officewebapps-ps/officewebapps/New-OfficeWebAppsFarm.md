@@ -368,7 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelExternalDataCacheLifetime
-Specifes the duration, in seconds, of the external data cache lifetime in Excel Online.
+Specifies the duration, in seconds, of the external data cache lifetime in Excel Online.
 The default is 300 seconds.
 
 ```yaml
