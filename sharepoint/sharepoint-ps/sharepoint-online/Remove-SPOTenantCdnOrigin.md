@@ -42,7 +42,7 @@ The example removes a CDN from a site level.
 ## PARAMETERS
 
 ### -CdnType
-Specifies the CDN type. The valuid values are: Public or Private.
+Specifies the CDN type. The valid values are: Public or Private.
 
 
 ```yaml
