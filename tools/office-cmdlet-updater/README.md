@@ -2,7 +2,7 @@
 
 ## Usage:
 1. Clone repo at: https://github.com/microsoftdocs/office-docs-powershell
-2. Configure your email address in tools/.local/config/default.json to receive emailed logs. (OPTIONAL)
+2. Configure your email address in tools/.local/default.json to receive emailed logs. (OPTIONAL)
 3. Confirm you have NodeJS installed.
     Open PowerShell or GitBash and type `npm --version`.
     If not, install from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
@@ -26,6 +26,7 @@
        - https://docs.microsoft.com/en-us/powershell/module/spmt
 7. Run the app, type `node index` and press Enter in order to get info for all modules
 8. Run the app for a certain module, type `node index -m <TypeModuleNameHere>`, with one of the following options - teams, skype, sharepoint, whiteboard, exchange. In example, you should run `node index -m teams` to run the tool for Microsoft Teams
+9. Run `node index -help` to get help information about all available commands
 
 ## Notes
 1. The modules are installed from the PowerShell Gallery (PSGallery).
