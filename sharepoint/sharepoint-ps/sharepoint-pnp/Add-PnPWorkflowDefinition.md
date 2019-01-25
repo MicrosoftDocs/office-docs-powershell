@@ -41,7 +41,7 @@ Accept pipeline input: False
 ```
 
 ### -DoNotPublish
-Overrides the default behaviour, which is to publish workflow definitions.
+Overrides the default behavior, which is to publish workflow definitions.
 
 ```yaml
 Type: SwitchParameter
