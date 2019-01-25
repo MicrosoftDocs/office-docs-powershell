@@ -1,6 +1,6 @@
 {
 	"name": "Office cmdlet updater",
-	"description": "Update documentation for modules in this repository",
+	"description": "Update documentation for modules in this repository. Available Modules: teams, skype, sharepoint, whiteboard, exchange, staffhub",
 	"version": "0.0.3",
 	"platyPS": {
 		"credentials": {
