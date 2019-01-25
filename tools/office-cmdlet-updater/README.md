@@ -14,26 +14,20 @@
        - execute into console `winrm quickconfig`
     - Microsoft Teams:
        - https://www.powershellgallery.com/packages/MicrosoftTeams
+       - alternatively, it could be installed by the tool, check Notes section below
     - SharePoint Online:
        - https://www.microsoft.com/en-us/download/details.aspx?id=35588
-    - Exchange Online cmdlets could be imported using [this guide](https://docs.microsoft.com/en-us/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)
+    - Exchange Online:
+       - cmdlets could be imported using [this guide](https://docs.microsoft.com/en-us/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)
     - Whiteboard:
        - https://www.powershellgallery.com/packages/WhiteboardAdmin
-    - StaffHub:
-       - https://www.powershellgallery.com/packages/MicrosoftStaffHub
-    - Office Online Server cmdlets are not distributed separately
-    - SharePoint Migration Tool (SPMT):
-       - https://docs.microsoft.com/en-us/powershell/module/spmt
+       - alternatively, it could be installed by the tool, check Notes section below
 7. Run the app, type `node index` and press Enter in order to get info for all modules
-8. Run the app for a certain module, type `node index -m <TypeModuleNameHere>`, with one of the following options - teams, skype, sharepoint, whiteboard, exchange. In example, you should run `node index -m teams` to run the tool for Microsoft Teams
-9. Run `node index -help` to get help information about all available commands
+8. Run the app for a certain module, type `node index -m <TypeModuleNameHere>`, with one of the following options - teams, skype, sharepoint, whiteboard, exchange. For example, you should run `node index -m teams` to run the tool for Microsoft Teams
+9. Run `node index -help` to get help information for all available commands
 
 ## Notes
-1. The modules are installed from the PowerShell Gallery (PSGallery).
-    This gallery contains user submitted code.
-    If you would rather not install modules from the PSGallery then you can install the modules manually prior to running the tool.
-    If you need to add PSGallery as a trusted source, you can do so with the following command:
-    `Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted`
+1. Some modules could be installed from the PowerShell Gallery (PSGallery). This gallery contains user submitted code. If you would rather not install modules from the PSGallery then you can install the modules manually prior to running the tool. If you need to add PSGallery as a trusted source, you can do so with the following command: `Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted`
 2. Run the tool from PowerShell x64 as an Administrator user
 
 ## Sample Run
