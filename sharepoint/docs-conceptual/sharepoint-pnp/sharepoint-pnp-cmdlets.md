@@ -126,7 +126,7 @@ Cmdlet|Description|Platform
 **[Get&#8209;PnPConnection](../../sharepoint-ps/sharepoint-pnp/Get-PnPConnection.md)** |Returns the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPContext](../../sharepoint-ps/sharepoint-pnp/Get-PnPContext.md)** |Returns the current context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Set&#8209;PnPContext](../../sharepoint-ps/sharepoint-pnp/Set-PnPContext.md)** |Set the ClientContext|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
-**[Get&#8209;PnPException](../../sharepoint-ps/sharepoint-pnp/Get-PnPException.md)** |Returns the last exception that occured|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
+**[Get&#8209;PnPException](../../sharepoint-ps/sharepoint-pnp/Get-PnPException.md)** |Returns the last exception that occurred|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Get&#8209;PnPHealthScore](../../sharepoint-ps/sharepoint-pnp/Get-PnPHealthScore.md)** |Retrieves the healthscore|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Connect&#8209;PnPOnline](../../sharepoint-ps/sharepoint-pnp/Connect-PnPOnline.md)** |Connect to a SharePoint site|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online
 **[Disconnect&#8209;PnPOnline](../../sharepoint-ps/sharepoint-pnp/Disconnect-PnPOnline.md)** |Disconnects the context|SharePoint Server 2013, SharePoint Server 2016, SharePoint Online

@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-PnPException
 
 ## SYNOPSIS
-Returns the last exception that occured
+Returns the last exception that occurred
 
 ## SYNTAX 
 
