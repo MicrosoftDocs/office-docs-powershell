@@ -55,7 +55,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
 Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
 ```
@@ -63,28 +63,28 @@ This example blocks access to https://contoso.sharepoint.com/sites/team1 and red
 
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
+```powershell
 Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false 
 ```
 This example hides the "Everyone Except External Users" claim in People Picker.
 
 
 ### -----------------------EXAMPLE 3-----------------------------
-```
+```powershell
 Set-SPOTenant -ShowAllUsersClaim $false 
 ```
 This example hides the "All Users" claim group in People Picker.
 
 
 ### -----------------------EXAMPLE 4-----------------------------
-```
+```powershell
 Set-SPOTenant -UsePersistentCookiesForExplorerView $true 
 ```
 This example enables the use of special persisted cookie for Open with Explorer.
 
 ### -----------------------EXAMPLE 5-----------------------------
 
-```
+```powershell
 Set-SPOTenant -LegacyAuthProtocolsEnabled $True
 ```
 
@@ -92,15 +92,15 @@ This example enables legacy authentication protocols on the tenant. This can hel
 
 ### -----------------------EXAMPLE 6------------------------------
 
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
 ```
 
-This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behaviour for other sites.
+This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behavior for other sites.
 
 ### -----------------------EXAMPLE 7-------------------------------
 
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
@@ -113,7 +113,7 @@ When the feature is enabled, all guest users are subject to conditional access p
 
 The valid values are:  
 False (default) - Guest access users are exempt from conditional access policy.  
-True - Conditional access policy is applieda also to guest users.
+True - Conditional access policy is also applied to guest users.
 
 
 ```yaml
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 ### -ShowAllUsersClaim
 Enables the administrator to hide the All Users claim groups in People Picker.
 
-When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organtization members in the tenant that used NTLM to authentication with SharePoint.
+When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organization members in the tenant that used NTLM to authentication with SharePoint.
 
 Note, the All Users (authenticated) group is equivalent to the Everyone claim, and shows as Everyone.
 To change this, see -ShowEveryoneClaim.
@@ -1245,13 +1245,13 @@ Accept wildcard characters: False
 ### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
 By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites). 
 In case you want the Content Type Hub to push content types to OneDrive for Business sites, use:  
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites 
 ```
 When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
 
 Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using:
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
