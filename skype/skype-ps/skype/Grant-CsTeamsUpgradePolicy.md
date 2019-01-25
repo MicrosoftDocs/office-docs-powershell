@@ -22,7 +22,7 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization. 
 
-IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been fully updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is not honored and has been deprecated. Organizations with users in Legacy mode must update their configurations to use a different mode.
+**IMPORTANT:**  TeamsUpgradePolicy has replaced TeamsInteropPolicy, which is no longer honored. Components that previously honored TeamsInteropPolicy have been fully updated to honor TeamsUpgradePolicy instead. Both TeamsInteropPolicy and Legacy mode have been retired. 
 
 
 
@@ -201,21 +201,21 @@ Accept wildcard characters: False
 
 ## NOTES
 
-Legacy mode in TeamsUpgradePolicy has been deprecated and it is no longer possible to grant legacy mode. Customers using Legacy mode must update their configuration of TeamsUpgradePolicy to use one of the other modes.
-
-TeamsInteropPolicy has been replaced by TeamsUpgradePolicy. All components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead. TeamsInteropPolicy is no longer honored and should not be used for routing.
+Legacy mode in TeamsUpgradePolicy has been deprecated and it is no longer possible to grant legacy mode. Both Legacy mode and TeamsInteropPolicy have been retired.
 
 
 
 
 ## RELATED LINKS
 
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+
+[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/en-us/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
+
+[Coexistence with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/coexistence-chat-calls-presence)
+
 [Get-CsTeamsUpgradeConfiguration](Get-CsTeamsUpgradeConfiguration.md)
 
 [Set-CsTeamsUpgradeConfiguration](Set-CsTeamsUpgradeConfiguration.md)
 
 [Get-CsTeamsUpgradePolicy](Get-CsTeamsUpgradePolicy.md)
-
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
-
-[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/en-us/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
