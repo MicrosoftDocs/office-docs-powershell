@@ -41,7 +41,8 @@
 		],
 		"ignoreFiles": [
 			"..\\..\\teams\\teams-ps\\teams\\teams.md",
-			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md"
+			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md",
+			"..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online\\sharepoint-online.md"
 		],
 		"tempFolderPath": ".\\.local\\temp"
 	},
