@@ -3,11 +3,11 @@ Manually adding new parameters to a cmdlet reference topic is doable, but there 
 
 - **Add the paramter and Type value to the SYNTAX block(s)**: Easy to do if there's only one, but what if there are multiple SYNTAX blocks (also known as parameter sets)? Does the new parameter go in one, some, or all of them? And what about the parameter Type value (String? `$true | $ false`? A finite list of values?)
 
-- **Create a new section for each parameter**: It's easy to create the section and write the descrition, but again, what about the parameter Type value? And which parameter sets does it belong to?
+- **Create a new section for each parameter**: It's easy to create the section and write the description, but again, what about the parameter Type value? And which parameter sets does it belong to?
 
 The reality is: you almost always need the open-source [platyPS](https://github.com/PowerShell/platyPS) tool to automatically answer the unknowns about new parameters.
 
-Currently, the best method with platyPS is to simply create a new version of the topic using the **New-MarkdownHelp** cmdlet, and copy whatever you need out of it. Theoretically, platyPS has an **Update-MarkdownHelp** cmdlet that automatically updates an existing local copy of the topic for you, which you can then upload in its entirety to the GitHub website to replace the exisitng topic. This approach currently has some issues in our enviornment:
+Currently, the best method with platyPS is to simply create a new version of the topic using the **New-MarkdownHelp** cmdlet, and copy whatever you need out of it. Theoretically, platyPS has an **Update-MarkdownHelp** cmdlet that automatically updates an existing local copy of the topic for you, which you can then upload in its entirety to the GitHub website to replace the existing topic. This approach currently has some issues in our environment:
 
 - It's difficult to get a local copy of an existing cmdlet topic from the GitHub website (unless you're interested in forking the repo and having a local cloned copy on your computer). You have to copy/paste everything from the Raw view of the topic on the web site, and the local copy text file you manually create needs to be UTF-8 formatted (instead of the Notepad default of ANSI).
 
@@ -15,7 +15,7 @@ Currently, the best method with platyPS is to simply create a new version of the
 
 In short, it's simply easier and faster to generate a new local copy of the cmdlet topic, and copy/paste only what you need into the existing topic on GitHub.
 
-Removing parameters from topics is a manual excercise, but we'll explain the process fully.
+Removing parameters from topics is a manual exercise, but we'll explain the process fully.
 
 ## Use platyPS to add new cmdlets to existing topics
 
@@ -28,7 +28,7 @@ You probably know how to do this already, but the available workloads and connec
 ### Step 3: Load platyPS in the PowerShell environment
 After you've connected in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), run the following command to make the platyPS cmdlets available in your session:
 
-```
+```powershell
 Import-Module platyPS
 ```
 
@@ -39,25 +39,25 @@ To recap: this step is required in Exchange, Skype for Business Online and other
 
 If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell to connect, you can skip this step.
 
-### Step 5: Use New-MarkdownHelp to dump the latest verion of the cmdlet to a file
+### Step 5: Use New-MarkdownHelp to dump the latest version of the cmdlet to a file
 These instructions are the same (up to a point) as in [Create new cmdlet topics](NEW_CMDLETS.md):
 
 The basic syntax is:
 
- ```
+ ```powershell
  New-MarkdownHelp -Command <Cmdlet> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
  ``` 
 
  or 
     
- ```
+ ```powershell
  $x = "<Cmdlet1>","<Cmdlet2>",..."<CmdletN>"
  New-MarkdownHelp -Command $x -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
  ``` 
 
  This example create a topic file for the updated cmdlet named Get-CoolFeature in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
 
-```
+```powershell
 New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO" -Session $Session
 ```
 
@@ -65,11 +65,11 @@ This example creates topic files for the updated cmdlets Get-CoolFeature, New-Co
 
 The first command stores the cmdlet names in a variable. The second command uses that variable to identify the cmdlets and write the output files.
 
-```
+```powershell
 $Delta = "Get-CoolFeature","New-CoolFeature","Remove-CoolFeature","Set-CoolFeature"
 ```
 
-```
+```powershell
 New-MarkdownHelp -Command $Delta -OutputFolder "C:\My Docs\ExO" -Session $Session
 ```
 
@@ -78,25 +78,25 @@ The resulting topics are plain text UTF-8 files that are formatted using [markdo
 
 1. Find the new parameter(s) in the SYNTAX block and the parameter sections.
 
-2. Add a parameter description. We highly enourage you to plagerize existing content and formatting from other cmdlet topics. Many parameters are common across a wide variety of cmdlets. 
+2. Add a parameter description. We highly encourage you to plagiarize existing content and formatting from other cmdlet topics. Many parameters are common across a wide variety of cmdlets. 
  
 3. Create/fill out the parameter metadata like other existing parameters in the topic.
 
     Here's an example of the parameter metadata that's present in every parameter section:
 
-        ```
-        Type: String
-        Parameter Sets: (All)
-        Aliases:
-        Applicable: Microsoft StaffHub
-        Required: False
-        Position: 1
-        Default value: None
-        Accept pipeline input: False
-        Accept wildcard characters: False
+    ```yaml
+    Type: String
+    Parameter Sets: (All)
+    Aliases:
+    Applicable: Microsoft StaffHub
+    Required: False
+    Position: 1
+    Default value: None
+    Accept pipeline input: False
+    Accept wildcard characters: False
     ```
 
-  Most of the atrributes and values are generated automatically by platyPS. The ones that require manual intervention are:
+  Most of the attributes and values are generated automatically by platyPS. The ones that require manual intervention are:
 
   - **Applicable**: You need to add this attribute and value yourself. Notice the capital 'A'. See other topics for available values (same available values as the **applicable** attribute at the top of the topic). Don't invent new values here. The value **must** come from the list of predefined values.
 
@@ -109,7 +109,7 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
 
     - Exchange: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange)
 
-       For Exchage, you also need to go one level deepter into an appropriate subfolder.
+       For Exchange, you also need to go one level deeper into an appropriate subfolder.
 
     - Office Web Apps: [https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps](https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps)
 
@@ -141,9 +141,9 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
 7. On the next screen, click **Create pull request**.
 
 ## Remove existing parameters from existing topics
-Removing parameters is a search and destroy mission in the existing topics on GitHub, using the basic [Editing Instrucstions](../README.md).
+Removing parameters is a search and destroy mission in the existing topics on GitHub, using the basic [Editing Instructions](../README.md).
 
-The most important thing to remember: a parameter isn't gone until it's truly not available to customers. If a parameter is still available, but it's going away "in the future", it doesn't work correctly anymore, or isn't supposed to be available, it needs to remain in the topic until the product code is actually changed to remove the parameter. Until then, you can use this type of languague for the parameter description:
+The most important thing to remember: a parameter isn't gone until it's truly not available to customers. If a parameter is still available, but it's going away "in the future", it doesn't work correctly anymore, or isn't supposed to be available, it needs to remain in the topic until the product code is actually changed to remove the parameter. Until then, you can use this type of language for the parameter description:
 
 - This parameter is reserved for internal Microsoft use.
 
