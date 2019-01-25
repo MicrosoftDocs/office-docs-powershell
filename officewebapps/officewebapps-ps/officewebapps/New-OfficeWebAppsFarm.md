@@ -760,7 +760,7 @@ Accept wildcard characters: False
 Turns on or off the ability to use Online Viewers to view Office files from a URL or UNC path.
 The default is False.
 
-You must set this paramater to True when you use ClipartEnabled.
+You must set this parameter to True when you use ClipartEnabled.
 
 ```yaml
 Type: SwitchParameter
