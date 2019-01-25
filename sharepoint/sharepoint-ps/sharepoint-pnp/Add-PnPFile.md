@@ -284,7 +284,7 @@ Multi value lookup (id of lookup values as string): -Values @{"MultiLookupField"
 
 Yes/No: -Values @{"YesNo" = $false}
 
-Person/Group (id of user/group in Site User Info List or email of the user, seperate multiple values with a comma): -Values @{"Person" = "user1@domain.com","21"}
+Person/Group (id of user/group in Site User Info List or email of the user, separate multiple values with a comma): -Values @{"Person" = "user1@domain.com","21"}
 
 Managed Metadata (single value with path to term): -Values @{"MetadataField" = "CORPORATE|DEPARTMENTS|FINANCE"}
 
