@@ -23,11 +23,11 @@
 				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
 				"metaTags": []
 			},
-			//			{
-			//				"name": "staffhub",
-			//				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
-			//				"metaTags": []
-			//			},
+			{
+				"name": "staffhub",
+				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+				"metaTags": []
+			},
 			{
 				"name": "whiteboard",
 				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
@@ -42,7 +42,8 @@
 		"ignoreFiles": [
 			"..\\..\\teams\\teams-ps\\teams\\teams.md",
 			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md",
-			"..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online\\sharepoint-online.md"
+			"..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online\\sharepoint-online.md",
+			"..\\..\\staffhub\\staffhub-ps\\staffhub\\staffhub.md"
 		],
 		"tempFolderPath": ".\\.local\\temp"
 	},
