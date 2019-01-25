@@ -189,7 +189,7 @@ Accept pipeline input: False
 ```
 
 ### -ExtensibilityHandlers
-Allows you to specify ExtensbilityHandlers to execute while extracting a template.
+Allows you to specify ExtensibilityHandlers to execute while extracting a template.
 
 ```yaml
 Type: ExtensibilityHandler[]
