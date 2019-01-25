@@ -24,7 +24,8 @@
     - Office Online Server cmdlets are not distributed separately
     - SharePoint Migration Tool (SPMT):
        - https://docs.microsoft.com/en-us/powershell/module/spmt
-7. Run the app, type `npm start` and press Enter.
+7. Run the app, type `node index` and press Enter in order to get info for all modules
+8. Run the app for a certain module, type `node index -m <TypeModuleNameHere>`, with one of the following options - teams, skype, sharepoint, whiteboard, exchange. In example, you should run `node index -m teams` to run the tool for Microsoft Teams
 
 ## Notes
 1. The modules are installed from the PowerShell Gallery (PSGallery).
@@ -32,5 +33,6 @@
     If you would rather not install modules from the PSGallery then you can install the modules manually prior to running the tool.
     If you need to add PSGallery as a trusted source, you can do so with the following command:
     `Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted`
+2. Run the tool from PowerShell x64 as an Administrator user
 
 ## Sample Run
