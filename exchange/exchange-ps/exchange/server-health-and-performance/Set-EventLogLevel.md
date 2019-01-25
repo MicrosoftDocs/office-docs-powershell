@@ -6,7 +6,7 @@ schema: 2.0.0
 monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
-# Set-eventloglevel
+# Set-EventLogLevel
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-eventloglevel [-Identity] <ECIdParameter> -Level <Lowest | Low | Medium | High | Expert> [-Confirm]
+Set-EventLogLevel [-Identity] <ECIdParameter> -Level <Lowest | Low | Medium | High | Expert> [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 

@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ### -EntryID
 The EntryID parameter specifies the deleted item that you want to restore. The EntryID value for the deleted item is unique in the mailbox.
 
-You can find the EntryID for specific items by using other search filters on the Get-ReoverableItems cmdlet (subject, date range, etc.).
+You can find the EntryID for specific items by using other search filters on the Get-RecoverableItems cmdlet (subject, date range, etc.).
 
 ```yaml
 Type: String

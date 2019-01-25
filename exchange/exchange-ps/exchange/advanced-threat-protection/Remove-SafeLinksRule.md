@@ -44,7 +44,7 @@ You can use any value that uniquely identifies the rule. For example:
 
 - Name
 
-- Distinguised name (DN)
+- Distinguished name (DN)
 
 - GUID
 

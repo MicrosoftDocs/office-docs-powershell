@@ -50,7 +50,7 @@ This example returns all Outlook Anywhere virtual directories on the server name
 Get-OutlookAnywhere -Identity "EXCH01\Rpc (Default Web Site)"
 ```
 
-This example returns information about the Outlook Anywhere virtual directory named Rpc on the default web siteof the server named EXCH01.
+This example returns information about the Outlook Anywhere virtual directory named Rpc on the default web site of the server named EXCH01.
 
 ## PARAMETERS
 

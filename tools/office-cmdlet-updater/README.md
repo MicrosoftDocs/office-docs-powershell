@@ -6,7 +6,7 @@
 3. Confirm you have NodeJS installed.
     Open PowerShell or GitBash and type `npm --version`.
     If not, install from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-4. Open GitBash or PowerShell and go into office-docs-powershell/tools/office-powershell-updater
+4. Open GitBash or PowerShell (using x64 version is a must here) and run `cd <EnterThePathHere>/office-docs-powershell/tools/office-cmdlet-updater`
 5. Install the required modules, type `npm install` and press Enter.
 6. Install required PowerShell modules and connectors:
     - Skype for Business Online:

@@ -29,7 +29,8 @@ Dial plans provide information required to enable Enterprise Voice users to make
 Users who do not have a valid dial plan will not be enabled to make calls by using Enterprise Voice.
 A dial plan determines such things as how normalization rules are applied and whether a prefix must be dialed for external calls.
 
-You can check whether a user has been granted a per-user dial plan by calling a command in this format: `Get-CsUser "\<user name\>" | Select-Object DialPlan.`
+You can check whether a user has been granted a per-user dial plan by calling a command in this format: `Get-CsUser "<user name>" | Select-Object DialPlan`
+
 For example:
 
 `Get-CsUser "Ken Myer" | Select-Object DialPlan`

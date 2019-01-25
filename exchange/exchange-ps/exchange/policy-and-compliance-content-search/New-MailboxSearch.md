@@ -79,7 +79,7 @@ StartDate and EndDate: These parameters specify the start date of January 1, 201
 
 TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
 
-StatusMailRecipeints: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
+StatusMailRecipients: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
 
 ### -------------------------- Example 2 --------------------------
 ```
