@@ -29,5 +29,3 @@
 ## Notes
 1. Some modules could be installed from the PowerShell Gallery (PSGallery). This gallery contains user submitted code. If you would rather not install modules from the PSGallery then you can install the modules manually prior to running the tool. If you need to add PSGallery as a trusted source, you can do so with the following command: `Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted`
 2. Run the tool from PowerShell x64 as an Administrator user
-
-## Sample Run
