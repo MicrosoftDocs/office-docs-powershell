@@ -462,6 +462,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDialInConferencing
+This parameter is not available in Skype for Business Online.
+
 Indicates whether users are able to join the meeting by dialing in with a public switched telephone network (PSTN) telephone.
 The default value is True.
 
