@@ -2,7 +2,7 @@
 
 ## Usage:
 1. Clone repo at: https://github.com/microsoftdocs/office-docs-powershell
-2. Configure your email address in tools/.local/default.json to receive emailed logs. (OPTIONAL)
+2. Configure your email address in `tools/.local/default.json` to receive emailed logs. (OPTIONAL)
 3. Confirm you have NodeJS installed.
     Open PowerShell or GitBash and type `npm --version`.
     If not, install from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
