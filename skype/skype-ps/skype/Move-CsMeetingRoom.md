@@ -273,7 +273,10 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-PARAMVALUE: String
+Specifies the file path for the log file created when the cmdlet runs.
+For example: -Report "C:\Logs\S1_FailOverLog.html".
+If this file already exists, it will be overwritten.
+By default, reports are written to the "AppData\Local\Temp" folder in your user profile.
 
 ```yaml
 Type: String
