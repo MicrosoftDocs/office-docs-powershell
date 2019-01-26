@@ -2,6 +2,7 @@ const Shell = require('node-powershell');
 const of = require('await-of').default;
 const commands = require('../constants/commands');
 const format = require('string-format');
+const { errorColor } = require('../helpers/colors');
 
 class PowerShellService {
 	constructor(config) {
@@ -24,8 +25,6 @@ class PowerShellService {
 		const [output, err] = await of(this.ps.invoke());
 
 		if (err) {
-			console.error(err);
-
 			throw new Error(err);
 		}
 
@@ -38,7 +37,7 @@ class PowerShellService {
 		const [output, err] = await of(this.ps.invoke());
 
 		if (err && printError) {
-			console.error(err);
+			console.error(errorColor(err));
 		}
 
 		return output;

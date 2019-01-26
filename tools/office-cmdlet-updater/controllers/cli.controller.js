@@ -1,3 +1,5 @@
+const { errorColor } = require('../helpers/colors');
+
 class CliController {
 	constructor(
 		cliService,
@@ -73,7 +75,7 @@ class CliController {
 					isNeedEmail
 				})
 				.catch((err) => {
-					console.error(err);
+					console.error(errorColor(err));
 
 					this.powerShellService.dispose();
 				});
