@@ -7,7 +7,7 @@ class PowerShellService {
 	constructor(config) {
 		this.config = config;
 		this.ps = new Shell({
-			executionPolicy: 'Bypass',
+			executionPolicy: 'Unrestricted',
 			noProfile: true
 		});
 	}
@@ -27,6 +27,18 @@ class PowerShellService {
 			console.error(err);
 
 			throw new Error(err);
+		}
+
+		return output;
+	}
+
+	async invokeCommandAndIgnoreError({ command, printError = false }) {
+		await this.ps.addCommand(command);
+
+		const [output, err] = await of(this.ps.invoke());
+
+		if (err && printError) {
+			console.error(err);
 		}
 
 		return output;

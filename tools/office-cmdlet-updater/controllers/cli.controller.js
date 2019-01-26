@@ -65,12 +65,18 @@ class CliController {
 				createPr: isNeedPullRequest
 			} = cli;
 
-			await this.markdownController.updateMarkdown({
-				cliModuleName,
-				cliCmdletName,
-				isNeedPullRequest,
-				isNeedEmail
-			});
+			await this.markdownController
+				.updateMarkdown({
+					cliModuleName,
+					cliCmdletName,
+					isNeedPullRequest,
+					isNeedEmail
+				})
+				.catch((err) => {
+					console.error(err);
+
+					this.powerShellService.dispose();
+				});
 		});
 	}
 }
