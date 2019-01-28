@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPWebTemplateForSiteMaster
 schema: 2.0.0
@@ -24,7 +24,7 @@ Use the Enable-SPWebTemplateEnabledForSiteMaster cmdlet to create a site master 
 
 ### Example 1 
 ```
-PS C:\>Enable-SPWebTemplateForSiteMaster -Template STS#0 -CompatibilityLevel 15
+Enable-SPWebTemplateForSiteMaster -Template STS#0 -CompatibilityLevel 15
 ```
 
 This example creates a site master in the database using the Team Site template.
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

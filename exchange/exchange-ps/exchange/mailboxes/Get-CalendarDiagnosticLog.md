@@ -67,10 +67,10 @@ This example retrieves the Calendar Diagnostic log entries for Shannon Steele's 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CalendarDiagnosticLog -Identity oevans -StartDate "6/1/2015 6:00:00 AM" -EndDate "6/30/2015 5:00:00 PM"
+Get-CalendarDiagnosticLog -Identity oevans -StartDate "6/1/2018 6:00:00 AM" -EndDate "6/30/2018 5:00:00 PM"
 ```
 
-This example retrieves the Calendar Diagnostic log entries for Oscar Evans' mailbox from 6/1/2015 to 6/30/2015.
+This example retrieves the Calendar Diagnostic log entries for Oscar Evans' mailbox from 6/1/2018 to 6/30/2018.
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -134,9 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingID
-The MeetingID parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGloablObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
+The MeetingID parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGlobalObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
 
-To find this value, it's easiest to first search for the calendar item by using the Subject, StartDate and EndDate parameters. After you find the calendar item that you want, you can use its CleanGloablObjectId value for the MeetingID parameter in future commands.
+To find this value, it's easiest to first search for the calendar item by using the Subject, StartDate and EndDate parameters. After you find the calendar item that you want, you can use its CleanGlobalObjectId value for the MeetingID parameter in future commands.
 
 Don't use this parameter with the Subject parameter, because the value of the MeetingID parameter takes precedence.
 
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime

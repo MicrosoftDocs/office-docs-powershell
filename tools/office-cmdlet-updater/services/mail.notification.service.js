@@ -4,27 +4,11 @@ const { mailErrors } = require('../constants/errors');
 const of = require('await-of').default;
 
 class MailNotificationService {
-	constructor(logStoreService, config) {
-		const { apiKey, sendMailNotification } = config.get('sendgrid');
-
-		this.sendMailNotification = sendMailNotification;
+	constructor(config) {
+		const { apiKey } = config.get('sendgrid');
 
 		if (!apiKey) {
 			throw new Error(mailErrors.CANT_GET_SENDGRID_API_KEY);
-		}
-
-		const { from, to, subject } = config.get('sendgrid.emailSettings');
-
-		if (!from) {
-			throw new Error(mailErrors.CANT_GET_MAIL_FROM);
-		}
-
-		if (!to) {
-			throw new Error(mailErrors.CANT_GET_MAIL_TO);
-		}
-
-		if (!subject) {
-			throw new Error(mailErrors.CANT_GET_MAIL_SUBJECT);
 		}
 
 		sgMail.setApiKey(apiKey);
@@ -37,10 +21,6 @@ class MailNotificationService {
 	}
 
 	addEmailToQueue(mail) {
-		if (!this.sendMailNotification) {
-			return;
-		}
-
 		this.queue.push(mail);
 	}
 

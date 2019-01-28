@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPO365LinkSettings
 schema: 2.0.0
@@ -27,7 +27,7 @@ To run this cmdlet requires farm administrator permission and that the user acco
 
 ### EXAMPLE 1
 ```powershell
-PS C:\> Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
+ Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
 ```
 
 This example sets the mysite host URL to contoso-my.sharepoint.com
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 

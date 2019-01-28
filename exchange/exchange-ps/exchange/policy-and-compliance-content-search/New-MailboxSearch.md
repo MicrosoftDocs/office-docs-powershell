@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-On July 1, 2017, you'll no longer be able to use the New-MailboxSearch cmdlet to create In-Place eDiscovery searches and In-Place Holds in Exchange Online. To create eDiscovery searches and eDiscovery case holds, please start using New-ComplianceSearch and New-CaseHoldPolicy in the Office 365 Security & Compliance Center. You'll still be able to use Set-MailboxSearch to modify existing In-Place eDiscovery searches and In-Place Holds. Creating new searches and holds in Exchange Server 2013 will still be supported, and searches run from your on-premises organization in an Exchange hybrid deployment aren't affected by this change.
+On July 1, 2018, you'll no longer be able to use the New-MailboxSearch cmdlet to create In-Place eDiscovery searches and In-Place Holds in Exchange Online. To create eDiscovery searches and eDiscovery case holds, please start using New-ComplianceSearch and New-CaseHoldPolicy in the Office 365 Security & Compliance Center. You'll still be able to use Set-MailboxSearch to modify existing In-Place eDiscovery searches and In-Place Holds. Creating new searches and holds in Exchange Server 2013 will still be supported, and searches run from your on-premises organization in an Exchange hybrid deployment aren't affected by this change.
 
 Use the New-MailboxSearch cmdlet to create a mailbox search and either get an estimate of search results, place search results on In-Place Hold or copy them to a Discovery mailbox. You can also place all contents in a mailbox on hold by not specifying a search query, which accomplishes similar results as Litigation Hold.
 
@@ -64,7 +64,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2015" -EndDate "12/31/2015" -Recipients "@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
+New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2018" -EndDate "12/31/2018" -Recipients "@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
 ```
 
 This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the search query:
@@ -75,11 +75,11 @@ Recipients: This parameter specifies that the search includes all mail sent to t
 
 SearchQuery: This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
 
-StartDate and EndDate: These parameters specify the start date of January 1, 2015, and end date of December 31, 2015, for the search.
+StartDate and EndDate: These parameters specify the start date of January 1, 2018, and end date of December 31, 2018, for the search.
 
 TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
 
-StatusMailRecipeints: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
+StatusMailRecipients: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -603,7 +603,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime

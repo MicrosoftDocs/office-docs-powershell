@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchMetadataCrawledProperty
 schema: 2.0.0
@@ -25,17 +25,17 @@ This cmdlet is used when the search functionality is configured for the first ti
 SPEnterpriseSearchMetadataCrawledProperty represents a crawled property in the enterprise search metadata property schema.
 Or, crawled properties are automatically created during regular crawls (see SPEnterpriseSearchMetadataCategory).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
-PS C:\>$crawlprop = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
-PS C:\>New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name "MyCrawlProp" -PropSet $crawlprop.PropSet -Category $crawlprop.CategoryName -IsNameEnum $false -VariantType $crawlprop.VariantType -IsMappedToContents $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
+$crawlprop = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
+New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Name "MyCrawlProp" -PropSet $crawlprop.PropSet -Category $crawlprop.CategoryName -IsNameEnum $false -VariantType $crawlprop.VariantType -IsMappedToContents $false
 ```
 
 This example maps the new crawled property MyCrawlProp to the People metadata category for the default search service application.
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 
 ### -VariantType
 Adds the crawled property as the specified variant type.
-For more information about valid values for this property, see VARIANT Type Constants (http://go.microsoft.com/fwlink/p/?LinkId=143322&clcid=0x409) (http://go.microsoft.com/fwlink/p/?LinkId=143322&clcid=0x409).
+For more information about valid values for this property, see VARIANT Type Constants (https://go.microsoft.com/fwlink/p/?LinkId=143322&clcid=0x409) (https://go.microsoft.com/fwlink/p/?LinkId=143322&clcid=0x409).
 
 The type must be an integer that specifies the variant data type of the property set.
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

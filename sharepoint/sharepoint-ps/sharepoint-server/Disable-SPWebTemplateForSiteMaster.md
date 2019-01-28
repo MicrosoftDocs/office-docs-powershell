@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Disable-SPWebTemplateForSiteMaster
 schema: 2.0.0
@@ -24,7 +24,7 @@ Use the Disable-SPWebTemplateForSiteMaster cmdlet to disable a site master in th
 
 ### Example 1 
 ```
-PS C:\>Disable-SPWebTemplateForSiteMaster -Template STS#0
+Disable-SPWebTemplateForSiteMaster -Template STS#0
 ```
 
 This example disables the template in the site master of a farm.
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

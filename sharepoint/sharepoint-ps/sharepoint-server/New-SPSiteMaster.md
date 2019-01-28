@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: New-SPSiteMaster
 schema: 2.0.0
@@ -27,7 +27,7 @@ Use the New-SPSiteMaster cmdlet to create a site master information in the farm.
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
+New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
 ```
 
 This example creates a site master in the database WSS_Content.
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

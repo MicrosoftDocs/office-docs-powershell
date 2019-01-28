@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPEnterpriseSearchServiceApplicationIndex
 schema: 2.0.0
@@ -34,7 +34,7 @@ The cmdlet has to be run in two phases.
 Phase one will take a backup of what is present in the index at the time that the backup cmdlet is run. 
 Phase two will take a differential backup of what was added to the index after you started the first phase index backup.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 
@@ -42,8 +42,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
 This example starts a Phase 1 backup of the search index for the default search application, and stores the backup at the location \\\\backuphost\backupfolder. 
@@ -51,16 +51,16 @@ The cmdlet stores a handle file backuphandle.txt that is used by the second phas
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
 This example checks the backup status and progress by re-running the cmdlet for Phase 1.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 2 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 2 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
 This example starts the Phase 2 of the search index backup by using the same backup location and backup handle file as used for Phase 1. 
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

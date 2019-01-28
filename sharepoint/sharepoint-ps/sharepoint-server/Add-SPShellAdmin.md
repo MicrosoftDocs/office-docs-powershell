@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPShellAdmin
 schema: 2.0.0
@@ -41,34 +41,34 @@ However, the result of running this cmdlet is that the user specified with the U
 
 Therefore, you should carefully plan which users are given this access.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
 ### -------------------EXAMPLE 1------------------------- 
 ```
-PS C:\>Add-SPShellAdmin -UserName CONTOSO\User1
+Add-SPShellAdmin -UserName CONTOSO\User1
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in the farm configuration database only, and also ensures the user is added to the WSS_Admin_WPG local group on each server in the farm.
 
 ### -------------------EXAMPLE 2------------------------- 
 ```
-PS C:\>Add-SPShellAdmin -UserName CONTOSO\User1 -database 4251d855-3c15-4501-8dd1-98f960359fa6
+Add-SPShellAdmin -UserName CONTOSO\User1 -database 4251d855-3c15-4501-8dd1-98f960359fa6
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in both the specified content database and the configuration database by passing a database GUID to the cmdlet.
 
 ### -------------------EXAMPLE 3------------------------- 
 ```
-PS C:\>Get-SPDatabase | Where-Object {$_.WebApplication -like "SPAdministrationWebApplication"} | Add-SPShellAdmin CONTOSO\User1
+Get-SPDatabase | Where-Object {$_.WebApplication -like "SPAdministrationWebApplication"} | Add-SPShellAdmin CONTOSO\User1
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in both the specified Central Administration content database and the configuration database.
 
 ### -------------------EXAMPLE 4------------------------- 
 ```
-PS C:\>Get-SPDatabase | ?{$_.Name -eq "WSS_Content"} | Add-SPShellAdmin -Username CONTOSO\User1
+Get-SPDatabase | ?{$_.Name -eq "WSS_Content"} | Add-SPShellAdmin -Username CONTOSO\User1
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role of both the specified content database and the configuration database by passing the name of the database to the cmdlet.
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

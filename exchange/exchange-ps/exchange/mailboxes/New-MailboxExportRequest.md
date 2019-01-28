@@ -144,10 +144,10 @@ This example exports the user Kweku's archive to a .pst file on the network shar
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-MailboxExportRequest -Mailbox Tony -ContentFilter {(body -like "*company*") -and (body -like "*profit*") -and (Received -lt "01/01/2012")} -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
+New-MailboxExportRequest -Mailbox Tony -ContentFilter {(body -like "*company*") -and (body -like "*profit*") -and (Received -lt "01/01/2018")} -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
 ```
 
-This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2012.
+This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2018.
 
 ### -------------------------- Example 4 --------------------------
 ```

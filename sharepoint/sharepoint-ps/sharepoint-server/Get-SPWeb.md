@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWeb
 schema: 2.0.0
@@ -38,27 +38,27 @@ The Filter parameter is a script block that uses the same syntax as a Where-Obje
 It is important to note that every site collection returned by the Get-SPWeb cmdlet is automatically disposed of at the end of the pipeline.
 To store the results of Get-SPWeb in a local variable, the Start-SPAssignment and Stop-SPAssignment cmdlets must be used to avoid memory leaks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------- 
 ```
-PS C:\>Get-SPWeb -site http://sitename/sites/site1
+Get-SPWeb -site http://sitename/sites/site1
 ```
 
 This example returns all the subwebs in a given site collection.
 
 ### --------------------EXAMPLE 2---------------------- 
 ```
-PS C:\>Get-SPWeb -Site http://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
+Get-SPWeb -Site http://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
 ```
 
 This example displays all subsites that use the "STS#0" template.
 
 ### --------------------EXAMPLE 3---------------------- 
 ```
-PS C:\>Start-SPAssignment -Global
+Start-SPAssignment -Global
 
 C:\PS>$w = Get-SPWeb http://sitename
 
@@ -66,7 +66,7 @@ C:\PS>$w.set_SiteLogoUrl("http://PathToImage/test.jpg")
 
 C:\PS>$w.Update()
 
-PS C:\>Stop-SPAssignment -Global
+Stop-SPAssignment -Global
 ```
 
 This example demonstrates how to save a subsite as a variable and to call object model methods on the SPAssignment object.
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

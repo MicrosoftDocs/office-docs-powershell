@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPPerformancePointContent
 schema: 2.0.0
@@ -25,9 +25,9 @@ The Import-SPPerformancePointContent imports a PPS dashboard and its dependencie
 
 ### Example 1 
 ```
-PS C:\>$ContentList = @{"/bi/Dashboard Content" = "/biprod/Dashboard Content"; "/bi/My Projects" = "/biprod/My Projects"}
-PS C:\>$DatasourceList = @{"/bi/DataConnections/AdventureWorks.ppsdc" = "/myBi/libraries/DataConnections/AdventureWorks_prod.ppsdc"; "/bi/DataConnections/AW 2008 Cubes4.ppsdc" =     "/myBi/libraries/DataConnections/AW 2008 Cubes3.ppsdc"; "/sales/DataConnections/Excel DS.ppsdc" = "/marketing/PPS Data Sources/PDW 2010.ppsdc"}
-PS C:\>Import-SPPerformancePointContent -ImportFileURL "http://contoso.com/biprod/DocumentLibrary/Dashboard1.cmp" -SiteDestination "http://contoso.com/biprod/" -LocationMap $ContentList -DatasourceMap $DatasourceList -MasterPage "marketing and sales.master"
+$ContentList = @{"/bi/Dashboard Content" = "/biprod/Dashboard Content"; "/bi/My Projects" = "/biprod/My Projects"}
+$DatasourceList = @{"/bi/DataConnections/AdventureWorks.ppsdc" = "/myBi/libraries/DataConnections/AdventureWorks_prod.ppsdc"; "/bi/DataConnections/AW 2008 Cubes4.ppsdc" =     "/myBi/libraries/DataConnections/AW 2008 Cubes3.ppsdc"; "/sales/DataConnections/Excel DS.ppsdc" = "/marketing/PPS Data Sources/PDW 2010.ppsdc"}
+Import-SPPerformancePointContent -ImportFileURL "http://contoso.com/biprod/DocumentLibrary/Dashboard1.cmp" -SiteDestination "http://contoso.com/biprod/" -LocationMap $ContentList -DatasourceMap $DatasourceList -MasterPage "marketing and sales.master"
 ```
 
 This example imports a dashboard by using the $Datasourcelist and $ContentList variables.
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

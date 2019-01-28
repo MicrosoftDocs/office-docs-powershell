@@ -1052,7 +1052,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -1632,7 +1632,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairDisabled
-The CalendarRepairDisabled parameter specifies whetherto prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
+The CalendarRepairDisabled parameter specifies whether to prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
 
 - $true: The Calendar Repair Assistant doesn't repair calendar items in the mailbox.
 
@@ -2239,7 +2239,7 @@ Accept wildcard characters: False
 ### -EndDateForRetentionHold
 The EndDateForRetentionHold parameter specifies the end date for retention hold for messaging records management (MRM). To use this parameter, you need to set the RetentionHoldEnabled parameter to the value $true.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -2622,7 +2622,7 @@ Accept wildcard characters: False
 ### -GMGen
 This parameter is available only in on-premises Exchange.
 
-The GMGen parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used for group metrics generation for the organization. In MailTips, group metrics information is used to indicate the number of recipients in a message or whether recipients are outside your organization. You can use this parameter only on an arbitration mailbox.
+The GMGen parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for group metrics generation for the organization. In MailTips, group metrics information is used to indicate the number of recipients in a message or whether recipients are outside your organization. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -3098,7 +3098,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -4265,7 +4265,7 @@ The RetainDeletedItemsFor parameter specifies the length of time to keep soft-de
 
 These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
 
-Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see Recoverable Items folder in Exchange Server (https://technet.microsoft.com/library/ee364755.aspx).
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -4393,7 +4393,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleAssignmentPolicy
-The RoleAssignmentPolicy parameter specifies the role assignment policy that's assigned to the mailbox.You can use any value that uniquely identifies the role assignment policy. For example:
+The RoleAssignmentPolicy parameter specifies the role assignment policy that's assigned to the mailbox. You can use any value that uniquely identifies the role assignment policy. For example:
 
 - Name
 
@@ -4784,7 +4784,7 @@ Accept wildcard characters: False
 ### -StartDateForRetentionHold
 The StartDateForRetentionHold parameter specifies the start date for the retention hold that's placed on the mailbox.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 To use this parameter, you need to set the RetentionHoldEnabled parameter to value $true.
 
@@ -4899,7 +4899,7 @@ Accept wildcard characters: False
 ### -UMDataStorage
 This parameter is available only in on-premises Exchange.
 
-The UMDataStorage parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used to store UM call data records and UM custom prompts. This capability can be assigned to only one arbitration mailbox for the organization. You can use this parameter only on an arbitration mailbox.
+The UMDataStorage parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used to store UM call data records and UM custom prompts. This capability can be assigned to only one arbitration mailbox for the organization. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -4930,7 +4930,7 @@ If you use this syntax and you omit any of the DTMF map values, those values are
 
 To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<intgers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4947,7 +4947,7 @@ Accept wildcard characters: False
 ### -UMGrammar
 This parameter is available only in on-premises Exchange.
 
-The UMGrammar parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
+The UMGrammar parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 

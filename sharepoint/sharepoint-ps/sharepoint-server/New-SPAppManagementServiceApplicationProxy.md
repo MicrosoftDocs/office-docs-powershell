@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAppManagementServiceApplicationProxy
 schema: 2.0.0
@@ -31,19 +31,19 @@ New-SPAppManagementServiceApplicationProxy -Uri <String> [-AssignmentCollection 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the New-SPAppManagementServiceApplicationProxy cmdlet to create an App Management Service application proxy with the specified name for the specified App Management Service application or the specified endpoint.
 Depending on the parameter value, it also adds the new proxy to the default proxy group.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE------------- 
 ```
-PS C:\>$sa = New-SPAppManagementServiceApplication -Name AppManagement -DatabaseServer MyDatabaseServer -DatabaseName AppManagementDB -ApplicationPool MyServiceAppPool
-PS C:\>New-SPAppManagementServiceApplicationProxy -Name AppManagementProxy -UseDefaultProxyGroup -ServiceApplication $sa
+$sa = New-SPAppManagementServiceApplication -Name AppManagement -DatabaseServer MyDatabaseServer -DatabaseName AppManagementDB -ApplicationPool MyServiceAppPool
+New-SPAppManagementServiceApplicationProxy -Name AppManagementProxy -UseDefaultProxyGroup -ServiceApplication $sa
 ```
 
 This example creates a new App Management Service application proxy named AppManagementProxy for the specified service application and adds the new App Management Service application proxy to the default proxy group.
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

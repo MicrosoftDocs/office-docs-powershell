@@ -13,8 +13,6 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-PhishFilterPolicy cmdlet to configure the phish filter policy in your cloud-based organization.
 
-This cmdlet is only available in Office 365 Enterprise E5, or with Advanced Threat Protection licenses.
-
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX

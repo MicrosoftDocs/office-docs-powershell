@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectEventServiceSettings
 schema: 2.0.0
@@ -23,7 +23,7 @@ Returns the settings for the Microsoft Project Server Events Service. There is c
 
 ### Example 1 
 ```
-PS C:\>Get-SPProjectEventServiceSettings
+Get-SPProjectEventServiceSettings
 ```
 
 This example shows what port the service is listening on.
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

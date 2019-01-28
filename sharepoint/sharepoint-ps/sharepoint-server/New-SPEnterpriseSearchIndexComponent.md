@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchIndexComponent
 schema: 2.0.0
@@ -29,10 +29,10 @@ The change is effectuated when the search topology is enabled.
 
 ### ------------------EXAMPLE-----------------
 ```
-PS C:\>$si = Get-SPEnterpriseSearchServiceInstance
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
-PS C:\>New-SPEnterpriseSearchIndexComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa -IndexPartition 1 -RootDirectory E:\Index
+$si = Get-SPEnterpriseSearchServiceInstance
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+New-SPEnterpriseSearchIndexComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa -IndexPartition 1 -RootDirectory E:\Index
 ```
 
 This example adds a new Search Index Component to the inactive topology for the existing Search Service Application. The directory of the Index Component is set to E:\Index with a Partition number of 1.
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

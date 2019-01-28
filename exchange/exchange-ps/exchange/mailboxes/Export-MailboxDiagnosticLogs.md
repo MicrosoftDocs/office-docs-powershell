@@ -63,7 +63,9 @@ This example retrieves the calendar permissions diagnostic log for the mailbox n
 ## PARAMETERS
 
 ### -ComponentName
-The ComponentName parameter specifies the component that you want to retrieve the diagnostic logs for. Valid values depend on the type and location of the mailbox (on-premises or Exchange Online). Possible values are:
+The ComponentName parameter specifies the component that you want to retrieve the diagnostic logs for. Valid values depend on the type and location of the mailbox (on-premises Exchange or Exchange Online). Valid values include:
+
+- ActionProcessingAgent
 
 - BirthdayAssistant
 
@@ -79,7 +81,11 @@ The ComponentName parameter specifies the component that you want to retrieve th
 
 - InternetCalendar
 
+- InternalCalendarSharingMigration
+
 - MRM
+
+- OnlineMeetings
 
 - OOFRules
 
@@ -88,6 +94,8 @@ The ComponentName parameter specifies the component that you want to retrieve th
 - SharingMigrationAssistant
 
 - SharingSyncAssistant
+
+- SweepRules
 
 ```yaml
 Type: String

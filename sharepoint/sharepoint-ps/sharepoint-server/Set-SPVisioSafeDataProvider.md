@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Visio.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPVisioSafeDataProvider
 schema: 2.0.0
@@ -21,14 +21,14 @@ Set-SPVisioSafeDataProvider -DataProviderId <String> -DataProviderType <Int32> -
 ## DESCRIPTION
 The `Set-SPVisioSafeDataProvider` cmdlet sets the Description property of a safe data provider for a Visio Services application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### -------------------EXAMPLE 1----------------------
 ```
-PS C:\>Set-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
+Set-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
 ```
 
 This example sets the description property of a safe data provider for a specific Visio Services application.
@@ -36,7 +36,7 @@ This example sets the description property of a safe data provider for a specifi
 
 ### -------------------EXAMPLE 2----------------------
 ```
-PS C:\>Get-SPVisioServiceApplication -Identity "VGS1" | Set-SPVisioSafeDataProvider -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
+Get-SPVisioServiceApplication -Identity "VGS1" | Set-SPVisioSafeDataProvider -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
 ```
 
 This example sets the Description property of a safe data provider for a specific Visio Services application.
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

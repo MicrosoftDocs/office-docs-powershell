@@ -48,7 +48,9 @@ Skype for Business Server Control Panel: The functions carried out by the New-Cs
 
 ### -------------------------- Example 1 -------------------------- (Lync Server 2013)
 ```
+$provider = New-CsClsProvider -Name "RedmondHybridVoice" -Type "WPP" -Level "Info" -Flags "All"
 
+New-CsClsScenario -Identity "global/RedmondHybridVoice"-Provider $provider
 ```
 
 The commands shown in Example 1 create a new centralized logging scenario with the Identity global/RedmondHybridVoice.
@@ -56,13 +58,13 @@ In order to carry out this task, the first command in the example uses the New-C
 
 After the description and the provider have been created, the final command in the example calls New-CsClsScenario in order to create the scenario, using the data stored in $provider to assign a value to the Provider property.
 
-$provider = New-CsClsProvider -Name "RedmondHybridVoice" -Type "WPP" -Level "Info" -Flags "All"
 
-New-CsClsScenario -Identity "global/RedmondHybridVoice"-Provider $provider
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
 ```
+$provider = New-CsClsProvider -Name "RedmondHybridVoice" -Type "WPP" -Level "Info" -Flags "All"
 
+New-CsClsScenario -Identity "global/RedmondHybridVoice"-Provider $provider
 ```
 
 The commands shown in Example 1 create a new centralized logging scenario with the Identity global/RedmondHybridVoice.
@@ -70,9 +72,7 @@ In order to carry out this task, the first command in the example uses the New-C
 
 After the description and the provider have been created, the final command in the example calls the New-CsClsScenario cmdlet in order to create the scenario, using the data stored in $provider to assign a value to the Provider property.
 
-$provider = New-CsClsProvider -Name "RedmondHybridVoice" -Type "WPP" -Level "Info" -Flags "All"
 
-New-CsClsScenario -Identity "global/RedmondHybridVoice"-Provider $provider
 
 ## PARAMETERS
 

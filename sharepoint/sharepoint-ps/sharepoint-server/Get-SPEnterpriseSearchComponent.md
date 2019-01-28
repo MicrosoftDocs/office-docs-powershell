@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchComponent
 schema: 2.0.0
@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Retrieves one or all search components in a given search topology..
+Retrieves one or all search components in a given search topology.
 
 
 
@@ -25,22 +25,22 @@ Get-SPEnterpriseSearchComponent [[-Identity] <SearchComponentPipeBind>]
 This cmdlet retrieves the search component with the specified identity from the given search topology.
 If an identity is not provided, all search components in the given search topology will be retrieved.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1----------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -Identity '06e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -Identity '06e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
 ```
 
 This example retrieves the search component with the identity 06e6651d-ecdd-4105-bb65-6a83b6155525 from the search topology with identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.
 
 ### ------------------EXAMPLE 2----------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
 ```
 
 This example retrieves all search components from the search topology with the identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

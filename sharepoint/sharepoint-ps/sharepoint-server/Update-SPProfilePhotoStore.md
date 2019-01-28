@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPProfilePhotoStore
 schema: 2.0.0
@@ -31,13 +31,13 @@ You just need to specify the starting portion of the URL that has changed from o
 
 For example, OldBaseUri: http://server1/my/ProfilePhotos; NewBaseUri: http://server1/my/NewLocation/ProfilePhotos
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-------------------
 ```
-PS C:\>Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
+Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
 ```
 
 This example uploads photos to a specified My Site host location.
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

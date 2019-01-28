@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchCrawlRule
 schema: 2.0.0
@@ -21,22 +21,22 @@ Get-SPEnterpriseSearchCrawlRule [[-Identity] <CrawlRulePipeBind>]
 ## DESCRIPTION
 Use the Get-SPEnterpriseSearchCrawlRule cmdlet for a search administrator to run this procedure to retrieve the crawl rule when the crawl rule is updated or deleted.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application' 
-PS C:\>Get-SPEnterpriseSearchCrawlRule -SearchApplication  $ssa -Identity http://webAppUrl
+$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application' 
+Get-SPEnterpriseSearchCrawlRule -SearchApplication  $ssa -Identity http://webAppUrl
 ```
 
 This example uses the `Get-SPEnterpriseSearchCrawlRule` cmdlet to retrieve a crawl rule.
 
 ### ---------------EXAMPLE 2--------------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchCrawlRule -SearchApplication $searchApp | ?{$_.Path -like '*example*'}
+$ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
+Get-SPEnterpriseSearchCrawlRule -SearchApplication $searchApp | ?{$_.Path -like '*example*'}
 ```
 
 This example returns a list of crawl rules with paths that contain the word example from the search service application named 'Search Service Application'.
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

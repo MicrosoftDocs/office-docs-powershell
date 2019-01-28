@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: Set-CsTenantFederationConfiguration
 schema: 2.0.0
@@ -13,11 +13,20 @@ These settings are used to determine which domains (if any) your users are allow
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTenantFederationConfiguration [[-Identity] <Object>] [-AllowedDomains <Object>]
- [-AllowFederatedUsers <Object>] [-AllowPublicUsers <Object>] [-BlockedDomains <Object>]
- [-BypassDualWrite <Object>] [-Confirm] [-Force] [-Instance <Object>] [-SharedSipAddressSpace <Object>]
- [-Tenant <Object>] [-TreatDiscoveredPartnersAsUnverified <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
+ [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
+ [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
+ [-AllowedDomainsAsAList <List>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
+ [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
+ [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
+ [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,7 +115,7 @@ Note that string values cannot be passed directly to the AllowedDomains paramete
 Instead, you must create an object reference using the `New-CsEdgeAllowList` cmdlet or the `New-CsEdgeAllowAllKnownDomains` cmdlet and then use the object reference variable as the parameter value.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -123,7 +132,7 @@ When set to True (the default value) users will be potentially allowed to commun
 If this property is set to False then users cannot communicate with users from other domains regardless of the values assigned to the AllowedDomains and BlockedDomains properties.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -140,7 +149,7 @@ When set to True (the default value) users will be potentially allowed to commun
 The collection of public providers that users can actually communicate with is managed by using the `Set-CsTenantPublicProvider` cmdlet.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -157,23 +166,7 @@ If the AllowedDomains property has been set to AllowAllKnownDomains, then users 
 If the AllowedDomains property has not been set to AllowAllKnownDomains, then the blocked list is ignored, and users can only communicate with domains that have been expressly added to the allowed domains list.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -226,7 +219,7 @@ For example:
 `Set-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Identity "global"`
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -242,7 +235,7 @@ Accept wildcard characters: False
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -256,10 +249,10 @@ Accept wildcard characters: False
 
 ### -SharedSipAddressSpace
 When set to True, indicates that the users homed on Skype for Business Online use the same SIP domain as users homed on the on-premises version of Skype for Business Server.
-The default value is False, meaning that the two sets of users gave have different SIP domains.
+The default value is False, meaning that the two sets of users have different SIP domains.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -286,7 +279,7 @@ Instead, the tenant ID will automatically be filled in for you based on your con
 The Tenant parameter is primarily for use in a hybrid deployment.
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -304,7 +297,7 @@ That means that those messages will be delivered only if they were sent from a p
 The default value is False ($False).
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -323,22 +316,6 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
 Applicable: Skype for Business Online
 
 Required: False

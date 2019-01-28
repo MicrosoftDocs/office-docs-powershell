@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.access.services.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAccessServiceApplication
 schema: 2.0.0
@@ -27,14 +27,14 @@ Set-SPAccessServiceApplication [-Identity] <SPAccessServiceApplicationPipeBind>
 The `Set-SPAccessServiceApplication` cmdlet sets the global runtime properties of an existing Access Services application in SharePoint Server.
 The changes made to the properties by using this cmdlet affect all machines in the farm on which this Access Services application runs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------EXAMPLE 1------------------
 ```
-PS C:\>Set-SPAccessServiceApplication -identity "MyAccessService" -RequestDurationMax 100
+Set-SPAccessServiceApplication -identity "MyAccessService" -RequestDurationMax 100
 ```
 
 This example sets the Access Services application named MyAccessService to let requests take up to 100 seconds before they time out.
@@ -42,7 +42,7 @@ This example sets the Access Services application named MyAccessService to let r
 
 ### ------------EXAMPLE 2------------------
 ```
-PS C:\>Get-SPAccessServiceApplication | Set-SPAccessServiceApplication -SessionsPerUserMax 5
+Get-SPAccessServiceApplication | Set-SPAccessServiceApplication -SessionsPerUserMax 5
 ```
 
 This example sets every Access Services application in the farm to allow up to five sessions per user on each back-end application server computer on which Access Services runs.
@@ -52,7 +52,7 @@ First, every Access Services application is retrieved and then a new value is se
 
 ### ------------EXAMPLE 3------------------
 ```
-PS C:\>Get-SPAccessServiceApplication | where {$_.RowsMax -gt 50000 } | Set-SPAccessServiceApplication -RowsMax 50000
+Get-SPAccessServiceApplication | where {$_.RowsMax -gt 50000 } | Set-SPAccessServiceApplication -RowsMax 50000
 ```
 
 This example sets every Access Services application in the farm that allows more than 50,000 rows to be returned from, or used in, a query and then sets the service application to allow up to 50,000 rows only.
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

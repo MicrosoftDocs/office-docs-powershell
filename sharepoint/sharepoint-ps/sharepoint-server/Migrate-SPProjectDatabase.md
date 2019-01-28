@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: Project Server 2016, Project Server 2019
 title: Migrate-SPProjectDatabase
 schema: 2.0.0
@@ -27,7 +27,7 @@ Server and the SharePoint farm account must have full access to the Project Serv
 
 ### Example 1 
 ```
-PS C:\>Migrate-SPProjectDatabase -Name ProjectDB1 -SiteCollection "http://contoso1/sites/PWA"
+Migrate-SPProjectDatabase -Name ProjectDB1 -SiteCollection "http://contoso1/sites/PWA"
 ```
 
 This example will look for a Project Server 2013 database named ProjectDB1 on the same instance of SQL Server where the content database containing http://contoso1/sites/PWA is located. The data will be upgraded and copied into the site collection.
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

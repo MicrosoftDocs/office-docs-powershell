@@ -15,10 +15,18 @@ Designates what meeting features guests using Microsoft Teams will have availabl
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsGuestMeetingConfiguration [-WhatIf] [-ScreenSharingMode <Object>] [-AllowMeetNow <bool>]
- [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-AllowIPVideo <bool>] [-Force] [-Instance <Object>]
- [-AsJob]
+Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +64,7 @@ Determines whether guests can start ad-hoc meetings. Set this to TRUE to allow g
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -101,7 +109,7 @@ Accept wildcard characters: False
 The only input allowed is "Global"
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -116,7 +124,7 @@ Accept wildcard characters: False
 Pipe the existing configuration from a Get- call.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: (All)
 Aliases:
 
@@ -131,7 +139,7 @@ Accept wildcard characters: False
 Determines the mode in which guests can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -146,7 +154,7 @@ Accept wildcard characters: False
 Internal Microsoft use
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -173,30 +181,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Internal Microsoft use
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

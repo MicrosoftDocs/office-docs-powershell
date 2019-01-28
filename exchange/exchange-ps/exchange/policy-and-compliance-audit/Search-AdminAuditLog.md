@@ -43,7 +43,7 @@ This example finds all the administrator audit log entries that contain either t
 
 ### -------------------------- Example 2 --------------------------
 ```
-Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2015 -EndDate 02/12/2015 -IsSuccess $true
+Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2018 -EndDate 02/12/2018 -IsSuccess $true
 ```
 
 This example finds all the administrator audit log entries that match the following criteria:
@@ -52,9 +52,9 @@ This example finds all the administrator audit log entries that match the follow
 
 - Parameters: UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
 
-- StartDate: 01/24/2015
+- StartDate: 01/24/2018
 
-- EndDate: 02/12/2015
+- EndDate: 02/12/2018
 
 The command completed successfully
 
@@ -69,10 +69,10 @@ First, store the audit log entries in a temporary variable. Then, iterate throug
 
 ### -------------------------- Example 4 --------------------------
 ```
-Search-AdminAuditLog -ExternalAccess $true -StartDate 09/17/2015 -EndDate 10/02/2015
+Search-AdminAuditLog -ExternalAccess $true -StartDate 09/17/2018 -EndDate 10/02/2018
 ```
 
-This example returns entries in the administrator audit log of an Exchange Online organization for cmdlets run by Microsoft datacenter administrators between September 17, 2015 and October 2, 2015.
+This example returns entries in the administrator audit log of an Exchange Online organization for cmdlets run by Microsoft datacenter administrators between September 17, 2018 and October 2, 2018.
 
 ## PARAMETERS
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Install-SPWebPartPack
 schema: 2.0.0
@@ -30,7 +30,7 @@ Install-SPWebPartPack [-Name] <String> [-AssignmentCollection <SPAssignmentColle
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Install-SPWebPartPack cmdlet installs the Web Part package, at the LiteralPath parameter location, in the local farm.
 The Web Part package can be installed in a specific Web application by using the WebApplication parameter.
@@ -43,13 +43,13 @@ Assemblies in the GAC are granted FullTrust permission, which gives this package
 
 Use the Force parameter to install the package to overwrite any existing Web Part package with the same name or installed in the same location.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Install-SPWebPartPack "MyCustomWebPartPack" -LiteralPath "C:\mywebpart.wpp" -GlobalInstall
+Install-SPWebPartPack "MyCustomWebPartPack" -LiteralPath "C:\mywebpart.wpp" -GlobalInstall
 ```
 
 This example installs the Web Part Package with the name MyCustomWebPartPack globally in the farm from the path c:/mywebpart.wpp.
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

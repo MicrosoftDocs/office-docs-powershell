@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPUser
 schema: 2.0.0
@@ -25,13 +25,13 @@ The Get-SPUser cmdlet returns all SharePoint user accounts that match the scope 
 
 The Identity parameter can use the alias of a user for returning exact matches.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
+Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
 ```
 
 This example returns all members of the SharePoint group Viewers on the site https://sharepoint.contoso.com.
@@ -39,14 +39,14 @@ This example returns all members of the SharePoint group Viewers on the site htt
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
 ```
 
 This example returns the specific user identified via Windows Claims on the site https://sharepoint.contoso.com.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-PS C:\>Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
 ```
 
 This example returns the specific user identified via Classic Windows authentication on the site https://sharepoint.contoso.com.
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -24,12 +24,12 @@ New-ComplianceSearchAction [-SearchName] <String[]> [-Export]
  [-ArchiveFormat <ComplianceExportArchiveFormat>]
  [-Confirm]
  [-FileTypeExclusionsForUnindexedItems <String[]>]
- [-EnableDedupe <Boolean>]
+ [-EnableDedupe <$true | $false>]
  [-ExchangeArchiveFormat <ComplianceExportArchiveFormat>]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
  [-IncludeCredential]
- [-IncludeSharePointDocumentVersions <Boolean>]
+ [-IncludeSharePointDocumentVersions <$true | $false>]
  [-JobOptions <Int32>]
  [-NotifyEmail <String>]
  [-NotifyEmailCC <String>]
@@ -65,14 +65,13 @@ New-ComplianceSearchAction [-SearchName] <String[]> [-Preview]
 
 ### Purge
 ```
-New-ComplianceSearchAction [-SearchName] <String[]> [-Purge]
+New-ComplianceSearchAction [-SearchName] <String[]> [-Purge] [-PurgeType <ComplianceDestroyType>]
  [-ActionName <String>]
  [-Confirm]
  [-Force]
  [-Format <ComplianceDataTransferFormat>]
  [-IncludeCredential]
  [-JobOptions <Int32>]
- [-PurgeType <ComplianceDestroyType>]
  [-Region <String>]
  [-ReferenceActionName <String>]
  [-RetryOnError]
@@ -208,7 +207,7 @@ The EnableDedupe parameter eliminates duplication of messages when you export co
 - $false: Export all copies of a message if the same message exists in multiple folders or mailboxes. This is the default value.
 
 ```yaml
-Type: Boolean
+Type: $true | $false
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -310,9 +309,9 @@ The Format parameter specifies the format of the search results when you use the
 
 - FxStream: Export to PST files. This is the only option that's available when you export search results from the Security & Compliance Center.
 
-- Mime: Export to .eml messsage files. This the default value when you use cmdlets to export the search results.
+- Mime: Export to .eml message files. This the default value when you use cmdlets to export the search results.
 
-- Message: Export to .msg messsage files.
+- Message: Export to .msg message files.
 
 - BodyText: Export to .txt files.
 
@@ -353,7 +352,7 @@ The IncludeSharePointDocumentVersions parameter specifies whether to export prev
 - $false: Export only the current published version of the topic. This is the default value.
 
 ```yaml
-Type: Boolean
+Type: $true | $false
 Parameter Sets: Export
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -420,7 +419,7 @@ Accept wildcard characters: False
 ### -Preview
 The Preview switch specifies the action for the content search is to preview the results that match the search criteria. You don't need to specify a value with this switch.
 
-In the Security & Compliance Center, this parameter requires the Preivew role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
+In the Security & Compliance Center, this parameter requires the Preview role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
 
 ```yaml
 Type: SwitchParameter
@@ -437,9 +436,15 @@ Accept wildcard characters: False
 ### -Purge
 The Purge switch specifies the action for the content search is to remove items that match the search criteria. You don't need to specify a value with this switch.
 
-Note that a maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
+Notes:
 
-Additionally, unindexed items aren't removed from mailboxes when you use this switch.
+- A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
+
+- You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see Search for and delete email messages in your Office 365 organization (https://docs.microsoft.com/office365/securitycompliance/search-for-and-delete-messages-in-your-organization).
+
+- Unindexed items aren't removed from mailboxes when you use this switch.
+
+- The value of the PurgeType parameter controls how the items are removed.
 
 ```yaml
 Type: SwitchParameter
@@ -454,9 +459,11 @@ Accept wildcard characters: False
 ```
 
 ### -PurgeType
-The PurgeType parameter specifies how to remove items when the action is Purge.
+The PurgeType parameter specifies how to remove items when the action is Purge. Valid values are:
 
-The valid value for this parameter is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
+- SoftDelete: Purged items are recoverable by users until the deleted item retention period expires.
+
+- HardDelete: Purged items are marked for permanent removal from the mailbox and will be permanently removed the next time the mailbox is processed by the Managed Folder Assistant. If single item recovery is enabled on the mailbox, purged items will be permanently removed after the deleted item retention period expires.
 
 ```yaml
 Type: ComplianceDestroyType
@@ -552,7 +559,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scenario
-In the Security & Compliance Center, this parameter requires the Preivew role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
+In the Security & Compliance Center, this parameter requires the Preview role. By default, the Preview role is assigned only to the eDiscovery Manager role group.
 
 The Scenario parameter specifies the scenario type when you use the Export switch. Valid values are:
 
@@ -625,7 +632,7 @@ Accept wildcard characters: False
 ### -SearchNames
 This parameter is available only in the cloud-based service.
 
-The SearchNames parameter specifies the names of the existing content searches to associate with the content search action. You separate the content searche names by commas.
+The SearchNames parameter specifies the names of the existing content searches to associate with the content search action. You separate the content search names by commas.
 
 You can find content search names by running the command Get-ComplianceSearch | Format-Table -Auto Name,Status.
 

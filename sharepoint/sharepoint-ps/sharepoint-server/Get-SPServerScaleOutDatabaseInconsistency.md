@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPServerScaleOutDatabaseInconsistency
 schema: 2.0.0
@@ -34,7 +34,7 @@ Use the Get-SPServerScaleOutDatabaseInconsistency cmdlet to return all inconsist
 ```
 C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-PS C:\>Get-SPServerScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
+Get-SPServerScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
 ```
 
 This example gets all the scale-out inconsistencies for the given service application.
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

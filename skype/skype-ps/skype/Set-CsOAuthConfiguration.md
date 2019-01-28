@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsOAuthConfiguration
 schema: 2.0.0
@@ -17,15 +17,16 @@ This cmdlet was introduced in Lync Server 2013.
 
 ### Identity (Default)
 ```
-Set-CsOAuthConfiguration [[-Identity] <XdsIdentity>] [-AdditionalAudienceUrls <String>] [-AlternateAudienceUrl <String>] 
-[-ClientAdalAuthOverride <ClientAdalAuthOverride>] [-ClientAuthorizationOAuthServerIdentity <String>] [-Confirm] 
-[-ExchangeAutodiscoverAllowedDomains <String>] [-ExchangeAutodiscoverUrl <String>] [-Force] [-Instance <PSObject>] 
-[-Realm <String>] [-ServiceName <String>] [-Tenant <Guid>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOAuthConfiguration [-Tenant <Guid>] [-Realm <String>] [-ServiceName <String>]
+ [-ClientAuthorizationOAuthServerIdentity <String>] [-ExchangeAutodiscoverAllowedDomains <String>]
+ [-ExchangeAutodiscoverUrl <String>] [-ClientAdalAuthOverride <ClientAdalAuthOverride>]
+ [-AlternateAudienceUrl <String>] [-AdditionalAudienceUrls <String>] [[-Identity] <XdsIdentity>] [-Force]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsOAuthConfiguration [-Confirm] [-Force] [-Instance <PSObject>] [-Tenant <Guid>] [-WhatIf]
+Set-CsOAuthConfiguration [-Tenant <Guid>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -58,6 +59,7 @@ In this example, the Realm property is set to "contoso.com".
 ### -Confirm
 Prompts you for confirmation before executing the command.
 
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -75,7 +77,8 @@ Accept wildcard characters: False
 Collection of domains that autodiscover requests can be redirected to.
 For example:
 
-`-ExchangeAutodiscoverAllowedDomains "*.contoso.com;*.fabrikam.com"`
+`-ExchangeAutodiscoverAllowedDomains "*.contoso.com","*.fabrikam.com"`
+
 
 ```yaml
 Type: String
@@ -93,6 +96,7 @@ Accept wildcard characters: False
 ### -ExchangeAutodiscoverUrl
 URL for the autodiscovery service used by the Office 365 version of Microsoft Exchange Server.
 
+
 ```yaml
 Type: String
 Parameter Sets: Identity, (All)
@@ -108,6 +112,7 @@ Accept wildcard characters: False
 
 ### -Force
 Suppresses the display of any non-fatal error message that might occur when running the command.
+
 
 ```yaml
 Type: SwitchParameter
@@ -128,6 +133,7 @@ Because you can only have a single, global instance of these settings, you do no
 You can, however, use the following syntax to reference the global settings:
 
 `-Identity global`
+
 
 ```yaml
 Type: XdsIdentity
@@ -178,6 +184,7 @@ Accept wildcard characters: False
 ### -ServiceName
 Globally unique identifier (GUID) assigned to the OAuth service.
 
+
 ```yaml
 Type: String
 Parameter Sets: Identity, (All)
@@ -201,11 +208,12 @@ You can return the tenant ID for each of your tenants by running this command:
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
+
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -216,6 +224,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Describes what would happen if you executed the command without actually executing the command.
+
 
 ```yaml
 Type: SwitchParameter
@@ -231,9 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalAudienceUrls
-An OAuth token includes an audience ("aud") claim that identifies the intended recipient of the token, in this case your Skype for Business Server. The audience is typically expressed as a URL, such as https://skypeforbusiness.contoso.com, and is validated by the Skype for Business authentication module. In some cases, depending on your authentication providers and/or other applications used in your organization, it may be necessary to allow multiple audience values to be used and recognized as valid by your Skype for Business server.
-
-The AlternateAudienceUrl and AdditionalAudienceUrls parameters allow you to specify one or more additional audience values that will be recognized as valid by your Skype for Business server.
+{{Fill AdditionalAudienceUrls Description}}
 
 ```yaml
 Type: String
@@ -249,9 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateAudienceUrl
-An OAuth token includes an audience ("aud") claim that identifies the intended recipient of the token, in this case your Skype for Business Server. The audience is typically expressed as a URL, such as https://skypeforbusiness.contoso.com, and is validated by the Skype for Business authentication module. In some cases, depending on your authentication providers and/or other applications used in your organization, it may be necessary to allow multiple audience values to be used and recognized as valid by your Skype for Business server.
-
-The AlternateAudienceUrl and AdditionalAudienceUrls parameters allow you to specify one or more additional audience values that will be recognized as valid by your Skype for Business server.
+{{Fill AlternateAudienceUrl Description}}
 
 ```yaml
 Type: String
@@ -267,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAdalAuthOverride
-Modern authentication using Azure ADAL (Active Directory Authentication Library) is enabled by default for Skype for Business Online. For authentication based on ADFS/MEX (metadata exchange), ADAL can be disabled by setting ClientAdalAuthOverride to Disallowed.
+{{Fill ClientAdalAuthOverride Description}}
 
 ```yaml
 Type: ClientAdalAuthOverride
@@ -286,31 +291,12 @@ Accept wildcard characters: False
 ### -ClientAuthorizationOAuthServerIdentity
 URI of the OAuth server used for client authentication.
 
+
 ```yaml
 Type: String
 Parameter Sets: Identity, (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-Indicates that this cmdlet runs as a background job.
-
-When you specify the AsJob parameter, the command immediately returns an object that represents the background job. You can continue to work in the session while the job finishes. The job is created on the local computer and the results from the Skype for Business Online session are automatically returned to the local computer. To get the job results, use the Receive-Job cmdlet.
-
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-6) and [about_Remote_Jobs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-6).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -336,5 +322,6 @@ Instead, the `Set-CsOAuthConfiguration` cmdlet modifies existing instances of th
 ## NOTES
 
 ## RELATED LINKS
+
 [Get-CsOAuthConfiguration](Get-CsOAuthConfiguration.md)
 

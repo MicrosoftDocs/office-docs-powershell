@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-The New-SyncMailPublicFolder cmdlet is used by the Import-MailPublicFoldersForMigration.ps1 and Sync-MailPublicFolders.ps1 scripts to create mail-enabled public folder recipient objects in Azure Active Directory in Office 365 (the scripts synchronize mail-enabled public folder objects from the source on-premises Exchange organization to Office 365). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
+The New-SyncMailPublicFolder cmdlet is used by the Import-MailPublicFoldersForMigration.ps1 and Sync-MailPublicFolders.ps1 scripts to create mail-enabled public folder recipient objects in Exchange Online in Office 365 (the scripts synchronize mail-enabled public folder objects from the source on-premises Exchange organization to Office 365). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -61,7 +61,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 

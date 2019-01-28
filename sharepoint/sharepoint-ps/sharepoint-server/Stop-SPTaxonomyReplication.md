@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPTaxonomyReplication
 schema: 2.0.0
@@ -24,7 +24,7 @@ Use the Stop-SPTaxonomyReplication cmdlet to terminate Hybrid SharePoint Taxonom
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Stop-SPTaxonomyReplication -Credential (Get-Credential)
+Stop-SPTaxonomyReplication -Credential (Get-Credential)
 ```
 
 This example performs a full replication and deletes the Taxonomy Groups Replication timer job. If the full replication fails, you can run the cmdlet again.  The credential is a SharePoint Online tenant administrator credential.
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

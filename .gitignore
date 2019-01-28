@@ -7,3 +7,6 @@ _themes*/
 .local/
 
 .openpublishing.buildcore.ps1
+**/node_modules
+
+\.idea/

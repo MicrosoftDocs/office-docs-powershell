@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Resume-SPStateServiceDatabase
 schema: 2.0.0
@@ -21,15 +21,15 @@ Resume-SPStateServiceDatabase [-Identity] <SPStateDatabasePipeBind>
 ## DESCRIPTION
 The `Resume-SPStateServiceDatabase` cmdlet resumes a paused state service database, an operation that adds the state service database to the set of databases that can receive new data as required by SharePoint Server applications.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE------------------
 ```
-PS C:\>$db = Get-SPStateServiceDatabase -Identity StateServceDbName
-PS C:\>Resume-SPStateServiceDatabase -Identity $db
+$db = Get-SPStateServiceDatabase -Identity StateServceDbName
+Resume-SPStateServiceDatabase -Identity $db
 ```
 
 This example resumes a paused state service database.
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

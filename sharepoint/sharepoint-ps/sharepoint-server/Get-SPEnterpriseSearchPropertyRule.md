@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchPropertyRule
 schema: 2.0.0
@@ -22,14 +22,14 @@ The Get-SPEnterpriseSearchPropertyRule cmdlet returns an instance of a property 
 The value for the condition is set in a separate step.
 Such a rule can be used in result item types, to group the results based on the condition of a result property.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName 'ContentTypeId' -Operator 'StartsWith'
-PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName 'ContentTypeId' -Operator 'StartsWith'
+$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
 ```
 
 This example returns a rule for the property "ContentTypeId", where the condition is that the property shall start with a specific value.
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

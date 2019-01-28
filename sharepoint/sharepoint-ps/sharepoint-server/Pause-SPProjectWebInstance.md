@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Pause-SPProjectWebInstance
 schema: 2.0.0
@@ -21,16 +21,16 @@ Pause-SPProjectWebInstance [-Identity] <ProjectInstancePipeBind>
 ## DESCRIPTION
 Switches the specified instance of Project Web App to read-only, preventing any changes from being made through the Project Server Interface (PSI) or Client Server Object Model (CSOM). While in this state the database is not actually read-only and the Queue service can still write to the database, but it will not pick up any new jobs to process. This cmdlet is used to allow the queue to empty out before an administrator switches the database to read-only.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
-PS C:\>$instance = Get-SPProjectWebInstance -ServiceApplication $sa
-PS C:\>Pause-SPProjectWebInstance -Identity $instance
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+$instance = Get-SPProjectWebInstance -ServiceApplication $sa
+Pause-SPProjectWebInstance -Identity $instance
 ```
 
 Pauses the Project Web Server Instance in the Project Web Application Service Application.
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

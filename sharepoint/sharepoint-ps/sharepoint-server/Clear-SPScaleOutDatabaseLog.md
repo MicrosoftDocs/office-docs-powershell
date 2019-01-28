@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPScaleOutDatabaseLog
 schema: 2.0.0
@@ -21,15 +21,15 @@ Clear-SPScaleOutDatabaseLog -Database <SPDatabasePipeBind> [-AssignmentCollectio
 ## DESCRIPTION
 Use the Clear-SPScaleOutDatabaseLog cmdlet clears all scale-out logs in the specified scale-out database unless there is a scale-out log entry newer than the specified time-out value.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### -----------EXAMPLE------- 
 ```
-PS C:\>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-PS C:\>$database = $databases[0]
-PS C:\>Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
 ```
 
 This example removes all scale-out log entries in the first scale-out database of the specified service application unless there is a scale-out log entry which is more recent than 30 minutes.
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

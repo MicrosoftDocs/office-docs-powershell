@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppAutoProvisionConnection
 schema: 2.0.0
@@ -43,18 +43,18 @@ Set-SPAppAutoProvisionConnection [-Remove] [-AssignmentCollection <SPAssignmentC
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the `Set-SPAppAutoProvisionConnection` cmdlet to set provision connection settings for a specified app.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
+Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
 ```
 
 This example configures remote web host to be used provision apps that use this functionality for the default site subscription server on http://SPremotewebhost.
@@ -64,7 +64,7 @@ This example configures remote web host to be used provision apps that use this 
 ```
 C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
 
-PS C:\>Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
 ```
 
 This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on http://SPremotewebhost.
@@ -72,7 +72,7 @@ This example configures remote web host to be used provision apps that use this 
 
 ### --------------------EXAMPLE 3---------------------
 ```
-PS C:\>Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
 ```
 
 This example updates the endpoint of the already configured remote web host server https://SPRemotewebhost for the default site subscription.
@@ -80,7 +80,7 @@ This example updates the endpoint of the already configured remote web host serv
 
 ### --------------------EXAMPLE 4---------------------
 ```
-PS C:\>Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
 ```
 
 This example removes the remote web host configuration for the default site subscription.
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

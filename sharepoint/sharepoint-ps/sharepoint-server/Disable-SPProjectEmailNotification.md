@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 applicable: Project Server 2016, Project Server 2019
 title: Disable-SPProjectEmailNotification
 schema: 2.0.0
@@ -24,7 +24,7 @@ Turns off the Project Web App site level setting for email notifications in Proj
 
 ### Example 1 
 ```
-PS C:\>Disable-SPProjectEmailNotification -Url http://pwa_site
+Disable-SPProjectEmailNotification -Url http://pwa_site
 ```
 
 Disables Project Server email notifications on the Project Web App site, http://pwa_site.
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

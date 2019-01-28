@@ -37,10 +37,10 @@ This example creates a new case hold rule named 2016 Budget Spreadsheets and add
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2017"
+New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2018"
 ```
 
-This example places email messages received by the recipients between December 1, 2016 and December 31, 2017 on hold.
+This example places email messages received by the recipients between December 1, 2016 and December 31, 2018 on hold.
 
 ## PARAMETERS
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-The Policy parameter specifies the case holdpolicy that contains the rule. You can use any value that uniquely identifies the policy. For example:
+The Policy parameter specifies the case hold policy that contains the rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 

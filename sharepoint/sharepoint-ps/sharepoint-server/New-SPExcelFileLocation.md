@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelFileLocation
 schema: 2.0.0
@@ -36,14 +36,14 @@ The properties that the trusted file location uses are determined through compar
 The longest match takes precedence.
 For example, if http://portal/site/ and http://portal/site/subsite are trusted locations and you load a workbook from the subsite, the application uses the properties from the subsite trusted location because it has the longest matching address.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address "http://myPortal/myTeam" -includechildren -locationType SharePoint -description "This is my team's site on myPortal." -workbooksizemax 50 -externaldataallowed DclAndEmbedded -WarnOnDataRefresh:$false
+Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address "http://myPortal/myTeam" -includechildren -locationType SharePoint -description "This is my team's site on myPortal." -workbooksizemax 50 -externaldataallowed DclAndEmbedded -WarnOnDataRefresh:$false
 ```
 
 This example adds a new trusted file location to the list of trusted file locations that is in the Excel Services Application Web service application named MyExcelService.
@@ -56,7 +56,7 @@ A warning message that the workbook is attempting to refresh external data will 
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address http://myPortal/myTeam/managers -locationType SharePoint -description "This is the manager's subsite for myTeam."
+Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address http://myPortal/myTeam/managers -locationType SharePoint -description "This is the manager's subsite for myTeam."
 ```
 
 This example adds a new trusted file location to the list of trusted file locations that is in the Excel Services Application Web service application named MyExcelService with a given address and description.
@@ -588,7 +588,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

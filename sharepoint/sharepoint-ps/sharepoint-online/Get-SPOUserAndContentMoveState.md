@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Get-SPOUserAndContentMoveState
 schema: 2.0.0
@@ -51,7 +51,7 @@ Obtain the move state by OneDrive Move Job ID
 ### Example 2
 
 ```Powershell
-Get-SPOUserAndContentMoveState -movestate NotStarted
+Get-SPOUserAndContentMoveState -MoveState NotStarted
 ```
 Getting which moves are being done in a particular state
 ###Example 3

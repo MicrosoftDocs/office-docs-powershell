@@ -9,19 +9,25 @@ monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 # New-SiteMailbox
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange. Site mailboxes were removed from Exchange Online and SharePoint Online in 2017.
 
-The New-SiteMailbox cmdlet is used by Microsoft SharePoint and Microsoft Exchange user interfaces to create site mailboxes. We recommend that you don't use this cmdlet in the Exchange Management Shell; instead use SharePoint to create the site mailbox. This cmdlet should only be used for diagnostic and troubleshooting purposes.
+The New-SiteMailbox cmdlet is used by the Microsoft SharePoint and Microsoft Exchange user interfaces to create site mailboxes. We recommend that you don't use this cmdlet in the Exchange Management Shell; instead use SharePoint to create the site mailbox. This cmdlet should only be used for diagnostic and troubleshooting purposes.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-SiteMailbox [[-DisplayName] <String>] -SharePointUrl <Uri> [-Alias <String>] [-Confirm]
- [-Database <DatabaseIdParameter>] [-DomainController <Fqdn>] [-Force] [-Name <String>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>] [-OverrideRecipientQuotas] [-WhatIf]
- [<CommonParameters>]
+New-SiteMailbox [[-DisplayName] <String>] -SharePointUrl <Uri>
+ [-Alias <String>]
+ [-Confirm]
+ [-Database <DatabaseIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Force]
+ [-Name <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-OverrideRecipientQuotas]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,8 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-This parameter is available only in on-premises Exchange.
-
 The Database parameter specifies the identity of the mailbox database on which the mailbox data for the site mailbox resides.
 
 ```yaml
@@ -120,8 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml

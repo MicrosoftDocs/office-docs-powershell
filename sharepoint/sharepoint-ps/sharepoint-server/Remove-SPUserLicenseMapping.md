@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPUserLicenseMapping
 schema: 2.0.0
@@ -21,14 +21,14 @@ Remove-SPUserLicenseMapping -Identity <System.Collections.Generic.List`1[System.
 ## DESCRIPTION
 The `Remove-SPUserLicenseMapping` cmdlet uses the Identity parameter to remove a claim-to-SharePoint user license mapping.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ----------------EXAMPLE---------------
 ```
-PS C:\>Remove-SPUserLicenseMapping -Identity e69ba7cc-4be0-4723-ad63-58d06173afff
+Remove-SPUserLicenseMapping -Identity e69ba7cc-4be0-4723-ad63-58d06173afff
 ```
 
 This example removes the claim-to-license mapping that has the unique ID, e69ba7cc-4be0-4723-ad63-58d06173afff.
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

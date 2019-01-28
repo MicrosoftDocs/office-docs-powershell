@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectPermissionMode
 schema: 2.0.0
@@ -23,13 +23,13 @@ The `Set-SPProjectPermissionMode` cmdlet changes the permission mode for the spe
 
 Switching security modes deletes all permissions configuration information for the specified Project Web App instance and reverts to the default settings for the specified mode.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-------------------
 ```
-PS C:\>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode ProjectServer
+Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode ProjectServer
 ```
 
 This example shows the syntax for transitioning a server into Project Server permission mode.
@@ -37,7 +37,7 @@ This example shows the syntax for transitioning a server into Project Server per
 
 ### --------------EXAMPLE 2-------------------
 ```
-PS C:\>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode SharePoint
+Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode SharePoint
 ```
 
 This example shows the syntax for transitioning a server into SharePoint permission mode.
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

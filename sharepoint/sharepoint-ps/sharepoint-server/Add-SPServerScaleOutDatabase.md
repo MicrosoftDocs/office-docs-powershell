@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPServerScaleOutDatabase
 schema: 2.0.0
@@ -29,8 +29,8 @@ Use the Add-SPServerScaleOutDatabase cmdlet to add an existing scale-out databas
 
 ### -------------EXAMPLE------------ 
 ```
-PS C:\>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
-PS C:\>Add-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
+Add-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example adds a new or existing scale out database into a specific service application.
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

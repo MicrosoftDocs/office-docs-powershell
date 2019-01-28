@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Enable-ProjectServerLicense
 schema: 2.0.0
@@ -24,7 +24,7 @@ Enables Project Server functionality on the farm.
 
 ### Example 1 
 ```
-PS C:\>Enable-ProjectServerLicense -Key XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+Enable-ProjectServerLicense -Key XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 ```
 
 This example enables all Project Server functionality in the farm. The type of license being enabled (full or trial) depends on the key that is passed in.
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

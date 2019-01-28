@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: 
 applicable: Skype for Business Online
 title: Grant-CsCallerIdPolicy
 schema: 2.0.0
@@ -8,28 +8,26 @@ schema: 2.0.0
 # Grant-CsCallerIdPolicy
 
 ## SYNOPSIS
-The CsCallerIdPolicy cmdlets have been deprecated. Please use the CsCallingLineIdentity cmdlets to manage caller ID policies for your organization.
+Provide the topic introduction here.
 
 ## SYNTAX
 
 ```
-Grant-CsCallerIdPolicy [[-Identity] <Object>] [[-PolicyName] <Object>] [-Confirm] [-DomainController <Object>]
- [-PassThru] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Grant-CsCallerIdPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+ [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The CsCallerIdPolicy cmdlets have been deprecated. Please use the CsCallingLineIdentity cmdlets to manage caller ID policies for your organization.
+Provide the detailed description here.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
-
 Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
-
 
 ## PARAMETERS
 
@@ -37,7 +35,7 @@ Insert descriptive text for example 1.
 PARAMVALUE: UserIdParameter
 
 ```yaml
-Type: Object
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -53,7 +51,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -85,7 +83,7 @@ Accept wildcard characters: False
 PARAMVALUE: Fqdn
 
 ```yaml
-Type: Object
+Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -117,7 +115,7 @@ Accept wildcard characters: False
 PARAMVALUE: Guid
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

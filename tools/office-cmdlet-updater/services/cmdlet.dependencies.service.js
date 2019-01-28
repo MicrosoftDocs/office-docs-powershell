@@ -81,7 +81,7 @@ class CmdletDependenciesService {
 
 	async preInstallStuffHub() {
 		// TODO: install module when installation error will be fix
-		// await this.ps.invokeCommand(commands.STUFFHUB_INSTALL);
+		await this.ps.invokeCommand(commands.STUFFHUB_INSTALL);
 	}
 
 	_getCredentialsFromConfig() {

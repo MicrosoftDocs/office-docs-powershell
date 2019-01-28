@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.access.server.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAccessServicesDatabaseServerGroup
 schema: 2.0.0
@@ -25,7 +25,7 @@ Returns a database server group associated with the given service context.
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServerGroup -ServiceContext http://siteUrl
+Get-SPAccessServicesDatabaseServerGroup -ServiceContext http://siteUrl
 ```
 Returns the database server group associated with the site, http://siteUrl.
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

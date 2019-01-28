@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectUserSyncOffPeakSyncThreshold
 schema: 2.0.0
@@ -26,13 +26,13 @@ Set it to a negative value to reset to the default of no threshold configured.
 
 This cmdlet only works in Project Server Permission mode.
 
-For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
+For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPProjectUserSyncOffPeakSyncThreshold -URL http://contoso/PWA -Threshold 900000
+Set-SPProjectUserSyncOffPeakSyncThreshold -URL http://contoso/PWA -Threshold 900000
 ```
 
 This example sets the sync off-peak threshold for the Project Web App instance at http//contoso-AppSrv/PWA to 900000.
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

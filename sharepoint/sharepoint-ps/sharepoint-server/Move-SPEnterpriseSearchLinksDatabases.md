@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPEnterpriseSearchLinksDatabases
 schema: 2.0.0
@@ -26,18 +26,18 @@ After the move has finished, the old databases can be removed.
 
 A links database stores query logging and analytics information.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### --------EXAMPLE-------- 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceapplication
-PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
-PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
-PS C:\>$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
-PS C:\>$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
-PS C:\>$ssa | Move-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
+$ssa = Get-SPEnterpriseSearchServiceapplication
+$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
+$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
+$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
+$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
+$ssa | Move-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
 ```
 
 This example adds 3 new links databases and uses Move-SPEnterpriseSearchLinksDatabases to move data from the current links databases into new databases.
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters http://go.microsoft.com/fwlink/?LinkID=113216 (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters https://go.microsoft.com/fwlink/?LinkID=113216 (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

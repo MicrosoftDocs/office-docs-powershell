@@ -748,7 +748,7 @@ Accept wildcard characters: False
 ### -ExceptIfReceivedAfterDate
 The ExceptIfReceivedAfterDate parameter specifies an exception for the Inbox rule that looks for messages received after the specified date.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 The corresponding condition parameter to this exception is ReceivedAfterDate.
 
@@ -767,7 +767,7 @@ Accept wildcard characters: False
 ### -ExceptIfReceivedBeforeDate
 The ExceptIfReceivedBeforeDate parameter specifies an exception for the Inbox rule that looks for messages received before the specified date.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 The corresponding condition parameter to this exception is ReceivedBeforeDate.
 
@@ -930,7 +930,7 @@ When you enter a value, qualify the value with one of the following units:
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-You need to use this parameter with the ExceptIfWithinSizeRangeMainimum parameter, and the value of this parameter must be greater than the value of ExceptIfWithinSizeRangeMinimum.
+You need to use this parameter with the ExceptIfWithinSizeRangeMinimum parameter, and the value of this parameter must be greater than the value of ExceptIfWithinSizeRangeMinimum.
 
 The corresponding condition parameter to this exception is WithinSizeRangeMaximum.
 
@@ -1508,7 +1508,7 @@ Accept wildcard characters: False
 ### -ReceivedAfterDate
 The ReceivedAfterDate parameter specifies a condition for the Inbox rule that looks for messages received after the specified date.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 The corresponding exception parameter to this condition is ExceptIfReceivedAfterDate.
 
@@ -1527,7 +1527,7 @@ Accept wildcard characters: False
 ### -ReceivedBeforeDate
 The ReceivedBeforeDate parameter specifies a condition for the Inbox rule that looks for messages received before the specified date.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 The corresponding exception parameter to this condition is ExceptIfReceivedBeforeDate.
 
@@ -1563,7 +1563,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectTo
-The RedirectTo parameter specifies an action for the Inbox rule that recdirects the message to the specified recipient. You can use any value that uniquely identifies the recipient.
+The RedirectTo parameter specifies an action for the Inbox rule that redirects the message to the specified recipient. You can use any value that uniquely identifies the recipient.
 
 For example:
 

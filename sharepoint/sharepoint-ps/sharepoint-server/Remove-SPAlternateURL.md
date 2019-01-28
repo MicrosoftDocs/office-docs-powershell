@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPAlternateURL
 schema: 2.0.0
@@ -21,14 +21,14 @@ Remove-SPAlternateURL [-Identity] <SPAlternateUrlPipeBind> [-AssignmentCollectio
 ## DESCRIPTION
 The `Remove-SPAlternateUrl` cmdlet completely deletes the alternate URL specified by the Identity parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Remove-SPAlternateURL -WebApplication http://sitename -Zone Extranet
+Remove-SPAlternateURL -WebApplication http://sitename -Zone Extranet
 ```
 
 This example deletes the extranet URL for the given Web application.
@@ -36,7 +36,7 @@ This example deletes the extranet URL for the given Web application.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Remove-SPAlternateURL
+Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Remove-SPAlternateURL
 ```
 
 This example removes all extranet alternate URLs in the farm.
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Restore-SPEnterpriseSearchServiceApplicationIndex
 schema: 2.0.0
@@ -30,23 +30,23 @@ Restore-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchSe
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 This cmdlet will clear the complete search index for a specified search service application and replace it with the search index from the specified backup files.
 
 This cmdlet supports parameter sets.
 The first set of parameters is for Application Configuration Attach mode and the second set of parameters is for Search Application Attach mode.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
-PS C:\>Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
+Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
 ```
 
 This example starts a restore of the search index in the default search service application from a backup located at \\\\sample\backup\spbr0000.
@@ -54,8 +54,8 @@ This example starts a restore of the search index in the default search service 
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
-PS C:\>Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
+$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
+Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
 ```
 
 This example checks the status of the running job to restore of the search index in the search service application Search Service Application with the handle $handle .
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

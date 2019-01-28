@@ -64,10 +64,10 @@ This example retrieves the calendar diagnostic logs for Pedro Pizarro's mailbox 
 
 ### -------------------------- Example 4 --------------------------
 ```
-Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Lunch" -StartDate 7/1/2017 -EndDate 7/31/2017 | Export-Csv "C:\My Documents\Team Lunch Meeting.csv" -NoTypeInformation
+Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Lunch" -StartDate 7/1/2018 -EndDate 7/31/2018 | Export-Csv "C:\My Documents\Team Lunch Meeting.csv" -NoTypeInformation
 ```
 
-This example returns diagnostic information for meetings with the subject Team Lunch in Pedro Pizarro's mailbox in the month of July, 2017, and exports the results to the file C:\\My Documents\\Team Lunch Meeting.csv.
+This example returns diagnostic information for meetings with the subject Team Lunch in Pedro Pizarro's mailbox in the month of July, 2018, and exports the results to the file C:\\My Documents\\Team Lunch Meeting.csv.
 
 ## PARAMETERS
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingId
-The MeetingId parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGloablObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
+The MeetingId parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGlobalObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
 
 ```yaml
 Type: String
@@ -328,7 +328,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPWebApplicationAppDomain
 schema: 2.0.0
@@ -27,7 +27,7 @@ Use the New-SPWebApplicationAppDomain cmdlet to create an AppDomain entry. If yo
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication http://www.contoso.com
+New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication http://www.contoso.com
 ```
 
 Creates a new app domain for apps for SharePoint for the specified web application in the default zone.
@@ -35,7 +35,7 @@ Creates a new app domain for apps for SharePoint for the specified web applicati
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication http://www.contoso.com -Zone Internet -Port 10000
+New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication http://www.contoso.com -Zone Internet -Port 10000
 ```
 
 Creates a new app domain for apps for SharePoint for the specified web application in the internet zone at port 10000.
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

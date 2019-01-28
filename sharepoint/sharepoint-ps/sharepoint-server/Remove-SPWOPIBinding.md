@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPWOPIBinding
 schema: 2.0.0
@@ -40,14 +40,14 @@ If you remove all the bindings on the SharePoint farm where this cmdlet is run, 
 
 If you want to stop using Office Web Apps for default clicks, but must preserve the bindings' discovery information and the ability for users to use the SharePoint Share by link feature to send a link to a document and allow the recipient to use Office Web Apps for that document type, use the `New-SPWOPISuppression` cmdlet instead.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-----------------
 ```
-PS C:\>Remove-SPWOPIBinding -Application "Excel"
+Remove-SPWOPIBinding -Application "Excel"
 ```
 
 This example removes all bindings for Excel on the current SharePoint farm where this cmdlet is run.
@@ -55,7 +55,7 @@ This example removes all bindings for Excel on the current SharePoint farm where
 
 ### --------------EXAMPLE 2-----------------
 ```
-PS C:\>Remove-SPWOPIBinding -All:$true
+Remove-SPWOPIBinding -All:$true
 ```
 
 This example removes all bindings on the current SharePoint farm where this cmdlet is run.
@@ -63,7 +63,7 @@ This example removes all bindings on the current SharePoint farm where this cmdl
 
 ### --------------EXAMPLE 3-----------------
 ```
-PS C:\>Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
+Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
 ```
 
 This example removes all bindings for Office Mobile Web Apps on the current SharePoint farm where this cmdlet is run.
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

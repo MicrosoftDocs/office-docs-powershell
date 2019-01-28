@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPWebApplication
 schema: 2.0.0
@@ -41,19 +41,19 @@ Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-AssignmentCollecti
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The `Set-SPWebApplication` cmdlet configures the Web application specified by the Identity parameter.
 For any settings that are zone-specific (for the Zone parameter set), the zone to configure must be provided.
 The provided zone must already exist.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Get-SPWebApplication http://somesite | Set-SPWebApplication -Zone "Extranet" -HostHeader "http://www.contoso.com" - AllowAnonymousAccess
+Get-SPWebApplication http://somesite | Set-SPWebApplication -Zone "Extranet" -HostHeader "http://www.contoso.com" - AllowAnonymousAccess
 ```
 
 This example sets the HostHeader URL for the Extranet zone of the given Web application as http://www.contoso.com and enables anonymous access.
@@ -401,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

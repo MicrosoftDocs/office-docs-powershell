@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMobilityPolicy
 schema: 2.0.0
@@ -17,36 +17,26 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 ```
-Set-CsMobilityPolicy [[-Identity] <XdsIdentity>] [-Confirm] [-Description <String>]
- [-EnableIPAudioVideo <Boolean>] [-EnableMobility <Boolean>] [-EnableOutsideVoice <Boolean>] [-Force]
- [-RequireWIFIForIPAudio <Boolean>] [-RequireWIFIForIPVideo <Boolean>] [-WhatIf]
- [-AllowCustomerExperienceImprovementProgram <Boolean>] [-AllowExchangeConnectivity <Boolean>]
- [-AllowSaveCallLogs <Boolean>] [-AllowSaveCredentials <Boolean>] [-AllowSaveIMHistory <Boolean>]
- [-RequireWiFiForSharing <Boolean>] [-Tenant <Guid>] [<CommonParameters>]
+Set-CsMobilityPolicy [-Tenant <Guid>] [-Description <String>] [-EnableOutsideVoice <Boolean>]
+ [-EnableMobility <Boolean>] [-EnableIPAudioVideo <Boolean>] [-RequireWIFIForIPVideo <Boolean>]
+ [-AllowCustomerExperienceImprovementProgram <Boolean>] [-RequireWiFiForSharing <Boolean>]
+ [-AllowSaveCallLogs <Boolean>] [-AllowExchangeConnectivity <Boolean>] [-AllowSaveIMHistory <Boolean>]
+ [-AllowSaveCredentials <Boolean>] [-EnablePushNotifications <Boolean>] [-EncryptAppData <Boolean>]
+ [-AllowDeviceContactsSync <Boolean>] [-RequireIntune <Boolean>] [-AllowAutomaticPstnFallback <Boolean>]
+ [-VoiceSettings <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsMobilityPolicy [-Confirm] [-Description <String>] [-EnableIPAudioVideo <Boolean>]
- [-EnableMobility <Boolean>] [-EnableOutsideVoice <Boolean>] [-Force] [-Instance <PSObject>]
- [-RequireWIFIForIPAudio <Boolean>] [-RequireWIFIForIPVideo <Boolean>] [-WhatIf]
- [-AllowCustomerExperienceImprovementProgram <Boolean>] [-AllowExchangeConnectivity <Boolean>]
- [-AllowSaveCallLogs <Boolean>] [-AllowSaveCredentials <Boolean>] [-AllowSaveIMHistory <Boolean>]
- [-RequireWiFiForSharing <Boolean>] [-Tenant <Guid>] [<CommonParameters>]
-```
-
-###  (Default)
-```
-Set-CsMobilityPolicy [[-Identity] <Object>] [-AllowAutomaticPstnFallback <Object>]
- [-AllowCustomerExperienceImprovementProgram <Object>] [-AllowDeviceContactsSync <Object>]
- [-AllowExchangeConnectivity <Object>] [-AllowSaveCallLogs <Object>] [-AllowSaveCredentials <Object>]
- [-AllowSaveIMHistory <Object>] [-BypassDualWrite <Object>] [-Confirm] [-Description <Object>]
- [-EnableIPAudioVideo <Object>] [-EnableMobility <Object>] [-EnableOutsideVoice <Object>]
- [-EnablePushNotifications <Object>] [-Force] [-Instance <Object>]
- [-RequireIntune <Object>] [-RequireWIFIForIPVideo <Object>] [-RequireWiFiForSharing <Object>]
- [-Tenant <Object>] [-VoiceSettings <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsMobilityPolicy [-Tenant <Guid>] [-Description <String>] [-EnableOutsideVoice <Boolean>]
+ [-EnableMobility <Boolean>] [-EnableIPAudioVideo <Boolean>] [-RequireWIFIForIPVideo <Boolean>]
+ [-AllowCustomerExperienceImprovementProgram <Boolean>] [-RequireWiFiForSharing <Boolean>]
+ [-AllowSaveCallLogs <Boolean>] [-AllowExchangeConnectivity <Boolean>] [-AllowSaveIMHistory <Boolean>]
+ [-AllowSaveCredentials <Boolean>] [-EnablePushNotifications <Boolean>] [-EncryptAppData <Boolean>]
+ [-AllowDeviceContactsSync <Boolean>] [-RequireIntune <Boolean>] [-AllowAutomaticPstnFallback <Boolean>]
+ [-VoiceSettings <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,7 +63,7 @@ In turn, that means that the user will not be able to use Call via Work, regardl
 
 To use Call via Work, users must be managed by a voice policy that allows simultaneous ringing.
 
-The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, Force, Identity, Instance, PipelineVariable, RequireIntune, Tenant, VoiceSettings
+The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, EncryptAppData, Force, Identity, Instance, PipelineVariable, RequireIntune, Tenant, VoiceSettings
 
 ## EXAMPLES
 
@@ -235,20 +225,6 @@ To refer to a per-user policy, use syntax similar to this:
 
 If you do not specify an Identity, then the `Set-CsMobilityPolicy` cmdlet will modify the global policy.
 
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
@@ -269,19 +245,6 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: PSObject
-Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -355,7 +318,7 @@ Accept wildcard characters: False
 {{Fill AllowAutomaticPstnFallback Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -372,7 +335,7 @@ When set to True (the default value) mobile users will be allowed to participate
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -388,7 +351,7 @@ Accept wildcard characters: False
 {{Fill AllowDeviceContactsSync Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -405,7 +368,7 @@ When set to True (the default value) users will be allowed to connect to Exchang
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -424,7 +387,7 @@ Note that this setting does not apply to Android devices.
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -440,9 +403,12 @@ Accept wildcard characters: False
 When set to True (the default value) users will be allowed to save credentials information (such as passwords) on their mobile device.
 This information can then be applied to auto-logon scenarios.
 
+Note: If a user has AllowSaveCredentials set to False in the CsMobility policy, the Skype for Business App for iOS may sign out automatically when bringing it from the background to the foreground. This is due to the password not being saved anywhere but in the iOS process memory. Once the process is killed by the iOS system, the password will no longer be available, so the user will need to enter it again. However, there is no impact if modern authenticaion is implemented.
+
+
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -459,26 +425,10 @@ When set to True (the default value) users will be allowed to save transcripts o
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named
@@ -491,7 +441,23 @@ Accept wildcard characters: False
 {{Fill EnablePushNotifications Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptAppData
+{{Fill EncryptAppData Description}}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -507,7 +473,7 @@ Accept wildcard characters: False
 {{Fill RequireIntune Description}}
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -528,7 +494,7 @@ If this value is set to False users can use the Options page to modify their sha
 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -552,7 +518,7 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 
 
 ```yaml
-Type: Object
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -574,23 +540,7 @@ Controls how audio is connected by a mobile device joining a meeting or a peer-t
 **Cellular:** Always perform a call back to the pre-defined phone number.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

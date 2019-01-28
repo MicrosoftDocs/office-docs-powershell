@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: sharepointserver.xml
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchResultItemType
 schema: 2.0.0
@@ -38,25 +38,25 @@ Example use cases:
 - Change the look of results from a particular author.
 - Add a result action to results from a particular result source as part of a custom search application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$web = Get-SPWeb http://webUrl
-PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
-PS C:\>$resultType.BuiltIn
-PS C:\>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
-PS C:\>$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
-PS C:\>$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
-PS C:\>$ruleCollection.Add($rule)
-PS C:\>$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
-PS C:\>$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-PS C:\>Set-SPEnterpriseSearchResultItemType 
+$web = Get-SPWeb http://webUrl
+$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
+$resultType.BuiltIn
+$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
+$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
+$ruleCollection.Add($rule)
+$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
+$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
+Set-SPEnterpriseSearchResultItemType 
 -Identity $resultType `
 -SearchApplication $ssa `
 -Name "CustomResultType" `
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -198,7 +198,7 @@ The Identity parameter specifies the name of the Exchange setting object. You ca
 
 - Name
 
-- Distingushed name (DN)
+- Distinguished name (DN)
 
 - GUID
 

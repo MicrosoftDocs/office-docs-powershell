@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Office.Server.Search.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchCrawlRule
 schema: 2.0.0
@@ -25,16 +25,16 @@ Set-SPEnterpriseSearchCrawlRule [-AccountName <String>] [-AccountPassword <Secur
 ## DESCRIPTION
 A search administrator runs the `Set-SPEnterpriseSearchCrawlRule` cmdlet at initial search configuration or any other time, to set or update various attributes of a crawl rule.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$crawlRule = Get-SPEnterpriseSearchCrawlRule -Identity 'file://fileserver/root' -SearchApplication $ssa
-PS C:\>Set-SPEnterpriseSearchCrawlRule -Identity $crawlRule -Type "ExclusionRule"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$crawlRule = Get-SPEnterpriseSearchCrawlRule -Identity 'file://fileserver/root' -SearchApplication $ssa
+Set-SPEnterpriseSearchCrawlRule -Identity $crawlRule -Type "ExclusionRule"
 ```
 
 This example sets the type of the crawl rule pertaining to the URL, file://fileserver/root, to exclude this path from future crawls.
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

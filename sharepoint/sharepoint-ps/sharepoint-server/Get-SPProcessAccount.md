@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPProcessAccount
 schema: 2.0.0
@@ -33,25 +33,25 @@ Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-NetworkS
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see Cmdlet Parameter Sets (https://go.microsoft.com/fwlink/?LinkID=187810).
 
 The Get-SPProcessAccount cmdlet returns a system account or a managed account and creates the SPProcessAccountPipeBind object.
 All operations that can accept an account can accept the SPProcessAccountPipeBind in place of the SPManagedAccountPipeBind.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Get-SPProcessAccount -NetworkService
+Get-SPProcessAccount -NetworkService
 ```
 
 This example creates the SPProcessAccountPipeBind type by using the NetworkService account.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
+Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
 ```
 
 This example creates an SPServiceApplicationPool account by using the NetworkService account returned by the Get-SPProcessAccount cmdlet.
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

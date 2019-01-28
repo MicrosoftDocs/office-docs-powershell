@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 applicable: SharePoint Server 2019
 title: Set-SPApplicationCredentialKey
 schema: 2.0.0
@@ -28,7 +28,7 @@ The application credential key must be identical on each server in the farm wher
 
 ### EXAMPLE 
 ```powershell
-PS C:\> $key = ConvertTo-SecureString -String "New Password" -AsPlainText -Force
+ $key = ConvertTo-SecureString -String "New Password" -AsPlainText -Force
 Set-SPApplicationCredentialKey -Password $key
 ```
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## RELATED LINKS

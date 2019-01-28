@@ -18,8 +18,9 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter>
- -MailboxState <Disabled | SoftDeleted> [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdParameter> -MailboxState <Disabled | SoftDeleted>
+ [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,7 @@ This example permanently purges the disconnected mailbox with the GUID 2ab32ce3-
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.database -Identity $_.mailboxguid -MailboxState SoftDeleted}
+Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -match "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.Database -Identity $_.MailboxGuid -MailboxState SoftDeleted}
 ```
 
 This example permanently purges all soft-deleted mailboxes from mailbox database MBD01.

@@ -49,21 +49,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2017 -EndDate 06/15/2017
+Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2018 -EndDate 06/15/2018
 ```
 
-This example retrieves details for incoming messages between June 13, 2017 and June 15, 2017.
+This example retrieves details for incoming messages between June 13, 2018 and June 15, 2018.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
+Get-MailTrafficATPReport -StartDate 7/20/2018 -EndDate 7/20/2018 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
-This example retrieves the statistics for outgoing messages on July 20, 2017 and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
+This example retrieves the statistics for outgoing messages on July 20, 2018 and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
+Get-MailTrafficATPReport -StartDate 7/20/2018 -EndDate 7/20/2018 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
 This example is similar to the previous example, but now the results are summarized. Because EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced and values of MessageCount are correspondingly larger on each row.
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime

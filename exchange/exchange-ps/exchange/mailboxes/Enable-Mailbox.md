@@ -562,7 +562,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -651,7 +651,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuditLog
-This parameter is availble only in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 This parameter is reserved for internal Microsoft use.
 

@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate or certificate request that you want to export. Valid values are:
 
-- \<ServerNameorFQDN\>\\\<Thumbprint\>
+- \<ServerNameOrFQDN\>\\\<Thumbprint\>
 
 - \<Thumbprint\>
 
