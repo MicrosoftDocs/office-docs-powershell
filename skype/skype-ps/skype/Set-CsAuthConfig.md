@@ -131,6 +131,6 @@ For more information, see [about_CommonParameters](http://go.microsoft.com/fwlin
 
 ## NOTES
 
-After changing CsAuthConfig, you must [run Enable-CsComputer](https://docs.microsoft.com/en-us/powershell/module/skype/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
+After changing CsAuthConfig, you must run [Enable-CsComputer](https://docs.microsoft.com/en-us/powershell/module/skype/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
 
 ## RELATED LINKS

@@ -2,7 +2,7 @@
 
 ## Usage:
 1. Clone repo at: https://github.com/microsoftdocs/office-docs-powershell
-2. Configure your email address in tools/.local/default.json to receive emailed logs. (OPTIONAL)
+2. Configure your email address in `tools/.local/default.json` to receive emailed logs. (OPTIONAL)
 3. Confirm you have NodeJS installed.
     Open PowerShell or GitBash and type `npm --version`.
     If not, install from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
@@ -29,5 +29,3 @@
 ## Notes
 1. Some modules could be installed from the PowerShell Gallery (PSGallery). This gallery contains user submitted code. If you would rather not install modules from the PSGallery then you can install the modules manually prior to running the tool. If you need to add PSGallery as a trusted source, you can do so with the following command: `Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted`
 2. Run the tool from PowerShell x64 as an Administrator user
-
-## Sample Run
