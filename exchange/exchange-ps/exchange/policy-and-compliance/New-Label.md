@@ -47,7 +47,7 @@ Insert descriptive text for example 1.
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the unique name for the label. The maiximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the unique name for the label. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String

@@ -31,7 +31,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Remove-Label -Identity "Marketing Group"
 ```
 
-This example removes the label named Margeting Group.
+This example removes the label named Marketing Group.
 
 ## PARAMETERS
 

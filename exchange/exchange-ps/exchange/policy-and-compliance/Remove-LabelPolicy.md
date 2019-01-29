@@ -31,7 +31,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Remove-LabelPolicy -Identity "Marketing Group"
 ```
 
-This example removes the policy named Margeting Group.
+This example removes the policy named Marketing Group.
 
 ## PARAMETERS
 
