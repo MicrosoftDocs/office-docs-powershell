@@ -92,7 +92,7 @@ This example lists the probes running in the client access services on a Mailbox
 
 For more information on probes and the monitoring framework, see Managed Availability (https://go.microsoft.com/fwlink/p/?LinkId=510838), Managed Availability and Server Health (https://go.microsoft.com/fwlink/p/?LinkId=510839), and Customizing Managed Availability (https://go.microsoft.com/fwlink/p/?LinkId=510840)
 
-By default, the cmdlet uses the test monitoring account attached to the specifed probe. You may enter a different mailbox instead via the MailboxId parameter. The options and results follow.
+By default, the cmdlet uses the test monitoring account attached to the specified probe. You may enter a different mailbox instead via the MailboxId parameter. The options and results follow.
 
 - MailboxId and Credential are not specified: Generic connectivity test against a test mailbox using the system's test credentials.
 

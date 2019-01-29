@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-UMDialplan cmdlet to set various properties on a Unified Messaging (UM) dial plan.
+Use the Set-UMDialPlan cmdlet to set various properties on a Unified Messaging (UM) dial plan.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -46,7 +46,7 @@ Set-UMDialPlan [-Identity] <UMDialPlanIdParameter> [-AccessTelephoneNumbers <Mul
 ```
 
 ## DESCRIPTION
-The Set-UMDialplan cmdlet changes or modifies the properties of an existing UM dial plan. Some UM dial plan properties are required and are created by default. However, in some cases, after the UM dial plan is created, not all properties for the UM dial plan are writable. Therefore, some of the properties can't be changed unless the existing UM dial plan is deleted and a new one is created.
+The Set-UMDialPlan cmdlet changes or modifies the properties of an existing UM dial plan. Some UM dial plan properties are required and are created by default. However, in some cases, after the UM dial plan is created, not all properties for the UM dial plan are writable. Therefore, some of the properties can't be changed unless the existing UM dial plan is deleted and a new one is created.
 
 UM dial plans are important to the operation of Unified Messaging. Modifications to an existing UM dial plan should be performed by an administrator who understands the implications of changes to UM dial plans.
 
@@ -58,14 +58,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-UMDialplan -Identity MyDialPlan -OutsideLineAccessCode 9
+Set-UMDialPlan -Identity MyDialPlan -OutsideLineAccessCode 9
 ```
 
 This example configures the UM dial plan MyDialPlan to use 9 for the outside line access code.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Set-UMDialplan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
+Set-UMDialPlan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
 ```
 
 This example configures the UM dial plan MyDialPlan to use a welcome greeting.

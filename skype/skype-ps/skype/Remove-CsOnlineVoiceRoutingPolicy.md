@@ -19,7 +19,7 @@ Remove-CsOnlineVoiceRoutingPolicy [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [
 ```
 
 ## DESCRIPTION
-Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
+Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Skype for Business Online users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
 
 Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via Skype for Business Online or Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+Globally unique identifier (GUID) of the tenant account whose online voice routing policy is being removed. For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 

@@ -68,7 +68,7 @@ Accept pipeline input: False
 ```
 
 ### -OverwriteIfAlreadyExists
-If provided, if a file already exists at the TargetUrl, it will be overwritten. If ommitted, the move operation will be canceled if the file already exists at the TargetUrl location.
+If provided, if a file already exists at the TargetUrl, it will be overwritten. If omitted, the move operation will be canceled if the file already exists at the TargetUrl location.
 
 ```yaml
 Type: SwitchParameter

@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -RollupGroup
-The RollupGroupswitch specifies that the health data is rolled up across servers with redundancy limits. You don't need to specify a value with this switch.
+The RollupGroup switch specifies that the health data is rolled up across servers with redundancy limits. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

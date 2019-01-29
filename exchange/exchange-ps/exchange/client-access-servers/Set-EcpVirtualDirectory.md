@@ -48,7 +48,7 @@ This example disables Basic authentication on the default ECP virtual directory 
 Set-EcpVirtualDirectory -Identity "Server01\ecp (Default Web site)" -AdminEnabled $false
 ```
 
-This example turns off the Internet access to the EAC on server named SErver01.
+This example turns off the Internet access to the EAC on server named Server01.
 
 ## PARAMETERS
 
@@ -65,7 +65,7 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
 
-To manage the first ECP virtual directory created in an Exchange organization, you need touse this cmdlet on the computer that includes the first ECP virtual directory. If you create additional ECP virtual directories, you can manage those remotely.
+To manage the first ECP virtual directory created in an Exchange organization, you need to use this cmdlet on the computer that includes the first ECP virtual directory. If you create additional ECP virtual directories, you can manage those remotely.
 
 ```yaml
 Type: VirtualDirectoryIdParameter

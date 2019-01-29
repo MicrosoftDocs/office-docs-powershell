@@ -41,7 +41,7 @@ This example removes the mobile device mailbox policy SalesPolicy.
 Remove-MobileDeviceMailboxPolicy -Identity Engineering -Confirm:$false
 ```
 
-This example removes the mobile device mailbox policy named Engineeringand hides the confirmation prompt.
+This example removes the mobile device mailbox policy named Engineering and hides the confirmation prompt.
 
 ### -------------------------- Example 3 --------------------------
 ```

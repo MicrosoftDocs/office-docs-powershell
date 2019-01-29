@@ -291,7 +291,7 @@ The AllowCopyContactsToDeviceAddressBook parameter specifies whether users can c
 
 - $true: Contacts can be copied to the device's address book in Outlook on the web for devices. This is the default value.
 
-- $false: Contacts cann't be copied to the device's address book in Outlook on the web for devices.
+- $false: Contacts can't be copied to the device's address book in Outlook on the web for devices.
 
 ```yaml
 Type: $true | $false
@@ -374,7 +374,7 @@ The AllowOfflineOn parameter specifies when Outlook on the web in offline mode i
 
 - AllComputers: Offline mode is available for public and private computer sessions. This is the default value. 
 
-When offline mode is available, uers can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
+When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Using Outlook Web App offline](https://go.microsoft.com/fwlink/p/?linkid=267644).
 
 ```yaml
 Type: PrivateComputersOnly | NoComputers | AllComputers
@@ -1289,7 +1289,7 @@ Accept wildcard characters: False
 ### -FormsAuthentication
 The FormsAuthentication parameter enables or disables forms-based authentication on the Outlook on the web virtual directory. Valid values are:
 
-- $true: Forms-based authentication is ensabled in Outlook on the web. This is the default value. The BasicAuthentication parameter is also set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
+- $true: Forms-based authentication is enabled in Outlook on the web. This is the default value. The BasicAuthentication parameter is also set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
 
 - $false: Forms-based authentication is disabled in Outlook on the web.
 
@@ -1397,7 +1397,7 @@ The InstantMessagingEnabled parameter specifies whether instant messaging is ava
 
 - $true: Instant messaging is available in Outlook on the web. This is the default value.
 
-- $false: Instnant messaging isn't available in Outlook on the web.
+- $false: Instant messaging isn't available in Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -1448,9 +1448,9 @@ Accept wildcard characters: False
 ### -IntegratedFeaturesEnabled
 The IntegratedFeaturesEnabled parameter specifies whether to allow Outlook on the web users who are logged on using Integrated Windows authentication to access specific features. Valid values are:
 
-- $true: Integrated featurs are enabled. For example, users logged on using Integrated Windows authentication can view and change meeting content. This is the default value.
+- $true: Integrated features are enabled. For example, users logged on using Integrated Windows authentication can view and change meeting content. This is the default value.
 
-- $false: Itegrated features are disabled.
+- $false: Integrated features are disabled.
 
 ```yaml
 Type: $true | $false
@@ -1514,7 +1514,7 @@ Accept wildcard characters: False
 ```
 
 ### -IRMEnabled
-The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are avaiable in Outlook on the web. Valid values are:
+The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are available in Outlook on the web. Valid values are:
 
 - $true: IRM is available in Outlook on the web. This is the default value.
 
@@ -1653,7 +1653,7 @@ The LogonPageLightSelectionEnabled parameter specifies whether the Outlook on th
 
 - $false: The option to use the light version of Outlook on the web is available on the sign-in page.
 
-This parameter is meaninful only for browsers that support the full version of Outlook on the web; unsupported browsers are always required to use the light version of Outlook on the web.
+This parameter is meaningful only for browsers that support the full version of Outlook on the web; unsupported browsers are always required to use the light version of Outlook on the web.
 
 ```yaml
 Type: $true | $false
@@ -2470,7 +2470,7 @@ Accept wildcard characters: False
 ### -WebPartsFrameOptionsType
 The WebPartsFrameOptionsType parameter specifies what sources can access web parts in IFRAME or FRAME elements in Outlook on the web. Valid values are:
 
-- None: Tthere are no restrictions on displaying Outlook on the web content in a frame.
+- None: There are no restrictions on displaying Outlook on the web content in a frame.
 
 - SameOrigin: This is the default value and the recommended value. Display Outlook on the web content only in a frame that has the same origin as the content.
 
@@ -2514,9 +2514,9 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingOnPrivateComputersEnabled parameter specifies whether WebReady Document Viewing is available in private computer sessions. Valid values are:
 
-- $true: WebReady Document Viewing is availble in private computer sessions. This is the default value.
+- $true: WebReady Document Viewing is available in private computer sessions. This is the default value.
 
-- $false: WebReady Document Viewing isn't availble in private computer sessions.
+- $false: WebReady Document Viewing isn't available in private computer sessions.
 
 By default in Exchange 2013, all Outlook on the web sessions are considered to be on private computers.
 
@@ -2537,9 +2537,9 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether WebReady Document Viewing is in public computer sessions. Valid values are:
 
-- $true: WebReady Document Viewing is availble for public computer sessions. This is the default value.
+- $true: WebReady Document Viewing is available for public computer sessions. This is the default value.
 
-- $false: WebReady Document Viewing isn't availble for public computer sessions.
+- $false: WebReady Document Viewing isn't available for public computer sessions.
 
 In Exchange 2013, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true).
 
