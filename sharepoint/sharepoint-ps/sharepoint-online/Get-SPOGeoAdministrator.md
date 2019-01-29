@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOGeoAdministrator
 
 ## SYNOPSIS
-This cmdlet returns the SharePoint Online user or security group accounts with global administrative privilegies in the current Multi-Geographics tenant
+This cmdlet returns the SharePoint Online user or security group accounts with global administrative privileges in the current Multi-Geographics tenant
 
 ## SYNTAX
 

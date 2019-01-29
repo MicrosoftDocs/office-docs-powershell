@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Specifes the policy for all users automatic Skype Meeting Ready scheduling.
+Specifies the policy for all users automatic Skype Meeting Ready scheduling.
 Can be either AutoScheduleEnabled or AutoScheduleDisabled.
 
 ```yaml
