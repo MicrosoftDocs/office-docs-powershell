@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-LabelPolicy -Identity <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf] [<CommonParameters>]
+Remove-LabelPolicy [-Identity] <PolicyIdParameter> [-Confirm] [-ForceDeletion] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

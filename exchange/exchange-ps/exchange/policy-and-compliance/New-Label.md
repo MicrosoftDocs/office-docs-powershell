@@ -18,15 +18,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-Label -Name <String>
+New-Label [-Name] <String> -DisplayName <String>
+ [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
- [-Conditions <MultiValuedProperty>]
  [-Confirm]
- [-DisplayName <String>]
- [-LabelActions <MultiValuedProperty>]
+ [-Identity <MasterIdParameter>]
  [-LocaleSettings <<MultiValuedProperty>]
  [-ParentId <ComplianceRuleIdParameter>]
- [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
  [-Tooltip <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -62,13 +61,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Comment
-The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+### -DisplayName
+The DisplayName parameter specifies the display name for the label. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate label before they send a message.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdvancedSettings
+{{Fill AdvancedSettings Description}}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -77,11 +91,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Conditions
-PARAMVALUE: MultiValuedProperty
+### -Comment
+The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
-Type: MultiValuedProperty
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
@@ -111,28 +125,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisplayName
-The DisplayName parameter specifies the display name for the label. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate label before they send a message.
+### -Identity
+{{Fill Identity Description}}
 
 ```yaml
-Type: String
+Type: MasterIdParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LabelActions
-PARAMVALUE: MultiValuedProperty
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -177,8 +176,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Setting
-PARAMVALUE: PswsHashtable
+### -Settings
+{{Fill Settings Description}}
 
 ```yaml
 Type: PswsHashtable

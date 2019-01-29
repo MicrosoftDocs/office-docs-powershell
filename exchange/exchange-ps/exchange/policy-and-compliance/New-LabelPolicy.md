@@ -18,22 +18,14 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-LabelPolicy -Labels <MultiValuedProperty> -Name <String>
+New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
+ [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
- [-ExchangeLocation <MultiValuedProperty>]
- [-ExchangeLocationException <MultiValuedProperty>]
  [-Force]
  [-ModernGroupLocation <MultiValuedProperty>]
  [-ModernGroupLocationException <MultiValuedProperty>]
- [-OneDriveLocation <MultiValuedProperty>]
- [-OneDriveLocationException <MultiValuedProperty>]
- [-PublicFolderLocation <MultiValuedProperty>]
- [-Setting <PswsHashtable>]
- [-SharePointLocation <MultiValuedProperty>]
- [-SharePointLocationException <MultiValuedProperty>]
- [-SkypeLocation <MultiValuedProperty>]
- [-SkypeLocationException <MultiValuedProperty>]
+ [-Settings <PswsHashtable>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -50,6 +42,21 @@ Insert example commands for example 1.
 Insert descriptive text for example 1.
 
 ## PARAMETERS
+
+### -Name
+The Name parameter specifies the unique name for the policy. The maiximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Office 365 Security & Compliance Center
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Labels
 The Labels parameter specifies the labels that are associated with the policy. You can use any value that uniquely identifies the label. For example:
@@ -74,16 +81,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-The Name parameter specifies the unique name for the policy. The maiximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+### -AdvancedSettings
+{{Fill AdvancedSettings Description}}
 
 ```yaml
-Type: String
+Type: PswsHashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
-Required: True
-Position: 1
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -115,70 +122,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExchangeLocation
-The ExchangeLocation parameter specifies the mailboxes to include in the policy. Valid values are:
-
-- A mailbox
-
-- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
-
-- The value All for all mailboxes. You can only use this value by itself.
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExchangeLocationException
-This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
-
-- A mailbox
-
-- A distribution group or mail-enabled security group
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -245,136 +188,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OneDriveLocation
-The OneDriveLocation parameter specifies the OneDrive for Business sites to include in the policy. You identify the site by its URL value, or you can use the value All to include all sites.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocationException
-This parameter specifies the OneDrive for Business sites to exclude when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PublicFolderLocation
-The PublicFolderLocation parameter specifies that you want to include all public folders in the policy. You use the value All for this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Setting
-PARAMVALUE: PswsHashtable
+### -Settings
+{{Fill Settings Description}}
 
 ```yaml
 Type: PswsHashtable
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointLocation
-The SharePointLocation parameter specifies the SharePoint Online sites to include in the policy. You identify the site by its URL value, or you can use the value All to include all sites.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointLocationException
-This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkypeLocation
-The SkypeLocation parameter specifies the Skype for Business Online users to include in the policy.
-
-You can use any value that uniquely identifies the user. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkypeLocationException
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center

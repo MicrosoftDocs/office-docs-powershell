@@ -20,36 +20,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Identity
 ```
 Set-LabelPolicy [-Identity] <PolicyIdParameter>
- [-AddExchangeLocation <MultiValuedProperty>]
- [-AddExchangeLocationException <MultiValuedProperty>]
  [-AddLabels <MultiValuedProperty>]
  [-AddModernGroupLocation <MultiValuedProperty>]
  [-AddModernGroupLocationException <MultiValuedProperty>]
- [-AddOneDriveLocation <MultiValuedProperty>]
- [-AddOneDriveLocationException <MultiValuedProperty>]
- [-AddPublicFolderLocation <MultiValuedProperty>]
- [-AddSharePointLocation <MultiValuedProperty>]
- [-AddSharePointLocationException <MultiValuedProperty>]
- [-AddSkypeLocation <MultiValuedProperty>]
- [-AddSkypeLocationException <MultiValuedProperty>]
+ [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <$true | $false>]
  [-Force]
  [-NextLabelPolicy <PolicyIdParameter>]
- [-RemoveExchangeLocation <MultiValuedProperty>]
- [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveLabels <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
  [-RemoveModernGroupLocationException <MultiValuedProperty>]
- [-RemoveOneDriveLocation <MultiValuedProperty>]
- [-RemoveOneDriveLocationException <MultiValuedProperty>]
- [-RemovePublicFolderLocation <MultiValuedProperty>]
- [-RemoveSharePointLocation <MultiValuedProperty>]
- [-RemoveSharePointLocationException <MultiValuedProperty>]
- [-RemoveSkypeLocation <MultiValuedProperty>]
- [-RemoveSkypeLocationException <MultiValuedProperty>]
- [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -57,11 +40,12 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
 ```
 Set-LabelPolicy [-Identity] <PolicyIdParameter> -RetryDistribution
  [-AddLabels <MultiValuedProperty>]
+ [-AdvancedSettings <PswsHashtable>]
  [-Confirm]
  [-NextLabelPolicy <PolicyIdParameter>]
  [-PreviousLabelPolicy <PolicyIdParameter>]
  [-RemoveLabels <MultiValuedProperty>]
- [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -109,68 +93,6 @@ Parameter Sets: RetryDistribution
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddExchangeLocation
-The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
-
-- A mailbox
-
-- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddExchangeLocationException
-This parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
-
-- A mailbox
-
-- A distribution group or mail-enabled security group
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -246,125 +168,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddOneDriveLocation
-The AddOneDriveLocation parameter specifies the OneDrive for Business sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+### -AdvancedSettings
+{{Fill AdvancedSettings Description}}
 
 ```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddOneDriveLocationException
-This parameter specifies the OneDrive for Business sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddPublicFolderLocation
-The AddPublicFolderLocation parameter specifies that you want to add all public folders to the retention policy. You use the value All for this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddSharePointLocation
-The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-SharePoint Online sites can't be added to the policy until they have been indexed.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddSharePointLocationException
-This parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddSkypeLocation
-The AddSkypeLocation parameter specifies the Skype for Business Online users to add from the list of included Skype for Business Online users.
-
-You can use any value that uniquely identifies the user. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddSkypeLocationException
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -472,68 +282,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveExchangeLocation
-The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
-
-- A mailbox
-
-- A distribution group or mail-enabled security group
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveExchangeLocationException
-This parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
-
-- A mailbox
-
-- A distribution group or mail-enabled security group
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RemoveLabels
 {{Fill RemoveLabels Description}}
 
@@ -603,133 +351,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveOneDriveLocation
-The RemoveOneDriveLocation parameter specifies the OneDrive for Business sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveOneDriveLocationException
-This parameter specifies the OneDrive for Business sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemovePublicFolderLocation
-he RemovePublicFolderLocation parameter specifies that you want to remove all public folders from the retention policy. You use the value All for this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveSharePointLocation
-The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveSharePointLocationException
-This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveSkypeLocation
-The RemoveSkypeLocation parameter specifies the Skype for Business Online users to remove from the list of included Skype for Business Online users.
-
-You can use any value that uniquely identifies the user. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- Email address
-
-- GUID
-
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveSkypeLocationException
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Setting
-PARAMVALUE: PswsHashtable
+### -Settings
+{{Fill Settings Description}}
 
 ```yaml
 Type: PswsHashtable

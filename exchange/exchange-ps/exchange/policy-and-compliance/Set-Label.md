@@ -19,8 +19,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-Label [-Identity] <ComplianceRuleIdParameter>
+ [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
- [-Conditions <MultiValuedProperty>]
  [-Confirm]
  [-Disabled <$true | $false>]
  [-DisplayName <String>]
@@ -30,7 +30,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
  [-Priority <Int32>]
- [-Setting <PswsHashtable>]
+ [-Settings <PswsHashtable>]
  [-Tooltip <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -70,13 +70,13 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Comment
-The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+### -AdvancedSettings
+{{Fill AdvancedSettings Description}}
 
 ```yaml
-Type: String
+Type: PswsHashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Office 365 Security & Compliance Center
 Required: False
 Position: Named
@@ -85,11 +85,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Conditions
-PARAMVALUE: MultiValuedProperty
+### -Comment
+The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
-Type: MultiValuedProperty
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
@@ -139,21 +139,6 @@ The DisplayName parameter specifies the display name for the label. The display 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Office 365 Security & Compliance Center
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LabelActions
-PARAMVALUE: MultiValuedProperty
-
-```yaml
-Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
 Applicable: Office 365 Security & Compliance Center
@@ -255,8 +240,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Setting
-PARAMVALUE: PswsHashtable
+### -Settings
+{{Fill Settings Description}}
 
 ```yaml
 Type: PswsHashtable
