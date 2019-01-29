@@ -17,7 +17,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ## SYNTAX
 
-### Identit
+### Identity
 ```
 Remove-PublicFolderMailboxMigrationRequest [-Identity] <PublicFolderMailboxMigrationRequestIdParameter>
  [-Confirm]
@@ -39,7 +39,7 @@ The Remove-PublicFolderMailboxMigrationRequest cmdlet is intended for troublesho
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-## EXAMPLES
+## EXAMPLES and SCENARIOS
 
 ### -------------------------- Example 1 --------------------------
 ```
@@ -47,6 +47,45 @@ Remove-PublicFolderMailboxMigrationRequest -Identity \PublicFolderMailboxMigrati
 ```
 
 This example removes the specified public folder mailbox migration request.
+
+### ------------Scenario 1: Removing an orphaned public folder mailbox migration request-----------
+```
+Here's an example of an orphaned PublicFolderMailboxMigrationRequest and how to remove it.
+
+When there is no migration batch:
+`PS D:\tools\PSSession> Get-MigrationBatch`
+`PS D:\tools\PSSession>`
+
+However, the following public folder mailbox migration request is present, with no target mailbox associated:
+`PS D:\tools\PSSession> Get-PublicFolderMailboxMigrationRequest`
+
+|Name  |TargetMailbox  |Status  |
+|---------|---------|---------|
+|PFMailboxMigration2b14b2ad-1e7e-4cb9-a7b5-16b70b443fc5|         |Failed|
+
+Or you can use the following command to list the public folder mailbox migration requests that do not have a designated target mailbox:
+
+`Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}`
+
+For any orphaned requests that are returned, use `Remove-PublicFolderMailboxMigrationRequest`, as in the following example:
+
+`Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null} | Remove-PublicFolderMailboxMigrationRequest`
+
+
+### -------Scenario 2: Remove duplicate public folder mailbox migration tasks-----------
+
+If you observe two or more public folder mailbox migration requests created for the same target mailbox, this means the public folder mailbox migration request is duplicated.
+
+You can find duplicates by running the `Get-PublicFolderMailboxMigrationRequest` cmdlet. If a mailbox name is mentioned as a target mailbox more than once, then it means you have duplicate requests.
+
+You can also use the following cmdlet to find duplicate requests:
+
+`Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}`
+
+If you do not get any output from the above command, then you do not have any duplicate mailbox migration requests.
+
+[A sample script is provided here](https://gallery.technet.microsoft.com/scriptcenter/Remove-Duplicate-public-055f0e5e) to detect duplicate or orphaned public folder mailbox migration requests and also remove them.
+
 
 ## PARAMETERS
 
