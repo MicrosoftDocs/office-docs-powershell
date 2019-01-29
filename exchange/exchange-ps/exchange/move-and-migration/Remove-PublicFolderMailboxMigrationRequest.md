@@ -39,7 +39,7 @@ The Remove-PublicFolderMailboxMigrationRequest cmdlet is intended for troublesho
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-## EXAMPLES and SCENARIOS
+## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
@@ -48,7 +48,7 @@ Remove-PublicFolderMailboxMigrationRequest -Identity \PublicFolderMailboxMigrati
 
 This example removes the specified public folder mailbox migration request.
 
-### ------------Scenario 1: Removing an orphaned public folder mailbox migration request-----------
+### ------------Example 2: Removing an orphaned public folder mailbox migration request -----------
 ```
 Here's an example of an orphaned PublicFolderMailboxMigrationRequest and how to remove it.
 
@@ -72,7 +72,7 @@ For any orphaned requests that are returned, use `Remove-PublicFolderMailboxMigr
 `Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null} | Remove-PublicFolderMailboxMigrationRequest`
 
 
-### -------Scenario 2: Remove duplicate public folder mailbox migration tasks-----------
+### -------Example 3: Remove duplicate public folder mailbox migration tasks -----------
 
 If you observe two or more public folder mailbox migration requests created for the same target mailbox, this means the public folder mailbox migration request is duplicated.
 
