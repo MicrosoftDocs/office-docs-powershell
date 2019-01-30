@@ -245,7 +245,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReinviteResponseCode
+### -FailoverResponseCodes
 If Direct Routing receives any 4xx or 6xx SIP error code in response to an outgoing Invite the call is considered completed by default. (Outgoing in this context is a call from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routing -> SBC -> Telephony network). Setting the SIP codes in this parameter forces Direct Routing on receiving the specified codes try another SBC (if another SBC exists in the voice routing policy of the user). Find more information in the "Reference" section of "Phone System Direct Routing" documentation.
 
 ```yaml
