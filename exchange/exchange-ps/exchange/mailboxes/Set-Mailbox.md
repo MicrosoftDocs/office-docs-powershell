@@ -4120,7 +4120,7 @@ Accept wildcard characters: False
 ### -RemoveManagedFolderAndPolicy
 This parameter is available only in on-premises Exchange.
 
-The RemoveManagedFolderAndPolicyswitch specifies whether to remove all MRM 1.0 policies and attributes from a mailbox. If you use this switch, MRM 1.0 policies and MRM 1.0 properties from any managed folders that were created as part of any MRM 1.0 policies are removed. Managed folders that are empty are also removed from the mailbox, and managed folders that contain items are converted to standard folders.
+The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox. 
 
 You don't need to specify a value with this switch.
 
