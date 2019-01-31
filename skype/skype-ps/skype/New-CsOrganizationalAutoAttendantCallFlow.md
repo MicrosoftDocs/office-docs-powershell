@@ -1,5 +1,5 @@
----
-external help file: Microsoft.Rtc.Management.dll-help.xml New-CsOrganizationalAutoAttendantCallFlow.xml
+﻿---
+external help file: New-CsOrganizationalAutoAttendantCallFlow.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallFlow
 schema: 2.0.0

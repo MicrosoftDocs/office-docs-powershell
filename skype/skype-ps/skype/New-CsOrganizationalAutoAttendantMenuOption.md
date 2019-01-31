@@ -1,5 +1,5 @@
----
-external help file: Microsoft.Rtc.Management.dll-help.xml New-CsOrganizationalAutoAttendantMenuOption.xml
+﻿---
+external help file: New-CsOrganizationalAutoAttendantMenuOption.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantMenuOption
 schema: 2.0.0

@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-help.xml Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 title: Get-CsTeamsUpgradePolicy
 schema: 2.0.0
