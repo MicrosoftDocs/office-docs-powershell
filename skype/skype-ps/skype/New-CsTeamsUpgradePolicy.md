@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Module Name: SkypeForBusiness
 online version:
 applicable: Skype for Business Server 2019

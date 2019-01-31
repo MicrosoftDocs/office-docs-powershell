@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Server 2019
 title: Set-CsAuthConfig
 schema: 2.0.0

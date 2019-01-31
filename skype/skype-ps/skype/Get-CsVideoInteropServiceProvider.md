@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Get-CsVideoInteropServiceProvider
