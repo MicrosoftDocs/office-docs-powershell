@@ -1333,35 +1333,43 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - None
 
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+
+- ApplyRecord (Available only in the cloud-based service)
+
 - Copy
 
-- Create
+- Create (Enabled by default)
 
-- FolderBind
+- FolderBind (Enabled by default in on-premises Exchange 2010 or later)
 
-- HardDelete
+- HardDelete (Enabled by default)
 
 - MessageBind
 
-- Move
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
 
-- MoveToDeletedItems
+- Move (Enabled by default in on-premises Exchange 2010 or later)
 
-- SendAs
+- MoveToDeletedItems (Enabled by default)
 
-- SendOnBehalf
+- RecordDelete (Available only in the cloud-based service)
 
-- SoftDelete
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
 
-- Update
+- SendAs (Enabled by default)
 
-- UpdateFolderPermissions (cloud-based service only)
+- SendOnBehalf (Enabled by default)
 
-- UpdateCalendarDelegation (cloud-based service only)
+- SoftDelete (Enabled by default)
 
-- UpdateInboxRules (cloud-based service only)
+- Update (Enabled by default)
 
-By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by administrators are logged.
+- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; Enabled by default.)
+
+- UpdateCalendarDelegation (Available only in Exchange 2019 and the cloud-based service; Enabled by default.)
+
+- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; Enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1386,29 +1394,39 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 
 - None
 
-- Create
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+
+- ApplyRecord (Available only in the cloud-based service)
+
+- Create (Enabled by default)
 
 - FolderBind
 
-- HardDelete
+- HardDelete (Enabled by default)
+
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
 
 - Move
 
-- MoveToDeletedItems
+- MoveToDeletedItems (Enabled by default only in the cloud-based service)
 
-- SendAs
+- RecordDelete (Available only in the cloud-based service)
 
-- SendOnBehalf
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
 
-- SoftDelete
+- SendAs (Enabled by default)
 
-- Update
+- SendOnBehalf (Enabled by default only in the cloud-based service)
 
-- UpdateFolderPermissions (cloud-based service only)
+- SoftDelete (Enabled by default only in the cloud-based service)
 
-- UpdateInboxRules (cloud-based service only)
+- Update (Enabled by default only in the cloud-based service)
 
-By default, the Update, SoftDelete, HardDelete, SendAs, Create, UpdateFolderPermissions, and UpdateInboxRules actions performed by delegates are logged.
+- UpdateCalendarDelegation (Available only in the cloud-based service)
+
+- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; Enabled by default)
+
+- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; Enabled by default)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1492,7 +1510,11 @@ Accept wildcard characters: False
 ### -AuditOwner
 The AuditOwner parameter specifies the mailbox operations to log for mailbox owners as part of mailbox audit logging. Valid values include:
 
-- None
+- None (This is the default value in on-premises Exchange 2010, Exchange 2013, and Exchange 2016)
+
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+
+- ApplyRecord (Available only in the cloud-based service)
 
 - Create
 
@@ -1500,21 +1522,25 @@ The AuditOwner parameter specifies the mailbox operations to log for mailbox own
 
 - MailboxLogin
 
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+
 - Move
 
 - MoveToDeletedItems
+
+- RecordDelete (Available only in the cloud-based service)
+
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
 
 - SoftDelete
 
 - Update
 
-- UpdateFolderPermissions (cloud-based service only)
+- UpdateFolderPermissions (Available only in the cloud-based service; Enabled by default)
 
-- UpdateCalendarDelegation (cloud-based service only)
+- UpdateCalendarDelegation (Available only in the cloud-based service; Enabled by default)
 
-- UpdateInboxRules (cloud-based service only)
-
-In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by the owner are logged by default.
+- UpdateInboxRules (Available only in the cloud-based service; Enabled by default)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
