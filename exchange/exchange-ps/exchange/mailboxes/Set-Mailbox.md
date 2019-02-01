@@ -1333,43 +1333,43 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - None
 
-- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- ApplyRecord (Available only in the cloud-based service)
+- ApplyRecord (Available only in the cloud-based service.)
 
 - Copy
 
-- Create (Enabled by default)
+- Create (Enabled by default.)
 
-- FolderBind (Enabled by default in on-premises Exchange 2010 or later)
+- FolderBind (Enabled by default in on-premises Exchange 2010 or later.)
 
-- HardDelete (Enabled by default)
+- HardDelete (Enabled by default.)
 
 - MessageBind
 
-- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- Move (Enabled by default in on-premises Exchange 2010 or later)
+- Move (Enabled by default in on-premises Exchange 2010 or later.)
 
-- MoveToDeletedItems (Enabled by default)
+- MoveToDeletedItems (Enabled by default.)
 
-- RecordDelete (Available only in the cloud-based service)
+- RecordDelete (Available only in the cloud-based service.)
 
-- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- SendAs (Enabled by default)
+- SendAs (Enabled by default.)
 
-- SendOnBehalf (Enabled by default)
+- SendOnBehalf (Enabled by default.)
 
-- SoftDelete (Enabled by default)
+- SoftDelete (Enabled by default.)
 
-- Update (Enabled by default)
+- Update (Enabled by default.)
 
-- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; Enabled by default.)
+- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
-- UpdateCalendarDelegation (Available only in Exchange 2019 and the cloud-based service; Enabled by default.)
+- UpdateCalendarDelegation (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
-- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; Enabled by default.)
+- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1394,39 +1394,39 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 
 - None
 
-- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- ApplyRecord (Available only in the cloud-based service)
+- ApplyRecord (Available only in the cloud-based service.)
 
-- Create (Enabled by default)
+- Create (Enabled by default.)
 
 - FolderBind
 
-- HardDelete (Enabled by default)
+- HardDelete (Enabled by default.)
 
-- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
 - Move
 
-- MoveToDeletedItems (Enabled by default only in the cloud-based service)
+- MoveToDeletedItems (Enabled by default only in the cloud-based service.)
 
-- RecordDelete (Available only in the cloud-based service)
+- RecordDelete (Available only in the cloud-based service.)
 
-- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- SendAs (Enabled by default)
+- SendAs (Enabled by default.)
 
-- SendOnBehalf (Enabled by default only in the cloud-based service)
+- SendOnBehalf (Enabled by default only in the cloud-based service.)
 
-- SoftDelete (Enabled by default only in the cloud-based service)
+- SoftDelete (Enabled by default only in the cloud-based service.)
 
-- Update (Enabled by default only in the cloud-based service)
+- Update (Enabled by default only in the cloud-based service.)
 
-- UpdateCalendarDelegation (Available only in the cloud-based service)
+- UpdateCalendarDelegation (Available only in the cloud-based service.)
 
-- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; Enabled by default)
+- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
-- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; Enabled by default)
+- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1510,37 +1510,41 @@ Accept wildcard characters: False
 ### -AuditOwner
 The AuditOwner parameter specifies the mailbox operations to log for mailbox owners as part of mailbox audit logging. Valid values include:
 
-- None (This is the default value in on-premises Exchange 2010, Exchange 2013, and Exchange 2016)
+- None (This is the default value in Exchange 2010, Exchange 2013, and Exchange 2016.)
 
-- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- ApplyRecord (Available only in the cloud-based service)
+- ApplyRecord (Available only in the cloud-based service.)
 
 - Create
 
+- FolderBind (Available only in Exchange 2013.)
+
 - HardDelete
 
-- MailboxLogin
+- MailboxLogin (Available only in Exchange 2016, Exchange 2019, and the cloud-based service.)
 
-- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- MessageBind (Available only in Exchange 2013.)
+
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
 - Move
 
 - MoveToDeletedItems
 
-- RecordDelete (Available only in the cloud-based service)
+- RecordDelete (Available only in the cloud-based service.)
 
-- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service)
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
 - SoftDelete
 
 - Update
 
-- UpdateFolderPermissions (Available only in the cloud-based service; Enabled by default)
+- UpdateFolderPermissions (Available only in the cloud-based service; enabled by default.)
 
-- UpdateCalendarDelegation (Available only in the cloud-based service; Enabled by default)
+- UpdateCalendarDelegation (Available only in the cloud-based service; enabled by default.)
 
-- UpdateInboxRules (Available only in the cloud-based service; Enabled by default)
+- UpdateInboxRules (Available only in the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
