@@ -12,7 +12,7 @@ schema: 2.0.0
 Creates a new mobility policy at the site or the per-user scope.
 Mobility policies determine whether or not a user can use Skype for Business Mobile.
 These policies also manage a user's ability to employ Call via Work, a feature that enables users to make and receive phone calls on their mobile phone by using their work phone number instead of their mobile phone number.
-Mobility policies can also be used to require Wi-Fi connections when making or receiving IP video calls.
+Mobility policies can also be used to require Wi-Fi connections when making or receiving IP video/screen share calls.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
 The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, EncryptAppData, Force, Identity, InMemory, PipelineVariable, RequireIntune, Tenant, and VoiceSettings
