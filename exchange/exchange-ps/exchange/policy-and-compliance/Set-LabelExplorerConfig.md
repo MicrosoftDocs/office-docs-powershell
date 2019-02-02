@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Set-LabelExplorerConfig cmdlet to modify label explorer configurations from your organization.
+Use the Set-LabelExplorerConfig cmdlet to modify sensitivity label explorer configurations from your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -47,7 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the label explorer configuration that you want to modify.
+The Identity parameter specifies the sensitivity label explorer configuration that you want to modify.
 
 ```yaml
 Type: LabelExplorerConfigIdParameter

@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Set-Label cmdlet to modify labels in your organization.
+Use the Set-Label cmdlet to modify sensitivity labels in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -50,7 +50,7 @@ Insert descriptive text for example 1.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the label that you want to modify. You can use any value that uniquely identifies the label. For example:
+The Identity parameter specifies the sensitivity label that you want to modify. You can use any value that uniquely identifies the label. For example:
 
 - Name
 
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The DisplayName parameter specifies the display name for the label. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate label before they send a message.
+The DisplayName parameter specifies the display name for the sensitivity label. The display name appears in the Microsoft Office and is used by Outlook users to select the appropriate sensitivity label before they send a message.
 
 ```yaml
 Type: String
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParentId
-The ParentId parameter specifies the policy that contains the label. You can use any value that uniquely identifies the policy. For example:
+The ParentId parameter specifies the policy that contains the sensitivity label. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -216,17 +216,17 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the label that determines the order of label processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and labels can't have the same priority value.
+The Priority parameter specifies a priority value for the sensitivity label that determines the order of label processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and sensitivity labels can't have the same priority value.
 
-Valid values and the default value for this parameter depend on the number of existing labels. For example, if there are 8 existing labels:
+Valid values and the default value for this parameter depend on the number of existing sensitivity labels. For example, if there are 8 existing labels:
 
-- Valid priority values for the existing 8 labels are from 0 through 7.
+- Valid priority values for the existing 8 sensitivity labels are from 0 through 7.
 
-- Valid priority values for a new label (the 9th label) are from 0 through 8.
+- Valid priority values for a new sensitivity label (the 9th label) are from 0 through 8.
 
-- The default value for a new label (the 9th label) is 8.
+- The default value for a new sensitivity label (the 9th label) is 8.
 
-If you modify the priority value of a label, the position of the label in the list changes to match the priority value you specify. In other words, if you set the priority value of a label to the same value as an existing label, the priority value of the existing label and all other lower priority labels after it is increased by 1.
+If you modify the priority value of a sensitivity label, the position of the label in the list changes to match the priority value you specify. In other words, if you set the priority value of a sensitivity label to the same value as an existing label, the priority value of the existing sensitivity label and all other lower priority labels after it is increased by 1.
 
 ```yaml
 Type: Int32

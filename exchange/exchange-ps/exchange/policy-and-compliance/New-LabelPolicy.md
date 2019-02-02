@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the New-LabelPolicy cmdlet to view label policies in your organization.
+Use the New-LabelPolicy cmdlet to view sensitivity label policies in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Labels
-The Labels parameter specifies the labels that are associated with the policy. You can use any value that uniquely identifies the label. For example:
+The Labels parameter specifies the sensitivity labels that are associated with the policy. You can use any value that uniquely identifies the label. For example:
 
 - Name
 

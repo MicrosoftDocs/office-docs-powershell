@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-Label cmdlet to view labels in your organization.
+Use the Get-Label cmdlet to view sensitivity labels in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -31,19 +31,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-Label
 ```
 
-This example returns a summary list of all labels in the organization.
+This example returns a summary list of all sensitivity labels in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-Label -Identity "Engineering Group" | Format-List
 ```
 
-This example returns detailed information for the label named Engineering Group.
+This example returns detailed information for the sensitivity label named Engineering Group.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the label that you want to view. You can use any value that uniquely identifies the label. For example:
+The Identity parameter specifies the sensitivity label that you want to view. You can use any value that uniquely identifies the label. For example:
 
 - Name
 

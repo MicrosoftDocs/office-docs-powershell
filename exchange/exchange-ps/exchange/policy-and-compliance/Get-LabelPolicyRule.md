@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Get-LabelPolicyRule cmdlet to view label policy rules in your organization.
+Use the Get-LabelPolicyRule cmdlet to view sensitivity label policy rules in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -31,19 +31,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-LabelPolicyRule | Format-Table -Auto Name,LabelName
 ```
 
-This example returns summary information for all label policy rules.
+This example returns summary information for all sensitivity label policy rules.
 
 ### Example 2
 ```
 Get-LabelPolicyRule -Identity lptr-a7be6cf1-fa3d-4614-924b-473820284997
 ```
 
-This example returns detailed information about the label policy rule with the specified Name value.
+This example returns detailed information about the sensitivity label policy rule with the specified Name value.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the label policy rule that you want to view. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the sensitivity label policy rule that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-The Policy parameter filters the results by the specified label policy. You can use any value that uniquely identifies the policy. For example:
+The Policy parameter filters the results by the specified sensitivity label policy. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 

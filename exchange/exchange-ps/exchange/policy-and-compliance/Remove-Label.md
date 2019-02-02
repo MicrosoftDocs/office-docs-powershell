@@ -11,7 +11,7 @@ monikerRange: "o365scc-ps"
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see Office 365 Security & Compliance Center PowerShell (https://technet.microsoft.com/library/mt587091.aspx).
 
-Use the Remove-Label cmdlet to remove labels from your organization.
+Use the Remove-Label cmdlet to remove sensitivity labels from your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -31,12 +31,12 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 Remove-Label -Identity "Marketing Group"
 ```
 
-This example removes the label named Marketing Group.
+This example removes the sensitivity label named Marketing Group.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the label that you want to remove. You can use any value that uniquely identifies the label. For example:
+The Identity parameter specifies the sensitivity label that you want to remove. You can use any value that uniquely identifies the label. For example:
 
 - Name
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDeletion
-The ForceDeletion switch forces the removal of the label. You don't need to specify a value with this switch.
+The ForceDeletion switch forces the removal of the sensitivity label. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
