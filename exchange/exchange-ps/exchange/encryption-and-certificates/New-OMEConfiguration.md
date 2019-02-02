@@ -1,29 +1,30 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 applicable: Exchange Online
-title: Set-OMEConfiguration
+title: New-OMEConfiguration
 schema: 2.0.0
 monikerRange: "exchonline-ps"
 ---
 
-# Set-OMEConfiguration
+# New-OMEConfiguration
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-OMEConfiguration cmdlet to configure Microsoft Office 365 Message Encryption (OME).
+Use the New-OMEConfiguration cmdlet to create a Microsoft Office 365 Message Encryption (OME) configuration.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
+New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-BackgroundColor <String>]
+ [-ClientEncryptionEnabled <$true | $false>]
  [-DisclaimerText <String>]
  [-EmailText <String>]
- [-Image <Byte[]>]
- [-IntroductionText <String>]
+ [-ExpirationOptionEnabled <$true | $false>]
+ [-Image <Byte[]>] [-IntroductionText <String>]
  [-OTPEnabled <$true | $false>]
  [-PortalText <String>]
  [-ReadButtonText <String>]
@@ -36,27 +37,27 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
-Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image (Get-Content "C:\Temp\OME Logo.gif" -Encoding byte)
+{{ Add example code here }}
 ```
 
-This example uses the Set-OMEConfiguration cmdlet to set all the parameters. Note the use of the Get-Content command to provide the input for the Image parameter.
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the OME configuration that you want to modify. The default OME configuration has the Identity value "OME Configuration". You can also use "default".
+{{Fill Identity Description}}
 
 ```yaml
-Type: OMEConfigurationIdParameter
+Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -73,6 +74,21 @@ For the list of available hex and text values, see Background colors for Office 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClientEncryptionEnabled
+{{Fill ClientEncryptionEnabled Description}}
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -107,6 +123,21 @@ To remove existing text and use the default value, use the value $null for this 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpirationOptionEnabled
+{{Fill ExpirationOptionEnabled Description}}
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -208,7 +239,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SocialIdSignIn 
+### -SocialIdSignIn
 {{Fill SocialIdSignIn Description}}
 
 ```yaml
@@ -240,4 +271,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/3ef0aec0-ce28-411d-abe8-7236f082af1b.aspx)
+[Online Version](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/New-OMEConfiguration)
