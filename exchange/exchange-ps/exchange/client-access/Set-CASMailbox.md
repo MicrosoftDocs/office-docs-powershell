@@ -1193,7 +1193,7 @@ Valid values for this parameter are:
 To selectively enable authenticated SMTP for specific mailboxes only: disable authenticated SMTP at the organizational level ($true), enable it for the specific mailboxes ($false), and leave the rest of the mailboxes with their default value ($null).
 
 ```yaml
-Type:$true | $false
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
