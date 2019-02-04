@@ -94,35 +94,45 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- Advanced phish filter\*
+Email phish EventTypes:
 
-- Anti-malware engine
+- Advanced phish filter (Indicates a message caught by the Office 365 machine learning model.)
 
-- ATP safe attachments\*
+- Anti-spoof: Intra-org (Indicates an internal message caught by anti-phish spoof protection.)
 
-- ATP safe links\*
+- Anti-spoof: external domain (Indicates an external message caught by anti-phish spoof protection.)
 
-- Anti-spoof: Intra-org
+- Domain impersonation\* (Indicates a message impersonating a domain protected by an anti-phish policy.)
 
-- Anti-spoof: external domain\*
+- User impersonation\* (Indicates a message impersonating a user protected by an anti-phish policy.)
 
-- Domain impersonation\*
+- Brand impersonation (Indicates a message caught by Office 365 phish filters as impersonating a known brand.)
 
-- General phish filter
+- General phish filter (Indicates a message caught by basic Office 365 phish protection.)
 
-- Malicious URL reputation
+- Malicious URL reputation (Indicates a message with a known malicious URL caught by Office 365 phish filters.)
 
-- URL detonation\*
+- Phish ZAP (Indicates a phish or spam message detected and auto-purged after delivery.)
 
-- Message passed
+Email malware EventTypes:
 
-- Phish ZAP
+- Anti-malware engine (Indicates a message caught by the Office 365 anti-malware engine.)
 
-- User impersonation\*
+- ATP safe attachments\* (Indicates a message with a malicious attachment blocked by ATP.)
 
-- Brand impersonation
+- ATP safe links\* (Indicates when a malicious link is blocked by ATP.)
 
-- ZAP
+- ZAP (Indicates a message with malware detected and auto-purged after delivery.)
+
+- Office 365 file reputation (Indicates a message with a known malicious file blocked.)
+
+- Anti-malware policy file type block (Indicates when the Common Attachment Types filter blocks a file.)
+
+Content malware EventTypes:
+
+- AtpDocumentMalware\* (Indicates malicious content detected by ATP Safe Attachments in the cloud.)
+
+- AvDocumentMalware (Indicates malware found by the Office 365 anti-malware engine. Reporting requires ATP or E5.)
 
 \* These features require a standalone Office 365 ATP or E5 subscription.
 

@@ -16,7 +16,7 @@ class NotificationController {
 		for (let { module, parsedLogs } of parsedModules) {
 			const {
 				isModuleChange,
-				moduleText
+				mailText: moduleText
 			} = this._generateMailTextForModule({
 				parsedLogs,
 				module

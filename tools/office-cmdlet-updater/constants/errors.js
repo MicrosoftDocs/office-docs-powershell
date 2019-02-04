@@ -1,9 +1,11 @@
 module.exports.powerShellErrors = {
+	PS_GALLERY_INSTALL_ERROR: "You should using x64 version of PowerShell",
 	DOC_PATH_DOESNT_EXIST: "Path to documentation folder doesn't exist",
 	INSTALL_PLATYPS_ERROR: "Can't install 'platyPS' module",
 	IMPORT_PLATYPS_ERROR: "Cant't import 'platyPS' module",
 	INSTALL_MICROSOFT_TEAM_ERROR: "Can't install 'Microsoft team' module",
-	AUTH_MICROSOFT_TEAM_ERROR: "Can't auth into 'Microsoft team'"
+	AUTH_MICROSOFT_TEAM_ERROR: "Can't auth into 'Microsoft team'",
+	EMPTY_CONFIG_CREDENTIALS: "Empty credentials fields in a config file. Please, feel 'platyPS.credentials' section into a config file"
 };
 
 module.exports.markdownErrors = {
