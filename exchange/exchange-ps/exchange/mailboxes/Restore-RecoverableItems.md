@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter> [-EntryID <String>] [-FilterEndTime <DateTime>] [-FilterItemType <String>] [-FilterStartTime <DateTime>] [-LastParentFolderID <String>] [-ResultSize <Unlimited>] [-SourceFolder <DeletedItems | RecoverableItems>] [-SubjectContains <String>] [<CommonParameters>]
+Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter> [-EntryID <String>] [-FilterEndTime <DateTime>] [-FilterItemType <String>] [-FilterStartTime <DateTime>] [-LastParentFolderID <String>] [-ResultSize <Unlimited>] [-SourceFolder <DeletedItems | RecoverableItems | Purgeditems>] [-SubjectContains <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -217,6 +217,8 @@ The SourceFolder parameter specifies the folder in the mailbox to search for del
 - DeletedItems: The Deleted Items folder.
 
 - RecoverableItems: Recoverable items that have been deleted from the Deleted Items folder.
+
+-Purgeditems: If either Litigation Hold or single item recovery is enabled, this Folder contains all items that are hard deleted. This folder isn't visible to end users
 
 If you don't use this parameter, the command will search both locations.
 
