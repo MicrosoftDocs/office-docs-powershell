@@ -24,7 +24,7 @@ Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
 [-FilterStartTime <DateTime>]
 [-LastParentFolderID <String>]
 [-ResultSize <Unlimited>]
-[-SourceFolder <DeletedItems | RecoverableItems>]
+[-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
 [-SubjectContains <String>]
 [<CommonParameters>]
 ```
@@ -195,9 +195,9 @@ The SourceFolder parameter specifies the folder in the mailbox to search for del
 
 - RecoverableItems: Recoverable items that have been deleted from the Deleted Items folder.
 
--Purgeditems: If either Litigation Hold or single item recovery is enabled, this subfolder contains all items that are hard deleted. This folder isn't visible to end users
+- Purgeditems: If either Litigation Hold or single item recovery is enabled on the mailbox, this subfolder contains all items that are hard deleted. This folder isn't visible to end users.
 
-If you don't use this parameter, the command will search both locations.
+If you don't use this parameter, the command will search all locations.
 
 ```yaml
 Type: DeletedItems | RecoverableItems
