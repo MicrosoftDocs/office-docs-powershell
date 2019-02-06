@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the New-UMDialplan cmdlet to create a Unified Messaging (UM) dial plan to establish a link between UM IP gateways, UM hunt groups, and Mailbox servers to enable communication between Unified Messaging components.
+Use the New-UMDialPlan cmdlet to create a Unified Messaging (UM) dial plan to establish a link between UM IP gateways, UM hunt groups, and Mailbox servers to enable communication between Unified Messaging components.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -32,7 +32,7 @@ New-UMDialPlan [-Name] <String> -CountryOrRegionCode <String> -NumberOfDigitsInE
 ```
 
 ## DESCRIPTION
-The New-UMDialplan cmdlet creates a UM dial plan in Active Directory. A UM dial plan object has an organization-wide scope and contains all configuration information related to a telephony dial plan. A UM dial plan is a required component for establishing Unified Messaging communications with Microsoft Exchange. When you create a UM dial plan, an understanding of telephony configurations and the implications of adding to or modifying a UM configuration is required.
+The New-UMDialPlan cmdlet creates a UM dial plan in Active Directory. A UM dial plan object has an organization-wide scope and contains all configuration information related to a telephony dial plan. A UM dial plan is a required component for establishing Unified Messaging communications with Microsoft Exchange. When you create a UM dial plan, an understanding of telephony configurations and the implications of adding to or modifying a UM configuration is required.
 
 After the new UM dial plan is created, a UM IP gateway and a Mailbox server must be associated with the UM dial plan to enable Unified Messaging operations.
 
@@ -44,21 +44,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-UMDialplan -Name MyUMDialPlan -NumberOfDigitsInExtension 4
+New-UMDialPlan -Name MyUMDialPlan -NumberOfDigitsInExtension 4
 ```
 
 This example creates the UM dial plan MyUMDialPlan that uses four-digit extension numbers.
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-UMDialplan -Name MyUMDialPlan -URIType SipName -NumberOfDigitsInExtension 5
+New-UMDialPlan -Name MyUMDialPlan -URIType SipName -NumberOfDigitsInExtension 5
 ```
 
 This example creates the UM dial plan MyUMDialPlan that uses five-digit extension numbers that support SIP URIs.
 
 ### -------------------------- Example 3 --------------------------
 ```
-New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Unsecured
+New-UMDialPlan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Unsecured
 ```
 
 This example creates the unsecured UM dial plan MyUMDialPlan that supports E.164 numbers and that uses five-digit extension numbers.

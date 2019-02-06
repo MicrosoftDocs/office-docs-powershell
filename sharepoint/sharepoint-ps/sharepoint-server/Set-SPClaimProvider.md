@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Set-SPClaimProvider -Identity "12345678-90ab-cdef-1234-567890bcdefgh"
+Set-SPClaimProvider -Identity "12345678-90ab-cdef-1234-567890bcdefgh"
 ```
 
 This example turns off the specified claim provider.

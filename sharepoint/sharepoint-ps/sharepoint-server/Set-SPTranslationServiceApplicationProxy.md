@@ -25,7 +25,7 @@ Use the `Set-SPTranslationServiceApplicationProxy` cmdlet to set properties on a
 
 ### -------------EXAMPLE---------
 ```
-PS C:\>Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
+Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
 ```
 
 This example adds the Machine Translation Service application proxy named TranslationServiceProxy to the default proxy group.

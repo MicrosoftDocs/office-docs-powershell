@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1----------
 ```
-PS C:\>Set-SPAppHostingQuotaConfiguration -Identity 586d4a32-98c3-42ce-80be-3c76c10c250c -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
+Set-SPAppHostingQuotaConfiguration -Identity 586d4a32-98c3-42ce-80be-3c76c10c250c -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
 ```
 
 This example sets hosting Quotas for the SiteSubscriptionId "586d4a32-98c3-42ce-80be-3c76c10c250c" with hosted appinstance limit as 50 and hosted apps licenses assigned as 25.
@@ -37,7 +37,7 @@ This example sets hosting Quotas for the SiteSubscriptionId "586d4a32-98c3-42ce-
 
 ### ----------------EXAMPLE 2----------
 ```
-PS C:\>Get-SPSiteSubscription | Set-SPAppHostingQuotaConfiguration -Identity $_ -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
+Get-SPSiteSubscription | Set-SPAppHostingQuotaConfiguration -Identity $_ -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
 ```
 
 This example sets hosting Quotas for all SiteSubscriptions in the farm with hosted apps limit as 50 and hosted apps licenses assigned as 25.

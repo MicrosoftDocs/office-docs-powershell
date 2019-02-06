@@ -36,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$newPassPhrase = "abcDEF123!"
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
-PS C:\>Update-SPSecureStoreMasterKey -ServiceApplicationProxy $proxy -Passphrase $newPassPhrase
+$newPassPhrase = "abcDEF123!"
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
+Update-SPSecureStoreMasterKey -ServiceApplicationProxy $proxy -Passphrase $newPassPhrase
 ```
 
 This example creates a new master key for the given service application.

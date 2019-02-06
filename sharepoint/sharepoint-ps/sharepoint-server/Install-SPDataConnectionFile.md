@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------- 
 ```
-PS C:\>Install-SPDataConnectionFile -Path 'C:\folder\sample.udcx' -Category "Install" -WebAccessible $true
+Install-SPDataConnectionFile -Path 'C:\folder\sample.udcx' -Category "Install" -WebAccessible $true
 ```
 
 This example uploads a data connection file to a specified category.

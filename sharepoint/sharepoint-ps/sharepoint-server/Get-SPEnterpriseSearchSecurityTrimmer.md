@@ -30,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-PS C:\>Get-SPEnterpriseSearchSecurityTrimmer -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+Get-SPEnterpriseSearchSecurityTrimmer -SearchApplication $ssa
 ```
 
 This example obtains the pluggable security trimmers registered in the search service application MySSA.

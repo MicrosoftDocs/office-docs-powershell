@@ -20,7 +20,7 @@ zh-TW Version: 17.0.15229.2100
 
 # Skype for Business PowerShell
 ## Description
-The following cmdlet references are for Skype for Business.
+The following cmdlet references are for Skype for Business and Microsoft Teams. You can find information on installing the module for Skype for Business Online here: https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell. If you are using Skype for Business Server then the cmdlets are available in the Skype for Business Server Management Shell and you can find information about it here: https://docs.microsoft.com/skypeforbusiness/manage/management-shell.
 
 ## Skype for Business Cmdlets
 ### [New-CSOnlinePSTNGateway](New-CSOnlinePSTNGateway.md)
@@ -3119,8 +3119,18 @@ The following cmdlet references are for Skype for Business.
 
 ### [Get-CsAuthConfig](Get-CsAuthConfig.md)
 
-### [Get-CsOnlineSipDomains](Get-CsOnlineSipDomains.md)
+### [Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)
 
-### [Enable-CsOnlineSipDomains](Enable-CsOnlineSipDomains.md)
+### [Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
 
-### [Disable-CsOnlineSipDomains](Disable-CsOnlineSipDomains.md)
+### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
+
+### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
+
+### [Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
+
+### [New-CsTeamsCallParkPolicy](New-CsTeamsCallParkPolicy.md)
+
+### [Grant-CsTeamsCallParkPolicy](Grant-CsTeamsCallParkPolicy.md)
+
+### [Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)

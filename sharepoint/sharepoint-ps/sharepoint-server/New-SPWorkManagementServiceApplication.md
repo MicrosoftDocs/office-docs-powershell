@@ -29,7 +29,7 @@ Note: This functionality has been removed from SharePoint Server 2016, SharePoin
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWorkManagementServiceApplication -Name 'Work Management Service Application' -ApplicationPool 'SharePoint Web Services Default'
+New-SPWorkManagementServiceApplication -Name 'Work Management Service Application' -ApplicationPool 'SharePoint Web Services Default'
 ```
 
 This example creates a new Work Management Service Application using the Application Pool named SharePoint Web Services Default.

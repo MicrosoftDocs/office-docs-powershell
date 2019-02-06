@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-------------------
 ```
-PS C:\>Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
+Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
 ```
 
 This example uploads photos to a specified My Site host location.

@@ -64,7 +64,7 @@ This example returns a summary list of all mail users in the organization.
 Get-MailUser -Identity Ed | Format-List
 ```
 
-This example returnsdetailed information for the mail user named Ed.
+This example returns detailed information for the mail user named Ed.
 
 ## PARAMETERS
 

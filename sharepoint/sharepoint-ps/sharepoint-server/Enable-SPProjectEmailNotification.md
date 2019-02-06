@@ -24,7 +24,7 @@ Turns on the Project Web App site level setting for email notifications in Proje
 
 ### Example 1 
 ```
-PS C:\>Enable-SPProjectEmailNotification -Url http://pwa_site
+Enable-SPProjectEmailNotification -Url http://pwa_site
 ```
 
 Enables Project Server email notifications on the Project Web App site, http://pwa_site.

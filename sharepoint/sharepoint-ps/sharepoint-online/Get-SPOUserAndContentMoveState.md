@@ -51,7 +51,7 @@ Obtain the move state by OneDrive Move Job ID
 ### Example 2
 
 ```Powershell
-Get-SPOUserAndContentMoveState -movestate NotStarted
+Get-SPOUserAndContentMoveState -MoveState NotStarted
 ```
 Getting which moves are being done in a particular state
 ###Example 3

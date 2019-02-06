@@ -1,9 +1,11 @@
+const { errorColor } = require('../helpers/colors');
+
 class CliController {
 	constructor(
 		cliService,
 		cmdletService,
-		markdownController,
-		powerShellService
+		powerShellService,
+		markdownController
 	) {
 		this.cliService = cliService;
 		this.cmdletService = cmdletService;
@@ -47,13 +49,36 @@ class CliController {
 			}
 		});
 
-		this.cliService.start(argv, async (cli) => {
-			const { module, cmdlet } = cli;
+		this.cliService.addOption({
+			option: '-e --send-email',
+			description: 'send email notification'
+		});
 
-			await this.markdownController.updateMarkdown({
-				moduleName: module,
-				cmdlet
-			});
+		this.cliService.addOption({
+			option: '-p --create-pr',
+			description: 'create pull request'
+		});
+
+		this.cliService.start(argv, async (cli) => {
+			const {
+				module: cliModuleName,
+				cmdlet: cliCmdletName,
+				sendEmail: isNeedEmail,
+				createPr: isNeedPullRequest
+			} = cli;
+
+			await this.markdownController
+				.updateMarkdown({
+					cliModuleName,
+					cliCmdletName,
+					isNeedPullRequest,
+					isNeedEmail
+				})
+				.catch((err) => {
+					console.error(errorColor(err));
+
+					this.powerShellService.dispose();
+				});
 		});
 	}
 }

@@ -90,6 +90,46 @@ Json sample for SharePoint migration(whole site):
    "SourcePath":"http://YourOnPremSite/subsite2",
    "TargetPath":"https://YourTargetSite/targetSubSite2"
 }
+Json sample with task level setting:
+{ 
+  "Tasks": [ 
+    { 
+      "SourcePath": "http://YourOnPremServerSiteURL", 
+      "TargetPath": "https://YourTargetSiteURL", 
+      "Items": { 
+        "Lists": [ 
+          { 
+            "SourceList": "SourceListName", 
+            "TargetList": "TargetListName" 
+          } 
+        ], 
+        "SubSites": [] 
+      }, 
+      "Settings": { 
+        "MigrateFileVersionHistory": true, 
+        "KeepFileVersions": 100, 
+        "MigrateHiddenItems": false, 
+        "MigrateItemsCreatedAfter": "yyyy-MM-dd", 
+        "MigrateItemsModifiedAfter": "yyyy-MM-dd", 
+        "SkipFilesWithExtensions": "txt:mp3:OtherFileExtentionsYouwantSkip", 
+        "EnableAzureDirectoryLookup": false, 
+        "PreservePermission": true, 
+        "UseCustomAzureStorage": false, 
+        "CustomAzureStorageAccount": null, 
+        "CustomAzureAccessKey": null, 
+        "CustomAzureDeletionAfterMig": false, 
+        "UserMappingCSVFile": null, 
+        "SkipListWithAudienceEnabled": true, 
+        "EnableIncremental": false, 
+        "MigrateOneNoteNotebook": true, 
+        "MigrateAllWebStructures": false, 
+        "FilterOutPathSpecialCharacters": false 
+      } 
+    } 
+  ] 
+}
+
+Note: Datetime format is "yyyy-MM-dd"
 ```
 ## EXAMPLES
 

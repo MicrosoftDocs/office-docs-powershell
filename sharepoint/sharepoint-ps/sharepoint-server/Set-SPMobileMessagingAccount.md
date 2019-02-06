@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPMobileMessagingAccount -WebApplication http://sitename -Identity SMS -ServiceName SMSLink -ServiceUrl https://www.adatum.com/Service/MessagingService.asmx-UserId someone@example.com -Password password1
+Set-SPMobileMessagingAccount -WebApplication http://sitename -Identity SMS -ServiceName SMSLink -ServiceUrl https://www.adatum.com/Service/MessagingService.asmx-UserId someone@example.com -Password password1
 ```
 
 This example changes the SMS mobile account settings of the Web application, http://sitename, to the following values:service name: SMSLink; service URL: https://www.adatum.com/Service/MessagingService.asmx; user ID: someone@example.com; and password: password1.

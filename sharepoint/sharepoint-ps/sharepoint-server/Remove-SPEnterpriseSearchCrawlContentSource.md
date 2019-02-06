@@ -29,13 +29,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
-PS C:\>$topo = Get-SPEnterpriseSearchCrawlTopology -SearchApplication $searchapp
-PS C:\>New-SPEnterpriseSearchCrawlTopology -SearchApplication $searchapp -clone -CrawlTopology $topo
-PS C:\>$newtopo = Get-SPEnterpriseSearchCrawlTopology -SearchApplication $searchapp -Identity 11111111-1111-1111-1111-111111111111
-PS C:\>$cc = Get-SPEnterpriseSearchCrawlComponent -CrawlTopology $newtopo -Identity 22222222-2222-2222-2222-222222222222
-PS C:\>$cc | Remove-SPEnterpriseSearchCrawlComponent
-PS C:\>$newtopo | Set-SPEnterpriseSearchCrawlTopology -Active
+$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
+$topo = Get-SPEnterpriseSearchCrawlTopology -SearchApplication $searchapp
+New-SPEnterpriseSearchCrawlTopology -SearchApplication $searchapp -clone -CrawlTopology $topo
+$newtopo = Get-SPEnterpriseSearchCrawlTopology -SearchApplication $searchapp -Identity 11111111-1111-1111-1111-111111111111
+$cc = Get-SPEnterpriseSearchCrawlComponent -CrawlTopology $newtopo -Identity 22222222-2222-2222-2222-222222222222
+$cc | Remove-SPEnterpriseSearchCrawlComponent
+$newtopo | Set-SPEnterpriseSearchCrawlTopology -Active
 ```
 
 This example creates a new, inactive, crawl topology, removes a crawl component from it and activates the new crawl topology.

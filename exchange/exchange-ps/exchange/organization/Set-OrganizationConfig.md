@@ -40,6 +40,7 @@ Set-OrganizationConfig
  [-ConnectorsEnabledForTeams <$true | $false>]
  [-ConnectorsEnabledForYammer <$true | $false>]
  [-CustomerLockboxEnabled <$true | $false>]
+ [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <Private | Public>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
@@ -75,6 +76,7 @@ Set-OrganizationConfig
  [-MailTipsMailboxSourcedTipsEnabled <$true | $false>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
  [-OutlookMobileHelpShiftEnabled <$true | $false>]
+ [-OutlookPayEnabled <$true | $false>]
  [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <$true | $false>]
@@ -173,7 +175,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ### AdfsAuthenticationParameter
 ```
 Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
- [-ACLableSyncedObjectEnabled <true | $false>]
+ [-ACLableSyncedObjectEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
@@ -296,9 +298,9 @@ Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowLis
 This example allows only the client applications specified by the EwsAllowList parameter to use REST and EWS.
 
 ### -------------------------- Example 6 -------------------------- 
-``` 
-Set-OrganizationConfig -VisibleMeetingUpdateProperties Location:15 
-``` 
+```
+Set-OrganizationConfig -VisibleMeetingUpdateProperties Location 15 
+```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except if the meeting location changes within 15 minutes of the meeting start time.
 
@@ -509,7 +511,7 @@ This parameter is available only in the cloud-based service.
 
 The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
 
-- $true: Mailbox auditing is disabled for the organization. 
+- $true: Mailbox auditing is disabled for the organization.
 
 - $false: Allow mailbox auditing in the organization. This is the default value.
 
@@ -848,6 +850,29 @@ Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultAuthenticationPolicy
+The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You create authentication policies with the New-AuthenticationPolicy cmdlet to block or selectively allow Basic authentication.
+
+```yaml
+Type: AuthPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -1286,7 +1311,7 @@ The EwsEnabled parameter specifies whether to globally enable or disable EWS acc
 
 - $false: All EWS access is disabled.
 
-- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the releated EWS parameters (for example EwsAllowEntourage). This is the default value.
+- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the related EWS parameters (for example EwsAllowEntourage). This is the default value.
 
 This parameter has no affect on access to REST.
 
@@ -1801,7 +1826,7 @@ The OAuth2ClientProfileEnabled parameter enables or disables modern authenticati
 
 - $true: Modern authentication is enabled.
 
-- $false: Modern authentication is disabled. 
+- $false: Modern authentication is disabled.
 
 Modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
 
@@ -1842,8 +1867,30 @@ This parameter is available only in the cloud-based service.
 {{Fill OutlookMobileHelpShiftEnabled Description}}
 
 ```yaml
-Type: Boolean
-Parameter Sets: $true | $false
+Type: $true | $false
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookPayEnabled
+
+This parameter is available only in the cloud-based service.
+
+The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization. Valid values are:
+
+- $true: Payments in Outlook are enabled.
+
+- $False: Payments in Outlook are disabled.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -1866,7 +1913,7 @@ A message that's permanently deleted can't be recovered by using the Recoverable
 
 ```yaml
 Type: $true | $false
-Parameter Sets: (All)
+Parameter Sets: AdfsAuthenticationRawConfiguration, AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2010
 Required: False
@@ -2269,7 +2316,9 @@ Accept wildcard characters: False
 ### -WACDiscoveryEndpoint
 This parameter is available only in on-premises Exchange.
 
-This parameter is reserved for internal Microsoft use.
+The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes in the organization. For example, https://oos.internal.contoso.com/hosting/discovery.
+
+Office Online Server enables users to view supported file attachments in Outlook on the web (formerly known as Outlook Web App).
 
 ```yaml
 Type: String

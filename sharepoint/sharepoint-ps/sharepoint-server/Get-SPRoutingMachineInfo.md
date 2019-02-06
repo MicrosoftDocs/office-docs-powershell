@@ -34,7 +34,7 @@ C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
 C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\>Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+Get-SPRoutingMachineInfo -RequestManagementSettings $rm
 ```
 
 This example returns a routing target for a specified identity.

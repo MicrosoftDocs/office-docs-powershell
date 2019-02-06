@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPServiceInstance -Server ServerA
+Get-SPServiceInstance -Server ServerA
 ```
 
 This example displays the service instances from a given server.

@@ -55,7 +55,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ExternalSystem = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "LobSystem" -ServiceContext http://contoso -Name "ContosoDatabase"
+$ExternalSystem = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "LobSystem" -ServiceContext http://contoso -Name "ContosoDatabase"
 ```
 
 This example looks at the principals (users) and their corresponding rights given for the External System metadata object, and overwrites the permissions of its child metadata objects with these same principals and rights.

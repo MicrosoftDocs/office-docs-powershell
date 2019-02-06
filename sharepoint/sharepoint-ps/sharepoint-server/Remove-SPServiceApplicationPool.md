@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPServiceApplicationPool TestServiceWebApplicationPool
+Remove-SPServiceApplicationPool TestServiceWebApplicationPool
 ```
 
 This example deletes the selected service application pool.

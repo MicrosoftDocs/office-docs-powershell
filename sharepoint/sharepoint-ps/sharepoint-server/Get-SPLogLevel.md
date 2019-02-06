@@ -29,14 +29,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPLogLevel
+Get-SPLogLevel
 ```
 
 This example displays throttle levels for all categories.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPLogLevel -Identity "Category1"
+Get-SPLogLevel -Identity "Category1"
 ```
 
 This example displays the throttle level for the Category1 category.
@@ -50,7 +50,7 @@ This example displays the throttle level for multiple categories.
 
 ### --------------EXAMPLE 4----------------- 
 ```
-PS C:\>Get-SPLogLevel -Identity "Area:*"
+Get-SPLogLevel -Identity "Area:*"
 ```
 
 This example displays the throttle level for all categories in one area.

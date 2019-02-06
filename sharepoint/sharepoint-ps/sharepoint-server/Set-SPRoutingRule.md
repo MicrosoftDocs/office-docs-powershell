@@ -29,15 +29,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$wa = Get-SPWebApplication http://webAppUrl
-PS C:\>$rm = Get-SPRequestManagementSettings -Identity $wa
-PS C:\>Get-SPRoutingRule -RequestManagementSettings $rm
-PS C:\>$machines = Get-SPRoutingMachineInfo -RequestManagementSettings $rm
-PS C:\>$pool = Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
-PS C:\>$criteria = New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
-PS C:\>$rule = Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
-PS C:\>$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
-PS C:\>Set-SPRoutingRule -Identity $rule -Criteria $criteriaNew
+$wa = Get-SPWebApplication http://webAppUrl
+$rm = Get-SPRequestManagementSettings -Identity $wa
+Get-SPRoutingRule -RequestManagementSettings $rm
+$machines = Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+$pool = Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
+$criteria = New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+$rule = Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
+$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
+Set-SPRoutingRule -Identity $rule -Criteria $criteriaNew
 ```
 
 This example sets a routing rule for the specified identity by using the $rule variable.

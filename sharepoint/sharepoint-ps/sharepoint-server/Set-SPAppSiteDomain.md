@@ -26,7 +26,7 @@ Use the Set-SPAppSiteDomain cmdlet to create or change the URL of any installed 
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set-SPAppSiteDomain -Site https://www.contoso.com
+Set-SPAppSiteDomain -Site https://www.contoso.com
 ```
 
 This example sets the subscription name and app site domain identifier for the https://www.contoso.com site.

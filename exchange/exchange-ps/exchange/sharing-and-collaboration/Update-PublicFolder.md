@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-The Server parameterspecifies the identity of a Mailbox server with a public folder database that's the source of the replication.
+The Server parameter specifies the identity of a Mailbox server with a public folder database that's the source of the replication.
 
 ```yaml
 Type: ServerIdParameter

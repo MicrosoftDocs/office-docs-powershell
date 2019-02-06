@@ -44,7 +44,7 @@ Connects to the Microsoft Graph API using application permissions via an app's d
 ## PARAMETERS
 
 ### -AADDomain
-The AAD where the O365 app is registred. Eg.: contoso.com, or contoso.onmicrosoft.com.
+The AAD where the O365 app is registered. Eg.: contoso.com, or contoso.onmicrosoft.com.
 
 ```yaml
 Type: String

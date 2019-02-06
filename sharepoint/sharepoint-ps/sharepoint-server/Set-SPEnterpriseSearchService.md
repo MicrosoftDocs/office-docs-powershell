@@ -31,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$password = Read-Host -AsSecureString
-PS C:\>Set-SPEnterpriseSearchService -IgnoreSSLWarnings $true -ServiceAccount 'contoso\adminAccount' -ServicePassword $password
+$password = Read-Host -AsSecureString
+Set-SPEnterpriseSearchService -IgnoreSSLWarnings $true -ServiceAccount 'contoso\adminAccount' -ServicePassword $password
 ```
 
 This example configures the search service to ignore SSL warnings and changes the service account for the search service.
@@ -191,11 +191,9 @@ Accept wildcard characters: False
 ### -PerformanceLevel
 Specifies the relative number of threads for the indexer performance:
 
-Reduced: Total number of threads = number of processors, Max Threads/host =  number of processors
-
-Partly Reduced:  Total number of threads = 4 times the number of processors , Max Threads/host = 16 time the number of processors
-
-Maximum: Total number of threads = number of processors
+* Reduced: Total number of threads = number of processors.
+* Partly Reduced:  Total number of threads = 4 times the number of processors.
+* Maximum: Total number of threads = 16 times the number of processors.
 
 The type must be one of the following values: Reduced, PartlyReduced, or Maximum.
 

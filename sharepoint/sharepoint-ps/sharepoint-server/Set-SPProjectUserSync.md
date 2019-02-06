@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Set-SPProjectUserSync http://localhost/pwa EnablePWA
+Set-SPProjectUserSync http://localhost/pwa EnablePWA
 ```
 
 In this example, WSS User sync is enabled for the Project Web App site at http://localhost/pwa.

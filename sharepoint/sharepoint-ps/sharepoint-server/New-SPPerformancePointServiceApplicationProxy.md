@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE--------------------
 ```
-PS C:\>New-SPPerformancePointServiceApplicationProxy -Name PPS_Application_Proxy_01 -ServiceApplication PPS_Application_01 -Default
+New-SPPerformancePointServiceApplicationProxy -Name PPS_Application_Proxy_01 -ServiceApplication PPS_Application_01 -Default
 ```
 
 This example creates a new PerformancePoint Service application proxy named PPS_Application_Proxy_01, associated with the service application named PPS_Application_01 and is added to the Default proxy group.

@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\>Repair-SPProjectWebInstance -Identity http://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
+Repair-SPProjectWebInstance -Identity http://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
 ```
 
 This example enqueues any missing triggers for the Project Web App instance at http://contoso-appsrv/PWA.

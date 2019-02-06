@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Import-SPInfoPathAdministrationFiles -path "backupfiles.cab"
+Import-SPInfoPathAdministrationFiles -path "backupfiles.cab"
 ```
 
 This example imports form templates (XSN files) and universal data connections (UDCX files) located on the SharePoint Central Administration Web site into the specified Forms service.

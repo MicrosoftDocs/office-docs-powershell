@@ -39,7 +39,7 @@ C:\PS>$throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name 
 
 C:\PS>$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
 
-PS C:\>Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
+Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
 ```
 
 This example sets throttling rule property

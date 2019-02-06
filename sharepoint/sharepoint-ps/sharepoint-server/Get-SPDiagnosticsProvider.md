@@ -30,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-PS C:\>Get-SPDiagnosticsProvider
+Get-SPDiagnosticsProvider
 ```
 
 This example returns all the diagnostics providers in the farm.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
+Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
 ```
 
 This example returns the event log diagnostics provider.

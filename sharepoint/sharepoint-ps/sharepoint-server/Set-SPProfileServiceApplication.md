@@ -51,8 +51,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE---------------------
 ```
-PS C:\>$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
-PS C:\>Set-SPProfileServiceApplication -Identity $sa -PurgeNonImportedObjects:$true
+$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
+Set-SPProfileServiceApplication -Identity $sa -PurgeNonImportedObjects:$true
 ```
 
 This example purges objects from the Profile database which are not in scope of the User Profile import.

@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-IntraorganizationConnector -DiscoveryEndpoint http://ExternalDiscovery.Contoso.com -Name MainCloudConnector -TargetAddressDomains Cloud1.contoso.com,Cloud2.contoso.com
+New-IntraOrganizationConnector -DiscoveryEndpoint http://ExternalDiscovery.Contoso.com -Name MainCloudConnector -TargetAddressDomains Cloud1.contoso.com,Cloud2.contoso.com
 ```
 
 This example creates an Intra-Organization connector named "MainCloudConnector" between an on-premises Exchange organization and an Exchange Online organization containing two domains, Cloud1.contoso.com and Cloud2.contoso.com.

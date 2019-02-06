@@ -52,7 +52,7 @@ This cmdlet does not trigger version-to-version upgrade of any site collections.
 
 ### --------------------------EXAMPLE 1------------------------------
 ```
-PS C:\>Upgrade-SPContentDatabase WSS_Content
+Upgrade-SPContentDatabase WSS_Content
 ```
 
 This example upgrades the existing WSS_Content content database schema and then performs only build-to-build upgrade actions on existing site collections if required.
@@ -60,7 +60,7 @@ This operation does not changed the CompatibilityLevel for existing site collect
 
 ### --------------------------EXAMPLE 2------------------------------
 ```
-PS C:\>Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade
+Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade
 ```
 
 This example upgrades the existing WSS_Content content database schema only.
@@ -69,7 +69,7 @@ This operation does not change The CompatibilityLevel for existing site collecti
 
 ### --------------------------EXAMPLE 3------------------------------
 ```
-PS C:\>Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade -UseSnapshot
+Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade -UseSnapshot
 ```
 
 This example upgrades the existing WSS_Content content database schema only while using a snapshot of the database to retain read-only access to the content during the upgrade. 

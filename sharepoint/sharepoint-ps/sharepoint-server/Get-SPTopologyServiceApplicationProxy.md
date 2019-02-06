@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPTopologyServiceApplicationProxy
+Get-SPTopologyServiceApplicationProxy
 ```
 
 This example displays the topology service application proxy in the farm.

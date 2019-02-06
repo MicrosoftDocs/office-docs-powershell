@@ -32,7 +32,7 @@ Excel Services.
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\>Remove-SPExcelBIServer -ExcelServiceApplication "MyExcel"
+Remove-SPExcelBIServer -ExcelServiceApplication "MyExcel"
 
 ```
 

@@ -27,14 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>Get-SPStateServiceApplicationProxy
+Get-SPStateServiceApplicationProxy
 ```
 
 This example displays all the state service application proxies on the farm.
 
 ### --------------EXAMPLE 2----------------- 
 ```
-PS C:\>Get-SPStateServiceApplicationProxy -Identity 81dc50e0-c0f9-4d2c-8284-bb03bb1ea676
+Get-SPStateServiceApplicationProxy -Identity 81dc50e0-c0f9-4d2c-8284-bb03bb1ea676
 ```
 
 This example displays a specific state service application proxy on the farm.

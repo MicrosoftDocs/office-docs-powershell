@@ -40,8 +40,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE----------------------
 ```
-PS C:\>$sa = Get-SPPerformancePointServiceApplication
-PS C:\>Set-SPPerformancePointServiceApplication -Identity $sa -DataSourceQueryTimeoutSeconds 5000
+$sa = Get-SPPerformancePointServiceApplication
+Set-SPPerformancePointServiceApplication -Identity $sa -DataSourceQueryTimeoutSeconds 5000
 ```
 
 This example sets the Data Source Query Timeout setting to a value of 5000.

@@ -1052,7 +1052,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -1333,35 +1333,43 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - None
 
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
+
+- ApplyRecord (Available only in the cloud-based service.)
+
 - Copy
 
-- Create
+- Create (Enabled by default.)
 
-- FolderBind
+- FolderBind (Enabled by default in on-premises Exchange 2010 or later.)
 
-- HardDelete
+- HardDelete (Enabled by default.)
 
 - MessageBind
 
-- Move
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- MoveToDeletedItems
+- Move (Enabled by default in on-premises Exchange 2010 or later.)
 
-- SendAs
+- MoveToDeletedItems (Enabled by default.)
 
-- SendOnBehalf
+- RecordDelete (Available only in the cloud-based service.)
 
-- SoftDelete
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- Update
+- SendAs (Enabled by default.)
 
-- UpdateFolderPermissions (cloud-based service only)
+- SendOnBehalf (Enabled by default.)
 
-- UpdateCalendarDelegation (cloud-based service only)
+- SoftDelete (Enabled by default.)
 
-- UpdateInboxRules (cloud-based service only)
+- Update (Enabled by default.)
 
-By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by administrators are logged.
+- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
+
+- UpdateCalendarDelegation (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
+
+- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1386,29 +1394,39 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 
 - None
 
-- Create
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
+
+- ApplyRecord (Available only in the cloud-based service.)
+
+- Create (Enabled by default.)
 
 - FolderBind
 
-- HardDelete
+- HardDelete (Enabled by default.)
+
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
 - Move
 
-- MoveToDeletedItems
+- MoveToDeletedItems (Enabled by default only in the cloud-based service.)
 
-- SendAs
+- RecordDelete (Available only in the cloud-based service.)
 
-- SendOnBehalf
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- SoftDelete
+- SendAs (Enabled by default.)
 
-- Update
+- SendOnBehalf (Enabled by default only in the cloud-based service.)
 
-- UpdateFolderPermissions (cloud-based service only)
+- SoftDelete (Enabled by default only in the cloud-based service.)
 
-- UpdateInboxRules (cloud-based service only)
+- Update (Enabled by default only in the cloud-based service.)
 
-By default, the Update, SoftDelete, HardDelete, SendAs, Create, UpdateFolderPermissions, and UpdateInboxRules actions performed by delegates are logged.
+- UpdateCalendarDelegation (Available only in the cloud-based service.)
+
+- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
+
+- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1492,29 +1510,41 @@ Accept wildcard characters: False
 ### -AuditOwner
 The AuditOwner parameter specifies the mailbox operations to log for mailbox owners as part of mailbox audit logging. Valid values include:
 
-- None
+- None (This is the default value in Exchange 2010, Exchange 2013, and Exchange 2016.)
+
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
+
+- ApplyRecord (Available only in the cloud-based service.)
 
 - Create
 
+- FolderBind (Available only in Exchange 2013.)
+
 - HardDelete
 
-- MailboxLogin
+- MailboxLogin (Available only in Exchange 2016, Exchange 2019, and the cloud-based service.)
+
+- MessageBind (Available only in Exchange 2013.)
+
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
 - Move
 
 - MoveToDeletedItems
 
+- RecordDelete (Available only in the cloud-based service.)
+
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
+
 - SoftDelete
 
 - Update
 
-- UpdateFolderPermissions (cloud-based service only)
+- UpdateFolderPermissions (Available only in the cloud-based service; enabled by default.)
 
-- UpdateCalendarDelegation (cloud-based service only)
+- UpdateCalendarDelegation (Available only in the cloud-based service; enabled by default.)
 
-- UpdateInboxRules (cloud-based service only)
-
-In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by the owner are logged by default.
+- UpdateInboxRules (Available only in the cloud-based service; enabled by default.)
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
@@ -1632,7 +1662,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairDisabled
-The CalendarRepairDisabled parameter specifies whetherto prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
+The CalendarRepairDisabled parameter specifies whether to prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
 
 - $true: The Calendar Repair Assistant doesn't repair calendar items in the mailbox.
 
@@ -2622,7 +2652,7 @@ Accept wildcard characters: False
 ### -GMGen
 This parameter is available only in on-premises Exchange.
 
-The GMGen parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used for group metrics generation for the organization. In MailTips, group metrics information is used to indicate the number of recipients in a message or whether recipients are outside your organization. You can use this parameter only on an arbitration mailbox.
+The GMGen parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for group metrics generation for the organization. In MailTips, group metrics information is used to indicate the number of recipients in a message or whether recipients are outside your organization. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -3098,7 +3128,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -4120,7 +4150,7 @@ Accept wildcard characters: False
 ### -RemoveManagedFolderAndPolicy
 This parameter is available only in on-premises Exchange.
 
-The RemoveManagedFolderAndPolicyswitch specifies whether to remove all MRM 1.0 policies and attributes from a mailbox. If you use this switch, MRM 1.0 policies and MRM 1.0 properties from any managed folders that were created as part of any MRM 1.0 policies are removed. Managed folders that are empty are also removed from the mailbox, and managed folders that contain items are converted to standard folders.
+The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox. 
 
 You don't need to specify a value with this switch.
 
@@ -4265,7 +4295,7 @@ The RetainDeletedItemsFor parameter specifies the length of time to keep soft-de
 
 These actions move the items to the Recoverable Items folder, into a subfolder named Deletions.
 
-Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see Recoverable Items folder in Exchange 2016 (https://technet.microsoft.com/library/ee364755.aspx).
+Before the deleted item retention period expires, users can recover soft-deleted items in Outlook and Outlook on the web by using the Recover Deleted Items feature. For more information, see Recoverable Items folder in Exchange Server (https://technet.microsoft.com/library/ee364755.aspx).
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -4393,7 +4423,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleAssignmentPolicy
-The RoleAssignmentPolicy parameter specifies the role assignment policy that's assigned to the mailbox.You can use any value that uniquely identifies the role assignment policy. For example:
+The RoleAssignmentPolicy parameter specifies the role assignment policy that's assigned to the mailbox. You can use any value that uniquely identifies the role assignment policy. For example:
 
 - Name
 
@@ -4899,7 +4929,7 @@ Accept wildcard characters: False
 ### -UMDataStorage
 This parameter is available only in on-premises Exchange.
 
-The UMDataStorage parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used to store UM call data records and UM custom prompts. This capability can be assigned to only one arbitration mailbox for the organization. You can use this parameter only on an arbitration mailbox.
+The UMDataStorage parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used to store UM call data records and UM custom prompts. This capability can be assigned to only one arbitration mailbox for the organization. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -4930,7 +4960,7 @@ If you use this syntax and you omit any of the DTMF map values, those values are
 
 To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<intgers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4947,7 +4977,7 @@ Accept wildcard characters: False
 ### -UMGrammar
 This parameter is available only in on-premises Exchange.
 
-The UMGrammar parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
+The UMGrammar parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
