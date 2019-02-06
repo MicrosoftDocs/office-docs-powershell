@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
 ```
 
-This example removess the specified Sweep rule.
+This example removes the specified Sweep rule.
 
 ### -------------------------- Example 2 --------------------------
 ```

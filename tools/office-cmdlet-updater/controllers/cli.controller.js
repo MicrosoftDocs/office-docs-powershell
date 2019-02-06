@@ -1,3 +1,5 @@
+const { errorColor } = require('../helpers/colors');
+
 class CliController {
 	constructor(
 		cliService,
@@ -65,12 +67,18 @@ class CliController {
 				createPr: isNeedPullRequest
 			} = cli;
 
-			await this.markdownController.updateMarkdown({
-				cliModuleName,
-				cliCmdletName,
-				isNeedPullRequest,
-				isNeedEmail
-			});
+			await this.markdownController
+				.updateMarkdown({
+					cliModuleName,
+					cliCmdletName,
+					isNeedPullRequest,
+					isNeedEmail
+				})
+				.catch((err) => {
+					console.error(errorColor(err));
+
+					this.powerShellService.dispose();
+				});
 		});
 	}
 }

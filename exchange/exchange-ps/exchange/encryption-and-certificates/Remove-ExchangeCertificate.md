@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the certificate that you want to remove. Valid values are:
 
-- \<ServerNameorFQDN\>\\\<Thumbprint\>
+- \<ServerNameOrFQDN\>\\\<Thumbprint\>
 
 - \<Thumbprint\>
 

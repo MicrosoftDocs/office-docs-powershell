@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Get-CsCallerIdPolicy
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsCallerIdPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the `Get-CsCalleridPolicy` cmdlet to display the Caller ID policies for your organization.
 
 ## SYNTAX
 
@@ -23,16 +23,17 @@ Get-CsCallerIdPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonP
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+By default, Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with. Client policies can be configured at the global, site and per-user scopes.
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Get-CsCallerIdPolicy
 ```
 
-Insert descriptive text for example 1.
+The example gets and displays the Caller ID policies for your organization.
 
 
 ## PARAMETERS

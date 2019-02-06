@@ -24,10 +24,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ###   ------------ Example 1 --------------------
-```
+```powershell
 Remove-SPOUserInfo -LoginName joe.healy@contoso.com -Site https://contoso.sharepoint.com/sites/sc1 
 ```
-Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the user ifnoramtion list of https://contoso.sharepoint.com/sites/sc1 site collection.
+Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the user information list of https://contoso.sharepoint.com/sites/sc1 site collection.
 
 ## PARAMETERS
 

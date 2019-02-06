@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Disable-RemoteMailbox cmdlet to remove mailboxes from the cloud-based service but keepthe associated user objects in the on-premises Active Directory.
+Use the Disable-RemoteMailbox cmdlet to remove mailboxes from the cloud-based service but keep the associated user objects in the on-premises Active Directory.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -42,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Disable-RemoteMailbox "Kim Akers"
 ```
 
-This example removes the cloud-based mailbox that's associated with the on-premises mail usernamed Kim Akers. The mail user is automatically converted to a regular user. This example assumes that you've already removed the Exchange Online license for the mailbox, and that directory synchronization has been configured.
+This example removes the cloud-based mailbox that's associated with the on-premises mail user named Kim Akers. The mail user is automatically converted to a regular user. This example assumes that you've already removed the Exchange Online license for the mailbox, and that directory synchronization has been configured.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Disable-RemoteMailbox "David Strome" -Archive
 ```
 
-This example removes thecloud-based archive mailbox but keeps the cloud-based mailbox that's associated with the on-premises mail usernamed David Strome. This example assumes directory synchronization has been configured.
+This example removes the cloud-based archive mailbox but keeps the cloud-based mailbox that's associated with the on-premises mail user named David Strome. This example assumes directory synchronization has been configured.
 
 ## PARAMETERS
 

@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteTenant
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 PARAMVALUE: SmtpDomain
 
