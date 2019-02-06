@@ -12,7 +12,7 @@ schema: 2.0.0
 Creates a new mobility policy at the site or the per-user scope.
 Mobility policies determine whether or not a user can use Skype for Business Mobile.
 These policies also manage a user's ability to employ Call via Work, a feature that enables users to make and receive phone calls on their mobile phone by using their work phone number instead of their mobile phone number.
-Mobility policies can also be used to require Wi-Fi connections when making or receiving calls.
+Mobility policies can also be used to require Wi-Fi connections when making or receiving IP video/screen share calls.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
 The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, EncryptAppData, Force, Identity, InMemory, PipelineVariable, RequireIntune, Tenant, and VoiceSettings
@@ -42,7 +42,6 @@ Both of these capabilities can be managed by using mobility policies.
 
 With Skype for Business Server, mobile devices can make or receive phone calls by using either the standard cellular phone network.
 or by using Wi-Fi connections.
-Mobility policies can be used to require Wi-Fi connections and to prevent calls over the cellular network.
 
 When you install Skype for Business Server, you will have a single, global mobility policy that applies to all your users.
 However, administrators can use the New-CsMobilityPolicy cmdlet to create custom policies at either the site or the per-user scope.
@@ -251,29 +250,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequireWIFIForIPAudio
-
-When set to True, the user can use IP audio in calls made when his or her mobile device is connected to a WiFi network.
-That means that the user will only be allowed to make audio calls using Wi-Fi, and will not be able to use the standard cellular phone network.
-The default value is False.
-
-This parameter was introduced in Lync Server 2013.
-
-
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
