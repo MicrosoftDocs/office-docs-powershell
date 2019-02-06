@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com
 ```
-Example 1 exports the query log for a user who has the e-mail address user1@contoso.harepoint.com to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the current working folder.
+Example 1 exports the query log for a user who has the e-mail address user1@contoso.sharepoint.com to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the current working folder.
 
 
 ###   ------------ Example 2 --------------------
