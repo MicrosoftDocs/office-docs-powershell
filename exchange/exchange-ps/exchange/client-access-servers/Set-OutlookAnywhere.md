@@ -22,13 +22,20 @@ Set-OutlookAnywhere [-Identity] <VirtualDirectoryIdParameter>
  [-ClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>]
  [-Confirm]
  [-DefaultAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | MaxValidValue | Misconfigured>]
- [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <None | Allow | Require>]
- [-ExternalHostname <Hostname>] [-IISAuthenticationMethods <MultiValuedProperty>] [-Name <String>]
- [-SSLOffloading <$true | $false>] [-WhatIf]  [-ExternalClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
+ [-DomainController <Fqdn>]
+ [-ExtendedProtectionFlags <MultiValuedProperty>]
+ [-ExtendedProtectionSPNList <MultiValuedProperty>]
+ [-ExtendedProtectionTokenChecking <None | Allow | Require>]
+ [-ExternalClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
  [-ExternalClientsRequireSsl <$true | $false>]
+ [-ExternalHostname <Hostname>]
+ [-IISAuthenticationMethods <MultiValuedProperty>]
  [-InternalClientAuthenticationMethod <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-InternalClientsRequireSsl <$true | $false>] [-InternalHostname <String>] [<CommonParameters>]
+ [-InternalClientsRequireSsl <$true | $false>]
+ [-InternalHostname <String>]
+ [-Name <String>]
+ [-SSLOffloading <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -247,101 +254,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalHostname
-The ExternalHostname parameter specifies the external hostname for the Outlook Anywhere virtual directory. For example, mail.contoso.com.
-
-```yaml
-Type: Hostname
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IISAuthenticationMethods
-The IISAuthenticationMethods parameter specifies the authentication method that's used on the Outlook Anywhere virtual directory in IIS. Valid values are:
-
-- Basic
-
-- Ntlm
-
-- Negotiate
-
-You can specify multiple value separated by commas. By default, all values are used.
-
-You can't use this parameter with the DefaultAuthenticationMethods parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the name of the Outlook Anywhere virtual directory. The default value is Rpc (Default Web Site). If the value you specify contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SSLOffloading
-The SSLOffloading parameter specifies whether a network device accepts SSL connections and decrypts them before proxying the connections to the Outlook Anywhere virtual directory on the Exchange server. Valid values are:
-
-- $true: Outlook Anywhere clients using SSL don't maintain an SSL connection along the entire network path to the Exchange server. A network device in front of the server decrypts the SSL connections and proxies the unencrypted (HTTP) client connections to the Outlook Anywhere virtual directory. The network segment where HTTP is used should be a secured network. This is the default value.
-
-- $false: Outlook Anywhere clients using SSL maintain an SSL connection along the entire network path to the Exchange server. Only SSL connections are allowed to the Outlook Anywhere virtual directory.
-
-This parameter configures the Require SSL value on the Outlook Anywhere virtual directory. When you set this parameter to $true, Require SSL is disabled. When you set this parameter to $fase, Require SSL is enabled. However, it may take several minutes before the change is visible in IIS Manager.
-
-You need to use the value $true for this parameter if you don't require SSL connections for internal or external Outlook Anywhere clients.
-
-The value of this parameter is related to the values of the ExternalClientsRequireSsl and InternalClientsRequireSsl parameters.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExternalClientAuthenticationMethod
 The ExternalClientAuthenticationMethod parameter specifies the authentication method that's used to authenticate external Outlook Anywhere clients. Valid values are:
 
@@ -379,6 +291,46 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalHostname
+The ExternalHostname parameter specifies the external hostname for the Outlook Anywhere virtual directory. For example, mail.contoso.com.
+
+```yaml
+Type: Hostname
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IISAuthenticationMethods
+The IISAuthenticationMethods parameter specifies the authentication method that's used on the Outlook Anywhere virtual directory in IIS. Valid values are:
+
+- Basic
+
+- Ntlm
+
+- Negotiate
+
+You can specify multiple value separated by commas. By default, all values are used.
+
+You can't use this parameter with the DefaultAuthenticationMethods parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -438,6 +390,61 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+The Name parameter specifies the name of the Outlook Anywhere virtual directory. The default value is Rpc (Default Web Site). If the value you specify contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SSLOffloading
+The SSLOffloading parameter specifies whether a network device accepts SSL connections and decrypts them before proxying the connections to the Outlook Anywhere virtual directory on the Exchange server. Valid values are:
+
+- $true: Outlook Anywhere clients using SSL don't maintain an SSL connection along the entire network path to the Exchange server. A network device in front of the server decrypts the SSL connections and proxies the unencrypted (HTTP) client connections to the Outlook Anywhere virtual directory. The network segment where HTTP is used should be a secured network. This is the default value.
+
+- $false: Outlook Anywhere clients using SSL maintain an SSL connection along the entire network path to the Exchange server. Only SSL connections are allowed to the Outlook Anywhere virtual directory.
+
+This parameter configures the Require SSL value on the Outlook Anywhere virtual directory. When you set this parameter to $true, Require SSL is disabled. When you set this parameter to $fase, Require SSL is enabled. However, it may take several minutes before the change is visible in IIS Manager.
+
+You need to use the value $true for this parameter if you don't require SSL connections for internal or external Outlook Anywhere clients.
+
+The value of this parameter is related to the values of the ExternalClientsRequireSsl and InternalClientsRequireSsl parameters.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
