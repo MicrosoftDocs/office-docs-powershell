@@ -6,8 +6,8 @@ module.exports.powerShellErrors = {
 	INSTALL_MICROSOFT_TEAM_ERROR: "Can't install 'Microsoft team' module",
 	AUTH_MICROSOFT_TEAM_ERROR: "Can't auth into 'Microsoft team'",
 	EMPTY_CONFIG_CREDENTIALS: "Empty credentials fields in a config file. Please, fill 'platyPS.credentials' section into a config file",
-	SKYPE_INSTALL_ERROR: "Can't install skype module",
-	EXCHANGE_INSTALL_ERROR: "Can't install exchange module",
+	SKYPE_INSTALL_ERROR: "The Skype PowerShell module does not appear to be installed. Please review the README to install the Skype module and try again.",
+	EXCHANGE_INSTALL_ERROR: "The Exchange PowerShell module does not appear to be installed. Please review the README to install the Exchange module and try again.",
 };
 
 module.exports.markdownErrors = {
