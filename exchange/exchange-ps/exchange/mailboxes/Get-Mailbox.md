@@ -227,7 +227,7 @@ This parameter is available only in on-premises Exchange.
 
 The Arbitration switch specifies whether to include arbitration mailboxes in the results. You don't need to specify a value with this switch.
 
-Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
 To return arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
