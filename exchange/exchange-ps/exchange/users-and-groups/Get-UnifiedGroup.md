@@ -164,11 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSoftDeletedGroups
-The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 Groups in the results. You don't need to specify a value with this switch.
+The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 groups in the results. You don't need to specify a value with this switch.
 
-This switch is required to return soft-deleted Office 365 Groups.
-
-Soft-deleted Office 365 Groups are deleted groups that are still recoverable.
+Soft-deleted Office 365 groups are deleted groups that are still recoverable.
 
 ```yaml
 Type: SwitchParameter
