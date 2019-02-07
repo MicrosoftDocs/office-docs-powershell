@@ -1,76 +1,150 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: tmp_lagl0bvw.h02-help.xml
+Module Name: tmp_lagl0bvw.h02
 online version:
-applicable: Skype for Business Online
-title: Remove-CsOnlinePSTNGateway
 schema: 2.0.0
 ---
 
 # Remove-CsOnlinePSTNGateway
 
 ## SYNOPSIS
-Removes the configuration of the previously defined Session Border Controller(s) (SBC(s))  that describes the settings for the peer entity. This cmdlet was introduced with Microsoft Phone System Direct Routing.
+Removes the configuration of the previously defined Session Border Controller(s) (SBC(s))  that describes the settings for the peer entity.
+This cmdlet was introduced with Microsoft Phone System Direct Routing.
 
 ## SYNTAX
+
 ```
-Remove-CsOnlinePSTNGateway -Identity <SBCFQDN> 
+Remove-CsOnlinePSTNGateway [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force] [-AsJob]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to remove the configuration of the previously created Session Border Controller(s) (SBC(s)) configuration. Note the SBC must be removed from all voice routes before executing this cmdlet.
+Use this cmdlet to remove the configuration of the previously created Session Border Controller(s) (SBC(s)) configuration.
+Note the SBC must be removed from all voice routes before executing this cmdlet
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> Remove-CsOnlinePSTNGateway -Identity sbc.contoso.com
+```
+PS C:\> Remove-CSOnlinePSTNGateway -Identity sbc.contoso.com
 ```
 
-This example removes SBC with Identity (and FQDN) sbc.contoso.com.
+This example removes SBC with Identity (and FQDN) sbc.contoso.com
 
 ### Example 2
-```powershell
+```
 PS C:\> Removes-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
 ```
 
-This example removes the SBCs with identities (and FQDNs) matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc.
+This example removes the SBC with identities (and FQDNs) matching the pattern *.contoso.com.
+For example: sbc1.contoso.com, sbc2.contoso.com etc
 
 ## PARAMETERS
 
 ### -Identity
-The parameter is mandatory for the cmdlet. The Identity is the same as the SBC FQDN.
+The parameter is mandatory for the cmdlet.
+The Identity is the same as the SBC FQDN.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
-Parameter Sets: Identity
+Type: Object
+Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
-Required: True
+
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{Fill Force Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tenant
+{{Fill Tenant Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## INPUTS
 
 ### Microsoft.Rtc.Management.Xds.XdsGlobalRelativeIdentity
-
-
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS
 
-[Set-CsOnlinePSTNGateway](Set-CsOnlinePSTNGateway.md)
+[Set-CSOnlinePSTNGateway]()
 
-[New-CsOnlinePSTNGateway](New-CsOnlinePSTNGateway.md)
+[New-CSOnlinePSTNGateway]()
 
-[Get-CsOnlinePSTNGateway](Get-CsOnlinePSTNGateway.md)
+[Get-CSOnlinePSTNGateway]()
+

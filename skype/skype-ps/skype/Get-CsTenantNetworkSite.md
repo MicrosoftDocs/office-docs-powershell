@@ -1,40 +1,36 @@
 ---
 external help file: tmp_lagl0bvw.h02-help.xml
 Module Name: tmp_lagl0bvw.h02
-online version:
+online version: https://docs.microsoft.com/en-us/powershell/module/skype/set-cstenantmigrationconfiguration?view=skype-ps
 schema: 2.0.0
 ---
 
-# Get-CsTeamsCallingPolicy
+# Get-CsTenantNetworkSite
 
 ## SYNOPSIS
-Returns information about the teams calling policies configured for use in your organization.
-Teams calling policies help determine which users are able to use calling functionality within Microsoft Teams.
 
 ## SYNTAX
 
 ```
-Get-CsTeamsCallingPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
+Get-CsTenantNetworkSite [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
-Returns information about the teams calling policies configured for use in your organization.
-Teams calling policies help determine which users are able to use calling functionality within Microsoft Teams and interoperability with Skype for Business.
+{{Fill in the Description}}
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
+```powershell
+PS C:\> {{ Add example code here }}
 ```
 
-Retrieves the calling policy with name "SalesCallingPolicy"
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Filter
-Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
+{{Fill Filter Description}}
 
 ```yaml
 Type: Object
@@ -49,7 +45,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specify the TeamsCallingPolicy that you would like to retrieve.
+{{Fill Identity Description}}
 
 ```yaml
 Type: Object
@@ -64,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Microsoft internal use.
+{{Fill LocalStore Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -73,13 +69,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Tenant
-Microsoft internal use.
+{{Fill Tenant Description}}
 
 ```yaml
 Type: Object
@@ -94,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Not applicable to online service.
+{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +99,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -111,6 +107,7 @@ Accept wildcard characters: False
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

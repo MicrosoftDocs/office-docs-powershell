@@ -1,34 +1,32 @@
 ---
 external help file: tmp_lagl0bvw.h02-help.xml
 Module Name: tmp_lagl0bvw.h02
-online version: https://docs.microsoft.com/en-us/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps
+online version: https://docs.microsoft.com/en-us/powershell/module/skype/get-cstenantmigrationconfiguration?view=skype-ps
 schema: 2.0.0
 ---
 
-# Grant-CsTeamsCallingPolicy
+# Set-CsTenantNetworkSubnet
 
 ## SYNOPSIS
-Cmdlet to assign a specific Teams Calling Policy to a user.
 
 ## SYNTAX
 
 ```
-Grant-CsTeamsCallingPolicy [-PassThru] [-Confirm] [[-PolicyName] <Object>] [[-Identity] <Object>] [-Global]
- [-Tenant <Object>] [-DomainController <Object>] [-WhatIf] [-AsJob]
+Set-CsTenantNetworkSubnet [-Description <Object>] [-WhatIf] [-Confirm] [[-Identity] <Object>]
+ [-Tenant <Object>] [-MaskBits <Object>] [-NetworkSiteID <Object>] [-Force] [-Instance <Object>] [-AsJob]
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interopability state with Skype for Business. 
-This cmdlet allows admins to grant user level policies to individual users.
+{{Fill in the Description}}
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Grant-CsTeamsCallingPolicy -identity "Ken Myer" -PolicyName SalesCallingPolicy
+```powershell
+PS C:\> {{ Add example code here }}
 ```
 
-Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the user "Ken Myer"
+{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -42,13 +40,13 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-Internal Microsoft use
+### -Description
+{{Fill Description Description}}
 
 ```yaml
 Type: Object
@@ -62,8 +60,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Global
-Internal Microsoft use
+### -Force
+{{Fill Force Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -72,45 +70,13 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Identity
-The user object to whom the policy is being assigned.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
-By default, the Grant-CsTeamsCallingPolicy cmdlet does not pass objects through the pipeline.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PolicyName
-The name of the policy being assigned. 
-To remove an existing user level policy assignment, specify PolicyName as null.
+{{Fill Identity Description}}
 
 ```yaml
 Type: Object
@@ -124,8 +90,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Instance
+{{Fill Instance Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaskBits
+{{Fill MaskBits Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkSiteID
+{{Fill NetworkSiteID Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
-Internal Microsoft use
+{{Fill Tenant Description}}
 
 ```yaml
 Type: Object
@@ -150,13 +161,13 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -AsJob
-Internal Microsoft use
+{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -165,14 +176,15 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.AD.UserIdParameter
+### System.Management.Automation.PSObject
+
 ## OUTPUTS
 
 ### System.Object
