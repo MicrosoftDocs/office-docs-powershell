@@ -4285,9 +4285,11 @@ Accept wildcard characters: False
 ### -RemoveOrphanedHolds
 This parameter is available only in the cloud-based service.
 
-The RemoveOrphanedHolds parameter specifies the GUID of an In-Place Hold that no longer exists but is still applied to a mailbox. This parameter is typically used to remove an inactive mailbox from an In-Place Hold that no longer exists, but the GUID for the hold is still applied to the mailbox. If you specify an In-Place Hold that still exists, the cmdlet returns an error. In this case, you'll have to remove the mailbox (or inactive mailbox) from the In-Place Hold.
+The RemoveOrphanedHolds parameter is used to remove the mailbox (typically, an inactive mailbox) from In-Place Holds that no longer exist, but are still applied to the mailbox. You identify the In-Place Hold by using its GUID value. You can specify multiple GUID values separated by commas.
 
-In an Exchange hybrid deployment, In-Place Holds created in the on-premises organization can be applied to cloud-based mailboxes. In this scenario, it's possible that the hold object hasn't been synced to the cloud-based organization. In this case, using this parameter will remove the specified hold from a cloud-based mailbox even though the hold may still exist. To prevent this from happening, make sure the hold doesn't exist in the on-premises organization before using this parameter.
+If you use the GUID value of an In-Place Hold that still exists as a value for this parameter, the command will return an error. If that happens, you'll need to remove the mailbox (or inactive mailbox) from the In-Place Hold.
+
+In an Exchange hybrid deployment, In-Place Holds that are created in the on-premises organization can be applied to cloud-based mailboxes. In this scenario, it's possible that the hold object hasn't been synced to the cloud-based organization, and using this parameter will remove the specified hold from the cloud-based mailbox even though the hold may still exist. To prevent this from happening, make sure the hold doesn't exist in the on-premises organization before you use this parameter.
 
 ```yaml
 Type: String[]
