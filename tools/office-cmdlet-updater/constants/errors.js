@@ -5,7 +5,7 @@ module.exports.powerShellErrors = {
 	IMPORT_PLATYPS_ERROR: "Cant't import 'platyPS' module",
 	INSTALL_MICROSOFT_TEAM_ERROR: "Can't install 'Microsoft team' module",
 	AUTH_MICROSOFT_TEAM_ERROR: "Can't auth into 'Microsoft team'",
-	EMPTY_CONFIG_CREDENTIALS: "Empty credentials fields in a config file. Please, feel 'platyPS.credentials' section into a config file"
+	EMPTY_CONFIG_CREDENTIALS: "Empty credentials fields in a config file. Please, fill 'platyPS.credentials' section into a config file"
 };
 
 module.exports.markdownErrors = {
