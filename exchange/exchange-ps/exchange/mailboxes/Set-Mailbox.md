@@ -4283,7 +4283,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOrphanedHolds
-{{Fill RemoveOrphanedHolds Description}}
+This parameter is available only in the cloud-based service.
+
+The RemoveOrphanedHolds parameter is used to remove the mailbox (typically, an inactive mailbox) from In-Place Holds that no longer exist, but are still applied to the mailbox. You identify the In-Place Hold by using its GUID value. You can specify multiple GUID values separated by commas.
+
+If you use the GUID value of an In-Place Hold that still exists as a value for this parameter, the command will return an error. If that happens, you'll need to remove the mailbox (or inactive mailbox) from the In-Place Hold.
+
+In an Exchange hybrid deployment, In-Place Holds that are created in the on-premises organization can be applied to cloud-based mailboxes. In this scenario, it's possible that the hold object hasn't been synced to the cloud-based organization, and using this parameter will remove the specified hold from the cloud-based mailbox even though the hold may still exist. To prevent this from happening, make sure the hold doesn't exist in the on-premises organization before you use this parameter.
 
 ```yaml
 Type: String[]
