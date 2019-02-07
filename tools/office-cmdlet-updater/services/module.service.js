@@ -1,3 +1,5 @@
+const { ciEquals } = require('../helpers/strings');
+
 class ModuleService {
 	constructor() {}
 
@@ -7,7 +9,7 @@ class ModuleService {
 			return modules;
 		}
 
-		return modules.filter((module) => module.name === cliModuleName);
+		return modules.filter((module) => ciEquals(module.name, cliModuleName));
 	}
 }
 
