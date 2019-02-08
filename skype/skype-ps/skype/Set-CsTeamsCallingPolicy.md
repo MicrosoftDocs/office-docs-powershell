@@ -1,7 +1,9 @@
 ---
-external help file: tmp_lagl0bvw.h02-help.xml
-Module Name: tmp_lagl0bvw.h02
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+Module Name: Skype for Business Online
 online version:
+applicable: Skype for Business Online
+title: Set-CsTeamsCallingPolicy
 schema: 2.0.0
 ---
 
@@ -12,12 +14,20 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-AllowCallForwardingToPhone <Object>] [-AllowVoicemail <Object>]
- [-AllowDelegation <Object>] [-PreventTollBypass <Object>] [-AllowCalling <Object>]
- [-AllowCallForwardingToUser <Object>] [-Confirm] [-WhatIf] [[-Identity] <Object>] [-Tenant <Object>]
- [-AllowCallGroups <Object>] [-AllowPrivateCalling <Object>] [-AllowUserControl <Object>] [-Force]
- [-Instance <Object>] [-AsJob]
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
+ [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
+  [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
+ [-PreventTollBypass <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTeamsCallingPolicy [-Tenant <System.Guid>] [-AllowCalling <Boolean>] [-AllowPrivateCalling <Boolean>]
+ [-AllowVoicemail <String>] [-AllowCallGroups <Boolean>] [-AllowDelegation <Boolean>]
+  [-AllowCallForwardingToUser <Boolean>] [-AllowCallForwardingToPhone <Boolean>]
+ [-PreventTollBypass <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +50,7 @@ Controls interop calling capabilities.
 Turning this on will allow Skype for Business users to have one-on-one calls with Teams users and vice-versa.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -57,7 +67,7 @@ Turning this off will turn off all calling functionality in Teams.
 If you use Skype for Business for calling, this policy will not affect calling functionality in Skype for Business.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -102,8 +112,8 @@ Accept wildcard characters: False
 Name of the policy being modified.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: XdsIdentity
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -114,17 +124,17 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Internal Microsoft use
+Use this to pipe a specific calling policy to be set.  You can only modify the global policy, so can only pass the global instance of the Calling Policy.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: PSObject
+Parameter Sets: Instance
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -132,7 +142,7 @@ Accept wildcard characters: False
 Internal Microsoft use
 
 ```yaml
-Type: Object
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -159,26 +169,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Internal Microsoft use
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowCallForwardingToPhone
-{{Fill AllowCallForwardingToPhone Description}}
+Determines whether or not the a user can leverage the call park functionality to 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -190,10 +185,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallForwardingToUser
-{{Fill AllowCallForwardingToUser Description}}
+Enables call forwarding or simultaneous ringing of inbound calls to other users
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -205,10 +200,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallGroups
-{{Fill AllowCallGroups Description}}
+Enables inbound calls to be routed to call groups 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -220,25 +215,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDelegation
-{{Fill AllowDelegation Description}}
+Enables inbound calls to be routed to delegates; allows delegates to make outbound calls on behalf of the users for whom they have delegated permissions.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowUserControl
-{{Fill AllowUserControl Description}}
-
-```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -250,10 +230,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-{{Fill AllowVoicemail Description}}
+Enables inbound calls to be routed to voice mail.  Valid options are: AlwaysEnabled, AlwaysDisabled, UserOverride
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -265,10 +245,10 @@ Accept wildcard characters: False
 ```
 
 ### -PreventTollBypass
-{{Fill PreventTollBypass Description}}
+Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -279,12 +259,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
