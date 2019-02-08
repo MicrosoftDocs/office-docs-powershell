@@ -1,7 +1,7 @@
 ---
-external help file: tmp_lagl0bvw.h02-help.xml
-Module Name: tmp_lagl0bvw.h02
-online version:
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+applicable: Skype for Business Online
+title: New-CsTenantNetworkSubnet
 schema: 2.0.0
 ---
 
