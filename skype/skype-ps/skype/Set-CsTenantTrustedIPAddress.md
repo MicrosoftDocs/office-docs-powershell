@@ -11,9 +11,16 @@ schema: 2.0.0
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsTenantTrustedIPAddress [-Description <Object>] [-WhatIf] [-Confirm] [[-Identity] <Object>]
- [-Tenant <Object>] [-MaskBits <Object>] [-Force] [-Instance <Object>] [-AsJob]
+Set-CsTenantTrustedIPAddress [-Tenant <System.Guid>] [-MaskBits <System.Int32>] [-Description <String>]
+ [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsTenantTrustedIPAddress [-Tenant <System.Guid>] [-MaskBits <System.Int32>] [-Description <String>]
+ [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +56,7 @@ Accept wildcard characters: False
 {{Fill Description Description}}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -79,8 +86,8 @@ Accept wildcard characters: False
 {{Fill Identity Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: XdsGlobalRelativeIdentity
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -94,14 +101,14 @@ Accept wildcard characters: False
 {{Fill Instance Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: PSObject
+Parameter Sets: Instance
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -109,7 +116,7 @@ Accept wildcard characters: False
 {{Fill MaskBits Description}}
 
 ```yaml
-Type: Object
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -124,7 +131,7 @@ Accept wildcard characters: False
 {{Fill Tenant Description}}
 
 ```yaml
-Type: Object
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -151,20 +158,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
