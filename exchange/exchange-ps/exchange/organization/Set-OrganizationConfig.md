@@ -1470,6 +1470,8 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
+This parameter has a limit of approximately 1200 entries.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)

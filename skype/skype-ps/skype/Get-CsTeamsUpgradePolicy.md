@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsTeamsUpgradePolicy
 
 ## SYNOPSIS
-TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy.  However, aspects of TeamsUpgradePolicy are still in preview mode as described below.
+TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams.
 
 
 ## SYNTAX
@@ -34,6 +34,7 @@ NOTES:
 
 IMPORTANT: TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead. Do not use TeamsInteropPolicy. In addition, Legacy mode in TeamsUpgradePolicy has been retired.
 
+You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 ## EXAMPLES
 
