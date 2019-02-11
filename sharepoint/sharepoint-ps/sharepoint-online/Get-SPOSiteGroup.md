@@ -22,7 +22,7 @@ Use the `Get-SPOSiteGroup` cmdlet to get all the groups on the specified site co
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [SharePoint Online PowerShell](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/index).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [SharePoint Online PowerShell](https://docs.microsoft.com/powershell/module/sharepoint-online/index).
 
 ## EXAMPLES
 
