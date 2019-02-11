@@ -424,8 +424,7 @@ Users are allowed to share a single application.
 None.
 Users are not allowed to share applications or their desktop.
 
-This setting is enforced at the per-user level.
-That means that some users in a conference might be allowed to share their desktop or applications while other users in the same conference might not be allowed to do so.
+
 
 The default value is Desktop.
 
