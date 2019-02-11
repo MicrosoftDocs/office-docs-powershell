@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to return information about the recipient's archive mailbox.
+The Archive switch is required to return the user's archive mailbox in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
