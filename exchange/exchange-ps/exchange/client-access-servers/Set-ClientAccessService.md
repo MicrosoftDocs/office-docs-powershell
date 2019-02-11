@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -CleanUpInvalidAlternateServiceAccountCredentials
-The CleanUpInvalidAlternateServiceAccountCredentialsswitch specifies whether to remove a previously configured alternate service account that's no longer valid. You don't need to specify a value with this switch.
+The CleanUpInvalidAlternateServiceAccountCredentials switch specifies whether to remove a previously configured alternate service account that's no longer valid. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAlternateServiceAccountCredentials
-The RemoveAlternateServiceAccountCredentialsswitch specifies whether to remove a previously distributed alternate service account. You don't need to specify a value with this switch.
+The RemoveAlternateServiceAccountCredentials switch specifies whether to remove a previously distributed alternate service account. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
