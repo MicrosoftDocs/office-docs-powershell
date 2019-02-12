@@ -870,11 +870,11 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch specifies that the mailbox you're creating is an arbitration mailbox. You don't need to specify a value with this switch.
+The Arbitration switch is required to create arbitration mailboxes. You don't need to specify a value with this switch.
 
 Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
 
-Note: To create an arbitration mailbox that's used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
+To create arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
 ```yaml
 Type: SwitchParameter
@@ -920,9 +920,7 @@ Accept wildcard characters: False
 ```
 
 ### -Discovery
-The Discoveryswitch specifies that the mailbox is a Discovery mailbox. You don't need to specify a value with this switch.
-
-This switch is required only if you're creating a Discovery mailbox.
+The Discovery switch is required to create Discovery mailboxes. You don't need to specify a value with this switch.
 
 Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be repurposed or converted to another type of mailbox. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
@@ -964,9 +962,9 @@ Accept wildcard characters: False
 ```
 
 ### -Equipment
-The Equipment switch specifies that the resource mailbox is an equipment mailbox. You don't need to specify a value with this switch.
+The Equipment switch is required to create equipment mailboxes. You don't need to specify a value with this switch.
 
-This switch is required only if you're creating an equipment mailbox.
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 ```yaml
 Type: SwitchParameter
@@ -1075,7 +1073,7 @@ Accept wildcard characters: False
 ### -LinkedRoom
 This parameter is available only in on-premises Exchange.
 
-The LinkedRoom switch specifies that the mailbox is a linked resource mailbox. You don't need to specify a value with this switch.
+The LinkedRoom switch is required to create linked resource mailboxes. You don't need to specify a value with this switch.
 
 A linked resource mailbox is useful in a scenario where you have an account in an authentication forest and you want it to be directly linked to a resource mailbox in resource forest.
 
@@ -1121,9 +1119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Migration
-The Migration switch specifies that the mailbox is a migration mailbox. You don't need to specify a value with this switch.
-
-This switch is required only if you're creating a migration mailbox.
+The Migration switch is required to create migration mailboxes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1167,11 +1163,11 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch specifies that the mailbox is a public folder mailbox. You don't need to specify a value with this switch.
+The PublicFolder switch is required to create public folder mailboxes. You don't need to specify a value with this switch.
 
-This switch is required only if you're creating a public folder mailbox.
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
-Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders. The first public folder mailbox created in your Exchange organization is called the primary hierarchy mailbox. It contains the writeable copy of the hierarchy of public folders for the organization and public folder content. There can be only one writeable copy of the public folder hierarchy in your organization. All other public folder mailboxes are called secondary public folder mailboxes and contain a read-only copy of the hierarchy and the content for public folders.
+The first public folder mailbox created in your Exchange organization is the primary hierarchy mailbox that contains the writeable copy of the hierarchy of public folders for the organization and public folder content. There can be only one writeable copy of the public folder hierarchy in your organization. All other public folder mailboxes are secondary public folder mailboxes that contain a read-only copy of the hierarchy and the content for public folders.
 
 ```yaml
 Type: SwitchParameter
@@ -1215,9 +1211,9 @@ Accept wildcard characters: False
 ```
 
 ### -Room
-The Room switch specifies that the resource mailbox is a room mailbox. You don't need to specify a value with this switch.
+The Room switch is required to create room mailboxes. You don't need to specify a value with this switch.
 
-This switch is required only if you're creating a room mailbox.
+Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
 When you use this switch, a logon-disabled account is created with the room mailbox, which prevents users from signing in to the mailbox. When you use the EnableRoomMailboxAccount and RoomMailboxPassword parameters, you can mail-enable the associated account.
 
@@ -1234,9 +1230,7 @@ Accept wildcard characters: False
 ```
 
 ### -Shared
-The Shared parameter specifies that the mailbox is a shared mailbox. You don't need to specify a value with this switch.
-
-This switch is required only if you're creating a shared mailbox.
+The Shared switch is required to create shared mailboxes. You don't need to specify a value with this switch.
 
 A shared mailbox is a mailbox where multiple users can log on to access the mailbox contents. The mailbox isn't associated with any of the users that can log on. It's associated with a disabled user account.
 
@@ -1438,19 +1432,19 @@ Accept wildcard characters: False
 ```
 
 ### -AuditLog
-The AuditLog switch specifies the mailbox is an arbitration mailbox that's used to store audit log settings. You don't need to specify a value with this switch.
+This parameter is available only in on-premises Exchange.
 
-Notes: 
+The AuditLog switch is required to create audit log mailboxes. You don't need to specify a value with this switch.
 
-- This switch is required only if you're creating this type of arbitration mailbox.
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- The Arbitration switch doesn't work for creating this type of arbitration mailbox.
+To create other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AuditLog
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None
@@ -1459,19 +1453,19 @@ Accept wildcard characters: False
 ```
 
 ### -AuxAuditLog
-The AuxAuditLog switch specifies the mailbox is an arbitration mailbox that's used to store audit log data. You don't need to specify a value with this switch.
+This parameter is available only in on-premises Exchange.
 
-Notes: 
+The AuxAuditLog switch is required to create auxillary audit log mailboxes. You don't need to specify a value with this switch.
 
-- This switch is required only if you're creating this type of arbitration mailbox.
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- The Arbitration switch doesn't work for creating this type of arbitration mailbox.
+To create other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AuxAuditLog
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: Named
 Default value: None

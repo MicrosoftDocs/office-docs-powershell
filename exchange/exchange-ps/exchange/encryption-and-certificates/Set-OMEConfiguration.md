@@ -18,9 +18,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter> [-BackgroundColor <String>] [-DisclaimerText <String>]
- [-EmailText <String>] [-Image <Byte[]>] [-IntroductionText <String>] [-OTPEnabled <$true | $false>]
- [-PortalText <String>] [-ReadButtonText <String>] [-SocialIdSignIn <$true | $false>] [<CommonParameters>]
+Set-OMEConfiguration [-Identity] <OMEConfigurationIdParameter>
+ [-BackgroundColor <String>]
+ [-DisclaimerText <String>]
+ [-EmailText <String>]
+ [-Image <Byte[]>]
+ [-IntroductionText <String>]
+ [-OTPEnabled <$true | $false>]
+ [-PortalText <String>]
+ [-ReadButtonText <String>]
+ [-SocialIdSignIn <$true | $false>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -135,6 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -IntroductionText
+The IntroductionText parameter specifies the text that appears next to the sender's name and email address. The maximum length is 1024 characters.
+
+To remove existing text and use the default value, use the value $null for this parameter.
 
 ```yaml
 Type: String
@@ -185,6 +196,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReadButtonText
+The ReadButtonText parameter specifies the text that appears on the "Read Message" button. The maximum length is 128 characters.
+
+To remove existing text and use the default value, use the value $null for this parameter.
 
 ```yaml
 Type: String
@@ -198,7 +212,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SocialIdSignIn 
+### -SocialIdSignIn
+The SocialSignIn parameter specifies whether to enable or disable authentication with Microsoft, Google, or Yahoo identities for this custom template. Valid values are:
+
+- $true: Authentication using Microsoft, Google, or Yahoo identities is enabled. This is the default value.
+
+- $false: Authentication using Microsoft, Google, or Yahoo identities is disabled.
 
 ```yaml
 Type: $true | $false
