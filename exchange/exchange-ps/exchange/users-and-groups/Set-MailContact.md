@@ -1306,7 +1306,7 @@ Accept wildcard characters: False
 ### -RemovePicture
 This parameter is available only in on-premises Exchange.
 
-The RemovePictureswitch specifies whether to remove the picture from the mail contact. You don't need to specify a value with this switch.
+The RemovePicture switch specifies whether to remove the picture from the mail contact. You don't need to specify a value with this switch.
 
 You can add a picture to a mail contact by using the Import-RecipientDataProperty cmdlet.
 

@@ -1,4 +1,5 @@
 const commands = require('../constants/commands');
+const errors = require('../constants/errors');
 const format = require('string-format');
 
 class CmdletDependenciesService {
@@ -8,7 +9,7 @@ class CmdletDependenciesService {
 	}
 
 	async installDependencies({ cmdletName }) {
-		await this.installPlatyPs();
+		await this.installGlobalDependencies();
 
 		switch (cmdletName) {
 			case 'teams': {
@@ -39,13 +40,28 @@ class CmdletDependenciesService {
 				await this.preInstallStuffHub();
 				break;
 			}
+			default: {
+			}
 		}
+	}
+
+	async installGlobalDependencies() {
+		await this.installPsGallery();
+		await this.installPlatyPs();
 	}
 
 	async installPlatyPs() {
 		await this.ps.invokeCommand(commands.INSTALL_PACKAGE_PROVIDER);
 		await this.ps.invokeCommand(commands.INSTALL_PLATYPS);
 		await this.ps.invokeCommand(commands.IMPORT_PLATYPS);
+	}
+
+	async installPsGallery() {
+		try {
+			await this.ps.invokeCommand(commands.INSTALL_PS_GALLERY);
+		} catch (e) {
+			throw errors.powerShellErrors.PS_GALLERY_INSTALL_ERROR;
+		}
 	}
 
 	async preInstallTeams() {
@@ -62,9 +78,20 @@ class CmdletDependenciesService {
 	async preInstallSkype({ login, pass }) {
 		await this._createCredInPs({ login, pass });
 
-		// await this.ps.invokeCommand(commands.SKYPE_INSTALL_MODULE);
-		await this.ps.invokeCommand(commands.SKYPE_CREATE_SESSION);
-		await this.ps.invokeCommand(commands.SKYPE_IMPORT_SESSION);
+		try {
+			await this.ps.invokeCommandAndIgnoreError({
+				command: commands.SKYPE_ENABLE_WIN_RM,
+				printError: true
+			});
+
+			//await this.ps.invokeCommand(commands.SKYPE_GET_CRED);
+			await this.ps.invokeCommand(commands.SKYPE_INSTALL_LYNC_MODULE);
+			await this.ps.invokeCommand(commands.SKYPE_INSTALL_MODULE);
+			await this.ps.invokeCommand(commands.SKYPE_CREATE_SESSION);
+			await this.ps.invokeCommand(commands.SKYPE_IMPORT_SESSION);
+		} catch (e) {
+			throw errors.powerShellErrors.SKYPE_INSTALL_ERROR;
+		}
 	}
 
 	async preInstallWhiteboard() {
@@ -74,9 +101,18 @@ class CmdletDependenciesService {
 	async preInstallExchange({ login, pass }) {
 		await this._createCredInPs({ login, pass });
 
-		//await this.ps.invokeCommand(commands.EXCHANGE_INSTALL_MODULE);
-		await this.ps.invokeCommand(commands.EXCHANGE_GET_SESSION);
-		await this.ps.invokeCommand(commands.EXCHANGE_SESSION_IMPORT);
+		try {
+			await this.ps.invokeCommandAndIgnoreError({
+				command: commands.SKYPE_ENABLE_WIN_RM,
+				printError: true
+			});
+
+			await this.ps.invokeCommand(commands.EXCHANGE_INSTALL_MODULE);
+			await this.ps.invokeCommand(commands.EXCHANGE_GET_SESSION);
+			await this.ps.invokeCommand(commands.EXCHANGE_SESSION_IMPORT);
+		} catch (e) {
+			throw errors.powerShellErrors.EXCHANGE_INSTALL_ERROR;
+		}
 	}
 
 	async preInstallStuffHub() {
@@ -88,7 +124,7 @@ class CmdletDependenciesService {
 		const { login, pass } = this.config.get('platyPS.credentials');
 
 		if (!login || !pass) {
-			throw new Error('Invalid credentials');
+			throw new Error(errors.powerShellErrors.EMPTY_CONFIG_CREDENTIALS);
 		}
 
 		return { login, pass };

@@ -175,7 +175,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ### AdfsAuthenticationParameter
 ```
 Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
- [-ACLableSyncedObjectEnabled <true | $false>]
+ [-ACLableSyncedObjectEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutEnabled <$true | $false>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <$true | $false>]
@@ -1469,6 +1469,8 @@ This parameter accepts IPv4 or IPv6 addresses in the following formats:
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+This parameter has a limit of approximately 1200 entries.
 
 ```yaml
 Type: MultiValuedProperty
