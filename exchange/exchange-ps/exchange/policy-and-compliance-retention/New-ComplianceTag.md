@@ -18,9 +18,20 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-ComplianceTag [-Name] <String> [-Comment <String>] [-Confirm] [-EventType <ComplianceRuleIdParameter>]
- [-IsRecordLabel <$true | $false>] [-RetentionAction <String>] [-RetentionDuration <Unlimited>]
- [-RetentionType <String>] [-ReviewerEmail <SmtpAddress[]>] [-WhatIf] [<CommonParameters>]
+New-ComplianceTag [-Name] <String>
+ [-Comment <String>]
+ [-Confirm]
+ [-EventType <ComplianceRuleIdParameter>]
+ [-FilePlanProperty <String>]
+ [-Force]
+ [-IsRecordLabel <$true | $false>]
+ [-Notes <String>]
+ [-Regulatory <$true | $false>]
+ [-RetentionAction <String>]
+ [-RetentionDuration <Unlimited>]
+ [-RetentionType <String>]
+ [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -115,6 +126,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FilePlanProperty
+{{Fill FilePlanProperty Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{Fill Force Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IsRecordLabel
 The IsRecordLabel parameter specifies whether the label is a record label. Valid values are:
 
@@ -124,6 +165,36 @@ The IsRecordLabel parameter specifies whether the label is a record label. Valid
 
 ```yaml
 Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notes
+The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Regulatory
+{{Fill Regulatory Description}}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
