@@ -133,9 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch specifies that you want to use this cmdlet on an Office 365 Group. You don't need to specify a value with this switch.
-
-This switch is required when you use this cmdlet on an Office 365 Group.
+The GroupMailbox switch is required to return Office 365 groups in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
