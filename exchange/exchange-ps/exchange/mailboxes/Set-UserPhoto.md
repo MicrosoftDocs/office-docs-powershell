@@ -105,9 +105,9 @@ This example deletes the preview photo that was uploaded in the previous example
 ## PARAMETERS
 
 ### -Cancel
-The Cancelswitch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
+The Cancel switch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
 
-To delete the photo that's currently associated with a user's account, use the Remove-UserPhotocmdlet. The Cancelswitch only deletes the preview photo.
+To delete the photo that's currently associated with a user's account, use the Remove-UserPhoto cmdlet. The Cancel switch only deletes the preview photo.
 
 ```yaml
 Type: SwitchParameter
@@ -217,9 +217,9 @@ Accept wildcard characters: False
 ```
 
 ### -Preview
-The Previewswitch uploads a preview photo for the user account. You don't need to specify a value with this switch.
+The Preview switch uploads a preview photo for the user account. You don't need to specify a value with this switch.
 
-A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Previewswitch to upload a preview photo, you need to run the command Set-UserPhoto -Save to save it as the user's photo.
+A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Preview switch to upload a preview photo, you need to run the command Set-UserPhoto -Save to save it as the user's photo.
 
 ```yaml
 Type: SwitchParameter
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -Save
-The Saveswitch specifies that the photo that's uploaded to the user's account will be saved as the user's photo. You don't need to specify a value with this switch.
+The Save switch specifies that the photo that's uploaded to the user's account will be saved as the user's photo. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch indicates the specified user is an Office 365 Group. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to modify Office 365 groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-const errorColor = chalk.red.bgBlack;
+const errorColor = chalk.redBright.bgBlack;
 
 module.exports = {
 	errorColor
