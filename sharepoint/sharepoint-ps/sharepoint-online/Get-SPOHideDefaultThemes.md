@@ -22,7 +22,7 @@ Note that this cmdlet was named **Get-HideDefaultThemes** until the December 201
 ### Example 1
 
 ```
-Get-SPOHideDefaultThemes $false
+Get-SPOHideDefaultThemes
 ```
 
 

@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch specifies whether to include arbitration mailboxes in the results. You don't need to specify a value with this switch.
+The Arbitration switch is required to return arbitration mailboxes in the results. You don't need to specify a value with this switch.
 
 Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to include archive mailboxes in the results. You don't need to specify a value with this switch.
+The Archive switch is required to return archive mailboxes in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -295,7 +295,9 @@ Accept wildcard characters: False
 ### -AuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuditLog switch specifies whether to include arbitration mailboxes that are used to store audit log settings in the results. You don't need to specify a value with this switch.
+The AuditLog switch is required to return audit log mailboxes in the results. You don't need to specify a value with this switch.
+
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
 To return other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
@@ -314,7 +316,9 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch specifies whether to include arbitration mailboxes that are used to store audit log settings in the results. You don't need to specify a value with this switch.
+The AuxAuditLog switch is required to return auxillary audit log mailboxes in the results. You don't need to specify a value with this switch.
+
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
 To return other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
@@ -409,7 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch specifies whether to include Office 365 groups in the results. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to return Office 365 groups in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -490,11 +494,11 @@ Accept wildcard characters: False
 ### -InactiveMailboxOnly
 This parameter is available only in the cloud-based service.
 
-The InactiveMailboxOnly switch specifies whether to include only inactive mailboxes in the results. You don't need to specify a value with this switch.
+The InactiveMailboxOnly switch specifies whether to return only inactive mailboxes in the results. You don't need to specify a value with this switch.
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
 
-To return active and inactive mailboxes in the results, don't use this switch. Instead, use the IncludeInactiveMailbox switch.
+To include active and inactive mailboxes in the results, don't use this switch. Instead, use the IncludeInactiveMailbox switch.
 
 ```yaml
 Type: SwitchParameter
@@ -561,7 +565,7 @@ Accept wildcard characters: False
 ```
 
 ### -Migration
-The Migration switch specifies whether to include migration mailboxes in the results. You don't need to specify a value with this switch.
+The Migration switch is required to return migration mailboxes in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -578,7 +582,7 @@ Accept wildcard characters: False
 ### -Monitoring
 This parameter is available only in on-premises Exchange.
 
-The Monitoring switch specifies whether to include monitoring mailboxes in the results. You don't need to specify a value with this switch.
+The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
 
 Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
 
@@ -618,7 +622,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch specifies whether to include public folder mailboxes in the results. You don't need to specify a value with this switch.
+The PublicFolder switch is required to return public folder mailboxes in the results. You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter
@@ -693,7 +699,7 @@ Accept wildcard characters: False
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
-The RemoteArchive switch specifies whether to include remote archive mailboxes in the results. You don't need to specify a value with this switch.
+The RemoteArchive switch is required to return remote archive mailboxes in the results. You don't need to specify a value with this switch.
 
 Remote archive mailboxes are archive mailboxes in the cloud-based service that are associated with mailbox users in on-premises Exchange organizations.
 
@@ -758,7 +764,7 @@ Accept wildcard characters: False
 ### -SoftDeletedMailbox
 This parameter is available only in the cloud-based service.
 
-The SoftDeletedMailbox switch specifies whether to include soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
+The SoftDeletedMailbox switch is required to return soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
 
 Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 

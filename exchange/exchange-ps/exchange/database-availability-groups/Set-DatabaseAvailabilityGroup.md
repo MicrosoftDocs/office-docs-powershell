@@ -237,9 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoverNetworks
-The DiscoverNetworksswitch specifies whether to force a rediscovery of the network and network interfaces. You don't need to specify a value with this switch.
+The DiscoverNetworks switch specifies whether to force a rediscovery of the network and network interfaces. You don't need to specify a value with this switch.
 
-By default, internal network heartbeats are sent between DAG members on the same subnet. If there's no response to the heartbeats, network discovery is performed automatically by the system. If you add or remove networks or change DAG network subnets, you can force rediscovery of all DAG networks by using the DiscoverNetworksswitch.
+By default, internal network heartbeats are sent between DAG members on the same subnet. If there's no response to the heartbeats, network discovery is performed automatically by the system. If you add or remove networks or change DAG network subnets, you can force rediscovery of all DAG networks by using the DiscoverNetworks switch.
 
 ```yaml
 Type: SwitchParameter

@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to disconnect the cloud-based archive mailbox from the associated cloud-based mailbox.
+The Archive switch specifies whether to disconnect the cloud-based archive mailbox from the associated cloud-based mailbox. You don't need to specify a value with this switch.
 
 The on-premises mail user and its associated cloud-based mailbox aren't removed if you use this switch.
 

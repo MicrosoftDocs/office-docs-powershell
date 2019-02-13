@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch indicates the specified user is an Office 365 Group. You don't need to specify a value with this switch.
+The GroupMailbox switch is required to modify Office 365 groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
