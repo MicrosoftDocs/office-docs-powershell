@@ -171,7 +171,7 @@ Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype
 
 Required: False
 Position: Named
-Default value: None
+Default value: Company
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
