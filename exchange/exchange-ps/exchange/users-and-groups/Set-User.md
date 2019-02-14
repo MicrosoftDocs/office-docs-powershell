@@ -148,7 +148,9 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch is required to modify arbitration mailboxes. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
 ```yaml
 Type: SwitchParameter
@@ -748,9 +750,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch specifies that the user is a public folder mailbox. This switch is required to only when you change the settings of public folder mailboxes. You don't need to specify a value with this switch.
+The PublicFolder switch is required to modify public folder mailboxes. You don't need to specify a value with this switch.
 
-Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders.
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter
