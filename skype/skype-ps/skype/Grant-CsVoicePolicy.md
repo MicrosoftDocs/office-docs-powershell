@@ -40,8 +40,7 @@ For example:
 
 `Get-CsUser "Ken Myer" | Select-Object VoicePolicy`
 
-    > [!NOTE]
-    > For accounts hosted in Skype for Business Online, it is not possible to grant a voice policy via PowerShell. In this scenario, the voice policy is automatically granted based on user licensing.
+    NOTE - For accounts hosted in Skype for Business Online, it is not possible to grant a voice policy via PowerShell. In this scenario, the voice policy is automatically granted based on user licensing.
 
 ## EXAMPLES
 
