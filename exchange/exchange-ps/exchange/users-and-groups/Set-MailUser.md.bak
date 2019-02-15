@@ -1,51 +1,69 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-title: Set-MailContact
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+title: Set-MailUser
 schema: 2.0.0
-monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
+monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps || eop-ps"
 ---
 
-# Set-MailContact
+# Set-MailUser
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-MailContact cmdlet to modify existing mail contacts.
+Use the Set-MailUser cmdlet to modify mail users. Mail users (also known as mail-enabled users) have email addresses and accounts in the Exchange organization, but they don't have Exchange mailboxes.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Set-MailContact [-Identity] <MailContactIdParameter> [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+Set-MailUser [-Identity] <MailUserIdParameter> [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>] [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>] [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
- [-Confirm] [-CreateDTMFMap <$true | $false>] [-CustomAttribute1 <String>] [-CustomAttribute10 <String>]
- [-CustomAttribute11 <String>] [-CustomAttribute12 <String>] [-CustomAttribute13 <String>]
- [-CustomAttribute14 <String>] [-CustomAttribute15 <String>] [-CustomAttribute2 <String>]
- [-CustomAttribute3 <String>] [-CustomAttribute4 <String>] [-CustomAttribute5 <String>]
- [-CustomAttribute6 <String>] [-CustomAttribute7 <String>] [-CustomAttribute8 <String>]
- [-CustomAttribute9 <String>] [-DisplayName <String>] [-DomainController <Fqdn>]
- [-EmailAddresses <ProxyAddressCollection>] [-EmailAddressPolicyEnabled <$true | $false>]
+ [-ArbitrationMailbox <MailboxIdParameter>] [-ArchiveGuid <Guid>] [-ArchiveName <MultiValuedProperty>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>] [-Confirm] [-CreateDTMFMap <$true | $false>]
+ [-CustomAttribute1 <String>] [-CustomAttribute10 <String>] [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>] [-CustomAttribute13 <String>] [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>] [-CustomAttribute2 <String>] [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>] [-CustomAttribute5 <String>] [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>] [-CustomAttribute8 <String>] [-CustomAttribute9 <String>] [-DisplayName <String>]
+ [-DomainController <Fqdn>] [-EmailAddresses <ProxyAddressCollection>]
+ [-EmailAddressPolicyEnabled <$true | $false>] [-ExchangeGuid <Guid>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>] [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>] [-ExtensionCustomAttribute4 <MultiValuedProperty>]
- [-ExtensionCustomAttribute5 <MultiValuedProperty>] [-ExternalEmailAddress <ProxyAddress>] [-ForceUpgrade]
- [-GrantSendOnBehalfTo <MultiValuedProperty>] [-HiddenFromAddressListsEnabled <$true | $false>]
- [-IgnoreDefaultScope] [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>]
- [-MailTip <String>] [-MailTipTranslations <MultiValuedProperty>] [-MaxReceiveSize <Unlimited>]
- [-MaxRecipientPerMessage <Unlimited>] [-MaxSendSize <Unlimited>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>] [-ExternalEmailAddress <ProxyAddress>]
+ [-FederatedIdentity <String>] [-ForceUpgrade] [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-HiddenFromAddressListsEnabled <$true | $false>] [-IgnoreDefaultScope] [-ImmutableId <String>]
+ [-MacAttachmentFormat <BinHex | UuEncode | AppleSingle | AppleDouble>] [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>] [-MaxReceiveSize <Unlimited>] [-MaxSendSize <Unlimited>]
  [-MessageBodyFormat <Text | Html | TextAndHtml>] [-MessageFormat <Text | Mime>]
  [-ModeratedBy <MultiValuedProperty>] [-ModerationEnabled <$true | $false>] [-Name <String>]
- [-PrimarySmtpAddress <SmtpAddress>] [-RejectMessagesFrom <MultiValuedProperty>]
- [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-Password <SecureString>] [-PrimarySmtpAddress <SmtpAddress>] [-RecipientLimits <Unlimited>]
+ [-RejectMessagesFrom <MultiValuedProperty>] [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>] [-RemovePicture] [-RemoveSpokenName]
- [-RequireSenderAuthenticationEnabled <$true | $false>] [-SecondaryAddress <String>]
- [-SecondaryDialPlan <UMDialPlanIdParameter>] [-SendModerationNotifications <Never | Internal | Always>]
- [-SimpleDisplayName <String>] [-UMDtmfMap <MultiValuedProperty>]
- [-UseMapiRichTextFormat <Never | Always | UseDefaultSettings>] [-UsePreferMessageFormat <$true | $false>]
- [-WhatIf] [-WindowsEmailAddress <SmtpAddress>] [-GenerateExternalDirectoryObjectId] [<CommonParameters>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>] [-ResetPasswordOnNextLogon <$true | $false>]
+ [-SamAccountName <String>] [-SecondaryAddress <String>] [-SecondaryDialPlan <UMDialPlanIdParameter>]
+ [-SendModerationNotifications <Never | Internal | Always>] [-SimpleDisplayName <String>]
+ [-UMDtmfMap <MultiValuedProperty>] [-UseMapiRichTextFormat <Never | Always | UseDefaultSettings>]
+ [-UsePreferMessageFormat <$true | $false>] [-UserPrincipalName <String>] [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>] [-AddOnSKUCapability <MultiValuedProperty>] [-ArchiveQuota <Unlimited>]
+ [-ArchiveWarningQuota <Unlimited>] [-BypassLiveId] [-CalendarVersionStoreDisabled <$true | $false>]
+ [-EndDateForRetentionHold <DateTime>] [-JournalArchiveAddress <SmtpAddress>] [-LitigationHoldDate <DateTime>]
+ [-LitigationHoldEnabled <$true | $false>] [-LitigationHoldOwner <String>]
+ [-MailboxProvisioningConstraint <MailboxProvisioningConstraint>]
+ [-MailboxProvisioningPreferences <MultiValuedProperty>] [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-NetID <NetID>] [-RecoverableItemsQuota <Unlimited>] [-RecoverableItemsWarningQuota <Unlimited>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>] [-RetentionComment <String>]
+ [-RetentionHoldEnabled <$true | $false>] [-RetentionUrl <String>]
+ [-SingleItemRecoveryEnabled <$true | $false>] [-SKUAssigned <$true | $false>]
+ [-SKUCapability <None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration>]
+ [-StartDateForRetentionHold <DateTime>] [-UsageLocation <CountryInfo>]
+ [-UserCertificate <MultiValuedProperty>] [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WindowsLiveID <SmtpAddress>] [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-IssueWarningQuota <Unlimited>] [-MailboxRegion <String>] [-ProhibitSendQuota <Unlimited>]
+ [-ProhibitSendReceiveQuota <Unlimited>] [-SkipDualWrite] [-SkipMailboxProvisioningConstraintValidation]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,15 +73,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-MailContact -Identity "John Rodman" -ExternalEmailAddress "john@contoso.com"
+Set-MailUser -Identity "John Woods" -ExternalEmailAddress john@tailspintoys.com
 ```
 
-This example sets John Rodman's external email address to john@contoso.com.
+This example modifies the external email address for the mail user named John Woods. Note that the original external email address isn't kept as a proxy address.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mail contact that you want to modify. You can use any value that uniquely identifies the mail contact.
+The Identity parameter specifies the mail user that you want to modify. You can use any value that uniquely identifies the mail user.
 
 For example:
 
@@ -82,10 +100,10 @@ For example:
 - GUID
 
 ```yaml
-Type: MailContactIdParameter
+Type: MailUserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: True
 Position: 1
 Default value: None
@@ -124,7 +142,7 @@ By default, this parameter is blank ($null), which allows this recipient to acce
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -163,7 +181,7 @@ By default, this parameter is blank ($null), which allows this recipient to acce
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -204,7 +222,7 @@ By default, this parameter is blank ($null), which allows this recipient to acce
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -233,7 +251,7 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -246,11 +264,65 @@ This parameter is available only in on-premises Exchange.
 
 The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox.
 
+For example:
+
+- Name
+
+- Display name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- \<domain name\>\\\<account name\>
+
+- Email address
+
+- GUID
+
+- LegacyExchangeDN
+
+- SamAccountName
+
+- User ID or user principal name (UPN)
+
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArchiveGuid
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArchiveName
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -287,7 +359,7 @@ This parameter is meaningful only when moderation is enabled for the recipient. 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -306,7 +378,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -325,7 +397,7 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -334,13 +406,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute1
-The CustomAttribute1 parameter specifies a value for the CustomAttribute1 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -349,13 +421,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute10
-The CustomAttribute10 parameter specifies a value for the CustomAttribute10 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -364,13 +436,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute11
-The CustomAttribute11 parameter specifies a value for the CustomAttribute11 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -379,13 +451,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute12
-The CustomAttribute12 parameter specifies a value for the CustomAttribute12 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -394,13 +466,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute13
-The CustomAttribute13 parameter specifies a value for the CustomAttribute13 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -409,13 +481,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute14
-The CustomAttribute14 parameter specifies a value for the CustomAttribute14 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -424,13 +496,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute15
-The CustomAttribute15 parameter specifies a value for the CustomAttribute15 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -439,13 +511,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute2
-The CustomAttribute2 parameter specifies a value for the CustomAttribute2 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -454,13 +526,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute3
-The CustomAttribute3 parameter specifies a value for the CustomAttribute3 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -469,13 +541,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute4
-The CustomAttribute4 parameter specifies a value for the CustomAttribute4 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -484,13 +556,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute5
-The CustomAttribute5 parameter specifies a value for the CustomAttribute5 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -499,13 +571,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute6
-The CustomAttribute6 parameter specifies a value for the CustomAttribute6 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -514,13 +586,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute7
-The CustomAttribute7 parameter specifies a value for the CustomAttribute7 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -529,13 +601,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute8
-The CustomAttribute8 parameter specifies a value for the CustomAttribute8 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -544,13 +616,13 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute9
-The CustomAttribute9 parameter specifies a value for the CustomAttribute9 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
+The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -559,13 +631,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-The DisplayName parameter specifies the display name of the mail contact. The display name is visible in the Exchange admin center (EAC) and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
+The DisplayName parameter specifies the display name of the mail user. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -621,7 +693,7 @@ To add or remove specify proxy addresses without affecting other existing values
 Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -650,20 +722,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExchangeGuid
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExtensionCustomAttribute1
-The ExtensionCustomAttribute1 parameter specifies a value for the ExtensionCustomAttribute1 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -672,19 +757,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute2
-The ExtensionCustomAttribute2 parameter specifies a value for the ExtensionCustomAttribute2 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -693,19 +776,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute3
-The ExtensionCustomAttribute3 parameter specifies a value for the ExtensionCustomAttribute3 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -714,19 +795,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute4
-The ExtensionCustomAttribute4 parameter specifies a value for the ExtensionCustomAttribute4 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -735,19 +814,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute5
-The ExtensionCustomAttribute5 parameter specifies a value for the ExtensionCustomAttribute5 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
+The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
-To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
+For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -766,7 +843,24 @@ When you use the ExternalEmailAddress parameter to change the external email add
 Type: ProxyAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FederatedIdentity
+This parameter is available only in the cloud-based service.
+
+The FederatedIdentity parameter associates an on-premises Active Directory user with a user in the cloud.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -781,7 +875,7 @@ The ForceUpgrade switch specifies whether to suppress the confirmation message t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -790,7 +884,7 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mail contact. Although messages sent on behalf of the mail contact clearly show the sender in the From field (\<Sender\> on behalf of \<Mail contact\>), replies to these messages are delivered to the mail contact, not the sender.
+The GrantSendOnBehalfTo parameter specifies who can send on behalf of this mail user. Although messages sent on behalf of the mail user clearly show the sender in the From field (\<Sender\> on behalf of \<Mail user\>), replies to these messages are delivered to the mail user, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender.
 
@@ -822,13 +916,13 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
-By default, this parameter is blank, which means no one else has permission to send on behalf of this mail contact.
+By default, this parameter is blank, which means no one else has permission to send on behalf of this mail user.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -847,7 +941,7 @@ The HiddenFromAddressListsEnabled parameter specifies whether this recipient is 
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -878,6 +972,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ImmutableId
+The ImmutableId parameter is used by GAL synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable ID based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com.
+
+You need to set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premises Exchange deployment scenario.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MacAttachmentFormat
 The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format to use for messages sent to the mail contact or mail user. Valid values are:
 
@@ -899,7 +1010,7 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 Type: BinHex | UuEncode | AppleSingle | AppleDouble
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -920,7 +1031,7 @@ When you add a MailTip to a recipient, two things happen:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -943,7 +1054,7 @@ For example, suppose this recipient currently has the MailTip text: "This mailbo
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -954,7 +1065,7 @@ Accept wildcard characters: False
 ### -MaxReceiveSize
 This parameter is available only in on-premises Exchange.
 
-The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to the mail contact. Messages larger than the maximum size are rejected.
+The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to the mail user. Messages larger than the maximum size are rejected.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -970,32 +1081,11 @@ When you enter a value, qualify the value with one of the following units:
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-A valid value is a number up to 2 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited.
+A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited.
 
-The value unlimited indicates the maximum receive size for the mail contact is controlled elsewhere (for example, organization, server, or connector limits).
+The value unlimited indicates the maximum receive size for the mail user is controlled elsewhere (for example, organization, server, or connector limits).
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MaxRecipientPerMessage
-This parameter is available only in on-premises Exchange.
-
-The MaxRecipientPerMessage parameter specifies the maximum number of recipients allowed in messages sent by the mail contact.
-
-A valid value is an integer up to 2147483647 (Int32) or the value unlimited. The default value is unlimited.
-
-The value unlimited indicates the maximum number of recipients per message for the mail contact is controlled elsewhere (for example, organization, server, or connector limits).
 
 ```yaml
 Type: Unlimited
@@ -1012,7 +1102,7 @@ Accept wildcard characters: False
 ### -MaxSendSize
 This parameter is available only in on-premises Exchange.
 
-The MaxSendSize parameter specifies the maximum size of a message that can be sent by the mail contact.
+The MaxSendSize parameter specifies the maximum size of a message that can be sent by the mail user.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -1028,9 +1118,9 @@ When you enter a value, qualify the value with one of the following units:
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
-A valid value is number up to 2 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited.
+A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited.
 
-The value unlimited indicates the maximum send size for the mail contact is controlled elsewhere (for example, organization, server, or connector limits).
+The value unlimited indicates the maximum send size for the mail user is controlled elsewhere (for example, organization, server, or connector limits).
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
@@ -1065,7 +1155,7 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 Type: Text | Html | TextAndHtml
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1092,7 +1182,7 @@ Therefore, if you want to change the MessageFormat parameter from Mime to Text, 
 Type: Text | Mime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1129,7 +1219,7 @@ You need to use this parameter to specify at least one moderator when you set th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1150,7 +1240,7 @@ You use the ModeratedBy parameter to specify the moderators.
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1159,13 +1249,34 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the unique name of the mail contact. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the unique name of the mail user. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Password
+This parameter is available only in the cloud-based service.
+
+The Password parameter allows users to change their own password.
+
+This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
+
+You can't use this parameter to change another user's password (the parameter is available only via the MyBaseOptions user role). To change another user's password, use the NewPassword parameter on the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see Connect to Office 365 PowerShell (https://go.microsoft.com/fwlink/p/?LinkId=614839).
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1180,10 +1291,31 @@ The PrimarySmtpAddress parameter specifies the primary return email address that
 
 By default, the primary address is the same as the ExternalEmailAddress parameter value.
 
-If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, which means the email addresses of the mail contact aren't automatically updated by email address policies. We recommend that you don't set the primary email address to a value other than the ExternalEmailAddress unless you're in a cross-forest scenario.
+If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but that means the email addresses of the mail user are no longer automatically updated by email address policies. We recommend that you don't set the primary email address to a value other than the ExternalEmailAddress unless you're in a cross-forest scenario.
 
 ```yaml
 Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientLimits
+This parameter is available only in on-premises Exchange.
+
+The RecipientLimits parameter specifies the maximum number of recipients allowed in messages sent by the mail user.
+
+A valid value is an integer or the value unlimited. The default value is unlimited.
+
+The value unlimited indicates the maximum number of recipients per message for the mail user is controlled elsewhere (for example, organization, server, or connector limits).
+
+```yaml
+Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
@@ -1225,7 +1357,7 @@ By default, this parameter is blank ($null), which allows this recipient to acce
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1264,7 +1396,7 @@ By default, this parameter is blank ($null), which allows this recipient to acce
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1305,7 +1437,7 @@ By default, this parameter is blank ($null), which allows this recipient to acce
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1316,9 +1448,9 @@ Accept wildcard characters: False
 ### -RemovePicture
 This parameter is available only in on-premises Exchange.
 
-The RemovePicture switch specifies whether to remove the picture from the mail contact. You don't need to specify a value with this switch.
+The RemovePicture switch specifies whether to remove the picture from the mail user. You don't need to specify a value with this switch.
 
-You can add a picture to a mail contact by using the Import-RecipientDataProperty cmdlet.
+You can add a picture to a mail user by using the Import-RecipientDataProperty cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1335,9 +1467,9 @@ Accept wildcard characters: False
 ### -RemoveSpokenName
 This parameter is available only in on-premises Exchange.
 
-The RemoveSpokenName parameter specifies whether to remove the spoken name from the mail contact. You don't need to specify a value with this switch.
+The RemoveSpokenName parameter specifies whether to remove the spoken name from the mail user. You don't need to specify a value with this switch.
 
-You can add a sound file to a mail contact by using the Import-RecipientDataProperty cmdlet.
+You can add a sound file to a mail user by using the Import-RecipientDataProperty cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1362,7 +1494,47 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResetPasswordOnNextLogon
+This parameter is available only in the cloud-based service.
+
+The ResetPasswordOnNextLogon parameter allows users to require themselves to change their password the next time they log on. Valid values are:
+
+- $true: The user is required to change their password then next time they successfully log on.
+
+- $false: The user isn't required to change their password then next time they successfully log on. This is the default value.
+
+You can't use this parameter to require another user to change their password (the parameter is available only via the MyBaseOptions user role). You need to use the ForceChangePassword parameter on the Set-MsolUserPassword cmdlet in Office 365 (Azure AD) PowerShell. For connection instructions, see Connect to Office 365 PowerShell (https://go.microsoft.com/fwlink/p/?LinkId=614839).
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SamAccountName
+This parameter is available only in on-premises Exchange.
+
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1371,13 +1543,13 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryAddress
-The SecondaryAddress parameter specifies the secondary address that's used by the Unified Messaging (UM)-enabled mail contact.
+The SecondaryAddress parameter specifies the secondary address used by the Unified Messaging (UM)-enabled user.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1392,7 +1564,7 @@ The SecondaryDialPlan parameter specifies a secondary UM dial plan to use. This 
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1415,7 +1587,7 @@ This parameter is only meaningful when moderation is enabled (the ModerationEnab
 Type: Never | Internal | Always
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1438,7 +1610,7 @@ The SimpleDisplayName parameter is used to display an alternative description of
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1467,7 +1639,7 @@ If you use this syntax, you don't need to specify all of the DTMF map values, an
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1490,7 +1662,7 @@ The default value is UseDefaultSettings.
 Type: Never | Always | UseDefaultSettings
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1509,7 +1681,24 @@ The UsePreferMessageFormat specifies whether the message format settings configu
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserPrincipalName
+This parameter is available only in on-premises Exchange.
+
+The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -1524,7 +1713,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1545,7 +1734,7 @@ The WindowsEmailAddress property is visible for the recipient in Active Director
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1553,14 +1742,576 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GenerateExternalDirectoryObjectId
+### -AddOnSKUCapability
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArchiveQuota
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArchiveWarningQuota
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassLiveId
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CalendarVersionStoreDisabled
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndDateForRetentionHold
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JournalArchiveAddress
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LitigationHoldDate
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LitigationHoldEnabled
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LitigationHoldOwner
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxProvisioningConstraint
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxProvisioningConstraint
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxProvisioningPreferences
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MicrosoftOnlineServicesID
+The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter only applies to objects in the cloud-based service. It isn't available for on-premises deployments.
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetID
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: NetID
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecoverableItemsQuota
+This parameter is available only in on-premises Exchange.
+
+The RecoverableItemsQuota parameter specifies the maximum size for the Recoverable Items folder for a mail user that has a corresponding remote mailbox or remote archive mailbox in the cloud-based service. If the Recoverable Items folder reaches or exceeds this size, it no longer accepts messages.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+A valid value is number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 30 gigabytes (32212254720 bytes).
+
+The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecoverableItemsWarningQuota
+This parameter is available only in on-premises Exchange.
+
+The RecoverableItemsWarningQuota parameter specifies the warning threshold for the size of the Recoverable Items folder for a mail user that has a corresponding remote mailbox or remote archive mailbox in the cloud-based service. If the Recoverable Items folder reaches or exceeds this size, Exchange logs an event to the application event log.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+A valid value is number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 20 gigabytes (21474836480 bytes).
+
+The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetainDeletedItemsFor
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionComment
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionHoldEnabled
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionUrl
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SingleItemRecoveryEnabled
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SKUAssigned
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SKUCapability
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: None | BPOS_S_Deskless | BPOS_S_Standard | BPOS_S_Enterprise | BPOS_S_Archive | BPOS_L_Standard | BPOS_B_Standard | BPOS_B_CustomDomain | BPOS_S_MidSize | BPOS_S_ArchiveAddOn | BPOS_S_EopStandardAddOn | BPOS_S_EopPremiumAddOn | BPOS_Unmanaged | TOU_Signed | FederatedUser | Partner_Managed | MasteredOnPremise | ResourceMailbox | ExcludedFromBackSync | UMFeatureRestricted | RichCoexistence | OrganizationCapabilityUMGrammar | OrganizationCapabilityUMDataStorage | OrganizationCapabilityOABGen | OrganizationCapabilityGMGen | OrganizationCapabilityClientExtensions | BEVDirLockdown | OrganizationCapabilityUMGrammarReady | OrganizationCapabilityMailRouting | OrganizationCapabilityManagement | OrganizationCapabilityTenantUpgrade | OrganizationCapabilityScaleOut | OrganizationCapabilityMessageTracking | OrganizationCapabilityPstProvider | OrganizationCapabilitySuiteServiceStorage | OrganizationCapabilityOfficeMessageEncryption | OrganizationCapabilityMigration
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartDateForRetentionHold
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UsageLocation
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: CountryInfo
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserCertificate
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserSMimeCertificate
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WindowsLiveID
+This parameter is available only in the cloud-based service.
+
+The WindowsLiveID parameter renames the Microsoft account that's associated with the mail user.
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataEncryptionPolicy
+This parameter is available only in the cloud-based service.
+
+The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the mail user. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+
+- Distinguished name (DN)
+
+- GUID
+
+You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
+
+```yaml
+Type: DataEncryptionPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IssueWarningQuota
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxRegion
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProhibitSendQuota
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProhibitSendReceiveQuota
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipDualWrite
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipMailboxProvisioningConstraintValidation
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
@@ -1585,4 +2336,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/04c4e889-8546-4395-9d26-31af08264e45.aspx)
+[Online Version](https://technet.microsoft.com/library/087a55a2-ee8d-41a8-9c8f-d86e32ce8448.aspx)
