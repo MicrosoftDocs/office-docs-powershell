@@ -41,7 +41,7 @@ This example creates the routing group connector Interop RGC with the following 
 
 - The Exchange 2010 server is Hub2010.contoso.com.
 
-- The Exchange 2003 bridgehead server is Bridghead2003.contoso.com.
+- The Exchange 2003 bridgehead server is Bridgehead2003.contoso.com.
 
 - The routing group connector is a two-way connector between the Exchange 2010 routing group and the routing group associated with the specified Exchange 2003 server.
 

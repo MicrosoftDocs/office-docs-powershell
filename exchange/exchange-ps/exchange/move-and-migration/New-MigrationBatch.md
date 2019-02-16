@@ -501,7 +501,7 @@ Accept wildcard characters: False
 ### -AllowUnknownColumnsInCsv
 The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns in the CSV file that aren't used by migration. Valid values are:
 
-- $true: The migration ignores (silently skips) unknown columns in the CSV file (including optional columnswithmisspelledcolumn headers). All unknown columns are treated like extra columns that aren't used by migration.
+- $true: The migration ignores (silently skips) unknown columns in the CSV file (including optional columns with misspelled column headers). All unknown columns are treated like extra columns that aren't used by migration.
 
 - $false: The migration fails if there are any unknown columns in the CSV file.This setting protects against spelling errors in column headers. This is the default value.
 
@@ -518,7 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveOnly
-The ArchiveOnlyswitchspecifies that only archive mailboxes are migrated for the users in the migration batch (primary mailboxes aren't migrated). You don't need to specify a value with this switch.
+The ArchiveOnly switch specifies that only archive mailboxes are migrated for the users in the migration batch (primary mailboxes aren't migrated). You don't need to specify a value with this switch.
 
 You can only use this switch for local moves and remote move migrations.
 
@@ -537,7 +537,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoComplete
-The AutoCompleteswitch forces the finalization of the individual mailboxes as soon as the mailbox has completed initial synchronization. You don't need to specify a value with this switch.
+The AutoComplete switch forces the finalization of the individual mailboxes as soon as the mailbox has completed initial synchronization. You don't need to specify a value with this switch.
 
 You can only use this switch for local moves and remote move migrations.
 
@@ -573,7 +573,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoStart
-The AutoStartswitch immediately starts the processing of the new migration batch. You don't need to specify a value with this switch.
+The AutoStart switch immediately starts the processing of the new migration batch. You don't need to specify a value with this switch.
 
 If you don't use this switch, you need to manually start the migration batch by using the Start-MigrationBatch cmdlet.
 
@@ -655,7 +655,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOnCopy
-The DisableOnCopyswitch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters.. You don't need to specify a value with this switch.
+The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters.. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -672,7 +672,7 @@ Accept wildcard characters: False
 ### -DisallowExistingUsers
 This parameter is available only in on-premises Exchange.
 
-The DisallowExistingUsersswitch prevents the migration of mailboxes that are currently defined in a different migration batch. You don't need to specify a value with this switch.
+The DisallowExistingUsers switch prevents the migration of mailboxes that are currently defined in a different migration batch. You don't need to specify a value with this switch.
 
 A validation warning is displayed for any pre-existing mailbox in the target destination.
 

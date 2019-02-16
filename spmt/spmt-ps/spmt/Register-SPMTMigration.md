@@ -15,7 +15,7 @@ After a session is registered, the user can add a migration task to the migratio
 ## SYNTAX
 
 ```
-Register-SPMTMigration [-SPOCredentials<PSCredential>][-Incremental <bool>]  [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>][-MigrateAllSiteFieldsAndContentTypes<bool>][-WorkingFolder <string>][-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>]  [-DuplidatePageBehavior <string>] [-MigrateNavigation <Nullable`1>] [-MigrateTermGroups <Nullable`1>] -Force
+Register-SPMTMigration [-SPOCredentials<PSCredential>][-Incremental <bool>] [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-MigrateAllSiteFieldsAndContentTypes<bool>] [-WorkingFolder <string>] [-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>]  [-DuplicatePageBehavior <string>] [-MigrateNavigation <Nullable`1>] [-MigrateTermGroups <Nullable`1>] -Force
 ```
 
 ## DESCRIPTION
@@ -475,9 +475,9 @@ Default value:"RENAME"
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -DuplidatePageBehavior 
+### -DuplicatePageBehavior 
 Determine the behavior of the page file migration when encountering a page file with the same name or same id on the target.
-By default, DuplidatePageBehavior is set to RENAME.
+By default, DuplicatePageBehavior is set to RENAME.
 The value can be "RENAME", or "OVERWRITE", or "SKIP", or "NO_PAGES_MIGRATION". 
 For RENAME, we will keep the conflicted page file on the target and rename the source page file with a new name by adding current date. 
 For OVERWRITE, we will overwrite the conflicted page file on the target using the source page file. 

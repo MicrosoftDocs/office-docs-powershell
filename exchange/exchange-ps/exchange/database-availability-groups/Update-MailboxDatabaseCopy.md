@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -CatalogOnly
-The CatalogOnlyswitch specifies that only the content index catalog for the database copy should be seeded. You don't need to specify a value with this switch.
+The CatalogOnly switch specifies that only the content index catalog for the database copy should be seeded. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseOnly
-The DatabaseOnlyswitch specifies that only the database copy should be seeded. The content index catalog isn't seeded. You don't need to specify a value with this switch.
+The DatabaseOnly switch specifies that only the database copy should be seeded. The content index catalog isn't seeded. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -SafeDeleteExistingFiles
-The SafeDeleteExistingFilesswitch specifies a seeding operation with a single copy redundancy pre-check prior to the seed. You don't need to specify a value with this switch.
+The SafeDeleteExistingFiles switch specifies a seeding operation with a single copy redundancy pre-check prior to the seed. You don't need to specify a value with this switch.
 
 Because this switch includes the redundancy safety check, it requires a lower level of permissions than the DeleteExistingFiles parameter. Limited permission administrators can perform the seeding operation by using this switch.
 

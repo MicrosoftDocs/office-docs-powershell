@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ### -Server
 This parameter is available only in on-premises Exchange 2010.
 
-The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifes the server. For example:
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
 

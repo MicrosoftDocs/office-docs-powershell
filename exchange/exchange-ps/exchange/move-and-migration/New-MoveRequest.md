@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteTenant
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 PARAMVALUE: SmtpDomain
 
@@ -512,9 +512,9 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveOnly
-The ArchiveOnlyswitch specifies that you're moving only the personal archive associated with the mailbox.
+The ArchiveOnly switch specifies that you're moving only the personal archive associated with the mailbox.
 
-You can't use this switch with the PrimaryOnlyswitch.
+You can't use this switch with the PrimaryOnly switch.
 
 ```yaml
 Type: SwitchParameter
@@ -664,7 +664,7 @@ Accept wildcard characters: False
 ### -DoNotPreserveMailboxSignature
 This parameter is available only in on-premises Exchange.
 
-The DoNotPreserveMailboxSignatureswitch specifies that the move doesn't preserve the mailbox mapping signature. You don't need to specify a value with this switch.
+The DoNotPreserveMailboxSignature switch specifies that the move doesn't preserve the mailbox mapping signature. You don't need to specify a value with this switch.
 
 We recommend that you use this switch only if the move request fails because the Named Property identifiers are depleted. If you use this parameter, the user must restart Outlook when the move request is complete.
 
@@ -681,7 +681,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceOffline
-The ForceOfflineswitch forces the mailbox move to be performed in offline mode. You don't need to specify a value with this switch.
+The ForceOffline switch forces the mailbox move to be performed in offline mode. You don't need to specify a value with this switch.
 
 Moving a mailbox in offline mode means the user will have no access to email during the mailbox move.
 
@@ -700,7 +700,7 @@ Accept wildcard characters: False
 ### -ForcePull
 This parameter is available only in on-premises Exchange.
 
-The ForcePullswitch specifies that the type of local move should be a Pull move. You don't need to specify a value with this switch.
+The ForcePull switch specifies that the type of local move should be a Pull move. You don't need to specify a value with this switch.
 
 You use this parameter only for local moves.
 
@@ -719,7 +719,7 @@ Accept wildcard characters: False
 ### -ForcePush
 This parameter is available only in on-premises Exchange.
 
-The ForcePushswitch specifies that the type of local move should be a Push move. You don't need to specify a value with this switch.
+The ForcePush switch specifies that the type of local move should be a Push move. You don't need to specify a value with this switch.
 
 You use this parameter only for local moves.
 

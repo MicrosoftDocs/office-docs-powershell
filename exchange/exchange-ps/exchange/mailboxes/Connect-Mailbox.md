@@ -207,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -Equipment
-The Equipment switch specifies that you are connecting an equipment mailbox, if this mailbox is a resource mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a resource mailbox
+The Equipment switch is required to connect equipment mailboxes. You don't need to specify a value with this switch.
+
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 ```yaml
 Type: SwitchParameter
@@ -268,7 +270,9 @@ Accept wildcard characters: False
 ```
 
 ### -Room
-The Room switch specifies that you are connecting a room mailbox, if this mailbox is a resource mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a resource mailbox.
+The Room switch is required to connect room mailboxes. You don't need to specify a value with this switch.
+
+Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
 ```yaml
 Type: SwitchParameter
@@ -283,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -Shared
-The Shared switch specifies that you are connecting a shared mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a shared mailbox.
+The Shared switch is required to connect shared mailboxes. You don't need to specify a value with this switch.
 
 A shared mailbox is a mailbox where multiple users can log on to access the mailbox contents. This mailbox isn't associated with any of the users that can log on. It's associated with a disabled user account.
 
@@ -371,7 +375,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 

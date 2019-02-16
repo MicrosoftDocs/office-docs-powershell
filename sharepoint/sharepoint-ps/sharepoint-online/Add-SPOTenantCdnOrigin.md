@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 Specifies a path to the doc library to be configured. It can be provided in two ways: relative path, or a mask. 
 
-Relative-Relative path depends on the OriginScope.  If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site.  The path must point to the valid Document Library or a folder with a document library. 
+Relative-Relative path depends on the OriginScope.  If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site.  The path must point to the valid Document Library or a folder within a document library. 
 
 
 ```yaml

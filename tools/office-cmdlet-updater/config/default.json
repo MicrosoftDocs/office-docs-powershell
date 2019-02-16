@@ -1,6 +1,6 @@
 {
 	"name": "Office cmdlet updater",
-	"description": "Update documentation for modules in this repository",
+	"description": "Update documentation for modules in this repository. Available Modules: teams, skype, sharepoint, whiteboard, exchange, staffhub",
 	"version": "0.0.3",
 	"platyPS": {
 		"credentials": {
@@ -23,11 +23,11 @@
 				"path": "..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online",
 				"metaTags": []
 			},
-			//			{
-			//				"name": "staffhub",
-			//				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
-			//				"metaTags": []
-			//			},
+			{
+				"name": "staffhub",
+				"path": "..\\..\\staffhub\\staffhub-ps\\staffhub",
+				"metaTags": []
+			},
 			{
 				"name": "whiteboard",
 				"path": "..\\..\\whiteboard\\whiteboard-ps\\whiteboard",
@@ -41,7 +41,9 @@
 		],
 		"ignoreFiles": [
 			"..\\..\\teams\\teams-ps\\teams\\teams.md",
-			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md"
+			"..\\..\\whiteboard\\whiteboard-ps\\whiteboard\\whiteboard.md",
+			"..\\..\\sharepoint\\sharepoint-ps\\sharepoint-online\\sharepoint-online.md",
+			"..\\..\\staffhub\\staffhub-ps\\staffhub\\staffhub.md"
 		],
 		"tempFolderPath": ".\\.local\\temp"
 	},

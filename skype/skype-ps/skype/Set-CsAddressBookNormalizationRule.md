@@ -44,7 +44,7 @@ The command shown in Example 1 changes the priority of the RedmondAddresses norm
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsAddressBookNormalizationRule | Where-Object {$_.Translation -eq '+1206556$1'} Set-CsAddressBookNormalizationRule -Translation '+1425556$1'
+Get-CsAddressBookNormalizationRule | Where-Object {$_.Translation -eq '+1206556$1'} | Set-CsAddressBookNormalizationRule -Translation '+1425556$1'
 ```
 
 In Example 2, all the normalization rules that use the Translation +12065556$1 are updated to use the Translation +14255556$1; this might be required if an area code changes from 206 to 425.

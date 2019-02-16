@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010"
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
 
-Use the Set-ManagedContentSettings cmdlet to modify existing managed content settingsfor a managed folder.
+Use the Set-ManagedContentSettings cmdlet to modify existing managed content settings for a managed folder.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 

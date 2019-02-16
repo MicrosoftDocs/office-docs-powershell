@@ -48,6 +48,8 @@ class MarkdownController {
 			return;
 		}
 
+		this._printResultIntoConsole({ text: mailText });
+
 		if (isNeedEmail && !isNeedPullRequest) {
 			this.notificationController.sendMailNotification({ mailText });
 		}
@@ -95,6 +97,16 @@ class MarkdownController {
 				mailText: mailTextWithPr
 			});
 		}
+	}
+
+	_printResultIntoConsole({ text }) {
+		const oldBreakSymbol = '<br>';
+		const newBreakSymbol = '\n';
+
+		const consoleText = text.replace(new RegExp(oldBreakSymbol, 'g'), newBreakSymbol);
+
+		console.log(`Report: ${newBreakSymbol}`);
+		console.log(consoleText);
 	}
 }
 

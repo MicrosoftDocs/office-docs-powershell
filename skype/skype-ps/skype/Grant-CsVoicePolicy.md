@@ -28,18 +28,19 @@ Grant-CsVoicePolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <
  [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
 
 This cmdlet assigns an existing per-user voice policy to a user.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
 Use this cmdlet to assign the settings that enable and disable these features for a specific user.
 
-You can check whether a user has been granted a per-user voice policy by calling a command in this format: `Get-CsUser "\<user name\>" | Select-Object VoicePolicy.`
+You can check whether a user has been granted a per-user voice policy by calling a command in this format: `Get-CsUser "<user name>" | Select-Object VoicePolicy.`
 For example:
 
 `Get-CsUser "Ken Myer" | Select-Object VoicePolicy`
 
-
+    NOTE - For accounts hosted in Skype for Business Online, it is not possible to grant a voice policy via PowerShell. In this scenario, the voice policy is automatically granted based on user licensing.
 
 ## EXAMPLES
 
@@ -69,7 +70,7 @@ The Identity (unique identifier) of the user to whom the policy is being assigne
 
 User identities can be specified by using one of four formats: 1) The user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
 
-Note that you can use the asterisk (*) wildcard character when using the Display Name as the user Identity.
+Note that you can use the asterisk (\*) wildcard character when using the Display Name as the user Identity.
 For example, the Identity "* Smith" would return all the users with the last name Smith.
 
 Full Data Type: Microsoft.Rtc.Management.AD.UserIdParameter

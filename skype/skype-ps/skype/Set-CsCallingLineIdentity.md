@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsCallingLineIdentity
 schema: 2.0.0
@@ -231,4 +231,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsCallingLineIdentity](Get-CsCallingLineIdentity.md)
 
+[Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
+
+[New-CsCallingLineIdentity](New-CsCallingLineIdentity.md)
+
+[Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
