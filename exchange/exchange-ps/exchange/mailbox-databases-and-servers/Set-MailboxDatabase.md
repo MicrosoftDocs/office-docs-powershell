@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDagExcludeFromMonitoring
-The AutoDagExcludedFromMonitoringparameter specifies whether to exclude the mailbox database from the ServerOneCopyMonitor, which alerts an administrator when a replicated database has only one healthy copy available. Valid values are:
+The AutoDagExcludedFromMonitoring parameter specifies whether to exclude the mailbox database from the ServerOneCopyMonitor, which alerts an administrator when a replicated database has only one healthy copy available. Valid values are:
 
 - $true: No alert is issued when there's only one healthy copy of the replicated database.
 

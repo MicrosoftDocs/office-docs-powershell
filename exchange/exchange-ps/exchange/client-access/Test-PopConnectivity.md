@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ### -LightMode
 The LightMode switch tells the command to perform only a test logon to the server by using the POP3 protocol. You don't need to specify a value with this switch.
 
-If you don't use this switch, the command also tests sending and receiving a message using the POP3 protocol.
+If you don't use this switch, the command also tests receiving a message using the POP3 protocol.
 
 ```yaml
 Type: SwitchParameter
