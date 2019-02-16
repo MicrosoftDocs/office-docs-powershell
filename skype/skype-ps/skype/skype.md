@@ -3119,11 +3119,11 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Get-CsAuthConfig](Get-CsAuthConfig.md)
 
-### [Get-CsOnlineSipDomains](Get-CsOnlineSipDomains.md)
+### [Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)
 
-### [Enable-CsOnlineSipDomains](Enable-CsOnlineSipDomains.md)
+### [Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
 
-### [Disable-CsOnlineSipDomains](Disable-CsOnlineSipDomains.md)
+### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 
 ### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
 

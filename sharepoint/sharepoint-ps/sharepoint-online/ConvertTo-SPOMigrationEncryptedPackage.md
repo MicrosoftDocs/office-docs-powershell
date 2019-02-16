@@ -8,7 +8,7 @@ schema: 2.0.0
 # ConvertTo-SPOMigrationEncryptedPackage
 
 ## SYNOPSIS
-Use this Cmdlet to convert your XML files into a new encryted migration package.
+Use this Cmdlet to convert your XML files into a new encrypted migration package.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters <EncryptionParamete
 ```
 
 ## DESCRIPTION
-This command convert the XML file on your temprary XML folder files into a new set of targeted migration encrypted metadata files to the target directory.
+This command convert the XML file on your temporary XML folder files into a new set of targeted migration encrypted metadata files to the target directory.
 
 ## EXAMPLES
 
@@ -47,12 +47,12 @@ PS C:\> ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA384
  -TargetPackagePath $TargetPackagePath
 ```
 
-Same as example1 but without log file and using an encription type SHA384
+Same as example1 but without log file and using an encryption type SHA384
 
 ## PARAMETERS
 
 ### -EncryptionParameters
-Parameters of the encription, it doesn't accept wildcard caracters.
+Parameters of the encryption, it doesn't accept wildcard characters.
 It accepts parameters like SHA384, SHA256, etc.
 
 ```yaml
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationSourceLocations
-Posible Source locations to migrate
+Possible Source locations to migrate
 
 ```yaml
 Type: MigrationPackageLocation

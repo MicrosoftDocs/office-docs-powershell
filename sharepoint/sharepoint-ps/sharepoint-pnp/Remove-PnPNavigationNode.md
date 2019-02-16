@@ -67,7 +67,7 @@ Will remove all the navigation nodes from the quick launch bar in the current we
 ## PARAMETERS
 
 ### -All
-Specifying the All parameter will remove all the nodes from specifed Location.
+Specifying the All parameter will remove all the nodes from specified Location.
 
 ```yaml
 Type: SwitchParameter

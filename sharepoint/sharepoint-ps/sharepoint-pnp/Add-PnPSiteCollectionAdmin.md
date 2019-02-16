@@ -16,7 +16,7 @@ Add-PnPSiteCollectionAdmin -Owners <UserPipeBind>
 ```
 
 ## DESCRIPTION
-This command allows adding one to many users as site collection administrators to the site collection in the current context. It does not replace or remove exisitng site collection administrators.
+This command allows adding one to many users as site collection administrators to the site collection in the current context. It does not replace or remove existing site collection administrators.
 
 ## EXAMPLES
 

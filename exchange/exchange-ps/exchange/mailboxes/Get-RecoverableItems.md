@@ -24,7 +24,7 @@ Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter>
 [-FilterStartTime <DateTime>]
 [-LastParentFolderID <String>]
 [-ResultSize <Unlimited>]
-[-SourceFolder <DeletedItems | RecoverableItems>]
+[-SourceFolder <DeletedItems | RecoverableItems | PurgedItems>]
 [-SubjectContains <String>]
 [<CommonParameters>]
 ```
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ### -EntryID
 The EntryID parameter specifies the deleted item that you want to restore. The EntryID value for the deleted item is unique in the mailbox.
 
-You can find the EntryID for specific items by using other search filters on the Get-ReoverableItems cmdlet (subject, date range, etc.).
+You can find the EntryID for specific items by using other search filters on the Get-RecoverableItems cmdlet (subject, date range, etc.).
 
 ```yaml
 Type: String
@@ -195,7 +195,9 @@ The SourceFolder parameter specifies the folder in the mailbox to search for del
 
 - RecoverableItems: Recoverable items that have been deleted from the Deleted Items folder.
 
-If you don't use this parameter, the command will search both locations.
+- Purgeditems: If either Litigation Hold or single item recovery is enabled on the mailbox, this subfolder contains all items that are hard deleted. This folder isn't visible to end users.
+
+If you don't use this parameter, the command will search all locations.
 
 ```yaml
 Type: DeletedItems | RecoverableItems

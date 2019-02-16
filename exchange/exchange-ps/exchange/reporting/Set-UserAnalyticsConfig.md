@@ -79,11 +79,11 @@ Accept wildcard characters: False
 ### -PrivacyMode
 The PrivacyMode parameter specifies the MyAnalytics privacy setting for the user. Valid values are:
 
-- Exclude
+- Excluded
 
-- OptIn
+- Opt-In
 
-- OptOut
+- Opt-Out
 
 ```yaml
 Type: String
