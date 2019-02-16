@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Connect-Mailbox cmdlet to connect disconnected mailboxes to existing user accounts that don't already have mailboxess.
+Use the Connect-Mailbox cmdlet to connect disconnected mailboxes to existing user accounts that don't already have mailboxes.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -106,7 +106,7 @@ Connect-Mailbox [-Identity] <StoreMailboxIdParameter> [-Database] <DatabaseIdPar
 ## DESCRIPTION
 If you link a mailbox to an existing user account, that user account has full access to the mailbox and all mail in the mailbox.
 
-If you use the User parameter to specify the user account, make sure you specify the correct account. If you don't use the User parameter, we recommend that you use the ValidateOnlyswitch to verify which user account the mailbox will try to connect to.
+If you use the User parameter to specify the user account, make sure you specify the correct account. If you don't use the User parameter, we recommend that you use the ValidateOnly switch to verify which user account the mailbox will try to connect to.
 
 There is no Disconnect-Mailbox cmdlet. You can use the Disable-Mailbox or Remove-Mailbox cmdlets to effectively disconnect mailboxes from user accounts.
 
@@ -207,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -Equipment
-The Equipment switch specifies that you are connecting an equipment mailbox, if this mailbox is a resource mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a resource mailbox
+The Equipment switch is required to connect equipment mailboxes. You don't need to specify a value with this switch.
+
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 ```yaml
 Type: SwitchParameter
@@ -268,7 +270,9 @@ Accept wildcard characters: False
 ```
 
 ### -Room
-The Room switch specifies that you are connecting a room mailbox, if this mailbox is a resource mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a resource mailbox.
+The Room switch is required to connect room mailboxes. You don't need to specify a value with this switch.
+
+Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
 ```yaml
 Type: SwitchParameter
@@ -283,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -Shared
-The Shared switch specifies that you are connecting a shared mailbox. You don't need to specify a value with this switch. This switch is required only if you're connecting a shared mailbox.
+The Shared switch is required to connect shared mailboxes. You don't need to specify a value with this switch.
 
 A shared mailbox is a mailbox where multiple users can log on to access the mailbox contents. This mailbox isn't associated with any of the users that can log on. It's associated with a disabled user account.
 
@@ -371,7 +375,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -553,7 +557,7 @@ For example:
 
 - GUID
 
-If you don't use this parameter, the command uses the LegacyExchangeDN and DisplayNameproperty values of the mailbox to find a user account that has those same values. If it can't find a unique match, it doesn't connect the mailbox.
+If you don't use this parameter, the command uses the LegacyExchangeDN and DisplayName property values of the mailbox to find a user account that has those same values. If it can't find a unique match, it doesn't connect the mailbox.
 
 ```yaml
 Type: UserIdParameter

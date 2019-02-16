@@ -18,11 +18,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime> [-Formatted] [-FreeText <String>]
- [-IPAddresses <String[]>] [-ObjectIds <String[]>] [-Operations <String[]>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-ResultSize <Int32>] [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
- [-SessionId <String>] [-SiteIds <String[]>] [-UserIds <String[]>] [<CommonParameters>]
+Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
+ [-Formatted]
+ [-FreeText <String>]
+ [-IPAddresses <String[]>]
+ [-ObjectIds <String[]>]
+ [-Operations <String[]>]
+ [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-ResultSize <Int32>]
+ [-SessionCommand <Initialize | ReturnLargeSet | ReturnNextPreviewPage>]
+ [-SessionId <String>]
+ [-SiteIds <String[]>]
+ [-UserIds <String[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -Formatted
-The Formatted switch causes attributes that are normally returned as integers (for example, RecordType and Operation) to be formatted as descriptive strings. You don't need to specify a value with this switch.
+The Formatted switch causes attributes that are normally returned as integers (for example, RecordType and Operation) to be formatted as descriptive strings. You don't need to specify a value with this switch. 
+In addition it will make AuditData more readable.
 
 ```yaml
 Type: SwitchParameter
@@ -201,9 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter filters the log entries by record type.
-
-Valid values are:
+The RecordType parameter filters the log entries by record type. Valid values are:
 
 - AzureActiveDirectory
 
@@ -239,7 +246,11 @@ Valid values are:
 
 - PowerBIAudit
 
+- SecurityComplianceAlerts
+
 - SecurityComplianceCenterEOPCmdlet
+
+- SecurityComplianceInsights
 
 - SharePoint
 
@@ -260,7 +271,7 @@ Valid values are:
 - Yammer
 
 ```yaml
-Type: ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence
+Type: AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

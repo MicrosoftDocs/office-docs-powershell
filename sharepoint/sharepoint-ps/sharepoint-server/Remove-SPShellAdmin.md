@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -database
-Specifies the GUID of the database or the Databse Object that includes the SharePoint_Shell_Access role from which the user is to be removed.
+Specifies the GUID of the database or the Database Object that includes the SharePoint_Shell_Access role from which the user is to be removed.
 If the database parameter is not specified, the configuration database is used.
 
 ```yaml

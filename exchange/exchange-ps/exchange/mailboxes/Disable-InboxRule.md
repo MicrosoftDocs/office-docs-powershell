@@ -34,7 +34,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Disable-InboxRule -Identity "MoveAnnouncements" -Mailbox "Joe@Contoso.com"
 ```
 
-This example disables the Inbox rule MoveAnnoncements in the mailbox Joe@Contoso.com.
+This example disables the Inbox rule MoveAnnouncements in the mailbox Joe@Contoso.com.
 
 ## PARAMETERS
 

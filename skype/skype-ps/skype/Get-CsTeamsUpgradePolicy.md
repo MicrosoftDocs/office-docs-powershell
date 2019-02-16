@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-applicable: Skype for Business Online, Skype for Business Server 2019
+applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 title: Get-CsTeamsUpgradePolicy
 schema: 2.0.0
 ---
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsTeamsUpgradePolicy
 
 ## SYNOPSIS
-TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. IMPORTANT:  TeamsUpgradePolicy has replaced TeamsInteropPolicy.  However, aspects of TeamsUpgradePolicy are still in preview mode as described below.
+TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams.
 
 
 ## SYNTAX
@@ -24,15 +24,17 @@ Get-CsTeamsUpgradePolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<Com
 ```
 
 ## DESCRIPTION
-TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. This cmdlet returns the set of instances of this policy. As an organization with Skype for Business starts to adopt Teams, administrators can manage client behavior for their end user using the concept of "mode", which defines where routing behavior (e.g in which client do chats and calls land). In the future, mode will also be used to define client behavior in Teams client in terms of what functionality will be available.  TeamsUpgradePolicy can be granted either on a per user basis or on a tenant-wide basis.  In addition, prior to upgrading to TeamsOnly mode, administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade. 
+TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. This cmdlet returns the set of instances of this policy. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode". Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. In the future, mode will also be used to define Teams client behavior in terms of what functionality will be available. Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade. 
 
 NOTES: 
   - Except for on-premise versions of Skype for Business Server, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet. 
-  - If you are using Skype for Business Server, there are no built-in instances and you'll need to create one. Also, only the NotifySfBUsers property is available. Mode is not present
-  - Instances with mode set to SfBWithTeamsCollab and SfBWithTeamsCollabAndMeetings are not yet fully functional. From a routing perspective, they will behave like SfBOnly mode.
+  - If you are using Skype for Business Server, there are no built-in instances and you'll need to create one. Also, only the NotifySfBUsers property is available. Mode is not present.
+  - Instances with mode set to SfBWithTeamsCollab and SfBWithTeamsCollabAndMeetings are not yet exposed in the Admin Portal. From a routing perspective, they will behave like SfBOnly mode.
+  - Using TeamsUpgradePolicy in an on-premises environmention requires Skype for Business Server 2015 with CU8 or later.
 
 IMPORTANT: TeamsUpgradePolicy has replaced TeamsInteropPolicy. Components that previously honored TeamsInteropPolicy have been updated to honor TeamsUpgradePolicy instead. Do not use TeamsInteropPolicy. In addition, Legacy mode in TeamsUpgradePolicy has been retired.
 
+You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/en-us/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 ## EXAMPLES
 
@@ -129,7 +131,7 @@ If identity parameter is passed, this will return a specific instance. If no ide
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 
 Required: False
 Position: 1
@@ -144,7 +146,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -161,7 +163,7 @@ Accept wildcard characters: False
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 
 Required: False
 Position: Named

@@ -790,6 +790,122 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
  [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
 ```
 
+### RemoveOrphanedHolds
+```
+Set-Mailbox [-Identity] <MailboxIdParameter> [-RemoveOrphanedHolds <String[]>]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-AccountDisabled <$true | $false>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ApplyMandatoryProperties]
+ [-ArchiveName <MultiValuedProperty>]
+ [-AuditAdmin <MultiValuedProperty>]
+ [-AuditDelegate <MultiValuedProperty>]
+ [-AuditEnabled <$true | $false>]
+ [-AuditLogAgeLimit <EnhancedTimeSpan>]
+ [-AuditOwner <MultiValuedProperty>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-CalendarRepairDisabled <$true | $false>]
+ [-CalendarVersionStoreDisabled <$true | $false>]
+ [-Confirm]
+ [-CreateDTMFMap <$true | $false>]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>
+ [-DefaultPublicFolderMailbox <RecipientIdParameter>]
+ [-DeliverToMailboxAndForward <$true | $false>]
+ [-DisplayName <String>]
+ [-ElcProcessingDisabled <$true | $false>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-EnableRoomMailboxAccount <$true | $false>]
+ [-EndDateForRetentionHold <DateTime>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalOofOptions <ExternalOofOptions>]
+ [-Force]
+ [-ForwardingAddress <RecipientIdParameter>]
+ [-ForwardingSmtpAddress <ProxyAddress>]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-HiddenFromAddressListsEnabled <$true | $false>]
+ [-ImListMigrationCompleted <$true | $false>]
+ [-ImmutableId <String>]
+ [-InactiveMailbox]
+ [-IsExcludedFromServingHierarchy <$true | $false>]
+ [-IssueWarningQuota <Unlimited>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-Languages <MultiValuedProperty>]
+ [-LitigationHoldDate <DateTime>]
+ [-LitigationHoldDuration <Unlimited>]
+ [-LitigationHoldEnabled <$true | $false>]
+ [-LitigationHoldOwner <String>]
+ [-MailboxRegion <String>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-MessageCopyForSendOnBehalfEnabled <$true | $false>]
+ [-MessageCopyForSentAsEnabled <$true | $false>]
+ [-MessageTrackingReadStatusEnabled <$true | $false>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>]
+ [-Name <String>]
+ [-Office <String>]
+ [-Password <SecureString>]
+ [-ProhibitSendQuota <Unlimited>]
+ [-ProhibitSendReceiveQuota <Unlimited>]
+ [-ProvisionedForOfficeGraph]
+ [-PublicFolder]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-ResourceCapacity <System.Int32>]
+ [-ResourceCustom <MultiValuedProperty>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>]
+ [-RetentionComment <String>]
+ [-RetentionHoldEnabled <$true | $false>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RetentionUrl <String>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-RoomMailboxPassword <SecureString>]
+ [-RulesQuota <ByteQuantifiedSize>]
+ [-SecondaryAddress <String>]
+ [-SecondaryDialPlan <UMDialPlanIdParameter>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-SimpleDisplayName <String>]
+ [-SingleItemRecoveryEnabled <$true | $false>]
+ [-SkipDualWrite]
+ [-StartDateForRetentionHold <DateTime>]
+ [-StsRefreshTokensValidFrom <DateTime>]
+ [-Type <Regular | Room | Equipment | Shared>]
+ [-UMDtmfMap <MultiValuedProperty>]
+ [-UseDatabaseQuotaDefaults <System.$true | $false>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 You can use this cmdlet for one mailbox at a time. To perform bulk management, you can pipeline the output of various Get- cmdlets (for example, the Get-Mailbox or Get-User cmdlets) and configure several mailboxes in a single-line command. You can also use the Set-Mailbox cmdlet in scripts.
 
@@ -1052,7 +1168,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -1109,15 +1225,11 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch specifies that the mailbox you're modifying is an arbitration mailbox. You don't need to specify a value with this switch.
+The Arbitration switch is required to modify arbitration mailboxes. You don't need to specify a value with this switch.
 
 Arbitration mailboxes are system mailbox that are used for storing different types of system data and for managing messaging approval workflow.
 
-Notes:
-
-- If you don't use this switch, the command can't find the arbitration mailbox to modify.
-
-- To modify an arbitration mailbox that's used to store audit log settings or data, you need to use the AuditLog or AuxAuditLog switches instead of the Arbitration switch.
+To modify arbitration mailboxes that are used to store audit log settings or data, don't use this switch. Instead, use the AuditLog or AuxAuditLog switches.
 
 ```yaml
 Type: SwitchParameter
@@ -1333,37 +1445,45 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 
 - None
 
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
+
+- ApplyRecord (Available only in the cloud-based service.)
+
 - Copy
 
-- Create
+- Create (Enabled by default.)
 
-- FolderBind
+- FolderBind (Enabled by default in on-premises Exchange 2010 or later.)
 
-- HardDelete
+- HardDelete (Enabled by default.)
 
 - MessageBind
 
-- Move
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- MoveToDeletedItems
+- Move (Enabled by default in on-premises Exchange 2010 or later.)
 
-- SendAs
+- MoveToDeletedItems (Enabled by default.)
 
-- SendOnBehalf
+- RecordDelete (Available only in the cloud-based service.)
 
-- SoftDelete
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- Update
+- SendAs (Enabled by default.)
 
-- UpdateFolderPermissions (cloud-based service only)
+- SendOnBehalf (Enabled by default.)
 
-- UpdateCalendarDelegation (cloud-based service only)
+- SoftDelete (Enabled by default.)
 
-- UpdateInboxRules (cloud-based service only)
+- Update (Enabled by default.)
 
-By default, the Update, Move, MoveToDeletedItems, SoftDelete, HardDelete, FolderBind, SendAs, SendOnBehalf, Create, UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by administrators are logged.
+- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+- UpdateCalendarDelegation (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
+
+- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
+
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1386,31 +1506,41 @@ The AuditDelegate parameter specifies the mailbox operations to log for delegate
 
 - None
 
-- Create
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
+
+- ApplyRecord (Available only in the cloud-based service.)
+
+- Create (Enabled by default.)
 
 - FolderBind
 
-- HardDelete
+- HardDelete (Enabled by default.)
+
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
 - Move
 
-- MoveToDeletedItems
+- MoveToDeletedItems (Enabled by default only in the cloud-based service.)
 
-- SendAs
+- RecordDelete (Available only in the cloud-based service.)
 
-- SendOnBehalf
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
-- SoftDelete
+- SendAs (Enabled by default.)
 
-- Update
+- SendOnBehalf (Enabled by default only in the cloud-based service.)
 
-- UpdateFolderPermissions (cloud-based service only)
+- SoftDelete (Enabled by default only in the cloud-based service.)
 
-- UpdateInboxRules (cloud-based service only)
+- Update (Enabled by default only in the cloud-based service.)
 
-By default, the Update, SoftDelete, HardDelete, SendAs, Create, UpdateFolderPermissions, and UpdateInboxRules actions performed by delegates are logged.
+- UpdateCalendarDelegation (Available only in the cloud-based service.)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+- UpdateFolderPermissions (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
+
+- UpdateInboxRules (Available only in Exchange 2019 and the cloud-based service; enabled by default.)
+
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1450,13 +1580,11 @@ Accept wildcard characters: False
 ### -AuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuditLog switch specifies the mailbox you're modifying is an arbitration mailbox that's used to store audit log settings. You don't need to specify a value with this switch.
+The AuditLog switch is required to modify audit log mailboxes. You don't need to specify a value with this switch.
 
-Notes:
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for modifying this type of arbitration mailbox.
+To modify other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1492,31 +1620,43 @@ Accept wildcard characters: False
 ### -AuditOwner
 The AuditOwner parameter specifies the mailbox operations to log for mailbox owners as part of mailbox audit logging. Valid values include:
 
-- None
+- None (This is the default value in Exchange 2010, Exchange 2013, and Exchange 2016.)
+
+- AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
+
+- ApplyRecord (Available only in the cloud-based service.)
 
 - Create
 
+- FolderBind (Available only in Exchange 2013.)
+
 - HardDelete
 
-- MailboxLogin
+- MailboxLogin (Available only in Exchange 2016, Exchange 2019, and the cloud-based service.)
+
+- MessageBind (Available only in Exchange 2013.)
+
+- ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 
 - Move
 
 - MoveToDeletedItems
 
+- RecordDelete (Available only in the cloud-based service.)
+
+- RemoveFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
+
 - SoftDelete
 
 - Update
 
-- UpdateFolderPermissions (cloud-based service only)
+- UpdateFolderPermissions (Available only in the cloud-based service; enabled by default.)
 
-- UpdateCalendarDelegation (cloud-based service only)
+- UpdateCalendarDelegation (Available only in the cloud-based service; enabled by default.)
 
-- UpdateInboxRules (cloud-based service only)
+- UpdateInboxRules (Available only in the cloud-based service; enabled by default.)
 
-In on-premises Exchange, mailbox access by the owner isn't logged by default. In the cloud-based service, only the UpdateFolderPermissions, UpdateCalendarDelegation, and UpdateInboxRules actions performed by the owner are logged by default.
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -1537,13 +1677,11 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch specifies the mailbox you're modifying is an arbitration mailbox that's used to store audit log data. You don't need to specify a value with this switch.
+The AuxAuditLog switch is required to modify auxillary audit log mailboxes. You don't need to specify a value with this switch.
 
-Notes:
+Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
-- If you don't use this switch, the command can't find this type of arbitration mailbox.
-
-- The Arbitration switch doesn't work for modifying this type of arbitration mailbox.
+To modify other types of arbitration mailboxes, don't use this switch. Instead, use the Arbitration switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1632,7 +1770,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairDisabled
-The CalendarRepairDisabled parameter specifies whetherto prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
+The CalendarRepairDisabled parameter specifies whether to prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
 
 - $true: The Calendar Repair Assistant doesn't repair calendar items in the mailbox.
 
@@ -1727,7 +1865,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute1
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute1 parameter specifies a value for the CustomAttribute1 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1742,7 +1880,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute10
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute10 parameter specifies a value for the CustomAttribute10 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1757,7 +1895,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute11
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute11 parameter specifies a value for the CustomAttribute11 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1772,7 +1910,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute12
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute12 parameter specifies a value for the CustomAttribute12 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1787,7 +1925,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute13
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute13 parameter specifies a value for the CustomAttribute13 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1802,7 +1940,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute14
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute14 parameter specifies a value for the CustomAttribute14 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1817,7 +1955,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute15
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute15 parameter specifies a value for the CustomAttribute15 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1832,7 +1970,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute2
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute2 parameter specifies a value for the CustomAttribute2 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1847,7 +1985,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute3
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute3 parameter specifies a value for the CustomAttribute3 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1862,7 +2000,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute4
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute4 parameter specifies a value for the CustomAttribute4 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1877,7 +2015,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute5
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute5 parameter specifies a value for the CustomAttribute5 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1892,7 +2030,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute6
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute6 parameter specifies a value for the CustomAttribute6 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1907,7 +2045,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute7
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute7 parameter specifies a value for the CustomAttribute7 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1922,7 +2060,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute8
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute8 parameter specifies a value for the CustomAttribute8 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1937,7 +2075,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute9
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+The CustomAttribute9 parameter specifies a value for the CustomAttribute9 property on the recipient. You can use this property to store custom information and use in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1991,7 +2129,7 @@ You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
 
 ```yaml
 Type: DataEncryptionPolicyIdParameter
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -2139,7 +2277,7 @@ The ElcProcessingDisabled parameter specifies whether to prevent the Managed Fol
 
 ```yaml
 Type: $true | $false
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -2277,7 +2415,7 @@ This parameter is available only in Exchange Online.
 
 The ExcludeFromOrgHolds parameter excludes the mailbox from one or more organization-wide Office 365 retention policies. This parameter can only be used for inactive mailboxes. A valid value for this parameter is the GUID of the organization-wide Office 365 retention policy that the inactive mailbox is excluded from. To find the GUID values of organization-wide Office 365 retention policies, run the command Get-OrganizationConfig | Format-List InplaceHolds. Note that retention policies assigned to mailboxes are prefaced by 'mbx'.
 
-You can specify multiple values for this parameter by using the syntax "GUID1","GUID2",…"GUIDX".
+You can specify multiple values by using the syntax: "GUID1","GUID2",..."GUIDX".
 
 When you use this parameter, use the DistinguishedName or ExchangeGuid property value for the identity of the inactive mailbox (those are the values that guarantee uniqueness).
 
@@ -2311,11 +2449,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute1
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+The ExtensionCustomAttribute1 parameter specifies a value for the ExtensionCustomAttribute1 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2330,11 +2470,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute2
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+The ExtensionCustomAttribute2 parameter specifies a value for the ExtensionCustomAttribute2 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2349,11 +2491,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute3
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+The ExtensionCustomAttribute3 parameter specifies a value for the ExtensionCustomAttribute3 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2368,11 +2512,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute4
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+The ExtensionCustomAttribute4 parameter specifies a value for the ExtensionCustomAttribute4 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2387,11 +2533,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute5
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+The ExtensionCustomAttribute5 parameter specifies a value for the ExtensionCustomAttribute5 property on the recipient. You can use this property to store custom information and use in filters. You can specify up to 1,300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+
+Although this is a multivalued property, the filter {ExtensionCustomAttributeX -eq '\<value\>'} will return a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2622,7 +2770,7 @@ Accept wildcard characters: False
 ### -GMGen
 This parameter is available only in on-premises Exchange.
 
-The GMGen parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used for group metrics generation for the organization. In MailTips, group metrics information is used to indicate the number of recipients in a message or whether recipients are outside your organization. You can use this parameter only on an arbitration mailbox.
+The GMGen parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for group metrics generation for the organization. In MailTips, group metrics information is used to indicate the number of recipients in a message or whether recipients are outside your organization. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -2667,7 +2815,7 @@ For example:
 
 - User ID or user principal name (UPN)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -2772,7 +2920,7 @@ Accept wildcard characters: False
 ### -InactiveMailbox
 This parameter is available only in the cloud-based service.
 
-The InactiveMailboxswitch specifies that the mailbox is an inactive mailbox. You don't need to specify a value with this switch.
+The InactiveMailbox switch specifies that the mailbox is an inactive mailbox. You don't need to specify a value with this switch.
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted.
 
@@ -2784,7 +2932,7 @@ You can't use this switch to modify other properties on inactive mailboxes.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -2887,7 +3035,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -2902,7 +3050,7 @@ The Languages parameter specifies the language preferences for this mailbox, in 
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -3098,13 +3246,13 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-This parameter is avaialble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -3420,7 +3568,7 @@ The MicrosoftOnlineServicesID parameter specifies the Microsoft work or school a
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -3433,7 +3581,7 @@ Accept wildcard characters: False
 ### -Migration
 This parameter is available only in on-premises Exchange.
 
-This parameter is reserved for internal Microsoft use.
+The Migration switch is required to modify migration mailboxes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: $true | $false
@@ -3466,7 +3614,7 @@ For example:
 
 - GUID
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -3768,7 +3916,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds
+Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online
 Required: False
@@ -3796,7 +3944,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch specifies that the mailbox is a public folder mailbox. This switch is required only when you modify public folder mailboxes. You don't need to specify a value with this switch.
+The PublicFolder switch is required to modify public folder mailboxes. You don't need to specify a value with this switch.
 
 Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
@@ -4120,7 +4268,7 @@ Accept wildcard characters: False
 ### -RemoveManagedFolderAndPolicy
 This parameter is available only in on-premises Exchange.
 
-The RemoveManagedFolderAndPolicyswitch specifies whether to remove all MRM 1.0 policies and attributes from a mailbox. If you use this switch, MRM 1.0 policies and MRM 1.0 properties from any managed folders that were created as part of any MRM 1.0 policies are removed. Managed folders that are empty are also removed from the mailbox, and managed folders that contain items are converted to standard folders.
+The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM policies and attributes from a mailbox. 
 
 You don't need to specify a value with this switch.
 
@@ -4129,6 +4277,27 @@ Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveOrphanedHolds
+This parameter is available only in the cloud-based service.
+
+The RemoveOrphanedHolds parameter is used to remove the mailbox (typically, an inactive mailbox) from In-Place Holds that no longer exist, but are still applied to the mailbox. You identify the In-Place Hold by using its GUID value. You can specify multiple GUID values separated by commas.
+
+If you use the GUID value of an In-Place Hold that still exists as a value for this parameter, the command will return an error. If that happens, you'll need to remove the mailbox (or inactive mailbox) from the In-Place Hold.
+
+In an Exchange hybrid deployment, In-Place Holds that are created in the on-premises organization can be applied to cloud-based mailboxes. In this scenario, it's possible that the hold object hasn't been synced to the cloud-based organization, and using this parameter will remove the specified hold from the cloud-based mailbox even though the hold may still exist. To prevent this from happening, make sure the hold doesn't exist in the on-premises organization before you use this parameter.
+
+```yaml
+Type: String[]
+Parameter Sets: RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -4238,7 +4407,7 @@ You use the Set-ResourceConfig and Get-ResourceConfig cmdlets to create and view
 
 After you create custom resource properties, you use this parameter to assign one or more of those properties to a resource mailbox. Properties that begin with the prefix Room/ are available only on room mailboxes, and properties that begin with the prefix Equipment/ are available only on equipment mailboxes. When you specify a property value for this parameter, don't include the prefix.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -4418,7 +4587,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoomMailboxPassword
-Use the RoomMailboxPassword parameter to changethe password for a room mailbox that has an enabled account (the EnableRoomMailboxAccount parameter is set to the value $true.)
+Use the RoomMailboxPassword parameter to change the password for a room mailbox that has an enabled account (the EnableRoomMailboxAccount parameter is set to the value $true.)
 
 This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
 
@@ -4504,7 +4673,7 @@ Accept wildcard characters: False
 ### -SCLDeleteThreshold
 This parameter is available only in on-premises Exchange.
 
-The SCLDeleteThreshold parameter specifies the SCL delete threshold. When the SCLDeleteEnabled parameter is set to $true, messages with an SCL greater than or equal to the specified value aresilently deleted.
+The SCLDeleteThreshold parameter specifies the SCL delete threshold. When the SCLDeleteEnabled parameter is set to $true, messages with an SCL greater than or equal to the specified value are silently deleted.
 
 A valid value is an integer from 0 through 9. This value should be greater than the other SCL\*Threshold values.
 
@@ -4632,7 +4801,7 @@ Accept wildcard characters: False
 ### -SCLRejectThreshold
 This parameter is available only in on-premises Exchange.
 
-The SCLRejectThreshold parameter specifies the SCL reject threshold. When the SCLRejectEnabled parameter is set to $true, messageswith an SCL greater than or equal to the specified value are rejected, and an NDR is sent to the sender.
+The SCLRejectThreshold parameter specifies the SCL reject threshold. When the SCLRejectEnabled parameter is set to $true, messages with an SCL greater than or equal to the specified value are rejected, and an NDR is sent to the sender.
 
 A valid value is an integer from 0 through 9. This value should be less than the SCLDeleteThreshold value, but greater than the SCLQuarantineThreshold value.
 
@@ -4899,7 +5068,7 @@ Accept wildcard characters: False
 ### -UMDataStorage
 This parameter is available only in on-premises Exchange.
 
-The UMDataStorage parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used to store UM call data records and UM custom prompts. This capability can be assigned to only one arbitration mailbox for the organization. You can use this parameter only on an arbitration mailbox.
+The UMDataStorage parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used to store UM call data records and UM custom prompts. This capability can be assigned to only one arbitration mailbox for the organization. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -4930,7 +5099,7 @@ If you use this syntax and you omit any of the DTMF map values, those values are
 
 To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
 
-If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<intgers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
+If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<integers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4947,7 +5116,7 @@ Accept wildcard characters: False
 ### -UMGrammar
 This parameter is available only in on-premises Exchange.
 
-The UMGrammar parameter specifies whether the arbitration mailbox (also called anorganization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
+The UMGrammar parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -4964,9 +5133,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseQuotaDefaults
-This parameter is available only in on-premises Exchange.
-
-The UseDatabaseQuotaDefaults parameter specifies whether the mailbox uses the applicable quota values configured on the mailbox database or configured on the mailbox. Valid values are:
+The UseDatabaseQuotaDefaults parameter specifies whether the mailbox uses the applicable quota values that are configured on the mailbox or on the mailbox database. Valid values are:
 
 - $true: The mailbox uses the applicable quota values that are configured on the mailbox database. Any of those quota values configured directly on the mailbox are ignored.
 

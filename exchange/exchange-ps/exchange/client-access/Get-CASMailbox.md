@@ -344,7 +344,9 @@ Accept wildcard characters: False
 ### -Monitoring
 This parameter is available only in on-premises Exchange.
 
-The Monitoring switch includes mailboxes that were created by monitoring accounts in the results. By default, these mailboxes aren't included in the results. You don't have to specify a value with this switch.
+The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
+
+Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
 
 ```yaml
 Type: SwitchParameter

@@ -91,7 +91,7 @@ This example displays the statistics for all calls received or placed by Mailbox
 
 ### -------------------------- Example 4 --------------------------
 ```
-Get-UMCallSummaryReport -GroupBy Month -UMDialplan MyUMDialPlan
+Get-UMCallSummaryReport -GroupBy Month -UMDialPlan MyUMDialPlan
 ```
 
 This example displays the statistics for calls received or placed by Mailbox servers for the UM dial plan MyUMDialPlan.

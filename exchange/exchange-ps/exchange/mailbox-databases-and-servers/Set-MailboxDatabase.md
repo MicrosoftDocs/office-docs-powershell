@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDagExcludeFromMonitoring
-The AutoDagExcludedFromMonitoringparameter specifies whether to exclude the mailbox database from the ServerOneCopyMonitor, which alerts an administrator when a replicated database has only one healthy copy available. Valid values are:
+The AutoDagExcludedFromMonitoring parameter specifies whether to exclude the mailbox database from the ServerOneCopyMonitor, which alerts an administrator when a replicated database has only one healthy copy available. Valid values are:
 
 - $true: No alert is issued when there's only one healthy copy of the replicated database.
 
@@ -464,7 +464,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexEnabled
-This parameter isn't avaialble in Exchange Server 2019.
+This parameter isn't available in Exchange Server 2019.
 
 The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox database. Valid values are:
 

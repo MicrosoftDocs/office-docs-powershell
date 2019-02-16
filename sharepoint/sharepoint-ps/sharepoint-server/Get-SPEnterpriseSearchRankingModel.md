@@ -38,7 +38,7 @@ This example retrieves the ranking model on the search service application level
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
 $owner = Get-SPEnterpriseSearchOwner -Level ssa
 Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner
 ```

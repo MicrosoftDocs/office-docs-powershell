@@ -134,9 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingID
-The MeetingID parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGloablObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
+The MeetingID parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGlobalObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
 
-To find this value, it's easiest to first search for the calendar item by using the Subject, StartDate and EndDate parameters. After you find the calendar item that you want, you can use its CleanGloablObjectId value for the MeetingID parameter in future commands.
+To find this value, it's easiest to first search for the calendar item by using the Subject, StartDate and EndDate parameters. After you find the calendar item that you want, you can use its CleanGlobalObjectId value for the MeetingID parameter in future commands.
 
 Don't use this parameter with the Subject parameter, because the value of the MeetingID parameter takes precedence.
 

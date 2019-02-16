@@ -118,7 +118,7 @@ Exchange 2016 and Exchange 2013 servers can't be associated with a TelExt or E.1
 
 You can also use this parameter to associate Exchange 2010 Unified Messaging servers to a UM dial plan.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ### -IrmLogPath
 The IrmLogPath parameter specifies the default IRM log directory location. The default location is %ExchangeInstallPath%IRMLogs.
 
-If you set the value of this parameter to $null, you effectively disable IRM logging. However, setting this parameter to $null when the value of the IrmLogEnabledparameter is $true, generates errors in the Application event log. The preferred way to disable IRM logging is to set the IrmLogEnabled parameter to $false.
+If you set the value of this parameter to $null, you effectively disable IRM logging. However, setting this parameter to $null when the value of the IrmLogEnabled parameter is $true, generates errors in the Application event log. The preferred way to disable IRM logging is to set the IrmLogEnabled parameter to $false.
 
 ```yaml
 Type: LocalLongFullPath
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ### -SIPAccessService
 The SIPAccessService parameter specifies the FQDN and TCP port of the nearest Lync Server pool or Skype for Business Server pool location for inbound and outbound calls from remote Lync or Skype for Business users located outside of the network. When this parameter isn't set, the Microsoft Exchange Unified Messaging service may select a Lync Server pool or Skype for Business Server pool for Real-Time Transport Protocol (RTP) media traffic that isn't the closest geographically to the remote user.
 
-This parameter is optional when you're configuring Unified Messaging with single Lync Server pool or Skype for Business Server pool deployments. However, for Lync Server or Skype for Business Server deployments that span multiple geographic regions, it's recommended that you specify this parameter. This parameter is set on a per-Unfined Messaging service basis and must point to the Lync Server pool or Skype for Business Server pool that is located the closest geographically to the Exchange server.
+This parameter is optional when you're configuring Unified Messaging with single Lync Server pool or Skype for Business Server pool deployments. However, for Lync Server or Skype for Business Server deployments that span multiple geographic regions, it's recommended that you specify this parameter. This parameter is set on a per-Unified Messaging service basis and must point to the Lync Server pool or Skype for Business Server pool that is located the closest geographically to the Exchange server.
 
 ```yaml
 Type: ProtocolConnectionSettings
