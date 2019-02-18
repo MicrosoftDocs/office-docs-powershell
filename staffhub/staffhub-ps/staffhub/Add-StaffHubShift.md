@@ -5,6 +5,8 @@ applicable: Microsoft StaffHub
 title: Add-StaffHubShift
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
 ---
 
 # Add-StaffHubShift

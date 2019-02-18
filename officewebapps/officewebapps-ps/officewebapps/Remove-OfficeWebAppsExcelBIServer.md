@@ -4,6 +4,8 @@ Module Name: officewebapps
 title: Remove-OfficeWebAppsExcelBIServer
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
 ---
 
 # Remove-OfficeWebAppsExcelBIServer

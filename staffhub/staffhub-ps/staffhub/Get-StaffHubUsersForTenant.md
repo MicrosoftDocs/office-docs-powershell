@@ -5,6 +5,8 @@ online version:
 applicable: Microsoft StaffHub
 title: Get-StaffHubUsersForTenant
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
 ---
 
 # Get-StaffHubUsersForTenant

@@ -4,6 +4,8 @@ Module Name: officewebapps
 title: Get-OfficeWebAppsMachine
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
 ---
 
 # Get-OfficeWebAppsMachine

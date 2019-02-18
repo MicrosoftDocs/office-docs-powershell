@@ -5,6 +5,8 @@ Applicable: SharePoint Migration Tool
 Title: Remove-SPMTTask
 Online version: 
 Schema: 2.0.0
+author: kenwith
+ms.author: kenwith
 ---
 
 # Remove-SPMTTask

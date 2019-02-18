@@ -5,6 +5,8 @@ applicable: Microsoft StaffHub
 title: Get-StaffHubTeamsForTenant
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
 ---
 
 # Get-StaffHubTeamsForTenant

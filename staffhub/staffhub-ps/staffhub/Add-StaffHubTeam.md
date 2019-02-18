@@ -5,6 +5,8 @@ applicable: Microsoft StaffHub
 title: Add-StaffHubTeam
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
 ---
 
 # Add-StaffHubTeam

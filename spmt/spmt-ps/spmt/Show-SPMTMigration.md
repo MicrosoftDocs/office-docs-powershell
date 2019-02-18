@@ -5,6 +5,8 @@ Applicable: SharePoint Migration Tool
 Title: Show-SPMTMigration
 Online version: 
 Schema: 2.0.0
+author: kenwith
+ms.author: kenwith
 ---
 
 # Show-SPMTMigration
