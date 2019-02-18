@@ -25,7 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPSessionStateService
+Get-SPSessionStateService
 ```
 
 This example returns the current configuration of the session state service.

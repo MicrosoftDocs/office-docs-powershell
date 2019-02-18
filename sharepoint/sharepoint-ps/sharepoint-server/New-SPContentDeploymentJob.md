@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Get-SPContentDeploymentPath "Path 1" | New-SPContentDeploymentJob -Name "Deployment Job" -SPContentDeploymentPath $_ -IncrementalEnabled:$true -ScheduleEnabled:$false
+Get-SPContentDeploymentPath "Path 1" | New-SPContentDeploymentJob -Name "Deployment Job" -SPContentDeploymentPath $_ -IncrementalEnabled:$true -ScheduleEnabled:$false
 ```
 
 This example creates a new content deployment job called Deployment Job by using the deployment path Path 1.

@@ -39,9 +39,9 @@ This example removes the ranking model for the search service application with t
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>$owner = Get-SPEnterpriseSearchOwner -Level ssa
-PS C:\>$MyRanking = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application" | Get-SPEnterpriseSearchRankingModel -Owner $owner
-PS C:\>Remove-SPEnterpriseSearchRankingModel -Identity $MyRanking -Owner $owner
+$owner = Get-SPEnterpriseSearchOwner -Level ssa
+$MyRanking = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application" | Get-SPEnterpriseSearchRankingModel -Owner $owner
+Remove-SPEnterpriseSearchRankingModel -Identity $MyRanking -Owner $owner
 ```
 
 This example removes the ranking model object MyRanking from the search service application Search Service Application.

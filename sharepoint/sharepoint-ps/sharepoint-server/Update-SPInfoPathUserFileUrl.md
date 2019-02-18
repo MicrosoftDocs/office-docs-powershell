@@ -45,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPWebApplication http://contoso2010 | Update-SPInfoPathUserFileUrl -Find "http://contoso2007" -Replace "http://contoso2010"
+Get-SPWebApplication http://contoso2010 | Update-SPInfoPathUserFileUrl -Find "http://contoso2007" -Replace "http://contoso2010"
 ```
 
 This example updates data connections in InfoPath form templates and universal data connection files, for all content under the Web application http://contoso2010.

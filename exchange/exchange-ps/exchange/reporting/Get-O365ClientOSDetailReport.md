@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperatingSystemVersion
-The OperatingSystermVersion parameter filters the report by operating system version. If you don't use this parameter, all operating system versions will be included. The parameter accepts version numbers up to the first minor version. For example, use 6 or 6.1, not 6.1.9600. Wildcards are not accepted.
+The OperatingSystemVersion parameter filters the report by operating system version. If you don't use this parameter, all operating system versions will be included. The parameter accepts version numbers up to the first minor version. For example, use 6 or 6.1, not 6.1.9600. Wildcards are not accepted.
 
 ```yaml
 Type: String

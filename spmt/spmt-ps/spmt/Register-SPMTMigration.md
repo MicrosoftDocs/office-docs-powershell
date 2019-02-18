@@ -15,7 +15,7 @@ After a session is registered, the user can add a migration task to the migratio
 ## SYNTAX
 
 ```
-Register-SPMTMigration [-Credentials <PSCredential>][-Incremental <bool>]  [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToKeep <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>][-MigrateAllSiteFieldsAndContentTypes<bool>][-WorkingFolder <string>]-Force
+Register-SPMTMigration [-SPOCredentials<PSCredential>][-Incremental <bool>] [-ScanOnly <bool>][-MigrateFilesAndFoldersWithInvalidChars <bool>][-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtensions <string>] [-MigrateHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>][-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-MigrateAllSiteFieldsAndContentTypes<bool>] [-WorkingFolder <string>] [-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>]  [-DuplicatePageBehavior <string>] [-MigrateNavigation <Nullable`1>] [-MigrateTermGroups <Nullable`1>] -Force
 ```
 
 ## DESCRIPTION
@@ -409,7 +409,6 @@ Accept wildcard characters: False
 ```
 ### -WorkingFolder
 By default, the working folder is %appdata%\Microsoft\MigrationToolStorage. If you wish to specify your own specific working folder, create it first, then use it as -WorkingFolder parameter. The changed working folder will take effect till you close the PowerShell window. 
-
 Notes:
 Make sure that your working folder has a minimum of 150 GB of free space. It may need more depending on the size of the data you plan to migrate.
 
@@ -424,7 +423,104 @@ Default value: %appdata%\Microsoft\MigrationToolStorage
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -SkipSitesWithName
+To prevent certain sites from migrating, list each site name, separating it with a semicolon. The default value is null. 
+```yaml
+Type: String
+Parameter Sets:  
+Aliases: 
+applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value:null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -SkipListsWithName
+To prevent certain list from migrating, list each list name, separating it with a semicolon. The default value is null. 
+```yaml
+Type: String
+Parameter Sets:  
+Aliases: 
+applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value:null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -SkipContentTypesWithName 
+To prevent certain content types from migrating, list each content type name, separating it with a semicolon. The default value is null. 
+```yaml
+Type: String
+Parameter Sets:  
+Aliases: 
+applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value:null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -SkipContentTypesWithName 
+To prevent certain list from migrating, list each site name, separating it with a semicolon. The default value is null. 
+```yaml
+Type: String
+Parameter Sets:  
+Aliases: 
+applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value:"RENAME"
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -DuplicatePageBehavior 
+Determine the behavior of the page file migration when encountering a page file with the same name or same id on the target.
+By default, DuplicatePageBehavior is set to RENAME.
+The value can be "RENAME", or "OVERWRITE", or "SKIP", or "NO_PAGES_MIGRATION". 
+For RENAME, we will keep the conflicted page file on the target and rename the source page file with a new name by adding current date. 
+For OVERWRITE, we will overwrite the conflicted page file on the target using the source page file. 
+For SKIP, we will skip migrating this conflicted page file.
+For NO_PAGES_MIGRATION, we will skip all the page files no matter they conflict with the target or not during the migration.
 
+```yaml
+Type: String
+Parameter Sets:  
+Aliases: 
+applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value:null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -MigrateNavigation 
+By default this is set to On. We will migrate the site and web navigation nodes when doing the migration.
+```yaml
+Type: String
+Parameter Sets:  
+Aliases: 
+applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value:null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -MigrateTermGroups 
+By default this is set to On. We will migrate the term groups when doing the migration.
+```yaml
+Type: String
+Parameter Sets:  
+Aliases: 
+applicable: SharePoint Migration Tool
+Required: False
+Position: Named
+Default value:null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ## INPUTS
 
 ### None

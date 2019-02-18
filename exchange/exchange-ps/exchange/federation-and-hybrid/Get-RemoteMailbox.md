@@ -46,7 +46,7 @@ Get-RemoteMailbox [[-Identity] <RemoteMailboxIdParameter>]
 ```
 
 ## DESCRIPTION
-The Get-RemoteMailbox cmdlet retrieves the mail-related attributes of a mail user in the on-premises Active Directory. It doesn't retrieve the attributes of the associated cloud-based mailbox. Most of the mail-related attributes of the on-premises mail user and the associated cloud-based mailbox should be the same. However, the cloud-based mailbox has additional attributes that you can't view by using this cmdlet. To view the attributes of the cloud-based mailbox, you need to use the Exchange admin center in the cloub-based service, or use remote PowerShell to connect to your cloud-based organization and run the Get-Mailbox cmdlet.
+The Get-RemoteMailbox cmdlet retrieves the mail-related attributes of a mail user in the on-premises Active Directory. It doesn't retrieve the attributes of the associated cloud-based mailbox. Most of the mail-related attributes of the on-premises mail user and the associated cloud-based mailbox should be the same. However, the cloud-based mailbox has additional attributes that you can't view by using this cmdlet. To view the attributes of the cloud-based mailbox, you need to use the Exchange admin center in the cloud-based service, or use remote PowerShell to connect to your cloud-based organization and run the Get-Mailbox cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch specifies whether to return information about the recipient's archive mailbox.
+The Archive switch is required to return the user's archive mailbox in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

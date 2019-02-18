@@ -46,8 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```
-PS C:\>$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
-PS C:\>Set-SPMetadataServiceApplication -Identity $sa -HubUri 'http://sitename' -SyndicationErrorReportEnabled
+$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
+Set-SPMetadataServiceApplication -Identity $sa -HubUri 'http://sitename' -SyndicationErrorReportEnabled
 ```
 
 This example adds a content type hub to an existing managed metadata service application.
@@ -56,8 +56,8 @@ It also enables error reporting when content types are imported.
 
 ### --------------------EXAMPLE 2---------------------
 ```
-PS C:\>$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
-PS C:\>Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
+$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
+Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
 ```
 
 This example sets permissions on an existing managed metadata service application.

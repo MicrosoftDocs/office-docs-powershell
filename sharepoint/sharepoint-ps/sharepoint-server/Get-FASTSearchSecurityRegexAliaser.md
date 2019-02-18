@@ -26,7 +26,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityRegexAliaser -Identity regex1
+Get-FASTSearchSecurityRegexAliaser -Identity regex1
 ```
 
 This example retrieves a regular expression aliaser with an identity of "regex1".

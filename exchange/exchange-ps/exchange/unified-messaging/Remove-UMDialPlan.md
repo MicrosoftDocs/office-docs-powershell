@@ -11,7 +11,7 @@ monikerRange: "exchserver-ps-2010 || exchserver-ps-2013 || exchserver-ps-2016 ||
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Remove-UMDialplan cmdlet to delete an existing Unified Messaging (UM) dial plan.
+Use the Remove-UMDialPlan cmdlet to delete an existing Unified Messaging (UM) dial plan.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -23,7 +23,7 @@ Remove-UMDialPlan [-Identity] <UMDialPlanIdParameter> [-Confirm] [-DomainControl
 ```
 
 ## DESCRIPTION
-The Remove-UMDialplan cmdlet deletes an existing UM dial plan from Active Directory. Make sure the UM dial plan isn't being used by other UM objects such as UM mailbox policies or UM IP gateways. When you delete an existing UM dial plan, the cmdlet verifies that the specified UM dial plan isn't referenced by a Mailbox server, UM IP gateway or UM mailbox policies. The only benefit gained from deleting an obsolete UM dial plan is to reuse the name or perform general Active Directory housekeeping.
+The Remove-UMDialPlan cmdlet deletes an existing UM dial plan from Active Directory. Make sure the UM dial plan isn't being used by other UM objects such as UM mailbox policies or UM IP gateways. When you delete an existing UM dial plan, the cmdlet verifies that the specified UM dial plan isn't referenced by a Mailbox server, UM IP gateway or UM mailbox policies. The only benefit gained from deleting an obsolete UM dial plan is to reuse the name or perform general Active Directory housekeeping.
 
 After this task is completed, the UM dial plan is removed from Active Directory.
 
@@ -33,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-UMDialplan -Identity MyUMDialPlan
+Remove-UMDialPlan -Identity MyUMDialPlan
 ```
 
 This example deletes the existing UM dial plan MyUMDialPlan.

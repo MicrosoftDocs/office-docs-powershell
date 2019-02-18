@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-applicable: Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Restore-RecoverableItems
 schema: 2.0.0
 monikerRange: "exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps" 
@@ -18,7 +18,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter> [-EntryID <String>] [-FilterEndTime <DateTime>] [-FilterItemType <String>] [-FilterStartTime <DateTime>] [-LastParentFolderID <String>] [-ResultSize <Unlimited>] [-SourceFolder <DeletedItems | RecoverableItems>] [-SubjectContains <String>] [<CommonParameters>]
+Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter> [-EntryID <String>] [-FilterEndTime <DateTime>] [-FilterItemType <String>] [-FilterStartTime <DateTime>] [-LastParentFolderID <String>] [-ResultSize <Unlimited>] [-SourceFolder <DeletedItems | RecoverableItems | Purgeditems>] [-SubjectContains <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,7 +97,7 @@ For example:
 Type: GeneralMailboxOrMailUserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -108,13 +108,13 @@ Accept wildcard characters: False
 ### -EntryID
 The EntryID parameter specifies the deleted item that you want to restore. The EntryID value for the deleted item is unique in the mailbox.
 
-You can find the EntryID for specific items by using other search filters on the Get-ReoverableItems cmdlet (subject, date range, etc.).
+You can find the EntryID for specific items by using other search filters on the Get-RecoverableItems cmdlet (subject, date range, etc.).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -131,7 +131,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -173,7 +173,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -203,7 +203,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -218,7 +218,9 @@ The SourceFolder parameter specifies the folder in the mailbox to search for del
 
 - RecoverableItems: Recoverable items that have been deleted from the Deleted Items folder.
 
-If you don't use this parameter, the command will search both locations.
+- Purgeditems: If either Litigation Hold or single item recovery is enabled on the mailbox, this folder contains all items that are hard deleted. This folder isn't visible to end users.
+
+If you don't use this parameter, the command will search all locations.
 
 ```yaml
 Type: DeletedItems | RecoverableItems
@@ -240,7 +242,7 @@ The SubjectContains parameter filters the items by the specified text value in t
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

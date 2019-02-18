@@ -24,23 +24,23 @@ In a multi-geo company, this cmdlet requires a multi-geo tenant to work, and ena
 ## EXAMPLES
 
 ### EXAMPLE 1
-```yaml
-Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 ### EXAMPLE 2
-```yaml
-Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)
 
 
 ### EXAMPLE 3
-```yaml
-Start-SPOUserAndContentMove -UserPrinciplName username@contoso.com -DestinationDataLocation EUR
+```powershell
+Start-SPOUserAndContentMove -UserPrincipalName username@contoso.com -DestinationDataLocation EUR
 ```
 
 This example moves the user username@contoso.com from the current location, example NA to the European Site (EUR)

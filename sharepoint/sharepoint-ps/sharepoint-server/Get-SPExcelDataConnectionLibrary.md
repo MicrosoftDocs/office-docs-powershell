@@ -28,14 +28,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------------- 
 ```
-PS C:\>Get-SPExcelserviceapplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary
+Get-SPExcelserviceapplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary
 ```
 
 This example displays all the data connection libraries that connection files can be loaded by an Excel Services Application Web service application.
 
 ### --------------EXAMPLE 2-------------- 
 ```
-PS C:\>Get-SPExcelserviceapplication -identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.Description.Contains("Sales Cube")}
+Get-SPExcelserviceapplication -identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.Description.Contains("Sales Cube")}
 ```
 
 This example displays all the data connection libraries that have descriptions containing the words Sales Cube from the specified Excel Services Application Web service application.

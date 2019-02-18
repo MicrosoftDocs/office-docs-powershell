@@ -30,9 +30,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Remove-SPUser "Contoso \jdoe" -web http://test/web1
+Remove-SPUser "Contoso\jdoe" -web http://test/web1
 
-PS C:\>Get-SPWeb "http://test/web1" | Remove-SPUser "Contoso\jdoe"
+Get-SPWeb "http://test/web1" | Remove-SPUser "Contoso\jdoe"
 ```
 
 This example removes the user (Contoso\jdoe) from the Web application http://test/web1.
@@ -40,7 +40,7 @@ This example removes the user (Contoso\jdoe) from the Web application http://tes
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPSite http://contoso.com |Get-SPWeb |Remove-SPUser "Contoso\jdoe"
+Get-SPSite http://contoso.com |Get-SPWeb |Remove-SPUser "Contoso\jdoe"
 ```
 
 This syntax removes the user (Contoso\Jdoe) from every Web in a site collection located at http://contoso.com.

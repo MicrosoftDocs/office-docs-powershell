@@ -39,7 +39,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>New-FASTSearchMetadataManagedProperty -name integervalue -type 2 -description "A managed property for integer values"
+New-FASTSearchMetadataManagedProperty -name integervalue -type 2 -description "A managed property for integer values"
 ```
 
 This example creates a managed property called "integervalue" of type 2 (integer).

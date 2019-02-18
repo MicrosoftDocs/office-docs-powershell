@@ -29,11 +29,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$app = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$GC = Start-SPAssignment
-PS C:\>$s = $GC | Get-SPSite UrlOfASiteCollection
-PS C:\>Remove-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $s.ID.ToString() -SearchApplication $app
-PS C:\>Stop-SPAssignment $GC
+$app = Get-SPEnterpriseSearchServiceApplication
+$GC = Start-SPAssignment
+$s = $GC | Get-SPSite UrlOfASiteCollection
+Remove-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $s.ID.ToString() -SearchApplication $app
+Stop-SPAssignment $GC
 ```
 
 This example removes the search settings for the site collection referenced by $s in the search application referenced by $app.

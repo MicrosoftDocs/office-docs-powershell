@@ -611,7 +611,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntraOrgConnectorProtocolLoggingLevel
-The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connector In the Front End Transport servicee. Valid values are:
+The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connector In the Front End Transport service. Valid values are:
 
 - None: Protocol logging is disabled for the intra-organization Send connector in the Front End Transport service.
 

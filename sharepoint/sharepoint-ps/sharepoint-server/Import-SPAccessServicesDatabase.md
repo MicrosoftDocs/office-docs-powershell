@@ -30,8 +30,8 @@ See more information about Data-Tier Framework at [Data-tier Applications](https
 
 ### Example 1 
 ```
-PS C:\>$accessDb = Get-SPAccessServicesDatabaseServer -ServiceContext http://site_url -DatabaseServer SQLSERVERNAME -DatabaseServerGroup DEFAULT
-PS C:\>Import-SPAccessServicesDatabase -DatabaseName accessDatabaseName -ServerReferenceId $accessDb.ServerReferenceId -Bacpac (Get-Content -Path C:\accessDb.bacpac -Encoding Byte)
+$accessDb = Get-SPAccessServicesDatabaseServer -ServiceContext http://site_url -DatabaseServer SQLSERVERNAME -DatabaseServerGroup DEFAULT
+Import-SPAccessServicesDatabase -DatabaseName accessDatabaseName -ServerReferenceId $accessDb.ServerReferenceId -Bacpac (Get-Content -Path C:\accessDb.bacpac -Encoding Byte)
 ```
 
 This example gets the ServerReferenceId value of the SQL Server for the Access Services Service Application; -DatabaseServerGroup is set to the value DEFAULT by default. The next step is to import the bacpac file to a byte array and finally, import the Access Services Database as the specified SQL database name to the specified SQL Server.

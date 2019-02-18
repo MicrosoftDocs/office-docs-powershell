@@ -32,9 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$crawlRule = Get-SPEnterpriseSearchCrawlRule -Identity 'file://fileserver/root' -SearchApplication $ssa
-PS C:\>Set-SPEnterpriseSearchCrawlRule -Identity $crawlRule -Type "ExclusionRule"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$crawlRule = Get-SPEnterpriseSearchCrawlRule -Identity 'file://fileserver/root' -SearchApplication $ssa
+Set-SPEnterpriseSearchCrawlRule -Identity $crawlRule -Type "ExclusionRule"
 ```
 
 This example sets the type of the crawl rule pertaining to the URL, file://fileserver/root, to exclude this path from future crawls.

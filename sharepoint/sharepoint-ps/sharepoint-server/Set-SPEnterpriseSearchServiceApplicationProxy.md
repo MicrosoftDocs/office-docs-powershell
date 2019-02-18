@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPEnterpriseSearchServiceApplicationProxy -Identity SsaProxy | Set- SPEnterpriseSearchServiceApplicationProxy -Name ContosoSearchProxy
+Get-SPEnterpriseSearchServiceApplicationProxy -Identity SsaProxy | Set- SPEnterpriseSearchServiceApplicationProxy -Name ContosoSearchProxy
 ```
 
 This example sets the display name of a search service application proxy.

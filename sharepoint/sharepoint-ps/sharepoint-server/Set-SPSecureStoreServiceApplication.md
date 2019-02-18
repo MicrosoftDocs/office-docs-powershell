@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Set-SPSecureStoreServiceApplication -Identity $contosoServApp -AuditlogMaxSize 40
+Set-SPSecureStoreServiceApplication -Identity $contosoServApp -AuditlogMaxSize 40
 ```
 
 This example sets the maximum size of the audit log to 40 days for the given service application.

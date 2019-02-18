@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImagePath
-File path and image (*.png,*.gif, *.jpg, or *.jpeg)
+File path and image (*.png, *.gif, *.jpg, or *.jpeg)
 
 ```yaml
 Type: String

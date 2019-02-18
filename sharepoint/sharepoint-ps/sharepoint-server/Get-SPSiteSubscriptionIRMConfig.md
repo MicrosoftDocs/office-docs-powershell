@@ -29,11 +29,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE----------- 
 ```
-PS C:\>site = Get-SPSite http://myspserver
+site = Get-SPSite http://myspserver
 
 C:\PS>$subscription = $site.SiteSubscription
 
-PS C:\>Get-SPSiteSubscriptionIRMConfig -Identity $subscription
+Get-SPSiteSubscriptionIRMConfig -Identity $subscription
 ```
 
 This example gets the IRM settings for a specified tenant by using the Identity parameter.

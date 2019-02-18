@@ -33,7 +33,7 @@ Returns the SQL Server instances that are available for use with Access Services
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServer
+Get-SPAccessServicesDatabaseServer
 ```
 
 Returns all SQL Server instances available for use.
@@ -41,7 +41,7 @@ Returns all SQL Server instances available for use.
 
 ### Example 2 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServer -DatabaseServer ACCSQL -ServiceContext http://siteUrl -DatabaseServergroup DEFAULT
+Get-SPAccessServicesDatabaseServer -DatabaseServer ACCSQL -ServiceContext http://siteUrl -DatabaseServergroup DEFAULT
 ```
 
 Returns the database server ACCSQL from the DEFAULT database server group using the service context from http://siteUrl.

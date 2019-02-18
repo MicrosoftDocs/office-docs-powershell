@@ -35,7 +35,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
 ```
-PS C:\>Remove-FASTSearchMetadataCategory -name Sharepoint
+Remove-FASTSearchMetadataCategory -name Sharepoint
 ```
 
 This example deletes the category named "Sharepoint".

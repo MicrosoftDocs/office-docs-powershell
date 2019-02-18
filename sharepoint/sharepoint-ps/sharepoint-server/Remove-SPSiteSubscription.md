@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Remove-SPSiteSubscription "http://contoso.com"
+Remove-SPSiteSubscription "http://contoso.com"
 ```
 
 This example removes all data for the contoso.com site subscription (site collections, site subscription and settings).

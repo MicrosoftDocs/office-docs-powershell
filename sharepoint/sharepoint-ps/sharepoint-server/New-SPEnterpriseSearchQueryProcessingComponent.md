@@ -30,10 +30,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------
 ```
-PS C:\>$si = Get-SPEnterpriseSearchServiceInstance
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
-PS C:\>New-SPEnterpriseSearchQueryProcessingComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa
+$si = Get-SPEnterpriseSearchServiceInstance
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+New-SPEnterpriseSearchQueryProcessingComponent -SearchTopology $topology -SearchServiceInstance $si -SearchApplication $ssa
 ```
 This example adds a new Search Query Processing Component to the inactive topology for the existing Search Service Application.
 

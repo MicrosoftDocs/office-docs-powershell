@@ -27,8 +27,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```
-PS C:\>$db = Get-SPStateServiceDatabase -Identity StateServceDbName
-PS C:\>Initialize-SPStateServiceDatabase -Identity $db
+$db = Get-SPStateServiceDatabase -Identity StateServceDbName
+Initialize-SPStateServiceDatabase -Identity $db
 ```
 
 This example installs the state service database schema into the database associated with the provided identity.

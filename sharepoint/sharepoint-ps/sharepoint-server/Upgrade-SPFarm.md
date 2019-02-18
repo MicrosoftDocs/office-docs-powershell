@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE---------
 ```
-PS C:\>Upgrade-SPFarm
+Upgrade-SPFarm
 ```
 
 This example starts the upgrade process on the local farm.

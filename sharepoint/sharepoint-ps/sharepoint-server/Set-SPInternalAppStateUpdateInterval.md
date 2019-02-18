@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------
 ```
-PS C:\>Set-SPInternalAppStateUpdateInterval -AppStateSyncHours 24
+Set-SPInternalAppStateUpdateInterval -AppStateSyncHours 24
 ```
 
 This example sets a 24-hour interval between updates of the internal app state update job.

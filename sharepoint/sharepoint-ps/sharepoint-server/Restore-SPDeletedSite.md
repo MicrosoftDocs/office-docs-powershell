@@ -36,8 +36,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE 1----------------------
 ```
-PS C:\>$deletedSite = Get-SPDeletedSite /sites/site_name
-PS C:\>Restore-SPDeletedSite -Identity $deletedSite
+$deletedSite = Get-SPDeletedSite /sites/site_name
+Restore-SPDeletedSite -Identity $deletedSite
 ```
 
 This example restores a specific deleted site collection by using the site ID.

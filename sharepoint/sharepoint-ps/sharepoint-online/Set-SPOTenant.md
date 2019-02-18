@@ -25,7 +25,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-StartASiteFormUrl <String>] [-UsePersistentCookiesForExplorerView <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultSharingLinkType <SharingLinkType>]
- [-DisableWebPartIds <Guid>]
+ [-DisabledWebPartIds <Guid>]
  [-DisallowInfectedFileDownload <Boolean>] [-EnableGuestSignInAcceleration <Boolean>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-IPAddressAllowList <String>] [-IPAddressEnforcement <Boolean>] [-IPAddressWACTokenLifetime <Int32>]
@@ -55,7 +55,7 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
 Set-SPOTenant -NoAccessRedirectUrl 'http://www.contoso.com'
 ```
@@ -63,28 +63,28 @@ This example blocks access to https://contoso.sharepoint.com/sites/team1 and red
 
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
+```powershell
 Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false 
 ```
 This example hides the "Everyone Except External Users" claim in People Picker.
 
 
 ### -----------------------EXAMPLE 3-----------------------------
-```
+```powershell
 Set-SPOTenant -ShowAllUsersClaim $false 
 ```
 This example hides the "All Users" claim group in People Picker.
 
 
 ### -----------------------EXAMPLE 4-----------------------------
-```
+```powershell
 Set-SPOTenant -UsePersistentCookiesForExplorerView $true 
 ```
 This example enables the use of special persisted cookie for Open with Explorer.
 
 ### -----------------------EXAMPLE 5-----------------------------
 
-```
+```powershell
 Set-SPOTenant -LegacyAuthProtocolsEnabled $True
 ```
 
@@ -92,15 +92,15 @@ This example enables legacy authentication protocols on the tenant. This can hel
 
 ### -----------------------EXAMPLE 6------------------------------
 
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites
 ```
 
-This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behaviour for other sites.
+This example enables Content Type Hub to push content types to all OneDrive for Business sites. There is no change in Content Type Publishing behavior for other sites.
 
 ### -----------------------EXAMPLE 7-------------------------------
 
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 
@@ -113,7 +113,7 @@ When the feature is enabled, all guest users are subject to conditional access p
 
 The valid values are:  
 False (default) - Guest access users are exempt from conditional access policy.  
-True - Conditional access policy is applieda also to guest users.
+True - Conditional access policy is also applied to guest users.
 
 
 ```yaml
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 ### -ShowAllUsersClaim
 Enables the administrator to hide the All Users claim groups in People Picker.
 
-When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organtization members in the tenant that used NTLM to authentication with SharePoint.
+When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organization members in the tenant that used NTLM to authentication with SharePoint.
 
 Note, the All Users (authenticated) group is equivalent to the Everyone claim, and shows as Everyone.
 To change this, see -ShowEveryoneClaim.
@@ -615,11 +615,12 @@ PARAMVALUE: <Guid>[,<Guid>,...]
  
 Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Only web parts that utilize third-party services (Amazon Kindle, YouTube, Twitter) can be disabled in such a manner.
  
-To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4)
+To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4). If you are looking for a GUID for any other web part, easiest way to achieve is to place the web part on a SharePoint page and move to maintenance mode. See more details around the [web part maintenance mode from Microsoft Support](https://support.office.com/en-us/article/Open-and-use-the-Web-Part-Maintenance-Page-EFF9CE22-D04A-44DD-AE83-AC29A5E396C2).
 
-You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOSite to get DisabledWebPartIds.
+You can enter in multiple GUIDs by using a comma to separate them. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
 
-To reenable disabled web parts, use the Set-SPOSite with the -DisabledWebPartIds parameter and corresponding GUIDs. 
+To re-enable some disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled web parts, use Set-SPOTenant -DisabledWebPartIds @().
+
  
 ```yaml
 Type: Guid[]
@@ -1244,13 +1245,13 @@ Accept wildcard characters: False
 ### -ContentTypeSyncSiteTemplatesList MySites [-ExcludeSiteTemplate]
 By default Content Type Hub will no longer push content types to OneDrive for Business sites (formerly known as MySites). 
 In case you want the Content Type Hub to push content types to OneDrive for Business sites, use:  
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites 
 ```
 When the feature is enabled, the Content Type Hub will push content types to OneDrive for Business sites.
 
 Once you have enabled Content Type publishing to OneDrive for Business sites, you can disable it later using:
-```
+```powershell
 Set-SPOTenant -ContentTypeSyncSiteTemplatesList MySites -ExcludeSiteTemplate 
 ```
 

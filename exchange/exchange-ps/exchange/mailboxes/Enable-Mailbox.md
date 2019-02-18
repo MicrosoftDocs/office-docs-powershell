@@ -308,7 +308,9 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
+The Arbitration switch is required to mailbox-enable arbitration mailboxes. You don't need to specify a value with this switch.
+
+Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
 ```yaml
 Type: SwitchParameter
@@ -342,7 +344,7 @@ Accept wildcard characters: False
 ```
 
 ### -Discovery
-The Discoveryswitch specifies that the mailbox is a Discovery mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a Discovery mailbox.
+The Discovery switch is required to mailbox-enable Discovery mailboxes. You don't need to specify a value with this switch.
 
 Discovery mailboxes are created as target mailboxes for Discovery searches. After being created or enabled, a Discovery mailbox can't be converted to another type of mailbox. For more information, see In-Place eDiscovery (https://technet.microsoft.com/library/dd298021.aspx).
 
@@ -361,7 +363,9 @@ Accept wildcard characters: False
 ### -Equipment
 This parameter is available only in on-premises Exchange.
 
-The Equipment parameter specifies that the resource mailbox is an equipment mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling an equipment resource mailbox.
+The Equipment switch is required to mailbox-enable equipment mailboxes. You don't need to specify a value with this switch.
+
+Equipment mailboxes are resource mailboxes that aren't associated with a specific location (for example, vehicles or computers).
 
 ```yaml
 Type: SwitchParameter
@@ -428,7 +432,7 @@ Accept wildcard characters: False
 ### -LinkedRoom
 This parameter is available only in on-premises Exchange.
 
-The LinkedRoomswitchspecifies that the mailbox is a linked resource mailbox. You don't need to specify a value with this switch.
+The LinkedRoom switch is required to mailbox-enable linked resource mailboxes. You don't need to specify a value with this switch.
 
 A linked resource mailbox is useful in a scenario where you have an account in an authentication forest and you want it to be directly linked to a resource mailbox in resource forest.
 
@@ -447,7 +451,7 @@ Accept wildcard characters: False
 ### -PublicFolder
 This parameter is available only in on-premises Exchange.
 
-The PublicFolderswitch specifies that the mailbox is a public folder mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a public folder mailbox.
+The PublicFolder switch is required to mailbox-enable public folder mailboxes. You don't need to specify a value with this switch.
 
 Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
@@ -466,7 +470,9 @@ Accept wildcard characters: False
 ### -Room
 This parameter is available only in on-premises Exchange.
 
-The Roomswitch specifies that the resource mailbox is a room mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a room resource mailbox.
+The Room switch is required to mailbox-enable room mailboxes. You don't need to specify a value with this switch.
+
+Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
 ```yaml
 Type: SwitchParameter
@@ -483,7 +489,7 @@ Accept wildcard characters: False
 ### -Shared
 This parameter is available only in on-premises Exchange.
 
-The Sharedswitch specifies that the mailbox is a shared mailbox. You don't need to specify a value with this switch. This switch is required only if you're enabling a shared mailbox.
+The Shared switch is required to connect shared mailboxes. You don't need to specify a value with this switch.
 
 A shared mailbox is a mailbox where multiple users can log on to access the mailbox contents. The mailbox isn't associated with any of the users that can log on. It's associated with a disabled user account.
 
@@ -562,7 +568,7 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipients without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
@@ -581,7 +587,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archiveswitchcreates an archive mailbox for an existing user that already has a mailbox. You don't need to specify a value with this switch.
+The Archive switch creates an archive mailbox for an existing user that already has a mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -651,7 +657,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuditLog
-This parameter is availble only in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -786,7 +792,7 @@ Accept wildcard characters: False
 ### -HoldForMigration
 This parameter is available only in on-premises Exchange.
 
-The HoldForMigrationswitch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
+The HoldForMigration switch specifies whether to prevent any client or user, except the Microsoft Exchange Mailbox Replication service (MRS) process, from logging on to a public folder mailbox. You don't need to specify a value with this switch.
 
 You need to use this parameter when you create the first public folder, which is called the hierarchy mailbox, in your organization.
 
@@ -881,7 +887,7 @@ Accept wildcard characters: False
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
-The RemoteArchiveswitch specifies that a remote archive mailbox is created for this mailbox. A remote archive exists in the cloud-based service. You don't need to specify a value with this switch.
+The RemoteArchive switch specifies that a remote archive mailbox is created for this mailbox. A remote archive exists in the cloud-based service. You don't need to specify a value with this switch.
 
 You need to use this parameter with the ArchiveDomain parameter, and you can't use this parameter with the Archive parameter.
 

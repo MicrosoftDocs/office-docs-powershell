@@ -25,7 +25,7 @@ Use the Get-SPExcelBIServer cmdlet to return the server ID of the instance of An
 
 ### Example 1 
 ```
-PS C:\>Get-SPExcelBIServer -ExcelServiceApplication 'Excel Service Application'
+Get-SPExcelBIServer -ExcelServiceApplication 'Excel Service Application'
 ```
 
 This example displays the name of the Excel Service application named 'Excel Service Application'.

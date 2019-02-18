@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
+Returns the app-denied endpoint list for the entire farm.
 
 
 
@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE---------- 
 ```
-PS C:\>Get-SPAppDeniedEndpoint
+Get-SPAppDeniedEndpoint
 ```
 
 This example returns all the app-denied endpoints within the farm.

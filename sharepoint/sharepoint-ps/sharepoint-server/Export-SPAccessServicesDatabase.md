@@ -30,9 +30,9 @@ See more information about Data-Tier Framework at [Data-tier Applications](https
 
 ### Example 1 
 ```
-PS C:\>$contentdb = Get-SPContentDatabase ContentDbName
-PS C:\>$accessDb = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | Select -First 1
-PS C:\>Export-SPAccessServicesDatabase -DatabaseName $accessDb.DatabaseName -ServerReferenceId $accessDb.ServerReferenceId | Set-Content -Path C:\accessDb.bacpac -Encoding Byte
+$contentdb = Get-SPContentDatabase ContentDbName
+$accessDb = Get-SPAccessServicesDatabase -ContentDb $contentdb -EA 0 | Select -First 1
+Export-SPAccessServicesDatabase -DatabaseName $accessDb.DatabaseName -ServerReferenceId $accessDb.ServerReferenceId | Set-Content -Path C:\accessDb.bacpac -Encoding Byte
 ```
 
 This cmdlet retrieves the first Access Database from the specified Content Database and exports the Access Database to a BACPAC. This BACPAC file can then be imported via SQL Server Management Studio to restore the Access Database.

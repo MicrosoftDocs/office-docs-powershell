@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Disable-SPWebApplicationHTTPThrottling http://sitename
+Disable-SPWebApplicationHTTPThrottling http://sitename
 ```
 
 This example disables network throttling on the Web application http://sitename.

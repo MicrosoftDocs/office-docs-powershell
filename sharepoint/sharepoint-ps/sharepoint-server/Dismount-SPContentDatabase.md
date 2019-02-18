@@ -31,14 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1------------ 
 ```
-PS C:\>Dismount-SPContentDatabase 12345678-90ab-cdef-1234-567890abcdef
+Dismount-SPContentDatabase 12345678-90ab-cdef-1234-567890abcdef
 ```
 
 This example detaches the content database with the GUID 12345678-90ab-cdef-1234-567890abcdef from its current parent Web application.
 
 ### --------------EXAMPLE 2------------ 
 ```
-PS C:\>Get-SPContentDatabase -WebApplication http://sitename | Dismount-SPContentDatabase -WhatIf
+Get-SPContentDatabase -WebApplication http://sitename | Dismount-SPContentDatabase -WhatIf
 ```
 
 This example detaches all content databases from the Web application on port 80 of the local machine.

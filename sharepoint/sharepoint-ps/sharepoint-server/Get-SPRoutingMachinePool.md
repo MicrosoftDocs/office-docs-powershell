@@ -33,7 +33,7 @@ C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
 C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\>Get-SPRoutingMachinePool -RequestManagementSettings $rm
+Get-SPRoutingMachinePool -RequestManagementSettings $rm
 ```
 
 This example returns a routing pool for the specified identity.

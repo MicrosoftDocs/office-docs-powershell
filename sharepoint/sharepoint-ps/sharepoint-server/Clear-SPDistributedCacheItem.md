@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE------ 
 ```
-PS C:\>Clear-SPDistributedCacheItem -ContainerType DistributedLogonTokenCache
+Clear-SPDistributedCacheItem -ContainerType DistributedLogonTokenCache
 ```
 
 This example removes all the cache items for distributed token cache.

@@ -27,24 +27,24 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchTopology -SearchApplication $ssa
 ```
 
 This example retrieves all search topologies of the search service application referenced by $ssa.
 
 ### ------------------EXAMPLE 2------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
 ```
 
 This example retrieves the active search topology of the search service application referenced by $ssa.
 
 ### ------------------EXAMPLE 3------------------ 
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity '10fa59cb-4b32-4fe6-8f8d-065388df201e'
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity '10fa59cb-4b32-4fe6-8f8d-065388df201e'
 ```
 
 This example retrieves search topology with the identity 10fa59cb-4b32-4fe6-8f8d-065388df201e of the search service application referenced by $ssa.

@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Install-SPService
+Install-SPService
 ```
 
 This example installs all services, service instances and service proxies specified in the registry on the local server computer.

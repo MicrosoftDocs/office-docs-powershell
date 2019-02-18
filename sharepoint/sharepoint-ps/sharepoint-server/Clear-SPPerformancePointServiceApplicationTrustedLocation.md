@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE----------------------- 
 ```
-PS C:\>Clear-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication My_Service_Application
+Clear-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication My_Service_Application
 ```
 
 This example removes trusted locations from the Service application named, My_Service_Application.

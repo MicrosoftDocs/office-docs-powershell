@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Set-SPEnterpriseSearchQueryAuthority -Identity http://contoso.com -Level 0.5 -SearchApplication MySSA
+Set-SPEnterpriseSearchQueryAuthority -Identity http://contoso.com -Level 0.5 -SearchApplication MySSA
 ```
 
 This example adjusts the authoritative level of the URL http://contoso.com to 0.5 on the search service application named MySSA.

@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE--------------------- 
 ```
-PS C:\>Install-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename
+Install-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename
 ```
 
 This example activates the sandboxed solution contoso_solution.wsp in the site http://sitename.

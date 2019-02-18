@@ -36,7 +36,7 @@ For more information, see SharePoint Shared Service Database Scale Out Generic P
 ```
 C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-PS C:\>Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example gets all scale-out databases for the given service application by using the $serviceApplication variable.

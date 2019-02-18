@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Remove-SPAppDeniedEndpoint -Endpoint "/_vti_bin/contoso/service.asmx"
+Remove-SPAppDeniedEndpoint -Endpoint "/_vti_bin/contoso/service.asmx"
 ```
 
 This example removes the "/_vti_bin/contoso/service.asmx" endpoint from the list of denied endpoints for apps.

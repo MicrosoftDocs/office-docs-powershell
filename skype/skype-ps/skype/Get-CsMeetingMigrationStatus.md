@@ -32,10 +32,10 @@ This example is used to get a summary status of all MMS migrations.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsMeetingMigrationStatus -UserId "ashaw@contoso.com"
+Get-CsMeetingMigrationStatus -Identity "ashaw@contoso.com"
 ```
 
-This example get the meeting migration status for user ashaw@contoso.com.
+This example gets the meeting migration status for user ashaw@contoso.com.
 
 
 ## PARAMETERS

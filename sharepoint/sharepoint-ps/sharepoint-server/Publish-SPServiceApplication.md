@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>Publish-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -Description "Connect to this TestServiceApplcation of you want to use FeatureA in your farm" -InfoLink http://testurl
+Publish-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -Description "Connect to this TestServiceApplcation of you want to use FeatureA in your farm" -InfoLink http://testurl
 ```
 
 This example publishes a service application to another farm.

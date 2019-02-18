@@ -29,15 +29,15 @@ Returns Access Services service applications available in the farm.
 ### Example 1 
 ```
 
-PS C:\>$sa = Get-SPServiceApplication| ?{$_.TypeName -eq 'Access Services Web Service Application'}
-PS C:\>Get-SPAccessServicesApplication -Identity $sa
+$sa = Get-SPServiceApplication| ?{$_.TypeName -eq 'Access Services Web Service Application'}
+Get-SPAccessServicesApplication -Identity $sa
 
 ```
 Returns the Access Services application using a service application pipebind.
 
 ### Example 2 
 ```
-PS C:\>Get-SPAccessServicesApplication -Identity 0d1da6e4-5cd6-4ccf-9ae1-ace2e964223a
+Get-SPAccessServicesApplication -Identity 0d1da6e4-5cd6-4ccf-9ae1-ace2e964223a
 ```
 
 Returns the Access Services application with the specified GUID.

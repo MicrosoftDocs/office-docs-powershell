@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>New-SPSite http://webApp/sites/test -OwnerAlias "DOMAIN\JDoe" -Language 1033 -Template STS#0
+New-SPSite http://webApp/sites/test -OwnerAlias "DOMAIN\JDoe" -Language 1033 -Template STS#0
 ```
 
 This example creates an English site collection at http://\<site name\>/sites/test that is owned by user DOMAIN\Jdow.
@@ -43,8 +43,8 @@ This example creates an English site collection at http://\<site name\>/sites/te
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>$w = Get-SPWebApplication http://webApp
-PS C:\>New-SPSite http://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template STS#0
+$w = Get-SPWebApplication http://webApp
+New-SPSite http://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template STS#0
 ```
 
 This example creates a host-named site collection.
@@ -53,7 +53,7 @@ Because the template is provided, the root web of this site collection will be c
 
 ### ------------------EXAMPLE 3-----------------------
 ```
-PS C:\>Get-SPWebTemplate | Where{ $_.Title -eq "Team Site" } | ForEach-Object{ New-SPSite http://<site name</sites/test -OwnerAlias DOMAIN\jdow -Template $_ }
+Get-SPWebTemplate | Where{ $_.Title -eq "Team Site" } | ForEach-Object{ New-SPSite http://<site name</sites/test -OwnerAlias DOMAIN\jdow -Template $_ }
 ```
 
 This example creates a site collection by using the "Team Site" Web template.
@@ -61,7 +61,7 @@ This example creates a site collection by using the "Team Site" Web template.
 
 ### ------------------EXAMPLE 4-----------------------
 ```
-PS C:\>New-SPSite -URL http://webApp/sites/testsite -OwnerAlias "DOMAIN\JDow" -Language 1033 -CompatibilityLevel 14 -Template STS#0
+New-SPSite -URL http://webApp/sites/testsite -OwnerAlias "DOMAIN\JDow" -Language 1033 -CompatibilityLevel 14 -Template STS#0
 ```
 
 This example creates an English 14 mode site collection by using the Team site template at http://\<site name\>/sites/testsite that is owned by user DOMAIN\Jdow

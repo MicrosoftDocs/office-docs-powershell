@@ -28,8 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>$subscription = Get-SPSiteSubscription http://site_url
-PS C:\>Import-SPSiteSubscriptionSettings -Identity $subscription -Path "C:\backups\contoso_settings_file.bak" -Force
+$subscription = Get-SPSiteSubscription http://site_url
+Import-SPSiteSubscriptionSettings -Identity $subscription -Path "C:\backups\contoso_settings_file.bak" -Force
 ```
 
 This example restores the subscription settings store of contoso.com.

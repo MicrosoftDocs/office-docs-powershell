@@ -29,8 +29,8 @@ This cmdlet updates properties of the search service instance for a farm.
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$si = Get-SPEnterpriseSearchServiceInstance -Local
-PS C:\>Set-SPEnterpriseSearchServiceInstance -Identity $si -DefaultIndexLocation F:\SearchIndex
+$si = Get-SPEnterpriseSearchServiceInstance -Local
+Set-SPEnterpriseSearchServiceInstance -Identity $si -DefaultIndexLocation F:\SearchIndex
 ```
 Sets the default index location to F:\SearchIndex.
 

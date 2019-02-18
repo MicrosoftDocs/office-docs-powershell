@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE------------------- 
 ```
-PS C:\>Get-SPEnterpriseSearchCrawlDatabase -SearchApplication 'Search Service Application' -Identity CrawlDB_1
+Get-SPEnterpriseSearchCrawlDatabase -SearchApplication 'Search Service Application' -Identity CrawlDB_1
 ```
 
 This example gets a reference to the crawl database CrawlDB_1 from the search service application named 'Search Service Application'.

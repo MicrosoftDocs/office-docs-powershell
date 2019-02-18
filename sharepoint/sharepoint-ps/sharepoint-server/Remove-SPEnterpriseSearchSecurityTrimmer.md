@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>Get-SPEnterpriseSearchSecurityTrimmer -SearchApplication MySSA |  Remove-SPEnterpriseSearchSecurityTrimmer
+Get-SPEnterpriseSearchSecurityTrimmer -SearchApplication MySSA |  Remove-SPEnterpriseSearchSecurityTrimmer
 ```
 
 This example removes the security trimmer registered in the search service application named MySSA.

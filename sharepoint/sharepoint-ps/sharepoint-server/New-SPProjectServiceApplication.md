@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>New-SPProjectServiceApplication -Name "PsiApplication" -ApplicationPool "PsiApplicationPool" -Proxy
+New-SPProjectServiceApplication -Name "PsiApplication" -ApplicationPool "PsiApplicationPool" -Proxy
 ```
 
 This example creates a Project Server Service application with the name PsiApplication and an application pool with the name PsiApplicationPool and it creates a Project Server Service application proxy for the application.
@@ -36,7 +36,7 @@ This example creates a Project Server Service application with the name PsiAppli
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Get-SPIisWebServiceApplicationPool "PsiApplicationPool" | New-SPProjectServiceApplication -Name "PsiApplication"
+Get-SPIisWebServiceApplicationPool "PsiApplicationPool" | New-SPProjectServiceApplication -Name "PsiApplication"
 ```
 
 This example creates a Project Server Service application with the name PsiApplication.

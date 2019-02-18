@@ -65,6 +65,20 @@ Get-PublicFolderMailboxMigrationRequest -HighPriority $true
 
 In on-premises Exchange, this example returns all migration requests that have a priority value of High, Higher, Highest or Emergency.
 
+### -------------------------- Example 3 --------------------------
+```
+Get-PublicFolderMailboxMigrationRequest | ?{$_.TargetMailbox -eq $null}
+```
+
+This example returns public folder mailbox migration requests that don't have a target mailbox.
+
+### -------------------------- Example 4 --------------------------
+```
+Get-PublicFolderMailboxMigrationRequest | group TargetMailbox |?{$_.Count -gt 1}
+```
+
+This example returns duplicate public folder migration requests (requests created for the same target mailbox). If the command returns no results, then there are no duplicate migration requests.
+
 ## PARAMETERS
 
 ### -BatchName

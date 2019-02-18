@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>Set- SPProjectServiceApplication -Identity PSIServiceApp -ApplicationPool newapppool RegisterTimerJob
+Set- SPProjectServiceApplication -Identity PSIServiceApp -ApplicationPool newapppool RegisterTimerJob
 ```
 
 This example updates the application pool and re-registers the timer job for a Project Server Service application.

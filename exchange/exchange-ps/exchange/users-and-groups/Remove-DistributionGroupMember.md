@@ -23,7 +23,7 @@ Remove-DistributionGroupMember [-Identity] <DistributionGroupIdParameter> [-Bypa
 ```
 
 ## DESCRIPTION
-You can't use the Remove-DistributionGroupMember cmdlet to remove the memberof a dynamic distribution group. A dynamic distribution group's membership is calculated from query results.
+You can't use the Remove-DistributionGroupMember cmdlet to remove the member of a dynamic distribution group. A dynamic distribution group's membership is calculated from query results.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
