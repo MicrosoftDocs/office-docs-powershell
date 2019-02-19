@@ -75,7 +75,7 @@ Set-OrganizationConfig
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <$true | $false>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
- [-OutlookMobileHelpShiftEnabled <$true | $false>]
+ [-OutlookMobileGCCRestrictionsEnabled <$true | $false>]
  [-OutlookPayEnabled <$true | $false>]
  [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -1863,10 +1863,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutlookMobileHelpShiftEnabled
+### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
 
-{{Fill OutlookMobileHelpShiftEnabled Description}}
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that aren't compliant with the Office 365 US Government plans. Valid values are:
+
+- $true: Disable features that aren't compliant with Office 365 US Government plans. This is the default value for all GCC tenants.
+
+- $false: Enable features that aren't compliant with Office 355 US Government plans. This is the default value for all other type of tenants.
+
+The features and services within Outlook for iOS and Android that aren't compliant with the Office 365 US Government plans include:
+
+- Multi-account support
+
+- Third-party services
+
+- HelpShift and in-app support
+
+- Any Microsoft services that are outside the Office 365 US Government compliance boundary (for example, Bing and Cortana).
 
 ```yaml
 Type: $true | $false
@@ -1881,7 +1895,6 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookPayEnabled
-
 This parameter is available only in the cloud-based service.
 
 The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization. Valid values are:
