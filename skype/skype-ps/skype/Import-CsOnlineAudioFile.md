@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Skype for Business Online
 title: Import-CsOnlineAudioFile
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Import-CsOnlineAudioFile

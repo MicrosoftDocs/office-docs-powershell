@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online
 title: Grant-CsTeamsCallParkPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsTeamsCallParkPolicy
