@@ -448,7 +448,7 @@ The UserRecipientFilter parameter specifies a condition for the client access ru
 
 - CountryOrRegion
 
-- CustomAttribute1-15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
