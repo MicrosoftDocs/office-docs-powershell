@@ -12,15 +12,12 @@ schema: 2.0.0
 ## SYNOPSIS
 Note: This cmdlet is currently in Beta.
 
-Adds an owner or member to the team, 
-and to the unified group which backs the team. 
+Adds an owner or member to the team, and to the unified group which backs the team. 
 
 Note: the command will return immediately, but the Teams application will not reflect the update immediately. 
 The Teams application may need to be open for up to an hour before changes are reflected.
 
-To turn an existing Member into an Owner, 
-first Add-TeamUser -Role Owner -User to add them to the owners list,
-then Remove-TeamUser -User foo to remove them from the members list.
+By default, when you run this cmdlet to add an owner, you will not add it as a member. You must run this cmdlet again to add the owner as a member as well.
 
 ## SYNTAX
 
@@ -42,7 +39,7 @@ Add user dmx@example.com to group.
 ## PARAMETERS
 
 ### -GroupId
-GroupId of the team
+GroupId of the team.
 
 ```yaml
 Type: String
@@ -58,8 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-User's UPN (user principal name - e.g.
-johndoe@example.com)
+User's UPN (user principal name - e.g. johndoe@example.com).
 
 ```yaml
 Type: String
@@ -75,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Member or Owner
+Member or Owner.
 
 ```yaml
 Type: String
@@ -85,7 +81,7 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Member
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

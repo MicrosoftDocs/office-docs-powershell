@@ -263,7 +263,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The ADComparisonAttribute parameter specifies a condition that compares an Active Directory attribute between the sender and all recipients of the message. This parameter works when the recipients are individual users. This parameter doesn't work with distribution groups.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -271,7 +271,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -1408,7 +1408,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfADComparisonAttribute parameter specifies an exception that compares an Active Directory attribute between the sender and all recipients of the message. This parameter works when the recipients are individual users. This parameter doesn't work with distribution groups.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -1416,7 +1416,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -2627,7 +2627,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception that looks for words in the Active Directory attributes of recipients. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -2635,7 +2635,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -2708,7 +2708,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception that looks for text patterns in the Active Directory attributes of recipients by using regular expressions. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -2716,7 +2716,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -2890,7 +2890,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfSenderADAttributeContainsWords parameter specifies an exception that looks for words in Active Directory attributes of message senders.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -2898,7 +2898,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -2971,7 +2971,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception that looks for text patterns in Active Directory attributes of message senders by using regular expressions.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -2979,7 +2979,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -4204,7 +4204,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The RecipientADAttributeContainsWords parameter specifies a condition that looks for words in the Active Directory attributes of recipients. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -4212,7 +4212,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -4285,7 +4285,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The RecipientADAttributeMatchesPatterns parameter specifies a condition that looks for text patterns in the Active Directory attributes of recipients by using regular expressions. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -4293,7 +4293,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -4706,7 +4706,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The SenderADAttributeContainsWords parameter specifies a condition that looks for words in Active Directory attributes of message senders.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -4714,7 +4714,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 
@@ -4787,7 +4787,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The SenderADAttributeMatchesPatterns parameter specifies a condition that looks for text patterns in Active Directory attributes of message senders by using regular expressions.
 
-You can check against any of the following Active Directory attributes:
+You can use any of the following Active Directory attributes:
 
 - City
 
@@ -4795,7 +4795,7 @@ You can check against any of the following Active Directory attributes:
 
 - Country
 
-- CustomAttribute1 - CustomAttribute15
+- CustomAttribute1 to CustomAttribute15
 
 - Department
 

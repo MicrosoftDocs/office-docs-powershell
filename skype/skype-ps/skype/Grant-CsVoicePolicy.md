@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsVoicePolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsVoicePolicy
@@ -40,8 +43,7 @@ For example:
 
 `Get-CsUser "Ken Myer" | Select-Object VoicePolicy`
 
-    > [!NOTE]
-    > For accounts hosted in Skype for Business Online, it is not possible to grant a voice policy via PowerShell. In this scenario, the voice policy is automatically granted based on user licensing.
+    NOTE - For accounts hosted in Skype for Business Online, it is not possible to grant a voice policy via PowerShell. In this scenario, the voice policy is automatically granted based on user licensing.
 
 ## EXAMPLES
 

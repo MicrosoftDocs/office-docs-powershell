@@ -60,14 +60,14 @@ This example uses the FolderScope parameter to view the statistics for calendar 
 Get-MailboxFolderStatistics -Identity Ayla@contoso.com -Archive
 ```
 
-This example uses the Archiveswitch to view the statistics for Ayla's archive.
+This example uses the Archive switch to view the statistics for Ayla's archive.
 
 ### -------------------------- Example 4 --------------------------
 ```
 Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -IncludeAnalysis
 ```
 
-This example uses the IncludeAnalysisswitch to view the statistics of Tony's Recoverable Items folder.
+This example uses the IncludeAnalysis switch to view the statistics of Tony's Recoverable Items folder.
 
 ## PARAMETERS
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archiveswitch specifies whether to return the usage statistics of the archive associated with the mailbox or mail user. You don't need to specify a value with this switch.
+The Archive switch specifies whether to return the usage statistics of the archive associated with the mailbox or mail user. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeAnalysis
-The IncludeAnalysisswitch specifies whether to scan all items within a folder and return statistics related to the folder and item size. You don't need to specify a value with this switch.
+The IncludeAnalysis switch specifies whether to scan all items within a folder and return statistics related to the folder and item size. You don't need to specify a value with this switch.
 
 You should use this switch for troubleshooting purposes, because the command might take a long time to complete.
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeOldestAndNewestItems
-The IncludeOldestAndNewestItemsswitch specifies whether to return the dates of the oldest and newest items in each folder. You don't need to specify a value with this switch.
+The IncludeOldestAndNewestItems switch specifies whether to return the dates of the oldest and newest items in each folder. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
