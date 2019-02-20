@@ -13,7 +13,9 @@ class CmdletDependenciesService {
 
 		switch (cmdletName) {
 			case 'teams': {
-				await this.preInstallTeams();
+				const { login, pass } = this._getCredentialsFromConfig();
+
+				await this.preInstallTeams({ login, pass });
 				break;
 			}
 			case 'skype': {
@@ -64,10 +66,11 @@ class CmdletDependenciesService {
 		}
 	}
 
-	async preInstallTeams() {
-		// TODO: check if user already auth
-
+	async preInstallTeams({ login, pass }) {
+		await this._createCredInPs({ login, pass });
+		//await this.ps.invokeCommand(commands.GET_TEAMS_CREDENTIALS);
 		await this.ps.invokeCommand(commands.INSTALL_MICROSOFT_TEAM);
+		await this.ps.invokeCommand(commands.IMPORT_MICROSOFT_TEAM);
 		await this.ps.invokeCommand(commands.CONNECT_MICROSOFT_TEAM);
 	}
 

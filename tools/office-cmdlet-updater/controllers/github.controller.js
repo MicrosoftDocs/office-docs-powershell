@@ -1,3 +1,5 @@
+const { errorColor } = require('../helpers/colors');
+
 class GithubController {
 	constructor(config, gitService, githubService) {
 		this.config = config;
@@ -50,7 +52,7 @@ class GithubController {
 
 	_pullRequestCb(err, data) {
 		if (err) {
-			console.error(err);
+			console.error(errorColor(err));
 			return;
 		}
 
