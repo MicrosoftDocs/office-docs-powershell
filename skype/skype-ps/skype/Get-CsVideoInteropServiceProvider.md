@@ -4,6 +4,9 @@ applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Get-CsVideoInteropServiceProvider
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-CsVideoInteropServiceProvider
