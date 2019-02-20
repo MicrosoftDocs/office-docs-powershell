@@ -1,3 +1,7 @@
+module.exports.general = {
+	TOOL_PLATFORM_TYPE: "Tool didn't support x86 platform"
+};
+
 module.exports.powerShellErrors = {
 	PS_GALLERY_INSTALL_ERROR: "You should using x64 version of PowerShell",
 	DOC_PATH_DOESNT_EXIST: "Path to documentation folder doesn't exist",
