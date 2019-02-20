@@ -25,7 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>Get-SPEnterpriseSearchService
+Get-SPEnterpriseSearchService
 ```
 
 This example obtains a reference to the search service of the current farm.

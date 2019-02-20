@@ -13,6 +13,8 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-UnifiedGroup cmdlet to modify Office 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Office 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
+**IMPORTANT**: When using this cmdlet, you can't remove all the MOERA addresses of the group. There must be at least one MOERA address attached to a group at any given point of time. To learn more about MOERA addresses, see How the proxyAddresses attribute is populated in Azure AD (https://support.microsoft.com/en-gb/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad). 
+
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
@@ -59,10 +61,15 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
  [-MailboxRegion <String>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <$true | $false>] 
  [-Notes <String>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-RequireSenderAuthenticationEnabled <$true | $false>]
+ [-SubscriptionEnabled]
  [-UnifiedGroupWelcomeMessageEnabled]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -327,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute1
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute1 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -342,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute10
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute10 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -357,7 +364,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute11
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute11 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -372,7 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute12
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute12 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -387,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute13
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute13 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -402,7 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute14
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute14 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -417,7 +424,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute15
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute15 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -432,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute2
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute2 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -447,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute3
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute3 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -462,7 +469,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute4
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute4 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -477,7 +484,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute5
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute5 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -492,7 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute6
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute6 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -507,7 +514,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute7
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute7 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -522,7 +529,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute8
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute8 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -537,7 +544,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAttribute9
-The CustomAttribute1 to CustomAttribute15 parameters specify custom attributes. You can use these attributes to store additional information.
+This parameter specifies a value for the CustomAttribute9 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -629,11 +636,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute1
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+This parameter specifies a value for the ExtensionCustomAttribute5 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
 ```yaml
 Type: MultiValuedProperty
@@ -648,11 +655,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute2
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+This parameter specifies a value for the ExtensionCustomAttribute2 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
 ```yaml
 Type: MultiValuedProperty
@@ -667,11 +674,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute3
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+This parameter specifies a value for the ExtensionCustomAttribute3 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
 ```yaml
 Type: MultiValuedProperty
@@ -686,11 +693,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute4
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+This parameter specifies a value for the ExtensionCustomAttribute4 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
 ```yaml
 Type: MultiValuedProperty
@@ -705,11 +712,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute5
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
+This parameter specifies a value for the ExtensionCustomAttribute5 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
-For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
+To enter multiple values that overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
-For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
+To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
 ```yaml
 Type: MultiValuedProperty
@@ -767,7 +774,7 @@ For example:
 
 - User ID or user principal name (UPN)
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -841,7 +848,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -889,6 +896,132 @@ For example, suppose this recipient currently has the MailTip text: "This mailbo
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxReceiveSize
+The MaxReceiveSize parameter specifies the maximum size of an email message that can be sent to this group. Messages that exceed the maximum size are rejected by the group.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+Valid values are from 0 through 2147482624 bytes.
+
+By default, the MaxReceiveSize parameter is set to the value unlimited. This indicates the maximum message size for the group is controlled by other message size limits in the organization.
+
+For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxSendSize
+The MaxSendSize parameter specifies the maximum size of an email message that can be sent by this group.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+
+- KB (kilobytes)
+
+- MB (megabytes)
+
+- GB (gigabytes)
+
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+Valid values are from 0 through 2147482624 bytes.
+
+By default, the MaxSendSize parameter is set to the value unlimited. This indicates the maximum message size for the group is controlled by other message size limits in the organization.
+
+For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ModeratedBy
+The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
+
+For example:
+
+- Name
+
+- Display name
+
+- Alias
+
+- Distinguished name (DN)
+
+- Canonical DN
+
+- Email address
+
+- GUID
+
+To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+
+You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ModerationEnabled
+The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
+
+- $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
+
+- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
+
+You use the ModeratedBy parameter to specify the moderators.
+
+```yaml
+Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -979,6 +1112,25 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 
 ```yaml
 Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubscriptionEnabled
+The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Office 365 Group. 
+
+- To change the value to $true, use this switch without a value.
+- 
+- To change the value to $false, use this exact syntax: -SubscriptionEnabled:$false.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

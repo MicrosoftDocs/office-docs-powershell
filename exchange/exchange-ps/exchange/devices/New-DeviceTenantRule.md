@@ -40,10 +40,10 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-DeviceTenantRule -ExclusionList
+New-DeviceTenantRule -ExclusionList "e10214c1-49b6-47d2-b5e6-466e918648b1","6e3931bd-a716-4bb9-9a2f-093aa2c967b4"
 ```
 
-This example creates a new mobile device tenant rule with the security groups named Engineering and Research and Development on the exclusion list. Members of these groups are allowed access even if they use non-compliant devices
+This example creates a new mobile device tenant rule with GUIDs of the security groups named Engineering and Research and Development on the exclusion list. Members of these groups are allowed access even if they use non-compliant devices
 
 You can have only one mobile device tenant rule in your organization.
 

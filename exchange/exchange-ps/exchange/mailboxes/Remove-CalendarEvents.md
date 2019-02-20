@@ -1,29 +1,34 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 title: Remove-CalendarEvents
 schema: 2.0.0
-monikerRange: "exchonline-ps"
+monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
 # Remove-CalendarEvents
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Remove-CalendarEvents cmdlet to cancel future meetings in user or resource mailboxes in Office 365. Cancelling future meetings removes them from attendee and resource calendars (for example, you're going to remove the mailbox, or the user is going on a leave of absence).
+Use the Remove-CalendarEvents cmdlet to cancel future meetings in user or resource mailboxes. Cancelling future meetings removes them from attendee and resource calendars (for example, you're going to remove the mailbox, or the user is going on a leave of absence).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-Remove-CalendarEvents [-Identity] <MailboxIdParameter> [-CancelOrganizedMeetings] [-Confirm] [-PreviewOnly]
- [-QueryStartDate <ExDateTime>] [-QueryWindowInDays <Int32>] [-WhatIf] [<CommonParameters>]
+Remove-CalendarEvents [-Identity] <MailboxIdParameter>
+ [-CancelOrganizedMeetings]
+ [-Confirm]
+ [-PreviewOnly]
+ [-QueryStartDate <ExDateTime>]
+ [-QueryWindowInDays <Int32>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet cancels meetings in the specified mailbox where the mailbox is the meeting organizer, and the meeting has one or more attendees or resources. It doesn't cancel appointments or meetings without attendees or resources.
+This cmdlet cancels meetings in the specified mailbox where the mailbox is the meeting organizer, and the meeting has one or more attendees or resources. It doesn't cancel appointments or meetings without attendees or resources. Because meeting cancellations must be sent out, the mailbox must still be enabled to send mail.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -75,7 +80,7 @@ For example:
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: True
 Position: 1
 Default value: None
@@ -92,7 +97,7 @@ To cancel meetings in the mailbox, you need to use this switch.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +116,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +133,7 @@ You use this switch with the Verbose switch.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +154,7 @@ You use the QueryWindowInDays parameter to specify the end date.
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -168,7 +173,7 @@ If an instance of a recurring meeting occurs during the specified time period, t
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -183,7 +188,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 Required: False
 Position: Named
 Default value: None

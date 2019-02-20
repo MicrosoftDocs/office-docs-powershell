@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE---------------------
 ```
-PS C:\>Remove-SPContentDatabase WSS_Content
+Remove-SPContentDatabase WSS_Content
 ```
 
 This example deletes the content database named 'WSS_Content'.

@@ -31,9 +31,9 @@ For permissions and the most current information about search cmdlets, see the o
 
 ### --------------------EXAMPLE---------------------
 ```
- PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication "Search Service Application" 
- PS C:\>$admin = Get-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
- PS C:\>$admin | Set-SPEnterpriseSearchAdministrationComponent -SearchServiceInstance SP02 -Force
+ $ssa = Get-SPEnterpriseSearchServiceApplication "Search Service Application" 
+ $admin = Get-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
+ $admin | Set-SPEnterpriseSearchAdministrationComponent -SearchServiceInstance SP02 -Force
 ```
 
 This example moves the administration component to a different server.

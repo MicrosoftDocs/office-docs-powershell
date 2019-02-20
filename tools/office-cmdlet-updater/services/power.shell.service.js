@@ -2,12 +2,13 @@ const Shell = require('node-powershell');
 const of = require('await-of').default;
 const commands = require('../constants/commands');
 const format = require('string-format');
+const { errorColor } = require('../helpers/colors');
 
 class PowerShellService {
 	constructor(config) {
 		this.config = config;
 		this.ps = new Shell({
-			executionPolicy: 'Bypass',
+			executionPolicy: 'Unrestricted',
 			noProfile: true
 		});
 	}
@@ -24,9 +25,19 @@ class PowerShellService {
 		const [output, err] = await of(this.ps.invoke());
 
 		if (err) {
-			console.error(err);
-
 			throw new Error(err);
+		}
+
+		return output;
+	}
+
+	async invokeCommandAndIgnoreError({ command, printError = false }) {
+		await this.ps.addCommand(command);
+
+		const [output, err] = await of(this.ps.invoke());
+
+		if (err && printError) {
+			console.error(errorColor(err));
 		}
 
 		return output;

@@ -35,14 +35,14 @@ This will install an app that is available in the site collection scoped app cat
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-Get-PnPAvailableApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe | Install-PnPApp
+Get-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe | Install-PnPApp
 ```
 
 This will install the given app from the tenant scoped app catalog into the site.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-Get-PnPAvailableApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Scope Site | Install-PnPApp
+Get-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Scope Site | Install-PnPApp
 ```
 
 This will install the given app from the site collection scoped app catalog into the site.

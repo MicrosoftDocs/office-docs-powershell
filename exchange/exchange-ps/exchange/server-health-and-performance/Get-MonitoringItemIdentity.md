@@ -36,7 +36,7 @@ This example returns information about the health set named OutlookMapiHttp.Prox
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the health setthat you want to view. To see the list of available health sets, you can use the Get-ServerHealth or Get-HealthReport cmdlets.
+The Identity parameter specifies the health set that you want to view. To see the list of available health sets, you can use the Get-ServerHealth or Get-HealthReport cmdlets.
 
 ```yaml
 Type: String

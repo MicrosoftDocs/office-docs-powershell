@@ -26,7 +26,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1
+Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1
 ```
 
 This example gets the Lotus Notes user store with the identity "ln1".

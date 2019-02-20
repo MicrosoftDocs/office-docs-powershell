@@ -46,11 +46,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$web = Get-SPWeb "UrlOfTheSite"
-PS C:\>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
-PS C:\>$searchapp = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $searchapp
-PS C:\>Remove-SPEnterpriseSearchResultItemType -Identity $resultType -Owner $tenantOwner -SearchApplication $searchapp
+$web = Get-SPWeb "UrlOfTheSite"
+$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
+$searchapp = Get-SPEnterpriseSearchServiceApplication
+$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $searchapp
+Remove-SPEnterpriseSearchResultItemType -Identity $resultType -Owner $tenantOwner -SearchApplication $searchapp
 ```
 
 This example first defines variables for the URL of the site, the search owner and search application.

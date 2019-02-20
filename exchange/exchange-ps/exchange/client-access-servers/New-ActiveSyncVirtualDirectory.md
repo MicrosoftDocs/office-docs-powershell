@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstallProxySubDirectory
-The InstallProxySubDirectory parameter was used to create an subdirectory that was required for proxing ActiveSync connections with Exchange 2007.
+The InstallProxySubDirectory parameter was used to create an subdirectory that was required for proxying ActiveSync connections with Exchange 2007.
 
 ```yaml
 Type: $true | $false

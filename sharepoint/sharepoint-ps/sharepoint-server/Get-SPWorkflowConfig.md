@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPWorkFlowConfig -webapplication http://sitename
+Get-SPWorkFlowConfig -webapplication http://sitename
 ```
 
 This example gets workflow settings for the specified Web application (http://sitename).

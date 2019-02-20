@@ -25,7 +25,7 @@ Returns a database server group associated with the given service context.
 
 ### Example 1 
 ```
-PS C:\>Get-SPAccessServicesDatabaseServerGroup -ServiceContext http://siteUrl
+Get-SPAccessServicesDatabaseServerGroup -ServiceContext http://siteUrl
 ```
 Returns the database server group associated with the site, http://siteUrl.
 

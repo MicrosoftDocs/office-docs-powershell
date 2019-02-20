@@ -34,14 +34,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1----------------------- 
 ```
-PS C:\>Move-SPBlobStorageLocation WSS_Content
+Move-SPBlobStorageLocation WSS_Content
 ```
 
 This example copies the content database named WSS_Content from the Windows Internal Database to the same database name in SQL Server 2008 Express by using RBS.
 
 ### -------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Move-SPBlobStorageLocation WSS_Content -DestinationDatabase WSS_V4_Content -BackupDatabase WSSBackupDB -VerboseMod:$true
+Move-SPBlobStorageLocation WSS_Content -DestinationDatabase WSS_V4_Content -BackupDatabase WSSBackupDB -VerboseMod:$true
 ```
 
 This example copies the content database named WSS_Content from the Windows Internal Database to a database in SQL Server 2008 Express.

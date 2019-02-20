@@ -26,7 +26,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityLogLevel
+Get-FASTSearchSecurityLogLevel
 ```
 
 This example gets the configuration information for the log level's general setting, specifying the data logged by the security system.

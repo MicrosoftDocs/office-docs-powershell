@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-------------------
 ```
-PS C:\>Remove-SPManagedAccount -Identity DOMAIN\ServiceAcct
+Remove-SPManagedAccount -Identity DOMAIN\ServiceAcct
 ```
 
 This example removes the DOMAIN\ServiceAcct managed account from the farm.

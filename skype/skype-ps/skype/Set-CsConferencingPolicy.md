@@ -424,8 +424,7 @@ Users are allowed to share a single application.
 None.
 Users are not allowed to share applications or their desktop.
 
-This setting is enforced at the per-user level.
-That means that some users in a conference might be allowed to share their desktop or applications while other users in the same conference might not be allowed to do so.
+
 
 The default value is Desktop.
 
@@ -462,6 +461,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDialInConferencing
+This parameter is not available in Skype for Business Online.
+
 Indicates whether users are able to join the meeting by dialing in with a public switched telephone network (PSTN) telephone.
 The default value is True.
 
@@ -472,7 +473,7 @@ However, the user can take part in other conferences where dial-in conferencing 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

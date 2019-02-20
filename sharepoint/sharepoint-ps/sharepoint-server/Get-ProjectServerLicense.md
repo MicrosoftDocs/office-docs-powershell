@@ -23,7 +23,7 @@ Retrieves the status of the license for Project Server. If the current license i
 
 ### Example 1 
 ```
-PS C:\>Get-ProjectServerLicense
+Get-ProjectServerLicense
 ```
 
 Gets the status of the Project Server license and when it was activated.

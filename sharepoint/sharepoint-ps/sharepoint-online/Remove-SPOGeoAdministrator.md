@@ -22,7 +22,7 @@ This cmdlet contains a single parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The `Remove-SPOGeoAdministrator` cmdlet matches a user or a security group and remove the GeoAdministrator privilegies in the SharePoint Organization.
+The `Remove-SPOGeoAdministrator` cmdlet matches a user or a security group and remove the GeoAdministrator privileges in the SharePoint Organization.
 
 You must be a SharePoint Online global administrator and you must have a Multi-Geo Tenant to run the `Get-SPOGeoAdministrator` cmdlet.
 
@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 Remove-SPOGeoAdministrator contosoadmin [-LoginName] <String>
 ```
-Remove the GeoAdministrator privilegies to the user contosoadmin of the SharePoint Online multi-geo tenant.
+Remove the GeoAdministrator privileges to the user contosoadmin of the SharePoint Online multi-geo tenant.
 
 ### Example 2
 ```powershell

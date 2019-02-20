@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>set-sploglevel -TraceSeverity Monitorable
+set-sploglevel -TraceSeverity Monitorable
 ```
 
 This example sets the TraceSeverity values for all categories to Monitorable.
@@ -38,7 +38,7 @@ This example sets the TraceSeverity values for all categories to Monitorable.
 
 ### ------------------EXAMPLE 2-----------------------
 ```
-PS C:\>Set-SPLogLevel -TraceSeverity High -EventSeverity Warning -Identity "Cat1"
+Set-SPLogLevel -TraceSeverity High -EventSeverity Warning -Identity "Cat1"
 ```
 
 This example sets the EventSeverity and TraceSeverity values for a single category.
@@ -54,7 +54,7 @@ This example sets the EventSeverity values for multiple categories.
 
 ### ------------------EXAMPLE 4-----------------------
 ```
-PS C:\>Set-SPLogLevel -EventSeverity Warning -Identity "AreaName:*"
+Set-SPLogLevel -EventSeverity Warning -Identity "AreaName:*"
 ```
 
 This example sets the EventSeverity values for all categories in the same area.

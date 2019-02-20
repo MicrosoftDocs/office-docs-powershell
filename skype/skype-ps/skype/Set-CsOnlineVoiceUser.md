@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Set-CsOnlineVoiceUser
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsOnlineVoiceUser
 
 ## SYNOPSIS
-Use the `Set-CsOnlineVoiceUser` to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
+Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Set-CsOnlineVoiceUser [-Identity] <UserIdParameter> [-Tenant <Guid>] [-Telephone
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneNumber +4255037311 -LocationID c7c5a17f-00d7-47c0-9ddb-3383229d606b
+Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneNumber +14255037311 -LocationID c7c5a17f-00d7-47c0-9ddb-3383229d606b
 ```
 
 This example sets the telephone number and location for a user identified by the user ObjectID.

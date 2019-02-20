@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------------EXAMPLE 1----------------------
 ```
-PS C:\>Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
+Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
 ```
 
 This example sets the identity provider to LiveIDSTS.

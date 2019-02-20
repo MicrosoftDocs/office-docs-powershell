@@ -30,9 +30,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>$linksDatabase = $ssa | Get-SPEnterpriseSearchLinksDatabase Links2
-PS C:\>Remove-SPEnterpriseSearchLinksDatabase -Identity $linksDatabase
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$linksDatabase = $ssa | Get-SPEnterpriseSearchLinksDatabase Links2
+Remove-SPEnterpriseSearchLinksDatabase -Identity $linksDatabase
 ```
 
 This example removes the links database referenced by $linksDatabase.

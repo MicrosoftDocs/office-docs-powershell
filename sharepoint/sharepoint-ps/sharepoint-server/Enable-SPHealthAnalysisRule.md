@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE 1--------------------------- 
 ```
-PS C:\>Enable-SPHealthAnalysisRule -Identity "CustomRule"
+Enable-SPHealthAnalysisRule -Identity "CustomRule"
 ```
 
 This example enables the health analyzer rule named CustomRule.

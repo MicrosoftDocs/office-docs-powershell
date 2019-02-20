@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsVoiceRoutingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsVoiceRoutingPolicy
@@ -26,7 +29,7 @@ Grant-CsVoiceRoutingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainContr
 ## DESCRIPTION
 
 Voice routing policies are used in "hybrid" scenarios: when some of your users are homed on the on-premises version of Skype for Business Server and other users are homed on Skype for Business Online.
-Assigning your Skype for Business Online users a voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
+Assigning your Skype for Business Online users a voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
 
 Note that simply assigning a user a voice routing policy will not enable them to make PSTN calls via Skype for Business Online.
 Among other things, you will also need to enable those users for Enterprise Voice and will need to assign them an appropriate voice policy and dial plan.
@@ -71,8 +74,8 @@ User Identities are typically specified using one of four formats: 1) the user's
 
 User Identities can also be specified by using the user's Active Directory distinguished name.
 
-In addition, you can use the asterisk (*) wildcard character when using the Display Name as the user Identity.
-For example, the Identity "* Smith" returns all the users who have a display name that ends with the string value " Smith".
+In addition, you can use the asterisk (\*) wildcard character when using the Display Name as the user Identity.
+For example, the Identity "\* Smith" returns all the users who have a display name that ends with the string value " Smith".
 
 ```yaml
 Type: UserIdParameter

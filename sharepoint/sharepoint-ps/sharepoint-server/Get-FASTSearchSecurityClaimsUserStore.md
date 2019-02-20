@@ -27,7 +27,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ### ---------------EXAMPLE 1-----------------
 ```
-PS C:\>Get-FASTSearchSecurityClaimsUserStore -Identity clm
+Get-FASTSearchSecurityClaimsUserStore -Identity clm
 ```
 
 This example retrieves the claims user store with the identity "clm".

@@ -64,7 +64,7 @@ This example returns a summary list of all mail users in the organization.
 Get-MailUser -Identity Ed | Format-List
 ```
 
-This example returnsdetailed information for the mail user named Ed.
+This example returns detailed information for the mail user named Ed.
 
 ## PARAMETERS
 
@@ -285,9 +285,7 @@ Accept wildcard characters: False
 ### -SoftDeletedMailUser
 This parameter is available only in the cloud-based service.
 
-The SoftDeletedMailUser switch specifies whether to include only soft-deleted mail users in the results. You don't need to specify a value with this switch.
-
-This switch is required to return soft-deleted mail users.
+The SoftDeletedMailUser switch specifies whether to include soft-deleted mail users in the results. You don't need to specify a value with this switch.
 
 Soft-deleted mail users are deleted mail users that are still recoverable.
 

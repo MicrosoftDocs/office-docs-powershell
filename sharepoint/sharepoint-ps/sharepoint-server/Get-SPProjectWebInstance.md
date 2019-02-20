@@ -38,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE----------------------- 
 ```
-PS C:\>Get-SPProjectWebInstance -Url http://server/pwa
+Get-SPProjectWebInstance -Url http://server/pwa
 ```
 
 This example returns the properties for a Project Web App instance at http://server/pwa.

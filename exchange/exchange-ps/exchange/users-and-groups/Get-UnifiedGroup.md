@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ### -IncludeAllProperties
 The IncludeAllProperties switch specifies whether to include the values of all properties in the results. You don't need to specify a value with this switch.
 
-If you don't use this switch, the values of some properties (for example, CalendarMemeberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.
+If you don't use this switch, the values of some properties (for example, CalendarMemberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.
 
 ```yaml
 Type: SwitchParameter
@@ -164,11 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSoftDeletedGroups
-The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 Groups in the results. You don't need to specify a value with this switch.
+The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Office 365 groups in the results. You don't need to specify a value with this switch.
 
-This switch is required to return soft-deleted Office 365 Groups.
-
-Soft-deleted Office 365 Groups are deleted groups that are still recoverable.
+Soft-deleted Office 365 groups are deleted groups that are still recoverable.
 
 ```yaml
 Type: SwitchParameter

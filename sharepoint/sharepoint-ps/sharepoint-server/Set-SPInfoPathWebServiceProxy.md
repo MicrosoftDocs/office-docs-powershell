@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\>Set-SPInfoPathWebServiceProxy -Identity "http://server_name" -AllowWebServiceProxy $true
+Set-SPInfoPathWebServiceProxy -Identity "http://server_name" -AllowWebServiceProxy $true
 ```
 
 This example sets the Web service proxy for a Web application.

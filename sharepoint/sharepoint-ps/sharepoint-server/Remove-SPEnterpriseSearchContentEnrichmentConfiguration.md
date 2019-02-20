@@ -28,8 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 ```
 
 This example removes the content enrichment configuration from the default search service application.

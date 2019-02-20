@@ -23,24 +23,24 @@ Returns the uploader.xml and Microsoft.Office.BigData.DataLoader.exe.config file
 
 ### Example 1 
 ```
-PS C:\>$config = Get-SPInsightsConfig
-PS C:\>$xml = $config.UploaderXml
-PS C:\>$config.UploaderXml = $xml
-PS C:\>$config.Update()
-PS C:\>Stop-SPService -Identity "Microsoft SharePoint Insights"
-PS C:\>Start-SPService -Identity "Microsoft SharePoint Insights"
+$config = Get-SPInsightsConfig
+$xml = $config.UploaderXml
+$config.UploaderXml = $xml
+$config.Update()
+Stop-SPService -Identity "Microsoft SharePoint Insights"
+Start-SPService -Identity "Microsoft SharePoint Insights"
 ```
 
 This example returns and modifies the config.uploader.xml file. It then restarts the SharePoint Insights service on all servers in order to commit the changes.
 
 ### Example 2
 ```
-PS C:\>$config = Get-SPInsightsConfig
-PS C:\>PS C:\>$odlExeConfig = $config.OdlExeConfig
-PS C:\>$config.OdlExeConfig = $odlExeConfig
-PS C:\>$config.Update()
-PS C:\>Stop-SPService -Identity "Microsoft SharePoint Insights"
-PS C:\>Start-SPService -Identity "Microsoft SharePoint Insights"
+$config = Get-SPInsightsConfig
+$odlExeConfig = $config.OdlExeConfig
+$config.OdlExeConfig = $odlExeConfig
+$config.Update()
+Stop-SPService -Identity "Microsoft SharePoint Insights"
+Start-SPService -Identity "Microsoft SharePoint Insights"
 ```
 
 This example returns and modifies the config.uploader.xml file. It then restarts the SharePoint Insights service on all servers in order to commit the changes.

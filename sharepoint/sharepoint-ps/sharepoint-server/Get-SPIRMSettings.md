@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE---------------- 
 ```
-PS C:\>Get-SPIRMSettings
+Get-SPIRMSettings
 ```
 
 This example returns IRM settings for the entire farm.

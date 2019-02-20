@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE--------------
 ```
-PS C:\>Test-SPInfoPathFormTemplate -Identity formName.xsn
+Test-SPInfoPathFormTemplate -Identity formName.xsn
 ```
 
 This example validates an InfoPath form template for a specified name.

@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>New-SPLogFile
+New-SPLogFile
 ```
 
 This example ends the current log file and starts a new log file.

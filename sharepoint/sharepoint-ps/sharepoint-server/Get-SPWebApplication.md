@@ -40,7 +40,7 @@ This example gets the Web application for http://sitename and stores it in a var
 
 ### ------------------EXAMPLE 2----------------------- 
 ```
-PS C:\>Get-SPWebApplication -IncludeCentralAdministration | Where { $_.DefaultServerComment -eq "SharePoint Central Administration v4"} | Format-List *
+Get-SPWebApplication -IncludeCentralAdministration | Where { $_.DefaultServerComment -eq "SharePoint Central Administration v4"} | Format-List *
 ```
 
 This example displays all public properties on the SharePoint Central Administration Web application in list format.

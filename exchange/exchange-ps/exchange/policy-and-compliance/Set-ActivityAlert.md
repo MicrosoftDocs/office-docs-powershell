@@ -20,12 +20,22 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-ActivityAlert [-Identity] <ComplianceRuleIdParameter>
  [-Category <None | DataLossPrevention | ThreatManagement | DataGovernance | AccessGovernance | Others>]
- [-Condition <String>] [-Confirm] [-Description <String>] [-Disabled <$true | $false>]
- [-DomainController <Fqdn>] [-EmailCulture <CultureInfo>] [-Multiplier <Double>] [-Name <String>]
- [-NotifyUser <MultiValuedProperty>] [-Operation <MultiValuedProperty>]
- [-RecordType <ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence>]
- [-ScopeLevel <SingleUser | AllUsers>] [-Severity <Low | Medium | High | None>] [-Threshold <Int32>]
- [-TimeWindow <Int32>] [-UserId <MultiValuedProperty>] [-WhatIf] [<CommonParameters>]
+ [-Condition <String>] [-Confirm]
+ [-Description <String>]
+ [-Disabled <$true | $false>]
+ [-DomainController <Fqdn>]
+ [-EmailCulture <CultureInfo>]
+ [-Multiplier <Double>]
+ [-Name <String>]
+ [-NotifyUser <MultiValuedProperty>]
+ [-Operation <MultiValuedProperty>]
+ [-RecordType <AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer>]
+ [-ScopeLevel <SingleUser | AllUsers>]
+ [-Severity <Low | Medium | High | None>]
+ [-Threshold <Int32>]
+ [-TimeWindow <Int32>]
+ [-UserId <MultiValuedProperty>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -251,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
-The Operation parameter specifies the activitiesthat trigger activity alerts.
+The Operation parameter specifies the activities that trigger activity alerts.
 
 A valid value for this parameter is an activity that's available in the Office 365 audit log. For a description of these activities, see Search the audit log in the Office 365 Security & Compliance Center (https://go.microsoft.com/fwlink/p/?LinkId=824986).
 
@@ -272,9 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter specifies a record type label for the activity alert.
-
-Valid values are:
+The RecordType parameter specifies a record type label for the activity alert. Valid values are:
 
 - AzureActiveDirectory
 
@@ -310,7 +318,11 @@ Valid values are:
 
 - PowerBIAudit
 
+- SecurityComplianceAlerts
+
 - SecurityComplianceCenterEOPCmdlet
+
+- SecurityComplianceInsights
 
 - SharePoint
 
@@ -333,7 +345,7 @@ Valid values are:
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 
 ```yaml
-Type: ExchangeAdmin | ExchangeItem | ExchangeItemGroup | SharePoint | SyntheticProbe | SharePointFileOperation | OneDrive | AzureActiveDirectory | AzureActiveDirectoryAccountLogon | DataCenterSecurityCmdlet | ComplianceDLPSharePoint | Sway | ComplianceDLPExchange | SharePointSharingOperation | AzureActiveDirectoryStsLogon | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | SecurityComplianceCenterEOPCmdlet | ExchangeAggregatedOperation | PowerBIAudit | CRM | Yammer | SkypeForBusinessCmdlets | Discovery | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | ThreatIntelligence
+Type: AzureActiveDirectory | AzureActiveDirectoryAccountLogon | AzureActiveDirectoryStsLogon | CRM | ComplianceDLPExchange | ComplianceDLPSharePoint | DataCenterSecurityCmdlet | Discovery | ExchangeAdmin | ExchangeAggregatedOperation | ExchangeItem | ExchangeItemGroup | MicrosoftTeams | MicrosoftTeamsAddOns | MicrosoftTeamsSettingsOperation | OneDrive | PowerBIAudit | SecurityComplianceAlerts | SecurityComplianceCenterEOPCmdlet | SecurityComplianceInsights | SharePoint | SharePointFileOperation | SharePointSharingOperation | SkypeForBusinessCmdlets | SkypeForBusinessPSTNUsage | SkypeForBusinessUsersBlocked | Sway | ThreatIntelligence | Yammer
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center

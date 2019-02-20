@@ -1,8 +1,11 @@
 ---
-external help file: 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 applicable: Skype for Business Online
 title: Grant-CsCloudMeetingPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Grant-CsCloudMeetingPolicy
@@ -56,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Specifes the policy for all users automatic Skype Meeting Ready scheduling.
+Specifies the policy for all users automatic Skype Meeting Ready scheduling.
 Can be either AutoScheduleEnabled or AutoScheduleDisabled.
 
 ```yaml

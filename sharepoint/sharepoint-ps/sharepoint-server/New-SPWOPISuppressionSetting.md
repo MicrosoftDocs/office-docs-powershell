@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPWOPISuppressionSetting
 
 ## SYNOPSIS
-The `New-SPWOPISuppressionSetting` cmdlet turns off Office Web Apps for the action, file name extension, or programmatic identifier that you've specified on the current SharePoint farm.
+Disables Office Web Apps for the action, file name extension, or programmatic identifier that you've specified on the current SharePoint farm.
 
 
 ## SYNTAX
@@ -30,8 +30,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>New-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
-PS C:\>New-SPWOPISuppressionSetting -Extension "XLS" -Action "view"
+New-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+New-SPWOPISuppressionSetting -Extension "XLS" -Action "view"
 ```
 
 This example turns off the ability of a user to use Office Web Apps to view Excel workbooks that have file name extensions ".xlsx" or ".xls".

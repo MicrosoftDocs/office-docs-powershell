@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE 1----------
 ```
-PS C:\>Set-SPAppSiteSubscriptionName -Name Contoso
+Set-SPAppSiteSubscriptionName -Name Contoso
 ```
 
 This example sets the name of the default site subscription to "Contoso".
@@ -36,7 +36,7 @@ This example sets the name of the default site subscription to "Contoso".
 
 ### -----------EXAMPLE 2----------
 ```
-PS C:\>Set-SPAppSiteSubscriptionName -Name Contoso -SiteSubscription https://www.contoso.com
+Set-SPAppSiteSubscriptionName -Name Contoso -SiteSubscription https://www.contoso.com
 ```
 
 This example changes the name of the site subscription for SPSite from https://www.contoso.com to "Contoso".

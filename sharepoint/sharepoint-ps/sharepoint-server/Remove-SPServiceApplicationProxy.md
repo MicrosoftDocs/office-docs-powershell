@@ -28,8 +28,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```
-PS C:\>$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\>Remove-SPServiceApplicationProxy $proxy
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Remove-SPServiceApplicationProxy $proxy
 ```
 
 This example deletes the User Profile Service Application proxy.

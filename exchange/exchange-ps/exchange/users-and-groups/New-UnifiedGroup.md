@@ -143,7 +143,7 @@ For example:
 
 All the properties and membership of the distribution group are copied to the Office 365 Group.
 
-The alias and proxy addresses of the distribution group are moved to the Office 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 attribute of the distribution group.
+The alias and proxy addresses of the distribution group are moved to the Office 365 Group, and are replaced on the distribution group by the values DLMigrated\_\<GUID\>. The original proxy addresses are copied to the ExtensionCustomAttribute5 property of the distribution group.
 
 Office 365 Groups don't have ReportToManager and ReportToOriginator parameters, so the values of these parameters aren't migrated from the distribution group to the Office 365 Group. The Office 365 Group behaves as if the default values of these parameters were set (ReportToManager is $false and ReportToOriginator is $true). In other words, delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the message sender and not to the owner of the Office 365 Group.
 
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-PARAMVALUE: String
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -557,7 +557,7 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter specifies one or more owners for the Office 365 Group. Owners are group members who have certain privileges, such as the ability to edit group properties.
+The Owner parameter specifies the for the Office 365 Group. An owner is a group member who has certain privileges, such as the ability to edit group properties.
 
 The owner you specify for this parameter must be a mailbox or mail user (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
 
@@ -584,8 +584,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-You can specify multiple owners separated by commas
 
 ```yaml
 Type: RecipientIdParameter

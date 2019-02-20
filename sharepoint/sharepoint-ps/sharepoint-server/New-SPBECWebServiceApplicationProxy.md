@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ###   ------------ Example 1 --------------------
 ```
-PS C:\>
+
 ```
 
 ## PARAMETERS

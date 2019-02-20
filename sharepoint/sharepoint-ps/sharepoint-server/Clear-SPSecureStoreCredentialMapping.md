@@ -37,9 +37,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```
-PS C:\>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
-PS C:\>$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
-PS C:\>Clear-SPSecureStoreCredentialMapping -Identity $ssApp -Principal $userClaim
+$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
+$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
+Clear-SPSecureStoreCredentialMapping -Identity $ssApp -Principal $userClaim
 ```
 
 This example deletes the credential mapping from the target application ContosoTargetApplication for the user with alias johndoe and domain CONTOSO.

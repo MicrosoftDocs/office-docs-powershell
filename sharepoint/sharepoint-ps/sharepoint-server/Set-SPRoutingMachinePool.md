@@ -28,11 +28,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\>$wa = Get-SPWebApplication -Identity http://webAppUrl
-PS C:\>$rm = Get-SPRequestManagementSettings -Identity $wa
-PS C:\>$pool = Get-SPRoutingMachinePool -RequestManagementSettings $rm -Name 'MachinePool'
-PS C:\>$newMachine = Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name SP01
-PS C:\>Set-SPRoutingMachinePool -Identity $pool -MachineTargets ($pool.MachineTargets + $newMachine)
+$wa = Get-SPWebApplication -Identity http://webAppUrl
+$rm = Get-SPRequestManagementSettings -Identity $wa
+$pool = Get-SPRoutingMachinePool -RequestManagementSettings $rm -Name 'MachinePool'
+$newMachine = Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name SP01
+Set-SPRoutingMachinePool -Identity $pool -MachineTargets ($pool.MachineTargets + $newMachine)
 ```
 This example sets the routing machine pool on the specified Web Application. Using the Request Management settings of the Web Application, it retrieves the existing routing machine pool named 'MachinePool'. It then gets the routing machine info for a new machine to add to the pool. Lastly, it sets the pool with the existing machine targets plus the new machine target.
 

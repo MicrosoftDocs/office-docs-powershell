@@ -31,8 +31,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -StemmingEnabled $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -StemmingEnabled $false
 ```
 
 This example shows how to disable stemming during query processing by setting the parameter StemmingEnabled to false.
@@ -40,8 +40,8 @@ This example shows how to disable stemming during query processing by setting th
 
 ### ------------------EXAMPLE 2-----------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEnabled $false
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEnabled $false
 ```
 
 This example shows how to disable all linguistic query and document processing functionalities.

@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-It's the unique identificator of the Public CDN path, it can be queried using the Cmdlet Get-SpoPublicCdnOrigins
+It's the unique identifier of the Public CDN path, it can be queried using the Cmdlet Get-SpoPublicCdnOrigins
 
 ```yaml
 Type: String

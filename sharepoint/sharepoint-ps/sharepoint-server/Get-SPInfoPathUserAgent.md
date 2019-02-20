@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```
-PS C:\>Get-SPInfoPathUserAgent
+Get-SPInfoPathUserAgent
 ```
 
 This example displays a list of user agents in the entire farm.

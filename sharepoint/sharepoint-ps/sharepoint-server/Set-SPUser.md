@@ -28,13 +28,20 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### ------------------EXAMPLE 1-----------------------
 ```
-PS C:\>Set-SPUser -Identity 'Contoso\jdow' -Web http:// test -AddPermissionLevel "Contributor"
+Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -AddPermissionLevel "Contributor"
 ```
 
-This example sets a user (Contoso\jdow) to be a contributor on http://test.
+This example sets a user (Contoso\jdoe) to be a contributor on https://intranet.contoso.com.
 
+
+### ------------------EXAMPLE 2-----------------------
+```
+Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -SyncFromAD
+```
+
+This updates the User Information List for the user 'contoso\jdoe' with the current `displayName` and `mail` attribute values from the user's Active Directory account.
 
 ## PARAMETERS
 
@@ -250,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncFromAD
-If provided, specifies that user information will be synchronized from the user directory store.
+If provided, specifies that user information will be synchronized from the user directory store. This switch only retrieves the `displayName` and `mail` value from the directory store. It supports Active Directory (Classic or Windows authentication), Forms-based Authentication, and SAML. FBA and SAML providers must support resolving from their directory store for this switch to work. The switch only supports SharePoint User objects.
 
 ```yaml
 Type: SwitchParameter

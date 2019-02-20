@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ### -IsDefault
 This parameter is available only in the cloud-based service.
 
-The IsDefaultswitch specifies whether the policy is the default policy. You don't need to specify a value with this switch.
+The IsDefault switch specifies whether the policy is the default policy. You don't need to specify a value with this switch.
 
 If another policy is currently set as the default, using this switch replaces the old default policy with this policy.
 

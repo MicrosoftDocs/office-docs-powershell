@@ -24,7 +24,7 @@ Use the Enable-SPWebTemplateEnabledForSiteMaster cmdlet to create a site master 
 
 ### Example 1 
 ```
-PS C:\>Enable-SPWebTemplateForSiteMaster -Template STS#0 -CompatibilityLevel 15
+Enable-SPWebTemplateForSiteMaster -Template STS#0 -CompatibilityLevel 15
 ```
 
 This example creates a site master in the database using the Team Site template.

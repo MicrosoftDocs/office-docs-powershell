@@ -45,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```
 C:\PS>$db = Get-SPContentDatabase -Identity wss_content
 
-PS C:\>Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
+Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
 ```
 
 This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
@@ -54,7 +54,7 @@ This example returns siteupgradeinfo for every SPContentDatabase returned from G
 ```
 C:\PS>$site=Get-SPSite -Identity http://localhost
 
-PS C:\>Get-SPSiteUpgradeSessionInfo -Site $site
+Get-SPSiteUpgradeSessionInfo -Site $site
 ```
 
 This example returns siteupgradeinfo for every SPSite object returned from Get-SPSite cmdlet.

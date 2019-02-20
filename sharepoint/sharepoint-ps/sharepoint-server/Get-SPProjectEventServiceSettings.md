@@ -23,7 +23,7 @@ Returns the settings for the Microsoft Project Server Events Service. There is c
 
 ### Example 1 
 ```
-PS C:\>Get-SPProjectEventServiceSettings
+Get-SPProjectEventServiceSettings
 ```
 
 This example shows what port the service is listening on.

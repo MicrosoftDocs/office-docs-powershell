@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE------- 
 ```
-PS C:\>Get-SPAppStoreConfiguration
+Get-SPAppStoreConfiguration
 ```
 
 This example returns the settings for all of the apps.

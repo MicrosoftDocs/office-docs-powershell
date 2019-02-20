@@ -35,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchFileFormat -SearchApplication $ssa -FormatId foo -FormatName FooApp -MimeType "text/foo"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchFileFormat -SearchApplication $ssa -FormatId foo -FormatName FooApp -MimeType "text/foo"
 ```
 
 This example uses the `New-SPEnterpriseSearchFileFormat` cmdlet to add a new file format FooApp with the belonging file name extension foo to the parsing system in the search service application referenced by $ssa

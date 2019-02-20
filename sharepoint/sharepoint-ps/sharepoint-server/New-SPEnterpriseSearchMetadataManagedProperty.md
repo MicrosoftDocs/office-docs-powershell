@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\>$ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\>New-SPEnterpriseSearchMetadataManagedProperty -Name AboutMeUpdate -SearchApplication $ssa -Type 4
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchMetadataManagedProperty -Name AboutMeUpdate -SearchApplication $ssa -Type 4
 ```
 
 This example creates a new managed property named AboutMeUpdate in the default search service application and sets it type to DateTime.
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeInAlertSignature
-{{Fill IncludeInAlertSignature Description}}
+Specifies whether this managed property should be included in the alert signature.
 
 ```yaml
 Type: Boolean
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -SafeForAnonymous
-{{Fill SafeForAnonymous Description}}
+Specifies whether it is acceptable to display the contents of the property in search results for anonymous searches.
 
 ```yaml
 Type: Boolean

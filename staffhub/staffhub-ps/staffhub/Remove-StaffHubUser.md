@@ -5,6 +5,9 @@ online version:
 applicable: Microsoft StaffHub
 title: Remote-StaffHubUser
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-StaffHubUser

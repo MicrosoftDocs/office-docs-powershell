@@ -39,7 +39,7 @@ This example sets the Health Score bucket values for the Memory\Available Mbytes
 
 ### ------------------EXAMPLE 2------------------
 ```
-PS C:\>Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint
+Set-SPWebApplicationHttpThrottlingMonitor http://sharepoint
 0 -Category Memory -Counter 'Available Mbytes' -IsDesc -UpperLimit 3000
 ```
 

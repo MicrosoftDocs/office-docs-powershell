@@ -41,7 +41,7 @@ The test results are displayed on-screen. The cmdlet returns the following infor
 
 - LocalSite: The name of the local Active Directory site.
 
-- Scenario: The operations that are tested. Values are: Logon, CalendaICS and CalendarHTML.
+- Scenario: The operations that are tested. Values are: Logon, CalendarICS and CalendarHTML.
 
 - Result: The values returned are typically Success, Skipped or Failure.
 

@@ -33,7 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -------------EXAMPLE---------------
 ```
 
-PS C:\>$sa = New-SPSubscriptionSettingsServiceApplication -ApplicationPool 'SharePoint Web Services Default' -Name 'Subscriptions Settings Service Application' -DatabaseName 'Subscription'
+$sa = New-SPSubscriptionSettingsServiceApplication -ApplicationPool 'SharePoint Web Services Default' -Name 'Subscriptions Settings Service Application' -DatabaseName 'Subscription'
+New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 
 ```
 

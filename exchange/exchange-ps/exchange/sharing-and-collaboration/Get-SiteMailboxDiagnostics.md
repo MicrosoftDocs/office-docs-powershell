@@ -1,15 +1,15 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-SiteMailboxDiagnostics
 schema: 2.0.0
-monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019 || exchonline-ps"
+monikerRange: "exchserver-ps-2013 || exchserver-ps-2016 || exchserver-ps-2019"
 ---
 
 # Get-SiteMailboxDiagnostics
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange. Site mailboxes were removed from Exchange Online and SharePoint Online in 2017.
 
 Use the Get-SiteMailboxDiagnostics cmdlet to view important event-related data for each site mailbox. This information can be used to troubleshoot site mailbox issues.
 
@@ -18,7 +18,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-SiteMailboxDiagnostics [-Identity] <RecipientIdParameter> [-BypassOwnerCheck] [-Confirm] [-SendMeEmail]
+Get-SiteMailboxDiagnostics [-Identity] <RecipientIdParameter>
+ [-BypassOwnerCheck]
+ [-Confirm]
+ [-SendMeEmail]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -68,7 +71,7 @@ The Identity parameter specifies the site mailbox. You can use the following val
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: True
 Position: 1
 Default value: None
@@ -85,7 +88,7 @@ If you run the command without this parameter and you aren't a member or owner o
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -104,7 +107,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -113,13 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### -SendMeEmail
-The SendMeEmailswitch specifies that the diagnostic information is sent to the primary SMTP email address of the user account that's running the command. You don't need to specify a value with this switch.
+The SendMeEmail switch specifies that the diagnostic information is sent to the primary SMTP email address of the user account that's running the command. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
@@ -134,7 +137,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Required: False
 Position: Named
 Default value: None
