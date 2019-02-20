@@ -17,7 +17,7 @@ class CliController {
 			this.startCli(argv);
 		} catch (e) {
 			this.powerShellService.dispose();
-			console.error(e.message);
+			console.error( errorColor(e.message));
 		}
 	}
 
