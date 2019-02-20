@@ -359,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeRemoteMove
-The ExchangeRemoteMoveswitch specifies the type of endpoint for cross-forest moves and remote move migrations in a hybrid deployment. You don't need to specify a value with this switch.
+The ExchangeRemoteMove switch specifies the type of endpoint for cross-forest moves and remote move migrations in a hybrid deployment. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 ### -IMAP
 This parameter is available only in the cloud-based service.
 
-The IMAPswitch specifies the type of endpoint for IMAP migrations. You don't need to specify a value with this switch.
+The IMAP switch specifies the type of endpoint for IMAP migrations. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
