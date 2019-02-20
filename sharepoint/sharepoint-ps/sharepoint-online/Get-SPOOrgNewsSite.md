@@ -23,6 +23,7 @@ Lists URLs of all the organizational authoritative news sites.
 
 ## EXAMPLES
 
+### EXAMPLE 1
 ```powershell
 Get-SPOOrgNewsSite
 ```
