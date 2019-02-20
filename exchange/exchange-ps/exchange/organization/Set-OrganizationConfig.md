@@ -75,7 +75,7 @@ Set-OrganizationConfig
  [-MailTipsLargeAudienceThreshold <UInt32>]
  [-MailTipsMailboxSourcedTipsEnabled <$true | $false>]
  [-OAuth2ClientProfileEnabled <$true | $false>]
- [-OutlookMobileHelpShiftEnabled <$true | $false>]
+ [-OutlookMobileGCCRestrictionsEnabled <$true | $false>]
  [-OutlookPayEnabled <$true | $false>]
  [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -1863,10 +1863,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OutlookMobileHelpShiftEnabled
+### -OutlookMobileGCCRestrictionsEnabled
 This parameter is available only in the cloud-based service.
 
-{{Fill OutlookMobileHelpShiftEnabled Description}}
+The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Office 365 US Government Community Cloud (GCC) customers. Valid values are:
+
+- $true: Disable features that aren't FedRAMP compliant for GCC customers. This is the default value for all GCC customers.
+
+- $false: Enable features that aren't FedRAMP compliant for GCC customers.
+
+The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Office 365 US Government customers include:
+
+- Multi-account support
+
+- Third-party services
+
+- HelpShift and in-app support
+
+- Any Microsoft services that are outside the Office 365 US Government Community Cloud (for example, Bing and Cortana).
+
+ For a full list of Features and services that are not FedRAMP compliant for GCC customers, see Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users (https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
 
 ```yaml
 Type: $true | $false
@@ -1881,7 +1897,6 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookPayEnabled
-
 This parameter is available only in the cloud-based service.
 
 The OutlookPayEnabled parameter enables or disables [Payments in Outlook](/outlook/payments/) in the Office 365 organization. Valid values are:
