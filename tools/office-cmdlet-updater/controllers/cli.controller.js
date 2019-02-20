@@ -1,4 +1,5 @@
 const { errorColor } = require('../helpers/colors');
+const checkWindowPlatformType = require('../helpers/os');
 
 class CliController {
 	constructor(
@@ -14,10 +15,12 @@ class CliController {
 	}
 	start(argv) {
 		try {
+			checkWindowPlatformType();
+
 			this.startCli(argv);
 		} catch (e) {
 			this.powerShellService.dispose();
-			console.error(e.message);
+			console.error(errorColor(e));
 		}
 	}
 
