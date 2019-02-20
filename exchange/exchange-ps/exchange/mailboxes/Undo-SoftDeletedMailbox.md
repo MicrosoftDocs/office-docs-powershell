@@ -59,7 +59,9 @@ This example recovers the deleted mailbox for the user Brian Johnson. When this 
 ## PARAMETERS
 
 ### -PublicFolder
-The PublicFolder switch specifies that the deleted mailbox you want to recover is a public folder mailbox. You don't need to specify a value with this switch.
+The PublicFolder switch is required to recover public folder mailboxes. You don't need to specify a value with this switch.
+
+Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
 ```yaml
 Type: SwitchParameter

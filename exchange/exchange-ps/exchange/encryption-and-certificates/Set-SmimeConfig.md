@@ -305,7 +305,7 @@ Valid values are::
 
 If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the 3DES algorithm, use the value 6603,\<CustomOID\>.
 
-This parameter uses the sytax <AlgorithmID> or RC2:<KeyLength> or <AlgorithmID>,<CustomOID>. You can specify multiple values separated by semicolons (;). For example, to set the encryption algorithms to 3DES, RC2-128, RC2-64, DES, and RC2-56, use the following value: 6603;6602:128;6602:64;6601;6602:56.
+This parameter uses the syntax <AlgorithmID> or RC2:<KeyLength> or <AlgorithmID>,<CustomOID>. You can specify multiple values separated by semicolons (;). For example, to set the encryption algorithms to 3DES, RC2-128, RC2-64, DES, and RC2-56, use the following value: 6603;6602:128;6602:64;6601;6602:56.
 
 If the parameter is not specified or is not formatted correctly, Outlook on the web uses 6610 (AES256). If the encryption algorithm or minimum key length is not available on a client, Outlook on the web does not allow encryption.
 
@@ -488,7 +488,7 @@ Valid values are:
  
 If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value 8804,\<CustomOID\>.
 
-This parameter uses the sytax <AlgorithmID> or <AlgorithmID>:<KeyLength> or <AlgorithmID>,<CustomOID>. You can specify multiple values separated by semicolons (;).
+This parameter uses the syntax <AlgorithmID> or <AlgorithmID>:<KeyLength> or <AlgorithmID>,<CustomOID>. You can specify multiple values separated by semicolons (;).
 
 For example, to set the signing algorithms to CALG\_SHA\_512, SHA1, and CALG\_MD5, use the value 800E;8004;8003.
 

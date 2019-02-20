@@ -67,7 +67,7 @@
     },
     "fileMetadata": {
       "apiPlatform":{
-        "exchange-ps/exchange" : [ "PowerShell" ]
+        "exchange-ps/exchange/**/*.md" : [ "powershell" ]
       }
     },
     "template": [],

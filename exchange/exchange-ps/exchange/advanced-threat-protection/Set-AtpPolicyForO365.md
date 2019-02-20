@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
-The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning. You can specify multiple values separated by semicolons.
+The BlockUrls parameter specifies the URLs that are always blocked by Safe Links scanning. You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
