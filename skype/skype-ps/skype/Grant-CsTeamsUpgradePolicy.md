@@ -84,6 +84,34 @@ PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 
 To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
 
+
+### Example 3 Get a report on existing TeamsUpgradePolicy users (Screen Report)
+
+
+You can get the output on the screen, on CSV or Html format. For Screen Report
+```
+Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
+```
+
+### Example 4 Get a report on existing TeamsUpgradePolicy users (CSV Report)
+
+```
+$objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
+$objusers | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
+```
+This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
+
+### Example 4 Get a report on existing TeamsUpgradePolicy users (HTML Report)
+
+```
+$objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
+$objusers | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
+
+```
+After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
+
+
+
 ## PARAMETERS
 
 
@@ -189,44 +217,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-**Reports on existing TeamsUpgradePolicy for users?**
-
-You can get the output on the screen, on CSV or Html format:
-
-**For Screen Report**
-```
-Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
-```
-
-**For CSV Report**
-```
-$objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
-$objusers | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
-```
-This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
-
-**For Html Report**
-```
-$objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
-$objusers | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
-
-```
-After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
-
-
-**One-liners versions**
-
-**Oneliner For CSV Report**
-```
-Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*  | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
-```
-This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
-
-**Oneliner For HTML**
-```
-Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
-```
-After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeasUpgrade.html"
 
 
 
