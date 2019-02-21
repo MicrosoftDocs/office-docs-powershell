@@ -189,9 +189,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## How to get a report on existing existing TeamsUpgradePolicy for users?
+## Reports on existing TeamsUpgradePolicy for users?
 
-You can get the output on screen, on CSV or Html format:
+You can get the output on the screen, on CSV or Html format:
 
 **For Screen Report**
 ```
@@ -211,7 +211,7 @@ $objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 $objusers | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
 
 ```
-This will create an  HTML  file on the Desktop of the current user with the name "TeasUpgrade.html"
+After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
 
 
 ## One-liners versions
@@ -226,7 +226,7 @@ This will create a CSV  file on the Desktop of the current user with the name "T
 ```
 Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
 ```
-This will create an  HTML  file on the Desktop of the current user with the name "TeasUpgrade.html"
+After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeasUpgrade.html"
 
 
 
