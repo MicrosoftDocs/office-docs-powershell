@@ -15,7 +15,7 @@ The TeamsCallParkPolicy controls whether or not users are able to leverage the c
 ## SYNTAX
 
 ```
-Remove-CsClientPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
+Remove-CsTeamsCallParkPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
