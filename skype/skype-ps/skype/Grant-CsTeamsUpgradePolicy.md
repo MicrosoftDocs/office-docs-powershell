@@ -101,11 +101,26 @@ $objusers | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\deskto
 ```
 This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
 
-### Example 4 Get a report on existing TeamsUpgradePolicy users (HTML Report)
+### Example 5 Get a report on existing TeamsUpgradePolicy users (HTML Report)
 
 ```
 $objUsers = Get-CSOnlineUser | select UserPrincipalName, teamsupgrade*
 $objusers | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
+
+```
+After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
+
+### Example 6 Get a report on existing TeamsUpgradePolicy users (CSV Report - Oneliner version)
+
+```
+Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Csv -NoTypeInformation | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.csv"
+```
+This will create a CSV  file on the Desktop of the current user with the name "TeasUpgrade.csv"
+
+### Example 7 Get a report on existing TeamsUpgradePolicy users (HTML Report - Oneliner Version)
+
+```
+Get-CSOnlineUser | select UserPrincipalName, teamsupgrade* | ConvertTo-Html | Out-File "$env:USERPROFILE\desktop\TeamsUpgrade.html"
 
 ```
 After running these lines will create an  HTML  file on the Desktop of the current user with the name "TeamUpgrade.html"
