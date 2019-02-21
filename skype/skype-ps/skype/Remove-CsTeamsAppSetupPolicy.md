@@ -1,34 +1,39 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Skype for Business Online
-title: Remove-CsTeamsCallParkPolicy
+title: Remove-CsTeamsAppSetupPolicy
 schema: 2.0.0
 ---
 
-
-# Remove-CsTeamsCallParkPolicy
+# Remove-CsTeamsAppSetupPolicy
 
 ## SYNOPSIS
 
-The TeamsCallParkPolicy controls whether or not users are able to leverage the call park feature in Microsoft Teams.  Call park allows enterprise voice customers to place a call on hold and then perform a number of actions on that call: transfer to another department, retrieve via the same phone, or retrieve via a different Teams phone.  The Remove-CsTeamsCallParkPolicy cmdlet lets delete a custom policy that has been configured in your organization.
+As an admin, you can use app setup policies to customize Microsoft Teams to highlight the apps that are most important for your users. You choose the apps to pin and set the order that they appear. App setup policies let you showcase apps that users in your organization need, including ones built by third parties or by developers in your organization. You can also use app setup policies to manage how built-in features appear.
+Apps are pinned to the app bar. This is the bar on the side of the Teams desktop client and at the bottom of the Teams mobile clients (iOS and Android).  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/MicrosoftTeams/teams-app-setup-policies
+
+**We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
 
 ## SYNTAX
 
 ```
-Remove-CsTeamsCallParkPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
+Remove-CsTeamsAppSetupPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The TeamsCallParkPolicy controls whether or not users are able to leverage the call park feature in Microsoft Teams.  Call park allows enterprise voice customers to place a call on hold and then perform a number of actions on that call: transfer to another department, retrieve via the same phone, or retrieve via a different phone.  The Remove-CsTeamsCallParkPolicy cmdlet lets delete a custom policy that has been configured in your organization.
+As an admin, you can use app setup policies to customize Microsoft Teams to highlight the apps that are most important for your users. You choose the apps to pin and set the order that they appear. App setup policies let you showcase apps that users in your organization need, including ones built by third parties or by developers in your organization. You can also use app setup policies to manage how built-in features appear.
+Apps are pinned to the app bar. This is the bar on the side of the Teams desktop client and at the bottom of the Teams mobile clients (iOS and Android).  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/MicrosoftTeams/teams-app-setup-policies
 
-If you run Remove-CsTeamsCallParkPolicy on the Global policy, it will be reset to the defaults provided for new organizations.
+**We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
+
+If you run Remove-CsTeamsAppSetupPolicy on the Global policy, it will be reset to the defaults provided for new organizations.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-CsTeamsCallParkPolicy -Identity SalesPolicy
+PS C:\> Remove-CsTeamsAppSetupPolicy -Identity SalesPolicy
 ```
 
 Deletes a custom policy that has already been created in the organization.
@@ -36,7 +41,7 @@ Deletes a custom policy that has already been created in the organization.
 ## PARAMETERS
 
 ### -Identity
-Unique identifier for the client policy to be removed.
+Unique identifier for the policy to be removed.
 To "remove" the global policy, use the following syntax: `-Identity global`.
 (Note that the global policy cannot actually be removed.  Instead, all the properties in that policy will be reset to their default values.) To remove a per-user policy, use syntax similar to this: `-Identity "SalesDepartmentPolicy"`.
 You cannot use wildcards when specifying a policy Identity.
