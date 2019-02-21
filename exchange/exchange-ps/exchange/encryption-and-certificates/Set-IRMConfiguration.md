@@ -62,7 +62,7 @@ This example enables licensing for external messages.
 ## PARAMETERS
 
 ### -AutomaticServiceUpdateEnabled
-The AutomaticServiceUpdateEnabled parameter specifies whether to allow the automatic addition of new features within Azure Information Protection for your cloud-based organization. Valid values are:
+This parameter is currently not in use. The AutomaticServiceUpdateEnabled parameter specifies whether to allow the automatic addition of new features within Azure Information Protection for your cloud-based organization. Valid values are:
 
 - $true: New Azure Information Protection features announced through Office 365 message center will be enabled automatically in your cloud-based organization. This is the default value.
 
