@@ -4,6 +4,9 @@ online version:
 applicable: Skype for Business Online
 title: Remove-CsOnlinePSTNGateway
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-CsOnlinePSTNGateway
