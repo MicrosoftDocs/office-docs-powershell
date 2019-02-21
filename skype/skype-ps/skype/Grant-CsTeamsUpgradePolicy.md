@@ -189,7 +189,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## Reports on existing TeamsUpgradePolicy for users?
+**Reports on existing TeamsUpgradePolicy for users?**
 
 You can get the output on the screen, on CSV or Html format:
 
