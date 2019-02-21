@@ -5,6 +5,9 @@ applicable: Microsoft StaffHub
 title: Import-StaffHubShift
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Import-StaffHubShift
