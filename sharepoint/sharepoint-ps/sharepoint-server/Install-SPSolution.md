@@ -154,9 +154,15 @@ Accept wildcard characters: False
 
 ### -CompatibilityLevel
 
-{{Fill CompatibilityLevel Description}}
+Specifies whether to install into the solution, into a specific version directory based on CompatibilityLevel. The default behavior if this parameter is not specified is to install the solution only to the version directory based on the version tracked in the manifest of the solution's cab file.
 
+Valid values are:
 
+--14
+
+--15
+
+--14,15
 
 ```yaml
 Type: String
@@ -317,10 +323,10 @@ Deploys the SharePoint solution for the specified SharePoint web application.
 The value must be in one of the following forms:
 
 --An authentic GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
+
 --An authentic name of a SharePoint web application (for example, MyOfficeApp1)
+
 --An instance of an authentic SPWebApplication object.
-
-
 
 ```yaml
 Type: SPWebApplicationPipeBind

@@ -1,5 +1,9 @@
+module.exports.general = {
+	TOOL_PLATFORM_TYPE: "The Cmdlet Updater is only supported on x64 architecture. X86 is not supported."
+};
+
 module.exports.powerShellErrors = {
-	PS_GALLERY_INSTALL_ERROR: "You should using x64 version of PowerShell",
+	PS_GALLERY_INSTALL_ERROR: "You should use x64 version of PowerShell",
 	DOC_PATH_DOESNT_EXIST: "Path to documentation folder doesn't exist",
 	INSTALL_PLATYPS_ERROR: "Can't install 'platyPS' module",
 	IMPORT_PLATYPS_ERROR: "Cant't import 'platyPS' module",
