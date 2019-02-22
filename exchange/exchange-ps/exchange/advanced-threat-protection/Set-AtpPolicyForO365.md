@@ -22,10 +22,15 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>] [-AllowClickThrough <$true | $false>]
- [-BlockUrls <MultiValuedProperty>] [-Confirm] [-EnableATPForSPOTeamsODB <$true | $false>]
- [-EnableSafeLinksForClients <$true | $false>] [-EnableSafeLinksForWebAccessCompanion <$true | $false>]
- [-TrackClicks <$true | $false>] [-WhatIf] [<CommonParameters>]
+Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
+ [-AllowClickThrough <$true | $false>]
+ [-BlockUrls <MultiValuedProperty>]
+ [-Confirm]
+ [-EnableATPForSPOTeamsODB <$true | $false>]
+ [-EnableSafeLinksForClients <$true | $false>]
+ [-EnableSafeLinksForWebAccessCompanion <$true | $false>]
+ [-TrackClicks <$true | $false>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
