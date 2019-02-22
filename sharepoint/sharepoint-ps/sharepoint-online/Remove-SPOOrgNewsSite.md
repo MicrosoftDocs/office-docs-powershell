@@ -3,6 +3,7 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Remove-SPOOrgNewsSite
 schema: 2.0.0
+ms.author: antonla
 ---
 
 # Remove-SPOOrgNewsSite
