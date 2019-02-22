@@ -4,6 +4,9 @@ Module Name: officewebapps
 title: New-OfficeWebAppsExcelUserDefinedFunction
 online version:
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # New-OfficeWebAppsExcelUserDefinedFunction

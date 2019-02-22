@@ -5,6 +5,9 @@ Applicable: SharePoint Migration Tool
 Title: Stop-SPMTMigration
 Online version: 
 Schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Stop-SPMTMigration

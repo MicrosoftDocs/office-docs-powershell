@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMobilityPolicy
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsMobilityPolicy
@@ -91,7 +94,7 @@ That filtered collection of policies is then piped to the `Set-CsMobilityPolicy`
 Get-CsMobilityPolicy | Where-Object {$_.Description -eq $Null} | Set-CsMobilityPolicy -Description "Policy owner: kenmyer@litwareinc.com"
 ```
 
-In Example 3, a new description is added to any mobility policy property that does not currently have a description.
+In Example 3, a new description is added to any mobility policy that does not currently have a description.
 To do this, the first uses the `Get-CsMobilityPolicy` cmdlet to return a collection of all the mobility policies currently in use in the organization.
 This collection is then piped to the `Where-Object` cmdlet, which selects only those policies where the Description property is equal to (-eq) a null value.
 That filtered collection is then piped to the `Set-CsMobilityPolicy` cmdlet, which sets the Description property for each policy to the string value "Policy owner: kenmyer@litwareinc.com".
