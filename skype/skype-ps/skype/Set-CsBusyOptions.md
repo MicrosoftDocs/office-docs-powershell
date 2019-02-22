@@ -3,6 +3,9 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsBusyOptions
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Set-CsBusyOptions
