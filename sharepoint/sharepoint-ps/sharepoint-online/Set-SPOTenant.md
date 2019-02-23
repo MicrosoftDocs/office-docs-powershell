@@ -1206,6 +1206,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseFindPeopleInPeoplePicker
+This feature enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
 
 > [!NOTE] 
 > When set to $true, users aren't able to share with security groups or SharePoint groups.  
