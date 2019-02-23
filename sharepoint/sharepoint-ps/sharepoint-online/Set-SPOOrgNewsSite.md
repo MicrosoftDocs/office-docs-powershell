@@ -3,6 +3,7 @@ external help file: sharepointonline.xml
 applicable: SharePoint Online
 title: Set-SPOOrgNewsSite
 schema: 2.0.0
+author: antonlabunets
 ms.author: antonla
 ---
 
