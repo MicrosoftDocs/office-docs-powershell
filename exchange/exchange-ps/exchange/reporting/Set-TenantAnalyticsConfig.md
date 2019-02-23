@@ -8,6 +8,8 @@ monikerRange: "exchonline-ps"
 
 # Set-TenantAnalyticsConfig
 
+**This cmdlet has been deprecated and no longer used.**
+
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
