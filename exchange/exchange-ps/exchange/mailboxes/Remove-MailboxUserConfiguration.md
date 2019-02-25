@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-MailboxUserConfiguration -Mailbox julia@contoso.com -Identity Configuration\IPM.Configuration.Aggregated.OwaUserConfiguration
 ```
 
-This example removes the specified user configuration item from the mailbox lila@contoso.com.
+This example removes the specified user configuration item from the mailbox julia@contoso.com.
 
 ## PARAMETERS
 
