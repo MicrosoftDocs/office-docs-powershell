@@ -5,6 +5,9 @@ applicable: Microsoft Teams
 title: Remove-Team
 online version: 
 schema: 2.0.0
+author: kenwith
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Remove-Team
@@ -12,7 +15,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Note: This cmdlet is currently in Beta.
 
-Deletes a team.
+Deletes a team from Microsoft Teams, the associated SharePoint Team Site and corresponding Office 365 Group.
 
 ## SYNTAX
 
