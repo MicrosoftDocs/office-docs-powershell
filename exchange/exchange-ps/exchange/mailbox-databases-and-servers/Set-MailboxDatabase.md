@@ -268,9 +268,9 @@ The DataMoveReplicationConstraint parameter specifies the throttling behavior fo
 
 - None: Moves shouldn't be throttled to ensure high availability. Use this setting if the database isn't part of a database availability group (DAG).
 
-- AllCopies (Exchange 2010 only): If the database is replicated, all passive mailbox database copies must have the most recent changes synchronized.
+- AllCopies (Exchange 2013 or earlier): If the database is replicated, all passive mailbox database copies must have the most recent changes synchronized.
 
-- AllDatacenters (Exchange 2010 only): If the database is replicated to multiple Active Directory sites, at least one passive mailbox database copy in each site must have the most recent changes replicated.
+- AllDatacenters (Exchange 2013 or earlier): If the database is replicated to multiple Active Directory sites, at least one passive mailbox database copy in each site must have the most recent changes replicated.
 
 - CINoReplication (Exchange 2013 or later): Moves shouldn't be throttled to ensure high availability, but the content indexing service must be up to date.
 
