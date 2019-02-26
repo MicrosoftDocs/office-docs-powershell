@@ -17,7 +17,7 @@ SharePoint Patterns and Practices (PnP) contains a library of PowerShell command
 
 ![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
 
-_**Applies to:** SharePoint Online | SharePoint 2016 | SharePoint 2013_
+_**Applies to:** SharePoint Online | SharePoint 2019 | SharePoint 2016 | SharePoint 2013_
 
 ## Installation #
 
@@ -29,6 +29,7 @@ If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/
 |**SharePoint Version**|**Command to install**|
 |------------------|------------------|
 |SharePoint Online|```Install-Module SharePointPnPPowerShellOnline ```|
+|SharePoint 2019|```Install-Module SharePointPnPPowerShell2019```|
 |SharePoint 2016|```Install-Module SharePointPnPPowerShell2016```|
 |SharePoint 2013|```Install-Module SharePointPnPPowerShell2013```|
 
