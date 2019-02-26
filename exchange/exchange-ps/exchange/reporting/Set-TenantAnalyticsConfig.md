@@ -1,4 +1,4 @@
----
+--
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 applicable: Exchange Online
 title: Set-TenantAnalyticsConfig
@@ -11,7 +11,7 @@ monikerRange: "exchonline-ps"
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-TenantAnalyticsConfig cmdlet to modify the minimum number of recipients that are required for MyAnalytics to show email statistics.
+**This cmdlet has been deprecated and no longer used.**
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -31,21 +31,21 @@ Set-TenantAnalyticsConfig -MinTeamSize <Int32> -TeamAnalyticsEnabled <$true | $f
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
+This cmdlet has been deprecated and no longer used.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-TenantAnalyticsConfig -MinRecipients 10
+Set-TenantAnalyticsConfig
 ```
 
-This example configures the minimum number of recipients required by MyAnalytics to 10 recipients.
+This cmdlet has been deprecated and no longer used.
 
 ## PARAMETERS
 
 ### -MinRecipients
-The MinRecipients parameter specifies the minimum number of recipients required for MyAnalytics to show email statistics. The default value is 5.
+This cmdlet has been deprecated and no longer used.
 
 ```yaml
 Type: Int32
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinTeamSize
-PARAMVALUE: Int32
+This cmdlet has been deprecated and no longer used.
 
 ```yaml
 Type: Int32
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamAnalyticsEnabled
-PARAMVALUE: $true | $false
+This cmdlet has been deprecated and no longer used.
 
 ```yaml
 Type: $true | $false
