@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Applicable: Exchange Server 2019, Exchange Online
 title: Remove-CalendarEvents
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchserver-ps-2019 || exchonline-ps"
 ---
 
