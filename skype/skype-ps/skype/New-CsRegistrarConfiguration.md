@@ -376,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCertificateReplicationThreshold
-PARAMVALUE: UInt64
+Minimum interval in minutes for user certificate to be replicated.
 
 ```yaml
 Type: UInt64
@@ -392,7 +392,7 @@ Accept wildcard characters: False
 ```
 
 ### -WinFabMaxLogsSizeMb
-PARAMVALUE: Int32
+Limits the maximum disk space used by Fabric traces.  Only applies to deployments using Windows Fabric 3.0 or newer
 
 ```yaml
 Type: Int32
