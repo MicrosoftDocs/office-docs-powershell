@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-Specifies the user name of the site collection’s primary owner. The owner must be a user instead of a security group or an email-enabled security group.
+Specifies the user name of the site collection’s primary owner. The owner must be a email-enabled user instead of a security group or an email-enabled security group.
 
 
 ```yaml
