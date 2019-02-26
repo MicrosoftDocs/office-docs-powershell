@@ -159,7 +159,7 @@ The LogonTypes parameter specifies the type of logons. Valid values include:
 
 - External: For Exchange Online mailboxes, audit log entries for mailbox access by Microsoft datacenter administrators are returned.
 
-- Owner: Audit log entries for mailbox access by the primary mailbox owner are returned. This value is available only in Exchange 2016 and also requires the ShowDetails switch.
+- Owner: Audit log entries for mailbox access by the primary mailbox owner are returned. This value requires the ShowDetails switch.
 
 ```yaml
 Type: MultiValuedProperty
