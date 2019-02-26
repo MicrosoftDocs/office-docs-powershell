@@ -3,6 +3,9 @@ external help file:
 applicable: Exchange Online
 title: Get-FocusedInbox
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
