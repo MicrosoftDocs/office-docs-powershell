@@ -24,7 +24,7 @@ Add-SPOGeoAdministrator
 
 ## DESCRIPTION
 This Cmdlet requires a connection to a multi-geo tenant to run correctly. 
-You must be a SharePoint Online global Administrator to run this script and allows you to add a user or security group in the SharePoint Multi-Geo Tenant as GeoAdministrator
+You must be a SharePoint Online global Administrator to run this script and allows you to add a user or security group in the SharePoint Multi-Geo Tenant as GeoAdministrator.
 
 
 ## EXAMPLES
