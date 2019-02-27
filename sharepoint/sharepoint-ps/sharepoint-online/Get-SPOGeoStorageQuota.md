@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOGeoStorageQuota
 
 ## SYNOPSIS
-This Cmdlet gets the Storage quota on a multi-geo tenant
+This Cmdlet gets the storage quota on a multi-geo tenant.
 
 
 ## SYNTAX
@@ -18,7 +18,7 @@ Get-SPOGeoStorageQuota [-AllLocations] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This Cmdlet shows the storage on the current location or all locations in a multi-geo SPO tenant
+This Cmdlet shows the storage on the current location or all locations in a multi-geo SPO tenant.
 
 
 ## EXAMPLES
@@ -27,13 +27,13 @@ This Cmdlet shows the storage on the current location or all locations in a mult
 ```Powershell
 Get-SPOGeoStorageQuota -AllLocations
 ```
-Get the storage size quota of all locations 
+Get the storage size quota of all locations. 
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```Powershell
 Get-SPOGeoStorageQuota 
 ```
-Get the storage size quota of the current location
+Get the storage size quota of the current location.
 
 
 ## PARAMETERS
