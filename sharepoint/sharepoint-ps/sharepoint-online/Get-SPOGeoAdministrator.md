@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 Get-SPOGeoAdministrator 
 ```
-This Cmdlet will output a SharePoint Online User or security group that is Multi-Geographic administrators on the current multi-geo Tenant.
+This cmdlet will output a SharePoint Online user or security group that is Multi-Geographic administrators on the current multi-geo tenant.
 
 
 ## PARAMETERS
