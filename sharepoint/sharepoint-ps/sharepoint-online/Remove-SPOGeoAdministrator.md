@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1 
 ```powershell
-Remove-SPOGeoAdministrator contosoadmin [-LoginName] <String>
+Remove-SPOGeoAdministrator contosoadmin 
 ```
 Remove the GeoAdministrator privileges to the user contosoadmin of the SharePoint Online multi-geo tenant.
 
@@ -43,7 +43,7 @@ Remove the GeoAdministrator privileges to the user contosoadmin of the SharePoin
 ```powershell
 Remove-SPOGeoAdministrator -LoginName contosoadmin
 ```
-Same as example 1, but using the LoginName parameter.
+Same as example 1, but using the LoginName parameter explicitly.
 
 ## PARAMETERS
 
@@ -67,6 +67,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
 
 ## OUTPUTS
 
