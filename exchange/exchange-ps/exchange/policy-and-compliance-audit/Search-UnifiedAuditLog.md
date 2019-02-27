@@ -3,6 +3,9 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 applicable: Exchange Online
 title: Search-UnifiedAuditLog
 schema: 2.0.0
+author: chrisda
+ms.author: chrisda
+ms.reviewer:
 monikerRange: "exchonline-ps"
 ---
 
