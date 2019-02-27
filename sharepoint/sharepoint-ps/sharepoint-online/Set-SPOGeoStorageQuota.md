@@ -18,7 +18,7 @@ Set-SPOGeoStorageQuota -GeoLocation <String> -StorageQuotaMB <Int64> [<CommonPar
 ```
 
 ## DESCRIPTION
-This Cmdlet sets the storage quota on a particular geo-location with a specific storage number on megabytes given by the int64
+This Cmdlet sets the storage quota on a particular geo-location with a specific storage number on megabytes given by the int64 parameter. Additionally, it requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to set the storage on particular geolocation.
 
 
 ## EXAMPLES
