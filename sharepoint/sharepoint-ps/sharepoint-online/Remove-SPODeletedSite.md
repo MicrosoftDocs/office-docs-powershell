@@ -24,6 +24,9 @@ You have to be a SharePoint Online global administrator and site collection admi
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+**Note**: As of today, the modern admin center UI does not allow permanent deletion of group connected site, but the use of this cmdlet does allow the deletion, but when this occurs it does not delete the associated group, just the site.
+
+
 
 ## EXAMPLES
 
