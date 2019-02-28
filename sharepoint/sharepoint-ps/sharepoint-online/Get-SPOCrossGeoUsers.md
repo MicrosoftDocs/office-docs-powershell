@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOCrossGeoUsers
 
 ## SYNOPSIS
-In a multi-geo tenant returns the SharePoint Online users that matches the criteria
+In a multi-geo tenant returns the SharePoint Online users that matches the criteria.
 
 
 ## SYNTAX
@@ -18,7 +18,7 @@ Get-SPOCrossGeoUsers -ValidDataLocation <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet contains a single parameter called (ValidDataLocation) which is a switch and enables to validate the location of the data, for users in a multi-geo tenant in SharePoint Online and it requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to run this cmdlet
+This cmdlet contains a single parameter called (ValidDataLocation) which is a switch and enables to validate the location of the data, for users in a multi-geo tenant in SharePoint Online and it requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to run this cmdlet.
 
 ## EXAMPLES
 
@@ -26,13 +26,13 @@ This cmdlet contains a single parameter called (ValidDataLocation) which is a sw
 ```Powershell
 Get-SPOCrossGeoUsers -ValidDataLocation
 ```
-In a multi-geo tenant, get all the cross users and validate its data location
+In a multi-geo tenant, get all the cross users and validate its data location.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```Powershell
 Get-SPOCrossGeoUsers 
 ```
-In a multi-geo tenant, get all the cross users
+In a multi-geo tenant, get all the cross users.
 
 
 ## PARAMETERS
