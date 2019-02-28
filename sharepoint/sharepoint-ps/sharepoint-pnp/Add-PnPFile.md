@@ -67,7 +67,7 @@ This will upload the file displaytemplate.html to the test folder in the display
 Add-PnPFile -Path .\sample.doc -Folder "Shared Documents" -Values @{Modified="1/1/2016"}
 ```
 
-This will upload the file sample.doc to the Shared Documnets folder. After uploading it will set the Modified date to 1/1/2016.
+This will upload the file sample.doc to the Shared Documents folder. After uploading it will set the Modified date to 1/1/2016.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
