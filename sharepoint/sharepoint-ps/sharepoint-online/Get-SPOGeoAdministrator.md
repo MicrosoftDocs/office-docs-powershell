@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOGeoAdministrator
 
 ## SYNOPSIS
-This cmdlet returns the user or security group accounts that are geo administrators for the geo location that you are connected to.
+This cmdlet returns the SharePoint Online user or security group accounts with global administrative privileges in the current Multi-Geographics tenant.
 
 ## SYNTAX
 
@@ -36,8 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 Get-SPOGeoAdministrator 
 ```
-You will get a user user or security group that are geo administrators for the geo location that you are connected to.
-
+This cmdlet will output a SharePoint Online user or security group that is Multi-Geographic administrators on the current multi-geo tenant.
 
 ## PARAMETERS
 
