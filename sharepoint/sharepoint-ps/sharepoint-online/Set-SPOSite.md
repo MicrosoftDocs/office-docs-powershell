@@ -664,7 +664,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-PARAMVALUE: $true | $false
+To enable the option to search for existing guest users at Site Collection Level, set this parameter to $true.
 
 
 ```yaml
