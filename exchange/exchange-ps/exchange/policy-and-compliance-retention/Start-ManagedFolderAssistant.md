@@ -211,5 +211,6 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 
 ## RELATED LINKS
+[Messaging Records Management (MRM) and Retention Policies in Office 365](https://support.microsoft.com/help/4032361/messaging-records-management-and-retention-policies-in-office-365)
 
-[Online Version](https://technet.microsoft.com/library/75d840ea-5abc-44bb-b361-e81561fa1b04.aspx)
+[Export-MailboxDiagnosticLogs](https://docs.microsoft.com/powershell/module/exchange/mailboxes/Export-MailboxDiagnosticLogs)
