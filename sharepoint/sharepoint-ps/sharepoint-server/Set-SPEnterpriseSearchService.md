@@ -189,13 +189,15 @@ Accept wildcard characters: False
 ```
 
 ### -PerformanceLevel
-Specifies the relative number of threads for the indexer performance:
+Specifies the relative number of threads for the crawl component performance.
+The type must be one of the following values: Reduced, PartlyReduced, or Maximum. The default value is Maximum.
+ 
+* Reduced: Total number of threads = number of processors, Max Threads/host = number of processors. Threads are assigned Below Normal priority.
+ 
+* Partly Reduced: Total number of threads = 16 times the number of processors , Max Threads/host = 8 plus the number of processors. Threads are assigned Below Normal priority.
+ 
+* Maximum: Total number of threads = 32 times the number of processors, Max Threads/host = 8 plus the number of processors. Threads are assigned Normal priority.  
 
-* Reduced: Total number of threads = number of processors.
-* Partly Reduced:  Total number of threads = 4 times the number of processors.
-* Maximum: Total number of threads = 16 times the number of processors.
-
-The type must be one of the following values: Reduced, PartlyReduced, or Maximum.
 
 
 ```yaml
