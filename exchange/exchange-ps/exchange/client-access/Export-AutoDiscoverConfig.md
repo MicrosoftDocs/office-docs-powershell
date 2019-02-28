@@ -28,7 +28,7 @@ Export-AutoDiscoverConfig -TargetForestDomainController <String> [-Confirm] [-De
 ```
 
 ## DESCRIPTION
-The Autodiscover service connection point pointer resides in Active Directory and contains the names of the Exchange Web Services URLs.
+The Autodiscover Service Connection Point pointer resides Active Directory in the user account forest and includes the LDAP URL of the resource forest that the client will use to locate the Autodiscover service in the resource forest.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
