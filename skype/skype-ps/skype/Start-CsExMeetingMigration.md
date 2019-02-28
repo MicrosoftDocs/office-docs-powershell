@@ -109,13 +109,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/en-us/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
+[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 
-[Get-CsMeetingMigrationStatus](https://docs.microsoft.com/en-us/powershell/module/skype/get-csmeetingmigrationstatus)
+[Get-CsMeetingMigrationStatus](https://docs.microsoft.com/powershell/module/skype/get-csmeetingmigrationstatus)
 
-[Set-CsTenantMigrationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/set-cstenantmigrationconfiguration)
+[Set-CsTenantMigrationConfiguration](https://docs.microsoft.com/powershell/module/skype/set-cstenantmigrationconfiguration)
 
-[Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/en-us/powershell/module/skype/get-cstenantmigrationconfiguration)
+[Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/powershell/module/skype/get-cstenantmigrationconfiguration)
 
 
 
