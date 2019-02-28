@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-In a Multi-Geo Tenant, adds a new SharePoint user or security Group as GeoAdministrator. 
+Adds a new SharePoint user or security group as GeoAdministrator to a multi-geo tenant.
 
 
 ## SYNTAX
@@ -23,8 +23,8 @@ Add-SPOGeoAdministrator
 ```
 
 ## DESCRIPTION
-This Cmdlet requires a connection to a multi-geo tenant to run correctly. 
-You must be a SharePoint Online global Administrator to run this script and allows you to add a user or security group in the SharePoint Multi-Geo Tenant as GeoAdministrator.
+This cmdlet requires a connection to a multi-geo tenant to run correctly. 
+You must be a SharePoint Online global Administrator to run this cmdlet.
 
 
 ## EXAMPLES
@@ -100,7 +100,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
